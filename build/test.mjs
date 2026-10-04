@@ -171,6 +171,43 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/'); await sel(''); await p.click('#legend summary').catch(() => {}); ok(await p.$eval('#legend', e => !e.hidden && /Pokémon GO compte/.test(e.textContent)), tag + ' legend visible in base view');
   await p.screenshot({ path: SHOTS + `base-view-${tag}.png` });
   await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
+  // ---- the sheet's own game switcher is the tracking context
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const cgState = () => p.$eval('.dnav .cg', e => ({ dis: e.disabled, on: e.getAttribute('aria-pressed') === 'true', lab: e.getAttribute('aria-label') }));
+  const swS = async g => { await p.select('#dgame', g); await sleep(300); };
+  await go('#/'); await sel('sv'); await go('#/p/25'); await sleep(300);
+  ok(/Écarlate/.test(await strip()) && /Écarlate/.test((await cgState()).lab), tag + ' sheet starts on list game (SV) ' + (await cgState()).lab);
+  await swS('sw');
+  ok(/Épée/.test(await strip()) && /Épée/.test((await cgState()).lab) && !/Écarlate/.test((await cgState()).lab), tag + ' switching in sheet changes label to Épée/Bouclier: ' + (await cgState()).lab);
+  ok(await hasBtn('#trackinfo .tr'), tag + ' Home-transfer button visible for Épée/Bouclier');
+  await p.click('.dnav .cg'); await sleep(100);
+  ok(JSON.stringify(await ls2('caught_g')) === '["sw:25"]' && (await cgState()).on, tag + ' mark stored under sw only: ' + JSON.stringify(await ls2('caught_g')));
+  await p.click('#trackinfo .tr'); await sleep(100); ok(JSON.stringify(await ls2('home_g')) === '["sw:25"]', tag + ' transfer stored under sw');
+  await p.click('.dnav .sh'); await sleep(100); ok(JSON.stringify(await ls2('shiny_g')) === '["sw:25"]' && await hasBtn('#trackinfo .trs'), tag + ' shiny stored under sw, shiny-transfer button appears');
+  await swS('sv'); ok(!(await cgState()).on && await p.$eval('.dnav .sh', e => e.getAttribute('aria-pressed') === 'false'), tag + ' back on SV: states are SV\'s own (not caught)');
+  ok(!(await p.$eval('#trackinfo .tr', e => e.getAttribute('aria-pressed') === 'true')), tag + ' SV transfer state not set');
+  await swS('rb'); ok(!(await cgState()).dis && !(await hasBtn('#trackinfo .tr')) && /Rouge/.test((await cgState()).lab), tag + ' Rouge/Bleu: buttons enabled, no Home transfer button');
+  await swS('go'); await sleep(400); ok(!(await cgState()).dis && await hasBtn('#trackinfo .tr') && /GO/.test((await cgState()).lab), tag + ' GO: buttons + transfer button');
+  await swS('home'); ok((await cgState()).dis && /lecture seule|vue d’ensemble/.test(await strip()), tag + ' general-infos option: read-only overview');
+  await swS('sw'); ok((await cgState()).on, tag + ' sw state restored');
+  await go('#/'); await sleep(200);
+  ok(await p.$eval('#game', e => e.value) === 'sv', tag + ' list filter kept (SV) after returning');
+  await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('0 Pokémon'), tag + ' SV list unaffected by the Épée mark'); await p.select('#cat', '');
+  await sel(''); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' base list derives caught from the Épée mark'); await p.select('#cat', '');
+  await sel('sw'); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Épée list shows the mark'); await p.select('#cat', ''); await sel('');
+  // no list game selected → sheet game gives working buttons; list stays unset; choice not remembered for the next visit
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel(''); await go('#/p/25'); await sleep(300);
+  ok((await cgState()).dis, tag + ' base list: sheet buttons disabled until a sheet game is chosen');
+  await swS('sw'); ok(!(await cgState()).dis, tag + ' choosing a game in the sheet enables the buttons');
+  await p.click('.dnav .cg'); await sleep(100); ok(JSON.stringify(await ls2('caught_g')) === '["sw:25"]', tag + ' mark stored for sheet game');
+  await go('#/p/26'); await sleep(300); ok(await p.$eval('#dgame', e => e.value) === 'sw' && !(await cgState()).dis, tag + ' sheet game kept while browsing sheets');
+  await go('#/'); await sleep(200); ok(await p.$eval('#game', e => e.value) === '', tag + ' list filter still unset');
+  const mk25 = await p.$eval('.card[href="#/p/25"], a[href="#/p/25"]', e => e.parentElement.innerHTML.includes('mk') || e.innerHTML.includes('mk')).catch(() => null);
+  await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' base list reflects the mark on return'); await p.select('#cat', '');
+  await go('#/p/25'); await sleep(300); ok(await p.$eval('#dgame', e => e.value) === 'home' && (await cgState()).dis, tag + ' sheet game choice reset after returning to the list');
+  await p.screenshot({ path: SHOTS + `sheet-context-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 260 } });
+  await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
   // Rouge/Bleu (not Home-compatible)
   await go('#/'); await sel('rb'); await go('#/p/25');
   ok(/Rouge\/Bleu/.test(await strip()) && !(await hasBtn('#trackinfo .tr')), tag + ' rb strip, no Home button: ' + await strip());

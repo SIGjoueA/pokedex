@@ -28,14 +28,14 @@ let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, 
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
 const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get('shiny_g', []));
-const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: store.get('dgame', 'home') };
+const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'home' };
 let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // Tracking context: a game id (or 'go') when one is selected in the Jeux filter, otherwise null = global marks (unchanged behaviour)
 // 'home' = Pokémon HOME: read-only, derived from the "Transféré vers Home" marks of the compatible games.
 const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('homeshiny_g', []));
 const trackCtx = () => (GAME_BY[state.game] || state.game === 'go' || state.game === 'home') ? state.game : null;
-const trackName = () => { const c = trackCtx(); return c === 'go' ? 'Pokémon GO' : c === 'home' ? 'Pokémon HOME' : c ? GAME_BY[c].s : ''; };
+const trackName = (c = trackCtx()) => { return c === 'go' ? 'Pokémon GO' : c === 'home' ? 'Pokémon HOME' : c ? GAME_BY[c].s : ''; };
 const homeKind = c => c === 'go' ? 'direct' : (GAME_BY[c] && GAME_BY[c].h) || null; // direct | bank | transporter | null
 const HOME_KIND_FR = { direct: 'transfert direct vers HOME', bank: 'via Pokémon Bank', transporter: 'via Poké Fret / Pokémon Bank' };
 const gkey = (c, p) => c + ':' + p.k;
@@ -67,12 +67,15 @@ function baseStatus(p, av) {
 const homeAvailF = (p, f) => [...(f.av || []).filter(g => GAME_BY[g] && GAME_BY[g].h).sort((a, b) => GIDX[a] - GIDX[b]), ...(p.go ? ['go'] : [])];
 // "complete" = transferred from every compatible game where it exists (DLC/extension games count only when no base game has it)
 const homeComplete = (p, av) => { const t = HOME_C.get(p.k) || []; const base = av.filter(g => !(GAME_BY[g] && GAME_BY[g].k === 'dlc')); const need = base.length ? base : av; return need.length > 0 && need.every(g => t.includes(g)); };
-const isCaught = p => { const c = trackCtx(); return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p)); };
-const isShiny = p => { const c = trackCtx(); return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p)); };
-const isTrans = p => TRANS_G.has(gkey(trackCtx(), p)), isSTrans = p => STRANS_G.has(gkey(trackCtx(), p));
+const isCaught = (p, c = trackCtx()) => { return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p)); };
+const isShiny = (p, c = trackCtx()) => { return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p)); };
+const isTrans = (p, c = trackCtx()) => TRANS_G.has(gkey(c, p)), isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(c, p));
+// The sheet has its own tracking context: its game switcher (state.dgame). 'home' = general infos → read-only (Home view if the list is on Home, else the derived overview).
+let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
+const sheetCtx = () => { const d = state.dgame; if (d === 'home') return state.game === 'home' ? 'home' : null; return (GAME_BY[d] || d === 'go') ? d : null; };
 const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); rebuildHome(); };
-function toggleMark(p, kind) {
-  const c = trackCtx(); if (!c || c === 'home') return; // base view and Home are read-only (derived)
+function toggleMark(p, kind, c = trackCtx()) {
+  if (!c || c === 'home') return; // base view and Home are read-only (derived)
   const k = gkey(c, p);
   if (kind === 'caught') {
     if (CAUGHT_G.has(k)) { CAUGHT_G.delete(k); TRANS_G.delete(k); STRANS_G.delete(k); } else CAUGHT_G.add(k); // un-catching also clears the transfer flags
@@ -82,8 +85,8 @@ function toggleMark(p, kind) {
   saveTrack();
 }
 // "Transféré vers Home": marking a transfer also marks the Pokémon as caught in that game; shiny transfer also marks shiny + transfer.
-function toggleTransfer(p, shiny) {
-  const c = trackCtx(); if (!c || c === 'home' || !homeKind(c)) return; const k = gkey(c, p);
+function toggleTransfer(p, shiny, c = trackCtx()) {
+  if (!c || c === 'home' || !homeKind(c)) return; const k = gkey(c, p);
   if (!shiny) { if (TRANS_G.has(k)) { TRANS_G.delete(k); STRANS_G.delete(k); } else { TRANS_G.add(k); CAUGHT_G.add(k); } }
   else if (STRANS_G.has(k)) STRANS_G.delete(k);
   else { STRANS_G.add(k); TRANS_G.add(k); CAUGHT_G.add(k); SHINY_G.add(k); }
@@ -251,7 +254,7 @@ function render() {
   if (ctx) { // progress of the selected game: marks among the entries that belong to it
     const dx = DEX[ctx], gi = GIDX[ctx];
     const uni = E.filter(p => (state.forms || !p.c) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (dx && dx.order.has(p.id) && (!p.c || inGame(p, gi)))));
-    const cu = uni.filter(isCaught).length, su = uni.filter(isShiny).length;
+    const cu = uni.filter(p => isCaught(p)).length, su = uni.filter(p => isShiny(p)).length;
     prog = ctx === 'home'
       ? `HOME : ${cu} / ${uni.length} transférés · ${su} shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} complets`
       : `${trackName()} : ${cu} / ${uni.length} capturés · ${su} shiny`;
@@ -291,7 +294,7 @@ function route() {
     openDetail(BY_KEY[m[1]]);
     window.scrollTo(0, 0);
   } else {
-    detailTok++;
+    detailTok++; sheetPref = null;
     dv.hidden = true; lv.hidden = false;
     document.title = 'Pokédex';
     window.scrollTo(0, listScroll);
@@ -299,13 +302,13 @@ function route() {
 }
 async function openDetail(p) {
   const tok = ++detailTok;
+  state.dgame = sheetPref || (state.game === 'go' || state.game === 'home' || GAME_BY[state.game] ? state.game : 'home'); // sheet game: its own choice, else the list filter
   document.title = `${p.n} #${pad(p.id)} – Pokédex`;
   $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
   try {
     const [sp, shared] = await Promise.all([loadSp(p.id), loadShared()]);
     if (tok !== detailTok) return;
     DET = { p, sp, f: sp.f[p.k], shared };
-    if (state.game === 'go' || state.game === 'home' || GAME_BY[state.game]) state.dgame = state.game; // follow the list filter
     pickGame(state.dgame);
     if (state.dgame === 'go') { try { DET.go = await loadGo(); } catch { state.dgame = 'home'; } if (tok !== detailTok) return; }
     renderDetail();
@@ -318,7 +321,7 @@ function availGames(f) { return (f.av || []).slice().sort((a, b) => GIDX[a] - GI
 function pickGame(g) {
   const f = DET.f;
   const ok = g === 'home' || (g === 'go' && f.go && f.go.r) || (GAME_BY[g] && (f.av || []).includes(g));
-  state.dgame = ok ? g : 'home'; store.set('dgame', state.dgame);
+  state.dgame = ok ? g : 'home';
 }
 const homeBall = '<svg class="ball hm" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
 function gameNames(ids) { return ids.map(g => g === 'go' ? 'Pokémon GO' : GAME_BY[g].s).join(', '); }
@@ -335,7 +338,7 @@ function baseHTML(p) {
   const row = g => `<li>${b.c.includes(g) ? BALL : BALL_OFF} ${esc(gameNames([g]))} — ${b.c.includes(g) ? 'capturé' : 'pas capturé'}${b.s.includes(g) ? ' · ✨ shiny' : ''}</li>`;
   const sw = av.filter(g => SWITCH_IDS.has(g)), old = av.filter(g => !SWITCH_IDS.has(g));
   const frac = (need, have) => `${need.filter(g => have.includes(g)).length} / ${need.length}`;
-  let h = `Suivi : <b>vue d’ensemble</b> (lecture seule : calculé d’après les marques de chaque jeu). Pour marquer, choisissez un jeu dans la liste « Jeux ».<br>` +
+  let h = `Suivi : <b>vue d’ensemble</b> (lecture seule : calculé d’après les marques de chaque jeu). Pour marquer, choisissez un jeu dans le sélecteur « Jeu » ci-dessous (ou dans la liste « Jeux »).<br>` +
     (b.any ? `${BALL} Capturé` : 'Pas encore capturé') + (b.shAny ? ' · ✨ shiny' : '') +
     (b.swDone ? ' · <span class="mk cm">✔ Switch complet</span>' : '') + (b.oldDone ? ' · <span class="mk om">🕹 Anciens jeux complets</span>' : '') +
     (b.shSwDone ? ' · <span class="mk cm">✨✔ shiny Switch</span>' : '') + (b.shOldDone ? ' · <span class="mk om">✨🕹 shiny anciens jeux</span>' : '');
@@ -346,7 +349,7 @@ function baseHTML(p) {
   return h;
 }
 function trackHTML(p) {
-  const c = trackCtx();
+  const c = sheetCtx();
   if (!c) return baseHTML(p);
   if (c === 'home') {
     const f = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [], av = homeAvail(p);
@@ -355,17 +358,19 @@ function trackHTML(p) {
       homeRowsHTML(av, f, sh);
   }
   const hk = homeKind(c);
-  let h = `Captures et shiny suivis pour : <b>${esc(trackName())}</b>`;
+  let h = `Captures et shiny suivis pour : <b>${esc(trackName(c))}</b>`;
+  { const b = baseStatus(p); h += `<br><span class="mute">Tous jeux confondus : capturé dans ${b.c.length} jeu${b.c.length > 1 ? 'x' : ''} sur ${gamesOf(p).length + (p.go ? 1 : 0)} · shiny dans ${b.s.length}.</span>`; }
   if (!hk) return h + '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.';
-  h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span><div class="trackbtns"><button type="button" class="tr" aria-pressed="${isTrans(p)}" title="Transféré vers Home depuis ${esc(trackName())}">${homeBall} Transféré vers Home</button>`;
-  if (isShiny(p) || isSTrans(p)) h += `<button type="button" class="trs" aria-pressed="${isSTrans(p)}" title="Shiny transféré vers Home">✨ Transféré</button>`;
+  h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span><div class="trackbtns"><button type="button" class="tr" aria-pressed="${isTrans(p, c)}" title="Transféré vers Home depuis ${esc(trackName(c))}">${homeBall} Transféré vers Home</button>`;
+  if (isShiny(p, c) || isSTrans(p, c)) h += `<button type="button" class="trs" aria-pressed="${isSTrans(p, c)}" title="Shiny transféré vers Home">✨ Transféré</button>`;
   return h + '</div>';
 }
 function refreshTrack(p) {
   const el = $('#trackinfo'); if (el) el.innerHTML = trackHTML(p);
   const cg = document.querySelector('.dnav .cg'), sh = document.querySelector('.dnav .sh');
-  if (cg) { cg.setAttribute('aria-pressed', isCaught(p)); cg.innerHTML = isCaught(p) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'; }
-  if (sh) sh.setAttribute('aria-pressed', isShiny(p));
+  const c = sheetCtx();
+  if (cg) { cg.setAttribute('aria-pressed', isCaught(p, c)); cg.innerHTML = isCaught(p, c) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'; }
+  if (sh) sh.setAttribute('aria-pressed', isShiny(p, c));
 }
 function navHTML(p) {
   const key = ik(p);
@@ -374,10 +379,11 @@ function navHTML(p) {
     const list = filtered().filter(x => !x.c); const i = list.findIndex(x => x.id === p.id);
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
+  const sc = sheetCtx();
   const ctxLine = `<div class="trackinfo" id="trackinfo">${trackHTML(p)}</div>`;
   return `<div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span>
-    <button class="cg" ${!trackCtx() || trackCtx() === 'home' ? 'disabled' : ''} aria-pressed="${isCaught(p)}" aria-label="Capturé${trackCtx() ? ' – ' + trackName() : ''}" title="Capturé${trackCtx() ? ' – ' + trackName() : ''}">${isCaught(p) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
-    <button class="sh" ${!trackCtx() || trackCtx() === 'home' ? 'disabled' : ''} aria-pressed="${isShiny(p)}" aria-label="Shiny capturé${trackCtx() ? ' – ' + trackName() : ''}" title="Shiny capturé${trackCtx() ? ' – ' + trackName() : ''}">✨ Shiny</button>
+    <button class="cg" ${!sc || sc === 'home' ? 'disabled' : ''} aria-pressed="${isCaught(p, sc)}" aria-label="Capturé${sc ? ' – ' + trackName(sc) : ''}" title="Capturé${sc ? ' – ' + trackName(sc) : ''}">${isCaught(p, sc) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
+    <button class="sh" ${!sc || sc === 'home' ? 'disabled' : ''} aria-pressed="${isShiny(p, sc)}" aria-label="Shiny capturé${sc ? ' – ' + trackName(sc) : ''}" title="Shiny capturé${sc ? ' – ' + trackName(sc) : ''}">✨ Shiny</button>
     <button class="fav" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${ctxLine}`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
@@ -697,7 +703,7 @@ function effNote(mode, gm) {
 async function changeGame(g) {
   state.dgame = g;
   if (g === 'go') { try { DET.go = await loadGo(); } catch { alert('Données GO indisponibles hors-ligne : ouvrez-les une fois avec une connexion.'); state.dgame = 'home'; } }
-  pickGame(state.dgame); store.set('dgame', state.dgame);
+  pickGame(state.dgame); sheetPref = state.dgame;
   renderDetail();
 }
 document.addEventListener('change', e => { if (e.target.id === 'dgame') changeGame(e.target.value); });
@@ -719,13 +725,13 @@ document.addEventListener('click', e => {
   const cgb = e.target.closest('.dnav .cg'), shb = e.target.closest('.dnav .sh');
   if (cgb || shb) {
     const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
-    toggleMark(p, cgb ? 'caught' : 'shiny'); refreshTrack(p); render();
+    toggleMark(p, cgb ? 'caught' : 'shiny', sheetCtx()); refreshTrack(p); render();
     return;
   }
   const lgb = e.target.closest('#trackinfo .lg');
   if (lgb) { const p = DET && DET.p; if (!p) return; CAUGHT.delete(ik(p)); SHINY.delete(ik(p)); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); refreshTrack(p); render(); return; }
   const trb = e.target.closest('#trackinfo .tr, #trackinfo .trs');
-  if (trb) { const p = DET && DET.p; if (!p) return; toggleTransfer(p, trb.classList.contains('trs')); refreshTrack(p); render(); return; }
+  if (trb) { const p = DET && DET.p; if (!p) return; toggleTransfer(p, trb.classList.contains('trs'), sheetCtx()); refreshTrack(p); render(); return; }
   const f = e.target.closest('.fav');
   if (f) {
     const p = DET && DET.p; if (!p) return; const key = ik(p);
