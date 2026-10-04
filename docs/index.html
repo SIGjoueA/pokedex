@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pokédex</title>
-<meta name="description" content="Pokédex hors-ligne en français pour Pokémon GO">
+<meta name="description" content="Pokédex hors-ligne en français : formes, jeux, Pokémon GO">
 <meta name="theme-color" content="#12141c">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -19,9 +19,11 @@
   <header class="top">
     <div class="searchrow">
       <input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nom ou numéro…" aria-label="Rechercher">
+      <button id="formsbtn" class="toggle" type="button" aria-pressed="false" title="Afficher / masquer les formes (Alola, Galar, Méga, Gigamax, femelles…)">Formes</button>
       <button id="viewbtn" class="icon" aria-label="Changer l’affichage" title="Grille / liste"></button>
     </div>
     <div class="filters">
+      <select id="game" aria-label="Jeu"></select>
       <select id="gen" aria-label="Génération"></select>
       <select id="cat" aria-label="Catégorie">
         <option value="">Catégorie</option>
@@ -52,7 +54,7 @@
     <div id="offline"></div>
     <p><button id="export" type="button">Exporter mes captures</button> <label class="filebtn">Importer<input id="import" type="file" accept="application/json" hidden></label></p>
     <p class="note">Vos captures sont enregistrées sur cet appareil. Exportez puis importez pour les copier entre ordinateur et téléphone.</p>
-    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
+    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Données GO : communautaires, non officielles (<a href="https://github.com/PokeMiners/game_masters" target="_blank" rel="noopener">PokeMiners game_masters</a>, <a href="https://pogoapi.net" target="_blank" rel="noopener">pogoapi.net</a>). Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
   </footer>
 </div>
 <div id="detail-view" hidden></div>
