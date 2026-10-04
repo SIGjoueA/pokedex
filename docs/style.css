@@ -102,3 +102,13 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
 .evpk small{color:var(--mute);font-size:11px}
 .evrow{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
 .evbranch{display:flex;flex-direction:column;gap:4px}
+
+/* Desktop: show all type chips (wrapped) instead of a hidden horizontal scroll */
+@media (min-width: 700px) and (pointer: fine){
+  .chips{flex-wrap:wrap;overflow-x:visible}
+}
+/* Elsewhere: visible thin scrollbar so mouse users can scroll too */
+@media (max-width: 699px) and (pointer: fine){
+  .chips{scrollbar-width:thin}
+  .chips::-webkit-scrollbar{display:block;height:6px}
+}

@@ -251,3 +251,14 @@ async function cacheImages() {
   showOffline(fail ? null : undefined);
 }
 boot();
+
+// Mouse wheel scrolls the type chips horizontally when they overflow
+(() => {
+  const c = document.getElementById('typechips');
+  if (!c) return;
+  c.addEventListener('wheel', e => {
+    if (c.scrollWidth > c.clientWidth && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      c.scrollLeft += e.deltaY; e.preventDefault();
+    }
+  }, { passive: false });
+})();
