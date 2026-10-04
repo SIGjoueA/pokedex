@@ -25,9 +25,71 @@ const validId = x => Number.isInteger(x) || (typeof x === 'string' && KEYRE.test
 
 let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, TYPE_FR = {};
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
-const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', forms: store.get('forms', false), view: store.get('view', 'grid'), goMode: store.get('goMode', true), dgame: store.get('dgame', 'home') };
+// Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
+const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get('shiny_g', []));
+const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: store.get('dgame', 'home') };
 let listScroll = 0;
-const ik = p => p.c ? p.k : p.id; // key used in the sets
+const ik = p => p.c ? p.k : p.id; // key used in the global sets
+// Tracking context: a game id (or 'go') when one is selected in the Jeux filter, otherwise null = global marks (unchanged behaviour)
+// 'home' = Pokémon HOME: read-only, derived from the "Transféré vers Home" marks of the compatible games.
+const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('homeshiny_g', []));
+const trackCtx = () => (GAME_BY[state.game] || state.game === 'go' || state.game === 'home') ? state.game : null;
+const trackName = () => { const c = trackCtx(); return c === 'go' ? 'Pokémon GO' : c === 'home' ? 'Pokémon HOME' : c ? GAME_BY[c].s : ''; };
+const homeKind = c => c === 'go' ? 'direct' : (GAME_BY[c] && GAME_BY[c].h) || null; // direct | bank | transporter | null
+const HOME_KIND_FR = { direct: 'transfert direct vers HOME', bank: 'via Pokémon Bank', transporter: 'via Poké Fret / Pokémon Bank' };
+const gkey = (c, p) => c + ':' + p.k;
+let HOME_C = new Map(), HOME_S = new Map(); // entry key -> [game ids]
+let CAUGHT_BY = new Map(), SHINY_BY = new Map(); // entry key -> [game ids incl. 'go'] with a per-game mark
+function rebuildHome() {
+  CAUGHT_BY = new Map(); SHINY_BY = new Map();
+  for (const [set, map] of [[CAUGHT_G, CAUGHT_BY], [SHINY_G, SHINY_BY]]) for (const x of set) { const i = x.indexOf(':'); const k = x.slice(i + 1); (map.get(k) || map.set(k, []).get(k)).push(x.slice(0, i)); }
+  HOME_C = new Map(); HOME_S = new Map();
+  for (const [set, map] of [[TRANS_G, HOME_C], [STRANS_G, HOME_S]]) for (const x of set) { const i = x.indexOf(':'); const g = x.slice(0, i), k = x.slice(i + 1); (map.get(k) || map.set(k, []).get(k)).push(g); }
+}
+rebuildHome();
+// Games (incl. 'go') compatible with Home in which an entry exists. Needs the regional dex files of the compatible games (loaded when Home is selected).
+const COMPAT = () => [...GAMES.filter(g => g.h).map(g => g.id), 'go'];
+const gamesOf = p => GAMES.filter((g, i) => inGame(p, i)).map(g => g.id);
+const homeAvail = p => [...gamesOf(p).filter(g => GAME_BY[g].h), ...(p.go ? ['go'] : [])];
+// ---- base view: read-only status derived from the per-game marks
+const SWITCH_IDS = new Set(['za', 'zadlc', 'svdisk', 'svmask', 'sv', 'la', 'bdsp', 'swcrown', 'swisle', 'sw', 'lgpe']);
+const coreOf = av => { const b = av.filter(g => GAME_BY[g].k !== 'dlc'); return b.length ? b : av; }; // extensions only count when no base game has it
+function baseStatus(p, av) {
+  av ||= gamesOf(p);
+  const c = CAUGHT_BY.get(p.k) || [], s = SHINY_BY.get(p.k) || [];
+  const sw = coreOf(av.filter(g => SWITCH_IDS.has(g))), old = coreOf(av.filter(g => !SWITCH_IDS.has(g)));
+  const done = (need, have) => need.length > 0 && need.every(g => have.includes(g));
+  const legacyC = CAUGHT.has(ik(p)), legacyS = SHINY.has(ik(p));
+  return { c, s, sw, old, legacyC, legacyS, any: c.length > 0 || legacyC, shAny: s.length > 0 || legacyS,
+    swDone: done(sw, c), oldDone: done(old, c), shSwDone: done(sw, s), shOldDone: done(old, s) };
+}
+const homeAvailF = (p, f) => [...(f.av || []).filter(g => GAME_BY[g] && GAME_BY[g].h).sort((a, b) => GIDX[a] - GIDX[b]), ...(p.go ? ['go'] : [])];
+// "complete" = transferred from every compatible game where it exists (DLC/extension games count only when no base game has it)
+const homeComplete = (p, av) => { const t = HOME_C.get(p.k) || []; const base = av.filter(g => !(GAME_BY[g] && GAME_BY[g].k === 'dlc')); const need = base.length ? base : av; return need.length > 0 && need.every(g => t.includes(g)); };
+const isCaught = p => { const c = trackCtx(); return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p)); };
+const isShiny = p => { const c = trackCtx(); return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p)); };
+const isTrans = p => TRANS_G.has(gkey(trackCtx(), p)), isSTrans = p => STRANS_G.has(gkey(trackCtx(), p));
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); rebuildHome(); };
+function toggleMark(p, kind) {
+  const c = trackCtx(); if (!c || c === 'home') return; // base view and Home are read-only (derived)
+  const k = gkey(c, p);
+  if (kind === 'caught') {
+    if (CAUGHT_G.has(k)) { CAUGHT_G.delete(k); TRANS_G.delete(k); STRANS_G.delete(k); } else CAUGHT_G.add(k); // un-catching also clears the transfer flags
+  } else {
+    if (SHINY_G.has(k)) { SHINY_G.delete(k); STRANS_G.delete(k); } else SHINY_G.add(k);
+  }
+  saveTrack();
+}
+// "Transféré vers Home": marking a transfer also marks the Pokémon as caught in that game; shiny transfer also marks shiny + transfer.
+function toggleTransfer(p, shiny) {
+  const c = trackCtx(); if (!c || c === 'home' || !homeKind(c)) return; const k = gkey(c, p);
+  if (!shiny) { if (TRANS_G.has(k)) { TRANS_G.delete(k); STRANS_G.delete(k); } else { TRANS_G.add(k); CAUGHT_G.add(k); } }
+  else if (STRANS_G.has(k)) STRANS_G.delete(k);
+  else { STRANS_G.add(k); TRANS_G.add(k); CAUGHT_G.add(k); SHINY_G.add(k); }
+  saveTrack();
+}
+const transValid = x => markValid(x) && !!homeKind(x.split(':')[0]);
+const markValid = x => typeof x === 'string' && /^([a-z0-9]+):\d+(-[a-z0-9-]+)?$/.test(x) && (GAME_BY[x.split(':')[0]] || x.startsWith('go:'));
 const DEX = {}; // game id -> { order: Map(sid -> index), nums: Map(sid -> [di,num,...]), dx: [labels] }
 
 async function getJSON(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); }
@@ -85,7 +147,8 @@ async function loadDex(id) {
 }
 async function setGame(v) {
   state.game = v; $('#game').value = v;
-  if (GAME_BY[v]) {
+  if (v === 'home') {
+  } else if (GAME_BY[v]) {
     try { await loadDex(v); } catch { state.game = ''; $('#game').value = ''; alert('Pokédex du jeu indisponible hors-ligne : ouvrez-le une fois avec une connexion.'); }
   }
   render();
@@ -127,10 +190,12 @@ function filtered() {
     if (state.cat === 'myth' && !p.my) return false;
     if (state.cat === 'baby' && !p.ba) return false;
     if (state.cat === 'fav' && !FAVS.has(key)) return false;
-    if (state.cat === 'caught' && !CAUGHT.has(key)) return false;
-    if (state.cat === 'missing' && CAUGHT.has(key)) return false;
-    if (state.cat === 'shiny' && !SHINY.has(key)) return false;
-    if (state.cat === 'noshiny' && SHINY.has(key)) return false;
+    if (state.cat === 'caught' && !isCaught(p)) return false;
+    if (state.cat === 'missing' && isCaught(p)) return false;
+    if (state.cat === 'shiny' && !isShiny(p)) return false;
+    if (state.cat === 'noshiny' && isShiny(p)) return false;
+    if (state.cat === 'swdone' && !baseStatus(p).swDone) return false;
+    if (state.cat === 'olddone' && !baseStatus(p).oldDone) return false;
     return true;
   });
   const pos = new Map(out.map((p, i) => [p, i]));
@@ -152,11 +217,24 @@ function numHTML(p) {
   const tag = p.c ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : '';
   return s + tag;
 }
+const BASE_LEGEND = `<span>${BALL} capturé dans au moins un jeu (Pokémon GO compris)</span> <span><span class="mk cm">✔</span> complété : capturé dans tous les jeux Switch où il existe</span> <span><span class="mk om">🕹</span> anciens jeux : capturé dans tous les jeux avant la Switch où il existe</span> <span><span class="mk sh">✨</span> shiny dans au moins un jeu (✨✔ / ✨🕹 : mêmes règles)</span> <span>Pokémon GO compte pour « capturé » mais pas pour les complétions. Pour marquer, choisissez un jeu dans « Jeux ».</span>`;
+function baseMarks(p) {
+  const b = baseStatus(p); let h = '';
+  if (b.swDone) h += '<span class="mk cm" aria-label="Complété sur Switch" title="Capturé dans tous les jeux Switch où il existe">✔</span>';
+  if (b.oldDone) h += '<span class="mk om" aria-label="Complété dans les anciens jeux" title="Capturé dans tous les anciens jeux où il existe">🕹</span>';
+  if (b.shSwDone) h += '<span class="mk cm" title="Shiny dans tous les jeux Switch où il existe">✨✔</span>';
+  if (b.shOldDone) h += '<span class="mk om" title="Shiny dans tous les anciens jeux où il existe">✨🕹</span>';
+  return h;
+}
 function cardHTML(p) {
   const key = ik(p);
+  const hm = trackCtx() === 'home';
   const star = (FAVS.has(key) ? '<span class="star" aria-label="Favori">★</span>' : '') +
-    (CAUGHT.has(key) ? `<span class="mk ok" aria-label="Capturé">${BALL}</span>` : '') +
-    (SHINY.has(key) ? '<span class="mk sh" aria-label="Shiny capturé">✨</span>' : '');
+    (hm ? (isCaught(p) ? '<span class="mk hm" aria-label="Transféré vers Home" title="Transféré vers Home">🏠</span>' : '') : isCaught(p) ? `<span class="mk ok" aria-label="Capturé">${BALL}</span>` : '') +
+    (isShiny(p) ? `<span class="mk sh" aria-label="Shiny ${hm ? 'transféré' : 'capturé'}">✨</span>` : '') +
+    (hm && isCaught(p) && homeComplete(p, homeAvail(p)) ? '<span class="mk cm" aria-label="Transféré depuis tous les jeux compatibles" title="Transféré depuis tous les jeux compatibles">✔</span>' : '') +
+    (!trackCtx() ? baseMarks(p) : '') +
+    (trackCtx() && trackCtx() !== 'home' && isTrans(p) ? '<span class="mk hm" aria-label="Transféré vers Home" title="Transféré vers Home">🏠</span>' : '');
   return `<a class="card${p.c ? ' form' : ''}" href="#/p/${p.k}"><img src="img/${p.k}.webp" alt="" loading="lazy" decoding="async" width="256" height="256">` +
     `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(p.n)} ${star}</div></div>` +
     `<div class="badges">${p.t.map(badge).join('')}</div></a>`;
@@ -168,7 +246,23 @@ function render() {
   $('#viewbtn').textContent = state.view === 'grid' ? '☰' : '▦';
   box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${GAME_BY[state.game] && !DEX[state.game] ? 'Chargement…' : 'Aucun Pokémon trouvé.'}</p>`;
   const gm = GAME_BY[state.game];
-  $('#count').textContent = `${res.length} ${state.forms ? 'entrées' : 'Pokémon'}${gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : state.game === 'home' ? ' · HOME' : ''} · ${CAUGHT.size} capturés · ${SHINY.size} shiny`;
+  const ctx = trackCtx(); let prog;
+  if (ctx) { // progress of the selected game: marks among the entries that belong to it
+    const dx = DEX[ctx], gi = GIDX[ctx];
+    const uni = E.filter(p => (state.forms || !p.c) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (dx && dx.order.has(p.id) && (!p.c || inGame(p, gi)))));
+    const cu = uni.filter(isCaught).length, su = uni.filter(isShiny).length;
+    prog = ctx === 'home'
+      ? `HOME : ${cu} / ${uni.length} transférés · ${su} shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} complets`
+      : `${trackName()} : ${cu} / ${uni.length} capturés · ${su} shiny`;
+  } else { // base view: derived from the per-game marks
+    const uni = E.filter(p => state.forms || !p.c); let cu = 0, su = 0, sw = 0, old = 0;
+    for (const p of uni) { const b = baseStatus(p); cu += b.any; su += b.shAny; sw += b.swDone; old += b.oldDone; }
+    prog = `${cu} / ${uni.length} capturés · ${su} shiny · ${sw} complétés Switch · ${old} anciens jeux`;
+  }
+  $('#count').textContent = `${res.length} ${state.forms ? 'entrées' : 'Pokémon'}${gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : ''} · ${prog}`;
+  const lg = $('#legend'); lg.hidden = !!ctx && ctx !== 'home';
+  if (!ctx) lg.innerHTML = `<details><summary>Légende des marques</summary>${BASE_LEGEND}</details>`;
+  if (ctx === 'home') lg.innerHTML = '<details><summary>Légende des marques</summary><span><span class="mk hm">🏠</span> transféré depuis au moins un jeu</span> <span><span class="mk sh">✨</span> au moins un shiny transféré</span> <span><span class="mk cm">✔</span> transféré depuis tous les jeux compatibles où il existe</span></details>';
   document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
   const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game;
   $('#reset').hidden = !active;
@@ -178,7 +272,7 @@ function render() {
 const SP = {};
 let SHARED = null, GODATA = null, EVO_ADJ = null;
 async function loadShared() {
-  if (!SHARED) SHARED = Promise.all(['evo', 'moves', 'ref'].map(n => getJSON(`data/${n}.json`))).then(([evo, moves, ref]) => ({ evo, moves, ref })).catch(e => { SHARED = null; throw e; });
+  if (!SHARED) SHARED = Promise.all(['evo', 'moves', 'ref', 'tm', 'loc'].map(n => getJSON(`data/${n}.json`))).then(([evo, moves, ref, tm, loc]) => ({ evo, moves, ref, tm, loc })).catch(e => { SHARED = null; throw e; });
   return SHARED;
 }
 async function loadGo() { if (!GODATA) GODATA = getJSON('data/go.json').catch(e => { GODATA = null; throw e; }); return GODATA; }
@@ -225,6 +319,53 @@ function pickGame(g) {
   const ok = g === 'home' || (g === 'go' && f.go && f.go.r) || (GAME_BY[g] && (f.av || []).includes(g));
   state.dgame = ok ? g : 'home'; store.set('dgame', state.dgame);
 }
+const homeBall = '<svg class="ball hm" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
+function gameNames(ids) { return ids.map(g => g === 'go' ? 'Pokémon GO' : GAME_BY[g].s).join(', '); }
+function homeRowsHTML(av, f, sh) {
+  if (!av.length) return '<br>Aucun jeu compatible avec Home ne contient ce Pokémon.';
+  const done = av.filter(g => f.includes(g)).length;
+  return `<br>Transféré depuis <b>${done} / ${av.length}</b> jeux compatibles${done === av.length ? ' <span class="mk cm">✔ complet</span>' : ''} :<ul class="plain homerows">` +
+    av.map(g => `<li>${f.includes(g) ? '🏠' : '▫️'} ${esc(gameNames([g]))} — ${f.includes(g) ? 'transféré' : 'pas transféré'}${sh.includes(g) ? ' · ✨ shiny' : ''}</li>`).join('') + '</ul>';
+}
+function baseHTML(p) {
+  const f = DET && DET.p === p ? DET.f : null;
+  const av = f && f.av ? f.av.slice().sort((a, b) => GIDX[a] - GIDX[b]) : gamesOf(p);
+  const b = baseStatus(p, av), go = p.go;
+  const row = g => `<li>${b.c.includes(g) ? BALL : BALL_OFF} ${esc(gameNames([g]))} — ${b.c.includes(g) ? 'capturé' : 'pas capturé'}${b.s.includes(g) ? ' · ✨ shiny' : ''}</li>`;
+  const sw = av.filter(g => SWITCH_IDS.has(g)), old = av.filter(g => !SWITCH_IDS.has(g));
+  const frac = (need, have) => `${need.filter(g => have.includes(g)).length} / ${need.length}`;
+  let h = `Suivi : <b>vue d’ensemble</b> (lecture seule : calculé d’après les marques de chaque jeu). Pour marquer, choisissez un jeu dans la liste « Jeux ».<br>` +
+    (b.any ? `${BALL} Capturé` : 'Pas encore capturé') + (b.shAny ? ' · ✨ shiny' : '') +
+    (b.swDone ? ' · <span class="mk cm">✔ Switch complet</span>' : '') + (b.oldDone ? ' · <span class="mk om">🕹 Anciens jeux complets</span>' : '') +
+    (b.shSwDone ? ' · <span class="mk cm">✨✔ shiny Switch</span>' : '') + (b.shOldDone ? ' · <span class="mk om">✨🕹 shiny anciens jeux</span>' : '');
+  if (b.legacyC || b.legacyS) h += `<br><span class="mute">Marque manuelle de l’ancienne version${b.legacyC ? ' (capturé)' : ''}${b.legacyS ? ' (shiny)' : ''}${b.c.length || b.s.length ? ' — remplacée par les marques par jeu' : ' — conservée tant qu’aucun jeu n’est marqué'} </span><button type="button" class="lg" title="Supprimer l’ancienne marque manuelle">Retirer</button>`;
+  if (sw.length) h += `<details open><summary>Jeux Switch — ${frac(coreOf(sw), b.c)}</summary><ul class="plain homerows">${sw.map(row).join('')}</ul></details>`;
+  if (old.length) h += `<details><summary>Anciens jeux — ${frac(coreOf(old), b.c)}</summary><ul class="plain homerows">${old.map(row).join('')}</ul></details>`;
+  if (go) h += `<ul class="plain homerows"><li>${b.c.includes('go') ? BALL : BALL_OFF} Pokémon GO — ${b.c.includes('go') ? 'capturé' : 'pas capturé'}${b.s.includes('go') ? ' · ✨ shiny' : ''} <span class="mute">(ne compte pas pour les complétions)</span></li></ul>`;
+  return h;
+}
+function trackHTML(p) {
+  const c = trackCtx();
+  if (!c) return baseHTML(p);
+  if (c === 'home') {
+    const f = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [], av = homeAvail(p);
+    return `Suivi : <b>Pokémon HOME</b> (lecture seule : calculé d’après « Transféré vers Home » dans les jeux compatibles).<br>` +
+      `<span class="mk hm">🏠</span> au moins un jeu · <span class="mk sh">✨</span> au moins un shiny · <span class="mk cm">✔</span> tous les jeux compatibles` +
+      homeRowsHTML(av, f, sh);
+  }
+  const hk = homeKind(c);
+  let h = `Captures et shiny suivis pour : <b>${esc(trackName())}</b>`;
+  if (!hk) return h + '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.';
+  h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span><div class="trackbtns"><button type="button" class="tr" aria-pressed="${isTrans(p)}" title="Transféré vers Home depuis ${esc(trackName())}">${homeBall} Transféré vers Home</button>`;
+  if (isShiny(p) || isSTrans(p)) h += `<button type="button" class="trs" aria-pressed="${isSTrans(p)}" title="Shiny transféré vers Home">✨ Transféré</button>`;
+  return h + '</div>';
+}
+function refreshTrack(p) {
+  const el = $('#trackinfo'); if (el) el.innerHTML = trackHTML(p);
+  const cg = document.querySelector('.dnav .cg'), sh = document.querySelector('.dnav .sh');
+  if (cg) { cg.setAttribute('aria-pressed', isCaught(p)); cg.innerHTML = isCaught(p) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'; }
+  if (sh) sh.setAttribute('aria-pressed', isShiny(p));
+}
 function navHTML(p) {
   const key = ik(p);
   let prev = '', next = '';
@@ -232,10 +373,11 @@ function navHTML(p) {
     const list = filtered().filter(x => !x.c); const i = list.findIndex(x => x.id === p.id);
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
+  const ctxLine = `<div class="trackinfo" id="trackinfo">${trackHTML(p)}</div>`;
   return `<div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span>
-    <button class="cg" aria-pressed="${CAUGHT.has(key)}" aria-label="Capturé" title="Capturé">${CAUGHT.has(key) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
-    <button class="sh" aria-pressed="${SHINY.has(key)}" aria-label="Shiny capturé" title="Shiny capturé">✨ Shiny</button>
-    <button class="fav" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>`;
+    <button class="cg" ${!trackCtx() || trackCtx() === 'home' ? 'disabled' : ''} aria-pressed="${isCaught(p)}" aria-label="Capturé${trackCtx() ? ' – ' + trackName() : ''}" title="Capturé${trackCtx() ? ' – ' + trackName() : ''}">${isCaught(p) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
+    <button class="sh" ${!trackCtx() || trackCtx() === 'home' ? 'disabled' : ''} aria-pressed="${isShiny(p)}" aria-label="Shiny capturé${trackCtx() ? ' – ' + trackName() : ''}" title="Shiny capturé${trackCtx() ? ' – ' + trackName() : ''}">✨ Shiny</button>
+    <button class="fav" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${ctxLine}`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
 function effGroups(types, mode, chart) {
@@ -286,23 +428,26 @@ function dexNumbers(sp, gid) {
   if (extra) { const ep = []; for (let i = 0; i < extra.length; i += 2) ep.push(`${esc(gm.info[extra[i]])} <b>#${pad3(extra[i + 1])}</b>`); parts.push(`<span class="mute">(îles : ${ep.join(' · ')})</span>`); }
   return parts.join(' · ');
 }
+const TR_NOTE = '<p class="note trnote">Traduit en français faute de données officielles (traduction automatique, peut différer du texte officiel).</p>';
 function flavorHTML(sp, gm) {
-  const vids = gm ? gm.ver : null;
-  if (!gm) { // latest available entry
-    const ks = Object.keys(sp.fv).map(Number).sort((a, b) => b - a); if (!ks.length) return '';
-    return `<p class="desc">${esc(sp.ft[sp.fv[ks[0]]])}</p>`;
+  const ftx = id => sp.fv[id] !== undefined ? [sp.ft[sp.fv[id]], false] : sp.tv && sp.tv[id] !== undefined ? [sp.tt[sp.tv[id]], true] : null;
+  if (!gm) { // latest available entry (official French first, otherwise machine translation)
+    const ks = Object.keys(sp.fv).map(Number).sort((a, b) => b - a);
+    if (ks.length) return `<p class="desc">${esc(sp.ft[sp.fv[ks[0]]])}</p>`;
+    const kt = Object.keys(sp.tv || {}).map(Number).sort((a, b) => b - a);
+    return kt.length ? `<p class="desc">${esc(sp.tt[sp.tv[kt[0]]])}</p>${TR_NOTE}` : '';
   }
-  const rows = []; const byText = new Map();
-  for (const [id, name] of vids) { const i = sp.fv[id]; if (i === undefined) continue; if (!byText.has(i)) byText.set(i, []); byText.get(i).push(name); }
-  if (!byText.size) return '<p class="note">Pas d’entrée de Pokédex en français pour ce jeu dans PokéAPI (disponible à partir de Noir/Blanc).</p>';
-  for (const [i, names] of byText) rows.push(`<p class="desc"><small>${esc(names.join(' / '))}</small><br>${esc(sp.ft[i])}</p>`);
-  return rows.join('');
+  const byText = new Map(); let anyTr = false;
+  for (const [id, name] of gm.ver) { const t = ftx(id); if (!t) continue; const k = t[0]; if (!byText.has(k)) byText.set(k, { names: [], tr: t[1] }); byText.get(k).names.push(name); anyTr ||= t[1]; }
+  if (!byText.size) return '<p class="note">Pas d’entrée de Pokédex disponible pour ce jeu dans PokéAPI.</p>';
+  return [...byText].map(([t, o]) => `<p class="desc"><small>${esc(o.names.join(' / '))}${o.tr ? ' · traduction automatique' : ''}</small><br>${esc(t)}</p>`).join('') + (anyTr ? TR_NOTE : '');
 }
 function abilitiesHTML(f, gm, ref) {
   const gen = gm ? gm.g : 9;
   if (gm && (gen < 3 || gm.id === 'la')) return `<p class="note">${gm.id === 'la' ? 'Les talents n’existent pas dans Légendes Pokémon : Arceus.' : 'Les talents n’existent pas avant la génération III.'}</p>`;
   let list = pickGen(f.pa, gen, f.a);
   if (gen < 5) list = list.filter(a => !a[1]);
+  list = list.filter(a => ((ref.ab[a[0]] || [])[2] || 1) <= gen); // an ability cannot exist before the generation that introduced it
   if (!list.length) return '<p class="note">Aucun talent.</p>';
   return list.map(([id, hid]) => { const a = ref.ab[id]; return a ? `<div class="ab"><b>${esc(a[0])}</b>${hid ? ' <span class="tag2">Talent caché</span>' : ''}<br><span class="mute">${esc(a[1] || '')}</span></div>` : ''; }).join('');
 }
@@ -339,11 +484,36 @@ function movesHTML(f, sp, gm, shared) {
   if (cur) {
     if (cur[0] === 'l') rows = cur[2].map(([id, lv]) => moveRow(id, gm, shared, lv <= 1 ? (lv === 1 ? 'Niv. 1' : '—') : 'Niv. ' + lv)).join('');
     else if (cur[0] === 'o') rows = cur[2].map(([id, mi]) => moveRow(id, gm, shared, METHODS[shared.ref.mm[mi]] || 'Autre')).join('');
-    else rows = cur[2].map(id => moveRow(id, gm, shared, '')).join('');
+    else if (cur[0] === 'm') {
+      const tm = shared.tm[gm.id] || {}; const num = id => { const l = tm[id]; if (!l) return [9, 9999]; const m = l.match(/^(CT|CS|DT)(\d+)/); return [{ CT: 0, CS: 1, DT: 2 }[m[1]], +m[2]]; };
+      rows = [...cur[2]].sort((a, b) => { const x = num(a), y = num(b); return x[0] - y[0] || x[1] - y[1]; }).map(id => moveRow(id, gm, shared, tm[id] || '')).join('');
+    } else rows = cur[2].map(id => moveRow(id, gm, shared, '')).join('');
   }
   return `<section class="box"><h2>Capacités <small class="cnt">${esc(gm.s)}</small></h2>
     <div class="tabs" role="tablist">${tabs.map(t => `<button data-mtab="${t[0]}" aria-pressed="${t[0] === movesTab}">${t[1]} <small>${t[2].length}</small></button>`).join('')}</div>
     <div class="mvs">${rows}</div><p class="note">Valeurs (type, puissance, précision, PP, catégorie) telles qu’elles étaient dans ce jeu (PokéAPI). Avant la génération IV, la catégorie dépend du type.</p></section>`;
+}
+
+/* encounters */
+function encHTML(f, sp, gm, shared) {
+  const src = f.en ? f : (f.enOf && sp.f[f.enOf]) || f;
+  const rows = (src.en && src.en[gm.id]) || [];
+  let body;
+  if (!rows.length) body = `<p class="note">${gm.enc ? 'Aucune rencontre sauvage répertoriée par PokéAPI pour ce Pokémon dans ce jeu (il peut s’obtenir par évolution, œuf, cadeau, échange ou autre moyen, ou la donnée est absente).' : 'PokéAPI ne fournit aucune donnée de rencontres pour ce jeu (les apparitions dans la nature ne sont pas répertoriées).'}</p>`;
+  else {
+    const by = new Map();
+    for (const r of rows) { if (!by.has(r[0])) by.set(r[0], []); by.get(r[0]).push(r); }
+    const L = shared.loc;
+    const verName = id => (gm.ver.find(v => v[0] === id) || [0, ''])[1];
+    const list = [...by].sort((a, b) => L.a[a[0]].localeCompare(L.a[b[0]], 'fr')).map(([a, rs]) => `<div class="enc"><b>${esc(L.a[a])}</b>` + rs.map(r => {
+      const conds = r[5] ? r[5].map(c => L.c[c]) : [];
+      const vs = r[6] ? [verName(r[6][0]) && r[6].map(verName).join(' / ')] : [];
+      return `<div class="ms">${esc(L.m[r[1]])} · Niv. ${r[2] === r[3] ? r[2] : r[2] + '–' + r[3]} · ${r[4]} %${conds.length ? ' · ' + esc(conds.join(', ')) : ''}${vs[0] ? ' · ' + esc(vs[0]) : ''}</div>`;
+    }).join('') + '</div>').join('');
+    body = `<details${by.size <= 8 ? ' open' : ''}><summary>${by.size} lieu${by.size > 1 ? 'x' : ''}</summary>${list}</details>` +
+      '<p class="note">Pourcentage = probabilité par rencontre selon PokéAPI (peut être incomplet).</p>';
+  }
+  return `<section class="box"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2>${body}</section>`;
 }
 
 /* evolutions */
@@ -431,9 +601,10 @@ function goHTML(p, f, sp, shared, go) {
         <li>Statut : <b>${d.r ? 'disponible dans Pokémon GO' : 'pas encore sorti'}</b></li>
         <li>Shiny : <b>${sh}</b></li>
         ${d.bd ? `<li>Distance compagnon : <b>${dec(d.bd)} km</b> par bonbon</li>` : ''}
+        ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
         ${d.th ? `<li>Seconde attaque chargée : <b>${fmt(d.th[0])}</b> poussières d’étoiles + <b>${d.th[1]}</b> bonbons</li>` : ''}
       </ul>
-      <p class="note">PC max = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). La distance d’éclosion d’œuf n’est pas fournie par la source.</p></section>
+      <p class="note">PC max = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>
     <section class="box"><h2>Attaques rapides</h2><div class="mvs">${fm || '<p class="note">—</p>'}</div></section>
     <section class="box"><h2>Attaques chargées</h2><div class="mvs">${cm || '<p class="note">—</p>'}</div>${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite). DPS = puissance ÷ durée.</p></section>
     <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}
@@ -464,7 +635,7 @@ function renderDetail() {
     const sArr = gm ? pickGen(f.ps, gen, f.s) : f.s;
     const gen1 = gm && gen === 1;
     const chart = chartFor(gm ? gen : 9);
-    const mode2 = gm ? 'main' : (state.goMode ? 'go' : 'main');
+    const mode2 = 'main';
     body = `${flavorHTML(sp, gm)}
     ${regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : ''}
     <section class="box"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div>
@@ -474,11 +645,10 @@ function renderDetail() {
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>
     <section class="box"><h2>Talents</h2>${abilitiesHTML(f, gm, shared.ref)}</section>
     ${heldHTML(f, gm, shared.ref)}
-    <section class="box"><h2>Faiblesses &amp; résistances${gm ? '' : `
-      <span class="seg" role="group"><button data-mode="go" aria-pressed="${state.goMode}">GO</button><button data-mode="main" aria-pressed="${!state.goMode}">Jeux</button></span>`}</h2>
+    <section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
       <div id="eff">${effHTML(types, mode2, chart)}</div>
       <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>
-    ${gm ? movesHTML(f, sp, gm, shared) : availHTML(sp, games)}
+    ${gm ? encHTML(f, sp, gm, shared) + movesHTML(f, sp, gm, shared) : homeSrcHTML(p, f) + availHTML(sp, games)}
     <section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
   }
@@ -496,9 +666,17 @@ function renderDetail() {
     ${formSwitcher(p, gm)}
     <section class="box gamebar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></section>
     ${body}
+    <p class="note disclaimer">Les données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
 }
 function renderDetailKeepScroll() { const y = window.scrollY; renderDetail(); window.scrollTo(0, y); }
+function homeSrcHTML(p, f) {
+  const av = homeAvailF(p, f), t = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [];
+  if (!av.length) return '';
+  return `<section class="box"><h2>Transferts vers Home <small class="cnt">${av.filter(g => t.includes(g)).length} / ${av.length}</small></h2>` +
+    `<p class="note" style="margin:0 0 6px"><span class="mk hm">🏠</span> transféré · <span class="mk sh">✨</span> shiny transféré · <span class="mk cm">✔</span> transféré depuis tous les jeux compatibles${homeComplete(p, av) ? ' (complet)' : ''}</p>` +
+    `<ul class="plain homerows">${av.map(g => `<li>${t.includes(g) ? '🏠' : '▫️'} ${esc(gameNames([g]))} — ${t.includes(g) ? 'transféré' : 'pas transféré'}${sh.includes(g) ? ' · ✨ shiny' : ''}</li>`).join('')}</ul></section>`;
+}
 function availHTML(sp, games) {
   if (!games.length) return '';
   const rows = games.map(g => { const n = dexNumbers(sp, g); return `<li><a href="#" data-game="${g}">${esc(GAME_BY[g].n)}</a>${n ? ` <span class="mute">${n}</span>` : ''}</li>`; }).join('');
@@ -507,7 +685,7 @@ function availHTML(sp, games) {
 function effNote(mode, gm) {
   return mode === 'go'
     ? 'Multiplicateurs de Pokémon GO (×1,6 par faiblesse, ×0,625 par résistance ; une immunité des jeux principaux compte comme une double résistance).'
-    : `Multiplicateurs des jeux principaux (×2, ×½, immunités ×0)${gm ? ` — table des types de la génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gm.g]}.` : '.'}`;
+    : `Multiplicateurs des jeux principaux (×2, ×½, immunités ×0)${gm ? ` — table des types de la génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gm.g]}, types du jeu.` : ' — table des types actuelle (pour GO, choisissez Pokémon GO dans le sélecteur de jeu).'}`;
 }
 async function changeGame(g) {
   state.dgame = g;
@@ -531,29 +709,16 @@ document.addEventListener('click', e => {
   if (mt) { movesTab = mt.dataset.mtab; renderDetailKeepScroll(); return; }
   const sb = e.target.closest('#shbtn');
   if (sb) { showShinyArt = !showShinyArt; renderDetailKeepScroll(); return; }
-  const m = e.target.closest('[data-mode]');
-  if (m && DET) {
-    state.goMode = m.dataset.mode === 'go'; store.set('goMode', state.goMode);
-    const f = DET.f; const mode2 = state.goMode ? 'go' : 'main';
-    $('#eff').innerHTML = effHTML(f.t, mode2, DATA.charts[6]); $('#effnote').textContent = effNote(mode2, null);
-    document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', (b.dataset.mode === 'go') === state.goMode));
-    return;
-  }
   const cgb = e.target.closest('.dnav .cg'), shb = e.target.closest('.dnav .sh');
   if (cgb || shb) {
-    const p = DET && DET.p; if (!p) return; const key = ik(p);
-    if (cgb) {
-      CAUGHT.has(key) ? CAUGHT.delete(key) : CAUGHT.add(key);
-      store.set('caught', [...CAUGHT]);
-      cgb.setAttribute('aria-pressed', CAUGHT.has(key)); cgb.innerHTML = CAUGHT.has(key) ? BALL + ' Capturé' : BALL_OFF + ' Capturé';
-    } else {
-      SHINY.has(key) ? SHINY.delete(key) : SHINY.add(key);
-      store.set('shiny', [...SHINY]);
-      shb.setAttribute('aria-pressed', SHINY.has(key));
-    }
-    render();
+    const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
+    toggleMark(p, cgb ? 'caught' : 'shiny'); refreshTrack(p); render();
     return;
   }
+  const lgb = e.target.closest('#trackinfo .lg');
+  if (lgb) { const p = DET && DET.p; if (!p) return; CAUGHT.delete(ik(p)); SHINY.delete(ik(p)); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); refreshTrack(p); render(); return; }
+  const trb = e.target.closest('#trackinfo .tr, #trackinfo .trs');
+  if (trb) { const p = DET && DET.p; if (!p) return; toggleTransfer(p, trb.classList.contains('trs')); refreshTrack(p); render(); return; }
   const f = e.target.closest('.fav');
   if (f) {
     const p = DET && DET.p; if (!p) return; const key = ik(p);
@@ -606,7 +771,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(p => `img/${p.k}.webp`), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/go.json', ...GAMES.map(g => `data/dex/${g.id}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/go.json', 'data/tm.json', 'data/loc.json', ...GAMES.map(g => `data/dex/${g.id}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) store.set('packDone2', true);
@@ -630,7 +795,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY] };
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -640,7 +805,12 @@ boot();
       const d = JSON.parse(await im.files[0].text());
       const ids = x => Array.isArray(x) ? x.filter(validId) : [];
       ids(d.favs).forEach(n => FAVS.add(n)); ids(d.caught).forEach(n => CAUGHT.add(n)); ids(d.shiny).forEach(n => SHINY.add(n));
-      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]);
+      const mk = x => Array.isArray(x) ? x.filter(markValid) : [];
+      mk(d.caught_g).forEach(n => CAUGHT_G.add(n)); mk(d.shiny_g).forEach(n => SHINY_G.add(n));
+      const mt = x => Array.isArray(x) ? x.filter(transValid) : [];
+      mt(d.home_g).forEach(n => { TRANS_G.add(n); CAUGHT_G.add(n); }); mt(d.homeshiny_g).forEach(n => { STRANS_G.add(n); TRANS_G.add(n); CAUGHT_G.add(n); SHINY_G.add(n); });
+      rebuildHome();
+      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]);
       render(); alert('Sauvegarde importée.');
     } catch { alert('Fichier invalide.'); }
     im.value = '';

@@ -10,6 +10,8 @@ import { GAMES } from './games.mjs';
 import { loadAll, list, genNum } from './entries.mjs';
 import { buildGo } from './go.mjs';
 import { evoText } from './evotext.mjs';
+import { parseEggs } from './eggs.mjs';
+import { clean as cleanEn } from './translate-prep.mjs';
 
 const OUT = path.join(DOCS, 'data');
 fs.rmSync(OUT, { recursive: true, force: true });
@@ -91,7 +93,7 @@ for (const g of GAMES) {
   dexOut[g.id] = { dx: dexes.map(D => frName(D.names) || D.name), e: order.map(sid => [sid, ...nums[sid]]) };
   for (const sid of order) (speciesGames[sid] ||= new Set()).add(g.id);
   games.push({
-    id: g.id, n: g.fr, s: g.short, d: g.d, k: g.kind, g: vg.gen, vo: vg.order, mv: g.mv, evo: vgs[g.evoVg || g.vg].order,
+    id: g.id, n: g.fr, s: g.short, ...(g.home ? { h: g.home } : {}), d: g.d, k: g.kind, g: vg.gen, vo: vg.order, mv: g.mv, evo: vgs[g.evoVg || g.vg].order,
     ver: g.ver.map(v => [versions[v].id, versions[v].fr]),
     dx: dexOut[g.id].dx, info: infos.map(D => frName(D.names) || D.name), count: order.length,
     _nums: nums, _info: info,
@@ -99,8 +101,106 @@ for (const g of GAMES) {
 }
 const gameById = Object.fromEntries(games.map(g => [g.id, g]));
 
+// ---------------------------------------------------------------- locations / encounters (PokéAPI)
+const verToGame = {}; for (const g of GAMES) for (const v of g.ver) verToGame[v] = g.id;
+const SHORT_METHOD = {
+  walk: 'Herbes hautes / grotte', 'old-rod': 'Canne', 'good-rod': 'Super Canne', 'super-rod': 'Méga Canne', surf: 'Surf', 'rock-smash': 'Éclate-Roc',
+  headbutt: 'Coup d’Boule (arbre)', 'headbutt-low': 'Coup d’Boule (arbre, rare)', 'headbutt-normal': 'Coup d’Boule (arbre)', 'headbutt-high': 'Coup d’Boule (arbre, fréquent)',
+  gift: 'Cadeau', 'gift-egg': 'Œuf cadeau', static: 'Rencontre fixe', 'dark-grass': 'Herbes sombres', 'grass-spots': 'Herbes mouvantes', 'cave-spots': 'Nuage de poussière',
+  'bridge-spots': 'Ombre de pont', 'super-rod-spots': 'Pêche (ombre)', 'surf-spots': 'Surf (ombre)', 'yellow-flowers': 'Fleurs jaunes', 'purple-flowers': 'Fleurs violettes',
+  'red-flowers': 'Fleurs rouges', 'rough-terrain': 'Terrain accidenté', pokeflute: 'Pokéflûte', 'squirt-bottle': 'Carapuce à O', 'wailmer-pail': 'Wailmerrosoir',
+  seaweed: 'Plongée (algues)', 'roaming-grass': 'Errant (herbe)', 'roaming-water': 'Errant (eau)', 'devon-scope': 'Devon Scope', 'feebas-tile-fishing': 'Pêche (case Barpau)',
+  'island-scan': 'Scan des îles', sos: 'Appel à l’aide (SOS)', 'bubbling-spots': 'Pêche (bulles)', 'berry-trees': 'Arbre à baies', 'npc-trade': 'Échange PNJ',
+  'sos-from-bubbling-spot': 'SOS (bulles)', overworld: 'Monde extérieur', 'overworld-water': 'Monde extérieur (eau)', 'overworld-flying': 'Monde extérieur (ciel)',
+  'overworld-special': 'Apparition rare (herbe)', 'overworld-flying-special': 'Apparition rare (ciel)', 'overworld-water-special': 'Apparition rare (eau)', horde: 'Horde (5 Pokémon)',
+  'hidden-grotto': 'Trouée cachée', 'honey-tree': 'Arbre à Miel', 'overworld-dirt': 'Monde extérieur (sol)', wanderer: 'Emplacement fixe', 'wanderer-water': 'Emplacement fixe (eau)',
+  'chase-water': 'Poursuite (eau)', 'dynamax-adventure': 'Expédition Dynamax', 'max-raid': 'Raid Dynamax', 'trash-can-ambush': 'Embuscade (poubelle)', 'rustling-bush-ambush': 'Embuscade (buisson)',
+  'ceiling-ambush': 'Embuscade (plafond)', 'ground-ambush': 'Embuscade (sol)', 'sky-ambush': 'Embuscade (ciel)', 'pokemon-ranger': 'Pokémon Ranger', 'pokemon-battle-revolution': 'Pokémon Battle Revolution',
+};
+const encMethodObj = {}; for (const u of await list('encounter-method')) { const M = await get(u); encMethodObj[M.name] = M; }
+const encCondObj = {}; for (const u of await list('encounter-condition-value')) { const C = await get(u); encCondObj[C.name] = C; }
+const encCache = { loc: [], locIdx: {}, m: [], mIdx: {}, c: [], cIdx: {} };
+const SFX_FR = { north: 'Nord', south: 'Sud', east: 'Est', west: 'Ouest', northeast: 'Nord-Est', northwest: 'Nord-Ouest', southeast: 'Sud-Est', southwest: 'Sud-Ouest', inside: 'intérieur', outside: 'extérieur', cave: 'grotte' };
+const unslug = n => n.replace(/-area$/, '').split('-').map(w => w[0]?.toUpperCase() + w.slice(1)).join(' ');
+async function areaIndex(url) {
+  if (url in encCache.locIdx) return encCache.locIdx[url];
+  const A = await get(url); const L = await get(A.location.url);
+  let name = frName(A.names);
+  if (!name) {
+    const lf = frName(L.names); const sfx = A.name.startsWith(L.name + '-') ? A.name.slice(L.name.length + 1) : '';
+    if (lf) name = !sfx || sfx === 'area' || sfx === 'main' ? lf : SFX_FR[sfx] ? `${lf} (${SFX_FR[sfx]})` : /^(max-den-)/.test(sfx) ? `${lf} (${sfx.slice(8).toUpperCase()})` : /^(b?\d+f|\d+)$/.test(sfx) ? `${lf} ${sfx.toUpperCase()}` : lf;
+    else name = unslug(A.name);
+  }
+  return encCache.locIdx[url] = encCache.loc.push(name) - 1;
+}
+async function methodIndex(name) {
+  if (name in encCache.mIdx) return encCache.mIdx[name];
+  const M = encMethodObj[name];
+  return encCache.mIdx[name] = encCache.m.push(SHORT_METHOD[name] || frName(M.names) || name) - 1;
+}
+async function condIndex(name) {
+  if (name in encCache.cIdx) return encCache.cIdx[name];
+  if (/^(trade-|coins-|story-progress-catch-all|other-caught)/.test(name)) return encCache.cIdx[name] = null;
+  const C = encCondObj[name]; const fr = frName(C.names);
+  return encCache.cIdx[name] = fr ? encCache.c.push(fr) - 1 : null;
+}
+const gamesWithEnc = new Set();
+async function encountersOf(pid) {
+  const raw = await get(`${API}/pokemon/${pid}/encounters`);
+  const per = {}; // game -> Map(key -> row)
+  for (const a of raw) {
+    const ai = await areaIndex(a.location_area.url);
+    for (const vd of a.version_details) {
+      const gid = verToGame[vd.version.name]; if (!gid) continue;
+      const by = new Map();
+      for (const d of vd.encounter_details) {
+        const mi = await methodIndex(d.method.name);
+        const cs = []; for (const c of d.condition_values) { const ci = await condIndex(c.name); if (ci !== null && !cs.includes(ci)) cs.push(ci); } cs.sort((x, y) => x - y);
+        const k = mi + '|' + cs.join('.'); const o = by.get(k) || { m: mi, c: cs, min: 999, max: 0, ch: 0 };
+        o.min = Math.min(o.min, d.min_level); o.max = Math.max(o.max, d.max_level); o.ch += d.chance; by.set(k, o);
+      }
+      const mapG = per[gid] ||= new Map();
+      for (const o of by.values()) {
+        const key = [ai, o.m, o.min, o.max, Math.min(o.ch, 100), o.c.join('.')].join('|');
+        const r = mapG.get(key) || { row: [ai, o.m, o.min, o.max, Math.min(o.ch, 100), o.c], vs: new Set() };
+        r.vs.add(versions[vd.version.name].id); mapG.set(key, r);
+      }
+    }
+  }
+  const out = {};
+  for (const [gid, m] of Object.entries(per)) {
+    const g = gameById[gid]; const all = g.ver.map(v => v[0]);
+    out[gid] = [...m.values()].map(({ row, vs }) => {
+      const full = all.every(v => vs.has(v));
+      const r = row.slice(); if (!r[5].length && full) return r.slice(0, 5);
+      r[5] = r[5].length ? r[5] : 0; if (!full) r.push([...vs].sort((a, b) => a - b)); return r;
+    }).sort((x, y) => x[0] - y[0] || x[1] - y[1]);
+    gamesWithEnc.add(gid);
+  }
+  return out;
+}
+// TM / HM / TR numbers per game
+const tmByVg = {};
+for (const u of await list('machine')) {
+  const M = await get(u); const m = M.item.name.match(/^(tm|hm|tr)(\d+)$/); if (!m) continue;
+  const lab = (m[1] === 'tm' ? 'CT' : m[1] === 'hm' ? 'CS' : 'DT') + m[2];
+  const o = tmByVg[M.version_group.name] ||= {}; const mid = idOf(M.move.url);
+  if (!(o[mid] || '').split('/').includes(lab)) o[mid] = o[mid] ? o[mid] + '/' + lab : lab;
+}
+const tmOut = {};
+for (const g of games) {
+  for (const vg of [...g.mv].reverse()) if (tmByVg[vg]) { tmOut[g.id] = { ...(tmOut[g.id] || {}), ...Object.fromEntries(Object.entries(tmByVg[vg]).filter(([k]) => !(tmOut[g.id] || {})[k])) }; }
+}
+
 // ---------------------------------------------------------------- GO data
 const go = await buildGo({ entries, byKey, species, sById, moveObjs, typeFr, moveFr: id => frName(moveObjs[id].names) });
+
+const eggs = await parseEggs(go.perKey);
+for (const [k, v] of Object.entries(eggs.byKey)) go.perKey[k].eg = v;
+go.shared.egg = { season: eggs.season, upd: eggs.updated, n: Object.keys(eggs.byKey).length };
+
+// machine translations of English-only Pokédex texts
+const TR = JSON.parse(fs.readFileSync(path.join(HERE, 'translations-fr.json'), 'utf8'));
 
 // ---------------------------------------------------------------- per-entry availability by game
 const movesVgsCache = new Map();
@@ -229,6 +329,7 @@ const heldOf = async P => {
 };
 
 let totalSp = 0;
+const encOwner = new Map();
 const goOut = go.perKey;
 const coreEntries = []; const avByKey = {};
 const mvHash = {};
@@ -237,8 +338,15 @@ for (const S of species) {
   const fl = S.flavor_text_entries.filter(f => f.language.name === 'fr');
   const ftab = []; const fv = {};
   for (const f of fl) { const t = clean(f.flavor_text); if (!t) continue; let i = ftab.indexOf(t); if (i < 0) i = ftab.push(t) - 1; fv[versions[f.version.name]?.id ?? f.version.name] = i; }
+  const frVers = new Set(fl.map(f => f.version.name));
+  const ttab = []; const tv = {};
+  for (const f of S.flavor_text_entries) {
+    if (f.language.name !== 'en' || frVers.has(f.version.name)) continue;
+    const t = TR[cleanEn(f.flavor_text)]; if (!t) continue;
+    let i = ttab.indexOf(t); if (i < 0) i = ttab.push(t) - 1; tv[versions[f.version.name]?.id ?? f.version.name] = i;
+  }
   const sp = {
-    id: S.id, gn: frName(S.genera, 'genus') || '', ft: ftab, fv,
+    id: S.id, gn: frName(S.genera, 'genus') || '', ft: ftab, fv, ...(ttab.length ? { tt: ttab, tv } : {}),
     gr: S.gender_rate, cr: S.capture_rate, hc: S.hatch_counter, bh: S.base_happiness,
     eg: S.egg_groups.map(g => eggGroups[g.name]), gw: S.growth_rate.name,
     gm: {}, f: {},
@@ -270,6 +378,10 @@ for (const S of species) {
       if (sets.length) { f.ls = sets.map(s => s.ls); f.lm = idx; }
     }
     if (go.perKey[e.key]) f.go = go.perKey[e.key];
+    if (!encOwner.has(P.id)) {
+      encOwner.set(P.id, e.key);
+      const en = await encountersOf(P.id); if (Object.keys(en).length) f.en = en;
+    } else if (encOwner.get(P.id) !== e.key) f.enOf = encOwner.get(P.id);
     sp.f[e.key] = f;
     coreEntries.push(e);
   }
@@ -299,18 +411,18 @@ for (const id of usedMoves) {
 // ---------------------------------------------------------------- ref table
 const refOut = { ab: {}, it: {}, mm: methodNames, eg: eggGroups };
 const clip = s => clean(s);
-for (const id of usedAb) { const A = abilityObjs[id]; const fl = A.flavor_text_entries.filter(f => f.language.name === 'fr').pop(); refOut.ab[id] = [frName(A.names) || A.name, clip(fl?.flavor_text)]; }
+for (const id of usedAb) { const A = abilityObjs[id]; const fl = A.flavor_text_entries.filter(f => f.language.name === 'fr').pop(); refOut.ab[id] = [frName(A.names) || A.name, clip(fl?.flavor_text), genNum(A.generation.name)]; }
 for (const id of usedItems) refOut.it[id] = itemCache[id];
 for (const id of Object.keys(itemCache)) refOut.it[id] = itemCache[id];
 
 // ---------------------------------------------------------------- core
 const core = {
   v: new Date().toISOString(), types: typesOut, charts,
-  games: games.map(({ _nums, _info, ...g }) => g),
+  games: games.map(({ _nums, _info, ...g }) => ({ ...g, ...(gamesWithEnc.has(g.id) ? { enc: 1 } : {}) })),
   e: coreEntries.map(e => {
     const r = { k: e.key, id: e.id, n: e.fr, en: e.en, t: typesOf(e.P), g: idOf(e.S.generation.url), s: statsOf(e.P) };
     if (e.cat !== 'base') { r.c = e.cat; r.l = e.label; } else if (e.label) r.l = e.label;
-    if (e.cat !== 'base') r.gb = games.reduce((m, g, i) => m + (avByKey[e.key].includes(g.id) ? 2 ** i : 0), 0);
+    r.gb = games.reduce((m, g, i) => m + (avByKey[e.key].includes(g.id) ? 2 ** i : 0), 0);
     if (e.S.is_legendary) r.lg = 1; if (e.S.is_mythical) r.my = 1; if (e.S.is_baby) r.ba = 1;
     if (manifest[e.key]?.shSha && manifest[e.key].shSha !== manifest[e.key].sha) r.sh = 1;
     if (go.perKey[e.key]?.r) r.go = 1;
@@ -325,5 +437,7 @@ sizes.evo = write('evo.json', evoOut);
 sizes.moves = write('moves.json', movesOut);
 sizes.ref = write('ref.json', refOut);
 sizes.go = write('go.json', go.shared);
+sizes.loc = write('loc.json', { a: encCache.loc, m: encCache.m, c: encCache.c });
+sizes.tm = write('tm.json', tmOut);
 sizes.sp = totalSp;
 console.log('entries', coreEntries.length, 'edges', evoOut.length, 'sizes (bytes, raw):', sizes);

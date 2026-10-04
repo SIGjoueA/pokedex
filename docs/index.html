@@ -35,6 +35,8 @@
         <option value="missing">Pas encore capturés</option>
         <option value="shiny">✨ Shiny capturés</option>
         <option value="noshiny">Shiny manquants</option>
+        <option value="swdone">✔ Complétés (Switch)</option>
+        <option value="olddone">🕹 Complétés (anciens jeux)</option>
       </select>
       <select id="sort" aria-label="Tri">
         <option value="id">Tri : N°</option>
@@ -47,6 +49,7 @@
       </select>
     </div>
     <div id="typechips" class="chips" role="group" aria-label="Filtrer par type"></div>
+    <div id="legend" class="legend" hidden></div>
     <div class="status"><span id="count"></span><button id="reset" class="link" hidden>Réinitialiser</button></div>
   </header>
   <main id="results" class="grid" aria-live="polite"></main>
@@ -54,7 +57,7 @@
     <div id="offline"></div>
     <p><button id="export" type="button">Exporter mes captures</button> <label class="filebtn">Importer<input id="import" type="file" accept="application/json" hidden></label></p>
     <p class="note">Vos captures sont enregistrées sur cet appareil. Exportez puis importez pour les copier entre ordinateur et téléphone.</p>
-    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Données GO : communautaires, non officielles (<a href="https://github.com/PokeMiners/game_masters" target="_blank" rel="noopener">PokeMiners game_masters</a>, <a href="https://pogoapi.net" target="_blank" rel="noopener">pogoapi.net</a>). Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
+    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Données GO : communautaires, non officielles (<a href="https://github.com/PokeMiners/game_masters" target="_blank" rel="noopener">PokeMiners game_masters</a>, <a href="https://pogoapi.net" target="_blank" rel="noopener">pogoapi.net</a>). Ces données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux ; les données Pokémon GO sont non officielles. Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
   </footer>
 </div>
 <div id="detail-view" hidden></div>

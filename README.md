@@ -19,9 +19,13 @@ puis http://localhost:8765 (le service worker exige localhost ou HTTPS).
 ## Reconstruire les données (Node 20+, Internet)
     cd build && npm install
     node fetch-pokeapi.mjs   # PokéAPI -> build/.cache (reprise possible, concurrence limitée, nouvelles tentatives)
+    node fetch-extra.mjs     # encounters, locations, TM/HM machines (PokéAPI) + GO egg pool (Leek Duck) -> build/.cache
     node fetch-go.mjs        # PokeMiners game_masters + pogoapi.net -> build/.cache
     node fetch-images.mjs    # illustrations -> docs/img/{clé}.webp (256 px) et docs/img/s/{clé}.webp (shiny)
+    # textes Pokédex seulement en anglais (traduction automatique, une seule fois ; résultat versionné : build/translations-fr.json)
+    #   node translate-prep.mjs && python3 translate.py && python3 translate-fix.py   (pip install argostranslate)
     node build-data.mjs      # -> docs/data/*.json (efface et recrée docs/data)
+    node audit.mjs           # vérifications de cohérence (~100 faits connus)
     node make-icons.mjs      # icônes PWA (facultatif)
     node test.mjs 8765       # tests Chrome headless (360 px et 1000 px), captures dans ../screenshots
 Après toute modification de `docs/`, incrémenter `VERSION` dans `docs/sw.js` (et `DATA_VERSION` si le format des JSON change).
@@ -32,7 +36,7 @@ Après toute modification de `docs/`, incrémenter `VERSION` dans `docs/sw.js` (
 | `core.json` (~240 Ko) | liste des 1 591 entrées (espèces + formes), types, tables de types par génération, catalogue des jeux | au démarrage |
 | `dex/{jeu}.json` | Pokédex régional d'un jeu (ordre + numéros) | au choix du jeu |
 | `sp/{id}.json` | une espèce : textes, stats passées, talents, objets, attaques par jeu, GO, pour chaque forme | à l'ouverture d'une fiche |
-| `evo.json`, `moves.json`, `ref.json`, `go.json` | évolutions (FR), attaques, talents/objets, attaques GO | à la première fiche |
+| `evo.json`, `moves.json`, `ref.json`, `go.json`, `tm.json`, `loc.json` | évolutions (FR), attaques, talents/objets, attaques GO, numéros de CT/CS/DT par jeu, noms de lieux/méthodes de rencontre | à la première fiche |
 
 Clés d'entrée : `25` (espèce de base), `26-alola`, `25-female`, `6-mega-x`, `25-gmax`, `201-b`… Dans `localStorage`, la base reste un entier (compatible avec les anciennes sauvegardes), les formes sont des chaînes (`"26-alola"`).
 
@@ -50,8 +54,21 @@ Les formes proviennent de `pokemon` / `pokemon-form` de PokéAPI. Femelles : for
 ## Pokémon GO
 Source principale : PokeMiners `game_masters` (`latest/latest.json`, daté dans `go.json`) ; liste des Pokémon sortis / shiny / Méga : pogoapi.net. PC max = formule officielle `floor((ATT+15)·√(DEF+15)·√(END+15)·cpm²/10)`, vérifiée (Mewtwo 4 724, Leuphorie 3 117 au niveau 50). Aucune valeur n'est inventée : une donnée absente n'est pas affichée (la distance d'éclosion n'est pas dans la source ; le statut shiny est au niveau espèce). Pied de page : « Données GO : communautaires, non officielles ».
 
+## Rencontres, CT/CS, œufs GO, textes traduits
+- **Rencontres** : PokéAPI `pokemon/{id}/encounters` (noms de lieux FR de PokéAPI, sinon nom du lieu + suffixe). Données jusqu'à la génération VIII (pas de Légendes Arceus, DEPS, Écarlate/Violet, Z-A : message explicite).
+- **CT / CS / DT** : PokéAPI `machine` par groupe de versions (ex. « CT24 »), affichés dans l'onglet CT/CS.
+- **Œufs GO** : distance (1/2/5/7/10/12 km, Aventure Synchro, cadeaux) lue sur la page Leek Duck « Eggs » (communautaire) = **pool de la saison en cours uniquement** (date indiquée dans l'app). Aucune valeur inventée.
+- **Textes Pokédex traduits** : les jeux sans texte français dans PokéAPI (avant Noir/Blanc, Noir 2/Blanc 2, Légendes Arceus, Écarlate/Violet) reçoivent une traduction automatique (Argos Translate, noms de Pokémon remplacés par les noms français), stockée à part (`tt`/`tv` dans `sp/*.json`) et toujours signalée « Traduit en français faute de données officielles ». Les textes officiels FR priment.
+
+## Suivi des captures
+- Vue de base (aucun jeu choisi) : **lecture seule, dérivée des marques par jeu**. 🔴 Capturé = capturé dans ≥ 1 jeu (Pokémon GO compris) ; ✔ Complété = capturé dans tous les jeux Switch où il existe (Let's Go, Épée/Bouclier + extensions, DÉ/PS, Légendes Arceus, Écarlate/Violet + extensions, Z-A + extension ; une extension ne compte que si aucun jeu de base ne contient le Pokémon) ; 🕹 Anciens jeux = capturé dans tous les jeux d'avant la Switch où il existe ; mêmes règles pour le shiny (✨, ✨✔, ✨🕹). GO compte pour « capturé » mais pas pour les complétions. Le détail liste l'état par jeu.
+- **Migration** : les anciennes marques globales `caught`/`shiny` sont conservées comme « marques manuelles de l'ancienne version » : comptées comme capturé/shiny dans la vue de base, indiquées comme telles dans le détail avec un bouton « Retirer ». Elles ne servent à aucune complétion. Les favoris (`favs`) restent globaux.
+- Un jeu ou Pokémon GO choisi dans « Jeux » : marques par jeu et par forme, `caught_g`, `shiny_g` (`"rb:25"`, `"sw:26-alola"`), compteurs et filtres Catégorie propres au jeu.
+- **Transféré vers Home** (`home_g`, `homeshiny_g`) : marquer un transfert marque aussi « capturé » dans ce jeu ; décocher « capturé » retire le transfert. Jeux compatibles : directs (GO, Let's Go, Épée/Bouclier + extensions, DÉ/PS, Légendes Arceus, Écarlate/Violet + extensions, Z-A + Méga-Dimension), via Pokémon Bank (X/Y, ROSA, Soleil/Lune, Ultra), via Poké Fret/Bank (Noir/Blanc, N2/B2, Diamant/Perle, Platine, HGSS). Non listés : Rouge/Bleu/Jaune, Or/Argent/Cristal, Rubis/Saphir/Émeraude, Rouge Feu/Vert Feuille (passage par d'autres jeux nécessaire).
+- Vue **Pokémon HOME** : lecture seule, dérivée des transferts (🏠 transféré, ✨ shiny transféré, ✔ transféré depuis tous les jeux compatibles où il existe ; les extensions ne comptent que si aucun jeu de base ne le contient).
+
 ## Limites connues
-Pas de lieux / rencontres. Textes Pokédex FR seulement à partir de Noir/Blanc (PokéAPI). Pas de numéros de CT. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
+Rencontres absentes pour les jeux récents (voir plus haut). Textes Pokédex FR officiels seulement à partir de Noir/Blanc (PokéAPI), le reste est traduit automatiquement. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 
 ## Taille
 `docs/` ≈ 52 Mo (images ≈ 44 Mo dont shiny 19 Mo à la demande, données ≈ 6 Mo, ≈ 1,5 Mo compressées).
