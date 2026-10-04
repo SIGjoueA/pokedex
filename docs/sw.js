@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = 'v5';
+const VERSION = 'v6';
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
 const SHELL_FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'data/pokedex.json',

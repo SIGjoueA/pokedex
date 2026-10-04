@@ -121,3 +121,14 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
 
 .ball{vertical-align:-.15em}.ball.off{filter:grayscale(1);opacity:.55}.mk.ok{display:inline-block}
 .dnav .cg[aria-pressed=true]{color:#e53935;border-color:#e53935}
+
+/* Fix: icon + label on one line, no overflow */
+.dnav .cg,.dnav .sh{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;padding:0 10px;font-size:14px}
+.dnav .cg .ball{flex:none;width:1.2em;height:1.2em}
+@media(max-width:480px){.dnav{gap:6px;padding:8px}.dnav a,.dnav button{padding:0 8px}.dnav .cg,.dnav .sh{font-size:13px;gap:4px}}
+.dnav .cg,.dnav .sh{flex:none;min-width:0}
+@media(max-width:480px){
+  .dnav{flex-wrap:wrap;row-gap:6px}
+  .dnav a,.dnav button{min-width:40px;height:44px}
+  .dnav .cg,.dnav .sh{font-size:13px}
+}
