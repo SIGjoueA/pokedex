@@ -119,6 +119,21 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.screenshot({ path: SHOTS + `detail-147-go-${tag}.png`, fullPage: true });
   await go('#/p/35'); await p.select('#dgame', 'e'); await sleep(400);
   ok(!/Garde Magik/.test(await p.$eval('.detail', e => e.textContent).catch(() => '')) || true, tag + ' (ability gen filter checked in audit)');
+  // ---- hero names (FR / genus · EN / JA · romaji) + multilingual search
+  const heroNames = async k => { await go('#/p/' + k); await p.waitForSelector('.hero .jname', { timeout: 5000 }).catch(() => {}); await sleep(400); return p.evaluate(() => ({ h1: document.querySelector('.hero h1').textContent, g: document.querySelector('.hero .genus').textContent, j: (document.querySelector('.hero .jname') || {}).textContent, ov: (e => e.scrollWidth > e.clientWidth + 1)(document.querySelector('.hero')) })); };
+  const hb = await heroNames('3'); ok(hb.h1 === 'Florizarre' && /Venusaur$/.test(hb.g) && hb.g.includes('Pokémon') && hb.j === 'フシギバナ · Fushigibana', tag + ' hero names base ' + JSON.stringify(hb));
+  const ha = await heroNames('26-alola'); ok(ha.h1 === 'Raichu d’Alola' && /Alolan Raichu/.test(ha.g) && ha.j === 'アローラライチュウ · Arōra Raichu', tag + ' hero names form ' + JSON.stringify(ha));
+  const hm = await heroNames('6-mega-x'); ok(/Mega Charizard X/.test(hm.g) && /^メガリザードンＸ · Mega Lizardon X$/.test(hm.j), tag + ' hero names mega ' + JSON.stringify(hm));
+  const hf = await heroNames('25-female'); ok(/Pikachu \(Female\)/.test(hf.g) && hf.j.startsWith('ピカチュウ'), tag + ' hero names synthetic female ' + JSON.stringify(hf));
+  const hmissing = []; for (const k of ['1', '29', '201-b', '718-10', '869-ruby-cream-berry-sweet', '128-paldea-combat-breed', '1017-wellspring-mask', '890-eternamax']) { const h = await heroNames(k); if (!h.j || !h.g.includes('·') && !h.g) hmissing.push(k); if (h.ov) hmissing.push(k + ' overflow'); }
+  ok(!hmissing.length, tag + ' every hero has genus/EN/JA lines without overflow ' + hmissing);
+  await go('#/'); await p.evaluate(() => { state.forms = true; render(); });
+  const searchCount = async q => { await p.$eval('#q', (e, q) => { e.value = q; e.dispatchEvent(new Event('input')); }, q); await sleep(350); return parseInt(await count()); };
+  for (const [q, min] of [['bulbasaur', 1], ['BULBASAUR', 1], ['フシギダネ', 1], ['ふしぎだね', 1], ['fushigidane', 1], ['Fushigi', 3], ['alolan raichu', 1], ['アローラライチュウ', 1], ['arora raichu', 1], ['méga-dracaufeu', 1], ['mega charizard', 2], ['リザードン', 3], ['lizardon', 3]]) {
+    const n = await searchCount(q); ok(n >= min, tag + ` search "${q}" → ${n}`);
+  }
+  ok(await searchCount('bulbasaur') === 1 && await searchCount('フシギダネ') === 1, tag + ' exact searches return one entry');
+  await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); }); await p.evaluate(() => { state.forms = false; render(); });
   // ---- per-game tracking + Home derived from transfers
   await go('#/'); await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   const ls2 = k => p.evaluate(k => JSON.parse(localStorage.getItem(k) || '[]'), k);

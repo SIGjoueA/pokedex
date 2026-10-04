@@ -420,7 +420,7 @@ const core = {
   v: new Date().toISOString(), types: typesOut, charts,
   games: games.map(({ _nums, _info, ...g }) => ({ ...g, ...(gamesWithEnc.has(g.id) ? { enc: 1 } : {}) })),
   e: coreEntries.map(e => {
-    const r = { k: e.key, id: e.id, n: e.fr, en: e.en, t: typesOf(e.P), g: idOf(e.S.generation.url), s: statsOf(e.P) };
+    const r = { k: e.key, id: e.id, n: e.fr, en: e.en, ja: e.ja, ro: e.ro, t: typesOf(e.P), g: idOf(e.S.generation.url), s: statsOf(e.P) };
     if (e.cat !== 'base') { r.c = e.cat; r.l = e.label; } else if (e.label) r.l = e.label;
     r.gb = games.reduce((m, g, i) => m + (avByKey[e.key].includes(g.id) ? 2 ** i : 0), 0);
     if (e.S.is_legendary) r.lg = 1; if (e.S.is_mythical) r.my = 1; if (e.S.is_baby) r.ba = 1;

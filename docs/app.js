@@ -12,7 +12,8 @@ const store = {
   get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
 };
-const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+// search key: case/accent-insensitive; keeps katakana/kanji (hiragana folded to katakana, full-width to ASCII) so Japanese and romaji names match
+const norm = s => String(s || '').normalize('NFKC').replace(/[\u3041-\u3096]/g, c => String.fromCharCode(c.charCodeAt(0) + 96)).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').normalize('NFC').replace(/[^a-z0-9\u30a1-\u30fc\u3400-\u9fff]/g, '');
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad = n => String(n).padStart(4, '0');
 const pad3 = n => String(n).padStart(3, '0');
@@ -104,7 +105,7 @@ async function boot() {
   E = DATA.e;
   E.forEach(p => {
     BY_KEY[p.k] = p; (FORMS[p.id] ||= []).push(p);
-    p.nn = norm(p.n); p.ne = norm(p.en); p.tot = p.s.reduce((a, b) => a + b, 0);
+    p.nn = norm(p.n); p.ne = norm(p.en); p.nj = norm(p.ja); p.nr = norm(p.ro); p.tot = p.s.reduce((a, b) => a + b, 0);
   });
   GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; });
   DATA.types.forEach(t => TYPE_FR[t[0]] = t[1]);
@@ -182,7 +183,7 @@ function filtered() {
     if (numeric !== null) {
       if (dex) { const n = dex.nums.get(p.id); if (!n.some((x, i) => i % 2 === 1 && x === numeric)) return false; }
       else if (p.id !== numeric) return false;
-    } else if (qn && !p.nn.includes(qn) && !p.ne.includes(qn)) return false;
+    } else if (qn && !p.nn.includes(qn) && !p.ne.includes(qn) && !p.nj.includes(qn) && !p.nr.includes(qn)) return false;
     if (state.gen && p.g !== +state.gen) return false;
     for (const t of state.types) if (!p.t.includes(t)) return false;
     const key = ik(p);
@@ -199,7 +200,7 @@ function filtered() {
     return true;
   });
   const pos = new Map(out.map((p, i) => [p, i]));
-  const startsWith = p => p.nn.startsWith(qn) || p.ne.startsWith(qn);
+  const startsWith = p => p.nn.startsWith(qn) || p.ne.startsWith(qn) || p.nj.startsWith(qn) || p.nr.startsWith(qn);
   if (qn && numeric === null && state.sort === 'id') out.sort((a, b) => (startsWith(b) - startsWith(a)) || (dex ? dex.order.get(a.id) - dex.order.get(b.id) : 0) || pos.get(a) - pos.get(b));
   else {
     const key = { id: p => dex ? dex.order.get(p.id) : p.id, name: p => p.nn, total: p => -p.tot, hp: p => -p.s[0], atk: p => -p.s[1], def: p => -p.s[2], spe: p => -p.s[5] }[state.sort];
@@ -299,7 +300,7 @@ function route() {
 async function openDetail(p) {
   const tok = ++detailTok;
   document.title = `${p.n} #${pad(p.id)} – Pokédex`;
-  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1></div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
+  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
   try {
     const [sp, shared] = await Promise.all([loadSp(p.id), loadShared()]);
     if (tok !== detailTok) return;
@@ -659,7 +660,7 @@ function renderDetail() {
       <img id="heroimg" src="${showShinyArt && p.sh ? simg : gimg}" alt="${esc(p.n)}" width="256" height="256">
       ${p.sh ? `<button id="shbtn" class="shart" type="button" aria-pressed="${showShinyArt}" title="Afficher l’illustration shiny">✨ ${showShinyArt ? 'Normal' : 'Shiny'}</button>` : ''}
       <h1>${esc(p.n)}</h1>
-      <div class="genus">${esc(sp.gn)}${!p.c && p.en !== p.n ? ` · ${esc(p.en)}` : ''}</div>
+      ${namesHTML(p, sp)}
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
       <div class="tags">${flags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     </div>
@@ -668,6 +669,12 @@ function renderDetail() {
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
+}
+// hero names: French (h1) → genus · English → Japanese · romaji
+function namesHTML(p, sp) {
+  const l1 = [sp && sp.gn, p.en].filter(Boolean).map((t, i, a) => (sp && sp.gn && i === 0) ? `<span class="gn">${esc(t)}</span>` : `<span lang="en" class="en">${esc(t)}</span>`).join(' · ');
+  const l2 = p.ja ? `<span lang="ja" class="ja">${esc(p.ja)}</span>${p.ro ? ` · <span class="ro">${esc(p.ro)}</span>` : ''}` : '';
+  return `<div class="genus">${l1}</div>${l2 ? `<div class="jname">${l2}</div>` : ''}`;
 }
 function renderDetailKeepScroll() { const y = window.scrollY; renderDetail(); window.scrollTo(0, y); }
 function homeSrcHTML(p, f) {

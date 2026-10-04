@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { get, API, CACHE, idOf, frName, enName } from './lib.mjs';
+import { composeNames, jaOfNames, roOfNames } from './names.mjs';
 
 export const ROMAN = { i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9 };
 export const genNum = name => ROMAN[name.replace('generation-', '')];
@@ -106,6 +107,14 @@ export async function loadAll() {
     const seen = {};
     for (const e of [base, ...forms]) { (seen[e.fr] ||= []).push(e); }
     for (const arr of Object.values(seen)) if (arr.length > 1) for (const e of arr) if (e.label) e.fr += ` (${e.label})`;
+    // English / Japanese / romaji names (species + form, composed from PokéAPI names only)
+    const sp = { en: sen, ja: jaOfNames(S.names), ro: roOfNames(S.names) };
+    const grp = [base, ...forms];
+    for (const e of grp.filter(x => !x.synthetic)) Object.assign(e, composeNames(e, sp), { _n: 1 });
+    for (const e of grp.filter(x => x.synthetic)) { // synthetic female entries: same name as the male/base entry they derive from + (Female)
+      const bs = e.sfx === 'female' ? '' : e.sfx.replace(/-female$/, ''); const src = grp.find(x => x.sfx === bs && x._n) || base;
+      Object.assign(e, { en: src.en.replace(/\)$/, '') + (/\)$/.test(src.en) ? ', Female)' : ' (Female)'), ja: src.ja, ro: src.ro, jaSpecific: false });
+    }
     entries.push(base, ...forms);
   }
   return { species, entries };
