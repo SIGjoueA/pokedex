@@ -13,7 +13,7 @@ const pad = n => String(n).padStart(4, '0');
 const dec = n => String(n).replace('.', ',');
 const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 
-let DATA, BY_ID = {}, TYPE_FR = {}, FAVS = new Set(store.get('favs', []));
+let DATA, BY_ID = {}, TYPE_FR = {}, FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 const state = { q: '', types: [], gen: '', cat: '', sort: 'id', view: store.get('view', 'grid'), goMode: store.get('goMode', true) };
 let listScroll = 0;
 
@@ -81,6 +81,10 @@ function filtered() {
     if (state.cat === 'myth' && !p.myth) return false;
     if (state.cat === 'baby' && !p.baby) return false;
     if (state.cat === 'fav' && !FAVS.has(p.id)) return false;
+    if (state.cat === 'caught' && !CAUGHT.has(p.id)) return false;
+    if (state.cat === 'missing' && CAUGHT.has(p.id)) return false;
+    if (state.cat === 'shiny' && !SHINY.has(p.id)) return false;
+    if (state.cat === 'noshiny' && SHINY.has(p.id)) return false;
     return true;
   });
   if (qn && numeric === null) { // prefix matches first
@@ -95,7 +99,9 @@ function filtered() {
 }
 
 function cardHTML(p) {
-  const star = FAVS.has(p.id) ? '<span class="star" aria-label="Favori">★</span>' : '';
+  const star = (FAVS.has(p.id) ? '<span class="star" aria-label="Favori">★</span>' : '') +
+    (CAUGHT.has(p.id) ? '<span class="mk ok" aria-label="Capturé">●</span>' : '') +
+    (SHINY.has(p.id) ? '<span class="mk sh" aria-label="Shiny capturé">✨</span>' : '');
   return `<a class="card" href="#/p/${p.id}"><img src="img/${p.id}.webp" alt="" loading="lazy" decoding="async" width="256" height="256">` +
     `<div class="info"><div class="num">#${pad(p.id)}${p.leg ? ' · Légendaire' : p.myth ? ' · Fabuleux' : ''}</div><div class="nm">${esc(p.fr)} ${star}</div></div>` +
     `<div class="badges">${p.t.map(badge).join('')}</div></a>`;
@@ -106,7 +112,7 @@ function render() {
   box.className = state.view === 'grid' ? 'grid' : 'grid list';
   $('#viewbtn').textContent = state.view === 'grid' ? '☰' : '▦';
   box.innerHTML = res.length ? res.map(cardHTML).join('') : '<p class="empty">Aucun Pokémon trouvé.</p>';
-  $('#count').textContent = `${res.length} Pokémon`;
+  $('#count').textContent = `${res.length} Pokémon · ${CAUGHT.size} capturés · ${SHINY.size} shiny`;
   document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
   const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id';
   $('#reset').hidden = !active;
@@ -166,6 +172,8 @@ function renderDetail(p) {
     `<div class="stat total"><span class="lb">Total</span><span class="v">${p.total}</span><div class="bar"><i style="width:${Math.min(100, p.total / 720 * 100)}%;background:var(--accent)"></i></div></div>`;
   $('#detail-view').innerHTML = `
   <div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span>
+    <button class="cg" aria-pressed="${CAUGHT.has(p.id)}" aria-label="Capturé" title="Capturé">${CAUGHT.has(p.id) ? '● Capturé' : '○ Capturé'}</button>
+    <button class="sh" aria-pressed="${SHINY.has(p.id)}" aria-label="Shiny capturé" title="Shiny capturé">✨ Shiny</button>
     <button class="fav" aria-pressed="${FAVS.has(p.id)}" aria-label="Favori">${FAVS.has(p.id) ? '★' : '☆'}</button></div>
   <div class="detail">
     <div class="hero" style="--c1:${c1};--c2:${c2}">
@@ -206,6 +214,21 @@ document.addEventListener('click', e => {
     const id = +location.hash.match(/#\/p\/(\d+)/)?.[1];
     $('#eff').innerHTML = effHTML(BY_ID[id]); $('#effnote').textContent = effNote();
     document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', (b.dataset.mode === 'go') === state.goMode));
+    return;
+  }
+  const cgb = e.target.closest('.dnav .cg'), shb = e.target.closest('.dnav .sh');
+  if (cgb || shb) {
+    const id = +location.hash.match(/#\/p\/(\d+)/)?.[1];
+    if (cgb) {
+      CAUGHT.has(id) ? CAUGHT.delete(id) : CAUGHT.add(id);
+      store.set('caught', [...CAUGHT]);
+      cgb.setAttribute('aria-pressed', CAUGHT.has(id)); cgb.textContent = CAUGHT.has(id) ? '● Capturé' : '○ Capturé';
+    } else {
+      SHINY.has(id) ? SHINY.delete(id) : SHINY.add(id);
+      store.set('shiny', [...SHINY]);
+      shb.setAttribute('aria-pressed', SHINY.has(id));
+    }
+    render();
     return;
   }
   const f = e.target.closest('.fav');
@@ -261,4 +284,27 @@ boot();
       c.scrollLeft += e.deltaY; e.preventDefault();
     }
   }, { passive: false });
+})();
+
+
+/* ---------------- backup / restore (captures, shiny, favoris) ---------------- */
+(() => {
+  const ex = document.getElementById('export'), im = document.getElementById('import');
+  if (!ex || !im) return;
+  ex.addEventListener('click', () => {
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY] };
+    const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
+    const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+  im.addEventListener('change', async () => {
+    try {
+      const d = JSON.parse(await im.files[0].text());
+      const ids = x => Array.isArray(x) ? x.filter(n => Number.isInteger(n)) : [];
+      ids(d.favs).forEach(n => FAVS.add(n)); ids(d.caught).forEach(n => CAUGHT.add(n)); ids(d.shiny).forEach(n => SHINY.add(n));
+      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]);
+      render(); alert('Sauvegarde importée.');
+    } catch { alert('Fichier invalide.'); }
+    im.value = '';
+  });
 })();

@@ -112,3 +112,9 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
   .chips{scrollbar-width:thin}
   .chips::-webkit-scrollbar{display:block;height:6px}
 }
+
+.mk{font-size:13px;margin-left:2px}.mk.ok{color:#46c46a}
+.dnav .cg[aria-pressed=true]{color:#46c46a;border-color:#46c46a}
+.dnav .sh{font-size:15px}.dnav .sh[aria-pressed=true]{color:#f2c200;border-color:#f2c200}
+.dnav .cg{font-size:15px}
+.foot .filebtn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);cursor:pointer}
