@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pokédex</title>
+<meta name="description" content="Pokédex hors-ligne en français pour Pokémon GO">
+<meta name="theme-color" content="#12141c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pokédex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="list-view">
+  <header class="top">
+    <div class="searchrow">
+      <input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nom ou numéro…" aria-label="Rechercher">
+      <button id="viewbtn" class="icon" aria-label="Changer l’affichage" title="Grille / liste"></button>
+    </div>
+    <div class="filters">
+      <select id="gen" aria-label="Génération"></select>
+      <select id="cat" aria-label="Catégorie">
+        <option value="">Catégorie</option>
+        <option value="leg">Légendaires</option>
+        <option value="myth">Fabuleux</option>
+        <option value="baby">Bébés</option>
+        <option value="fav">★ Favoris</option>
+      </select>
+      <select id="sort" aria-label="Tri">
+        <option value="id">Tri : N°</option>
+        <option value="name">Tri : nom</option>
+        <option value="total">Tri : Total</option>
+        <option value="hp">Tri : PV</option>
+        <option value="atk">Tri : Att.</option>
+        <option value="def">Tri : Déf.</option>
+        <option value="spe">Tri : Vit.</option>
+      </select>
+    </div>
+    <div id="typechips" class="chips" role="group" aria-label="Filtrer par type"></div>
+    <div class="status"><span id="count"></span><button id="reset" class="link" hidden>Réinitialiser</button></div>
+  </header>
+  <main id="results" class="grid" aria-live="polite"></main>
+  <footer class="foot">
+    <div id="offline"></div>
+    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
+  </footer>
+</div>
+<div id="detail-view" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
