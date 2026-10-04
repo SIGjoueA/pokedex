@@ -1,5 +1,5 @@
 'use strict';
-const VERSION = 'v11';
+const VERSION = 'v15';
 const DATA_VERSION = 'd2'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

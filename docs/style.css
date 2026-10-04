@@ -201,9 +201,16 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .dnav button:disabled{opacity:.6;cursor:default}
 .mk.hm{font-size:12px}
 .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--mute);padding:4px 0}
-.mk.cm{color:#14161e;background:#f2c200;border-radius:999px;padding:0 5px;font-size:11px;font-weight:700;display:inline-block;line-height:16px}
 .homerows li{padding:3px 0;border:0;font-size:13.5px}
-.mk.om{color:#fff;background:#7a5af8;border-radius:999px;padding:0 5px;font-size:11px;font-weight:700;display:inline-block;line-height:16px}
 .trackinfo details{margin-top:4px}
 .trackinfo button.lg{min-height:30px;padding:0 8px;font-size:12px}
 .trackinfo .mk{vertical-align:middle}
+
+.trackinfo .bo{font-weight:700}
+.trackinfo .shr{white-space:normal}
+
+.ball.gold{filter:drop-shadow(0 0 2px #f2b705)}
+.mk.ok.gold{display:inline-flex;align-items:center;gap:1px}
+.mk .lvl{font-size:9px;font-weight:800;color:#14161e;background:#f2c200;border-radius:6px;padding:0 3px;line-height:13px;margin-left:1px}
+.mk.hm .hmi{vertical-align:-.15em;fill:rgba(90,160,255,.35);stroke:#5aa0ff;width:1.15em;height:1.15em}
+.mk.hm.gold .hmi{fill:#f2c200;stroke:#b8860b;filter:drop-shadow(0 0 2px #f2b705)}

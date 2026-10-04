@@ -41,6 +41,22 @@ eq('Mélofée gen3', abAt(F(35), 3), 'Joli Sourire'); eq('Mélofée gen4', abAt(
 eq('Mélofée gen5', abAt(F(35), 5), 'Joli Sourire,Garde Magik,Garde-Ami*');
 ok('Dracaufeu gen9 Brasier', abAt(F(6), 9).startsWith('Brasier'));
 eq('Mew gen3', abAt(F(151), 3), 'Synchro');
+// ---- game / expansion dex separation (no duplicates in "Présent dans", base game not listed when the Pokémon is only in an expansion dex)
+{
+  const poke = async n => { const r = await fetch(`https://pokeapi.co/api/v2/pokedex/${n}/`); if (!r.ok) throw new Error('pokedex ' + n); return new Set((await r.json()).pokemon_entries.map(e => e.pokemon_species.name)); };
+  const havePoke = true;
+  const pairs = [['sw', 'galar'], ['swisle', 'isle-of-armor'], ['swcrown', 'crown-tundra'], ['sv', 'paldea'], ['svmask', 'kitakami'], ['svdisk', 'blueberry'], ['za', 'lumiose-city'], ['zadlc', 'hyperspace'], ['xy', null], ['sm', null], ['usum', null]];
+  for (const [g, pd] of pairs) {
+    if (!pd) { let rep = 0; for (const r of dex(g).e) { const nums = r.slice(1); const seen = new Set(); for (let i = 0; i < nums.length; i += 2) { const key = nums[i] + ':' + nums[i + 1]; if (seen.has(key)) rep++; seen.add(key); } } ok(`${g}: no repeated dex label/number (${dex(g).dx.join('/')})`, rep === 0); continue; }
+    if (!havePoke) continue;
+    const want = await poke(pd), got = new Set(dex(g).e.map(r => r[0]));
+    ok(`dex ${g} = PokéAPI ${pd} (${got.size} vs ${want.size})`, want.size === got.size);
+  }
+  const v = sp(3).f['3'].av; ok('Venusaur: Isolarmure yes, Épée/Bouclier base no, Paldea base no, Disque Indigo yes', v.includes('swisle') && !v.includes('sw') && !v.includes('sv') && v.includes('svdisk') && !v.includes('svmask') && !v.includes('swcrown'), JSON.stringify(v));
+  const names = core.games.map(g => g.n); ok('game names unique', new Set(names).size === names.length);
+  let dup = 0; for (const e of core.e.filter(e => !e.c)) { const f = sp(e.id).f[e.k]; if (new Set(f.av).size !== f.av.length) dup++; }
+  ok('no duplicated game within any species sheet', dup === 0, dup);
+}
 // ---- regional dex
 const dn = (g, name) => { const d = dex(g); const i = d.e.findIndex(r => sp(r[0]).f[String(r[0])].n === name); return i < 0 ? null : d.e[i][2]; };
 eq('rb Mewtwo', dn('rb', 'Mewtwo'), 150); eq('rb count', dex('rb').e.length, 151); eq('Z-A #1', sp(dex('za').e[0][0]).f[String(dex('za').e[0][0])].n, 'Germignon');
@@ -78,7 +94,9 @@ ok('GO Dracaufeu moves', gof('6').fm.includes('FIRE_SPIN_FAST') && (gof('6').cm.
 ok('GO Pikachu buddy 1km', gof('25').bd === 1, gof('25').bd); ok('GO Raichu Alola exists', !!gof('26-alola'));
 ok('GO Evoli evo 25 candy', (evo.find(e => e[0] === '133' && e[1] === '134')[3] || {}).c === 25);
 ok('GO Nymphali walk 70 hearts?', JSON.stringify(evo.find(e => e[0] === '133' && e[1] === '700')[3]).includes('"c":25'));
-const pogo = JSON.parse(fs.readFileSync(path.join(HERE, '.cache/pogoapi-pokemon_max_cp.json'), 'utf8'));
+const pogoFile = path.join(HERE, '.cache/pogoapi-pokemon_max_cp.json'); fs.mkdirSync(path.dirname(pogoFile), { recursive: true });
+if (!fs.existsSync(pogoFile)) fs.writeFileSync(pogoFile, await (await fetch('https://pogoapi.net/api/v1/pokemon_max_cp.json')).text());
+const pogo = JSON.parse(fs.readFileSync(pogoFile, 'utf8'));
 let n = 0, bad = [];
 for (const r of pogo) { if (r.form && r.form !== 'Normal') continue; const g = gof(String(r.pokemon_id)); if (!g) continue; n++; if (g.m51 !== r.max_cp) bad.push(`${r.pokemon_id}:${g.m50}!=${r.max_cp}`); }
 ok(`GO max CP vs pogoapi (${n} species)`, bad.length < 5, bad.slice(0, 8).join(' ')); if (bad.length) console.log('maxcp diffs', bad.length, bad.slice(0, 10));

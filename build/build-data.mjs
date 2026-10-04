@@ -11,6 +11,7 @@ import { loadAll, list, genNum } from './entries.mjs';
 import { buildGo } from './go.mjs';
 import { evoText } from './evotext.mjs';
 import { parseEggs } from './eggs.mjs';
+import { battleBase, BATTLE_ONLY } from './battle.mjs';
 import { clean as cleanEn } from './translate-prep.mjs';
 
 const OUT = path.join(DOCS, 'data');
@@ -93,7 +94,7 @@ for (const g of GAMES) {
   dexOut[g.id] = { dx: dexes.map(D => frName(D.names) || D.name), e: order.map(sid => [sid, ...nums[sid]]) };
   for (const sid of order) (speciesGames[sid] ||= new Set()).add(g.id);
   games.push({
-    id: g.id, n: g.fr, s: g.short, ...(g.home ? { h: g.home } : {}), d: g.d, k: g.kind, g: vg.gen, vo: vg.order, mv: g.mv, evo: vgs[g.evoVg || g.vg].order,
+    id: g.id, n: g.fr, s: g.short, ...(g.home ? { h: g.home } : {}), ...(g.base ? { base: g.base } : {}), d: g.d, k: g.kind, g: vg.gen, vo: vg.order, mv: g.mv, evo: vgs[g.evoVg || g.vg].order,
     ver: g.ver.map(v => [versions[v].id, versions[v].fr]),
     dx: dexOut[g.id].dx, info: infos.map(D => frName(D.names) || D.name), count: order.length,
     _nums: nums, _info: info,
@@ -416,12 +417,14 @@ for (const id of usedItems) refOut.it[id] = itemCache[id];
 for (const id of Object.keys(itemCache)) refOut.it[id] = itemCache[id];
 
 // ---------------------------------------------------------------- core
+const byKeyAll = Object.fromEntries(coreEntries.map(e => [e.key, e]));
 const core = {
   v: new Date().toISOString(), types: typesOut, charts,
   games: games.map(({ _nums, _info, ...g }) => ({ ...g, ...(gamesWithEnc.has(g.id) ? { enc: 1 } : {}) })),
   e: coreEntries.map(e => {
     const r = { k: e.key, id: e.id, n: e.fr, en: e.en, ja: e.ja, ro: e.ro, t: typesOf(e.P), g: idOf(e.S.generation.url), s: statsOf(e.P) };
     if (e.cat !== 'base') { r.c = e.cat; r.l = e.label; } else if (e.label) r.l = e.label;
+    { const bo = battleBase(e, byKeyAll); if (bo && bo !== e.key) r.bo = bo; }
     r.gb = games.reduce((m, g, i) => m + (avByKey[e.key].includes(g.id) ? 2 ** i : 0), 0);
     if (e.S.is_legendary) r.lg = 1; if (e.S.is_mythical) r.my = 1; if (e.S.is_baby) r.ba = 1;
     if (manifest[e.key]?.shSha && manifest[e.key].shSha !== manifest[e.key].sha) r.sh = 1;
