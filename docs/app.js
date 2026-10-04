@@ -1,4 +1,6 @@
 'use strict';
+const BALL = '<svg class="ball" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#fff" stroke="#222" stroke-width="2"/><path d="M1.5 12a10.5 10.5 0 0 1 21 0z" fill="#e53935" stroke="#222" stroke-width="2"/><path d="M1.5 12h21" stroke="#222" stroke-width="2"/><circle cx="12" cy="12" r="3.6" fill="#fff" stroke="#222" stroke-width="2"/></svg>';
+const BALL_OFF = BALL.replace('class="ball"', 'class="ball off"');
 const TYPE_COLORS = {normal:'#8a8f98',fighting:'#c03a4b',flying:'#7f9bd8',poison:'#a35bc8',ground:'#b98a4b',rock:'#a89d6c',bug:'#8aaa28',ghost:'#5a6bb3',steel:'#5a8ea3',fire:'#f08030',water:'#3b8ee6',grass:'#46a846',electric:'#e0b800',psychic:'#f2587f',ice:'#4cc1c8',dragon:'#4a58d6',dark:'#5a4a52',fairy:'#e87fc5'};
 const STAT_LABELS = ['PV','Attaque','Défense','Att. Spé.','Déf. Spé.','Vitesse'];
 const GEN_LABELS = ['', 'I Kanto', 'II Johto', 'III Hoenn', 'IV Sinnoh', 'V Unys', 'VI Kalos', 'VII Alola', 'VIII Galar', 'IX Paldea'];
@@ -100,7 +102,7 @@ function filtered() {
 
 function cardHTML(p) {
   const star = (FAVS.has(p.id) ? '<span class="star" aria-label="Favori">★</span>' : '') +
-    (CAUGHT.has(p.id) ? '<span class="mk ok" aria-label="Capturé">●</span>' : '') +
+    (CAUGHT.has(p.id) ? '<span class="mk ok" aria-label="Capturé"><svg class="ball" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="#fff" stroke="#222" stroke-width="2"/><path d="M1.5 12a10.5 10.5 0 0 1 21 0z" fill="#e53935" stroke="#222" stroke-width="2"/><path d="M1.5 12h21" stroke="#222" stroke-width="2"/><circle cx="12" cy="12" r="3.6" fill="#fff" stroke="#222" stroke-width="2"/></svg></span>' : '') +
     (SHINY.has(p.id) ? '<span class="mk sh" aria-label="Shiny capturé">✨</span>' : '');
   return `<a class="card" href="#/p/${p.id}"><img src="img/${p.id}.webp" alt="" loading="lazy" decoding="async" width="256" height="256">` +
     `<div class="info"><div class="num">#${pad(p.id)}${p.leg ? ' · Légendaire' : p.myth ? ' · Fabuleux' : ''}</div><div class="nm">${esc(p.fr)} ${star}</div></div>` +
@@ -172,7 +174,7 @@ function renderDetail(p) {
     `<div class="stat total"><span class="lb">Total</span><span class="v">${p.total}</span><div class="bar"><i style="width:${Math.min(100, p.total / 720 * 100)}%;background:var(--accent)"></i></div></div>`;
   $('#detail-view').innerHTML = `
   <div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span>
-    <button class="cg" aria-pressed="${CAUGHT.has(p.id)}" aria-label="Capturé" title="Capturé">${CAUGHT.has(p.id) ? '● Capturé' : '○ Capturé'}</button>
+    <button class="cg" aria-pressed="${CAUGHT.has(p.id)}" aria-label="Capturé" title="Capturé">${CAUGHT.has(p.id) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
     <button class="sh" aria-pressed="${SHINY.has(p.id)}" aria-label="Shiny capturé" title="Shiny capturé">✨ Shiny</button>
     <button class="fav" aria-pressed="${FAVS.has(p.id)}" aria-label="Favori">${FAVS.has(p.id) ? '★' : '☆'}</button></div>
   <div class="detail">
@@ -222,7 +224,7 @@ document.addEventListener('click', e => {
     if (cgb) {
       CAUGHT.has(id) ? CAUGHT.delete(id) : CAUGHT.add(id);
       store.set('caught', [...CAUGHT]);
-      cgb.setAttribute('aria-pressed', CAUGHT.has(id)); cgb.textContent = CAUGHT.has(id) ? '● Capturé' : '○ Capturé';
+      cgb.setAttribute('aria-pressed', CAUGHT.has(id)); cgb.innerHTML = CAUGHT.has(id) ? BALL + ' Capturé' : BALL_OFF + ' Capturé';
     } else {
       SHINY.has(id) ? SHINY.delete(id) : SHINY.add(id);
       store.set('shiny', [...SHINY]);

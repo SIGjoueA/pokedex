@@ -118,3 +118,6 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
 .dnav .sh{font-size:15px}.dnav .sh[aria-pressed=true]{color:#f2c200;border-color:#f2c200}
 .dnav .cg{font-size:15px}
 .foot .filebtn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);cursor:pointer}
+
+.ball{vertical-align:-.15em}.ball.off{filter:grayscale(1);opacity:.55}.mk.ok{display:inline-block}
+.dnav .cg[aria-pressed=true]{color:#e53935;border-color:#e53935}
