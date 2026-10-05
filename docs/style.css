@@ -127,7 +127,11 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
 .dnav .cg[aria-pressed=true]{color:#e53935;border-color:#e53935}
 
 /* Fix: icon + label on one line, no overflow */
-.dnav .cg,.dnav .sh{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;padding:0 10px;font-size:14px}
+.dnav .cg,.dnav .sh,.dnav .gem{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;padding:0 10px;font-size:14px}
+.dnav .gem{padding:0 6px;min-width:44px}
+.dnav .gem .gemimg{width:28px;height:28px;object-fit:contain;display:block;image-rendering:auto}
+.dnav .gem[aria-pressed=true]{background:#5b4fcf;border-color:#5b4fcf;box-shadow:0 0 0 2px #c4b5fd}
+.dnav .gem[aria-pressed=true] .gemimg{filter:drop-shadow(0 0 1px #fff)}
 .dnav .cg .ball{flex:none;width:1.2em;height:1.2em}
 @media(max-width:480px){.dnav{gap:6px;padding:8px}.dnav a,.dnav button{padding:0 8px}.dnav .cg,.dnav .sh{font-size:13px;gap:4px}}
 .dnav .cg,.dnav .sh{flex:none;min-width:0}
@@ -165,7 +169,15 @@ button.toggle[aria-pressed=true]{background:var(--accent);color:var(--accent-fg)
 .ab{padding:6px 0;border-bottom:1px solid var(--line)}.ab:last-child{border:0}
 .tag2{background:var(--bg3);border-radius:6px;padding:1px 6px;font-size:11px;color:var(--mute)}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.tabs button{min-height:40px;padding:0 12px;border-radius:999px;border:2px solid var(--line);background:var(--bg3);cursor:pointer;font-weight:600;font-size:13px}
+.tabs button{min-height:40px;padding:0 10px;border-radius:999px;border:2px solid var(--line);background:var(--bg3);cursor:pointer;font-weight:600;font-size:13px;display:inline-flex;align-items:center;gap:6px}
+.tabs .tlab{white-space:nowrap}
+.cntb{display:inline-flex;align-items:center;justify-content:center;min-width:1.35em;height:1.35em;padding:0 5px;border-radius:999px;border:1.5px solid currentColor;font-size:11px;font-weight:800;line-height:1;box-sizing:border-box;opacity:.95}
+.tabs button[aria-pressed=true] .cntb{border-color:currentColor}
+h2 .cntb{margin-left:6px;vertical-align:middle;font-size:12px;min-width:1.45em;height:1.45em;position:relative;top:-1px}
+@media (max-width:420px){
+  .tabs button{font-size:12px;padding:0 8px;min-height:36px;gap:5px}
+  .cntb{font-size:10px;min-width:1.3em;height:1.3em;padding:0 4px}
+}
 .tabs button[aria-pressed=true]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
 .mvs{display:flex;flex-direction:column}
 .mv{display:grid;grid-template-columns:62px 1fr;gap:2px 8px;padding:8px 0;border-bottom:1px solid var(--line);align-items:center}

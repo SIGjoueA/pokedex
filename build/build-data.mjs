@@ -11,7 +11,7 @@ import { loadAll, list, genNum } from './entries.mjs';
 import { buildGo } from './go.mjs';
 import { evoText } from './evotext.mjs';
 import { parseEggs } from './eggs.mjs';
-import { battleBase, BATTLE_ONLY } from './battle.mjs';
+import { battleBase, megaBase, BATTLE_ONLY } from './battle.mjs';
 import { clean as cleanEn } from './translate-prep.mjs';
 
 const OUT = path.join(DOCS, 'data');
@@ -215,10 +215,12 @@ function availability(e) {
     if (!sg.has(g.id)) continue;
     const vg = vgs[g.mv[g.mv.length - 1]]; const own = vgs[g.mv[0]];
     let ok;
-    if (e.cat === 'mega' || e.cat === 'primal') {
-      const MEGA_GAMES = e.cat === 'primal' ? ['oras'] : ['xy', 'oras', 'sm', 'usum', 'lgpe', 'za', 'zadlc'];
+    if (e.cat === 'primal') {
       const intro = vgs[e.intro].order;
-      ok = MEGA_GAMES.includes(g.id) && (own.order >= intro || (e.intro === 'mega-dimension' && (g.id === 'za' || g.id === 'zadlc')));
+      ok = g.id === 'oras' && own.order >= intro;
+    } else if (e.cat === 'mega') {
+      // Z-A: Megas are independently markable only in Légendes Z-A / Méga-Dimension (species already in sg).
+      ok = g.id === 'za' || g.id === 'zadlc';
     }
     else if (e.cat === 'sex') ok = g.g >= 4 && (!e.variety || moveVgs(e.P).size === 0 || g.mv.some(v => moveVgs(e.P).has(v)));
     else if (e.variety) {
@@ -424,7 +426,7 @@ const core = {
   e: coreEntries.map(e => {
     const r = { k: e.key, id: e.id, n: e.fr, en: e.en, ja: e.ja, ro: e.ro, t: typesOf(e.P), g: idOf(e.S.generation.url), s: statsOf(e.P) };
     if (e.cat !== 'base') { r.c = e.cat; r.l = e.label; } else if (e.label) r.l = e.label;
-    { const bo = battleBase(e, byKeyAll); if (bo && bo !== e.key) r.bo = bo; }
+    { const bo = battleBase(e, byKeyAll); if (bo && bo !== e.key) r.bo = bo; const mb = megaBase(e, byKeyAll); if (mb && mb !== e.key) r.mb = mb; }
     r.gb = games.reduce((m, g, i) => m + (avByKey[e.key].includes(g.id) ? 2 ** i : 0), 0);
     if (e.S.is_legendary) r.lg = 1; if (e.S.is_mythical) r.my = 1; if (e.S.is_baby) r.ba = 1;
     if (manifest[e.key]?.shSha && manifest[e.key].shSha !== manifest[e.key].sha) r.sh = 1;

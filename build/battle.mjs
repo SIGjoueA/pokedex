@@ -1,9 +1,12 @@
 // Battle-only form variants: forms that cannot be obtained / caught as such and only exist in battle or through an in-battle trigger.
-// They are never marked separately: they inherit the marks of their base form (`bo` = key of that base entry in core.json) and stay visible in the Formes list.
-// Rule 1 (by category): every Mega Evolution, Primal Reversion, Gigantamax form and Eternamax.
-// Rule 2 (explicit list below): other in-battle transformations. Each line: key → [base key, reason].
-// Deliberately NOT battle-only (obtainable out of battle, so markable on their own): Deoxys, Rotom, Arceus, Giratina/Dialga/Palkia Origin, Shaymin Sky, Kyurem B/W, Therian formes,
-// Hoopa Unbound, Keldeo Resolute, Necrozma Dusk/Dawn, Zacian/Zamazenta Crowned, Calyrex riders, Ogerpon masks, Koraidon/Miraidon builds, Xerneas, Zygarde 10 %, Oricorio, Lycanroc, etc.
+// They inherit the marks of their base form (`bo` = key of that base entry in core.json) and stay visible in the Formes list.
+// Rule 1 (by category): Primal Reversion and Eternamax.
+// Rule 2 (explicit list): other in-battle transformations.
+// NOT battle-only:
+//   - Mega Evolutions (Légendes Z-A): markable via Méga-Gemme rules in the app (`mb` = base key). Captured in Z-A = base caught + gem owned.
+//   - Gigantamax: caught separately in-game.
+//   - Deoxys, Rotom, Arceus, Origin formes, Shaymin Sky, Kyurem B/W, Therian, Hoopa Unbound, Keldeo Resolute,
+//     Necrozma Dusk/Dawn, Crowned Zacian/Zamazenta, Calyrex riders, Ogerpon masks, etc.
 export const BATTLE_ONLY = {
   '351-sunny': ['351', 'Morphéo : change selon la météo en combat'],
   '351-rainy': ['351', 'Morphéo : change selon la météo en combat'],
@@ -29,12 +32,31 @@ export const BATTLE_ONLY = {
   '1024-terastal': ['1024', 'Terapagos : Forme Téracristal en combat'],
   '1024-stellar': ['1024', 'Terapagos : Forme Stellaire en combat'],
 };
-const CAT_RE = /(^|-)(mega(-[xyz])?|primal|gmax|eternamax)$/;
-// returns the base key (string) or null
+const CAT_RE = /(^|-)(mega(-[xyz])?|primal|eternamax)$/;
+const MEGA_RE = /(^|-)((male|female|original|curly|droopy|stretchy)-)?mega(-[xyz])?$/;
+
+/** Base key for a Mega form (for Z-A gem rules). */
+export function megaBase(e, byKey) {
+  if (e.cat !== 'mega') return null;
+  const sfx = e.sfx || '';
+  let cand;
+  if (/(^|-)male-mega$/.test(sfx)) cand = String(e.id);
+  else if (/(^|-)female-mega$/.test(sfx)) cand = `${e.id}-female`;
+  else if (/original-mega$/.test(sfx)) cand = `${e.id}-original`;
+  else if (/curly-mega$/.test(sfx)) cand = String(e.id); // curly = default Nigirigon
+  else if (/(droopy|stretchy)-mega$/.test(sfx)) cand = `${e.id}-${sfx.replace(/-mega$/, '')}`;
+  else {
+    const rest = sfx.replace(/(^|-)mega(-[xyz])?$/, '').replace(/^-/, '');
+    cand = rest ? `${e.id}-${rest}` : String(e.id);
+  }
+  return byKey[cand] ? cand : String(e.id);
+}
+
+/** Battle-only base key, or null. Megas are NOT battle-only (Z-A gem rules). */
 export function battleBase(e, byKey) {
   if (BATTLE_ONLY[e.key]) { const b = BATTLE_ONLY[e.key][0]; return byKey[b] ? b : String(e.id); }
-  if (e.cat === 'mega' || e.cat === 'primal' || e.cat === 'gmax') {
-    const rest = e.sfx.replace(CAT_RE, '');
+  if (e.cat === 'primal' || e.sfx === 'eternamax' || /eternamax$/.test(e.sfx || '')) {
+    const rest = (e.sfx || '').replace(CAT_RE, '');
     const cand = rest ? `${e.id}-${rest}` : String(e.id);
     return byKey[cand] ? cand : String(e.id);
   }

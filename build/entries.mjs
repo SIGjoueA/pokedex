@@ -12,6 +12,16 @@ export const list = async ep => (await get(`${API}/${ep}?limit=5000`, { name: `l
 const EXCLUDE = /(^|-)(totem|cosplay|rock-star|belle|pop-star|phd|libre|starter)(-|$)/;
 const REGION = { alola: 'Alola', galar: 'Galar', hisui: 'Hisui', paldea: 'Paldea' };
 const FR_REGION = { alola: 'd’Alola', galar: 'de Galar', hisui: 'de Hisui', paldea: 'de Paldea' };
+// Vivillon-line pattern names (Scatterbug/Spewpa have no FR form_names in PokéAPI)
+const PATTERN_FR = {
+  icy_snow: 'Blizzard', 'icy-snow': 'Blizzard', polar: 'Banquise', tundra: 'Glace', continental: 'Continent',
+  garden: 'Verdure', elegant: 'Monarchie', meadow: 'Floraison', modern: 'Métropole', marine: 'Rivage',
+  archipelago: 'Archipel', 'high-plains': 'Sécheresse', high_plains: 'Sécheresse', sandstorm: 'Sable',
+  river: 'Delta', monsoon: 'Cyclone', savanna: 'Mangrove', sun: 'Zénith', ocean: 'Soleil Levant',
+  jungle: 'Jungle', fancy: 'Fantaisie', 'poke-ball': 'Poké Ball', poke_ball: 'Poké Ball',
+};
+const CLOAK_FR = { plant: 'Cape Plante', sandy: 'Cape Sable', trash: 'Cape Déchet' };
+
 
 export function formCategory(sfx) {
   if (sfx === 'female' || (/-female$/.test(sfx) && !/mega/.test(sfx))) return 'sex';
@@ -30,9 +40,44 @@ function shortLabel(sfx, cat, formNameFr, speciesFr, fullFr) {
   if (cat === 'primal') return 'Primo';
   if (cat === 'reg' && REGION[sfx]) return REGION[sfx];
   if (cat === 'reg') { const t = (fullFr || formNameFr || sfx).replace(speciesFr, '').replace(/^\s*(de|d’)\s*/, '').trim(); return t || sfx; }
+  if (!formNameFr && (PATTERN_FR[sfx] || CLOAK_FR[sfx])) return PATTERN_FR[sfx] || CLOAK_FR[sfx];
   let t = (formNameFr || sfx).replace(speciesFr, '').trim();
   t = t.replace(/^(Forme|Aspect|Motif|Style|Mode|Coupe|Fleur|Taille|Noyau|Casquette|Masque|Mer|Plumage)\s+(d’|de |du |des |de la |)?/i, m => /^(Casquette|Masque|Plumage|Fleur|Noyau|Mer)/i.test(m) ? m : '');
-  return t || sfx;
+  return t || PATTERN_FR[sfx] || CLOAK_FR[sfx] || sfx;
+}
+
+// Prefer form-specific HOME art when the form has a real form_name (Unown letters, Alcremie creams…).
+// Species official-artwork is often a shared/wrong render (e.g. Unown OA is letter F, not A).
+function formArt(F, P) {
+  const home = F?.sprites?.other?.home;
+  const oaF = F?.sprites?.other?.['official-artwork'];
+  const oaP = P?.sprites?.other?.['official-artwork'];
+  if (F?.form_name && home?.front_default) return { img: home.front_default, shiny: home.front_shiny || undefined };
+  const img = oaF?.front_default || oaP?.front_default || home?.front_default || P?.sprites?.front_default;
+  const shiny = oaF?.front_shiny || oaP?.front_shiny || home?.front_shiny || undefined;
+  return { img, shiny };
+}
+
+function baseLabel(forms, F0, defSfx, sfr) {
+  if (!forms.length) return '';
+  const fn0 = frName(F0.form_names);
+  const hasFemale = forms.some(f => f.sfx === 'female' || /-female$/.test(f.sfx));
+  const nonSex = forms.filter(f => f.cat !== 'sex');
+  // Only sexual dimorphism → Mâle / Femelle
+  if (hasFemale && !nonSex.length && !fn0 && !defSfx) return 'Mâle';
+  // Default form carries an official form name (Zarbi A, Charmilly Lait Vanille…, Prismillon Floraison…)
+  if (fn0) {
+    if (/^Forme de /i.test(fn0)) return 'Normal'; // e.g. "Forme de Morphéo" / "Forme de Motisma"
+    const lab = shortLabel(defSfx || F0.form_name || '', 'form', fn0, sfr, frName(F0.names));
+    if (lab && lab !== sfr) return lab;
+  }
+  const fromMap = PATTERN_FR[F0.form_name] || PATTERN_FR[defSfx] || CLOAK_FR[F0.form_name] || CLOAK_FR[defSfx];
+  if (fromMap) return fromMap;
+  if (defSfx) {
+    const lab = shortLabel(defSfx, 'form', fn0, sfr);
+    if (lab && lab !== defSfx) return lab;
+  }
+  return 'Normal';
 }
 
 export async function loadAll() {
@@ -50,10 +95,11 @@ export async function loadAll() {
     const P0 = def.P;
     const F0 = await get(P0.forms[0].url);
     const defSfx = P0.name === S.name ? '' : P0.name.slice(S.name.length + 1);
+    const baseArt = formArt(F0, P0);
     const base = {
       key: String(S.id), id: S.id, sfx: '', cat: 'base', S, P: P0, F: F0, fr: sfr, en: sen, defSfx,
-      pokemonName: P0.name, img: P0.sprites?.other?.['official-artwork']?.front_default || F0.sprites?.other?.home?.front_default || P0.sprites?.front_default,
-      shiny: P0.sprites?.other?.['official-artwork']?.front_shiny || F0.sprites?.other?.home?.front_shiny,
+      pokemonName: P0.name, img: baseArt.img,
+      shiny: baseArt.shiny,
     };
     const forms = [];
     const addForm = (e) => { if (EXCLUDE.test(e.sfx)) return; forms.push(e); };
@@ -65,12 +111,10 @@ export async function loadAll() {
       cosmetic.push({ F, sfx });
     }
     for (const { F, sfx } of cosmetic) {
-      const home = F.sprites?.other?.home;
-      const img = F.sprites?.other?.['official-artwork']?.front_default || home?.front_default;
-      const sh = F.sprites?.other?.['official-artwork']?.front_shiny || home?.front_shiny;
+      const art = formArt(F, P0);
       const nm = frName(F.names), fn = frName(F.form_names);
       const cat = formCategory(sfx);
-      addForm({ key: `${S.id}-${sfx}`, id: S.id, sfx, cat, S, P: P0, F, fr: nm || `${sfr} ${fn || sfx}`, en: `${sen} ${F.form_name || sfx}`, label: shortLabel(sfx, cat, fn, sfr, nm), img, shiny: sh, cosmetic: true, intro: F.version_group.name, order: F.form_order ?? F.order });
+      addForm({ key: `${S.id}-${sfx}`, id: S.id, sfx, cat, S, P: P0, F, fr: nm || `${sfr} ${fn || sfx}`, en: `${sen} ${F.form_name || sfx}`, label: shortLabel(sfx, cat, fn, sfr, nm), img: art.img, shiny: art.shiny, cosmetic: true, intro: F.version_group.name, order: F.form_order ?? F.order });
     }
     // other varieties
     for (const { v, P } of vars) {
@@ -79,9 +123,9 @@ export async function loadAll() {
       const F = await get(P.forms[0].url);
       const cat = formCategory(sfx);
       const nm = frName(F.names), fn = frName(F.form_names);
+      const art = formArt(F, P);
       addForm({ key: `${S.id}-${sfx}`, id: S.id, sfx, cat, S, P, F, fr: nm || `${sfr} ${fn || sfx}`, en: `${sen} ${sfx.replace(/-/g, ' ')}`, label: shortLabel(sfx, cat, fn, sfr, nm),
-        img: P.sprites?.other?.['official-artwork']?.front_default || P.sprites?.other?.home?.front_default,
-        shiny: P.sprites?.other?.['official-artwork']?.front_shiny || P.sprites?.other?.home?.front_shiny,
+        img: art.img, shiny: art.shiny,
         intro: F.version_group.name, order: P.order, variety: true });
     }
     // synthetic female forms from the HOME renders (visible sexual dimorphism)
@@ -101,9 +145,7 @@ export async function loadAll() {
     for (let i = forms.length - 1; i >= 0; i--) if (!forms[i].img) forms.splice(i, 1);
     for (const f of forms) { f.fr = f.fr.replace(/Paldéa/g, 'Paldea'); if (f.label) f.label = f.label.replace(/Paldéa/g, 'Paldea'); }
     forms.sort((a, b) => (CAT_RANK[a.cat] - CAT_RANK[b.cat]) || ((a.order ?? 0) - (b.order ?? 0)));
-    base.label = forms.length ? (forms.some(f => f.sfx === 'female') && !frName(F0.form_names) ? '♂ / Normal' : shortLabel(defSfx, 'form', frName(F0.form_names), sfr) || 'Normal') : '';
-    if (forms.length && (!defSfx || base.label === defSfx)) base.label = forms.some(f => f.sfx === 'female') ? 'Mâle' : 'Normal';
-    if (S.id === 201) base.label = 'A';
+    base.label = baseLabel(forms, F0, defSfx, sfr);
     const seen = {};
     for (const e of [base, ...forms]) { (seen[e.fr] ||= []).push(e); }
     for (const arr of Object.values(seen)) if (arr.length > 1) for (const e of arr) if (e.label) e.fr += ` (${e.label})`;

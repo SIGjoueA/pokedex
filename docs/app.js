@@ -34,11 +34,41 @@ const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // Tracking context: a game id (or 'go') when one is selected in the Jeux filter, otherwise null = global marks (unchanged behaviour)
 // 'home' = Pokémon HOME: read-only, derived from the "Transféré vers Home" marks of the compatible games.
 const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('homeshiny_g', []));
+// Légendes Z-A: owning the Méga-Gemme for a Mega form (keys like "3-mega", "6-mega-x"). Captured in Z-A = base caught in the Z-A save + gem.
+const MEGA_GEMS = new Set(store.get('mega_gems', []));
+let MEGA_STONES = { fallback: { item: 'key-stone', fr: 'Gemme Sésame', img: 'img/stones/key-stone.png', label: 'Méga-Gemme' }, stones: {} };
+const megaStoneOf = p => {
+  if (!p?.mb) return null;
+  const s = MEGA_STONES.stones?.[p.k];
+  if (s) return { ...s, label: s.fr, specific: true };
+  const f = MEGA_STONES.fallback || {};
+  return { item: f.item || 'key-stone', fr: f.fr || 'Gemme Sésame', img: f.img || 'img/stones/key-stone.png', label: f.label || 'Méga-Gemme', specific: false };
+};
+
+const isZa = c => c === 'za' || c === 'zadlc';
+const ZA_IDS = new Set(['za', 'zadlc']);
+/** Z-A Mega forms are tracked only for Z-A / Méga-Dimension (not XY/ORAS/LGPE battle megas, not GO). */
+const megaTrackGames = p => gamesOf(p).filter(g => ZA_IDS.has(g));
+
+const hasGem = p => !!(p && p.mb && MEGA_GEMS.has(p.k));
+const megaBaseP = p => (p && p.mb && BY_KEY[p.mb]) || null;
+const zaMegaCaughtGames = p => {
+  if (!p?.mb || !hasGem(p)) return [];
+  const b = megaBaseP(p); if (!b) return [];
+  const bc = CAUGHT_BY.get(b.k) || [];
+  return megaTrackGames(p).filter(g => bc.some(h => saveOf(h) === saveOf(g)));
+};
+const zaMegaShinyGames = p => {
+  if (!p?.mb || !hasGem(p)) return [];
+  const b = megaBaseP(p); if (!b) return [];
+  const bs = SHINY_BY.get(b.k) || [];
+  return megaTrackGames(p).filter(g => bs.some(h => saveOf(h) === saveOf(g)));
+};
 const trackCtx = () => (GAME_BY[state.game] || state.game === 'go' || state.game === 'home') ? state.game : null;
 const trackName = (c = trackCtx()) => { return c === 'go' ? 'Pokémon GO' : c === 'home' ? 'Pokémon HOME' : c ? GAME_BY[c].s : ''; };
 const homeKind = c => c === 'go' ? 'direct' : (GAME_BY[c] && GAME_BY[c].h) || null; // direct | bank | transporter | null
 const HOME_KIND_FR = { direct: 'transfert direct vers HOME', bank: 'via Pokémon Bank', transporter: 'via Poké Fret / Pokémon Bank' };
-// Battle-only variants (p.bo = key of the base form) have no marks of their own: they read/write nothing and show the base form's marks.
+// Battle-only (p.bo): Primo, Éternamax, in-battle forms — inherit base marks. Megas use p.mb + Méga-Gemme (Z-A). Gigamax are separately markable.
 const mp = p => (p.bo && BY_KEY[p.bo]) || p;
 const gkey = (c, p) => c + ':' + mp(p).k;
 // Save groups: a game and its expansions share one save (sw + swisle + swcrown, sv + svmask + svdisk, za + zadlc). Marks are written to every game of the group where the entry exists.
@@ -61,14 +91,27 @@ rebuildHome();
 // Games (incl. 'go') compatible with Home in which an entry exists. Needs the regional dex files of the compatible games (loaded when Home is selected).
 const COMPAT = () => [...GAMES.filter(g => g.h).map(g => g.id), 'go'];
 const gamesOf = p => GAMES.filter((g, i) => inGame(p, i)).map(g => g.id);
-const homeAvail = p => [...gamesOf(p).filter(g => GAME_BY[g].h), ...(p.go && !p.my ? ['go'] : [])]; // GO counts as a Home-compatible game, except for Mythicals (cannot be transferred from GO)
+const homeAvail = p => {
+  // Z-A Megas transfer only from Z-A / Méga-Dimension (not XY/LGPE battle megas, not GO)
+  if (p.mb) return megaTrackGames(p).filter(g => GAME_BY[g] && GAME_BY[g].h);
+  return [...gamesOf(p).filter(g => GAME_BY[g].h), ...(p.go && !p.my ? ['go'] : [])]; // GO counts as a Home-compatible game, except for Mythicals (cannot be transferred from GO)
+};
 // ---- base view: read-only status derived from the per-game marks
 const SWITCH_IDS = new Set(['za', 'zadlc', 'svdisk', 'svmask', 'sv', 'la', 'bdsp', 'swcrown', 'swisle', 'sw', 'lgpe']);
 function baseStatus(p, av) {
   if (p.bo) { p = mp(p); av = null; }
+  // Z-A Megas: capture completion = caught in every Z-A save where the Mega exists (base+gem). No GO / no anciens jeux.
+  if (p.mb) {
+    av = megaTrackGames(p);
+    const c = zaMegaCaughtGames(p), s = zaMegaShinyGames(p);
+    return { c, s, sw: av, old: [], legacyC: false, legacyS: false, any: c.length > 0, shAny: s.length > 0,
+      swDone: grpDone(av, c), oldDone: false };
+  }
   av ||= gamesOf(p);
-  const c = CAUGHT_BY.get(p.k) || [], s = SHINY_BY.get(p.k) || [];
-  const sw = av.filter(g => SWITCH_IDS.has(g)), old = av.filter(g => !SWITCH_IDS.has(g));
+  let c = CAUGHT_BY.get(p.k) || [], s = SHINY_BY.get(p.k) || [];
+  // Switch / jeux actuels tier: every Switch game where it exists, PLUS Pokémon GO when the species is in GO (same gold-ball tier, not a third level)
+  const sw = [...av.filter(g => SWITCH_IDS.has(g)), ...(p.go ? ['go'] : [])];
+  const old = av.filter(g => !SWITCH_IDS.has(g));
   const done = grpDone; // a game and its expansions count once
   const legacyC = CAUGHT.has(ik(p)), legacyS = SHINY.has(ik(p));
   return { c, s, sw, old, legacyC, legacyS, any: c.length > 0 || legacyC, shAny: s.length > 0 || legacyS,
@@ -77,15 +120,33 @@ function baseStatus(p, av) {
 const homeAvailF = (p, f) => [...(f.av || []).filter(g => GAME_BY[g] && GAME_BY[g].h).sort((a, b) => GIDX[a] - GIDX[b]), ...(p.go && !p.my ? ['go'] : [])];
 // "complete" = transferred from every compatible game where it exists (DLC/extension games count only when no base game has it)
 const homeComplete = (p, av) => { if (p.bo) { p = mp(p); av = homeAvail(p); } return grpDone(av, HOME_C.get(p.k) || []); }; // a game and its expansions count once
-const isCaught = (p, c = trackCtx()) => { p = mp(p); return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p)); };
-const isShiny = (p, c = trackCtx()) => { p = mp(p); return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p)); };
+const isCaught = (p, c = trackCtx()) => {
+  p = mp(p);
+  if (p.mb) {
+    if (c === 'home') return HOME_C.has(p.k);
+    if (c && isZa(c)) return zaMegaCaughtGames(p).some(g => saveOf(g) === saveOf(c));
+    if (c) return false;
+    return zaMegaCaughtGames(p).length > 0;
+  }
+  return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p));
+};
+const isShiny = (p, c = trackCtx()) => {
+  p = mp(p);
+  if (p.mb) {
+    if (c === 'home') return HOME_S.has(p.k);
+    if (c && isZa(c)) return zaMegaShinyGames(p).some(g => saveOf(g) === saveOf(c));
+    if (c) return false;
+    return zaMegaShinyGames(p).length > 0;
+  }
+  return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p));
+};
 const isTrans = (p, c = trackCtx()) => TRANS_G.has(gkey(c, p)), isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(c, p));
 // The sheet has its own tracking context: its game switcher (state.dgame). 'home' = general infos → read-only (Home view if the list is on Home, else the derived overview).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; if (d === 'home') return state.game === 'home' ? 'home' : null; return (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); rebuildHome(); };
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('mega_gems', [...MEGA_GEMS]); rebuildHome(); };
 function toggleMark(p, kind, c = trackCtx()) {
-  if (!c || c === 'home' || p.bo) return; // base view, Home and battle-only variants are read-only (derived / inherited)
+  if (!c || c === 'home' || p.bo || p.mb) return; // base view, Home, battle-only, and Z-A Megas (caught/shiny derived from base + gem)
   const on = !(kind === 'caught' ? CAUGHT_G : SHINY_G).has(gkey(c, p));
   for (const g of grpTargets(c, p)) { // every game of the save group where the entry exists
     const k = gkey(g, p);
@@ -101,10 +162,34 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
   const k0 = gkey(c, p), on = !(shiny ? STRANS_G : TRANS_G).has(k0);
   for (const g of grpTargets(c, p)) {
     const k = gkey(g, p);
-    if (!shiny) { if (on) { TRANS_G.add(k); CAUGHT_G.add(k); } else { TRANS_G.delete(k); STRANS_G.delete(k); } }
-    else if (on) { STRANS_G.add(k); TRANS_G.add(k); CAUGHT_G.add(k); SHINY_G.add(k); }
-    else STRANS_G.delete(k);
+    if (p.mb) {
+      // Mega transfer is stored on the Mega key; caught/shiny stay derived (base + gem) — do not write caught_g on the Mega
+      if (!shiny) { if (on) TRANS_G.add(k); else { TRANS_G.delete(k); STRANS_G.delete(k); } }
+      else if (on) { STRANS_G.add(k); TRANS_G.add(k); }
+      else STRANS_G.delete(k);
+    } else {
+      if (!shiny) { if (on) { TRANS_G.add(k); CAUGHT_G.add(k); } else { TRANS_G.delete(k); STRANS_G.delete(k); } }
+      else if (on) { STRANS_G.add(k); TRANS_G.add(k); CAUGHT_G.add(k); SHINY_G.add(k); }
+      else STRANS_G.delete(k);
+    }
   }
+  // If transferring the base in Z-A while owning a Mega gem → also transfer that Mega
+  if (on && isZa(c) && !p.mb && !p.bo) {
+    for (const m of E) {
+      if (m.mb !== p.k && m.mb !== String(p.id)) continue;
+      if (!hasGem(m)) continue;
+      for (const g of grpTargets(c, m)) {
+        const k = gkey(g, m);
+        TRANS_G.add(k);
+        if (shiny) STRANS_G.add(k);
+      }
+    }
+  }
+  saveTrack();
+}
+function toggleGem(p) {
+  if (!p?.mb) return;
+  if (MEGA_GEMS.has(p.k)) MEGA_GEMS.delete(p.k); else MEGA_GEMS.add(p.k);
   saveTrack();
 }
 const transValid = x => markValid(x) && !!homeKind(x.split(':')[0]);
@@ -131,6 +216,7 @@ async function getJSON(url) { const r = await fetch(url); if (!r.ok) throw new E
 async function boot() {
   try {
     DATA = await getJSON('data/core.json');
+    try { const ms = await getJSON('data/mega-stones.json'); if (ms?.stones) MEGA_STONES = ms; else if (ms && !ms.fallback) MEGA_STONES = { fallback: MEGA_STONES.fallback, stones: ms }; } catch {}
   } catch (e) {
     $('#results').innerHTML = '<p class="empty">Impossible de charger les données. Ouvrez l’application une fois avec une connexion Internet.</p>';
     return;
@@ -257,15 +343,16 @@ function numHTML(p) {
 const BALL_GOLD = BALL.replace('class="ball"', 'class="ball gold"').replace('#e53935', '#f2b705').replace(/fill="#fff"/g, 'fill="#fff6c9"');
 const homeIcon = (gold, label) => `<span class="mk hm${gold ? ' gold' : ''}" role="img" aria-label="${label}" title="${label}"><svg class="hmi" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" stroke-width="2" stroke-linejoin="round"/></svg></span>`;
 const HOME_T = 'Transféré vers Home depuis au moins un jeu', HOME_C_T = 'Transféré depuis tous les jeux compatibles où il existe';
-const goldBall = (lv, label) => `<span class="mk ok gold" role="img" aria-label="${label}" title="${label}">${BALL_GOLD}<small class="lvl">${lv}</small></span>`;
-const LVL_T = { sw: 'Complété sur Switch : capturé dans tous les jeux Switch où il existe', old: 'Complété dans les anciens jeux : capturé dans tous les jeux d’avant la Switch où il existe' };
-const BASE_LEGEND = `<span>${BALL} capturé dans au moins un jeu (Pokémon GO compris)</span> <span>${goldBall('NS', 'Poké Ball dorée « NS »')} <b>Poké Ball dorée « NS »</b> : complété sur Nintendo Switch = capturé dans tous les jeux Switch où il existe (un jeu et ses extensions comptent pour un)</span> <span>${goldBall('🕹', 'Poké Ball dorée 🕹')} <b>Poké Ball dorée 🕹</b> : complété dans les anciens jeux = capturé dans tous les jeux d’avant la Switch où il existe (les deux niveaux atteints : « NS🕹 »)</span> <span><span class="mk sh">✨</span> shiny dans au moins un jeu</span> <span>Pokémon GO compte pour « capturé » mais pas pour les complétions. Pour marquer, choisissez un jeu dans « Jeux ».</span> <span class="mute">Menu Catégorie : 🔴 Poké Ball · 🟡 Poké Ball dorée (NS = Switch, 🕹 = anciens jeux) · 🏠 Home · 🟡🏠 Home doré · ✨ shiny.</span>`;
+const goldBall = (lv, label) => `<span class="mk ok gold" role="img" aria-label="${label}" title="${label}">${BALL_GOLD}${lv ? `<small class="lvl">${lv}</small>` : ''}</span>`;
+const LVL_T = { sw: 'Complété jeux actuels : capturé dans tous les jeux Switch où il existe, et dans Pokémon GO s’il y est disponible', old: 'Complété dans les anciens jeux : capturé dans tous les jeux d’avant la Switch où il existe' };
+const BASE_LEGEND = `<span>${BALL} capturé dans au moins un jeu (Pokémon GO compris)</span> <span>${goldBall('', 'Poké Ball dorée')} <b>Poké Ball dorée</b> : complété jeux actuels = capturé dans tous les jeux Switch où il existe (un jeu et ses extensions comptent pour un) <b>et</b> dans Pokémon GO s’il y est disponible</span> <span>${goldBall('🕹', 'Poké Ball dorée 🕹')} <b>Poké Ball dorée 🕹</b> : complété dans les anciens jeux = capturé dans tous les jeux d’avant la Switch où il existe (les deux niveaux : dorée + 🕹)</span> <span><span class="mk sh">✨</span> shiny dans au moins un jeu</span> <span>Pour marquer, choisissez un jeu (ou Pokémon GO) dans « Jeux ».</span> <span class="mute">Menu Catégorie : 🔴 Poké Ball · 🟡 Poké Ball dorée (jeux actuels / Switch + GO) · 🟡🕹 anciens jeux · 🏠 Home · 🟡🏠 Home doré · ✨ shiny.</span>`;
 const HOME_LEGEND = `<span>${homeIcon(false, HOME_T)} transféré depuis au moins un jeu compatible</span> <span>${homeIcon(true, HOME_C_T)} <b>dorée</b> : transféré depuis tous les jeux compatibles où il existe (Pokémon GO compris, sauf pour les fabuleux qui ne peuvent pas être transférés depuis GO)</span> <span><span class="mk sh">✨</span> au moins un shiny transféré</span> <span class="mute">Menu Catégorie : 🏠 Home · 🟡🏠 Home doré · ✨ shiny.</span>`;
-// ball shown on cards in the base view: red = caught somewhere, gold = completed (NS = Switch, 🕹 = old games)
+// ball shown on cards in the base view: red = caught somewhere, gold = Switch-complete, gold+🕹 = anciens jeux (both → gold+🕹)
 function baseBall(p) {
   const b = baseStatus(p); if (!b.any) return '';
-  const lv = (b.swDone ? 'NS' : '') + (b.oldDone ? '🕹' : '');
-  return lv ? goldBall(lv, [b.swDone && LVL_T.sw, b.oldDone && LVL_T.old].filter(Boolean).join(' — ')) : `<span class="mk ok" aria-label="Capturé">${BALL}</span>`;
+  if (!b.swDone && !b.oldDone) return `<span class="mk ok" aria-label="Capturé">${BALL}</span>`;
+  const lv = b.oldDone ? '🕹' : '';
+  return goldBall(lv, [b.swDone && LVL_T.sw, b.oldDone && LVL_T.old].filter(Boolean).join(' — '));
 }
 function cardHTML(p) {
   const key = ik(p);
@@ -315,7 +402,7 @@ function render() {
   } else { // base view: derived from the per-game marks
     const uni = E.filter(p => (state.forms || !p.c) && !p.bo); let cu = 0, su = 0, sw = 0, old = 0, tr = 0, hc = 0;
     for (const p of uni) { const b = baseStatus(p); cu += b.any; su += b.shAny; sw += b.swDone; old += b.oldDone; tr += HOME_C.has(p.k); hc += homeComplete(p, homeAvail(p)); }
-    prog = `${cu} / ${uni.length} 🔴 capturés · ${su} ✨ shiny · ${sw} 🟡NS complétés Switch · ${old} 🟡🕹 anciens jeux · ${tr} 🏠 transférés Home · ${hc} 🟡🏠 complets Home`;
+    prog = `${cu} / ${uni.length} 🔴 capturés · ${su} ✨ shiny · ${sw} 🟡 complétés jeux actuels · ${old} 🟡🕹 anciens jeux · ${tr} 🏠 transférés Home · ${hc} 🟡🏠 complets Home`;
   }
   $('#count').textContent = `${res.length} ${state.forms ? 'entrées' : 'Pokémon'}${gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : ''} · ${prog}`;
   const lg = $('#legend'); lg.hidden = !!ctx && ctx !== 'home';
@@ -391,15 +478,14 @@ function baseHTML(p0) {
   const b = baseStatus(p, av), go = p.go;
   const shr = g => { const o = sharedWith(g, p); return o.length ? ` <span class="mute">· partagé avec ${esc(o.map(x => GAME_BY[x].s).join(', '))}</span>` : ''; };
   const row = g => `<li>${b.c.includes(g) ? BALL : BALL_OFF} ${esc(gameNames([g]))} — ${b.c.includes(g) ? 'capturé' : 'pas capturé'}${b.s.includes(g) ? ' · ✨ shiny' : ''}${shr(g)}</li>`;
-  const sw = av.filter(g => SWITCH_IDS.has(g)), old = av.filter(g => !SWITCH_IDS.has(g));
+  const sw = b.sw, old = b.old; // b.sw already includes Pokémon GO when the species is in GO
   const frac = (need, have) => { const gs = grpsOf(need); return `${gs.filter(G => grpHas(G, have)).length} / ${gs.length}`; };
   let h = `Suivi : <b>vue d’ensemble</b> (lecture seule : calculé d’après les marques de chaque jeu). Pour marquer, choisissez un jeu dans le sélecteur « Jeu » ci-dessous (ou dans la liste « Jeux »).<br>` +
     (b.any ? `${BALL} Capturé` : 'Pas encore capturé') + (b.shAny ? ' · ✨ shiny' : '') +
-    (b.swDone ? ` · ${goldBall('NS', LVL_T.sw)} Switch complet` : '') + (b.oldDone ? ` · ${goldBall('🕹', LVL_T.old)} Anciens jeux complets` : '');
+    (b.swDone ? ` · ${goldBall('', LVL_T.sw)} Jeux actuels complets` : '') + (b.oldDone ? ` · ${goldBall('🕹', LVL_T.old)} Anciens jeux complets` : '');
   if (b.legacyC || b.legacyS) h += `<br><span class="mute">Marque manuelle de l’ancienne version${b.legacyC ? ' (capturé)' : ''}${b.legacyS ? ' (shiny)' : ''}${b.c.length || b.s.length ? ' — remplacée par les marques par jeu' : ' — conservée tant qu’aucun jeu n’est marqué'} </span><button type="button" class="lg" title="Supprimer l’ancienne marque manuelle">Retirer</button>`;
-  if (sw.length) h += `<details open><summary>Jeux Switch — ${frac(sw, b.c)} <small class="mute">(un jeu et ses extensions comptent pour un)</small></summary><ul class="plain homerows">${sw.map(row).join('')}</ul></details>`;
+  if (sw.length) h += `<details open><summary>Jeux actuels (Switch${go ? ' + GO' : ''}) — ${frac(sw, b.c)} <small class="mute">(un jeu et ses extensions comptent pour un ; GO compte dans ce palier)</small></summary><ul class="plain homerows">${sw.map(row).join('')}</ul></details>`;
   if (old.length) h += `<details><summary>Anciens jeux — ${frac(old, b.c)}</summary><ul class="plain homerows">${old.map(row).join('')}</ul></details>`;
-  if (go) h += `<ul class="plain homerows"><li>${b.c.includes('go') ? BALL : BALL_OFF} Pokémon GO — ${b.c.includes('go') ? 'capturé' : 'pas capturé'}${b.s.includes('go') ? ' · ✨ shiny' : ''} <span class="mute">(ne compte pas pour les complétions)</span></li></ul>`;
   return h;
 }
 function trackHTML(p0) {
@@ -415,13 +501,17 @@ function trackHTML(p0) {
   const hk = homeKind(c), sw = sharedWith(c, p);
   let h = note + `Captures et shiny suivis pour : <b>${esc(trackName(c))}</b>`;
   if (sw.length) h += ` <span class="mute shr">· partagé avec ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>`;
+  if (p0.mb && isZa(c)) {
+    const b = megaBaseP(p0);
+    h += `<br><span class="mute">Z-A Méga : ${esc((megaStoneOf(p0)||{}).label || 'Méga-Gemme')} ${hasGem(p0) ? 'obtenue' : 'non obtenue'} · base ${b ? `<a href="#/p/${b.k}">${esc(b.n)}</a>` : ''} ${b && isCaught(b, c) ? 'capturée' : 'pas encore capturée'} → Méga ${isCaught(p0, c) ? 'capturée' : 'non capturée'}.</span>`;
+  }
   { const b = baseStatus(p), n = grpsOf(gamesOf(p)).length + (p.go ? 1 : 0); h += `<br><span class="mute">Tous jeux confondus : capturé dans ${grpsOf(b.c).length} jeu${grpsOf(b.c).length > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
   if (!hk) return h + '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.';
   if (c === 'go' && p.my) return h + '<br>Les Pokémon fabuleux ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion Home de ce Pokémon.';
   h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span>`;
   if (bo) return h;
-  h += `<div class="trackbtns"><button type="button" class="tr" aria-pressed="${isTrans(p, c)}" title="Transféré vers Home depuis ${esc(trackName(c))}${sw.length ? ' (et ' + esc(sw.map(x => GAME_BY[x].s).join(', ')) + ')' : ''}">${homeBall} Transféré vers Home</button>`;
-  if (isShiny(p, c) || isSTrans(p, c)) h += `<button type="button" class="trs" aria-pressed="${isSTrans(p, c)}" title="Shiny transféré vers Home">✨ Transféré</button>`;
+  h += `<div class="trackbtns"><button type="button" class="tr" aria-pressed="${isTrans(p, c)}" title="Transféré vers Home depuis ${esc(trackName(c))}${sw.length ? ' (et ' + esc(sw.map(x => GAME_BY[x].s).join(', ')) + ')' : ''}${p0.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}">${homeBall} Transféré vers Home</button>`;
+  if (isShiny(p, c) || isSTrans(p, c) || (p0.mb && hasGem(p0))) h += `<button type="button" class="trs" aria-pressed="${isSTrans(p, c)}" title="Shiny transféré vers Home">✨ Transféré</button>`;
   return h + '</div>';
 }
 function refreshTrack(p) {
@@ -439,10 +529,14 @@ function navHTML(p) {
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
   const sc = sheetCtx();
+  const catchDis = !sc || sc === 'home' || p.bo || !!p.mb; // Z-A Mega: Capturé/Shiny dérivés (base + gemme)
+  const st = p.mb ? megaStoneOf(p) : null;
+  const gemBtn = st ? `<button class="gem" type="button" aria-pressed="${hasGem(p)}" aria-label="${esc(st.label)}" title="${esc(st.label)}${st.specific ? '' : ' (sprite Gemme Sésame)'} — requise avec la forme de base pour capturer cette Méga en Z-A"><img class="gemimg" src="${st.img}" alt="" width="28" height="28" decoding="async"></button>` : '';
   const ctxLine = `<div class="trackinfo" id="trackinfo">${trackHTML(p)}</div>`;
   return `<div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span>
-    <button class="cg" ${!sc || sc === 'home' || p.bo ? 'disabled' : ''} aria-pressed="${isCaught(p, sc)}" aria-label="Capturé${sc ? ' – ' + trackName(sc) : ''}" title="Capturé${sc ? ' – ' + trackName(sc) : ''}">${isCaught(p, sc) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
-    <button class="sh" ${!sc || sc === 'home' || p.bo ? 'disabled' : ''} aria-pressed="${isShiny(p, sc)}" aria-label="Shiny capturé${sc ? ' – ' + trackName(sc) : ''}" title="Shiny capturé${sc ? ' – ' + trackName(sc) : ''}">✨ Shiny</button>
+    <button class="cg" ${catchDis ? 'disabled' : ''} aria-pressed="${isCaught(p, sc)}" aria-label="Capturé${sc ? ' – ' + trackName(sc) : ''}" title="${p.mb ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : ('Capturé' + (sc ? ' – ' + trackName(sc) : ''))}">${isCaught(p, sc) ? BALL + ' Capturé' : BALL_OFF + ' Capturé'}</button>
+    <button class="sh" ${catchDis ? 'disabled' : ''} aria-pressed="${isShiny(p, sc)}" aria-label="Shiny capturé${sc ? ' – ' + trackName(sc) : ''}" title="${p.mb ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : ('Shiny capturé' + (sc ? ' – ' + trackName(sc) : ''))}">✨ Shiny</button>
+    ${gemBtn}
     <button class="fav" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${ctxLine}`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
@@ -515,7 +609,7 @@ function abilitiesHTML(f, gm, ref) {
   if (gen < 5) list = list.filter(a => !a[1]);
   list = list.filter(a => ((ref.ab[a[0]] || [])[2] || 1) <= gen); // an ability cannot exist before the generation that introduced it
   if (!list.length) return '<p class="note">Aucun talent.</p>';
-  return list.map(([id, hid]) => { const a = ref.ab[id]; return a ? `<div class="ab"><b>${esc(a[0])}</b>${hid ? ' <span class="tag2">Talent caché</span>' : ''}<br><span class="mute">${esc(a[1] || '')}</span></div>` : ''; }).join('');
+  return { n: list.length, body: list.map(([id, hid]) => { const a = ref.ab[id]; return a ? `<div class="ab"><b>${esc(a[0])}</b>${hid ? ' <span class="tag2">Talent caché</span>' : ''}<br><span class="mute">${esc(a[1] || '')}</span></div>` : ''; }).join('') };
 }
 function heldHTML(f, gm, ref) {
   if (!gm || !f.hi) return '';
@@ -556,7 +650,7 @@ function movesHTML(f, sp, gm, shared) {
     } else rows = cur[2].map(id => moveRow(id, gm, shared, '')).join('');
   }
   return `<section class="box"><h2>Capacités <small class="cnt">${esc(gm.s)}</small></h2>
-    <div class="tabs" role="tablist">${tabs.map(t => `<button data-mtab="${t[0]}" aria-pressed="${t[0] === movesTab}">${t[1]} <small>${t[2].length}</small></button>`).join('')}</div>
+    <div class="tabs" role="tablist">${tabs.map(t => `<button data-mtab="${t[0]}" aria-pressed="${t[0] === movesTab}" title="${t[1]} : ${t[2].length} capacit${t[2].length > 1 ? 'és' : 'é'}"><span class="tlab">${t[1]}</span><span class="cntb" aria-hidden="true">${t[2].length}</span></button>`).join('')}</div>
     <div class="mvs">${rows}</div><p class="note">Valeurs (type, puissance, précision, PP, catégorie) telles qu’elles étaient dans ce jeu (PokéAPI). Avant la génération IV, la catégorie dépend du type.</p></section>`;
 }
 
@@ -626,9 +720,10 @@ function evoHTML(p, f, mode, gm) {
   let start = p.k;
   if (!out[start] && !inn[start]) start = String(p.id);
   let note = '';
-  if (p.c === 'mega') note = 'Forme obtenue par Méga-Évolution (Méga-Gemme) depuis la forme de base.';
+  if (p.c === 'mega') note = 'Méga-Évolution (Légendes Z-A) : marquez la Méga-Gemme ici. Capturé / shiny = forme de base capturée (ou shiny) dans la sauvegarde Z-A <b>et</b> gemme obtenue. Transfert Home : manuel, sauf si la gemme est cochée — transférer la base transfère aussi cette Méga.';
   else if (p.c === 'primal') note = 'Forme obtenue par Régression primale (Orbe) depuis la forme de base.';
-  else if (p.c === 'gmax') note = 'Forme obtenue par Gigamax / Dynamax en combat.';
+  else if (p.c === 'gmax' && !p.bo) note = 'Forme Gigamax : à capturer / marquer séparément (le facteur Gigamax ne se trouve pas à l’état sauvage autrement).';
+  else if (p.c === 'gmax' && p.bo) note = 'Forme Éternamax : variante de combat – suit la forme de base.';
   if (!out[start] && !inn[start]) return note ? `<p class="note">${note}</p>` : `<p class="note">${mode === 'go' ? 'Pas d’évolution dans Pokémon GO.' : 'Ne possède pas d’évolution.'}</p>`;
   const comp = new Set([start]); const stack = [start];
   while (stack.length) { const k = stack.pop(); for (const e of [...(out[k] || []), ...(inn[k] || [])]) for (const n of [e.f, e.t]) if (!comp.has(n)) { comp.add(n); stack.push(n); } }
@@ -709,7 +804,7 @@ function renderDetail() {
       <p class="note">Groupes d’œuf : ${sp.eg.map(esc).join(', ') || '—'} · Croissance : ${GROWTH[sp.gw] || sp.gw} · Bonheur de base : ${sp.bh}</p>`}</section>
     <section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>
-    <section class="box"><h2>Talents</h2>${abilitiesHTML(f, gm, shared.ref)}</section>
+    ${(() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })()}
     ${heldHTML(f, gm, shared.ref)}
     <section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
       <div id="eff">${effHTML(types, mode2, chart)}</div>
@@ -786,6 +881,12 @@ document.addEventListener('click', e => {
   if (cgb || shb) {
     const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
     toggleMark(p, cgb ? 'caught' : 'shiny', sheetCtx()); refreshTrack(p); render();
+    return;
+  }
+  const gemb = e.target.closest('.dnav .gem');
+  if (gemb) {
+    const p = DET && DET.p; if (!p || !p.mb) return;
+    toggleGem(p); refreshTrack(p); render();
     return;
   }
   const lgb = e.target.closest('#trackinfo .lg');
@@ -868,7 +969,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G] };
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], mega_gems: [...MEGA_GEMS] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -882,8 +983,9 @@ boot();
       mk(d.caught_g).forEach(n => CAUGHT_G.add(n)); mk(d.shiny_g).forEach(n => { SHINY_G.add(n); CAUGHT_G.add(n); });
       const mt = x => Array.isArray(x) ? x.filter(transValid) : [];
       mt(d.home_g).forEach(n => { TRANS_G.add(n); CAUGHT_G.add(n); }); mt(d.homeshiny_g).forEach(n => { STRANS_G.add(n); TRANS_G.add(n); CAUGHT_G.add(n); SHINY_G.add(n); });
+      if (Array.isArray(d.mega_gems)) d.mega_gems.filter(k => BY_KEY[k] && BY_KEY[k].mb).forEach(k => MEGA_GEMS.add(k));
       migrateMarks(); rebuildHome();
-      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]);
+      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('mega_gems', [...MEGA_GEMS]);
       render(); alert('Sauvegarde importée.');
     } catch { alert('Fichier invalide.'); }
     im.value = '';
