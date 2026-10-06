@@ -244,3 +244,14 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .trackinfo .gem .gemcap{display:inline}
 .trackinfo .gem[aria-pressed=true]{background:#5b4fcf;border-color:#5b4fcf;color:#fff;box-shadow:0 0 0 2px #c4b5fd}
 .trackinfo .gems>.mute{flex-basis:100%}
+
+/* Pitrouille / Banshitrouye: same art, display scale by size (S < M < L < XL) */
+.card.sz-s img,.hero.sz-s img{transform:scale(.72);transform-origin:center}
+.card.sz-m img,.hero.sz-m img{transform:scale(1)}
+.card.sz-l img,.hero.sz-l img{transform:scale(1.18);transform-origin:center}
+.card.sz-xl img,.hero.sz-xl img{transform:scale(1.36);transform-origin:center}
+.card.sz-s,.card.sz-l,.card.sz-xl,.hero.sz-s,.hero.sz-l,.hero.sz-xl{overflow:hidden}
+.list .card.sz-s img{transform:scale(.78)}
+.list .card.sz-l img{transform:scale(1.12)}
+.list .card.sz-xl img{transform:scale(1.28)}
+.rn.hors{color:var(--muted);font-style:italic;font-weight:500}

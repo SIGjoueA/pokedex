@@ -5,7 +5,7 @@ https://sigjouea.github.io/pokedex/
 
 ## Fonctions
 - Recherche instantanée sans accents, filtres type / génération / catégorie / tri, grille ou liste.
-- **Jeux** : Pokémon HOME, Pokémon GO, puis 27 jeux (série principale + Légendes + DLC) du plus récent au plus ancien. Un jeu choisi = seuls les Pokémon (et formes) de son Pokédex régional, triés et numérotés selon ce Pokédex (numéro régional affiché sur la carte, numéro national en gris).
+- **Jeux** : Pokémon HOME, Pokémon GO, puis 27 jeux (série principale + Légendes + DLC) du plus récent au plus ancien. Un jeu choisi = Pokédex régional, puis en fin de liste les espèces absentes du Pokédex régional mais disponibles (transfert / Méga) marquées « Hors dex », tri national, triés et numérotés selon ce Pokédex (numéro régional affiché sur la carte, numéro national en gris).
 - **Formes** (bouton dans l'en-tête, masquées par défaut) : régionales, Méga, Primo, Gigamax, multi-formes (Zarbi, Flabébé, Vivaldaim…), mâle/femelle. Sélecteur de formes sur la fiche.
 - **Fiche par jeu** : stats / types / talents / objets tenus / attaques / évolutions tels qu'à l'époque du jeu, Pokédex FR, numéros régionaux.
 - **Pokémon GO** : stats ATT/DEF/END, PC max (niv. 50 et 51), attaques avec DPS, distance compagnon, coûts d'évolution, shiny, statut de sortie.

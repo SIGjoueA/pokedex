@@ -278,9 +278,11 @@ function buildControls() {
 async function loadDex(id) {
   if (DEX[id]) return DEX[id];
   const d = await getJSON(`data/dex/${id}.json`);
-  const order = new Map(), nums = new Map();
+  const order = new Map(), nums = new Map(), extra = new Set(d.x || []);
   d.e.forEach((row, i) => { order.set(row[0], i); nums.set(row[0], row.slice(1)); });
-  return DEX[id] = { order, nums, dx: d.dx };
+  // Species available in this game but absent from the regional Pokédex → end of list, national order, no regional nº
+  (d.x || []).forEach((sid, i) => { if (!order.has(sid)) order.set(sid, d.e.length + i); });
+  return DEX[id] = { order, nums, dx: d.dx, extra, regional: d.e.length };
 }
 async function setGame(v) {
   state.game = v; $('#game').value = v;
@@ -349,8 +351,9 @@ function numHTML(p) {
   const gm = GAME_BY[state.game], dex = gm && DEX[gm.id];
   let s;
   if (dex) {
-    const n = dex.nums.get(p.id) || [];
-    s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
+    const n = dex.nums.get(p.id);
+    if (n && n.length) s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
+    else s = `<span class="rn hors" title="Absent du Pokédex régional — disponible via transfert / Méga-Gemme">Hors dex</span> <span class="nat">#${pad(p.id)}</span>`;
   } else s = `#${pad(p.id)}`;
   const tag = p.c ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : '';
   return s + tag;
@@ -370,6 +373,8 @@ function baseBall(p) {
   const lv = b.oldDone ? '🕹' : '';
   return goldBall(lv, [b.swDone && LVL_T.sw, b.oldDone && LVL_T.old].filter(Boolean).join(' — '));
 }
+const SIZE_CLS = { 'Taille S': 'sz-s', 'Taille M': 'sz-m', 'Taille L': 'sz-l', 'Taille XL': 'sz-xl' };
+const sizeClass = p => (p.id === 710 || p.id === 711) ? (SIZE_CLS[p.l] || 'sz-m') : '';
 function cardHTML(p) {
   const key = ik(p);
   const hm = trackCtx() === 'home';
@@ -377,7 +382,7 @@ function cardHTML(p) {
     (hm ? (isCaught(p) ? homeIcon(homeComplete(p, homeAvail(p)), homeComplete(p, homeAvail(p)) ? HOME_C_T : HOME_T) : '') : !trackCtx() ? baseBall(p) : isCaught(p) ? `<span class="mk ok" aria-label="Capturé">${BALL}</span>` : '') +
     (isShiny(p) ? `<span class="mk sh" aria-label="Shiny ${hm ? 'transféré' : 'capturé'}">✨</span>` : '') +
     (trackCtx() && trackCtx() !== 'home' && isTrans(p) ? homeIcon(false, HOME_T) : '');
-  return `<a class="card${p.c ? ' form' : ''}" href="#/p/${p.k}"><img src="img/${p.k}.webp" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+  return `<a class="card${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="img/${p.k}.webp" alt="" loading="lazy" decoding="async" width="256" height="256">` +
     `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(p.n)} ${star}</div></div>` +
     `<div class="badges">${p.t.map(badge).join('')}</div></a>`;
 }
@@ -464,7 +469,7 @@ async function openDetail(p) {
   const tok = ++detailTok;
   state.dgame = sheetPref || (state.game === 'go' || state.game === 'home' || GAME_BY[state.game] ? state.game : 'home'); // sheet game: its own choice, else the list filter
   document.title = `${p.n} #${pad(p.id)} – Pokédex`;
-  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
+  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
   try {
     const [sp, shared] = await Promise.all([loadSp(p.id), loadShared()]);
     if (tok !== detailTok) return;
@@ -837,7 +842,7 @@ function renderDetail() {
   }
   $('#detail-view').innerHTML = navHTML(p) + `
   <div class="detail">
-    <div class="hero" style="--c1:${c1};--c2:${c2}">
+    <div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${c1};--c2:${c2}">
       <div class="num">#${pad(p.id)}</div>
       <img id="heroimg" src="${showShinyArt && p.sh ? simg : gimg}" alt="${esc(p.n)}" width="256" height="256">
       ${p.sh ? `<button id="shbtn" class="shart" type="button" aria-pressed="${showShinyArt}" title="Afficher l’illustration shiny">✨ ${showShinyArt ? 'Normal' : 'Shiny'}</button>` : ''}

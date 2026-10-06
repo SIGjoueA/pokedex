@@ -52,6 +52,23 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/p/710'); await sleep(500);
   const pump = await p.evaluate(() => [...document.querySelectorAll('.fchip')].map(a => { const r = a.getBoundingClientRect(); return { t: a.textContent.trim(), vis: r.width > 0 && r.left >= 0 && r.right <= innerWidth + 1 }; }));
   ok(pump.length === 4 && pump.every(x => x.vis) && pump.map(x => x.t).join() === 'Taille S,Taille M,Taille L,Taille XL', tag + ' Pitrouille: 4 size chips visible ' + JSON.stringify(pump));
+  const scales = await p.evaluate(() => {
+    const out = {};
+    for (const k of ['710-small', '710', '710-large', '710-super']) {
+      // navigate via DOM check of class on a temp render: read SIZE from data
+    }
+    return { s: SIZE_CLS['Taille S'], m: SIZE_CLS['Taille M'], l: SIZE_CLS['Taille L'], xl: SIZE_CLS['Taille XL'],
+      cls: ['710-small','710','710-large','710-super'].map(k => sizeClass(BY_KEY[k])) };
+  });
+  ok(scales.cls.join() === 'sz-s,sz-m,sz-l,sz-xl', tag + ' Pitrouille sizeClass ' + JSON.stringify(scales.cls));
+  await go('#/p/710-small'); await sleep(400);
+  ok(await p.$eval('.hero', e => e.classList.contains('sz-s')), tag + ' hero Taille S scaled');
+  await go('#/'); await sleep(200);
+  await p.evaluate(() => { state.forms = true; state.game = ''; state.q = 'pitrouille'; document.querySelector('#q').value = 'pitrouille'; document.querySelector('#game').value = ''; render(); });
+  await sleep(300);
+  const cardSz = await p.evaluate(() => [...document.querySelectorAll('#results .card')].map(c => ({ k: c.getAttribute('href'), sz: [...c.classList].find(x => x.startsWith('sz-')) })));
+  ok(cardSz.some(c => c.sz === 'sz-s') && cardSz.some(c => c.sz === 'sz-xl'), tag + ' grid cards sized ' + JSON.stringify(cardSz));
+  await p.evaluate(() => { state.forms = false; state.q = ''; document.querySelector('#q').value = ''; render(); });
   await go('#/p/19'); await sleep(400);
   const ratChips = await p.evaluate(() => [...document.querySelectorAll('.fchip span')].map(e => e.textContent.trim()));
   ok(ratChips[0] === 'Commun' && ratChips.includes('Alola') && !ratChips.includes('Normal'), tag + ' Rattata sheet chips: ' + ratChips);
@@ -387,7 +404,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(megaCounted.ok, tag + ' Mega counts in forms uni completion ' + JSON.stringify(megaCounted));
   // Megas listed in every Mega game (X/Y, ROSA, SL, USUL, LGPE, Z-A); outside Z-A battle-only (inherit base, not counted)
   const megaGames = await p.evaluate(() => ({ v: gamesOf(BY_KEY['3-mega']), g: gamesOf(BY_KEY['6-mega-x']), m: gamesOf(BY_KEY['380-mega'] || BY_KEY['3-mega']), dlc: gamesOf(BY_KEY['978-curly-mega']) }));
-  ok(megaGames.v.includes('xy') && megaGames.v.includes('lgpe') && megaGames.v.includes('za') && megaGames.m.some(g => g === 'oras') && megaGames.dlc.join() === 'zadlc', tag + ' Megas in all Mega games ' + JSON.stringify(megaGames));
+  ok(megaGames.v.includes('xy') && megaGames.v.includes('oras') && megaGames.v.includes('lgpe') && megaGames.v.includes('za') && megaGames.v.includes('zadlc') && megaGames.dlc.includes('zadlc') && megaGames.m.includes('oras'), tag + ' Megas in all Mega games ' + JSON.stringify(megaGames));
   await go('#/'); await sel('xy'); await sleep(300);
   const xyCnt = await count();
   ok(await p.evaluate(() => isCombat(BY_KEY['3-mega'], 'xy') && !isCombat(BY_KEY['3-mega'], 'za') && !isCombat(BY_KEY['3-mega'], null) && !isCombat(BY_KEY['3-mega'], 'home')), tag + ' Mega combat outside Z-A only');
@@ -399,6 +416,27 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(await p.evaluate(() => !!document.querySelector('[data-mtab], .moves, #moves')), tag + ' X/Y Mega sheet has moves');
   await go('#/p/3'); await sleep(300); await p.click('.dnav .cg'); await sleep(150);
   ok(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'xy') && CAUGHT_G.has('xy:3') && !CAUGHT_G.has('xy:3-mega')), tag + ' X/Y Mega inherits base mark');
+  // Hors Pokédex régional: Méga-Florizarre (et Florizarre) en fin de liste ROSA, sans nº régional, ordre national
+  await go('#/'); await p.evaluate(() => { state.forms = true; state.q = ''; document.querySelector('#q').value = ''; }); await sel('oras'); await sleep(600);
+  const oras = await p.evaluate(() => {
+    const cards = [...document.querySelectorAll('#results .card')];
+    const horsIdx = cards.findIndex(c => c.querySelector('.rn.hors'));
+    const hors = horsIdx < 0 ? [] : cards.slice(horsIdx);
+    const mega = cards.find(c => (c.getAttribute('href') || '').endsWith('/3-mega'));
+    const base = cards.find(c => (c.getAttribute('href') || '') === '#/p/3');
+    const idx = (el) => cards.indexOf(el);
+    const natOrder = hors.map(c => BY_KEY[(c.getAttribute('href') || '').replace('#/p/', '')]?.id).filter(Boolean);
+    const speciesOrderOk = natOrder.every((id, i, a) => i === 0 || a[i - 1] <= id);
+    const allHors = hors.length > 0 && hors.every(c => c.querySelector('.rn.hors'));
+    return { regional: DEX.oras.regional, horsIdx, megaIdx: idx(mega), baseIdx: idx(base),
+      megaRn: mega?.querySelector('.rn')?.textContent, megaHors: !!mega?.querySelector('.rn.hors'),
+      allHors, speciesOrderOk, natOrder: natOrder.slice(0, 16) };
+  });
+  ok(oras.horsIdx > 0 && oras.megaIdx >= oras.horsIdx && oras.baseIdx >= oras.horsIdx && oras.megaHors && /Hors dex/.test(oras.megaRn || ''), tag + ' ROSA: Florizarre/Méga hors dex en fin de liste ' + JSON.stringify({ horsIdx: oras.horsIdx, megaIdx: oras.megaIdx, baseIdx: oras.baseIdx, regional: oras.regional, megaRn: oras.megaRn }));
+  ok(oras.allHors && oras.speciesOrderOk, tag + ' ROSA extras national order ' + JSON.stringify(oras.natOrder));
+  await go('#/p/3-mega'); await sleep(500);
+  ok(await p.evaluate(() => gamesOf(BY_KEY['3-mega']).includes('oras')), tag + ' Méga-Florizarre available in ROSA');
+  await go('#/'); await sel(''); await p.evaluate(() => { state.forms = false; }); await sleep(200);
   // Méga-Gemme on the base sheet (Z-A), one state per stone shared across forms, immediate re-render
   await go('#/'); await sel('za'); await go('#/p/6'); await sleep(500);
   const baseGems = await p.evaluate(() => [...document.querySelectorAll('#trackinfo .gem[data-mega]')].map(b => [b.dataset.mega, b.getAttribute('aria-pressed'), b.querySelector('.gemcap').textContent]));
@@ -561,7 +599,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.goto(BASE + '#/p/700'); await sleep(1200);
   ok(/Nymphali/.test(await p.$eval('.hero h1', e => e.textContent)), 'offline detail page');
   await p.select('#dgame', 'go'); await sleep(500); ok(/PC max/.test(await p.$eval('.detail', e => e.textContent)), 'offline GO page');
-  await p.goto(BASE); await sleep(300); await p.select('#game', 'za'); await sleep(500); ok((await p.$eval('#count', e => e.textContent)).startsWith('232'), 'offline game dex');
+  await p.goto(BASE); await sleep(300); await p.select('#game', 'za'); await sleep(500); ok(parseInt(await p.$eval('#count', e => e.textContent)) >= 232, 'offline game dex: ' + await p.$eval('#count', e => e.textContent));
   await p.close();
 }
 console.log('console errors:', errs.length, errs.slice(0, 10));

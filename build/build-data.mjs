@@ -213,7 +213,8 @@ function availability(e) {
   if (e.id === 710 || e.id === 711) return [...sg]; // Pitrouille/Banshitrouye: all four sizes exist in every game with the species
   const out = [];
   for (const g of games) {
-    if (!sg.has(g.id)) continue;
+    // Megas/Primals can appear via transfer + stone even when the species is absent from the regional dex (e.g. Méga-Florizarre in ROSA).
+    if (!sg.has(g.id) && e.cat !== 'mega' && e.cat !== 'primal') continue;
     const vg = vgs[g.mv[g.mv.length - 1]]; const own = vgs[g.mv[0]];
     let ok;
     if (e.cat === 'primal') {
@@ -391,6 +392,34 @@ for (const S of species) {
     sp.f[e.key] = f;
     coreEntries.push(e);
   }
+  // Base follows this species' Megas/Primals into transfer games (even if absent from the regional dex)
+  {
+    const baseAv = avByKey[String(S.id)] || (avByKey[String(S.id)] = []);
+    for (const e of ents) {
+      if (e.cat !== 'mega' && e.cat !== 'primal') continue;
+      for (const gid of avByKey[e.key] || []) if (!baseAv.includes(gid)) baseAv.push(gid);
+    }
+    const bf0 = sp.f[String(S.id)];
+    if (bf0) {
+      bf0.av = baseAv.slice();
+      // learnsets for newly added games (transfer)
+      const baseEnt = ents.find(e => e.key === String(S.id)) || ents[0];
+      if (!lsCache.has(baseEnt.P)) lsCache.set(baseEnt.P, learnsets(baseEnt.P));
+      const per = lsCache.get(baseEnt.P);
+      if (per && baseAv.length) {
+        const sets = (bf0.ls || []).map(ls => ({ h: JSON.stringify(ls), ls }));
+        const idx = { ...(bf0.lm || {}) };
+        for (const gid of baseAv) {
+          if (idx[gid] !== undefined) continue;
+          const ls = gameLearnset(per, gameById[gid]); if (!ls) continue;
+          const h = JSON.stringify(ls); let i = sets.findIndex(s => s.h === h);
+          if (i < 0) { sets.push({ h, ls }); i = sets.length - 1; }
+          idx[gid] = i;
+        }
+        if (sets.length) { bf0.ls = sets.map(s => s.ls); bf0.lm = idx; }
+      }
+    }
+  }
   // identical learnsets between forms -> reference the base
   const baseF = sp.f[String(S.id)];
   for (const [k, f] of Object.entries(sp.f)) {
@@ -423,6 +452,16 @@ for (const id of Object.keys(itemCache)) refOut.it[id] = itemCache[id];
 
 // ---------------------------------------------------------------- core
 const byKeyAll = Object.fromEntries(coreEntries.map(e => [e.key, e]));
+// Dex extras: species available in a game but absent from its regional Pokédex → append at end (national order, no regional nº)
+for (const g of games) {
+  const inDex = new Set(dexOut[g.id].e.map(r => r[0]));
+  const extra = new Set();
+  for (const e of coreEntries) {
+    if ((avByKey[e.key] || []).includes(g.id) && !inDex.has(e.id)) extra.add(e.id);
+  }
+  dexOut[g.id].x = [...extra].sort((a, b) => a - b);
+  g.extra = dexOut[g.id].x.length;
+}
 const core = {
   v: new Date().toISOString(), types: typesOut, charts,
   games: games.map(({ _nums, _info, ...g }) => ({ ...g, ...(gamesWithEnc.has(g.id) ? { enc: 1 } : {}) })),
