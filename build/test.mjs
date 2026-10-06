@@ -34,6 +34,20 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(formLab.vivillon[0][1] === 'Floraison' || /Floraison|Motif/.test(formLab.vivillon[0][1]), tag + ' Prismillon Floraison: ' + formLab.vivillon[0][1]);
   ok(formLab.flabebe[0][1].includes('Rouge') && formLab.deerling[0][1] === 'Printemps' && formLab.shellos[0][1].includes('Occident') && formLab.burmy[0][1].includes('Plante'), tag + ' Flabébé/Vivaldaim/Sancoki/Cheniti defaults: ' + [formLab.flabebe[0][1], formLab.deerling[0][1], formLab.shellos[0][1], formLab.burmy[0][1]]);
   ok(formLab.furfrou[0][1] === 'Sauvage' && formLab.cherrim[0][1].includes('Couvert') && formLab.ogerpon[0][1].includes('Turquoise'), tag + ' Couafarel/Ceriflor/Ogerpon: ' + [formLab.furfrou[0][1], formLab.cherrim[0][1], formLab.ogerpon[0][1]]);
+  // Base forms without an official name: « Commun » (regional variants / others) or « Mâle » (sexual dimorphism) — never « Normal »
+  const common = await p.evaluate(() => {
+    const L = k => (BY_KEY[k] || {}).l;
+    const normals = E.filter(x => !x.c && x.l === 'Normal').map(x => x.k);
+    return { rattata: L('19'), farfuret: L('215'), darmanitan: L('555'), darmGalar: L('555-galar-standard'), bulba: L('3'), pika: L('25'), eevee: L('133'),
+      rotom: L('479'), zard: L('6'), kyogre: L('183') === undefined ? L('382') : L('382'), pump: L('710'), normals };
+  });
+  ok(common.rattata === 'Commun' && common.farfuret === 'Commun' && common.darmanitan === 'Commun' && common.darmGalar === 'Galar', tag + ' regional bases → Commun ' + JSON.stringify(common));
+  ok(common.bulba === 'Mâle' && common.pika === 'Mâle' && common.eevee === 'Mâle', tag + ' gender-split bases → Mâle');
+  ok(common.rotom === 'Commun' && common.zard === 'Commun' && common.kyogre === 'Commun' && common.pump === 'Normale', tag + ' other bases → Commun, Pitrouille size kept');
+  ok(common.normals.every(k => k === '493' || k === '647'), tag + ' only official « Normal » left (Arceus type, Keldeo): ' + common.normals);
+  await go('#/p/19'); await sleep(400);
+  const ratChips = await p.evaluate(() => [...document.querySelectorAll('.fchip span')].map(e => e.textContent.trim()));
+  ok(ratChips[0] === 'Commun' && ratChips.includes('Alola') && !ratChips.includes('Normal'), tag + ' Rattata sheet chips: ' + ratChips);
   // Zarbi A sprite must look like letter A (not F): check via sheet form chips
   await go('#/p/201'); await sleep(400);
   const zarbi = await p.evaluate(() => [...document.querySelectorAll('.fchip span')].map(e => e.textContent.trim()));

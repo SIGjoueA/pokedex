@@ -570,7 +570,7 @@ function statsHTML(arr, gen1, max = 255) {
   return idx.map((i, j) => `<div class="stat"><span class="lb">${lab[j]}</span><span class="v">${arr[i]}</span><div class="bar"><i style="width:${Math.min(100, arr[i] / max * 100)}%;background:${statColor(arr[i])}"></i></div></div>`).join('') +
     `<div class="stat total"><span class="lb">Total</span><span class="v">${tot}</span><div class="bar"><i style="width:${Math.min(100, tot / (gen1 ? 600 : 720) * 100)}%;background:var(--accent)"></i></div></div>`;
 }
-function formLabel(q) { return q.l || (q.c ? q.n : 'Normal'); }
+function formLabel(q) { return q.l || (q.c ? q.n : 'Commun'); }
 function formSwitcher(p, gm) {
   const list = FORMS[p.id]; if (!list || list.length < 2) return '';
   const gi = gm ? GIDX[gm.id] : -1;

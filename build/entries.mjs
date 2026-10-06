@@ -58,6 +58,16 @@ function formArt(F, P) {
   return { img, shiny };
 }
 
+// Base form without an official form name (Yann: never « Normal »):
+// regional variants exist → « Commun » (officially « de Kanto »…); else male/female split → « Mâle »; else « Commun ».
+// True regional variants only (Pikachu « Casquette d’Alola » is a cap, not a regional form).
+const isRegional = f => f.cat === 'reg' && !/(^|-)cap$/.test(f.sfx || '');
+function commonLabel(forms, hasFemale) {
+  if (forms.some(isRegional)) return 'Commun';
+  if (hasFemale) return 'Mâle';
+  return 'Commun';
+}
+
 function baseLabel(forms, F0, defSfx, sfr) {
   if (!forms.length) return '';
   const fn0 = frName(F0.form_names);
@@ -67,8 +77,11 @@ function baseLabel(forms, F0, defSfx, sfr) {
   if (hasFemale && !nonSex.length && !fn0 && !defSfx) return 'Mâle';
   // Default form carries an official form name (Zarbi A, Charmilly Lait Vanille…, Prismillon Floraison…)
   if (fn0) {
-    if (/^Forme de /i.test(fn0)) return 'Normal'; // e.g. "Forme de Morphéo" / "Forme de Motisma"
+    if (/^Forme de /i.test(fn0)) return commonLabel(forms, hasFemale); // e.g. "Forme de Morphéo" / "Forme de Motisma"
     const lab = shortLabel(defSfx || F0.form_name || '', 'form', fn0, sfr, frName(F0.names));
+    // Official « Mode Normal » etc. but the species has regional variants (Darumacho) → « Commun ».
+    // Other official names stay (Arceus type Normal, Keldeo Forme Normale, Pitrouille taille Normale).
+    if (lab && /^normale?$/i.test(lab) && forms.some(isRegional)) return 'Commun';
     if (lab && lab !== sfr) return lab;
   }
   const fromMap = PATTERN_FR[F0.form_name] || PATTERN_FR[defSfx] || CLOAK_FR[F0.form_name] || CLOAK_FR[defSfx];
@@ -77,7 +90,7 @@ function baseLabel(forms, F0, defSfx, sfr) {
     const lab = shortLabel(defSfx, 'form', fn0, sfr);
     if (lab && lab !== defSfx) return lab;
   }
-  return 'Normal';
+  return commonLabel(forms, hasFemale);
 }
 
 export async function loadAll() {
@@ -144,6 +157,8 @@ export async function loadAll() {
     }
     for (let i = forms.length - 1; i >= 0; i--) if (!forms[i].img) forms.splice(i, 1);
     for (const f of forms) { f.fr = f.fr.replace(/Paldéa/g, 'Paldea'); if (f.label) f.label = f.label.replace(/Paldéa/g, 'Paldea'); }
+    // Regional default mode: « Galar Normal » (Darumacho de Galar, Mode Normal) → « Galar »
+    for (const f of forms) if (f.cat === 'reg' && f.label) f.label = f.label.replace(/\s+(Mode\s+)?Normale?$/i, '');
     forms.sort((a, b) => (CAT_RANK[a.cat] - CAT_RANK[b.cat]) || ((a.order ?? 0) - (b.order ?? 0)));
     base.label = baseLabel(forms, F0, defSfx, sfr);
     const seen = {};
