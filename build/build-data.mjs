@@ -210,6 +210,7 @@ const SWSH_VGS = ['sword-shield', 'the-isle-of-armor', 'the-crown-tundra'];
 function availability(e) {
   const sg = speciesGames[e.id] || new Set();
   if (e.cat === 'base') return [...sg];
+  if (e.id === 710 || e.id === 711) return [...sg]; // Pitrouille/Banshitrouye: all four sizes exist in every game with the species
   const out = [];
   for (const g of games) {
     if (!sg.has(g.id)) continue;
@@ -219,8 +220,10 @@ function availability(e) {
       const intro = vgs[e.intro].order;
       ok = g.id === 'oras' && own.order >= intro;
     } else if (e.cat === 'mega') {
-      // Z-A: Megas are independently markable only in Légendes Z-A / Méga-Dimension (species already in sg).
-      ok = g.id === 'za' || g.id === 'zadlc';
+      // Listed in every game with Mega Evolution (moves/sheets per game). Tracking: battle-only outside Z-A, gem rules in Z-A (app).
+      const MEGA_GAMES = ['xy', 'oras', 'sm', 'usum', 'lgpe', 'za', 'zadlc'];
+      const intro = vgs[e.intro].order;
+      ok = MEGA_GAMES.includes(g.id) && (own.order >= intro || (e.intro === 'mega-dimension' && (g.id === 'za' || g.id === 'zadlc')));
     }
     else if (e.cat === 'sex') ok = g.g >= 4 && (!e.variety || moveVgs(e.P).size === 0 || g.mv.some(v => moveVgs(e.P).has(v)));
     else if (e.variety) {

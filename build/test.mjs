@@ -43,8 +43,15 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   });
   ok(common.rattata === 'Commun' && common.farfuret === 'Commun' && common.darmanitan === 'Commun' && common.darmGalar === 'Galar', tag + ' regional bases → Commun ' + JSON.stringify(common));
   ok(common.bulba === 'Mâle' && common.pika === 'Mâle' && common.eevee === 'Mâle', tag + ' gender-split bases → Mâle');
-  ok(common.rotom === 'Commun' && common.zard === 'Commun' && common.kyogre === 'Commun' && common.pump === 'Normale', tag + ' other bases → Commun, Pitrouille size kept');
+  ok(common.rotom === 'Commun' && common.zard === 'Commun' && common.kyogre === 'Commun' && common.pump === 'Taille M', tag + ' other bases → Commun, Pitrouille Taille M');
   ok(common.normals.every(k => k === '493' || k === '647'), tag + ' only official « Normal » left (Arceus type, Keldeo): ' + common.normals);
+  const labs = await p.evaluate(() => Object.fromEntries(['801-mega', '801-original-mega', '978-curly-mega', '978-droopy-mega', '978-stretchy-mega', '6-mega-x', '6-mega-y', '150-mega-x', '800-ultra', '710', '710-small', '710-large', '710-super', '711-super'].map(k => [k, (BY_KEY[k] || {}).l])));
+  ok(labs['801-mega'] === 'Méga' && labs['801-original-mega'] === 'Méga Passé' && labs['978-curly-mega'] === 'Méga Courbée' && labs['978-droopy-mega'] === 'Méga Affalée' && labs['978-stretchy-mega'] === 'Méga Raide' && labs['6-mega-x'] === 'Méga X' && labs['6-mega-y'] === 'Méga Y' && labs['150-mega-x'] === 'Méga X', tag + ' distinct Mega labels ' + JSON.stringify(labs));
+  ok(labs['800-ultra'] === 'Ultra' && labs['710'] === 'Taille M' && labs['710-small'] === 'Taille S' && labs['710-large'] === 'Taille L' && labs['710-super'] === 'Taille XL' && labs['711-super'] === 'Taille XL', tag + ' Necrozma Ultra + Pitrouille sizes');
+  ok(await p.evaluate(() => BY_KEY['25-alola-cap'].c === 'form' && !E.some(e => e.c === 'reg' && /-cap$/.test(e.k))), tag + ' Pikachu Alola cap is a form, not regional');
+  await go('#/p/710'); await sleep(500);
+  const pump = await p.evaluate(() => [...document.querySelectorAll('.fchip')].map(a => { const r = a.getBoundingClientRect(); return { t: a.textContent.trim(), vis: r.width > 0 && r.left >= 0 && r.right <= innerWidth + 1 }; }));
+  ok(pump.length === 4 && pump.every(x => x.vis) && pump.map(x => x.t).join() === 'Taille S,Taille M,Taille L,Taille XL', tag + ' Pitrouille: 4 size chips visible ' + JSON.stringify(pump));
   await go('#/p/19'); await sleep(400);
   const ratChips = await p.evaluate(() => [...document.querySelectorAll('.fchip span')].map(e => e.textContent.trim()));
   ok(ratChips[0] === 'Commun' && ratChips.includes('Alola') && !ratChips.includes('Normal'), tag + ' Rattata sheet chips: ' + ratChips);
@@ -78,6 +85,8 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel('');
   await p.$eval('#formsbtn', e => { e.scrollIntoView({ block: 'center' }); e.click(); }); await sleep(400);
   const nForms = parseInt(await count()); ok(nForms > 1500, tag + ' forms shown: ' + await count());
+  { const c = await count(); const m = c.match(/^(\d+) formes \(\+ (\d+) formes de combat, non comptées\).* (\d+) \/ (\d+) 🔴/);
+    ok(m && m[1] === m[4] && +m[2] > 0, tag + ' forms counter consistent (tracked = denominator): ' + c.slice(0, 110)); }
   await p.type('#q', 'raichu'); await sleep(200); console.log('raichu+forms', await cards(6));
   await p.screenshot({ path: SHOTS + `forms-${tag}.png` });
   await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); });
@@ -352,6 +361,8 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok((await cgState()).dis && await p.$('.dnav .gem'), tag + ' Mega sheet: Capturé disabled, gem button present');
   const gemUI = await p.$eval('.dnav .gem', e => ({ aria: e.getAttribute('aria-label'), img: e.querySelector('img')?.getAttribute('src'), pressed: e.getAttribute('aria-pressed') }));
   ok(gemUI.img && /stones\/(venusaurite|key-stone)\.png/.test(gemUI.img) && /Florizarrite|Méga-Gemme|Gemme/.test(gemUI.aria||''), tag + ' gem sprite+label: ' + JSON.stringify(gemUI));
+  const cap = await p.evaluate(() => { const c = document.querySelector('.dnav .gem .gemcap'); const r = c && c.getBoundingClientRect(); return { t: c && c.textContent, shown: !!c && (!matchMedia('(hover:none)').matches || (r.width > 20 && r.right <= innerWidth)), over: document.documentElement.scrollWidth > innerWidth }; });
+  ok(cap.t === gemUI.aria && cap.shown && !cap.over, tag + ' gem caption (touch) visible, no overflow ' + JSON.stringify(cap));
   ok(!(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'za'))), tag + ' Mega not caught without gem/base');
   await p.click('.dnav .gem'); await sleep(100);
   ok((await ls2('mega_gems')).includes('3-mega') && !(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'za'))), tag + ' gem alone insufficient');
@@ -374,6 +385,44 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     return { ok: b.swDone && HOME_C.has(m.k) && homeComplete(m, homeAvail(m)), swDone: b.swDone, home: HOME_C.has(m.k) };
   });
   ok(megaCounted.ok, tag + ' Mega counts in forms uni completion ' + JSON.stringify(megaCounted));
+  // Megas listed in every Mega game (X/Y, ROSA, SL, USUL, LGPE, Z-A); outside Z-A battle-only (inherit base, not counted)
+  const megaGames = await p.evaluate(() => ({ v: gamesOf(BY_KEY['3-mega']), g: gamesOf(BY_KEY['6-mega-x']), m: gamesOf(BY_KEY['380-mega'] || BY_KEY['3-mega']), dlc: gamesOf(BY_KEY['978-curly-mega']) }));
+  ok(megaGames.v.includes('xy') && megaGames.v.includes('lgpe') && megaGames.v.includes('za') && megaGames.m.some(g => g === 'oras') && megaGames.dlc.join() === 'zadlc', tag + ' Megas in all Mega games ' + JSON.stringify(megaGames));
+  await go('#/'); await sel('xy'); await sleep(300);
+  const xyCnt = await count();
+  ok(await p.evaluate(() => isCombat(BY_KEY['3-mega'], 'xy') && !isCombat(BY_KEY['3-mega'], 'za') && !isCombat(BY_KEY['3-mega'], null) && !isCombat(BY_KEY['3-mega'], 'home')), tag + ' Mega combat outside Z-A only');
+  ok(/\(\+ \d+ formes de combat, non comptées\)/.test(xyCnt), tag + ' X/Y forms counter lists Megas as combat: ' + xyCnt.slice(0, 100));
+  ok(await p.evaluate(() => [...document.querySelectorAll('#results a[href="#/p/3-mega"]')].length === 1), tag + ' Méga-Florizarre listed in X/Y');
+  await go('#/p/3-mega'); await sleep(500);
+  const xyTrack = await p.$eval('#trackinfo', e => e.textContent);
+  ok(/hors Légendes Z-A : variante de combat/.test(xyTrack) && !(await p.$('#trackinfo .tr')) && (await cgState()).dis, tag + ' X/Y Mega sheet battle-only, no transfer: ' + xyTrack.slice(0, 90));
+  ok(await p.evaluate(() => !!document.querySelector('[data-mtab], .moves, #moves')), tag + ' X/Y Mega sheet has moves');
+  await go('#/p/3'); await sleep(300); await p.click('.dnav .cg'); await sleep(150);
+  ok(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'xy') && CAUGHT_G.has('xy:3') && !CAUGHT_G.has('xy:3-mega')), tag + ' X/Y Mega inherits base mark');
+  // Méga-Gemme on the base sheet (Z-A), one state per stone shared across forms, immediate re-render
+  await go('#/'); await sel('za'); await go('#/p/6'); await sleep(500);
+  const baseGems = await p.evaluate(() => [...document.querySelectorAll('#trackinfo .gem[data-mega]')].map(b => [b.dataset.mega, b.getAttribute('aria-pressed'), b.querySelector('.gemcap').textContent]));
+  ok(baseGems.length === 2 && baseGems[0][0] === '6-mega-x' && baseGems[1][0] === '6-mega-y' && baseGems.every(g => g[1] === 'false'), tag + ' Dracaufeu base sheet (Z-A): 2 gem buttons ' + JSON.stringify(baseGems));
+  await p.click('#trackinfo .gem[data-mega="6-mega-y"]'); await sleep(80);
+  const afterTap = await p.evaluate(() => [...document.querySelectorAll('#trackinfo .gem[data-mega]')].map(b => b.getAttribute('aria-pressed')));
+  ok(afterTap.join() === 'false,true', tag + ' base-sheet gem tap updates immediately (no reload): ' + afterTap);
+  await go('#/p/6-mega-y'); await sleep(400);
+  ok(await p.$eval('.dnav .gem', b => b.getAttribute('aria-pressed')) === 'true', tag + ' gem set on base sheet shows on Mega sheet');
+  await p.click('.dnav .gem'); await sleep(80);
+  const megaTap = await p.evaluate(() => ({ btn: document.querySelector('.dnav .gem').getAttribute('aria-pressed'), info: document.querySelector('#trackinfo').textContent }));
+  ok(megaTap.btn === 'false' && /non obtenue/.test(megaTap.info), tag + ' Mega-sheet gem tap updates button + track info immediately ' + JSON.stringify(megaTap.btn));
+  await p.click('.dnav .gem'); await sleep(80);
+  ok(await p.$eval('.dnav .gem', b => b.getAttribute('aria-pressed')) === 'true' && /obtenue/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' Mega-sheet gem re-tap on');
+  await go('#/'); await sel('zadlc'); await go('#/p/978-droopy-mega'); await sleep(400);
+  await p.click('.dnav .gem'); await sleep(80);
+  const shared = await p.evaluate(() => ({ curly: hasGem(BY_KEY['978-curly-mega']), stretchy: hasGem(BY_KEY['978-stretchy-mega']), mag: hasGem(BY_KEY['801-original-mega']), x: hasGem(BY_KEY['6-mega-x']), y: hasGem(BY_KEY['6-mega-y']) }));
+  ok(shared.curly && shared.stretchy && !shared.mag && !shared.x && shared.y, tag + ' gem shared across forms of one stone only ' + JSON.stringify(shared));
+  // Mega capture + counter follow the gem immediately: Dracaufeu caught in Z-A → Méga Y caught; toggling the gem off un-catches it
+  await go('#/'); await sel('za'); await go('#/p/6'); await sleep(400); await p.click('.dnav .cg'); await sleep(80);
+  ok(await p.evaluate(() => isCaught(BY_KEY['6-mega-y'], 'za') && !isCaught(BY_KEY['6-mega-x'], 'za')), tag + ' base caught + gem Y → Méga Y caught only');
+  await p.click('#trackinfo .gem[data-mega="6-mega-y"]'); await sleep(80);
+  ok(await p.evaluate(() => !isCaught(BY_KEY['6-mega-y'], 'za')) && await p.$eval('#trackinfo .gem[data-mega="6-mega-y"]', b => b.getAttribute('aria-pressed')) === 'false', tag + ' gem off → Méga Y no longer caught, button updated');
+  await go('#/'); await sel(''); await p.evaluate(() => { state.forms = false; }); await go('#/'); await sleep(200);
 
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   // still-battle-only (Primo): inherits

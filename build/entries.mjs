@@ -28,21 +28,32 @@ export function formCategory(sfx) {
   if (/(^|-)gmax$/.test(sfx) || sfx === 'eternamax') return 'gmax';
   if (/^mega/.test(sfx) || /-mega(-|$)/.test(sfx)) return 'mega';
   if (sfx === 'primal') return 'primal';
+  if (/(^|-)cap$/.test(sfx)) return 'form'; // Pikachu « Casquette d’Alola » is a cap, not a regional form
   if (/(^|-)(alola|galar|hisui|paldea)(-|$)/.test(sfx)) return 'reg';
   return 'form';
 }
 const CAT_RANK = { sex: 0, form: 1, reg: 2, mega: 3, primal: 3, gmax: 4 };
+// Megas of non-default base forms: Magearna Couleur du Passé, Nigirigon Courbée / Affalée / Raide (official FR form names)
+const MEGA_PRE_FR = { original: 'Passé', curly: 'Courbée', droopy: 'Affalée', stretchy: 'Raide' };
+// Pitrouille / Banshitrouye sizes (Yann: Taille S / M / L / XL)
+const SIZE_FR = { small: 'Taille S', average: 'Taille M', large: 'Taille L', super: 'Taille XL' };
 
 function shortLabel(sfx, cat, formNameFr, speciesFr, fullFr) {
   if (cat === 'sex') return sfx === 'female' ? 'Femelle' : (formNameFr || sfx);
   if (cat === 'gmax') return sfx === 'eternamax' ? 'Éternamax' : 'Gigamax' + (/^(.+)-gmax$/.test(sfx) && sfx !== 'gmax' ? ' ' + sfx.replace(/-gmax$/, '').replace(/-/g, ' ') : '');
-  if (cat === 'mega') { const m = sfx.match(/(?:mega-(x|y|z)$)|(?:^(male|female)-mega$)/); const x = m && (m[1] || m[2]); return 'Méga' + (x ? ' ' + ({ x: 'X', y: 'Y', z: 'Z', male: '♂', female: '♀' }[x]) : ''); }
+  if (cat === 'mega') {
+    const m = sfx.match(/(?:mega-(x|y|z)$)|(?:^(male|female)-mega$)/); const x = m && (m[1] || m[2]);
+    if (x) return 'Méga ' + ({ x: 'X', y: 'Y', z: 'Z', male: '♂', female: '♀' }[x]);
+    const pre = (sfx.match(/^(.+)-mega$/) || [])[1]; // species with several Megas from different base forms
+    return 'Méga' + (pre && MEGA_PRE_FR[pre] ? ' ' + MEGA_PRE_FR[pre] : '');
+  }
   if (cat === 'primal') return 'Primo';
   if (cat === 'reg' && REGION[sfx]) return REGION[sfx];
   if (cat === 'reg') { const t = (fullFr || formNameFr || sfx).replace(speciesFr, '').replace(/^\s*(de|d’)\s*/, '').trim(); return t || sfx; }
   if (!formNameFr && (PATTERN_FR[sfx] || CLOAK_FR[sfx])) return PATTERN_FR[sfx] || CLOAK_FR[sfx];
   let t = (formNameFr || sfx).replace(speciesFr, '').trim();
   t = t.replace(/^(Forme|Aspect|Motif|Style|Mode|Coupe|Fleur|Taille|Noyau|Casquette|Masque|Mer|Plumage)\s+(d’|de |du |des |de la |)?/i, m => /^(Casquette|Masque|Plumage|Fleur|Noyau|Mer)/i.test(m) ? m : '');
+  t = t.replace(/^[\s\-–]+|[\s\-–]+$/g, ''); // « Ultra-Necrozma » minus species → « Ultra »
   return t || PATTERN_FR[sfx] || CLOAK_FR[sfx] || sfx;
 }
 
@@ -161,6 +172,12 @@ export async function loadAll() {
     for (const f of forms) if (f.cat === 'reg' && f.label) f.label = f.label.replace(/\s+(Mode\s+)?Normale?$/i, '');
     forms.sort((a, b) => (CAT_RANK[a.cat] - CAT_RANK[b.cat]) || ((a.order ?? 0) - (b.order ?? 0)));
     base.label = baseLabel(forms, F0, defSfx, sfr);
+    if (S.id === 710 || S.id === 711) { // sizes S / M / L / XL, in size order
+      base.label = SIZE_FR[defSfx] || SIZE_FR.average;
+      for (const f of forms) if (SIZE_FR[f.sfx]) f.label = SIZE_FR[f.sfx];
+      const ord = ['small', 'average', 'large', 'super'];
+      forms.sort((a, b) => ord.indexOf(a.sfx) - ord.indexOf(b.sfx));
+    }
     const seen = {};
     for (const e of [base, ...forms]) { (seen[e.fr] ||= []).push(e); }
     for (const arr of Object.values(seen)) if (arr.length > 1) for (const e of arr) if (e.label) e.fr += ` (${e.label})`;

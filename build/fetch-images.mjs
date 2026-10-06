@@ -47,11 +47,13 @@ await pool(jobs, 10, async e => {
 fs.writeFileSync(MAN, JSON.stringify(man));
 // duplicates among forms of one species (same bytes as the base or an earlier form)
 const KEEP_DUPES = new Set(['201-f']); // Zarbi F has no distinct artwork but must stay listed (image copied from the base)
+// Species whose forms share one artwork but are real, separately tracked forms: Cheniselle capes, Lépidonille/Pérégrain patterns, Pitrouille/Banshitrouye sizes (Taille S/M/L/XL)
+const KEEP_DUPE_SPECIES = new Set([414, 664, 665, 710, 711]);
 const dupes = []; const seen = {};
 for (const e of entries) {
   const m = man[e.key]; if (!m?.sha) continue;
   const k = e.id + ':' + m.sha;
-  if (seen[k]) { if (e.cat !== 'base' && !KEEP_DUPES.has(e.key)) dupes.push(e.key); } else seen[k] = e.key;
+  if (seen[k]) { if (e.cat !== 'base' && !KEEP_DUPES.has(e.key) && !KEEP_DUPE_SPECIES.has(e.id)) dupes.push(e.key); } else seen[k] = e.key;
 }
 fs.writeFileSync(path.join(HERE, 'art-dupes.json'), JSON.stringify(dupes));
 for (const k of dupes) for (const f of [path.join(IMG, k + '.webp'), path.join(IMG, 's', k + '.webp')]) fs.rmSync(f, { force: true });
