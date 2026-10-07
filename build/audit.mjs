@@ -104,4 +104,13 @@ ok(`GO max CP vs pogoapi (${n} species)`, bad.length < 5, bad.slice(0, 8).join('
 eq('TM rb Mega Punch', tm.rb['5'], 'CT01'); eq('TM sv count', Object.keys(tm.sv).length, 229); ok('CS rb Cut', tm.rb['15'] === 'CS01', tm.rb['15']);
 ok('Enc Rattata rb Route 1', (F(19).en.rb || []).some(r => loc.a[r[0]] === 'Route 1'));
 ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
+// ---- v21 Hors dex: no sibling-dex species in a « Hors dex » tail; separate lists for games with expansions
+{
+  const dx = Object.fromEntries(core.games.map(g => [g.id, D(`dex/${g.id}.json`)])), grp = g => g.base || g.id;
+  for (const g of core.games) { const sib = new Set(core.games.filter(h => grp(h) === grp(g)).flatMap(h => dx[h.id].e.map(r => r[0]))); const bad = (dx[g.id].x || []).filter(s => sib.has(s)); ok('Hors dex ' + g.id + ' sans espèce d’un dex de la même sauvegarde', !bad.length, JSON.stringify(bad.slice(0, 5))); ok('extra count ' + g.id, (g.extra || 0) === (dx[g.id].x || []).length); }
+  for (const b of ['sw', 'sv']) { const h = D(`dex/hors-${b}.json`), reg = new Set(core.games.filter(g => grp(g) === b).flatMap(g => dx[g.id].e.map(r => r[0]))); ok('hors-' + b + ' list', h.x.length > 0 && h.x.every(s => !reg.has(s)) && h.x.every((s, i) => !i || h.x[i - 1] < s), h.x.length); ok('hors-' + b + ' base dexes untouched', core.games.filter(g => grp(g) === b).every(g => !(dx[g.id].x || []).length)); }
+  eq('Hors dex É/B count', D('dex/hors-sw.json').x.length, 80); eq('Hors dex É/V count', D('dex/hors-sv.json').x.length, 69);
+  eq('ROSA total', dx.oras.e.length + dx.oras.x.length, 721); ok('Mew Hors dex ROSA → sp.hx', (D('sp/151.json').hx || []).includes('oras') && (D('sp/151.json').hx || []).includes('sw'));
+  ok('Z-A Hors dex vide (Méga-Dimension)', !dx.za.x.length && !dx.zadlc.x.length);
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -54,7 +54,7 @@ main{max-width:1100px;margin:0 auto;padding:10px 12px}
 .foot p{margin:12px 0 0}
 
 /* ---------- detail ---------- */
-.dnav{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line)}
+.dnav{background:var(--bg);display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line)}
 .dnav .sp{flex:1}
 .dnav a,.dnav button{min-width:var(--tap);height:var(--tap);display:grid;place-items:center;border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);text-decoration:none;font-size:20px;cursor:pointer;padding:0 12px}
 .dnav a.disabled{opacity:.3;pointer-events:none}
@@ -118,28 +118,10 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
 }
 
 .mk{font-size:13px;margin-left:2px}.mk.ok{color:#46c46a}
-.dnav .cg[aria-pressed=true]{color:#46c46a;border-color:#46c46a}
-.dnav .sh{font-size:15px}.dnav .sh[aria-pressed=true]{color:#f2c200;border-color:#f2c200}
-.dnav .cg{font-size:15px}
 .foot .filebtn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);cursor:pointer}
 
 .ball{vertical-align:-.15em}.ball.off{filter:grayscale(1);opacity:.55}.mk.ok{display:inline-block}
-.dnav .cg[aria-pressed=true]{color:#e53935;border-color:#e53935}
 
-/* Fix: icon + label on one line, no overflow */
-.dnav .cg,.dnav .sh,.dnav .gem{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;padding:0 10px;font-size:14px}
-.dnav .gem{padding:0 6px;min-width:44px}
-.dnav .gem .gemimg{width:28px;height:28px;object-fit:contain;display:block;image-rendering:auto}
-.dnav .gem[aria-pressed=true]{background:#5b4fcf;border-color:#5b4fcf;box-shadow:0 0 0 2px #c4b5fd}
-.dnav .gem[aria-pressed=true] .gemimg{filter:drop-shadow(0 0 1px #fff)}
-.dnav .cg .ball{flex:none;width:1.2em;height:1.2em}
-@media(max-width:480px){.dnav{gap:6px;padding:8px}.dnav a,.dnav button{padding:0 8px}.dnav .cg,.dnav .sh{font-size:13px;gap:4px}}
-.dnav .cg,.dnav .sh{flex:none;min-width:0}
-@media(max-width:480px){
-  .dnav{flex-wrap:wrap;row-gap:6px}
-  .dnav a,.dnav button{min-width:40px;height:44px}
-  .dnav .cg,.dnav .sh{font-size:13px}
-}
 
 
 /* ---------- v7: forms, games, moves, GO ---------- */
@@ -160,8 +142,6 @@ button.toggle[aria-pressed=true]{background:var(--accent);color:var(--accent-fg)
 .gamebar{display:flex;align-items:center;gap:10px}
 .gamebar label{font-weight:700}
 .gamebar select{flex:1;min-width:0;height:44px;border-radius:12px;border:2px solid var(--line);background:var(--bg3);padding:0 8px;font-size:15px}
-.gamebar{position:sticky;top:60px;z-index:4}
-@media(max-width:480px){.gamebar{position:static}}
 .mute{color:var(--mute)}
 .rn-line{margin:0;font-size:16px}
 .kv3{grid-template-columns:repeat(3,1fr)}.kv.sm b{font-size:16px}.kv{margin-top:8px}
@@ -190,13 +170,6 @@ h2 .cntb{margin-left:6px;vertical-align:middle;font-size:12px;min-width:1.45em;h
 .evpk{width:84px}
 .evrow>.evlink{max-width:150px}
 .evbranch{gap:6px}
-/* 360px: keep all detail buttons (nav, Capturé, Shiny, favori) on a single row */
-@media(max-width:400px){
-  .dnav{flex-wrap:nowrap;gap:4px;padding:8px 6px}
-  .dnav a,.dnav button{min-width:36px;padding:0 4px}
-  .dnav .cg,.dnav .sh{font-size:12.5px;gap:3px;padding:0 6px}
-  .dnav .sp{flex:1 1 0;min-width:0}
-}
 
 /* ---------- v8: suivi par jeu, rencontres, avertissements ---------- */
 .trackinfo{max-width:760px;margin:0 auto;padding:6px 14px 0;font-size:12.5px;color:var(--mute)}
@@ -205,11 +178,8 @@ h2 .cntb{margin-left:6px;vertical-align:middle;font-size:12px;min-width:1.45em;h
 .enc .ms{padding-left:8px}
 details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;display:flex;align-items:center}
 .trnote,.disclaimer{font-style:italic}
-.trackinfo .trackbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .trackinfo button{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;min-height:40px;padding:0 12px;border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);cursor:pointer;font-size:13.5px;color:var(--fg)}
 .trackinfo button .ball{width:1.2em;height:1.2em;flex:none}
-.trackinfo button.tr[aria-pressed=true]{color:#2f80ed;border-color:#2f80ed}
-.trackinfo button.trs[aria-pressed=true]{color:#f2c200;border-color:#f2c200}
 .dnav button:disabled{opacity:.6;cursor:default}
 .mk.hm{font-size:12px}
 .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--mute);padding:4px 0}
@@ -227,24 +197,6 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .mk.hm .hmi{vertical-align:-.15em;fill:rgba(90,160,255,.35);stroke:#5aa0ff;width:1.15em;height:1.15em}
 .mk.hm.gold .hmi{fill:#f2c200;stroke:#b8860b;filter:drop-shadow(0 0 2px #f2b705)}
 
-/* Méga-Gemme: stone name visible under the sprite on touch screens (no hover tooltip there) */
-.dnav .gem .gemcap{display:none}
-@media (hover:none){
-  .dnav .gem{flex-direction:column;justify-content:center;gap:1px;padding:2px 4px;height:auto;min-height:44px}
-  .dnav .gem .gemimg{width:24px;height:24px}
-  .dnav .gem .gemcap{display:block;font-size:9px;line-height:1.1;max-width:58px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit}
-  .dnav .gem[aria-pressed=true] .gemcap{color:#fff}
-}
-/* Mega sheets on phones: Capturé / Shiny are derived (disabled) → icon only, so the Méga-Gemme button + caption fit on one line */
-@media(max-width:480px){.dnav.mega .cg .t,.dnav.mega .sh .t{display:none}.dnav.mega .cg,.dnav.mega .sh{min-width:44px;padding:0 6px}.dnav.mega{gap:5px}}
-/* Méga-Gemme buttons on the base-form sheet (Z-A): sprite + stone name, same pressed look */
-.trackinfo .gems{align-items:center}
-.trackinfo .gem{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:2px 10px;border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);cursor:pointer;font-size:13px}
-.trackinfo .gem .gemimg{width:28px;height:28px;object-fit:contain}
-.trackinfo .gem .gemcap{display:inline}
-.trackinfo .gem[aria-pressed=true]{background:#5b4fcf;border-color:#5b4fcf;color:#fff;box-shadow:0 0 0 2px #c4b5fd}
-.trackinfo .gems>.mute{flex-basis:100%}
-
 /* Pitrouille / Banshitrouye: same art, display scale by size (S < M < L < XL) */
 .card.sz-s img,.hero.sz-s img{transform:scale(.72);transform-origin:center}
 .card.sz-m img,.hero.sz-m img{transform:scale(1)}
@@ -255,3 +207,42 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .list .card.sz-l img{transform:scale(1.12)}
 .list .card.sz-xl img{transform:scale(1.28)}
 .rn.hors{color:var(--muted);font-style:italic;font-weight:500}
+
+/* ---------- v21: sheet layout — sticky header (← ‹ › ★) + fixed action row ---------- */
+.dtop{position:sticky;top:0;z-index:6;background:var(--bg)}
+.actbar{background:var(--bg);border-bottom:1px solid var(--line);padding:6px 12px 8px}
+.actctx{max-width:760px;margin:0 auto 4px;font-size:12px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.actctx b{color:var(--fg)}
+.acts{max-width:760px;margin:0 auto;display:flex;gap:8px}
+.act{flex:1 1 0;min-width:0;min-height:var(--tap);display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:4px 8px;border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);color:var(--fg);font:inherit;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap}
+.act .t{overflow:hidden;text-overflow:ellipsis}
+.act .ball{flex:none;width:1.25em;height:1.25em}
+.act .ic{font-size:1.1em;line-height:1}
+.act .gemimg{width:28px;height:28px;object-fit:contain;flex:none;display:block}
+.act:disabled{opacity:.38;cursor:default;filter:grayscale(.6)}
+.act.cg[aria-pressed=true]{color:#e53935;border-color:#e53935}
+.act.sh[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)}
+.act.tr[aria-pressed=true]{color:#2f80ed;border-color:#2f80ed;background:rgba(47,128,237,.1)}
+.act.gem[aria-pressed=true],.act.energy[aria-pressed=true]{background:#5b4fcf;border-color:#5b4fcf;color:#fff;box-shadow:0 0 0 2px #c4b5fd}
+.act.gem[aria-pressed=true] .gemimg,.act.energy[aria-pressed=true] .gemimg{filter:drop-shadow(0 0 1px #fff)}
+@media (prefers-color-scheme:dark){.act.sh[aria-pressed=true]{color:#f2c200}}
+.trackbox .gamebar{margin:0}
+.trackbox .trackinfo{max-width:none;margin:0;padding:8px 0 0}
+.act .shl{display:none}
+.gobox .gol1{margin:0 0 6px}
+.golink{font-weight:600}
+/* Phones: the action row is a bar stuck to the bottom of the screen (thumb zone); icon above a short label */
+@media (max-width:699px){
+  .actbar{position:fixed;left:0;right:0;bottom:0;z-index:7;border-bottom:0;border-top:1px solid var(--line);padding:4px 6px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 14px rgba(0,0,0,.18)}
+  .actctx{text-align:center;font-size:11px;margin-bottom:3px}
+  .acts{gap:5px}
+  .act{flex-direction:column;gap:2px;padding:3px 2px;min-height:52px;font-size:11.5px;line-height:1.1}
+  .act .ball{width:22px;height:22px}
+  .act .ic{font-size:20px}
+  .act .ball.hm,.act svg.hm{width:22px;height:22px}
+  .act .gemimg{width:24px;height:24px}
+  .act .t{max-width:100%;line-height:1.3}
+  .act .lgl{display:none}.act .shl{display:inline}
+  #detail-view:not([hidden]){padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+.h3{font-size:14px;margin:12px 0 4px;font-weight:700}

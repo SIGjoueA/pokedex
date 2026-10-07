@@ -28,14 +28,19 @@ let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, 
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
 const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get('shiny_g', []));
-const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'home' };
+const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'home' };
 let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // Tracking context: a game id (or 'go') when one is selected in the Jeux filter, otherwise null = global marks (unchanged behaviour)
 // 'home' = Pokémon HOME: read-only, derived from the "Transféré vers Home" marks of the compatible games.
 const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('homeshiny_g', []));
-// Légendes Z-A: owning the Méga-Gemme for a Mega form (keys like "3-mega", "6-mega-x"). Captured in Z-A = base caught in the Z-A save + gem.
-const MEGA_GEMS = new Set(store.get('mega_gems', []));
+// Méga-Gemmes: ownership per save group and per stone — keys "<save>:<megaKey>" ("za:3-mega", "xy:6-mega-x", "oras:3-mega"…).
+// Légendes Z-A: captured = base caught in the Z-A save + gem. Other Mega games: plain ownership mark (Megas stay battle-only, no completion effect).
+// Legacy keys without a prefix (v15–v20) were Z-A gems.
+const MEGA_GEMS = new Set(store.get('mega_gems', []).map(k => k.includes(':') ? k : 'za:' + k));
+// Pokémon GO: Méga-énergie obtained, one mark per species (national ids as strings).
+const MEGA_ENERGY = new Set(store.get('mega_energy', []).map(String));
+let ENERGY_ICONS = { generic: 'img/energy/generic.webp', ids: new Set() };
 let MEGA_STONES = { fallback: { item: 'key-stone', fr: 'Gemme Sésame', img: 'img/stones/key-stone.png', label: 'Méga-Gemme' }, stones: {} };
 const megaStoneOf = p => {
   if (!p?.mb) return null;
@@ -48,21 +53,35 @@ const megaStoneOf = p => {
 // Stones without a PokéAPI item: one per species + X/Y/Z.
 const gemId = p => (MEGA_STONES.stones?.[p.k]?.item) || `${p.id}${(p.k.match(/mega-(x|y|z)$/) || ['', ''])[1] ? '-' + p.k.match(/mega-(x|y|z)$/)[1] : ''}`;
 const gemMates = p => E.filter(q => q.mb && q.id === p.id && gemId(q) === gemId(p));
-// Megas whose Méga-Gemme can be set from this sheet: the Mega itself, or (Z-A context) the Megas of this base form — one button per stone.
-function gemsFor(p, c) {
-  if (p.mb) return [p];
-  if (!c || !isZa(c)) return [];
-  const seen = new Set();
-  return E.filter(q => q.mb === p.k && megaTrackGames(q).some(g => saveOf(g) === saveOf(c))).filter(q => !seen.has(gemId(q)) && seen.add(gemId(q)));
+// Megas of a sheet: the Mega itself, or the Megas of this (base) form. One gem button per stone.
+const megasOf = p => p.mb ? [p] : E.filter(q => q.mb === p.k);
+const uniqGems = ms => { const seen = new Set(); return ms.filter(q => !seen.has(gemId(q)) && seen.add(gemId(q))); };
+// The Mega exists in this game's save group (X/Y, ROSA, SL, USUL, Let's Go, Z-A, Méga-Dimension…)
+const megaInGame = (q, c) => !!(c && GAME_BY[c] && gamesOf(q).some(g => saveOf(g) === saveOf(c)));
+// Gem slot of the action row: every stone of the sheet, enabled only in a game where that Mega exists (greyed elsewhere: overview, Home, other games)
+const gemSlot = (p, c) => uniqGems(megasOf(p)).map(m => ({ m, on: megaInGame(m, c) }));
+const gemsFor = (p, c) => gemSlot(p, c).filter(x => x.on).map(x => x.m);
+const gemGrp = c => saveOf(c || 'za');
+function gemBtnHTML(m, c, on, short) {
+  const st = megaStoneOf(m), za = isZa(c), pressed = !!on && hasGem(m, c);
+  const why = !on ? ' — à marquer dans un jeu où cette Méga existe' : za ? ' — requise avec la forme de base pour capturer cette Méga en Z-A' : ` — possédée dans ${trackName(c)} (simple marque : la Méga reste une forme de combat, sans effet sur la complétion)`;
+  return `<button class="act gem" type="button" data-mega="${m.k}"${on ? '' : ' disabled'} aria-pressed="${pressed}" aria-label="${esc(st.label)}${on ? ' – ' + esc(trackName(c)) : ''}" title="${esc(st.label)} (${esc(m.n)})${st.specific ? '' : ' – sprite Gemme Sésame'}${why}"><img class="gemimg" src="${st.img}" alt="" width="28" height="28" decoding="async"><span class="t">${esc(short || st.label)}</span></button>`;
 }
-const gemBtnHTML = (m, cls = '') => { const st = megaStoneOf(m); return `<button class="gem${cls}" type="button" data-mega="${m.k}" aria-pressed="${hasGem(m)}" aria-label="${esc(st.label)}" title="${esc(st.label)} (${esc(m.n)})${st.specific ? '' : ' – sprite Gemme Sésame'} — requise avec la forme de base pour capturer cette Méga en Z-A"><img class="gemimg" src="${st.img}" alt="" width="28" height="28" decoding="async"><span class="gemcap">${esc(st.label)}</span></button>`; };
+// Pokémon GO: species whose Mega is released in GO (needs the sheet data)
+const goMegas = p => { const sp = DET && DET.p && DET.p.id === p.id ? DET.sp : null; return sp ? megasOf(p).filter(q => sp.f[q.k] && sp.f[q.k].go && sp.f[q.k].go.r) : []; };
+const hasEnergy = p => MEGA_ENERGY.has(String(p.id));
+function energyBtnHTML(p) {
+  const base = BY_KEY[String(p.id)] || p, img = ENERGY_ICONS.ids.has(p.id) ? `img/energy/${p.id}.webp` : ENERGY_ICONS.generic;
+  return `<button class="act energy" type="button" data-energy="${p.id}" aria-pressed="${hasEnergy(p)}" aria-label="Méga-énergie ${esc(base.n)} – Pokémon GO" title="Méga-énergie de ${esc(base.n)} obtenue dans Pokémon GO (une marque par espèce)"><img class="gemimg" src="${img}" alt="" width="28" height="28" decoding="async"><span class="t"><span class="lgl">Méga-énergie</span><span class="shl">Énergie</span></span></button>`;
+}
+function toggleEnergy(p) { const k = String(p.id); if (MEGA_ENERGY.has(k)) MEGA_ENERGY.delete(k); else MEGA_ENERGY.add(k); saveTrack(); }
 
 const isZa = c => c === 'za' || c === 'zadlc';
 const ZA_IDS = new Set(['za', 'zadlc']);
 /** Z-A Mega forms are tracked only for Z-A / Méga-Dimension (not XY/ORAS/LGPE battle megas, not GO). */
 const megaTrackGames = p => gamesOf(p).filter(g => ZA_IDS.has(g));
 
-const hasGem = p => !!(p && p.mb && (MEGA_GEMS.has(p.k) || gemMates(p).some(q => MEGA_GEMS.has(q.k))));
+const hasGem = (p, c = 'za') => !!(p && p.mb && [p, ...gemMates(p)].some(q => MEGA_GEMS.has(gemGrp(c) + ':' + q.k)));
 const megaBaseP = p => (p && p.mb && BY_KEY[p.mb]) || null;
 const zaMegaCaughtGames = p => {
   if (!p?.mb || !hasGem(p)) return [];
@@ -90,6 +109,8 @@ const gkey = (c, p) => c + ':' + mp(p, c).k;
 const saveOf = g => (GAME_BY[g] && GAME_BY[g].base) || g;
 const saveGames = g => GAMES.filter(x => saveOf(x.id) === saveOf(g)).map(x => x.id);
 const grpTargets = (c, p) => { if (!GAME_BY[c]) return [c]; const av = gamesOf(mp(p, c)); const t = saveGames(c).filter(g => av.includes(g)); return t.length ? t : [c]; };
+// Entry listed in a game where it does not exist but a game of the same save does (Méga-Dex: Méga-Dimension-only species in the Z-A context) → read that game's marks (identical: marks are written to the whole save group)
+const ctxFor = (p, c) => { if (!GAME_BY[c] || inGame(p, GIDX[c])) return c; const g = saveGames(c).find(x => inGame(p, GIDX[x])); return g || c; };
 const sharedWith = (c, p) => grpTargets(c, p).filter(g => g !== c);
 const grpsOf = av => [...new Set(av.map(saveOf))];
 const grpHas = (G, have) => have.some(h => saveOf(h) === G);
@@ -143,6 +164,7 @@ const isCaught = (p, c = trackCtx()) => {
     if (c) return false;
     return zaMegaCaughtGames(p).length > 0;
   }
+  c = ctxFor(p, c);
   return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p));
 };
 const isShiny = (p, c = trackCtx()) => {
@@ -153,13 +175,14 @@ const isShiny = (p, c = trackCtx()) => {
     if (c) return false;
     return zaMegaShinyGames(p).length > 0;
   }
+  c = ctxFor(p, c);
   return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p));
 };
-const isTrans = (p, c = trackCtx()) => TRANS_G.has(gkey(c, p)), isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(c, p));
+const isTrans = (p, c = trackCtx()) => TRANS_G.has(gkey(ctxFor(mp(p, c), c), p)), isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(ctxFor(mp(p, c), c), p));
 // The sheet has its own tracking context: its game switcher (state.dgame). 'home' = general infos → read-only (Home view if the list is on Home, else the derived overview).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; if (d === 'home') return state.game === 'home' ? 'home' : null; return (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('mega_gems', [...MEGA_GEMS]); rebuildHome(); };
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); rebuildHome(); };
 function toggleMark(p, kind, c = trackCtx()) {
   if (!c || c === 'home' || p.bo || p.mb) return; // base view, Home, battle-only, and Z-A Megas (caught/shiny derived from base + gem)
   const on = !(kind === 'caught' ? CAUGHT_G : SHINY_G).has(gkey(c, p));
@@ -192,7 +215,7 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
   if (on && isZa(c) && !p.mb && !p.bo) {
     for (const m of E) {
       if (m.mb !== p.k && m.mb !== String(p.id)) continue;
-      if (!hasGem(m)) continue;
+      if (!hasGem(m, c)) continue;
       for (const g of grpTargets(c, m)) {
         const k = gkey(g, m);
         TRANS_G.add(k);
@@ -202,10 +225,10 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
   }
   saveTrack();
 }
-function toggleGem(p) {
+function toggleGem(p, c = 'za') {
   if (!p?.mb) return;
-  const on = !hasGem(p);
-  for (const q of gemMates(p)) if (on) MEGA_GEMS.add(q.k); else MEGA_GEMS.delete(q.k); // same stone → every form of the species
+  const on = !hasGem(p, c), G = gemGrp(c);
+  for (const q of [p, ...gemMates(p)]) if (on) MEGA_GEMS.add(G + ':' + q.k); else MEGA_GEMS.delete(G + ':' + q.k); // same stone → every form of the species, in this save group only
   saveTrack();
 }
 const transValid = x => markValid(x) && !!homeKind(x.split(':')[0]);
@@ -225,6 +248,23 @@ function migrateMarks() {
   for (const set of [CAUGHT, SHINY]) for (const x of [...set]) { const p = BY_KEY[x]; if (p && p.bo) { set.delete(x); set.add(ik(mp(p))); changed = true; } }
   if (changed) { saveTrack(); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); }
 }
+// Virtual dexes (list filter only). « Méga-Dex » = third Légendes Z-A dex: every species with a Mega in the Z-A save group
+// (Z-A + Méga-Dimension), base form + its Megas, national order. Tracking context = Légendes Z-A (same save, shared marks).
+// « Hors dex » lists of games with expansions (same save): species obtainable (transfer / trade / event) but absent from every dex of the save → separate list, marks in the base game.
+const VDEX = {
+  zamega: { game: 'za', mega: 1, n: 'Légendes Pokémon : Z-A – Méga-Dex', s: 'Méga-Dex Z-A' },
+  svhors: { game: 'sv', file: 'hors-sv', n: 'Écarlate / Violet (+ extensions) – Hors dex', s: 'Hors dex É/V' },
+  swhors: { game: 'sw', file: 'hors-sw', n: 'Épée / Bouclier (+ extensions) – Hors dex', s: 'Hors dex É/B' },
+};
+let MEGADEX = null;
+function megaDex() {
+  if (MEGADEX) return MEGADEX;
+  const megas = E.filter(p => p.mb && megaTrackGames(p).length), keys = new Set();
+  for (const m of megas) { keys.add(m.k); if (BY_KEY[m.mb]) keys.add(m.mb); }
+  const ids = [...new Set(megas.map(m => m.id))].sort((a, b) => a - b);
+  return MEGADEX = { keys, order: new Map(ids.map((id, i) => [id, i])), nums: new Map(), dx: [], extra: new Set(), regional: 0, virtual: true, mega: true, species: ids.length, megas: megas.length };
+}
+const listDex = () => { const gm = GAME_BY[state.game]; if (!gm) return null; const v = state.vdex && VDEX[state.vdex]; return v ? (v.mega ? megaDex() : DEX['vd:' + state.vdex] || null) : DEX[gm.id] || null; };
 const DEX = {}; // game id -> { order: Map(sid -> index), nums: Map(sid -> [di,num,...]), dx: [labels] }
 
 async function getJSON(url) { const r = await fetch(url); if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); }
@@ -232,6 +272,7 @@ async function getJSON(url) { const r = await fetch(url); if (!r.ok) throw new E
 async function boot() {
   try {
     DATA = await getJSON('data/core.json');
+    try { const me = await getJSON('data/mega-energy.json'); if (me?.ids) ENERGY_ICONS = { generic: me.generic || ENERGY_ICONS.generic, ids: new Set(me.ids) }; } catch {}
     try { const ms = await getJSON('data/mega-stones.json'); if (ms?.stones) MEGA_STONES = ms; else if (ms && !ms.fallback) MEGA_STONES = { fallback: MEGA_STONES.fallback, stones: ms }; } catch {}
   } catch (e) {
     $('#results').innerHTML = '<p class="empty">Impossible de charger les données. Ouvrez l’application une fois avec une connexion Internet.</p>';
@@ -245,6 +286,7 @@ async function boot() {
   GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; });
   DATA.types.forEach(t => TYPE_FR[t[0]] = t[1]);
   migrateMarks();
+  store.set('mega_gems', [...MEGA_GEMS]); // legacy un-prefixed gem keys → "za:"
   $('#formsbtn').setAttribute('aria-pressed', state.forms);
   buildControls();
   render();
@@ -256,7 +298,7 @@ async function boot() {
 /* ---------------- list ---------------- */
 function buildControls() {
   $('#game').innerHTML = '<option value="">Jeux</option><option value="home">Pokémon HOME</option><option value="go">Pokémon GO</option>' +
-    GAMES.map(g => `<option value="${g.id}">${esc(g.n)}</option>`).join('');
+    GAMES.map(g => `<option value="${g.id}">${esc(g.n)}</option>` + Object.entries(VDEX).filter(([, v]) => v.game === g.id).map(([k, v]) => `<option value="${k}">${esc(v.n)}</option>`).join('')).join('');
   $('#gen').innerHTML = '<option value="">Toutes gén.</option>' +
     GEN_LABELS.slice(1).map((l, i) => `<option value="${i + 1}">Gén. ${l}</option>`).join('');
   $('#typechips').innerHTML = DATA.types.map(t =>
@@ -277,18 +319,20 @@ function buildControls() {
 }
 async function loadDex(id) {
   if (DEX[id]) return DEX[id];
-  const d = await getJSON(`data/dex/${id}.json`);
+  const d = await getJSON(`data/dex/${id.startsWith('vd:') ? VDEX[id.slice(3)].file : id}.json`);
   const order = new Map(), nums = new Map(), extra = new Set(d.x || []);
   d.e.forEach((row, i) => { order.set(row[0], i); nums.set(row[0], row.slice(1)); });
   // Species available in this game but absent from the regional Pokédex → end of list, national order, no regional nº
   (d.x || []).forEach((sid, i) => { if (!order.has(sid)) order.set(sid, d.e.length + i); });
-  return DEX[id] = { order, nums, dx: d.dx, extra, regional: d.e.length };
+  return DEX[id] = { order, nums, dx: d.dx, extra, regional: d.e.length, virtual: id.startsWith('vd:') };
 }
 async function setGame(v) {
-  state.game = v; $('#game').value = v;
+  state.vdex = VDEX[v] ? v : '';
+  if (VDEX[v]) v = VDEX[v].game;
+  state.game = v; $('#game').value = state.vdex || v;
   if (v === 'home') {
   } else if (GAME_BY[v]) {
-    try { await loadDex(v); } catch { state.game = ''; $('#game').value = ''; alert('Pokédex du jeu indisponible hors-ligne : ouvrez-le une fois avec une connexion.'); }
+    try { await loadDex(v); if (state.vdex && VDEX[state.vdex].file) await loadDex('vd:' + state.vdex); } catch { state.game = ''; state.vdex = ''; $('#game').value = ''; alert('Pokédex du jeu indisponible hors-ligne : ouvrez-le une fois avec une connexion.'); }
   }
   render();
 }
@@ -299,7 +343,7 @@ function toggleType(t) {
   render();
 }
 function resetFilters() {
-  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '' });
+  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '' });
   $('#q').value = ''; $('#gen').value = ''; $('#cat').value = ''; $('#sort').value = 'id'; $('#game').value = '';
   render();
 }
@@ -310,16 +354,18 @@ function filtered() {
   const raw = state.q.trim();
   const qn = norm(raw);
   const numeric = /^#?\d+$/.test(raw) ? parseInt(raw.replace('#', ''), 10) : null;
-  const gm = GAME_BY[state.game], dex = gm && DEX[gm.id], gi = gm ? GIDX[gm.id] : -1;
+  const gm = GAME_BY[state.game], dex = listDex(), gi = gm ? GIDX[gm.id] : -1;
   if (gm && !dex) return [];
   let out = E.filter(p => {
-    if (p.c && !state.forms) return false;
-    if (dex) {
+    if (dex && dex.mega) { if (!dex.keys.has(p.k)) return false; } // Méga-Dex: base forms + Megas, whatever the forms toggle
+    else if (p.c && !state.forms) return false;
+    if (dex && dex.mega) {
+    } else if (dex) {
       if (!dex.order.has(p.id)) return false;
       if (p.c && !inGame(p, gi)) return false;
     } else if (state.game === 'go' && !p.go) return false;
     if (numeric !== null) {
-      if (dex) { const n = dex.nums.get(p.id); if (!n.some((x, i) => i % 2 === 1 && x === numeric)) return false; }
+      if (dex && !dex.mega) { const n = dex.nums.get(p.id) || []; if (!n.some((x, i) => i % 2 === 1 && x === numeric) && !(dex.extra.has(p.id) && p.id === numeric)) return false; } // Hors dex: national nº
       else if (p.id !== numeric) return false;
     } else if (qn && !p.nn.includes(qn) && !p.ne.includes(qn) && !p.nj.includes(qn) && !p.nr.includes(qn)) return false;
     if (state.gen && p.g !== +state.gen) return false;
@@ -348,12 +394,13 @@ function filtered() {
   return out;
 }
 function numHTML(p) {
-  const gm = GAME_BY[state.game], dex = gm && DEX[gm.id];
+  const gm = GAME_BY[state.game], dex = listDex();
   let s;
-  if (dex) {
+  if (dex && dex.mega) s = `#${pad(p.id)}`;
+  else if (dex) {
     const n = dex.nums.get(p.id);
     if (n && n.length) s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
-    else s = `<span class="rn hors" title="Absent du Pokédex régional — disponible via transfert / Méga-Gemme">Hors dex</span> <span class="nat">#${pad(p.id)}</span>`;
+    else s = `<span class="rn hors" title="Absent du Pokédex régional — obtenable par transfert, échange, événement ou Méga-Gemme">Hors dex</span> <span class="nat">#${pad(p.id)}</span>`;
   } else s = `#${pad(p.id)}`;
   const tag = p.c ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : '';
   return s + tag;
@@ -414,8 +461,10 @@ function render() {
   const gm = GAME_BY[state.game];
   const ctx = trackCtx(); let prog;
   if (ctx) { // progress of the selected game: marks among the entries that belong to it
-    const dx = DEX[ctx], gi = GIDX[ctx];
-    const uni = E.filter(p => (state.forms || !p.c) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (dx && dx.order.has(p.id) && (!p.c || inGame(p, gi)))));
+    const dx = DEX[ctx], gi = GIDX[ctx], vd = listDex();
+    const ld = vd && vd.virtual ? vd : dx;
+    const uni = vd && vd.mega ? E.filter(p => vd.keys.has(p.k) && !isCombat(p, ctx)) :
+      E.filter(p => (state.forms || !p.c) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (ld && ld.order.has(p.id) && (!p.c || inGame(p, gi)))));
     const cu = uni.filter(p => isCaught(p)).length, su = uni.filter(p => isShiny(p)).length;
     prog = ctx === 'home'
       ? `HOME : ${cu} / ${uni.length} 🏠 transférés · ${su} ✨ shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} 🟡🏠 complets`
@@ -427,8 +476,9 @@ function render() {
   }
   // Forms view: tracked forms vs battle-only variants (shown but never counted) so the numbers add up
   const combat = state.forms ? res.filter(p => isCombat(p, ctx)).length : 0;
-  const head = state.forms ? `${res.length - combat} formes${combat ? ` (+ ${combat} formes de combat, non comptées)` : ''}` : `${res.length} Pokémon`;
-  $('#count').textContent = `${head}${gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : ''} · ${prog}`;
+  const vdx = state.vdex && VDEX[state.vdex];
+  const head = vdx && vdx.mega ? `${res.filter(p => !p.mb).length} Pokémon + ${res.filter(p => p.mb).length} Méga` : state.forms ? `${res.length - combat} formes${combat ? ` (+ ${combat} formes de combat, non comptées)` : ''}` : `${res.length} Pokémon`;
+  $('#count').textContent = `${head}${vdx ? ' · ' + vdx.s : gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : ''} · ${prog}`;
   const lg = $('#legend'); lg.hidden = !!ctx && ctx !== 'home';
   if (!ctx) lg.innerHTML = `<details><summary>Légende des marques</summary>${BASE_LEGEND}</details>`;
   if (ctx === 'home') lg.innerHTML = `<details><summary>Légende des marques</summary>${HOME_LEGEND}</details>`;
@@ -483,10 +533,13 @@ async function openDetail(p) {
   }
 }
 function availGames(f) { return (f.av || []).slice().sort((a, b) => GIDX[a] - GIDX[b]); }
+// Games where this species is « Hors dex » (obtainable by transfer / trade / event, absent from the regional dex) — default form only; marks only, completion unchanged
+const horsGames = (p, sp) => (sp && sp.hx && p.k === String(p.id) ? sp.hx.filter(g => GAME_BY[g]).sort((a, b) => GIDX[a] - GIDX[b]) : []);
 function pickGame(g) {
   const f = DET.f;
-  const ok = g === 'home' || (g === 'go' && f.go && f.go.r) || (GAME_BY[g] && (f.av || []).includes(g));
-  state.dgame = ok ? g : 'home';
+  const ok = g === 'home' || (g === 'go' && f.go && f.go.r) || (GAME_BY[g] && ((f.av || []).includes(g) || horsGames(DET.p, DET.sp).includes(g)));
+  const sib = !ok && GAME_BY[g] ? availGames(f).find(x => saveOf(x) === saveOf(g)) : null; // same save (Z-A ↔ Méga-Dimension, extensions)
+  state.dgame = ok ? g : sib || 'home';
 }
 const homeBall = '<svg class="ball hm" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
 function gameNames(ids) { return ids.map(g => g === 'go' ? 'Pokémon GO' : GAME_BY[g].s).join(', '); }
@@ -525,28 +578,53 @@ function trackHTML(p0) {
   const hk = homeKind(c), sw = sharedWith(c, p);
   let h = note + `Captures et shiny suivis pour : <b>${esc(trackName(c))}</b>`;
   if (sw.length) h += ` <span class="mute shr">· partagé avec ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>`;
-  if (!p0.mb) { const gs = gemsFor(p0, c); if (gs.length) h += `<div class="trackbtns gems"><span class="mute">Méga-Gemme${gs.length > 1 ? 's' : ''} :</span>${gs.map(m => gemBtnHTML(m, ' big')).join('')}</div>`; }
   if (p0.mb && isZa(c)) {
     const b = megaBaseP(p0);
-    h += `<br><span class="mute">Z-A Méga : ${esc((megaStoneOf(p0)||{}).label || 'Méga-Gemme')} ${hasGem(p0) ? 'obtenue' : 'non obtenue'} · base ${b ? `<a href="#/p/${b.k}">${esc(b.n)}</a>` : ''} ${b && isCaught(b, c) ? 'capturée' : 'pas encore capturée'} → Méga ${isCaught(p0, c) ? 'capturée' : 'non capturée'}.</span>`;
+    h += `<br><span class="mute">Z-A Méga : ${esc((megaStoneOf(p0)||{}).label || 'Méga-Gemme')} ${hasGem(p0, c) ? 'obtenue' : 'non obtenue'} · base ${b ? `<a href="#/p/${b.k}">${esc(b.n)}</a>` : ''} ${b && isCaught(b, c) ? 'capturée' : 'pas encore capturée'} → Méga ${isCaught(p0, c) ? 'capturée' : 'non capturée'}.</span>`;
+  } else if (c !== 'go') {
+    const gs = gemsFor(p0, c);
+    if (gs.length) h += `<br><span class="mute gemline">Méga-Gemme${gs.length > 1 ? 's' : ''} : ${gs.map(m => `${esc(megaStoneOf(m).label)} ${hasGem(m, c) ? 'obtenue' : 'non obtenue'}`).join(' · ')}${isZa(c) ? ' (avec la forme de base capturée = Méga capturée en Z-A)' : ' (simple marque de possession dans ce jeu : les Méga y restent des formes de combat, sans effet sur la complétion)'}.</span>`;
+  } else if (goMegas(p0).length) {
+    h += `<br><span class="mute gemline">Méga-énergie de ${esc((BY_KEY[String(p0.id)] || p0).n)} : ${hasEnergy(p0) ? 'obtenue' : 'pas encore obtenue'} (marque par espèce, sans effet sur la complétion).</span>`;
   }
-  { const b = baseStatus(p), n = grpsOf(gamesOf(p)).length + (p.go ? 1 : 0); h += `<br><span class="mute">Tous jeux confondus : capturé dans ${grpsOf(b.c).length} jeu${grpsOf(b.c).length > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
+  { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
   if (!hk) return h + '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.';
   if (c === 'go' && p.my) return h + '<br>Les Pokémon fabuleux ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion Home de ce Pokémon.';
   h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span>`;
-  if (bo) return h;
-  h += `<div class="trackbtns"><button type="button" class="tr" aria-pressed="${isTrans(p, c)}" title="Transféré vers Home depuis ${esc(trackName(c))}${sw.length ? ' (et ' + esc(sw.map(x => GAME_BY[x].s).join(', ')) + ')' : ''}${p0.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}">${homeBall} Transféré vers Home</button>`;
-  if (isShiny(p, c) || isSTrans(p, c) || (p0.mb && hasGem(p0))) h += `<button type="button" class="trs" aria-pressed="${isSTrans(p, c)}" title="Shiny transféré vers Home">✨ Transféré</button>`;
-  return h + '</div>';
+  if (!bo) h += `<br>${isTrans(p, c) ? `${homeBall} Transféré vers Home` : 'Pas encore transféré vers Home'} depuis ce jeu.`;
+  return h;
 }
 function refreshTrack(p) {
   const el = $('#trackinfo'); if (el) el.innerHTML = trackHTML(p);
-  const cg = document.querySelector('.dnav .cg'), sh = document.querySelector('.dnav .sh');
-  const c = sheetCtx();
-  if (cg) { cg.setAttribute('aria-pressed', isCaught(p, c)); cg.innerHTML = (isCaught(p, c) ? BALL : BALL_OFF) + '<span class="t"> Capturé</span>'; }
-  if (sh) sh.setAttribute('aria-pressed', isShiny(p, c));
-  document.querySelectorAll('.gem[data-mega]').forEach(b => b.setAttribute('aria-pressed', hasGem(BY_KEY[b.dataset.mega])));
+  const bar = $('#actbar'); if (!bar) return;
+  const a = document.activeElement, sel = a && bar.contains(a) ? (a.dataset.mega ? `[data-mega="${a.dataset.mega}"]` : '.' + [...a.classList].filter(x => x !== 'act')[0]) : null;
+  bar.outerHTML = actbarHTML(p);
+  if (sel) { const b = $('#actbar ' + sel); if (b) b.focus(); }
 }
+// Fixed action row, same order on every sheet: Capturé · Shiny · Transféré (Home) · Méga-Gemme(s) / Méga-énergie (GO).
+// Buttons that do not apply stay in place, greyed (disabled). The gem/energy slot exists only for forms that have a Mega.
+function actbarHTML(p) {
+  const c = sheetCtx(), q = mp(p, c), nm = c ? trackName(c) : '';
+  const catchDis = !c || c === 'home' || p.bo || !!p.mb; // Megas: Capturé/Shiny derived (Z-A: base + gemme; elsewhere battle-only)
+  const hk = c && c !== 'home' ? homeKind(c) : null;
+  const trOn = !!(hk && !p.bo && !megaBo(p, c) && !(c === 'go' && p.my)); // same guard as toggleTransfer (logic unchanged)
+  const sw = c && GAME_BY[c] ? sharedWith(c, q) : [];
+  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : c === 'home' ? 'Pokémon HOME : lecture seule' : !hk ? 'Ce jeu ne peut pas envoyer de Pokémon vers HOME' : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : !trOn ? 'Variante de combat : suit la forme de base' :
+    `Transféré vers Home depuis ${nm}${sw.length ? ' (et ' + sw.map(x => GAME_BY[x].s).join(', ') + ')' : ''}${p.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}`;
+  let slot = '';
+  if (c === 'go') { if (goMegas(p).length) slot = energyBtnHTML(p); }
+  else {
+    const gs = gemSlot(p, c);
+    slot = gs.map(x => { const xyz = (x.m.k.match(/mega-(x|y|z)$/) || [])[1]; return gemBtnHTML(x.m, c, x.on, gs.length > 1 ? (xyz ? 'Gemme ' + xyz.toUpperCase() : megaStoneOf(x.m).label) : 'Méga-Gemme'); }).join('');
+  }
+  const ctx = !c ? 'Vue d’ensemble — choisissez un jeu pour marquer' : c === 'home' ? '<b>Pokémon HOME</b> · lecture seule' : `Suivi : <b>${esc(nm)}</b>${sw.length ? ` <span class="shr">+ ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>` : ''}`;
+  return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts">
+    <button class="act cg" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${isCaught(p, c)}" aria-label="Capturé${nm ? ' – ' + esc(nm) : ''}" title="${p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${isCaught(p, c) ? BALL : BALL_OFF}<span class="t">Capturé</span></button>
+    <button class="act sh" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
+    <button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers Home${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}">${homeBall}<span class="t">Transféré</span></button>
+    ${slot}</div></div>`;
+}
+// Sticky header: back, previous / next, favourite only.
 function navHTML(p) {
   const key = ik(p);
   let prev = '', next = '';
@@ -554,15 +632,7 @@ function navHTML(p) {
     const list = filtered().filter(x => !x.c); const i = list.findIndex(x => x.id === p.id);
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
-  const sc = sheetCtx();
-  const catchDis = !sc || sc === 'home' || p.bo || !!p.mb; // Z-A Mega: Capturé/Shiny dérivés (base + gemme)
-  const gemBtn = p.mb ? gemBtnHTML(p) : '';
-  const ctxLine = `<div class="trackinfo" id="trackinfo">${trackHTML(p)}</div>`;
-  return `<div class="dnav${p.mb ? ' mega' : ''}"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span>
-    <button class="cg" ${catchDis ? 'disabled' : ''} aria-pressed="${isCaught(p, sc)}" aria-label="Capturé${sc ? ' – ' + trackName(sc) : ''}" title="${p.mb ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : ('Capturé' + (sc ? ' – ' + trackName(sc) : ''))}">${isCaught(p, sc) ? BALL : BALL_OFF}<span class="t"> Capturé</span></button>
-    <button class="sh" ${catchDis ? 'disabled' : ''} aria-pressed="${isShiny(p, sc)}" aria-label="Shiny capturé${sc ? ' – ' + trackName(sc) : ''}" title="${p.mb ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : ('Shiny capturé' + (sc ? ' – ' + trackName(sc) : ''))}">✨<span class="t"> Shiny</span></button>
-    ${gemBtn}
-    <button class="fav" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${ctxLine}`;
+  return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${actbarHTML(p)}</div>`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
 function effGroups(types, mode, chart) {
@@ -781,22 +851,30 @@ function goHTML(p, f, sp, shared, go) {
   const shadow = d.shm && go.moves[d.shm] ? `<p class="note">Obscur : ${esc(go.moves[d.shm][0])} · Purifié : ${esc(go.moves[d.pum]?.[0] || '—')}</p>` : '';
   const sh = d.sh ? (d.sh.length ? `Oui (${d.sh.map(s => ({ wild: 'sauvage', raid: 'raid', egg: 'œuf', evolution: 'évolution', research: 'recherche', photobomb: 'photobomb', alola: 'forme d’Alola' }[s] || s)).join(', ')})` : 'Oui') : (p.c ? 'Non vérifié pour cette forme' : 'Non disponible');
   const types = d.t;
-  return `
-    <section class="box"><h2>Pokémon GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2>
+  // GO blocks, placed by renderDetail in the fixed sheet order (stats → moves → evolution → GO infos)
+  return {
+    stats: `
+    <section class="box gostats"><h2>Statistiques GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2>
       <div class="kv kv3"><div><b>${d.a}</b><span>Attaque</span></div><div><b>${d.d}</b><span>Défense</span></div><div><b>${d.s}</b><span>Endurance</span></div></div>
       <div class="kv"><div><b>${fmt(d.m50)}</b><span>PC max niv. 50 (IV 15/15/15)</span></div><div><b>${fmt(d.m51)}</b><span>PC max niv. 51 (meilleur compagnon)</span></div></div>
+      <p class="note">PC max = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50).</p></section>
+    <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}
+      <p class="note">Multiplicateurs de Pokémon GO (×1,6 par faiblesse, ×0,625 par résistance ; une immunité des jeux principaux compte comme une double résistance).</p></section>`,
+    moves: `
+    <section class="box"><h2>Attaques rapides</h2><div class="mvs">${fm || '<p class="note">—</p>'}</div></section>
+    <section class="box"><h2>Attaques chargées</h2><div class="mvs">${cm || '<p class="note">—</p>'}</div>${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite). DPS = puissance ÷ durée.</p></section>`,
+    info: `
+    <section class="box goinfo"><h2>Pokémon GO : bonbons, compagnon, œufs</h2>
       <ul class="plain gol">
         <li>Statut : <b>${d.r ? 'disponible dans Pokémon GO' : 'pas encore sorti'}</b></li>
         <li>Shiny : <b>${sh}</b></li>
         ${d.bd ? `<li>Distance compagnon : <b>${dec(d.bd)} km</b> par bonbon</li>` : ''}
         ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
         ${d.th ? `<li>Seconde attaque chargée : <b>${fmt(d.th[0])}</b> poussières d’étoiles + <b>${d.th[1]}</b> bonbons</li>` : ''}
+        ${!d.bd && !d.eg && !d.th ? '<li>Pas de données de compagnon / œufs pour cette forme.</li>' : ''}
       </ul>
-      <p class="note">PC max = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>
-    <section class="box"><h2>Attaques rapides</h2><div class="mvs">${fm || '<p class="note">—</p>'}</div></section>
-    <section class="box"><h2>Attaques chargées</h2><div class="mvs">${cm || '<p class="note">—</p>'}</div>${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite). DPS = puissance ÷ durée.</p></section>
-    <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}
-      <p class="note">Multiplicateurs de Pokémon GO (×1,6 par faiblesse, ×0,625 par résistance ; une immunité des jeux principaux compte comme une double résistance).</p></section>`;
+      <p class="note">Bonbons d’évolution : voir « Évolutions » ci-dessus. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>`
+  };
 }
 
 function renderDetail() {
@@ -812,33 +890,41 @@ function renderDetail() {
   const goOk = f.go && f.go.r;
   const opts = `<option value="home"${mode === 'home' ? ' selected' : ''}>Pokémon HOME (infos générales)</option>` +
     (goOk ? `<option value="go"${isGo ? ' selected' : ''}>Pokémon GO</option>` : '') +
-    games.map(g => `<option value="${g}"${mode === g ? ' selected' : ''}>${esc(GAME_BY[g].n)}</option>`).join('');
+    games.map(g => `<option value="${g}"${mode === g ? ' selected' : ''}>${esc(GAME_BY[g].n)}</option>`).join('') +
+    horsGames(p, sp).filter(g => !games.includes(g)).map(g => `<option value="${g}"${mode === g ? ' selected' : ''}>${esc(GAME_BY[g].n)} — hors dex</option>`).join('');
   const gimg = `img/${p.k}.webp`, simg = `img/s/${p.k}.webp`;
   const regional = gm ? dexNumbers(sp, gm.id) : '';
+  // Fixed body order: description → stats → abilities → moves → evolution → encounters → games → GO
   let body = '';
   if (isGo && f.go && DET.go) {
-    body = goHTML(p, f, sp, shared, DET.go);
-    body += `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>`;
+    const g = goHTML(p, f, sp, shared, DET.go);
+    body = flavorHTML(sp, null) + g.stats + g.moves +
+      `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` +
+      g.info;
   } else {
     const sArr = gm ? pickGen(f.ps, gen, f.s) : f.s;
     const gen1 = gm && gen === 1;
     const chart = chartFor(gm ? gen : 9);
     const mode2 = 'main';
+    const goBox = goOk ? `<section class="box gobox"><h2>Pokémon GO</h2><p class="gol1">Disponible dans Pokémon GO${f.go.m50 ? ` · PC max niv. 50 : <b>${fmt(f.go.m50)}</b>` : ''}${f.go.bd ? ` · compagnon : <b>${dec(f.go.bd)} km</b>` : ''}</p><p><a href="#" class="golink" data-game="go">Voir les données Pokémon GO →</a></p></section>` : '';
     body = `${flavorHTML(sp, gm)}
     ${regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : ''}
     <section class="box"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div>
-      ${gm ? '' : `<div class="kv kv3 sm"><div><b>${f.go ? '' : ''}${sp.gr < 0 ? 'Asexué' : `${dec(((8 - sp.gr) / 8 * 100).toFixed(1))} % ♂`}</b><span>${sp.gr < 0 ? 'Sexe' : `${dec((sp.gr / 8 * 100).toFixed(1))} % ♀`}</span></div><div><b>${sp.cr}</b><span>Taux de capture</span></div><div><b>${fmt((sp.hc + 1) * 255)}</b><span>Pas pour éclore</span></div></div>
+      ${gm ? '' : `<div class="kv kv3 sm"><div><b>${sp.gr < 0 ? 'Asexué' : `${dec(((8 - sp.gr) / 8 * 100).toFixed(1))} % ♂`}</b><span>${sp.gr < 0 ? 'Sexe' : `${dec((sp.gr / 8 * 100).toFixed(1))} % ♀`}</span></div><div><b>${sp.cr}</b><span>Taux de capture</span></div><div><b>${fmt((sp.hc + 1) * 255)}</b><span>Pas pour éclore</span></div></div>
       <p class="note">Groupes d’œuf : ${sp.eg.map(esc).join(', ') || '—'} · Croissance : ${GROWTH[sp.gw] || sp.gw} · Bonheur de base : ${sp.bh}</p>`}</section>
     <section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>
-    ${(() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })()}
-    ${heldHTML(f, gm, shared.ref)}
     <section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
       <div id="eff">${effHTML(types, mode2, chart)}</div>
       <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>
-    ${gm ? encHTML(f, sp, gm, shared) + movesHTML(f, sp, gm, shared) : homeSrcHTML(p, f) + availHTML(sp, games)}
+    ${(() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })()}
+    ${heldHTML(f, gm, shared.ref)}
+    ${gm ? movesHTML(f, sp, gm, shared) : ''}
     <section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
-      <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
+      <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>
+    ${gm ? encHTML(f, sp, gm, shared) : homeSrcHTML(p, f)}
+    ${availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g)))}
+    ${goBox}`;
   }
   $('#detail-view').innerHTML = navHTML(p) + `
   <div class="detail">
@@ -851,8 +937,8 @@ function renderDetail() {
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
       <div class="tags">${flags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     </div>
+    <section class="box trackbox"><div class="gamebar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
     ${formSwitcher(p, gm)}
-    <section class="box gamebar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></section>
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
@@ -872,10 +958,11 @@ function homeSrcHTML(p, f) {
     `<p class="note" style="margin:0 0 6px">${homeIcon(false, HOME_T)} transféré · <span class="mk sh">✨</span> shiny transféré · ${homeIcon(true, HOME_C_T)} transféré depuis tous les jeux compatibles${homeComplete(p, av) ? ' (complet)' : ''}</p>` +
     `<ul class="plain homerows">${av.map(g => `<li>${t.includes(g) ? '🏠' : '▫️'} ${esc(gameNames([g]))} — ${t.includes(g) ? 'transféré' : 'pas transféré'}${sh.includes(g) ? ' · ✨ shiny' : ''}</li>`).join('')}</ul></section>`;
 }
-function availHTML(sp, games) {
-  if (!games.length) return '';
+function availHTML(sp, games, hors = []) {
+  if (!games.length && !hors.length) return '';
   const rows = games.map(g => { const n = dexNumbers(sp, g); return `<li><a href="#" data-game="${g}">${esc(GAME_BY[g].n)}</a>${n ? ` <span class="mute">${n}</span>` : ''}</li>`; }).join('');
-  return `<section class="box"><h2>Présent dans <small class="cnt">${games.length} jeux</small></h2><ul class="plain avl">${rows}</ul><p class="note">Selon les Pokédex régionaux (PokéAPI). Touchez un jeu pour voir ses données.</p></section>`;
+  const hrows = hors.map(g => `<li><a href="#" data-game="${g}">${esc(GAME_BY[g].n)}</a> <span class="mute">hors dex</span></li>`).join('');
+  return `<section class="box"><h2>Présent dans <small class="cnt">${games.length} jeux</small></h2><ul class="plain avl">${rows}</ul>${hors.length ? `<h3 class="h3">Hors Pokédex régional <small class="cnt">${hors.length}</small></h3><ul class="plain avl">${hrows}</ul>` : ''}<p class="note">Selon les Pokédex régionaux (PokéAPI). « Hors dex » : obtenable par transfert, échange ou événement sans figurer dans le Pokédex régional (marques possibles, sans effet sur la complétion). Touchez un jeu pour voir ses données.</p></section>`;
 }
 function effNote(mode, gm) {
   return mode === 'go'
@@ -904,23 +991,25 @@ document.addEventListener('click', e => {
   if (mt) { movesTab = mt.dataset.mtab; renderDetailKeepScroll(); return; }
   const sb = e.target.closest('#shbtn');
   if (sb) { showShinyArt = !showShinyArt; renderDetailKeepScroll(); return; }
-  const cgb = e.target.closest('.dnav .cg'), shb = e.target.closest('.dnav .sh');
+  const cgb = e.target.closest('#actbar .cg'), shb = e.target.closest('#actbar .sh');
   if (cgb || shb) {
     const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
     toggleMark(p, cgb ? 'caught' : 'shiny', sheetCtx()); refreshTrack(p); render();
     return;
   }
-  const gemb = e.target.closest('.gem[data-mega]');
+  const gemb = e.target.closest('#actbar .gem[data-mega]');
   if (gemb) {
-    const p = DET && DET.p, m = BY_KEY[gemb.dataset.mega]; if (!p || !m || !m.mb) return;
-    toggleGem(m); refreshTrack(p); render(); // immediate: buttons, Mega capture/transfer state, counters
+    const p = DET && DET.p, m = BY_KEY[gemb.dataset.mega], c = sheetCtx(); if (!p || !m || !m.mb || gemb.disabled || !megaInGame(m, c)) return;
+    toggleGem(m, c); refreshTrack(p); render(); // immediate: buttons, Mega capture/transfer state, counters
     return;
   }
+  const enb = e.target.closest('#actbar .energy');
+  if (enb) { const p = DET && DET.p; if (!p || enb.disabled || sheetCtx() !== 'go') return; toggleEnergy(p); refreshTrack(p); render(); return; }
   const lgb = e.target.closest('#trackinfo .lg');
   if (lgb) { const p = DET && DET.p; if (!p) return; CAUGHT.delete(ik(p)); SHINY.delete(ik(p)); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); refreshTrack(p); render(); return; }
-  const trb = e.target.closest('#trackinfo .tr, #trackinfo .trs');
-  if (trb) { const p = DET && DET.p; if (!p) return; toggleTransfer(p, trb.classList.contains('trs'), sheetCtx()); refreshTrack(p); render(); return; }
-  const f = e.target.closest('.fav');
+  const trb = e.target.closest('#actbar .tr');
+  if (trb) { const p = DET && DET.p; if (!p || trb.disabled) return; toggleTransfer(p, false, sheetCtx()); refreshTrack(p); render(); return; }
+  const f = e.target.closest('.dnav .fav');
   if (f) {
     const p = DET && DET.p; if (!p) return; const key = ik(p);
     FAVS.has(key) ? FAVS.delete(key) : FAVS.add(key);
@@ -972,7 +1061,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(p => `img/${p.k}.webp`), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/go.json', 'data/tm.json', 'data/loc.json', ...GAMES.map(g => `data/dex/${g.id}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/go.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) store.set('packDone2', true);
@@ -996,7 +1085,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], mega_gems: [...MEGA_GEMS] };
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -1010,7 +1099,8 @@ boot();
       mk(d.caught_g).forEach(n => CAUGHT_G.add(n)); mk(d.shiny_g).forEach(n => { SHINY_G.add(n); CAUGHT_G.add(n); });
       const mt = x => Array.isArray(x) ? x.filter(transValid) : [];
       mt(d.home_g).forEach(n => { TRANS_G.add(n); CAUGHT_G.add(n); }); mt(d.homeshiny_g).forEach(n => { STRANS_G.add(n); TRANS_G.add(n); CAUGHT_G.add(n); SHINY_G.add(n); });
-      if (Array.isArray(d.mega_gems)) d.mega_gems.filter(k => BY_KEY[k] && BY_KEY[k].mb).forEach(k => MEGA_GEMS.add(k));
+      if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
+      if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       migrateMarks(); rebuildHome();
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('mega_gems', [...MEGA_GEMS]);
       render(); alert('Sauvegarde importée.');

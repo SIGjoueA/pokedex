@@ -459,6 +459,9 @@ for (const g of games) {
   for (const e of coreEntries) {
     if ((avByKey[e.key] || []).includes(g.id) && !inDex.has(e.id)) extra.add(e.id);
   }
+  // Same save group (Z-A + Méga-Dimension, Épée/Bouclier + extensions…): a species listed in a sibling's regional dex is not "Hors dex" here
+  const grp = g.base || g.id;
+  for (const h of games) if (h.id !== g.id && (h.base || h.id) === grp) for (const r of dexOut[h.id].e) extra.delete(r[0]);
   dexOut[g.id].x = [...extra].sort((a, b) => a - b);
   g.extra = dexOut[g.id].x.length;
 }
