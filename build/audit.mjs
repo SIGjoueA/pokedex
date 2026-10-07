@@ -122,6 +122,9 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('no hotlinking of origin marks', !/bulbagarden\.net/i.test(css + app));
   for (const g of ['rb', 'y', 'gs', 'c']) eq('Console virtuelle ' + g + ' → Home (vc)', core.games.find(x => x.id === g).h, 'vc');
   ok('every Home-compatible game has an origin mark', core.games.filter(g => g.h).every(g => new RegExp(`games: \\[[^\\]]*'${g.id}'`).test(app)), core.games.filter(g => g.h).map(g => g.id).join());
+  for (const m of ['alola', 'kalos', 'none', 'gb']) ok('v23 ancienne marque hors dorure ' + m, new RegExp(`id: '${m}', old: 1`).test(app));
+  for (const m of ['za', 'paldea', 'hisui', 'sinnoh', 'galar', 'lgpe', 'go']) ok('v23 marque Switch/GO comptée ' + m, new RegExp(`id: '${m}', n:`).test(app));
+  for (const g of ['rs', 'e', 'frlg']) ok('v23 GBA ' + g + ' sans lien HOME (pas de marque)', !core.games.find(x => x.id === g).h && !new RegExp(`games: \\[[^\\]]*'${g}'`).test(app));
   const me = D('mega-energy.json'); for (const id of ['6-x', '6-y', '150-x', '150-y']) ok('energy icon ' + id, me.ids.map(String).includes(id) && fs.existsSync(path.join(DOCS, 'img/energy', id + '.webp')));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

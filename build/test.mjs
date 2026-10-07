@@ -574,7 +574,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // ---- Catégorie: transfer categories (game / base / Home)
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   const catN = async c => { await p.select('#cat', c); await sleep(200); return parseInt(await count()); };
-  const tinfo = await p.evaluate(() => ({ N: E.filter(e => !e.c && homeAvail(e).length > 0).length, one: (e => e && { k: e.k, g: ORI[homeAvail(e)[0]].games.find(g => gamesOf(e).includes(g)) })(E.find(e => !e.c && !e.bo && !e.my && homeAvail(e).length === 1 && homeAvail(e)[0] !== 'go')) }));
+  const tinfo = await p.evaluate(() => ({ N: E.filter(e => !e.c && homeAvail(e).length > 0).length, one: (e => e && { k: e.k, g: ORI[homeGold(e)[0]].games.find(g => gamesOf(e).includes(g)) })(E.find(e => !e.c && !e.bo && !e.my && homeAvail(e).length === 1 && homeGold(e).length === 1 && homeAvail(e)[0] !== 'go')) }));
   await go('#/'); await sel('sw'); await go('#/p/25'); await sleep(300); await p.click('#actbar .tr'); await sleep(100);
   await go('#/'); await sleep(200);
   ok(await catN('trans') === 1, tag + ' game view: "transférés depuis ce jeu" = 1');
@@ -595,8 +595,8 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // ---- Home completion with Pokémon GO: required, except for Mythicals
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   const gi = await p.evaluate(() => ({
-    reg: (e => e && { k: e.k, reps: homeAvail(e).map(m => m === 'go' ? 'go' : ORI[m].games.find(g => gamesOf(e).includes(g))) })(E.find(e => !e.c && !e.bo && !e.my && e.go && homeAvail(e).length === 2 && homeAvail(e).includes('go'))),
-    myth: (e => e && { k: e.k, reps: homeAvail(e).map(m => ORI[m].games.find(g => gamesOf(e).includes(g))), withGo: !homeAvail(e).includes('go') })(E.filter(e => !e.c && !e.bo && e.my && e.go && homeAvail(e).length >= 1).sort((a, b) => homeAvail(a).length - homeAvail(b).length)[0]) }));
+    reg: (e => e && { k: e.k, reps: homeGold(e).map(m => m === 'go' ? 'go' : ORI[m].games.find(g => gamesOf(e).includes(g))) })(E.find(e => !e.c && !e.bo && !e.my && e.go && homeGold(e).length === 2 && homeGold(e).includes('go'))),
+    myth: (e => e && { k: e.k, reps: homeGold(e).map(m => ORI[m].games.find(g => gamesOf(e).includes(g))), withGo: !homeAvail(e).includes('go') })(E.filter(e => !e.c && !e.bo && e.my && e.go && homeGold(e).length >= 1).sort((a, b) => homeGold(a).length - homeGold(b).length)[0]) }));
   ok(gi.reg && gi.myth && gi.myth.withGo, tag + ' found GO test Pokémon ' + JSON.stringify(gi));
   const trf = async (g, k) => { await go('#/'); await sel(g); await go('#/p/' + k); await sleep(250); await p.click('#actbar .tr'); await sleep(100); };
   for (const g of gi.reg.reps.filter(g => g !== 'go')) await trf(g, gi.reg.k);
@@ -628,7 +628,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(/HOME : 1 \/ 1025 🏠 transférés · 1 ✨ shiny · 0 🟡🏠 complets/.test(await count()), tag + ' Home counter: ' + await count());
   await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home caught filter derived'); await p.select('#cat', 'shiny'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home shiny filter derived'); await p.select('#cat', '');
   await go('#/p/25'); await sleep(300);
-  ok(/Transféré depuis 1 \/ \d+ marques d’origine/.test(await strip()) && /Marque de Galar[^—]*— transféré[^·]*· ✨ shiny/.test(await strip()), tag + ' Home detail shows source mark: ' + await strip());
+  ok(/Compte pour la dorure : 1 \/ \d+ marques/.test(await strip()) && /Marque de Galar[^—]*— transféré[^·]*· ✨ shiny/.test(await strip()), tag + ' Home detail shows source mark: ' + await strip());
   ok(!(await p.$('#actbar .cg')) && await p.$eval('#actbar .ori[data-origin="galar"]', e => e.getAttribute('aria-pressed')) === 'true', tag + ' Home sheet bar = origin marks (Galar on)');
   await p.screenshot({ path: SHOTS + `home-derived-${tag}.png` });
   // un-catching in the game removes the transfer
@@ -649,7 +649,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel('');
   // ---- Home markers: partial / shiny / complete
   await go('#/'); await sel('home'); await p.evaluate(() => { localStorage.removeItem('home_g'); });
-  const pick = await p.evaluate(() => { const q = E.find(x => !x.c && homeAvail(x).length === 2 && !homeAvail(x).includes('go')); return q && { k: q.k, av: homeAvail(q).map(m => ORI[m].games.find(g => gamesOf(q).includes(g))), n: q.n }; });
+  const pick = await p.evaluate(() => { const q = E.find(x => !x.c && homeAvail(x).length === 2 && homeGold(x).length === 2 && !homeAvail(x).includes('go')); return q && { k: q.k, av: homeGold(q).map(m => ORI[m].games.find(g => gamesOf(q).includes(g))), n: q.n }; });
   ok(!!pick, tag + ' found a Pokémon present in exactly 2 Home-compatible games ' + JSON.stringify(pick));
   await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); HOME_O.clear(); HOME_OG.clear(); saveTrack(); });
   await sel(pick.av[0]); await go('#/p/' + pick.k); await p.click('#actbar .tr'); await sleep(100);
@@ -662,11 +662,27 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   mks = await p.$$eval('.card .mk', e => e.map(x => x.className));
   ok(mks.some(c => /hm gold/.test(c)) && mks.some(c => /sh/.test(c)), tag + ' complete = gold Home icon + ✨ ' + mks);
   ok(/1 🟡🏠 complets/.test(await count()) && /1 ✨ shiny/.test(await count()), tag + ' counters: ' + await count());
-  ok(await p.$eval('#legend', e => !e.hidden && /toutes les marques/.test(e.textContent) && /Kalos/.test(e.textContent) && /dorée/.test(e.textContent) && /fabuleux/.test(e.textContent)), tag + ' legend visible in Home (gold + mythical note)');
+  ok(await p.$eval('#legend', e => !e.hidden && /toutes<\/b> les marques Switch|toutes les marques Switch/.test(e.textContent) && /Anciens jeux/.test(e.textContent) && /Kalos/.test(e.textContent) && /dorée/.test(e.textContent) && /fabuleux/.test(e.textContent)), tag + ' legend visible in Home (gold + mythical note)');
   await go('#/p/' + pick.k); await sleep(300);
   ok((await p.$$eval('#trackinfo .homerows li', e => e.map(x => x.textContent))).length === 2 && /complet/.test(await strip()), tag + ' detail lists per-game status: ' + await strip());
   await p.screenshot({ path: SHOTS + `home-complete-${tag}.png` });
   await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); HOME_O.clear(); HOME_OG.clear(); saveTrack(); });
+  { const r = await p.evaluate(() => { HOME_O.clear(); HOME_OG.clear(); saveTrack(); const q = BY_KEY['25'], av = homeAvail(q), g = homeGold(q);
+      for (const m of av.filter(m => ORI[m].old)) HOME_O.add(m + ':25'); saveTrack(); const oldOnly = homeComplete(q);
+      for (const m of g) HOME_O.add(m + ':25'); saveTrack(); const all = homeComplete(q);
+      HOME_O.delete('kalos:25'); HOME_O.delete('gb:25'); saveTrack(); const noOld = homeComplete(q);
+      const celebi = BY_KEY['251'], oldC = homeAvail(celebi).filter(m => ORI[m].old);
+      HOME_O.clear(); saveTrack();
+      return { oldOnly, all, noOld, gold: g.join(), old: av.filter(m => ORI[m].old).join(), celebiGold: homeGold(celebi).join(), oldC: oldC.join() }; });
+    ok(!r.oldOnly && r.all && r.noOld && r.gold === 'za,paldea,hisui,sinnoh,galar,lgpe,go' && r.old === 'alola,kalos,none,gb', tag + ' v23: only Switch-era marks + GO count for Home gold ' + JSON.stringify(r)); }
+  for (const g of ['rs', 'e', 'frlg']) { await go('#/'); await sel(g); await go('#/p/25'); await sleep(400);
+    const st = await p.evaluate(g => { const b = document.querySelector('#actbar .tr'); return { dis: b.disabled, pressed: b.getAttribute('aria-pressed'), om: !!b.querySelector('.om'), mark: originOf(g), h: GAME_BY[g].h || null, txt: document.querySelector('#trackinfo').textContent }; }, g);
+    await p.evaluate(() => toggleTransfer(DET.p, false, sheetCtx())); const o = await ls2('home_o');
+    ok(st.dis && st.pressed === 'false' && !st.om && st.mark === null && st.h === null && /Pal Park/.test(st.txt) && /Sans marque/.test(st.txt) && !o.length, tag + ' v23 GBA ' + g + ': Transféré greyed, no mark, Pal Park → « Sans marque » explained'); }
+  ok(await p.evaluate(() => !homeAvail(BY_KEY['380']).some(m => m === null) && E.every(e => !homeAvail(e).includes(undefined)) && ['rs', 'e', 'frlg'].every(g => !COMPAT().includes(g))), tag + ' v23 GBA games never in Home availability');
+  await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
+  { const hb = await p.evaluate(() => ({ old: [...document.querySelectorAll('#actbar .ori.old')].map(b => b.dataset.origin).join(), grp: [...document.querySelectorAll('#trackinfo .hgrp')].map(x => x.textContent).join('|') }));
+    ok(hb.old === 'alola,kalos,none,gb' && /Compte pour la dorure\|Anciens jeux/.test(hb.grp), tag + ' v23 Home sheet separates dorure / anciens jeux ' + JSON.stringify(hb)); }
   await go('#/'); await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); }); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());

@@ -27,7 +27,7 @@ async function shot(game, hash, file, marks, full) {
   await p.close();
 }
 await shot('sw', '#/p/25', 'v22-fiche-mobile-jeu-epee.png', { caught_g: ['sw:25', 'swisle:25', 'swcrown:25'], home_o: ['galar:25', 'paldea:25', 'go:25'], home_og: ['galar:25'] });
-await shot('home', '#/p/25', 'v22-fiche-mobile-home.png', { caught_g: ['sw:25', 'swisle:25', 'swcrown:25'], home_o: ['galar:25', 'paldea:25', 'go:25', 'kalos:25', 'gb:25'], home_og: ['galar:25'] });
+await shot('home', '#/p/25', 'v23-fiche-mobile-home.png', { caught_g: ['sw:25', 'swisle:25', 'swcrown:25'], home_o: ['galar:25', 'paldea:25', 'go:25', 'kalos:25', 'gb:25'], home_og: ['galar:25'] });
 await shot('go', '#/p/6', 'v22-fiche-mobile-go-energie-xy.png', { caught_g: ['go:6'], mega_energy: ['6-x'] });
 console.log('errs', errs);
 await b.close();

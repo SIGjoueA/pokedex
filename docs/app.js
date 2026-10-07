@@ -125,14 +125,19 @@ const ORIGINS = [
   { id: 'galar', n: 'Galar', fr: 'Marque de Galar (Épée / Bouclier + extensions)', games: ['sw', 'swisle', 'swcrown'] },
   { id: 'lgpe', n: 'Let’s Go', fr: 'Marque Let’s Go (Pikachu / Évoli)', games: ['lgpe'] },
   { id: 'go', n: 'GO', fr: 'Marque GO (Pokémon GO)', games: ['go'] },
-  { id: 'alola', n: 'Alola', fr: 'Trèfle (Soleil / Lune, Ultra-Soleil / Ultra-Lune)', games: ['sm', 'usum'] },
-  { id: 'kalos', n: 'Kalos', fr: 'Pentagone (X / Y, Rubis Oméga / Saphir Alpha)', games: ['xy', 'oras'] },
-  { id: 'none', n: 'Sans marque', s: 'Gén. 4–5', fr: 'Sans marque (4ᵉ–5ᵉ génération, via Poké Transfert / Pokémon Bank)', games: ['dp', 'pt', 'hgss', 'bw', 'b2w2'], noimg: 1 },
-  { id: 'gb', n: 'Game Boy', s: 'GB', fr: 'Marque Game Boy (Console virtuelle 3DS : Rouge / Bleu / Jaune / Or / Argent / Cristal)', games: ['rb', 'y', 'gs', 'c'] },
+  { id: 'alola', old: 1, n: 'Alola', fr: 'Trèfle (Soleil / Lune, Ultra-Soleil / Ultra-Lune)', games: ['sm', 'usum'] },
+  { id: 'kalos', old: 1, n: 'Kalos', fr: 'Pentagone (X / Y, Rubis Oméga / Saphir Alpha)', games: ['xy', 'oras'] },
+  { id: 'none', old: 1, n: 'Sans marque', s: 'Gén. 4–5', fr: 'Sans marque (4ᵉ–5ᵉ génération, via Poké Transfert / Pokémon Bank)', games: ['dp', 'pt', 'hgss', 'bw', 'b2w2'], noimg: 1 },
+  { id: 'gb', old: 1, n: 'Game Boy', s: 'GB', fr: 'Marque Game Boy (Console virtuelle 3DS : Rouge / Bleu / Jaune / Or / Argent / Cristal)', games: ['rb', 'y', 'gs', 'c'] },
 ];
 const ORI = Object.fromEntries(ORIGINS.map((o, i) => [o.id, { ...o, i }]));
 const ORIGIN_OF = {}; ORIGINS.forEach(o => o.games.forEach(g => ORIGIN_OF[g] = o.id));
 const originOf = c => ORIGIN_OF[c] || null;
+// v23 (Yann's rule): only Switch-era marks count for Home gold — Let's Go, Galar, DÉ/PS, Hisui, Paldea, Z-A, GO (except Mythicals), and GBA (Rouge Feu / Vert Feuille Switch) once added.
+// Old marks (Game Boy, pentagon, clover, « Sans marque ») keep their buttons and marks but do not count (Pokémon Bank closing).
+// GBA originals (Rubis/Saphir/Émeraude, Rouge Feu/Vert Feuille GBA): no HOME link (h: null) → Transféré greyed, no mark; Pal Park path = « Sans marque »
+const GBA_IDS = new Set(['rs', 'e', 'frlg']);
+const isGoldMark = m => !!ORI[m] && !ORI[m].old;
 const marksOf = games => [...new Set(games.map(originOf).filter(Boolean))].sort((a, b) => ORI[a].i - ORI[b].i);
 const omIcon = m => (!m || !ORI[m] || ORI[m].noimg) ? homeBall : `<span class="om om-${m}" aria-hidden="true"></span>`;
 // Battle-only (p.bo): Primo, Éternamax, in-battle forms — inherit base marks. Megas use p.mb + Méga-Gemme (Z-A). Gigamax are separately markable.
@@ -194,7 +199,8 @@ function baseStatus(p, av) {
 }
 const homeAvailF = (p, f) => p.mb ? homeAvail(p) : marksOf([...(f.av || []).filter(g => GAME_BY[g] && GAME_BY[g].h), ...(p.go && !p.my ? ['go'] : [])]);
 // "complete" = transferred from every compatible game where it exists (DLC/extension games count only when no base game has it)
-const homeComplete = (p, av = homeAvail(p)) => { if (p.bo) { p = mp(p); av = homeAvail(p); } const t = HOME_C.get(p.k) || []; return av.length > 0 && av.every(m => t.includes(m)); }; // every origin mark where it exists
+const homeGold = p => homeAvail(p).filter(isGoldMark); // marks that count for the gold Home icon
+const homeComplete = (p, av = homeAvail(p)) => { if (p.bo) { p = mp(p); av = homeAvail(p); } av = av.filter(isGoldMark); const t = HOME_C.get(p.k) || []; return av.length > 0 && av.every(m => t.includes(m)); }; // every Switch-era (+ GO) mark where it exists
 const isCaught = (p, c = trackCtx()) => {
   p = mp(p, c);
   if (p.mb) {
@@ -463,11 +469,11 @@ function numHTML(p) {
 // Icons: Poké Ball (red = caught in at least one game, gold = completed) and Home house (blue = transferred from at least one game, gold = from all compatible games)
 const BALL_GOLD = BALL.replace('class="ball"', 'class="ball gold"').replace('#e53935', '#f2b705').replace(/fill="#fff"/g, 'fill="#fff6c9"');
 const homeIcon = (gold, label) => `<span class="mk hm${gold ? ' gold' : ''}" role="img" aria-label="${label}" title="${label}"><svg class="hmi" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" stroke-width="2" stroke-linejoin="round"/></svg></span>`;
-const HOME_T = 'Transféré vers Home avec au moins une marque d’origine', HOME_C_T = 'Transféré avec toutes les marques d’origine possibles (tous les jeux compatibles où il existe)';
+const HOME_T = 'Transféré vers Home avec au moins une marque d’origine', HOME_C_T = 'Transféré avec toutes les marques d’origine Switch possibles (+ GO sauf fabuleux) : anciens jeux non comptés';
 const goldBall = (lv, label) => `<span class="mk ok gold" role="img" aria-label="${label}" title="${label}">${BALL_GOLD}${lv ? `<small class="lvl">${lv}</small>` : ''}</span>`;
 const LVL_T = { sw: 'Complété jeux actuels : capturé dans tous les jeux Switch où il existe, et dans Pokémon GO s’il y est disponible', old: 'Complété dans les anciens jeux : capturé dans tous les jeux d’avant la Switch où il existe' };
 const BASE_LEGEND = `<span>${BALL} capturé dans au moins un jeu (Pokémon GO compris)</span> <span>${goldBall('', 'Poké Ball dorée')} <b>Poké Ball dorée</b> : complété jeux actuels = capturé dans tous les jeux Switch où il existe (un jeu et ses extensions comptent pour un) <b>et</b> dans Pokémon GO s’il y est disponible</span> <span>${goldBall('🕹', 'Poké Ball dorée 🕹')} <b>Poké Ball dorée 🕹</b> : complété dans les anciens jeux = capturé dans tous les jeux d’avant la Switch où il existe (les deux niveaux : dorée + 🕹)</span> <span><span class="mk sh">✨</span> shiny dans au moins un jeu</span> <span>Pour marquer, choisissez un jeu (ou Pokémon GO) dans « Jeux ».</span> <span class="mute">Menu Catégorie : 🔴 Poké Ball · 🟡 Poké Ball dorée (jeux actuels / Switch + GO) · 🟡🕹 anciens jeux · 🏠 Home · 🟡🏠 Home doré · ✨ shiny.</span>`;
-const HOME_LEGEND = `<span>${homeIcon(false, HOME_T)} transféré avec au moins une marque d’origine</span> <span>${homeIcon(true, HOME_C_T)} <b>dorée</b> : transféré avec <b>toutes</b> les marques d’origine possibles = une par jeu compatible où il existe, un jeu et ses extensions comptant pour une (Pokémon GO compris, sauf pour les fabuleux)</span> <span>Marques : ${ORIGINS.map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')}</span> <span>Pour cocher : fiche du Pokémon → « Pokémon HOME » (une case par marque ; échanges Home compris, sans « Capturé ») ou « Transféré » dans la fiche d’un jeu (implique « Capturé » dans ce jeu).</span> <span class="mute">Icônes des marques : Bulbagarden Archives (usage équitable). Menu Catégorie : 🏠 Home · 🟡🏠 Home doré.</span>`;
+const HOME_LEGEND = `<span>${homeIcon(false, HOME_T)} transféré avec au moins une marque d’origine</span> <span>${homeIcon(true, HOME_C_T)} <b>dorée</b> : transféré avec <b>toutes</b> les marques Switch où il existe — ${ORIGINS.filter(o => !o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')} (un jeu et ses extensions comptent pour une ; Pokémon GO compris, sauf pour les fabuleux ; plus tard Rouge Feu / Vert Feuille Switch)</span> <span><b>Anciens jeux</b> (${ORIGINS.filter(o => o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')}) : boutons et marques conservés, mais ne comptent pas pour la dorure (fermeture de Pokémon Bank).</span> <span>Pour cocher : fiche du Pokémon → « Pokémon HOME » (une case par marque ; échanges Home compris, sans « Capturé ») ou « Transféré » dans la fiche d’un jeu (implique « Capturé » dans ce jeu).</span> <span class="mute">Icônes des marques : Bulbagarden Archives (usage équitable). Menu Catégorie : 🏠 Home · 🟡🏠 Home doré.</span>`;
 // ball shown on cards in the base view: red = caught somewhere, gold = Switch-complete, gold+🕹 = anciens jeux (both → gold+🕹)
 function baseBall(p) {
   const b = baseStatus(p); if (!b.any) return '';
@@ -498,11 +504,12 @@ function transCat(p, cat) {
     return cat === 'trans' ? t : cat === 'notrans' ? !t : cat === 'strans' ? isSTrans(p, c) : homeComplete(p, homeAvail(p));
   }
   const q = mp(p), av = homeAvail(q); if (!av.length) return false;
+  if (cat === 'hcomplete' && !av.some(isGoldMark)) return false;
   return cat === 'trans' ? HOME_C.has(q.k) : cat === 'notrans' ? !HOME_C.has(q.k) : cat === 'strans' ? HOME_S.has(q.k) : homeComplete(q, av);
 }
 function updateCatOptions() {
   const c = trackCtx(), game = c && c !== 'home', off = game && !homeKind(c);
-  const lab = game ? { trans: '🏠 Transférés (marque de ce jeu)', notrans: '🏠 Pas encore transférés (marque de ce jeu)', strans: '✨ Shiny transférés (ce jeu)', hcomplete: '🟡🏠 Complets Home (toutes les marques)' } : { trans: '🏠 Transférés (au moins une marque)', notrans: '🏠 Pas encore transférés (aucune marque)', strans: '✨ Shiny transférés', hcomplete: '🟡🏠 Complets Home (toutes les marques)' };
+  const lab = game ? { trans: '🏠 Transférés (marque de ce jeu)', notrans: '🏠 Pas encore transférés (marque de ce jeu)', strans: '✨ Shiny transférés (ce jeu)', hcomplete: '🟡🏠 Complets Home (marques Switch + GO)' } : { trans: '🏠 Transférés (au moins une marque)', notrans: '🏠 Pas encore transférés (aucune marque)', strans: '✨ Shiny transférés', hcomplete: '🟡🏠 Complets Home (marques Switch + GO)' };
   for (const o of document.querySelectorAll('#cat option')) if (lab[o.value]) { o.textContent = lab[o.value]; o.disabled = !!off; }
   if (off && TRANS_CATS.includes(state.cat)) { state.cat = ''; $('#cat').value = ''; }
 }
@@ -600,9 +607,11 @@ function gameNames(ids) { return ids.map(g => g === 'go' ? 'Pokémon GO' : GAME_
 const omName = m => ORI[m] ? ORI[m].fr : m;
 function homeRowsHTML(av, f, sh, k) {
   if (!av.length) return '<br>Aucune marque d’origine possible : ce Pokémon (ou cette forme) n’existe dans aucun jeu compatible avec Home.';
-  const done = av.filter(m => f.includes(m)).length;
-  return `<br>Transféré depuis <b>${done} / ${av.length}</b> marques d’origine${done === av.length ? ` ${homeIcon(true, HOME_C_T)} complet` : ''} :<ul class="plain homerows">` +
-    av.map(m => `<li class="${f.includes(m) ? 'on' : ''}">${omIcon(m)} ${esc(omName(m))} — ${f.includes(m) ? `transféré${k && HOME_OG.has(m + ':' + k) ? ' <span class="mute">(depuis la fiche du jeu)</span>' : ''}` : 'pas transféré'}${sh.includes(m) ? ' · ✨ shiny' : ''}</li>`).join('') + '</ul>';
+  const row = m => `<li class="${f.includes(m) ? 'on' : ''}">${omIcon(m)} ${esc(omName(m))} — ${f.includes(m) ? `transféré${k && HOME_OG.has(m + ':' + k) ? ' <span class="mute">(depuis la fiche du jeu)</span>' : ''}` : 'pas transféré'}${sh.includes(m) ? ' · ✨ shiny' : ''}</li>`;
+  const gold = av.filter(isGoldMark), old = av.filter(m => !isGoldMark(m)), done = gold.filter(m => f.includes(m)).length;
+  return `<br><b class="hgrp">Compte pour la dorure</b> : ${gold.length ? `<b>${done} / ${gold.length}</b> marques${done === gold.length ? ` ${homeIcon(true, HOME_C_T)} complet` : ''}` : 'aucune (pas de dorure possible pour cette forme)'}` +
+    (gold.length ? `<ul class="plain homerows">${gold.map(row).join('')}</ul>` : '') +
+    (old.length ? `<b class="hgrp">Anciens jeux</b> <span class="mute">(marques conservées, ne comptent pas pour la dorure : fermeture de Pokémon Bank)</span><ul class="plain homerows old">${old.map(row).join('')}</ul>` : '');
 }
 function baseHTML(p0) {
   const p = mp(p0), f = DET && DET.p === p ? DET.f : null;
@@ -627,7 +636,7 @@ function trackHTML(p0) {
   if (c === 'home') {
     const f = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [], av = homeAvail(p);
     return note + `Suivi : <b>Pokémon HOME</b> — une marque d’origine par jeu (et ses extensions). Cochez la marque du Pokémon reçu, y compris par échange dans Home : cela compte comme un transfert depuis ce jeu, sans le marquer « Capturé » dans le jeu. Même état que le bouton « Transféré » de la fiche du jeu.<br>` +
-      `${homeIcon(false, HOME_T)} au moins une marque · ${homeIcon(true, HOME_C_T)} toutes les marques possibles (GO compris, sauf fabuleux)` +
+      `${homeIcon(false, HOME_T)} au moins une marque · ${homeIcon(true, HOME_C_T)} toutes les marques Switch possibles + GO (sauf fabuleux)` +
       homeRowsHTML(av, f, sh, p.k) + '<span class="mute credit">Icônes des marques d’origine : Bulbagarden Archives (usage équitable).</span>';
   }
   const hk = homeKind(c), sw = sharedWith(c, p);
@@ -644,7 +653,7 @@ function trackHTML(p0) {
     h += `<br><span class="mute gemline">${ms.map(m => `${megaXYZ(m) ? `Méga-énergie ${megaXYZ(m).toUpperCase()}` : 'Méga-énergie'} de ${esc((BY_KEY[String(p0.id)] || p0).n)} : ${hasEnergy(m) ? 'obtenue' : 'pas encore obtenue'}`).join(' · ')} (${ms.length > 1 ? 'une marque par Méga' : 'marque par espèce'}, sans effet sur la complétion).</span>`;
   }
   { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
-  if (!hk) return h + '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.';
+  if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → 4ᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
   if (c === 'go' && p.my) return h + '<br>Les Pokémon fabuleux ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion Home de ce Pokémon.';
   const om = originOf(c);
   h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span>`;
@@ -664,10 +673,10 @@ function refreshTrack(p) {
 // Mobile: the fixed bottom bar can wrap (Home origin marks) → its height feeds the bottom padding of the sheet.
 function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $('#detail-view'); if (b && v) v.style.setProperty('--barh', b.offsetHeight + 'px'); }); }
 function homeBarHTML(p) {
-  const q = mp(p, 'home'), av = homeAvail(q), f = HOME_C.get(q.k) || [], dis = !!p.bo, done = av.filter(m => f.includes(m)).length;
+  const q = mp(p, 'home'), av = homeAvail(q), f = HOME_C.get(q.k) || [], dis = !!p.bo, gav = av.filter(isGoldMark), done = gav.filter(m => f.includes(m)).length;
   const extra = f.filter(m => ORI[m] && !av.includes(m)); // ticked from a « hors dex » game sheet: shown so it can be unticked (no effect on completion)
-  const btns = [...av, ...extra].sort((a, b) => ORI[a].i - ORI[b].i).map(m => `<button class="act ori" type="button" data-origin="${m}"${dis ? ' disabled' : ''} aria-pressed="${f.includes(m)}" aria-label="Transféré – ${esc(omName(m))}" title="${esc(omName(m))} : ${dis ? 'variante de combat, suit la forme de base' : 'transféré vers Home avec cette marque d’origine (ou reçu par échange dans Home) — sans marquer « Capturé » dans le jeu'}">${omIcon(m)}<span class="t">${esc(ORI[m].s || ORI[m].n)}</span></button>`).join('');
-  const ctx = `<b>Pokémon HOME</b> · ${av.length ? `${done} / ${av.length} marque${av.length > 1 ? 's' : ''} d’origine${av.length && done === av.length ? ' ' + homeIcon(true, HOME_C_T) : ''}` : 'aucune marque possible'}`;
+  const btns = [...av, ...extra].sort((a, b) => ORI[a].i - ORI[b].i).map(m => `<button class="act ori${isGoldMark(m) ? '' : ' old'}" type="button" data-origin="${m}"${dis ? ' disabled' : ''} aria-pressed="${f.includes(m)}" aria-label="Transféré – ${esc(omName(m))}" title="${esc(omName(m))}${isGoldMark(m) ? ' (compte pour la dorure)' : ' (ancien jeu : ne compte pas pour la dorure)'} : ${dis ? 'variante de combat, suit la forme de base' : 'transféré vers Home avec cette marque d’origine (ou reçu par échange dans Home) — sans marquer « Capturé » dans le jeu'}">${omIcon(m)}<span class="t">${esc(ORI[m].s || ORI[m].n)}</span></button>`).join('');
+  const ctx = `<b>Pokémon HOME</b> · ${!av.length ? 'aucune marque possible' : gav.length ? `dorure ${done} / ${gav.length}${done === gav.length ? ' ' + homeIcon(true, HOME_C_T) : ''}${av.length > gav.length ? ` · <span class="oldl">anciens jeux en pointillés</span>` : ''}` : 'anciens jeux seulement (pas de dorure)'}`;
   return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${btns || '<span class="mute">Aucun jeu compatible avec Home ne contient cette forme.</span>'}</div></div>`;
 }
 function actbarHTML(p) {
@@ -677,7 +686,7 @@ function actbarHTML(p) {
   const hk = c && c !== 'home' ? homeKind(c) : null;
   const trOn = !!(hk && !p.bo && !megaBo(p, c) && !(c === 'go' && p.my)); // same guard as toggleTransfer (logic unchanged)
   const sw = c && GAME_BY[c] ? sharedWith(c, q) : [];
-  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? 'Ce jeu ne peut pas envoyer de Pokémon vers HOME' : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : !trOn ? 'Variante de combat : suit la forme de base' :
+  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? (GBA_IDS.has(c) ? 'Jeu GBA : pas de transfert direct vers HOME (Pal Park → 4ᵉ gén. → Bank : « Sans marque » sur la fiche Pokémon HOME)' : 'Ce jeu ne peut pas envoyer de Pokémon vers HOME') : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : !trOn ? 'Variante de combat : suit la forme de base' :
     `Transféré vers Home depuis ${nm}${sw.length ? ' (et ' + sw.map(x => GAME_BY[x].s).join(', ') + ')' : ''}${p.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}`;
   let slot = '';
   if (c === 'go') slot = energyMates(p).map(m => energyBtnHTML(m)).join(''); // one Méga-énergie per Mega when the species has X / Y
@@ -1023,9 +1032,10 @@ function homeSrcHTML(p, f) {
   if (p.bo) return ''; // battle-only variant: shown through the base form
   const av = homeAvailF(p, f), t = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [];
   if (!av.length) return '';
-  return `<section class="box"><h2>Transferts vers Home <small class="cnt">${av.filter(m => t.includes(m)).length} / ${av.length}</small></h2>` +
-    `<p class="note" style="margin:0 0 6px">Une marque d’origine par jeu (et ses extensions) · ${homeIcon(true, HOME_C_T)} toutes les marques possibles${homeComplete(p, av) ? ' (complet)' : ''}. Pour cocher : « Pokémon HOME » ou le jeu dans le sélecteur.</p>` +
-    `<ul class="plain homerows">${av.map(m => `<li class="${t.includes(m) ? 'on' : ''}">${omIcon(m)} ${esc(omName(m))} — ${t.includes(m) ? 'transféré' : 'pas transféré'}${sh.includes(m) ? ' · ✨ shiny' : ''}</li>`).join('')}</ul></section>`;
+  const gav = av.filter(isGoldMark);
+  return `<section class="box"><h2>Transferts vers Home <small class="cnt">${gav.filter(m => t.includes(m)).length} / ${gav.length}</small></h2>` +
+    `<p class="note" style="margin:0 0 6px">Une marque d’origine par jeu (et ses extensions) · ${homeIcon(true, HOME_C_T)} toutes les marques Switch + GO (les anciens jeux sont affichés mais ne comptent pas)${homeComplete(p, av) ? ' (complet)' : ''}. Pour cocher : « Pokémon HOME » ou le jeu dans le sélecteur.</p>` +
+    `<ul class="plain homerows">${av.map(m => `<li class="${t.includes(m) ? 'on' : ''}">${omIcon(m)} ${esc(omName(m))} — ${t.includes(m) ? 'transféré' : 'pas transféré'}${isGoldMark(m) ? '' : ' <span class="mute">(ancien jeu, hors dorure)</span>'}${sh.includes(m) ? ' · ✨ shiny' : ''}</li>`).join('')}</ul></section>`;
 }
 function availHTML(sp, games, hors = []) {
   if (!games.length && !hors.length) return '';
