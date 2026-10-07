@@ -265,13 +265,25 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(await hasBtn('#actbar .tr'), tag + ' Home-transfer button visible for Épée/Bouclier');
   await p.click('#actbar .cg'); await sleep(100);
   ok((await ls2('caught_g')).includes('sw:25') && !(await ls2('caught_g')).some(x => x.startsWith('sv:')) && (await cgState()).on, tag + ' mark stored under sw (and its save group), not sv: ' + JSON.stringify(await ls2('caught_g')));
-  await p.click('#actbar .tr'); await sleep(100); ok((await ls2('home_g')).includes('sw:25') && !(await ls2('home_g')).some(x => x.startsWith('sv:')), tag + ' transfer stored under sw group');
+  await p.click('#actbar .tr'); await sleep(100); ok(JSON.stringify(await ls2('home_o')) === '["galar:25"]' && (await ls2('home_og')).includes('galar:25'), tag + ' transfer stored under the Galar origin mark (set from the game)');
   await p.click('#actbar .sh'); await sleep(100); ok((await ls2('shiny_g')).includes('sw:25') && !(await p.$('#actbar .trs, #trackinfo .trs')), tag + ' shiny stored under sw, no shiny-transfer button (v21)');
   await swS('sv'); ok(!(await cgState()).on && await p.$eval('#actbar .sh', e => e.getAttribute('aria-pressed') === 'false'), tag + ' back on SV: states are SV\'s own (not caught)');
   ok(!(await p.$eval('#actbar .tr', e => e.getAttribute('aria-pressed') === 'true')), tag + ' SV transfer state not set');
-  await swS('rb'); ok(!(await cgState()).dis && !(await hasBtn('#actbar .tr')) && /Rouge/.test((await cgState()).lab), tag + ' Rouge/Bleu: buttons enabled, no Home transfer button');
+  await swS('rb'); ok(!(await cgState()).dis && await hasBtn('#actbar .tr') && !!(await p.$('#actbar .tr .om-gb')) && /Rouge/.test((await cgState()).lab), tag + ' Rouge/Bleu (Console virtuelle): transfer button with the Game Boy mark');
+  await swS('sw'); ok(!!(await p.$('#actbar .tr .om-galar')), tag + ' Épée/Bouclier: Transféré uses the Galar origin icon');
   await swS('go'); await sleep(400); ok(!(await cgState()).dis && await hasBtn('#actbar .tr') && /GO/.test((await cgState()).lab), tag + ' GO: buttons + transfer button');
-  await swS('home'); ok((await cgState()).dis && /lecture seule|vue d’ensemble/.test(await strip()), tag + ' general-infos option: read-only overview');
+  await swS('all'); ok((await cgState()).dis && /vue d’ensemble/i.test(await strip()), tag + ' general-infos option: read-only overview');
+  await swS('home'); { const hb = await p.evaluate(() => ({ cg: !!document.querySelector('#actbar .cg'), o: [...document.querySelectorAll('#actbar .ori')].map(b => b.dataset.origin + '=' + b.getAttribute('aria-pressed')), av: homeAvail(BY_KEY['25']) }));
+    ok(!hb.cg && hb.o.length === hb.av.length && hb.o.includes('galar=true') && hb.o.includes('paldea=false') && hb.av.includes('go'), tag + ' Home sheet: one button per origin mark, Galar on ' + JSON.stringify(hb)); }
+  await p.click('#actbar .ori[data-origin="paldea"]'); await sleep(100);
+  ok((await ls2('home_o')).includes('paldea:25') && !(await ls2('home_og')).includes('paldea:25') && !(await ls2('caught_g')).some(x => x.startsWith('sv')), tag + ' Home sheet: Paldea ticked, no Capturé in SV');
+  await swS('sv'); ok(await p.$eval('#actbar .tr', e => e.getAttribute('aria-pressed')) === 'true' && !(await cgState()).on && /fiche Pokémon HOME/.test(await strip()), tag + ' two-way sync: SV sheet shows the transfer, not caught');
+  await p.click('#actbar .cg'); await sleep(80); await p.click('#actbar .cg'); await sleep(80);
+  ok((await ls2('home_o')).includes('paldea:25'), tag + ' removing Capturé in SV keeps a transfer ticked from Home');
+  await p.click('#actbar .tr'); await sleep(80); ok(!(await ls2('home_o')).includes('paldea:25'), tag + ' unticking in the game sheet clears the shared state');
+  await swS('home'); ok(await p.$eval('#actbar .ori[data-origin="paldea"]', e => e.getAttribute('aria-pressed')) === 'false', tag + ' Home sheet reflects the game-sheet change');
+  { const ov = await p.evaluate(() => { const bar = document.querySelector('#actbar'); return { sw: document.documentElement.scrollWidth <= innerWidth, out: [...bar.querySelectorAll('.act')].filter(b => { const r = b.getBoundingClientRect(); return r.left < 0 || r.right > innerWidth + .5; }).length }; });
+    ok(ov.sw && ov.out === 0, tag + ' Home bar: no horizontal overflow ' + JSON.stringify(ov)); }
   await swS('sw'); ok((await cgState()).on, tag + ' sw state restored');
   await go('#/'); await sleep(200);
   ok(await p.$eval('#game', e => e.value) === 'sv', tag + ' list filter kept (SV) after returning');
@@ -288,7 +300,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/'); await sleep(200); ok(await p.$eval('#game', e => e.value) === '', tag + ' list filter still unset');
   const mk25 = await p.$eval('.card[href="#/p/25"], a[href="#/p/25"]', e => e.parentElement.innerHTML.includes('mk') || e.innerHTML.includes('mk')).catch(() => null);
   await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' base list reflects the mark on return'); await p.select('#cat', '');
-  await go('#/p/25'); await sleep(300); ok(await p.$eval('#dgame', e => e.value) === 'home' && (await cgState()).dis, tag + ' sheet game choice reset after returning to the list');
+  await go('#/p/25'); await sleep(300); ok(await p.$eval('#dgame', e => e.value) === 'all' && (await cgState()).dis, tag + ' sheet game choice reset after returning to the list');
   await p.screenshot({ path: SHOTS + `sheet-context-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 260 } });
   await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
   // ---- "Présent dans": one entry per game/expansion, consistent names (Venusaur regression)
@@ -324,10 +336,10 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(JSON.stringify((await ls2('caught_g')).sort()) === JSON.stringify(expC), tag + ' caught written to the whole save group ' + JSON.stringify(await ls2('caught_g')));
   await swS('swisle'); ok((await cgState()).on, tag + ' expansion shows the shared mark');
   await p.click('#actbar .sh'); await sleep(100); await p.click('#actbar .tr'); await sleep(100);
-  ok((await ls2('shiny_g')).length === expC.length && (await ls2('home_g')).length === expC.length, tag + ' shiny + transfer shared too');
+  ok((await ls2('shiny_g')).length === expC.length && JSON.stringify(await ls2('home_o')) === JSON.stringify(['galar:' + grp.both.k]), tag + ' shiny shared; transfer = one Galar mark for the whole save');
   await go('#/'); await sel('swisle'); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' expansion list shows the shared mark'); await p.select('#cat', ''); await sel('');
   await go('#/p/' + grp.both.k); await sleep(300); await swS('swisle'); await p.click('#actbar .cg'); await sleep(100);
-  ok((await ls2('caught_g')).length === 0 && (await ls2('home_g')).length === 0 && (await ls2('shiny_g')).length === 0, tag + ' un-catching in the expansion clears the group (shiny + transfers)');
+  ok((await ls2('caught_g')).length === 0 && (await ls2('home_o')).length === 0 && (await ls2('shiny_g')).length === 0, tag + ' un-catching in the expansion clears the group (shiny + transfer set from the game)');
   // chain: shiny ⇒ caught; shiny transferred ⇒ shiny + caught + transferred; un-catch clears the rest (also shared groups and forms)
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   await go('#/'); await sel('sw'); await go('#/p/' + grp.both.k); await sleep(300);
@@ -336,15 +348,18 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.click('#actbar .cg'); await sleep(100);
   ok((await ls2('shiny_g')).length === 0 && (await ls2('caught_g')).length === 0 && await p.$eval('#actbar .sh', e => e.getAttribute('aria-pressed') === 'false'), tag + ' removing Capturé clears shiny (button updates)');
   await p.click('#actbar .sh'); await sleep(100); await p.click('#actbar .tr'); await sleep(100); await trsLogic(); await sleep(100);
-  ok((await ls2('homeshiny_g')).length === expC.length && (await ls2('home_g')).length === expC.length && (await ls2('shiny_g')).length === expC.length && (await ls2('caught_g')).length === expC.length, tag + ' shiny transfer ⇒ shiny + caught + transferred');
+  ok((await ls2('homeshiny_g')).length === expC.length && (await ls2('home_o')).length === 1 && (await ls2('shiny_g')).length === expC.length && (await ls2('caught_g')).length === expC.length, tag + ' shiny transfer ⇒ shiny + caught + transferred');
   await p.click('#actbar .sh'); await sleep(100);
-  ok((await ls2('shiny_g')).length === 0 && (await ls2('homeshiny_g')).length === 0 && (await ls2('home_g')).length === expC.length && (await ls2('caught_g')).length === expC.length, tag + ' un-shiny keeps caught + transfer, clears shiny transfer');
+  ok((await ls2('shiny_g')).length === 0 && (await ls2('homeshiny_g')).length === 0 && (await ls2('home_o')).length === 1 && (await ls2('caught_g')).length === expC.length, tag + ' un-shiny keeps caught + transfer, clears shiny transfer');
   await p.click('#actbar .cg'); await sleep(100);
-  ok((await ls2('home_g')).length === 0 && (await ls2('caught_g')).length === 0, tag + ' removing Capturé clears the transfer too');
+  ok((await ls2('home_o')).length === 0 && (await ls2('caught_g')).length === 0, tag + ' removing Capturé clears the transfer set from the game');
   await go('#/'); await sel('sm'); await go('#/p/26-alola'); await sleep(300); await p.click('#actbar .sh'); await sleep(100);
   ok((await ls2('caught_g')).includes('sm:26-alola') && (await ls2('shiny_g')).includes('sm:26-alola'), tag + ' form: shiny marks caught too');
   await p.evaluate(() => { localStorage.clear(); localStorage.setItem('shiny_g', '["rb:25"]'); localStorage.setItem('home_g', '["sw:25"]'); }); await p.reload({ waitUntil: 'networkidle0' });
   ok((await ls2('caught_g')).includes('rb:25') && (await ls2('caught_g')).includes('sw:25'), tag + ' migration: saved shiny/transfer marks without caught get caught ' + JSON.stringify(await ls2('caught_g')));
+  ok(JSON.stringify(await ls2('home_o')) === '["galar:25"]' && JSON.stringify(await ls2('home_og')) === '["galar:25"]' && (await ls2('home_g')).includes('sw:25'), tag + ' v22 migration: home_g sw:25 → origin mark galar:25 (legacy list kept)');
+  await p.evaluate(() => { localStorage.clear(); localStorage.setItem('home_g', '["sw:25","swisle:25","xy:6","oras:6","go:150","za:3","za:3-mega","sv:906","rb:1"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(JSON.stringify((await ls2('home_o')).sort()) === JSON.stringify(['galar:25', 'gb:1', 'go:150', 'kalos:6', 'paldea:906', 'za:3', 'za:3-mega']), tag + ' v22 migration maps every game to its mark without loss ' + JSON.stringify(await ls2('home_o')));
   // completion counts a save group once
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   if (grp.two) {
@@ -393,10 +408,10 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/p/3'); await sleep(300); await p.click('#actbar .cg'); await sleep(100);
   ok(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'za')), tag + ' base + gem → Mega caught in Z-A');
   await go('#/p/3'); await sleep(200); await p.click('#actbar .tr'); await sleep(100);
-  ok((await ls2('home_g')).includes('za:3') && (await ls2('home_g')).includes('za:3-mega'), tag + ' transferring base with gem also transfers Mega ' + JSON.stringify(await ls2('home_g')));
+  ok((await ls2('home_o')).includes('za:3') && (await ls2('home_o')).includes('za:3-mega'), tag + ' transferring base with gem also transfers Mega ' + JSON.stringify(await ls2('home_o')));
   // Mega counts toward jeux actuels + Home completion (Z-A only track)
   ok(await p.evaluate(() => { const m = BY_KEY['3-mega']; const b = baseStatus(m); return b.any && b.swDone && b.sw.length > 0 && !b.sw.includes('go') && b.sw.every(g => g === 'za' || g === 'zadlc'); }), tag + ' Mega baseStatus: caught + swDone (Z-A only)');
-  ok(await p.evaluate(() => { const m = BY_KEY['3-mega']; return homeComplete(m, homeAvail(m)) && homeAvail(m).every(g => g === 'za' || g === 'zadlc') && HOME_C.has('3-mega'); }), tag + ' Mega homeComplete after Z-A transfer');
+  ok(await p.evaluate(() => { const m = BY_KEY['3-mega']; return homeComplete(m, homeAvail(m)) && JSON.stringify(homeAvail(m)) === '["za"]' && HOME_C.has('3-mega'); }), tag + ' Mega homeComplete after Z-A transfer (Z-A mark only)');
   await p.evaluate(() => { state.forms = true; });
   await go('#/'); await sel(''); await sleep(200);
   const hdr = await p.$eval('#count', e => e.textContent);
@@ -485,12 +500,20 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // GO: Méga-énergie per species, only when the Mega is out in GO
   await go('#/'); await sel('go'); await go('#/p/6'); await sleep(600);
   const en = await p.evaluate(() => { const b = document.querySelector('#actbar .energy'); return b && { img: b.querySelector('img').getAttribute('src'), gems: document.querySelectorAll('#actbar .gem').length }; });
-  ok(en && /energy\/6\.webp/.test(en.img) && en.gems === 0, tag + ' GO Dracaufeu: Méga-énergie button with species icon ' + JSON.stringify(en));
-  await p.click('#actbar .energy'); await sleep(80);
-  ok(JSON.stringify(await ls2('mega_energy')) === '["6"]' && await p.$eval('#actbar .energy', b => b.getAttribute('aria-pressed')) === 'true' && /Méga-énergie de Dracaufeu : obtenue/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' GO energy stored per species');
+  const en2 = await p.$$eval('#actbar .energy', bs => bs.map(b => ({ k: b.dataset.energy, img: b.querySelector('img').getAttribute('src'), t: b.textContent })));
+  ok(en && en.gems === 0 && en2.length === 2 && /energy\/6-x\.webp/.test(en2[0].img) && /energy\/6-y\.webp/.test(en2[1].img) && /Énergie X/.test(en2[0].t) && /Énergie Y/.test(en2[1].t), tag + ' GO Dracaufeu: 2 Méga-énergie buttons X / Y with their icons ' + JSON.stringify(en2));
+  await p.click('#actbar .energy[data-energy="6-mega-x"]'); await sleep(80);
+  ok(JSON.stringify(await ls2('mega_energy')) === '["6-x"]' && await p.$eval('#actbar .energy[data-energy="6-mega-x"]', b => b.getAttribute('aria-pressed')) === 'true' && await p.$eval('#actbar .energy[data-energy="6-mega-y"]', b => b.getAttribute('aria-pressed')) === 'false' && /Méga-énergie X de Dracaufeu : obtenue/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' GO energy X stored separately from Y');
   await go('#/p/6-mega-y'); await sleep(500);
-  ok(await p.$eval('#actbar .energy', b => b.getAttribute('aria-pressed')) === 'true', tag + ' GO energy shared by the species (Mega sheet)');
-  await go('#/p/150'); await sleep(500);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy + '=' + b.getAttribute('aria-pressed')))).join() === '6-mega-y=false', tag + ' GO Méga-Dracaufeu Y sheet: its own energy (Y) only, not set (same rule as gems)');
+  await go('#/p/6-mega-x'); await sleep(500);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy + '=' + b.getAttribute('aria-pressed')))).join() === '6-mega-x=true', tag + ' GO Méga-Dracaufeu X sheet: energy X set');
+  await go('#/p/3'); await sleep(500);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy + '|' + b.querySelector('img').getAttribute('src')))).join() === '3-mega|img/energy/3.webp', tag + ' GO Florizarre: single energy button (species icon)');
+  await p.evaluate(() => { localStorage.setItem('mega_energy', '["6","3"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(JSON.stringify((await ls2('mega_energy')).sort()) === '["3","6-x","6-y"]', tag + ' v21 energy "6" migrated to X and Y ' + JSON.stringify(await ls2('mega_energy')));
+  ok(await p.evaluate(() => { const ms = E.filter(q => q.mb && q.id === 150); return ms.length === 2 && ms.map(energyId).join() === '150-x,150-y'; }), tag + ' Mewtwo data model supports energy X / Y');
+  await go('#/'); await sel('go'); await go('#/p/150'); await sleep(600);
   ok(!(await p.$('#actbar .energy')), tag + ' GO Mewtwo: no energy button (Megas not released in GO)');
   const goOrder = await p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
   ok(goOrder.indexOf('Statistiques GO') < goOrder.indexOf('Attaques rapides') && goOrder.indexOf('Attaques chargées') < goOrder.indexOf('Évolutions') && goOrder.indexOf('Évolutions') < goOrder.indexOf('Pokémon GO : bonbons, compagnon, œufs'), tag + ' GO body order ' + goOrder);
@@ -502,6 +525,8 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // Z-A dexes: no « Hors dex » tail for species of the sibling dex (Z-A ↔ Méga-Dimension); 3rd dex « Méga-Dex »
   const zx = await p.evaluate(async () => { const a = await loadDex('za'), b = await loadDex('zadlc'); return { za: a.extra.size, zadlc: b.extra.size, zaN: a.order.size, dlcN: b.order.size }; });
   ok(zx.za === 0 && zx.zadlc === 0 && zx.zaN === 232 && zx.dlcN === 132, tag + ' Z-A / Méga-Dimension: no sibling species in Hors dex ' + JSON.stringify(zx));
+  { const ord = (await p.$$eval('#game option', o => o.map(x => x.value))).join(' ');
+    ok(/zamega zadlc za svhors svdisk svmask sv la bdsp swhors swcrown swisle sw lgpe/.test(ord), tag + ' Jeux: extra dexes just above the latest expansion of their group ' + ord); }
   await go('#/'); await p.select('#game', 'zamega'); await sleep(600);
   const md = await p.evaluate(() => { const r = filtered(); return { n: r.length, sp: new Set(r.map(x => x.id)).size, megas: r.filter(x => x.mb).length, ctx: trackCtx(), sel: document.querySelector('#game').value,
     nat: r.every((x, i) => i === 0 || r[i - 1].id <= x.id), allMega: [...new Set(r.map(x => x.id))].every(id => r.some(x => x.id === id && x.mb)), first: r.slice(0, 3).map(x => x.k), count: document.querySelector('#count').textContent,
@@ -549,7 +574,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // ---- Catégorie: transfer categories (game / base / Home)
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   const catN = async c => { await p.select('#cat', c); await sleep(200); return parseInt(await count()); };
-  const tinfo = await p.evaluate(() => ({ N: E.filter(e => !e.c && homeAvail(e).length > 0).length, one: (e => e && { k: e.k, g: homeAvail(e)[0] })(E.find(e => !e.c && !e.bo && !e.my && grpsOf(homeAvail(e)).length === 1 && homeAvail(e)[0] !== 'go')) }));
+  const tinfo = await p.evaluate(() => ({ N: E.filter(e => !e.c && homeAvail(e).length > 0).length, one: (e => e && { k: e.k, g: ORI[homeAvail(e)[0]].games.find(g => gamesOf(e).includes(g)) })(E.find(e => !e.c && !e.bo && !e.my && homeAvail(e).length === 1 && homeAvail(e)[0] !== 'go')) }));
   await go('#/'); await sel('sw'); await go('#/p/25'); await sleep(300); await p.click('#actbar .tr'); await sleep(100);
   await go('#/'); await sleep(200);
   ok(await catN('trans') === 1, tag + ' game view: "transférés depuis ce jeu" = 1');
@@ -561,7 +586,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel(''); ok(await catN('trans') === 1 && await catN('notrans') === tinfo.N - 1 && await catN('hcomplete') === 0, tag + ' base view transfer categories (N=' + tinfo.N + ')');
   await p.select('#cat', ''); await sleep(200); ok(/1 🏠 transférés Home/.test(await count()), tag + ' base counter: ' + await count());
   await sel('home'); ok(await catN('trans') === 1 && await catN('notrans') === tinfo.N - 1, tag + ' Home view transfer categories'); await p.select('#cat', '');
-  await sel('rb'); ok(await p.$eval('#cat option[value=trans]', o => o.disabled), tag + ' categories disabled in a game that cannot transfer'); await sel('');
+  await sel('frlg'); ok(await p.$eval('#cat option[value=trans]', o => o.disabled), tag + ' categories disabled in a game that cannot transfer'); await sel('');
   await go('#/'); await sel(tinfo.one.g); await go('#/p/' + tinfo.one.k); await sleep(300); await p.click('#actbar .tr'); await sleep(100); await sel('');
   ok(await catN('hcomplete') === 1, tag + ' "Complets Home" for a Pokémon in one compatible save (' + JSON.stringify(tinfo.one) + ')'); await p.select('#cat', '');
   await sleep(200); ok(/1 🟡🏠 complets Home/.test(await count()), tag + ' base counter complets Home: ' + await count());
@@ -570,8 +595,8 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // ---- Home completion with Pokémon GO: required, except for Mythicals
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   const gi = await p.evaluate(() => ({
-    reg: (e => e && { k: e.k, reps: grpsOf(homeAvail(e)).map(G => homeAvail(e).find(g => saveOf(g) === G)) })(E.find(e => !e.c && !e.bo && !e.my && e.go && grpsOf(homeAvail(e)).length === 2 && homeAvail(e).includes('go'))),
-    myth: (e => e && { k: e.k, reps: grpsOf(homeAvail(e)).map(G => homeAvail(e).find(g => saveOf(g) === G)), withGo: !homeAvail(e).includes('go') })(E.filter(e => !e.c && !e.bo && e.my && e.go && homeAvail(e).length >= 1).sort((a, b) => grpsOf(homeAvail(a)).length - grpsOf(homeAvail(b)).length)[0]) }));
+    reg: (e => e && { k: e.k, reps: homeAvail(e).map(m => m === 'go' ? 'go' : ORI[m].games.find(g => gamesOf(e).includes(g))) })(E.find(e => !e.c && !e.bo && !e.my && e.go && homeAvail(e).length === 2 && homeAvail(e).includes('go'))),
+    myth: (e => e && { k: e.k, reps: homeAvail(e).map(m => ORI[m].games.find(g => gamesOf(e).includes(g))), withGo: !homeAvail(e).includes('go') })(E.filter(e => !e.c && !e.bo && e.my && e.go && homeAvail(e).length >= 1).sort((a, b) => homeAvail(a).length - homeAvail(b).length)[0]) }));
   ok(gi.reg && gi.myth && gi.myth.withGo, tag + ' found GO test Pokémon ' + JSON.stringify(gi));
   const trf = async (g, k) => { await go('#/'); await sel(g); await go('#/p/' + k); await sleep(250); await p.click('#actbar .tr'); await sleep(100); };
   for (const g of gi.reg.reps.filter(g => g !== 'go')) await trf(g, gi.reg.k);
@@ -586,7 +611,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
   // Rouge/Bleu (not Home-compatible)
   await go('#/'); await sel('rb'); await go('#/p/25');
-  ok(/Rouge\/Bleu/.test(await strip()) && !(await hasBtn('#actbar .tr')), tag + ' rb strip, no Home button: ' + await strip());
+  ok(/Rouge\/Bleu/.test(await strip()) && await hasBtn('#actbar .tr') && /Console virtuelle/.test(await strip()), tag + ' rb strip (Console virtuelle → Home, Game Boy mark): ' + await strip());
   await p.click('#actbar .cg'); ok(JSON.stringify(await ls2('caught_g')) === '["rb:25"]' && JSON.stringify(await ls2('caught')) === '[25,"26-alola"]', tag + ' rb mark stored per game, legacy global unchanged');
   await go('#/'); await sleep(200); ok(/Rouge\/Bleu : 1 \/ 151 🔴 capturés/.test(await count()), tag + ' rb counter: ' + await count());
   await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' rb caught filter'); 
@@ -595,7 +620,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel('sw'); await go('#/p/25');
   ok(await hasBtn('#actbar .tr'), tag + ' sw has Home transfer button');
   await p.click('#actbar .tr'); await sleep(100);
-  ok((await ls2('home_g')).includes('sw:25') && (await ls2('caught_g')).includes('sw:25'), tag + ' transfer auto-marks caught');
+  ok((await ls2('home_o')).includes('galar:25') && (await ls2('caught_g')).includes('sw:25'), tag + ' transfer auto-marks caught');
   await p.click('#actbar .sh'); await sleep(100); ok(!(await p.$('#actbar .trs, #trackinfo .trs')), tag + ' no shiny-transfer button even when shiny (v21)');
   await trsLogic(); await sleep(100); ok((await ls2('homeshiny_g')).includes('sw:25'), tag + ' shiny transfer stored');
   // Home view derived
@@ -603,30 +628,30 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(/HOME : 1 \/ 1025 🏠 transférés · 1 ✨ shiny · 0 🟡🏠 complets/.test(await count()), tag + ' Home counter: ' + await count());
   await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home caught filter derived'); await p.select('#cat', 'shiny'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home shiny filter derived'); await p.select('#cat', '');
   await go('#/p/25'); await sleep(300);
-  ok(/Transféré depuis 1 \/ \d+ jeux/.test(await strip()) && /Épée\/Bouclier — transféré · ✨ shiny/.test(await strip()), tag + ' Home detail shows source: ' + await strip());
-  ok(await p.$eval('#actbar .cg', e => e.disabled), tag + ' Home buttons read-only');
+  ok(/Transféré depuis 1 \/ \d+ marques d’origine/.test(await strip()) && /Marque de Galar[^—]*— transféré[^·]*· ✨ shiny/.test(await strip()), tag + ' Home detail shows source mark: ' + await strip());
+  ok(!(await p.$('#actbar .cg')) && await p.$eval('#actbar .ori[data-origin="galar"]', e => e.getAttribute('aria-pressed')) === 'true', tag + ' Home sheet bar = origin marks (Galar on)');
   await p.screenshot({ path: SHOTS + `home-derived-${tag}.png` });
   // un-catching in the game removes the transfer
   await go('#/'); await sel('sw'); await go('#/p/25'); await p.click('#actbar .cg'); await sleep(100);
-  ok(!(await ls2('home_g')).includes('sw:25') && !(await ls2('homeshiny_g')).includes('sw:25'), tag + ' un-catch clears transfer');
+  ok(!(await ls2('home_o')).includes('galar:25') && !(await ls2('homeshiny_g')).includes('sw:25'), tag + ' un-catch clears the transfer set from the game');
   await p.click('#actbar .tr'); await p.screenshot({ path: SHOTS + `track-sw-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 200 } });
   const tr1 = await p.evaluate(() => [...document.querySelectorAll('#actbar .act')].map(b => ({ one: b.scrollHeight <= b.clientHeight + 1, w: b.getBoundingClientRect().right <= innerWidth })));
   ok(tr1.every(x => x.one && x.w), tag + ' transfer buttons one line / inside viewport ' + JSON.stringify(tr1));
   // GO is a game too
   await go('#/'); await sel('go'); await go('#/p/150'); await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(100);
-  ok((await ls2('home_g')).includes('go:150'), tag + ' GO transfer');
+  ok((await ls2('home_o')).includes('go:150'), tag + ' GO transfer');
   // export / import round-trip
-  const dump = await p.evaluate(() => JSON.stringify({ favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G] }));
+  const dump = await p.evaluate(() => JSON.stringify({ favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG] }));
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
   await p.evaluate(async d => { const f = new File([d], 'x.json', { type: 'application/json' }); const dt = new DataTransfer(); dt.items.add(f); const i = document.getElementById('import'); i.files = dt.files; window.alert = () => {}; i.dispatchEvent(new Event('change')); }, dump);
   await sleep(500);
-  ok((await ls2('home_g')).includes('go:150') && (await ls2('caught_g')).includes('rb:25') && (await ls2('caught')).includes(25), tag + ' import restores per-game + transfer marks');
+  ok((await ls2('home_o')).includes('go:150') && (await ls2('caught_g')).includes('rb:25') && (await ls2('caught')).includes(25), tag + ' import restores per-game + transfer marks');
   await sel('');
   // ---- Home markers: partial / shiny / complete
   await go('#/'); await sel('home'); await p.evaluate(() => { localStorage.removeItem('home_g'); });
-  const pick = await p.evaluate(() => { const q = E.find(x => !x.c && homeAvail(x).length === 2 && !homeAvail(x).includes('go')); return q && { k: q.k, av: homeAvail(q), n: q.n }; });
+  const pick = await p.evaluate(() => { const q = E.find(x => !x.c && homeAvail(x).length === 2 && !homeAvail(x).includes('go')); return q && { k: q.k, av: homeAvail(q).map(m => ORI[m].games.find(g => gamesOf(q).includes(g))), n: q.n }; });
   ok(!!pick, tag + ' found a Pokémon present in exactly 2 Home-compatible games ' + JSON.stringify(pick));
-  await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); saveTrack(); });
+  await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); HOME_O.clear(); HOME_OG.clear(); saveTrack(); });
   await sel(pick.av[0]); await go('#/p/' + pick.k); await p.click('#actbar .tr'); await sleep(100);
   await go('#/'); await sel('home'); await p.type('#q', pick.n); await sleep(300);
   let mks = await p.$$eval('.card .mk', e => e.map(x => x.className));
@@ -637,11 +662,11 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   mks = await p.$$eval('.card .mk', e => e.map(x => x.className));
   ok(mks.some(c => /hm gold/.test(c)) && mks.some(c => /sh/.test(c)), tag + ' complete = gold Home icon + ✨ ' + mks);
   ok(/1 🟡🏠 complets/.test(await count()) && /1 ✨ shiny/.test(await count()), tag + ' counters: ' + await count());
-  ok(await p.$eval('#legend', e => !e.hidden && /tous les jeux/.test(e.textContent) && /dorée/.test(e.textContent) && /fabuleux/.test(e.textContent)), tag + ' legend visible in Home (gold + mythical note)');
+  ok(await p.$eval('#legend', e => !e.hidden && /toutes les marques/.test(e.textContent) && /Kalos/.test(e.textContent) && /dorée/.test(e.textContent) && /fabuleux/.test(e.textContent)), tag + ' legend visible in Home (gold + mythical note)');
   await go('#/p/' + pick.k); await sleep(300);
   ok((await p.$$eval('#trackinfo .homerows li', e => e.map(x => x.textContent))).length === 2 && /complet/.test(await strip()), tag + ' detail lists per-game status: ' + await strip());
   await p.screenshot({ path: SHOTS + `home-complete-${tag}.png` });
-  await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); saveTrack(); });
+  await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); HOME_O.clear(); HOME_OG.clear(); saveTrack(); });
   await go('#/'); await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); }); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());

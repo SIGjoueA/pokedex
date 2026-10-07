@@ -113,4 +113,15 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   eq('ROSA total', dx.oras.e.length + dx.oras.x.length, 721); ok('Mew Hors dex ROSA → sp.hx', (D('sp/151.json').hx || []).includes('oras') && (D('sp/151.json').hx || []).includes('sw'));
   ok('Z-A Hors dex vide (Méga-Dimension)', !dx.za.x.length && !dx.zadlc.x.length);
 }
+// ---- v22: Pokémon HOME origin marks + Méga-énergie X / Y
+{
+  const DOCS = path.join(HERE, '../docs');
+  for (const f of ['kalos', 'alola', 'gb', 'gba', 'lgpe', 'go', 'galar', 'sinnoh', 'hisui', 'paldea', 'za']) ok('origin mark ' + f + '.png hébergée', fs.existsSync(path.join(DOCS, 'img/origin', f + '.png')));
+  ok('origin marks credit (Bulbagarden Archives)', /Bulbagarden Archives/.test(fs.readFileSync(path.join(DOCS, 'img/origin/CREDITS.txt'), 'utf8')));
+  const css = fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('no hotlinking of origin marks', !/bulbagarden\.net/i.test(css + app));
+  for (const g of ['rb', 'y', 'gs', 'c']) eq('Console virtuelle ' + g + ' → Home (vc)', core.games.find(x => x.id === g).h, 'vc');
+  ok('every Home-compatible game has an origin mark', core.games.filter(g => g.h).every(g => new RegExp(`games: \\[[^\\]]*'${g.id}'`).test(app)), core.games.filter(g => g.h).map(g => g.id).join());
+  const me = D('mega-energy.json'); for (const id of ['6-x', '6-y', '150-x', '150-y']) ok('energy icon ' + id, me.ids.map(String).includes(id) && fs.existsSync(path.join(DOCS, 'img/energy', id + '.webp')));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

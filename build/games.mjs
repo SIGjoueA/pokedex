@@ -25,10 +25,10 @@ export const GAMES = [
   { id: 'e', fr: 'Émeraude', short: 'Émeraude', d: '2004-09-16', vg: 'emerald', mv: ['emerald'], dex: ['hoenn'], ver: ['emerald'], kind: 'main' },
   { id: 'frlg', fr: 'Rouge Feu / Vert Feuille', short: 'Rouge Feu/Vert Feuille', d: '2004-01-29', vg: 'firered-leafgreen', mv: ['firered-leafgreen'], dex: ['kanto'], ver: ['firered', 'leafgreen'], kind: 'main' },
   { id: 'rs', fr: 'Rubis / Saphir', short: 'Rubis/Saphir', d: '2002-11-21', vg: 'ruby-sapphire', mv: ['ruby-sapphire'], dex: ['hoenn'], ver: ['ruby', 'sapphire'], kind: 'main' },
-  { id: 'c', fr: 'Cristal', short: 'Cristal', d: '2000-12-14', vg: 'crystal', mv: ['crystal'], dex: ['original-johto'], ver: ['crystal'], kind: 'main' },
-  { id: 'gs', fr: 'Or / Argent', short: 'Or/Argent', d: '1999-11-21', vg: 'gold-silver', mv: ['gold-silver'], dex: ['original-johto'], ver: ['gold', 'silver'], kind: 'main' },
-  { id: 'y', fr: 'Jaune', short: 'Jaune', d: '1998-09-12', vg: 'yellow', mv: ['yellow'], dex: ['kanto'], ver: ['yellow'], kind: 'main' },
-  { id: 'rb', fr: 'Rouge / Bleu', short: 'Rouge/Bleu', d: '1996-02-27', vg: 'red-blue', mv: ['red-blue'], dex: ['kanto'], ver: ['red', 'blue'], kind: 'main' },
+  { id: 'c', home: 'vc', fr: 'Cristal', short: 'Cristal', d: '2000-12-14', vg: 'crystal', mv: ['crystal'], dex: ['original-johto'], ver: ['crystal'], kind: 'main' },
+  { id: 'gs', home: 'vc', fr: 'Or / Argent', short: 'Or/Argent', d: '1999-11-21', vg: 'gold-silver', mv: ['gold-silver'], dex: ['original-johto'], ver: ['gold', 'silver'], kind: 'main' },
+  { id: 'y', home: 'vc', fr: 'Jaune', short: 'Jaune', d: '1998-09-12', vg: 'yellow', mv: ['yellow'], dex: ['kanto'], ver: ['yellow'], kind: 'main' },
+  { id: 'rb', home: 'vc', fr: 'Rouge / Bleu', short: 'Rouge/Bleu', d: '1996-02-27', vg: 'red-blue', mv: ['red-blue'], dex: ['kanto'], ver: ['red', 'blue'], kind: 'main' },
 ];
 export const EXCLUDED = [
   ['Pokémon Colosseum / XD', 'pas de Pokédex régional (PokéAPI n’en fournit pas)'],

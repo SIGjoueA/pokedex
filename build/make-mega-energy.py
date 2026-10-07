@@ -56,9 +56,13 @@ def pick(sid):
     return None
 
 done = []
+# icon ids: species ("6") and, for species with several Megas, one per Mega ("6-x", "6-y", "448-z") from keys like 0006_MEGA_X
 ids = sorted({int(k.split('_')[0]) for k in colors})
-for sid in ids:
-    c = pick(sid)
+targets = [(str(sid), pick(sid)) for sid in ids]
+for k, v in colors.items():
+    parts = k.split('_')
+    if len(parts) >= 3 and parts[1].upper() == 'MEGA': targets.append((f"{int(parts[0])}-{parts[2].lower()}", v))
+for tid, c in targets:
     r1, r2, r3, glow = hexc(c['_RampColor1']), hexc(c['_RampColor2']), hexc(c['_RampColor3']), hexc(c['_GlowColor'])
     if len({r1, r2, r3}) == 1 and lum(r1) > 245: continue  # primal (white material: Kyogre / Groudon) → not a Mega Energy
     # diagonal gradient: dark ramp2 (bottom-right) → ramp1 (middle) → ramp3 (top-left highlight)
@@ -81,9 +85,9 @@ for sid in ids:
     # soft glow halo
     halo = Image.new('RGBA', (W, H), glow + (0,)); halo.putalpha(a.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(4)).point(lambda v: v * 0.55))
     out = Image.alpha_composite(halo, img).resize((S, S), Image.LANCZOS)
-    out.save(os.path.join(OUT, f'{sid}.webp'), quality=88, method=6)
-    done.append(sid)
+    out.save(os.path.join(OUT, f'{tid}.webp'), quality=88, method=6)
+    done.append(tid)
 
 json.dump({'src': 'PokeMiners/pogo_assets', 'generic': 'img/energy/generic.webp', 'ids': done},
           open(os.path.join(DOCS, 'data', 'mega-energy.json'), 'w'), separators=(',', ':'))
-print('energy icons', len(done), 'skipped', [i for i in ids if i not in done])
+print('energy icons', len(done), 'skipped', [t for t, _ in targets if t not in done])

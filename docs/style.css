@@ -243,6 +243,33 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
   .act .gemimg{width:24px;height:24px}
   .act .t{max-width:100%;line-height:1.3}
   .act .lgl{display:none}.act .shl{display:inline}
-  #detail-view:not([hidden]){padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  #detail-view:not([hidden]){padding-bottom:calc(var(--barh, 96px) + 12px)}
 }
 .h3{font-size:14px;margin:12px 0 4px;font-weight:700}
+
+/* ---------- v22: Pokémon HOME origin marks (icons: Bulbagarden Archives, fair use — img/origin/CREDITS.txt) ---------- */
+.om{display:inline-block;flex:none;width:1.4em;height:1.4em;background:currentColor;-webkit-mask:center/contain no-repeat;mask:center/contain no-repeat;vertical-align:-.3em}
+.om-za{-webkit-mask-image:url(img/origin/za.png);mask-image:url(img/origin/za.png)}
+.om-paldea{-webkit-mask-image:url(img/origin/paldea.png);mask-image:url(img/origin/paldea.png)}
+.om-hisui{-webkit-mask-image:url(img/origin/hisui.png);mask-image:url(img/origin/hisui.png)}
+.om-sinnoh{-webkit-mask-image:url(img/origin/sinnoh.png);mask-image:url(img/origin/sinnoh.png)}
+.om-galar{-webkit-mask-image:url(img/origin/galar.png);mask-image:url(img/origin/galar.png)}
+.om-lgpe{-webkit-mask-image:url(img/origin/lgpe.png);mask-image:url(img/origin/lgpe.png)}
+.om-go{-webkit-mask-image:url(img/origin/go.png);mask-image:url(img/origin/go.png)}
+.om-alola{-webkit-mask-image:url(img/origin/alola.png);mask-image:url(img/origin/alola.png)}
+.om-kalos{-webkit-mask-image:url(img/origin/kalos.png);mask-image:url(img/origin/kalos.png)}
+.om-gb{-webkit-mask-image:url(img/origin/gb.png);mask-image:url(img/origin/gb.png)}
+.om-gba{-webkit-mask-image:url(img/origin/gba.png);mask-image:url(img/origin/gba.png)}
+.homebar .acts{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))} /* 11 marks max → 2 rows of 6, equal columns */
+.act.ori{min-width:0}
+.act.ori[aria-pressed=true]{color:#2f80ed;border-color:#2f80ed;background:rgba(47,128,237,.1)}
+.homerows .om{width:1.25em;height:1.25em;color:var(--mute)}
+.homerows li.on .om{color:#2f80ed}
+.legend .om{width:1.15em;height:1.15em}
+.trackinfo .om{width:1.2em;height:1.2em}
+.credit{display:block;margin-top:4px;font-size:11.5px}
+@media (max-width:699px){
+  .homebar .acts{gap:4px}
+  .act.ori{min-height:48px;font-size:11px;padding:3px 1px}
+  .act .om{width:22px;height:22px}
+}
