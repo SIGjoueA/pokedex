@@ -127,4 +127,11 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const g of ['rs', 'e', 'frlg']) ok('v23 GBA ' + g + ' sans lien HOME (pas de marque)', !core.games.find(x => x.id === g).h && !new RegExp(`games: \\[[^\\]]*'${g}'`).test(app));
   const me = D('mega-energy.json'); for (const id of ['6-x', '6-y', '150-x', '150-y']) ok('energy icon ' + id, me.ids.map(String).includes(id) && fs.existsSync(path.join(DOCS, 'img/energy', id + '.webp')));
 }
+// ---- v24: « HOME » in capitals in user-visible strings; Catégorie entries
+{
+  const DOCS = path.join(HERE, '../docs'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8').replace("k === 'Home'", ''), html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+  ok('v24 no « Home » (lower-case) in app.js / index.html', !/\bHome\b/.test(app + html), (app + html).match(/.{0,30}\bHome\b.{0,30}/g));
+  for (const v of ['swmiss', 'oldmiss', 'strans', 'nostrans', 'hmiss']) ok('v24 catégorie ' + v, html.includes(`value="${v}"`));
+  ok('v24 HOME manquants label', html.includes('⚪🏠 HOME manquants (marques Switch + GO)'));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

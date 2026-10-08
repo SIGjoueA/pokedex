@@ -278,3 +278,30 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .homebar .oldl{border-bottom:1px dashed currentColor}
 .hgrp{display:inline-block;margin-top:6px}
 .homerows.old{opacity:.8}
+/* ---------- v24: HOME sheet « Shiny dans HOME » + Jeux menu (custom listbox) ---------- */
+.act.hsh[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.14)}
+@media (prefers-color-scheme:dark){.act.hsh[aria-pressed=true]{color:#f2c200}}
+.vh{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;border:0!important}
+.gsel{position:relative;min-width:0}
+.gbtn{width:100%;height:44px;display:flex;align-items:center;gap:7px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);color:var(--fg);padding:0 8px;font:inherit;font-size:14px;text-align:left;cursor:pointer}
+.gbtn .gl{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gbtn .gcaret{flex:none;font-size:12px;opacity:.7}
+.gbtn[aria-expanded=true]{border-color:#2f80ed}
+.gdot{flex:none;display:inline-block;width:14px;height:14px;border-radius:50%;background:linear-gradient(90deg,var(--c1) 50%,var(--c2) 50%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.gdot.none{background:none;box-shadow:none}
+.gpop{position:absolute;z-index:30;left:0;top:calc(100% + 4px);width:max(100%,340px);max-width:calc(100vw - 24px);max-height:min(70vh,560px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;margin:0;padding:4px 0;list-style:none;background:var(--bg);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);outline:none}
+.gopt{display:flex;align-items:center;gap:10px;min-height:40px;padding:6px 12px;font-size:14.5px;cursor:pointer;line-height:1.25}
+.gopt .gl{min-width:0}
+.gopt.gact{background:var(--bg3, rgba(47,128,237,.1));outline:2px solid #2f80ed;outline-offset:-2px}
+.gopt[aria-selected=true]{font-weight:700}
+.gopt[aria-selected=true]::after{content:'✓';margin-left:auto;color:#2f80ed}
+@media (hover:hover){.gopt:hover{background:var(--bg2)}}
+.gsep{height:0;margin:3px 12px;border-top:1px solid var(--line)}
+.gsep2{margin:6px 0 2px;padding:3px 12px 0;border-top:3px double var(--line);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mute)}
+.gback{position:fixed;inset:0;z-index:29;background:transparent}
+@media (max-width:699px){
+  .gpop{position:fixed;left:8px;right:8px;top:auto;bottom:calc(8px + env(safe-area-inset-bottom));width:auto;max-width:none;max-height:72vh;border-radius:16px}
+  .gback{background:rgba(0,0,0,.35)}
+  .gopt{min-height:44px;font-size:15px}
+}
+.hshl{margin:4px 0 2px}

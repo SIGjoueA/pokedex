@@ -83,7 +83,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   console.log(opts.join(' | '));
   ok(opts[1] === 'Pokémon HOME' && opts[2] === 'Pokémon GO' && /Z-A/.test(opts[3]) && /Rouge/.test(opts[opts.length - 1]), tag + ' game option order');
   // layout: game select left of gen
-  const pos = await p.evaluate(() => { const a = document.querySelector('#game').getBoundingClientRect(), g = document.querySelector('#gen').getBoundingClientRect(); return [a.left < g.left, a.top === g.top, document.documentElement.scrollWidth <= innerWidth]; });
+  const pos = await p.evaluate(() => { const a = document.querySelector('#gamebtn').getBoundingClientRect(), g = document.querySelector('#gen').getBoundingClientRect(); return [a.left < g.left, a.top === g.top, document.documentElement.scrollWidth <= innerWidth]; });
   ok(pos[0] && pos[1] && pos[2], tag + ' game select left of gen, no h-overflow ' + pos);
   await p.screenshot({ path: SHOTS + `list-${tag}.png` });
   // games
@@ -216,7 +216,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   const ls2 = k => p.evaluate(k => JSON.parse(localStorage.getItem(k) || '[]'), k);
   const strip = () => p.$eval('#trackinfo', e => e.textContent.replace(/\s+/g, ' '));
   const hasBtn = sel => p.$(sel).then(x => x ? x.evaluate(e => !e.disabled) : false); // v21: action-row buttons stay in place, greyed when not applicable
-  const trsLogic = () => p.evaluate(() => { toggleTransfer(DET.p, true, sheetCtx()); refreshTrack(DET.p); render(); }); // shiny-transfer button removed from the UI in v21 (logic/data kept)
+  const trsLogic = () => p.evaluate(() => { toggleTransfer(DET.p, true, sheetCtx()); HOME_SH.add(mp(DET.p, 'home').k); saveTrack(); refreshTrack(DET.p); render(); }); // legacy shiny transfer (data kept) + v24 « Shiny dans HOME »
   // base view = global marks, untouched
   await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
   await sel(''); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' legacy global mark still shown as caught in base view');
@@ -521,7 +521,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   const order = await p.evaluate(() => [...document.querySelectorAll('.detail > *')].map(e => e.classList.contains('hero') ? 'hero' : e.classList.contains('trackbox') ? 'track' : e.classList.contains('desc') ? 'desc' : (e.querySelector('h2')?.childNodes[0].textContent.trim() || '')));
   const at = x => order.indexOf(x);
   ok(at('hero') === 0 && at('track') === 1 && at('Formes') === 2 && (at('desc') < 0 || (at('desc') > 2 && at('desc') < at('Statistiques de base'))) && at('Statistiques de base') < at('Talents') && at('Talents') < at('Capacités') && at('Capacités') < at('Évolutions') && at('Évolutions') < at('Où le trouver') && at('Où le trouver') < at('Présent dans') && at('Présent dans') < at('Pokémon GO'), tag + ' game body order ' + order.filter(Boolean).join(' > '));
-  ok(!(await p.$('#cat option[value="strans"]')), tag + ' « Shiny transférés » filter hidden (shiny-transfer button removed)');
+  ok(await p.$eval('#cat option[value="strans"]', o => o.textContent) === '✨ Shiny transférés (HOME)', tag + ' v24 « Shiny transférés (HOME) » filter restored');
   // Z-A dexes: no « Hors dex » tail for species of the sibling dex (Z-A ↔ Méga-Dimension); 3rd dex « Méga-Dex »
   const zx = await p.evaluate(async () => { const a = await loadDex('za'), b = await loadDex('zadlc'); return { za: a.extra.size, zadlc: b.extra.size, zaN: a.order.size, dlcN: b.order.size }; });
   ok(zx.za === 0 && zx.zadlc === 0 && zx.zaN === 232 && zx.dlcN === 132, tag + ' Z-A / Méga-Dimension: no sibling species in Hors dex ' + JSON.stringify(zx));
@@ -578,18 +578,18 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/'); await sel('sw'); await go('#/p/25'); await sleep(300); await p.click('#actbar .tr'); await sleep(100);
   await go('#/'); await sleep(200);
   ok(await catN('trans') === 1, tag + ' game view: "transférés depuis ce jeu" = 1');
-  await p.select('#cat', ''); await sleep(200); ok(/1 transférés vers Home/.test(await count()), tag + ' game header counter: ' + await count());
+  await p.select('#cat', ''); await sleep(200); ok(/1 transférés vers HOME/.test(await count()), tag + ' game header counter: ' + await count());
   ok(await catN('notrans') === 399 && await catN('hcomplete') === 0, tag + ' game view: not yet = 399, complets 0');
   ok((await p.$eval('#cat option[value=trans]', o => o.textContent)).includes('ce jeu'), tag + ' game labels'); await p.select('#cat', '');
   await go('#/p/25'); await sleep(300); await p.click('#actbar .sh'); await trsLogic(); await sleep(100); await go('#/'); await sleep(200);
-  ok(await p.evaluate(() => HOME_S.size === 1 && E.filter(x => transCat(x, 'strans')).length === 1), tag + ' shiny-transfer data + logic kept (filter hidden in v21)'); await p.select('#cat', '');
+  ok(await p.evaluate(() => HOME_S.size === 1 && E.filter(x => transCat(x, 'strans')).length === 1), tag + ' v24 « Shiny transférés (HOME) » filter = Shiny dans HOME'); await p.select('#cat', '');
   await sel(''); ok(await catN('trans') === 1 && await catN('notrans') === tinfo.N - 1 && await catN('hcomplete') === 0, tag + ' base view transfer categories (N=' + tinfo.N + ')');
-  await p.select('#cat', ''); await sleep(200); ok(/1 🏠 transférés Home/.test(await count()), tag + ' base counter: ' + await count());
+  await p.select('#cat', ''); await sleep(200); ok(/1 🏠 transférés HOME/.test(await count()), tag + ' base counter: ' + await count());
   await sel('home'); ok(await catN('trans') === 1 && await catN('notrans') === tinfo.N - 1, tag + ' Home view transfer categories'); await p.select('#cat', '');
   await sel('frlg'); ok(await p.$eval('#cat option[value=trans]', o => o.disabled), tag + ' categories disabled in a game that cannot transfer'); await sel('');
   await go('#/'); await sel(tinfo.one.g); await go('#/p/' + tinfo.one.k); await sleep(300); await p.click('#actbar .tr'); await sleep(100); await sel('');
   ok(await catN('hcomplete') === 1, tag + ' "Complets Home" for a Pokémon in one compatible save (' + JSON.stringify(tinfo.one) + ')'); await p.select('#cat', '');
-  await sleep(200); ok(/1 🟡🏠 complets Home/.test(await count()), tag + ' base counter complets Home: ' + await count());
+  await sleep(200); ok(/1 🟡🏠 complets HOME/.test(await count()), tag + ' base counter complets Home: ' + await count());
   const gh = await p.$$eval('.card .mk.hm.gold', e => e.length); await sel('home'); const gh2 = await p.$$eval('.card .mk.hm.gold', e => e.length); ok(gh2 >= 1, tag + ' gold Home icon in Home view');
   await sel('');
   // ---- Home completion with Pokémon GO: required, except for Mythicals
@@ -628,7 +628,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(/HOME : 1 \/ 1025 🏠 transférés · 1 ✨ shiny · 0 🟡🏠 complets/.test(await count()), tag + ' Home counter: ' + await count());
   await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home caught filter derived'); await p.select('#cat', 'shiny'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home shiny filter derived'); await p.select('#cat', '');
   await go('#/p/25'); await sleep(300);
-  ok(/Compte pour la dorure : 1 \/ \d+ marques/.test(await strip()) && /Marque de Galar[^—]*— transféré[^·]*· ✨ shiny/.test(await strip()), tag + ' Home detail shows source mark: ' + await strip());
+  ok(/Compte pour la dorure : 1 \/ \d+ marques/.test(await strip()) && /Marque de Galar[^—]*— transféré/.test(await strip()) && /Shiny dans HOME/.test(await strip()), tag + ' Home detail shows source mark: ' + await strip());
   ok(!(await p.$('#actbar .cg')) && await p.$eval('#actbar .ori[data-origin="galar"]', e => e.getAttribute('aria-pressed')) === 'true', tag + ' Home sheet bar = origin marks (Galar on)');
   await p.screenshot({ path: SHOTS + `home-derived-${tag}.png` });
   // un-catching in the game removes the transfer
@@ -684,6 +684,72 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   { const hb = await p.evaluate(() => ({ old: [...document.querySelectorAll('#actbar .ori.old')].map(b => b.dataset.origin).join(), grp: [...document.querySelectorAll('#trackinfo .hgrp')].map(x => x.textContent).join('|') }));
     ok(hb.old === 'alola,kalos,none,gb' && /Compte pour la dorure\|Anciens jeux/.test(hb.grp), tag + ' v23 Home sheet separates dorure / anciens jeux ' + JSON.stringify(hb)); }
   await go('#/'); await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); }); await sel('');
+  // ---- v24: Jeux / Catégorie custom dropdowns, « Shiny dans HOME », new categories, HOME uppercase
+  await p.evaluate(() => { localStorage.clear(); }); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sleep(300);
+  { const j = await p.evaluate(() => { const sel = document.querySelector('#game'), btn = document.querySelector('#gamebtn'), l = document.querySelector('#gamelist');
+      const opts = [...l.querySelectorAll('.gopt')].map(li => li.dataset.v), nat = [...sel.options].map(o => o.value);
+      const seq = [...l.children].map(li => li.classList.contains('gsep2') ? '=' + li.textContent : li.classList.contains('gsep') ? '-' : li.dataset.v);
+      const dots = [...l.querySelectorAll('.gopt')].filter(li => li.dataset.v).map(li => getComputedStyle(li.querySelector('.gdot')).backgroundImage);
+      return { hidden: sel.classList.contains('vh') && sel.tabIndex === -1, btn: btn.getAttribute('aria-haspopup') === 'listbox' && btn.getAttribute('aria-expanded') === 'false', sameOrder: JSON.stringify(opts) === JSON.stringify(nat),
+        seq: seq.join(' '), dotsOk: dots.every(d => /gradient/.test(d)), sv: l.querySelector('.gopt[data-v="sv"] .gdot').getAttribute('style'), svd: l.querySelector('.gopt[data-v="svdisk"] .gdot').getAttribute('style') }; });
+    ok(j.hidden && j.btn && j.sameOrder && j.dotsOk && j.sv === j.svd && /#e0383e.*#8b45c5/.test(j.sv), tag + ' v24 Jeux dropdown: hidden native select, same order, coloured dots (Écarlate/Violet split, same for its DLC)');
+    ok(j.seq.startsWith(' home go =Switch zamega zadlc za svhors svdisk svmask sv - la bdsp swhors swcrown swisle sw - lgpe =3DS usum sm - oras xy =DS b2w2 bw - hgss pt dp =Game Boy Advance e frlg rs =Game Boy / Color c gs - y rb'), tag + ' v24 Jeux separators: double per console, simple per generation ' + j.seq); }
+  await p.click('#gamebtn'); await sleep(200);
+  ok(await p.evaluate(() => !document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamelist' && document.querySelector('#gamebtn').getAttribute('aria-expanded') === 'true'), tag + ' v24 Jeux dropdown opens, listbox focused');
+  for (const k of ['ArrowDown', 'ArrowDown', 'ArrowDown']) await p.keyboard.press(k);
+  await p.keyboard.press('Enter'); await sleep(500);
+  ok(await p.$eval('#game', e => e.value) === 'zamega' && await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn' && /Méga-Dex/.test(document.querySelector('#gamebtn').textContent)), tag + ' v24 Jeux keyboard: ↓↓↓ + Entrée → Méga-Dex Z-A, menu closed, focus back on the button');
+  await p.click('#gamebtn'); await sleep(150); await p.keyboard.press('Escape'); await sleep(100);
+  ok(await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn'), tag + ' v24 Jeux: Échap closes');
+  await p.click('#gamebtn'); await sleep(150); await p.click('#gamelist .gopt[data-v="home"]'); await sleep(400);
+  ok(await p.$eval('#game', e => e.value) === 'home' && /Pokémon HOME/.test(await p.$eval('#gamebtn', e => e.textContent)), tag + ' v24 Jeux: click/tap an option selects it');
+  await sel(''); await sleep(200);
+  ok(await p.$eval('#gamebtn', e => e.textContent.replace('▾', '').trim()) === 'Jeux', tag + ' v24 Jeux button follows programmatic changes');
+  { const c = await p.evaluate(() => [...document.querySelector('#catlist').children].map(li => li.classList.contains('gsep') ? '────' : li.textContent));
+    const exp = ['Toutes catégories (aucun filtre)', 'Légendaires', 'Fabuleux', 'Bébés', '★ Favoris', '────', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', '────', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)'];
+    ok(JSON.stringify(c) === JSON.stringify(exp), tag + ' v24 Catégorie dropdown: exact validated labels + separators ' + JSON.stringify(c)); }
+  await p.click('#catbtn'); await sleep(150); await p.click('#catlist .gopt[data-v="swmiss"]'); await sleep(300);
+  ok(await p.$eval('#cat', e => e.value) === 'swmiss' && parseInt(await count()) > 0, tag + ' v24 Catégorie dropdown selects (Jeux actuels manquants): ' + (await count()).slice(0, 40));
+  await p.select('#cat', ''); await sleep(150);
+  await sel('frlg'); await p.click('#catbtn'); await sleep(150);
+  ok(await p.evaluate(() => document.querySelector('#catlist .gopt[data-v="trans"]').getAttribute('aria-disabled') === 'true' && document.querySelector('#catlist .gopt[data-v="strans"]').getAttribute('aria-disabled') !== 'true'), tag + ' v24 Catégorie: HOME transfer entries disabled in a GBA game (Shiny HOME stays)');
+  await p.keyboard.press('Escape'); await sel('');
+  // category logic
+  { const r = await p.evaluate(() => {
+      const cnt = c => { state.cat = c; const n = filtered().length; state.cat = ''; return n; };
+      HOME_O.clear(); HOME_OG.clear(); HOME_SH.clear(); CAUGHT_G.clear(); saveTrack();
+      const base = { sw: cnt('swmiss'), old: cnt('oldmiss'), hm: cnt('hmiss'), ns: cnt('nostrans') };
+      const N = E.filter(e => !e.c && homeGold(mp(e)).length).length, Nsw = E.filter(e => !e.c && baseStatus(e).sw.length).length, Nold = E.filter(e => !e.c && baseStatus(e).old.length).length;
+      for (const m of homeGold(BY_KEY['25'])) HOME_O.add(m + ':25'); HOME_O.add('kalos:6'); saveTrack();
+      const after = { hm: cnt('hmiss'), ns: cnt('nostrans') };
+      HOME_SH.add('25'); saveTrack(); const ns2 = cnt('nostrans'), st = cnt('strans');
+      HOME_O.clear(); HOME_SH.clear(); saveTrack();
+      return { base, N, Nsw, Nold, after, ns2, st }; });
+    ok(r.base.sw === r.Nsw && r.base.old === r.Nold && r.base.hm === r.N && r.base.ns === 0 && r.after.hm === r.N - 1 && r.after.ns === 2 && r.ns2 === 1 && r.st === 1, tag + ' v24 categories: Jeux actuels / Anciens jeux / HOME manquants (gold set, old marks ignored) / Shiny manquants (HOME) ' + JSON.stringify(r)); }
+  // HOME sheet « Shiny » button
+  await p.evaluate(() => { localStorage.clear(); }); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
+  const hsh = () => p.$eval('#actbar .hsh', b => ({ dis: b.disabled, on: b.getAttribute('aria-pressed') === 'true', last: b === b.parentElement.lastElementChild }));
+  let hs4 = await hsh(); ok(hs4.dis && !hs4.on && hs4.last, tag + ' v24 HOME sheet: Shiny button after the origin marks, disabled without any mark');
+  await p.click('#actbar .ori[data-origin="galar"]'); await sleep(100); hs4 = await hsh(); ok(!hs4.dis && !hs4.on, tag + ' v24 Shiny enabled once a mark is ticked');
+  await p.click('#actbar .hsh'); await sleep(100); hs4 = await hsh();
+  ok(hs4.on && JSON.stringify(await ls2('home_sh')) === '["25"]' && /Shiny dans HOME/.test(await strip()), tag + ' v24 Shiny dans HOME stored');
+  await p.click('#actbar .ori[data-origin="kalos"]'); await sleep(80); await p.click('#actbar .ori[data-origin="galar"]'); await sleep(80); hs4 = await hsh();
+  ok(!hs4.dis && hs4.on, tag + ' v24 Shiny kept while another mark remains');
+  await p.click('#actbar .ori[data-origin="kalos"]'); await sleep(100); hs4 = await hsh();
+  ok(hs4.dis && !hs4.on && JSON.stringify(await ls2('home_sh')) === '[]', tag + ' v24 Shiny reset when all marks are unticked');
+  await p.evaluate(() => { localStorage.clear(); localStorage.setItem('home_g', '["sw:25"]'); localStorage.setItem('homeshiny_g', '["sw:25","swisle:25"]'); localStorage.setItem('home_o', '["galar:25"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(JSON.stringify(await ls2('home_sh')) === '["25"]' && await p.evaluate(() => HOME_S.has('25')), tag + ' v24 migration: old per-game shiny transfers → Shiny dans HOME');
+  // HOME uppercase everywhere (visible text, labels, tooltips)
+  await go('#/'); await sel('home'); await sleep(200);
+  { const txt = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' ') + ' ' + [...document.querySelectorAll('option')].map(o => o.textContent).join(' '));
+    await go('#/p/25'); await sleep(400);
+    const t2 = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' '));
+    await p.select('#dgame', 'sw'); await sleep(300);
+    const t3 = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' '));
+    const bad = [txt, t2, t3].join(' ').match(/.{0,20}\bHome\b.{0,20}/g);
+    ok(!bad, tag + ' v24 « HOME » in capitals in list, legend, HOME sheet, game sheet, tooltips ' + JSON.stringify(bad)); }
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());
   await p.select('#cat', ''); 
