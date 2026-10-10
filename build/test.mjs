@@ -153,7 +153,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/'); await sel(''); await sleep(200);
   ok(/1 \/ 1025 🔴 capturés/.test(await count()), tag + ' base counter derived from per-game marks: ' + await count());
   await go('#/p/25'); await sleep(300);
-  ok(/Anciens jeux|Jeux actuels|Jeux Switch/.test(await p.$eval('#trackinfo', e => e.textContent)) && /X\/Y — capturé/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' base detail per-game breakdown');
+  ok(/Anciens jeux|Jeux actuels|Jeux Switch/.test(await p.$eval('#trackinfo', e => e.textContent)) && /X \/ Y — capturé/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' base detail per-game breakdown');
   // v21 layout: sticky header = ← ‹ › ★ only; action row Capturé · Shiny · Transféré (+ gem/energy) in a fixed order
   const lay = await p.evaluate(() => {
     const hdr = [...document.querySelectorAll('.dnav > :not(.sp)')].map(e => e.getAttribute('aria-label'));
@@ -548,7 +548,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   const swx = await p.evaluate(async () => { const a = await loadDex('sw'); return a.extra.size; });
   await go('#/'); await p.select('#game', 'swhors'); await sleep(600);
   const hs = await p.evaluate(() => ({ n: filtered().length, ctx: trackCtx(), hors: document.querySelectorAll('.card .rn.hors').length, first: filtered()[0].id, count: document.querySelector('#count').textContent }));
-  ok(swx === 0 && hs.n === 80 && hs.ctx === 'sw' && hs.first === 150 && /Hors dex É\/B/.test(hs.count), tag + ' Hors dex Épée/Bouclier list (sw dexes untouched) ' + JSON.stringify(hs));
+  ok(swx === 0 && hs.n === 80 && hs.ctx === 'sw' && hs.first === 150 && /Hors dex ÉB/.test(hs.count), tag + ' Hors dex Épée/Bouclier list (sw dexes untouched) ' + JSON.stringify(hs));
   await go('#/p/151'); await sleep(500);
   const dg2 = await p.$eval('#dgame', e => e.value); await p.click('#actbar .cg'); await sleep(100);
   ok(dg2 === 'sw' && await p.evaluate(() => CAUGHT_G.has('sw:151') && isCaught(BY_KEY['151'], 'sw') && !gamesOf(BY_KEY['151']).includes('sw')), tag + ' Mew marked in Épée/Bouclier from the Hors dex list (completion rules unchanged)');
@@ -611,9 +611,9 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
   // Rouge/Bleu (not Home-compatible)
   await go('#/'); await sel('rb'); await go('#/p/25');
-  ok(/Rouge\/Bleu/.test(await strip()) && await hasBtn('#actbar .tr') && /Console virtuelle/.test(await strip()), tag + ' rb strip (Console virtuelle → Home, Game Boy mark): ' + await strip());
+  ok(/Rouge \/ Bleu/.test(await strip()) && await hasBtn('#actbar .tr') && /Console virtuelle/.test(await strip()), tag + ' rb strip (Console virtuelle → Home, Game Boy mark): ' + await strip());
   await p.click('#actbar .cg'); ok(JSON.stringify(await ls2('caught_g')) === '["rb:25"]' && JSON.stringify(await ls2('caught')) === '[25,"26-alola"]', tag + ' rb mark stored per game, legacy global unchanged');
-  await go('#/'); await sleep(200); ok(/Rouge\/Bleu : 1 \/ 151 🔴 capturés/.test(await count()), tag + ' rb counter: ' + await count());
+  await go('#/'); await sleep(200); ok(/Rouge \/ Bleu : 1 \/ 151 🔴 capturés/.test(await count()), tag + ' rb counter: ' + await count());
   await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' rb caught filter'); 
   await sel('xy'); ok((await count()).startsWith('0 Pokémon'), tag + ' other game has no marks: ' + await count()); await p.select('#cat', '');
   // Épée/Bouclier (Home-compatible): caught + transfer + shiny transfer
@@ -879,6 +879,31 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.focus('#dgamebtn'); await p.keyboard.press('Home'); await p.keyboard.press('Enter'); await sleep(150); await p.keyboard.press('Home'); await p.keyboard.press('Enter'); await sleep(500);
   ok(await p.$eval('#dgame', e => e.value) === 'all' && await p.evaluate(() => document.activeElement.id === 'dgamebtn'), tag + ' v26 sheet game menu keyboard → Vue d’ensemble, focus kept on the new button');
   await p.select('#dgame', 'sw'); await sleep(400); ok(/Épée/.test(await p.$eval('#dgamebtn', e => e.textContent)), tag + ' v26 sheet button follows the native select (programmatic change)');
+  // ---- v27: legend as a list (icon + sentence per line)
+  await go('#/'); await sel('');
+  { const r = await p.evaluate(() => { const lg = document.querySelector('#legend'); lg.hidden = false; const d = lg.querySelector('details'); d.open = true; const li = [...lg.querySelectorAll('ul.lgl > li')];
+      return { n: li.length, icons: li.map(x => !!x.querySelector('.lgi')), ball: !!li[0].querySelector('.lgi svg.ball'), gold: !!li[1].querySelector('.lgi .mk.gold'), old: /🕹/.test(li[2].querySelector('.lgi').textContent), sh: /✨/.test(li[3].querySelector('.lgi').textContent), info: !!li[4].querySelector('.lgi-i'), lines: li.slice(0, 5).map(x => Math.round(x.querySelector('.lgi').getBoundingClientRect().left)), txt: lg.textContent }; });
+    ok(r.n === 6 && r.icons.every(Boolean) && r.ball && r.gold && r.old && r.sh && r.info && new Set(r.lines).size === 1 && /Poké Ball dorée/.test(r.txt) && /Pokémon GO/.test(r.txt), tag + ' v27 base legend = list, one icon + one sentence per line, same icons as the cards ' + JSON.stringify({ ...r, txt: undefined })); }
+  await sel('home'); await sleep(300);
+  { const r = await p.evaluate(() => { const lg = document.querySelector('#legend'); const d = lg.querySelector('details'); d.open = true; const li = [...lg.querySelectorAll('ul.lgl > li')]; return { n: li.length, hm: !!li[0].querySelector('.lgi .mk.hm'), gold: !!li[1].querySelector('.lgi .mk.hm.gold'), om: !!li[2].querySelector('.lgi .om'), txt: lg.textContent }; });
+    ok(r.n === 5 && r.hm && r.gold && r.om && /toutes les marques Switch/.test(r.txt) && /Anciens jeux/.test(r.txt) && /Sans marque/.test(r.txt), tag + ' v27 HOME legend = list with the HOME icons ' + JSON.stringify({ ...r, txt: undefined })); }
+  await sel('');
+  // ---- v27: in-app messages instead of alert()
+  { await p.evaluate(() => { window.__alerts = 0; window.alert = () => { window.__alerts++; }; });
+    const imp = async d => { await p.evaluate(async d => { const f = new File([d], 'x.json', { type: 'application/json' }); const dt = new DataTransfer(); dt.items.add(f); const i = document.getElementById('import'); i.files = dt.files; i.dispatchEvent(new Event('change')); }, d); await sleep(500); return p.evaluate(() => { const t = document.querySelector('#toast'); return t && { on: t.classList.contains('on'), cls: t.className, txt: t.textContent, role: t.getAttribute('role'), live: t.getAttribute('aria-live'), al: window.__alerts }; }); };
+    const bad = await imp('pas du json');
+    ok(bad && bad.on && /err/.test(bad.cls) && /Fichier invalide/.test(bad.txt) && bad.role === 'status' && bad.live === 'polite' && bad.al === 0, tag + ' v27 invalid import → in-app error message, no alert() ' + JSON.stringify(bad));
+    const good = await imp(JSON.stringify({ favs: [], caught: [], shiny: [] }));
+    ok(good && good.on && /\bok\b/.test(good.cls) && /Sauvegarde importée/.test(good.txt) && good.al === 0, tag + ' v27 valid import → « Sauvegarde importée » in-app message ' + JSON.stringify(good));
+    await p.click('#toast button'); await sleep(300); ok(await p.evaluate(() => !document.querySelector('#toast').classList.contains('on')), tag + ' v27 message can be closed (×)');
+    await go('#/'); await p.evaluate(() => toast('Liste')); await sleep(300); await go('#/p/25'); await sleep(300); ok(await p.evaluate(() => !document.querySelector('#toast').classList.contains('on')), tag + ' v27 message hidden when the screen changes (never covers the sheet buttons)'); await p.select('#dgame', 'sw'); await sleep(400); await p.evaluate(() => toast('Test')); await sleep(400);
+    const pos = await p.evaluate(() => { const t = document.querySelector('#toast').getBoundingClientRect(), b = document.querySelector('#actbar'), br = b.getBoundingClientRect(); return { fixed: getComputedStyle(b).position === 'fixed', tb: Math.round(t.bottom), bt: Math.round(br.top), vis: t.top >= 0 && t.bottom <= innerHeight }; });
+    ok(pos.vis && (!pos.fixed || pos.tb <= pos.bt), tag + ' v27 message sits above the sheet bar ' + JSON.stringify(pos)); }
+  // ---- v27: game names + generation numerals
+  { const r = await p.evaluate(() => ({ bad: GAMES.filter(g => /\S\/|\/\S/.test(g.s) || /\S\/|\/\S/.test(g.n)).map(g => g.id), sw: GAME_BY.sw.s, bdsp: GAME_BY.bdsp.s, usum: GAME_BY.usum.s, hg: GAME_BY.hgss.s, none: ORI.none.s, sinnoh: ORI.sinnoh.n, vd: [VDEX.svhors.s, VDEX.swhors.s] }));
+    ok(!r.bad.length && r.sw === 'Épée / Bouclier' && r.bdsp === 'Diamant Étincelant / Perle Scintillante' && r.usum === 'Ultra-Soleil / Ultra-Lune' && r.hg === 'Or HeartGold / Argent SoulSilver' && r.none === 'Gén. IV–V' && r.sinnoh === 'DÉ / PS' && r.vd.join() === 'Hors dex ÉV,Hors dex ÉB', tag + ' v27 one naming rule: spaced « / », full base-game names, ÉV/ÉB prefixes, roman numerals ' + JSON.stringify(r)); }
+  ok(/Suivi : Épée \/ Bouclier/.test(await p.$eval('#actbar', e => e.textContent.replace(/\s+/g, ' '))) && /partagé avec ÉB Isolarmure/.test(await strip()), tag + ' v27 sheet bar + track info use the unified names');
+  { await p.select('#dgame', 'home'); await sleep(400); const t = await p.$eval('#detail-view', e => e.textContent); ok(/Gén\. IV–V/.test(t) && !/Gén\. ?\d/.test(t) && !/\dᵉ gén/.test(t), tag + ' v27 HOME sheet: « Gén. IV–V », no arabic generation numbers'); }
   await go('#/'); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());

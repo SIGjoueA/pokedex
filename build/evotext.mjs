@@ -45,7 +45,7 @@ export async function evoText(d, c) {
   if (d.needs_overworld_rain) p.push('sous la pluie');
   if (d.turn_upside_down) p.push('en retournant la console');
   if (d.relative_physical_stats !== null && d.relative_physical_stats !== undefined) p.push(d.relative_physical_stats > 0 ? 'Attaque > Défense' : d.relative_physical_stats < 0 ? 'Attaque < Défense' : 'Attaque = Défense');
-  if (d.min_steps) p.push(`après ${d.min_steps} pas en mode « Go ! » (Écarlate/Violet)`);
+  if (d.min_steps) p.push(`après ${d.min_steps} pas en mode « Go ! » (Écarlate / Violet)`);
   if (d.needs_multiplayer) p.push('avec un autre joueur (Cercle Union)');
   if (d.allowed_natures?.length) p.push(`nature : ${d.allowed_natures.map(n => c.natureFr[n.name] || n.name).join(', ')}`);
   if (d.condition_expression) { const e = d.condition_expression; if (e.percentage_chance) p.push(`aléatoire (≈ ${e.percentage_chance} %)`); }

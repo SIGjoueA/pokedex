@@ -146,6 +146,17 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'); for (const [v, l] of [['baron', 'Barons'], ['nobaron', '⚪ Barons manquants'], ['barons', '✨ Barons shiny'], ['nobarons', '⚪✨ Barons shiny manquants']]) ok('v25 catégorie ' + v, html.includes(`<option value="${v}">${l}</option>`)); }
   ok('v25 icône Baron en cache hors-ligne', sw.includes("'img/alpha/baron.png'"));
 }
+// ---- v27: legend list, in-app messages, unified names
+{ const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), css = fs.readFileSync(path.join(HERE, '../docs/style.css'), 'utf8');
+  const code = app.split('\n').filter(l => !/^\s*\/\//.test(l)).map(l => l.replace(/\s\/\/ .*$/, '')).join('\n');
+  ok('v27 aucun alert() dans app.js', !/\balert\(/.test(code));
+  ok('v27 toast() en zone live polie', /function toast\(/.test(app) && /aria-live', 'polite'/.test(app) && /\.toast\.on\{/.test(css));
+  ok('v27 légende en liste (ul.lgl)', /BASE_LEGEND = '<ul class="lgl">'/.test(app) && /HOME_LEGEND = '<ul class="lgl">'/.test(app) && /\.lgl li\{/.test(css));
+  ok('v27 pas de numéro de génération en chiffres arabes', !/Gén\. ?\d/.test(code) && !/\dᵉ/.test(code));
+  ok('v27 pas de « / » collé dans les noms de jeux (app)', !/'(?:DÉ\/PS|[^'<\/]*[A-Za-zÉé0-9]\/[A-Za-zÉé0-9][^'<\/]*)'/.test(code.match(/const GAME_SHORT = \{[^\n]*\}/)[0]) && !/É\/[VB]/.test(code) && !/ROSA|USUL/.test(code));
+  const core = JSON.parse(fs.readFileSync(path.join(HERE, '../docs/data/core.json'), 'utf8'));
+  ok('v27 core.json : noms courts avec « / » espacé', core.games.every(g => !/\S\/|\/\S/.test(g.s) && !/\S\/|\/\S/.test(g.n)));
+  const games = fs.readFileSync(path.join(HERE, 'games.mjs'), 'utf8'); ok('v27 games.mjs : noms courts avec « / » espacé', !/short: '[^']*(\S\/|\/\S)[^']*'/.test(games)); }
 // ---- v26: every list / sheet selector uses the custom dropdown
 { const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'); for (const id of ['game', 'cat', 'gen', 'sort', 'dgame']) ok('v26 menu personnalisé #' + id, app.includes(`initMenu('${id}'`)); }
 { const html = fs.readFileSync(path.join(HERE, '../docs/index.html'), 'utf8'); ok('v26 catégorie Ultra-Chimères sous Fabuleux', /value="myth">Fabuleux<\/option>\s*<option value="ub">Ultra-Chimères<\/option>/.test(html)); }

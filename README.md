@@ -101,6 +101,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - Les sélecteurs « Génération » et « Tri » de la liste, et le sélecteur de jeu dans les fiches, utilisent maintenant le même menu personnalisé que « Jeux » et « Catégorie » (pastilles de couleur et séparateurs génération / console dans les fiches). Le `<select>` natif reste caché et sert de source de vérité.
 - Catégorie « Ultra-Chimères » juste sous « Fabuleux » (11 espèces : Zéroïd, Mouscoto, Cancrelove, Câblifère, Bamboiselle, Katagami, Engloutyran, Vémini, Mandrillon, Ama-Ama, Pierroteknik ; Cosmog, Cosmovum, Solgaleo, Lunala et Necrozma exclus) et étiquette « Ultra-Chimère » sur leurs fiches, comme Légendaire / Fabuleux.
 
+## v27 : légende en liste, messages intégrés, noms harmonisés
+
+- « Légende des marques » (vue de base et Pokémon HOME) : une ligne par marque, avec la même icône que sur les cartes et les boutons, puis une phrase.
+- Les messages « Sauvegarde importée », « Fichier invalide », « Données GO indisponibles hors-ligne » et « Pokédex du jeu indisponible hors-ligne » s’affichent dans l’app (bandeau en bas, refermable, au-dessus de la barre des fiches) et non plus dans une boîte `alert()`.
+- Noms de jeux : « / » toujours entouré d’espaces ; noms courts = titre complet sans « Pokémon : » pour les jeux de base (Épée / Bouclier, Ultra-Soleil / Ultra-Lune, Or HeartGold / Argent SoulSilver…), préfixe ÉV / ÉB / Z-A pour les extensions (ÉV Disque Indigo, ÉB Isolarmure, Z-A Méga-Dimension), « Hors dex ÉV / ÉB ». Générations en chiffres romains partout (« Gén. IV–V », « IVᵉ génération »). Les noms courts sont appliqués par l’app (`GAME_SHORT`), donc identiques même avec un ancien `core.json` en cache.
+
 ## Limites connues
 Rencontres absentes pour les jeux récents (voir plus haut). Textes Pokédex FR officiels seulement à partir de Noir/Blanc (PokéAPI), le reste est traduit automatiquement. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

@@ -24,6 +24,9 @@ const KEYRE = /^\d+(?:-[a-z0-9-]+)?$/;
 // ids in the "favs / caught / shiny" sets: integers for base species (unchanged since v1), strings like "26-alola" for forms
 const validId = x => Number.isInteger(x) || (typeof x === 'string' && KEYRE.test(x) && x.includes('-'));
 
+// v27: one naming rule for short game names — spaced slash « / » everywhere; base games in full (minus « Pokémon : »),
+// expansions = base prefix (ÉV, ÉB, Z-A) + expansion name. Applied over core.json so a cached older data file reads the same.
+const GAME_SHORT = { zadlc: 'Z-A Méga-Dimension', za: 'Légendes Z-A', svdisk: 'ÉV Disque Indigo', svmask: 'ÉV Masque Turquoise', sv: 'Écarlate / Violet', la: 'Légendes Arceus', bdsp: 'Diamant Étincelant / Perle Scintillante', swcrown: 'ÉB Couronneige', swisle: 'ÉB Isolarmure', sw: 'Épée / Bouclier', lgpe: 'Let’s Go', usum: 'Ultra-Soleil / Ultra-Lune', sm: 'Soleil / Lune', oras: 'Rubis Oméga / Saphir Alpha', xy: 'X / Y', b2w2: 'Noir 2 / Blanc 2', bw: 'Noir / Blanc', hgss: 'Or HeartGold / Argent SoulSilver', pt: 'Platine', dp: 'Diamant / Perle', e: 'Émeraude', frlg: 'Rouge Feu / Vert Feuille', rs: 'Rubis / Saphir', c: 'Cristal', gs: 'Or / Argent', y: 'Jaune', rb: 'Rouge / Bleu' };
 let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, TYPE_FR = {};
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
@@ -126,13 +129,13 @@ const ORIGINS = [
   { id: 'za', n: 'Z-A', fr: 'Marque Z-A (Légendes Z-A + Méga-Dimension)', games: ['za', 'zadlc'] },
   { id: 'paldea', n: 'Paldea', fr: 'Marque de Paldea (Écarlate / Violet + extensions)', games: ['sv', 'svmask', 'svdisk'] },
   { id: 'hisui', n: 'Hisui', fr: 'Marque de Hisui (Légendes Arceus)', games: ['la'] },
-  { id: 'sinnoh', n: 'DÉ/PS', fr: 'Marque de Sinnoh (Diamant Étincelant / Perle Scintillante)', games: ['bdsp'] },
+  { id: 'sinnoh', n: 'DÉ / PS', fr: 'Marque de Sinnoh (Diamant Étincelant / Perle Scintillante)', games: ['bdsp'] },
   { id: 'galar', n: 'Galar', fr: 'Marque de Galar (Épée / Bouclier + extensions)', games: ['sw', 'swisle', 'swcrown'] },
   { id: 'lgpe', n: 'Let’s Go', fr: 'Marque Let’s Go (Pikachu / Évoli)', games: ['lgpe'] },
   { id: 'go', n: 'GO', fr: 'Marque GO (Pokémon GO)', games: ['go'] },
   { id: 'alola', old: 1, n: 'Alola', fr: 'Trèfle (Soleil / Lune, Ultra-Soleil / Ultra-Lune)', games: ['sm', 'usum'] },
   { id: 'kalos', old: 1, n: 'Kalos', fr: 'Pentagone (X / Y, Rubis Oméga / Saphir Alpha)', games: ['xy', 'oras'] },
-  { id: 'none', old: 1, n: 'Sans marque', s: 'Gén. 4–5', fr: 'Sans marque (4ᵉ–5ᵉ génération, via Poké Transfert / Pokémon Bank)', games: ['dp', 'pt', 'hgss', 'bw', 'b2w2'], noimg: 1 },
+  { id: 'none', old: 1, n: 'Sans marque', s: 'Gén. IV–V', fr: 'Sans marque (IVᵉ–Vᵉ génération, via Poké Transfert / Pokémon Bank)', games: ['dp', 'pt', 'hgss', 'bw', 'b2w2'], noimg: 1 },
   { id: 'gb', old: 1, n: 'Game Boy', s: 'GB', fr: 'Marque Game Boy (Console virtuelle 3DS : Rouge / Bleu / Jaune / Or / Argent / Cristal)', games: ['rb', 'y', 'gs', 'c'] },
 ];
 const ORI = Object.fromEntries(ORIGINS.map((o, i) => [o.id, { ...o, i }]));
@@ -368,8 +371,8 @@ function migrateMarks() {
 // Jeux list (newest first): each extra dex sits just ABOVE the latest expansion of its game group (`before`)
 const VDEX = {
   zamega: { game: 'za', before: 'zadlc', mega: 1, n: 'Légendes Pokémon : Z-A – Méga-Dex', s: 'Méga-Dex Z-A' },
-  svhors: { game: 'sv', before: 'svdisk', file: 'hors-sv', n: 'Écarlate / Violet (+ extensions) – Hors dex', s: 'Hors dex É/V' },
-  swhors: { game: 'sw', before: 'swcrown', file: 'hors-sw', n: 'Épée / Bouclier (+ extensions) – Hors dex', s: 'Hors dex É/B' },
+  svhors: { game: 'sv', before: 'svdisk', file: 'hors-sv', n: 'Écarlate / Violet (+ extensions) – Hors dex', s: 'Hors dex ÉV' },
+  swhors: { game: 'sw', before: 'swcrown', file: 'hors-sw', n: 'Épée / Bouclier (+ extensions) – Hors dex', s: 'Hors dex ÉB' },
 };
 let MEGADEX = null;
 function megaDex() {
@@ -398,7 +401,7 @@ async function boot() {
     BY_KEY[p.k] = p; (FORMS[p.id] ||= []).push(p);
     p.nn = norm(p.n); p.ne = norm(p.en); p.nj = norm(p.ja); p.nr = norm(p.ro); p.tot = p.s.reduce((a, b) => a + b, 0);
   });
-  GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; });
+  GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; g.s = GAME_SHORT[g.id] || g.s; });
   DATA.types.forEach(t => TYPE_FR[t[0]] = t[1]);
   migrateOrigins(); migrateHomeShiny(); migrateEnergy();
   migrateMarks();
@@ -449,7 +452,7 @@ async function setGame(v) {
   state.game = v; $('#game').value = state.vdex || v;
   if (v === 'home') {
   } else if (GAME_BY[v]) {
-    try { await loadDex(v); if (state.vdex && VDEX[state.vdex].file) await loadDex('vd:' + state.vdex); } catch { state.game = ''; state.vdex = ''; $('#game').value = ''; alert('Pokédex du jeu indisponible hors-ligne : ouvrez-le une fois avec une connexion.'); }
+    try { await loadDex(v); if (state.vdex && VDEX[state.vdex].file) await loadDex('vd:' + state.vdex); } catch { state.game = ''; state.vdex = ''; $('#game').value = ''; toast('Pokédex du jeu indisponible hors-ligne : ouvrez-le une fois avec une connexion.', 'err', 6500); }
   }
   render();
 }
@@ -554,8 +557,24 @@ const homeIcon = (gold, label) => `<span class="mk hm${gold ? ' gold' : ''}" rol
 const HOME_T = 'Transféré vers HOME avec au moins une marque d’origine', HOME_C_T = 'Transféré avec toutes les marques d’origine Switch possibles (+ GO sauf fabuleux) : anciens jeux non comptés';
 const goldBall = (lv, label) => `<span class="mk ok gold" role="img" aria-label="${label}" title="${label}">${BALL_GOLD}${lv ? `<small class="lvl">${lv}</small>` : ''}</span>`;
 const LVL_T = { sw: 'Complété jeux actuels : capturé dans tous les jeux Switch où il existe, et dans Pokémon GO s’il y est disponible', old: 'Complété dans les anciens jeux : capturé dans tous les jeux d’avant la Switch où il existe' };
-const BASE_LEGEND = `<span>${BALL} capturé dans au moins un jeu (Pokémon GO compris)</span> <span>${goldBall('', 'Poké Ball dorée')} <b>Poké Ball dorée</b> : complété jeux actuels = capturé dans tous les jeux Switch où il existe (un jeu et ses extensions comptent pour un) <b>et</b> dans Pokémon GO s’il y est disponible</span> <span>${goldBall('🕹', 'Poké Ball dorée 🕹')} <b>Poké Ball dorée 🕹</b> : complété dans les anciens jeux = capturé dans tous les jeux d’avant la Switch où il existe (les deux niveaux : dorée + 🕹)</span> <span><span class="mk sh">✨</span> shiny dans au moins un jeu</span> <span>Pour marquer, choisissez un jeu (ou Pokémon GO) dans « Jeux ».</span> <span class="mute">Menu Catégorie : 🔴 Poké Ball · 🟡 Poké Ball dorée (jeux actuels / Switch + GO) · 🟡🕹 anciens jeux · 🏠 HOME · 🟡🏠 HOME doré · ✨ shiny.</span>`;
-const HOME_LEGEND = `<span>${homeIcon(false, HOME_T)} transféré avec au moins une marque d’origine</span> <span>${homeIcon(true, HOME_C_T)} <b>dorée</b> : transféré avec <b>toutes</b> les marques Switch où il existe — ${ORIGINS.filter(o => !o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')} (un jeu et ses extensions comptent pour une ; Pokémon GO compris, sauf pour les fabuleux ; plus tard Rouge Feu / Vert Feuille Switch)</span> <span><b>Anciens jeux</b> (${ORIGINS.filter(o => o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')}) : boutons et marques conservés, mais ne comptent pas pour la dorure (fermeture de Pokémon Bank).</span> <span>Pour cocher : fiche du Pokémon → « Pokémon HOME » (une case par marque ; échanges HOME compris, sans « Capturé ») ou « Transféré » dans la fiche d’un jeu (implique « Capturé » dans ce jeu).</span> <span class="mute">Icônes des marques : Bulbagarden Archives (usage équitable). Menu Catégorie : 🏠 HOME · 🟡🏠 HOME doré.</span>`;
+// v27: legend as a list — one icon (same as on the cards / buttons) + one sentence per line.
+const LG_INFO = '<span class="lgi-i" aria-hidden="true">i</span>';
+const lgItem = (ic, html, cls) => `<li${cls ? ` class="${cls}"` : ''}><span class="lgi">${ic}</span><span>${html}</span></li>`;
+const BASE_LEGEND = '<ul class="lgl">' + [
+  lgItem(`<span class="mk ok">${BALL}</span>`, '<b>Capturé</b> dans au moins un jeu (Pokémon GO compris).'),
+  lgItem(goldBall('', 'Poké Ball dorée'), '<b>Poké Ball dorée</b> : complété dans les jeux actuels — capturé dans tous les jeux Switch où il existe (un jeu et ses extensions comptent pour un) <b>et</b> dans Pokémon GO s’il y est disponible.'),
+  lgItem(goldBall('🕹', 'Poké Ball dorée 🕹'), '<b>Poké Ball dorée 🕹</b> : complété dans les anciens jeux — capturé dans tous les jeux d’avant la Switch où il existe (les deux niveaux : dorée + 🕹).'),
+  lgItem('<span class="mk sh">✨</span>', '<b>Shiny</b> dans au moins un jeu.'),
+  lgItem(LG_INFO, 'Pour marquer, choisissez un jeu (ou Pokémon GO) dans « Jeux ».'),
+  lgItem('', 'Dans le menu Catégorie : 🔴 Poké Ball · 🟡 Poké Ball dorée (jeux actuels / Switch + GO) · 🟡🕹 anciens jeux · 🏠 HOME · 🟡🏠 HOME doré · ✨ shiny.', 'mute'),
+].join('') + '</ul>';
+const HOME_LEGEND = '<ul class="lgl">' + [
+  lgItem(homeIcon(false, HOME_T), '<b>Transféré</b> vers HOME avec au moins une marque d’origine.'),
+  lgItem(homeIcon(true, HOME_C_T), `<b>Maison dorée</b> : transféré avec <b>toutes</b> les marques Switch où il existe — ${ORIGINS.filter(o => !o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')} (un jeu et ses extensions comptent pour une ; Pokémon GO compris, sauf pour les fabuleux ; plus tard Rouge Feu / Vert Feuille Switch).`),
+  lgItem(omIcon('kalos'), `<b>Anciens jeux</b> (${ORIGINS.filter(o => o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')}) : boutons et marques conservés, mais ils ne comptent pas pour la dorure (fermeture de Pokémon Bank).`),
+  lgItem(LG_INFO, 'Pour cocher : fiche du Pokémon → « Pokémon HOME » (une case par marque ; échanges HOME compris, sans « Capturé »), ou « Transféré » dans la fiche d’un jeu (implique « Capturé » dans ce jeu).'),
+  lgItem('', 'Icônes des marques : Bulbagarden Archives (usage équitable). Menu Catégorie : 🏠 HOME · 🟡🏠 HOME doré.', 'mute'),
+].join('') + '</ul>';
 // ball shown on cards in the base view: red = caught somewhere, gold = Switch-complete, gold+🕹 = anciens jeux (both → gold+🕹)
 function baseBall(p) {
   const b = baseStatus(p); if (!b.any) return '';
@@ -758,7 +777,7 @@ function trackHTML(p0) {
   if (alphaOk(p, c)) h += `<br><span class="mute baronl">${BARON_IC} Baron : ${isBaron(p, c) ? 'oui' : 'non'}${isBaronS(p, c) ? ' · Baron shiny ✨' : ''} <small>(sans effet sur la complétion)</small></span>`;
   else if (ALPHA_GAMES.has(c) && !p0.mb && !bo) h += `<br><span class="mute baronl">Ne peut pas être Baron dans ce jeu${(BY_KEY[String(p.id)] || p).lg || (BY_KEY[String(p.id)] || p).my ? ' (légendaire / fabuleux)' : ''}.</span>`;
   { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
-  if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → 4ᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
+  if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
   if (c === 'go' && p.my) return h + '<br>Les Pokémon fabuleux ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion HOME de ce Pokémon.';
   const om = originOf(c);
   h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span>`;
@@ -776,6 +795,19 @@ function refreshTrack(p) {
 // Fixed action row, same order on every sheet: Capturé · Shiny · Transféré (HOME) · Méga-Gemme(s) / Méga-énergie (GO).
 // Buttons that do not apply stay in place, greyed (disabled). The gem/energy slot exists only for forms that have a Mega.
 // Mobile: the fixed bottom bar can wrap (HOME origin marks) → its height feeds the bottom padding of the sheet.
+// v27: in-app message instead of alert() — polite live region, auto-hides, sits above the sheet's fixed bar on mobile.
+let TOAST_T = 0;
+function toast(msg, kind = 'ok', ms = 4500) {
+  let t = $('#toast');
+  if (!t) { t = document.createElement('div'); t.id = 'toast'; t.className = 'toast'; t.setAttribute('role', 'status'); t.setAttribute('aria-live', 'polite'); document.body.appendChild(t); }
+  t.className = 'toast ' + kind; t.innerHTML = `<span class="ti" aria-hidden="true">${kind === 'err' ? '!' : '✓'}</span><span class="tm">${esc(msg)}</span><button type="button" aria-label="Fermer le message">×</button>`;
+  t.querySelector('button').onclick = () => { t.classList.remove('on'); };
+  const b = $('#actbar'), fixed = b && b.getClientRects().length && getComputedStyle(b).position === 'fixed'; // offsetParent is null for fixed elements
+  t.style.bottom = fixed ? `calc(${b.offsetHeight + 12}px + env(safe-area-inset-bottom))` : '';
+  requestAnimationFrame(() => t.classList.add('on'));
+  clearTimeout(TOAST_T); TOAST_T = setTimeout(() => t.classList.remove('on'), ms);
+}
+addEventListener('hashchange', () => { const t = $('#toast'); if (t) { clearTimeout(TOAST_T); t.classList.remove('on'); } }); // a message never lingers over another screen's buttons
 function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $('#detail-view'); if (b && v) v.style.setProperty('--barh', b.offsetHeight + 'px'); }); }
 // v25 Baron buttons (official Alpha icon, self-hosted: img/alpha/CREDITS.txt). Baron shiny = icon + ✨ badge; checked = same yellow as Shiny.
 const BARON_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"></span>';
@@ -802,7 +834,7 @@ function actbarHTML(p) {
   const hk = c && c !== 'home' ? homeKind(c) : null;
   const trOn = !!(hk && !p.bo && !megaBo(p, c) && !(c === 'go' && p.my)); // same guard as toggleTransfer (logic unchanged)
   const sw = c && GAME_BY[c] ? sharedWith(c, q) : [];
-  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? (GBA_IDS.has(c) ? 'Jeu GBA : pas de transfert direct vers HOME (Pal Park → 4ᵉ gén. → Bank : « Sans marque » sur la fiche Pokémon HOME)' : 'Ce jeu ne peut pas envoyer de Pokémon vers HOME') : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : !trOn ? 'Variante de combat : suit la forme de base' :
+  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? (GBA_IDS.has(c) ? 'Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ gén. → Bank : « Sans marque » sur la fiche Pokémon HOME)' : 'Ce jeu ne peut pas envoyer de Pokémon vers HOME') : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : !trOn ? 'Variante de combat : suit la forme de base' :
     `Transféré vers HOME depuis ${nm}${sw.length ? ' (et ' + sw.map(x => GAME_BY[x].s).join(', ') + ')' : ''}${p.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}`;
   let slot = '';
   if (c === 'go') slot = energyMates(p).map(m => energyBtnHTML(m)).join(''); // one Méga-énergie per Mega when the species has X / Y
@@ -1012,7 +1044,7 @@ function evoHTML(p, f, mode, gm) {
   let start = p.k;
   if (!out[start] && !inn[start]) start = String(p.id);
   let note = '';
-  if (p.c === 'mega') note = 'Méga-Évolution : hors Légendes Z-A (X/Y, ROSA, Soleil/Lune, USUL, Let’s Go), variante de combat qui suit la forme de base. En Légendes Z-A : marquez la Méga-Gemme ici. Capturé / shiny = forme de base capturée (ou shiny) dans la sauvegarde Z-A <b>et</b> gemme obtenue. Transfert HOME : manuel, sauf si la gemme est cochée — transférer la base transfère aussi cette Méga.';
+  if (p.c === 'mega') note = 'Méga-Évolution : hors Légendes Z-A (X / Y, Rubis Oméga / Saphir Alpha, Soleil / Lune, Ultra-Soleil / Ultra-Lune, Let’s Go), variante de combat qui suit la forme de base. En Légendes Z-A : marquez la Méga-Gemme ici. Capturé / shiny = forme de base capturée (ou shiny) dans la sauvegarde Z-A <b>et</b> gemme obtenue. Transfert HOME : manuel, sauf si la gemme est cochée — transférer la base transfère aussi cette Méga.';
   else if (p.c === 'primal') note = 'Forme obtenue par Régression primale (Orbe) depuis la forme de base.';
   else if (p.c === 'gmax' && !p.bo) note = 'Forme Gigamax : à capturer / marquer séparément (le facteur Gigamax ne se trouve pas à l’état sauvage autrement).';
   else if (p.c === 'gmax' && p.bo) note = 'Forme Éternamax : variante de combat – suit la forme de base.';
@@ -1168,7 +1200,7 @@ function effNote(mode, gm) {
 }
 async function changeGame(g) {
   state.dgame = g;
-  if (g === 'go') { try { DET.go = await loadGo(); } catch { alert('Données GO indisponibles hors-ligne : ouvrez-les une fois avec une connexion.'); state.dgame = 'all'; } }
+  if (g === 'go') { try { DET.go = await loadGo(); } catch { toast('Données GO indisponibles hors-ligne : ouvrez-les une fois avec une connexion.', 'err', 6500); state.dgame = 'all'; } }
   pickGame(state.dgame); sheetPref = state.dgame;
   renderDetail();
 }
@@ -1314,8 +1346,8 @@ boot();
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       migrateEnergy(); migrateMarks(); rebuildHome(); store.set('mega_energy', [...MEGA_ENERGY]);
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
-      render(); alert('Sauvegarde importée.');
-    } catch { alert('Fichier invalide.'); }
+      render(); toast('Sauvegarde importée.');
+    } catch { toast('Fichier invalide : ce n’est pas une sauvegarde du Pokédex.', 'err', 6500); }
     im.value = '';
   });
 })();

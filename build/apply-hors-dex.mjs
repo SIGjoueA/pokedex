@@ -18,7 +18,7 @@ const VG = { 'brilliant-diamond-shining-pearl': 'brilliant-diamond-and-shining-p
 export const MANUAL = { // species obtainable but without a PokéAPI learnset for the default form in that version group
   frlg: [[386, 'Deoxys : Ticket Aurora (événement) / échange']],
   e: [[386, 'Deoxys : Ticket Aurora (événement) / échange']],
-  bdsp: [[386, 'Deoxys : transfert HOME'], [489, 'Phione : reproduction de Manaphy / HOME'], [491, 'Darkrai : bonus de sauvegarde Légendes Arceus / HOME'], [492, 'Shaymin : bonus de sauvegarde Épée/Bouclier / HOME'], [493, 'Arceus : bonus de sauvegarde Légendes Arceus / HOME']],
+  bdsp: [[386, 'Deoxys : transfert HOME'], [489, 'Phione : reproduction de Manaphy / HOME'], [491, 'Darkrai : bonus de sauvegarde Légendes Arceus / HOME'], [492, 'Shaymin : bonus de sauvegarde Épée / Bouclier / HOME'], [493, 'Arceus : bonus de sauvegarde Légendes Arceus / HOME']],
 };
 const dex = Object.fromEntries(core.games.map(g => [g.id, rd(`dex/${g.id}.json`)]));
 const grpOf = g => g.base || g.id;
