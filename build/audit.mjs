@@ -146,4 +146,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'); for (const [v, l] of [['baron', 'Barons'], ['nobaron', '⚪ Barons manquants'], ['barons', '✨ Barons shiny'], ['nobarons', '⚪✨ Barons shiny manquants']]) ok('v25 catégorie ' + v, html.includes(`<option value="${v}">${l}</option>`)); }
   ok('v25 icône Baron en cache hors-ligne', sw.includes("'img/alpha/baron.png'"));
 }
+// ---- v26: every list / sheet selector uses the custom dropdown
+{ const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'); for (const id of ['game', 'cat', 'gen', 'sort', 'dgame']) ok('v26 menu personnalisé #' + id, app.includes(`initMenu('${id}'`)); }
+{ const html = fs.readFileSync(path.join(HERE, '../docs/index.html'), 'utf8'); ok('v26 catégorie Ultra-Chimères sous Fabuleux', /value="myth">Fabuleux<\/option>\s*<option value="ub">Ultra-Chimères<\/option>/.test(html)); }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -421,7 +421,7 @@ function buildControls() {
     `<button class="chip" data-t="${t[0]}" aria-pressed="false" style="background:${TYPE_COLORS[t[0]]}">${esc(t[1])}</button>`).join('');
   $('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
   $('#game').addEventListener('change', async e => { await setGame(e.target.value); });
-  initGameMenu(); initCatMenu();
+  initGameMenu(); initCatMenu(); initGenMenu(); initSortMenu();
   $('#gen').addEventListener('change', e => { state.gen = e.target.value; render(); });
   $('#cat').addEventListener('change', e => { state.cat = e.target.value; render(); });
   $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
@@ -481,6 +481,9 @@ function regionalReps(g) { // species id -> regional form shown first / instead 
 }
 const listReps = (gid, dex) => dex && !dex.virtual && !dex.mega && REGION_OF_GAME[gid] ? regionalReps(gid) : null;
 const regShow = (p, reg) => state.forms ? true : p.c ? !!(reg && reg.get(p.id) === p) : !(reg && reg.has(p.id));
+// v26: Ultra-Chimères (Ultra Beasts) — the 11 species; Necrozma / Cosmog line are Legendaries, not UB
+const UB_IDS = new Set([793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]);
+const isUB = p => UB_IDS.has(p.id);
 function filtered() {
   const raw = state.q.trim();
   const qn = norm(raw);
@@ -505,6 +508,7 @@ function filtered() {
     const key = ik(p);
     if (state.cat === 'leg' && !p.lg) return false;
     if (state.cat === 'myth' && !p.my) return false;
+    if (state.cat === 'ub' && !isUB(p)) return false;
     if (state.cat === 'baby' && !p.ba) return false;
     if (state.cat === 'fav' && !FAVS.has(key)) return false;
     if (state.cat === 'caught' && !isCaught(p)) return false;
@@ -541,7 +545,7 @@ function numHTML(p) {
     if (n && n.length) s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
     else s = `<span class="rn hors" title="Absent du Pokédex régional — obtenable par transfert, échange, événement ou Méga-Gemme">Hors dex</span> <span class="nat">#${pad(p.id)}</span>`;
   } else s = `#${pad(p.id)}`;
-  const tag = p.c ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : '';
+  const tag = p.c ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : isUB(p) ? ' · Ultra-Chimère' : '';
   return s + tag;
 }
 // Icons: Poké Ball (red = caught in at least one game, gold = completed) and HOME house (blue = transferred from at least one game, gold = from all compatible games)
@@ -1076,7 +1080,7 @@ function renderDetail() {
   const key = ik(p);
   const types = isGo && f.go ? f.go.t : gm ? pickGen(f.pt, gen, f.t) : f.t;
   const c1 = TYPE_COLORS[types[0]], c2 = TYPE_COLORS[types[1] || types[0]];
-  const flags = [p.lg && 'Légendaire', p.my && 'Fabuleux', p.ba && 'Bébé', `Gén. ${GEN_LABELS[p.g]}`].filter(Boolean);
+  const flags = [p.lg && 'Légendaire', p.my && 'Fabuleux', isUB(p) && 'Ultra-Chimère', p.ba && 'Bébé', `Gén. ${GEN_LABELS[p.g]}`].filter(Boolean);
   const games = availGames(f);
   const goOk = f.go && f.go.r;
   const opts = `<option value="all"${mode === 'all' ? ' selected' : ''}>Vue d’ensemble (infos générales)</option><option value="home"${mode === 'home' ? ' selected' : ''}>Pokémon HOME (transferts)</option>` +
@@ -1133,7 +1137,7 @@ function renderDetail() {
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
-  setBarH();
+  setBarH(); initSheetGameMenu();
 }
 // hero names: French (h1) → genus · English → Japanese · romaji
 function namesHTML(p, sp) {
@@ -1168,7 +1172,7 @@ async function changeGame(g) {
   pickGame(state.dgame); sheetPref = state.dgame;
   renderDetail();
 }
-document.addEventListener('change', e => { if (e.target.id === 'dgame') changeGame(e.target.value); });
+document.addEventListener('change', e => { if (e.target.id === 'dgame') { dgameRefocus = !!(MENUS.dgame && document.activeElement === MENUS.dgame.btn); changeGame(e.target.value); } });
 
 document.addEventListener('click', e => {
   const t = e.target.closest('[data-type]');
@@ -1331,7 +1335,7 @@ const gmNorm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCa
 // cfg: { btnId, listId, label, empty (button text when value ''), allLabel (list text for value ''), dot(v) → html, sep(v, prevV) → '' | 'sep' | ['sep2', caption] }
 const MENUS = {};
 function initMenu(selId, cfg) {
-  const sel = $('#' + selId); if (!sel || MENUS[selId]) return;
+  const sel = $('#' + selId); if (!sel || (MENUS[selId] && MENUS[selId].sel === sel)) return; // v26: sheet menu (#dgame) is re-created on each render → re-init
   sel.classList.add('vh'); sel.tabIndex = -1; sel.setAttribute('aria-hidden', 'true');
   const wrap = document.createElement('div'); wrap.className = 'gsel'; sel.parentNode.insertBefore(wrap, sel); wrap.appendChild(sel);
   wrap.insertAdjacentHTML('beforeend', `<button id="${cfg.btnId}" class="gbtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="${cfg.listId}" aria-label="${esc(cfg.label)}"></button><div class="gback" hidden></div><ul id="${cfg.listId}" class="gpop" role="listbox" tabindex="-1" aria-label="${esc(cfg.label)}" hidden></ul>`);
@@ -1342,9 +1346,9 @@ function initMenu(selId, cfg) {
   M.list.addEventListener('keydown', e => menuKey(M, e));
   M.list.addEventListener('focusout', e => { if (M.open && !wrap.contains(e.relatedTarget)) closeMenu(M, false); });
   M.back.addEventListener('click', () => closeMenu(M, true));
-  document.addEventListener('pointerdown', e => { if (M.open && !wrap.contains(e.target)) closeMenu(M, false); });
   buildMenu(M); syncMenu(M);
 }
+document.addEventListener('pointerdown', e => { for (const M of Object.values(MENUS)) if (M.open && !M.wrap.contains(e.target)) closeMenu(M, false); }); // one listener for every menu
 function buildMenu(M) {
   const { cfg } = M;
   M.items = [...M.sel.options].map(o => ({ v: o.value, label: o.value ? o.textContent : cfg.allLabel, dis: o.disabled }));
@@ -1366,7 +1370,7 @@ function syncMenu(M) {
   M.btn.setAttribute('aria-label', M.cfg.label + ' : ' + (v ? it.label : 'tous'));
   for (const li of M.list.querySelectorAll('.gopt')) li.setAttribute('aria-selected', String(li.dataset.v === v));
 }
-function syncMenus() { for (const M of Object.values(MENUS)) syncMenu(M); }
+function syncMenus() { for (const M of Object.values(MENUS)) if (M.sel.isConnected) syncMenu(M); }
 function setMenuActive(M, i, dir = 1) {
   const n = M.items.length; i = Math.max(0, Math.min(n - 1, i));
   while (M.items[i] && M.items[i].dis && i + dir >= 0 && i + dir < n) i += dir; // skip disabled options
@@ -1414,10 +1418,20 @@ function menuKey(M, e) {
   e.preventDefault();
 }
 // Jeux: double separator (+ console caption) when the console changes, simple one between generations; coloured dot per game
+const gameSep = (v, pv) => { const g = GAME_BY[gameOfValue(v)]; if (!g) return ''; const pg = pv != null && GAME_BY[gameOfValue(pv)]; const con = CONSOLE_OF[g.id] || '';
+  return !pg || CONSOLE_OF[pg.id] !== con ? ['sep2', con] : pg.g !== g.g ? 'sep' : ''; };
 function initGameMenu() {
-  initMenu('game', { btnId: 'gamebtn', listId: 'gamelist', label: 'Jeu', empty: 'Jeux', allLabel: 'Tous les jeux (aucun filtre)', dot: gdot,
-    sep: (v, pv) => { const g = GAME_BY[gameOfValue(v)]; if (!g) return ''; const pg = pv != null && GAME_BY[gameOfValue(pv)]; const con = CONSOLE_OF[g.id] || '';
-      return !pg || CONSOLE_OF[pg.id] !== con ? ['sep2', con] : pg.g !== g.g ? 'sep' : ''; } });
+  initMenu('game', { btnId: 'gamebtn', listId: 'gamelist', label: 'Jeu', empty: 'Jeux', allLabel: 'Tous les jeux (aucun filtre)', dot: gdot, sep: gameSep });
+}
+// v26: Génération + Tri use the same custom dropdown (content unchanged); the sheet's game selector too (dots + generation / console separators)
+function initGenMenu() { initMenu('gen', { btnId: 'genbtn', listId: 'genlist', label: 'Génération', empty: 'Toutes gén.', allLabel: 'Toutes gén.' }); }
+function initSortMenu() { initMenu('sort', { btnId: 'sortbtn', listId: 'sortlist', label: 'Tri', empty: 'Tri : N°', allLabel: 'Tri : N°' }); }
+let dgameRefocus = false;
+function initSheetGameMenu() {
+  const sel = $('#dgame'); if (!sel) return;
+  initMenu('dgame', { btnId: 'dgamebtn', listId: 'dgamelist', label: 'Jeu de la fiche', empty: 'Vue d’ensemble', allLabel: 'Vue d’ensemble', dot: v => v === 'all' ? '<span class="gdot none" aria-hidden="true"></span>' : gdot(v), sep: gameSep });
+  const lb = document.querySelector('.gamebar label[for="dgame"]'); if (lb) lb.htmlFor = 'dgamebtn';
+  if (dgameRefocus) { dgameRefocus = false; $('#dgamebtn').focus({ preventScroll: true }); }
 }
 // Catégorie: simple separators between families (sélection · captures · complétion jeux · HOME)
 const CAT_SEP_BEFORE = new Set(['caught', 'swdone', 'trans', 'baron']);

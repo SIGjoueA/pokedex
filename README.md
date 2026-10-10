@@ -96,6 +96,11 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - Icône officielle Baron (Bulbagarden Archives, usage équitable, copie locale `img/alpha/`, crédit `img/alpha/CREDITS.txt`) ; B. shiny = icône + badge ✨, coché = même jaune que Shiny. Z-A : libellés courts « Transf. » / « Gemme », barre sur deux lignes au-delà de 6 boutons (téléphone).
 - **Formes régionales d'abord** dans le Pokédex de leur région : Alola (Soleil/Lune, Ultra-Soleil/Ultra-Lune), Galar (Épée/Bouclier + extensions), Hisui (Légendes Arceus), Paldea (Écarlate/Violet + extensions). Formes activées : la forme régionale est listée avant la forme commune ; Formes désactivées : la forme régionale remplace la forme commune (un Pokémon par espèce, compteur compris). Let's Go (Kanto), Z-A, Tous les jeux et listes « Hors dex » : inchangés.
 
+## v26 : menus unifiés et Ultra-Chimères
+
+- Les sélecteurs « Génération » et « Tri » de la liste, et le sélecteur de jeu dans les fiches, utilisent maintenant le même menu personnalisé que « Jeux » et « Catégorie » (pastilles de couleur et séparateurs génération / console dans les fiches). Le `<select>` natif reste caché et sert de source de vérité.
+- Catégorie « Ultra-Chimères » juste sous « Fabuleux » (11 espèces : Zéroïd, Mouscoto, Cancrelove, Câblifère, Bamboiselle, Katagami, Engloutyran, Vémini, Mandrillon, Ama-Ama, Pierroteknik ; Cosmog, Cosmovum, Solgaleo, Lunala et Necrozma exclus) et étiquette « Ultra-Chimère » sur leurs fiches, comme Légendaire / Fabuleux.
+
 ## Limites connues
 Rencontres absentes pour les jeux récents (voir plus haut). Textes Pokédex FR officiels seulement à partir de Noir/Blanc (PokéAPI), le reste est traduit automatiquement. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

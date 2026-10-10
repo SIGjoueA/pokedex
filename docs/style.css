@@ -141,6 +141,8 @@ button.toggle[aria-pressed=true]{background:var(--accent);color:var(--accent-fg)
 .cnt{color:var(--mute);font-weight:500;font-size:13px}
 .gamebar{display:flex;align-items:center;gap:10px}
 .gamebar label{font-weight:700}
+.gamebar .gsel{flex:1}
+.gamebar .gbtn{background:var(--bg3);font-size:15px}
 .gamebar select{flex:1;min-width:0;height:44px;border-radius:12px;border:2px solid var(--line);background:var(--bg3);padding:0 8px;font-size:15px}
 .mute{color:var(--mute)}
 .rn-line{margin:0;font-size:16px}

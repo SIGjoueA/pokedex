@@ -83,7 +83,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   console.log(opts.join(' | '));
   ok(opts[1] === 'Pokémon HOME' && opts[2] === 'Pokémon GO' && /Z-A/.test(opts[3]) && /Rouge/.test(opts[opts.length - 1]), tag + ' game option order');
   // layout: game select left of gen
-  const pos = await p.evaluate(() => { const a = document.querySelector('#gamebtn').getBoundingClientRect(), g = document.querySelector('#gen').getBoundingClientRect(); return [a.left < g.left, a.top === g.top, document.documentElement.scrollWidth <= innerWidth]; });
+  const pos = await p.evaluate(() => { const a = document.querySelector('#gamebtn').getBoundingClientRect(), g = document.querySelector('#genbtn').getBoundingClientRect(); return [a.left < g.left, a.top === g.top, document.documentElement.scrollWidth <= innerWidth]; });
   ok(pos[0] && pos[1] && pos[2], tag + ' game select left of gen, no h-overflow ' + pos);
   await p.screenshot({ path: SHOTS + `list-${tag}.png` });
   // games
@@ -706,7 +706,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel(''); await sleep(200);
   ok(await p.$eval('#gamebtn', e => e.textContent.replace('▾', '').trim()) === 'Jeux', tag + ' v24 Jeux button follows programmatic changes');
   { const c = await p.evaluate(() => [...document.querySelector('#catlist').children].map(li => li.classList.contains('gsep') ? '────' : li.textContent));
-    const exp = ['Toutes catégories (aucun filtre)', 'Légendaires', 'Fabuleux', 'Bébés', '★ Favoris', '────', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', '────', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)', '────', 'Barons', '⚪ Barons manquants', '✨ Barons shiny', '⚪✨ Barons shiny manquants'];
+    const exp = ['Toutes catégories (aucun filtre)', 'Légendaires', 'Fabuleux', 'Ultra-Chimères', 'Bébés', '★ Favoris', '────', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', '────', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)', '────', 'Barons', '⚪ Barons manquants', '✨ Barons shiny', '⚪✨ Barons shiny manquants'];
     ok(JSON.stringify(c) === JSON.stringify(exp), tag + ' v24 Catégorie dropdown: exact validated labels + separators ' + JSON.stringify(c)); }
   await p.click('#catbtn'); await sleep(150); await p.click('#catlist .gopt[data-v="swmiss"]'); await sleep(300);
   ok(await p.$eval('#cat', e => e.value) === 'swmiss' && parseInt(await count()) > 0, tag + ' v24 Catégorie dropdown selects (Jeux actuels manquants): ' + (await count()).slice(0, 40));
@@ -848,6 +848,38 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(await p.evaluate(() => document.querySelector('#catlist .gopt[data-v="baron"]').getAttribute('aria-disabled') === 'true' && getComputedStyle(document.querySelector('#catlist .gopt[data-v="baron"]')).opacity < 0.6), tag + ' v25 greyed in the custom menu'); await p.keyboard.press('Escape');
   await sel('go'); ok(await p.evaluate(() => document.querySelector('#cat option[value=baron]').disabled), tag + ' v25 Barons greyed in Pokémon GO');
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  // ---- v26: Ultra-Chimères
+  { const r = await p.evaluate(() => { state.cat = 'ub'; const ks = filtered().map(x => x.n); state.cat = ''; return ks; });
+    ok(r.join() === 'Zéroïd,Mouscoto,Cancrelove,Câblifère,Bamboiselle,Katagami,Engloutyran,Vémini,Mandrillon,Ama-Ama,Pierroteknik', tag + ' v26 Catégorie « Ultra-Chimères »: the 11 Ultra Beasts ' + r); }
+  ok(await p.evaluate(() => { const l = [...document.querySelectorAll('#catlist .gopt')].map(li => li.dataset.v); return l.indexOf('ub') === l.indexOf('myth') + 1 && !document.querySelector('#catlist .gopt[data-v="ub"]').previousElementSibling.classList.contains('gsep'); }), tag + ' v26 « Ultra-Chimères » right under « Fabuleux », same block');
+  await go('#/p/793'); await sleep(500);
+  ok(await p.evaluate(() => [...document.querySelectorAll('.hero .tags .tag')].some(t => t.textContent === 'Ultra-Chimère')), tag + ' v26 Zéroïd sheet: « Ultra-Chimère » tag (same style as Légendaire / Fabuleux)');
+  for (const k of ['800', '789']) { await go('#/p/' + k); await sleep(500); ok(await p.evaluate(() => ![...document.querySelectorAll('.hero .tags .tag')].some(t => t.textContent === 'Ultra-Chimère') && [...document.querySelectorAll('.hero .tags .tag')].some(t => t.textContent === 'Légendaire')), tag + ' v26 ' + k + ': Légendaire, not Ultra-Chimère'); }
+  await go('#/'); await sel('');
+  // ---- v26: Génération / Tri / sheet game selector → same custom dropdown as Jeux / Catégorie
+  await go('#/'); await sel('');
+  for (const [id, n] of [['gen', 10], ['sort', 7]]) {
+    const r = await p.evaluate(id => { const s = document.querySelector('#' + id), l = document.querySelector('#' + id + 'list'), b = document.querySelector('#' + id + 'btn');
+      return { hidden: s.classList.contains('vh'), btn: !!b && b.getAttribute('aria-haspopup') === 'listbox', same: JSON.stringify([...s.options].map(o => o.textContent)) === JSON.stringify([...l.querySelectorAll('.gopt')].map(li => li.textContent.trim())), n: l.querySelectorAll('.gopt').length }; }, id);
+    ok(r.hidden && r.btn && r.same && r.n === n, tag + ` v26 ${id} custom dropdown: hidden native select, same content ` + JSON.stringify(r));
+  }
+  await p.click('#genbtn'); await sleep(150); await p.click('#genlist .gopt[data-v="4"]'); await sleep(300);
+  ok(await p.$eval('#gen', e => e.value) === '4' && /Sinnoh/.test(await p.$eval('#genbtn', e => e.textContent)) && /^107 Pokémon/.test(await count()), tag + ' v26 Génération pick (tap) filters: ' + (await count()).slice(0, 20));
+  await p.focus('#sortbtn'); await p.keyboard.press('ArrowDown'); await sleep(150); await p.keyboard.press('ArrowDown'); await p.keyboard.press('Enter'); await sleep(300);
+  ok(await p.$eval('#sort', e => e.value) === 'name' && await p.evaluate(() => document.activeElement.id === 'sortbtn' && document.querySelector('#sortlist').hidden), tag + ' v26 Tri keyboard ↓ + Entrée → Tri : nom, focus back');
+  await p.click('#reset'); await sleep(300);
+  ok(await p.evaluate(() => /Toutes gén/.test(document.querySelector('#genbtn').textContent) && /Tri : N°/.test(document.querySelector('#sortbtn').textContent)), tag + ' v26 Réinitialiser resets the Génération / Tri buttons');
+  await go('#/p/25'); await sleep(500);
+  { const r = await p.evaluate(() => { const l = document.querySelector('#dgamelist'), opts = [...l.querySelectorAll('.gopt')];
+      return { init: MENUS.dgame && MENUS.dgame.sel === document.querySelector('#dgame'), hidden: document.querySelector('#dgame').classList.contains('vh'), label: document.querySelector('.gamebar label').htmlFor,
+        same: opts.length === document.querySelector('#dgame').options.length, dots: opts.filter(li => li.querySelector('.gdot:not(.none)')).length, n: opts.length, sep2: [...l.querySelectorAll('.gsep2')].map(x => x.textContent), sep: l.querySelectorAll('.gsep').length, btn: document.querySelector('#dgamebtn').textContent }; });
+    ok(r.init && r.hidden && r.label === 'dgamebtn' && r.same && r.dots === r.n - 1 && r.sep2[0] === 'Switch' && r.sep2.length >= 3 && r.sep >= 3 && /Vue d’ensemble/.test(r.btn), tag + ' v26 sheet game menu: custom dropdown, colour dots, console / generation separators ' + JSON.stringify(r)); }
+  await p.click('#dgamebtn'); await sleep(150); await p.click('#dgamelist .gopt[data-v="la"]'); await sleep(500);
+  ok(/Légendes Arceus/.test(await strip()) && await p.evaluate(() => MENUS.dgame.sel === document.querySelector('#dgame') && /Arceus/.test(document.querySelector('#dgamebtn').textContent) && document.querySelector('#dgamelist').hidden), tag + ' v26 sheet game pick → sheet re-rendered on Légendes Arceus, menu re-initialised');
+  await p.focus('#dgamebtn'); await p.keyboard.press('Home'); await p.keyboard.press('Enter'); await sleep(150); await p.keyboard.press('Home'); await p.keyboard.press('Enter'); await sleep(500);
+  ok(await p.$eval('#dgame', e => e.value) === 'all' && await p.evaluate(() => document.activeElement.id === 'dgamebtn'), tag + ' v26 sheet game menu keyboard → Vue d’ensemble, focus kept on the new button');
+  await p.select('#dgame', 'sw'); await sleep(400); ok(/Épée/.test(await p.$eval('#dgamebtn', e => e.textContent)), tag + ' v26 sheet button follows the native select (programmatic change)');
+  await go('#/'); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());
   await p.select('#cat', ''); 
