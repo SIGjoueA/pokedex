@@ -105,6 +105,9 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 
 - « Légende des marques » (vue de base et Pokémon HOME) : une ligne par marque, avec la même icône que sur les cartes et les boutons, puis une phrase.
 - Les messages « Sauvegarde importée », « Fichier invalide », « Données GO indisponibles hors-ligne » et « Pokédex du jeu indisponible hors-ligne » s’affichent dans l’app (bandeau en bas, refermable, au-dessus de la barre des fiches) et non plus dans une boîte `alert()`.
+- Bouton grille / liste : icône « liste avec vignettes » en vue grille, « 4 carrés » en vue liste (l’icône montre l’affichage obtenu en appuyant ; ☰ ressemblait à un menu).
+- « Baron » coché en brun-rouge (clair et sombre), distinct du rouge de « Capturé » ; « B. shiny » reste jaune comme « Shiny ».
+- Menu Catégorie : titres de blocs Statut / Marques / HOME / Barons, même style que les titres du menu Jeux.
 - Noms de jeux : « / » toujours entouré d’espaces ; noms courts = titre complet sans « Pokémon : » pour les jeux de base (Épée / Bouclier, Ultra-Soleil / Ultra-Lune, Or HeartGold / Argent SoulSilver…), préfixe ÉV / ÉB / Z-A pour les extensions (ÉV Disque Indigo, ÉB Isolarmure, Z-A Méga-Dimension), « Hors dex ÉV / ÉB ». Générations en chiffres romains partout (« Gén. IV–V », « IVᵉ génération »). Les noms courts sont appliqués par l’app (`GAME_SHORT`), donc identiques même avec un ancien `core.json` en cache.
 
 ## Limites connues

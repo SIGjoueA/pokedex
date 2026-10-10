@@ -156,6 +156,9 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v27 pas de « / » collé dans les noms de jeux (app)', !/'(?:DÉ\/PS|[^'<\/]*[A-Za-zÉé0-9]\/[A-Za-zÉé0-9][^'<\/]*)'/.test(code.match(/const GAME_SHORT = \{[^\n]*\}/)[0]) && !/É\/[VB]/.test(code) && !/ROSA|USUL/.test(code));
   const core = JSON.parse(fs.readFileSync(path.join(HERE, '../docs/data/core.json'), 'utf8'));
   ok('v27 core.json : noms courts avec « / » espacé', core.games.every(g => !/\S\/|\/\S/.test(g.s) && !/\S\/|\/\S/.test(g.n)));
+  ok('v27 bouton grille / liste en icônes SVG (plus de ☰ / ▦)', /VIEW_LIST_IC = '<svg/.test(app) && /VIEW_GRID_IC = '<svg/.test(app) && !/'☰'|'▦'/.test(code));
+  ok('v27 Baron coché brun-rouge (clair + sombre), B. shiny inchangé', /\.act\.baron\[aria-pressed=true\]\{color:#8a3b12;border-color:#a0522d/.test(css) && /\.act\.baron\[aria-pressed=true\]\{color:#e8a477;border-color:#c46a3c/.test(css) && /\.act\.barons\[aria-pressed=true\]\{color:#b58f00;border-color:#f2c200/.test(css));
+  ok('v27 titres du menu Catégorie', /CAT_HEAD = \{ leg: 'Statut', caught: 'Marques', trans: 'HOME', baron: 'Barons' \}/.test(app) && /sep: catSep/.test(app));
   const games = fs.readFileSync(path.join(HERE, 'games.mjs'), 'utf8'); ok('v27 games.mjs : noms courts avec « / » espacé', !/short: '[^']*(\S\/|\/\S)[^']*'/.test(games)); }
 // ---- v26: every list / sheet selector uses the custom dropdown
 { const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'); for (const id of ['game', 'cat', 'gen', 'sort', 'dgame']) ok('v26 menu personnalisé #' + id, app.includes(`initMenu('${id}'`)); }

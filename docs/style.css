@@ -316,9 +316,9 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .gopt .bi .bsp,.gbtn .bi .bsp{font-size:11px;right:-6px;top:-7px}
 .act .bi{width:24px;height:24px}
 .act .bi .bsp{font-size:13px;right:-8px;top:-8px}
-.act.baron[aria-pressed=true]{color:#c62828;border-color:#e53935;background:rgba(229,57,53,.1)}
+.act.baron[aria-pressed=true]{color:#8a3b12;border-color:#a0522d;background:rgba(160,82,45,.13)} /* v27: red-brown, distinct from Capturé red */
 .act.barons[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)} /* same as the checked Shiny button */
-@media (prefers-color-scheme:dark){.act.barons[aria-pressed=true]{color:#f2c200}.act.baron[aria-pressed=true]{color:#ff6b66}}
+@media (prefers-color-scheme:dark){.act.barons[aria-pressed=true]{color:#f2c200}.act.baron[aria-pressed=true]{color:#e8a477;border-color:#c46a3c;background:rgba(196,106,60,.18)}}
 .act.baron:disabled .bi img,.act.barons:disabled .bi img{filter:grayscale(1)}
 .baronl .bi,.hshl .bi{width:1.2em;height:1.2em}
 @media (max-width:699px){
@@ -341,3 +341,4 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .toast.ok{border-color:#46c46a}.toast.err{border-color:#e53935}
 .toast .ti{font-weight:700;flex:none;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;border:2px solid currentColor;font-size:13px}.toast.ok .ti{color:#2e9e4f}.toast.err .ti{color:#e53935}
 .toast button{margin-left:auto;background:none;border:0;color:var(--mute);font-size:18px;cursor:pointer;min-width:32px;min-height:32px}
+button.icon .vic{display:block}

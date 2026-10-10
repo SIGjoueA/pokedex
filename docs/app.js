@@ -27,6 +27,9 @@ const validId = x => Number.isInteger(x) || (typeof x === 'string' && KEYRE.test
 // v27: one naming rule for short game names — spaced slash « / » everywhere; base games in full (minus « Pokémon : »),
 // expansions = base prefix (ÉV, ÉB, Z-A) + expansion name. Applied over core.json so a cached older data file reads the same.
 const GAME_SHORT = { zadlc: 'Z-A Méga-Dimension', za: 'Légendes Z-A', svdisk: 'ÉV Disque Indigo', svmask: 'ÉV Masque Turquoise', sv: 'Écarlate / Violet', la: 'Légendes Arceus', bdsp: 'Diamant Étincelant / Perle Scintillante', swcrown: 'ÉB Couronneige', swisle: 'ÉB Isolarmure', sw: 'Épée / Bouclier', lgpe: 'Let’s Go', usum: 'Ultra-Soleil / Ultra-Lune', sm: 'Soleil / Lune', oras: 'Rubis Oméga / Saphir Alpha', xy: 'X / Y', b2w2: 'Noir 2 / Blanc 2', bw: 'Noir / Blanc', hgss: 'Or HeartGold / Argent SoulSilver', pt: 'Platine', dp: 'Diamant / Perle', e: 'Émeraude', frlg: 'Rouge Feu / Vert Feuille', rs: 'Rubis / Saphir', c: 'Cristal', gs: 'Or / Argent', y: 'Jaune', rb: 'Rouge / Bleu' };
+// v27: grid / list toggle shows the view you get by tapping — list with thumbnails (from grid) / 4 squares (from list). ☰ looked like a menu.
+const VIEW_LIST_IC = '<svg class="vic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><rect x="3" y="4" width="5" height="4.5" rx="1.2"/><rect x="10" y="5.25" width="11" height="2" rx="1"/><rect x="3" y="9.75" width="5" height="4.5" rx="1.2"/><rect x="10" y="11" width="11" height="2" rx="1"/><rect x="3" y="15.5" width="5" height="4.5" rx="1.2"/><rect x="10" y="16.75" width="11" height="2" rx="1"/></svg>';
+const VIEW_GRID_IC = '<svg class="vic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><rect x="3" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.8"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.8"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.8"/></svg>';
 let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, TYPE_FR = {};
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
@@ -637,7 +640,7 @@ function render() {
   const res = filtered();
   const box = $('#results');
   box.className = state.view === 'grid' ? 'grid' : 'grid list';
-  $('#viewbtn').textContent = state.view === 'grid' ? '☰' : '▦';
+  { const vb = $('#viewbtn'), g = state.view === 'grid'; if (vb.dataset.v !== state.view) { vb.innerHTML = g ? VIEW_LIST_IC : VIEW_GRID_IC; vb.dataset.v = state.view; vb.title = g ? 'Afficher en liste' : 'Afficher en grille'; vb.setAttribute('aria-label', vb.title); } }
   box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${GAME_BY[state.game] && !DEX[state.game] ? 'Chargement…' : 'Aucun Pokémon trouvé.'}</p>`;
   const gm = GAME_BY[state.game];
   const ctx = trackCtx(); let prog;
@@ -1467,4 +1470,6 @@ function initSheetGameMenu() {
 }
 // Catégorie: simple separators between families (sélection · captures · complétion jeux · HOME)
 const CAT_SEP_BEFORE = new Set(['caught', 'swdone', 'trans', 'baron']);
-function initCatMenu() { initMenu('cat', { btnId: 'catbtn', listId: 'catlist', label: 'Catégorie', empty: 'Catégorie', allLabel: 'Toutes catégories (aucun filtre)', sep: v => CAT_SEP_BEFORE.has(v) ? 'sep' : '', dot: v => v === 'baron' || v === 'nobaron' ? BARON_IC : v === 'barons' || v === 'nobarons' ? BARONS_IC : '' }); }
+const CAT_HEAD = { leg: 'Statut', caught: 'Marques', trans: 'HOME', baron: 'Barons' }; // v27: block headings, same style as the Jeux menu (SWITCH, 3DS…)
+const catSep = v => CAT_HEAD[v] ? ['h', CAT_HEAD[v]] : CAT_SEP_BEFORE.has(v) ? 'sep' : '';
+function initCatMenu() { initMenu('cat', { btnId: 'catbtn', listId: 'catlist', label: 'Catégorie', empty: 'Catégorie', allLabel: 'Toutes catégories (aucun filtre)', sep: catSep, dot: v => v === 'baron' || v === 'nobaron' ? BARON_IC : v === 'barons' || v === 'nobarons' ? BARONS_IC : '' }); }
