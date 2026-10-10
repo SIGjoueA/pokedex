@@ -475,7 +475,7 @@ const core = {
     r.gb = games.reduce((m, g, i) => m + (avByKey[e.key].includes(g.id) ? 2 ** i : 0), 0);
     if (e.S.is_legendary) r.lg = 1; if (e.S.is_mythical) r.my = 1; if (e.S.is_baby) r.ba = 1;
     if (manifest[e.key]?.shSha && manifest[e.key].shSha !== manifest[e.key].sha) r.sh = 1;
-    if (go.perKey[e.key]?.r && e.cat !== 'mega') r.go = 1; // Z-A Megas: tracked in Z-A only (not a GO capture target)
+    if (go.perKey[e.key]?.r) r.go = 1; // v28: Megas / Primals released in GO are GO forms too (Gigamax + late Megas: apply-go-overrides.mjs)
     return r;
   }),
   chains: chainOf,
@@ -490,4 +490,5 @@ sizes.go = write('go.json', go.shared);
 sizes.loc = write('loc.json', { a: encCache.loc, m: encCache.m, c: encCache.c });
 sizes.tm = write('tm.json', tmOut);
 sizes.sp = totalSp;
+await import('./apply-go-overrides.mjs'); // v28: manual GO overrides (build/go-overrides.json), never overwritten by a rebuild
 console.log('entries', coreEntries.length, 'edges', evoOut.length, 'sizes (bytes, raw):', sizes);

@@ -76,7 +76,7 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
 
   const releasedSp = new Set(Object.keys(released).map(Number));
   const alolaSp = new Set(Object.keys(alolan).map(Number)), galarSp = new Set(Object.keys(galarian).map(Number));
-  const megaOk = new Set(megaApi.map(m => `${m.pokemon_id}|${m.form}`));
+  const megaOk = new Set(megaApi.map(m => `${m.pokemon_id}|${m.form}`)); // frozen list: later Megas are added by build/go-overrides.json
   const perKey = {};
   const TEMP = { TEMP_EVOLUTION_MEGA: 'mega', TEMP_EVOLUTION_MEGA_X: 'mega-x', TEMP_EVOLUTION_MEGA_Y: 'mega-y', TEMP_EVOLUTION_PRIMAL: 'primal' };
   const TEMP_API = { 'mega': 'Normal', 'mega-x': 'X', 'mega-y': 'Y' };
@@ -110,7 +110,7 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
       if (e.sfx === 'alola') ok = ok && alolaSp.has(e.id);
       if (e.sfx === 'galar') ok = ok && galarSp.has(e.id);
     }
-    if (e.cat === 'gmax' || e.sfx.endsWith('-female')) continue;
+    if (e.cat === 'gmax' || e.sfx.endsWith('-female')) continue; // Gigamax: release list + shiny in build/go-overrides.json (apply-go-overrides.mjs)
     const o = dataFrom(ps, ov); o.r = ok ? 1 : 0;
     if (e.cat === 'base' || e.cat === 'sex') {
       const sh = shinyApi[String(e.id)];

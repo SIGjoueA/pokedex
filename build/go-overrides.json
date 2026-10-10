@@ -1,0 +1,30 @@
+{
+  "_doc": "Overrides manuels Pokémon GO (v28), appliqués par apply-go-overrides.mjs (lancé à la fin de build-data.mjs, idempotent, relançable seul). À METTRE À JOUR À LA MAIN : la mise à jour GO (fetch-go + build) ne modifie jamais ce fichier. Sources : Bulbapedia « Mega Evolution (GO) », « Gigantamax (GO) », liste des shiny GO (vérifié le 2026-10-10).",
+  "megaReleased": {
+    "_doc": "Méga-Évolutions sorties dans GO mais absentes de la liste pogoapi (mega_pokemon.json, figée). Une Méga listée ici est marquée sortie (go.r = 1) même si pogoapi ne la connaît pas. Ne pas ajouter une Méga annoncée mais pas sortie (Méga-Lugulabre : pas encore).",
+    "keys": ["26-mega-x", "26-mega-y", "71-mega", "121-mega", "149-mega", "150-mega-x", "150-mega-y", "227-mega", "398-mega", "652-mega", "655-mega", "658-mega", "687-mega", "870-mega"]
+  },
+  "gmax": {
+    "_doc": "Formes Gigamax de GO (Combats Max). from = date de sortie (AAAA-MM-JJ, null = déjà sortie) : avant cette date la forme reste cachée, l'app l'affiche automatiquement à partir de ce jour. shiny = shiny disponible ; shinyFrom = date de sortie du shiny. Une forme absente de cette liste n'est pas dans GO. Transfert vers HOME : impossible pour tous les Gigamax de GO.",
+    "forms": {
+      "3-gmax": { "from": null, "shiny": true },
+      "6-gmax": { "from": null, "shiny": true },
+      "9-gmax": { "from": null, "shiny": true },
+      "12-gmax": { "from": null, "shiny": true },
+      "25-gmax": { "from": null, "shiny": true },
+      "52-gmax": { "from": null, "shiny": true },
+      "68-gmax": { "from": null, "shiny": true },
+      "94-gmax": { "from": null, "shiny": true },
+      "99-gmax": { "from": null, "shiny": true },
+      "131-gmax": { "from": null, "shiny": true },
+      "143-gmax": { "from": null, "shiny": true },
+      "569-gmax": { "from": null, "shiny": true },
+      "812-gmax": { "from": null, "shiny": true },
+      "815-gmax": { "from": null, "shiny": true },
+      "818-gmax": { "from": null, "shiny": false },
+      "849-amped-gmax": { "from": null, "shiny": false },
+      "861-gmax": { "from": null, "shiny": true },
+      "884-gmax": { "from": "2026-11-06", "shiny": true, "shinyFrom": "2026-11-06" }
+    }
+  }
+}

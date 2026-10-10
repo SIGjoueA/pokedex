@@ -163,4 +163,19 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
 // ---- v26: every list / sheet selector uses the custom dropdown
 { const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'); for (const id of ['game', 'cat', 'gen', 'sort', 'dgame']) ok('v26 menu personnalisé #' + id, app.includes(`initMenu('${id}'`)); }
 { const html = fs.readFileSync(path.join(HERE, '../docs/index.html'), 'utf8'); ok('v26 catégorie Ultra-Chimères sous Fabuleux', /value="myth">Fabuleux<\/option>\s*<option value="ub">Ultra-Chimères<\/option>/.test(html)); }
+// ---- v28: GO Megas / Primals / Gigamax (build/go-overrides.json must stay applied after every GO update)
+{ const OV = JSON.parse(fs.readFileSync(path.join(HERE, 'go-overrides.json'), 'utf8'));
+  for (const k of OV.megaReleased.keys) ok('v28 Méga sortie dans GO (override) ' + k, E[k] && E[k].go === 1 && F(E[k].id, k).go && F(E[k].id, k).go.r === 1);
+  for (const [k, o] of Object.entries(OV.gmax.forms)) { const g = E[k] && F(E[k].id, k).go; ok('v28 Gigamax GO ' + k, !!g && (o.from ? !E[k].go && E[k].gof === o.from && g.rf === o.from && g.r === 0 : E[k].go === 1 && g.r === 1) && (o.shiny ? g.sh && g.sh[0] === 'max' && !g.nosh : g.nosh === 1)); }
+  ok('v28 Gigamax hors liste sans GO', core.e.filter(e => e.c === 'gmax' && (e.go || e.gof)).length === Object.keys(OV.gmax.forms).length && !E['892-single-strike-gmax'].go && !E['890-eternamax']?.go);
+  ok('v28 17 Gigamax sortis + Duralugon le 2026-11-06', core.e.filter(e => e.c === 'gmax' && e.go).length === 17 && E['884-gmax'].gof === '2026-11-06' && F(884, '884-gmax').go.shf === '2026-11-06');
+  ok('v28 pas de shiny Gigamax Lézargus / Salarsen', F(818, '818-gmax').go.nosh === 1 && F(849, '849-amped-gmax').go.nosh === 1 && !F(6, '6-gmax').go.nosh);
+  ok('v28 Méga-Dracaufeu X / Y, Méga-Mewtwo X / Y, Primo-Kyogre / Groudon dans GO', ['6-mega-x', '6-mega-y', '150-mega-x', '150-mega-y', '382-primal', '383-primal'].every(k => E[k].go === 1));
+  ok('v28 Méga-Lugulabre pas encore dans GO', !E['609-mega'].go);
+  ok('v28 Gigamax GO = stats de la base', F(6, '6-gmax').go.a === F(6).go.a && F(6, '6-gmax').go.m50 === F(6).go.m50);
+  ok('v28 shiny Méga = Méga-Évolution d’un shiny', JSON.stringify(F(6, '6-mega-x').go.sh) === '["mega"]');
+  ok('v28 nombre de Méga / Primo GO', core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length === 62);
+  const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), bd = fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8');
+  ok('v28 build-data lance apply-go-overrides', bd.includes("await import('./apply-go-overrides.mjs')") && !/e\.cat !== 'mega'\) r\.go/.test(bd));
+  ok('v28 GO hors dorure (goGold)', /const goGold = p => !!p\.go && !p\.mb && p\.c !== 'gmax' && p\.c !== 'primal';/.test(app) && (app.match(/goGold\(p\)/g) || []).length >= 3); }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
