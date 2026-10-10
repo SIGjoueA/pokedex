@@ -1,9 +1,10 @@
 'use strict';
-const VERSION = 'v28';
+const VERSION = 'v29';
 const DATA_VERSION = 'd10'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
+const CRIES = 'pokedex-cries'; // v29: cries (MP3), cached when first played
 const SHELL_FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'data/core.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'img/alpha/baron.png'];
 
@@ -25,6 +26,16 @@ self.addEventListener('fetch', e => {
       if (hit) return hit;
       const res = await fetch(req);
       if (res.ok) c.put(req, res.clone());
+      return res;
+    }));
+    return;
+  }
+  if (url.pathname.includes('/cries/')) { // cache-first, only once played (offline afterwards)
+    e.respondWith(caches.open(CRIES).then(async c => {
+      const hit = await c.match(req, { ignoreVary: true });
+      if (hit) return hit;
+      const res = await fetch(req);
+      if (res.ok && res.status === 200) c.put(req, res.clone());
       return res;
     }));
     return;

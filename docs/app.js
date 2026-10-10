@@ -701,6 +701,31 @@ async function loadShared() {
   if (!SHARED) SHARED = Promise.all(['evo', 'moves', 'ref', 'tm', 'loc'].map(n => getJSON(`data/${n}.json`))).then(([evo, moves, ref, tm, loc]) => ({ evo, moves, ref, tm, loc })).catch(e => { SHARED = null; throw e; });
   return SHARED;
 }
+let CRIES = null; // v29: data/cries.json { k: [latest, legacy] } ("l/6" → cries/latest/6.mp3, "o/6" → cries/legacy/6.mp3)
+async function loadCries() { if (!CRIES) CRIES = getJSON('data/cries.json').catch(() => { CRIES = null; return {}; }); return CRIES; }
+let CRY_CTX = null, CRY_SRC = null;
+const cryUrl = f => `cries/${f[0] === 'o' ? 'legacy' : 'latest'}/${f.slice(2)}.mp3`;
+// Web Audio: the context is created / resumed inside the tap (iPhone Safari unlock), the MP3 is fetched whole (service worker cache, offline after one play)
+function playCry(f, btn) {
+  const AC = window.AudioContext || window.webkitAudioContext;
+  try { CRY_CTX ||= new AC(); if (CRY_CTX.state === 'suspended') CRY_CTX.resume(); } catch { CRY_CTX = null; }
+  if (CRY_SRC) { try { CRY_SRC.stop(); } catch {} CRY_SRC = null; }
+  document.querySelectorAll('.cry.on').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on'); const off = () => btn.classList.remove('on');
+  const fail = () => { off(); toast(navigator.onLine === false ? 'Cri indisponible hors-ligne : écoutez-le une fois avec une connexion pour le garder.' : 'Impossible de lire ce cri.', 'err', 5000); };
+  fetch(cryUrl(f)).then(r => { if (!r.ok) throw new Error(r.status); return r.arrayBuffer(); }).then(buf => {
+    if (!CRY_CTX) { const au = new Audio(URL.createObjectURL(new Blob([buf], { type: 'audio/mpeg' }))); au.onended = off; return au.play(); }
+    return new Promise((ok, ko) => CRY_CTX.decodeAudioData(buf, ok, ko)).then(ab => {
+      if (!btn.classList.contains('on')) return;
+      const s = CRY_CTX.createBufferSource(); s.buffer = ab; s.connect(CRY_CTX.destination); s.onended = () => { if (CRY_SRC === s) CRY_SRC = null; off(); }; CRY_SRC = s; s.start();
+    });
+  }).catch(fail);
+}
+function cryBtns(p) {
+  const c = CRIES && !(CRIES instanceof Promise) ? CRIES[p.k] : null; if (!c) return '';
+  const [l, o] = c, same = l && o && l === o;
+  return `<div class="cries">${l ? `<button class="cry" type="button" data-cry="${l}" aria-label="Écouter le cri" title="Écouter le cri (version actuelle)"><span aria-hidden="true">🔊</span> Cri</button>` : ''}${o && !same ? `<button class="cry" type="button" data-cry="${o}" aria-label="Écouter le cri d’origine" title="Cri d’origine (jeux Gén. I–V, avant la refonte des cris)"><span aria-hidden="true">🔊</span> Ancien</button>` : ''}</div>`;
+}
 async function loadGo() { if (!GODATA) GODATA = getJSON('data/go.json').catch(e => { GODATA = null; throw e; }); return GODATA; }
 async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).catch(e => { delete SP[id]; throw e; }); return SP[id]; }
 
@@ -728,7 +753,7 @@ async function openDetail(p) {
   document.title = `${p.n} #${pad(p.id)} – Pokédex`;
   $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
   try {
-    const [sp, shared] = await Promise.all([loadSp(p.id), loadShared()]);
+    const [sp, shared] = await Promise.all([loadSp(p.id), loadShared()]); CRIES = await loadCries();
     if (tok !== detailTok) return;
     DET = { p, sp, f: sp.f[p.k], shared };
     pickGame(state.dgame);
@@ -975,11 +1000,38 @@ function abilitiesHTML(f, gm, ref) {
   if (!list.length) return '<p class="note">Aucun talent.</p>';
   return { n: list.length, body: list.map(([id, hid]) => { const a = ref.ab[id]; return a ? `<div class="ab"><b>${esc(a[0])}</b>${hid ? ' <span class="tag2">Talent caché</span>' : ''}<br><span class="mute">${esc(a[1] || '')}</span></div>` : ''; }).join('') };
 }
+// v29: wild held items of the selected game (PokéAPI held_items: item, % per version), next to the encounters. Versions with different % are listed separately.
 function heldHTML(f, gm, ref) {
   if (!gm || !f.hi) return '';
-  const ids = gm.ver.map(v => v[0]); const rows = [];
-  for (const [item, rar, vs] of f.hi) { const v = vs.filter(x => ids.includes(x)); if (v.length) rows.push(`<li>${esc(ref.it[item] || '?')} <span class="mute">(${rar} %)</span></li>`); }
-  return rows.length ? `<section class="box"><h2>Objets tenus</h2><ul class="plain">${rows.join('')}</ul></section>` : '';
+  const ids = gm.ver.map(v => v[0]), vn = Object.fromEntries(gm.ver), by = new Map();
+  for (const [item, rar, vs] of f.hi) for (const v of vs) if (ids.includes(v)) { const m = by.get(item) || by.set(item, new Map()).get(item); m.set(v, rar); }
+  if (!by.size) return ''; // nothing held in this game
+  const rows = [...by].map(([item, m]) => {
+    const rs = [...new Set(m.values())], all = ids.every(v => m.has(v));
+    const pct = rs.length === 1 ? `<b>${rs[0]} %</b>${all || ids.length === 1 ? '' : ` <span class="mute">(${[...m.keys()].map(v => esc(vn[v])).join(', ')} seulement)</span>`}` : [...m].map(([v, r]) => `${esc(vn[v])} <b>${r} %</b>`).join(' · ');
+    return `<li><span class="hin">${esc(ref.it[item] || '?')}</span> <span class="hip">${pct}</span></li>`;
+  });
+  return `<section class="box held"><h2>Objets tenus <small class="cnt">sauvages · ${by.size}</small></h2><ul class="plain heldl">${rows.join('')}</ul><p class="note">Probabilité qu’un Pokémon sauvage tienne l’objet (PokéAPI ; objet récupérable en le capturant).</p></section>`;
+}
+// v29: reproduction & capture (species data; hatch steps per game: II–III & VII 256 steps / cycle, IV + DÉPS 255, V–VI 257, Épée/Bouclier & Écarlate/Violet 128)
+const NO_EGG = new Set(['rb', 'y', 'lgpe', 'la', 'za', 'zadlc']);
+const stepsPerCycle = gm => !gm ? null : gm.id === 'bdsp' ? 255 : gm.g >= 8 ? 128 : gm.g === 7 ? 256 : gm.g >= 5 ? 257 : gm.g === 4 ? 255 : 256;
+function breedHTML(p, sp, gm) {
+  if (sp.cr == null) return '';
+  const noEgg = gm && NO_EGG.has(saveOf(gm.id)), undisc = !sp.eg.length || sp.eg.every(g => /Inconnu|Indéfini/i.test(g));
+  const sex = sp.gr < 0 ? '<b>Asexué</b>' : sp.gr === 0 ? '<b>♂ 100 %</b>' : sp.gr === 8 ? '<b>♀ 100 %</b>' : `<b>♂ ${dec(((8 - sp.gr) / 8 * 100).toFixed(1))} %</b> · <b>♀ ${dec((sp.gr / 8 * 100).toFixed(1))} %</b>`;
+  const pc = Math.min(100, Math.pow(sp.cr / 3 / 255, 0.75) * 100), pcs = pc >= 99.5 ? '100' : pc < 1 ? dec(pc.toFixed(1)) : Math.round(pc);
+  const spc = stepsPerCycle(gm), st = n => fmt(sp.hc * n);
+  const hatch = noEgg ? `<span class="mute">pas d’œufs dans ${esc(gm.s)}</span>` : undisc ? ((BY_KEY[String(p.id)] || p).ba ? `<b>${sp.hc} cycles</b> <span class="mute">· bébé : œuf obtenu en faisant se reproduire son évolution</span>` : '<span class="mute">ne se reproduit pas</span>') : gm ? `<b>${sp.hc} cycles</b> · ≈ ${st(spc)} pas` : `<b>${sp.hc} cycles</b> · ≈ ${st(128)} pas (Switch) · ${st(256)} (Gén. II–VII)`;
+  const row = (k, v) => `<div class="br"><span class="bk">${k}</span><span class="bv">${v}</span></div>`;
+  return `<section class="box breed"><h2>Reproduction &amp; capture</h2><div class="brl">` +
+    row('Sexe', sex) +
+    row('Taux de capture', `<b>${sp.cr}</b> / 255 <span class="mute">· ≈ ${pcs} % (Poké Ball, PV max)</span>`) +
+    row('Groupes d’œufs', sp.eg.length ? sp.eg.map(g => `<b>${esc(g)}</b>`).join(' · ') : '—') +
+    row('Éclosion', hatch) +
+    row('Croissance', `<b>${esc(GROWTH[sp.gw] || sp.gw)}</b>`) +
+    row('Bonheur de base', `<b>${sp.bh}</b>${sp.bh != null ? ' <span class="mute">/ 255</span>' : ''}`) +
+    `</div><p class="note">Données de l’espèce (PokéAPI, valeurs actuelles). Capture : estimation Gén. V+ sans bonus (statut, PV bas, Ball améliorée). Pas d’éclosion approximatifs (pas par cycle selon le jeu).</p></section>`;
 }
 
 /* moves */
@@ -1182,19 +1234,18 @@ function renderDetail() {
     body = `${flavorHTML(sp, gm)}
     ${regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : ''}
     <section class="box"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div>
-      ${gm ? '' : `<div class="kv kv3 sm"><div><b>${sp.gr < 0 ? 'Asexué' : `${dec(((8 - sp.gr) / 8 * 100).toFixed(1))} % ♂`}</b><span>${sp.gr < 0 ? 'Sexe' : `${dec((sp.gr / 8 * 100).toFixed(1))} % ♀`}</span></div><div><b>${sp.cr}</b><span>Taux de capture</span></div><div><b>${fmt((sp.hc + 1) * 255)}</b><span>Pas pour éclore</span></div></div>
-      <p class="note">Groupes d’œuf : ${sp.eg.map(esc).join(', ') || '—'} · Croissance : ${GROWTH[sp.gw] || sp.gw} · Bonheur de base : ${sp.bh}</p>`}</section>
+</section>
     <section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>
+    ${breedHTML(p, sp, gm)}
     <section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
       <div id="eff">${effHTML(types, mode2, chart)}</div>
       <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>
     ${(() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })()}
-    ${heldHTML(f, gm, shared.ref)}
     ${gm ? movesHTML(f, sp, gm, shared) : ''}
     <section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>
-    ${gm ? encHTML(f, sp, gm, shared) : mode === 'home' ? '' : homeSrcHTML(p, f)}
+    ${gm ? heldHTML(f, gm, shared.ref) + encHTML(f, sp, gm, shared) : mode === 'home' ? '' : homeSrcHTML(p, f)}
     ${availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g)))}
     ${goBox}`;
   }
@@ -1202,6 +1253,7 @@ function renderDetail() {
   <div class="detail">
     <div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${c1};--c2:${c2}">
       <div class="num">#${pad(p.id)}</div>
+      ${cryBtns(p)}
       <img id="heroimg" src="${showShinyArt && p.sh ? simg : gimg}" alt="${esc(p.n)}" width="256" height="256">
       ${p.sh ? `<button id="shbtn" class="shart" type="button" aria-pressed="${showShinyArt}" title="Afficher l’illustration shiny">✨ ${showShinyArt ? 'Normal' : 'Shiny'}</button>` : ''}
       <h1>${esc(p.n)}</h1>
@@ -1263,6 +1315,7 @@ document.addEventListener('click', e => {
   if (dg) { e.preventDefault(); changeGame(dg.dataset.game); window.scrollTo(0, 0); return; }
   const mt = e.target.closest('[data-mtab]');
   if (mt) { movesTab = mt.dataset.mtab; renderDetailKeepScroll(); return; }
+  const cb = e.target.closest('.cry[data-cry]'); if (cb) { playCry(cb.dataset.cry, cb); return; }
   const sb = e.target.closest('#shbtn');
   if (sb) { showShinyArt = !showShinyArt; renderDetailKeepScroll(); return; }
   const cgb = e.target.closest('#actbar .cg'), shb = e.target.closest('#actbar .sh');

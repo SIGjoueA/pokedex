@@ -178,4 +178,13 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), bd = fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8');
   ok('v28 build-data lance apply-go-overrides', bd.includes("await import('./apply-go-overrides.mjs')") && !/e\.cat !== 'mega'\) r\.go/.test(bd));
   ok('v28 GO hors dorure (goGold)', /const goGold = p => !!p\.go && !p\.mb && p\.c !== 'gmax' && p\.c !== 'primal';/.test(app) && (app.match(/goGold\(p\)/g) || []).length >= 3); }
+// ---- v29: cries (self-hosted MP3) + species reproduction data
+{ const C = D('cries.json'), dir = path.join(HERE, '../docs/cries'); let miss = 0, bytes = 0; const seen = new Set();
+  for (const v of Object.values(C)) for (const f of v) if (f && !seen.has(f)) { seen.add(f); const fp = path.join(dir, f[0] === 'o' ? 'legacy' : 'latest', f.slice(2) + '.mp3'); if (!fs.existsSync(fp)) miss++; else bytes += fs.statSync(fp).size; }
+  ok('v29 cris : tous les fichiers référencés existent', miss === 0, miss + ' manquants');
+  ok('v29 cris : toutes les formes ont un cri', core.e.every(e => C[e.k] && C[e.k][0]), core.e.filter(e => !C[e.k]).map(e => e.k).slice(0, 5).join());
+  ok('v29 cris : taille raisonnable (< 20 Mo)', bytes < 20 * 1048576, (bytes / 1048576).toFixed(1) + ' Mo');
+  eq('v29 cri Dracaufeu (actuel + ancien)', C['6'], ['l/6', 'o/6']); eq('v29 cri Méga-Dracaufeu X (propre)', C['6-mega-x'][0], 'l/10034'); eq('v29 Pêchaminus sans cri ancien', C['1025'][1], 0);
+  const s6 = sp(6); eq('v29 Dracaufeu reproduction', [s6.gr, s6.cr, s6.hc, s6.bh, s6.eg, s6.gw], [1, 45, 20, 70, ['Monstrueux', 'Draconique'], 'medium-slow']);
+  ok('v29 SW : cris en cache après écoute', /pokedex-cries/.test(fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'))); }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

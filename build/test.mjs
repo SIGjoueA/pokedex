@@ -517,6 +517,38 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy))).join() === '150-mega-x,150-mega-y', tag + ' v28 GO Mewtwo: energy X / Y (Méga-Mewtwo X / Y released in GO, override list)');
   const goOrder = await p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
   ok(goOrder.indexOf('Statistiques GO') < goOrder.indexOf('Attaques rapides') && goOrder.indexOf('Attaques chargées') < goOrder.indexOf('Évolutions') && goOrder.indexOf('Évolutions') < goOrder.indexOf('Pokémon GO : bonbons, compagnon, œufs'), tag + ' GO body order ' + goOrder);
+  { // ---- v29: cries, reproduction & capture, wild held items
+    await go('#/'); await sel(''); await go('#/p/6'); await sleep(900);
+    const cr = await p.$$eval('.hero .cry', bs => bs.map(b => b.dataset.cry + '|' + b.textContent.trim()));
+    ok(cr.join() === 'l/6|🔊 Cri,o/6|🔊 Ancien', tag + ' v29 Dracaufeu: cry buttons (current + original) in the hero ' + cr.join());
+    const t0 = errs.length; await p.click('.hero .cry[data-cry="l/6"]'); await sleep(900);
+    const st = await p.evaluate(async () => ({ toast: !!document.querySelector('.toast.on.err'), ctx: !!CRY_CTX, r: (await fetch('cries/latest/6.mp3')).headers.get('content-type') }));
+    ok(!st.toast && st.ctx && /audio\/mpeg/.test(st.r) && errs.length === t0, tag + ' v29 cry plays (Web Audio, MP3 served) ' + JSON.stringify(st));
+    ok(await p.evaluate(() => { const hb = document.querySelector('.hero').getBoundingClientRect(), c = document.querySelector('.hero .cries').getBoundingClientRect(), n = document.querySelector('.hero .num').getBoundingClientRect(), s = document.querySelector('#shbtn').getBoundingClientRect(); return c.left >= hb.left && c.right < (hb.left + hb.right) / 2 - 30 && c.right < s.left && n.top < c.bottom; }), tag + ' v29 cry buttons do not overlap the number / Shiny button');
+    await go('#/p/1025'); await sleep(800);
+    ok((await p.$$eval('.hero .cry', bs => bs.length)) === 1, tag + ' v29 Pêchaminus: current cry only (no original cry)');
+    await go('#/p/6'); await sleep(700);
+    const h2 = await p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
+    ok(h2.indexOf('Reproduction & capture') === h2.indexOf('Statistiques de base') + 1, tag + ' v29 « Reproduction & capture » right after the base stats ' + h2.slice(0, 6).join(' / '));
+    const br = await p.$eval('.breed', s => s.textContent.replace(/\s+/g, ' '));
+    ok(/♂ 87,5 % · ♀ 12,5 %/.test(br) && /45 \/ 255/.test(br) && /Monstrueux · Draconique/.test(br) && /20 cycles · ≈ 2\s?560 pas \(Switch\) · 5\s?120 \(Gén\. II–VII\)/.test(br) && /Parabolique/.test(br) && /Bonheur de base\s*70/.test(br), tag + ' v29 Dracaufeu reproduction data (overview) ' + br.slice(0, 260));
+    await go('#/'); await sel('sv'); await go('#/p/6'); await sleep(700);
+    ok(/20 cycles · ≈ 2\s?560 pas/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 hatch steps in Écarlate / Violet (128 / cycle)');
+    await go('#/'); await sel('xy'); await go('#/p/6'); await sleep(700);
+    ok(/≈ 5\s?140 pas/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 hatch steps in X / Y (257 / cycle)');
+    await go('#/'); await sel('la'); await go('#/p/25'); await sleep(700);
+    ok(/pas d’œufs dans/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Légendes Arceus: no eggs');
+    await go('#/'); await sel(''); await go('#/p/150'); await sleep(700);
+    ok(/Asexué/.test(await p.$eval('.breed', s => s.textContent)) && /ne se reproduit pas/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Mewtwo: asexué, ne se reproduit pas');
+    await go('#/p/175'); await sleep(700);
+    ok(/bébé/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Togepi: baby egg note');
+    await go('#/'); await sel('bw'); await go('#/p/25'); await sleep(900);
+    const hl = await p.evaluate(() => { const s = document.querySelector('.held'); const hs = [...document.querySelectorAll('.detail > section h2')].map(h => h.childNodes[0].textContent.trim()); return { t: s && s.textContent.replace(/\s+/g, ' '), i: hs.indexOf('Objets tenus'), e: hs.indexOf('Où le trouver'), ab: hs.indexOf('Talents') }; });
+    ok(hl.t && /Baie Oran 50 %/.test(hl.t) && /Balle Lumière 1 %/.test(hl.t) && hl.e === hl.i + 1 && hl.i > hl.ab + 1, tag + ' v29 Pikachu N / B: wild held items with %, just before the encounters ' + JSON.stringify(hl).slice(0, 220));
+    await go('#/'); await sel('rs'); await go('#/p/25'); await sleep(900);
+    ok(/Balle Lumière 5 %/.test(await p.$eval('.held', s => s.textContent)), tag + ' v29 Pikachu Rubis / Saphir: Balle Lumière 5 %');
+    await go('#/'); await sel('');
+  }
   { // ---- v28: GO Megas / Primals / Gigamax
     const keep = await p.evaluate(() => Object.fromEntries(['caught_g', 'shiny_g', 'mega_energy', 'home_o', 'home_og', 'forms'].map(k => [k, localStorage.getItem(k)])));
     await p.evaluate(() => { for (const k of ['caught_g', 'shiny_g', 'mega_energy']) localStorage.setItem(k, '[]'); }); await p.reload({ waitUntil: 'networkidle0' });

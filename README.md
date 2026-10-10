@@ -27,6 +27,7 @@ puis http://localhost:8765 (le service worker exige localhost ou HTTPS).
     node build-data.mjs      # -> docs/data/*.json (efface et recrée docs/data)
     node fetch-mega-stones.mjs   # -> docs/data/mega-stones.json (à relancer après build-data)
     node apply-go-overrides.mjs  # (déjà lancé par build-data) Méga récentes + Gigamax GO depuis build/go-overrides.json, idempotent
+    node fetch-cries.mjs     # v29 : cris (dépôt PokéAPI « cries ») -> docs/cries/*.mp3 + docs/data/cries.json (relançable, cache build/.cache/cries)
     node fetch-obtainable.mjs && node apply-hors-dex.mjs   # -> Hors dex (dex/*.json x, dex/hors-sw|sv.json, sp hx)
     python3 make-mega-energy.py  # -> icônes Méga-énergie GO (docs/img/energy, docs/data/mega-energy.json)
     node audit.mjs           # vérifications de cohérence (~100 faits connus)
@@ -119,6 +120,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Complétion (règle de Yann)** : ces formes comptent seulement dans les totaux de formes GO (compteur : « dont N Méga / Primo / Gigamax (hors dorure) »), jamais pour la Poké Ball dorée jeux actuels ni pour HOME doré (`goGold` : pas de palier GO ni de marque GO pour ces formes). Les Méga de Légendes Z-A gardent leurs règles.
 - Texte « Jeu » des fiches GO Méga / Primo / Gigamax réécrit (règles ci-dessus) ; statut GO « annoncé pour le … » pour une sortie datée ; shiny « Méga-Évolution d’un Pokémon shiny » / « Combats Max ».
 - Données : `go-overrides.json` + `apply-go-overrides.mjs` (voir « Pokémon GO »), `core.json` `gof` (date de sortie GO), `go.rf` / `go.shf` / `go.nosh` / `go.nost` ; `DATA_VERSION` d10.
+
+## v29 : cris, reproduction & capture, objets tenus
+- **Cris** 🔊 dans l’en-tête des fiches : « Cri » (cri actuel) et « Ancien » (cri d’origine des jeux Gén. I–V, quand il existe et diffère). Source : dépôt PokéAPI `cries` (Ogg Vorbis), converti par `build/fetch-cries.mjs` en MP3 mono 48 kb/s (lisible sur iPhone), auto-hébergé dans `docs/cries/latest|legacy/{id pokémon}.mp3` : 1 919 fichiers, 14,1 Mo, fichiers identiques stockés une fois. `docs/data/cries.json` : forme → fichiers (Méga, formes régionales, Gigamax… ont leur cri quand il existe, sinon celui de l’espèce). Lecture via Web Audio (déverrouillage iPhone au toucher), fichier entier mis en cache par le service worker (`pokedex-cries`) à la première écoute : hors-ligne ensuite ; sinon message « Cri indisponible hors-ligne ». Pas de pré-chargement.
+- **Reproduction & capture** (bloc après les statistiques de base, sur toutes les fiches de jeu et la vue d’ensemble) : sexe (♂ / ♀ % ou asexué), taux de capture (/255 + estimation Poké Ball PV max, formule Gén. V+), groupes d’œufs (FR), éclosion en cycles + pas selon le jeu (256 pas / cycle en Gén. II–III et VII, 255 en Gén. IV et DÉ/PS, 257 en Gén. V–VI, 128 sur Épée/Bouclier et Écarlate/Violet ; « pas d’œufs » dans Rouge/Bleu/Jaune, Let’s Go, Légendes Arceus, Z-A ; bébés : œuf de leur évolution), croissance (FR), bonheur de base. Remplace la ligne compacte de la vue d’ensemble.
+- **Objets tenus sauvages** par jeu (noms FR, %), placés juste avant « Où le trouver » ; une version différente (Noir 1 % / Blanc 5 %…) est détaillée.
+- Aperçus seulement (non implémentés) : faiblesses avec talents (Lévitation…), note « forme de base » sur les formes liées, sprites HOME / animés, descriptions FR en bulle (`build/preview29.mjs`, `screenshots/v29/`).
 
 ## Limites connues
 Rencontres absentes pour les jeux récents (voir plus haut). Textes Pokédex FR officiels seulement à partir de Noir/Blanc (PokéAPI), le reste est traduit automatiquement. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
