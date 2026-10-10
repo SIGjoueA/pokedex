@@ -1,4 +1,4 @@
-// v25 screenshots (360 px): PLA bar with B. shiny checked, HOME bar, Z-A Dracaufeu bar, Hisui dex (Formes off), Catégorie preview with proposed Baron entries (mock: not in the app yet)
+// v25 screenshots (360 px): PLA bar with B. shiny checked, HOME bar, Z-A Dracaufeu bar, Hisui dex (Formes off)
 import puppeteer from 'puppeteer-core';
 const BASE = `http://localhost:${process.argv[2] || 8801}/`, OUT = '/workspace/pokedex/screenshots/';
 const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: 'new', args: ['--no-sandbox'] });
@@ -26,29 +26,4 @@ await p.evaluate(() => document.querySelector('.card[href="#/p/58-hisui"]').scro
 await p.evaluate(() => document.querySelector('.card[href="#/p/58-hisui"]').scrollIntoView({ block: 'center' })); await sleep(500);
 await p.screenshot({ path: OUT + 'v25-liste-hisui-formes-off-360.png' }); console.log(OUT + 'v25-liste-hisui-formes-off-360.png');
 await p.evaluate(() => { state.view = 'grid'; render(); });
-// Catégorie preview (mock entries)
-await p.setViewport({ width: 360, height: 1040, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
-await p.select('#game', 'la'); await sleep(600);
-await p.evaluate(() => {
-  const sel = document.querySelector('#cat');
-  const add = (v, t) => { const o = document.createElement('option'); o.value = v; o.textContent = t; sel.appendChild(o); };
-  add('baron', 'Barons'); add('nobaron', 'Barons manquants'); add('barons', 'Barons shiny'); add('nobarons', 'Barons shiny manquants');
-  CAT_SEP_BEFORE.add('baron'); MENUS.cat.sig = ''; syncMenu(MENUS.cat);
-});
-await p.click('#catbtn'); await sleep(500);
-await p.evaluate(() => {
-  const ic = (sh, miss) => `<span class="bi" style="width:20px;height:20px${miss ? ';opacity:.55' : ''}"><img src="img/alpha/baron.png" alt="">${sh ? '<span class="bsp" style="font-size:11px;right:-6px;top:-7px">✨</span>' : ''}</span>`;
-  for (const [v, sh, miss] of [['baron', 0, 0], ['nobaron', 0, 1], ['barons', 1, 0], ['nobarons', 1, 1]]) { const li = document.querySelector(`#catlist .gopt[data-v="${v}"]`); li.insertAdjacentHTML('afterbegin', (miss ? '<span style="margin-right:-6px">⚪</span>' : '') + ic(sh, miss)); li.style.background = 'rgba(229,57,53,.07)'; }
-  document.querySelector('#catlist').insertAdjacentHTML('beforeend', '<li role="presentation" style="padding:6px 12px;font-size:11.5px;color:#888">Aperçu (maquette) : nouveau bloc « Barons », pas encore actif</li>');
-  const l = document.querySelector('#catlist'); l.scrollTop = l.scrollHeight;
-});
-await sleep(400);
-await p.screenshot({ path: OUT + 'preview-categorie-barons-360.png' }); console.log(OUT + 'preview-categorie-barons-360.png');
-// same menu in a non-Legends game: greyed
-await p.keyboard.press('Escape'); await p.select('#game', 'sw'); await sleep(600);
-await p.evaluate(() => { for (const v of ['baron', 'nobaron', 'barons', 'nobarons']) document.querySelector(`#cat option[value=${v}]`).disabled = true; MENUS.cat.sig = ''; syncMenu(MENUS.cat); });
-await p.click('#catbtn'); await sleep(400);
-await p.evaluate(() => { const l = document.querySelector('#catlist'); l.scrollTop = l.scrollHeight; });
-await sleep(300);
-await p.screenshot({ path: OUT + 'preview-categorie-barons-epee-grise-360.png' }); console.log(OUT + 'preview-categorie-barons-epee-grise-360.png');
 await b.close();

@@ -518,6 +518,7 @@ function filtered() {
     if (state.cat === 'hmiss') { const q = mp(p); if (!homeGold(q).length || homeComplete(q)) return false; } // ≥ 1 Switch-era / GO mark missing (same set as the gold HOME icon)
     if (state.cat === 'nostrans') { const q = mp(p); if (!HOME_C.has(q.k) || HOME_S.has(q.k)) return false; } // in HOME (≥ 1 origin mark) but not marked shiny in HOME
     if (TRANS_CATS.includes(state.cat) && !transCat(p, state.cat)) return false;
+    if (BARON_CATS.includes(state.cat) && !baronCat(p, state.cat)) return false;
     return true;
   });
   const pos0 = new Map(out.map((p, i) => [p, i]));
@@ -585,12 +586,28 @@ function transCat(p, cat) {
   if (cat === 'hcomplete' && !av.some(isGoldMark)) return false;
   return cat === 'trans' ? HOME_C.has(q.k) : cat === 'notrans' ? !HOME_C.has(q.k) : cat === 'strans' ? HOME_S.has(q.k) : homeComplete(q, av);
 }
+// v25 Catégorie « Barons » block. Tous les jeux = Baron in Arceus OR Z-A OR HOME; Arceus / Z-A = that game; HOME = HOME Baron marks; greyed in other games.
+// « manquants » = Alpha-capable forms only (HOME: only with the Hisui or Z-A mark ticked).
+const BARON_CATS = ['baron', 'nobaron', 'barons', 'nobarons'];
+function baronCat(p, cat) {
+  if (p.bo || p.mb) return false;
+  const c = trackCtx(), sh = cat === 'barons' || cat === 'nobarons', miss = cat.startsWith('no'), H = sh ? HOME_BS : HOME_B;
+  const g = q => sh ? isBaronS(p, q) : isBaron(p, q);
+  if (c === 'home') return miss ? homeBaronOn(p) && !H.has(p.k) : H.has(p.k);
+  if (c) { if (!ALPHA_GAMES.has(c) || !alphaOk(p, c)) return false; return miss !== g(c); }
+  const av = ['la', 'za'].filter(q => alphaOk(p, q)); if (!av.length) return false;
+  const has = av.some(g) || H.has(p.k);
+  return miss !== has;
+}
 function updateCatOptions() {
   const c = trackCtx(), game = c && c !== 'home', off = game && !homeKind(c);
   const lab = game ? { trans: '🏠 Transférés HOME (marque de ce jeu)', notrans: '🏠 Pas encore transférés HOME (marque de ce jeu)', hcomplete: '🟡🏠 Complets HOME (marques Switch + GO)' } : { trans: '🏠 Transférés HOME (au moins une marque)', notrans: '🏠 Pas encore transférés HOME (aucune marque)', hcomplete: '🟡🏠 Complets HOME (marques Switch + GO)' };
   for (const o of document.querySelectorAll('#cat option')) if (lab[o.value]) { o.textContent = lab[o.value]; o.disabled = !!off; }
   { const o = $('#cat option[value=strans]'); if (o) o.disabled = false; }
   if (off && TRANS_CATS.includes(state.cat) && state.cat !== 'strans') { state.cat = ''; $('#cat').value = ''; }
+  const bOff = !!(game && !ALPHA_GAMES.has(c)); // Barons only in Légendes Arceus / Z-A (+ Tous les jeux, HOME)
+  for (const v of BARON_CATS) { const o = $(`#cat option[value=${v}]`); if (o) o.disabled = bOff; }
+  if (bOff && BARON_CATS.includes(state.cat)) { state.cat = ''; $('#cat').value = ''; }
 }
 function render() {
   updateCatOptions(); syncMenus();
@@ -609,8 +626,8 @@ function render() {
       E.filter(p => regShow(p, reg) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (ld && ld.order.has(p.id) && (!p.c || inGame(p, gi)))));
     const cu = uni.filter(p => isCaught(p)).length, su = uni.filter(p => isShiny(p)).length;
     prog = ctx === 'home'
-      ? `HOME : ${cu} / ${uni.length} 🏠 transférés · ${su} ✨ shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} 🟡🏠 complets`
-      : `${trackName()} : ${cu} / ${uni.length} 🔴 capturés · ${su} ✨ shiny` + (homeKind(ctx) ? ` · ${uni.filter(p => isTrans(p, ctx)).length} transférés vers HOME` : '');
+      ? `HOME : ${cu} / ${uni.length} 🏠 transférés · ${su} ✨ shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} 🟡🏠 complets${HOME_B.size ? ` · ${uni.filter(p => HOME_B.has(p.k)).length} Barons` : ''}`
+      : `${trackName()} : ${cu} / ${uni.length} 🔴 capturés · ${su} ✨ shiny` + (ALPHA_GAMES.has(ctx) ? ` · ${uni.filter(p => isBaron(p, ctx)).length} Barons` : '') + (homeKind(ctx) ? ` · ${uni.filter(p => isTrans(p, ctx)).length} transférés vers HOME` : '');
   } else { // base view: derived from the per-game marks
     const uni = E.filter(p => (state.forms || !p.c) && !p.bo); let cu = 0, su = 0, sw = 0, old = 0, tr = 0, hc = 0;
     for (const p of uni) { const b = baseStatus(p); cu += b.any; su += b.shAny; sw += b.swDone; old += b.oldDone; tr += HOME_C.has(p.k); hc += homeComplete(p, homeAvail(p)); }
@@ -758,7 +775,7 @@ function refreshTrack(p) {
 function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $('#detail-view'); if (b && v) v.style.setProperty('--barh', b.offsetHeight + 'px'); }); }
 // v25 Baron buttons (official Alpha icon, self-hosted: img/alpha/CREDITS.txt). Baron shiny = icon + ✨ badge; checked = same yellow as Shiny.
 const BARON_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"></span>';
-const BARONS_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"><span class="bsp">✨</span></span>';
+const BARONS_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"><span class="bsp"></span></span>'; // ✨ badge drawn in CSS (keeps menu / button text clean)
 function baronBtns(on, son, dis, nm, offT) {
   const t1 = dis ? offT : `Baron (Pokémon Alpha)${nm ? ' – ' + nm : ''} : implique « Capturé »`, t2 = dis ? offT : `Baron shiny${nm ? ' – ' + nm : ''} : implique Baron + Shiny + Capturé`;
   return `<button class="act baron" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && on}" aria-label="Baron${nm ? ' – ' + esc(nm) : ''}" title="${esc(t1)}">${BARON_IC}<span class="t">Baron</span></button>` +
@@ -1403,5 +1420,5 @@ function initGameMenu() {
       return !pg || CONSOLE_OF[pg.id] !== con ? ['sep2', con] : pg.g !== g.g ? 'sep' : ''; } });
 }
 // Catégorie: simple separators between families (sélection · captures · complétion jeux · HOME)
-const CAT_SEP_BEFORE = new Set(['caught', 'swdone', 'trans']);
-function initCatMenu() { initMenu('cat', { btnId: 'catbtn', listId: 'catlist', label: 'Catégorie', empty: 'Catégorie', allLabel: 'Toutes catégories (aucun filtre)', sep: v => CAT_SEP_BEFORE.has(v) ? 'sep' : '' }); }
+const CAT_SEP_BEFORE = new Set(['caught', 'swdone', 'trans', 'baron']);
+function initCatMenu() { initMenu('cat', { btnId: 'catbtn', listId: 'catlist', label: 'Catégorie', empty: 'Catégorie', allLabel: 'Toutes catégories (aucun filtre)', sep: v => CAT_SEP_BEFORE.has(v) ? 'sep' : '', dot: v => v === 'baron' || v === 'nobaron' ? BARON_IC : v === 'barons' || v === 'nobarons' ? BARONS_IC : '' }); }

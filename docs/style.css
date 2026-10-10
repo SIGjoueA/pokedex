@@ -309,6 +309,9 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
 .bi{position:relative;display:inline-block;flex:none;width:1.4em;height:1.4em;vertical-align:-.3em}
 .bi img{width:100%;height:100%;object-fit:contain;display:block}
 .bi .bsp{position:absolute;right:-.45em;top:-.5em;font-size:.6em;line-height:1}
+.bi .bsp::after{content:'✨'}
+.gopt .bi,.gbtn .bi{width:20px;height:20px}
+.gopt .bi .bsp,.gbtn .bi .bsp{font-size:11px;right:-6px;top:-7px}
 .act .bi{width:24px;height:24px}
 .act .bi .bsp{font-size:13px;right:-8px;top:-8px}
 .act.baron[aria-pressed=true]{color:#c62828;border-color:#e53935;background:rgba(229,57,53,.1)}

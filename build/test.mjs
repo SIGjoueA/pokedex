@@ -706,7 +706,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel(''); await sleep(200);
   ok(await p.$eval('#gamebtn', e => e.textContent.replace('▾', '').trim()) === 'Jeux', tag + ' v24 Jeux button follows programmatic changes');
   { const c = await p.evaluate(() => [...document.querySelector('#catlist').children].map(li => li.classList.contains('gsep') ? '────' : li.textContent));
-    const exp = ['Toutes catégories (aucun filtre)', 'Légendaires', 'Fabuleux', 'Bébés', '★ Favoris', '────', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', '────', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)'];
+    const exp = ['Toutes catégories (aucun filtre)', 'Légendaires', 'Fabuleux', 'Bébés', '★ Favoris', '────', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', '────', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)', '────', 'Barons', '⚪ Barons manquants', '✨ Barons shiny', '⚪✨ Barons shiny manquants'];
     ok(JSON.stringify(c) === JSON.stringify(exp), tag + ' v24 Catégorie dropdown: exact validated labels + separators ' + JSON.stringify(c)); }
   await p.click('#catbtn'); await sleep(150); await p.click('#catlist .gopt[data-v="swmiss"]'); await sleep(300);
   ok(await p.$eval('#cat', e => e.value) === 'swmiss' && parseInt(await count()) > 0, tag + ' v24 Catégorie dropdown selects (Jeux actuels manquants): ' + (await count()).slice(0, 40));
@@ -761,7 +761,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   const ord = () => p.$$eval('#actbar .act', bs => bs.map(b => [...b.classList].filter(c => c !== 'act')[0]));
   const st25 = () => p.evaluate(() => Object.fromEntries([...document.querySelectorAll('#actbar .act')].map(b => [[...b.classList].filter(c => c !== 'act')[0], b.getAttribute('aria-pressed') === 'true'])));
   ok((await ord()).join() === 'cg,sh,baron,barons,tr', tag + ' v25 PLA bar: Capturé · Shiny · Baron · B. shiny · Transféré ' + await ord());
-  ok(await p.$eval('#actbar .baron img', i => i.getAttribute('src') === 'img/alpha/baron.png' && i.naturalWidth > 0) && await p.$eval('#actbar .barons', b => !!b.querySelector('img') && b.querySelector('.bsp').textContent === '✨'), tag + ' v25 official Alpha icon (self-hosted) + ✨ badge on B. shiny');
+  ok(await p.$eval('#actbar .baron img', i => i.getAttribute('src') === 'img/alpha/baron.png' && i.naturalWidth > 0) && await p.$eval('#actbar .barons', b => !!b.querySelector('img') && getComputedStyle(b.querySelector('.bsp'), '::after').content.includes('✨')), tag + ' v25 official Alpha icon (self-hosted) + ✨ badge on B. shiny');
   await p.click('#actbar .barons'); await sleep(150);
   let s5 = await st25(); ok(s5.cg && s5.sh && s5.baron && s5.barons && !s5.tr, tag + ' v25 B. shiny ⇒ Capturé + Shiny + Baron ' + JSON.stringify(s5));
   { const col = await p.evaluate(() => { const a = getComputedStyle(document.querySelector('#actbar .barons')), b = getComputedStyle(document.querySelector('#actbar .sh')); return [a.borderTopColor, a.backgroundColor, b.borderTopColor, b.backgroundColor]; });
@@ -815,6 +815,38 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(/: 1 \/ 242 🔴 capturés/.test(await count()), tag + ' v25 PLA counter counts the Hisuian form ' + (await count()).slice(0, 80));
   await go('#/p/58-hisui'); await sleep(400);
   { const nav = await p.$$eval('.dnav a', as => as.map(a => a.getAttribute('href'))); ok(nav[1] !== '#' && nav[2] !== '#' && await p.$eval('#actbar .cg', b => b.getAttribute('aria-pressed') === 'true'), tag + ' v25 Hisuian sheet from the PLA list: ‹ › navigation + Capturé on the right form ' + nav); }
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  // v25 C: Catégorie « Barons » block
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  { const c = await p.evaluate(() => { const l = [...document.querySelector('#catlist').children]; const i = l.findIndex(li => li.dataset && li.dataset.v === 'baron'); return { sep: l[i - 1].classList.contains('gsep'), last: l.slice(i).map(li => li.textContent.trim()), icons: l.slice(i).map(li => !!li.querySelector('.bi img') + '/' + !!li.querySelector('.bsp')) }; });
+    ok(c.sep && c.last.join('|') === 'Barons|⚪ Barons manquants|✨ Barons shiny|⚪✨ Barons shiny manquants' && c.icons.join() === 'true/false,true/false,true/true,true/true', tag + ' v25 Catégorie: separated Barons block at the end, Baron icon (+ ✨ badge for shiny) ' + JSON.stringify(c)); }
+  { const r = await p.evaluate(() => {
+      const cnt = (c, g) => { state.cat = c; state.game = g || ''; const n = filtered().map(x => x.k); state.cat = ''; state.game = ''; return n; };
+      CAUGHT_G.clear(); BARON_G.clear(); BARONS_G.clear(); HOME_O.clear(); HOME_B.clear(); HOME_BS.clear(); HOME_SH.clear(); saveTrack();
+      const capAll = E.filter(e => !e.c && (alphaOk(e, 'la') || alphaOk(e, 'za'))).length;
+      const miss0 = cnt('nobaron').length;
+      BARON_G.add('la:25'); CAUGHT_G.add('la:25'); BARON_G.add('za:6'); BARON_G.add('zadlc:6'); BARONS_G.add('za:6'); BARONS_G.add('zadlc:6'); HOME_O.add('za:3'); HOME_B.add('3'); saveTrack();
+      const all = cnt('baron'), allS = cnt('barons'), allM = cnt('nobaron').length, allSM = cnt('nobarons').length;
+      return { capAll, miss0, all, allS, allM, allSM };
+    });
+    ok(r.miss0 === r.capAll && r.all.join() === '3,6,25' && r.allS.join() === '6' && r.allM === r.capAll - 3 && r.allSM === r.capAll - 1, tag + ' v25 Tous les jeux: Barons = Arceus OR Z-A OR HOME; manquants = Alpha-capable only ' + JSON.stringify({ ...r, all: r.all.join(), allS: r.allS.join() })); }
+  await sel('la'); await p.select('#cat', 'baron'); await sleep(300);
+  { const ks = await p.evaluate(() => filtered().map(x => x.k)); const c = await count(); ok(ks.join() === '25' && /· 1 Barons/.test(c), tag + ' v25 Arceus: Barons of that game only + counter ' + c.slice(0, 120)); }
+  await p.select('#cat', 'nobaron'); await sleep(300);
+  { const r = await p.evaluate(() => { const ks = filtered().map(x => x.k); return { n: ks.length, leg: ks.some(k => BY_KEY[k].lg || BY_KEY[k].my), c58: ks.includes('58'), h58: ks.includes('58-hisui'), p25: ks.includes('25') }; }); ok(r.n === 241 - 18 && !r.leg && !r.c58 && r.h58 && !r.p25, tag + ' v25 Arceus « Barons manquants »: Alpha-capable only (no legendaries), Hisuian forms ' + JSON.stringify(r)); }
+  await sel('za'); await p.select('#cat', 'barons'); await sleep(300);
+  ok((await p.evaluate(() => filtered().map(x => x.k))).join() === '6', tag + ' v25 Z-A: Barons shiny of that save');
+  await sel('home'); await p.select('#cat', 'baron'); await sleep(300);
+  { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.join() === '3' && /· 1 Barons/.test(await count()), tag + ' v25 HOME: HOME Baron marks + counter'); }
+  await p.select('#cat', 'nobaron'); await sleep(300);
+  { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.length === 0, tag + ' v25 HOME « Barons manquants »: only forms with the Hisui / Z-A mark (none missing) ' + ks); }
+  await p.evaluate(() => { HOME_O.add('hisui:25'); saveTrack(); render(); }); await sleep(200);
+  ok((await p.evaluate(() => filtered().map(x => x.k))).join() === '25', tag + ' v25 HOME « Barons manquants » lists a form once its Hisui mark is ticked');
+  await sel('sw'); await sleep(200);
+  ok(await p.$eval('#cat', e => e.value) === '' && await p.evaluate(() => ['baron', 'nobaron', 'barons', 'nobarons'].every(v => document.querySelector(`#cat option[value=${v}]`).disabled)), tag + ' v25 Barons entries greyed (and reset) in a non-Legends game');
+  await p.click('#catbtn'); await sleep(150);
+  ok(await p.evaluate(() => document.querySelector('#catlist .gopt[data-v="baron"]').getAttribute('aria-disabled') === 'true' && getComputedStyle(document.querySelector('#catlist .gopt[data-v="baron"]')).opacity < 0.6), tag + ' v25 greyed in the custom menu'); await p.keyboard.press('Escape');
+  await sel('go'); ok(await p.evaluate(() => document.querySelector('#cat option[value=baron]').disabled), tag + ' v25 Barons greyed in Pokémon GO');
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());

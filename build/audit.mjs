@@ -143,6 +143,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const k of ['baron_g', 'barons_g', 'home_b', 'home_bs']) ok('v25 sauvegarde/export ' + k, app.includes(`${k}: [...`) && app.includes(`d.${k}`));
   ok('v25 B. shiny coché = style Shiny', /\.act\.barons\[aria-pressed=true\]\{color:#b58f00;border-color:#f2c200;background:rgba\(242,194,0,\.12\)\}/.test(css) && css.includes('.act.sh[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)}'));
   ok('v25 régions des formes régionales', /alola: \['sm', 'usum'\], galar: \['sw', 'swisle', 'swcrown'\], hisui: \['la'\], paldea: \['sv', 'svmask', 'svdisk'\]/.test(app));
+  { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'); for (const [v, l] of [['baron', 'Barons'], ['nobaron', '⚪ Barons manquants'], ['barons', '✨ Barons shiny'], ['nobarons', '⚪✨ Barons shiny manquants']]) ok('v25 catégorie ' + v, html.includes(`<option value="${v}">${l}</option>`)); }
   ok('v25 icône Baron en cache hors-ligne', sw.includes("'img/alpha/baron.png'"));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
