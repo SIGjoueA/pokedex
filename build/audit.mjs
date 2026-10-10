@@ -134,4 +134,15 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const v of ['swmiss', 'oldmiss', 'strans', 'nostrans', 'hmiss']) ok('v24 catégorie ' + v, html.includes(`value="${v}"`));
   ok('v24 HOME manquants label', html.includes('⚪🏠 HOME manquants (marques Switch + GO)'));
 }
+// ---- v25: Baron (Alpha) icon self-hosted + credited; Baron storage in backups; regional-first regions
+{
+  const DOCS = path.join(HERE, '../docs'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), css = fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v25 icône Baron hébergée (img/alpha/baron.png)', fs.existsSync(path.join(DOCS, 'img/alpha/baron.png')) && fs.statSync(path.join(DOCS, 'img/alpha/baron.png')).size > 500);
+  ok('v25 crédit icône Baron (Bulbagarden Archives)', /Bulbagarden Archives/.test(fs.readFileSync(path.join(DOCS, 'img/alpha/CREDITS.txt'), 'utf8')));
+  ok('v25 pas de hotlink Bulbagarden', !/bulbagarden\.net/.test(app + css));
+  for (const k of ['baron_g', 'barons_g', 'home_b', 'home_bs']) ok('v25 sauvegarde/export ' + k, app.includes(`${k}: [...`) && app.includes(`d.${k}`));
+  ok('v25 B. shiny coché = style Shiny', /\.act\.barons\[aria-pressed=true\]\{color:#b58f00;border-color:#f2c200;background:rgba\(242,194,0,\.12\)\}/.test(css) && css.includes('.act.sh[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)}'));
+  ok('v25 régions des formes régionales', /alola: \['sm', 'usum'\], galar: \['sw', 'swisle', 'swcrown'\], hisui: \['la'\], paldea: \['sv', 'svmask', 'svdisk'\]/.test(app));
+  ok('v25 icône Baron en cache hors-ligne', sw.includes("'img/alpha/baron.png'"));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

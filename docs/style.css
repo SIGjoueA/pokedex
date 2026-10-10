@@ -305,3 +305,19 @@ details>summary{cursor:pointer;color:var(--mute);font-size:13px;min-height:32px;
   .gopt{min-height:44px;font-size:15px}
 }
 .hshl{margin:4px 0 2px}
+/* ---------- v25: Baron (Pokémon Alpha) buttons — icon: Bulbagarden Archives (img/alpha/CREDITS.txt) ---------- */
+.bi{position:relative;display:inline-block;flex:none;width:1.4em;height:1.4em;vertical-align:-.3em}
+.bi img{width:100%;height:100%;object-fit:contain;display:block}
+.bi .bsp{position:absolute;right:-.45em;top:-.5em;font-size:.6em;line-height:1}
+.act .bi{width:24px;height:24px}
+.act .bi .bsp{font-size:13px;right:-8px;top:-8px}
+.act.baron[aria-pressed=true]{color:#c62828;border-color:#e53935;background:rgba(229,57,53,.1)}
+.act.barons[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)} /* same as the checked Shiny button */
+@media (prefers-color-scheme:dark){.act.barons[aria-pressed=true]{color:#f2c200}.act.baron[aria-pressed=true]{color:#ff6b66}}
+.act.baron:disabled .bi img,.act.barons:disabled .bi img{filter:grayscale(1)}
+.baronl .bi,.hshl .bi{width:1.2em;height:1.2em}
+@media (max-width:699px){
+  .act .bi{width:22px;height:22px}
+  .acts.wrap2{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px} /* > 6 buttons (Z-A, two gems): 2 lines */
+}
+.gopt[aria-disabled=true]{opacity:.42;cursor:default} /* v25: greyed entries (e.g. HOME / Baron filters where they do not apply) */

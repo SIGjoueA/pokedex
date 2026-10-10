@@ -39,6 +39,9 @@ const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('
 const HOME_O = new Set(store.get('home_o', [])), HOME_OG = new Set(store.get('home_og', []));
 // v24: « Shiny dans HOME » (one mark per form, HOME sheet), allowed once at least one origin mark is ticked
 const HOME_SH = new Set(store.get('home_sh', []));
+// v25: Barons (Pokémon Alpha) — Légendes Arceus / Légendes Z-A only. Per game (same save group as Capturé): BARON_G, BARONS_G (Baron shiny). HOME sheet: HOME_B, HOME_BS (per form, independent of the games).
+const BARON_G = new Set(store.get('baron_g', [])), BARONS_G = new Set(store.get('barons_g', []));
+const HOME_B = new Set(store.get('home_b', [])), HOME_BS = new Set(store.get('home_bs', []));
 // Méga-Gemmes: ownership per save group and per stone — keys "<save>:<megaKey>" ("za:3-mega", "xy:6-mega-x", "oras:3-mega"…).
 // Légendes Z-A: captured = base caught in the Z-A save + gem. Other Mega games: plain ownership mark (Megas stay battle-only, no completion effect).
 // Legacy keys without a prefix (v15–v20) were Z-A gems.
@@ -226,18 +229,38 @@ const isShiny = (p, c = trackCtx()) => {
   return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p));
 };
 const isTrans = (p, c = trackCtx()) => { const m = originOf(c); return !!m && HOME_O.has(m + ':' + mp(p, c).k); }, isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(ctxFor(mp(p, c), c), p));
+// ---- v25 Barons (Alpha). Sources: Bulbapedia « Alpha Pokémon », Serebii (Legends Arceus / Z-A). Never Legendary / Mythical, Megas, battle-only variants, gift-only forms.
+const ALPHA_GAMES = new Set(['la', 'za', 'zadlc']);
+const ALPHA_NO = new Set(['37-alola', '38-alola', '670-eternal', '172-spiky-eared']); // PLA: Alolan Vulpix / Ninetales (gift). Z-A: Floette Fleur Éternelle (gift), Pichu Troizépi (event)
+const ALPHA_MARK = { la: 'hisui', za: 'za', zadlc: 'za' }; // HOME origin mark of each Legends game
+const isRegional = q => /-(alola|galar|hisui|paldea)(-(?!cap)|$)/.test(q.k);
+function alphaOk(p, c) {
+  if (!p || !ALPHA_GAMES.has(c) || p.mb || p.bo || ALPHA_NO.has(p.k)) return false;
+  const b = BY_KEY[String(p.id)] || p; if (b.lg || b.my || p.lg || p.my) return false;
+  if (!saveGames(c).some(g => inGame(p, GIDX[g]))) return false; // not in that game (or its expansion)
+  // PLA: species with a Hisuian form are only wild in that form (Kantonian Growlithe, Johto Typhlosion… = transfer only), except Sneasel (both wild)
+  if (c === 'la' && p.id !== 215 && !p.k.includes('-hisui') && (FORMS[p.id] || []).some(q => q.k.includes('-hisui'))) return false;
+  return true;
+}
+const isBaron = (p, c = trackCtx()) => { p = mp(p, c); if (!alphaOk(p, c)) return false; return BARON_G.has(gkey(ctxFor(p, c), p)); };
+const isBaronS = (p, c = trackCtx()) => { p = mp(p, c); if (!alphaOk(p, c)) return false; return BARONS_G.has(gkey(ctxFor(p, c), p)); };
+const alphaHomeGames = p => ['la', 'za'].filter(c => alphaOk(p, c)); // HOME: Baron buttons only for forms that can be Alpha in PLA or Z-A
+const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + ':' + p.k)); // … active only with the Hisui / Z-A mark ticked
 // The sheet has its own tracking context: its game switcher (state.dgame). 'all' = overview (general infos, read-only); 'home' = Pokémon HOME sheet (origin marks).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
+  for (const k of [...HOME_B]) if (!BY_KEY[k] || !homeBaronOn(BY_KEY[k])) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark
+  for (const k of [...HOME_BS]) if (!HOME_B.has(k) || !HOME_SH.has(k)) HOME_BS.delete(k); // HOME Baron shiny needs HOME Baron + HOME Shiny
+  store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
 function toggleMark(p, kind, c = trackCtx()) {
   if (!c || c === 'home' || p.bo || p.mb) return; // base view, HOME, battle-only, and Z-A Megas (caught/shiny derived from base + gem)
   const on = !(kind === 'caught' ? CAUGHT_G : SHINY_G).has(gkey(c, p));
   for (const g of grpTargets(c, p)) { // every game of the save group where the entry exists
     const k = gkey(g, p);
     // chain: shiny ⇒ caught, transferred ⇒ caught, shiny transferred ⇒ shiny + transferred + caught; removing Capturé clears shiny + transfer flags of that game
-    if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); } }
-    else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); }
+    if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); } }
+    else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); BARONS_G.delete(k); } // v25: no Capturé → no Baron; no Shiny → no Baron shiny
   }
   // Removing Capturé clears the origin transfer only if it was set from a game sheet and no other game of that mark (e.g. X/Y ↔ ROSA) still has it caught.
   // A transfer ticked on the Pokémon HOME sheet (or received by trade) is never cleared by the games.
@@ -258,6 +281,24 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
     else STRANS_G.delete(k);
   }
   if (on && isZa(c) && !p.mb && !p.bo) gemMegaTransfers(p, c, true);
+  saveTrack();
+}
+// v25 Baron / Baron shiny (Légendes games): Baron ⇒ Capturé ; Baron shiny ⇒ Baron + Shiny + Capturé. Unticking Baron clears Baron shiny. No effect on completion.
+function toggleBaron(p, shiny, c = trackCtx()) {
+  if (!alphaOk(p, c)) return;
+  const on = !(shiny ? BARONS_G : BARON_G).has(gkey(c, p));
+  for (const g of grpTargets(c, p)) {
+    const k = gkey(g, p);
+    if (on) { BARON_G.add(k); CAUGHT_G.add(k); if (shiny) { BARONS_G.add(k); SHINY_G.add(k); } }
+    else { if (!shiny) BARON_G.delete(k); BARONS_G.delete(k); }
+  }
+  saveTrack();
+}
+// HOME sheet: Baron / Baron shiny per form, independent of the games; only with the Hisui or Z-A mark. B. shiny ⇒ Baron + Shiny (HOME).
+function toggleHomeBaron(p0, shiny) {
+  const p = mp(p0, 'home'), k = p.k; if (p0.bo || !homeBaronOn(p)) return;
+  if (!shiny) { if (HOME_B.has(k)) { HOME_B.delete(k); HOME_BS.delete(k); } else HOME_B.add(k); }
+  else if (HOME_BS.has(k)) HOME_BS.delete(k); else { HOME_BS.add(k); HOME_B.add(k); HOME_SH.add(k); }
   saveTrack();
 }
 // Z-A: transferring the base while owning a Mega gem also transfers that Mega
@@ -307,7 +348,7 @@ function migrateMarks() {
   let changed = false;
   for (const x of [...STRANS_G]) for (const set of [TRANS_G, SHINY_G, CAUGHT_G]) if (!set.has(x)) { set.add(x); changed = true; }
   for (const x of [...TRANS_G, ...SHINY_G]) if (!CAUGHT_G.has(x)) { CAUGHT_G.add(x); changed = true; }
-  for (const pass of [0, 1]) for (const set of [CAUGHT_G, SHINY_G, TRANS_G, STRANS_G]) {
+  for (const pass of [0, 1]) for (const set of [CAUGHT_G, SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G]) {
     for (const x of [...set]) {
       const i = x.indexOf(':'), g = x.slice(0, i), k = x.slice(i + 1), p = BY_KEY[k]; if (!p) continue;
       if (p.bo || megaBo(p, g)) { set.delete(x); set.add(g + ':' + mp(p, g).k); changed = true; continue; }
@@ -426,15 +467,30 @@ function resetFilters() {
 function badge(t) { return `<span class="badge" style="background:${TYPE_COLORS[t]}">${esc(TYPE_FR[t])}</span>`; }
 const inGame = (p, gi) => !!((p.gb >> gi) & 1);
 
+// v25: in a regional dex, the regional forms of THAT region come first (forms on), and replace the common form when the Formes toggle is off.
+// Alola = Soleil/Lune, Ultra-Soleil/Ultra-Lune · Galar = Épée/Bouclier + extensions · Hisui = Légendes Arceus · Paldea = Écarlate/Violet + extensions. Let’s Go = Kanto (common first). Z-A: no Kalos forms.
+const REGION_GAMES = { alola: ['sm', 'usum'], galar: ['sw', 'swisle', 'swcrown'], hisui: ['la'], paldea: ['sv', 'svmask', 'svdisk'] };
+const REGION_OF_GAME = {}; for (const [r, gs] of Object.entries(REGION_GAMES)) gs.forEach(g => REGION_OF_GAME[g] = r);
+const regionOf = q => (q.k.match(/-(alola|galar|hisui|paldea)(?:-(?!cap)|$)/) || [])[1] || null;
+const REG_REPS = {};
+function regionalReps(g) { // species id -> regional form shown first / instead of the common form in this game's regional dex
+  if (REG_REPS[g]) return REG_REPS[g];
+  const r = REGION_OF_GAME[g], m = new Map(); if (!r) return REG_REPS[g] = m;
+  for (const q of E) if (q.c && !q.bo && regionOf(q) === r && inGame(q, GIDX[g]) && !m.has(q.id)) m.set(q.id, q);
+  return REG_REPS[g] = m;
+}
+const listReps = (gid, dex) => dex && !dex.virtual && !dex.mega && REGION_OF_GAME[gid] ? regionalReps(gid) : null;
+const regShow = (p, reg) => state.forms ? true : p.c ? !!(reg && reg.get(p.id) === p) : !(reg && reg.has(p.id));
 function filtered() {
   const raw = state.q.trim();
   const qn = norm(raw);
   const numeric = /^#?\d+$/.test(raw) ? parseInt(raw.replace('#', ''), 10) : null;
   const gm = GAME_BY[state.game], dex = listDex(), gi = gm ? GIDX[gm.id] : -1;
   if (gm && !dex) return [];
+  const reg = gm ? listReps(gm.id, dex) : null, R = gm && REGION_OF_GAME[gm.id];
   let out = E.filter(p => {
     if (dex && dex.mega) { if (!dex.keys.has(p.k)) return false; } // Méga-Dex: base forms + Megas, whatever the forms toggle
-    else if (p.c && !state.forms) return false;
+    else if (!regShow(p, reg)) return false;
     if (dex && dex.mega) {
     } else if (dex) {
       if (!dex.order.has(p.id)) return false;
@@ -464,7 +520,9 @@ function filtered() {
     if (TRANS_CATS.includes(state.cat) && !transCat(p, state.cat)) return false;
     return true;
   });
-  const pos = new Map(out.map((p, i) => [p, i]));
+  const pos0 = new Map(out.map((p, i) => [p, i]));
+  const rr = p => reg && regionOf(p) === R ? 0 : 1; // regional form of this region before the common form (same species)
+  const pos = new Map(out.map(p => [p, rr(p) * 1e6 + pos0.get(p)]));
   const startsWith = p => p.nn.startsWith(qn) || p.ne.startsWith(qn) || p.nj.startsWith(qn) || p.nr.startsWith(qn);
   if (qn && numeric === null && state.sort === 'id') out.sort((a, b) => (startsWith(b) - startsWith(a)) || (dex ? dex.order.get(a.id) - dex.order.get(b.id) : 0) || pos.get(a) - pos.get(b));
   else {
@@ -546,8 +604,9 @@ function render() {
   if (ctx) { // progress of the selected game: marks among the entries that belong to it
     const dx = DEX[ctx], gi = GIDX[ctx], vd = listDex();
     const ld = vd && vd.virtual ? vd : dx;
+    const reg = ld && !ld.virtual ? listReps(ctx, ld) : null;
     const uni = vd && vd.mega ? E.filter(p => vd.keys.has(p.k) && !isCombat(p, ctx)) :
-      E.filter(p => (state.forms || !p.c) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (ld && ld.order.has(p.id) && (!p.c || inGame(p, gi)))));
+      E.filter(p => regShow(p, reg) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (ld && ld.order.has(p.id) && (!p.c || inGame(p, gi)))));
     const cu = uni.filter(p => isCaught(p)).length, su = uni.filter(p => isShiny(p)).length;
     prog = ctx === 'home'
       ? `HOME : ${cu} / ${uni.length} 🏠 transférés · ${su} ✨ shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} 🟡🏠 complets`
@@ -633,6 +692,7 @@ function homeRowsHTML(av, f, sh, k) {
   return `<br><b class="hgrp">Compte pour la dorure</b> : ${gold.length ? `<b>${done} / ${gold.length}</b> marques${done === gold.length ? ` ${homeIcon(true, HOME_C_T)} complet` : ''}` : 'aucune (pas de dorure possible pour cette forme)'}` +
     (gold.length ? `<ul class="plain homerows">${gold.map(row).join('')}</ul>` : '') +
     (k && HOME_SH.has(k) ? '<div class="hshl"><span class="mk sh">✨</span> <b>Shiny dans HOME</b></div>' : '') +
+    (k && HOME_B.has(k) ? `<div class="hshl">${HOME_BS.has(k) ? BARONS_IC : BARON_IC} <b>${HOME_BS.has(k) ? 'Baron shiny' : 'Baron'} dans HOME</b></div>` : '') +
     (old.length ? `<b class="hgrp">Anciens jeux</b> <span class="mute">(marques conservées, ne comptent pas pour la dorure : fermeture de Pokémon Bank)</span><ul class="plain homerows old">${old.map(row).join('')}</ul>` : '');
 }
 function baseHTML(p0) {
@@ -674,6 +734,8 @@ function trackHTML(p0) {
     const ms = energyMates(p0);
     h += `<br><span class="mute gemline">${ms.map(m => `${megaXYZ(m) ? `Méga-énergie ${megaXYZ(m).toUpperCase()}` : 'Méga-énergie'} de ${esc((BY_KEY[String(p0.id)] || p0).n)} : ${hasEnergy(m) ? 'obtenue' : 'pas encore obtenue'}`).join(' · ')} (${ms.length > 1 ? 'une marque par Méga' : 'marque par espèce'}, sans effet sur la complétion).</span>`;
   }
+  if (alphaOk(p, c)) h += `<br><span class="mute baronl">${BARON_IC} Baron : ${isBaron(p, c) ? 'oui' : 'non'}${isBaronS(p, c) ? ' · Baron shiny ✨' : ''} <small>(sans effet sur la complétion)</small></span>`;
+  else if (ALPHA_GAMES.has(c) && !p0.mb && !bo) h += `<br><span class="mute baronl">Ne peut pas être Baron dans ce jeu${(BY_KEY[String(p.id)] || p).lg || (BY_KEY[String(p.id)] || p).my ? ' (légendaire / fabuleux)' : ''}.</span>`;
   { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
   if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → 4ᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
   if (c === 'go' && p.my) return h + '<br>Les Pokémon fabuleux ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion HOME de ce Pokémon.';
@@ -694,6 +756,14 @@ function refreshTrack(p) {
 // Buttons that do not apply stay in place, greyed (disabled). The gem/energy slot exists only for forms that have a Mega.
 // Mobile: the fixed bottom bar can wrap (HOME origin marks) → its height feeds the bottom padding of the sheet.
 function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $('#detail-view'); if (b && v) v.style.setProperty('--barh', b.offsetHeight + 'px'); }); }
+// v25 Baron buttons (official Alpha icon, self-hosted: img/alpha/CREDITS.txt). Baron shiny = icon + ✨ badge; checked = same yellow as Shiny.
+const BARON_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"></span>';
+const BARONS_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"><span class="bsp">✨</span></span>';
+function baronBtns(on, son, dis, nm, offT) {
+  const t1 = dis ? offT : `Baron (Pokémon Alpha)${nm ? ' – ' + nm : ''} : implique « Capturé »`, t2 = dis ? offT : `Baron shiny${nm ? ' – ' + nm : ''} : implique Baron + Shiny + Capturé`;
+  return `<button class="act baron" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && on}" aria-label="Baron${nm ? ' – ' + esc(nm) : ''}" title="${esc(t1)}">${BARON_IC}<span class="t">Baron</span></button>` +
+    `<button class="act barons" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && son}" aria-label="Baron shiny${nm ? ' – ' + esc(nm) : ''}" title="${esc(t2)}">${BARONS_IC}<span class="t">B. shiny</span></button>`;
+}
 function homeBarHTML(p) {
   const q = mp(p, 'home'), av = homeAvail(q), f = HOME_C.get(q.k) || [], dis = !!p.bo, gav = av.filter(isGoldMark), done = gav.filter(m => f.includes(m)).length;
   const extra = f.filter(m => ORI[m] && !av.includes(m)); // ticked from a « hors dex » game sheet: shown so it can be unticked (no effect on completion)
@@ -701,7 +771,8 @@ function homeBarHTML(p) {
   const ctx = `<b>Pokémon HOME</b> · ${!av.length ? 'aucune marque possible' : gav.length ? `dorure ${done} / ${gav.length}${done === gav.length ? ' ' + homeIcon(true, HOME_C_T) : ''}${av.length > gav.length ? ` · <span class="oldl">anciens jeux en pointillés</span>` : ''}` : 'anciens jeux seulement (pas de dorure)'}`;
   const shOn = !dis && f.length > 0, shP = HOME_SH.has(q.k);
   const shb = av.length || extra.length ? `<button class="act hsh" type="button"${shOn ? '' : ' disabled'} aria-pressed="${shOn && shP}" aria-label="Shiny dans HOME" title="${shOn ? 'Shiny dans HOME (ce Pokémon / cette forme)' : 'Cochez d’abord au moins une marque d’origine (transfert ou échange)'}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>` : '';
-  return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${btns ? btns + shb : '<span class="mute">Aucun jeu compatible avec HOME ne contient cette forme.</span>'}</div></div>`;
+  const bOn = !dis && homeBaronOn(q), hb = !dis && alphaHomeGames(q).length ? baronBtns(HOME_B.has(q.k), HOME_BS.has(q.k), !bOn, 'HOME', `Cochez d’abord la marque ${alphaHomeGames(q).map(c => omName(ALPHA_MARK[c])).join(' ou ')} (seuls les Pokémon venus de Légendes Arceus / Z-A peuvent être Barons)`) : '';
+  return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${btns ? btns + shb + hb : '<span class="mute">Aucun jeu compatible avec HOME ne contient cette forme.</span>'}</div></div>`;
 }
 function actbarHTML(p) {
   const c = sheetCtx(), q = mp(p, c), nm = c ? trackName(c) : '';
@@ -716,13 +787,15 @@ function actbarHTML(p) {
   if (c === 'go') slot = energyMates(p).map(m => energyBtnHTML(m)).join(''); // one Méga-énergie per Mega when the species has X / Y
   else {
     const gs = gemSlot(p, c);
-    slot = gs.map(x => { const xyz = (x.m.k.match(/mega-(x|y|z)$/) || [])[1]; return gemBtnHTML(x.m, c, x.on, gs.length > 1 ? (xyz ? 'Gemme ' + xyz.toUpperCase() : megaStoneOf(x.m).label) : 'Méga-Gemme'); }).join('');
+    slot = gs.map(x => { const xyz = (x.m.k.match(/mega-(x|y|z)$/) || [])[1]; return gemBtnHTML(x.m, c, x.on, gs.length > 1 ? (xyz ? 'Gemme ' + xyz.toUpperCase() : megaStoneOf(x.m).label) : isZa(c) ? 'Gemme' : 'Méga-Gemme'); }).join(''); // Z-A: short labels (room for the Baron buttons)
   }
+  const al = alphaOk(q, c) && !p.bo, bb = al ? baronBtns(isBaron(q, c), isBaronS(q, c), false, nm, '') : ''; // v25: Légendes Arceus / Z-A, Alpha-capable forms only
+  const nB = 3 + (al ? 2 : 0) + (slot.match(/class="act /g) || []).length;
   const ctx = !c ? 'Vue d’ensemble — choisissez un jeu (ou Pokémon HOME) pour marquer' : `Suivi : <b>${esc(nm)}</b>${sw.length ? ` <span class="shr">+ ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>` : ''}`;
-  return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts">
+  return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts${nB > 6 ? ' wrap2' : ''}">
     <button class="act cg" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${isCaught(p, c)}" aria-label="Capturé${nm ? ' – ' + esc(nm) : ''}" title="${p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${isCaught(p, c) ? BALL : BALL_OFF}<span class="t">Capturé</span></button>
     <button class="act sh" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
-    <button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">Transféré</span></button>
+    ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
     ${slot}</div></div>`;
 }
 // Sticky header: back, previous / next, favourite only.
@@ -730,7 +803,7 @@ function navHTML(p) {
   const key = ik(p);
   let prev = '', next = '';
   if (GAME_BY[state.game] && DEX[state.game]) { // follow the filtered list when a game is selected
-    const list = filtered().filter(x => !x.c); const i = list.findIndex(x => x.id === p.id);
+    const seen = new Set(), list = filtered().filter(x => !seen.has(x.id) && seen.add(x.id)); const i = list.findIndex(x => x.id === p.id); // one entry per species (regional form in its region’s dex)
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
   return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${actbarHTML(p)}</div>`;
@@ -1108,6 +1181,8 @@ document.addEventListener('click', e => {
   }
   const enb = e.target.closest('#actbar .energy');
   if (enb) { const p = DET && DET.p, m = BY_KEY[enb.dataset.energy]; if (!p || !m || !m.mb || enb.disabled || sheetCtx() !== 'go') return; toggleEnergy(m); refreshTrack(p); render(); return; }
+  const bab = e.target.closest('#actbar .baron, #actbar .barons');
+  if (bab) { const p = DET && DET.p, c = sheetCtx(); if (!p || bab.disabled || !c) return; const sh = bab.classList.contains('barons'); if (c === 'home') toggleHomeBaron(p, sh); else toggleBaron(p, sh, c); refreshTrack(p); render(); return; }
   const hsb = e.target.closest('#actbar .hsh');
   if (hsb) { const p = DET && DET.p; if (!p || hsb.disabled || sheetCtx() !== 'home') return; toggleHomeShiny(p); refreshTrack(p); render(); return; }
   const orb = e.target.closest('#actbar .ori[data-origin]');
@@ -1192,7 +1267,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY] };
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -1209,6 +1284,9 @@ boot();
       // v22 origin marks; an older backup (home_g only) is converted game → origin mark (set from a game)
       const om = x => Array.isArray(x) ? x.filter(v => typeof v === 'string' && ORI[v.slice(0, v.indexOf(':'))] && BY_KEY[v.slice(v.indexOf(':') + 1)]) : [];
       if (Array.isArray(d.home_sh)) d.home_sh.filter(k => typeof k === 'string' && BY_KEY[k]).forEach(k => HOME_SH.add(k)); else mt(d.homeshiny_g).forEach(n => HOME_SH.add(n.slice(n.indexOf(':') + 1)));
+      mk(d.baron_g).forEach(n => { BARON_G.add(n); CAUGHT_G.add(n); }); mk(d.barons_g).forEach(n => { BARONS_G.add(n); BARON_G.add(n); SHINY_G.add(n); CAUGHT_G.add(n); }); // v25
+      const fk = x => Array.isArray(x) ? x.filter(k => typeof k === 'string' && BY_KEY[k]) : [];
+      fk(d.home_b).forEach(k => HOME_B.add(k)); fk(d.home_bs).forEach(k => HOME_BS.add(k));
       if (Array.isArray(d.home_o)) { om(d.home_o).forEach(n => HOME_O.add(n)); om(d.home_og).forEach(n => { if (HOME_O.has(n)) HOME_OG.add(n); }); }
       else [...mt(d.home_g), ...mt(d.homeshiny_g)].forEach(n => { const i = n.indexOf(':'), m = originOf(n.slice(0, i)); if (m) { HOME_O.add(m + n.slice(i)); HOME_OG.add(m + n.slice(i)); } });
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));

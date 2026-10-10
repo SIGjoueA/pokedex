@@ -729,7 +729,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // HOME sheet « Shiny » button
   await p.evaluate(() => { localStorage.clear(); }); await p.reload({ waitUntil: 'networkidle0' });
   await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
-  const hsh = () => p.$eval('#actbar .hsh', b => ({ dis: b.disabled, on: b.getAttribute('aria-pressed') === 'true', last: b === b.parentElement.lastElementChild }));
+  const hsh = () => p.$eval('#actbar .hsh', b => ({ dis: b.disabled, on: b.getAttribute('aria-pressed') === 'true', last: (b === b.parentElement.lastElementChild || b.nextElementSibling.classList.contains('baron')) }));
   let hs4 = await hsh(); ok(hs4.dis && !hs4.on && hs4.last, tag + ' v24 HOME sheet: Shiny button after the origin marks, disabled without any mark');
   await p.click('#actbar .ori[data-origin="galar"]'); await sleep(100); hs4 = await hsh(); ok(!hs4.dis && !hs4.on, tag + ' v24 Shiny enabled once a mark is ticked');
   await p.click('#actbar .hsh'); await sleep(100); hs4 = await hsh();
@@ -749,6 +749,72 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     const t3 = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' '));
     const bad = [txt, t2, t3].join(' ').match(/.{0,20}\bHome\b.{0,20}/g);
     ok(!bad, tag + ' v24 « HOME » in capitals in list, legend, HOME sheet, game sheet, tooltips ' + JSON.stringify(bad)); }
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  // ---- v25: Barons (Alpha) + regional forms first in their region's dex
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  { const a = await p.evaluate(() => Object.fromEntries([['25', 'la'], ['58', 'la'], ['58-hisui', 'la'], ['215', 'la'], ['215-hisui', 'la'], ['37', 'la'], ['37-alola', 'la'], ['483', 'la'], ['493', 'la'], ['150', 'za'], ['6', 'za'], ['6', 'zadlc'], ['6-mega-x', 'za'], ['670-eternal', 'za'], ['670', 'za'], ['25', 'sw'], ['716', 'za']].map(([k, c]) => [k + '@' + c, alphaOk(BY_KEY[k], c)])));
+    const want = { '25@la': true, '58@la': false, '58-hisui@la': true, '215@la': true, '215-hisui@la': true, '37@la': true, '37-alola@la': false, '483@la': false, '493@la': false, '150@za': false, '6@za': true, '6@zadlc': true, '6-mega-x@za': false, '670-eternal@za': false, '670@za': true, '25@sw': false, '716@za': false };
+    ok(JSON.stringify(a) === JSON.stringify(want), tag + ' v25 alpha-capable rules (no legendary/mythical, Mega, gift forms, PLA transfer-only commons) ' + JSON.stringify(a));
+    const n = await p.evaluate(() => ({ la: E.filter(e => !e.c && alphaOk(e, 'la')).length, za: E.filter(e => !e.c && alphaOk(e, 'za')).length }));
+    ok(n.la === 224 - 15 && n.za === 339, tag + ' v25 alpha-capable species counts (PLA 224 minus 15 Hisui-only bases counted on their Hisuian form; Z-A 339) ' + JSON.stringify(n)); }
+  await go('#/'); await sel('la'); await go('#/p/25'); await sleep(400);
+  const ord = () => p.$$eval('#actbar .act', bs => bs.map(b => [...b.classList].filter(c => c !== 'act')[0]));
+  const st25 = () => p.evaluate(() => Object.fromEntries([...document.querySelectorAll('#actbar .act')].map(b => [[...b.classList].filter(c => c !== 'act')[0], b.getAttribute('aria-pressed') === 'true'])));
+  ok((await ord()).join() === 'cg,sh,baron,barons,tr', tag + ' v25 PLA bar: Capturé · Shiny · Baron · B. shiny · Transféré ' + await ord());
+  ok(await p.$eval('#actbar .baron img', i => i.getAttribute('src') === 'img/alpha/baron.png' && i.naturalWidth > 0) && await p.$eval('#actbar .barons', b => !!b.querySelector('img') && b.querySelector('.bsp').textContent === '✨'), tag + ' v25 official Alpha icon (self-hosted) + ✨ badge on B. shiny');
+  await p.click('#actbar .barons'); await sleep(150);
+  let s5 = await st25(); ok(s5.cg && s5.sh && s5.baron && s5.barons && !s5.tr, tag + ' v25 B. shiny ⇒ Capturé + Shiny + Baron ' + JSON.stringify(s5));
+  { const col = await p.evaluate(() => { const a = getComputedStyle(document.querySelector('#actbar .barons')), b = getComputedStyle(document.querySelector('#actbar .sh')); return [a.borderTopColor, a.backgroundColor, b.borderTopColor, b.backgroundColor]; });
+    ok(col[0] === col[2] && col[1] === col[3] && /242, 194, 0/.test(col[0]), tag + ' v25 B. shiny checked = same yellow border/background as Shiny ' + col); }
+  ok(JSON.stringify(await ls2('baron_g')) === '["la:25"]' && JSON.stringify(await ls2('barons_g')) === '["la:25"]' && /Baron : oui · Baron shiny/.test(await strip()), tag + ' v25 Baron marks stored per game + sheet text');
+  await p.click('#actbar .sh'); await sleep(120); s5 = await st25(); ok(s5.cg && !s5.sh && s5.baron && !s5.barons, tag + ' v25 unticking Shiny clears B. shiny, Baron kept');
+  await p.click('#actbar .barons'); await sleep(100); await p.click('#actbar .baron'); await sleep(120); s5 = await st25(); ok(s5.cg && s5.sh && !s5.baron && !s5.barons, tag + ' v25 unticking Baron clears B. shiny');
+  await p.click('#actbar .baron'); await sleep(100); await p.click('#actbar .cg'); await sleep(120); s5 = await st25(); ok(!s5.cg && !s5.sh && !s5.baron && !s5.barons && JSON.stringify(await ls2('baron_g')) === '[]', tag + ' v25 unticking Capturé clears Baron + B. shiny');
+  ok(await p.evaluate(() => { CAUGHT_G.clear(); BARON_G.add('la:25'); saveTrack(); state.game = 'la'; const n = E.filter(e => isCaught(e, 'la')).length; BARON_G.clear(); saveTrack(); return n === 0; }), tag + ' v25 Barons do not count for completion');
+  await go('#/p/483'); await sleep(400); ok((await ord()).join() === 'cg,sh,tr' && /Ne peut pas être Baron.*légendaire/.test(await strip()), tag + ' v25 Dialga (PLA): no Baron buttons (legendary)');
+  await go('#/p/58'); await sleep(400); ok(!(await ord()).includes('baron'), tag + ' v25 Caninos commun (PLA, transfer only): no Baron buttons');
+  await go('#/'); await sel('za'); await go('#/p/6'); await sleep(400);
+  { const o = await ord(), w = await p.$eval('#actbar .acts', e => e.classList.contains('wrap2')), lab = await p.$$eval('#actbar .act .t', ts => ts.map(t => t.textContent));
+    ok(o.join() === 'cg,sh,baron,barons,tr,gem,gem' && w && lab.join() === 'Capturé,Shiny,Baron,B. shiny,Transf.,Gemme X,Gemme Y', tag + ' v25 Z-A Dracaufeu: 7 buttons, short labels, 2-line bar ' + lab);
+    if (mobile) { const rows = await p.$$eval('#actbar .act', bs => [...new Set(bs.map(b => Math.round(b.getBoundingClientRect().top)))].length); const clip = await p.$$eval('#actbar .act .t', ts => ts.filter(t => t.scrollWidth > t.clientWidth + 1).length); ok(rows === 2 && clip === 0, tag + ' v25 Z-A Dracaufeu mobile: 2 rows, no clipped label'); } }
+  await go('#/p/3'); await sleep(400);
+  { const lab = await p.$$eval('#actbar .act .t', ts => ts.map(t => t.textContent)), w = await p.$eval('#actbar .acts', e => e.classList.contains('wrap2'));
+    const clip = await p.$$eval('#actbar .act .t', ts => ts.filter(t => t.scrollWidth > t.clientWidth + 1).length);
+    ok(lab.join() === 'Capturé,Shiny,Baron,B. shiny,Transf.,Gemme' && !w && clip === 0, tag + ' v25 Z-A Florizarre: 6 buttons on one line, nothing clipped ' + lab); }
+  await go('#/p/6-mega-x'); await sleep(400); ok(!(await ord()).includes('baron'), tag + ' v25 Z-A Mega sheet: no Baron buttons');
+  await go('#/p/716'); await sleep(400); ok(!(await ord()).includes('baron'), tag + ' v25 Xerneas (Z-A): no Baron buttons');
+  // HOME sheet Baron buttons
+  await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
+  const hb5 = () => p.evaluate(() => { const bs = [...document.querySelectorAll('#actbar .act')], i = bs.findIndex(b => b.classList.contains('hsh')); const g = c => document.querySelector('#actbar .' + c); return { after: bs[i + 1]?.classList.contains('baron') && bs[i + 2]?.classList.contains('barons') && bs.length === i + 3, dis: g('baron').disabled && g('barons').disabled, b: g('baron').getAttribute('aria-pressed') === 'true', bs: g('barons').getAttribute('aria-pressed') === 'true', sh: g('hsh').getAttribute('aria-pressed') === 'true' }; });
+  let h5 = await hb5(); ok(h5.after && h5.dis, tag + ' v25 HOME: Baron · B. shiny after Shiny, disabled without Hisui / Z-A mark');
+  await p.click('#actbar .ori[data-origin="galar"]'); await sleep(100); h5 = await hb5(); ok(h5.dis, tag + ' v25 HOME: Galar mark alone does not unlock Baron');
+  await p.click('#actbar .ori[data-origin="hisui"]'); await sleep(100); h5 = await hb5(); ok(!h5.dis && !h5.b, tag + ' v25 HOME: Hisui mark unlocks Baron');
+  await p.click('#actbar .barons'); await sleep(120); h5 = await hb5();
+  ok(h5.b && h5.bs && h5.sh && JSON.stringify(await ls2('home_b')) === '["25"]' && JSON.stringify(await ls2('home_bs')) === '["25"]' && JSON.stringify(await ls2('baron_g')) === '[]' && /Baron shiny dans HOME/.test(await strip()), tag + ' v25 HOME: B. shiny ⇒ Baron + Shiny (HOME), games untouched');
+  await p.click('#actbar .hsh'); await sleep(100); h5 = await hb5(); ok(h5.b && !h5.bs && !h5.sh, tag + ' v25 HOME: unticking Shiny clears B. shiny');
+  await p.click('#actbar .ori[data-origin="hisui"]'); await sleep(120); h5 = await hb5();
+  ok(h5.dis && !h5.b && JSON.stringify(await ls2('home_b')) === '[]', tag + ' v25 HOME: Baron reset when Hisui and Z-A are both unticked');
+  await go('#/p/483'); await sleep(400); ok(!(await p.$('#actbar .baron')), tag + ' v25 HOME: no Baron buttons for Dialga');
+  // regional forms
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel('la'); await sleep(300);
+  { const r = await p.evaluate(() => { const ks = filtered().map(x => x.k); return { n: ks.length, h: ks.includes('58-hisui'), c: ks.includes('58'), sn: ks.includes('215') && !ks.includes('215-hisui'), q: ks.includes('211-hisui') && !ks.includes('211'), v: ks.includes('37') && !ks.includes('37-alola'), i: ks.indexOf('58-hisui') }; });
+    const c = await count(); const card = await p.evaluate(() => [...document.querySelectorAll('.card')].find(a => a.getAttribute('href') === '#/p/58-hisui')?.querySelector('.nm').textContent.trim());
+    ok(r.n === 242 && r.h && !r.c && r.q && r.v && r.sn === false && /^242 Pokémon/.test(c) && /Caninos de Hisui/.test(card || ''), tag + ' v25 Hisui dex, Formes off: Hisuian forms replace the common form (Caninos de Hisui, Qwilfish…) ' + JSON.stringify(r) + ' ' + c.slice(0, 30)); }
+  await p.click('#formsbtn'); await sleep(300);
+  { const r = await p.evaluate(() => { const ks = filtered().map(x => x.k); return [['58-hisui', '58'], ['215-hisui', '215'], ['157-hisui', '157'], ['706-hisui', '706']].map(([a, b]) => ks.indexOf(a) >= 0 && ks.indexOf(a) < ks.indexOf(b)); });
+    ok(r.every(Boolean), tag + ' v25 Hisui dex, Formes on: Hisuian form before the common form ' + r); }
+  await p.click('#formsbtn'); await sleep(200);
+  await sel('sw'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('52-galar') && !ks.includes('52') && ks.includes('77-galar') && !ks.includes('77'), tag + ' v25 Galar dex: Miaouss / Ponyta de Galar by default'); }
+  await sel('sv'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('128-paldea-combat-breed') && !ks.includes('128') && ks.includes('194-paldea') && !ks.includes('194'), tag + ' v25 Paldea dex: Tauros / Axoloto de Paldea by default'); }
+  await sel('sm'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('19-alola') && !ks.includes('19'), tag + ' v25 Alola dex (SL): Rattata d’Alola by default'); }
+  await sel('lgpe'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('19') && !ks.includes('19-alola'), tag + ' v25 Let’s Go (Kanto): common form kept'); }
+  await sel('za'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('25') && ks.length === 232, tag + ' v25 Z-A: unchanged (' + ks.length + ')'); }
+  await sel(''); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.length === 1025 && ks.includes('58') && !ks.includes('58-hisui'), tag + ' v25 Tous les jeux: unchanged'); }
+  await sel('la'); await p.evaluate(() => { CAUGHT_G.add('la:58-hisui'); saveTrack(); render(); }); await sleep(200);
+  ok(/: 1 \/ 242 🔴 capturés/.test(await count()), tag + ' v25 PLA counter counts the Hisuian form ' + (await count()).slice(0, 80));
+  await go('#/p/58-hisui'); await sleep(400);
+  { const nav = await p.$$eval('.dnav a', as => as.map(a => a.getAttribute('href'))); ok(nav[1] !== '#' && nav[2] !== '#' && await p.$eval('#actbar .cg', b => b.getAttribute('aria-pressed') === 'true'), tag + ' v25 Hisuian sheet from the PLA list: ‹ › navigation + Capturé on the right form ' + nav); }
   await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
   // list shows marks, cat filter
   await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());
