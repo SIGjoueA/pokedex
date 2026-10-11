@@ -442,3 +442,7 @@ details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] sum
 .ditbox .ditpast{margin-top:10px}
 .ditbox .ditpast summary{cursor:pointer;font-weight:600;font-size:14px}
 .ditbox .ditc .fchip{padding-right:10px}
+/* v33: image + Officiel / HOME / Animé centered right under it at every width (desktop: the inline img and the inline-flex
+   switch used to sit side by side). Fixed square box for every sprite style → no layout shift when switching. */
+.hero #heroimg{display:block;margin:0 auto;box-sizing:border-box;width:min(70vw,300px);height:auto;aspect-ratio:1/1;object-fit:contain}
+.hero .sprsw{display:flex;width:max-content;max-width:100%;margin:4px auto 8px}

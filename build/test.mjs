@@ -755,6 +755,15 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     await open('132', 'go'); { const r = await p.evaluate(() => { const b = document.querySelector('.ditbox'); if (!b) return null; const cur = [...b.querySelectorAll(':scope > .ditc .fchip')]; return { h: b.querySelector('h2').textContent, n: cur.length, fer: cur.some(a => a.getAttribute('href') === '#/p/56' && /Férosinge/.test(a.textContent) && a.querySelector('img')), past: b.querySelector('details.ditpast')?.textContent || '', src: [...b.querySelectorAll('a[href^="http"]')].map(a => a.href).join(' ') }; });
       ok(r && /^Déguisements/.test(r.h) && r.n === 11 && r.fer && /Bulbizarre/.test(r.past) && /Pokopia/.test(r.past) && /leekduck\.com/.test(r.src) && /bulbapedia/.test(r.src), tag + ' v32 Métamorph GO: Déguisements (11 actuels avec icône + lien, anciens par période, sources) ' + JSON.stringify(r && { n: r.n, fer: r.fer })); }
     await open('133', 'go'); ok(await p.$('.ditbox') === null, tag + ' v32 Déguisements only on Métamorph');
+    { const geo = () => p.evaluate(() => { const h = document.querySelector('.hero').getBoundingClientRect(), i = document.querySelector('#heroimg').getBoundingClientRect(), s = document.querySelector('.sprsw').getBoundingClientRect();
+        return { dx: Math.round(Math.abs((s.left + s.width / 2) - (i.left + i.width / 2))), hx: Math.round(Math.abs((i.left + i.width / 2) - (h.left + h.width / 2))), gap: Math.round(s.top - i.bottom), top: Math.round(s.top - h.top), iw: Math.round(i.width), ih: Math.round(i.height) }; });
+      const ok33 = g => g.dx <= 2 && g.hx <= 2 && g.gap >= 0 && g.gap <= 16 && g.iw === g.ih;
+      const bad = [];
+      for (const [k, gm] of [['6', null], ['6', 'xy'], ['26-alola', null], ['133', 'go']]) { await open(k, gm || undefined); const g = await geo(); if (!ok33(g)) bad.push(k + '/' + gm + ' ' + JSON.stringify(g)); }
+      ok(!bad.length, tag + ' v33 hero: Officiel / HOME / Animé centred right under the image (overview, game, form, GO) ' + bad.join(' '));
+      await open('6'); const g0 = await geo(); const gs = [];
+      for (const m of ['home', 'anim', 'off']) { await p.click(`.sprsw [data-spr=${m}]`); await sleep(500); gs.push(await geo()); }
+      ok(gs.every(g => ok33(g) && g.top === g0.top && g.ih === g0.ih), tag + ' v33 hero: no layout shift when switching sprite style ' + JSON.stringify([g0, ...gs].map(g => g.top + '/' + g.ih))); }
     await p.select('#cat', 'gmax'); await sleep(500); ok(await p.evaluate(() => filtered().length > 20 && filtered().every(q => q.c === 'gmax')), tag + ' v32 Gigamax in Épée / Bouclier lists the Gigamax forms of the Galar dex');
     await p.select('#cat', ''); await sleep(300);
     await go('#/'); await sel('');

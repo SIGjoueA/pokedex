@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v32';
+const VERSION = 'v33';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Descriptions Poképédia, origine du nom, lieux des jeux Switch, GO : PvP, régions, déguisements de Métamorph, filtres Méga / Gigamax.';
+const NOTES = 'Fiche sur ordinateur : boutons Officiel / HOME / Animé bien centrés sous l’image, sans décalage en changeant de style.';
 const DATA_VERSION = 'd12'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

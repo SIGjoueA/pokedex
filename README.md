@@ -154,6 +154,9 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - DATA_VERSION d12.
 - **Limites** : lieux détaillés seulement pour les jeux Switch (les tanières de raid ÉB ne sont pas séparées par DLC ; RF/VF Switch garde les rencontres PokéAPI de RF/VF) ; pages « Indisponibles » incomplètes par endroits ; Méga-évolutions sans texte propre (texte de l’espèce) ; 13 formes PvPoke non reliées (Mewtwo armuré, Zacian / Zamazenta Couronnés, Sylveroy Cavalier du Froid, Necrozma Crinière / Ailes, Zygarde 10 %, Éthernatos Infinimax, Muplodocus / Colimucus de Hisui, Darumacho de Galar Transe, Paragruel ♂ / ♀) ; liste régionale GO manuelle (formes sans données GO rattachées à la forme de base) ; œufs GO = saison en cours.
 
+## v33 : correctif d’affichage
+- **Fiche sur ordinateur** : l’image et les boutons Officiel / HOME / Animé étaient côte à côte (décalés) à partir d’environ 700 px de large ; l’image est maintenant un bloc carré centré (même taille pour l’illustration, HOME et le sprite animé, donc aucun décalage en changeant de style) et les boutons sont centrés juste dessous, à toutes les largeurs. DATA_VERSION inchangé (d12).
+
 ## Limites connues
 Rencontres détaillées des jeux Switch via Poképédia (v32). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 
