@@ -419,3 +419,26 @@ details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] sum
 
 /* v31: game colour icon in « Présent dans » (same dot as the Jeux menus) */
 .avl li{padding-left:21px}.avl li a .gdot{width:13px;height:13px;margin:0 8px 0 -21px;vertical-align:-1px}
+/* v32: Poképédia credit, étymologie, distributions, lieux détaillés (cadeaux / échanges), GO : PC niv. 40, PvP, régions */
+.ppcredit{margin-top:2px;font-size:11.5px}
+.ety li{padding:5px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.4}.ety li:last-child{border:0}
+.etymore summary,.evd summary{cursor:pointer;text-decoration:underline;font-size:14px;padding:6px 0;min-height:32px}
+.evl li{padding:4px 0;font-size:13.5px;line-height:1.35;border-bottom:1px solid var(--line)}.evl li:last-child{border:0}
+.evl .yr{display:inline-block;min-width:3.2em;font-weight:700;font-variant-numeric:tabular-nums;color:var(--mute)}
+.encsum{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.encchip{display:inline-block;padding:4px 9px;border-radius:999px;background:var(--bg3);border:1px solid var(--line);font-size:13px;line-height:1.3}
+.enc .ms.gift{font-weight:600}
+.encna{font-size:15px;margin:4px 0 6px}
+.cpmax span{font-size:12px}
+.pvp .pvpc{background:var(--bg3);border-radius:10px;padding:8px 4px}
+.pvp .pvpc b{font-size:19px}.pvp .pvpc.top b{color:var(--res)}
+.pvp .pvpc span{display:block;font-size:12.5px;line-height:1.25}.pvp .pvpc span small{display:block;font-size:11px}
+.pvp .pvsh{display:block;margin-top:3px;font-size:11.5px;color:var(--mute)}
+.rgl b{font-weight:700}
+/* v32 Métamorph GO : déguisements */
+.ditbox .dith{font-size:14px;margin:10px 0 4px}
+.ditbox .ditl{margin:8px 0 6px;font-size:13px;font-weight:600}
+.ditbox .ditl.old{color:var(--mute,#666);font-weight:500}
+.ditbox .ditpast{margin-top:10px}
+.ditbox .ditpast summary{cursor:pointer;font-weight:600;font-size:14px}
+.ditbox .ditc .fchip{padding-right:10px}

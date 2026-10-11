@@ -39,6 +39,24 @@ for (const [k, o] of Object.entries(gmax)) {
   f.go = g;
   if (g.r) e.go = 1; else e.gof = o.from;
 }
+// v32: regional exclusives (go.rg = zone in French, go.rgm = 1 when migratory). Cleared first so a removed key disappears.
+{ const RG = OV.regional || { keys: {}, migratory: {} };
+  for (const e of core.e) { if (!e.go) continue; const sp = spOf(e.id), f = sp.f[e.k]; if (f && f.go) { delete f.go.rg; delete f.go.rgm; delete f.go.rgf; } }
+  for (const [grp, mig] of [[RG.keys || {}, 0], [RG.migratory || {}, 1]]) for (const [k, z] of Object.entries(grp)) {
+    if (k.startsWith('_')) continue; const e = byKey[k]; if (!e) { log.push(`! régional inconnu ${k}`); continue; }
+    const sp = spOf(e.id), f = sp.f[k]; if (!f || !f.go) { const b = sp.f[String(e.id)]; if (b && b.go) { (b.go.rgf ||= []).push([e.l || e.n, z]); continue; } log.push(`! régional ${k} sans données GO`); continue; }
+    f.go.rg = z; if (mig) f.go.rgm = 1; }
+  log.push(`régionaux GO : ${Object.keys(RG.keys || {}).filter(k => !k.startsWith('_')).length} + ${Object.keys(RG.migratory || {}).length} migrateurs`); }
+// v32: Ditto (Métamorph) disguises in GO from build/go-ditto.json (manual, cited) → sp/132.json f['132'].go.dit
+{ const DT = JSON.parse(fs.readFileSync(new URL('./go-ditto.json', import.meta.url)));
+  const byEn = new Map(core.e.filter(e => !e.c).map(e => [e.en, e.id]));
+  const ids = ns => ns.map(n => { const id = byEn.get(n); if (!id) throw new Error(`go-ditto.json : nom inconnu « ${n} »`); return id; });
+  const used = new Set([DT.current, ...DT.past].flatMap(x => x.src));
+  const sp = spOf(132), f = sp.f['132'];
+  if (f && f.go) { f.go.dit = { cur: { l: DT.current.label, ids: ids(DT.current.names) }, past: DT.past.map(x => ({ l: x.label, ids: ids(x.names) })),
+      src: [...used].map(k => { if (!DT.sources[k]) throw new Error(`go-ditto.json : source inconnue ${k}`); return DT.sources[k]; }), chk: DT.checked };
+    log.push(`Métamorph GO : ${f.go.dit.cur.ids.length} déguisements actuels, ${f.go.dit.past.reduce((n, x) => n + x.ids.length, 0)} passés (vérifié le ${DT.checked})`); }
+  else log.push('! Métamorph (132) sans données GO'); }
 for (const [id, sp] of sps) wr(`sp/${id}.json`, sp);
 wr('core.json', core);
 const nM = core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length, nG = core.e.filter(e => e.c === 'gmax' && e.go).length, nF = core.e.filter(e => e.gof).length;

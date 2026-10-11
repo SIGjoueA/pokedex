@@ -218,6 +218,46 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v31 RF/VF Switch : n° Kanto identiques à RF/VF (GBA)', [1, 25, 150].every(id => JSON.stringify(sp(id).gm.frlgsw) === JSON.stringify(sp(id).gm.frlg)) && fs.existsSync(path.join(HERE, '../docs/data/dex/frlgsw.json')));
   ok('v31 RF/VF Switch : marque d’origine GBA (image) dans les jeux actuels', /id: 'gba'[^}]*games: \['frlgsw'\]/.test(app) && fs.existsSync(path.join(HERE, '../docs/img/origin/gba.png')) && /SWITCH_IDS = new Set\(\['frlgsw'/.test(app));
   ok('v31 Présent dans : icône du jeu (même pastille que les menus Jeux)', (app.match(/data-game="\$\{g\}">\$\{gdot\(g\)\}/g) || []).length === 2 && /\.avl li a \.gdot\{/.test(fs.readFileSync(path.join(HERE, '../docs/style.css'), 'utf8')));
-  ok('v31 SW : v31 + DATA_VERSION d11 (core.json modifié)', /VERSION = 'v31'/.test(sw) && /DATA_VERSION = 'd11'/.test(sw));
+  ok('v31 SW : version ≥ v31, DATA_VERSION ≥ d11', +sw.match(/VERSION = 'v(\d+)'/)[1] >= 31 && +sw.match(/DATA_VERSION = 'd(\d+)'/)[1] >= 11);
+}
+// ---- v32: Poképédia (descriptions, étymologies, distributions, lieux Switch), GO extras, Méga / Gigamax filters
+{ const core = D('core.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), html = fs.readFileSync(path.join(HERE, '../docs/index.html'), 'utf8');
+  const ids = [...new Set(core.e.map(e => e.id))], S = ids.map(id => [id, sp(id)]);
+  const withPp = S.filter(([, s]) => s.pt && (s.pv || Object.values(s.f).some(f => f.pv))).length;
+  ok('v32 Poképédia : descriptions pour ≥ 99 % des espèces', withPp / ids.length >= 0.99, withPp + '/' + ids.length);
+  const badIdx = S.filter(([, s]) => [s.pv || {}, ...Object.values(s.f).map(f => f.pv || {})].some(m => Object.values(m).some(i => !s.pt || i < 0 || i >= s.pt.length))).map(([id]) => id);
+  ok('v32 Poképédia : index de textes valides', badIdx.length === 0, badIdx.slice(0, 5).join());
+  const verOk = new Set(core.games.flatMap(g => g.ver.map(v => String(v[0]))));
+  const badVer = S.filter(([, s]) => Object.keys(s.pv || {}).some(v => !verOk.has(v))).map(([id]) => id);
+  ok('v32 Poképédia : versions connues de l’app uniquement', badVer.length === 0, badVer.slice(0, 5).join());
+  const dirty = S.filter(([, s]) => (s.pt || []).some(t => /\{\{|\}\}|\[\[|\]\]|'''|<ref|<br/.test(t))).map(([id]) => id);
+  ok('v32 Poképédia : textes nettoyés (pas de wikicode)', dirty.length === 0, dirty.slice(0, 8).join());
+  const s6 = sp(6), s1017 = sp(1017), s26 = sp(26);
+  ok('v32 extensions → texte du jeu de base (Ogerpon Masque du Puits, Méga-Dimension)', s1017.f['1017-wellspring-mask'].pv['42'] === s1017.f['1017-wellspring-mask'].pv['40'] && s6.pv['48'] === s6.pv['47']);
+  ok('v32 formes : textes propres (Ogerpon masques, Raichu d’Alola)', s1017.f['1017-wellspring-mask'].pv['40'] !== s1017.f['1017'].pv['40'] && /Alola/.test(s26.pt[s26.f['26-alola'].pv['27']]));
+  ok('v32 étymologies : ligne en français pour ≥ 97 % des espèces', S.filter(([, s]) => s.ety && s.ety.some(r => /^Français/.test(r[0]))).length / ids.length >= 0.97);
+  ok('v32 distributions événementielles : années + libellés', S.filter(([, s]) => s.evd).length > 100 && S.every(([, s]) => !s.evd || s.evd.every(e => /^\d{4}$/.test(e[0]) && e[1].length > 2)));
+  const LG = ['sv', 'svmask', 'svdisk', 'za', 'zadlc', 'la', 'bdsp', 'sw', 'swisle', 'swcrown', 'lgpe'], cov = {};
+  for (const [, s] of S) for (const f of Object.values(s.f)) for (const g of Object.keys(f.pl || {})) cov[g] = (cov[g] || 0) + 1;
+  ok('v32 lieux Poképédia : tous les jeux Switch (ÉV + DLC, Z-A + DLC, LPA, DEPS, ÉB + DLC, Let’s Go)', LG.every(g => cov[g] > 20), JSON.stringify(cov));
+  const badG = Object.keys(cov).filter(g => !core.games.some(x => x.id === g)); ok('v32 lieux : identifiants de jeux valides', badG.length === 0, badG.join());
+  const anyL = re => S.some(([, s]) => Object.values(s.f).some(f => Object.values(f.pl || {}).some(L => L.some(x => re.test(x[1])))));
+  ok('v32 lieux : cadeaux et échanges in-game présents', anyL(/^Donné/) && anyL(/^Échange/));
+  ok('v32 lieux : pas de texte « À compléter »', S.every(([, s]) => Object.values(s.f).every(f => !f.pln || Object.values(f.pln).every(t => !/compléter/i.test(t)))));
+  ok('v32 lieux : noms de lieux sans « Page|Affiché » ni wikicode', S.every(([, s]) => Object.values(s.f).every(f => !f.pl || Object.values(f.pl).every(L => L.every(([pl]) => !/[|\[\]{}]/.test(pl))))));
+  ok('v32 crédit Poképédia CC BY-NC-SA 3.0 FR (app + à propos)', /CC BY-NC-SA 3\.0 FR/.test(app) && /pokepedia\.fr/.test(html) && /by-nc-sa\/3\.0\/fr/.test(html));
+  ok('v32 extrait Poképédia suivi (rebuild sans re-télécharger)', fs.existsSync(path.join(HERE, 'pokepedia/extract.json.gz')) && /pokepedia\.mjs'\)\.then\(m => m\.apply\(\)\)/.test(fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8')));
+  const pvp = D('pvp.json'), keys = new Set(core.e.map(e => e.k));
+  ok('v32 PvP : classements PvPoke (3 ligues) liés à des entrées existantes', pvp.n.g > 500 && pvp.n.m > 200 && Object.keys(pvp.r).length > 500 && Object.keys(pvp.r).every(k => keys.has(k)));
+  ok('v32 PvP : chargé avec les données GO seulement et dans le pack hors-ligne', /getJSON\('data\/pvp\.json'\)/.test(app) && /'data\/pvp\.json'/.test(app) && !/pvp/.test(sw));
+  const ov = JSON.parse(fs.readFileSync(path.join(HERE, 'go-overrides.json'), 'utf8')).regional;
+  const rgKeys = Object.keys(ov.keys).filter(k => !k.startsWith('_'));
+  ok('v32 GO régionaux : clés valides, appliqués par apply-go-overrides', rgKeys.every(k => keys.has(k)) && sp(115).f['115'].go.rg === 'Australie' && sp(336).f['336'].go.rgm === 1);
+  ok('v32 GO : PC max niv. 40 (multiplicateur 0,7903)', /40: 0\.7903/.test(app));
+  ok('v32 Catégories Méga-évolutions / Gigamax après Ultra-Chimères', /value="ub">Ultra-Chimères<\/option>\s*<option value="mega">Méga-évolutions<\/option>\s*<option value="gmax">Gigamax<\/option>/.test(html));
+  { const dit = JSON.parse(fs.readFileSync(new URL('../docs/data/sp/132.json', import.meta.url))).f['132'].go?.dit, ids = new Set(core.e.map(e => e.id)), DJ = JSON.parse(fs.readFileSync(new URL('./go-ditto.json', import.meta.url)));
+    ok('v32 Métamorph GO : déguisements actuels / passés appliqués depuis go-ditto.json', dit && dit.cur.ids.length === DJ.current.names.length && dit.past.length === DJ.past.length && [dit.cur, ...dit.past].every(x => x.ids.length && x.ids.every(id => ids.has(id))));
+    ok('v32 Métamorph GO : sources citées (URL) + date de vérification', dit && dit.src.length >= 2 && dit.src.every(([n, u]) => n && /^https:\/\//.test(u)) && /^\d{4}-\d\d-\d\d$/.test(dit.chk)); }
+  ok('v32 SW : v32 + DATA_VERSION d12 + NOTES', /VERSION = 'v32'/.test(sw) && /DATA_VERSION = 'd12'/.test(sw) && /Poképédia/.test(sw.match(/NOTES = '([^']*)'/)[1]));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

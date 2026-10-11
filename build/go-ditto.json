@@ -1,0 +1,36 @@
+{
+  "_doc": "Déguisements de Métamorph (#132) dans Pokémon GO. Édité à la main (jamais écrit par les scripts) ; appliqué par apply-go-overrides.mjs (lancé par build-data et la routine GO hebdomadaire) dans docs/data/sp/132.json (f['132'].go.dit). Noms anglais tels que dans les sources, résolus via core.json (en) ; un nom inconnu fait échouer l'application. Pour mettre à jour : vérifier Leek Duck (posts/find-ditto) + Polygon, déplacer l'ancienne liste « current » en tête de « past » avec sa période, mettre « checked » à jour.",
+  "checked": "2026-10-11",
+  "current": {
+    "label": "Depuis l’événement « Completely Normal » (23/09/2025)",
+    "since": "2025-09-23",
+    "names": ["Mankey", "Growlithe", "Magnemite", "Voltorb", "Sentret", "Teddiursa", "Seedot", "Surskit", "Slakoth", "Whismur", "Duskull"],
+    "src": ["leekduck", "polygon", "niantic-2025"]
+  },
+  "past": [
+    {
+      "label": "Célébration Pokémon Pokopia (10 – 16/03/2026, Métamorph costumé : chapeau / casquette)",
+      "from": "2026-03-10", "to": "2026-03-16",
+      "names": ["Bulbasaur", "Charmander", "Squirtle", "Pikachu", "Hitmonchan", "Scyther", "Marill", "Sudowoodo", "Combee", "Drilbur", "Timburr", "Goomy"],
+      "src": ["leekduck-pokopia"]
+    },
+    {
+      "label": "À partir du 11/12/2023 (jusqu’au 23/09/2025 au plus tard)",
+      "from": "2023-12-11", "to": "2025-09-23",
+      "names": ["Oddish", "Koffing", "Rhyhorn", "Goldeen", "Spinarak", "Numel", "Bidoof", "Gothita", "Solosis", "Bergmite", "Stufful"],
+      "src": ["bulbapedia"]
+    },
+    {
+      "label": "Listes antérieures (2016 – 2023, périodes non détaillées par la source)",
+      "names": ["Weedle", "Pidgey", "Rattata", "Ekans", "Zubat", "Paras", "Venonat", "Diglett", "Mankey", "Grimer", "Gastly", "Drowzee", "Voltorb", "Magikarp", "Sentret", "Hoothoot", "Ledyba", "Natu", "Hoppip", "Yanma", "Snubbull", "Teddiursa", "Remoraid", "Zigzagoon", "Seedot", "Surskit", "Whismur", "Skitty", "Gulpin", "Corphish", "Starly", "Stunky", "Finneon", "Lillipup", "Roggenrola", "Tympole", "Dwebble", "Foongus", "Litleo", "Swirlix"],
+      "src": ["bulbapedia"]
+    }
+  ],
+  "sources": {
+    "leekduck": ["Leek Duck — Current Ditto Disguises (maj. 04/03/2026)", "https://leekduck.com/posts/find-ditto/"],
+    "polygon": ["Polygon — Ditto disguises list (maj. 01/10/2026)", "https://www.polygon.com/pokemon-go-guide/23648583/ditto-disguises-shiny/"],
+    "niantic-2025": ["Pokémon GO — Completely Normal (08/09/2025)", "https://pokemongo.com/post/completely-normal-2025"],
+    "leekduck-pokopia": ["Leek Duck — Pokémon Pokopia Celebration Event", "https://leekduck.com/events/pokemon-pokopia-celebration-event-2026/"],
+    "bulbapedia": ["Bulbapedia — Ditto (Pokémon), section Pokémon GO (rév. 06/10/2026)", "https://bulbapedia.bulbagarden.net/wiki/Ditto_(Pok%C3%A9mon)#In_Pok%C3%A9mon_GO"]
+  }
+}

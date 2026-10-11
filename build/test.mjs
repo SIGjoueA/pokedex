@@ -182,9 +182,9 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.click('[data-mtab=m]'); await sleep(200);
   ok((await p.$$eval('.mv .lv', e => e.map(x => x.textContent))).some(x => /^CT\d+/.test(x)), tag + ' TM numbers shown');
   await go('#/p/25'); await p.select('#dgame', 'sv'); await sleep(400);
-  ok(/PokéAPI ne fournit aucune donnée de rencontres/.test(await p.$eval('.detail', e => e.textContent)), tag + ' SV: no encounter data message');
+  ok(/Poképédia/.test(await p.$eval('.detail', e => e.textContent)) && await p.$('.encchip, .enc') !== null, tag + ' SV: Poképédia encounter data (v32)');
   await go('#/p/25'); await p.select('#dgame', 'rb'); await sleep(400);
-  ok(/Traduit en français faute de données officielles/.test(await p.$eval('.detail', e => e.textContent)), tag + ' translated text label in Rouge/Bleu');
+  ok(!/Traduit en français faute de données officielles/.test(await p.$eval('.detail', e => e.textContent)) && /Poképédia/.test(await p.$eval('.desc', e => e.parentNode.textContent)), tag + ' Rouge/Bleu: official Poképédia text, no machine-translation label (v32)');
   await p.select('#dgame', 'sw'); await sleep(400);
   ok(!/Traduit en français faute/.test(await p.$eval('.detail', e => e.textContent)), tag + ' official FR text in Épée/Bouclier has no translation label');
   ok(/peuvent contenir des erreurs/.test(await p.$eval('.detail', e => e.textContent)), tag + ' detail disclaimer');
@@ -516,7 +516,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/'); await sel('go'); await go('#/p/150'); await sleep(600);
   ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy))).join() === '150-mega-x,150-mega-y', tag + ' v28 GO Mewtwo: energy X / Y (Méga-Mewtwo X / Y released in GO, override list)');
   const goOrder = await p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
-  ok(goOrder.indexOf('Statistiques GO') < goOrder.indexOf('Attaques rapides') && goOrder.indexOf('Attaques chargées') < goOrder.indexOf('Évolutions') && goOrder.indexOf('Évolutions') < goOrder.indexOf('Pokémon GO : bonbons, compagnon, œufs'), tag + ' GO body order ' + goOrder);
+  ok(goOrder.indexOf('Statistiques GO') < goOrder.indexOf('Attaques rapides') && goOrder.indexOf('Attaques chargées') < goOrder.indexOf('Évolutions') && goOrder.indexOf('Évolutions') < goOrder.findIndex(h => h.startsWith('Pokémon GO : bonbons, compagnon, œufs')), tag + ' GO body order ' + goOrder);
   { // ---- v29: cries, reproduction & capture, wild held items
     await go('#/'); await sel(''); await go('#/p/6'); await sleep(900);
     const cr = await p.$$eval('.hero .cry', bs => bs.map(b => b.dataset.cry + '|' + b.textContent.trim()));
@@ -718,6 +718,45 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(150);
     await go('#/'); await sel('frlg'); await go('#/p/4'); await sleep(400);
     ok(await p.$eval('#actbar .tr', b => b.disabled), tag + ' v31 GBA Rouge Feu / Vert Feuille: still no HOME link (Transféré greyed)');
+    // ===== v32 =====
+    const txt = sel_ => p.evaluate(s => [...document.querySelectorAll(s)].map(e => e.innerText.replace(/\s+/g, ' ')).join(' | '), sel_);
+    await open('6', 'xy'); let fl = await txt('.detail > .desc, .detail .desc');
+    ok(/Quand il crache son souffle brûlant/.test(fl) && !/traduction automatique|PokéAPI/.test(fl) && await p.$('.ppcredit') !== null, tag + ' v32 Dracaufeu X / Y: Pokédex text from Poképédia + CC BY-NC-SA credit ' + fl.slice(0, 120));
+    await open('1017-wellspring-mask', 'svmask'); const og1 = await txt('.desc'); await open('1017', 'svmask'); const og2 = await txt('.desc');
+    ok(og1 && og2 && og1 !== og2 && /Sous cette forme/.test(og1) && !/Sous cette forme/.test(og2), tag + ' v32 Ogerpon: per-form texts (Masque du Puits ≠ Turquoise), expansion falls back to Écarlate / Violet ' + og1.slice(0, 80));
+    await open('26-alola', 'sm'); ok(/ne se produit qu.à Alola/.test(await txt('.desc')), tag + ' v32 Raichu d’Alola Soleil / Lune: regional-form text (Poképédia form page)');
+    await open('174', 'b2w2'); ok(/traduction automatique/.test(await txt('.desc')), tag + ' v32 machine translation kept only as last resort and marked (Toudoudou N2 / B2)');
+    await open('6'); const ety = await txt('.etybox'), evd = await txt('.evdbox');
+    ok(/Origine du nom/.test(ety) && /Français : Dracaufeu vient du latin/.test(ety) && /Anglais : Charizard/.test(ety) && /Distributions événementielles 4/.test(evd), tag + ' v32 overview: étymologie (FR / EN / JA + other languages) and event distributions ' + ety.slice(0, 90));
+    await open('133', 'sv'); let wh = await txt('.encbox');
+    ok(/Zone Ouest n° 3/.test(wh) && /Raid Téracristal/.test(wh) && /Poképédia/.test(wh), tag + ' v32 Évoli Écarlate / Violet: detailed locations (Poképédia) ' + wh.slice(0, 120));
+    await open('52-galar', 'sv'); wh = await txt('.encbox'); ok(/🎁 Cadeau : Académie de Paldea/.test(wh) && /Donné · Niv. 5/.test(wh), tag + ' v32 Miaouss de Galar ÉV: in-game gift (Académie de Paldea) ' + wh.slice(0, 90));
+    await open('129', 'bdsp'); ok(/Échange\s*:\s*Chenal 226/.test(await txt('.encbox')), tag + ' v32 Magicarpe DEPS: in-game trade (Chenal 226)');
+    await open('26-alola', 'sw'); { const w = await txt('.encbox'); ok(/Plaine Salutation/.test(w) && !/\|/.test(w), tag + ' v32 Raichu d’Alola ÉB: « Page|Affiché » place names cleaned'); }
+    await open('2', 'svdisk'); wh = await txt('.encbox'); ok(/Faire évoluer Bulbizarre/.test(wh) || /lieu/.test(wh), tag + ' v32 Herbizarre Le Disque Indigo: evolve-only note or locations ' + wh.slice(0, 80));
+    await open('25', 'lgpe'); ok(/Forêt de Jade|lieu/.test(await txt('.encbox')), tag + ' v32 Pikachu Let’s Go: Poképédia locations');
+    await open('133', 'go'); const gq = await txt('.gostats, .pvpbox, .goinfo');
+    ok(/1 071 PC max niv. 40/.test(gq) && /Ligue Super/.test(gq) && /#\d+/.test(gq) && /Bonbons d’évolution : 25 bonbons → Aquali, Voltali, Pyroli/.test(gq), tag + ' v32 GO Évoli: max CP lv 40, PvP ranks (PvPoke), evolution candy grouped ' + gq.slice(0, 160));
+    await open('115', 'go'); ok(/Exclusivité régionale : Australie/.test(await txt('.goinfo')), tag + ' v32 GO Kangourex: regional exclusive (Australie)');
+    await open('376', 'go'); ok(/Ligue Master/.test(await txt('.pvpbox')) && await p.$eval('.pvpbox', b => [...b.querySelectorAll('.pvpc')][2].classList.contains('top')), tag + ' v32 GO Métalosse: top-100 Master League in green');
+    // Catégorie: Méga-évolutions / Gigamax (right after Ultra-Chimères), shown even with Formes off, greyed in dexes without them
+    await go('#/'); await sel(''); await p.evaluate(() => { state.forms = false; });
+    const ord = await p.$$eval('#cat option', o => o.map(x => x.value)); ok(ord.indexOf('mega') === ord.indexOf('ub') + 1 && ord.indexOf('gmax') === ord.indexOf('ub') + 2, tag + ' v32 Méga-évolutions / Gigamax right after Ultra-Chimères ' + ord.slice(0, 8).join(' '));
+    await p.select('#cat', 'mega'); await sleep(500);
+    let fc = await p.evaluate(() => { const r = filtered(); return { n: r.length, all: r.every(q => q.c === 'mega' || q.c === 'primal'), primal: r.some(q => q.k === '382-primal'), x: r.some(q => q.k === '6-mega-x'), forms: state.forms }; });
+    ok(fc.n > 60 && fc.all && fc.primal && fc.x && !fc.forms && /^\d+/.test(await count()), tag + ' v32 Méga-évolutions: all Megas + Primals, Formes toggle off ' + JSON.stringify(fc));
+    await p.select('#cat', 'gmax'); await sleep(500);
+    fc = await p.evaluate(() => { const r = filtered(); return { n: r.length, all: r.every(q => q.c === 'gmax'), eter: r.some(q => q.k === '890-eternamax') }; });
+    ok(fc.n >= 33 && fc.all && fc.eter, tag + ' v32 Gigamax: all Gigamax + Éthernatos Infinimax ' + JSON.stringify(fc));
+    const dis = async g => { await sel(g); await sleep(600); return p.evaluate(() => ['mega', 'gmax'].map(v => document.querySelector(`#cat option[value=${v}]`).disabled ? 'off' : 'on').join(',') + ' cat=' + state.cat); };
+    const dRb = await dis('rb'), dXy = await dis('xy'), dSw = await dis('sw');
+    ok(/^off,off cat=$/.test(dRb) && /^on,off/.test(dXy) && /^off,on/.test(dSw), tag + ' v32 Méga / Gigamax greyed in game dexes without them (R/B: both, X/Y: Gigamax, Épée: Méga) ' + [dRb, dXy, dSw].join(' / '));
+    await sel('rb'); await sleep(600); ok(await p.evaluate(() => ['mega', 'gmax'].every(v => document.querySelector(`#catlist .gopt[data-v="${v}"]`)?.getAttribute('aria-disabled') === 'true')), tag + ' v32 Méga / Gigamax also greyed in the Catégorie menu (R/B)'); await sel('');
+    await open('132', 'go'); { const r = await p.evaluate(() => { const b = document.querySelector('.ditbox'); if (!b) return null; const cur = [...b.querySelectorAll(':scope > .ditc .fchip')]; return { h: b.querySelector('h2').textContent, n: cur.length, fer: cur.some(a => a.getAttribute('href') === '#/p/56' && /Férosinge/.test(a.textContent) && a.querySelector('img')), past: b.querySelector('details.ditpast')?.textContent || '', src: [...b.querySelectorAll('a[href^="http"]')].map(a => a.href).join(' ') }; });
+      ok(r && /^Déguisements/.test(r.h) && r.n === 11 && r.fer && /Bulbizarre/.test(r.past) && /Pokopia/.test(r.past) && /leekduck\.com/.test(r.src) && /bulbapedia/.test(r.src), tag + ' v32 Métamorph GO: Déguisements (11 actuels avec icône + lien, anciens par période, sources) ' + JSON.stringify(r && { n: r.n, fer: r.fer })); }
+    await open('133', 'go'); ok(await p.$('.ditbox') === null, tag + ' v32 Déguisements only on Métamorph');
+    await p.select('#cat', 'gmax'); await sleep(500); ok(await p.evaluate(() => filtered().length > 20 && filtered().every(q => q.c === 'gmax')), tag + ' v32 Gigamax in Épée / Bouclier lists the Gigamax forms of the Galar dex');
+    await p.select('#cat', ''); await sleep(300);
     await go('#/'); await sel('');
   }
   ok(await p.$eval('#cat option[value="strans"]', o => o.textContent) === '✨ Shiny transférés (HOME)', tag + ' v24 « Shiny transférés (HOME) » filter restored');
@@ -905,7 +944,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await sel(''); await sleep(200);
   ok(await p.$eval('#gamebtn', e => e.textContent.replace('▾', '').trim()) === 'Jeux', tag + ' v24 Jeux button follows programmatic changes');
   { const c = await p.evaluate(() => [...document.querySelector('#catlist').children].map(li => li.classList.contains('gsep') ? '────' : li.textContent));
-    const exp = ['Toutes catégories (aucun filtre)', 'Statut', 'Légendaires', 'Fabuleux', 'Ultra-Chimères', 'Bébés', '★ Favoris', 'Marques', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', 'HOME', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)', 'Barons', 'Barons', '⚪ Barons manquants', '✨ Barons shiny', '⚪✨ Barons shiny manquants'];
+    const exp = ['Toutes catégories (aucun filtre)', 'Statut', 'Légendaires', 'Fabuleux', 'Ultra-Chimères', 'Méga-évolutions', 'Gigamax', 'Bébés', '★ Favoris', 'Marques', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', 'HOME', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)', 'Barons', 'Barons', '⚪ Barons manquants', '✨ Barons shiny', '⚪✨ Barons shiny manquants'];
     ok(JSON.stringify(c) === JSON.stringify(exp), tag + ' v24 Catégorie dropdown: exact validated labels + separators ' + JSON.stringify(c)); }
   await p.click('#catbtn'); await sleep(150); await p.click('#catlist .gopt[data-v="swmiss"]'); await sleep(300);
   ok(await p.$eval('#cat', e => e.value) === 'swmiss' && parseInt(await count()) > 0, tag + ' v24 Catégorie dropdown selects (Jeux actuels manquants): ' + (await count()).slice(0, 40));

@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v31';
+const VERSION = 'v32';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Rouge Feu / Vert Feuille (Switch) ajouté (compatible HOME), bloc ✨ Shiny par jeu, faiblesses selon le talent, autres sprites, descriptions au toucher.';
-const DATA_VERSION = 'd11'; // bump when the schema of data/*.json changes
+const NOTES = 'Descriptions Poképédia, origine du nom, lieux des jeux Switch, GO : PvP, régions, déguisements de Métamorph, filtres Méga / Gigamax.';
+const DATA_VERSION = 'd12'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

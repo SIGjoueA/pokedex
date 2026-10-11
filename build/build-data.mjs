@@ -492,4 +492,5 @@ sizes.tm = write('tm.json', tmOut);
 sizes.sp = totalSp;
 await import('./apply-go-overrides.mjs'); // v28: manual GO overrides (build/go-overrides.json), never overwritten by a rebuild
 await import('./add-frlgsw.mjs'); // v31: Rouge Feu / Vert Feuille (Switch), separate HOME-compatible game (idempotent)
+await import('./pokepedia.mjs').then(m => m.apply()); // v32: Poképédia descriptions, étymologies, distributions, lieux Switch (build/pokepedia/extract.json.gz)
 console.log('entries', coreEntries.length, 'edges', evoOut.length, 'sizes (bytes, raw):', sizes);

@@ -512,6 +512,9 @@ const regShow = (p, reg) => state.forms ? true : p.c ? !!(reg && reg.get(p.id) =
 // v26: Ultra-Chimères (Ultra Beasts) — the 11 species; Necrozma / Cosmog line are Legendaries, not UB
 const UB_IDS = new Set([793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]);
 const isUB = p => UB_IDS.has(p.id);
+// v32: form categories — Méga-évolutions (Megas + Primo-Résurgences) and Gigamax (+ Éthernatos Infinimax); shown whatever the Formes toggle
+const FORM_CATS = { mega: p => p.c === 'mega' || p.c === 'primal', gmax: p => p.c === 'gmax' };
+const formCat = (p, cat = state.cat) => !!(FORM_CATS[cat] && FORM_CATS[cat](p));
 function filtered() {
   const raw = state.q.trim();
   const qn = norm(raw);
@@ -521,7 +524,7 @@ function filtered() {
   const reg = gm ? listReps(gm.id, dex) : null, R = gm && REGION_OF_GAME[gm.id];
   let out = E.filter(p => {
     if (dex && dex.mega) { if (!dex.keys.has(p.k)) return false; } // Méga-Dex: base forms + Megas, whatever the forms toggle
-    else if (!regShow(p, reg)) return false;
+    else if (!(FORM_CATS[state.cat] && formCat(p)) && !regShow(p, reg)) return false;
     if (dex && dex.mega) {
     } else if (dex) {
       if (!dex.order.has(p.id)) return false;
@@ -537,6 +540,7 @@ function filtered() {
     if (state.cat === 'leg' && !p.lg) return false;
     if (state.cat === 'myth' && !p.my) return false;
     if (state.cat === 'ub' && !isUB(p)) return false;
+    if (FORM_CATS[state.cat] && !formCat(p)) return false;
     if (state.cat === 'baby' && !p.ba) return false;
     if (state.cat === 'fav' && !FAVS.has(key)) return false;
     if (state.cat === 'caught' && !isCaught(p)) return false;
@@ -656,6 +660,14 @@ function updateCatOptions() {
   const bOff = !!(game && !ALPHA_GAMES.has(c)); // Barons only in Légendes Arceus / Z-A (+ Tous les jeux, HOME)
   for (const v of BARON_CATS) { const o = $(`#cat option[value=${v}]`); if (o) o.disabled = bOff; }
   if (bOff && BARON_CATS.includes(state.cat)) { state.cat = ''; $('#cat').value = ''; }
+  // v32: Méga-évolutions / Gigamax greyed in a game (dex) that has none of these forms
+  const gm = GAME_BY[state.game], gi = gm ? GIDX[gm.id] : -1, dex = gm ? listDex() : null;
+  for (const v of Object.keys(FORM_CATS)) {
+    const o = $(`#cat option[value=${v}]`); if (!o) continue;
+    const has = state.game === 'go' ? E.some(p => p.go && formCat(p, v)) : !gm || !dex ? true : E.some(p => formCat(p, v) && (dex.mega ? dex.keys.has(p.k) : inGame(p, gi) && dex.order.has(p.id)));
+    o.disabled = !has;
+    if (!has && state.cat === v) { state.cat = ''; $('#cat').value = ''; }
+  }
 }
 function render() {
   updateCatOptions(); syncMenus();
@@ -730,7 +742,7 @@ function cryBtns(p) {
   const [l, o] = c, same = l && o && l === o;
   return `<div class="cries">${l ? `<button class="cry" type="button" data-cry="${l}" aria-label="Écouter le cri" title="Écouter le cri (version actuelle)"><span aria-hidden="true">🔊</span> Cri</button>` : ''}${o && !same ? `<button class="cry" type="button" data-cry="${o}" aria-label="Écouter le cri d’origine" title="Cri d’origine (jeux Gén. I–V, avant la refonte des cris)"><span aria-hidden="true">🔊</span> Ancien</button>` : ''}</div>`;
 }
-async function loadGo() { if (!GODATA) GODATA = getJSON('data/go.json').catch(e => { GODATA = null; throw e; }); return GODATA; }
+async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null)]).then(([g, pv]) => { g.pvp = pv; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP rankings (data/pvp.json, optional)
 async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).catch(e => { delete SP[id]; throw e; }); return SP[id]; }
 
 /* ---------------- detail ---------------- */
@@ -1025,18 +1037,31 @@ function dexNumbers(sp, gid) {
   return parts.join(' · ');
 }
 const TR_NOTE = '<p class="note trnote">Traduit en français faute de données officielles (traduction automatique, peut différer du texte officiel).</p>';
-function flavorHTML(sp, gm) {
-  const ftx = id => sp.fv[id] !== undefined ? [sp.ft[sp.fv[id]], false] : sp.tv && sp.tv[id] !== undefined ? [sp.tt[sp.tv[id]], true] : null;
-  if (!gm) { // latest available entry (official French first, otherwise machine translation)
-    const ks = Object.keys(sp.fv).map(Number).sort((a, b) => b - a);
-    if (ks.length) return `<p class="desc">${esc(sp.ft[sp.fv[ks[0]]])}</p>`;
-    const kt = Object.keys(sp.tv || {}).map(Number).sort((a, b) => b - a);
-    return kt.length ? `<p class="desc">${esc(sp.tt[sp.tv[kt[0]]])}</p>${TR_NOTE}` : '';
+// v32: Pokédex texts — Poképédia first (per version, expansions → base game, per form), then PokéAPI official French, then machine translation (marked)
+const PP_CREDIT = '<p class="note ppcredit">Descriptions : <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (licence <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 FR</a>).</p>';
+function flavorHTML(sp, gm, f) {
+  const fp = f && f.pv, pt = sp.pt || [];
+  // → [text, source] with source 'pp' (Poképédia) | 'api' (PokéAPI, French) | 'tr' (machine translation)
+  const ftx = id => fp && fp[id] !== undefined ? [pt[fp[id]], 'pp'] : sp.pv && sp.pv[id] !== undefined ? [pt[sp.pv[id]], 'pp']
+    : sp.fv[id] !== undefined ? [sp.ft[sp.fv[id]], 'api'] : sp.tv && sp.tv[id] !== undefined ? [sp.tt[sp.tv[id]], 'tr'] : null;
+  if (!gm) { // latest available entry
+    const ks = [...new Set([...Object.keys(fp || {}), ...Object.keys(sp.pv || {}), ...Object.keys(sp.fv), ...Object.keys(sp.tv || {})])].map(Number).sort((a, b) => b - a);
+    for (const id of ks) { const t = ftx(id); if (t) return `<p class="desc">${esc(t[0])}</p>${t[1] === 'tr' ? TR_NOTE : t[1] === 'pp' ? PP_CREDIT : ''}`; }
+    return '';
   }
-  const byText = new Map(); let anyTr = false;
-  for (const [id, name] of gm.ver) { const t = ftx(id); if (!t) continue; const k = t[0]; if (!byText.has(k)) byText.set(k, { names: [], tr: t[1] }); byText.get(k).names.push(name); anyTr ||= t[1]; }
-  if (!byText.size) return '<p class="note">Pas d’entrée de Pokédex disponible pour ce jeu dans PokéAPI.</p>';
-  return [...byText].map(([t, o]) => `<p class="desc"><small>${esc(o.names.join(' / '))}${o.tr ? ' · traduction automatique' : ''}</small><br>${esc(t)}</p>`).join('') + (anyTr ? TR_NOTE : '');
+  const byText = new Map(); let anyTr = false, anyPp = false;
+  for (const [id, name] of gm.ver) { const t = ftx(id); if (!t) continue; const k = t[0]; if (!byText.has(k)) byText.set(k, { names: [], src: t[1] }); byText.get(k).names.push(name); anyTr ||= t[1] === 'tr'; anyPp ||= t[1] === 'pp'; }
+  if (!byText.size) return `<p class="note">${(sp.pna || []).some(v => gm.ver.some(x => x[0] === v)) ? 'Pas de description du Pokédex dans ce jeu (absent du Pokédex National du jeu, selon Poképédia).' : 'Pas d’entrée de Pokédex disponible pour ce jeu (Poképédia, PokéAPI).'}</p>`;
+  return [...byText].map(([t, o]) => `<p class="desc"><small>${esc(o.names.join(' / '))}${o.src === 'tr' ? ' · traduction automatique' : o.src === 'api' ? ' · PokéAPI' : ''}</small><br>${esc(t)}</p>`).join('') + (anyTr ? TR_NOTE : '') + (anyPp ? PP_CREDIT : '');
+}
+// v32: étymologie + distributions événementielles (Poképédia), overview only
+function etyHTML(sp) {
+  if (!sp.ety && !sp.evd) return '';
+  const main = (sp.ety || []).filter(r => /^(Français|Anglais|Japonais)/.test(r[0])), rest = (sp.ety || []).filter(r => !main.includes(r));
+  const row = r => `<li><b>${esc(r[0])}</b> : ${esc(r[1])}</li>`;
+  const ety = sp.ety ? `<section class="box etybox"><h2>Origine du nom</h2><ul class="plain ety">${(main.length ? main : sp.ety.slice(0, 3)).map(row).join('')}</ul>${rest.length && main.length ? `<details class="etymore"><summary>Autres langues (${rest.length})</summary><ul class="plain ety">${rest.map(row).join('')}</ul></details>` : ''}<p class="note">Source : Poképédia (CC BY-NC-SA 3.0 FR).</p></section>` : '';
+  const ev = sp.evd ? `<section class="box evdbox"><h2>Distributions événementielles <small class="cnt">${sp.evd.length}</small></h2><details class="evd"><summary>Voir les ${sp.evd.length} distribution${sp.evd.length > 1 ? 's' : ''}</summary><ul class="plain evl">${sp.evd.map(e => `<li><span class="yr">${esc(e[0])}</span> ${esc(e[1])}</li>`).join('')}</ul></details><p class="note">Pokémon distribués lors d’événements (souvent terminés). Source : Poképédia.</p></section>` : '';
+  return ety + ev;
 }
 function abilityList(f, gm, ref) { // [[abilityId, hidden]] of the form in this game ([] when abilities do not exist)
   const gen = gm ? gm.g : 9;
@@ -1229,7 +1254,27 @@ function movesHTML(f, sp, gm, shared) {
 }
 
 /* encounters */
+// v32: detailed locations of the Switch-era games from Poképédia (f.pl[game] = [[place, details]]); non-regional forms use the base form's list
+function ppLocs(f, sp, gm) {
+  if (f.pl) return f.pl[gm.id] || null;
+  const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k];
+  if (e && e.c === 'reg') return null;
+  const b = sp.f[f.enOf || String(sp.id)]; return b && b.pl ? b.pl[gm.id] || null : null;
+}
+function ppLocHTML(rows, gm) {
+  const by = new Map(); for (const [pl, d] of rows) { if (!by.has(pl)) by.set(pl, []); if (d) by.get(pl).push(d); }
+  const KEY = /^(Donné|Échange|Œuf|Rencontre)/;
+  const gifts = [...by].filter(([, ds]) => ds.some(d => KEY.test(d)));
+  const list = [...by].sort((a, b) => a[0].localeCompare(b[0], 'fr', { numeric: true })).map(([pl, ds]) => `<div class="enc"><b>${esc(pl)}</b>${ds.map(d => `<div class="ms${/^(Donné|Échange)/.test(d) ? ' gift' : ''}">${esc(d)}</div>`).join('')}</div>`).join('');
+  const gl = gifts.length ? `<p class="encsum">${gifts.map(([pl, ds]) => { const d = ds.find(x => KEY.test(x)); const t = /^Donné/.test(d) ? '🎁 Cadeau' : /^Échange/.test(d) ? '🔁 Échange' : /^Œuf/.test(d) ? '🥚 Œuf' : '⭐ Rencontre fixe'; return `<span class="encchip">${t} : ${esc(pl)}</span>`; }).join(' ')}</p>` : '';
+  return gl + `<details${by.size <= 8 ? ' open' : ''}><summary>${by.size} lieu${by.size > 1 ? 'x' : ''}</summary>${list}</details>` +
+    '<p class="note">Lieux, niveaux et taux : <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), données des pages de lieux. Cadeaux (« Donné ») et échanges in-game inclus.</p>';
+}
 function encHTML(f, sp, gm, shared) {
+  const pp = ppLocs(f, sp, gm);
+  if (pp && pp.length) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2>${ppLocHTML(pp, gm)}</section>`;
+  { const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k], N = f.pln || (e && e.c !== 'reg' ? (sp.f[String(sp.id)] || {}).pln : null) || {}, na = N[gm.id] || N[{ svmask: 'sv', svdisk: 'sv', swisle: 'sw', swcrown: 'sw', zadlc: 'za' }[gm.id]];
+    if (na) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(na)}</p><p class="note">Pas de lieu de capture dans ce jeu ; méthode d’obtention selon <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p></section>`; }
   const src = f.en ? f : (f.enOf && sp.f[f.enOf]) || f;
   const rows = (src.en && src.en[gm.id]) || [];
   let body;
@@ -1318,6 +1363,35 @@ function evoHTML(p, f, mode, gm) {
 
 /* Pokémon GO */
 const frDate = s => s.split('-').reverse().join('/');
+// v32: GO extras — max CP at level 40 (CPM 0.7903), PvP rankings (PvPoke), evolution candy of this form
+const goCp = (d, L) => { const cpm = { 40: 0.7903, 50: 0.8403, 51: 0.8453 }[L]; return Math.max(10, Math.floor((d.a + 15) * Math.sqrt(d.d + 15) * Math.sqrt(d.s + 15) * cpm * cpm / 10)); };
+function pvpHTML(p, go) {
+  const P = go.pvp; if (!P) return '';
+  const r = P.r[p.k] || (p.c === 'sex' ? P.r[String(p.id)] : null);
+  const L = [['g', 'Ligue Super', '≤ 1 500 PC'], ['u', 'Ligue Hyper', '≤ 2 500 PC'], ['m', 'Ligue Master', 'sans limite']];
+  const cell = (i, lab, cap, k) => { const v = r && r[i], vs = r && r[i + 3]; return `<div class="pvpc${v && v <= 100 ? ' top' : ''}"><b>${v ? '#' + v : '—'}</b><span>${lab}<small>${cap}</small></span>${vs ? `<small class="pvsh">Obscur : #${vs}</small>` : ''}</div>`; };
+  return `<section class="box pvpbox"><h2>Combats GO (PvP) <small class="cnt">classement</small></h2>
+    <div class="kv kv3 pvp">${L.map(([k, lab, cap], i) => cell(i, lab, cap, k)).join('')}</div>
+    <p class="note">${r ? `Rang dans le classement général <a href="https://pvpoke.com/rankings/" target="_blank" rel="noopener">PvPoke</a> de chaque ligue (sur ${P.n.g} / ${P.n.u} / ${P.n.m} Pokémon classés ; en vert : top 100). « — » : pas classé dans cette ligue.` : 'Pas classé par PvPoke (pas assez performant, pas encore sorti ou forme absente du classement).'} Mis à jour le ${frDate(P.date)}.</p></section>`;
+}
+// v32: Ditto (Métamorph) — Pokémon it can be disguised as in GO (build/go-ditto.json, cited sources)
+function ditHTML(d) {
+  const D = d && d.dit; if (!D) return '';
+  const chip = id => { const q = BY_KEY[String(id)]; return q ? `<a class="fchip" href="#/p/${q.k}" title="${esc(q.n)}"><img src="img/${q.k}.webp" alt="" loading="lazy" width="36" height="36"><span>${esc(q.n)}</span></a>` : ''; };
+  const grp = (l, ids, cls) => `<p class="ditl${cls}">${esc(l)} <small class="mute">· ${ids.length}</small></p><div class="fchips ditc">${ids.map(chip).join('')}</div>`;
+  return `<section class="box ditbox"><h2>Déguisements <small class="cnt">${D.cur.ids.length} actuels</small></h2>
+    <p class="note">Dans Pokémon GO, Métamorph n’apparaît jamais sous sa propre forme : il se cache sous l’apparence d’une de ces espèces sauvages (révélé à la capture).</p>
+    <h3 class="dith">Actuels</h3>${grp(D.cur.l, D.cur.ids, '')}
+    <details class="ditpast"><summary>Anciens déguisements (${D.past.length} périodes)</summary>${D.past.map(x => grp(x.l, x.ids, ' old')).join('')}</details>
+    <p class="note">Sources : ${D.src.map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(' · ')}. Liste vérifiée le ${frDate(D.chk)} ; les événements peuvent la changer temporairement.</p></section>`;
+}
+function goCandyHTML(p) {
+  const out = evoGraph().filter(e => e.f === p.k && e.o && BY_KEY[e.t]);
+  if (!out.length) return '';
+  const grp = new Map(); // same cost → one line (Évoli: 25 bonbons → 8 évolutions)
+  for (const e of out) { const o = e.o, c = `${o.c !== undefined ? o.c + ' bonbons' : '?'}${o.i ? ' + ' + (o.ic ? o.ic + ' × ' + o.i : o.i) : ''}`; if (!grp.has(c)) grp.set(c, { names: [], nt: false }); grp.get(c).names.push(BY_KEY[e.t].n); grp.get(c).nt ||= !!o.nt; }
+  return `<li>Bonbons d’évolution : ${[...grp].map(([c, g]) => `<b>${esc(c)}</b> → ${esc(g.names.join(', '))}${g.nt ? ' <span class="mute">(gratuit après un échange)</span>' : ''}`).join(' · ')}</li>`;
+}
 function goHTML(p, f, sp, shared, go) {
   const d = f.go;
   const moveRowGo = (key, fast, elite) => {
@@ -1338,24 +1412,28 @@ function goHTML(p, f, sp, shared, go) {
     <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}</section>` : `
     <section class="box gostats"><h2>Statistiques GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2>
       <div class="kv kv3"><div><b>${d.a}</b><span>Attaque</span></div><div><b>${d.d}</b><span>Défense</span></div><div><b>${d.s}</b><span>Endurance</span></div></div>
-      <div class="kv"><div><b>${fmt(d.m50)}</b><span>PC max niv. 50 (IV 15/15/15)</span></div><div><b>${fmt(d.m51)}</b><span>PC max niv. 51 (meilleur compagnon)</span></div></div>
-      <p class="note">PC max = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50).</p></section>
+      <div class="kv kv3 cpmax"><div><b>${fmt(goCp(d, 40))}</b><span>PC max niv. 40</span></div><div><b>${fmt(d.m50)}</b><span>PC max niv. 50</span></div><div><b>${fmt(d.m51)}</b><span>niv. 51 (meilleur compagnon)</span></div></div>
+      <p class="note">PC max avec IV 15/15/15 = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Niveau 40 : maximum avant les Bonbons L.</p></section>
+    ${pvpHTML(p, go)}
     <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}
       <p class="note">Multiplicateurs de Pokémon GO (×1,6 par faiblesse, ×0,625 par résistance ; une immunité des jeux principaux compte comme une double résistance).</p></section>`,
     moves: `
     <section class="box"><h2>Attaques rapides</h2><div class="mvs">${fm || '<p class="note">—</p>'}</div></section>
     <section class="box"><h2>Attaques chargées</h2><div class="mvs">${cm || '<p class="note">—</p>'}</div>${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite). DPS = puissance ÷ durée.</p></section>`,
     info: `
-    <section class="box goinfo"><h2>Pokémon GO : bonbons, compagnon, œufs</h2>
+    <section class="box goinfo"><h2>Pokémon GO : bonbons, compagnon, œufs, régions</h2>
       <ul class="plain gol">
         <li>Statut : <b>${goRel(d) ? 'disponible dans Pokémon GO' : d.rf ? `annoncé pour le ${frDate(d.rf)}` : 'pas encore sorti'}</b>${p.c === 'gmax' ? ' · Gigamax : capturé en Combat Max, ne peut pas être envoyé vers HOME' : goTemp(p) ? ` · ${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire (énergie), enregistrée au Pokédex GO à la première transformation` : ''}</li>
         <li>Shiny : <b>${sh}</b></li>
+        ${d.rg ? `<li class="rgl">🌍 Exclusivité régionale : <b>${esc(d.rg)}</b>${d.rgm ? ' <span class="mute">(migrateur : échange parfois sa zone avec son pendant)</span>' : ''}</li>` : ''}
+        ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
+        ${goCandyHTML(p)}
         ${d.bd ? `<li>Distance compagnon : <b>${dec(d.bd)} km</b> par bonbon</li>` : ''}
         ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
         ${d.th ? `<li>Seconde attaque chargée : <b>${fmt(d.th[0])}</b> poussières d’étoiles + <b>${d.th[1]}</b> bonbons</li>` : ''}
         ${!d.bd && !d.eg && !d.th ? '<li>Pas de données de compagnon / œufs pour cette forme.</li>' : ''}
       </ul>
-      <p class="note">Bonbons d’évolution : voir « Évolutions » ci-dessus. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>`
+      <p class="note">Détail des conditions d’évolution : voir « Évolutions » ci-dessus. Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>${ditHTML(d)}`
   };
 }
 
@@ -1377,7 +1455,7 @@ function renderDetail() {
   let body = '';
   if (isGo && f.go && DET.go) {
     const g = goHTML(p, f, sp, shared, DET.go);
-    body = flavorHTML(sp, null) + g.stats + g.moves +
+    body = flavorHTML(sp, null, f) + g.stats + g.moves +
       `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` +
       g.info;
   } else {
@@ -1387,7 +1465,7 @@ function renderDetail() {
     const mode2 = 'main';
     const abE = abilityEff(f, gm, shared.ref, types, chart); // v31
     const goBox = goOk ? `<section class="box gobox"><h2>Pokémon GO</h2><p class="gol1">Disponible dans Pokémon GO${f.go.m50 ? ` · PC max niv. 50 : <b>${fmt(f.go.m50)}</b>` : ''}${f.go.bd ? ` · compagnon : <b>${dec(f.go.bd)} km</b>` : ''}</p><p><a href="#" class="golink" data-game="go">Voir les données Pokémon GO →</a></p></section>` : '';
-    body = `${flavorHTML(sp, gm)}
+    body = `${flavorHTML(sp, gm, f)}
     ${regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : ''}
     <section class="box"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div>
 </section>
@@ -1404,6 +1482,7 @@ function renderDetail() {
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>
     ${gm ? heldHTML(f, gm, shared.ref) + encHTML(f, sp, gm, shared) : mode === 'home' ? '' : homeSrcHTML(p, f)}
     ${mode !== 'all' ? '' : availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g)))}
+    ${mode === 'all' ? etyHTML(sp) : ''}
     ${goBox}`;
   }
   $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
@@ -1423,7 +1502,7 @@ function renderDetail() {
     ${baseNoteHTML(p)}
     ${formSwitcher(p, gm)}
     ${body}
-    <p class="note disclaimer">Les données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
+    <p class="note disclaimer">Les données proviennent de PokéAPI, de Poképédia (CC BY-NC-SA 3.0 FR) et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
   setBarH(); initSheetGameMenu(); if (spriteMode !== 'off') setSprite(spriteMode, true);
 }
@@ -1585,7 +1664,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(p => `img/${p.k}.webp`), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) store.set('packDone2', true);
