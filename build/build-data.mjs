@@ -491,4 +491,5 @@ sizes.loc = write('loc.json', { a: encCache.loc, m: encCache.m, c: encCache.c })
 sizes.tm = write('tm.json', tmOut);
 sizes.sp = totalSp;
 await import('./apply-go-overrides.mjs'); // v28: manual GO overrides (build/go-overrides.json), never overwritten by a rebuild
+await import('./add-frlgsw.mjs'); // v31: Rouge Feu / Vert Feuille (Switch), separate HOME-compatible game (idempotent)
 console.log('entries', coreEntries.length, 'edges', evoOut.length, 'sizes (bytes, raw):', sizes);

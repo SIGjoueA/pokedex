@@ -81,7 +81,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   // game options order
   const opts = await p.$$eval('#game option', o => o.map(x => x.textContent));
   console.log(opts.join(' | '));
-  ok(opts[1] === 'Pokémon HOME' && opts[2] === 'Pokémon GO' && /Z-A/.test(opts[3]) && /Rouge/.test(opts[opts.length - 1]), tag + ' game option order');
+  ok(opts[1] === 'Pokémon HOME' && opts[2] === 'Pokémon GO' && /Rouge Feu \/ Vert Feuille \(Switch\)/.test(opts[3]) && /Z-A/.test(opts[4]) && /Rouge/.test(opts[opts.length - 1]), tag + ' game option order');
   // layout: game select left of gen
   const pos = await p.evaluate(() => { const a = document.querySelector('#gamebtn').getBoundingClientRect(), g = document.querySelector('#genbtn').getBoundingClientRect(); return [a.left < g.left, a.top === g.top, document.documentElement.scrollWidth <= innerWidth]; });
   ok(pos[0] && pos[1] && pos[2], tag + ' game select left of gen, no h-overflow ' + pos);
@@ -543,10 +543,10 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     await go('#/p/175'); await sleep(700);
     ok(/bébé/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Togepi: baby egg note');
     await go('#/'); await sel('bw'); await go('#/p/25'); await sleep(900);
-    const hl = await p.evaluate(() => { const s = document.querySelector('.held'); const hs = [...document.querySelectorAll('.detail > section h2')].map(h => h.childNodes[0].textContent.trim()); return { t: s && s.textContent.replace(/\s+/g, ' '), i: hs.indexOf('Objets tenus'), e: hs.indexOf('Où le trouver'), ab: hs.indexOf('Talents') }; });
+    const hl = await p.evaluate(() => { const s = document.querySelector('.held'); const hs = [...document.querySelectorAll('.detail > section h2')].map(h => h.childNodes[0].textContent.trim()); return { t: s && s.textContent.replace(/ⓘ/g, '').replace(/\s+/g, ' '), i: hs.indexOf('Objets tenus'), e: hs.indexOf('Où le trouver'), ab: hs.indexOf('Talents') }; });
     ok(hl.t && /Baie Oran 50 %/.test(hl.t) && /Balle Lumière 1 %/.test(hl.t) && hl.e === hl.i + 1 && hl.i > hl.ab + 1, tag + ' v29 Pikachu N / B: wild held items with %, just before the encounters ' + JSON.stringify(hl).slice(0, 220));
     await go('#/'); await sel('rs'); await go('#/p/25'); await sleep(900);
-    ok(/Balle Lumière 5 %/.test(await p.$eval('.held', s => s.textContent)), tag + ' v29 Pikachu Rubis / Saphir: Balle Lumière 5 %');
+    ok(/Balle Lumière 5 %/.test(await p.$eval('.held', s => s.textContent.replace(/ⓘ/g, '').replace(/\s+/g, ' '))), tag + ' v29 Pikachu Rubis / Saphir: Balle Lumière 5 %');
     await go('#/'); await sel('');
   }
   { // ---- v28: GO Megas / Primals / Gigamax
@@ -624,7 +624,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     o = await sheetOpts('150'); let vs = o.map(x => x.v);
     ok(vs.indexOf('zamega') >= 0 && vs.indexOf('zamega') === vs.indexOf('zadlc') - 1 && !n('zamega') && o.find(x => x.v === 'za').n === '#232', tag + ' v30 Mewtwo: Méga-Dex just above Méga-Dimension (no own number), Z-A #232 ' + vs.slice(0, 7).join(' '));
     o = await sheetOpts('145'); vs = o.map(x => x.v); const sh = o.find(x => x.v === 'svhors');
-    ok(sh && sh.n === 'Hors dex' && !/hors dex/i.test(sh.l) && vs.indexOf('svhors') === vs.indexOf('go') + 1 && vs.indexOf('svhors') < vs.indexOf('bdsp') && !vs.includes('sv') && listOrd.indexOf('svhors') === listOrd.indexOf('svdisk') - 1, tag + ' v30 Électhor: « Écarlate / Violet (+ extensions) » Hors dex in the place of « Jeux » (above Le Disque Indigo, not at the end) ' + vs.slice(0, 8).join(' '));
+    ok(sh && sh.n === 'Hors dex' && !/hors dex/i.test(sh.l) && vs.indexOf('svhors') === vs.indexOf('frlgsw') + 1 && vs.indexOf('frlgsw') === vs.indexOf('go') + 1 && vs.indexOf('svhors') < vs.indexOf('bdsp') && !vs.includes('sv') && listOrd.indexOf('svhors') === listOrd.indexOf('svdisk') - 1, tag + ' v30 Électhor: « Écarlate / Violet (+ extensions) » Hors dex in the place of « Jeux » (above Le Disque Indigo, not at the end) ' + vs.slice(0, 8).join(' '));
     ok(!o.slice(-3).some(x => x.n === 'Hors dex' && /hors|mega/.test(x.v)), tag + ' v30 Hors dex / Méga-Dex entries are not at the end');
     await p.select('#dgame', 'svhors'); await sleep(500);
     ok(await p.evaluate(() => state.dgame === 'sv' && document.querySelector('#dgame').value === 'svhors' && /Hors dex/.test(document.querySelector('#dgamebtn').textContent)), tag + ' v30 choosing the Hors dex entry opens the Écarlate / Violet sheet, button shows « Hors dex »');
@@ -639,6 +639,85 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     await p.click('#dgamebtn'); await sleep(250); await p.click('#dgamelist [data-v="xy"]'); await sleep(500);
     ok(await p.evaluate(() => state.dgame === 'xy' && /#085/.test(document.querySelector('#dgamebtn').textContent)), tag + ' v30 switching game from the sticky selector after scrolling');
     await p.screenshot({ path: SHOTS + `v30-sticky-${tag}.png` });
+    await go('#/'); await sel('');
+  }
+  { // ---- v31: shiny block, ability-aware weaknesses, base-form note, alternative sprites, description popups, Rouge Feu / Vert Feuille (Switch)
+    const open = async (k, g = 'all') => { await go('#/'); await sel(''); await go('#/p/' + k); await sleep(600); await p.select('#dgame', g); await sleep(g === 'go' ? 900 : 500); };
+    const h2s = () => p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
+    await open('6', 'svdisk');
+    let hs = await h2s(), sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return s && { st: s.querySelector('.shst').className, t: s.innerText.replace(/\s+/g, ' '), hd: [...s.querySelectorAll('.shm .hd')].map(x => x.textContent), best: [...s.querySelectorAll('.shm .best')].map(x => x.textContent) }; });
+    ok(sb && hs.indexOf('✨ Shiny') === hs.indexOf('Reproduction & capture') + 1 && hs.indexOf('Faiblesses & résistances') === hs.indexOf('✨ Shiny') + 1, tag + ' v31 shiny block between « Reproduction & capture » and « Faiblesses » ' + hs.slice(0, 8).join(' / '));
+    ok(/\bok\b/.test(sb.st) && /Peut être shiny/.test(sb.t) && sb.hd.join() === 'Méthode,Sans Charme,Avec Charme' && sb.best.includes('1/683') && sb.best.includes('1/512') && !/Raids Téracristal/.test(sb.t) && /Charme Chroma Compléter le Pokédex de Paldea/.test(sb.t) && /Sources : Bulbapedia/.test(sb.t), tag + ' v31 Dracaufeu ÉV Disque Indigo: ✔, Sans / Avec Charme, best in green, raids hidden, Charme Chroma, sources ' + JSON.stringify(sb).slice(0, 260));
+    await open('1007', 'sv'); sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return { st: s.querySelector('.shst').className, t: s.innerText.replace(/\s+/g, ' '), det: !!s.querySelector('details.shd:not([open])') }; });
+    ok(/lock/.test(sb.st) && /SHINY LOCK/.test(sb.t) && /Koraidon ne peut pas être shiny/.test(sb.t) && /Pepper/.test(sb.t) && sb.det, tag + ' v31 Koraidon Écarlate / Violet: SHINY LOCK, encounter named, methods folded ' + sb.t.slice(0, 160));
+    await open('25', 'lgpe'); sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return { st: s.querySelector('.shst').className, t: s.innerText.replace(/\s+/g, ' ') }; });
+    ok(/part/.test(sb.st) && /Pikachu \(partenaire\)/.test(sb.t) && /Combo Capture/.test(sb.t) && /Vérifié le 11\/10\/2026/.test(sb.t), tag + ' v31 Pikachu Let’s Go: partial lock names the partner, Let’s Go entries verified ' + sb.t.slice(0, 160));
+    await open('6', 'hgss'); sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return { one: !!s.querySelector('.shm.one'), t: s.innerText.replace(/\s+/g, ' ') }; });
+    ok(sb.one && /n’existe pas dans ce jeu/.test(sb.t) && /1\/8192/.test(sb.t), tag + ' v31 HG/SS: one column (no Charme Chroma), 1/8192');
+    await open('6', 'rb'); ok(/Pas de Pokémon shiny/.test(await p.$eval('.shinybox', s => s.textContent)), tag + ' v31 Rouge / Bleu: no shinies yet');
+    await open('6'); const ov = await p.$('.shinybox'); await open('6', 'go'); const gsb = await p.$('.shinybox');
+    ok(!ov && !gsb && /Shiny : /.test(await p.$eval('.goinfo', s => s.textContent)), tag + ' v31 no shiny block on the overview / GO (GO keeps its single « Shiny : » line)');
+    await open('380', 'zadlc'); ok(/\bok\b/.test(await p.$eval('.shinybox .shst', s => s.className)), tag + ' v31 Méga-Dimension: Latias shiny-able (verified list)');
+    // weaknesses + abilities
+    await open('479', 'dp'); let ab = await p.evaluate(() => ({ imm: [...document.querySelectorAll('.eff')].find(e => /Immunisé/.test(e.textContent))?.innerText.replace(/\s+/g, ' '), abx: [...document.querySelectorAll('.badge.abx')].map(b => b.dataset.type), n: document.querySelector('.abnote')?.innerText }));
+    ok(/Sol/.test(ab.imm || '') && ab.abx.includes('ground') && /Lévitation/.test(ab.n) && /seul talent/.test(ab.n), tag + ' v31 Motisma D/P: Lévitation (only ability) → Sol in Immunisé, marked * ' + JSON.stringify(ab));
+    await open('186', 'svmask'); ab = await p.evaluate(() => ({ abx: [...document.querySelectorAll('.badge.abx')].map(b => b.dataset.type), n: document.querySelector('.abnote')?.innerText, res: [...document.querySelectorAll('.eff')].find(e => /^Résiste ×/.test(e.innerText.trim()))?.innerText }));
+    ok(ab.abx.includes('water') && /Absorb/.test(ab.n) && /si le Pokémon a ce talent/.test(ab.n) && /Eau/.test(ab.res || ''), tag + ' v31 Tarpaud ÉV Le Masque Turquoise: Absorbe-Eau (one of its abilities) → Eau marked *, table unchanged ' + JSON.stringify(ab).slice(0, 200));
+    await open('479', 'go'); ok(!(await p.$('.abnote')), tag + ' v31 no ability caveat on the GO sheet');
+    // base-form note
+    const bn = async k => { await open(k); return p.evaluate(() => document.querySelector('.basenote')?.innerText.replace(/\s+/g, ' ') || ''); };
+    const n1 = await bn('52-galar'), n2 = await bn('6-mega-x'), n3 = await bn('382-primal'), n4 = await bn('6');
+    ok(/^Forme de Galar de Miaouss/.test(n1) && /Méga-Évolution de Dracaufeu, nécessite la Dracaufite X/.test(n2) && /Primo-Résurgence de Kyogre.*Orbe Bleu/.test(n3) && !n4, tag + ' v31 base-form notes ' + [n1, n2, n3].join(' | ').slice(0, 260));
+    await open('26-alola'); ok(await p.$eval('.basenote a', a => a.getAttribute('href')) === '#/p/26', tag + ' v31 base-form note links to the base sheet');
+    // sprites on demand
+    const ext = []; const onReq = r => { if (/raw\.githubusercontent\.com/.test(r.url())) ext.push(r.url()); }; p.on('request', onReq);
+    await open('6'); const sw0 = await p.evaluate(() => ({ b: [...document.querySelectorAll('.sprsw button')].map(x => x.textContent + ':' + x.getAttribute('aria-pressed')).join(), src: document.querySelector('#heroimg').getAttribute('src') }));
+    ok(sw0.b === 'Officiel:true,HOME:false,Animé:false' && sw0.src === 'img/6.webp' && ext.length === 0, tag + ' v31 sprites: Officiel / HOME / Animé, official art by default, nothing fetched before a tap ' + JSON.stringify(sw0));
+    await p.click('[data-spr="home"]'); await p.waitForFunction(() => document.querySelector('#heroimg').complete, { timeout: 10000 }).catch(() => {}); await sleep(400);
+    const sw1 = await p.evaluate(() => ({ src: document.querySelector('#heroimg').src, w: document.querySelector('#heroimg').naturalWidth, pr: document.querySelector('[data-spr="home"]').getAttribute('aria-pressed') }));
+    ok(/other\/home\/6\.png$/.test(sw1.src) && sw1.pr === 'true' && ext.length >= 1, tag + ' v31 HOME sprite fetched on tap ' + JSON.stringify(sw1) + ' ' + ext.length);
+    await p.click('[data-spr="anim"]'); await sleep(1500); ok(/showdown\/6\.gif$/.test(await p.$eval('#heroimg', i => i.src)) && await p.$eval('#heroimg', i => i.classList.contains('pix')), tag + ' v31 animated sprite (pixelated)');
+    ok(await p.evaluate(async () => { for (const k of await caches.keys()) for (const r of await (await caches.open(k)).keys()) if (/githubusercontent/.test(r.url)) return false; return true; }), tag + ' v31 alternative sprites never stored by the service worker');
+    await open('25'); await p.setOfflineMode(true); await p.click('[data-spr="home"]'); await sleep(500);
+    ok(await p.evaluate(() => document.querySelector('#heroimg').getAttribute('src') === 'img/25.webp' && document.querySelector('[data-spr="off"]').getAttribute('aria-pressed') === 'true' && /Hors-ligne/.test(document.querySelector('#toast')?.textContent || '')), tag + ' v31 offline: stays on the official art with a message');
+    await p.setOfflineMode(false); p.off('request', onReq);
+    // popups
+    await open('6', 'xy');
+    await p.evaluate(() => { const b = [...document.querySelectorAll('.mv .dsc')].find(x => /Lance-Flammes/.test(x.textContent)); b.scrollIntoView({ block: 'center' }); b.click(); }); await sleep(700);
+    let pp = await p.evaluate(() => { const o = document.querySelector('#dpop'); if (!o) return null; const r = o.getBoundingClientRect(), a = document.querySelector('#actbar').getBoundingClientRect(), fixed = getComputedStyle(document.querySelector('#actbar')).position === 'fixed'; return { t: o.innerText.replace(/\s+/g, ' '), inside: r.left >= 0 && r.right <= innerWidth + 0.5, noBar: !fixed || r.bottom <= a.top + 1 }; });
+    ok(pp && /Lance-Flammes/.test(pp.t) && /torrent de flammes/.test(pp.t) && /Puissance 90/.test(pp.t) && pp.inside && pp.noBar, tag + ' v31 move popup: French text + power, inside the screen, not under the bar ' + JSON.stringify(pp).slice(0, 200));
+    { const mv = await p.evaluate(() => { const M = DET.shared.moves, f = (id, g) => { const m = moveInfo(id, GAME_BY[g], M); return [m.power, m.acc, m.type].join('/'); }; return [f(53, 'bw'), f(53, 'xy'), f(33, 'hgss'), f(33, 'bw'), f(33, 'xy'), f(33, 'sm'), f(59, 'rb'), f(59, 'gs')].join(' '); });
+      ok(mv === '95/100/fire 90/100/fire 35/95/normal 50/100/normal 50/100/normal 40/100/normal 120/90/ice 120/70/ice', tag + ' v31 move stats per game (PokéAPI past values = values before that version group): ' + mv); }
+    await p.keyboard.press('Escape'); await sleep(150); ok(!(await p.$('#dpop')), tag + ' v31 Escape closes the popup');
+    await p.evaluate(() => document.querySelector('.ab .dsc').click()); await sleep(300);
+    ok(/Brasier/.test(await p.$eval('#dpop', o => o.textContent)) && /Augmente la puissance/.test(await p.$eval('#dpop', o => o.textContent)), tag + ' v31 ability popup (Brasier)');
+    await p.evaluate(() => document.body.click()); await sleep(150); ok(!(await p.$('#dpop')), tag + ' v31 tapping elsewhere closes the popup');
+    await open('25', 'bw'); await p.evaluate(() => document.querySelector('.held .dsc').click()); await sleep(600);
+    ok(/Baie Oran/.test(await p.$eval('#dpop', o => o.textContent)) && /restaure 10 PV/.test(await p.$eval('#dpop', o => o.textContent)), tag + ' v31 held item popup (Baie Oran)');
+    // shiny methods table fits the phone width in every game (ORAS Navi-Dex / hordes qualifiers move to the note)
+    { await go('#/p/3'); await sleep(500); const vw = await p.evaluate(() => innerWidth), bad = [];
+      for (const g of await p.evaluate(() => GAMES.map(x => x.id).filter(x => x !== 'go'))) { if (!await p.$(`#dgame option[value="${g}"]`)) continue; await p.select('#dgame', g); await sleep(350); const w = await p.evaluate(() => [innerWidth, document.documentElement.scrollWidth]); if (w[0] !== vw || w[1] > vw) bad.push(g + ':' + w); }
+      await p.select('#dgame', 'oras'); await sleep(400);
+      const nd = await p.evaluate(() => [...document.querySelectorAll('.shm .v')].map(v => v.textContent));
+      await p.select('#dgame', 'hgss'); await sleep(400); const nh = await p.evaluate(() => [...document.querySelectorAll('.shm .v')].map(v => v.textContent)); nd.push(...nh);
+      ok(!bad.length && nd.includes('≈1/1000') && nd.includes('n.c.') && nd.includes('≈1/819') && nh.includes('garanti'), tag + ' v31 shiny table: no horizontal overflow in any game, compact cells ' + bad.join() + ' ' + nd.join('|')); }
+    // « Présent dans » : game colour icon (same dot as the Jeux menus), order unchanged
+    await go('#/'); await sel(''); await go('#/p/6'); await sleep(500);
+    const av = await p.evaluate(() => { const li = [...document.querySelectorAll('.avl li')], ord = GAMES.map(g => g.id); const ids = li.map(l => l.querySelector('a').dataset.game);
+      return { n: li.length, dots: li.filter(l => { const d = l.querySelector('a > .gdot:first-child'), c = GAME_COLORS[l.querySelector('a').dataset.game]; return d && !d.classList.contains('none') && c && d.style.getPropertyValue('--c1') === c[0]; }).length,
+        sorted: [...document.querySelectorAll('ul.avl')].every(u => { const x = [...u.querySelectorAll('a')].map(a => ord.indexOf(a.dataset.game)); return x.every((v, i) => i === 0 || x[i - 1] < v); }), first: ids[0], wrapOk: li.every(l => { const d = l.querySelector('.gdot').getBoundingClientRect(), t = l.querySelector('a > span:not(.gdot)').getClientRects()[0]; return d.right <= t.left + 1 && d.top >= l.getBoundingClientRect().top; }), ow: document.documentElement.scrollWidth <= innerWidth }; });
+    ok(av.n > 10 && av.dots === av.n && av.sorted && av.first === 'frlgsw' && av.wrapOk && av.ow, tag + ' v31 Présent dans: game icon (menu colours) next to each name, order unchanged, no overflow ' + JSON.stringify(av));
+    // Rouge Feu / Vert Feuille (Switch)
+    await go('#/'); await sel('frlgsw'); await sleep(300);
+    ok(/^151 Pokémon/.test(await count()) && /0 \/ 151/.test(await count()), tag + ' v31 RF/VF Switch: Kanto dex, 151, starts empty ' + (await count()).slice(0, 90));
+    const fr = await p.evaluate(() => ({ sw: SWITCH_IDS.has('frlgsw'), h: GAME_BY.frlgsw.h, gba: GAME_BY.frlg.h || null, om: originOf('frlgsw'), gold: isGoldMark('gba'), av1: homeAvail(BY_KEY['1']).includes('gba'), av152: homeAvail(BY_KEY['152']).includes('gba'), base: baseStatus(BY_KEY['1']).sw.includes('frlgsw'), con: CONSOLE_OF.frlgsw, ord: [...document.querySelectorAll('#game option')].map(o => o.value).slice(0, 5).join(' ') }));
+    ok(fr.sw && fr.h === 'direct' && !fr.gba && fr.om === 'gba' && fr.gold && fr.av1 && !fr.av152 && fr.base && fr.con === 'Switch' && fr.ord === ' home go frlgsw zamega', tag + ' v31 RF/VF Switch: current game, HOME direct (GBA mark, gold), GBA original unchanged, first in Switch ' + JSON.stringify(fr));
+    await go('#/p/4'); await sleep(500); await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(200);
+    const mk = await p.evaluate(() => ({ c: CAUGHT_G.has('frlgsw:4'), g: CAUGHT_G.has('frlg:4'), t: HOME_O.has('gba:4') }));
+    ok(mk.c && !mk.g && mk.t, tag + ' v31 RF/VF Switch marks are separate from the GBA game; Transféré = GBA mark ' + JSON.stringify(mk));
+    await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(150);
+    await go('#/'); await sel('frlg'); await go('#/p/4'); await sleep(400);
+    ok(await p.$eval('#actbar .tr', b => b.disabled), tag + ' v31 GBA Rouge Feu / Vert Feuille: still no HOME link (Transféré greyed)');
     await go('#/'); await sel('');
   }
   ok(await p.$eval('#cat option[value="strans"]', o => o.textContent) === '✨ Shiny transférés (HOME)', tag + ' v24 « Shiny transférés (HOME) » filter restored');
@@ -794,7 +873,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
       const celebi = BY_KEY['251'], oldC = homeAvail(celebi).filter(m => ORI[m].old);
       HOME_O.clear(); saveTrack();
       return { oldOnly, all, noOld, gold: g.join(), old: av.filter(m => ORI[m].old).join(), celebiGold: homeGold(celebi).join(), oldC: oldC.join() }; });
-    ok(!r.oldOnly && r.all && r.noOld && r.gold === 'za,paldea,hisui,sinnoh,galar,lgpe,go' && r.old === 'alola,kalos,none,gb', tag + ' v23: only Switch-era marks + GO count for Home gold ' + JSON.stringify(r)); }
+    ok(!r.oldOnly && r.all && r.noOld && r.gold === 'gba,za,paldea,hisui,sinnoh,galar,lgpe,go' && r.old === 'alola,kalos,none,gb', tag + ' v23: only Switch-era marks (incl. GBA mark from RF/VF Switch) + GO count for Home gold ' + JSON.stringify(r)); }
   for (const g of ['rs', 'e', 'frlg']) { await go('#/'); await sel(g); await go('#/p/25'); await sleep(400);
     const st = await p.evaluate(g => { const b = document.querySelector('#actbar .tr'); return { dis: b.disabled, pressed: b.getAttribute('aria-pressed'), om: !!b.querySelector('.om'), mark: originOf(g), h: GAME_BY[g].h || null, txt: document.querySelector('#trackinfo').textContent }; }, g);
     await p.evaluate(() => toggleTransfer(DET.p, false, sheetCtx())); const o = await ls2('home_o');
@@ -813,12 +892,12 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
       return { hidden: sel.classList.contains('vh') && sel.tabIndex === -1, btn: btn.getAttribute('aria-haspopup') === 'listbox' && btn.getAttribute('aria-expanded') === 'false', sameOrder: JSON.stringify(opts) === JSON.stringify(nat),
         seq: seq.join(' '), dotsOk: dots.every(d => /gradient/.test(d)), sv: l.querySelector('.gopt[data-v="sv"] .gdot').getAttribute('style'), svd: l.querySelector('.gopt[data-v="svdisk"] .gdot').getAttribute('style') }; });
     ok(j.hidden && j.btn && j.sameOrder && j.dotsOk && j.sv === j.svd && /#e0383e.*#8b45c5/.test(j.sv), tag + ' v24 Jeux dropdown: hidden native select, same order, coloured dots (Écarlate/Violet split, same for its DLC)');
-    ok(j.seq.startsWith(' home go =Switch zamega zadlc za svhors svdisk svmask sv - la bdsp swhors swcrown swisle sw - lgpe =3DS usum sm - oras xy =DS b2w2 bw - hgss pt dp =Game Boy Advance e frlg rs =Game Boy / Color c gs - y rb'), tag + ' v24 Jeux separators: double per console, simple per generation ' + j.seq); }
+    ok(j.seq.startsWith(' home go =Switch frlgsw - zamega zadlc za svhors svdisk svmask sv - la bdsp swhors swcrown swisle sw - lgpe =3DS usum sm - oras xy =DS b2w2 bw - hgss pt dp =Game Boy Advance e frlg rs =Game Boy / Color c gs - y rb'), tag + ' v24 Jeux separators: double per console, simple per generation ' + j.seq); }
   await p.click('#gamebtn'); await sleep(200);
   ok(await p.evaluate(() => !document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamelist' && document.querySelector('#gamebtn').getAttribute('aria-expanded') === 'true'), tag + ' v24 Jeux dropdown opens, listbox focused');
-  for (const k of ['ArrowDown', 'ArrowDown', 'ArrowDown']) await p.keyboard.press(k);
+  for (const k of ['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown']) await p.keyboard.press(k);
   await p.keyboard.press('Enter'); await sleep(500);
-  ok(await p.$eval('#game', e => e.value) === 'zamega' && await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn' && /Méga-Dex/.test(document.querySelector('#gamebtn').textContent)), tag + ' v24 Jeux keyboard: ↓↓↓ + Entrée → Méga-Dex Z-A, menu closed, focus back on the button');
+  ok(await p.$eval('#game', e => e.value) === 'zamega' && await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn' && /Méga-Dex/.test(document.querySelector('#gamebtn').textContent)), tag + ' v24 Jeux keyboard: ↓↓↓↓ + Entrée (RF/VF Switch now above) → Méga-Dex Z-A, menu closed, focus back on the button');
   await p.click('#gamebtn'); await sleep(150); await p.keyboard.press('Escape'); await sleep(100);
   ok(await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn'), tag + ' v24 Jeux: Échap closes');
   await p.click('#gamebtn'); await sleep(150); await p.click('#gamelist .gopt[data-v="home"]'); await sleep(400);

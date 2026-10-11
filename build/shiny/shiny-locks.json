@@ -1,0 +1,2482 @@
+{
+ "_sources": [
+  "https://www.pokepedia.fr/Shiny_Lock (CC BY-NC-SA 3.0)",
+  "https://bulbapedia.bulbagarden.net/wiki/List_of_unobtainable_Shiny_Pok%C3%A9mon (CC BY-NC-SA 2.5)",
+  "https://rotomlabs.net/article/shiny-rates-for-legends-z-a-mega-dimension-dlc"
+ ],
+ "_extrait_le": "2026-10-11",
+ "jeux": {
+  "rs": {
+   "source_section": "RSE",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que : ** Les Pokémon 10ANNIV ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+     "regle": true
+    }
+   ]
+  },
+  "e": {
+   "source_section": "RSE",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que : ** Les Pokémon 10ANNIV ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+     "regle": true
+    }
+   ]
+  },
+  "frlg": {
+   "source_section": "RSE",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que : ** Les Pokémon 10ANNIV ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+     "regle": true
+    }
+   ]
+  },
+  "dp": {
+   "source_section": "DPP",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres : ** {{Miniature|0251|jeu=DP}} Celebi (HVR2011) ; ** {{Miniature|0491|jeu=DP}} Darkrai (ALAMOS) ; ** {{Miniature|0492|Terrestre|jeu=DP}} Shaymin (Film11) ; ** {{Miniature|0493|jeu=DP}} Arceus (MICHINA) ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+     "regle": true
+    }
+   ]
+  },
+  "pt": {
+   "source_section": "DPP",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres : ** {{Miniature|0251|jeu=DP}} Celebi (HVR2011) ; ** {{Miniature|0491|jeu=DP}} Darkrai (ALAMOS) ; ** {{Miniature|0492|Terrestre|jeu=DP}} Shaymin (Film11) ; ** {{Miniature|0493|jeu=DP}} Arceus (MICHINA) ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu.",
+     "regle": true
+    }
+   ]
+  },
+  "hgss": {
+   "source_section": "HGSS",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres : ** {{Miniature|0151|jeu=DP}} Mew (AUT2010) ; ** {{Miniature|0385|jeu=DP}} Jirachi (ETE2010) ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu ; * {{Miniature|0172|jeu=DP}} Pichu Troizépi : Lié à un événement interne déclenché après la réception d'un Pichu chromatique, ce Pichu ne peut pas être obtenu en chromatique et n'est pas transférable ; * {{Miniature|0213|jeu=DP}} Caratroc d'Irisia : Contrairement à OAC, ce Caratroc ne peut pas être obtenu chromatique sans tricher, car il a une Valeur Interne Personnelle et un ID fixes, de la même manière que les Pokémon reçus en échange interne ; * {{Miniature|0021|jeu=DP}} Piafabec de Doublonville : Ce Piafabec ne peut pas être obtenu chromatique pour la même raison que le Caratroc d'Irisia ; * Les Pokémon provenant du Pokéwalker : Le Pokéwalker ne permet pas de capturer des Pokémon chromatiques, même lors du transfert dans le jeu de base, le Pokémon reste normal.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu ;",
+     "regle": true
+    },
+    {
+     "id": 172,
+     "nom": "Pichu",
+     "obtention": "Lié à un événement interne déclenché après la réception d'un Pichu chromatique, ce Pichu ne peut pas être obtenu en chromatique et n'est pas transférable ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 213,
+     "nom": "Caratroc",
+     "obtention": "Contrairement à OAC, ce Caratroc ne peut pas être obtenu chromatique sans tricher, car il a une Valeur Interne Personnelle et un ID fixes, de la même manière que les Pokémon reçus en échange interne ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 21,
+     "nom": "Piafabec",
+     "obtention": "Ce Piafabec ne peut pas être obtenu chromatique pour la même raison que le Caratroc d'Irisia ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon provenant du Pokéwalker : Le Pokéwalker ne permet pas de capturer des Pokémon chromatiques, même lors du transfert dans le jeu de base, le Pokémon reste normal.",
+     "regle": true
+    }
+   ]
+  },
+  "bw": {
+   "source_section": "NB",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres : ** {{Miniature|0150|jeu=NB}} Mewtwo (PRI2012) ; ** {{Miniature|0491|jeu=NB}} Darkrai (HVR2011) ; ** {{Miniature|0571|jeu=NB}} Zoroark, {{Miniature|0588|jeu=NB}} Carabing et {{Miniature|0616|jeu=NB}} Escargaume (ÉTÉ2011) ; ** {{Miniature|0647|jeu=NB}} Keldeo (ÉTÉ2012) ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu ; * {{Miniature|0494|jeu=NB}} Victini : Désormais, les Pokémon fabuleux ont leur caractère chromatique systématiquement verrouillé par les développeurs ; * {{Miniature|0570|jeu=NB}} Zorua et {{Miniature|0571|jeu=NB}} Zoroark : Désormais, les Pokémon liés à des événements ont leur caractère chromatique systématiquement verrouillé par les développeurs. Il est néanmoins possible de les obtenir sous leur forme chromatique en passant par la reproduction ; * {{Miniature|0643|jeu=NB}} Reshiram et {{Miniature|0644|jeu=NB}} Zekrom : Désormais, les Pokémon de la jaquette ont leur caractère chromatique systématiquement verrouillé par les développeurs ; * Les Pokémon du Heylink : Les Pokémon qui possèdent une capacité spéciale exclusive ne peuvent pas être chromatiques.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu ;",
+     "regle": true
+    },
+    {
+     "id": 494,
+     "nom": "Victini",
+     "obtention": "Désormais, les Pokémon fabuleux ont leur caractère chromatique systématiquement verrouillé par les développeurs ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 570,
+     "nom": "Zorua",
+     "obtention": "Désormais, les Pokémon liés à des événements ont leur caractère chromatique systématiquement verrouillé par les développeurs. Il est néanmoins possible de les obtenir sous leur forme chromatique en passant par la reproduction ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 571,
+     "nom": "Zoroark",
+     "obtention": "Désormais, les Pokémon liés à des événements ont leur caractère chromatique systématiquement verrouillé par les développeurs. Il est néanmoins possible de les obtenir sous leur forme chromatique en passant par la reproduction ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 643,
+     "nom": "Reshiram",
+     "obtention": "Désormais, les Pokémon de la jaquette ont leur caractère chromatique systématiquement verrouillé par les développeurs ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 644,
+     "nom": "Zekrom",
+     "obtention": "Désormais, les Pokémon de la jaquette ont leur caractère chromatique systématiquement verrouillé par les développeurs ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon du Heylink : Les Pokémon qui possèdent une capacité spéciale exclusive ne peuvent pas être chromatiques.",
+     "regle": true
+    }
+   ]
+  },
+  "b2w2": {
+   "source_section": "N2B2",
+   "intro": "Dans ces jeux, les Pokémon ne pouvant pas être obtenus sous leur forme chromatique sont les suivants : * Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres : ** {{Miniature|0386|jeu=N2B2}} Deoxys (Plasma) ; ** {{Miniature|0647|jeu=N2B2}} Keldeo (HVR2013) ; ** {{Miniature|0648|Chant|jeu=N2B2}} Meloetta (PRI2013) ; ** {{Miniature|0649|jeu=N2B2}} Genesect (Plasma) ; * Les Pokémon reçus lors d'un échange avec un personnage du jeu ; * {{Miniature|0133|jeu=N2B2}} Évoli : Offert avec sa capacité spéciale exclusive, il ne peut donc être chromatique ; * {{Miniature|0585|Printemps|jeu=N2B2}} Vivaldaim : Offert avec sa capacité spéciale exclusive, il ne peut donc être chromatique ; * {{Miniature|0570|jeu=N2B2}} Zorua de N : Comme pour tous les autres Pokémon de N, le DO, l'ID, les IVs et le PID sont fixes et sont préprogrammés pour ne pas être chromatiques ; * {{Miniature|0494|jeu=N2B2}} Victini, {{Miniature|0643|jeu=N2B2}} Reshiram et {{Miniature|0644|jeu=N2B2}} Zekrom : Même raison que pour NB ; * Les Pokémon du Heylink : Les Pokémon qui possèdent une capacité spéciale exclusive ne peuvent pas être chromatiques ; * Les Pokémon des Trouées Cachées : Même raison que pour les Pokémon du Heylink.",
+   "entrees": [
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon offerts par Cadeau Mystère dont les DV sont préprogrammés, tels que, entre autres :",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon reçus lors d'un échange avec un personnage du jeu ;",
+     "regle": true
+    },
+    {
+     "id": 133,
+     "nom": "Évoli",
+     "obtention": "Offert avec sa capacité spéciale exclusive, il ne peut donc être chromatique ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 585,
+     "nom": "Vivaldaim",
+     "obtention": "Offert avec sa capacité spéciale exclusive, il ne peut donc être chromatique ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 570,
+     "nom": "Zorua",
+     "obtention": "Comme pour tous les autres Pokémon de N, le DO, l'ID, les IVs et le PID sont fixes et sont préprogrammés pour ne pas être chromatiques ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 494,
+     "nom": "Victini",
+     "obtention": "Même raison que pour NB ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 643,
+     "nom": "Reshiram",
+     "obtention": "Même raison que pour NB ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 644,
+     "nom": "Zekrom",
+     "obtention": "Même raison que pour NB ;",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon du Heylink : Les Pokémon qui possèdent une capacité spéciale exclusive ne peuvent pas être chromatiques ;",
+     "regle": true
+    },
+    {
+     "id": null,
+     "nom": null,
+     "obtention": "Les Pokémon des Trouées Cachées : Même raison que pour les Pokémon du Heylink.",
+     "regle": true
+    }
+   ]
+  },
+  "xy": {
+   "source_section": "XY",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous Shiny Lock dans XY. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pokémon légendaires, fabuleux ainsi que les Prismillon Motif Fantaisie et Motif Poké Ball.",
+   "entrees": [
+    {
+     "id": 143,
+     "nom": "Ronflex",
+     "obtention": "Route 7",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 144,
+     "nom": "Artikodin",
+     "obtention": "Antre Néréen après 10 rencontres en tant que Pokémon mouvant",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 145,
+     "nom": "Électhor",
+     "obtention": "Antre Néréen après 10 rencontres en tant que Pokémon mouvant",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 146,
+     "nom": "Sulfura",
+     "obtention": "Antre Néréen après 10 rencontres en tant que Pokémon mouvant",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 150,
+     "nom": "Mewtwo",
+     "obtention": "Grotte Inconnue",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 255,
+     "nom": "Poussifeu",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 448,
+     "nom": "Lucario",
+     "obtention": "Tour Maîtrise",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 666,
+     "nom": "Prismillon (Fantaisie)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 666,
+     "nom": "Prismillon (Poké Ball)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 716,
+     "nom": "Xerneas (Déchaîné)",
+     "obtention": "Repaire Team Flare",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 717,
+     "nom": "Yveltal",
+     "obtention": "Repaire Team Flare",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 718,
+     "nom": "Zygarde",
+     "obtention": "Grotte Coda",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 719,
+     "nom": "Diancie",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 151,
+     "nom": "Mew",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 251,
+     "nom": "Celebi",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 385,
+     "nom": "Jirachi",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 490,
+     "nom": "Manaphy",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 491,
+     "nom": "Darkrai",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 492,
+     "nom": "Shaymin (Terrestre)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 493,
+     "nom": "Arceus",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 494,
+     "nom": "Victini",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 647,
+     "nom": "Keldeo",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 648,
+     "nom": "Meloetta (Chant)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 649,
+     "nom": "Genesect",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 83,
+     "nom": "Canarticho",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 129,
+     "nom": "Magicarpe",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 133,
+     "nom": "Évoli",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 208,
+     "nom": "Steelix",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 280,
+     "nom": "Tarsal",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 625,
+     "nom": "Scalproie",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 650,
+     "nom": "Marisson",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 653,
+     "nom": "Feunnec",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 656,
+     "nom": "Grenousse",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    }
+   ]
+  },
+  "oras": {
+   "source_section": "ROSA",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans ROSA. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pikachu Cosplayeur, Pokémon légendaires et fabuleux.",
+   "entrees": [
+    {
+     "id": 25,
+     "nom": "Pikachu (Cosplayeur)",
+     "obtention": "Offert après une participation au Concours Live à Poivressel",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 52,
+     "nom": "Miaouss",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 382,
+     "nom": "Kyogre",
+     "obtention": "Grotte Origine",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 383,
+     "nom": "Groudon",
+     "obtention": "Grotte Origine",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 384,
+     "nom": "Rayquaza",
+     "obtention": "Pilier Céleste",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 386,
+     "nom": "Deoxys",
+     "obtention": "Dans l'espace, à la fin de l'Épisode Delta",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 719,
+     "nom": "Diancie",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 720,
+     "nom": "Hoopa (Enchaîné)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 721,
+     "nom": "Volcanion",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 222,
+     "nom": "Corayon",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 296,
+     "nom": "Makuhita",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 300,
+     "nom": "Skitty",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    }
+   ]
+  },
+  "sm": {
+   "source_section": "SL",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans SL. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pikachu à Casquette, Sachanobi et Pokémon légendaires et fabuleux.",
+   "entrees": [
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette Originale)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette de Hoenn)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette de Sinnoh)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette d'Unys)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette de Kalos)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette d'Alola)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 446,
+     "nom": "Goinfrex",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 658,
+     "nom": "Amphinobi (Sacha)",
+     "obtention": "Pokémon Soleil et Lune : Version démo spéciale",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 718,
+     "nom": "Zygarde",
+     "obtention": "Collecter les cellules et les cœurs de Zygarde",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 746,
+     "nom": "Froussardine (Solitaire)",
+     "obtention": "Rencontré avant l'épreuve de Néphie",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 785,
+     "nom": "Tokorico",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 786,
+     "nom": "Tokopiyon",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 787,
+     "nom": "Tokotoro",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 788,
+     "nom": "Tokopisco",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 789,
+     "nom": "Cosmog",
+     "obtention": "À l'autel du Lac du Halo Solaire – Lac du Halo Lunaire dans le monde inversé",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 791,
+     "nom": "Solgaleo",
+     "obtention": "Autel du Soleil – Autel de la Lune",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 792,
+     "nom": "Lunala",
+     "obtention": "Autel du Soleil – Autel de la Lune",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 793,
+     "nom": "Zéroïd",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 794,
+     "nom": "Mouscoto",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 795,
+     "nom": "Cancrelove",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 796,
+     "nom": "Câblifère",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 797,
+     "nom": "Bamboiselle",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 798,
+     "nom": "Katagami",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 799,
+     "nom": "Engloutyran",
+     "obtention": "Capturable après avoir accepté les missions de Beladonis",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 800,
+     "nom": "Necrozma",
+     "obtention": "Clairière de la Colline Dicarat",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 801,
+     "nom": "Magearna",
+     "obtention": "En scannant le QR code avec le Scanner QR",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 802,
+     "nom": "Marshadow",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 61,
+     "nom": "Têtarte",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 66,
+     "nom": "Machoc",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 75,
+     "nom": "Gravalanch (Alola)",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 440,
+     "nom": "Ptiravi",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 663,
+     "nom": "Flambusard",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 761,
+     "nom": "Croquine",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 762,
+     "nom": "Candine",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    }
+   ]
+  },
+  "usum": {
+   "source_section": "USUL",
+   "intro": "Dans ces jeux, les Ultra-Chimères perdent leurs ''Shiny Lock'' et peuvent être récupérés dans leur forme chromatique dans l'Ultra-Dimension. Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans USUL. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pikachu à Casquette, Pokémon Dominants et Pokémon légendaires et fabuleux.",
+   "entrees": [
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette Originale)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette de Hoenn)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette de Sinnoh)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette d'Unys)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette de Kalos)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Casquette d'Alola)",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 101,
+     "nom": "Électrode",
+     "obtention": "Château Rocket",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 127,
+     "nom": "Scarabrute",
+     "obtention": "Attaquant les Noadkoko d'Alola sur l'Île Noadkoko",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 718,
+     "nom": "Zygarde",
+     "obtention": "Forme 50 % à la Caverne Coda, Forme 10 % offerte par Dexio à la base Æther de la Route 16",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 744,
+     "nom": "Rocabot",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 785,
+     "nom": "Tokorico",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 786,
+     "nom": "Tokopiyon",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 787,
+     "nom": "Tokotoro",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 788,
+     "nom": "Tokopisco",
+     "obtention": "Ruines du Conflit – Ruines de l'Éveil Ruines de l'Essor – Ruines de l'Au-Delà",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 789,
+     "nom": "Cosmog",
+     "obtention": "À l'autel du Lac du Halo Solaire – Lac du Halo Lunaire dans le monde inversé",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 791,
+     "nom": "Solgaleo",
+     "obtention": "Sentier de Mahalo",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 792,
+     "nom": "Lunala",
+     "obtention": "Sentier de Mahalo",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 800,
+     "nom": "Necrozma",
+     "obtention": "Mont Lanakila",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 801,
+     "nom": "Magearna",
+     "obtention": "En scannant le QR code avec le Scanner QR",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 807,
+     "nom": "Zeraora",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 243,
+     "nom": "Raikou",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 244,
+     "nom": "Entei",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 249,
+     "nom": "Lugia",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 250,
+     "nom": "Ho-Oh",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 380,
+     "nom": "Latias",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 381,
+     "nom": "Latios",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 382,
+     "nom": "Kyogre",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 383,
+     "nom": "Groudon",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 483,
+     "nom": "Dialga",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 484,
+     "nom": "Palkia",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 485,
+     "nom": "Heatran",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 486,
+     "nom": "Regigigas",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 641,
+     "nom": "Boréas",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 642,
+     "nom": "Fulguris",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 643,
+     "nom": "Reshiram",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 644,
+     "nom": "Zekrom",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 716,
+     "nom": "Xerneas",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 717,
+     "nom": "Yveltal",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 20,
+     "nom": "Rattatac (Alola)",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 105,
+     "nom": "Ossatueur (Alola)",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 735,
+     "nom": "Argouste",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 738,
+     "nom": "Lucanon",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 743,
+     "nom": "Rubombelle",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 752,
+     "nom": "Tarenbulle",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 754,
+     "nom": "Floramantis",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 758,
+     "nom": "Malamandre",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 777,
+     "nom": "Togedemaru",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 778,
+     "nom": "Mimiqui",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 784,
+     "nom": "Ékaïser",
+     "obtention": "Pokémon Dominants offerts par le Professeur Raphaël Chen",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 24,
+     "nom": "Arbok",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 128,
+     "nom": "Tauros",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 339,
+     "nom": "Barloche",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 422,
+     "nom": "Sancoki",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 701,
+     "nom": "Brutalibré",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 708,
+     "nom": "Brocélôme",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 714,
+     "nom": "Sonistrelle",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 92,
+     "nom": "Fantominus",
+     "obtention": "Pokémon fixe trouvable lors de quêtes secondaires",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 97,
+     "nom": "Hypnomade",
+     "obtention": "Pokémon fixe trouvable lors de quêtes secondaires",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 425,
+     "nom": "Baudrive",
+     "obtention": "Pokémon fixe trouvable lors de quêtes secondaires",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 592,
+     "nom": "Viskuse",
+     "obtention": "Pokémon fixe trouvable lors de quêtes secondaires",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 760,
+     "nom": "Chelours",
+     "obtention": "Pokémon fixe trouvable lors de quêtes secondaires",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 769,
+     "nom": "Bacabouh",
+     "obtention": "Pokémon fixe trouvable lors de quêtes secondaires",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    }
+   ]
+  },
+  "sw": {
+   "source_section": "EB",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans EB. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pokémon légendaires et fabuleux.",
+   "entrees": [
+    {
+     "id": 4,
+     "nom": "Salamèche",
+     "obtention": "Dans la chambre de Tarak à Paddoxton après être devenu Maître",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu (Gigamax)",
+     "obtention": "Offert par une jeune Dresseuse au Sentier de la Gare (si une sauvegarde de LGP est présente sur la Nintendo Switch)",
+     "chromatique_ailleurs": "Chromatique obtenable en donnant une Maxi Soupe à un Pikachu chromatique, ou via l'antre événementiel 14",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 79,
+     "nom": "Ramoloss (Galar)",
+     "obtention": "Capturable à la gare de Brasswick, une fois les Terres Sauvages accessibles (après mise à jour 1.1.0).",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 133,
+     "nom": "Évoli (Gigamax)",
+     "obtention": "Offert par un jeune Dresseur au Sentier de la Gare (si une sauvegarde de LGE est présente sur la Nintendo Switch)",
+     "chromatique_ailleurs": "Chromatique obtenable en donnant une Maxi Soupe à un Évoli chromatique, ou via l'antre événementiel 15",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 151,
+     "nom": "Mew",
+     "obtention": "Obtenable via la Poké Ball Plus",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 772,
+     "nom": "Type:0",
+     "obtention": "Offert à la Tour de Combat après la fin du jeu.",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 810,
+     "nom": "Ouistempo",
+     "obtention": "Pokémon de départ offerts à Paddoxton",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 813,
+     "nom": "Flambino",
+     "obtention": "Pokémon de départ offerts à Paddoxton",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 816,
+     "nom": "Larméléon",
+     "obtention": "Pokémon de départ offerts à Paddoxton",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 848,
+     "nom": "Toxizap",
+     "obtention": "Offert à la Garderie Pokémon",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 888,
+     "nom": "Zacian (Héros Aguerri)",
+     "obtention": "Capturables au Stade de Kickenham au Sommet de la Tour",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 889,
+     "nom": "Zamazenta (Héros Aguerri)",
+     "obtention": "Capturables au Stade de Kickenham au Sommet de la Tour",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 890,
+     "nom": "Éthernatos",
+     "obtention": "Capturables au Stade de Kickenham au Sommet de la Tour",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 893,
+     "nom": "Zarude",
+     "obtention": "Distribution événementielle",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ]
+  },
+  "swisle": {
+   "source_section": "EBisa",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans EBisa. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite à Noadkoko d'Alola et Wushours.",
+   "entrees": [
+    {
+     "id": 1,
+     "nom": "Bulbizarre",
+     "obtention": "Offerts par Apia",
+     "chromatique_ailleurs": "Chromatiques obtenables via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 7,
+     "nom": "Carapuce",
+     "obtention": "Offerts par Apia",
+     "chromatique_ailleurs": "Chromatiques obtenables via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 26,
+     "nom": "Raichu (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 27,
+     "nom": "Sabelette (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 37,
+     "nom": "Goupix (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 50,
+     "nom": "Taupiqueur (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 52,
+     "nom": "Miaouss (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 79,
+     "nom": "Ramoloss",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 103,
+     "nom": "Noadkoko (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 105,
+     "nom": "Ossatueur (Alola)",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "À l'exception de Noadkoko d'Alola, les versions chromatiques sont obtenables via reproduction, ou via expédition Dynamax pour Raichu d'Alola et Ossatueur d'Alola",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 137,
+     "nom": "Porygon",
+     "obtention": "Offert par Hortensio",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 722,
+     "nom": "Brindibou",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "Chromatiques obtenables via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 725,
+     "nom": "Flamiaou",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "Chromatiques obtenables via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 728,
+     "nom": "Otaquin",
+     "obtention": "Offerts en récompense de la quête des 150 Taupiqueur d'Alola",
+     "chromatique_ailleurs": "Chromatiques obtenables via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 891,
+     "nom": "Wushours",
+     "obtention": "Offert par Mustar",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ]
+  },
+  "swcrown": {
+   "source_section": "EBtec",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' et il n'existe aucune alternative pour trouver leur forme chromatique dans EB. À noter que même si Cosmog est ''Shiny Lock'', Solgaleo et Lunala peuvent être obtenus sous forme chromatique dans les expéditions Dynamax.",
+   "entrees": [
+    {
+     "id": 144,
+     "nom": "Artikodin (Galar)",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 145,
+     "nom": "Électhor (Galar)",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 146,
+     "nom": "Sulfura (Galar)",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 647,
+     "nom": "Keldeo",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 789,
+     "nom": "Cosmog",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 803,
+     "nom": "Vémini",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 896,
+     "nom": "Blizzeval",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 897,
+     "nom": "Spectreval",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 898,
+     "nom": "Sylveroy",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ]
+  },
+  "bdsp": {
+   "source_section": "DEPS",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans DEPS. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pokémon légendaires et fabuleux.",
+   "entrees": [
+    {
+     "id": 151,
+     "nom": "Mew",
+     "obtention": "Offert par une Mondaine au sud-ouest de Floraville (si une sauvegarde de LGPE est présente sur la Nintendo Switch)",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 385,
+     "nom": "Jirachi",
+     "obtention": "Offert par un Gentleman au sud-ouest de Floraville (si une sauvegarde de EB est présente sur la Nintendo Switch)",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ]
+  },
+  "la": {
+   "source_section": "LPA",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans LPA. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite à Amovénus.",
+   "entrees": [
+    {
+     "id": 155,
+     "nom": "Héricendre",
+     "obtention": "Offerts au Siège du Groupe Galaxie par le Professeur Lavande",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages dans les Distorsion Spatio-Temporelles et dans les Mégapparitions",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 501,
+     "nom": "Moustillon",
+     "obtention": "Offerts au Siège du Groupe Galaxie par le Professeur Lavande",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages dans les Distorsion Spatio-Temporelles et dans les Mégapparitions",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 722,
+     "nom": "Brindibou",
+     "obtention": "Offerts au Siège du Groupe Galaxie par le Professeur Lavande",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages dans les Distorsion Spatio-Temporelles et dans les Mégapparitions",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 37,
+     "nom": "Goupix (Alola)",
+     "obtention": "Offert par Keoni au Bivouac des Neiges dans les Terres Immaculées, après avoir terminé la quête secondaire N°83 \"Des Goupix blancs comme la neige\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 201,
+     "nom": "Zarbi",
+     "obtention": "Pokémon fixe dispersés dans tout Hisui",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages aux Ruines Bonvivre, une fois l'Alphabet Zarbi complété.",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 442,
+     "nom": "Spiritomb",
+     "obtention": "Capturable dans les Ruines Brumeuses au Marais Carmin, après avoir terminé la quête secondaire N°22 \"Étranges apparitions nocturnes\"",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages dans les Ruines Brumeuses, différent de celui qui apparait après la quête secondaire N°22 et dans les Mégapparitions au Marais Carmin",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 480,
+     "nom": "Créhelf",
+     "obtention": "Lac Savoir – Lac Vérité – Lac Courage",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 481,
+     "nom": "Créfollet",
+     "obtention": "Lac Savoir – Lac Vérité – Lac Courage",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 482,
+     "nom": "Créfadet",
+     "obtention": "Lac Savoir – Lac Vérité – Lac Courage",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 483,
+     "nom": "Dialga",
+     "obtention": "Temple de Sinnoh",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 484,
+     "nom": "Palkia",
+     "obtention": "Temple de Sinnoh",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 493,
+     "nom": "Arceus",
+     "obtention": "Temple de Sinnoh",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 485,
+     "nom": "Heatran",
+     "obtention": "Île Crache-Feu",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 486,
+     "nom": "Regigigas",
+     "obtention": "Temple Frimapic",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 487,
+     "nom": "Giratina",
+     "obtention": "Grotte du Retour",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 488,
+     "nom": "Cresselia",
+     "obtention": "Arène de la Lune",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 489,
+     "nom": "Phione",
+     "obtention": "Creux du Cap sur la Côte Lazuli, , après avoir terminé la quête secondaire N°66 \"La légende de mers\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 490,
+     "nom": "Manaphy",
+     "obtention": "Creux du Cap sur la Côte Lazuli, , après avoir terminé la quête secondaire N°66 \"La légende de mers\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 491,
+     "nom": "Darkrai",
+     "obtention": "Près de la Falaise Calade au Contrefort Couronné, lors de la quête secondaire N°93 \"un sombre cauchemar\" (si une sauvegarde de DEPS est présente sur la Nintendo Switch)",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 492,
+     "nom": "Shaymin",
+     "obtention": "Champ Flora dans les Plaines Obsidiennes, lors de la quête secondaire N°92 \"exprimer sa gratitude\" (si une sauvegarde de EB est présente sur la Nintendo Switch)",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 641,
+     "nom": "Boréas",
+     "obtention": "Terres Immaculées – Côte Lazuli – Plaines Obsidiennes, lors de la quête secondaire N°94 \"Les avatars de Hisui\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 642,
+     "nom": "Fulguris",
+     "obtention": "Terres Immaculées – Côte Lazuli – Plaines Obsidiennes, lors de la quête secondaire N°94 \"Les avatars de Hisui\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 645,
+     "nom": "Démétéros",
+     "obtention": "Terres Immaculées – Côte Lazuli – Plaines Obsidiennes, lors de la quête secondaire N°94 \"Les avatars de Hisui\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 905,
+     "nom": "Amovénus",
+     "obtention": "Marais Carmin, uniquement après avoir complété les pages Pokédex de Boréas, Fulguris et Démétéros lors de la quête secondaire N°94 \"Les avatars de Hisui\"",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ],
+   "regle_generale": "Depuis Légendes Arceus, toutes les rencontres scénarisées (légendaires, fabuleux, Pokémon offerts) ne sont jamais chromatiques."
+  },
+  "sv": {
+   "source_section": "EV",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans EV. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pokémon légendaires.",
+   "entrees": [
+    {
+     "id": 906,
+     "nom": "Poussacha",
+     "obtention": "Pokémon de départ offerts à Cuchalaga",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 909,
+     "nom": "Chochodile",
+     "obtention": "Pokémon de départ offerts à Cuchalaga",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 912,
+     "nom": "Coiffeton",
+     "obtention": "Pokémon de départ offerts à Cuchalaga",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 52,
+     "nom": "Miaouss (Galar)",
+     "obtention": "Offert par Salvio à l'Académie de Paldea",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 93,
+     "nom": "Spectrum",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 194,
+     "nom": "Axoloto",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 872,
+     "nom": "Frissonille",
+     "obtention": "Échange interne avec différents PNJ",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 931,
+     "nom": "Tapatoès (Vert)",
+     "obtention": "Pokémon fixe sur le toit de la maison du joueur à Cuchalaga",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 950,
+     "nom": "Craparoi",
+     "obtention": "Pokémon Dominants",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 962,
+     "nom": "Lestombaile",
+     "obtention": "Pokémon Dominants",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 968,
+     "nom": "Ferdeter",
+     "obtention": "Pokémon Dominants",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 978,
+     "nom": "Nigirigon",
+     "obtention": "Pokémon Dominants",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction ou rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 984,
+     "nom": "Fort-Ivoire",
+     "obtention": "Pokémon Paradoxe Dominants",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 990,
+     "nom": "Roue-de-Fer",
+     "obtention": "Pokémon Paradoxe Dominants",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 999,
+     "nom": "Mordudor",
+     "obtention": "Pokémon fixes dispersés dans tout Paldea",
+     "chromatique_ailleurs": "Chromatique obtenable via raid Téracristal événementiel (22, 54)",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 1001,
+     "nom": "Chongjian",
+     "obtention": "Zone Sud n° 1 – Zone Ouest n° 1 – Forêt Toastée – Zone Nord n° 2",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1002,
+     "nom": "Baojian",
+     "obtention": "Zone Sud n° 1 – Zone Ouest n° 1 – Forêt Toastée – Zone Nord n° 2",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1003,
+     "nom": "Dinglu",
+     "obtention": "Zone Sud n° 1 – Zone Ouest n° 1 – Forêt Toastée – Zone Nord n° 2",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1004,
+     "nom": "Yuyu",
+     "obtention": "Zone Sud n° 1 – Zone Ouest n° 1 – Forêt Toastée – Zone Nord n° 2",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1007,
+     "nom": "Koraidon",
+     "obtention": "Offert par Pepper sur la Route de Cuchalaga",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1008,
+     "nom": "Miraidon",
+     "obtention": "Offert par Pepper sur la Route de Cuchalaga",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1007,
+     "nom": "Koraidon",
+     "obtention": "Zone Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1008,
+     "nom": "Miraidon",
+     "obtention": "Zone Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1009,
+     "nom": "Serpente-Eau",
+     "obtention": "Raid Téracristal événementiel (13, 46)",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1010,
+     "nom": "Vert-de-Fer",
+     "obtention": "Raid Téracristal événementiel (13, 46)",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ],
+   "regle_generale": "Depuis Légendes Arceus, toutes les rencontres scénarisées (légendaires, fabuleux, Pokémon offerts) ne sont jamais chromatiques."
+  },
+  "svmask": {
+   "source_section": "EVmt",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans EVmt. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Adoramis, Ogerpon et Ursaking, « Lune Vermeille ».",
+   "entrees": [
+    {
+     "id": 58,
+     "nom": "Caninos (Hisui)",
+     "obtention": "Offert par Lithia à Jaderaude",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 387,
+     "nom": "Tortipouss",
+     "obtention": "Œuf offert par Jacq au Sentier de la Liesse",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 390,
+     "nom": "Ouisticram",
+     "obtention": "Œuf offert par Jacq au Sentier de la Liesse",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 393,
+     "nom": "Tiplouf",
+     "obtention": "Œuf offert par Jacq au Sentier de la Liesse",
+     "chromatique_ailleurs": "Chromatique obtenable via reproduction",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 901,
+     "nom": "Ursaking (Lune Vermeille)",
+     "obtention": "Forêt Ternelle",
+     "chromatique_ailleurs": "Chromatique visible dans le Pokédex si un Ursaking chromatique est transféré via HOME",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 1014,
+     "nom": "Félicanis",
+     "obtention": "Lande de la Quiétude",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1015,
+     "nom": "Fortusimia",
+     "obtention": "Plaine des Glycines",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1016,
+     "nom": "Favianos",
+     "obtention": "Mont Strueux",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1017,
+     "nom": "Ogerpon",
+     "obtention": "Antre Interdit",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ],
+   "regle_generale": "Depuis Légendes Arceus, toutes les rencontres scénarisées (légendaires, fabuleux, Pokémon offerts) ne sont jamais chromatiques."
+  },
+  "svdisk": {
+   "source_section": "EVdi",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans EVdi et il n'existe aucune alternative pour trouver leur forme chromatique dans EV. Tous les Pokémon légendaires capturables grâce aux friandises offertes par Jeffry Andise à l'Institut Myrtille sont également ''Shiny Lock''.",
+   "entrees": [
+    {
+     "id": 648,
+     "nom": "Meloetta",
+     "obtention": "Zone Côtière",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1020,
+     "nom": "Feu-Perçant",
+     "obtention": "Zone Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1021,
+     "nom": "Ire-Foudre",
+     "obtention": "Zone Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1022,
+     "nom": "Roc-de-Fer",
+     "obtention": "Zone Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1023,
+     "nom": "Chef-de-Fer",
+     "obtention": "Zone Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1024,
+     "nom": "Terapagos (Normale)",
+     "obtention": "Abîme Zéro",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 1025,
+     "nom": "Pêchaminus",
+     "obtention": "Parc Adorami",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ],
+   "regle_generale": "Depuis Légendes Arceus, toutes les rencontres scénarisées (légendaires, fabuleux, Pokémon offerts) ne sont jamais chromatiques."
+  },
+  "za": {
+   "source_section": "LPZA",
+   "intro": "Les Pokémon indiqués dans ce tableau sont tous ''Shiny Lock'' dans LPZA. Il est néanmoins possible de trouver leur forme chromatique via d'autres méthodes, exception faite aux Pokémon légendaires, Pokémon fabuleux et aux formes régionales.",
+   "entrees": [
+    {
+     "id": 152,
+     "nom": "Germignon",
+     "obtention": "Pokémon de départ offerts lors de la mission P001",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 498,
+     "nom": "Gruikui",
+     "obtention": "Pokémon de départ offerts lors de la mission P001",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 158,
+     "nom": "Kaiminus",
+     "obtention": "Pokémon de départ offerts lors de la mission P001",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 359,
+     "nom": "Absol",
+     "obtention": "Donné lors de la mission P009",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 448,
+     "nom": "Lucario",
+     "obtention": "Dans la chambre du joueur après les crédits de fin",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 670,
+     "nom": "Floette (Éternelle)",
+     "obtention": "Donné en récompense de la mission P039",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 716,
+     "nom": "Xerneas",
+     "obtention": "Rencontré lors de la mission P040",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 717,
+     "nom": "Yveltal",
+     "obtention": "Rencontré lors de la mission P041",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 718,
+     "nom": "Zygarde (10 %)",
+     "obtention": "Rencontré lors de la mission P042",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 659,
+     "nom": "Sapereau",
+     "obtention": "Rencontré lors de la mission S001",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 1 et la zone sauvage n° 5",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 214,
+     "nom": "Scarhino",
+     "obtention": "Donné lors de la mission S002",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 13 et la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 302,
+     "nom": "Ténéfix",
+     "obtention": "Rencontré lors de la mission S003",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 9 et la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 650,
+     "nom": "Marisson",
+     "obtention": "Donné lors de la mission S007",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 17",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 653,
+     "nom": "Feunnec",
+     "obtention": "Donné lors de la mission S008",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 18",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 656,
+     "nom": "Grenousse",
+     "obtention": "Donné lors de la mission S009",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 16",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 665,
+     "nom": "Pérégrain",
+     "obtention": "Donné lors de la mission S021",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 4",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 1,
+     "nom": "Bulbizarre",
+     "obtention": "Pokémon de départ offerts lors de la mission S022",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 4,
+     "nom": "Salamèche",
+     "obtention": "Pokémon de départ offerts lors de la mission S022",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 7,
+     "nom": "Carapuce",
+     "obtention": "Pokémon de départ offerts lors de la mission S022",
+     "chromatique_ailleurs": "Chromatique obtenable dans la zone sauvage n° 20",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 447,
+     "nom": "Riolu",
+     "obtention": "Donné lors de la mission S024",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 79,
+     "nom": "Ramoloss (Galar)",
+     "obtention": "Donné lors de la mission S039",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 618,
+     "nom": "Limonde (Galar)",
+     "obtention": "Donné lors de la mission S072",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 303,
+     "nom": "Mysdibule",
+     "obtention": "Rencontré lors de la mission S077",
+     "chromatique_ailleurs": "Chromatique obtenable via rencontre avec des Pokémon sauvages",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 26,
+     "nom": "Raichu (Alola)",
+     "obtention": "Donné lors de la mission S108",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 719,
+     "nom": "Diancie",
+     "obtention": "Rencontré lors de la mission EX001",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 150,
+     "nom": "Mewtwo",
+     "obtention": "Rencontré lors de la mission EX002",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ],
+   "regle_generale": "Depuis Légendes Arceus, toutes les rencontres scénarisées (légendaires, fabuleux, Pokémon offerts) ne sont jamais chromatiques."
+  },
+  "home": {
+   "source_section": "HOME",
+   "intro": "À quelques exceptions près, tous les Pokémon distribués dans HOME sont ''Shiny Lock''.",
+   "entrees": [
+    {
+     "id": 1,
+     "nom": "Bulbizarre",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 4,
+     "nom": "Salamèche",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 7,
+     "nom": "Carapuce",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 25,
+     "nom": "Pikachu",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 133,
+     "nom": "Évoli",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 155,
+     "nom": "Héricendre",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 172,
+     "nom": "Pichu",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 387,
+     "nom": "Tortipouss",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 390,
+     "nom": "Ouisticram",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 393,
+     "nom": "Tiplouf",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 479,
+     "nom": "Motisma",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 501,
+     "nom": "Moustillon",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 722,
+     "nom": "Brindibou",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 801,
+     "nom": "Magearna (Couleur du Passé)",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 809,
+     "nom": "Melmetal (Gigamax)",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 810,
+     "nom": "Ouistempo",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 813,
+     "nom": "Flambino",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 816,
+     "nom": "Larméléon",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 906,
+     "nom": "Poussacha",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 909,
+     "nom": "Chochodile",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 912,
+     "nom": "Coiffeton",
+     "obtention": null,
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    }
+   ]
+  },
+  "lgpe": {
+   "source_section": "Bulbapedia",
+   "intro": "Pikachu et Évoli partenaires ne peuvent pas être chromatiques ; Meltan / Melmetal viennent de GO (chromatiques seulement via GO) ; Mew (Poké Ball Plus) non chromatique. Les oiseaux légendaires et Mewtwo peuvent être chromatiques.",
+   "entrees": [
+    {
+     "id": 25,
+     "nom": "Pikachu (partenaire)",
+     "obtention": "Pokémon de départ (Let’s Go Pikachu)",
+     "chromatique_ailleurs": "Pikachu sauvages : oui",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 133,
+     "nom": "Évoli (partenaire)",
+     "obtention": "Pokémon de départ (Let’s Go Évoli)",
+     "chromatique_ailleurs": "Évoli sauvages : oui",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 151,
+     "nom": "Mew",
+     "obtention": "Poké Ball Plus",
+     "chromatique_ailleurs": null,
+     "statut": "lock_total"
+    },
+    {
+     "id": 808,
+     "nom": "Meltan",
+     "obtention": "Transfert depuis GO",
+     "chromatique_ailleurs": "Seulement s’il est chromatique dans GO",
+     "statut": "lock_partiel"
+    },
+    {
+     "id": 809,
+     "nom": "Melmetal",
+     "obtention": "Transfert depuis GO",
+     "chromatique_ailleurs": "Seulement s’il est chromatique dans GO",
+     "statut": "lock_partiel"
+    }
+   ],
+   "a_verifier": true
+  },
+  "zadlc": {
+   "source_section": "Bulbapedia + RotomLabs",
+   "intro": "Dans Méga-Dimension, seuls 5 légendaires peuvent être chromatiques (Latias, Latios, Cobalion, Terrakion, Viridium), ainsi que Mordudor coffre et Gromago. Les autres Pokémon rencontrés en mission restent verrouillés (règle depuis Légendes Arceus).",
+   "entrees": [],
+   "chromatiques_autorises": [
+    380,
+    381,
+    638,
+    639,
+    640,
+    999,
+    1000
+   ],
+   "a_verifier": true,
+   "regle_generale": "Depuis Légendes Arceus, toutes les rencontres scénarisées (légendaires, fabuleux, Pokémon offerts) ne sont jamais chromatiques."
+  },
+  "rb": {
+   "intro": "Les Pokémon chromatiques n’existent pas avant la 2ᵉ génération.",
+   "entrees": []
+  },
+  "y": {
+   "intro": "Les Pokémon chromatiques n’existent pas avant la 2ᵉ génération.",
+   "entrees": []
+  }
+ }
+}

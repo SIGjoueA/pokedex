@@ -198,4 +198,26 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v30 sélecteur de jeu de la fiche dans l’en-tête collant', /navHTML\(p, `<div class="gamebar dgbar">/.test(app) && /\.dgbar\{/.test(css) && /\.gnum\{/.test(css));
   ok('v30 « Présent dans » en vue d’ensemble seulement', /\$\{mode !== 'all' \? '' : availHTML\(/.test(app));
 }
+// ---- v31: shiny data, popup texts, Rouge Feu / Vert Feuille (Switch)
+{ const S = D('shiny.json'), DS = D('desc.json'), mv = D('moves.json'), ref = D('ref.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8');
+  const gids = core.games.map(g => g.id), keys = new Set(core.e.map(e => e.k)), ids = new Set(core.e.map(e => e.id));
+  ok('v31 shiny : méthodes pour chaque jeu (+ GO)', gids.every(g => S.m[g]) && S.m.go, gids.filter(g => !S.m[g]).join());
+  ok('v31 shiny : Gén. I sans chromatiques, Gén. II+ avec taux de base', ['rb', 'y'].every(g => !S.m[g].e) && gids.filter(g => !['rb', 'y'].includes(g)).every(g => S.m[g].e && /1\/(8192|4096)/.test(S.m[g].b)));
+  ok('v31 shiny : Charme Chroma à partir de Noir 2 / Blanc 2 seulement', ['gs', 'c', 'rs', 'e', 'frlg', 'frlgsw', 'dp', 'pt', 'hgss', 'bw'].every(g => !S.m[g].c) && ['b2w2', 'xy', 'sv', 'za'].every(g => S.m[g].c));
+  const badK = Object.values(S.l).flatMap(l => Object.keys(l)).filter(k => k[0] === '#' ? !ids.has(+k.slice(1)) : !keys.has(k));
+  ok('v31 shiny : verrous liés à des espèces / formes existantes', badK.length === 0, badK.slice(0, 5).join());
+  ok('v31 shiny : verrous connus (Koraidon ÉV, Zacian ÉB, Mew Let’s Go total ; Pikachu partenaire partiel)', S.l.sv['#1007'][0] === 't' && S.l.sw['#888'][0] === 't' && S.l.lgpe['#151'][0] === 't' && S.l.lgpe['#25'][0] === 'p');
+  ok('v31 shiny : Méga-Dimension, légendaires chromatiques vérifiés', JSON.stringify(S.ok.zadlc) === '[380,381,638,639,640,999,1000]' && /Vérifié/.test(S.v.zadlc) && /Vérifié/.test(S.v.lgpe));
+  ok('v31 descriptions : toutes les attaques ont un texte FR', Object.keys(mv).every(k => DS.m[k]), Object.keys(mv).filter(k => !DS.m[k]).length + ' manquantes');
+  ok('v31 descriptions : objets tenus (≥ 90 %)', Object.keys(DS.i).length / Object.keys(ref.it).length >= 0.9, Object.keys(DS.i).length + '/' + Object.keys(ref.it).length);
+  ok('v31 sprites HOME / animés : jamais pré-chargés par le service worker', !/githubusercontent/.test(sw) && /never precached/.test(app));
+  const fg = core.games.find(g => g.id === 'frlgsw'), fo = core.games.find(g => g.id === 'frlg'), fi = gids.indexOf('frlgsw'), oi = gids.indexOf('frlg');
+  ok('v31 RF/VF Switch : jeu séparé, compatible HOME, 151, 1er de la section Switch', fg && fg.h === 'direct' && fg.count === 151 && fg.extra === 0 && fi === 0 && fo && !fo.h);
+  const inG = (e, i) => (e.gb >> i) & 1, bad = core.e.filter(e => inG(e, fi) && (!inG(e, oi) || e.id > 151));
+  ok('v31 RF/VF Switch : uniquement le Pokédex de Kanto de RF/VF', bad.length === 0 && core.e.filter(e => inG(e, fi)).length === 151, bad.slice(0, 5).map(e => e.k).join());
+  ok('v31 RF/VF Switch : n° Kanto identiques à RF/VF (GBA)', [1, 25, 150].every(id => JSON.stringify(sp(id).gm.frlgsw) === JSON.stringify(sp(id).gm.frlg)) && fs.existsSync(path.join(HERE, '../docs/data/dex/frlgsw.json')));
+  ok('v31 RF/VF Switch : marque d’origine GBA (image) dans les jeux actuels', /id: 'gba'[^}]*games: \['frlgsw'\]/.test(app) && fs.existsSync(path.join(HERE, '../docs/img/origin/gba.png')) && /SWITCH_IDS = new Set\(\['frlgsw'/.test(app));
+  ok('v31 Présent dans : icône du jeu (même pastille que les menus Jeux)', (app.match(/data-game="\$\{g\}">\$\{gdot\(g\)\}/g) || []).length === 2 && /\.avl li a \.gdot\{/.test(fs.readFileSync(path.join(HERE, '../docs/style.css'), 'utf8')));
+  ok('v31 SW : v31 + DATA_VERSION d11 (core.json modifié)', /VERSION = 'v31'/.test(sw) && /DATA_VERSION = 'd11'/.test(sw));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -372,3 +372,50 @@ button.icon .vic{display:block}
 .toast.upd .updgo:disabled{opacity:.7;cursor:default}
 .toast.upd .updx{margin-left:0;flex:none}
 @media (max-width:520px){.toast.upd{flex-wrap:wrap;width:calc(100vw - 24px)}.toast.upd .ti{display:none}.toast.upd .tm{flex:1 1 0}.toast.upd .tm small{-webkit-line-clamp:2}.toast.upd .updgo{order:3;flex:1 1 100%;margin:2px 0 0}}
+/* v31: shiny block */
+.shst{display:flex;gap:8px;align-items:flex-start;padding:9px 11px;border-radius:12px;font-size:14px;line-height:1.4;margin:0 0 10px}
+.shst .ic{font-size:17px;line-height:1.2;flex:none}
+.shst.ok{background:rgba(22,135,90,.12);border:1px solid rgba(22,135,90,.35)}
+.shst.part{background:rgba(255,190,0,.13);border:1px solid rgba(214,150,0,.45)}
+.shst.lock{background:rgba(217,54,54,.11);border:1px solid rgba(217,54,54,.45)}
+.shst.none{background:var(--bg3);border:1px solid var(--line)}
+.shlock{display:inline-block;background:#d93636;color:#fff;border-radius:6px;padding:1px 7px;font-size:12px;font-weight:700;letter-spacing:.02em;margin-right:5px}
+.shm{display:grid;grid-template-columns:minmax(0,1fr) 5em 5em;gap:0 8px;align-items:baseline}
+.shm.one{grid-template-columns:minmax(0,1fr) 6em}
+.shm .hd{font-size:11.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em;padding-bottom:4px;text-align:right}
+.shm .hd:first-child{text-align:left}
+.shm .nm{padding:7px 0;overflow-wrap:break-word;border-top:1px solid var(--line);font-size:14px;line-height:1.3}
+.shm .nm small{display:block;color:var(--mute);font-size:12px}
+.shm .v{padding:7px 0;border-top:1px solid var(--line);text-align:right;font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.shm .v.na{color:var(--mute);font-weight:400}
+.shm .best{color:var(--res)}
+.shcharm{margin-top:8px}
+details.shd summary{cursor:pointer;min-height:40px;display:flex;align-items:center;font-weight:600;font-size:14px;color:var(--accent);list-style:none}
+details.shd summary::-webkit-details-marker{display:none}
+details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] summary::before{content:'▾'}
+/* v31: ability-aware weaknesses */
+.badge.abx{outline:2px dashed rgba(123,92,214,.9);outline-offset:1px}
+.badge sup{font-weight:800;margin-left:1px}
+.abnote{margin:12px 0 4px;padding:8px 12px;border-radius:12px;background:rgba(123,92,214,.10);border:1px solid rgba(123,92,214,.35);font-size:14px;line-height:1.4}
+.abnote p{margin:4px 0}
+/* v31: base-form note */
+.basenote{border-left:4px solid var(--accent)}
+.basenote p{margin:0;font-size:14.5px;line-height:1.45}
+.basenote p.note{margin-top:4px}
+/* v31: alternative sprites */
+.sprsw{display:inline-flex;margin:2px auto 8px;border-radius:12px;background:rgba(0,0,0,.28);padding:3px;gap:2px;position:relative;z-index:1}
+.sprsw button{padding:0 12px;min-height:34px;border-radius:9px;font-size:13px;font-weight:600;border:0;background:none;color:#fff;cursor:pointer}
+.sprsw button[aria-pressed="true"]{background:#fff;color:#14161e}
+#heroimg.pix{image-rendering:pixelated;object-fit:contain;padding:28px}
+/* v31: description popups */
+.dsc{background:none;border:0;padding:0;margin:0;font:inherit;color:inherit;text-align:left;cursor:pointer;display:inline;min-height:0}
+.dsc .ii{color:var(--mute);font-weight:500;margin-left:4px;font-size:.9em}
+.dsc:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.ab .dsc,.mv .dsc{padding:4px 0}
+.dpop{position:absolute;z-index:60;background:var(--bg2);color:var(--fg);border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.28);padding:10px 40px 10px 12px;font-size:14px;line-height:1.4}
+.dpop p{margin:4px 0}
+.dpop small{color:var(--mute);font-size:12.5px;display:block}
+.dpop .dpx{position:absolute;top:2px;right:2px;min-width:36px;min-height:36px;border:0;background:none;color:var(--mute);font-size:20px;cursor:pointer}
+
+/* v31: game colour icon in « Présent dans » (same dot as the Jeux menus) */
+.avl li{padding-left:21px}.avl li a .gdot{width:13px;height:13px;margin:0 8px 0 -21px;vertical-align:-1px}

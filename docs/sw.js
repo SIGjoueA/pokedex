@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v30';
+const VERSION = 'v31';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Sélecteur de jeu toujours visible en haut des fiches, n° régionaux dans le menu des jeux, mises à jour proposées dans l’app.';
-const DATA_VERSION = 'd10'; // bump when the schema of data/*.json changes
+const NOTES = 'Rouge Feu / Vert Feuille (Switch) ajouté (compatible HOME), bloc ✨ Shiny par jeu, faiblesses selon le talent, autres sprites, descriptions au toucher.';
+const DATA_VERSION = 'd11'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

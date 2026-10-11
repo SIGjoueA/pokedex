@@ -1,0 +1,992 @@
+{
+ "_sources": [
+  "https://bulbapedia.bulbagarden.net/wiki/Shiny_Pok%C3%A9mon (CC BY-NC-SA 2.5)",
+  "https://www.pokepedia.fr/Pok%C3%A9mon_chromatique (CC BY-NC-SA 3.0)",
+  "https://rotomlabs.net/legends-z-a/shiny-rates",
+  "https://serebii.net/legendsz-a/shinypokemon.shtml"
+ ],
+ "_note": "Chances par rencontre, arrondies. chance_base = sans bonus ; chance_max = meilleur cas SANS Charme Chroma ; chance_max_charme = meilleur cas AVEC (null si le Charme ne joue pas).",
+ "jeux": {
+  "rb": {
+   "existe": false,
+   "note": "Les Pokémon chromatiques apparaissent en 2ᵉ génération (Or / Argent).",
+   "methodes": []
+  },
+  "y": {
+   "existe": false,
+   "note": "Les Pokémon chromatiques apparaissent en 2ᵉ génération (Or / Argent).",
+   "methodes": []
+  },
+  "gs": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage, statique, Œuf",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Reproduction avec un parent chromatique",
+     "condition": "Parent chromatique de sexe opposé au bébé",
+     "chance_base": "1/64",
+     "chance_max": "1/64",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Léviator rouge",
+     "condition": "Lac Colère (scénario)",
+     "chance_base": "garanti",
+     "chance_max": "garanti",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "note": "Le chromatique dépend des DV : un Pokémon à 12,5 % de femelles ne peut pas être femelle et chromatique ; seuls Zarbi I et V peuvent l’être.",
+   "existe": true
+  },
+  "c": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage, statique, Œuf",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Reproduction avec un parent chromatique",
+     "condition": "Parent chromatique de sexe opposé au bébé",
+     "chance_base": "1/64",
+     "chance_max": "1/64",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Léviator rouge",
+     "condition": "Lac Colère (scénario)",
+     "chance_base": "garanti",
+     "chance_max": "garanti",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Œuf Bizarre",
+     "condition": "Offert à la Pension (Cristal)",
+     "chance_base": "14 %",
+     "chance_max": "14 %",
+     "charme": false,
+     "note": "50 % en version japonaise",
+     "chance_max_charme": null
+    }
+   ],
+   "note": "Le chromatique dépend des DV : un Pokémon à 12,5 % de femelles ne peut pas être femelle et chromatique ; seuls Zarbi I et V peuvent l’être.",
+   "existe": true
+  },
+  "rs": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage, statique, Œuf",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "e": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage, statique, Œuf",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "frlg": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage, statique, Œuf",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "dp": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Œuf de deux parents de langues différentes",
+     "chance_base": "1/1639",
+     "chance_max": "1/1639",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Poké Radar",
+     "condition": "Chaîne de 40+ dans un même carré d’herbe",
+     "chance_base": "1/8192",
+     "chance_max": "1/200",
+     "charme": false,
+     "note": "≈ 1/50 si 4 carrés brillent",
+     "chance_max_charme": null
+    }
+   ],
+   "acces": "Poké Radar : après le Pokédex national",
+   "existe": true
+  },
+  "pt": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Œuf de deux parents de langues différentes",
+     "chance_base": "1/1639",
+     "chance_max": "1/1639",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Poké Radar",
+     "condition": "Chaîne de 40+ dans un même carré d’herbe",
+     "chance_base": "1/8192",
+     "chance_max": "1/200",
+     "charme": false,
+     "note": "≈ 1/50 si 4 carrés brillent",
+     "chance_max_charme": null
+    }
+   ],
+   "acces": "Poké Radar : après le Pokédex national",
+   "existe": true
+  },
+  "hgss": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Œuf de deux parents de langues différentes",
+     "chance_base": "1/1639",
+     "chance_max": "1/1639",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Léviator rouge",
+     "condition": "Lac Colère (scénario)",
+     "chance_base": "garanti",
+     "chance_max": "garanti",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "bw": {
+   "taux_base": "1/8192",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/1366",
+     "chance_max": "1/1366",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "b2w2": {
+   "taux_base": "1/8192",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex national, parler à la Pr Keteleeria",
+    "effet": "+2 tirages (×3)"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/8192",
+     "chance_max": "1/8192",
+     "charme": true,
+     "chance_max_charme": "1/2731"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/1366",
+     "chance_max": "1/1366",
+     "charme": true,
+     "chance_max_charme": "1/1024"
+    },
+    {
+     "nom": "Tranchodon chromatique",
+     "condition": "Réserve Naturelle (scénario)",
+     "chance_base": "garanti",
+     "chance_max": "garanti",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "xy": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex national",
+    "effet": "+2 tirages (×3)"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Poké Radar",
+     "condition": "Chaîne de 40+ (carré qui brille)",
+     "chance_base": "1/4096",
+     "chance_max": "1/100",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Pêche à la chaîne",
+     "condition": "20 prises de suite au même endroit",
+     "chance_base": "1/4096",
+     "chance_max": "1/100",
+     "charme": true,
+     "chance_max_charme": "1/96"
+    },
+    {
+     "nom": "Safari des Amis",
+     "condition": "Zones du Safari (après la Ligue)",
+     "chance_base": "1/820",
+     "chance_max": "1/820",
+     "charme": true,
+     "chance_max_charme": "1/586"
+    },
+    {
+     "nom": "Hordes",
+     "condition": "5 Pokémon par combat (Doux Parfum)",
+     "chance_base": "1/4096",
+     "chance_max": "≈1/819 par horde",
+     "charme": true,
+     "note": "5 tirages par rencontre",
+     "chance_max_charme": "≈1/273 par horde"
+    }
+   ],
+   "existe": true
+  },
+  "oras": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex national",
+    "effet": "+2 tirages (×3)"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Pêche à la chaîne",
+     "condition": "20 prises de suite",
+     "chance_base": "1/4096",
+     "chance_max": "1/100",
+     "charme": true,
+     "chance_max_charme": "1/96"
+    },
+    {
+     "nom": "Navi-Dex (Pokémon cachés)",
+     "condition": "Niveau de recherche de l’espèce + chaîne",
+     "chance_base": "1/4096",
+     "chance_max": "≈1/1000 (niv. 200+) ; pics aux 50ᵉ / 100ᵉ rencontres",
+     "charme": true,
+     "chance_max_charme": "bonus non chiffré simplement"
+    },
+    {
+     "nom": "Hordes",
+     "condition": "5 Pokémon par combat",
+     "chance_base": "1/4096",
+     "chance_max": "≈1/819 par horde",
+     "charme": true,
+     "chance_max_charme": "≈1/273 par horde"
+    }
+   ],
+   "existe": true
+  },
+  "sm": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex d’Alola (studio GAME FREAK, Ho’ohale)",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Intrusion (combat SOS)",
+     "condition": "Chaîne de 31+ renforts",
+     "chance_base": "1/4096",
+     "chance_max": "1/316",
+     "charme": true,
+     "chance_max_charme": "1/274"
+    }
+   ],
+   "existe": true
+  },
+  "usum": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex d’Alola (studio GAME FREAK, Ho’ohale)",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Intrusion (combat SOS)",
+     "condition": "Chaîne de 31+ renforts",
+     "chance_base": "1/4096",
+     "chance_max": "1/316",
+     "charme": true,
+     "chance_max_charme": "1/274"
+    },
+    {
+     "nom": "Ultra-Brèche",
+     "condition": "Ultra-Dimension : distance et anneaux du trou",
+     "chance_base": "1 %",
+     "chance_max": "36 % (3 anneaux, 5 000 al+)",
+     "charme": false,
+     "note": "Hors légendaires",
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "lgpe": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex (153)",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Combo Capture",
+     "condition": "31+ captures de suite de l’espèce",
+     "chance_base": "1/4096",
+     "chance_max": "1/342",
+     "charme": true,
+     "avec_parfum": "1/316",
+     "max_tout": "1/274 (Parfum + Charme)",
+     "note": "+ Parfum (Leurre) : jusqu’à ≈1/274 avec le Charme",
+     "chance_max_charme": "1/293"
+    },
+    {
+     "nom": "Combo Capture + Parfum",
+     "condition": "Combo 31+ avec un Parfum actif",
+     "chance_base": "1/4096",
+     "chance_max": "1/316",
+     "chance_max_charme": "1/274",
+     "charme": true
+    }
+   ],
+   "note": "Pas de reproduction dans Let’s Go.",
+   "existe": true
+  },
+  "sw": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex de Galar",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Nombre de combats (Pokémon « à aura »)",
+     "condition": "500+ Pokémon de l’espèce vaincus / capturés ; seulement les Pokémon brillants (aura)",
+     "chance_base": "1/2048",
+     "chance_max": "1/586",
+     "charme": true,
+     "note": "sans Charme ≈1/586, avec ≈1/456",
+     "chance_max_charme": "1/456"
+    },
+    {
+     "nom": "Raids Dynamax",
+     "condition": "Antres",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme ne s’applique pas",
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "swisle": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex de Galar",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Nombre de combats (Pokémon « à aura »)",
+     "condition": "500+ Pokémon de l’espèce vaincus / capturés ; seulement les Pokémon brillants (aura)",
+     "chance_base": "1/2048",
+     "chance_max": "1/586",
+     "charme": true,
+     "note": "sans Charme ≈1/586, avec ≈1/456",
+     "chance_max_charme": "1/456"
+    },
+    {
+     "nom": "Raids Dynamax",
+     "condition": "Antres",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme ne s’applique pas",
+     "chance_max_charme": null
+    }
+   ],
+   "note": "Mêmes méthodes que le jeu de base.",
+   "existe": true
+  },
+  "swcrown": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex de Galar",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Sauvage et rencontres fixes non verrouillées",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Nombre de combats (Pokémon « à aura »)",
+     "condition": "500+ Pokémon de l’espèce vaincus / capturés ; seulement les Pokémon brillants (aura)",
+     "chance_base": "1/2048",
+     "chance_max": "1/586",
+     "charme": true,
+     "note": "sans Charme ≈1/586, avec ≈1/456",
+     "chance_max_charme": "1/456"
+    },
+    {
+     "nom": "Raids Dynamax",
+     "condition": "Antres",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme ne s’applique pas",
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Expédition Dynamax",
+     "condition": "Pokémon final (légendaire) d’une expédition",
+     "chance_base": "1/300",
+     "chance_max": "1/300",
+     "charme": true,
+     "chance_max_charme": "1/100"
+    }
+   ],
+   "existe": true
+  },
+  "bdsp": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex national",
+    "effet": "Seulement pour les Œufs"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme n’agit pas sur les rencontres",
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Poké Radar",
+     "condition": "Chaîne de 40+",
+     "chance_base": "1/4096",
+     "chance_max": "1/99",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Souterrain (« il va se passer un truc bien ! »)",
+     "condition": "Repaires, 4 min après 40 points de Taupiqueur roses",
+     "chance_base": "1/4096",
+     "chance_max": "1/2048",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "la": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Toutes les pages du Pokédex au niveau 10",
+    "effet": "+3 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Selon la recherche de l’espèce (niv. 10 / parfait)",
+     "chance_base": "1/4096",
+     "chance_max": "1/1024 (parfait)",
+     "charme": true,
+     "chance_max_charme": "1/586"
+    },
+    {
+     "nom": "Apparition massive",
+     "condition": "",
+     "chance_base": "1/158",
+     "chance_max": "1/142 (parfait)",
+     "charme": true,
+     "chance_max_charme": "1/128"
+    },
+    {
+     "nom": "Mégapparition (apparition massive exceptionnelle)",
+     "condition": "Après la mise à jour 1.1",
+     "chance_base": "1/316",
+     "chance_max": "1/256 (parfait)",
+     "charme": true,
+     "chance_max_charme": "1/216"
+    }
+   ],
+   "existe": true
+  },
+  "sv": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex de Paldea (Jacq)",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Apparition massive",
+     "condition": "60+ battus ou capturés",
+     "chance_base": "1/4096",
+     "chance_max": "1/1366",
+     "charme": true,
+     "chance_max_charme": "1/820"
+    },
+    {
+     "nom": "Aura Brillance (sandwich)",
+     "condition": "Niv. 3, du type de l’espèce",
+     "chance_base": "1/4096",
+     "chance_max": "1/1024",
+     "charme": true,
+     "chance_max_charme": "1/683"
+    },
+    {
+     "nom": "Apparition massive + Aura Brillance",
+     "condition": "Meilleur combo",
+     "chance_base": "1/4096",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Raids Téracristal",
+     "condition": "Raids normaux",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme ne s’applique pas ; raids événementiels parfois garantis",
+     "chance_max_charme": null
+    }
+   ],
+   "existe": true
+  },
+  "svmask": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex de Paldea (Jacq)",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Apparition massive",
+     "condition": "60+ battus ou capturés",
+     "chance_base": "1/4096",
+     "chance_max": "1/1366",
+     "charme": true,
+     "chance_max_charme": "1/820"
+    },
+    {
+     "nom": "Aura Brillance (sandwich)",
+     "condition": "Niv. 3, du type de l’espèce",
+     "chance_base": "1/4096",
+     "chance_max": "1/1024",
+     "charme": true,
+     "chance_max_charme": "1/683"
+    },
+    {
+     "nom": "Apparition massive + Aura Brillance",
+     "condition": "Meilleur combo",
+     "chance_base": "1/4096",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Raids Téracristal",
+     "condition": "Raids normaux",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme ne s’applique pas ; raids événementiels parfois garantis",
+     "chance_max_charme": null
+    }
+   ],
+   "note": "Mêmes méthodes ; le Charme s’obtient toujours via le Pokédex de Paldea.",
+   "existe": true
+  },
+  "svdisk": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Compléter le Pokédex de Paldea (Jacq)",
+    "effet": "+2 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1366"
+    },
+    {
+     "nom": "Apparition massive",
+     "condition": "60+ battus ou capturés",
+     "chance_base": "1/4096",
+     "chance_max": "1/1366",
+     "charme": true,
+     "chance_max_charme": "1/820"
+    },
+    {
+     "nom": "Aura Brillance (sandwich)",
+     "condition": "Niv. 3, du type de l’espèce",
+     "chance_base": "1/4096",
+     "chance_max": "1/1024",
+     "charme": true,
+     "chance_max_charme": "1/683"
+    },
+    {
+     "nom": "Apparition massive + Aura Brillance",
+     "condition": "Meilleur combo",
+     "chance_base": "1/4096",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Méthode Masuda",
+     "condition": "Parents de langues différentes",
+     "chance_base": "1/683",
+     "chance_max": "1/683",
+     "charme": true,
+     "chance_max_charme": "1/512"
+    },
+    {
+     "nom": "Raids Téracristal",
+     "condition": "Raids normaux",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": false,
+     "note": "Le Charme ne s’applique pas ; raids événementiels parfois garantis",
+     "chance_max_charme": null
+    }
+   ],
+   "note": "Mêmes méthodes ; le Charme s’obtient toujours via le Pokédex de Paldea.",
+   "existe": true
+  },
+  "za": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Terminer toutes les recherches de Mable",
+    "effet": "+3 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre sauvage",
+     "condition": "Zones sauvages, fossiles ; rien d’autre ne peut être chromatique",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1024"
+    }
+   ],
+   "note": "Les Pokémon offerts et les rencontres de mission ne sont jamais chromatiques.",
+   "existe": true
+  },
+  "zadlc": {
+   "taux_base": "1/4096",
+   "charme_chroma": {
+    "obtention": "Terminer toutes les recherches de Mable",
+    "effet": "+3 tirages"
+   },
+   "methodes": [
+    {
+     "nom": "Rencontre sauvage",
+     "condition": "Distorsions d’Extra Illumis",
+     "chance_base": "1/4096",
+     "chance_max": "1/4096",
+     "charme": true,
+     "chance_max_charme": "1/1024"
+    },
+    {
+     "nom": "Aura Brillance (Donut)",
+     "condition": "Donut sucré, Pokémon du type de l’aura, distorsions seulement",
+     "chance_base": "1/4096",
+     "chance_max": "1/1024 (niv. 3)",
+     "charme": true,
+     "chance_max_charme": "1/586",
+     "note": "Niv. 3 : le premier Pokémon du bon type qui apparaît près du joueur est chromatique"
+    }
+   ],
+   "existe": true
+  },
+  "go": {
+   "taux_base": "≈1/512",
+   "charme_chroma": null,
+   "methodes": [
+    {
+     "nom": "Rencontre normale",
+     "condition": "Espèces dont le chromatique est sorti",
+     "chance_base": "≈1/512",
+     "chance_max": "≈1/512",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Événements, Journée Communauté",
+     "condition": "Espèce mise en avant",
+     "chance_base": "≈1/64 à 1/25",
+     "chance_max": "≈1/25",
+     "charme": false,
+     "chance_max_charme": null
+    },
+    {
+     "nom": "Raids légendaires, Recherches",
+     "condition": "",
+     "chance_base": "≈1/20",
+     "chance_max": "≈1/20",
+     "charme": false,
+     "chance_max_charme": null
+    }
+   ],
+   "note": "Taux communautaires, non officiels. Disponibilité par espèce : déjà dans le bloc Pokémon GO de l’appli.",
+   "existe": true
+  }
+ }
+}
