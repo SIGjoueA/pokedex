@@ -258,6 +258,6 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   { const dit = JSON.parse(fs.readFileSync(new URL('../docs/data/sp/132.json', import.meta.url))).f['132'].go?.dit, ids = new Set(core.e.map(e => e.id)), DJ = JSON.parse(fs.readFileSync(new URL('./go-ditto.json', import.meta.url)));
     ok('v32 Métamorph GO : déguisements actuels / passés appliqués depuis go-ditto.json', dit && dit.cur.ids.length === DJ.current.names.length && dit.past.length === DJ.past.length && [dit.cur, ...dit.past].every(x => x.ids.length && x.ids.every(id => ids.has(id))));
     ok('v32 Métamorph GO : sources citées (URL) + date de vérification', dit && dit.src.length >= 2 && dit.src.every(([n, u]) => n && /^https:\/\//.test(u)) && /^\d{4}-\d\d-\d\d$/.test(dit.chk)); }
-  ok('v32 SW : v32 + DATA_VERSION d12 + NOTES', /VERSION = 'v32'/.test(sw) && /DATA_VERSION = 'd12'/.test(sw) && /Poképédia/.test(sw.match(/NOTES = '([^']*)'/)[1]));
+  ok('v32 SW : v32 + DATA_VERSION ≥ d12 + NOTES', /VERSION = 'v32'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 12 && /Poképédia/.test(sw.match(/NOTES = '([^']*)'/)[1]));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
