@@ -1,5 +1,7 @@
 'use strict';
-const VERSION = 'v29';
+const VERSION = 'v30';
+// v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
+const NOTES = 'Sélecteur de jeu toujours visible en haut des fiches, n° régionaux dans le menu des jeux, mises à jour proposées dans l’app.';
 const DATA_VERSION = 'd10'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
@@ -8,8 +10,18 @@ const CRIES = 'pokedex-cries'; // v29: cries (MP3), cached when first played
 const SHELL_FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'data/core.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'img/alpha/baron.png'];
 
+// v30: a new version waits until the user taps « Mettre à jour » (in-app banner) — no forced activation.
+// One-time bridge: pages of v29 and older have no banner, so replacing such a version still activates at once (as before).
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(SHELL).then(c => c.addAll(SHELL_FILES)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(SHELL).then(c => c.addAll(SHELL_FILES.map(u => new Request(u, { cache: 'reload' })))).then(() => caches.keys()).then(keys => { // cache: 'reload' = fresh files, not the HTTP cache
+    const legacy = keys.some(k => { const m = /^pokedex-shell-v(\d+)$/.exec(k); return m && +m[1] < 30; });
+    if (legacy) return self.skipWaiting();
+  }));
+});
+self.addEventListener('message', e => {
+  const d = e.data || {};
+  if (d.type === 'SKIP_WAITING') self.skipWaiting();
+  else if (d.type === 'VERSION' && e.ports[0]) e.ports[0].postMessage({ v: VERSION, notes: NOTES });
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => ((k.startsWith('pokedex-shell-') && k !== SHELL) || (k.startsWith('pokedex-data-') && k !== DATA) || k === 'pokedex-data')).map(k => caches.delete(k))))

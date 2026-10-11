@@ -187,4 +187,15 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   eq('v29 cri Dracaufeu (actuel + ancien)', C['6'], ['l/6', 'o/6']); eq('v29 cri Méga-Dracaufeu X (propre)', C['6-mega-x'][0], 'l/10034'); eq('v29 Pêchaminus sans cri ancien', C['1025'][1], 0);
   const s6 = sp(6); eq('v29 Dracaufeu reproduction', [s6.gr, s6.cr, s6.hc, s6.bh, s6.eg, s6.gw], [1, 45, 20, 70, ['Monstrueux', 'Draconique'], 'medium-slow']);
   ok('v29 SW : cris en cache après écoute', /pokedex-cries/.test(fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'))); }
+// ---- v30: update prompt (waiting SW), sheet game selector
+{ const sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), css = fs.readFileSync(path.join(HERE, '../docs/style.css'), 'utf8');
+  const inst = (sw.match(/addEventListener\('install'[\s\S]*?\n\}\);/) || [''])[0];
+  ok('v30 SW : pas de skipWaiting forcé à l’installation (sauf pont v29-)', !/\.then\(\(\) => self\.skipWaiting\(\)\)/.test(inst) && /\+m\[1\] < 30/.test(inst));
+  ok('v30 SW : skipWaiting sur demande + version / nouveautés', /type === 'SKIP_WAITING'\) self\.skipWaiting\(\)/.test(sw) && /type === 'VERSION'/.test(sw) && /const NOTES = '[^']{10,160}'/.test(sw));
+  ok('v30 app : rechargement unique après le tap (controllerchange gardé)', /if \(!SW_ASKED \|\| SW_RELOADING\) return; SW_RELOADING = true; location\.reload\(\)/.test(app));
+  ok('v30 app : pas de bannière à la première installation', /if \(!navigator\.serviceWorker\.controller/.test(app));
+  ok('v30 app : vérifications au démarrage, au retour (visibilitychange) et toutes les 30 min', /swWatch\(reg\)/.test(app) && /visibilitychange[^\n]*swCheck\(\)/.test(app) && /setInterval\(swCheck, 30 \* 60 \* 1000\)/.test(app) && /\.update\(\)/.test(app));
+  ok('v30 sélecteur de jeu de la fiche dans l’en-tête collant', /navHTML\(p, `<div class="gamebar dgbar">/.test(app) && /\.dgbar\{/.test(css) && /\.gnum\{/.test(css));
+  ok('v30 « Présent dans » en vue d’ensemble seulement', /\$\{mode !== 'all' \? '' : availHTML\(/.test(app));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

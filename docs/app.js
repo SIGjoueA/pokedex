@@ -870,7 +870,7 @@ function toast(msg, kind = 'ok', ms = 4500) {
   clearTimeout(TOAST_T); TOAST_T = setTimeout(() => t.classList.remove('on'), ms);
 }
 addEventListener('hashchange', () => { const t = $('#toast'); if (t) { clearTimeout(TOAST_T); t.classList.remove('on'); } }); // a message never lingers over another screen's buttons
-function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $('#detail-view'); if (b && v) v.style.setProperty('--barh', b.offsetHeight + 'px'); }); }
+function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $('#detail-view'); if (b && v) v.style.setProperty('--barh', b.offsetHeight + 'px'); updPos(); }); }
 // v25 Baron buttons (official Alpha icon, self-hosted: img/alpha/CREDITS.txt). Baron shiny = icon + ✨ badge; checked = same yellow as Shiny.
 const BARON_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"></span>';
 const BARONS_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"><span class="bsp"></span></span>'; // ✨ badge drawn in CSS (keeps menu / button text clean)
@@ -917,14 +917,32 @@ function actbarHTML(p) {
     ${slot}</div></div>`;
 }
 // Sticky header: back, previous / next, favourite only.
-function navHTML(p) {
+// v30: sheet game menu = same order / separators as the list « Jeux » menu (extra lists above their game's latest expansion), regional dex number on each game.
+// Values: game ids; « Hors dex » lists of games with expansions and the Méga-Dex keep their list value (svhors, swhors, zamega) and open their game (changeGame).
+const menuNum = (sp, g) => { const n = sp.gm && sp.gm[g]; if (!n) return ''; const a = []; for (let i = 1; i < n.length; i += 2) a.push('#' + pad3(n[i])); return a.length > 2 ? a[0] + ' …' : a.join(' · '); };
+function sheetGameOpts(p, sp, games, goOk, mode) {
+  const hors = horsGames(p, sp).filter(g => !games.includes(g)), mega = megaDex().keys.has(p.k);
+  const items = [['all', 'Vue d’ensemble (infos générales)', ''], ['home', 'Pokémon HOME (transferts)', '']];
+  if (goOk) items.push(['go', 'Pokémon GO', '']);
+  for (const g of GAMES) {
+    for (const [k, v] of Object.entries(VDEX)) if ((v.before || v.game) === g.id) {
+      if (v.mega && mega) items.push([k, v.n, '']); // Méga-Dex: no numbers of its own (national order), same marks as Z-A
+      else if (v.file && hors.includes(v.game)) items.push([k, v.n.replace(/\s*[–—-]\s*Hors dex$/i, ''), 'Hors dex']);
+    }
+    if (games.includes(g.id)) items.push([g.id, g.n, menuNum(sp, g.id)]);
+    else if (hors.includes(g.id) && !Object.values(VDEX).some(v => v.file && v.game === g.id)) items.push([g.id, g.n, 'Hors dex']);
+  }
+  const has = v => items.some(x => x[0] === v), selV = has(mode) ? mode : (Object.keys(VDEX).find(k => VDEX[k].file && VDEX[k].game === mode && has(k)) || 'all');
+  return items.map(([v, l, n]) => `<option value="${v}"${n ? ` data-n="${esc(n)}"` : ''}${v === selV ? ' selected' : ''}>${esc(l)}</option>`).join('');
+}
+function navHTML(p, extra = '') {
   const key = ik(p);
   let prev = '', next = '';
   if (GAME_BY[state.game] && DEX[state.game]) { // follow the filtered list when a game is selected
     const seen = new Set(), list = filtered().filter(x => !seen.has(x.id) && seen.add(x.id)); const i = list.findIndex(x => x.id === p.id); // one entry per species (regional form in its region’s dex)
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
-  return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${actbarHTML(p)}</div>`;
+  return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
 function effGroups(types, mode, chart) {
@@ -1212,10 +1230,7 @@ function renderDetail() {
   const flags = [p.lg && 'Légendaire', p.my && 'Fabuleux', isUB(p) && 'Ultra-Chimère', p.ba && 'Bébé', `Gén. ${GEN_LABELS[p.g]}`].filter(Boolean);
   const games = availGames(f);
   const goOk = goRel(f.go);
-  const opts = `<option value="all"${mode === 'all' ? ' selected' : ''}>Vue d’ensemble (infos générales)</option><option value="home"${mode === 'home' ? ' selected' : ''}>Pokémon HOME (transferts)</option>` +
-    (goOk ? `<option value="go"${isGo ? ' selected' : ''}>Pokémon GO</option>` : '') +
-    games.map(g => `<option value="${g}"${mode === g ? ' selected' : ''}>${esc(GAME_BY[g].n)}</option>`).join('') +
-    horsGames(p, sp).filter(g => !games.includes(g)).map(g => `<option value="${g}"${mode === g ? ' selected' : ''}>${esc(GAME_BY[g].n)} — hors dex</option>`).join('');
+  const opts = sheetGameOpts(p, sp, games, goOk, mode);
   const gimg = `img/${p.k}.webp`, simg = `img/s/${p.k}.webp`;
   const regional = gm ? dexNumbers(sp, gm.id) : '';
   // Fixed body order: description → stats → abilities → moves → evolution → encounters → games → GO
@@ -1246,10 +1261,10 @@ function renderDetail() {
     <section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>
     ${gm ? heldHTML(f, gm, shared.ref) + encHTML(f, sp, gm, shared) : mode === 'home' ? '' : homeSrcHTML(p, f)}
-    ${availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g)))}
+    ${mode !== 'all' ? '' : availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g)))}
     ${goBox}`;
   }
-  $('#detail-view').innerHTML = navHTML(p) + `
+  $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
   <div class="detail">
     <div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${c1};--c2:${c2}">
       <div class="num">#${pad(p.id)}</div>
@@ -1261,7 +1276,7 @@ function renderDetail() {
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
       <div class="tags">${flags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     </div>
-    <section class="box trackbox"><div class="gamebar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
+    <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
     ${formSwitcher(p, gm)}
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
@@ -1296,6 +1311,7 @@ function effNote(mode, gm) {
     : `Multiplicateurs des jeux principaux (×2, ×½, immunités ×0)${gm ? ` — table des types de la génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gm.g]}, types du jeu.` : ' — table des types actuelle (pour GO, choisissez Pokémon GO dans le sélecteur de jeu).'}`;
 }
 async function changeGame(g) {
+  if (VDEX[g]) g = VDEX[g].game; // v30: « Hors dex » list / Méga-Dex entry of the sheet menu → its game
   state.dgame = g;
   if (g === 'go') { try { DET.go = await loadGo(); } catch { toast('Données GO indisponibles hors-ligne : ouvrez-les une fois avec une connexion.', 'err', 6500); state.dgame = 'all'; } }
   pickGame(state.dgame); sheetPref = state.dgame;
@@ -1355,12 +1371,43 @@ document.addEventListener('click', e => {
 /* ---------------- offline / PWA ---------------- */
 function registerSW() {
   if (!('serviceWorker' in navigator)) { $('#offline').textContent = ''; return; }
-  navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready).then(() => {
+  navigator.serviceWorker.register('sw.js').then(reg => { swWatch(reg); return navigator.serviceWorker.ready; }).then(() => {
     const metered = navigator.connection && (navigator.connection.saveData || navigator.connection.type === 'cellular');
     if (!store.get('imgsDone', false) && !metered) cacheImages();
     else showOffline();
   }).catch(() => {});
 }
+// v30: in-app update prompt. A new sw.js installs in the background and WAITS; the banner asks, the tap activates it,
+// and the page reloads once on controllerchange (only after that tap: first install / claim never reloads or shows the banner).
+// Checks: app start (register), return to the app (visibilitychange — iPhone home-screen PWA), every 30 min.
+let SW_REG = null, SW_ASKED = false, SW_RELOADING = false, SW_SHOWN = null;
+function swAsk(w) { // version + notes of the waiting worker (MessageChannel), null if it does not answer
+  return new Promise(res => { const t = setTimeout(() => res(null), 2000); try { const ch = new MessageChannel(); ch.port1.onmessage = e => { clearTimeout(t); res(e.data); }; w.postMessage({ type: 'VERSION' }, [ch.port2]); } catch { clearTimeout(t); res(null); } });
+}
+function updPos() { const u = $('#upd'); if (!u) return; const b = $('#actbar'), fixed = b && b.getClientRects().length && getComputedStyle(b).position === 'fixed' && !$('#detail-view').hidden; u.style.bottom = fixed ? `calc(${b.offsetHeight + 12}px + env(safe-area-inset-bottom))` : ''; }
+async function swOffer(w) {
+  if (!navigator.serviceWorker.controller || !w || SW_SHOWN === w) return; // first install: nothing to replace
+  SW_SHOWN = w;
+  const info = await swAsk(w) || {};
+  if (info.v && sessionStorage.getItem('updLater') === info.v) return; // « Plus tard » for this version: ask again next session
+  let u = $('#upd');
+  if (!u) { u = document.createElement('div'); u.id = 'upd'; u.setAttribute('role', 'status'); u.setAttribute('aria-live', 'polite'); document.body.appendChild(u); }
+  u.className = 'toast ok upd';
+  u.innerHTML = `<span class="ti" aria-hidden="true">↻</span><span class="tm"><b>Nouvelle version disponible</b>${info.v || info.notes ? `<small>${info.v ? esc(info.v) + (info.notes ? ' · ' : '') : ''}${info.notes ? 'Nouveautés : ' + esc(info.notes) : ''}</small>` : ''}</span><button type="button" class="updgo">Mettre à jour</button><button type="button" class="updx" aria-label="Plus tard">×</button>`;
+  u.querySelector('.updgo').onclick = e => { SW_ASKED = true; e.currentTarget.disabled = true; e.currentTarget.textContent = 'Mise à jour…'; w.postMessage({ type: 'SKIP_WAITING' }); setTimeout(() => { if (!SW_RELOADING) { SW_RELOADING = true; location.reload(); } }, 6000); };
+  u.querySelector('.updx').onclick = () => { u.classList.remove('on'); if (info.v) sessionStorage.setItem('updLater', info.v); };
+  updPos(); requestAnimationFrame(() => u.classList.add('on'));
+}
+function swWatch(reg) {
+  SW_REG = reg;
+  if (reg.waiting) swOffer(reg.waiting);
+  reg.addEventListener('updatefound', () => { const w = reg.installing; if (w) w.addEventListener('statechange', () => { if (w.state === 'installed') swOffer(reg.waiting || w); }); });
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (!SW_ASKED || SW_RELOADING) return; SW_RELOADING = true; location.reload(); });
+  setInterval(swCheck, 30 * 60 * 1000);
+}
+function swCheck() { if (SW_REG && navigator.onLine !== false) SW_REG.update().then(() => { if (SW_REG.waiting) swOffer(SW_REG.waiting); }).catch(() => {}); }
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') swCheck(); });
+addEventListener('hashchange', () => setTimeout(updPos, 120));
 let caching = false;
 function showOffline(msg) {
   const imgs = store.get('imgsDone', false), pack = store.get('packDone2', false);
@@ -1481,22 +1528,22 @@ function initMenu(selId, cfg) {
 document.addEventListener('pointerdown', e => { for (const M of Object.values(MENUS)) if (M.open && !M.wrap.contains(e.target)) closeMenu(M, false); }); // one listener for every menu
 function buildMenu(M) {
   const { cfg } = M;
-  M.items = [...M.sel.options].map(o => ({ v: o.value, label: o.value ? o.textContent : cfg.allLabel, dis: o.disabled }));
+  M.items = [...M.sel.options].map(o => ({ v: o.value, label: o.value ? o.textContent : cfg.allLabel, dis: o.disabled, n: o.dataset.n || '' }));
   let html = '', prev = null;
   M.items.forEach((it, i) => {
     const sp = cfg.sep ? cfg.sep(it.v, prev) : '';
     if (Array.isArray(sp)) html += `<li class="gsep2" role="presentation" aria-hidden="true">${sp[1] ? `<span>${esc(sp[1])}</span>` : ''}</li>`;
     else if (sp) html += '<li class="gsep" role="presentation" aria-hidden="true"></li>';
     prev = it.v;
-    html += `<li id="${cfg.listId}-${i}" class="gopt" role="option" data-i="${i}" data-v="${esc(it.v)}" aria-selected="false"${it.dis ? ' aria-disabled="true"' : ''}>${cfg.dot ? cfg.dot(it.v) : ''}<span class="gl">${esc(it.label)}</span></li>`;
+    html += `<li id="${cfg.listId}-${i}" class="gopt" role="option" data-i="${i}" data-v="${esc(it.v)}" aria-selected="false"${it.dis ? ' aria-disabled="true"' : ''}>${cfg.dot ? cfg.dot(it.v) : ''}<span class="gl">${esc(it.label)}</span>${it.n ? `<span class="gnum${it.n === 'Hors dex' ? ' hx' : ''}">${esc(it.n)}</span>` : ''}</li>`;
   });
-  M.list.innerHTML = html; M.sig = M.items.map(x => x.v + '|' + x.label + '|' + x.dis).join('\n');
+  M.list.innerHTML = html; M.sig = M.items.map(x => x.v + '|' + x.label + '|' + x.dis + '|' + x.n).join('\n');
 }
 function syncMenu(M) {
-  const sig = [...M.sel.options].map(o => o.value + '|' + (o.value ? o.textContent : M.cfg.allLabel) + '|' + o.disabled).join('\n');
+  const sig = [...M.sel.options].map(o => o.value + '|' + (o.value ? o.textContent : M.cfg.allLabel) + '|' + o.disabled + '|' + (o.dataset.n || '')).join('\n');
   if (sig !== M.sig && !M.open) buildMenu(M); // labels / disabled state change with the list context (Catégorie)
   const v = M.sel.value, it = M.items.find(x => x.v === v) || M.items[0];
-  M.btn.innerHTML = `${v && M.cfg.dot ? M.cfg.dot(v) : ''}<span class="gl">${esc(v ? it.label : M.cfg.empty)}</span><span class="gcaret" aria-hidden="true">▾</span>`;
+  M.btn.innerHTML = `${v && M.cfg.dot ? M.cfg.dot(v) : ''}<span class="gl">${esc(v ? it.label : M.cfg.empty)}</span>${v && it.n ? `<span class="gnum${it.n === 'Hors dex' ? ' hx' : ''}">${esc(it.n)}</span>` : ''}<span class="gcaret" aria-hidden="true">▾</span>`;
   M.btn.setAttribute('aria-label', M.cfg.label + ' : ' + (v ? it.label : 'tous'));
   for (const li of M.list.querySelectorAll('.gopt')) li.setAttribute('aria-selected', String(li.dataset.v === v));
 }

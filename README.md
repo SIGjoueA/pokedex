@@ -127,6 +127,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Objets tenus sauvages** par jeu (noms FR, %), placés juste avant « Où le trouver » ; une version différente (Noir 1 % / Blanc 5 %…) est détaillée.
 - Aperçus seulement (non implémentés) : faiblesses avec talents (Lévitation…), note « forme de base » sur les formes liées, sprites HOME / animés, descriptions FR en bulle (`build/preview29.mjs`, `screenshots/v29/`).
 
+## v30 : sélecteur de jeu collant, n° régionaux, mises à jour dans l’app
+- Fiche : le sélecteur « Jeu » est une 2ᵉ ligne de l’en-tête collant (sous ← ‹ › ★), toujours accessible en défilant ; la barre d’actions du bas ne change pas (mobile), elle reste sous l’en-tête sur ordinateur.
+- Menu des jeux de la fiche : même ordre et mêmes séparateurs que le menu « Jeux » de l’accueil (listes Hors dex et Méga-Dex à leur place, au-dessus de la dernière extension), n° régional à droite (#021 ; « Hors dex » ; Méga-Dex sans n°, il suit l’ordre national).
+- « Présent dans » n’apparaît plus que dans la vue d’ensemble.
+- Nouvelle version : elle s’installe en arrière-plan et attend ; une bannière « Nouvelle version disponible » (n° + nouveautés, `NOTES` dans `sw.js`) propose « Mettre à jour » → activation et un seul rechargement. Vérifié au démarrage, au retour dans l’app (iPhone : écran d’accueil) et toutes les 30 min. Rien à la première installation ; « × » = plus tard (session). Les versions v29 et antérieures passent encore directement en v30 (pas de bannière chez elles).
+
 ## Limites connues
 Rencontres absentes pour les jeux récents (voir plus haut). Textes Pokédex FR officiels seulement à partir de Noir/Blanc (PokéAPI), le reste est traduit automatiquement. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

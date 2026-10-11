@@ -159,7 +159,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     const hdr = [...document.querySelectorAll('.dnav > :not(.sp)')].map(e => e.getAttribute('aria-label'));
     const bar = document.querySelector('#actbar'), r = bar.getBoundingClientRect();
     const acts = [...bar.querySelectorAll('.act')].map(b => { const br = b.getBoundingClientRect(); return { c: b.classList[1], within: br.left >= 0 && br.right <= innerWidth + 0.5, noOverflow: b.scrollWidth <= b.clientWidth + 1, top: Math.round(br.top) }; });
-    return { hdr, fixedBottom: getComputedStyle(bar).position === 'fixed' && Math.abs(r.bottom - innerHeight) < 2, underHeader: getComputedStyle(bar).position !== 'fixed' && r.top >= document.querySelector('.dnav').getBoundingClientRect().bottom - 1 && r.top < 140, acts, sw: document.documentElement.scrollWidth };
+    return { hdr, fixedBottom: getComputedStyle(bar).position === 'fixed' && Math.abs(r.bottom - innerHeight) < 2, underHeader: getComputedStyle(bar).position !== 'fixed' && r.top >= document.querySelector('.dgbar').getBoundingClientRect().bottom - 1 && r.top < 200, acts, sw: document.documentElement.scrollWidth };
   });
   ok(JSON.stringify(lay.hdr) === '["Retour à la liste","Précédent","Suivant","Favori"]', tag + ' header: back/prev/next/fav only ' + JSON.stringify(lay.hdr));
   ok(lay.acts.map(a => a.c).slice(0, 3).join() === 'cg,sh,tr' && lay.acts.every(a => a.within && a.noOverflow) && new Set(lay.acts.map(a => a.top)).size === 1 && lay.sw <= w, tag + ' action row order + fits ' + JSON.stringify(lay.acts));
@@ -606,7 +606,41 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await go('#/'); await sel('sv'); await go('#/p/25'); await sleep(500);
   const order = await p.evaluate(() => [...document.querySelectorAll('.detail > *')].map(e => e.classList.contains('hero') ? 'hero' : e.classList.contains('trackbox') ? 'track' : e.classList.contains('desc') ? 'desc' : (e.querySelector('h2')?.childNodes[0].textContent.trim() || '')));
   const at = x => order.indexOf(x);
-  ok(at('hero') === 0 && at('track') === 1 && at('Formes') === 2 && (at('desc') < 0 || (at('desc') > 2 && at('desc') < at('Statistiques de base'))) && at('Statistiques de base') < at('Talents') && at('Talents') < at('Capacités') && at('Capacités') < at('Évolutions') && at('Évolutions') < at('Où le trouver') && at('Où le trouver') < at('Présent dans') && at('Présent dans') < at('Pokémon GO'), tag + ' game body order ' + order.filter(Boolean).join(' > '));
+  ok(at('hero') === 0 && at('track') === 1 && at('Formes') === 2 && (at('desc') < 0 || (at('desc') > 2 && at('desc') < at('Statistiques de base'))) && at('Statistiques de base') < at('Talents') && at('Talents') < at('Capacités') && at('Capacités') < at('Évolutions') && at('Évolutions') < at('Où le trouver') && at('Où le trouver') < at('Pokémon GO') && at('Présent dans') < 0, tag + ' game body order (v30: no « Présent dans » on a game sheet) ' + order.filter(Boolean).join(' > '));
+  { // ---- v30: sheet game selector = sticky 2nd header row, same order as « Jeux », regional numbers; « Présent dans » on the overview only
+    const listOrd = await p.$$eval('#game option', o => o.map(x => x.value).filter(Boolean));
+    const sheetOpts = async k => { await go('#/'); await sel(''); await go('#/p/' + k); await sleep(700); return p.$$eval('#dgame option', o => o.map(x => ({ v: x.value, l: x.textContent, n: x.dataset.n || '' }))); };
+    const subseq = vs => { let i = 0; for (const v of vs) { i = listOrd.indexOf(v, i); if (i < 0) return false; i += 1; } return true; };
+    const bad = [];
+    for (const k of ['6', '150', '145', '25', '1000', '493', '26-alola', '6-mega-x', '384']) { const o = await sheetOpts(k); const vs = o.map(x => x.v); if (vs[0] !== 'all' || !subseq(vs.slice(1))) bad.push(k + ': ' + vs.join(' ')); }
+    ok(!bad.length, tag + ' v30 sheet menu order = « Jeux » menu order (subsequence, overview first) ' + bad.join(' / '));
+    let o = await sheetOpts('6'); const n = v => (o.find(x => x.v === v) || {}).n;
+    ok(n('sw') === '#380' && n('za') === '#153' && n('svdisk') === '#169' && n('rb') === '#006' && n('bdsp') === 'Hors dex' && !n('all') && !n('home') && !n('go'), tag + ' v30 Dracaufeu: regional numbers in the sheet menu ' + o.map(x => x.v + '=' + x.n).join(' '));
+    await p.click('#dgamebtn'); await sleep(250);
+    const pop = await p.evaluate(() => ({ sw: document.querySelector('#dgamelist [data-v="sw"] .gnum')?.textContent, bd: document.querySelector('#dgamelist [data-v="bdsp"] .gnum.hx')?.textContent, seps: [...document.querySelectorAll('#dgamelist .gsep2')].map(e => e.textContent.trim()) }));
+    const listSeps = await p.evaluate(() => [...new Set([...document.querySelectorAll('#gamelist .gsep2')].map(e => e.textContent.trim()))]);
+    ok(pop.sw === '#380' && pop.bd === 'Hors dex' && pop.seps.every(s => listSeps.includes(s)) && pop.seps.join() === listSeps.filter(s => pop.seps.includes(s)).join(), tag + ' v30 sheet popup shows the numbers and the « Jeux » separators ' + JSON.stringify(pop) + ' / ' + listSeps.join());
+    await p.keyboard.press('Escape'); await sleep(150);
+    o = await sheetOpts('150'); let vs = o.map(x => x.v);
+    ok(vs.indexOf('zamega') >= 0 && vs.indexOf('zamega') === vs.indexOf('zadlc') - 1 && !n('zamega') && o.find(x => x.v === 'za').n === '#232', tag + ' v30 Mewtwo: Méga-Dex just above Méga-Dimension (no own number), Z-A #232 ' + vs.slice(0, 7).join(' '));
+    o = await sheetOpts('145'); vs = o.map(x => x.v); const sh = o.find(x => x.v === 'svhors');
+    ok(sh && sh.n === 'Hors dex' && !/hors dex/i.test(sh.l) && vs.indexOf('svhors') === vs.indexOf('go') + 1 && vs.indexOf('svhors') < vs.indexOf('bdsp') && !vs.includes('sv') && listOrd.indexOf('svhors') === listOrd.indexOf('svdisk') - 1, tag + ' v30 Électhor: « Écarlate / Violet (+ extensions) » Hors dex in the place of « Jeux » (above Le Disque Indigo, not at the end) ' + vs.slice(0, 8).join(' '));
+    ok(!o.slice(-3).some(x => x.n === 'Hors dex' && /hors|mega/.test(x.v)), tag + ' v30 Hors dex / Méga-Dex entries are not at the end');
+    await p.select('#dgame', 'svhors'); await sleep(500);
+    ok(await p.evaluate(() => state.dgame === 'sv' && document.querySelector('#dgame').value === 'svhors' && /Hors dex/.test(document.querySelector('#dgamebtn').textContent)), tag + ' v30 choosing the Hors dex entry opens the Écarlate / Violet sheet, button shows « Hors dex »');
+    const pres = async g => { await p.select('#dgame', g); await sleep(g === 'go' ? 800 : 400); return p.evaluate(() => [...document.querySelectorAll('.detail > section h2')].some(h => /Présent dans/.test(h.textContent))); };
+    await go('#/'); await sel(''); await go('#/p/6'); await sleep(600);
+    const pr = { all: await pres('all'), home: await pres('home'), sw: await pres('sw'), go: await pres('go'), all2: await pres('all') };
+    ok(pr.all && pr.all2 && !pr.home && !pr.sw && !pr.go, tag + ' v30 « Présent dans » on the overview only ' + JSON.stringify(pr));
+    await p.select('#dgame', 'sw'); await sleep(400); await p.evaluate(() => window.scrollTo(0, 2200)); await sleep(300);
+    const st = await p.evaluate(() => { const g = document.querySelector('.dgbar').getBoundingClientRect(), d = document.querySelector('.dnav').getBoundingClientRect(), b = document.querySelector('#dgamebtn').getBoundingClientRect(), a = document.querySelector('#actbar').getBoundingClientRect();
+      const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2); return { y: scrollY, gTop: Math.round(g.top), gBot: Math.round(g.bottom), h: Math.round(g.height), dBot: Math.round(d.bottom), aTop: Math.round(a.top), aBot: Math.round(a.bottom), hit: !!(hit && hit.closest('#dgamebtn')), num: document.querySelector('#dgamebtn .gnum')?.textContent, sw: document.documentElement.scrollWidth }; });
+    ok(st.y > 1000 && Math.abs(st.gTop - st.dBot) <= 1 && st.h <= 56 && st.hit && st.num === '#380' && st.sw <= w && (w < 700 ? st.aTop > st.gBot + 300 : st.aTop >= st.gBot - 1 && st.aBot < 210), tag + ' v30 game selector stays visible under ← ‹ › ★ while scrolling, compact, clickable, no overlap ' + JSON.stringify(st));
+    await p.click('#dgamebtn'); await sleep(250); await p.click('#dgamelist [data-v="xy"]'); await sleep(500);
+    ok(await p.evaluate(() => state.dgame === 'xy' && /#085/.test(document.querySelector('#dgamebtn').textContent)), tag + ' v30 switching game from the sticky selector after scrolling');
+    await p.screenshot({ path: SHOTS + `v30-sticky-${tag}.png` });
+    await go('#/'); await sel('');
+  }
   ok(await p.$eval('#cat option[value="strans"]', o => o.textContent) === '✨ Shiny transférés (HOME)', tag + ' v24 « Shiny transférés (HOME) » filter restored');
   // Z-A dexes: no « Hors dex » tail for species of the sibling dex (Z-A ↔ Méga-Dimension); 3rd dex « Méga-Dex »
   const zx = await p.evaluate(async () => { const a = await loadDex('za'), b = await loadDex('zadlc'); return { za: a.extra.size, zadlc: b.extra.size, zaN: a.order.size, dlcN: b.order.size }; });
@@ -637,7 +671,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(swx === 0 && hs.n === 80 && hs.ctx === 'sw' && hs.first === 150 && /Hors dex ÉB/.test(hs.count), tag + ' Hors dex Épée/Bouclier list (sw dexes untouched) ' + JSON.stringify(hs));
   await go('#/p/151'); await sleep(500);
   const dg2 = await p.$eval('#dgame', e => e.value); await p.click('#actbar .cg'); await sleep(100);
-  ok(dg2 === 'sw' && await p.evaluate(() => CAUGHT_G.has('sw:151') && isCaught(BY_KEY['151'], 'sw') && !gamesOf(BY_KEY['151']).includes('sw')), tag + ' Mew marked in Épée/Bouclier from the Hors dex list (completion rules unchanged)');
+  ok(dg2 === 'swhors' && await p.evaluate(() => state.dgame === 'sw' && CAUGHT_G.has('sw:151') && isCaught(BY_KEY['151'], 'sw') && !gamesOf(BY_KEY['151']).includes('sw')), tag + ' Mew marked in Épée/Bouclier from the Hors dex list (completion rules unchanged)');
   await go('#/'); await p.select('#game', 'svhors'); await sleep(600);
   ok((await p.evaluate(() => [filtered().length, trackCtx()])).join() === '69,sv', tag + ' Hors dex Écarlate/Violet: 69, context sv');
   await go('#/'); await p.select('#game', ''); await sleep(300);
@@ -1034,6 +1068,46 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.select('#dgame', 'go'); await sleep(500); ok(/PC max/.test(await p.$eval('.detail', e => e.textContent)), 'offline GO page');
   await p.goto(BASE); await sleep(300); await p.select('#game', 'za'); await sleep(500); ok(parseInt(await p.$eval('#count', e => e.textContent)) >= 232, 'offline game dex: ' + await p.$eval('#count', e => e.textContent));
   await p.close();
+}
+// v30: in-app update prompt — simulated version bump on a copy of docs/ (symlinks + a real sw.js) served on port+1
+{
+  const fs = await import('node:fs'), path = await import('node:path'), { spawn } = await import('node:child_process');
+  const DOCS = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../docs'), TMP = '/tmp/pdx-upd', PORT = +(process.argv[2] || 8801) + 1, U = `http://localhost:${PORT}/`;
+  fs.rmSync(TMP, { recursive: true, force: true }); fs.mkdirSync(TMP);
+  for (const f of fs.readdirSync(DOCS)) if (f !== 'sw.js') fs.symlinkSync(path.join(DOCS, f), path.join(TMP, f));
+  const sw0 = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8'); fs.writeFileSync(path.join(TMP, 'sw.js'), sw0);
+  const srv = spawn('python3', ['-m', 'http.server', String(PORT), '--directory', TMP], { stdio: 'ignore' }); await sleep(1200);
+  const ctx = await b.createBrowserContext(); const p = await ctx.newPage(); await p.setViewport({ width: 360, height: 780, isMobile: true, hasTouch: true });
+  p.on('pageerror', e => errs.push('upd: ' + e.message));
+  let loads = 0; p.on('load', () => { loads += 1; });
+  const ver = () => p.evaluate(() => new Promise(res => { const c = navigator.serviceWorker.controller; if (!c) return res(null); const ch = new MessageChannel(); ch.port1.onmessage = e => res(e.data.v); c.postMessage({ type: 'VERSION' }, [ch.port2]); setTimeout(() => res('?'), 2000); }));
+  const vis = () => p.evaluate(() => { const u = document.querySelector('#upd'); return !!(u && u.classList.contains('on') && u.getBoundingClientRect().height > 0); });
+  await p.goto(U, { waitUntil: 'networkidle0' }); await p.evaluate(() => navigator.serviceWorker.ready); await sleep(1500);
+  ok(!(await vis()) && !(await p.$('#upd')), 'v30 update: first install shows no banner');
+  await p.reload({ waitUntil: 'networkidle0' }); await sleep(800);
+  const v0 = await ver(); ok(v0 === /VERSION = '([^']+)'/.exec(sw0)[1] && !(await vis()), 'v30 update: controlled by ' + v0 + ', no banner without a new version');
+  // bump: new sw.js on the server, picked up when returning to the app (visibilitychange → registration.update())
+  fs.writeFileSync(path.join(TMP, 'sw.js'), sw0.replace(/const VERSION = '[^']+'/, "const VERSION = 'v99-test'").replace(/const NOTES = '[^']*'/, "const NOTES = 'Version de test.'"));
+  await p.goto(U + '#/p/6', { waitUntil: 'networkidle0' }); const l0 = loads;
+  await p.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+  for (let i = 0; i < 20 && !(await vis()); i++) await sleep(500);
+  const bn = await p.evaluate(() => { const u = document.querySelector('#upd'), r = u.getBoundingClientRect(), a = document.querySelector('#actbar').getBoundingClientRect(); return { t: u.textContent.replace(/\s+/g, ' '), btn: !!u.querySelector('.updgo'), above: r.bottom <= a.top + 1, inside: r.left >= 0 && r.right <= innerWidth + 0.5 }; });
+  ok(await vis() && /Nouvelle version disponible/.test(bn.t) && /v99-test · Nouveautés : Version de test\./.test(bn.t) && bn.btn && bn.above && bn.inside, 'v30 update: banner « Nouvelle version disponible » + v99-test · Nouveautés + « Mettre à jour », above the action bar ' + JSON.stringify(bn));
+  await sleep(1500);
+  ok((await ver()) === v0 && await p.evaluate(async () => !!(await navigator.serviceWorker.getRegistration()).waiting) && loads === l0, 'v30 update: new version waits (no forced activation, no reload) until the tap');
+  await p.screenshot({ path: SHOTS + 'v30/08-banniere-mise-a-jour.png' });
+  await p.click('#upd .updgo');
+  for (let i = 0; i < 20 && loads === l0; i++) await sleep(300);
+  await sleep(2500);
+  const v1 = await ver();
+  ok(v1 === 'v99-test' && loads === l0 + 1 && !(await vis()), `v30 update: tap → new version active, exactly one reload (${loads - l0}), no banner after`);
+  await sleep(3000); ok(loads === l0 + 1, 'v30 update: no reload loop');
+  // « Plus tard » hides it for this session
+  fs.writeFileSync(path.join(TMP, 'sw.js'), sw0.replace(/const VERSION = '[^']+'/, "const VERSION = 'v100-test'"));
+  await p.evaluate(() => document.dispatchEvent(new Event('visibilitychange'))); for (let i = 0; i < 20 && !(await vis()); i++) await sleep(500);
+  await p.click('#upd .updx'); await sleep(400); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1500);
+  ok(!(await vis()) && (await ver()) === 'v99-test', 'v30 update: « × » (plus tard) hides the banner for the session, version still waiting');
+  await ctx.close(); srv.kill(); fs.rmSync(TMP, { recursive: true, force: true });
 }
 console.log('console errors:', errs.length, errs.slice(0, 10));
 console.log(fails ? `${fails} FAILURES` : 'ALL PASS');

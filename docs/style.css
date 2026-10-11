@@ -353,3 +353,22 @@ button.icon .vic{display:block}
 .heldl li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;padding:6px 0;border-top:1px solid var(--line, rgba(127,127,127,.18))}
 .heldl li:first-child{border-top:0}
 .heldl .hin{font-weight:600}
+/* v30: sheet game selector in the sticky header (second row), regional dex numbers in the game menus */
+.dgbar{background:var(--bg);padding:6px 12px;border-bottom:1px solid var(--line);gap:8px}
+.dgbar label{font-size:14px}
+.dgbar .gbtn{height:40px}
+.gnum{flex:none;margin-left:auto;padding-left:8px;font-size:13px;font-weight:700;color:var(--mute);font-variant-numeric:tabular-nums;white-space:nowrap}
+.gnum.hx{font-weight:500;font-style:italic}
+.gopt .gl{flex:1;min-width:0}
+@media (min-width:700px){.dgbar{padding:6px max(12px,calc((100% - 760px)/2 + 14px))}}
+/* v30: update banner (same look as the v27 in-app messages, stays until answered) */
+.toast.upd{z-index:99;width:auto;max-width:min(calc(100vw - 24px),560px);flex-wrap:nowrap}
+.toast.upd .ti{color:#2e9e4f}
+.toast.upd .tm{display:flex;flex-direction:column;gap:2px;min-width:0}
+.toast.upd .tm small{color:var(--mute);font-size:12.5px;line-height:1.3;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.toast.upd{padding:10px 10px 10px 14px;gap:8px}
+.toast.upd .updgo{padding:0 12px}
+.toast.upd .updgo{margin-left:auto;flex:none;min-height:40px;padding:0 14px;border-radius:10px;border:0;background:#2e9e4f;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
+.toast.upd .updgo:disabled{opacity:.7;cursor:default}
+.toast.upd .updx{margin-left:0;flex:none}
+@media (max-width:520px){.toast.upd{flex-wrap:wrap;width:calc(100vw - 24px)}.toast.upd .ti{display:none}.toast.upd .tm{flex:1 1 0}.toast.upd .tm small{-webkit-line-clamp:2}.toast.upd .updgo{order:3;flex:1 1 100%;margin:2px 0 0}}
