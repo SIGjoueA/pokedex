@@ -1,6 +1,6 @@
 {
   "_doc": "Déguisements de Métamorph (#132) dans Pokémon GO. Édité à la main (jamais écrit par les scripts) ; appliqué par apply-go-overrides.mjs (lancé par build-data et la routine GO hebdomadaire) dans docs/data/sp/132.json (f['132'].go.dit). Noms anglais tels que dans les sources, résolus via core.json (en) ; un nom inconnu fait échouer l'application. Pour mettre à jour : vérifier Leek Duck (posts/find-ditto) + Polygon, déplacer l'ancienne liste « current » en tête de « past » avec sa période, mettre « checked » à jour.",
-  "checked": "2026-10-11",
+  "checked": "2026-10-12",
   "current": {
     "label": "Depuis l’événement « Completely Normal » (23/09/2025)",
     "since": "2025-09-23",

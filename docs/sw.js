@@ -1,8 +1,8 @@
 'use strict';
 const VERSION = 'v33';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiche sur ordinateur : boutons Officiel / HOME / Animé bien centrés sous l’image, sans décalage en changeant de style.';
-const DATA_VERSION = 'd12'; // bump when the schema of data/*.json changes
+const NOTES = 'Données GO vérifiées (12/10) : Métamorph, œufs, PvP et régionaux à jour ; zone du Tapatoès Plumage Bleu affichée une seule fois.';
+const DATA_VERSION = 'd13'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
