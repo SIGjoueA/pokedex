@@ -41,7 +41,7 @@ for (const [k, o] of Object.entries(gmax)) {
 }
 // v32: regional exclusives (go.rg = zone in French, go.rgm = 1 when migratory). Cleared first so a removed key disappears.
 { const RG = OV.regional || { keys: {}, migratory: {} };
-  for (const e of core.e) { if (!e.go) continue; const sp = spOf(e.id), f = sp.f[e.k]; if (f && f.go) { delete f.go.rg; delete f.go.rgm; delete f.go.rgf; } }
+  for (const e of core.e) { const sp = spOf(e.id), f = sp.f[e.k]; if (f && f.go) { delete f.go.rg; delete f.go.rgm; delete f.go.rgf; } }
   for (const [grp, mig] of [[RG.keys || {}, 0], [RG.migratory || {}, 1]]) for (const [k, z] of Object.entries(grp)) {
     if (k.startsWith('_')) continue; const e = byKey[k]; if (!e) { log.push(`! régional inconnu ${k}`); continue; }
     const sp = spOf(e.id), f = sp.f[k]; if (!f || !f.go) { const b = sp.f[String(e.id)]; if (b && b.go) { (b.go.rgf ||= []).push([e.l || e.n, z]); continue; } log.push(`! régional ${k} sans données GO`); continue; }
