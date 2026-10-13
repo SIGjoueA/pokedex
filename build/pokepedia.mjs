@@ -19,6 +19,12 @@ export const CODE = { RB: [1, 2], R: [1], B: [2], V: [1], RV: [1, 2], J: [3], OA
   SL: [27, 28], S: [27], L: [28], So: [27], Lu: [28], USUL: [29, 30], US: [29], UL: [30], LGPE: [31, 32], LGP: [31], LGE: [32], EB: [33, 34], Ep: [33], Bo: [34],
   DEPS: [37, 38], DE: [37], PS: [38], LPA: [39], EV: [40, 41], Ec: [40], Vi: [41], LPZA: [47], LPZAmd: [48],
   EC: [40], No: [17], 'Éc': [40], VI: [41], Ev: [40, 41], 'Ép': [33], Bl2: [22], No2: [21] };
+// v34: Poképédia article titles of the games (without « Pokémon ») → codes above (older sub-pages link the game instead of {{Jeu|…}})
+const GAME_LINK = { 'Rouge': 'R', 'Bleu': 'B', 'Vert': 'V', 'Jaune': 'J', 'Or': 'O', 'Argent': 'A', 'Cristal': 'Cr', 'Rubis': 'Ru', 'Saphir': 'Sa', 'Émeraude': 'É',
+  'Rouge Feu': 'RF', 'Vert Feuille': 'VF', 'Rouge Feu et Vert Feuille': 'RFVF', 'Diamant': 'D', 'Perle': 'P', 'Platine': 'Pt', 'Diamant et Perle': 'DP', 'Or HeartGold': 'HG', 'Argent SoulSilver': 'SS',
+  'Or HeartGold et Argent SoulSilver': 'HGSS', 'Noir': 'N', 'Blanc': 'Bl', 'Noir et Blanc': 'NB', 'Noir 2': 'N2', 'Blanc 2': 'B2', 'Noir 2 et Blanc 2': 'N2B2', 'X': 'X', 'Y': 'Y', 'X et Y': 'XY',
+  'Rubis Oméga': 'RuO', 'Saphir Alpha': 'SaA', 'Rubis Oméga et Saphir Alpha': 'ROSA', 'Soleil': 'S', 'Lune': 'L', 'Soleil et Lune': 'SL', 'Ultra-Soleil': 'US', 'Ultra-Lune': 'UL', 'Ultra-Soleil et Ultra-Lune': 'USUL',
+  'Épée': 'Ep', 'Bouclier': 'Bo', 'Épée et Bouclier': 'EB', 'Diamant Étincelant': 'DE', 'Perle Scintillante': 'PS', 'Écarlate': 'Ec', 'Violet': 'Vi', 'Écarlate et Violet': 'EV', 'Légendes Pokémon : Arceus': 'LPA' };
 // expansions without their own Pokédex text → base game version
 export const EXP = { 42: 40, 52: 41, 43: 40, 53: 41, 35: 33, 50: 34, 36: 33, 51: 34, 48: 47 };
 
@@ -58,7 +64,10 @@ function descs(w) {
   for (const line of body.split('\n')) {
     const h = line.match(/^=+ *(.*?) *=+ *$/);
     if (h) { form = clean(h[1]); cur = null; continue; }
-    if (line.startsWith(';')) { const codes = [...line.matchAll(/\{\{Jeu\|([^}|]+)/g)].map(x => x[1].trim()); cur = codes.length ? codes : null; }
+    if (line.startsWith(';')) { const codes = [...line.matchAll(/\{\{Jeu\|([^}|]+)/g)].map(x => x[1].trim());
+      // v34: games written as links on older-generation sub-pages: « ;{{Jeu|D}}, [[Pokémon Perle|Perle]] et [[Pokémon Platine|Platine]] »
+      for (const x of line.matchAll(/\[\[(?:Pokémon )?([^\]|]+?)(?:\|[^\]]*)?\]\]/g)) { const c = GAME_LINK[A(x[1]).trim()]; if (c) codes.push(c); }
+      cur = codes.length ? codes : null; }
     else if (line.startsWith(':') && cur) { const t = clean(line.slice(1)); if (t) out.push({ codes: cur, form, t, absent: NOTDEX.test(t) }); }
   }
   return out;
@@ -74,7 +83,7 @@ function events(w) {
   const out = []; let year = null;
   for (const line of body.split('\n')) {
     const y = line.match(/^\* *'''(\d{4})'''/); if (y) { year = y[1]; continue; }
-    const e = line.match(/^\*\* *(.+)$/); if (e && year) { const t = clean(e[1]); if (t) out.push([year, t]); }
+    const e = line.match(/^\*\* *(.+)$/); if (e && year) { const t = clean(e[1].replace(/\s*==.*$/, '')); /* v34: heading glued to the last line */ if (t) out.push([year, t]); }
   }
   return out.length ? out : null;
 }

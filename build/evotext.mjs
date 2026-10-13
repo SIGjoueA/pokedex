@@ -23,7 +23,7 @@ export async function evoText(d, c) {
     case 'tower-of-waters': p.push('Visiter la Tour des Eaux'); break;
     case 'three-defeated-bisharp': p.push('Vaincre 3 Scalproie chefs, puis monter de niveau'); break;
     case 'meltan-candies': p.push('Donner 400 Bonbons Meltan'); break;
-    case 'gimmighoul-coins': p.push('Posséder 999 Pièces Gimmighoul'); break;
+    case 'gimmighoul-coins': p.push('Posséder 999 Pièces de Mordudor'); break;
     case 'in-battle-level-up': p.push('Monter de niveau pendant un combat'); break;
     case 'strong-style-move': case 'agile-style-move': case 'use-move':
       if (d.used_move) p.push(`Utiliser ${c.moveFr(d.used_move.url)} ${d.min_move_count || ''} fois${t === 'strong-style-move' ? ' (style Puissant)' : t === 'agile-style-move' ? ' (style Rapide)' : ''}`.replace(/\s+/g, ' ')); break;

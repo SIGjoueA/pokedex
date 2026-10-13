@@ -5,8 +5,8 @@ const FORM_SYN = { GALARIAN: 'galar', HISUIAN: 'hisui', ALOLA: 'alola', ALOLAN: 
 const ITEM_FR = {
   ITEM_SUN_STONE: 'Pierre Soleil', ITEM_KINGS_ROCK: 'Roche Royale', ITEM_METAL_COAT: 'Peau Métal', ITEM_DRAGON_SCALE: 'Écaille Draco',
   ITEM_UP_GRADE: 'Améliorator', ITEM_GEN4_EVOLUTION_STONE: 'Pierre Sinnoh', ITEM_GEN5_EVOLUTION_STONE: 'Pierre Unys', ITEM_BEANS: 'Haricots (Gimmighoul)',
-  ITEM_OTHER_EVOLUTION_STONE_A: 'Pierre d’évolution spéciale', ITEM_OTHER_EVOLUTION_STONE_MAPLE_A: 'Pierre d’évolution spéciale (Maple A)',
-  ITEM_OTHER_EVOLUTION_STONE_MAPLE_B: 'Pierre d’évolution spéciale (Maple B)', ITEM_OTHER_EVOLUTION_STONE_MAPLE_C: 'Pierre d’évolution spéciale (Maple C)',
+  ITEM_OTHER_EVOLUTION_STONE_A: 'Pièces de Mordudor', ITEM_OTHER_EVOLUTION_STONE_MAPLE_A: 'Pomme Sucrée',
+  ITEM_OTHER_EVOLUTION_STONE_MAPLE_B: 'Pomme Acidulée', ITEM_OTHER_EVOLUTION_STONE_MAPLE_C: 'Pomme Nectar', // v34: real item names
 };
 const LURE_FR = { ITEM_TROY_DISK_MAGNETIC: 'Module Leurre Magnétique', ITEM_TROY_DISK_GLACIAL: 'Module Leurre Glacial', ITEM_TROY_DISK_MOSSY: 'Module Leurre Moussu', ITEM_TROY_DISK_RAINY: 'Module Leurre Pluvieux' };
 const TYPE_KEY = t => t.replace('POKEMON_TYPE_', '').toLowerCase();

@@ -1,0 +1,242 @@
+[
+ {
+  "w": 1440,
+  "nm": "vue-ensemble",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1440,
+  "nm": "vue-ensemble",
+  "mode": "home",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1440,
+  "nm": "vue-ensemble",
+  "mode": "anim",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1440,
+  "nm": "fiche-jeu",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1440,
+  "nm": "forme",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1440,
+  "nm": "go",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1280,
+  "nm": "vue-ensemble",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1280,
+  "nm": "vue-ensemble",
+  "mode": "home",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1280,
+  "nm": "vue-ensemble",
+  "mode": "anim",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1280,
+  "nm": "fiche-jeu",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1280,
+  "nm": "forme",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1280,
+  "nm": "go",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1000,
+  "nm": "vue-ensemble",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1000,
+  "nm": "vue-ensemble",
+  "mode": "home",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1000,
+  "nm": "vue-ensemble",
+  "mode": "anim",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1000,
+  "nm": "fiche-jeu",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1000,
+  "nm": "forme",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 1000,
+  "nm": "go",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 300,
+  "sTop": 338,
+  "h1": 600
+ },
+ {
+  "w": 360,
+  "nm": "vue-ensemble",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 252,
+  "sTop": 290,
+  "h1": 468
+ },
+ {
+  "w": 360,
+  "nm": "vue-ensemble",
+  "mode": "home",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 252,
+  "sTop": 290,
+  "h1": 468
+ },
+ {
+  "w": 360,
+  "nm": "vue-ensemble",
+  "mode": "anim",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 252,
+  "sTop": 290,
+  "h1": 468
+ },
+ {
+  "w": 360,
+  "nm": "fiche-jeu",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 252,
+  "sTop": 290,
+  "h1": 468
+ },
+ {
+  "w": 360,
+  "nm": "forme",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 252,
+  "sTop": 290,
+  "h1": 468
+ },
+ {
+  "w": 360,
+  "nm": "go",
+  "mode": "off",
+  "dx": 0,
+  "gap": 4,
+  "imgH": 252,
+  "sTop": 290,
+  "h1": 468
+ }
+]

@@ -1,0 +1,12 @@
+// v34 audit fixes, applied after a rebuild (end of build-data.mjs) or alone: node apply-v34.mjs. Every step is idempotent.
+import { execFileSync } from 'node:child_process';
+const H = new URL('.', import.meta.url).pathname, R = new URL('..', import.meta.url).pathname;
+const node = f => execFileSync('node', [H + f], { stdio: 'inherit' }), py = f => execFileSync('python3', [H + f], { stdio: 'inherit', cwd: R });
+node('fix-v34-types.mjs');      // Arceus / Silvallié: type of each plate / memory
+node('fix-v34-lgpe.mjs');       // Let's Go: Kanto + Meltan / Melmetal only
+node('fix-v34-merge.mjs');      // Papilord / Lépidonille / Pérégrain: one form each (core.mg → migration in the app)
+node('fix-v34-names.mjs');      // Noyau, Zygarde 10 %, Floette Fleur …, Zygarde 10 % in Z-A, Xerneas / Koraidon / Miraidon battle forms
+py('fix-v34-frlgsw-loc.py');    // RF/VF Switch: no GBA-only rows, « Centre Pokémon »
+py('fix-v34-desc.py');          // leftover machine translations (units)
+node('fix-v34-za-alpha.mjs');   // Z-A Barons from Poképédia (needs pokepedia.mjs apply first)
+node('apply-go-overrides.mjs'); // GO releases / Mordudor / evolution items (go-overrides.json), after the type fix

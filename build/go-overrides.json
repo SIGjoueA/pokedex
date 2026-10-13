@@ -174,5 +174,72 @@
       "631": "Europe, Asie et Australie",
       "632": "Amériques et Afrique"
     }
+  },
+  "released": {
+    "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13).",
+    "keys": {
+      "778": "MIMIKYU_DISGUISED",
+      "807": "ZERAORA_NORMAL",
+      "825": "DOTTLER_NORMAL",
+      "826": "ORBEETLE_NORMAL",
+      "843": "SILICOBRA_NORMAL",
+      "844": "SANDACONDA_NORMAL",
+      "847": "BARRASKEWDA_NORMAL",
+      "849": "TOXTRICITY_AMPED",
+      "849-low-key": "TOXTRICITY_LOW_KEY",
+      "931": "SQUAWKABILLY_GREEN",
+      "931-blue-plumage": "SQUAWKABILLY_BLUE",
+      "931-yellow-plumage": "SQUAWKABILLY_YELLOW",
+      "931-white-plumage": "SQUAWKABILLY_WHITE",
+      "956": "ESPATHRA_NORMAL",
+      "968": "ORTHWORM_NORMAL",
+      "973": "FLAMIGO_NORMAL",
+      "982-three-segment": "DUDUNSPARCE_THREE",
+      "77-galar": "PONYTA_GALARIAN",
+      "78-galar": "RAPIDASH_GALARIAN",
+      "80-galar": "SLOWBRO_GALARIAN",
+      "122-galar": "MR_MIME_GALARIAN",
+      "144-galar": "ARTICUNO_GALARIAN",
+      "145-galar": "ZAPDOS_GALARIAN",
+      "146-galar": "MOLTRES_GALARIAN",
+      "199-galar": "SLOWKING_GALARIAN",
+      "222-galar": "CORSOLA_GALARIAN",
+      "555-galar-standard": "DARMANITAN_GALARIAN_STANDARD",
+      "422-east": "SHELLOS_EAST_SEA",
+      "423-east": "GASTRODON_EAST_SEA",
+      "421-sunshine": "CHERRIM_SUNNY",
+      "718-10": "ZYGARDE_TEN_PERCENT",
+      "741-pom-pom": "ORICORIO_POMPOM",
+      "800-dusk": "NECROZMA_DUSK_MANE",
+      "800-dawn": "NECROZMA_DAWN_WINGS",
+      "888-crowned": "ZACIAN_CROWNED_SWORD",
+      "889-crowned": "ZAMAZENTA_CROWNED_SHIELD",
+      "999-roaming": "GIMMIGHOUL_NORMAL"
+    }
+  },
+  "unreleased": {
+    "_doc": "v34 : entrées que GO n'a pas (marquées indisponibles même si une source les donne sorties). Mordudor : seule la Forme Marche existe dans GO.",
+    "keys": [
+      "999"
+    ]
+  },
+  "evoItems": {
+    "_doc": "v34 : objets d'évolution GO affichés (clé « de>vers » de evo.json) ; c = null retire les bonbons.",
+    "edges": {
+      "840>841": {
+        "i": "Pomme Acidulée"
+      },
+      "840>842": {
+        "i": "Pomme Sucrée"
+      },
+      "840>1011": {
+        "i": "Pomme Nectar"
+      },
+      "999>1000": {
+        "c": null,
+        "i": "Pièces de Mordudor",
+        "ic": 999
+      }
+    }
   }
 }

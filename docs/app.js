@@ -261,6 +261,8 @@ function alphaOk(p, c) {
   const b = BY_KEY[String(p.id)] || p; if (b.lg || b.my || p.lg || p.my) return false;
   if (!saveGames(c).some(g => inGame(p, GIDX[g]))) return false; // not in that game (or its expansion)
   // PLA: species with a Hisuian form are only wild in that form (Kantonian Growlithe, Johto Typhlosion… = transfer only), except Sneasel (both wild)
+  // v34: Z-A / Méga-Dimension = only the species Poképédia lists with a Baron level (core zb); non-regional forms follow their base. Stored marks are kept, just hidden.
+  if (c !== 'la' && !(p.zb || (p.c !== 'reg' && b.zb))) return false;
   if (c === 'la' && p.id !== 215 && !p.k.includes('-hisui') && (FORMS[p.id] || []).some(q => q.k.includes('-hisui'))) return false;
   return true;
 }
@@ -272,7 +274,7 @@ const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + 
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
 const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
-  for (const k of [...HOME_B]) if (!BY_KEY[k] || !homeBaronOn(BY_KEY[k])) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark
+  for (const k of [...HOME_B]) if (!BY_KEY[k] || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
   for (const k of [...HOME_BS]) if (!HOME_B.has(k) || !HOME_SH.has(k)) HOME_BS.delete(k); // HOME Baron shiny needs HOME Baron + HOME Shiny
   store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
 function toggleMark(p, kind, c = trackCtx()) {
@@ -371,7 +373,20 @@ function toggleGem(p, c = 'za') {
 const transValid = x => markValid(x) && !!homeKind(x.split(':')[0]);
 const markValid = x => typeof x === 'string' && /^([a-z0-9]+):\d+(-[a-z0-9-]+)?$/.test(x) && (GAME_BY[x.split(':')[0]] || x.startsWith('go:'));
 // Saved marks migration (run at start and after an import): union across each save group (nothing is lost) and move marks of battle-only variants onto their base form.
+// v34 migration: forms merged into their base (Papilord, Lépidonille, Pérégrain: core.mg « old key → base key »). Every saved mark of an
+// old form moves to the base (union, nothing lost). Idempotent: runs at each start / after an import, only writes when something moved.
+function migrateMerged() {
+  const MG = (DATA && DATA.mg) || {}; if (!Object.keys(MG).length) return;
+  const mapK = x => { if (typeof x !== 'string') return x; if (MG[x]) return MG[x]; const i = x.indexOf(':'); return i > 0 && MG[x.slice(i + 1)] ? x.slice(0, i + 1) + MG[x.slice(i + 1)] : x; };
+  const sets = { favs: FAVS, shiny_g: SHINY_G, caught_g: CAUGHT_G, home_g: TRANS_G, homeshiny_g: STRANS_G, baron_g: BARON_G, barons_g: BARONS_G, home_o: HOME_O, home_og: HOME_OG, home_sh: HOME_SH, home_b: HOME_B, home_bs: HOME_BS };
+  for (const [name, set] of [...Object.entries(sets), ['caught', CAUGHT, 1], ['shiny', SHINY, 1]].map(x => x)) {
+    const ikSet = name === 'caught' || name === 'shiny'; let ch = false;
+    for (const x of [...set]) { const y = mapK(x); if (y !== x) { set.delete(x); set.add(ikSet && typeof y === 'string' && /^\d+$/.test(y) ? +y : y); ch = true; } }
+    if (ch) store.set(name, [...set]);
+  }
+}
 function migrateMarks() {
+  migrateMerged();
   let changed = false;
   for (const x of [...STRANS_G]) for (const set of [TRANS_G, SHINY_G, CAUGHT_G]) if (!set.has(x)) { set.add(x); changed = true; }
   for (const x of [...TRANS_G, ...SHINY_G]) if (!CAUGHT_G.has(x)) { CAUGHT_G.add(x); changed = true; }
@@ -1256,9 +1271,9 @@ function movesHTML(f, sp, gm, shared) {
 /* encounters */
 // v32: detailed locations of the Switch-era games from Poképédia (f.pl[game] = [[place, details]]); non-regional forms use the base form's list
 function ppLocs(f, sp, gm) {
-  if (f.pl) return f.pl[gm.id] || null;
   const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k];
-  if (e && e.c === 'reg') return null;
+  if (f.pl && f.pl[gm.id]) return f.pl[gm.id];
+  if (e && (e.c === 'reg' || e.mb)) return null; // v34: Megas say « Méga-Évolution de … »; a non-regional form without rows for this game uses the base form's list
   const b = sp.f[f.enOf || String(sp.id)]; return b && b.pl ? b.pl[gm.id] || null : null;
 }
 function ppLocHTML(rows, gm) {
@@ -1278,6 +1293,12 @@ function encHTML(f, sp, gm, shared) {
   const src = f.en ? f : (f.enOf && sp.f[f.enOf]) || f;
   const rows = (src.en && src.en[gm.id]) || [];
   let body;
+  if (!rows.length && !gm.enc) { // v34: recent games (Poképédia only): say how to get it instead of « PokéAPI ne fournit aucune donnée »
+    const k = Object.keys(sp.f).find(x => sp.f[x] === f), p = BY_KEY[k] || BY_KEY[String(sp.id)];
+    const pre = evoGraph().filter(x => (x.t === k || x.t === String(sp.id)) && BY_KEY[x.f] && BY_KEY[x.f].id !== sp.id && inGame(BY_KEY[x.f], GIDX[gm.id])).map(x => BY_KEY[x.f].n);
+    const how = p && p.mb ? `Méga-Évolution de ${(BY_KEY[p.mb] || {}).n || 'sa forme de base'} (avec sa Méga-Gemme)` : p && p.bo ? `Changement de forme de ${(BY_KEY[p.bo] || {}).n || 'sa forme de base'}` : pre.length ? `Faire évoluer ${[...new Set(pre)].join(' ou ')}` : 'Lieu non renseigné pour ce jeu (cadeau, échange, événement, raid ou rencontre unique possibles).';
+    return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(how)}</p><p class="note">Aucun lieu de capture répertorié par <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> pour ce Pokémon dans ce jeu.</p></section>`;
+  }
   if (!rows.length) body = `<p class="note">${gm.enc ? 'Aucune rencontre sauvage répertoriée par PokéAPI pour ce Pokémon dans ce jeu (il peut s’obtenir par évolution, œuf, cadeau, échange ou autre moyen, ou la donnée est absente).' : 'PokéAPI ne fournit aucune donnée de rencontres pour ce jeu (les apparitions dans la nature ne sont pas répertoriées).'}</p>`;
   else {
     const by = new Map();
@@ -1386,10 +1407,11 @@ function ditHTML(d) {
     <p class="note">Sources : ${D.src.map(([n, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join(' · ')}. Liste vérifiée le ${frDate(D.chk)} ; les événements peuvent la changer temporairement.</p></section>`;
 }
 function goCandyHTML(p) {
-  const out = evoGraph().filter(e => e.f === p.k && e.o && BY_KEY[e.t]);
+  let out = evoGraph().filter(e => e.f === p.k && e.o && BY_KEY[e.t]);
+  if (!out.length && p.c === 'form') out = evoGraph().filter(e => e.f === String(p.id) && e.o && BY_KEY[e.t]); // v34: Mordudor Forme Marche (the only one in GO) evolves like the base
   if (!out.length) return '';
   const grp = new Map(); // same cost → one line (Évoli: 25 bonbons → 8 évolutions)
-  for (const e of out) { const o = e.o, c = `${o.c !== undefined ? o.c + ' bonbons' : '?'}${o.i ? ' + ' + (o.ic ? o.ic + ' × ' + o.i : o.i) : ''}`; if (!grp.has(c)) grp.set(c, { names: [], nt: false }); grp.get(c).names.push(BY_KEY[e.t].n); grp.get(c).nt ||= !!o.nt; }
+  for (const e of out) { const o = e.o, c = [o.c !== undefined ? o.c + ' bonbons' : '', o.i ? (o.ic ? o.ic + ' × ' + o.i : o.i) : ''].filter(Boolean).join(' + ') || '?'; /* v34: Mordudor = 999 Pièces, no candy */ if (!grp.has(c)) grp.set(c, { names: [], nt: false }); grp.get(c).names.push(BY_KEY[e.t].n); grp.get(c).nt ||= !!o.nt; }
   return `<li>Bonbons d’évolution : ${[...grp].map(([c, g]) => `<b>${esc(c)}</b> → ${esc(g.names.join(', '))}${g.nt ? ' <span class="mute">(gratuit après un échange)</span>' : ''}`).join(' · ')}</li>`;
 }
 function goHTML(p, f, sp, shared, go) {
@@ -1596,6 +1618,7 @@ function registerSW() {
   if (!('serviceWorker' in navigator)) { $('#offline').textContent = ''; return; }
   navigator.serviceWorker.register('sw.js').then(reg => { swWatch(reg); return navigator.serviceWorker.ready; }).then(() => {
     const metered = navigator.connection && (navigator.connection.saveData || navigator.connection.type === 'cellular');
+    swDataVersion().then(() => showOffline()); // v34: the offline pack flag is only valid for the data cache it filled
     if (!store.get('imgsDone', false) && !metered) cacheImages();
     else showOffline();
   }).catch(() => {});
@@ -1632,8 +1655,13 @@ function swCheck() { if (SW_REG && navigator.onLine !== false) SW_REG.update().t
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') swCheck(); });
 addEventListener('hashchange', () => setTimeout(updPos, 120));
 let caching = false;
+// v34: « packDone2 » stores the DATA_VERSION whose cache was filled (old value true = unknown). A new DATA_VERSION empties the data cache
+// (sw.js activate) → the ✓ disappears and the download button comes back. DATA_DV = version reported by the active service worker.
+let DATA_DV = null;
+async function swDataVersion() { const c = navigator.serviceWorker && navigator.serviceWorker.controller; if (!c) return null; const r = await swAsk(c); DATA_DV = (r && r.dv) || null; return DATA_DV; }
+const packOk = () => { const v = store.get('packDone2', false); return !!v && DATA_DV !== null && v === DATA_DV; };
 function showOffline(msg) {
-  const imgs = store.get('imgsDone', false), pack = store.get('packDone2', false);
+  const imgs = store.get('imgsDone', false), pack = packOk();
   $('#offline').innerHTML = msg || [
     imgs ? '<p style="margin:0">✓ Images des Pokémon enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon (~12 Mo)</button></p>',
     pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~14 Mo)</button></p>',
@@ -1667,7 +1695,7 @@ async function cachePack() {
     'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
-  if (!fail) store.set('packDone2', true);
+  if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
   showOffline();
 }
 boot();

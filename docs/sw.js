@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v33';
+const VERSION = 'v34';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Données GO vérifiées (12/10) : Métamorph, œufs, PvP et régionaux à jour ; zone du Tapatoès Plumage Bleu affichée une seule fois.';
-const DATA_VERSION = 'd13'; // bump when the schema of data/*.json changes
+const NOTES = 'Corrections de l’audit : types d’Arceus et Silvallié, Pokémon GO, Barons Z-A, Let’s Go, noms de formes et hors-ligne.';
+const DATA_VERSION = 'd14'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
@@ -21,7 +21,7 @@ self.addEventListener('install', e => {
 self.addEventListener('message', e => {
   const d = e.data || {};
   if (d.type === 'SKIP_WAITING') self.skipWaiting();
-  else if (d.type === 'VERSION' && e.ports[0]) e.ports[0].postMessage({ v: VERSION, notes: NOTES });
+  else if (d.type === 'VERSION' && e.ports[0]) e.ports[0].postMessage({ v: VERSION, notes: NOTES, dv: DATA_VERSION }); // v34: dv = data cache version (offline pack flag)
 });
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => ((k.startsWith('pokedex-shell-') && k !== SHELL) || (k.startsWith('pokedex-data-') && k !== DATA) || k === 'pokedex-data')).map(k => caches.delete(k))))

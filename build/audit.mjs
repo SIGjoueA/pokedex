@@ -262,4 +262,40 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   { const css = fs.readFileSync(new URL('../docs/style.css', import.meta.url), 'utf8');
     ok('v33 hero : image en bloc centrée + boutons Officiel / HOME / Animé centrés dessous (CSS)', /\.hero #heroimg\{display:block;margin:0 auto;box-sizing:border-box;[^}]*aspect-ratio:1\/1/.test(css) && /\.hero \.sprsw\{display:flex;width:max-content;[^}]*margin:4px auto 8px/.test(css)); }
 }
+// ---- v34 : corrections de l'audit v33 (régressions)
+{ const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const OV = JSON.parse(fs.readFileSync(path.join(HERE, 'go-overrides.json'), 'utf8'));
+  const TY = new Set(core.types.map(t => t[0]));
+  const typed = core.e.filter(e => (e.id === 493 || e.id === 773) && e.c === 'form' && TY.has(e.k.split('-').slice(1).join('-')));
+  ok('v34 Arceus / Silvallié : 34 formes du type de leur plaque / ROM (core + fiche)', typed.length === 34 && typed.every(e => e.t.length === 1 && e.t[0] === e.k.split('-')[1] && sp(e.id).f[e.k].t[0] === e.t[0]));
+  eq('v34 Arceus Feu : type', E['493-fire'].t, ['fire']); eq('v34 Silvallié Type : Fée', E['773-fairy'].t, ['fairy']);
+  const goR = k => { const e = E[k]; return !!(e && e.go && sp(e.id).f[k].go && sp(e.id).f[k].go.r === 1); };
+  const rel = Object.keys(OV.released.keys).filter(k => !k.startsWith('_'));
+  ok('v34 GO : 13 espèces + 20 formes sorties (go-overrides released) marquées disponibles', rel.length >= 33 && rel.every(goR), rel.filter(k => !goR(k)).join());
+  ok('v34 GO : Zeraora, Salarsen, Tapatoès, M. Mime de Galar, Zygarde 10 %, Zacian Épée Suprême, Darumacho de Galar disponibles', ['807', '849', '931', '122-galar', '718-10', '888-crowned', '555-galar-standard', '982-three-segment'].every(goR));
+  ok('v34 GO : Mordudor = Forme Marche seulement', goR('999-roaming') && !E['999'].go && sp(999).f['999'].go.r === 0);
+  const ed = (a, b) => evo.find(x => x[0] === a && x[1] === b)[3];
+  ok('v34 GO évolutions : Pommes de Verpom, 999 Pièces de Mordudor sans bonbons', ed('840', '841').i === 'Pomme Acidulée' && ed('840', '842').i === 'Pomme Sucrée' && ed('840', '1011').i === 'Pomme Nectar' && ed('999', '1000').i === 'Pièces de Mordudor' && ed('999', '1000').ic === 999 && ed('999', '1000').c === undefined);
+  ok('v34 GO évolutions : plus de code interne (Maple / Pierre d’évolution spéciale)', !evo.some(x => x[3] && /Maple|Pierre d’évolution spéciale/.test(x[3].i || '')) && !/Pièces Gimmighoul/.test(JSON.stringify(evo)));
+  ok('v34 GO : bonbons absents → pas de « ? + »', /filter\(Boolean\)\.join\(' \+ '\) \|\| '\?'/.test(app));
+  const zb = core.e.filter(e => e.zb);
+  ok('v34 Barons Z-A : liste Poképédia (niveau Baron en Z-A / Méga-Dimension), sans légendaires ni Méga', zb.length > 150 && zb.length < 400 && zb.every(e => !e.lg && !e.my && !e.mb), String(zb.length));
+  { const zi = core.games.findIndex(g => g.id === 'za'), zd = core.games.findIndex(g => g.id === 'zadlc'), zaNon = core.e.filter(e => ((e.gb >> zi) & 1 || (e.gb >> zd) & 1) && !e.c && !e.lg && !e.my && !e.zb);
+  ok('v34 Barons Z-A : espèces sans niveau Baron exclues (alphaOk teste core.zb) ; marques gardées (non supprimées)', /p\.zb \|\| \(p\.c !== 'reg' && b\.zb\)/.test(app) && /\['hisui', 'za'\]\.some\(m => HOME_O\.has/.test(app) && !!E['181'].zb && zaNon.length >= 5, String(zaNon.length)); }
+  const L = core.games.findIndex(g => g.id === 'lgpe'), inL = e => (e.gb >> L) & 1;
+  eq('v34 Let’s Go : 153 espèces', new Set(core.e.filter(inL).map(e => e.id)).size, 153);
+  eq('v34 Let’s Go : 15 Méga de Kanto (filtre Méga)', core.e.filter(e => inL(e) && e.mb).length, 15);
+  ok('v34 Let’s Go : aucune espèce hors Kanto (sauf Meltan / Melmetal)', core.e.filter(inL).every(e => e.id <= 151 || e.id === 808 || e.id === 809) && dex('lgpe').x.length === 0 && G.lgpe.extra === 0);
+  ok('v34 Papilord / Lépidonille / Pérégrain : une seule forme, anciennes clés migrées (core.mg)', [414, 664, 665].every(id => core.e.filter(e => e.id === id).length === 1) && Object.keys(core.mg || {}).length === 40 && /function migrateMerged\(\)/.test(app));
+  ok('v34 noms de formes : plus de mots anglais (polar, meadow, sandy, trash…)', !core.e.some(e => /\b(polar|tundra|meadow|sandy|trash|poke-ball|garden|elegant)\b/.test(e.n)));
+  ok('v34 noms : Météno Noyau, Zygarde Forme 10 %, Floette Fleur Éternelle', !core.e.some(e => /Noyeau/.test(e.n)) && E['718-10'].n === 'Zygarde Forme 10 %' && E['670-eternal'].n === 'Floette Fleur Éternelle');
+  ok('v34 Zygarde 10 % dans Z-A et Méga-Dimension', ['za', 'zadlc'].every(g => sp(718).f['718-10'].av.includes(g) && (E['718-10'].gb >> core.games.findIndex(x => x.id === g)) & 1));
+  ok('v34 Xerneas / Koraidon / Miraidon : formes = variantes de la base (comptent pour 1)', core.e.filter(e => [716, 1007, 1008].includes(e.id) && e.c === 'form').every(e => e.bo === String(e.id)) && core.e.filter(e => [716, 1007, 1008].includes(e.id) && e.c === 'form').length === 5);
+  ok('v34 hors-ligne : drapeau du pack lié à DATA_VERSION (sw → dv)', /dv: DATA_VERSION/.test(sw) && /v === DATA_DV/.test(app) && /store\.set\('packDone2', DATA_DV/.test(app) && !/store\.set\('packDone2', true\)/.test(app));
+  ok('v34 RF/VF Switch : pas de ligne GBA (Colosseum), « Centre Pokémon » en français', !loc.a.some(a => /Pokecenter/.test(a)) && !loc.m.some(m => /Pokemon /.test(m)) && !(sp(25).f['25'].en.frlgsw || []).some(r => /Colosseum/.test(loc.m[r[1]])));
+  ok('v34 lieux : repli « Faire évoluer … » / « Lieu non renseigné » pour les jeux Poképédia', /Lieu non renseigné pour ce jeu/.test(app) && /Faire évoluer \$\{/.test(app));
+  { let bad = 0; for (const id of [43, 275, 276, 409]) { const s = sp(id); bad += Object.entries(s.tv || {}).filter(([v, i]) => !(s.pv || {})[v] && s.fv[v] === undefined && /pieds\/seconde|miles|\d pieds/.test(s.tt[i])).length; } eq('v34 descriptions : plus d’unités impériales', bad, 0); }
+  ok('v34 SW : VERSION ≥ v34, DATA_VERSION ≥ d14', +((sw.match(/const VERSION = 'v(\d+)'/) || [])[1] || 0) >= 34 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 14);
+  ok('v34 build : apply-v34.mjs lancé à la fin de build-data.mjs', /import\('\.\/apply-v34\.mjs'\)/.test(fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8')));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

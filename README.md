@@ -157,6 +157,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 ## v33 : correctif d’affichage
 - **Fiche sur ordinateur** : l’image et les boutons Officiel / HOME / Animé étaient côte à côte (décalés) à partir d’environ 700 px de large ; l’image est maintenant un bloc carré centré (même taille pour l’illustration, HOME et le sprite animé, donc aucun décalage en changeant de style) et les boutons sont centrés juste dessous, à toutes les largeurs. DATA_VERSION inchangé (d12).
 
+## v34 : corrections de l’audit v33
+- **Script** : `build/apply-v34.mjs` (lancé à la fin de `build-data.mjs`, relançable seul, idempotent) enchaîne `fix-v34-types.mjs` (types d’Arceus / Silvallié), `fix-v34-lgpe.mjs` (Let’s Go = Kanto + Meltan / Melmetal), `fix-v34-merge.mjs` (Papilord, Lépidonille, Pérégrain en une forme ; `core.mg` = anciennes clés → base, migrées en union dans l’app par `migrateMerged`), `fix-v34-names.mjs` (Noyau, Zygarde Forme 10 % + Z-A, Floette Fleur …, Xerneas / Koraidon / Miraidon = variantes de la base), `fix-v34-frlgsw-loc.py`, `fix-v34-desc.py`, `fix-v34-za-alpha.mjs` (Barons Z-A = niveau « Baron » dans les lieux Poképédia Z-A / Méga-Dimension → `core.e.zb`), puis `apply-go-overrides.mjs`.
+- **GO** (`go-overrides.json`) : `released.keys` (clé → forme du game master ; stats / attaques reprises de `build/.cache/go-latest.json`), `unreleased.keys` (Mordudor Coffre), `evoItems.edges` (Pommes de Verpom, 999 Pièces de Mordudor sans bonbons). À compléter à la main par la routine hebdo quand une espèce sort.
+- **Hors-ligne** : `packDone2` contient la DATA_VERSION téléchargée (le service worker la renvoie avec sa version) ; après un changement de DATA_VERSION, le bouton de téléchargement revient.
+- **Lieux** : sans lieu Poképédia pour un jeu récent, la fiche affiche « Faire évoluer … », « Méga-Évolution de … » ou « Lieu non renseigné pour ce jeu ».
+
 ## Limites connues
 Rencontres détaillées des jeux Switch via Poképédia (v32). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Distance d'éclosion GO limitée au pool de la saison en cours. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

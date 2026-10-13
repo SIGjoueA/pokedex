@@ -39,6 +39,39 @@ for (const [k, o] of Object.entries(gmax)) {
   f.go = g;
   if (g.r) e.go = 1; else e.gof = o.from;
 }
+// v34: released species / forms missing from the frozen pogoapi list (released.keys: entry → game-master form name), entries GO doesn't have
+// (unreleased.keys) and GO evolution items shown in the app (evoItems.edges, evo.json « from>to »). Stats / moves taken from the cached game master.
+{ const REL = (OV.released || {}).keys || {}, UNREL = (OV.unreleased || {}).keys || [];
+  const GMF = new URL('./.cache/go-latest.json', import.meta.url); let GM = null;
+  const gm = () => GM ||= fs.existsSync(GMF) ? JSON.parse(fs.readFileSync(GMF)) : [];
+  const goj = rd('go.json'); let movesAdded = 0;
+  const cpm = L => { const a = gm().map(e => e.data.playerLevel).find(Boolean)?.cpMultiplier; return Number.isInteger(L) ? a[L - 1] : Math.sqrt((a[Math.floor(L) - 1] ** 2 + a[Math.floor(L)] ** 2) / 2); };
+  const maxCp = (st, L) => Math.max(10, Math.floor((st.baseAttack + 15) * Math.sqrt(st.baseDefense + 15) * Math.sqrt(st.baseStamina + 15) * cpm(L) ** 2 / 10));
+  const TK = t => t.replace('POKEMON_TYPE_', '').toLowerCase();
+  const mv = key => { if (typeof key !== 'string') return null; if (goj.moves[key]) return key;
+    const m = gm().map(e => e.data.moveSettings).find(x => x && x.movementId === key); if (!m) return null;
+    const base = key.replace(/_FAST$/, '');
+    goj.moves[key] = [base.split('_').map(w => w[0] + w.slice(1).toLowerCase()).join(' '), TK(m.pokemonType), m.power || 0, Math.abs(m.energyDelta || 0), m.durationMs, key.endsWith('_FAST') ? 1 : 0]; movesAdded++; return key; };
+  for (const [k, form] of Object.entries(REL)) {
+    if (k.startsWith('_')) continue; const e = byKey[k]; if (!e) { log.push(`! sortie GO inconnue ${k}`); continue; }
+    const sp = spOf(e.id), f = sp.f[k]; if (!f) { log.push(`! ${k} absente de sp/${e.id}.json`); continue; }
+    if (!f.go && form) { const ps = gm().map(x => x.data.pokemonSettings).find(x => x && x.form === form);
+      if (!ps) { log.push(`! ${k} : forme ${form} absente du game master`); continue; }
+      const st = ps.stats, g = { a: st.baseAttack, d: st.baseDefense, s: st.baseStamina, m50: maxCp(st, 50), m51: maxCp(st, 51), t: [ps.type, ps.type2].filter(Boolean).map(TK) };
+      if (ps.kmBuddyDistance) g.bd = ps.kmBuddyDistance;
+      g.fm = (ps.quickMoves || []).map(mv).filter(Boolean); g.cm = (ps.cinematicMoves || []).map(mv).filter(Boolean);
+      if (ps.thirdMove) g.th = [ps.thirdMove.stardustToUnlock, ps.thirdMove.candyToUnlock];
+      if (ps.pokemonClass) g.cl = ps.pokemonClass.replace('POKEMON_CLASS_', '').toLowerCase();
+      f.go = g; log.push(`${k} : données GO depuis le game master (${form})`); }
+    if (!f.go) { log.push(`! ${k} : pas de données GO`); continue; }
+    f.go.r = 1; e.go = 1;
+  }
+  for (const k of UNREL) { const e = byKey[k]; if (!e) { log.push(`! indisponible GO inconnu ${k}`); continue; } const f = spOf(e.id).f[k]; if (f && f.go) f.go.r = 0; delete e.go; }
+  if (movesAdded) wr('go.json', goj);
+  const EI = (OV.evoItems || {}).edges || {}, evo = rd('evo.json'); let ne = 0;
+  for (const ed of evo) { const o = EI[ed[0] + '>' + ed[1]]; if (!o || !ed[3]) continue; for (const [x, v] of Object.entries(o)) { if (v === null) delete ed[3][x]; else ed[3][x] = v; } ne++; }
+  for (const ed of evo) for (const c of ed[2] || []) if (c.x) c.x = c.x.map(t => t.replace('Pièces Gimmighoul', 'Pièces de Mordudor'));
+  wr('evo.json', evo); log.push(`GO v34 : ${Object.keys(REL).filter(k => !k.startsWith('_')).length} sorties ajoutées, ${UNREL.length} retirées, ${ne} objets d’évolution, ${movesAdded} attaques ajoutées`); }
 // v32: regional exclusives (go.rg = zone in French, go.rgm = 1 when migratory). Cleared first so a removed key disappears.
 { const RG = OV.regional || { keys: {}, migratory: {} };
   for (const e of core.e) { const sp = spOf(e.id), f = sp.f[e.k]; if (f && f.go) { delete f.go.rg; delete f.go.rgm; delete f.go.rgf; } }

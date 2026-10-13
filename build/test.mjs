@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 // Headless Chrome tests. Usage: node test.mjs [port]   (serve docs/ first)
 import puppeteer from 'puppeteer-core';
 const BASE = `http://localhost:${process.argv[2] || 8801}/`;
@@ -1003,7 +1004,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     const want = { '25@la': true, '58@la': false, '58-hisui@la': true, '215@la': true, '215-hisui@la': true, '37@la': true, '37-alola@la': false, '483@la': false, '493@la': false, '150@za': false, '6@za': true, '6@zadlc': true, '6-mega-x@za': false, '670-eternal@za': false, '670@za': true, '25@sw': false, '716@za': false };
     ok(JSON.stringify(a) === JSON.stringify(want), tag + ' v25 alpha-capable rules (no legendary/mythical, Mega, gift forms, PLA transfer-only commons) ' + JSON.stringify(a));
     const n = await p.evaluate(() => ({ la: E.filter(e => !e.c && alphaOk(e, 'la')).length, za: E.filter(e => !e.c && alphaOk(e, 'za')).length }));
-    ok(n.la === 224 - 15 && n.za === 339, tag + ' v25 alpha-capable species counts (PLA 224 minus 15 Hisui-only bases counted on their Hisuian form; Z-A 339) ' + JSON.stringify(n)); }
+    ok(n.la === 224 - 15 && n.za === 332, tag + ' v25/v34 alpha-capable species counts (PLA 224 minus 15 Hisui-only bases counted on their Hisuian form; Z-A 332 = Poképédia Baron list) ' + JSON.stringify(n)); }
   await go('#/'); await sel('la'); await go('#/p/25'); await sleep(400);
   const ord = () => p.$$eval('#actbar .act', bs => bs.map(b => [...b.classList].filter(c => c !== 'act')[0]));
   const st25 = () => p.evaluate(() => Object.fromEntries([...document.querySelectorAll('#actbar .act')].map(b => [[...b.classList].filter(c => c !== 'act')[0], b.getAttribute('aria-pressed') === 'true'])));
@@ -1236,6 +1237,38 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   ok(!(await vis()) && (await ver()) === 'v99-test', 'v30 update: « × » (plus tard) hides the banner for the session, version still waiting');
   await ctx.close(); srv.kill(); fs.rmSync(TMP, { recursive: true, force: true });
 }
+// ---- v34 regressions (audit v33)
+{ const p = await mk(360, 780, true); const U = BASE; const sleep2 = ms => new Promise(r => setTimeout(r, ms));
+  const txt = () => p.$eval('#detail-view', e => e.textContent.replace(/\s+/g, ' '));
+  const sheet = async (k, g) => { await p.evaluate(g => { sheetPref = g; }, g); await p.goto(U + '#/p/' + k); await sleep2(1300); };
+  await p.goto(U, { waitUntil: 'networkidle0' }); await p.evaluate(() => navigator.serviceWorker && navigator.serviceWorker.ready); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(800);
+  await sheet('493-fire', 'all'); const t1 = await txt();
+  ok((await p.evaluate(() => BY_KEY['493-fire'].t.join())) === 'fire' && /Feu/.test(await p.$eval('.hero', e => e.textContent)), 'v34 Arceus Feu : type Feu (fiche)');
+  ok(await p.evaluate(() => E.filter(e => e.id === 773 && e.c).every(e => e.t[0] === e.k.split('-')[1])), 'v34 Silvallié : types des ROM');
+  await p.goto(U + '#/'); await sleep2(500); await p.select('#game', 'lgpe'); await sleep2(900);
+  ok(/^153 Pokémon/.test(await p.$eval('#count', e => e.textContent)), "v34 Let's Go : 153 Pokémon " + await p.$eval('#count', e => e.textContent));
+  await p.select('#game', ''); await sleep2(500);
+  await sheet('999-roaming', 'go'); const tg = await txt();
+  ok(/999 × Pièces de Mordudor/.test(tg) && !/\? \+/.test(tg), 'v34 GO : Mordudor Forme Marche → 999 Pièces de Mordudor, sans « ? + »');
+  await sheet('840', 'go'); const ta = await txt(); ok(/Pomme Acidulée/.test(ta) && !/Maple/.test(ta), 'v34 GO : Verpom → Pommes');
+  ok(await p.evaluate(() => ['807', '122-galar', '718-10', '888-crowned'].every(k => BY_KEY[k].go) && !BY_KEY['999'].go), 'v34 GO : sorties corrigées (Zeraora, M. Mime de Galar, Zygarde 10 %, Zacian Suprême ; Mordudor Coffre absent)');
+  await sheet('6', 'za'); ok(/Faire évoluer Reptincel/.test(await txt()), 'v34 lieux : Dracaufeu Z-A → « Faire évoluer Reptincel »');
+  await sheet('25', 'frlgsw'); const tf = await txt(); ok(!/Pokecenter|Colosseum/.test(tf), 'v34 RF/VF Switch : pas de lieu GBA en anglais');
+  ok(await p.evaluate(() => !alphaOk(BY_KEY['865'], 'za') && alphaOk(BY_KEY['181'], 'za')), 'v34 Barons Z-A : Palarticho exclu, Pharamp Baron');
+  ok(await p.evaluate(() => E.filter(e => [414, 664, 665].includes(e.id)).length === 3 && BY_KEY['718-10'].n === 'Zygarde Forme 10 %' && BY_KEY['716-neutral'].bo === '716'), 'v34 formes fusionnées, Zygarde 10 %, Xerneas variante');
+  // marks of merged forms → union on the base (first open)
+  await p.evaluate(() => { localStorage.setItem('caught_g', JSON.stringify(['dp:414-sandy', 'xy:664-polar', 'xy:665'])); localStorage.setItem('home_o', JSON.stringify(['kalos:665-meadow'])); localStorage.setItem('caught', JSON.stringify(['664-garden'])); localStorage.setItem('favs', JSON.stringify(['414-trash'])); });
+  await p.reload({ waitUntil: 'networkidle0' }); await sleep2(600);
+  const mg = await p.evaluate(() => ['caught_g', 'home_o', 'caught', 'favs'].map(k => JSON.parse(localStorage.getItem(k))));
+  ok(mg[0].includes('dp:414') && mg[0].includes('xy:664') && mg[0].includes('xy:665') && !mg[0].some(x => /-(sandy|polar)/.test(x)) && mg[1].includes('kalos:665') && mg[2].includes(664) && mg[3].includes('414'), 'v34 migration des formes fusionnées (union) ' + JSON.stringify(mg));
+  // offline flag tied to DATA_VERSION
+  const dv = /DATA_VERSION = '([^']+)'/.exec(fs.readFileSync(new URL('../docs/sw.js', import.meta.url), 'utf8'))[1];
+  await p.evaluate(() => { localStorage.setItem('packDone2', 'true'); localStorage.setItem('imgsDone', 'true'); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(2500);
+  const o1 = await p.$eval('#offline', e => e.innerHTML);
+  await p.evaluate(dv => localStorage.setItem('packDone2', JSON.stringify(dv)), dv); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(2500);
+  const o2 = await p.$eval('#offline', e => e.innerHTML);
+  ok(/id="dl2"/.test(o1) && !/disponibles hors-ligne/.test(o1) && /disponibles hors-ligne/.test(o2), 'v34 hors-ligne : ✓ seulement pour la DATA_VERSION téléchargée (' + dv + ')');
+  await p.close(); }
 console.log('console errors:', errs.length, errs.slice(0, 10));
 console.log(fails ? `${fails} FAILURES` : 'ALL PASS');
 await b.close();
