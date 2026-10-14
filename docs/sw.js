@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v35';
+const VERSION = 'v36';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Images HOME par défaut (fiches, listes, hors-ligne), la bonne image pour chaque forme, et nom officiel de la forme par défaut (Nigirigon Forme Courbée…).';
-const DATA_VERSION = 'd15'; // bump when the schema of data/*.json changes
+const NOTES = 'Théffroi et Polthégeist Forme Authentique, Salarsen Gigamax, talents corrigés, #0201 · A pour la forme par défaut, bas de liste visible sur iPhone.';
+const DATA_VERSION = 'd16'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

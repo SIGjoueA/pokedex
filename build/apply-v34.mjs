@@ -13,3 +13,4 @@ node('fix-v35-formnames.mjs');  // v35: official name of default forms (core fn)
 node('fix-v35-sprites.mjs');   // v35: HOME / animated sprite file of each form (core hs / as)
 node('fetch-home.mjs');        // v35: self-hosted HOME webp (img/h, core hh)
 node('apply-go-overrides.mjs'); // GO releases / Mordudor / evolution items (go-overrides.json), after the type fix
+node('fix-v36.mjs');           // v36: Gigamax, Théffroi / Polthégeist Authentique, talents sans \\n

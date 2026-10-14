@@ -596,7 +596,7 @@ function numHTML(p) {
     if (n && n.length) s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
     else s = `<span class="rn hors" title="Absent du Pokédex régional — obtenable par transfert, échange, événement ou Méga-Gemme">Hors dex</span> <span class="nat">#${pad(p.id)}</span>`;
   } else s = `#${pad(p.id)}`;
-  const tag = p.c ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : isUB(p) ? ' · Ultra-Chimère' : '';
+  const tag = p.c || p.fn ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : isUB(p) ? ' · Ultra-Chimère' : '';
   return s + tag;
 }
 // Icons: Poké Ball (red = caught in at least one game, gold = completed) and HOME house (blue = transferred from at least one game, gold = from all compatible games)
@@ -1674,7 +1674,7 @@ function showOffline(msg) {
   const imgs = store.get('imgsDoneH', false), pack = packOk();
   $('#offline').innerHTML = msg || [
     imgs ? '<p style="margin:0">✓ Images des Pokémon enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon (~10 Mo, images HOME)</button></p>',
-    pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~14 Mo)</button></p>',
+    pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~35 Mo)</button></p>',
     '<p class="note">Les illustrations shiny ne sont enregistrées que lorsque vous les ouvrez.</p>'
   ].join('');
   const b = $('#dl'); if (b) b.onclick = cacheImages;
