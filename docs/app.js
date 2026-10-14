@@ -37,6 +37,10 @@ const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get
 const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all' };
 let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
+// v35: full name of a form; default forms of real alternate-form species carry their official form name (core fn: « Nigirigon Forme Courbée »)
+const fullN = p => p.fn || p.n;
+// v35: default art = the self-hosted Pokémon HOME image of THIS form (img/h/<key>.webp, core hh); official art when HOME has none
+const artOf = p => p.hh ? `img/h/${p.k}.webp` : `img/${p.k}.webp`;
 // Tracking context: a game id (or 'go') when one is selected in the Jeux filter, otherwise null = global marks (unchanged behaviour)
 // 'home' (list) = Pokémon HOME: marks = origin-mark transfers (HOME_O), shared with the game sheets.
 const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('homeshiny_g', [])); // TRANS_G (v8–v21 per-game transfers): kept as a frozen backup, migrated once to HOME_O
@@ -439,7 +443,7 @@ async function boot() {
   E.forEach(p => {
     BY_KEY[p.k] = p; (FORMS[p.id] ||= []).push(p);
     if (p.gof && TODAY >= p.gof) p.go = 1; // v28: GO release announced with a date (Gigamax Duralugon 2026-11-06)
-    p.nn = norm(p.n); p.ne = norm(p.en); p.nj = norm(p.ja); p.nr = norm(p.ro); p.tot = p.s.reduce((a, b) => a + b, 0);
+    p.nn = norm(fullN(p)); p.ne = norm(p.en); p.nj = norm(p.ja); p.nr = norm(p.ro); p.tot = p.s.reduce((a, b) => a + b, 0);
   });
   GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; g.s = GAME_SHORT[g.id] || g.s; });
   DATA.types.forEach(t => TYPE_FR[t[0]] = t[1]);
@@ -635,8 +639,8 @@ function cardHTML(p) {
     (hm ? (isCaught(p) ? homeIcon(homeComplete(p, homeAvail(p)), homeComplete(p, homeAvail(p)) ? HOME_C_T : HOME_T) : '') : !trackCtx() ? baseBall(p) : isCaught(p) ? `<span class="mk ok" aria-label="Capturé">${BALL}</span>` : '') +
     (isShiny(p) ? `<span class="mk sh" aria-label="Shiny ${hm ? 'transféré' : 'capturé'}">✨</span>` : '') +
     (trackCtx() && trackCtx() !== 'home' && isTrans(p) ? homeIcon(false, HOME_T) : '');
-  return `<a class="card${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="img/${p.k}.webp" alt="" loading="lazy" decoding="async" width="256" height="256">` +
-    `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(p.n)} ${star}</div></div>` +
+  return `<a class="card${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="${artOf(p)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+    `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(state.forms ? fullN(p) : p.n)} ${star}</div></div>` +
     `<div class="badges">${p.t.map(badge).join('')}</div></a>`;
 }
 // Catégorie filters about HOME transfers: per game (this game) or global (base / HOME view). Not offered for games that cannot send Pokémon to HOME.
@@ -781,12 +785,12 @@ function route() {
 async function openDetail(p) {
   const tok = ++detailTok;
   state.dgame = sheetPref || (state.game === 'go' || state.game === 'home' || GAME_BY[state.game] ? state.game : 'all'); // sheet game: its own choice, else the list filter
-  document.title = `${p.n} #${pad(p.id)} – Pokédex`;
-  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(p.n)}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
+  document.title = `${fullN(p)} #${pad(p.id)} – Pokédex`;
+  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}</div><img src="img/${p.k}.webp" alt="${esc(fullN(p))}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
   try {
     const [sp, shared, shiny] = await Promise.all([loadSp(p.id), loadShared(), loadShiny()]); CRIES = await loadCries();
     if (tok !== detailTok) return;
-    DET = { p, sp, f: sp.f[p.k], shared, shiny }; spriteMode = 'off'; closePop();
+    DET = { p, sp, f: sp.f[p.k], shared, shiny }; spriteMode = 'home'; closePop(); // v35: every sheet opens on its own HOME image
     pickGame(state.dgame);
     if (state.dgame === 'go') { try { DET.go = await loadGo(); } catch { state.dgame = 'all'; } if (tok !== detailTok) return; }
     renderDetail();
@@ -1039,7 +1043,7 @@ function formSwitcher(p, gm) {
   const gi = gm ? GIDX[gm.id] : -1;
   const chips = list.map(q => {
     const na = gm && q.c && !inGame(q, gi);
-    return `<a class="fchip${q.k === p.k ? ' cur' : ''}${na ? ' na' : ''}" href="#/p/${q.k}" title="${esc(q.n)}"><img src="img/${q.k}.webp" alt="" loading="lazy" width="36" height="36"><span>${esc(formLabel(q))}</span></a>`;
+    return `<a class="fchip${q.k === p.k ? ' cur' : ''}${na ? ' na' : ''}" href="#/p/${q.k}" title="${esc(fullN(q))}"><img src="${artOf(q)}" alt="" loading="lazy" width="36" height="36"><span>${esc(formLabel(q))}</span></a>`;
   }).join('');
   return `<section class="box"><h2>Formes <small class="cnt">${list.length}</small></h2><div class="fchips${list.length > 14 ? ' many' : ''}">${chips}</div>${gm ? '<p class="note">Formes grisées : absentes de ce jeu.</p>' : ''}</section>`;
 }
@@ -1181,23 +1185,29 @@ function baseNoteHTML(p) {
 /* ---------------- v31: alternative sprites (on demand, network only) ---------------- */
 // Officiel = the self-hosted artwork (offline). HOME / Animé come from the PokéAPI sprites repository ONLY when tapped:
 // never precached, not stored by the service worker (other origin); offline or missing → back to the official artwork.
-let spriteMode = 'off';
+let spriteMode = 'home'; // v35: HOME = default (self-hosted, offline); Officiel / Animé = alternatives for the current sheet
 const SPR = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/';
 const pokeId = p => { const c = CRIES && CRIES[p.k] && CRIES[p.k][0]; return c ? +c.slice(2) : (p.c ? 0 : p.id); };
 function spriteBtns(p) {
-  const id = pokeId(p); if (!id) return '';
-  return `<div class="sprsw" role="group" aria-label="Illustration">${[['off', 'Officiel'], ['home', 'HOME'], ['anim', 'Animé']].map(([v, l]) => `<button type="button" data-spr="${v}" aria-pressed="${spriteMode === v}">${l}</button>`).join('')}</div>`;
+  return `<div class="sprsw" role="group" aria-label="Illustration">${[['home', 'HOME'], ['off', 'Officiel'], ['anim', 'Animé']].map(([v, l]) => `<button type="button" data-spr="${v}" aria-pressed="${spriteMode === v}">${l}</button>`).join('')}</div>`;
 }
+// v35: each form uses ITS OWN sprite (core hs / as from the PokeAPI file list); never another form's image. Missing → this form's official art.
+// A token guards against a late load / error of the previous sheet or mode (no stale image when switching forms).
+let SPR_TOK = 0;
 function setSprite(mode, quiet) {
   const p = DET && DET.p, img = $('#heroimg'); if (!p || !img) return;
-  const shiny = showShinyArt && p.sh, off = `img/${shiny ? 's/' : ''}${p.k}.webp`, id = pokeId(p);
-  const back = msg => { spriteMode = 'off'; img.classList.remove('pix'); img.src = off; document.querySelectorAll('.sprsw button').forEach(b => b.setAttribute('aria-pressed', b.dataset.spr === 'off')); if (msg && !quiet) toast(msg, 'err', 4500); };
-  if (mode === 'off' || !id) return back();
-  if (navigator.onLine === false) return back('Hors-ligne : seule l’illustration officielle est disponible.');
-  spriteMode = mode; document.querySelectorAll('.sprsw button').forEach(b => b.setAttribute('aria-pressed', b.dataset.spr === mode));
-  const url = mode === 'home' ? `${SPR}home/${shiny ? 'shiny/' : ''}${id}.png` : `${SPR}showdown/${shiny ? 'shiny/' : ''}${id}.gif`;
+  const tok = ++SPR_TOK, shiny = showShinyArt && p.sh, off = `img/${shiny ? 's/' : ''}${p.k}.webp`;
+  img.onerror = null; img.onload = null;
+  const press = m => document.querySelectorAll('.sprsw button').forEach(b => b.setAttribute('aria-pressed', b.dataset.spr === m));
+  const back = msg => { if (tok !== SPR_TOK) return; img.onerror = null; spriteMode = 'off'; img.classList.remove('pix'); img.src = off; press('off'); if (msg && !quiet) toast(msg, 'err', 4500); };
+  if (mode === 'off') return back();
+  let url;
+  if (mode === 'home') url = !shiny && p.hh ? `img/h/${p.k}.webp` : p.hs && navigator.onLine !== false ? `${SPR}home/${shiny ? 'shiny/' : ''}${p.hs}.png` : null;
+  else url = p.as && navigator.onLine !== false ? `${SPR}showdown/${shiny ? 'shiny/' : ''}${p.as}.gif` : null;
+  if (!url) return back(navigator.onLine === false && mode === 'anim' ? 'Hors-ligne : sprite animé indisponible, illustration officielle.' : `${mode === 'home' ? 'Rendu HOME' : 'Sprite animé'} indisponible pour ${fullN(p)} : illustration officielle.`);
+  spriteMode = mode; press(mode);
   img.classList.toggle('pix', mode === 'anim');
-  img.onerror = () => { img.onerror = null; back(`${mode === 'home' ? 'Rendu HOME' : 'Sprite animé'} indisponible pour ${p.n} : illustration officielle.`); };
+  img.onerror = () => back(`${mode === 'home' ? 'Rendu HOME' : 'Sprite animé'} indisponible pour ${fullN(p)} : illustration officielle.`);
   img.src = url;
 }
 
@@ -1373,7 +1383,7 @@ function evoHTML(p, f, mode, gm) {
   const seen = new Set();
   const node = (k, label) => {
     const q = BY_KEY[k]; const cur = k === start;
-    const me = `<a class="evpk${cur ? ' cur' : ''}" href="#/p/${q.k}"><img src="img/${q.k}.webp" alt="" loading="lazy" width="72" height="72"><span>${esc(q.n)}</span><small>#${pad(q.id)}</small></a>`;
+    const me = `<a class="evpk${cur ? ' cur' : ''}" href="#/p/${q.k}"><img src="${artOf(q)}" alt="" loading="lazy" width="72" height="72"><span>${esc(q.n)}</span><small>#${pad(q.id)}</small></a>`;
     if (seen.has(k)) return `<div class="evrow">${me}</div>`;
     seen.add(k);
     const kids = (out[k] || []).map(e => `<div class="evrow"><div class="evlink">${e.lines.map(l => `<div>${esc(cap(l))}</div>`).join('') || ''}</div>${node(e.t)}</div>`).join('');
@@ -1398,7 +1408,7 @@ function pvpHTML(p, go) {
 // v32: Ditto (Métamorph) — Pokémon it can be disguised as in GO (build/go-ditto.json, cited sources)
 function ditHTML(d) {
   const D = d && d.dit; if (!D) return '';
-  const chip = id => { const q = BY_KEY[String(id)]; return q ? `<a class="fchip" href="#/p/${q.k}" title="${esc(q.n)}"><img src="img/${q.k}.webp" alt="" loading="lazy" width="36" height="36"><span>${esc(q.n)}</span></a>` : ''; };
+  const chip = id => { const q = BY_KEY[String(id)]; return q ? `<a class="fchip" href="#/p/${q.k}" title="${esc(q.n)}"><img src="${artOf(q)}" alt="" loading="lazy" width="36" height="36"><span>${esc(q.n)}</span></a>` : ''; };
   const grp = (l, ids, cls) => `<p class="ditl${cls}">${esc(l)} <small class="mute">· ${ids.length}</small></p><div class="fchips ditc">${ids.map(chip).join('')}</div>`;
   return `<section class="box ditbox"><h2>Déguisements <small class="cnt">${D.cur.ids.length} actuels</small></h2>
     <p class="note">Dans Pokémon GO, Métamorph n’apparaît jamais sous sa propre forme : il se cache sous l’apparence d’une de ces espèces sauvages (révélé à la capture).</p>
@@ -1471,7 +1481,7 @@ function renderDetail() {
   const games = availGames(f);
   const goOk = goRel(f.go);
   const opts = sheetGameOpts(p, sp, games, goOk, mode);
-  const gimg = `img/${p.k}.webp`, simg = `img/s/${p.k}.webp`;
+  const gimg = spriteMode === 'off' ? `img/${p.k}.webp` : artOf(p), simg = `img/s/${p.k}.webp`; // v35: HOME by default
   const regional = gm ? dexNumbers(sp, gm.id) : '';
   // Fixed body order: description → stats → abilities → moves → evolution → encounters → games → GO
   let body = '';
@@ -1515,7 +1525,7 @@ function renderDetail() {
       <img id="heroimg" src="${showShinyArt && p.sh ? simg : gimg}" alt="${esc(p.n)}" width="256" height="256">
       ${spriteBtns(p)}
       ${p.sh ? `<button id="shbtn" class="shart" type="button" aria-pressed="${showShinyArt}" title="Afficher l’illustration shiny">✨ ${showShinyArt ? 'Normal' : 'Shiny'}</button>` : ''}
-      <h1>${esc(p.n)}</h1>
+      <h1>${esc(fullN(p))}</h1>
       ${namesHTML(p, sp)}
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
       <div class="tags">${flags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
@@ -1526,7 +1536,7 @@ function renderDetail() {
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI, de Poképédia (CC BY-NC-SA 3.0 FR) et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
-  setBarH(); initSheetGameMenu(); if (spriteMode !== 'off') setSprite(spriteMode, true);
+  setBarH(); initSheetGameMenu(); setSprite(spriteMode, true); // v35: HOME (default) or the mode chosen on this sheet
 }
 // hero names: French (h1) → genus · English → Japanese · romaji
 function namesHTML(p, sp) {
@@ -1619,7 +1629,7 @@ function registerSW() {
   navigator.serviceWorker.register('sw.js').then(reg => { swWatch(reg); return navigator.serviceWorker.ready; }).then(() => {
     const metered = navigator.connection && (navigator.connection.saveData || navigator.connection.type === 'cellular');
     swDataVersion().then(() => showOffline()); // v34: the offline pack flag is only valid for the data cache it filled
-    if (!store.get('imgsDone', false) && !metered) cacheImages();
+    if (!store.get('imgsDoneH', false) && !metered) cacheImages();
     else showOffline();
   }).catch(() => {});
 }
@@ -1661,9 +1671,9 @@ let DATA_DV = null;
 async function swDataVersion() { const c = navigator.serviceWorker && navigator.serviceWorker.controller; if (!c) return null; const r = await swAsk(c); DATA_DV = (r && r.dv) || null; return DATA_DV; }
 const packOk = () => { const v = store.get('packDone2', false); return !!v && DATA_DV !== null && v === DATA_DV; };
 function showOffline(msg) {
-  const imgs = store.get('imgsDone', false), pack = packOk();
+  const imgs = store.get('imgsDoneH', false), pack = packOk();
   $('#offline').innerHTML = msg || [
-    imgs ? '<p style="margin:0">✓ Images des Pokémon enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon (~12 Mo)</button></p>',
+    imgs ? '<p style="margin:0">✓ Images des Pokémon enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon (~10 Mo, images HOME)</button></p>',
     pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~14 Mo)</button></p>',
     '<p class="note">Les illustrations shiny ne sont enregistrées que lorsque vous les ouvrez.</p>'
   ].join('');
@@ -1684,14 +1694,14 @@ async function runPool(urls, n, label) {
 }
 async function cacheImages() {
   if (caching) return; caching = true;
-  const fail = await runPool(E.filter(p => !p.c).map(p => `img/${p.k}.webp`), 4, 'Téléchargement des images');
+  const fail = await runPool(E.filter(p => !p.c).map(artOf), 4, 'Téléchargement des images');
   caching = false;
-  if (!fail) store.set('imgsDone', true);
+  if (!fail) store.set('imgsDoneH', true);
   showOffline();
 }
 async function cachePack() {
   if (caching) return; caching = true;
-  const urls = [...E.filter(p => p.c).map(p => `img/${p.k}.webp`), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
+  const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
     'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;

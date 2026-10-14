@@ -673,14 +673,15 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     // sprites on demand
     const ext = []; const onReq = r => { if (/raw\.githubusercontent\.com/.test(r.url())) ext.push(r.url()); }; p.on('request', onReq);
     await open('6'); const sw0 = await p.evaluate(() => ({ b: [...document.querySelectorAll('.sprsw button')].map(x => x.textContent + ':' + x.getAttribute('aria-pressed')).join(), src: document.querySelector('#heroimg').getAttribute('src') }));
-    ok(sw0.b === 'Officiel:true,HOME:false,Animé:false' && sw0.src === 'img/6.webp' && ext.length === 0, tag + ' v31 sprites: Officiel / HOME / Animé, official art by default, nothing fetched before a tap ' + JSON.stringify(sw0));
-    await p.click('[data-spr="home"]'); await p.waitForFunction(() => document.querySelector('#heroimg').complete, { timeout: 10000 }).catch(() => {}); await sleep(400);
+    ok(sw0.b === 'HOME:true,Officiel:false,Animé:false' && sw0.src === 'img/h/6.webp' && ext.length === 0, tag + ' v35 sprites: HOME (self-hosted) by default, Officiel / Animé alternatives, nothing fetched remotely ' + JSON.stringify(sw0));
+    await p.click('[data-spr="off"]'); await sleep(200); ok(await p.$eval('#heroimg', i => i.getAttribute('src')) === 'img/6.webp', tag + ' v35 Officiel on tap'); await p.click('[data-spr="home"]'); await p.waitForFunction(() => document.querySelector('#heroimg').complete, { timeout: 10000 }).catch(() => {}); await sleep(400);
     const sw1 = await p.evaluate(() => ({ src: document.querySelector('#heroimg').src, w: document.querySelector('#heroimg').naturalWidth, pr: document.querySelector('[data-spr="home"]').getAttribute('aria-pressed') }));
-    ok(/other\/home\/6\.png$/.test(sw1.src) && sw1.pr === 'true' && ext.length >= 1, tag + ' v31 HOME sprite fetched on tap ' + JSON.stringify(sw1) + ' ' + ext.length);
+    ok(/\/img\/h\/6\.webp$/.test(sw1.src) && sw1.w === 256 && sw1.pr === 'true' && ext.length === 0, tag + ' v35 HOME back on tap, local ' + JSON.stringify(sw1) + ' ' + ext.length);
     await p.click('[data-spr="anim"]'); await sleep(1500); ok(/showdown\/6\.gif$/.test(await p.$eval('#heroimg', i => i.src)) && await p.$eval('#heroimg', i => i.classList.contains('pix')), tag + ' v31 animated sprite (pixelated)');
     ok(await p.evaluate(async () => { for (const k of await caches.keys()) for (const r of await (await caches.open(k)).keys()) if (/githubusercontent/.test(r.url)) return false; return true; }), tag + ' v31 alternative sprites never stored by the service worker');
-    await open('25'); await p.setOfflineMode(true); await p.click('[data-spr="home"]'); await sleep(500);
-    ok(await p.evaluate(() => document.querySelector('#heroimg').getAttribute('src') === 'img/25.webp' && document.querySelector('[data-spr="off"]').getAttribute('aria-pressed') === 'true' && /Hors-ligne/.test(document.querySelector('#toast')?.textContent || '')), tag + ' v31 offline: stays on the official art with a message');
+    await open('25'); await p.setOfflineMode(true); await p.click('[data-spr="anim"]'); await sleep(500);
+    ok(await p.evaluate(() => document.querySelector('#heroimg').getAttribute('src') === 'img/25.webp' && document.querySelector('[data-spr="off"]').getAttribute('aria-pressed') === 'true' && /Hors-ligne/.test(document.querySelector('#toast')?.textContent || '')), tag + ' v35 offline: Animé falls back to the official art with a message');
+    await p.click('[data-spr="home"]'); await sleep(400); ok(await p.$eval('#heroimg', i => i.getAttribute('src')) === 'img/h/25.webp', tag + ' v35 offline: HOME (self-hosted) still available');
     await p.setOfflineMode(false); p.off('request', onReq);
     // popups
     await open('6', 'xy');
@@ -1268,6 +1269,34 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
   await p.evaluate(dv => localStorage.setItem('packDone2', JSON.stringify(dv)), dv); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(2500);
   const o2 = await p.$eval('#offline', e => e.innerHTML);
   ok(/id="dl2"/.test(o1) && !/disponibles hors-ligne/.test(o1) && /disponibles hors-ligne/.test(o2), 'v34 hors-ligne : ✓ seulement pour la DATA_VERSION téléchargée (' + dv + ')');
+  await p.close(); }
+
+// ---- v35 HOME sprites: default everywhere, one image per form, fallback to the same form's official art
+{ const p = await mk(360, 780, true); const sl = ms => new Promise(r => setTimeout(r, ms));
+  await p.goto(BASE, { waitUntil: 'networkidle0' }); await sl(500);
+  ok((await p.$$eval('.card img', es => es.slice(0, 6).map(e => e.getAttribute('src')))).every(s => s.startsWith('img/h/')), 'v35 liste / grille : images HOME par défaut');
+  const hero = async k => { await p.goto(BASE + '#/p/' + k); await sl(1300); return p.$eval('#heroimg', e => e.getAttribute('src')); };
+  const ks = ['666-icy-snow', '666-fancy', '585-winter', '201-c', '676-heart', '479-wash', '1017-cornerstone-mask', '978-stretchy', '741-sensu', '774-blue', '386-speed', '671-white'];
+  const bad = []; for (const k of ks) { const s = await hero(k); if (s !== `img/h/${k}.webp`) bad.push(k + '→' + s); }
+  ok(!bad.length, 'v35 fiche : image HOME de la bonne forme ' + bad.join(' '));
+  ok(await p.$eval('.sprsw [data-spr="home"]', e => e.getAttribute('aria-pressed')) === 'true', 'v35 bouton HOME sélectionné par défaut');
+  await p.click('.sprsw [data-spr="off"]'); await sl(300); ok(await p.$eval('#heroimg', e => e.getAttribute('src')) === 'img/671-white.webp', 'v35 Officiel : art de la même forme');
+  await hero('1017-wellspring-mask'); await p.click('.sprsw [data-spr="anim"]'); await sl(500);
+  ok(await p.$eval('#heroimg', e => e.getAttribute('src')) === 'img/1017-wellspring-mask.webp', 'v35 sans sprite animé : art officiel de la même forme');
+  ok(await hero('1017-hearthflame-mask') === 'img/h/1017-hearthflame-mask.webp', 'v35 changement de forme : HOME de nouveau, pas d’image périmée');
+  await p.close(); }
+// ---- v35 default form names
+{ const p = await mk(360, 780, true); const sl = ms => new Promise(r => setTimeout(r, ms));
+  await p.goto(BASE, { waitUntil: 'networkidle0' });
+  const h1 = async k => { await p.goto(BASE + '#/p/' + k); await sl(1200); return p.$eval('.hero h1', e => e.textContent); };
+  ok(await h1('978') === 'Nigirigon Forme Courbée' && await h1('386') === 'Deoxys Forme Normale' && await h1('52') === 'Miaouss' && await h1('3') === 'Florizarre', 'v35 titres : Nigirigon Forme Courbée, Deoxys Forme Normale ; Miaouss / Florizarre inchangés');
+  await h1('978'); ok(/Nigirigon Forme Courbée/.test(await p.$eval('.fchip.cur', e => e.title)), 'v35 puce de forme : titre complet');
+  await p.goto(BASE + '#/'); await sl(500);
+  await p.evaluate(() => { state.forms = true; const i = document.querySelector('#q'); i.value = 'courbée'; i.dispatchEvent(new Event('input')); }); await sl(600);
+  const names = await p.$$eval('.card .nm', es => es.map(e => e.textContent.trim()));
+  ok(names.some(n => n.startsWith('Nigirigon Forme Courbée')), 'v35 liste avec Formes + recherche « courbée » → Nigirigon Forme Courbée ' + names.slice(0, 4).join(' / '));
+  await p.evaluate(() => { state.forms = false; const i = document.querySelector('#q'); i.value = 'nigirigon'; i.dispatchEvent(new Event('input')); }); await sl(600);
+  ok((await p.$$eval('.card .nm', es => es.map(e => e.textContent.trim())))[0].startsWith('Nigirigon') , 'v35 liste sans Formes : nom de l’espèce');
   await p.close(); }
 console.log('console errors:', errs.length, errs.slice(0, 10));
 console.log(fails ? `${fails} FAILURES` : 'ALL PASS');

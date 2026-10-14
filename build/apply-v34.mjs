@@ -9,4 +9,7 @@ node('fix-v34-names.mjs');      // Noyau, Zygarde 10 %, Floette Fleur …, Zygar
 py('fix-v34-frlgsw-loc.py');    // RF/VF Switch: no GBA-only rows, « Centre Pokémon »
 py('fix-v34-desc.py');          // leftover machine translations (units)
 node('fix-v34-za-alpha.mjs');   // Z-A Barons from Poképédia (needs pokepedia.mjs apply first)
+node('fix-v35-formnames.mjs');  // v35: official name of default forms (core fn) + aligned sibling names
+node('fix-v35-sprites.mjs');   // v35: HOME / animated sprite file of each form (core hs / as)
+node('fetch-home.mjs');        // v35: self-hosted HOME webp (img/h, core hh)
 node('apply-go-overrides.mjs'); // GO releases / Mordudor / evolution items (go-overrides.json), after the type fix

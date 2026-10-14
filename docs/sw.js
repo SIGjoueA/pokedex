@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v34';
+const VERSION = 'v35';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Corrections de l’audit : types d’Arceus et Silvallié, Pokémon GO, Barons Z-A, Let’s Go, noms de formes et hors-ligne.';
-const DATA_VERSION = 'd14'; // bump when the schema of data/*.json changes
+const NOTES = 'Images HOME par défaut (fiches, listes, hors-ligne), la bonne image pour chaque forme, et nom officiel de la forme par défaut (Nigirigon Forme Courbée…).';
+const DATA_VERSION = 'd15'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -295,7 +295,25 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v34 RF/VF Switch : pas de ligne GBA (Colosseum), « Centre Pokémon » en français', !loc.a.some(a => /Pokecenter/.test(a)) && !loc.m.some(m => /Pokemon /.test(m)) && !(sp(25).f['25'].en.frlgsw || []).some(r => /Colosseum/.test(loc.m[r[1]])));
   ok('v34 lieux : repli « Faire évoluer … » / « Lieu non renseigné » pour les jeux Poképédia', /Lieu non renseigné pour ce jeu/.test(app) && /Faire évoluer \$\{/.test(app));
   { let bad = 0; for (const id of [43, 275, 276, 409]) { const s = sp(id); bad += Object.entries(s.tv || {}).filter(([v, i]) => !(s.pv || {})[v] && s.fv[v] === undefined && /pieds\/seconde|miles|\d pieds/.test(s.tt[i])).length; } eq('v34 descriptions : plus d’unités impériales', bad, 0); }
-  ok('v34 SW : VERSION ≥ v34, DATA_VERSION ≥ d14', +((sw.match(/const VERSION = 'v(\d+)'/) || [])[1] || 0) >= 34 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 14);
+  ok('v34 SW : VERSION ≥ v34, DATA_VERSION ≥ d14 (v35 : v35 / d15)', +((sw.match(/const VERSION = 'v(\d+)'/) || [])[1] || 0) >= 34 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 14);
   ok('v34 build : apply-v34.mjs lancé à la fin de build-data.mjs', /import\('\.\/apply-v34\.mjs'\)/.test(fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8')));
+}
+
+// ---- v35 : images HOME (défaut) par forme
+{ const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v35 HOME auto-hébergé : chaque hh a son fichier img/h', core.e.filter(e => e.hh).every(e => fs.existsSync(path.join(DOCS, 'img/h', e.k + '.webp'))) && core.e.filter(e => e.hh).length >= 1500);
+  const dup = []; const g = {}; for (const e of core.e) if (e.hs && e.c !== 'sex') (g[e.id + '|' + e.hs] ||= []).push(e.k); for (const v of Object.values(g)) if (v.length > 1) dup.push(v.join('='));
+  ok('v35 aucune forme ne réutilise le sprite HOME d’une autre ' + dup.slice(0, 5).join(' '), !dup.length);
+  ok('v35 Prismillon / Flabébé / Zarbi / Vivaldaim : fichier cosmétique propre', E['666-icy-snow'].hs === '666-icy-snow' && E['669-blue'].hs === '669-blue' && E['201-b'].hs === '201-b' && E['585-winter'].hs === '585-winter');
+  ok('v35 HOME par défaut dans l’app', /let spriteMode = 'home'/.test(app) && /spriteMode = 'home'; closePop\(\)/.test(app) && /const artOf = p => p\.hh/.test(app) && !/pokeId\(p\)/.test(app.split('function spriteBtns')[1].slice(0, 1500)));
+}
+// ---- v35 : nom officiel de la forme par défaut
+{ const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  eq('v35 Nigirigon Forme Courbée', E['978'].fn, 'Nigirigon Forme Courbée'); eq('v35 Deoxys Forme Normale', E['386'].fn, 'Deoxys Forme Normale');
+  ok('v35 Giratina / Shaymin / Boréas / Vivaldaim / Plumeline / Lougaroc / Zygarde / Ogerpon / Morpeko / Deusolourdo / Famignol', E['487'].fn === 'Giratina Forme Alternative' && E['492'].fn === 'Shaymin Forme Terrestre' && E['641'].fn === 'Boréas Forme Avatar' && E['585'].fn === 'Vivaldaim Forme Printemps' && E['741'].fn === 'Plumeline Style Flamenco' && E['745'].fn === 'Lougaroc Forme Diurne' && E['718'].fn === 'Zygarde Forme 50 %' && E['1017'].fn === 'Ogerpon Masque Turquoise' && E['877'].fn === 'Morpeko Mode Rassasié' && E['982'].fn === 'Deusolourdo Forme Double' && E['925'].fn === 'Famignol Famille de Quatre');
+  ok('v35 pas de nom de forme pour régionaux / Méga / Gigamax / sexe seul (Miaouss, Florizarre, Pikachu)', !E['52'].fn && !E['3'].fn && !E['25'].fn && !E['6'].fn);
+  ok('v35 fn uniquement sur des bases ayant des formes alternatives, préfixé par le nom de l’espèce', core.e.filter(e => e.fn).every(e => !e.c && e.fn.startsWith(e.n + ' ') && core.e.some(x => x.id === e.id && x.c === 'form')) && core.e.filter(e => e.fn).length >= 50);
+  ok('v35 noms de formes alignés (Flabébé Fleur Bleue, Prismillon Motif Blizzard, Ogerpon Masque du Puits, Dialga Originel)', E['669-blue'].n === 'Flabébé Fleur Bleue' && E['666-icy-snow'].n === 'Prismillon Motif Blizzard' && E['1017-wellspring-mask'].n === 'Ogerpon Masque du Puits' && !core.e.some(e => /Diagla/.test(e.n)));
+  ok('v35 app : titre, puces de formes, liste avec Formes et recherche utilisent fullN', /<h1>\$\{esc\(fullN\(p\)\)\}<\/h1>/.test(app) && /state\.forms \? fullN\(p\) : p\.n/.test(app) && /p\.nn = norm\(fullN\(p\)\)/.test(app) && /title="\$\{esc\(fullN\(q\)\)\}"/.test(app));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
