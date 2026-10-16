@@ -1,14 +1,14 @@
 'use strict';
-const VERSION = 'v37';
+const VERSION = 'v38';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Cocher un Gigamax coche aussi sa forme de base. Salarsen Gigamax séparé en Aigüe et Grave.';
-const DATA_VERSION = 'd17'; // bump when the schema of data/*.json changes
+const NOTES = 'Icônes officielles Gigamax et Dynamax. Bouton Dynamax sur les fiches Pokémon GO. Icônes Énergie Primo pour Kyogre et Groudon.';
+const DATA_VERSION = 'd18'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
 const CRIES = 'pokedex-cries'; // v29: cries (MP3), cached when first played
 const SHELL_FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'data/core.json',
-  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'img/alpha/baron.png'];
+  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'img/alpha/baron.png', 'img/max/gigamax.webp', 'img/max/dynamax.webp'];
 
 // v30: a new version waits until the user taps « Mettre à jour » (in-app banner) — no forced activation.
 // One-time bridge: pages of v29 and older have no banner, so replacing such a version still activates at once (as before).

@@ -90,6 +90,10 @@ for (const [k, o] of Object.entries(gmax)) {
       src: [...used].map(k => { if (!DT.sources[k]) throw new Error(`go-ditto.json : source inconnue ${k}`); return DT.sources[k]; }), chk: DT.checked };
     log.push(`Métamorph GO : ${f.go.dit.cur.ids.length} déguisements actuels, ${f.go.dit.past.reduce((n, x) => n + x.ids.length, 0)} passés (vérifié le ${DT.checked})`); }
   else log.push('! Métamorph (132) sans données GO'); }
+// v38: Dynamax in GO (dynamax.keys: entry → release date) → core dmx = date (the app shows the « Dynamax » button from that date). Cleared first.
+{ const DM = (OV.dynamax || {}).keys || {}; for (const e of core.e) delete e.dmx;
+  for (const [k, d] of Object.entries(DM)) { if (k.startsWith('_')) continue; const e = byKey[k]; if (!e) { log.push(`! Dynamax inconnu ${k}`); continue; } e.dmx = d; }
+  log.push(`Dynamax GO : ${Object.keys(DM).filter(k => !k.startsWith('_')).length} formes`); }
 for (const [id, sp] of sps) wr(`sp/${id}.json`, sp);
 wr('core.json', core);
 const nM = core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length, nG = core.e.filter(e => e.c === 'gmax' && e.go).length, nF = core.e.filter(e => e.gof).length;

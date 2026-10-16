@@ -58,6 +58,9 @@ const HOME_B = new Set(store.get('home_b', [])), HOME_BS = new Set(store.get('ho
 const MEGA_GEMS = new Set(store.get('mega_gems', []).map(k => k.includes(':') ? k : 'za:' + k));
 // Pokémon GO: Méga-énergie obtained, one mark per species (national ids as strings).
 const MEGA_ENERGY = new Set(store.get('mega_energy', []).map(String));
+// v38: Pokémon GO « Dynamax » mark (usable in Max Battles), one per GO sheet (entry keys). No effect on completion (like the Méga-énergie).
+const DYNAMAX = new Set(store.get('go_dynamax', []).map(String));
+const GMAX_IC = '<img class="gemimg" src="img/max/gigamax.webp" alt="" width="28" height="28" decoding="async">', DMAX_IC = '<img class="gemimg" src="img/max/dynamax.webp" alt="" width="28" height="28" decoding="async">';
 let ENERGY_ICONS = { generic: 'img/energy/generic.webp', ids: new Set() };
 let MEGA_STONES = { fallback: { item: 'key-stone', fr: 'Gemme Sésame', img: 'img/stones/key-stone.png', label: 'Méga-Gemme' }, stones: {} };
 const megaStoneOf = p => {
@@ -100,9 +103,10 @@ const megaXYZ = m => (m.k.match(/mega-(x|y|z)$/) || [])[1] || '';
 const energyId = m => String(m.id) + (megaXYZ(m) ? '-' + megaXYZ(m) : '');
 const hasEnergy = m => MEGA_ENERGY.has(energyId(m));
 const energyMates = p => { const seen = new Set(); return goMegas(p).filter(m => !seen.has(energyId(m)) && seen.add(energyId(m))); };
+const energyImg = m => { const id = energyId(m); return ENERGY_ICONS.ids.has(id) ? `img/energy/${id}.webp` : ENERGY_ICONS.ids.has(String(m.id)) ? `img/energy/${m.id}.webp` : ENERGY_ICONS.generic; };
 function energyBtnHTML(m) {
   const base = BY_KEY[String(m.id)] || m, id = energyId(m), xyz = megaXYZ(m).toUpperCase();
-  const img = ENERGY_ICONS.ids.has(id) ? `img/energy/${id}.webp` : ENERGY_ICONS.ids.has(String(m.id)) ? `img/energy/${m.id}.webp` : ENERGY_ICONS.generic;
+  const img = energyImg(m);
   const lab = m.c === 'primal' ? 'Énergie Primo' : `Méga-énergie${xyz ? ' ' + xyz : ''}`;
   return `<button class="act energy" type="button" data-energy="${m.k}" aria-pressed="${hasEnergy(m)}" aria-label="${lab} ${esc(base.n)} – Pokémon GO" title="${lab} de ${esc(base.n)} obtenue dans Pokémon GO (${xyz ? `marque séparée pour ${esc(m.n)}` : 'une marque par espèce'})"><img class="gemimg" src="${img}" alt="" width="28" height="28" decoding="async"><span class="t"><span class="lgl">${lab}</span><span class="shl">Énergie${xyz ? ' ' + xyz : ''}</span></span></button>`;
 }
@@ -284,7 +288,7 @@ const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + 
 // The sheet has its own tracking context: its game switcher (state.dgame). 'all' = overview (general infos, read-only); 'home' = Pokémon HOME sheet (origin marks).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
   for (const k of [...HOME_B]) if (!BY_KEY[k] || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
   for (const k of [...HOME_BS]) if (!HOME_B.has(k) || !HOME_SH.has(k)) HOME_BS.delete(k); // HOME Baron shiny needs HOME Baron + HOME Shiny
   store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
@@ -953,17 +957,18 @@ function actbarHTML(p) {
     slot = gs.map(x => { const xyz = (x.m.k.match(/mega-(x|y|z)$/) || [])[1]; return gemBtnHTML(x.m, c, x.on, gs.length > 1 ? (xyz ? 'Gemme ' + xyz.toUpperCase() : megaStoneOf(x.m).label) : isZa(c) ? 'Gemme' : 'Méga-Gemme'); }).join(''); // Z-A: short labels (room for the Baron buttons)
   }
   const gx = isGmx(p), mg = !!p.mb && c !== 'go'; // v37b: Gigamax sheet → « Gigamax » first; Mega sheet → Méga-Gemme first (no Capturé)
-  const gbs = gmaxBtnsOf(p).map(g => { const on = gmaxInGame(g, c), pr = on && isCaught(g, c); return `<button class="act gem gmx" type="button" data-gmax="${g.k}"${on ? '' : ' disabled'} aria-pressed="${pr}" aria-label="Gigamax${nm ? ' – ' + esc(nm) : ''}" title="${on ? esc(`Gigamax obtenu dans ${nm} (coche ${g.n}${p.id === 869 ? ', une seule fiche pour toutes les formes' : ''}) — coche aussi cette forme`) : 'À marquer dans un jeu où ce Gigamax existe (Épée / Bouclier, Pokémon GO)'}"><span class="ic" aria-hidden="true">🔺</span><span class="t">Gigamax</span></button>`; }).join('');
+  const gbs = gmaxBtnsOf(p).map(g => { const on = gmaxInGame(g, c), pr = on && isCaught(g, c); return `<button class="act gem gmx" type="button" data-gmax="${g.k}"${on ? '' : ' disabled'} aria-pressed="${pr}" aria-label="Gigamax${nm ? ' – ' + esc(nm) : ''}" title="${on ? esc(`Gigamax obtenu dans ${nm} (coche ${g.n}${p.id === 869 ? ', une seule fiche pour toutes les formes' : ''}) — coche aussi cette forme`) : 'À marquer dans un jeu où ce Gigamax existe (Épée / Bouclier, Pokémon GO)'}">${GMAX_IC}<span class="t">Gigamax</span></button>`; }).join('');
+  const dmx = c === 'go' && !gT && !gG && !p.bo && !!p.dmx && TODAY >= p.dmx, dmb = dmx ? `<button class="act gem dmx" type="button" data-dmax="${p.k}" aria-pressed="${DYNAMAX.has(p.k)}" aria-label="Dynamax – Pokémon GO" title="Dynamax obtenu dans Pokémon GO (utilisable en Combats Max) — coche aussi ${esc(p.n)} capturé ; sans effet sur la complétion">${DMAX_IC}<span class="t">Dynamax</span></button>` : '';
   let first = '';
   if (mg) { first = slot; slot = ''; }
   const al = alphaOk(q, c) && !p.bo, bb = al ? baronBtns(isBaron(q, c), isBaronS(q, c), false, nm, '') : ''; // v25: Légendes Arceus / Z-A, Alpha-capable forms only
-  const nB = (mg ? 2 : 3) + (al ? 2 : 0) + ((first + slot + gbs).match(/class="act /g) || []).length;
+  const nB = (mg ? 2 : 3) + (al ? 2 : 0) + ((first + slot + dmb + gbs).match(/class="act /g) || []).length;
   const ctx = !c ? 'Vue d’ensemble — choisissez un jeu (ou Pokémon HOME) pour marquer' : `Suivi : <b>${esc(nm)}</b>${sw.length ? ` <span class="shr">+ ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>` : ''}`;
   return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts${nB > 6 ? ' wrap2' : ''}">
-    ${mg ? first : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? '<span class="ic" aria-hidden="true">🔺</span>' : gT ? '<span class="ic" aria-hidden="true">⚡</span>' : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
+    ${mg ? first : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? GMAX_IC : gT ? `<img class="gemimg" src="${energyImg(p)}" alt="" width="28" height="28" decoding="async">` : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
     <button class="act sh" type="button" ${shDis ? 'disabled' : ''} aria-pressed="${!shDis && isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${shNo ? esc(shNo) : gT ? esc(`Shiny = ${p.n} shiny enregistré (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} d’un Pokémon shiny) — coche aussi ${tb ? tb.n : 'la forme de base'} shiny et la ${eL}`) : p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
     ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
-    ${slot}${gbs}</div></div>`;
+    ${slot}${dmb}${gbs}</div></div>`;
 }
 // Sticky header: back, previous / next, favourite only.
 // v30: sheet game menu = same order / separators as the list « Jeux » menu (extra lists above their game's latest expansion), regional dex number on each game.
@@ -1617,6 +1622,9 @@ document.addEventListener('click', e => {
   }
   const gxb = e.target.closest('#actbar .gmx[data-gmax]');
   if (gxb) { const p = DET && DET.p, g = BY_KEY[gxb.dataset.gmax], c = sheetCtx(); if (!p || !g || gxb.disabled || !gmaxInGame(g, c)) return; toggleMark(g, 'caught', c, p); refreshTrack(p); render(); return; } // base sheet ↔ Gigamax sheet (ticks this form)
+  const dmb = e.target.closest('#actbar .dmx[data-dmax]');
+  if (dmb) { const p = DET && DET.p; if (!p || p.k !== dmb.dataset.dmax || sheetCtx() !== 'go') return; // v38: Dynamax ⇒ caught in GO (unticking leaves Capturé)
+    if (DYNAMAX.has(p.k)) DYNAMAX.delete(p.k); else { DYNAMAX.add(p.k); if (!CAUGHT_G.has(gkey('go', p))) toggleMark(p, 'caught', 'go'); } saveTrack(); refreshTrack(p); render(); return; }
   const enb = e.target.closest('#actbar .energy');
   if (enb) { const p = DET && DET.p, m = BY_KEY[enb.dataset.energy]; if (!p || !m || !goTemp(m) || enb.disabled || sheetCtx() !== 'go') return; toggleEnergy(m); refreshTrack(p); render(); return; }
   const bab = e.target.closest('#actbar .baron, #actbar .barons');
@@ -1742,7 +1750,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY] };
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -1766,6 +1774,7 @@ boot();
       else [...mt(d.home_g), ...mt(d.homeshiny_g)].forEach(n => { const i = n.indexOf(':'), m = originOf(n.slice(0, i)); if (m) { HOME_O.add(m + n.slice(i)); HOME_OG.add(m + n.slice(i)); } });
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
+      if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(k => BY_KEY[k]).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
       migrateEnergy(); migrateMarks(); rebuildHome(); store.set('mega_energy', [...MEGA_ENERGY]);
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
       render(); toast('Sauvegarde importée.');
