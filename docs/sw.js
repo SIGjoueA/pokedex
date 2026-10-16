@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v38';
+const VERSION = 'v39';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Icônes officielles Gigamax et Dynamax. Bouton Dynamax sur les fiches Pokémon GO. Icônes Énergie Primo pour Kyogre et Groudon.';
-const DATA_VERSION = 'd18'; // bump when the schema of data/*.json changes
+const NOTES = 'Corrections : dispo GO, RF/VF Switch hors dex, Isolarmure 210, noms des Méga-Gemmes, shiny Z-A, Meltan / Melmetal GO → HOME, noms de formes officiels.';
+const DATA_VERSION = 'd19'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

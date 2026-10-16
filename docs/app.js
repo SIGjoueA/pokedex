@@ -184,6 +184,8 @@ const mp = (p, c) => (boC(p, c) && BY_KEY[p.bo]) || (megaBo(p, c) && BY_KEY[p.mb
 const isCombat = (p, c) => boC(p, c) || megaBo(p, c); // not counted in totals for context c
 // v28: GO counts for gold completion (jeux actuels, HOME) only for regular forms: not GO Megas / Primals / Gigamax (form totals only; Gigamax cannot leave GO)
 const goGold = p => !!p.go && !p.mb && p.c !== 'gmax' && p.c !== 'primal';
+// v39: Mythicals cannot leave GO for HOME, except Meltan / Melmetal (core gt)
+const goMy = p => !!p.my && !p.gt;
 const gkey = (c, p) => c + ':' + mp(p, c).k;
 // Save groups: a game and its expansions share one save (sw + swisle + swcrown, sv + svmask + svdisk, za + zadlc). Marks are written to every game of the group where the entry exists.
 const saveOf = g => (GAME_BY[g] && GAME_BY[g].base) || g;
@@ -213,7 +215,7 @@ const gamesOf = p => GAMES.filter((g, i) => inGame(p, i)).map(g => g.id);
 const homeAvail = p => {
   // Z-A Megas transfer only from Z-A / Méga-Dimension (not XY/LGPE battle megas, not GO)
   if (p.mb) return marksOf(megaTrackGames(p).filter(g => GAME_BY[g] && GAME_BY[g].h));
-  return marksOf([...gamesOf(p).filter(g => GAME_BY[g].h), ...(goGold(p) && !p.my ? ['go'] : [])]);
+  return marksOf([...gamesOf(p).filter(g => GAME_BY[g].h), ...(goGold(p) && !goMy(p) ? ['go'] : [])]);
 };
 // ---- base view: read-only status derived from the per-game marks
 const SWITCH_IDS = new Set(['frlgsw', 'za', 'zadlc', 'svdisk', 'svmask', 'sv', 'la', 'bdsp', 'swcrown', 'swisle', 'sw', 'lgpe']);
@@ -237,7 +239,7 @@ function baseStatus(p, av) {
   return { c, s, sw, old, legacyC, legacyS, any: c.length > 0 || legacyC, shAny: s.length > 0 || legacyS,
     swDone: done(sw, c), oldDone: done(old, c) };
 }
-const homeAvailF = (p, f) => p.mb ? homeAvail(p) : marksOf([...(f.av || []).filter(g => GAME_BY[g] && GAME_BY[g].h), ...(goGold(p) && !p.my ? ['go'] : [])]);
+const homeAvailF = (p, f) => p.mb ? homeAvail(p) : marksOf([...(f.av || []).filter(g => GAME_BY[g] && GAME_BY[g].h), ...(goGold(p) && !goMy(p) ? ['go'] : [])]);
 // "complete" = transferred from every compatible game where it exists (DLC/extension games count only when no base game has it)
 const homeGold = p => homeAvail(p).filter(isGoldMark); // marks that count for the gold HOME icon
 const homeComplete = (p, av = homeAvail(p)) => { if (p.bo) { p = mp(p); av = homeAvail(p); } av = av.filter(isGoldMark); const t = HOME_C.get(p.k) || []; return av.length > 0 && av.every(m => t.includes(m)); }; // every Switch-era (+ GO) mark where it exists
@@ -316,7 +318,7 @@ function toggleMark(p, kind, c = trackCtx(), base = null) {
 // "Transféré" from a GAME sheet: sets the transfer of that game's origin mark (same state as the HOME sheet) and marks Capturé in that game.
 // (shiny = legacy shiny transfer, no longer in the UI: per-game STRANS_G kept for the future HOME redesign)
 function toggleTransfer(p, shiny, c = trackCtx()) {
-  if (!c || c === 'home' || !homeKind(c) || p.bo || megaBo(p, c) || (c === 'go' && (p.my || goTemp(p) || p.c === 'gmax'))) return; // Mythicals, Megas / Primals and Gigamax cannot be transferred from GO
+  if (!c || c === 'home' || !homeKind(c) || p.bo || megaBo(p, c) || (c === 'go' && (goMy(p) || goTemp(p) || p.c === 'gmax'))) return; // Mythicals, Megas / Primals and Gigamax cannot be transferred from GO
   const m = originOf(c); if (!m) return;
   const mk = m + ':' + p.k, on = shiny ? !STRANS_G.has(gkey(c, p)) : !HOME_O.has(mk);
   if (on) { HOME_O.add(mk); HOME_OG.add(mk); } else if (!shiny) { HOME_O.delete(mk); HOME_OG.delete(mk); }
@@ -497,11 +499,11 @@ function buildControls() {
 async function loadDex(id) {
   if (DEX[id]) return DEX[id];
   const d = await getJSON(`data/dex/${id.startsWith('vd:') ? VDEX[id.slice(3)].file : id}.json`);
-  const order = new Map(), nums = new Map(), extra = new Set(d.x || []);
+  const order = new Map(), nums = new Map(), extra = new Set(d.x || []), nreq = new Set(d.nr || []); // v39: nr = listed but not required (Zarude, Isolarmure)
   d.e.forEach((row, i) => { order.set(row[0], i); nums.set(row[0], row.slice(1)); });
   // Species available in this game but absent from the regional Pokédex → end of list, national order, no regional nº
   (d.x || []).forEach((sid, i) => { if (!order.has(sid)) order.set(sid, d.e.length + i); });
-  return DEX[id] = { order, nums, dx: d.dx, extra, regional: d.e.length, virtual: id.startsWith('vd:') };
+  return DEX[id] = { order, nums, dx: d.dx, extra, nreq, regional: d.e.length, virtual: id.startsWith('vd:') };
 }
 async function setGame(v) {
   state.vdex = VDEX[v] ? v : '';
@@ -606,7 +608,8 @@ function numHTML(p) {
   if (dex && dex.mega) s = `#${pad(p.id)}`;
   else if (dex) {
     const n = dex.nums.get(p.id);
-    if (n && n.length) s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
+    if (n && n.length && dex.nreq && dex.nreq.has(p.id)) s = `<span class="rn hors" title="Listé dans ce Pokédex mais non requis pour le compléter (hors compteur)">Non requis</span> <span class="nat">#${pad(p.id)}</span>`;
+    else if (n && n.length) s = `<span class="rn">${dex.dx.length > 1 ? esc(dex.dx[n[0]]) + ' ' : ''}#${pad3(n[1])}</span> <span class="nat">Nat. ${pad(p.id)}</span>`;
     else s = `<span class="rn hors" title="Absent du Pokédex régional — obtenable par transfert, échange, événement ou Méga-Gemme">Hors dex</span> <span class="nat">#${pad(p.id)}</span>`;
   } else s = `#${pad(p.id)}`;
   const tag = p.c || p.fn ? ` · ${esc(p.l || '')}` : p.lg ? ' · Légendaire' : p.my ? ' · Fabuleux' : isUB(p) ? ' · Ultra-Chimère' : '';
@@ -631,7 +634,7 @@ const BASE_LEGEND = '<ul class="lgl">' + [
 ].join('') + '</ul>';
 const HOME_LEGEND = '<ul class="lgl">' + [
   lgItem(homeIcon(false, HOME_T), '<b>Transféré</b> vers HOME avec au moins une marque d’origine.'),
-  lgItem(homeIcon(true, HOME_C_T), `<b>Maison dorée</b> : transféré avec <b>toutes</b> les marques Switch où il existe — ${ORIGINS.filter(o => !o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')} (un jeu et ses extensions comptent pour une ; Pokémon GO compris, sauf pour les fabuleux ; plus tard Rouge Feu / Vert Feuille Switch).`),
+  lgItem(homeIcon(true, HOME_C_T), `<b>Maison dorée</b> : transféré avec <b>toutes</b> les marques Switch où il existe — ${ORIGINS.filter(o => !o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')} (un jeu et ses extensions comptent pour une ; Pokémon GO compris, sauf pour les fabuleux autres que Meltan et Melmetal ; plus tard Rouge Feu / Vert Feuille Switch).`),
   lgItem(omIcon('kalos'), `<b>Anciens jeux</b> (${ORIGINS.filter(o => o.old).map(o => `${omIcon(o.id)} ${esc(o.n)}`).join(' · ')}) : boutons et marques conservés, mais ils ne comptent pas pour la dorure (fermeture de Pokémon Bank).`),
   lgItem(LG_INFO, 'Pour cocher : fiche du Pokémon → « Pokémon HOME » (une case par marque ; échanges HOME compris, sans « Capturé »), ou « Transféré » dans la fiche d’un jeu (implique « Capturé » dans ce jeu).'),
   lgItem('', 'Icônes des marques : Bulbagarden Archives (usage équitable). Menu Catégorie : 🏠 HOME · 🟡🏠 HOME doré.', 'mute'),
@@ -662,7 +665,7 @@ function transCat(p, cat) {
   if (cat === 'strans') return HOME_S.has(mp(p).k); // v24: « Shiny dans HOME » mark (HOME sheet), any context
   const c = trackCtx();
   if (c && c !== 'home') {
-    if (!homeKind(c) || (c === 'go' && mp(p).my)) return false;
+    if (!homeKind(c) || (c === 'go' && goMy(mp(p)))) return false;
     const t = isTrans(p, c);
     return cat === 'trans' ? t : cat === 'notrans' ? !t : cat === 'strans' ? isSTrans(p, c) : homeComplete(p, homeAvail(p));
   }
@@ -715,7 +718,7 @@ function render() {
     const ld = vd && vd.virtual ? vd : dx;
     const reg = ld && !ld.virtual ? listReps(ctx, ld) : null;
     const uni = vd && vd.mega ? E.filter(p => vd.keys.has(p.k) && !isCombat(p, ctx)) :
-      E.filter(p => regShow(p, reg) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (ld && ld.order.has(p.id) && (!p.c || inGame(p, gi)))));
+      E.filter(p => regShow(p, reg) && !isCombat(p, ctx) && (ctx === 'home' ? true : ctx === 'go' ? p.go : (ld && ld.order.has(p.id) && !(ld.nreq && ld.nreq.has(p.id)) && (!p.c || inGame(p, gi)))));
     const cu = uni.filter(p => isCaught(p)).length, su = uni.filter(p => isShiny(p)).length;
     prog = ctx === 'home'
       ? `HOME : ${cu} / ${uni.length} 🏠 transférés · ${su} ✨ shiny · ${uni.filter(p => isCaught(p) && homeComplete(p, homeAvail(p))).length} 🟡🏠 complets${HOME_B.size ? ` · ${uni.filter(p => HOME_B.has(p.k)).length} Barons` : ''}`
@@ -888,7 +891,7 @@ function trackHTML(p0) {
   else if (ALPHA_GAMES.has(c) && !p0.mb && !bo) h += `<br><span class="mute baronl">Ne peut pas être Baron dans ce jeu${(BY_KEY[String(p.id)] || p).lg || (BY_KEY[String(p.id)] || p).my ? ' (légendaire / fabuleux)' : ''}.</span>`;
   { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
   if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
-  if (c === 'go' && p.my) return h + '<br>Les Pokémon fabuleux ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion HOME de ce Pokémon.';
+  if (c === 'go' && goMy(p)) return h + '<br>Les Pokémon fabuleux (sauf Meltan et Melmetal) ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion HOME de ce Pokémon.';
   const om = originOf(c);
   h += ` <span class="mute">(${HOME_KIND_FR[hk]})</span>`
   if (c === 'frlgsw') h += '<br><span class="mute">Version Switch (HOME 4.1.0, depuis le 7/10/2026) : transfert à sens unique vers HOME, rien ne peut y revenir. La version GBA reste un jeu séparé (anciens jeux).</span>';
@@ -946,9 +949,9 @@ function actbarHTML(p) {
   const shDis = catchDis || (gG && !goShinyOk(gd)), shNo = gG && !goShinyOk(gd) ? (gd && gd.shf ? `Gigamax shiny pas encore sorti dans GO (à partir du ${gd.shf.split('-').reverse().join('/')})` : 'Pas de Gigamax shiny dans Pokémon GO pour l’instant') : '';
   const tb = gT ? goTempBase(p) : null, eL = gT ? (p.c === 'primal' ? 'Énergie Primo' : 'Méga-énergie' + (megaXYZ(p) ? ' ' + megaXYZ(p).toUpperCase() : '')) : '';
   const hk = c && c !== 'home' ? homeKind(c) : null;
-  const trOn = !!(hk && !p.bo && !megaBo(p, c) && !(c === 'go' && (p.my || gT || gG))); // same guard as toggleTransfer
+  const trOn = !!(hk && !p.bo && !megaBo(p, c) && !(c === 'go' && (goMy(p) || gT || gG))); // same guard as toggleTransfer
   const sw = c && GAME_BY[c] ? sharedWith(c, q) : [];
-  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? (GBA_IDS.has(c) ? 'Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ gén. → Bank : « Sans marque » sur la fiche Pokémon HOME)' : 'Ce jeu ne peut pas envoyer de Pokémon vers HOME') : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : gG ? 'Gigamax de Pokémon GO : ne peut pas être envoyé vers HOME' : gT ? `${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire : transférez la forme de base` : !trOn ? 'Variante de combat : suit la forme de base' :
+  const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? (GBA_IDS.has(c) ? 'Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ gén. → Bank : « Sans marque » sur la fiche Pokémon HOME)' : 'Ce jeu ne peut pas envoyer de Pokémon vers HOME') : (c === 'go' && goMy(p)) ? 'Fabuleux : pas de transfert depuis GO' : gG ? 'Gigamax de Pokémon GO : ne peut pas être envoyé vers HOME' : gT ? `${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire : transférez la forme de base` : !trOn ? 'Variante de combat : suit la forme de base' :
     `Transféré vers HOME depuis ${nm}${sw.length ? ' (et ' + sw.map(x => GAME_BY[x].s).join(', ') + ')' : ''}${p.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}`;
   let slot = '';
   if (c === 'go') slot = gT ? '' : energyMates(p).map(m => energyBtnHTML(m)).join(''); // one Méga-énergie per Mega when the species has X / Y
@@ -1071,6 +1074,7 @@ function dexNumbers(sp, gid) {
   for (let i = 0; i < n.length; i += 2) parts.push(`${gm.dx.length > 1 ? esc(gm.dx[n[i]]) + ' ' : ''}<b>#${pad3(n[i + 1])}</b>`);
   const extra = sp.gm[gid + '*'];
   if (extra) { const ep = []; for (let i = 0; i < extra.length; i += 2) ep.push(`${esc(gm.info[extra[i]])} <b>#${pad3(extra[i + 1])}</b>`); parts.push(`<span class="mute">(îles : ${ep.join(' · ')})</span>`); }
+  if (DEX[gid] && DEX[gid].nreq && DEX[gid].nreq.has(sp.id)) parts.push('<span class="mute">non requis (hors compteur)</span>');
   return parts.join(' · ');
 }
 const TR_NOTE = '<p class="note trnote">Traduit en français faute de données officielles (traduction automatique, peut différer du texte officiel).</p>';

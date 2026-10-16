@@ -180,7 +180,7 @@
     }
   },
   "released": {
-    "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13).",
+    "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13). v39 : Larvadar (17/03/2026), Embrochet (18/08/2026), Toxizap (16/11/2024), Théffroi (03/12/2024), Grondogue / Dogrino (08/09/2026), Flotillon (12/05/2026) — pokemon.com / Leek Duck / wiki GO, vérifié le 2026-10-16.",
     "keys": {
       "778": "MIMIKYU_DISGUISED",
       "807": "ZERAORA_NORMAL",
@@ -218,13 +218,26 @@
       "800-dawn": "NECROZMA_DAWN_WINGS",
       "888-crowned": "ZACIAN_CROWNED_SWORD",
       "889-crowned": "ZAMAZENTA_CROWNED_SHIELD",
-      "999-roaming": "GIMMIGHOUL_NORMAL"
+      "999-roaming": "GIMMIGHOUL_NORMAL",
+      "824": null,
+      "846": null,
+      "848": null,
+      "854": null,
+      "942": null,
+      "943": null,
+      "955": null
     }
   },
   "unreleased": {
-    "_doc": "v34 : entrées que GO n'a pas (marquées indisponibles même si une source les donne sorties). Mordudor : seule la Forme Marche existe dans GO.",
+    "_doc": "v34 : entrées que GO n'a pas (marquées indisponibles même si une source les donne sorties). Mordudor : seule la Forme Marche existe dans GO. v39 : Meloetta Danse, Prismillon Fantaisie / Poké Ball, Ultra-Necrozma, Darumacho Mode Transe (et de Galar) : pas sortis dans GO (vérifié le 2026-10-16).",
     "keys": [
-      "999"
+      "999",
+      "648-pirouette",
+      "666-fancy",
+      "666-poke-ball",
+      "800-ultra",
+      "555-zen",
+      "555-galar-zen"
     ]
   },
   "evoItems": {

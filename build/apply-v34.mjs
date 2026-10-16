@@ -15,3 +15,5 @@ node('fetch-home.mjs');        // v35: self-hosted HOME webp (img/h, core hh)
 node('apply-go-overrides.mjs'); // GO releases / Mordudor / evolution items (go-overrides.json), after the type fix
 node('fix-v36.mjs');           // v36: Gigamax, Théffroi / Polthégeist Authentique, talents sans \\n
 node('fix-v37.mjs');           // v37: Gigamax → forme de base, Salarsen Gigamax Aigüe / Grave
+node('fix-v38.mjs');           // v38: Dynamax GO, icônes Énergie Primo
+node('fix-v39.mjs');           // v39: revue v33 (RF/VF Switch hors dex, Isolarmure, Méga-Gemmes, Casino, shiny Z-A, noms de formes, Meltan GO)
