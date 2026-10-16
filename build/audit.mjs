@@ -305,7 +305,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const dup = []; const g = {}; for (const e of core.e) if (e.hs && e.c !== 'sex') (g[e.id + '|' + e.hs] ||= []).push(e.k); for (const v of Object.values(g)) if (v.length > 1 && v.join() !== '849-amped-gmax,849-low-key-gmax') dup.push(v.join('='));
   ok('v35 aucune forme ne réutilise le sprite HOME d’une autre ' + dup.slice(0, 5).join(' '), !dup.length);
   ok('v35 Prismillon / Flabébé / Zarbi / Vivaldaim : fichier cosmétique propre', E['666-icy-snow'].hs === '666-icy-snow' && E['669-blue'].hs === '669-blue' && E['201-b'].hs === '201-b' && E['585-winter'].hs === '585-winter');
-  ok('v37 Gigamax → forme de base (gbk) + Salarsen Gigamax Aigüe / Grave', core.e.filter(e => e.c === 'gmax').every(e => E[e.gbk]) && E['849-low-key-gmax']?.gbk === '849-low-key' && E['892-rapid-strike-gmax'].gbk === '892-rapid-strike' && /p\.c === 'gmax'\) \{ const b = BY_KEY\[p\.gbk\]/.test(app));
+  ok('v37 Gigamax → forme de base (gbk) + Salarsen Gigamax Aigüe / Grave', core.e.filter(e => e.c === 'gmax').every(e => E[e.gbk]) && E['849-low-key-gmax']?.gbk === '849-low-key' && E['892-rapid-strike-gmax'].gbk === '892-rapid-strike' && /p\.c === 'gmax'\) \{ const b = base \|\| BY_KEY\[p\.gbk\]/.test(app));
+  ok('v37b boutons : Méga (gemme d’abord, sans Capturé), Gigamax (Gigamax), base (+ Gigamax)', /if \(mg\) \{ first = slot; slot = ''; \}/.test(app) && /data-gmax=/.test(app) && /toggleMark\(g, 'caught', c, p\)/.test(app) && /\$\{slot\}\$\{gbs\}/.test(app));
   ok('v35 HOME par défaut dans l’app', /let spriteMode = 'home'/.test(app) && /spriteMode = 'home'; closePop\(\)/.test(app) && /const artOf = p => p\.hh/.test(app) && !/pokeId\(p\)/.test(app.split('function spriteBtns')[1].slice(0, 1500)));
 }
 // ---- v35 : nom officiel de la forme par défaut
