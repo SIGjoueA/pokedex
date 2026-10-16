@@ -119,6 +119,8 @@ function migrateEnergy() {
 const isGmx = p => !!p && p.c === 'gmax' && p.k !== '890-eternamax'; // Infinimax: not catchable, keeps its plain Capturé
 const gmaxBtnsOf = p => isGmx(p) || p.mb || p.bo ? [] : p.id === 869 ? E.filter(q => q.k === '869-gmax') : E.filter(q => isGmx(q) && q.gbk === p.k);
 const gmaxInGame = (g, c) => !!c && c !== 'home' && (c === 'go' ? !!(g.go || (g.gof && TODAY >= g.gof)) : !!GAME_BY[c] && gamesOf(g).some(x => saveOf(x) === saveOf(c)));
+// v37c: GO Mega / Primal sheet: one « Méga-énergie » mark = registered OR energy (old marks: either one ⇒ on)
+const goMegaOn = p => CAUGHT_G.has('go:' + p.k) || hasEnergy(p);
 const isZa = c => c === 'za' || c === 'zadlc';
 const ZA_IDS = new Set(['za', 'zadlc']);
 /** Z-A Mega forms are tracked only for Z-A / Méga-Dimension (not XY/ORAS/LGPE battle megas, not GO). */
@@ -945,7 +947,7 @@ function actbarHTML(p) {
   const trT = !c ? 'Choisissez un jeu pour marquer un transfert' : !hk ? (GBA_IDS.has(c) ? 'Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ gén. → Bank : « Sans marque » sur la fiche Pokémon HOME)' : 'Ce jeu ne peut pas envoyer de Pokémon vers HOME') : (c === 'go' && p.my) ? 'Fabuleux : pas de transfert depuis GO' : gG ? 'Gigamax de Pokémon GO : ne peut pas être envoyé vers HOME' : gT ? `${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire : transférez la forme de base` : !trOn ? 'Variante de combat : suit la forme de base' :
     `Transféré vers HOME depuis ${nm}${sw.length ? ' (et ' + sw.map(x => GAME_BY[x].s).join(', ') + ')' : ''}${p.mb ? ' (Méga : manuel, ou auto si gemme + transfert de la base)' : ''}`;
   let slot = '';
-  if (c === 'go') slot = energyMates(p).map(m => energyBtnHTML(m)).join(''); // one Méga-énergie per Mega when the species has X / Y
+  if (c === 'go') slot = gT ? '' : energyMates(p).map(m => energyBtnHTML(m)).join(''); // one Méga-énergie per Mega when the species has X / Y
   else {
     const gs = gemSlot(p, c);
     slot = gs.map(x => { const xyz = (x.m.k.match(/mega-(x|y|z)$/) || [])[1]; return gemBtnHTML(x.m, c, x.on, gs.length > 1 ? (xyz ? 'Gemme ' + xyz.toUpperCase() : megaStoneOf(x.m).label) : isZa(c) ? 'Gemme' : 'Méga-Gemme'); }).join(''); // Z-A: short labels (room for the Baron buttons)
@@ -958,7 +960,7 @@ function actbarHTML(p) {
   const nB = (mg ? 2 : 3) + (al ? 2 : 0) + ((first + slot + gbs).match(/class="act /g) || []).length;
   const ctx = !c ? 'Vue d’ensemble — choisissez un jeu (ou Pokémon HOME) pour marquer' : `Suivi : <b>${esc(nm)}</b>${sw.length ? ` <span class="shr">+ ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>` : ''}`;
   return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts${nB > 6 ? ' wrap2' : ''}">
-    ${mg ? first : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${isCaught(p, c)}" aria-label="Capturé${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? '<span class="ic" aria-hidden="true">🔺</span>' : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? 'Méga' : 'Capturé'}</span></button>`}
+    ${mg ? first : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? '<span class="ic" aria-hidden="true">🔺</span>' : gT ? '<span class="ic" aria-hidden="true">⚡</span>' : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
     <button class="act sh" type="button" ${shDis ? 'disabled' : ''} aria-pressed="${!shDis && isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${shNo ? esc(shNo) : gT ? esc(`Shiny = ${p.n} shiny enregistré (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} d’un Pokémon shiny) — coche aussi ${tb ? tb.n : 'la forme de base'} shiny et la ${eL}`) : p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
     ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
     ${slot}${gbs}</div></div>`;
@@ -1603,7 +1605,8 @@ document.addEventListener('click', e => {
   const cgb = e.target.closest('#actbar .cg'), shb = e.target.closest('#actbar .sh');
   if (cgb || shb) {
     const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
-    toggleMark(p, cgb ? 'caught' : 'shiny', sheetCtx()); refreshTrack(p); render();
+    if (cgb && sheetCtx() === 'go' && goTemp(p) && goMegaOn(p)) { CAUGHT_G.delete('go:' + p.k); SHINY_G.delete('go:' + p.k); MEGA_ENERGY.delete(energyId(p)); saveTrack(); } // v37c: untick clears both old marks
+    else toggleMark(p, cgb ? 'caught' : 'shiny', sheetCtx()); refreshTrack(p); render();
     return;
   }
   const gemb = e.target.closest('#actbar .gem[data-mega]');
