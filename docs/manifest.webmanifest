@@ -1,7 +1,7 @@
 {
   "name": "Pokédex",
   "short_name": "Pokédex",
-  "description": "Pokédex en français, hors-ligne, pour Pokémon GO",
+  "description": "Pokédex en français, hors-ligne, pour tous les jeux et Pokémon GO",
   "lang": "fr",
   "start_url": "./",
   "scope": "./",

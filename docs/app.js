@@ -597,7 +597,7 @@ function filtered() {
   const startsWith = p => p.nn.startsWith(qn) || p.ne.startsWith(qn) || p.nj.startsWith(qn) || p.nr.startsWith(qn);
   if (qn && numeric === null && state.sort === 'id') out.sort((a, b) => (startsWith(b) - startsWith(a)) || (dex ? dex.order.get(a.id) - dex.order.get(b.id) : 0) || pos.get(a) - pos.get(b));
   else {
-    const key = { id: p => dex ? dex.order.get(p.id) : p.id, name: p => p.nn, total: p => -p.tot, hp: p => -p.s[0], atk: p => -p.s[1], def: p => -p.s[2], spe: p => -p.s[5] }[state.sort];
+    const key = { id: p => dex ? dex.order.get(p.id) : p.id, name: p => p.nn, total: p => -p.tot, hp: p => -p.s[0], atk: p => -p.s[1], def: p => -p.s[2], spa: p => -p.s[3], spd: p => -p.s[4], spe: p => -p.s[5] }[state.sort];
     out.sort((a, b) => { const x = key(a), y = key(b); return x < y ? -1 : x > y ? 1 : pos.get(a) - pos.get(b); });
   }
   return out;
@@ -697,9 +697,11 @@ function updateCatOptions() {
   if (bOff && BARON_CATS.includes(state.cat)) { state.cat = ''; $('#cat').value = ''; }
   // v32: Méga-évolutions / Gigamax greyed in a game (dex) that has none of these forms
   const gm = GAME_BY[state.game], gi = gm ? GIDX[gm.id] : -1, dex = gm ? listDex() : null;
-  for (const v of Object.keys(FORM_CATS)) {
+  // v40: Ultra-Chimères too (none before Soleil / Lune)
+  for (const v of [...Object.keys(FORM_CATS), 'ub']) {
     const o = $(`#cat option[value=${v}]`); if (!o) continue;
-    const has = state.game === 'go' ? E.some(p => p.go && formCat(p, v)) : !gm || !dex ? true : E.some(p => formCat(p, v) && (dex.mega ? dex.keys.has(p.k) : inGame(p, gi) && dex.order.has(p.id)));
+    const isV = v === 'ub' ? isUB : p => formCat(p, v);
+    const has = state.game === 'go' ? E.some(p => p.go && isV(p)) : !gm || !dex ? true : E.some(p => isV(p) && (dex.mega ? dex.keys.has(p.k) : inGame(p, gi) && dex.order.has(p.id)));
     o.disabled = !has;
     if (!has && state.cat === v) { state.cat = ''; $('#cat').value = ''; }
   }
