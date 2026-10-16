@@ -326,4 +326,18 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v35 noms de formes alignés (Flabébé Fleur Bleue, Prismillon Motif Blizzard, Ogerpon Masque du Puits, Dialga Originel)', E['669-blue'].n === 'Flabébé Fleur Bleue' && E['666-icy-snow'].n === 'Prismillon Motif Blizzard' && E['1017-wellspring-mask'].n === 'Ogerpon Masque du Puits' && !core.e.some(e => /Diagla/.test(e.n)));
   ok('v35 app : titre, puces de formes, liste avec Formes et recherche utilisent fullN', /<h1>\$\{esc\(fullN\(p\)\)\}<\/h1>/.test(app) && /state\.forms \? fullN\(p\) : p\.n/.test(app) && /p\.nn = norm\(fullN\(p\)\)/.test(app) && /title="\$\{esc\(fullN\(q\)\)\}"/.test(app));
 }
+// ---- v41 : contrôles automatiques (types des formes, dispo GO / go-overrides, compteur Let's Go) + formes interchangeables
+{ const TY = new Set(core.types.map(t => t[0]));
+  const bad = core.e.filter(e => e.c && (!Array.isArray(e.t) || e.t.length < 1 || e.t.length > 2 || new Set(e.t).size !== e.t.length || !e.t.every(t => TY.has(t))));
+  ok('v41 types des formes : 1 ou 2 types valides, sans doublon', bad.length === 0, bad.slice(0, 5).map(e => e.k).join(','));
+  eq('v41 types de formes connues', [E['479-heat'].t, E['26-alola'].t, E['6-mega-x'] && E['6-mega-x'].t, E['648-pirouette'] && E['648-pirouette'].t], [['electric', 'fire'], ['electric', 'psychic'], ['fire', 'dragon'], ['normal', 'fighting']]);
+  const ov = JSON.parse(fs.readFileSync(new URL('./go-overrides.json', import.meta.url))), un = (ov.unreleased.keys || []).filter(k => E[k]), rel = Object.keys(ov.released.keys).filter(k => E[k]);
+  ok('v41 GO : clés « unreleased » absentes de GO', un.length > 0 && un.every(k => !E[k].go), un.filter(k => E[k].go).join(','));
+  ok('v41 GO : clés « released » présentes dans GO', rel.length > 0 && rel.every(k => E[k].go), rel.filter(k => !E[k].go).join(','));
+  ok('v41 GO : aucune clé à la fois sortie et non sortie', !un.some(k => k in ov.released.keys));
+  const lg = dex('lgpe'), ids = new Set(lg.e.map(x => x[0])), nreq = new Set(lg.x || []);
+  eq('v41 compteur Let’s Go', [lg.e.length, ids.size, [...ids].filter(i => !nreq.has(i)).length], [153, 153, 153]);
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v41 formes interchangeables : FLINK / FSHORT, raccourci, images des formes', /const FLINK = \{ 493: '\*', 773: '\*', 676: \['xy'\], 649: \['bw', 'b2w2', 'home'\]/.test(app) && /Cocher toutes les formes/.test(app) && /✓ Toutes cochées/.test(app) && /new Set\(E\.map\(artOf\)\)/.test(app));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

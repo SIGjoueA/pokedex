@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v40';
+const VERSION = 'v41';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Ultra-Chimères masquées si absentes, tris Att. Spé. / Déf. Spé., Méga-Mistigrix ♂ / ♀, images et données GO mises à jour plus vite.';
+const NOTES = 'Formes interchangeables : bouton « Cocher toutes les formes », formes liées quand le jeu ou HOME ne les distingue pas, images des formes hors-ligne.';
 const DATA_VERSION = 'd19'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

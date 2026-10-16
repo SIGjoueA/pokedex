@@ -190,6 +190,14 @@ const gkey = (c, p) => c + ':' + mp(p, c).k;
 // Save groups: a game and its expansions share one save (sw + swisle + swcrown, sv + svmask + svdisk, za + zadlc). Marks are written to every game of the group where the entry exists.
 const saveOf = g => (GAME_BY[g] && GAME_BY[g].base) || g;
 const saveGames = g => GAMES.filter(x => saveOf(x.id) === saveOf(g)).map(x => x.id);
+// v41: interchangeable forms (REVUE-FORMES-2). FLINK = games where the forms share one mark ('*' = everywhere, 'home' = HOME transfers);
+// FSHORT = species with separate marks + « Cocher toutes les formes » in their Formes block (except where linked).
+const FLINK = { 493: '*', 773: '*', 676: ['xy'], 649: ['bw', 'b2w2', 'home'], 483: ['home'], 484: ['home'], 487: ['home'], 646: ['home'], 800: ['home'], 888: ['home'], 889: ['home'], 898: ['home'], 1017: ['home'] };
+const FSHORT = new Set([386, 412, 479, 483, 484, 487, 492, 585, 586, 641, 642, 645, 646, 647, 649, 676, 718, 720, 741, 800, 888, 889, 898, 905, 1017]);
+const fSibs = p => (FORMS[p.id] || []).filter(q => !q.mb && !q.bo && q.c !== 'gmax');
+const fLinked = (p, c) => { const l = FLINK[p.id]; if (!l || !c || p.mb || p.bo || p.c === 'gmax') return false; return l === '*' || l.includes(c) || (!!GAME_BY[c] && l.includes(saveOf(c))); };
+const fIn = (q, c) => c === 'go' ? !!q.go : GIDX[c] !== undefined && inGame(q, GIDX[c]);
+const linkSet = (p, c) => fLinked(p, c) ? fSibs(p).filter(q => q === p || c === 'home' || fIn(q, c)) : [p];
 const grpTargets = (c, p) => { if (!GAME_BY[c]) return [c]; const av = gamesOf(mp(p, c)); const t = saveGames(c).filter(g => av.includes(g)); return t.length ? t : [c]; };
 // Entry listed in a game where it does not exist but a game of the same save does (Méga-Dex: Méga-Dimension-only species in the Z-A context) → read that game's marks (identical: marks are written to the whole save group)
 const ctxFor = (p, c) => { if (!GAME_BY[c] || inGame(p, GIDX[c])) return c; const g = saveGames(c).find(x => inGame(p, GIDX[x])); return g || c; };
@@ -298,8 +306,8 @@ function toggleMark(p, kind, c = trackCtx(), base = null) {
   if (!c || c === 'home' || boC(p, c) || (p.mb && c !== 'go')) return; // base view, HOME, battle-only, and Z-A Megas (caught/shiny derived from base + gem)
   if (c === 'go' && kind === 'shiny' && p.c === 'gmax' && DET && DET.p === p && DET.f && !goShinyOk(DET.f.go)) return; // no shiny for this Gigamax in GO (yet)
   const on = !(kind === 'caught' ? CAUGHT_G : SHINY_G).has(gkey(c, p));
-  for (const g of grpTargets(c, p)) { // every game of the save group where the entry exists
-    const k = gkey(g, p);
+  for (const q of linkSet(p, c)) for (const g of grpTargets(c, q)) { // every game of the save group where the entry exists (v41: every linked form)
+    const k = gkey(g, q);
     // chain: shiny ⇒ caught, transferred ⇒ caught, shiny transferred ⇒ shiny + transferred + caught; removing Capturé clears shiny + transfer flags of that game
     if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); } }
     else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); BARONS_G.delete(k); } // v25: no Capturé → no Baron; no Shiny → no Baron shiny
@@ -321,7 +329,8 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
   if (!c || c === 'home' || !homeKind(c) || p.bo || megaBo(p, c) || (c === 'go' && (goMy(p) || goTemp(p) || p.c === 'gmax'))) return; // Mythicals, Megas / Primals and Gigamax cannot be transferred from GO
   const m = originOf(c); if (!m) return;
   const mk = m + ':' + p.k, on = shiny ? !STRANS_G.has(gkey(c, p)) : !HOME_O.has(mk);
-  if (on) { HOME_O.add(mk); HOME_OG.add(mk); } else if (!shiny) { HOME_O.delete(mk); HOME_OG.delete(mk); }
+  for (const q of linkSet(p, 'home')) { const qk = m + ':' + q.k; // v41: linked in HOME ⇒ every form gets the transfer
+    if (on) { if (q === p || !HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.add(qk); } } else if (!shiny) { HOME_O.delete(qk); HOME_OG.delete(qk); } }
   for (const g of grpTargets(c, p)) {
     const k = gkey(g, p);
     if (shiny) { if (on) { STRANS_G.add(k); if (!p.mb) { CAUGHT_G.add(k); SHINY_G.add(k); } } else STRANS_G.delete(k); }
@@ -373,7 +382,8 @@ function migrateHomeShiny() {
 function toggleHomeOrigin(p0, m) {
   const p = mp(p0, 'home'); if (p0.bo || p.bo || !ORI[m] || (!homeAvail(p).includes(m) && !HOME_O.has(m + ':' + p.k))) return;
   const mk = m + ':' + p.k, on = !HOME_O.has(mk);
-  if (on) { HOME_O.add(mk); HOME_OG.delete(mk); } else { HOME_O.delete(mk); HOME_OG.delete(mk); }
+  for (const q of linkSet(p, 'home')) { const qk = m + ':' + q.k; // v41: linked in HOME
+    if (on) { if (q === p || !HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.delete(qk); } } else { HOME_O.delete(qk); HOME_OG.delete(qk); } }
   if (on && m === 'za' && !p.mb) gemMegaTransfers(p, 'za', false);
   saveTrack();
 }
@@ -905,6 +915,7 @@ function refreshTrack(p) {
   const bar = $('#actbar'); if (!bar) return;
   const a = document.activeElement, sel = a && bar.contains(a) ? (a.dataset.mega ? `[data-mega="${a.dataset.mega}"]` : a.dataset.origin ? `[data-origin="${a.dataset.origin}"]` : a.dataset.energy ? `[data-energy="${a.dataset.energy}"]` : '.' + [...a.classList].filter(x => x !== 'act')[0]) : null;
   bar.outerHTML = actbarHTML(p);
+  const fb = $('#formesbox'); if (fb && DET && DET.p === p) { const h = formSwitcher(p, GAME_BY[state.dgame]); if (h) fb.outerHTML = h; } // v41: shortcut counter
   if (sel) { const b = $('#actbar ' + sel); if (b) b.focus(); }
   setBarH();
 }
@@ -1068,7 +1079,14 @@ function formSwitcher(p, gm) {
     const na = gm && q.c && !inGame(q, gi);
     return `<a class="fchip${q.k === p.k ? ' cur' : ''}${na ? ' na' : ''}" href="#/p/${q.k}" title="${esc(fullN(q))}"><img src="${artOf(q)}" alt="" loading="lazy" width="36" height="36"><span>${esc(formLabel(q))}</span></a>`;
   }).join('');
-  return `<section class="box"><h2>Formes <small class="cnt">${list.length}</small></h2><div class="fchips${list.length > 14 ? ' many' : ''}">${chips}</div>${gm ? '<p class="note">Formes grisées : absentes de ce jeu.</p>' : ''}</section>`;
+  return `<section class="box" id="formesbox"><h2>Formes <small class="cnt">${list.length}</small></h2><div class="fchips${list.length > 14 ? ' many' : ''}">${chips}</div>${gm ? '<p class="note">Formes grisées : absentes de ce jeu.</p>' : ''}${allFormsHTML(p)}</section>`;
+}
+// v41: « Cocher toutes les formes » — marks Capturé for every form of the species in the sheet's game only (separate marks, S* species)
+const allFormsList = (p, c = sheetCtx()) => (!c || c === 'home' || !FSHORT.has(p.id) || p.mb || p.bo || p.c === 'gmax' || fLinked(p, c)) ? [] : fSibs(p).filter(q => fIn(q, c));
+function allFormsHTML(p) {
+  const l = allFormsList(p); if (l.length < 2) return '';
+  const c = sheetCtx(), n = l.filter(q => isCaught(q, c)).length, all = n === l.length;
+  return `<div class="allforms"><button type="button" id="allforms" class="${all ? 'done' : ''}"${all ? ' disabled' : ''}>${all ? '✓ Toutes cochées' : 'Cocher toutes les formes'}</button><span class="note">Capturé : ${n} / ${l.length} formes</span></div>`;
 }
 function dexNumbers(sp, gid) {
   const gm = GAME_BY[gid]; const n = sp.gm[gid]; if (!n) return '';
@@ -1613,6 +1631,7 @@ document.addEventListener('click', e => {
   const cb = e.target.closest('.cry[data-cry]'); if (cb) { playCry(cb.dataset.cry, cb); return; }
   const sb = e.target.closest('#shbtn');
   if (sb) { showShinyArt = !showShinyArt; renderDetailKeepScroll(); return; }
+  if (e.target.closest('#allforms')) { const p = DET && DET.p, c = sheetCtx(); if (!p || !c) return; for (const q of allFormsList(p, c)) if (!isCaught(q, c)) toggleMark(q, 'caught', c); refreshTrack(p); render(); return; }
   const cgb = e.target.closest('#actbar .cg'), shb = e.target.closest('#actbar .sh');
   if (cgb || shb) {
     const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
@@ -1659,7 +1678,7 @@ function registerSW() {
   navigator.serviceWorker.register('sw.js').then(reg => { swWatch(reg); return navigator.serviceWorker.ready; }).then(() => {
     const metered = navigator.connection && (navigator.connection.saveData || navigator.connection.type === 'cellular');
     swDataVersion().then(() => showOffline()); // v34: the offline pack flag is only valid for the data cache it filled
-    if (!store.get('imgsDoneH', false) && !metered) cacheImages();
+    if (!store.get('imgsDoneF', false) && !metered) cacheImages();
     else showOffline();
   }).catch(() => {});
 }
@@ -1701,9 +1720,9 @@ let DATA_DV = null;
 async function swDataVersion() { const c = navigator.serviceWorker && navigator.serviceWorker.controller; if (!c) return null; const r = await swAsk(c); DATA_DV = (r && r.dv) || null; return DATA_DV; }
 const packOk = () => { const v = store.get('packDone2', false); return !!v && DATA_DV !== null && v === DATA_DV; };
 function showOffline(msg) {
-  const imgs = store.get('imgsDoneH', false), pack = packOk();
+  const imgs = store.get('imgsDoneF', false), pack = packOk();
   $('#offline').innerHTML = msg || [
-    imgs ? '<p style="margin:0">✓ Images des Pokémon enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon (~10 Mo, images HOME)</button></p>',
+    imgs ? '<p style="margin:0">✓ Images des Pokémon et de leurs formes enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon et de leurs formes (~17 Mo, images HOME)</button></p>',
     pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~35 Mo)</button></p>',
     '<p class="note">Les illustrations shiny ne sont enregistrées que lorsque vous les ouvrez.</p>'
   ].join('');
@@ -1724,9 +1743,9 @@ async function runPool(urls, n, label) {
 }
 async function cacheImages() {
   if (caching) return; caching = true;
-  const fail = await runPool(E.filter(p => !p.c).map(artOf), 4, 'Téléchargement des images');
+  const fail = await runPool([...new Set(E.map(artOf))], 4, 'Téléchargement des images');
   caching = false;
-  if (!fail) store.set('imgsDoneH', true);
+  if (!fail) store.set('imgsDoneF', true);
   showOffline();
 }
 async function cachePack() {
