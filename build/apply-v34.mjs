@@ -14,3 +14,4 @@ node('fix-v35-sprites.mjs');   // v35: HOME / animated sprite file of each form 
 node('fetch-home.mjs');        // v35: self-hosted HOME webp (img/h, core hh)
 node('apply-go-overrides.mjs'); // GO releases / Mordudor / evolution items (go-overrides.json), after the type fix
 node('fix-v36.mjs');           // v36: Gigamax, Théffroi / Polthégeist Authentique, talents sans \\n
+node('fix-v37.mjs');           // v37: Gigamax → forme de base, Salarsen Gigamax Aigüe / Grave

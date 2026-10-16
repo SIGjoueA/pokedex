@@ -291,6 +291,8 @@ function toggleMark(p, kind, c = trackCtx()) {
     if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); } }
     else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); BARONS_G.delete(k); } // v25: no Capturé → no Baron; no Shiny → no Baron shiny
   }
+  if (on && p.c === 'gmax') { const b = BY_KEY[p.gbk] || (FORMS[p.id] || [])[0]; // v37: Gigamax caught / shiny ⇒ its base form caught / shiny in the same game (unticking leaves the base)
+    if (b && b !== p && !boC(b, c)) for (const g of grpTargets(c, b)) { const k = gkey(g, b); CAUGHT_G.add(k); if (kind === 'shiny') SHINY_G.add(k); } }
   // Removing Capturé clears the origin transfer only if it was set from a game sheet and no other game of that mark (e.g. X/Y ↔ ROSA) still has it caught.
   // A transfer ticked on the Pokémon HOME sheet (or received by trade) is never cleared by the games.
   if (c === 'go') { // v28: GO Mega / Primal registered ⇒ base form caught + its Méga-énergie (shiny ⇒ base shiny); unticking the base clears its Megas
