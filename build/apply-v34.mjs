@@ -17,3 +17,4 @@ node('fix-v36.mjs');           // v36: Gigamax, Théffroi / Polthégeist Authent
 node('fix-v37.mjs');           // v37: Gigamax → forme de base, Salarsen Gigamax Aigüe / Grave
 node('fix-v38.mjs');           // v38: Dynamax GO, icônes Énergie Primo
 node('fix-v39.mjs');           // v39: revue v33 (RF/VF Switch hors dex, Isolarmure, Méga-Gemmes, Casino, shiny Z-A, noms de formes, Meltan GO)
+node('fix-v42.mjs');           // v42: lieux GBA / DS depuis Poképédia (espèces sans rencontre PokéAPI)

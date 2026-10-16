@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v41';
+const VERSION = 'v42';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Formes interchangeables : bouton « Cocher toutes les formes », formes liées quand le jeu ou HOME ne les distingue pas, images des formes hors-ligne.';
-const DATA_VERSION = 'd19'; // bump when the schema of data/*.json changes
+const NOTES = 'Lieux des jeux GBA / DS complétés depuis Poképédia : évolution, reproduction, échange ou événement pour chaque espèce sans rencontre.';
+const DATA_VERSION = 'd20'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

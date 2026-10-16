@@ -89,7 +89,7 @@ function events(w) {
 }
 
 // ---------- Lua data tables (Module:Localisations/Données/…) ----------
-function parseLua(src) {
+export function parseLua(src) {
   let i = src.indexOf('return'); if (i < 0) throw new Error('no return'); i += 6;
   const ws = () => { for (;;) { while (/\s/.test(src[i])) i++; if (src.startsWith('--', i)) { while (src[i] !== '\n' && i < src.length) i++; } else break; } };
   const str = () => { const q = src[i++]; let s = ''; while (src[i] !== q) { if (src[i] === '\\') { s += src[i + 1]; i += 2; } else s += src[i++]; } i++; return s; };
@@ -125,7 +125,7 @@ function gameOfPlace(mod, place, sub, rec) {
   if (mod === 'za') return sub === 'Extra Illumis' || /LPZAmd/.test(tx) ? 'zadlc' : 'za';
   return mod;
 }
-function recLine(mod, r) {
+export function recLine(mod, r) {
   const bits = []; let ver = null;
   const mil = r.milieu ? clean(String(r.milieu)).replace(/,\s*,/g, ',').replace(/,\s*\(/g, ' (').replace(/\s*,\s*$/, '') : '';
   if (mil) bits.push(mil);
