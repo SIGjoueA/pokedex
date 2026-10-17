@@ -1,6 +1,6 @@
 // v44c (Yann): purely visual gender differences = ONE entry (classic Pokédex). The female form leaves the list (core.e) and is kept
 // on its species entry as core « fe » (key, games, GO, HOME / animated sprites) for the « ♀ » mark and the female image; sp/<id>.json f[<key>-female] stays.
-// Real differences (other stats / abilities / own learnset) keep two entries: Mistigrix, Wimessir, Paralyse, Fragroin (+ Méga-Mistigrix ♂ / ♀). Idempotent.
+// Real differences (other stats / abilities / own learnset) keep two entries: Mistigrix, Wimessir, Paragruel, Fragroin (+ Méga-Mistigrix ♂ / ♀). Idempotent.
 import fs from 'node:fs';
 const D = new URL('../docs/data/', import.meta.url);
 const rd = f => JSON.parse(fs.readFileSync(new URL(f, D))), wr = (f, o) => fs.writeFileSync(new URL(f, D), JSON.stringify(o));

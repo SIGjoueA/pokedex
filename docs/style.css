@@ -455,10 +455,6 @@ details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] sum
 #allforms{min-height:44px;padding:8px 16px;border-radius:999px;border:0;background:#e5534b;color:#fff;font-weight:700;font-size:14px;cursor:pointer}
 #allforms.done{background:#3fbf7f;cursor:default;opacity:1}
 .allforms .note{margin:0}
-/* v44c: « ♀ Femelle » (visual gender difference, single entry): mark button + hero image toggle */
-.act.fem .ic{color:#d0457f;font-weight:700}
-.act.fem[aria-pressed=true]{color:#c2185b;border-color:#e0609a;background:rgba(224,96,154,.12)}
-@media (prefers-color-scheme:dark){.act.fem[aria-pressed=true]{color:#f48fb1}}
-.femi{color:#d0457f}
+/* v44c: hero image toggle ♀ / ♂ (visual gender difference, single entry) */
 .hero .feart{top:58px}
 .hero .feart[aria-pressed=true]{background:#e0609a;color:#fff;border-color:#e0609a}

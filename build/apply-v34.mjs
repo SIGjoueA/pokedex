@@ -20,3 +20,4 @@ node('fix-v39.mjs');           // v39: revue v33 (RF/VF Switch hors dex, Isolarm
 node('fix-v42.mjs');           // v42: lieux GBA / DS depuis Poképédia (espèces sans rencontre PokéAPI)
 node('fix-v44.mjs');           // v44: Salarsen Gigamax = une seule fiche
 node('fix-v44c.mjs');          // v44: différences mâle / femelle d’apparence = une seule entrée (core fe, bouton ♀)
+node('fix-v44d.mjs');          // v44: Méga-Mistigrix une seule entrée (image ♂ / ♀), « mâle » / « femelle » sur les 4 vraies différences
