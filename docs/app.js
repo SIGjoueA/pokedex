@@ -630,6 +630,8 @@ const BALL_GOLD = BALL.replace('class="ball"', 'class="ball gold"').replace('#e5
 const homeIcon = (gold, label) => `<span class="mk hm${gold ? ' gold' : ''}" role="img" aria-label="${label}" title="${label}"><svg class="hmi" viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" stroke-width="2" stroke-linejoin="round"/></svg></span>`;
 const HOME_T = 'Transféré vers HOME avec au moins une marque d’origine', HOME_C_T = 'Transféré avec toutes les marques d’origine Switch possibles (+ GO sauf fabuleux) : anciens jeux non comptés';
 const goldBall = (lv, label) => `<span class="mk ok gold" role="img" aria-label="${label}" title="${label}">${BALL_GOLD}${lv ? `<small class="lvl">${lv}</small>` : ''}</span>`;
+// v44: anciens jeux complets without jeux actuels = red ball + 🕹 badge (gold ball = current games only)
+const oldBall = label => `<span class="mk ok gold" role="img" aria-label="${label}" title="${label}">${BALL}<small class="lvl">🕹</small></span>`;
 const LVL_T = { sw: 'Complété jeux actuels : capturé dans tous les jeux Switch où il existe, et dans Pokémon GO s’il y est disponible', old: 'Complété dans les anciens jeux : capturé dans tous les jeux d’avant la Switch où il existe' };
 // v27: legend as a list — one icon (same as on the cards / buttons) + one sentence per line.
 const LG_INFO = '<span class="lgi-i" aria-hidden="true">i</span>';
@@ -637,7 +639,8 @@ const lgItem = (ic, html, cls) => `<li${cls ? ` class="${cls}"` : ''}><span clas
 const BASE_LEGEND = '<ul class="lgl">' + [
   lgItem(`<span class="mk ok">${BALL}</span>`, '<b>Capturé</b> dans au moins un jeu (Pokémon GO compris).'),
   lgItem(goldBall('', 'Poké Ball dorée'), '<b>Poké Ball dorée</b> : complété dans les jeux actuels — capturé dans tous les jeux Switch où il existe (un jeu et ses extensions comptent pour un) <b>et</b> dans Pokémon GO s’il y est disponible.'),
-  lgItem(goldBall('🕹', 'Poké Ball dorée 🕹'), '<b>Poké Ball dorée 🕹</b> : complété dans les anciens jeux — capturé dans tous les jeux d’avant la Switch où il existe (les deux niveaux : dorée + 🕹).'),
+  lgItem(oldBall('Poké Ball 🕹'), '<b>Badge 🕹</b> : complété dans les anciens jeux — capturé dans tous les jeux d’avant la Switch où il existe. La Poké Ball reste rouge tant que les jeux actuels ne sont pas complets.'),
+  lgItem(goldBall('🕹', 'Poké Ball dorée 🕹'), '<b>Poké Ball dorée 🕹</b> : complété dans les jeux actuels <b>et</b> les anciens jeux.'),
   lgItem('<span class="mk sh">✨</span>', '<b>Shiny</b> dans au moins un jeu.'),
   lgItem(LG_INFO, 'Pour marquer, choisissez un jeu (ou Pokémon GO) dans « Jeux ».'),
   lgItem('', 'Dans le menu Catégorie : 🔴 Poké Ball · 🟡 Poké Ball dorée (jeux actuels / Switch + GO) · 🟡🕹 anciens jeux · 🏠 HOME · 🟡🏠 HOME doré · ✨ shiny.', 'mute'),
@@ -649,12 +652,12 @@ const HOME_LEGEND = '<ul class="lgl">' + [
   lgItem(LG_INFO, 'Pour cocher : fiche du Pokémon → « Pokémon HOME » (une case par marque ; échanges HOME compris, sans « Capturé »), ou « Transféré » dans la fiche d’un jeu (implique « Capturé » dans ce jeu).'),
   lgItem('', 'Icônes des marques : Bulbagarden Archives (usage équitable). Menu Catégorie : 🏠 HOME · 🟡🏠 HOME doré.', 'mute'),
 ].join('') + '</ul>';
-// ball shown on cards in the base view: red = caught somewhere, gold = Switch-complete, gold+🕹 = anciens jeux (both → gold+🕹)
+// ball shown on cards in the base view: red = caught somewhere, gold = Switch(+GO)-complete only, 🕹 badge = anciens jeux complets (v44: red+🕹 when only old games are complete, gold+🕹 when both)
 function baseBall(p) {
   const b = baseStatus(p); if (!b.any) return '';
   if (!b.swDone && !b.oldDone) return `<span class="mk ok" aria-label="Capturé">${BALL}</span>`;
-  const lv = b.oldDone ? '🕹' : '';
-  return goldBall(lv, [b.swDone && LVL_T.sw, b.oldDone && LVL_T.old].filter(Boolean).join(' — '));
+  if (!b.swDone) return oldBall(LVL_T.old); // v44: old games never gild the ball
+  return goldBall(b.oldDone ? '🕹' : '', [LVL_T.sw, b.oldDone && LVL_T.old].filter(Boolean).join(' — '));
 }
 const SIZE_CLS = { 'Taille S': 'sz-s', 'Taille M': 'sz-m', 'Taille L': 'sz-l', 'Taille XL': 'sz-xl' };
 const sizeClass = p => (p.id === 710 || p.id === 711) ? (SIZE_CLS[p.l] || 'sz-m') : '';
@@ -858,7 +861,7 @@ function baseHTML(p0) {
   const frac = (need, have) => { const gs = grpsOf(need); return `${gs.filter(G => grpHas(G, have)).length} / ${gs.length}`; };
   let h = `Suivi : <b>vue d’ensemble</b> (lecture seule : calculé d’après les marques de chaque jeu). Pour marquer, choisissez un jeu dans le sélecteur « Jeu » ci-dessous (ou dans la liste « Jeux »).<br>` +
     (b.any ? `${BALL} Capturé` : 'Pas encore capturé') + (b.shAny ? ' · ✨ shiny' : '') +
-    (b.swDone ? ` · ${goldBall('', LVL_T.sw)} Jeux actuels complets` : '') + (b.oldDone ? ` · ${goldBall('🕹', LVL_T.old)} Anciens jeux complets` : '');
+    (b.swDone ? ` · ${goldBall('', LVL_T.sw)} Jeux actuels complets` : '') + (b.oldDone ? ` · ${oldBall(LVL_T.old)} Anciens jeux complets` : '');
   if (b.legacyC || b.legacyS) h += `<br><span class="mute">Marque manuelle de l’ancienne version${b.legacyC ? ' (capturé)' : ''}${b.legacyS ? ' (shiny)' : ''}${b.c.length || b.s.length ? ' — remplacée par les marques par jeu' : ' — conservée tant qu’aucun jeu n’est marqué'} </span><button type="button" class="lg" title="Supprimer l’ancienne marque manuelle">Retirer</button>`;
   if (sw.length) h += `<details open><summary>Jeux actuels (Switch${go ? ' + GO' : ''}) — ${frac(sw, b.c)} <small class="mute">(un jeu et ses extensions comptent pour un ; GO compte dans ce palier)</small></summary><ul class="plain homerows">${sw.map(row).join('')}</ul></details>`;
   if (old.length) h += `<details><summary>Anciens jeux — ${frac(old, b.c)}</summary><ul class="plain homerows">${old.map(row).join('')}</ul></details>`;

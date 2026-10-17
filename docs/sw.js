@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v43';
+const VERSION = 'v44';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiches réorganisées : nouvel ordre des blocs pour chaque vue (jeux, GO, HOME, vue d’ensemble), bloc Costumes GO en chantier.';
+const NOTES = 'Poké Ball dorée : seulement pour les jeux actuels (Switch + GO). Anciens jeux complets : badge 🕹 sur la Poké Ball rouge.';
 const DATA_VERSION = 'd20'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
