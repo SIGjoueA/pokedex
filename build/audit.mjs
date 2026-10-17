@@ -196,7 +196,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v30 app : pas de bannière à la première installation', /if \(!navigator\.serviceWorker\.controller/.test(app));
   ok('v30 app : vérifications au démarrage, au retour (visibilitychange) et toutes les 30 min', /swWatch\(reg\)/.test(app) && /visibilitychange[^\n]*swCheck\(\)/.test(app) && /setInterval\(swCheck, 30 \* 60 \* 1000\)/.test(app) && /\.update\(\)/.test(app));
   ok('v30 sélecteur de jeu de la fiche dans l’en-tête collant', /navHTML\(p, `<div class="gamebar dgbar">/.test(app) && /\.dgbar\{/.test(css) && /\.gnum\{/.test(css));
-  ok('v30 « Présent dans » en vue d’ensemble seulement', /\$\{mode !== 'all' \? '' : availHTML\(/.test(app));
+  ok('v30 « Présent dans » en vue d’ensemble seulement', /else \{ pre = homeSrcHTML\(p, f\); body = [^\n]*availHTML\(sp, games/.test(app));
+  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) body = regB \+ statsB \+ evoB \+ encHTML[^\n]*heldHTML[^\n]*breedHTML[^\n]*shinyHTML[^\n]*effB \+ abB \+ movesHTML[^\n]*E\.ev;/.test(app) && app.includes("pre = costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("goBox + costumesHTML('Costumes GO')") && app.includes('${desc}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
 }
 // ---- v31: shiny data, popup texts, Rouge Feu / Vert Feuille (Switch)
 { const S = D('shiny.json'), DS = D('desc.json'), mv = D('moves.json'), ref = D('ref.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8');

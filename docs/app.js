@@ -1117,12 +1117,12 @@ function flavorHTML(sp, gm, f) {
 }
 // v32: étymologie + distributions événementielles (Poképédia), overview only
 function etyHTML(sp) {
-  if (!sp.ety && !sp.evd) return '';
+  if (!sp.ety && !sp.evd) return { ety: '', ev: '' };
   const main = (sp.ety || []).filter(r => /^(Français|Anglais|Japonais)/.test(r[0])), rest = (sp.ety || []).filter(r => !main.includes(r));
   const row = r => `<li><b>${esc(r[0])}</b> : ${esc(r[1])}</li>`;
   const ety = sp.ety ? `<section class="box etybox"><h2>Origine du nom</h2><ul class="plain ety">${(main.length ? main : sp.ety.slice(0, 3)).map(row).join('')}</ul>${rest.length && main.length ? `<details class="etymore"><summary>Autres langues (${rest.length})</summary><ul class="plain ety">${rest.map(row).join('')}</ul></details>` : ''}<p class="note">Source : Poképédia (CC BY-NC-SA 3.0 FR).</p></section>` : '';
   const ev = sp.evd ? `<section class="box evdbox"><h2>Distributions événementielles <small class="cnt">${sp.evd.length}</small></h2><details class="evd"><summary>Voir les ${sp.evd.length} distribution${sp.evd.length > 1 ? 's' : ''}</summary><ul class="plain evl">${sp.evd.map(e => `<li><span class="yr">${esc(e[0])}</span> ${esc(e[1])}</li>`).join('')}</ul></details><p class="note">Pokémon distribués lors d’événements (souvent terminés). Source : Poképédia.</p></section>` : '';
-  return ety + ev;
+  return { ety, ev };
 }
 function abilityList(f, gm, ref) { // [[abilityId, hidden]] of the form in this game ([] when abilities do not exist)
   const gen = gm ? gm.g : 9;
@@ -1479,37 +1479,44 @@ function goHTML(p, f, sp, shared, go) {
   const shadow = d.shm && go.moves[d.shm] ? `<p class="note">Obscur : ${esc(go.moves[d.shm][0])} · Purifié : ${esc(go.moves[d.pum]?.[0] || '—')}</p>` : '';
   const sh = d.nosh ? 'Non disponible (pas de shiny pour ce Gigamax pour l’instant)' : d.shf && TODAY < d.shf ? `Pas encore (à partir du ${frDate(d.shf)})` : d.sh ? (d.sh.length ? `Oui (${d.sh.map(s => ({ wild: 'sauvage', raid: 'raid', egg: 'œuf', evolution: 'évolution', research: 'recherche', photobomb: 'photobomb', alola: 'forme d’Alola', mega: 'Méga-Évolution d’un Pokémon shiny', max: 'Combats Max' }[s] || s)).join(', ')})` : 'Oui') : (p.c ? 'Non vérifié pour cette forme' : 'Non disponible');
   const types = d.t;
-  // GO blocks, placed by renderDetail in the fixed sheet order (stats → moves → evolution → GO infos)
+  const effB = `<section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}${d.nost ? '' : '\n      <p class="note">Multiplicateurs de Pokémon GO (×1,6 par faiblesse, ×0,625 par résistance ; une immunité des jeux principaux compte comme une double résistance).</p>'}</section>`;
+  // v43: GO blocks returned separately, placed by renderDetail in Yann's sheet order
   return {
     stats: d.nost ? `
-    <section class="box gostats"><h2>Statistiques GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2><p class="note">Statistiques GO de cette Méga pas encore dans nos données (sortie récente) : elles apparaîtront à la prochaine mise à jour GO. Attaques ci-dessous = celles de la forme de base.</p></section>
-    <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}</section>` : `
+    <section class="box gostats"><h2>Statistiques GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2><p class="note">Statistiques GO de cette Méga pas encore dans nos données (sortie récente) : elles apparaîtront à la prochaine mise à jour GO. Attaques ci-dessous = celles de la forme de base.</p></section>` : `
     <section class="box gostats"><h2>Statistiques GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2>
       <div class="kv kv3"><div><b>${d.a}</b><span>Attaque</span></div><div><b>${d.d}</b><span>Défense</span></div><div><b>${d.s}</b><span>Endurance</span></div></div>
       <div class="kv kv3 cpmax"><div><b>${fmt(goCp(d, 40))}</b><span>PC max niv. 40</span></div><div><b>${fmt(d.m50)}</b><span>PC max niv. 50</span></div><div><b>${fmt(d.m51)}</b><span>niv. 51 (meilleur compagnon)</span></div></div>
-      <p class="note">PC max avec IV 15/15/15 = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Niveau 40 : maximum avant les Bonbons L.</p></section>
-    ${pvpHTML(p, go)}
-    <section class="box"><h2>Faiblesses &amp; résistances <small class="cnt">GO</small></h2>${effHTML(types, 'go', DATA.charts[6])}
-      <p class="note">Multiplicateurs de Pokémon GO (×1,6 par faiblesse, ×0,625 par résistance ; une immunité des jeux principaux compte comme une double résistance).</p></section>`,
+      <p class="note">PC max avec IV 15/15/15 = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Niveau 40 : maximum avant les Bonbons L.</p></section>`,
+    pvp: d.nost ? '' : pvpHTML(p, go),
+    eff: effB,
+    candy: goCandyHTML(p),
+    dispo: `
+    <section class="box goinfo godispo"><h2>Disponibilité</h2>
+      <ul class="plain gol">
+        <li>Statut : <b>${goRel(d) ? 'disponible dans Pokémon GO' : d.rf ? `annoncé pour le ${frDate(d.rf)}` : 'pas encore sorti'}</b>${p.c === 'gmax' ? ' · Gigamax : capturé en Combat Max, ne peut pas être envoyé vers HOME' : goTemp(p) ? ` · ${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire (énergie), enregistrée au Pokédex GO à la première transformation` : ''}</li>
+        ${d.rg ? `<li class="rgl">🌍 Exclusivité régionale : <b>${esc(d.rg)}</b>${d.rgm ? ' <span class="mute">(migrateur : échange parfois sa zone avec son pendant)</span>' : ''}</li>` : ''}
+        ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
+        ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
+      </ul>
+      <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>`,
+    shiny: `
+    <section class="box shinybox goshiny"><h2>✨ Shiny <small class="cnt">GO</small></h2><ul class="plain gol"><li>Shiny : <b>${sh}</b></li></ul></section>`,
     moves: `
     <section class="box"><h2>Attaques rapides</h2><div class="mvs">${fm || '<p class="note">—</p>'}</div></section>
     <section class="box"><h2>Attaques chargées</h2><div class="mvs">${cm || '<p class="note">—</p>'}</div>${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite). DPS = puissance ÷ durée.</p></section>`,
-    info: `
-    <section class="box goinfo"><h2>Pokémon GO : bonbons, compagnon, œufs, régions</h2>
+    comp: `
+    <section class="box goinfo gocomp"><h2>Compagnon &amp; bonbons</h2>
       <ul class="plain gol">
-        <li>Statut : <b>${goRel(d) ? 'disponible dans Pokémon GO' : d.rf ? `annoncé pour le ${frDate(d.rf)}` : 'pas encore sorti'}</b>${p.c === 'gmax' ? ' · Gigamax : capturé en Combat Max, ne peut pas être envoyé vers HOME' : goTemp(p) ? ` · ${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire (énergie), enregistrée au Pokédex GO à la première transformation` : ''}</li>
-        <li>Shiny : <b>${sh}</b></li>
-        ${d.rg ? `<li class="rgl">🌍 Exclusivité régionale : <b>${esc(d.rg)}</b>${d.rgm ? ' <span class="mute">(migrateur : échange parfois sa zone avec son pendant)</span>' : ''}</li>` : ''}
-        ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
-        ${goCandyHTML(p)}
         ${d.bd ? `<li>Distance compagnon : <b>${dec(d.bd)} km</b> par bonbon</li>` : ''}
-        ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
         ${d.th ? `<li>Seconde attaque chargée : <b>${fmt(d.th[0])}</b> poussières d’étoiles + <b>${d.th[1]}</b> bonbons</li>` : ''}
-        ${!d.bd && !d.eg && !d.th ? '<li>Pas de données de compagnon / œufs pour cette forme.</li>' : ''}
-      </ul>
-      <p class="note">Détail des conditions d’évolution : voir « Évolutions » ci-dessus. Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>${ditHTML(d)}`
+        ${!d.bd && !d.th ? '<li>Pas de données de compagnon pour cette forme.</li>' : ''}
+      </ul></section>`,
+    dit: ditHTML(d)
   };
 }
+// v43: GO costumes block, placeholder until the costume data is added
+function costumesHTML(title) { return `<section class="box costbox"><h2>${title}</h2><p class="note">En chantier.</p></section>`; }
 
 function renderDetail() {
   const { p, sp, f, shared } = DET;
@@ -1525,13 +1532,15 @@ function renderDetail() {
   const opts = sheetGameOpts(p, sp, games, goOk, mode);
   const gimg = spriteMode === 'off' ? `img/${p.k}.webp` : artOf(p), simg = `img/s/${p.k}.webp`; // v35: HOME by default
   const regional = gm ? dexNumbers(sp, gm.id) : '';
-  // Fixed body order: description → stats → abilities → moves → evolution → encounters → games → GO
-  let body = '';
+  // v43: sheet order chosen by Yann (per view); description, tracking and forms are placed in the template below
+  let body = '', desc = '', pre = '';
   if (isGo && f.go && DET.go) {
     const g = goHTML(p, f, sp, shared, DET.go);
-    body = flavorHTML(sp, null, f) + g.stats + g.moves +
-      `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` +
-      g.info;
+    desc = flavorHTML(sp, null, f);
+    pre = costumesHTML('Costumes');
+    body = g.stats +
+      `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` +
+      g.dispo + g.shiny + g.eff + g.moves + g.pvp + g.comp + g.dit;
   } else {
     const sArr = gm ? pickGen(f.ps, gen, f.s) : f.s;
     const gen1 = gm && gen === 1;
@@ -1539,25 +1548,22 @@ function renderDetail() {
     const mode2 = 'main';
     const abE = abilityEff(f, gm, shared.ref, types, chart); // v31
     const goBox = goOk ? `<section class="box gobox"><h2>Pokémon GO</h2><p class="gol1">Disponible dans Pokémon GO${f.go.m50 ? ` · PC max niv. 50 : <b>${fmt(f.go.m50)}</b>` : ''}${f.go.bd ? ` · compagnon : <b>${dec(f.go.bd)} km</b>` : ''}</p><p><a href="#" class="golink" data-game="go">Voir les données Pokémon GO →</a></p></section>` : '';
-    body = `${flavorHTML(sp, gm, f)}
-    ${regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : ''}
+    const E = etyHTML(sp);
+    desc = `${flavorHTML(sp, gm, f)}
     <section class="box"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div>
-</section>
-    <section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
-      <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>
-    ${breedHTML(p, sp, gm)}
-    ${gm ? shinyHTML(p, gm) : ''}
-    <section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
+</section>`;
+    const regB = regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : '';
+    const statsB = `<section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
+      <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>`;
+    const effB = `<section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
       <div id="eff">${effHTML(types, mode2, chart, abE)}</div>${abE ? abE.html : ''}
-      <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>
-    ${(() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })()}
-    ${gm ? movesHTML(f, sp, gm, shared) : ''}
-    <section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
-      <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>
-    ${gm ? heldHTML(f, gm, shared.ref) + encHTML(f, sp, gm, shared) : mode === 'home' ? '' : homeSrcHTML(p, f)}
-    ${mode !== 'all' ? '' : availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g)))}
-    ${mode === 'all' ? etyHTML(sp) : ''}
-    ${goBox}`;
+      <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>`;
+    const abB = (() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })();
+    const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
+      <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
+    if (gm) body = regB + statsB + evoB + encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + breedHTML(p, sp, gm) + shinyHTML(p, gm) + effB + abB + movesHTML(f, sp, gm, shared) + E.ev;
+    else if (mode === 'home') body = statsB + evoB + homeSrcHTML(p, f, 'Compatibilité') + effB + abB;
+    else { pre = homeSrcHTML(p, f); body = statsB + evoB + breedHTML(p, sp, gm) + effB + abB + availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + E.ety + E.ev + goBox + costumesHTML('Costumes GO'); }
   }
   $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
   <div class="detail">
@@ -1572,9 +1578,11 @@ function renderDetail() {
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
       <div class="tags">${flags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     </div>
-    <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
+    ${desc}
     ${baseNoteHTML(p)}
+    <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
     ${formSwitcher(p, gm)}
+    ${pre}
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI, de Poképédia (CC BY-NC-SA 3.0 FR) et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
@@ -1587,12 +1595,12 @@ function namesHTML(p, sp) {
   return `<div class="genus">${l1}</div>${l2 ? `<div class="jname">${l2}</div>` : ''}`;
 }
 function renderDetailKeepScroll() { const y = window.scrollY; renderDetail(); window.scrollTo(0, y); }
-function homeSrcHTML(p, f) {
+function homeSrcHTML(p, f, title = 'Transferts vers HOME') {
   if (p.bo) return ''; // battle-only variant: shown through the base form
   const av = homeAvailF(p, f), t = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [];
   if (!av.length) return '';
   const gav = av.filter(isGoldMark);
-  return `<section class="box"><h2>Transferts vers HOME <small class="cnt">${gav.filter(m => t.includes(m)).length} / ${gav.length}</small></h2>` +
+  return `<section class="box"><h2>${title} <small class="cnt">${gav.filter(m => t.includes(m)).length} / ${gav.length}</small></h2>` +
     `<p class="note" style="margin:0 0 6px">Une marque d’origine par jeu (et ses extensions) · ${homeIcon(true, HOME_C_T)} toutes les marques Switch + GO (les anciens jeux sont affichés mais ne comptent pas)${homeComplete(p, av) ? ' (complet)' : ''}. Pour cocher : « Pokémon HOME » ou le jeu dans le sélecteur.</p>` +
     `<ul class="plain homerows">${av.map(m => `<li class="${t.includes(m) ? 'on' : ''}">${omIcon(m)} ${esc(omName(m))} — ${t.includes(m) ? 'transféré' : 'pas transféré'}${isGoldMark(m) ? '' : ' <span class="mute">(ancien jeu, hors dorure)</span>'}${sh.includes(m) ? ' · ✨ shiny' : ''}</li>`).join('')}</ul></section>`;
 }
