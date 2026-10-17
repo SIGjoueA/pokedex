@@ -18,3 +18,5 @@ node('fix-v37.mjs');           // v37: Gigamax → forme de base, Salarsen Gigam
 node('fix-v38.mjs');           // v38: Dynamax GO, icônes Énergie Primo
 node('fix-v39.mjs');           // v39: revue v33 (RF/VF Switch hors dex, Isolarmure, Méga-Gemmes, Casino, shiny Z-A, noms de formes, Meltan GO)
 node('fix-v42.mjs');           // v42: lieux GBA / DS depuis Poképédia (espèces sans rencontre PokéAPI)
+node('fix-v44.mjs');           // v44: Salarsen Gigamax = une seule fiche
+node('fix-v44c.mjs');          // v44: différences mâle / femelle d’apparence = une seule entrée (core fe, bouton ♀)

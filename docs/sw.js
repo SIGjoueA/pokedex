@@ -1,8 +1,8 @@
 'use strict';
 const VERSION = 'v44';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Poké Ball dorée = jeux actuels seulement (anciens jeux : badge 🕹). Salarsen Gigamax : une seule fiche, boutons Gigamax Aigüe / Grave.';
-const DATA_VERSION = 'd21'; // bump when the schema of data/*.json changes
+const NOTES = 'Poké Ball dorée = jeux actuels. Salarsen Gigamax : une seule fiche (Aigüe / Grave). Femelles d’apparence : une seule entrée + bouton ♀ hors complétion.';
+const DATA_VERSION = 'd22'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

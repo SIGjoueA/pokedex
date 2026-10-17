@@ -77,13 +77,13 @@ ok('Qwilfish Hisui>Qwilpik', /Multitoxik/.test(ev('211-hisui', '904'))); ok('Ram
 ok('Mordudor>Gromago', /999/.test(ev('999', '1000')));
 // ---- forms listing
 const forms = id => core.e.filter(e => e.id === id).map(e => e.k);
-ok('Pikachu forms', ['25', '25-female', '25-gmax', '25-alola-cap', '25-original-cap'].every(k => forms(25).includes(k)), forms(25).join(','));
+ok('Pikachu forms (v44 : femelle = ♀ sur la fiche, core fe)', ['25', '25-gmax', '25-alola-cap', '25-original-cap'].every(k => forms(25).includes(k)) && !forms(25).includes('25-female') && core.e.find(e => e.k === '25').fe?.k === '25-female', forms(25).join(','));
 ok('Mistigrix forms', forms(678).includes('678') && forms(678).includes('678-female'), forms(678).join(','));
 eq('Zarbi forms', forms(201).length, 28); ok('Rotom forms', forms(479).length === 6, forms(479).join(',')); ok('Tauros breeds', ['128-paldea-combat-breed', '128-paldea-blaze-breed', '128-paldea-aqua-breed'].every(k => forms(128).includes(k)), forms(128).join(','));
 ok('Deoxys forms', forms(386).length === 4); ok('Shaymin', forms(492).length === 2); ok('Giratina', forms(487).length === 2);
 ok('Oricorio', forms(741).length === 4, forms(741).join(',')); ok('Lycanroc', forms(745).length === 3, forms(745).join(',')); ok('Vivaldaim seasons', forms(585).length === 4, forms(585).join(','));
 ok('Flabébé colors', forms(669).length === 5, forms(669).join(',')); ok('Indeedee', forms(876).length === 2); ok('Basculegion', forms(902).length >= 2, forms(902).join(','));
-ok('Hippopotas F', forms(449).includes('449-female')); ok('Mega Dracaufeu X/Y', forms(6).includes('6-mega-x') && forms(6).includes('6-mega-y')); ok('Gmax Dracaufeu', forms(6).includes('6-gmax'));
+ok('Hippopotas F (v44 : ♀ sur la fiche)', !forms(449).includes('449-female') && core.e.find(e => e.k === '449').fe?.k === '449-female'); ok('Mega Dracaufeu X/Y', forms(6).includes('6-mega-x') && forms(6).includes('6-mega-y')); ok('Gmax Dracaufeu', forms(6).includes('6-gmax'));
 ok('Alcremie many', forms(869).length >= 9, forms(869).length); ok('Minior', forms(774).length >= 2, forms(774).join(','));
 ok('Raichu Alola', forms(26).includes('26-alola')); ok('Arcanin Hisui', forms(58).includes('58-hisui')); ok('Rapasdepic Paldea? (Tauros)', forms(128).length >= 4);
 // ---- GO
@@ -302,10 +302,14 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
 
 // ---- v35 : images HOME (défaut) par forme
 { const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
-  ok('v35 HOME auto-hébergé : chaque hh a son fichier img/h', core.e.filter(e => e.hh).every(e => fs.existsSync(path.join(DOCS, 'img/h', e.k + '.webp'))) && core.e.filter(e => e.hh).length >= 1500);
+  ok('v35 HOME auto-hébergé : chaque hh a son fichier img/h', [...core.e, ...core.e.filter(e => e.fe).map(e => e.fe)].filter(e => e.hh).every(e => fs.existsSync(path.join(DOCS, 'img/h', e.k + '.webp'))) && core.e.filter(e => e.hh).length + core.e.filter(e => e.fe && e.fe.hh).length >= 1500); // v44: + ♀ (core fe)
   const dup = []; const g = {}; for (const e of core.e) if (e.hs && e.c !== 'sex') (g[e.id + '|' + e.hs] ||= []).push(e.k); for (const v of Object.values(g)) if (v.length > 1 && v.join() !== '849-amped-gmax,849-low-key-gmax') dup.push(v.join('='));
   ok('v35 aucune forme ne réutilise le sprite HOME d’une autre ' + dup.slice(0, 5).join(' '), !dup.length);
   ok('v35 Prismillon / Flabébé / Zarbi / Vivaldaim : fichier cosmétique propre', E['666-icy-snow'].hs === '666-icy-snow' && E['669-blue'].hs === '669-blue' && E['201-b'].hs === '201-b' && E['585-winter'].hs === '585-winter');
+  { const fe = core.e.filter(e => e.fe), sx = core.e.filter(e => e.c === 'sex').map(e => e.k).sort().join();
+  ok('v44 différences mâle / femelle : 4 espèces en deux entrées (Mistigrix, Wimessir, Paralyse, Fragroin)', sx === '678-female,876-female,902-female,916-female', sx);
+  ok('v44 99 femelles d’apparence rattachées (core fe) : sprites + données sp gardés, jeux dès la gén. IV', fe.length === 99 && fe.every(e => { const f = D(`sp/${e.id}.json`).f[e.fe.k]; return f && !f.ls && e.fe.hs && (e.fe.gb & ~e.gb) === 0 && core.games.every((g, i) => !((e.fe.gb >> i) & 1) || g.g >= 4) && fs.existsSync(path.join(HERE, '../docs/img', e.fe.k + '.webp')); }));
+  ok('v44 pas de « Mâle » sur une entrée unique', fe.every(e => e.l !== 'Mâle')); }
   ok('v37 Gigamax → forme de base (gbk) + Salarsen Gigamax (v44 : une fiche, marques Aigüe / Grave)', core.e.filter(e => e.c === 'gmax').every(e => E[e.gbk]) && !E['849-low-key-gmax'] && E['849-amped-gmax']?.gbk === '849' && /SAL_BASE = \{ A: '849', G: '849-low-key' \}/.test(app) && E['892-rapid-strike-gmax'].gbk === '892-rapid-strike' && /p\.c === 'gmax'\) \{ const b = base \|\| BY_KEY\[p\.gbk\]/.test(app));
   ok('v37c GO Méga : Méga-énergie en premier, sans doublon', /slot = gT \? '' : energyMates/.test(app) && /const goMegaOn = /.test(app));
   ok('v37b boutons : Méga (gemme d’abord, sans Capturé), Gigamax (Gigamax), base (+ Gigamax)', /if \(mg\) \{ first = slot; slot = ''; \}/.test(app) && /data-gmax=/.test(app) && /toggleMark\(g, 'caught', c, p\)/.test(app) && /\$\{slot\}\$\{dmb\}\$\{gbs\}/.test(app));

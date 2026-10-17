@@ -129,6 +129,46 @@ const isSal = p => !!p && p.k === SAL_A;
 const salKey = v => v === 'G' ? SAL_G : SAL_A;
 const salOn = (v, c) => { const a = BY_KEY[SAL_A]; if (!a || !c || c === 'home') return false; return CAUGHT_G.has(ctxFor(a, c) + ':' + salKey(v)); };
 const gmaxInGame = (g, c) => !!c && c !== 'home' && (c === 'go' ? !!(g.go || (g.gof && TODAY >= g.gof)) : !!GAME_BY[c] && gamesOf(g).some(x => saveOf(x) === saveOf(c)));
+// v44c (Yann): purely visual gender differences = ONE entry (classic Pokédex). The female form is no list entry any more: core « fe » on the species
+// entry (old key, games from gen. IV, GO, sprites). Optional « ♀ Femelle » mark per game save / GO / HOME (FEM_G "game:key", "go:key", "home:key"),
+// NO effect on completion (♀ in a game ⇒ Capturé there, like Baron; unticking Capturé clears it). Real differences keep two entries (Mistigrix, Wimessir, Paralyse, Fragroin).
+const FEM_G = new Set(store.get('fem_g', []));
+const FEM_MIG = new Set(store.get('fem_mig', [])); // old female-key marks already copied (so an unticked ♀ / Capturé is never brought back)
+let FEM_OF = {}; // old female key ("3-female", "215-hisui-female") -> species entry (boot)
+const femP = p => p && p.fe ? (p.feP ||= { ...p, ...p.fe, c: 'sex', l: 'Femelle', fe: undefined }) : null; // pseudo entry for the female image
+const femIn = (p, c) => !!(p && p.fe && c) && (c === 'home' ? !!(p.fe.hh || p.fe.hs) : c === 'go' ? !!p.fe.go : GIDX[c] !== undefined && saveGames(c).some(g => inGame(p.fe, GIDX[g])));
+const femKey = (p, c) => (c === 'home' ? 'home' : ctxFor(p, c)) + ':' + p.k;
+const femOn = (p, c) => femIn(p, c) && FEM_G.has(femKey(p, c));
+function toggleFem(p, c) {
+  if (!femIn(p, c)) return;
+  const on = !femOn(p, c);
+  if (c === 'home') { if (on) FEM_G.add('home:' + p.k); else FEM_G.delete('home:' + p.k); saveTrack(); return; }
+  for (const g of grpTargets(c, p)) { const k = gkey(g, p); if (on) FEM_G.add(k); else FEM_G.delete(k); }
+  if (on && !isCaught(p, c)) toggleMark(p, 'caught', c); else saveTrack();
+}
+// Migration (start + after an import; idempotent, nothing removed): every mark of an old female key is copied once onto the species entry
+// (Capturé / Shiny / Baron / HOME marks) AND kept as its « ♀ » mark. The old keys stay stored untouched.
+function migrateFem() {
+  if (!Object.keys(FEM_OF).length) return; let ch = false;
+  const add = (set, x) => { if (!set.has(x)) { set.add(x); ch = true; } };
+  const once = (tag, x) => { const t = tag + '|' + x; if (FEM_MIG.has(t)) return false; FEM_MIG.add(t); ch = true; return true; };
+  const per = [['caught_g', CAUGHT_G, ''], ['shiny_g', SHINY_G, 's'], ['baron_g', BARON_G, 'b'], ['barons_g', BARONS_G, 'bs'], ['home_g', TRANS_G, 't'], ['homeshiny_g', STRANS_G, 'ts']];
+  for (const [tag, set, kind] of per) for (const x of [...set]) {
+    if (typeof x !== 'string') continue; const i = x.indexOf(':'), b = i > 0 && FEM_OF[x.slice(i + 1)]; if (!b || !once(tag, x)) continue;
+    const y = x.slice(0, i) + ':' + b.k; add(set, y); add(CAUGHT_G, y); add(FEM_G, y);
+    if (kind === 's' || kind === 'bs' || kind === 'ts') add(SHINY_G, y); if (kind === 'bs') add(BARON_G, y); if (kind === 'ts') add(TRANS_G, y);
+  }
+  for (const [tag, set] of [['home_o', HOME_O], ['home_og', HOME_OG]]) for (const x of [...set]) {
+    if (typeof x !== 'string') continue; const i = x.indexOf(':'), b = i > 0 && FEM_OF[x.slice(i + 1)]; if (!b || !once(tag, x)) continue;
+    const y = x.slice(0, i) + ':' + b.k; if (set === HOME_O) { if (!HOME_O.has(y)) { HOME_O.add(y); if (HOME_OG.has(x)) HOME_OG.add(y); ch = true; } } add(FEM_G, 'home:' + b.k);
+  }
+  for (const [tag, set, home] of [['home_sh', HOME_SH, 1], ['home_b', HOME_B, 1], ['home_bs', HOME_BS, 1], ['favs', FAVS], ['go_dynamax', DYNAMAX]]) for (const x of [...set]) {
+    const b = FEM_OF[x]; if (!b || !once(tag, x)) continue; add(set, b.k); if (home) add(FEM_G, 'home:' + b.k); if (set === HOME_BS) { add(HOME_B, b.k); add(HOME_SH, b.k); }
+  }
+  for (const [tag, set] of [['caught', CAUGHT], ['shiny', SHINY]]) for (const x of [...set]) { const b = FEM_OF[x]; if (!b || !once(tag, x)) continue; add(set, ik(b)); }
+  if (ch) { saveTrack(); store.set('fem_mig', [...FEM_MIG]); store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); }
+}
+const femLine = (p, c) => femIn(p, c) ? `<br><span class="mute feml"><b class="femi">♀</b> Femelle : ${femOn(p, c) ? 'oui' : 'non'} <small>(différence d’apparence seulement, sans effet sur la complétion)</small></span>` : '';
 // v37c: GO Mega / Primal sheet: one « Méga-énergie » mark = registered OR energy (old marks: either one ⇒ on)
 const goMegaOn = p => CAUGHT_G.has('go:' + p.k) || hasEnergy(p);
 const isZa = c => c === 'za' || c === 'zadlc';
@@ -306,8 +346,8 @@ const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + 
 // The sheet has its own tracking context: its game switcher (state.dgame). 'all' = overview (general infos, read-only); 'home' = Pokémon HOME sheet (origin marks).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
-  for (const k of [...HOME_B]) if (!BY_KEY[k] || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); store.set('fem_g', [...FEM_G]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
+  for (const k of [...HOME_B]) if ((!BY_KEY[k] && !FEM_OF[k]) || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
   for (const k of [...HOME_BS]) if (!HOME_B.has(k) || !HOME_SH.has(k)) HOME_BS.delete(k); // HOME Baron shiny needs HOME Baron + HOME Shiny
   store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
 function toggleMark(p, kind, c = trackCtx(), base = null) {
@@ -317,7 +357,7 @@ function toggleMark(p, kind, c = trackCtx(), base = null) {
   for (const q of linkSet(p, c)) for (const g of grpTargets(c, q)) { // every game of the save group where the entry exists (v41: every linked form)
     const k = gkey(g, q);
     // chain: shiny ⇒ caught, transferred ⇒ caught, shiny transferred ⇒ shiny + transferred + caught; removing Capturé clears shiny + transfer flags of that game
-    if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); } }
+    if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); FEM_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); } }
     else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); BARONS_G.delete(k); } // v25: no Capturé → no Baron; no Shiny → no Baron shiny
   }
   if (on && p.c === 'gmax') { const b = base || BY_KEY[p.gbk] || (FORMS[p.id] || [])[0]; // v37: Gigamax caught / shiny ⇒ its base form caught / shiny in the same game (unticking leaves the base)
@@ -452,12 +492,12 @@ function migrateSal() {
   if (ch) { saveTrack(); store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); }
 }
 function migrateMarks() {
-  migrateMerged(); migrateSal();
+  migrateMerged(); migrateSal(); migrateFem();
   let changed = false;
   const salG = x => x.endsWith(':' + SAL_A) && CAUGHT_G.has(x.slice(0, -SAL_A.length) + SAL_G); // v44: Salarsen Gigamax shiny with only « Gigamax Grave » = already caught
   for (const x of [...STRANS_G]) for (const set of [TRANS_G, SHINY_G, CAUGHT_G]) if (!set.has(x) && !(set === CAUGHT_G && salG(x))) { set.add(x); changed = true; }
   for (const x of [...TRANS_G, ...SHINY_G]) if (!CAUGHT_G.has(x) && !salG(x)) { CAUGHT_G.add(x); changed = true; }
-  for (const pass of [0, 1]) for (const set of [CAUGHT_G, SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G]) {
+  for (const pass of [0, 1]) for (const set of [CAUGHT_G, SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G, FEM_G]) {
     for (const x of [...set]) {
       const i = x.indexOf(':'), g = x.slice(0, i), k = x.slice(i + 1), p = BY_KEY[k]; if (!p) continue;
       if (boC(p, g) || megaBo(p, g)) { set.delete(x); set.add(g + ':' + mp(p, g).k); changed = true; continue; }
@@ -508,6 +548,7 @@ async function boot() {
     if (p.gof && TODAY >= p.gof) p.go = 1; // v28: GO release announced with a date (Gigamax Duralugon 2026-11-06)
     p.nn = norm(fullN(p)); p.ne = norm(p.en); p.nj = norm(p.ja); p.nr = norm(p.ro); p.tot = p.s.reduce((a, b) => a + b, 0);
   });
+  E.forEach(p => { if (p.fe) FEM_OF[p.fe.k] = p; }); // v44c
   GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; g.s = GAME_SHORT[g.id] || g.s; });
   DATA.types.forEach(t => TYPE_FR[t[0]] = t[1]);
   migrateOrigins(); migrateHomeShiny(); migrateEnergy();
@@ -834,15 +875,16 @@ async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.js
 async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).catch(e => { delete SP[id]; throw e; }); return SP[id]; }
 
 /* ---------------- detail ---------------- */
-let detailTok = 0, DET = null, showShinyArt = false;
+let detailTok = 0, DET = null, showShinyArt = false, showFemArt = false; // v44c: showFemArt = female image of a single-entry species (hero « ♀ » button)
 function route() {
   const m = location.hash.match(/^#\/p\/(\d+(?:-[a-z0-9-]+)?)/);
   const lv = $('#list-view'), dv = $('#detail-view');
-  if (m && BY_KEY[m[1]]) {
+  const rp = m && (BY_KEY[m[1]] || FEM_OF[m[1]]); // v44c: an old female link (#/p/3-female) opens the species sheet, female image
+  if (rp) {
     if (!lv.hidden) listScroll = window.scrollY;
     lv.hidden = true; dv.hidden = false;
-    showShinyArt = false;
-    openDetail(BY_KEY[m[1]]);
+    showShinyArt = false; showFemArt = !BY_KEY[m[1]];
+    openDetail(rp);
     window.scrollTo(0, 0);
   } else {
     detailTok++; sheetPref = null;
@@ -900,6 +942,8 @@ function baseHTML(p0) {
   let h = `Suivi : <b>vue d’ensemble</b> (lecture seule : calculé d’après les marques de chaque jeu). Pour marquer, choisissez un jeu dans le sélecteur « Jeu » ci-dessous (ou dans la liste « Jeux »).<br>` +
     (b.any ? `${BALL} Capturé` : 'Pas encore capturé') + (b.shAny ? ' · ✨ shiny' : '') +
     (b.swDone ? ` · ${goldBall('', LVL_T.sw)} Jeux actuels complets` : '') + (b.oldDone ? ` · ${oldBall(LVL_T.old)} Anciens jeux complets` : '');
+  if (p.fe) { const fg = [...new Set([...FEM_G].filter(x => x.endsWith(':' + p.k)).map(x => x.slice(0, x.indexOf(':'))).map(g => GAME_BY[g] ? saveOf(g) : g))];
+    h += `<br><b class="femi">♀</b> Femelle (apparence différente, hors complétion) : ${fg.length ? 'notée dans ' + esc(fg.map(g => g === 'home' ? 'Pokémon HOME' : gameNames([g])).join(', ')) : 'pas encore notée'}`; } // v44c
   if (b.legacyC || b.legacyS) h += `<br><span class="mute">Marque manuelle de l’ancienne version${b.legacyC ? ' (capturé)' : ''}${b.legacyS ? ' (shiny)' : ''}${b.c.length || b.s.length ? ' — remplacée par les marques par jeu' : ' — conservée tant qu’aucun jeu n’est marqué'} </span><button type="button" class="lg" title="Supprimer l’ancienne marque manuelle">Retirer</button>`;
   if (sw.length) h += `<details open><summary>Jeux actuels (Switch${go ? ' + GO' : ''}) — ${frac(sw, b.c)} <small class="mute">(un jeu et ses extensions comptent pour un ; GO compte dans ce palier)</small></summary><ul class="plain homerows">${sw.map(row).join('')}</ul></details>`;
   if (old.length) h += `<details><summary>Anciens jeux — ${frac(old, b.c)}</summary><ul class="plain homerows">${old.map(row).join('')}</ul></details>`;
@@ -913,7 +957,7 @@ function trackHTML(p0) {
     const f = HOME_C.get(p.k) || [], sh = HOME_S.get(p.k) || [], av = homeAvail(p);
     return note + `Suivi : <b>Pokémon HOME</b> — une marque d’origine par jeu (et ses extensions). Cochez la marque du Pokémon reçu, y compris par échange dans HOME : cela compte comme un transfert depuis ce jeu, sans le marquer « Capturé » dans le jeu. Même état que le bouton « Transféré » de la fiche du jeu.<br>` +
       `${homeIcon(false, HOME_T)} au moins une marque · ${homeIcon(true, HOME_C_T)} toutes les marques Switch possibles + GO (sauf fabuleux)` +
-      homeRowsHTML(av, f, sh, p.k) + '<span class="mute credit">Icônes des marques d’origine : Bulbagarden Archives (usage équitable).</span>';
+      homeRowsHTML(av, f, sh, p.k) + femLine(p0, 'home') + '<span class="mute credit">Icônes des marques d’origine : Bulbagarden Archives (usage équitable).</span>';
   }
   const hk = homeKind(c), sw = sharedWith(c, p);
   let h = note + `Captures et shiny suivis pour : <b>${esc(trackName(c))}</b>`;
@@ -942,6 +986,7 @@ function trackHTML(p0) {
   }
   if (alphaOk(p, c)) h += `<br><span class="mute baronl">${BARON_IC} Baron : ${isBaron(p, c) ? 'oui' : 'non'}${isBaronS(p, c) ? ' · Baron shiny ✨' : ''} <small>(sans effet sur la complétion)</small></span>`;
   else if (ALPHA_GAMES.has(c) && !p0.mb && !bo) h += `<br><span class="mute baronl">Ne peut pas être Baron dans ce jeu${(BY_KEY[String(p.id)] || p).lg || (BY_KEY[String(p.id)] || p).my ? ' (légendaire / fabuleux)' : ''}.</span>`;
+  if (!bo) h += femLine(p0, c); // v44c
   { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
   if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
   if (c === 'go' && goMy(p)) return h + '<br>Les Pokémon fabuleux (sauf Meltan et Melmetal) ne peuvent pas être transférés depuis Pokémon GO : GO n’est pas requis pour la complétion HOME de ce Pokémon.';
@@ -985,6 +1030,12 @@ function baronBtns(on, son, dis, nm, offT) {
   return `<button class="act baron" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && on}" aria-label="Baron${nm ? ' – ' + esc(nm) : ''}" title="${esc(t1)}">${BARON_IC}<span class="t">Baron</span></button>` +
     `<button class="act barons" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && son}" aria-label="Baron shiny${nm ? ' – ' + esc(nm) : ''}" title="${esc(t2)}">${BARONS_IC}<span class="t">B. shiny</span></button>`;
 }
+// v44c: « ♀ Femelle » (single-entry species with a visual female): shown where the female exists (overview: greyed, like the other buttons)
+function femBtn(p, c, nm) {
+  if (!p.fe || p.bo || p.mb || p.c === 'gmax' || (c && !femIn(p, c))) return '';
+  const dis = !c, on = !dis && femOn(p, c);
+  return `<button class="act fem" type="button"${dis ? ' disabled' : ''} aria-pressed="${on}" aria-label="Femelle${nm ? ' – ' + esc(nm) : ''}" title="${dis ? 'Choisissez un jeu pour marquer la femelle' : esc(`Femelle obtenue${nm ? ' – ' + nm : ''}${c === 'home' ? '' : ' (coche aussi Capturé)'} — différence d’apparence seulement, sans effet sur la complétion`)}"><span class="ic" aria-hidden="true">♀</span><span class="t">Femelle</span></button>`;
+}
 function homeBarHTML(p) {
   const q = mp(p, 'home'), av = homeAvail(q), f = HOME_C.get(q.k) || [], dis = !!p.bo, gav = av.filter(isGoldMark), done = gav.filter(m => f.includes(m)).length;
   const extra = f.filter(m => ORI[m] && !av.includes(m)); // ticked from a « hors dex » game sheet: shown so it can be unticked (no effect on completion)
@@ -993,7 +1044,7 @@ function homeBarHTML(p) {
   const shOn = !dis && f.length > 0, shP = HOME_SH.has(q.k);
   const shb = av.length || extra.length ? `<button class="act hsh" type="button"${shOn ? '' : ' disabled'} aria-pressed="${shOn && shP}" aria-label="Shiny dans HOME" title="${shOn ? 'Shiny dans HOME (ce Pokémon / cette forme)' : 'Cochez d’abord au moins une marque d’origine (transfert ou échange)'}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>` : '';
   const bOn = !dis && homeBaronOn(q), hb = !dis && alphaHomeGames(q).length ? baronBtns(HOME_B.has(q.k), HOME_BS.has(q.k), !bOn, 'HOME', `Cochez d’abord la marque ${alphaHomeGames(q).map(c => omName(ALPHA_MARK[c])).join(' ou ')} (seuls les Pokémon venus de Légendes Arceus / Z-A peuvent être Barons)`) : '';
-  return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${btns ? btns + shb + hb : '<span class="mute">Aucun jeu compatible avec HOME ne contient cette forme.</span>'}</div></div>`;
+  return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${btns ? btns + shb + hb + femBtn(p, 'home', 'HOME') : '<span class="mute">Aucun jeu compatible avec HOME ne contient cette forme.</span>'}</div></div>`;
 }
 function actbarHTML(p) {
   const c = sheetCtx(), q = mp(p, c), nm = c ? trackName(c) : '';
@@ -1021,13 +1072,14 @@ function actbarHTML(p) {
   if (mg) { first = slot; slot = ''; }
   const salBtns = isSal(p) && c && c !== 'home' ? ['A', 'G'].map(v => { const n = v === 'G' ? 'Grave' : 'Aigüe', dis = catchDis || !gmaxInGame(p, c); return `<button class="act salg gem gmx" type="button" data-sal="${v}"${dis ? ' disabled' : ''} aria-pressed="${!dis && salOn(v, c)}" aria-label="Gigamax ${n}${nm ? ' – ' + esc(nm) : ''}" title="${esc(`Salarsen Gigamax Forme ${n} obtenu${nm ? ' – ' + nm : ''} (coche aussi Salarsen Forme ${n} ; lié au bouton Gigamax de sa fiche). Capturé = Aigüe ou Grave`)}">${GMAX_IC}<span class="t">Gigamax ${n}</span></button>`; }).join('') : ''; // v44
   const al = alphaOk(q, c) && !p.bo, bb = al ? baronBtns(isBaron(q, c), isBaronS(q, c), false, nm, '') : ''; // v25: Légendes Arceus / Z-A, Alpha-capable forms only
-  const nB = (mg ? 2 : 3) + (salBtns ? 1 : 0) + (al ? 2 : 0) + ((first + slot + dmb + gbs).match(/class="act /g) || []).length;
+  const fem = femBtn(p, c, nm);
+  const nB = (mg ? 2 : 3) + (salBtns ? 1 : 0) + (al ? 2 : 0) + ((first + slot + dmb + gbs + fem).match(/class="act /g) || []).length;
   const ctx = !c ? 'Vue d’ensemble — choisissez un jeu (ou Pokémon HOME) pour marquer' : `Suivi : <b>${esc(nm)}</b>${sw.length ? ` <span class="shr">+ ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>` : ''}`;
   return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts${nB > 6 ? ' wrap2' : ''}">
     ${mg ? first : isSal(p) && c && c !== 'home' ? salBtns : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? GMAX_IC : gT ? `<img class="gemimg" src="${energyImg(p)}" alt="" width="28" height="28" decoding="async">` : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
     <button class="act sh" type="button" ${shDis ? 'disabled' : ''} aria-pressed="${!shDis && isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${shNo ? esc(shNo) : gT ? esc(`Shiny = ${p.n} shiny enregistré (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} d’un Pokémon shiny) — coche aussi ${tb ? tb.n : 'la forme de base'} shiny et la ${eL}`) : p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
     ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
-    ${slot}${dmb}${gbs}</div></div>`;
+    ${slot}${dmb}${gbs}${fem}</div></div>`;
 }
 // Sticky header: back, previous / next, favourite only.
 // v30: sheet game menu = same order / separators as the list « Jeux » menu (extra lists above their game's latest expansion), regional dex number on each game.
@@ -1280,7 +1332,7 @@ function spriteBtns(p) {
 // A token guards against a late load / error of the previous sheet or mode (no stale image when switching forms).
 let SPR_TOK = 0;
 function setSprite(mode, quiet) {
-  const p = DET && DET.p, img = $('#heroimg'); if (!p || !img) return;
+  const p0 = DET && DET.p, p = p0 && showFemArt && p0.fe ? femP(p0) : p0, img = $('#heroimg'); if (!p || !img) return;
   const tok = ++SPR_TOK, shiny = showShinyArt && p.sh, off = `img/${shiny ? 's/' : ''}${p.k}.webp`;
   img.onerror = null; img.onload = null;
   const press = m => document.querySelectorAll('.sprsw button').forEach(b => b.setAttribute('aria-pressed', b.dataset.spr === m));
@@ -1573,7 +1625,7 @@ function renderDetail() {
   const games = availGames(f);
   const goOk = goRel(f.go);
   const opts = sheetGameOpts(p, sp, games, goOk, mode);
-  const gimg = spriteMode === 'off' ? `img/${p.k}.webp` : artOf(p), simg = `img/s/${p.k}.webp`; // v35: HOME by default
+  const ap = showFemArt && p.fe ? femP(p) : p, gimg = spriteMode === 'off' ? `img/${ap.k}.webp` : artOf(ap), simg = `img/s/${ap.k}.webp`; // v35: HOME by default
   const regional = gm ? dexNumbers(sp, gm.id) : '';
   // v43: sheet order chosen by Yann (per view); description, tracking and forms are placed in the template below
   let body = '', desc = '', pre = '';
@@ -1613,9 +1665,10 @@ function renderDetail() {
     <div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${c1};--c2:${c2}">
       <div class="num">#${pad(p.id)}</div>
       ${cryBtns(p)}
-      <img id="heroimg" src="${showShinyArt && p.sh ? simg : gimg}" alt="${esc(p.n)}" width="256" height="256">
+      <img id="heroimg" src="${showShinyArt && ap.sh ? simg : gimg}" alt="${esc(p.n)}${showFemArt && p.fe ? ' femelle' : ''}" width="256" height="256">
       ${spriteBtns(p)}
       ${p.sh ? `<button id="shbtn" class="shart" type="button" aria-pressed="${showShinyArt}" title="Afficher l’illustration shiny">✨ ${showShinyArt ? 'Normal' : 'Shiny'}</button>` : ''}
+      ${p.fe ? `<button id="febtn" class="shart feart" type="button" aria-pressed="${showFemArt}" title="${showFemArt ? 'Afficher le mâle' : 'Afficher la femelle (différence d’apparence)'}">${showFemArt ? '♂ Mâle' : '♀ Femelle'}</button>` : ''}
       <h1>${esc(fullN(p))}</h1>
       ${namesHTML(p, sp)}
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
@@ -1682,6 +1735,9 @@ document.addEventListener('click', e => {
   const cb = e.target.closest('.cry[data-cry]'); if (cb) { playCry(cb.dataset.cry, cb); return; }
   const sb = e.target.closest('#shbtn');
   if (sb) { showShinyArt = !showShinyArt; renderDetailKeepScroll(); return; }
+  if (e.target.closest('#febtn')) { showFemArt = !showFemArt; renderDetailKeepScroll(); return; } // v44c: female image
+  const feb = e.target.closest('#actbar .fem');
+  if (feb) { const p = DET && DET.p; if (!p || feb.disabled) return; toggleFem(p, sheetCtx()); refreshTrack(p); render(); return; } // v44c: ♀ mark
   if (e.target.closest('#allforms')) { const p = DET && DET.p, c = sheetCtx(); if (!p || !c) return; for (const q of allFormsList(p, c)) if (!isCaught(q, c)) toggleMark(q, 'caught', c); refreshTrack(p); render(); return; }
   const slb = e.target.closest('#actbar .salg[data-sal]');
   if (slb) { const p = DET && DET.p; if (!p || !isSal(p) || slb.disabled) return; toggleSal(slb.dataset.sal, sheetCtx()); refreshTrack(p); render(); return; } // v44: Gigamax Aigüe / Grave
@@ -1804,7 +1860,7 @@ async function cacheImages() {
 }
 async function cachePack() {
   if (caching) return; caching = true;
-  const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
+  const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
     'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
@@ -1829,7 +1885,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX] };
+    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], fem_g: [...FEM_G] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -1844,18 +1900,20 @@ boot();
       const mt = x => Array.isArray(x) ? x.filter(transValid) : [];
       mt(d.home_g).forEach(n => { TRANS_G.add(n); CAUGHT_G.add(n); }); mt(d.homeshiny_g).forEach(n => { STRANS_G.add(n); TRANS_G.add(n); CAUGHT_G.add(n); SHINY_G.add(n); });
       // v22 origin marks; an older backup (home_g only) is converted game → origin mark (set from a game)
-      const om = x => Array.isArray(x) ? x.filter(v => typeof v === 'string' && ORI[v.slice(0, v.indexOf(':'))] && BY_KEY[v.slice(v.indexOf(':') + 1)]) : [];
-      if (Array.isArray(d.home_sh)) d.home_sh.filter(k => typeof k === 'string' && BY_KEY[k]).forEach(k => HOME_SH.add(k)); else mt(d.homeshiny_g).forEach(n => HOME_SH.add(n.slice(n.indexOf(':') + 1)));
+      const kOk = k => !!(BY_KEY[k] || FEM_OF[k]); // v44c: old female keys are migrated after the import
+      const om = x => Array.isArray(x) ? x.filter(v => typeof v === 'string' && ORI[v.slice(0, v.indexOf(':'))] && kOk(v.slice(v.indexOf(':') + 1))) : [];
+      if (Array.isArray(d.home_sh)) d.home_sh.filter(k => typeof k === 'string' && kOk(k)).forEach(k => HOME_SH.add(k)); else mt(d.homeshiny_g).forEach(n => HOME_SH.add(n.slice(n.indexOf(':') + 1)));
       mk(d.baron_g).forEach(n => { BARON_G.add(n); CAUGHT_G.add(n); }); mk(d.barons_g).forEach(n => { BARONS_G.add(n); BARON_G.add(n); SHINY_G.add(n); CAUGHT_G.add(n); }); // v25
-      const fk = x => Array.isArray(x) ? x.filter(k => typeof k === 'string' && BY_KEY[k]) : [];
+      const fk = x => Array.isArray(x) ? x.filter(k => typeof k === 'string' && kOk(k)) : [];
+      if (Array.isArray(d.fem_g)) d.fem_g.filter(x => typeof x === 'string' && /^[a-z0-9]+:\d+(-[a-z0-9-]+)?$/.test(x) && (GAME_BY[x.split(':')[0]] || /^(go|home):/.test(x)) && BY_KEY[x.slice(x.indexOf(':') + 1)]).forEach(x => FEM_G.add(x)); // v44c
       fk(d.home_b).forEach(k => HOME_B.add(k)); fk(d.home_bs).forEach(k => HOME_BS.add(k));
       if (Array.isArray(d.home_o)) { om(d.home_o).forEach(n => HOME_O.add(n)); om(d.home_og).forEach(n => { if (HOME_O.has(n)) HOME_OG.add(n); }); }
       else [...mt(d.home_g), ...mt(d.homeshiny_g)].forEach(n => { const i = n.indexOf(':'), m = originOf(n.slice(0, i)); if (m) { HOME_O.add(m + n.slice(i)); HOME_OG.add(m + n.slice(i)); } });
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
-      if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(k => BY_KEY[k]).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
+      if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(kOk).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
       migrateEnergy(); migrateMarks(); rebuildHome(); store.set('mega_energy', [...MEGA_ENERGY]);
-      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
+      store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('fem_g', [...FEM_G]);
       render(); toast('Sauvegarde importée.');
     } catch { toast('Fichier invalide : ce n’est pas une sauvegarde du Pokédex.', 'err', 6500); }
     im.value = '';
