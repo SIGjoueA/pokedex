@@ -822,6 +822,7 @@ function render() {
   document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
   const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game;
   $('#reset').hidden = !active;
+  requestAnimationFrame(updJump);
 }
 
 /* ---------------- shared data (loaded with the first detail page) ---------------- */
@@ -1799,6 +1800,35 @@ function swWatch(reg) {
 function swCheck() { if (SW_REG && navigator.onLine !== false) SW_REG.update().then(() => { if (SW_REG.waiting) swOffer(SW_REG.waiting); }).catch(() => {}); }
 document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') swCheck(); });
 addEventListener('hashchange', () => setTimeout(updPos, 120));
+// v45: list jump buttons ⬆︎ / ⬇︎ (bottom-right, above the iPhone home indicator / rounded corners). Shown once the list is scrolled a bit;
+// ⬆︎ hidden at the top, ⬇︎ hidden once the last entry is in view. Cards use content-visibility:auto (estimated heights) → the ⬇︎ jump re-aims
+// at the last card for a few frames until it really sits at the bottom of the screen.
+const JUMP_IC = d => `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="${d ? 'M12 5v13M6 12l6 6 6-6' : 'M12 19V6M6 12l6-6 6 6'}" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+function jumpEls() {
+  let w = $('#jump'); if (w) return w;
+  w = document.createElement('div'); w.id = 'jump'; w.className = 'jump';
+  w.innerHTML = `<button id="jumpup" type="button" aria-label="Remonter en haut de la liste" title="Haut de la liste">${JUMP_IC(0)}</button><button id="jumpdn" type="button" aria-label="Descendre en bas de la liste" title="Bas de la liste">${JUMP_IC(1)}</button>`;
+  document.body.appendChild(w);
+  $('#jumpup').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'instant' }); updJump(); });
+  $('#jumpdn').addEventListener('click', jumpBottom);
+  return w;
+}
+const lastCard = () => { const c = $('#results').lastElementChild; return c && c.classList.contains('card') ? c : null; };
+function lastTarget() { const c = lastCard(); if (!c) return null; const r = c.getBoundingClientRect(); return Math.max(0, Math.round(scrollY + r.bottom - innerHeight + 12)); }
+function jumpBottom() {
+  let n = 0;
+  const go = () => { const t = lastTarget(); if (t === null) return; if (Math.abs(scrollY - t) > 1) window.scrollTo({ top: t, behavior: 'instant' }); if (++n < 8) requestAnimationFrame(go); else updJump(); };
+  go();
+}
+function updJump() {
+  const w = jumpEls(), lv = $('#list-view'), c = lastCard();
+  const on = !lv.hidden && !!c && document.documentElement.scrollHeight > innerHeight * 2;
+  const top = scrollY < 240, atEnd = !c || c.getBoundingClientRect().bottom <= innerHeight + 4;
+  $('#jumpup').classList.toggle('show', on && !top);
+  $('#jumpdn').classList.toggle('show', on && !top && !atEnd);
+}
+{ let raf = 0; const q = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; updJump(); }); };
+  addEventListener('scroll', q, { passive: true }); addEventListener('resize', q); addEventListener('hashchange', () => setTimeout(updJump, 60)); }
 let caching = false;
 // v34: « packDone2 » stores the DATA_VERSION whose cache was filled (old value true = unknown). A new DATA_VERSION empties the data cache
 // (sw.js activate) → the ✓ disappears and the download button comes back. DATA_DV = version reported by the active service worker.

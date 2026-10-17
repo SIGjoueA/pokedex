@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v44';
+const VERSION = 'v45';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Poké Ball dorée = jeux actuels. Salarsen Gigamax : une seule fiche. Femelles d’apparence et Méga-Mistigrix : une seule entrée, bouton d’image ♂/♀.';
+const NOTES = 'Boutons ⬆︎ / ⬇︎ pour monter ou descendre d’un coup dans la liste.';
 const DATA_VERSION = 'd23'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
