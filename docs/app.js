@@ -121,7 +121,13 @@ function migrateEnergy() {
 // v37b: Gigamax treated like Megas. A Gigamax sheet's « Gigamax » mark = its caught mark (same keys as before → old marks kept).
 // Base sheets get a « Gigamax » button (after HOME / Méga-Gemme) linked both ways with the Gigamax sheet. Charmilly: one Gigamax for its 63 forms.
 const isGmx = p => !!p && p.c === 'gmax' && p.k !== '890-eternamax'; // Infinimax: not catchable, keeps its plain Capturé
-const gmaxBtnsOf = p => isGmx(p) || p.mb || p.bo ? [] : p.id === 869 ? E.filter(q => q.k === '869-gmax') : E.filter(q => isGmx(q) && q.gbk === p.k);
+const gmaxBtnsOf = p => isGmx(p) || p.mb || p.bo ? [] : p.id === 869 ? E.filter(q => q.k === '869-gmax') : p.k === SAL_BASE.G ? E.filter(isSal) : E.filter(q => isGmx(q) && q.gbk === p.k); // v44: Salarsen Grave → the single Salarsen Gigamax entry («Gigamax Grave» mark)
+// v44 (Yann): Salarsen Gigamax = ONE entry (849-amped-gmax) with two capture marks: « Gigamax Aigüe » (its own key) and « Gigamax Grave »
+// (key 849-low-key-gmax, no list entry since v44: the v37–v43 Grave entry's capture marks ARE this mark). Shiny / HOME: shared, on the entry key.
+const SAL_A = '849-amped-gmax', SAL_G = '849-low-key-gmax', SAL_BASE = { A: '849', G: '849-low-key' };
+const isSal = p => !!p && p.k === SAL_A;
+const salKey = v => v === 'G' ? SAL_G : SAL_A;
+const salOn = (v, c) => { const a = BY_KEY[SAL_A]; if (!a || !c || c === 'home') return false; return CAUGHT_G.has(ctxFor(a, c) + ':' + salKey(v)); };
 const gmaxInGame = (g, c) => !!c && c !== 'home' && (c === 'go' ? !!(g.go || (g.gof && TODAY >= g.gof)) : !!GAME_BY[c] && gamesOf(g).some(x => saveOf(x) === saveOf(c)));
 // v37c: GO Mega / Primal sheet: one « Méga-énergie » mark = registered OR energy (old marks: either one ⇒ on)
 const goMegaOn = p => CAUGHT_G.has('go:' + p.k) || hasEnergy(p);
@@ -210,6 +216,7 @@ let CAUGHT_BY = new Map(), SHINY_BY = new Map(); // entry key -> [game ids incl.
 function rebuildHome() {
   CAUGHT_BY = new Map(); SHINY_BY = new Map();
   for (const [set, map] of [[CAUGHT_G, CAUGHT_BY], [SHINY_G, SHINY_BY]]) for (const x of set) { const i = x.indexOf(':'); const k = x.slice(i + 1); (map.get(k) || map.set(k, []).get(k)).push(x.slice(0, i)); }
+  const sg = CAUGHT_BY.get(SAL_G); if (sg) { const a = CAUGHT_BY.get(SAL_A) || []; CAUGHT_BY.set(SAL_A, [...new Set([...a, ...sg])]); CAUGHT_BY.delete(SAL_G); } // v44: Salarsen Gigamax caught = Aigüe or Grave
   HOME_C = new Map(); HOME_S = new Map(); // entry key -> [origin marks]
   const push = (map, k, m) => { if (!m) return; const a = map.get(k) || map.set(k, []).get(k); if (!a.includes(m)) a.push(m); };
   for (const x of HOME_O) { const i = x.indexOf(':'); push(HOME_C, x.slice(i + 1), x.slice(0, i)); }
@@ -261,6 +268,7 @@ const isCaught = (p, c = trackCtx()) => {
     return zaMegaCaughtGames(p).length > 0 || CAUGHT_G.has('go:' + p.k);
   }
   c = ctxFor(p, c);
+  if (isSal(p) && c && c !== 'home' && CAUGHT_G.has(c + ':' + SAL_G)) return true; // v44: either Gigamax mark
   return c === 'home' ? HOME_C.has(p.k) : c ? CAUGHT_G.has(gkey(c, p)) : CAUGHT_BY.has(p.k) || CAUGHT.has(ik(p));
 };
 const isShiny = (p, c = trackCtx()) => {
@@ -323,6 +331,26 @@ function toggleMark(p, kind, c = trackCtx(), base = null) {
   if (kind === 'caught' && !on) { const m = originOf(c), mk = m + ':' + p.k; if (HOME_OG.has(mk) && !ORI[m].games.some(g => CAUGHT_G.has(gkey(g, p)))) { HOME_O.delete(mk); HOME_OG.delete(mk); } }
   saveTrack();
 }
+// v44: Salarsen Gigamax « Gigamax Aigüe » / « Gigamax Grave » (same mark from the Gigamax sheet and from the Gigamax button of Forme Aigüe / Forme Grave).
+// Tick ⇒ that base form caught in the same game. Untick: Shiny / Transféré of the entry are cleared only once neither Gigamax mark is left in that game.
+function toggleSal(v, c) {
+  const a = BY_KEY[SAL_A]; if (!a || !c || c === 'home' || !gmaxInGame(a, c)) return;
+  const ts = grpTargets(c, a), on = !salOn(v, c);
+  for (const g of ts) { const k = g + ':' + salKey(v); if (on) CAUGHT_G.add(k); else CAUGHT_G.delete(k); }
+  if (on) { const b = BY_KEY[SAL_BASE[v]]; if (b) for (const g of grpTargets(c, b)) CAUGHT_G.add(gkey(g, b)); }
+  else if (!salOn(v === 'G' ? 'A' : 'G', c)) {
+    for (const g of ts) { const k = g + ':' + SAL_A; SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); }
+    const m = originOf(c), mk = m + ':' + SAL_A; if (m && HOME_OG.has(mk) && !ORI[m].games.some(g => CAUGHT_G.has(g + ':' + SAL_A) || CAUGHT_G.has(g + ':' + SAL_G))) { HOME_O.delete(mk); HOME_OG.delete(mk); }
+  }
+  saveTrack();
+}
+// v44: shared Shiny on the Salarsen Gigamax sheet: ticking it with only « Gigamax Grave » marked keeps Aigüe unticked and makes Forme Grave shiny.
+function toggleSalShiny(c) {
+  const a = BY_KEY[SAL_A]; if (!a || !c || c === 'home') return;
+  const on = !SHINY_G.has(gkey(ctxFor(a, c), a));
+  if (on && salOn('G', c) && !salOn('A', c)) { toggleMark(a, 'shiny', c, BY_KEY[SAL_BASE.G]); for (const g of grpTargets(c, a)) CAUGHT_G.delete(g + ':' + SAL_A); saveTrack(); }
+  else toggleMark(a, 'shiny', c);
+}
 // "Transféré" from a GAME sheet: sets the transfer of that game's origin mark (same state as the HOME sheet) and marks Capturé in that game.
 // (shiny = legacy shiny transfer, no longer in the UI: per-game STRANS_G kept for the future HOME redesign)
 function toggleTransfer(p, shiny, c = trackCtx()) {
@@ -333,8 +361,8 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
     if (on) { if (q === p || !HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.add(qk); } } else if (!shiny) { HOME_O.delete(qk); HOME_OG.delete(qk); } }
   for (const g of grpTargets(c, p)) {
     const k = gkey(g, p);
-    if (shiny) { if (on) { STRANS_G.add(k); if (!p.mb) { CAUGHT_G.add(k); SHINY_G.add(k); } } else STRANS_G.delete(k); }
-    else if (on) { if (!p.mb) CAUGHT_G.add(k); } // Megas: caught stays derived (base + gem)
+    if (shiny) { if (on) { STRANS_G.add(k); if (!p.mb) { if (!(isSal(p) && CAUGHT_G.has(g + ':' + SAL_G))) CAUGHT_G.add(k); SHINY_G.add(k); } } else STRANS_G.delete(k); }
+    else if (on) { if (!p.mb && !(isSal(p) && CAUGHT_G.has(g + ':' + SAL_G))) CAUGHT_G.add(k); } // Megas: caught stays derived (base + gem); v44: Salarsen Gigamax already caught as Grave
     else STRANS_G.delete(k);
   }
   if (on && isZa(c) && !p.mb && !p.bo) gemMegaTransfers(p, c, true);
@@ -414,11 +442,21 @@ function migrateMerged() {
     if (ch) store.set(name, [...set]);
   }
 }
+// v44 migration (idempotent, nothing lost): the removed Salarsen Gigamax (Grave) entry. Its per-game captures stay as the « Gigamax Grave » mark (same keys);
+// its shiny / HOME / Baron / favourite / old manual marks join the single entry (shared Shiny and HOME).
+function migrateSal() {
+  let ch = false; const mv = (set, x, y) => { set.delete(x); if (!set.has(y)) set.add(y); ch = true; };
+  for (const set of [SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G, HOME_O, HOME_OG]) for (const x of [...set]) if (typeof x === 'string' && x.endsWith(':' + SAL_G)) mv(set, x, x.slice(0, -SAL_G.length) + SAL_A);
+  for (const set of [HOME_SH, HOME_B, HOME_BS, FAVS, CAUGHT, SHINY]) if (set.has(SAL_G)) mv(set, SAL_G, SAL_A);
+  for (const x of SHINY_G) if (x.endsWith(':' + SAL_A)) { const g = x.slice(0, -SAL_A.length - 1); if (!CAUGHT_G.has(g + ':' + SAL_A) && !CAUGHT_G.has(g + ':' + SAL_G)) { CAUGHT_G.add(g + ':' + SAL_A); ch = true; } } // shiny ⇒ caught
+  if (ch) { saveTrack(); store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); }
+}
 function migrateMarks() {
-  migrateMerged();
+  migrateMerged(); migrateSal();
   let changed = false;
-  for (const x of [...STRANS_G]) for (const set of [TRANS_G, SHINY_G, CAUGHT_G]) if (!set.has(x)) { set.add(x); changed = true; }
-  for (const x of [...TRANS_G, ...SHINY_G]) if (!CAUGHT_G.has(x)) { CAUGHT_G.add(x); changed = true; }
+  const salG = x => x.endsWith(':' + SAL_A) && CAUGHT_G.has(x.slice(0, -SAL_A.length) + SAL_G); // v44: Salarsen Gigamax shiny with only « Gigamax Grave » = already caught
+  for (const x of [...STRANS_G]) for (const set of [TRANS_G, SHINY_G, CAUGHT_G]) if (!set.has(x) && !(set === CAUGHT_G && salG(x))) { set.add(x); changed = true; }
+  for (const x of [...TRANS_G, ...SHINY_G]) if (!CAUGHT_G.has(x) && !salG(x)) { CAUGHT_G.add(x); changed = true; }
   for (const pass of [0, 1]) for (const set of [CAUGHT_G, SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G]) {
     for (const x of [...set]) {
       const i = x.indexOf(':'), g = x.slice(0, i), k = x.slice(i + 1), p = BY_KEY[k]; if (!p) continue;
@@ -916,7 +954,7 @@ function trackHTML(p0) {
 function refreshTrack(p) {
   const el = $('#trackinfo'); if (el) el.innerHTML = trackHTML(p);
   const bar = $('#actbar'); if (!bar) return;
-  const a = document.activeElement, sel = a && bar.contains(a) ? (a.dataset.mega ? `[data-mega="${a.dataset.mega}"]` : a.dataset.origin ? `[data-origin="${a.dataset.origin}"]` : a.dataset.energy ? `[data-energy="${a.dataset.energy}"]` : '.' + [...a.classList].filter(x => x !== 'act')[0]) : null;
+  const a = document.activeElement, sel = a && bar.contains(a) ? (a.dataset.mega ? `[data-mega="${a.dataset.mega}"]` : a.dataset.origin ? `[data-origin="${a.dataset.origin}"]` : a.dataset.energy ? `[data-energy="${a.dataset.energy}"]` : a.dataset.sal ? `[data-sal="${a.dataset.sal}"]` : '.' + [...a.classList].filter(x => x !== 'act')[0]) : null;
   bar.outerHTML = actbarHTML(p);
   const fb = $('#formesbox'); if (fb && DET && DET.p === p) { const h = formSwitcher(p, GAME_BY[state.dgame]); if (h) fb.outerHTML = h; } // v41: shortcut counter
   if (sel) { const b = $('#actbar ' + sel); if (b) b.focus(); }
@@ -976,15 +1014,17 @@ function actbarHTML(p) {
     slot = gs.map(x => { const xyz = (x.m.k.match(/mega-(x|y|z)$/) || [])[1]; return gemBtnHTML(x.m, c, x.on, gs.length > 1 ? (xyz ? 'Gemme ' + xyz.toUpperCase() : megaStoneOf(x.m).label) : isZa(c) ? 'Gemme' : 'Méga-Gemme'); }).join(''); // Z-A: short labels (room for the Baron buttons)
   }
   const gx = isGmx(p), mg = !!p.mb && c !== 'go'; // v37b: Gigamax sheet → « Gigamax » first; Mega sheet → Méga-Gemme first (no Capturé)
-  const gbs = gmaxBtnsOf(p).map(g => { const on = gmaxInGame(g, c), pr = on && isCaught(g, c); return `<button class="act gem gmx" type="button" data-gmax="${g.k}"${on ? '' : ' disabled'} aria-pressed="${pr}" aria-label="Gigamax${nm ? ' – ' + esc(nm) : ''}" title="${on ? esc(`Gigamax obtenu dans ${nm} (coche ${g.n}${p.id === 869 ? ', une seule fiche pour toutes les formes' : ''}) — coche aussi cette forme`) : 'À marquer dans un jeu où ce Gigamax existe (Épée / Bouclier, Pokémon GO)'}">${GMAX_IC}<span class="t">Gigamax</span></button>`; }).join('');
+  const sv = isSal(gmaxBtnsOf(p)[0]) ? (p.k === SAL_BASE.G ? 'G' : 'A') : '';
+  const gbs = gmaxBtnsOf(p).map(g => { const on = gmaxInGame(g, c), pr = on && (sv ? salOn(sv, c) : isCaught(g, c)); return `<button class="act gem gmx" type="button" data-gmax="${g.k}"${sv ? ` data-sal="${sv}"` : ''}${on ? '' : ' disabled'} aria-pressed="${pr}" aria-label="Gigamax${nm ? ' – ' + esc(nm) : ''}" title="${on ? esc(`Gigamax obtenu dans ${nm} (coche ${sv ? `« Gigamax ${sv === 'G' ? 'Grave' : 'Aigüe'} » sur la fiche ${g.n}` : g.n}${p.id === 869 ? ', une seule fiche pour toutes les formes' : ''}) — coche aussi cette forme`) : 'À marquer dans un jeu où ce Gigamax existe (Épée / Bouclier, Pokémon GO)'}">${GMAX_IC}<span class="t">Gigamax</span></button>`; }).join('');
   const dmx = c === 'go' && !gT && !gG && !p.bo && !!p.dmx && TODAY >= p.dmx, dmb = dmx ? `<button class="act gem dmx" type="button" data-dmax="${p.k}" aria-pressed="${DYNAMAX.has(p.k)}" aria-label="Dynamax – Pokémon GO" title="Dynamax obtenu dans Pokémon GO (utilisable en Combats Max) — coche aussi ${esc(p.n)} capturé ; sans effet sur la complétion">${DMAX_IC}<span class="t">Dynamax</span></button>` : '';
   let first = '';
   if (mg) { first = slot; slot = ''; }
+  const salBtns = isSal(p) && c && c !== 'home' ? ['A', 'G'].map(v => { const n = v === 'G' ? 'Grave' : 'Aigüe', dis = catchDis || !gmaxInGame(p, c); return `<button class="act salg gem gmx" type="button" data-sal="${v}"${dis ? ' disabled' : ''} aria-pressed="${!dis && salOn(v, c)}" aria-label="Gigamax ${n}${nm ? ' – ' + esc(nm) : ''}" title="${esc(`Salarsen Gigamax Forme ${n} obtenu${nm ? ' – ' + nm : ''} (coche aussi Salarsen Forme ${n} ; lié au bouton Gigamax de sa fiche). Capturé = Aigüe ou Grave`)}">${GMAX_IC}<span class="t">Gigamax ${n}</span></button>`; }).join('') : ''; // v44
   const al = alphaOk(q, c) && !p.bo, bb = al ? baronBtns(isBaron(q, c), isBaronS(q, c), false, nm, '') : ''; // v25: Légendes Arceus / Z-A, Alpha-capable forms only
-  const nB = (mg ? 2 : 3) + (al ? 2 : 0) + ((first + slot + dmb + gbs).match(/class="act /g) || []).length;
+  const nB = (mg ? 2 : 3) + (salBtns ? 1 : 0) + (al ? 2 : 0) + ((first + slot + dmb + gbs).match(/class="act /g) || []).length;
   const ctx = !c ? 'Vue d’ensemble — choisissez un jeu (ou Pokémon HOME) pour marquer' : `Suivi : <b>${esc(nm)}</b>${sw.length ? ` <span class="shr">+ ${esc(sw.map(x => GAME_BY[x].s).join(', '))}</span>` : ''}`;
   return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts${nB > 6 ? ' wrap2' : ''}">
-    ${mg ? first : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? GMAX_IC : gT ? `<img class="gemimg" src="${energyImg(p)}" alt="" width="28" height="28" decoding="async">` : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
+    ${mg ? first : isSal(p) && c && c !== 'home' ? salBtns : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? GMAX_IC : gT ? `<img class="gemimg" src="${energyImg(p)}" alt="" width="28" height="28" decoding="async">` : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
     <button class="act sh" type="button" ${shDis ? 'disabled' : ''} aria-pressed="${!shDis && isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${shNo ? esc(shNo) : gT ? esc(`Shiny = ${p.n} shiny enregistré (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} d’un Pokémon shiny) — coche aussi ${tb ? tb.n : 'la forme de base'} shiny et la ${eL}`) : p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
     ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
     ${slot}${dmb}${gbs}</div></div>`;
@@ -1643,7 +1683,10 @@ document.addEventListener('click', e => {
   const sb = e.target.closest('#shbtn');
   if (sb) { showShinyArt = !showShinyArt; renderDetailKeepScroll(); return; }
   if (e.target.closest('#allforms')) { const p = DET && DET.p, c = sheetCtx(); if (!p || !c) return; for (const q of allFormsList(p, c)) if (!isCaught(q, c)) toggleMark(q, 'caught', c); refreshTrack(p); render(); return; }
+  const slb = e.target.closest('#actbar .salg[data-sal]');
+  if (slb) { const p = DET && DET.p; if (!p || !isSal(p) || slb.disabled) return; toggleSal(slb.dataset.sal, sheetCtx()); refreshTrack(p); render(); return; } // v44: Gigamax Aigüe / Grave
   const cgb = e.target.closest('#actbar .cg'), shb = e.target.closest('#actbar .sh');
+  if (shb && DET && isSal(DET.p) && !shb.disabled) { const c = sheetCtx(); if (c === 'go' && DET.f && !goShinyOk(DET.f.go)) return; toggleSalShiny(c); refreshTrack(DET.p); render(); return; }
   if (cgb || shb) {
     const p = DET && DET.p; if (!p || (cgb || shb).disabled) return;
     if (cgb && sheetCtx() === 'go' && goTemp(p) && goMegaOn(p)) { CAUGHT_G.delete('go:' + p.k); SHINY_G.delete('go:' + p.k); MEGA_ENERGY.delete(energyId(p)); saveTrack(); } // v37c: untick clears both old marks
@@ -1657,7 +1700,7 @@ document.addEventListener('click', e => {
     return;
   }
   const gxb = e.target.closest('#actbar .gmx[data-gmax]');
-  if (gxb) { const p = DET && DET.p, g = BY_KEY[gxb.dataset.gmax], c = sheetCtx(); if (!p || !g || gxb.disabled || !gmaxInGame(g, c)) return; toggleMark(g, 'caught', c, p); refreshTrack(p); render(); return; } // base sheet ↔ Gigamax sheet (ticks this form)
+  if (gxb) { const p = DET && DET.p, g = BY_KEY[gxb.dataset.gmax], c = sheetCtx(); if (!p || !g || gxb.disabled || !gmaxInGame(g, c)) return; if (gxb.dataset.sal) toggleSal(gxb.dataset.sal, c); else toggleMark(g, 'caught', c, p); refreshTrack(p); render(); return; } // base sheet ↔ Gigamax sheet (ticks this form)
   const dmb = e.target.closest('#actbar .dmx[data-dmax]');
   if (dmb) { const p = DET && DET.p; if (!p || p.k !== dmb.dataset.dmax || sheetCtx() !== 'go') return; // v38: Dynamax ⇒ caught in GO (unticking leaves Capturé)
     if (DYNAMAX.has(p.k)) DYNAMAX.delete(p.k); else { DYNAMAX.add(p.k); if (!CAUGHT_G.has(gkey('go', p))) toggleMark(p, 'caught', 'go'); } saveTrack(); refreshTrack(p); render(); return; }
