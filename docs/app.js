@@ -816,9 +816,8 @@ function render() {
   const goX = ctx === 'go' && state.forms ? res.filter(p => !isCombat(p, ctx) && (goTemp(p) || p.c === 'gmax')).length : 0; // v28: GO Megas / Primals / Gigamax: form totals only, never gold completion
   const head = vdx && vdx.mega ? `${res.filter(p => !p.mb).length} Pokémon + ${res.filter(p => p.mb).length} Méga` : state.forms ? `${res.length - combat} formes${goX ? ` dont ${goX} Méga / Primo / Gigamax (hors dorure)` : ''}${combat ? ` (+ ${combat} formes de combat, non comptées)` : ''}` : `${res.length} Pokémon`;
   $('#count').textContent = `${head}${vdx ? ' · ' + vdx.s : gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : ''} · ${prog}`;
-  const lg = $('#legend'); lg.hidden = !!ctx && ctx !== 'home';
-  if (!ctx) lg.innerHTML = `<details><summary>Légende des marques</summary>${BASE_LEGEND}</details>`;
-  if (ctx === 'home') lg.innerHTML = `<details><summary>Légende des marques</summary>${HOME_LEGEND}</details>`;
+  // v45: the legend lives in the ☰ menu (HOME legend in the HOME view, the base legend elsewhere)
+  const lg = $('#legend'), lgW = ctx === 'home' ? 'home' : 'base'; if (lg.dataset.w !== lgW) { lg.dataset.w = lgW; lg.innerHTML = lgW === 'home' ? HOME_LEGEND : BASE_LEGEND; }
   document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
   const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game;
   $('#reset').hidden = !active;
@@ -1873,6 +1872,26 @@ async function cachePack() {
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
   showOffline();
 }
+// v45: ☰ menu (top bar, list view): offline pack, export / import, legend, version. Closes on ✕, outside tap, Escape, navigation.
+function menuOpen(on) {
+  const m = $('#menu'), bk = $('#menuback'), b = $('#menubtn'); if (!m || m.hidden === !on) return;
+  m.hidden = bk.hidden = !on; b.setAttribute('aria-expanded', on);
+  if (on) { menuVersion(); $('#menux').focus({ preventScroll: true }); } else if (document.activeElement && m.contains(document.activeElement)) b.focus({ preventScroll: true });
+}
+async function menuVersion() {
+  const el = $('#appver'); if (!el) return;
+  const w = navigator.serviceWorker && (navigator.serviceWorker.controller || (SW_REG && SW_REG.active));
+  const r = w ? await swAsk(w) : null;
+  el.textContent = r && r.v ? `Application ${r.v} · données ${r.dv || '—'}` : 'Version inconnue (application pas encore installée)';
+}
+(() => {
+  const b = $('#menubtn'); if (!b) return;
+  b.addEventListener('click', () => menuOpen($('#menu').hidden));
+  $('#menux').addEventListener('click', () => menuOpen(false));
+  $('#menuback').addEventListener('click', () => menuOpen(false));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#menu').hidden) { e.preventDefault(); menuOpen(false); } });
+  addEventListener('hashchange', () => menuOpen(false));
+})();
 boot();
 
 // Mouse wheel scrolls the type chips horizontally when they overflow

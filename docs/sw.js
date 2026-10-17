@@ -1,7 +1,7 @@
 'use strict';
 const VERSION = 'v45';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Boutons ⬆︎ / ⬇︎ pour monter ou descendre d’un coup dans la liste.';
+const NOTES = 'Boutons ⬆︎ / ⬇︎ dans la liste. Menu ☰ en haut à droite : pack hors-ligne, export / import, légende et version.';
 const DATA_VERSION = 'd23'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
