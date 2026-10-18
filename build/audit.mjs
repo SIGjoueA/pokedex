@@ -94,12 +94,15 @@ ok('GO Dracaufeu moves', gof('6').fm.includes('FIRE_SPIN_FAST') && (gof('6').cm.
 ok('GO Pikachu buddy 1km', gof('25').bd === 1, gof('25').bd); ok('GO Raichu Alola exists', !!gof('26-alola'));
 ok('GO Evoli evo 25 candy', (evo.find(e => e[0] === '133' && e[1] === '134')[3] || {}).c === 25);
 ok('GO Nymphali walk 70 hearts?', JSON.stringify(evo.find(e => e[0] === '133' && e[1] === '700')[3]).includes('"c":25'));
-const pogoFile = path.join(HERE, '.cache/pogoapi-pokemon_max_cp.json'); fs.mkdirSync(path.dirname(pogoFile), { recursive: true });
-if (!fs.existsSync(pogoFile)) fs.writeFileSync(pogoFile, await (await fetch('https://pogoapi.net/api/v1/pokemon_max_cp.json')).text());
-const pogo = JSON.parse(fs.readFileSync(pogoFile, 'utf8'));
+// v47: pogoapi.net is no longer maintained → base stats cross-checked against PvPoke's game master (independent, updated every season)
+const pvpFile = path.join(HERE, '.cache/pvpoke-pokemon.json'); fs.mkdirSync(path.dirname(pvpFile), { recursive: true });
+if (!fs.existsSync(pvpFile)) fs.writeFileSync(pvpFile, await (await fetch('https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster/pokemon.json')).text());
+const pvpk = JSON.parse(fs.readFileSync(pvpFile, 'utf8'));
 let n = 0, bad = [];
-for (const r of pogo) { if (r.form && r.form !== 'Normal') continue; const g = gof(String(r.pokemon_id)); if (!g) continue; n++; if (g.m51 !== r.max_cp) bad.push(`${r.pokemon_id}:${g.m50}!=${r.max_cp}`); }
-ok(`GO max CP vs pogoapi (${n} species)`, bad.length < 5, bad.slice(0, 8).join(' ')); if (bad.length) console.log('maxcp diffs', bad.length, bad.slice(0, 10));
+for (const r of pvpk) { if (r.speciesId.includes('_') || (r.tags || []).includes('mega')) continue; const g = sp(r.dex).f[String(r.dex)]?.go; if (!g || g.nost) continue; n++; if (g.a !== r.baseStats.atk || g.d !== r.baseStats.def || g.s !== r.baseStats.hp) bad.push(`${r.dex} ${r.speciesId}:${g.a}/${g.d}/${g.s}!=${r.baseStats.atk}/${r.baseStats.def}/${r.baseStats.hp}`); }
+ok(`GO stats vs PvPoke (${n} species)`, n > 800 && bad.length < 5, bad.slice(0, 8).join(' ')); if (bad.length) console.log('GO stats diffs', bad.length, bad.slice(0, 10));
+const gmTs = (() => { try { return D('go.json').ts; } catch { return null; } })(); ok('GO game master date ≤ 60 days old (fetch-go.mjs + refresh-go.mjs)', !!gmTs && (Date.now() - Date.parse(gmTs)) / 864e5 <= 60, gmTs);
+ok('no pogoapi.net call left in fetch-go / go.mjs (v47)', !/pogoapi\.net\/api/.test(fs.readFileSync(path.join(HERE, 'fetch-go.mjs'), 'utf8') + fs.readFileSync(path.join(HERE, 'go.mjs'), 'utf8')));
 // ---- TM / encounters
 eq('TM rb Mega Punch', tm.rb['5'], 'CT01'); eq('TM sv count', Object.keys(tm.sv).length, 229); ok('CS rb Cut', tm.rb['15'] === 'CS01', tm.rb['15']);
 ok('Enc Rattata rb Route 1', (F(19).en.rb || []).some(r => loc.a[r[0]] === 'Route 1'));
@@ -143,7 +146,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const k of ['baron_g', 'barons_g', 'home_b', 'home_bs']) ok('v25 sauvegarde/export ' + k, app.includes(`${k}: [...`) && app.includes(`d.${k}`));
   ok('v25 B. shiny coché = style Shiny', /\.act\.barons\[aria-pressed=true\]\{color:#b58f00;border-color:#f2c200;background:rgba\(242,194,0,\.12\)\}/.test(css) && css.includes('.act.sh[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)}'));
   ok('v25 régions des formes régionales', /alola: \['sm', 'usum'\], galar: \['sw', 'swisle', 'swcrown'\], hisui: \['la'\], paldea: \['sv', 'svmask', 'svdisk'\]/.test(app));
-  { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'); for (const [v, l] of [['baron', 'Barons'], ['nobaron', '⚪ Barons manquants'], ['barons', '✨ Barons shiny'], ['nobarons', '⚪✨ Barons shiny manquants']]) ok('v25 catégorie ' + v, html.includes(`<option value="${v}">${l}</option>`)); }
+  { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'); for (const [v, l] of [['baron', 'Barons'], ['nobaron', '⚪ Barons manquants']]) ok('v25 catégorie ' + v, html.includes(`<option value="${v}">${l}</option>`)); }
+  { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'); ok('v47 « Baron shiny » retiré (filtres + bouton), marques conservées (export barons_g / home_bs)', !/value="(no)?barons"/.test(html) && !/class="act barons"/.test(app) && /barons_g: \[\.\.\.BARONS_G\]/.test(app) && /home_bs: \[\.\.\.HOME_BS\]/.test(app)); ok('v47 blocs HOME « Dex national HOME » + « Shiny »', /pre = homeDexHTML\(p\); body = statsB \+ evoB \+ homeSrcHTML\(p, f, 'Compatibilité'\) \+ homeShinyHTML\(p, f\)/.test(app)); }
   ok('v25 icône Baron en cache hors-ligne', sw.includes("'img/alpha/baron.png'"));
 }
 // ---- v27: legend list, in-app messages, unified names

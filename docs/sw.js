@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v46';
+const VERSION = 'v47';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Menu ☰ : notes de version (les nouveautés de chaque version) et bouton « Signaler un bug / proposer une idée » qui ouvre un mail prêt.';
-const DATA_VERSION = 'd23'; // bump when the schema of data/*.json changes
+const NOTES = 'Fiches HOME : blocs « Dex national HOME » et « Shiny ». Données Pokémon GO à jour, images des Méga-Gemmes, bouton « Baron shiny » retiré.';
+const DATA_VERSION = 'd24'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

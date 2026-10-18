@@ -123,7 +123,8 @@ function migrateEnergy() {
 const isGmx = p => !!p && p.c === 'gmax' && p.k !== '890-eternamax'; // Infinimax: not catchable, keeps its plain Capturé
 const gmaxBtnsOf = p => isGmx(p) || p.mb || p.bo ? [] : p.id === 869 ? E.filter(q => q.k === '869-gmax') : p.k === SAL_BASE.G ? E.filter(isSal) : E.filter(q => isGmx(q) && q.gbk === p.k); // v44: Salarsen Grave → the single Salarsen Gigamax entry («Gigamax Grave» mark)
 // v44: Salarsen Gigamax = ONE entry (849-amped-gmax) with two capture marks: « Gigamax Aigüe » (its own key) and « Gigamax Grave »
-// (key 849-low-key-gmax, no list entry since v44: the v37–v43 Grave entry's capture marks ARE this mark). Shiny / HOME: shared, on the entry key.
+// (key 849-low-key-gmax, no list entry since v44: the v37–v43 Grave entry's capture marks ARE this mark). Game shiny: shared, on the entry key.
+// v47: HOME = two marks too: « Gigamax Aigüe » on the entry key, « Gigamax Grave » on 849-low-key-gmax (HOME_O origin mark + its own HOME shiny).
 const SAL_A = '849-amped-gmax', SAL_G = '849-low-key-gmax', SAL_BASE = { A: '849', G: '849-low-key' };
 const isSal = p => !!p && p.k === SAL_A;
 const salKey = v => v === 'G' ? SAL_G : SAL_A;
@@ -239,7 +240,7 @@ const sharedWith = (c, p) => grpTargets(c, p).filter(g => g !== c);
 const grpsOf = av => [...new Set(av.map(saveOf))];
 const grpHas = (G, have) => have.some(h => saveOf(h) === G);
 const grpDone = (av, have) => { const gs = grpsOf(av); return gs.length > 0 && gs.every(G => grpHas(G, have)); };
-let HOME_C = new Map(), HOME_S = new Map(); // HOME_C: entry key -> [origin marks]; HOME_S: entry keys shiny in HOME
+let HOME_C = new Map(), HOME_S = new Map(), HOME_R = new Map(); // HOME_C: entry key -> [origin marks]; HOME_S: entry keys shiny in HOME
 let CAUGHT_BY = new Map(), SHINY_BY = new Map(); // entry key -> [game ids incl. 'go'] with a per-game mark
 function rebuildHome() {
   CAUGHT_BY = new Map(); SHINY_BY = new Map();
@@ -248,7 +249,9 @@ function rebuildHome() {
   HOME_C = new Map(); HOME_S = new Map(); // entry key -> [origin marks]
   const push = (map, k, m) => { if (!m) return; const a = map.get(k) || map.set(k, []).get(k); if (!a.includes(m)) a.push(m); };
   for (const x of HOME_O) { const i = x.indexOf(':'); push(HOME_C, x.slice(i + 1), x.slice(0, i)); }
-  for (const k of HOME_SH) if (HOME_C.has(k)) HOME_S.set(k, []); // v24: shiny in HOME (one mark per form)
+  HOME_R = new Map([...HOME_C].map(([k, v]) => [k, [...v]])); // v47: raw per key (Salarsen « Gigamax Aigüe » / « Gigamax Grave » separately)
+  const hg = HOME_R.get(SAL_G); if (hg) for (const m of hg) push(HOME_C, SAL_A, m); // entry level: Salarsen Gigamax in HOME = Aigüe or Grave (as in the games)
+  for (const k of HOME_SH) if (HOME_R.has(k)) { HOME_S.set(k, []); if (k === SAL_G) HOME_S.set(SAL_A, []); } // v24: shiny in HOME (one mark per form)
 }
 rebuildHome();
 // Games (incl. 'go') compatible with HOME in which an entry exists. Needs the regional dex files of the compatible games (loaded when HOME is selected).
@@ -311,7 +314,7 @@ const isShiny = (p, c = trackCtx()) => {
   c = ctxFor(p, c);
   return c === 'home' ? HOME_S.has(p.k) : c ? SHINY_G.has(gkey(c, p)) : SHINY_BY.has(p.k) || SHINY.has(ik(p));
 };
-const isTrans = (p, c = trackCtx()) => { const m = originOf(c); return !!m && HOME_O.has(m + ':' + mp(p, c).k); }, isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(ctxFor(mp(p, c), c), p));
+const isTrans = (p, c = trackCtx()) => { const m = originOf(c); if (!m) return false; const k = mp(p, c).k; return HOME_O.has(m + ':' + k) || (k === SAL_A && HOME_O.has(m + ':' + SAL_G)); } // v47: Salarsen Gigamax = Aigüe or Grave HOME mark, isSTrans = (p, c = trackCtx()) => STRANS_G.has(gkey(ctxFor(mp(p, c), c), p));
 // ---- v25 Barons (Alpha). Sources: Bulbapedia « Alpha Pokémon », Serebii (Legends Arceus / Z-A). Never Legendary / Mythical, Megas, battle-only variants, gift-only forms.
 const ALPHA_GAMES = new Set(['la', 'za', 'zadlc']);
 const ALPHA_NO = new Set(['37-alola', '38-alola', '670-eternal', '172-spiky-eared']); // PLA: Alolan Vulpix / Ninetales (gift). Z-A: Floette Fleur Éternelle (gift), Pichu Troizépi (event)
@@ -334,9 +337,9 @@ const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + 
 // The sheet has its own tracking context: its game switcher (state.dgame). 'all' = overview (general infos, read-only); 'home' = Pokémon HOME sheet (origin marks).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_C.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_R.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
   for (const k of [...HOME_B]) if ((!BY_KEY[k] && !FEM_OF[k]) || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
-  for (const k of [...HOME_BS]) if (!HOME_B.has(k) || !HOME_SH.has(k)) HOME_BS.delete(k); // HOME Baron shiny needs HOME Baron + HOME Shiny
+  // v47: Baron shiny marks (BARONS_G / HOME_BS) are frozen: no button, never shown or changed, kept in storage + export (future « mode Collection »)
   store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
 function toggleMark(p, kind, c = trackCtx(), base = null) {
   if (!c || c === 'home' || boC(p, c) || (p.mb && c !== 'go')) return; // base view, HOME, battle-only, and Z-A Megas (caught/shiny derived from base + gem)
@@ -345,8 +348,8 @@ function toggleMark(p, kind, c = trackCtx(), base = null) {
   for (const q of linkSet(p, c)) for (const g of grpTargets(c, q)) { // every game of the save group where the entry exists (v41: every linked form)
     const k = gkey(g, q);
     // chain: shiny ⇒ caught, transferred ⇒ caught, shiny transferred ⇒ shiny + transferred + caught; removing Capturé clears shiny + transfer flags of that game
-    if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); } }
-    else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); BARONS_G.delete(k); } // v25: no Capturé → no Baron; no Shiny → no Baron shiny
+    if (kind === 'caught') { if (on) CAUGHT_G.add(k); else { CAUGHT_G.delete(k); SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); } }
+    else if (on) { SHINY_G.add(k); CAUGHT_G.add(k); } else { SHINY_G.delete(k); STRANS_G.delete(k); } // v25: no Capturé → no Baron (v47: Baron shiny marks frozen, untouched)
   }
   if (on && p.c === 'gmax') { const b = base || BY_KEY[p.gbk] || (FORMS[p.id] || [])[0]; // v37: Gigamax caught / shiny ⇒ its base form caught / shiny in the same game (unticking leaves the base)
     if (b && b !== p && !boC(b, c)) for (const g of grpTargets(c, b)) { const k = gkey(g, b); CAUGHT_G.add(k); if (kind === 'shiny') SHINY_G.add(k); } }
@@ -367,9 +370,9 @@ function toggleSal(v, c) {
   for (const g of ts) { const k = g + ':' + salKey(v); if (on) CAUGHT_G.add(k); else CAUGHT_G.delete(k); }
   if (on) { const b = BY_KEY[SAL_BASE[v]]; if (b) for (const g of grpTargets(c, b)) CAUGHT_G.add(gkey(g, b)); }
   else if (!salOn(v === 'G' ? 'A' : 'G', c)) {
-    for (const g of ts) { const k = g + ':' + SAL_A; SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); BARONS_G.delete(k); }
-    const m = originOf(c), mk = m + ':' + SAL_A; if (m && HOME_OG.has(mk) && !ORI[m].games.some(g => CAUGHT_G.has(g + ':' + SAL_A) || CAUGHT_G.has(g + ':' + SAL_G))) { HOME_O.delete(mk); HOME_OG.delete(mk); }
+    for (const g of ts) { const k = g + ':' + SAL_A; SHINY_G.delete(k); STRANS_G.delete(k); BARON_G.delete(k); }
   }
+  if (!on) { const m = originOf(c), mk = m + ':' + salKey(v); if (m && ORI[m] && HOME_OG.has(mk) && !ORI[m].games.some(g => CAUGHT_G.has(g + ':' + salKey(v)))) { HOME_O.delete(mk); HOME_OG.delete(mk); } } // v47: per variant
   saveTrack();
 }
 // v44: shared Shiny on the Salarsen Gigamax sheet: ticking it with only « Gigamax Grave » marked keeps Aigüe unticked and makes Forme Grave shiny.
@@ -384,6 +387,7 @@ function toggleSalShiny(c) {
 function toggleTransfer(p, shiny, c = trackCtx()) {
   if (!c || c === 'home' || !homeKind(c) || p.bo || megaBo(p, c) || (c === 'go' && (goMy(p) || goTemp(p) || p.c === 'gmax'))) return; // Mythicals, Megas / Primals and Gigamax cannot be transferred from GO
   const m = originOf(c); if (!m) return;
+  if (isSal(p) && !shiny) return toggleSalTransfer(p, c, m);
   const mk = m + ':' + p.k, on = shiny ? !STRANS_G.has(gkey(c, p)) : !HOME_O.has(mk);
   for (const q of linkSet(p, 'home')) { const qk = m + ':' + q.k; // v41: linked in HOME ⇒ every form gets the transfer
     if (on) { if (q === p || !HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.add(qk); } } else if (!shiny) { HOME_O.delete(qk); HOME_OG.delete(qk); } }
@@ -396,22 +400,37 @@ function toggleTransfer(p, shiny, c = trackCtx()) {
   if (on && isZa(c) && !p.mb && !p.bo) gemMegaTransfers(p, c, true);
   saveTrack();
 }
-// v25 Baron / Baron shiny (Légendes games): Baron ⇒ Capturé ; Baron shiny ⇒ Baron + Shiny + Capturé. Unticking Baron clears Baron shiny. No effect on completion.
+// v47: « Transféré vers HOME » on a Salarsen Gigamax game sheet = the HOME mark of each Gigamax variant ticked in that game (Aigüe, Grave or both;
+// none ticked ⇒ Aigüe + Capturé « Gigamax Aigüe », as before). Pressed = every such variant has its HOME mark. Tick ⇒ the missing marks (flagged « set
+// from a game »). Untick ⇒ only the marks set from a game sheet (HOME_OG); marks ticked on the HOME sheet stay, unless all of them came from there.
+const salTransVs = c => { const vs = ['A', 'G'].filter(v => salOn(v, c)); return vs.length ? vs : ['A']; };
+const salTransOn = c => { const m = originOf(c); return !!m && salTransVs(c).every(v => HOME_O.has(m + ':' + salKey(v))); };
+function toggleSalTransfer(p, c, m) {
+  const vs = salTransVs(c);
+  if (!salTransOn(c)) {
+    if (!salOn('A', c) && !salOn('G', c)) for (const g of grpTargets(c, p)) CAUGHT_G.add(g + ':' + SAL_A);
+    for (const v of vs) { const k = m + ':' + salKey(v); if (!HOME_O.has(k)) { HOME_O.add(k); HOME_OG.add(k); } }
+  } else {
+    let n = 0; for (const v of ['A', 'G']) { const k = m + ':' + salKey(v); if (HOME_OG.has(k)) { HOME_O.delete(k); HOME_OG.delete(k); n++; } }
+    if (!n) for (const v of vs) HOME_O.delete(m + ':' + salKey(v));
+  }
+  saveTrack();
+}
+// v25 Baron (Légendes games): Baron ⇒ Capturé. No effect on completion. v47: the « Baron shiny » button is gone (stored marks kept, frozen).
 function toggleBaron(p, shiny, c = trackCtx()) {
-  if (!alphaOk(p, c)) return;
+  if (shiny || !alphaOk(p, c)) return;
   const on = !(shiny ? BARONS_G : BARON_G).has(gkey(c, p));
   for (const g of grpTargets(c, p)) {
     const k = gkey(g, p);
     if (on) { BARON_G.add(k); CAUGHT_G.add(k); if (shiny) { BARONS_G.add(k); SHINY_G.add(k); } }
-    else { if (!shiny) BARON_G.delete(k); BARONS_G.delete(k); }
+    else BARON_G.delete(k);
   }
   saveTrack();
 }
-// HOME sheet: Baron / Baron shiny per form, independent of the games; only with the Hisui or Z-A mark. B. shiny ⇒ Baron + Shiny (HOME).
+// HOME sheet: Baron per form, independent of the games; only with the Hisui or Z-A mark. v47: no « Baron shiny » (HOME_BS kept, frozen).
 function toggleHomeBaron(p0, shiny) {
-  const p = mp(p0, 'home'), k = p.k; if (p0.bo || !homeBaronOn(p)) return;
-  if (!shiny) { if (HOME_B.has(k)) { HOME_B.delete(k); HOME_BS.delete(k); } else HOME_B.add(k); }
-  else if (HOME_BS.has(k)) HOME_BS.delete(k); else { HOME_BS.add(k); HOME_B.add(k); HOME_SH.add(k); }
+  const p = mp(p0, 'home'), k = p.k; if (shiny || p0.bo || !homeBaronOn(p)) return;
+  if (HOME_B.has(k)) HOME_B.delete(k); else HOME_B.add(k);
   saveTrack();
 }
 // Z-A: transferring the base while owning a Mega gem also transfers that Mega
@@ -435,13 +454,48 @@ function migrateHomeShiny() {
   for (const x of STRANS_G) { const k = x.slice(x.indexOf(':') + 1), p = BY_KEY[k]; HOME_SH.add(p && (p.bo || megaBo(p, x.slice(0, x.indexOf(':')))) ? mp(p).k : k); }
   saveTrack();
 }
-function toggleHomeOrigin(p0, m) {
+function toggleHomeOrigin(p0, m, base = null) {
   const p = mp(p0, 'home'); if (p0.bo || p.bo || !ORI[m] || (!homeAvail(p).includes(m) && !HOME_O.has(m + ':' + p.k))) return;
   const mk = m + ':' + p.k, on = !HOME_O.has(mk);
   for (const q of linkSet(p, 'home')) { const qk = m + ':' + q.k; // v41: linked in HOME
     if (on) { if (q === p || !HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.delete(qk); } } else { HOME_O.delete(qk); HOME_OG.delete(qk); } }
   if (on && m === 'za' && !p.mb) gemMegaTransfers(p, 'za', false);
+  if (on && isGmx(p)) { const b = base || BY_KEY[p.gbk] || (FORMS[p.id] || [])[0]; // v47: like the games (v37), a Gigamax in HOME ⇒ its base form gets the same origin mark (unticking leaves the base)
+    if (b && b !== p && !b.bo && homeAvail(b).includes(m)) for (const q of linkSet(b, 'home')) { const qk = m + ':' + q.k; if (!HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.delete(qk); } } }
   saveTrack();
+}
+// v47: « Gigamax » button of a base HOME sheet = the HOME mark of its Gigamax sheet (6-gmax, 869-gmax for the 63 Charmilly forms, the shared
+// Salarsen Gigamax entry for « Gigamax Aigüe » / « Gigamax Grave »). Tick = its origin mark (Galar: the only game a Gigamax can come from) + this base form;
+// untick = every origin mark of the Gigamax entry (its HOME shiny goes with it), the base form keeps its marks.
+const gmaxHomeMark = g => { const av = homeAvail(g); return av.find(isGoldMark) || av[0] || null; };
+function toggleHomeGmax(g, base) {
+  if (!isGmx(g)) return;
+  const t = HOME_R.get(g.k);
+  if (t && t.length) { for (const m of t) { HOME_O.delete(m + ':' + g.k); HOME_OG.delete(m + ':' + g.k); } saveTrack(); return; }
+  const m = gmaxHomeMark(g); if (m) toggleHomeOrigin(g, m, base);
+}
+// v47: Salarsen Gigamax in HOME, two marks: « Gigamax Aigüe » (entry key) / « Gigamax Grave » (849-low-key-gmax). Tick ⇒ its origin mark + Galar on
+// the matching base form (Forme Aigüe / Forme Grave); untick ⇒ every origin mark of that variant (its HOME shiny goes with it), base unchanged.
+const salHomeOn = v => HOME_R.has(salKey(v));
+function toggleSalHome(v) {
+  const a = BY_KEY[SAL_A]; if (!a) return; const key = salKey(v), t = HOME_R.get(key);
+  if (t && t.length) { for (const m of t) { HOME_O.delete(m + ':' + key); HOME_OG.delete(m + ':' + key); } saveTrack(); return; }
+  if (v === 'A') return toggleHomeGmax(a, BY_KEY[SAL_BASE.A]);
+  const m = gmaxHomeMark(a); if (!m) return; HOME_O.add(m + ':' + key); HOME_OG.delete(m + ':' + key);
+  const b = BY_KEY[SAL_BASE.G]; if (b && !b.bo && homeAvail(b).includes(m)) for (const q of linkSet(b, 'home')) { const qk = m + ':' + q.k; if (!HOME_O.has(qk)) { HOME_O.add(qk); HOME_OG.delete(qk); } }
+  saveTrack();
+}
+function toggleSalHomeShiny(v) { const key = salKey(v); if (!HOME_R.has(key)) return; if (HOME_SH.has(key)) HOME_SH.delete(key); else HOME_SH.add(key); saveTrack(); }
+// v47 migration (once, nothing removed): the shared v44–v47 HOME mark stays « Gigamax Aigüe »; copied to « Gigamax Grave » (origin marks, « set from a
+// game » flag, HOME shiny) only if a « Gigamax Grave » capture mark exists in a game. Re-run on import of a backup made before this split (no sal_h47).
+function migrateSalHome(force) {
+  if (!force && store.get('sal_h47', 0)) return;
+  const t = HOME_R.get(SAL_A) || [];
+  if (t.length && [...CAUGHT_G].some(x => typeof x === 'string' && x.endsWith(':' + SAL_G))) {
+    for (const m of t) { const ka = m + ':' + SAL_A, kg = m + ':' + SAL_G; if (!HOME_O.has(kg)) { HOME_O.add(kg); if (HOME_OG.has(ka)) HOME_OG.add(kg); } }
+    if (HOME_SH.has(SAL_A)) HOME_SH.add(SAL_G);
+  }
+  store.set('sal_h47', 1); saveTrack();
 }
 // v22 migration (once): per-game transfers (home_g, homeshiny_g) → per origin mark, flagged "set from a game" (they implied Capturé)
 function migrateOrigins() {
@@ -471,11 +525,11 @@ function migrateMerged() {
   }
 }
 // v44 migration (idempotent, nothing lost): the removed Salarsen Gigamax (Grave) entry. Its per-game captures stay as the « Gigamax Grave » mark (same keys);
-// its shiny / HOME / Baron / favourite / old manual marks join the single entry (shared Shiny and HOME).
+// its shiny / Baron / favourite / old manual marks join the single entry (shared Shiny). v47: its HOME marks stay (« Gigamax Grave » in HOME).
 function migrateSal() {
   let ch = false; const mv = (set, x, y) => { set.delete(x); if (!set.has(y)) set.add(y); ch = true; };
-  for (const set of [SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G, HOME_O, HOME_OG]) for (const x of [...set]) if (typeof x === 'string' && x.endsWith(':' + SAL_G)) mv(set, x, x.slice(0, -SAL_G.length) + SAL_A);
-  for (const set of [HOME_SH, HOME_B, HOME_BS, FAVS, CAUGHT, SHINY]) if (set.has(SAL_G)) mv(set, SAL_G, SAL_A);
+  for (const set of [SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G]) for (const x of [...set]) if (typeof x === 'string' && x.endsWith(':' + SAL_G)) mv(set, x, x.slice(0, -SAL_G.length) + SAL_A);
+  for (const set of [HOME_B, HOME_BS, FAVS, CAUGHT, SHINY]) if (set.has(SAL_G)) mv(set, SAL_G, SAL_A); // v47: HOME_O / HOME_OG / HOME_SH on 849-low-key-gmax = the « Gigamax Grave » HOME mark (kept)
   for (const x of SHINY_G) if (x.endsWith(':' + SAL_A)) { const g = x.slice(0, -SAL_A.length - 1); if (!CAUGHT_G.has(g + ':' + SAL_A) && !CAUGHT_G.has(g + ':' + SAL_G)) { CAUGHT_G.add(g + ':' + SAL_A); ch = true; } } // shiny ⇒ caught
   if (ch) { saveTrack(); store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); }
 }
@@ -540,7 +594,7 @@ async function boot() {
   GAMES = DATA.games; GAMES.forEach((g, i) => { GAME_BY[g.id] = g; GIDX[g.id] = i; g.s = GAME_SHORT[g.id] || g.s; });
   DATA.types.forEach(t => TYPE_FR[t[0]] = t[1]);
   migrateOrigins(); migrateHomeShiny(); migrateEnergy();
-  migrateMarks();
+  migrateMarks(); rebuildHome(); migrateSalHome();
   store.set('mega_gems', [...MEGA_GEMS]); // legacy un-prefixed gem keys → "za:"
   $('#formsbtn').setAttribute('aria-pressed', state.forms);
   buildControls();
@@ -755,7 +809,7 @@ function transCat(p, cat) {
 }
 // v25 Catégorie « Barons » block. Tous les jeux = Baron in Arceus OR Z-A OR HOME; Arceus / Z-A = that game; HOME = HOME Baron marks; greyed in other games.
 // « manquants » = Alpha-capable forms only (HOME: only with the Hisui or Z-A mark ticked).
-const BARON_CATS = ['baron', 'nobaron', 'barons', 'nobarons'];
+const BARON_CATS = ['baron', 'nobaron']; // v47: « Barons shiny » filters removed
 function baronCat(p, cat) {
   if (p.bo || p.mb) return false;
   const c = trackCtx(), sh = cat === 'barons' || cat === 'nobarons', miss = cat.startsWith('no'), H = sh ? HOME_BS : HOME_B;
@@ -916,7 +970,7 @@ function homeRowsHTML(av, f, sh, k) {
   return `<br><b class="hgrp">Compte pour la dorure</b> : ${gold.length ? `<b>${done} / ${gold.length}</b> marques${done === gold.length ? ` ${homeIcon(true, HOME_C_T)} complet` : ''}` : 'aucune (pas de dorure possible pour cette forme)'}` +
     (gold.length ? `<ul class="plain homerows">${gold.map(row).join('')}</ul>` : '') +
     (k && HOME_SH.has(k) ? '<div class="hshl"><span class="mk sh">✨</span> <b>Shiny dans HOME</b></div>' : '') +
-    (k && HOME_B.has(k) ? `<div class="hshl">${HOME_BS.has(k) ? BARONS_IC : BARON_IC} <b>${HOME_BS.has(k) ? 'Baron shiny' : 'Baron'} dans HOME</b></div>` : '') +
+    (k && HOME_B.has(k) ? `<div class="hshl">${BARON_IC} <b>Baron dans HOME</b></div>` : '') +
     (old.length ? `<b class="hgrp">Anciens jeux</b> <span class="mute">(marques conservées, ne comptent pas pour la dorure : fermeture de Pokémon Bank)</span><ul class="plain homerows old">${old.map(row).join('')}</ul>` : '');
 }
 function baseHTML(p0) {
@@ -970,7 +1024,7 @@ function trackHTML(p0) {
     const ms = energyMates(p0);
     h += `<br><span class="mute gemline">${ms.map(m => `${m.c === 'primal' ? 'Énergie Primo' : megaXYZ(m) ? `Méga-énergie ${megaXYZ(m).toUpperCase()}` : 'Méga-énergie'} de ${esc((BY_KEY[String(p0.id)] || p0).n)} : ${hasEnergy(m) ? 'obtenue' : 'pas encore obtenue'}`).join(' · ')} (${ms.length > 1 ? 'une marque par forme' : 'marque par espèce'}, sans effet sur la complétion ; cochée automatiquement quand vous marquez la ${ms.some(m => m.c === 'primal') ? 'Primo' : 'Méga'} capturée).</span>`;
   }
-  if (alphaOk(p, c)) h += `<br><span class="mute baronl">${BARON_IC} Baron : ${isBaron(p, c) ? 'oui' : 'non'}${isBaronS(p, c) ? ' · Baron shiny ✨' : ''} <small>(sans effet sur la complétion)</small></span>`;
+  if (alphaOk(p, c)) h += `<br><span class="mute baronl">${BARON_IC} Baron : ${isBaron(p, c) ? 'oui' : 'non'} <small>(sans effet sur la complétion)</small></span>`;
   else if (ALPHA_GAMES.has(c) && !p0.mb && !bo) h += `<br><span class="mute baronl">Ne peut pas être Baron dans ce jeu${(BY_KEY[String(p.id)] || p).lg || (BY_KEY[String(p.id)] || p).my ? ' (légendaire / fabuleux)' : ''}.</span>`;
   { const b = baseStatus(p), avG = grpsOf([...gamesOf(p), ...(p.go ? ['go'] : [])]), n = avG.length, cN = grpsOf(b.c).filter(G => avG.includes(G)).length; h += `<br><span class="mute">Tous jeux confondus : capturé dans ${cN} jeu${cN > 1 ? 'x' : ''} sur ${n} (un jeu et ses extensions comptent pour un) · shiny dans ${grpsOf(b.s).length}.</span>`; }
   if (!hk) return h + (GBA_IDS.has(c) ? '<br><span class="gbanote">Jeu GBA : pas de transfert direct vers HOME (Pal Park → IVᵉ génération → Poké Transfert → Pokémon Bank). Un Pokémon venu par ce chemin se coche « Sans marque » sur la fiche Pokémon HOME (ancien jeu : ne compte pas pour la dorure).</span>' : '<br>Ce jeu ne peut pas envoyer directement de Pokémon vers HOME.');
@@ -1011,9 +1065,8 @@ function setBarH() { requestAnimationFrame(() => { const b = $('#actbar'), v = $
 const BARON_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"></span>';
 const BARONS_IC = '<span class="bi" aria-hidden="true"><img src="img/alpha/baron.png" alt="" width="22" height="22"><span class="bsp"></span></span>'; // ✨ badge drawn in CSS (keeps menu / button text clean)
 function baronBtns(on, son, dis, nm, offT) {
-  const t1 = dis ? offT : `Baron (Pokémon Alpha)${nm ? ' – ' + nm : ''} : implique « Capturé »`, t2 = dis ? offT : `Baron shiny${nm ? ' – ' + nm : ''} : implique Baron + Shiny + Capturé`;
-  return `<button class="act baron" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && on}" aria-label="Baron${nm ? ' – ' + esc(nm) : ''}" title="${esc(t1)}">${BARON_IC}<span class="t">Baron</span></button>` +
-    `<button class="act barons" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && son}" aria-label="Baron shiny${nm ? ' – ' + esc(nm) : ''}" title="${esc(t2)}">${BARONS_IC}<span class="t">B. shiny</span></button>`;
+  const t1 = dis ? offT : `Baron (Pokémon Alpha)${nm ? ' – ' + nm : ''} : implique « Capturé »`; // v47: « Baron shiny » button removed (son unused)
+  return `<button class="act baron" type="button"${dis ? ' disabled' : ''} aria-pressed="${!dis && on}" aria-label="Baron${nm ? ' – ' + esc(nm) : ''}" title="${esc(t1)}">${BARON_IC}<span class="t">Baron</span></button>`;
 }
 function homeBarHTML(p) {
   const q = mp(p, 'home'), av = homeAvail(q), f = HOME_C.get(q.k) || [], dis = !!p.bo, gav = av.filter(isGoldMark), done = gav.filter(m => f.includes(m)).length;
@@ -1023,7 +1076,15 @@ function homeBarHTML(p) {
   const shOn = !dis && f.length > 0, shP = HOME_SH.has(q.k);
   const shb = av.length || extra.length ? `<button class="act hsh" type="button"${shOn ? '' : ' disabled'} aria-pressed="${shOn && shP}" aria-label="Shiny dans HOME" title="${shOn ? 'Shiny dans HOME (ce Pokémon / cette forme)' : 'Cochez d’abord au moins une marque d’origine (transfert ou échange)'}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>` : '';
   const bOn = !dis && homeBaronOn(q), hb = !dis && alphaHomeGames(q).length ? baronBtns(HOME_B.has(q.k), HOME_BS.has(q.k), !bOn, 'HOME', `Cochez d’abord la marque ${alphaHomeGames(q).map(c => omName(ALPHA_MARK[c])).join(' ou ')} (seuls les Pokémon venus de Légendes Arceus / Z-A peuvent être Barons)`) : '';
-  return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${btns ? btns + shb + hb : '<span class="mute">Aucun jeu compatible avec HOME ne contient cette forme.</span>'}</div></div>`;
+  const gbs = dis ? '' : gmaxBtnsOf(q).map(g => { // v47: « Gigamax » at the end, linked with the HOME mark of the Gigamax sheet (as on the game / GO sheets)
+    const sv = isSal(g) ? (q.k === SAL_BASE.G ? 'G' : 'A') : '', lb = sv ? `Gigamax ${sv === 'G' ? 'Grave' : 'Aigüe'}` : 'Gigamax', gm = gmaxHomeMark(g), pr = sv ? salHomeOn(sv) : HOME_R.has(g.k), on = !!gm || pr;
+    const ti = on ? `${lb} dans Pokémon HOME (même marque que la fiche ${g.n}${q.id === 869 ? ', une seule fiche pour toutes les formes' : ''}${sv ? ` ; marque HOME « ${lb} », distincte de l’autre forme` : ''})${gm ? ` — cocher ajoute la marque ${omName(gm)} au Gigamax et à cette forme` : ''}` : 'Aucun jeu compatible avec HOME ne contient ce Gigamax';
+    return `<button class="act hgmx gem gmx" type="button" data-hgmax="${g.k}"${sv ? ` data-hsal="${sv}"` : ''}${on ? '' : ' disabled'} aria-pressed="${pr}" aria-label="${lb} – Pokémon HOME" title="${esc(ti)}">${GMAX_IC}<span class="t">${lb}</span></button>`; }).join('');
+  const sal = isSal(q) && !dis ? ['A', 'G'].map(v => { // v47: Salarsen Gigamax HOME sheet = two HOME marks (« Gigamax Aigüe » / « Gigamax Grave ») + one HOME shiny each
+    const n = v === 'G' ? 'Grave' : 'Aigüe', gm = gmaxHomeMark(q), pr = salHomeOn(v), on = !!gm || pr, sp = pr && HOME_SH.has(salKey(v));
+    return `<button class="act hsalg gem gmx" type="button" data-hsal="${v}"${on ? '' : ' disabled'} aria-pressed="${pr}" aria-label="Gigamax ${n} – Pokémon HOME" title="${esc(`Salarsen Gigamax Forme ${n} dans Pokémon HOME (lié au bouton « Gigamax ${n} » de la fiche HOME de Salarsen Forme ${n})${gm ? ` — cocher ajoute la marque ${omName(gm)} et coche aussi Salarsen Forme ${n}` : ''}`)}">${GMAX_IC}<span class="t">Gigamax ${n}</span></button>` +
+      `<button class="act hsh hsalsh" type="button" data-hsal="${v}"${pr ? '' : ' disabled'} aria-pressed="${sp}" aria-label="Shiny Gigamax ${n} – Pokémon HOME" title="${pr ? `Shiny dans HOME (Gigamax ${n})` : `Cochez d’abord « Gigamax ${n} »`}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny ${n}</span></button>`; }).join('') : '';
+  return `<div class="actbar homebar" id="actbar" role="toolbar" aria-label="Transferts Pokémon HOME par marque d’origine"><div class="actctx">${ctx}</div><div class="acts oris">${sal ? sal : btns ? btns + shb + hb + gbs : '<span class="mute">Aucun jeu compatible avec HOME ne contient cette forme.</span>'}</div></div>`;
 }
 function actbarHTML(p) {
   const c = sheetCtx(), q = mp(p, c), nm = c ? trackName(c) : '';
@@ -1056,7 +1117,7 @@ function actbarHTML(p) {
   return `<div class="actbar" id="actbar" role="toolbar" aria-label="Suivi${nm ? ' – ' + esc(nm) : ''}"><div class="actctx">${ctx}</div><div class="acts${nB > 6 ? ' wrap2' : ''}">
     ${mg ? first : isSal(p) && c && c !== 'home' ? salBtns : `<button class="act cg${gx ? ' gem gmx' : ''}" type="button" ${catchDis ? 'disabled' : ''} aria-pressed="${gT ? goMegaOn(p) : isCaught(p, c)}" aria-label="${gT ? eL : 'Capturé'}${nm ? ' – ' + esc(nm) : ''}" title="${gT ? esc(`Capturé = enregistré au Pokédex GO (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} faite au moins une fois) — coche aussi ${tb ? tb.n : 'la forme de base'} et la ${eL}`) : gG ? 'Gigamax capturé en Combat Max – Pokémon GO (coche aussi sa forme de base)' : gx ? `Gigamax obtenu${nm ? ' – ' + esc(nm) : ''} (coche aussi sa forme de base ; lié au bouton Gigamax de sa fiche)` : p.mb ? (isZa(c) ? 'Capturé en Z-A = forme de base capturée + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Capturé' + (nm ? ' – ' + esc(nm) : ''))}">${gx ? GMAX_IC : gT ? `<img class="gemimg" src="${energyImg(p)}" alt="" width="28" height="28" decoding="async">` : isCaught(p, c) ? BALL : BALL_OFF}<span class="t">${gx ? 'Gigamax' : gT ? eL : 'Capturé'}</span></button>`}
     <button class="act sh" type="button" ${shDis ? 'disabled' : ''} aria-pressed="${!shDis && isShiny(p, c)}" aria-label="Shiny capturé${nm ? ' – ' + esc(nm) : ''}" title="${shNo ? esc(shNo) : gT ? esc(`Shiny = ${p.n} shiny enregistré (${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} d’un Pokémon shiny) — coche aussi ${tb ? tb.n : 'la forme de base'} shiny et la ${eL}`) : p.mb ? (isZa(c) ? 'Shiny en Z-A = forme de base shiny + Méga-Gemme' : 'Méga : forme de combat, suit la forme de base') : ('Shiny capturé' + (nm ? ' – ' + esc(nm) : ''))}"><span class="ic" aria-hidden="true">✨</span><span class="t">Shiny</span></button>
-    ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && isTrans(q, c)}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
+    ${bb}<button class="act tr" type="button" ${trOn ? '' : 'disabled'} aria-pressed="${trOn && (isSal(q) ? salTransOn(c) : isTrans(q, c))}" aria-label="Transféré vers HOME${nm ? ' – ' + esc(nm) : ''}" title="${esc(trT)}${hk ? ' — ' + esc(omName(originOf(c))) : ''}">${hk ? omIcon(originOf(c)) : homeBall}<span class="t">${isZa(c) ? 'Transf.' : 'Transféré'}</span></button>
     ${slot}${dmb}${gbs}</div></div>`;
 }
 // Sticky header: back, previous / next, favourite only.
@@ -1635,7 +1696,7 @@ function renderDetail() {
     const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
     if (gm) body = regB + statsB + evoB + encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + breedHTML(p, sp, gm) + shinyHTML(p, gm) + effB + abB + movesHTML(f, sp, gm, shared) + E.ev;
-    else if (mode === 'home') body = statsB + evoB + homeSrcHTML(p, f, 'Compatibilité') + effB + abB;
+    else if (mode === 'home') { pre = homeDexHTML(p); body = statsB + evoB + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f) + effB + abB; } // v47: Dex national HOME after Formes, Shiny after Compatibilité
     else { pre = homeSrcHTML(p, f); body = statsB + evoB + breedHTML(p, sp, gm) + effB + abB + availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + E.ety + E.ev + goBox + costumesHTML('Costumes GO'); }
   }
   $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
@@ -1677,6 +1738,44 @@ function homeSrcHTML(p, f, title = 'Transferts vers HOME') {
   return `<section class="box"><h2>${title} <small class="cnt">${gav.filter(m => t.includes(m)).length} / ${gav.length}</small></h2>` +
     `<p class="note" style="margin:0 0 6px">Une marque d’origine par jeu (et ses extensions) · ${homeIcon(true, HOME_C_T)} toutes les marques Switch + GO (les anciens jeux sont affichés mais ne comptent pas)${homeComplete(p, av) ? ' (complet)' : ''}. Pour cocher : « Pokémon HOME » ou le jeu dans le sélecteur.</p>` +
     `<ul class="plain homerows">${av.map(m => `<li class="${t.includes(m) ? 'on' : ''}">${omIcon(m)} ${esc(omName(m))} — ${t.includes(m) ? 'transféré' : 'pas transféré'}${isGoldMark(m) ? '' : ' <span class="mute">(ancien jeu, hors dorure)</span>'}${sh.includes(m) ? ' · ✨ shiny' : ''}</li>`).join('')}</ul></section>`;
+}
+// v47: HOME sheet, info-only blocks (no effect on marks / completion).
+// « Dex national HOME » (after Formes): national nº, the species' HOME forms (no Megas / Primo / Gigamax / battle-only variants: not stored in HOME)
+// with ✅ = at least one origin mark (HOME_C) / ⬜ = none, ✨ = shiny mark in HOME.
+const homeForms = p => (FORMS[p.id] || [p]).filter(q => !q.bo && !['mega', 'primal', 'gmax'].includes(q.c) && (homeAvail(q).length || HOME_C.has(q.k)));
+function homeDexHTML(p) {
+  if (p.bo) return '';
+  const L = homeForms(p); if (!L.length) return '';
+  const done = L.filter(q => HOME_C.has(q.k)).length;
+  const rows = L.map(q => { const on = HOME_C.has(q.k); return `<li class="${on ? 'on' : ''}${q.k === p.k ? ' cur' : ''}"><a href="#/p/${q.k}">${on ? '✅' : '⬜'} <span>${esc(L.length > 1 ? formLabel(q) : fullN(q))}</span></a>${HOME_S.has(q.k) ? ' · ✨ shiny' : ''}${q.k === p.k && L.length > 1 ? ' <span class="mute">(cette fiche)</span>' : ''}</li>`; }).join('');
+  return `<section class="box" id="homedexbox"><h2>Dex national HOME <small class="cnt">#${pad(p.id)}</small></h2>` +
+    `<p class="hdx1">N° national <b>#${pad(p.id)}</b> · <b>${L.length}</b> forme${L.length > 1 ? 's' : ''} dans HOME · <b>${done}</b> / ${L.length} enregistrée${done > 1 ? 's' : ''}</p>` +
+    `<ul class="plain homerows hdxl">${rows}</ul><p class="note">Information seulement, sans effet sur les marques ni la complétion. ✅ = au moins une marque d’origine cochée dans « Pokémon HOME ». Méga-Évolutions, Gigamax et variantes de combat ne sont pas des formes stockées dans HOME.</p></section>`;
+}
+// « Shiny » (after Compatibilité): per HOME origin mark, can this form be caught shiny in one of its games (data/shiny.json, same status as the
+// game sheets; GO = GO shiny data) → brought shiny to HOME. No mark possible = shiny lock everywhere (e.g. Zarude). Events are not counted.
+function homeShinyHTML(p, f) {
+  const S = DET.shiny; if (p.bo || !S) return '';
+  const av = homeAvailF(p, f); if (!av.length) return '';
+  const where = new Set(f.av || []), out = [];
+  for (const m of av) {
+    let st;
+    if (m === 'go') { const d = f.go; st = !d || !goRel(d) ? null : d.nosh || !d.sh ? { k: 'no', t: d.sh === undefined && p.c ? 'non vérifié pour cette forme' : 'pas de shiny dans GO' } : d.shf && TODAY < d.shf ? { k: 'no', t: `pas encore (à partir du ${frDate(d.shf)})` } : { k: 'ok', t: 'shiny disponible dans GO' }; }
+    else {
+      const R = ORI[m].games.filter(g => where.has(g) && GAME_BY[g] && S.m[g]).map(g => ({ g, s: shinyStatus(p, GAME_BY[g], S) }));
+      const ok = R.filter(r => r.s.cls === 'ok' || r.s.cls === 'part'), lock = R.filter(r => r.s.lock);
+      st = !R.length ? null : ok.length ? { k: 'ok', t: `peut être shiny dans ${ok.map(r => GAME_BY[r.g].s).join(', ')}` } : lock.length ? { k: 'lock', t: `shiny lock dans ${lock.map(r => GAME_BY[r.g].s).join(', ')}` } : { k: 'no', t: 'pas de shiny dans ces jeux' };
+    }
+    if (st) out.push({ m, ...st });
+  }
+  if (!out.length) return '';
+  const ok = out.filter(o => o.k === 'ok'), lockAll = !ok.length && out.some(o => o.k === 'lock'), mine = HOME_SH.has(p.k);
+  const head = ok.length
+    ? `<div class="shst ok"><span class="ic" aria-hidden="true">✔</span><span><b>Peut être ramené shiny dans HOME</b> depuis ${ok.map(o => `${omIcon(o.m)} ${esc(ORI[o.m].n)}`).join(' · ')}.</span></div>`
+    : `<div class="shst lock"><span class="ic" aria-hidden="true">🔒</span><span>${lockAll ? '<span class="shlock">SHINY LOCK</span>' : ''}<b>${esc(fullN(p))} : impossible à obtenir shiny</b> dans les jeux compatibles HOME.</span></div>`;
+  return `<section class="box shinybox" id="homeshbox"><h2>✨ Shiny <small class="cnt">HOME</small></h2>${head}` +
+    `<ul class="plain homerows">${out.map(o => `<li class="${o.k === 'ok' ? 'on' : ''}">${omIcon(o.m)} ${esc(ORI[o.m].n)} — ${o.k === 'lock' ? '🔒 ' : ''}${esc(o.t)}</li>`).join('')}</ul>` +
+    `<p class="note">Votre marque : ${mine ? '✨ shiny dans HOME' : 'pas marqué shiny dans HOME'}. Information seulement, sans effet sur la complétion. Selon les données shiny de chaque jeu (Poképédia, Bulbapedia) et de Pokémon GO ; les distributions événementielles ne sont pas comptées.</p></section>`;
 }
 function availHTML(sp, games, hors = []) {
   if (!games.length && !hors.length) return '';
@@ -1731,6 +1830,8 @@ document.addEventListener('click', e => {
     toggleGem(m, c); refreshTrack(p); render(); // immediate: buttons, Mega capture/transfer state, counters
     return;
   }
+  const hgb = e.target.closest('#actbar .hgmx[data-hgmax]');
+  if (hgb) { const p = DET && DET.p, g = BY_KEY[hgb.dataset.hgmax]; if (!p || !g || hgb.disabled || sheetCtx() !== 'home') return; if (hgb.dataset.hsal) toggleSalHome(hgb.dataset.hsal); else toggleHomeGmax(g, mp(p, 'home')); refreshTrack(p); render(); return; } // v47: HOME base sheet ↔ HOME mark of the Gigamax sheet
   const gxb = e.target.closest('#actbar .gmx[data-gmax]');
   if (gxb) { const p = DET && DET.p, g = BY_KEY[gxb.dataset.gmax], c = sheetCtx(); if (!p || !g || gxb.disabled || !gmaxInGame(g, c)) return; if (gxb.dataset.sal) toggleSal(gxb.dataset.sal, c); else toggleMark(g, 'caught', c, p); refreshTrack(p); render(); return; } // base sheet ↔ Gigamax sheet (ticks this form)
   const dmb = e.target.closest('#actbar .dmx[data-dmax]');
@@ -1740,6 +1841,8 @@ document.addEventListener('click', e => {
   if (enb) { const p = DET && DET.p, m = BY_KEY[enb.dataset.energy]; if (!p || !m || !goTemp(m) || enb.disabled || sheetCtx() !== 'go') return; toggleEnergy(m); refreshTrack(p); render(); return; }
   const bab = e.target.closest('#actbar .baron, #actbar .barons');
   if (bab) { const p = DET && DET.p, c = sheetCtx(); if (!p || bab.disabled || !c) return; const sh = bab.classList.contains('barons'); if (c === 'home') toggleHomeBaron(p, sh); else toggleBaron(p, sh, c); refreshTrack(p); render(); return; }
+  const hsl = e.target.closest('#actbar .hsalg[data-hsal], #actbar .hsalsh[data-hsal]');
+  if (hsl) { const p = DET && DET.p; if (!p || !isSal(p) || hsl.disabled || sheetCtx() !== 'home') return; if (hsl.classList.contains('hsalsh')) toggleSalHomeShiny(hsl.dataset.hsal); else toggleSalHome(hsl.dataset.hsal); refreshTrack(p); render(); return; } // v47: Salarsen Gigamax HOME sheet
   const hsb = e.target.closest('#actbar .hsh');
   if (hsb) { const p = DET && DET.p; if (!p || hsb.disabled || sheetCtx() !== 'home') return; toggleHomeShiny(p); refreshTrack(p); render(); return; }
   const orb = e.target.closest('#actbar .ori[data-origin]');
@@ -1966,7 +2069,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX] };
+    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -1981,7 +2084,7 @@ boot();
       const mt = x => Array.isArray(x) ? x.filter(transValid) : [];
       mt(d.home_g).forEach(n => { TRANS_G.add(n); CAUGHT_G.add(n); }); mt(d.homeshiny_g).forEach(n => { STRANS_G.add(n); TRANS_G.add(n); CAUGHT_G.add(n); SHINY_G.add(n); });
       // v22 origin marks; an older backup (home_g only) is converted game → origin mark (set from a game)
-      const kOk = k => !!(BY_KEY[k] || FEM_OF[k]); // v44c: old female keys are migrated after the import
+      const kOk = k => !!(BY_KEY[k] || FEM_OF[k] || k === SAL_G); // v44c: old female keys are migrated after the import
       const om = x => Array.isArray(x) ? x.filter(v => typeof v === 'string' && ORI[v.slice(0, v.indexOf(':'))] && kOk(v.slice(v.indexOf(':') + 1))) : [];
       if (Array.isArray(d.home_sh)) d.home_sh.filter(k => typeof k === 'string' && kOk(k)).forEach(k => HOME_SH.add(k)); else mt(d.homeshiny_g).forEach(n => HOME_SH.add(n.slice(n.indexOf(':') + 1)));
       mk(d.baron_g).forEach(n => { BARON_G.add(n); CAUGHT_G.add(n); }); mk(d.barons_g).forEach(n => { BARONS_G.add(n); BARON_G.add(n); SHINY_G.add(n); CAUGHT_G.add(n); }); // v25
@@ -1992,7 +2095,7 @@ boot();
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(kOk).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
-      migrateEnergy(); migrateMarks(); rebuildHome(); store.set('mega_energy', [...MEGA_ENERGY]);
+      migrateEnergy(); migrateMarks(); rebuildHome(); if (!d.sal_h47) migrateSalHome(true); store.set('mega_energy', [...MEGA_ENERGY]);
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
       render(); toast('Sauvegarde importée.');
     } catch { toast('Fichier invalide : ce n’est pas une sauvegarde du Pokédex.', 'err', 6500); }

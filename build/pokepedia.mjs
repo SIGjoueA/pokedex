@@ -58,15 +58,15 @@ function section(w, re) { // body of the first heading matching re, up to the ne
   return end >= 0 ? rest.slice(0, end) : rest;
 }
 const NOTDEX = /En l'absence de Pokédex|absence de Pokédex/i;
-function descs(w) {
+export function descs(w) {
   const body = section(w, /^(=+) *Descriptions du (?:\[\[)?Pokédex(?:\]\])? *\1 *$/m); if (!body) return [];
   const out = []; let cur = null, form = null;
   for (const line of body.split('\n')) {
     const h = line.match(/^=+ *(.*?) *=+ *$/);
     if (h) { form = clean(h[1]); cur = null; continue; }
-    if (line.startsWith(';')) { const codes = [...line.matchAll(/\{\{Jeu\|([^}|]+)/g)].map(x => x[1].trim());
+    if (line.startsWith(';')) { const codes = [...line.matchAll(/\{\{[Jj]eu\|([^}|]+)/g)].map(x => x[1].trim()); // v47: « {{jeu|C}} » (lower case) too
       // v34: games written as links on older-generation sub-pages: « ;{{Jeu|D}}, [[Pokémon Perle|Perle]] et [[Pokémon Platine|Platine]] »
-      for (const x of line.matchAll(/\[\[(?:Pokémon )?([^\]|]+?)(?:\|[^\]]*)?\]\]/g)) { const c = GAME_LINK[A(x[1]).trim()]; if (c) codes.push(c); }
+      for (const x of line.matchAll(/\[\[(?:Pokémon )?(?:Versions? )?([^\]|]+?)(?:\|[^\]]*)?\]\]/g)) { const c = GAME_LINK[A(x[1]).trim()]; if (c) codes.push(c); } // v47: « [[Pokémon Versions Diamant et Perle|…]] »
       cur = codes.length ? codes : null; }
     else if (line.startsWith(':') && cur) { const t = clean(line.slice(1)); if (t) out.push({ codes: cur, form, t, absent: NOTDEX.test(t) }); }
   }

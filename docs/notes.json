@@ -1,4 +1,13 @@
 [
+  { "v": "v47", "d": "2026-10-18", "l": [
+    "Fiches HOME : nouveau bloc « Dex national HOME » (numéro national, formes de l'espèce dans HOME avec ✅ / ⬜ selon vos marques).",
+    "Fiches HOME : nouveau bloc « Shiny » (jeux d'où il peut être ramené shiny dans HOME, ou shiny lock, par exemple Zarude). Ces deux blocs sont informatifs, sans effet sur la complétion.",
+    "Données Pokémon GO mises à jour depuis une nouvelle source (stats, attaques, coûts d'évolution), avec les sorties annoncées : Météno, Méga-Lugulabre, Colimucus et Muplodocus de Hisui.",
+    "Images officielles pour les Méga-Gemmes de Légendes Z-A et Méga-Dimension.",
+    "Quelques descriptions du Pokédex remplacées par les textes officiels.",
+    "Rouge Feu / Vert Feuille et Émeraude : retrait des Pokémon de la Grotte Métamo jamais distribués.",
+    "Fiches HOME : bouton « Gigamax » en fin de suivi pour les Pokémon qui ont un Gigamax (lié à la fiche Gigamax ; une seule pour les 63 formes de Charmilly ; « Gigamax Aigüe » / « Gigamax Grave » pour Salarsen, deux marques HOME séparées).", "Le bouton « Baron shiny » et ses filtres sont retirés (le bouton « Baron » reste). Vos marques Baron shiny déjà cochées sont conservées et toujours exportées."
+  ] },
   { "v": "v46", "d": "2026-10-18", "l": [
     "Nouvelle rubrique « Notes de version » dans le menu ☰.",
     "Après une mise à jour, un message propose de voir les nouveautés.",

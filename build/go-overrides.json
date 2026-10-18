@@ -255,6 +255,15 @@
       }
     }
   },
+  "upcoming": {
+    "_doc": "v47 : sorties GO annoncées avec une date (clé d’entrée → from = date de sortie AAAA-MM-JJ, shinyFrom = date du shiny). Avant la date : « annoncé pour le … » ; à partir de la date l’app affiche la forme comme sortie. Les stats / attaques viennent du game master (refresh-go.mjs). Après la date, déplacer la clé dans released.keys (ou megaReleased.keys) et l’enlever d’ici. Sources : pokemongo.com/fr/news (Pluies de Météno), Leek Duck « Chandelure Super Mega Raid Day », Pokémon GO Hub « GO Wild Area 2026 » (Colimucus / Muplodocus de Hisui : uniquement aux événements en personne de Sendai et Mexico du 6 au 8/11, pas au week-end mondial), vérifié le 2026-10-18. Météno : seule la Forme Météore (sauvage) ; les couleurs de noyau sortiront une par pluie d’étoiles filantes, non annoncées.",
+    "keys": {
+      "774": { "from": "2026-10-19" },
+      "609-mega": { "from": "2026-10-31", "shinyFrom": "2026-10-31" },
+      "705-hisui": { "from": "2026-11-06" },
+      "706-hisui": { "from": "2026-11-06" }
+    }
+  },
   "dynamax": {
     "_doc": "v38 : formes utilisables en Combats Max (Dynamax) dans Pokémon GO → bouton « Dynamax » sur la fiche GO. Clé d’entrée → date de sortie (AAAA-MM-JJ) ; une date future = bouton affiché à partir de cette date. Liste maintenue à la main (routine GO hebdo). Source : Bulbapedia « Dynamax (GO) » (vérifié le 2026-10-16), recoupé avec Leek Duck. Les Gigamax ont leur propre clé (gmax).",
     "keys": {

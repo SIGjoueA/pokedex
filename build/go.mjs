@@ -1,4 +1,7 @@
-// Pokémon GO data: PokeMiners game_masters (stats, moves, evolutions, buddy distance, candy) + pogoapi.net (released / shiny lists).
+// Pokémon GO data: game master (PokeMiners / alexelgt mirror, newest one: fetch-go.mjs) for stats, moves, evolutions, buddy distance, candy
+// + v47 frozen pogoapi.net snapshot (build/go-frozen.json: released / shiny / Alola / Galar / Mega lists; pogoapi is no longer maintained,
+// later releases are in go-overrides.json) + entry → template map (build/go-templates.json, same as refresh-go.mjs).
+import fs from 'node:fs';
 import { get, frName, idOf } from './lib.mjs';
 const ROMAN_DUMMY = null;
 const FORM_SYN = { GALARIAN: 'galar', HISUIAN: 'hisui', ALOLA: 'alola', ALOLAN: 'alola', PALDEA: 'paldea', PALDEA_COMBAT: 'paldea-combat-breed', PALDEA_BLAZE: 'paldea-blaze-breed', PALDEA_AQUA: 'paldea-aqua-breed' };
@@ -15,11 +18,9 @@ const norm = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
 export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr, moveFr }) {
   const gm = await get('x', { name: 'go-latest' });
   const stamp = new Date(+(await get('x', { name: 'go-timestamp', text: true })).trim());
-  const released = await get('x', { name: 'pogoapi-released_pokemon' });
-  const shinyApi = await get('x', { name: 'pogoapi-shiny_pokemon' });
-  const alolan = await get('x', { name: 'pogoapi-alolan_pokemon' });
-  const galarian = await get('x', { name: 'pogoapi-galarian_pokemon' });
-  const megaApi = await get('x', { name: 'pogoapi-mega_pokemon' });
+  const FROZEN = JSON.parse(fs.readFileSync(new URL('./go-frozen.json', import.meta.url)));
+  const MAPK = JSON.parse(fs.readFileSync(new URL('./go-templates.json', import.meta.url))).keys;
+  const tplById = {}; for (const e of gm) if (e.data.pokemonSettings && /^V\d{4}_POKEMON_/.test(e.templateId)) tplById[e.templateId] = e.data.pokemonSettings;
   const cpmArr = gm.map(e => e.data.playerLevel).find(Boolean).cpMultiplier;
   const cpm = L => Number.isInteger(L) ? cpmArr[L - 1] : Math.sqrt((cpmArr[Math.floor(L) - 1] ** 2 + cpmArr[Math.floor(L)] ** 2) / 2);
   const maxCp = (st, L) => Math.max(10, Math.floor((st.baseAttack + 15) * Math.sqrt(st.baseDefense + 15) * Math.sqrt(st.baseStamina + 15) * cpm(L) ** 2 / 10));
@@ -52,7 +53,7 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
   const nameToId = {};
   for (const e of gm) {
     const ps = e.data.pokemonSettings; const m = e.templateId.match(/^V(\d{4})_POKEMON_(.+)$/);
-    if (!ps || !m) continue;
+    if (!ps || !m || (ps.form && typeof ps.form !== 'string')) continue; // v47: costume forms the mirror could not decode are numbers
     const id = +m[1]; nameToId[ps.pokemonId] = id;
     const t = T[id] ||= { noForm: null, bySfx: {}, nameU: ps.pokemonId };
     if (!ps.form) { t.noForm = ps; continue; }
@@ -62,7 +63,7 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
     t.bySfx[sfx] = ps;
   }
   const speciesSfxFromGo = (id, formName) => {
-    const t = T[id]; if (!t || !formName) return null;
+    const t = T[id]; if (!t || !formName || typeof formName !== 'string') return null;
     let rest = formName.startsWith(t.nameU + '_') ? formName.slice(t.nameU.length + 1) : formName;
     return FORM_SYN[rest] || rest.toLowerCase().replace(/_/g, '-');
   };
@@ -74,9 +75,9 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
     const k = `${id}-${sfx}`; return byKey[k] ? k : null;
   };
 
-  const releasedSp = new Set(Object.keys(released).map(Number));
-  const alolaSp = new Set(Object.keys(alolan).map(Number)), galarSp = new Set(Object.keys(galarian).map(Number));
-  const megaOk = new Set(megaApi.map(m => `${m.pokemon_id}|${m.form}`)); // frozen list: later Megas are added by build/go-overrides.json
+  const releasedSp = new Set(FROZEN.released);
+  const alolaSp = new Set(FROZEN.alolan), galarSp = new Set(FROZEN.galarian);
+  const megaOk = new Set(FROZEN.mega); // frozen list: later Megas are added by build/go-overrides.json
   const perKey = {};
   const TEMP = { TEMP_EVOLUTION_MEGA: 'mega', TEMP_EVOLUTION_MEGA_X: 'mega-x', TEMP_EVOLUTION_MEGA_Y: 'mega-y', TEMP_EVOLUTION_PRIMAL: 'primal' };
   const TEMP_API = { 'mega': 'Normal', 'mega-x': 'X', 'mega-y': 'Y' };
@@ -98,7 +99,14 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
   for (const e of entries) {
     const t = T[e.id]; if (!t) continue;
     let ps, ov, ok = releasedSp.has(e.id);
-    if (e.cat === 'mega' || e.cat === 'primal') {
+    const mp = MAPK[e.key];
+    if (mp && tplById[mp[0]]) { // v47: explicit entry → template map
+      ps = tplById[mp[0]]; ov = mp[1] ? (ps.tempEvoOverrides || []).find(o => o.tempEvoId === mp[1]) : null;
+      if (mp[1] && !ov?.stats) continue;
+      if (e.cat === 'mega') ok = ok && megaOk.has(`${e.id}|${TEMP_API[e.sfx]}`);
+      if (e.sfx === 'alola') ok = ok && alolaSp.has(e.id);
+      if (e.sfx === 'galar') ok = ok && galarSp.has(e.id);
+    } else if (e.cat === 'mega' || e.cat === 'primal') {
       const base = t.bySfx[byKey[String(e.id)].defSfx] || t.bySfx.normal || t.noForm; if (!base) continue;
       ov = (base.tempEvoOverrides || []).find(o => TEMP[o.tempEvoId] === e.sfx);
       if (!ov) continue; ps = base;
@@ -113,9 +121,9 @@ export async function buildGo({ entries, byKey, species, sById, moveObjs, typeFr
     if (e.cat === 'gmax' || e.sfx.endsWith('-female')) continue; // Gigamax: release list + shiny in build/go-overrides.json (apply-go-overrides.mjs)
     const o = dataFrom(ps, ov); o.r = ok ? 1 : 0;
     if (e.cat === 'base' || e.cat === 'sex') {
-      const sh = shinyApi[String(e.id)];
-      if (sh) { o.sh = ['wild', 'raid', 'egg', 'evolution', 'research', 'photobomb'].filter(k => sh['found_' + k]); }
-    } else if (e.sfx === 'alola') { const sh = shinyApi[String(e.id)]; if (sh && sh.alolan_shiny) o.sh = ['alola']; }
+      const sh = FROZEN.shiny[String(e.id)];
+      if (sh) { o.sh = sh.filter(k => k !== 'alola'); }
+    } else if (e.sfx === 'alola') { const sh = FROZEN.shiny[String(e.id)]; if (sh && sh.includes('alola')) o.sh = ['alola']; }
     perKey[e.key] = o;
   }
 

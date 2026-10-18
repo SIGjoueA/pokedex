@@ -1,0 +1,1 @@
+Sprites des Méga-Gemmes / Orbes : PokeAPI sprites (https://github.com/PokeAPI/sprites, sprites/items). Images © Nintendo / Creatures / GAME FREAK / The Pokémon Company, utilisées à titre non commercial.

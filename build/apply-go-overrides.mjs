@@ -90,6 +90,20 @@ for (const [k, o] of Object.entries(gmax)) {
       src: [...used].map(k => { if (!DT.sources[k]) throw new Error(`go-ditto.json : source inconnue ${k}`); return DT.sources[k]; }), chk: DT.checked };
     log.push(`Métamorph GO : ${f.go.dit.cur.ids.length} déguisements actuels, ${f.go.dit.past.reduce((n, x) => n + x.ids.length, 0)} passés (vérifié le ${DT.checked})`); }
   else log.push('! Métamorph (132) sans données GO'); }
+// v47: announced GO debuts (upcoming.keys: entry → { from, shinyFrom }) → go.r = 0 + go.rf = from, core gof = from: the app shows the entry
+// as « annoncé pour le … » and as released from that day. GO data must exist (refresh-go.mjs creates it from the game master).
+// A Mega / Primal with a shiny base gets sh = ['mega'] + shf. Once the date has passed, move the key to released.keys / megaReleased.keys.
+{ const UP = (OV.upcoming || {}).keys || {};
+  for (const e of core.e) if (e.c !== 'gmax' && e.gof && !UP[e.k]) { delete e.gof; const f = spOf(e.id).f[e.k]; if (f && f.go) { delete f.go.rf; delete f.go.shf; } }
+  for (const [k, o] of Object.entries(UP)) {
+    if (k.startsWith('_')) continue; const e = byKey[k]; if (!e) { log.push(`! sortie annoncée inconnue ${k}`); continue; }
+    const sp = spOf(e.id), f = sp.f[k]; if (!f || !f.go) { log.push(`! ${k} : pas de données GO (lancer refresh-go.mjs)`); continue; }
+    f.go.r = 0; f.go.rf = o.from; delete e.go; e.gof = o.from;
+    const b = baseGo(sp, e.id);
+    if ((e.c === 'mega' || e.c === 'primal') && b && b.sh && b.sh.length) { f.go.sh = ['mega']; f.go.shf = o.shinyFrom || o.from; }
+    else if (o.shinyFrom) f.go.shf = o.shinyFrom; else delete f.go.shf;
+    log.push(`${k} ${e.n} : annoncé dans GO pour le ${o.from}`);
+  } }
 // v38: Dynamax in GO (dynamax.keys: entry → release date) → core dmx = date (the app shows the « Dynamax » button from that date). Cleared first.
 { const DM = (OV.dynamax || {}).keys || {}; for (const e of core.e) delete e.dmx;
   for (const [k, d] of Object.entries(DM)) { if (k.startsWith('_')) continue; const e = byKey[k]; if (!e) { log.push(`! Dynamax inconnu ${k}`); continue; } e.dmx = d; }

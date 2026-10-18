@@ -21,3 +21,4 @@ node('fix-v42.mjs');           // v42: lieux GBA / DS depuis Poképédia (espèc
 node('fix-v44.mjs');           // v44: Salarsen Gigamax = une seule fiche
 node('fix-v44c.mjs');          // v44: différences mâle / femelle d’apparence = une seule entrée (core fe, bouton ♀)
 node('fix-v44d.mjs');          // v44: Méga-Mistigrix une seule entrée (image ♂ / ♀), « mâle » / « femelle » sur les 4 vraies différences
+node('fix-v47.mjs');           // v47: GO depuis le game master (refresh-go + overrides), descriptions Poképédia, images des Méga-Gemmes Z-A, Grotte Métamo
