@@ -1,0 +1,57 @@
+[
+  { "v": "v46", "d": "2026-10-18", "l": [
+    "Nouvelle rubrique « Notes de version » dans le menu ☰.",
+    "Après une mise à jour, un message propose de voir les nouveautés.",
+    "Bouton « 🐞 Signaler un bug / proposer une idée » dans le menu ☰ : il ouvre un mail déjà prêt."
+  ] },
+  { "v": "v45", "d": "2026-10-17", "l": [
+    "Boutons ⬆︎ et ⬇︎ pour aller d'un coup en haut ou en bas de la liste.",
+    "Menu ☰ en haut à droite : pack hors-ligne, export / import, légende et version."
+  ] },
+  { "v": "v44", "d": "2026-10-17", "l": [
+    "La Poké Ball dorée est réservée aux jeux actuels ; les anciens jeux complets ont le badge 🕹.",
+    "Une seule fiche pour Salarsen Gigamax (Aigüe et Grave) et pour Méga-Mistigrix.",
+    "Les femelles qui ne diffèrent que par l'apparence rejoignent leur espèce, avec un bouton pour voir l'image ♀."
+  ] },
+  { "v": "v43", "d": "2026-10-17", "l": [
+    "Les blocs des fiches sont rangés dans un ordre adapté à chaque vue (jeu, GO, HOME, vue d'ensemble).",
+    "Nouveau bloc Costumes GO, encore en chantier."
+  ] },
+  { "v": "v42", "d": "2026-10-16", "l": [
+    "Lieux de capture des jeux GBA et DS, de Rubis / Saphir à Noire 2 / Blanche 2.",
+    "458 espèces qui n'avaient aucun lieu en ont maintenant un."
+  ] },
+  { "v": "v41", "d": "2026-10-16", "l": [
+    "Bouton « Cocher toutes les formes » pour les Pokémon qui changent de forme (Arceus, Silvallié…).",
+    "Les images des formes sont incluses dans le pack hors-ligne."
+  ] },
+  { "v": "v40", "d": "2026-10-16", "l": [
+    "Les Ultra-Chimères n'apparaissent plus dans les jeux où elles n'existent pas.",
+    "Nouveaux tris par Attaque Spéciale et Défense Spéciale.",
+    "Données et images mises à jour plus vite quand elles changent."
+  ] },
+  { "v": "v39", "d": "2026-10-16", "l": [
+    "Disponibilités dans Pokémon GO corrigées.",
+    "Noms français des Méga-Gemmes et des Orbes, noms de formes officiels.",
+    "Corrections de plusieurs dex, dont Rouge Feu / Vert Feuille sur Switch."
+  ] },
+  { "v": "v38", "d": "2026-10-16", "l": [
+    "Icônes officielles Gigamax et Dynamax.",
+    "Bouton Dynamax sur les fiches Pokémon GO.",
+    "Icônes d'Énergie Primo pour Kyogre et Groudon."
+  ] },
+  { "v": "v37", "d": "2026-10-16", "l": [
+    "Cocher un Gigamax coche aussi sa forme de base.",
+    "Fiches Méga et Gigamax avec leurs propres boutons (Méga-Gemme ou Gigamax, Shiny, HOME).",
+    "Charmilly : un seul Gigamax pour ses 63 formes."
+  ] },
+  { "v": "v36", "d": "2026-10-14", "l": [
+    "Théffroi et Polthégeist : Forme Contrefaçon et Forme Authentique.",
+    "Noms corrigés pour Salarsen Gigamax et Éthernatos Infinimax.",
+    "Meilleure marge en bas de l'écran sur iPhone."
+  ] },
+  { "v": "v35", "d": "2026-10-14", "l": [
+    "Nom officiel de la forme par défaut (ex. Nigirigon Forme Courbée).",
+    "Images HOME et animées propres à chaque forme, disponibles hors-ligne."
+  ] }
+]

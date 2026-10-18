@@ -1,0 +1,177 @@
+{
+ "za": {
+  "vg": "legends-za",
+  "note": "pas de données PokéAPI (version group absent de la base GraphQL)",
+  "n": 0
+ },
+ "hors-sv": {
+  "vg": "scarlet-violet",
+  "regional": 664,
+  "transfer": 69
+ },
+ "la": {
+  "vg": "legends-arceus",
+  "regional": 242,
+  "mega": 0,
+  "transfer": 0,
+  "total": 0,
+  "manual": []
+ },
+ "bdsp": {
+  "vg": "brilliant-diamond-and-shining-pearl",
+  "regional": 151,
+  "mega": 0,
+  "transfer": 342,
+  "total": 342,
+  "manual": [
+   "Deoxys : transfert HOME",
+   "Phione : reproduction de Manaphy / HOME",
+   "Darkrai : bonus de sauvegarde Légendes Arceus / HOME",
+   "Shaymin : bonus de sauvegarde Épée/Bouclier / HOME",
+   "Arceus : bonus de sauvegarde Légendes Arceus / HOME"
+  ]
+ },
+ "hors-sw": {
+  "vg": "sword-shield",
+  "regional": 584,
+  "transfer": 80
+ },
+ "lgpe": {
+  "vg": "lets-go-pikachu-lets-go-eevee",
+  "regional": 153,
+  "mega": 33,
+  "transfer": 0,
+  "total": 33,
+  "manual": []
+ },
+ "usum": {
+  "vg": "ultra-sun-ultra-moon",
+  "regional": 403,
+  "mega": 22,
+  "transfer": 382,
+  "total": 404,
+  "manual": []
+ },
+ "sm": {
+  "vg": "sun-moon",
+  "regional": 302,
+  "mega": 30,
+  "transfer": 470,
+  "total": 500,
+  "manual": []
+ },
+ "oras": {
+  "vg": "omega-ruby-alpha-sapphire",
+  "regional": 211,
+  "mega": 21,
+  "transfer": 489,
+  "total": 510,
+  "manual": []
+ },
+ "xy": {
+  "vg": "x-y",
+  "regional": 457,
+  "mega": 3,
+  "transfer": 261,
+  "total": 264,
+  "manual": []
+ },
+ "b2w2": {
+  "vg": "black-2-white-2",
+  "regional": 301,
+  "mega": 0,
+  "transfer": 348,
+  "total": 348,
+  "manual": []
+ },
+ "bw": {
+  "vg": "black-white",
+  "regional": 156,
+  "mega": 0,
+  "transfer": 493,
+  "total": 493,
+  "manual": []
+ },
+ "hgss": {
+  "vg": "heartgold-soulsilver",
+  "regional": 256,
+  "mega": 0,
+  "transfer": 237,
+  "total": 237,
+  "manual": []
+ },
+ "pt": {
+  "vg": "platinum",
+  "regional": 210,
+  "mega": 0,
+  "transfer": 283,
+  "total": 283,
+  "manual": []
+ },
+ "dp": {
+  "vg": "diamond-pearl",
+  "regional": 151,
+  "mega": 0,
+  "transfer": 342,
+  "total": 342,
+  "manual": []
+ },
+ "e": {
+  "vg": "emerald",
+  "regional": 202,
+  "mega": 0,
+  "transfer": 184,
+  "total": 184,
+  "manual": []
+ },
+ "frlg": {
+  "vg": "firered-leafgreen",
+  "regional": 151,
+  "mega": 0,
+  "transfer": 235,
+  "total": 235,
+  "manual": [
+   "Deoxys : Ticket Aurora (événement) / échange"
+  ]
+ },
+ "rs": {
+  "vg": "ruby-sapphire",
+  "regional": 202,
+  "mega": 0,
+  "transfer": 184,
+  "total": 184,
+  "manual": []
+ },
+ "c": {
+  "vg": "crystal",
+  "regional": 251,
+  "mega": 0,
+  "transfer": 0,
+  "total": 0,
+  "manual": []
+ },
+ "gs": {
+  "vg": "gold-silver",
+  "regional": 251,
+  "mega": 0,
+  "transfer": 0,
+  "total": 0,
+  "manual": []
+ },
+ "y": {
+  "vg": "yellow",
+  "regional": 151,
+  "mega": 0,
+  "transfer": 0,
+  "total": 0,
+  "manual": []
+ },
+ "rb": {
+  "vg": "red-blue",
+  "regional": 151,
+  "mega": 0,
+  "transfer": 0,
+  "total": 0,
+  "manual": []
+ }
+}

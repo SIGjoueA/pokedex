@@ -1,0 +1,33 @@
+// v24 screenshots: open Jeux menu (mobile) + Home sheet bar with « Shiny » (mobile). 360×780, 2×
+import puppeteer from 'puppeteer-core';
+const BASE = process.argv[2] || 'http://localhost:8801/';
+const OUT = '/workspace/pokedex/screenshots/';
+const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: 'new', args: ['--no-sandbox'] });
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const errs = [];
+const p = await b.newPage();
+await p.setViewport({ width: 360, height: 780, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+p.on('pageerror', e => errs.push(e.message));
+await p.goto(BASE, { waitUntil: 'networkidle0' });
+await p.evaluate(() => { localStorage.clear(); localStorage.setItem('caught_g', '["sw:25","swisle:25","swcrown:25"]'); localStorage.setItem('home_o', '["galar:25","paldea:25","go:25","kalos:25"]'); localStorage.setItem('home_og', '["galar:25"]'); localStorage.setItem('home_sh', '["25"]'); });
+await p.reload({ waitUntil: 'networkidle0' });
+await p.tap('#gamebtn'); await sleep(500);
+const m = await p.evaluate(() => { const l = document.querySelector('#gamelist'), r = l.getBoundingClientRect(); return { open: !l.hidden, top: Math.round(r.top), h: Math.round(r.height), opts: l.querySelectorAll('.gopt').length, sep: l.querySelectorAll('.gsep').length, sep2: [...l.querySelectorAll('.gsep2')].map(x => x.textContent).join('|'), over: document.documentElement.scrollWidth > innerWidth }; });
+await p.screenshot({ path: OUT + 'preview-jeux.png' });
+console.log('menu', JSON.stringify(m));
+// Catégorie: custom dropdown (same as Jeux), opened for real
+await p.keyboard.press('Escape'); await sleep(300); await p.setViewport({ width: 360, height: 1320, deviceScaleFactor: 2, isMobile: true, hasTouch: true }); await sleep(300);
+await p.tap('#catbtn'); await sleep(400);
+await p.screenshot({ path: OUT + 'preview-categorie-2.png' });
+console.log('cat', JSON.stringify(await p.evaluate(() => [...document.querySelectorAll('#catlist li')].map(li => li.classList.contains('gopt') ? li.textContent : '────'))));
+console.log('catlist fits', await p.evaluate(() => { const l = document.querySelector('#catlist'); return [l.scrollHeight <= l.clientHeight + 1, document.documentElement.scrollWidth <= innerWidth]; }));
+await p.keyboard.press('Escape'); await sleep(200); await p.setViewport({ width: 360, height: 780, deviceScaleFactor: 2, isMobile: true, hasTouch: true }); await sleep(300);
+await p.tap('#gamebtn'); await sleep(300);
+await p.tap('#gamelist .gopt[data-v="home"]'); await sleep(500);
+console.log('picked', await p.$eval('#game', e => e.value), await p.$eval('#gamebtn', e => e.textContent));
+await p.goto(BASE + '#/p/25'); await sleep(2200);
+await p.evaluate(() => { const t = document.querySelector('.trackbox'); window.scrollTo(0, t.getBoundingClientRect().top + scrollY - 70); }); await sleep(400);
+await p.screenshot({ path: OUT + 'v24-fiche-home-barre-mobile.png' });
+console.log('bar', await p.evaluate(() => [...document.querySelectorAll('#actbar .act')].map(x => (x.dataset.origin || x.classList[1]) + (x.disabled ? '(grisé)' : '') + '=' + x.getAttribute('aria-pressed')).join(' ')), await p.evaluate(() => document.documentElement.scrollWidth > innerWidth));
+console.log('errs', errs);
+await b.close();

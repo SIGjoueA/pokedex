@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pokédex</title>
+<meta name="description" content="Pokédex hors-ligne en français : formes, jeux, Pokémon GO">
+<meta name="theme-color" content="#12141c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pokédex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="list-view">
+  <header class="top">
+    <div class="searchrow">
+      <input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nom ou n°…" aria-label="Rechercher">
+      <button id="formsbtn" class="toggle" type="button" aria-pressed="false" title="Afficher / masquer les formes (Alola, Galar, Méga, Gigamax, femelles…)">Formes</button>
+      <button id="viewbtn" class="icon" aria-label="Changer l’affichage" title="Grille / liste"></button>
+      <button id="menubtn" class="icon" type="button" aria-label="Menu" title="Menu : hors-ligne, sauvegarde, légende, version" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu"><svg class="mic" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="filters">
+      <select id="game" aria-label="Jeu"></select>
+      <select id="gen" aria-label="Génération"></select>
+      <select id="cat" aria-label="Catégorie">
+        <option value="">Catégorie</option>
+        <option value="leg">Légendaires</option>
+        <option value="myth">Fabuleux</option>
+        <option value="ub">Ultra-Chimères</option>
+        <option value="mega">Méga-évolutions</option>
+        <option value="gmax">Gigamax</option>
+        <option value="baby">Bébés</option>
+        <option value="fav">★ Favoris</option>
+        <option value="caught">🔴 Capturés</option>
+        <option value="missing">⚪ Pas encore capturés</option>
+        <option value="shiny">✨ Shiny capturés</option>
+        <option value="noshiny">✨ Shiny manquants</option>
+        <option value="swdone">🟡 Complétés jeux actuels</option>
+        <option value="olddone">🟡🕹 Complétés anciens jeux</option>
+        <option value="swmiss">⚪🟡 Jeux actuels manquants</option>
+        <option value="oldmiss">⚪🕹 Anciens jeux manquants</option>
+        <option value="trans">🏠 Transférés HOME (au moins une marque)</option>
+        <option value="notrans">🏠 Pas encore transférés HOME (aucune marque)</option>
+        <option value="strans">✨ Shiny transférés (HOME)</option>
+        <option value="nostrans">✨ Shiny manquants (HOME)</option>
+        <option value="hcomplete">🟡🏠 Complets HOME (marques Switch + GO)</option>
+        <option value="hmiss">⚪🏠 HOME manquants (marques Switch + GO)</option>
+        <option value="baron">Barons</option>
+        <option value="nobaron">⚪ Barons manquants</option>
+        <option value="barons">✨ Barons shiny</option>
+        <option value="nobarons">⚪✨ Barons shiny manquants</option>
+      </select>
+      <select id="sort" aria-label="Tri">
+        <option value="id">Tri : N°</option>
+        <option value="name">Tri : nom</option>
+        <option value="total">Tri : Total</option>
+        <option value="hp">Tri : PV</option>
+        <option value="atk">Tri : Att.</option>
+        <option value="def">Tri : Déf.</option>
+        <option value="spa">Tri : Att. Spé.</option>
+        <option value="spd">Tri : Déf. Spé.</option>
+        <option value="spe">Tri : Vit.</option>
+      </select>
+    </div>
+    <div id="typechips" class="chips" role="group" aria-label="Filtrer par type"></div>
+    <div class="status"><span id="count"></span><button id="reset" class="link" hidden>Réinitialiser</button></div>
+  </header>
+  <main id="results" class="grid" aria-live="polite"></main>
+  <footer class="foot">
+    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Descriptions du Pokédex, étymologies, distributions et lieux de capture des jeux Switch : <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a>, licence <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 FR</a> (usage personnel non commercial). Classements PvP : <a href="https://pvpoke.com" target="_blank" rel="noopener">PvPoke</a>. Données GO : communautaires, non officielles (<a href="https://github.com/PokeMiners/game_masters" target="_blank" rel="noopener">PokeMiners game_masters</a>, <a href="https://pogoapi.net" target="_blank" rel="noopener">pogoapi.net</a>). Ces données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux ; les données Pokémon GO sont non officielles. Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
+  </footer>
+</div>
+<div id="detail-view" hidden></div>
+<div id="menuback" class="menuback" hidden></div>
+<div id="menu" class="menu" role="dialog" aria-modal="true" aria-labelledby="menutitle" hidden>
+  <div class="menuhead"><button id="menuprev" type="button" class="menuprev" aria-label="Retour au menu" hidden>‹</button><h2 id="menutitle">Menu</h2><button id="menux" type="button" class="menux" aria-label="Fermer le menu">✕</button></div>
+  <div id="mmain">
+  <section class="msec"><h3>Hors-ligne</h3><div id="offline"></div></section>
+  <section class="msec"><h3>Sauvegarde</h3>
+    <p class="mrow"><button id="export" type="button">Exporter mes captures</button> <label class="filebtn">Importer<input id="import" type="file" accept="application/json" hidden></label></p>
+    <p class="note">Vos captures sont enregistrées sur cet appareil. Exportez puis importez pour les copier entre ordinateur et téléphone.</p>
+  </section>
+  <section class="msec"><h3>Légende des marques</h3><div id="legend" class="legend"></div></section>
+  <section class="msec"><h3>Version</h3><p id="appver" class="mver">—</p>
+    <p class="mrow"><button id="notesbtn" type="button" class="mnext"><span>📝 Notes de version</span><span class="chev" aria-hidden="true">›</span></button></p></section>
+  <section class="msec"><h3>Contact</h3>
+    <p class="mrow"><a id="bugbtn" class="mnext" href="mailto:pokedexsigjouea@gmail.com"><span>🐞 Signaler un bug / proposer une idée</span><span class="chev" aria-hidden="true">›</span></a></p>
+    <p class="note">Ouvre un mail déjà prêt (version, écran et appareil inclus) : il ne reste qu’à décrire le problème ou l’idée.</p></section>
+  </div>
+  <div id="mnotes" class="mnotes" hidden></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+build/node_modules/
+build/.cache/
+
+# Internal review / audit / proposal docs (kept locally, not published)
+/AUDIT-*
+/REVUE-*
+/PROPOSITION-*
+/screenshots/

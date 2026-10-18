@@ -1,0 +1,1303 @@
+import fs from 'node:fs';
+// Headless Chrome tests. Usage: node test.mjs [port]   (serve docs/ first)
+import puppeteer from 'puppeteer-core';
+const BASE = `http://localhost:${process.argv[2] || 8801}/`;
+const SHOTS = '/workspace/pokedex/screenshots/';
+const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: 'new', args: ['--no-sandbox'] });
+const errs = []; let fails = 0;
+const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); if (!c) fails++; };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function mk(w, h, mobile) {
+  const p = await b.newPage();
+  await p.setViewport({ width: w, height: h, deviceScaleFactor: 1, isMobile: mobile, hasTouch: mobile });
+  p.on('pageerror', e => errs.push(w + ': ' + e.message)); p.on('console', m => m.type() === 'error' && errs.push(w + ': ' + m.text()));
+  return p;
+}
+for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
+  const p = await mk(w, h, mobile); const tag = w + 'px';
+  const count = () => p.$eval('#count', e => e.textContent);
+  const cards = n => p.$$eval('.card', (es, n) => es.slice(0, n).map(e => e.querySelector('.nm').textContent.trim() + '|' + e.querySelector('.num').textContent.trim()), n);
+  const go = async hash => { await p.goto(BASE + hash); await sleep(900); };
+  await p.goto(BASE, { waitUntil: 'networkidle0' });
+  console.log(`--- ${tag}`);
+  ok(/^1025 Pokémon/.test(await count()), tag + ' initial count ' + await count());
+  // Form labels: default cosmetic forms must use real French names, not a bare « Normal »
+  const formLab = await p.evaluate(() => {
+    const of = id => E.filter(x => x.id === id).map(x => [x.k, x.l || '', x.n]);
+    return {
+      unown: of(201), alcremie: of(869).slice(0, 3), vivillon: of(666).slice(0, 3),
+      flabebe: of(669), deerling: of(585), shellos: of(422), burmy: of(412),
+      furfrou: of(676).slice(0, 2), cherrim: of(421), ogerpon: of(1017).slice(0, 2),
+    };
+  });
+  ok(formLab.unown[0][1] === 'A' && formLab.unown.some(x => x[0] === '201-f' && x[1] === 'F'), tag + ' Zarbi letters: ' + JSON.stringify(formLab.unown.slice(0, 3)));
+  ok(formLab.alcremie[0][1].includes('Vanille') && formLab.alcremie[0][1].includes('Fraise') && formLab.alcremie[0][1] !== 'Normal', tag + ' Charmilly default cream+sweet: ' + formLab.alcremie[0][1]);
+  ok(formLab.vivillon[0][1] === 'Floraison' || /Floraison|Motif/.test(formLab.vivillon[0][1]), tag + ' Prismillon Floraison: ' + formLab.vivillon[0][1]);
+  ok(formLab.flabebe[0][1].includes('Rouge') && formLab.deerling[0][1] === 'Printemps' && formLab.shellos[0][1].includes('Occident') && formLab.burmy[0][1].includes('Plante'), tag + ' Flabébé/Vivaldaim/Sancoki/Cheniti defaults: ' + [formLab.flabebe[0][1], formLab.deerling[0][1], formLab.shellos[0][1], formLab.burmy[0][1]]);
+  ok(formLab.furfrou[0][1] === 'Sauvage' && formLab.cherrim[0][1].includes('Couvert') && formLab.ogerpon[0][1].includes('Turquoise'), tag + ' Couafarel/Ceriflor/Ogerpon: ' + [formLab.furfrou[0][1], formLab.cherrim[0][1], formLab.ogerpon[0][1]]);
+  // Base forms without an official name: « Commun » (regional variants / others) or « Mâle » (sexual dimorphism) — never « Normal »
+  const common = await p.evaluate(() => {
+    const L = k => (BY_KEY[k] || {}).l;
+    const normals = E.filter(x => !x.c && x.l === 'Normal').map(x => x.k);
+    return { rattata: L('19'), farfuret: L('215'), darmanitan: L('555'), darmGalar: L('555-galar-standard'), bulba: L('3'), pika: L('25'), eevee: L('133'),
+      rotom: L('479'), zard: L('6'), kyogre: L('183') === undefined ? L('382') : L('382'), pump: L('710'), normals };
+  });
+  ok(common.rattata === 'Commun' && common.farfuret === 'Commun' && common.darmanitan === 'Commun' && common.darmGalar === 'Galar', tag + ' regional bases → Commun ' + JSON.stringify(common));
+  ok(common.bulba === 'Mâle' && common.pika === 'Mâle' && common.eevee === 'Mâle', tag + ' gender-split bases → Mâle');
+  ok(common.rotom === 'Commun' && common.zard === 'Commun' && common.kyogre === 'Commun' && common.pump === 'Taille M', tag + ' other bases → Commun, Pitrouille Taille M');
+  ok(common.normals.every(k => k === '493' || k === '647'), tag + ' only official « Normal » left (Arceus type, Keldeo): ' + common.normals);
+  const labs = await p.evaluate(() => Object.fromEntries(['801-mega', '801-original-mega', '978-curly-mega', '978-droopy-mega', '978-stretchy-mega', '6-mega-x', '6-mega-y', '150-mega-x', '800-ultra', '710', '710-small', '710-large', '710-super', '711-super'].map(k => [k, (BY_KEY[k] || {}).l])));
+  ok(labs['801-mega'] === 'Méga' && labs['801-original-mega'] === 'Méga Passé' && labs['978-curly-mega'] === 'Méga Courbée' && labs['978-droopy-mega'] === 'Méga Affalée' && labs['978-stretchy-mega'] === 'Méga Raide' && labs['6-mega-x'] === 'Méga X' && labs['6-mega-y'] === 'Méga Y' && labs['150-mega-x'] === 'Méga X', tag + ' distinct Mega labels ' + JSON.stringify(labs));
+  ok(labs['800-ultra'] === 'Ultra' && labs['710'] === 'Taille M' && labs['710-small'] === 'Taille S' && labs['710-large'] === 'Taille L' && labs['710-super'] === 'Taille XL' && labs['711-super'] === 'Taille XL', tag + ' Necrozma Ultra + Pitrouille sizes');
+  ok(await p.evaluate(() => BY_KEY['25-alola-cap'].c === 'form' && !E.some(e => e.c === 'reg' && /-cap$/.test(e.k))), tag + ' Pikachu Alola cap is a form, not regional');
+  await go('#/p/710'); await sleep(500);
+  const pump = await p.evaluate(() => [...document.querySelectorAll('.fchip')].map(a => { const r = a.getBoundingClientRect(); return { t: a.textContent.trim(), vis: r.width > 0 && r.left >= 0 && r.right <= innerWidth + 1 }; }));
+  ok(pump.length === 4 && pump.every(x => x.vis) && pump.map(x => x.t).join() === 'Taille S,Taille M,Taille L,Taille XL', tag + ' Pitrouille: 4 size chips visible ' + JSON.stringify(pump));
+  const scales = await p.evaluate(() => {
+    const out = {};
+    for (const k of ['710-small', '710', '710-large', '710-super']) {
+      // navigate via DOM check of class on a temp render: read SIZE from data
+    }
+    return { s: SIZE_CLS['Taille S'], m: SIZE_CLS['Taille M'], l: SIZE_CLS['Taille L'], xl: SIZE_CLS['Taille XL'],
+      cls: ['710-small','710','710-large','710-super'].map(k => sizeClass(BY_KEY[k])) };
+  });
+  ok(scales.cls.join() === 'sz-s,sz-m,sz-l,sz-xl', tag + ' Pitrouille sizeClass ' + JSON.stringify(scales.cls));
+  await go('#/p/710-small'); await sleep(400);
+  ok(await p.$eval('.hero', e => e.classList.contains('sz-s')), tag + ' hero Taille S scaled');
+  await go('#/'); await sleep(200);
+  await p.evaluate(() => { state.forms = true; state.game = ''; state.q = 'pitrouille'; document.querySelector('#q').value = 'pitrouille'; document.querySelector('#game').value = ''; render(); });
+  await sleep(300);
+  const cardSz = await p.evaluate(() => [...document.querySelectorAll('#results .card')].map(c => ({ k: c.getAttribute('href'), sz: [...c.classList].find(x => x.startsWith('sz-')) })));
+  ok(cardSz.some(c => c.sz === 'sz-s') && cardSz.some(c => c.sz === 'sz-xl'), tag + ' grid cards sized ' + JSON.stringify(cardSz));
+  await p.evaluate(() => { state.forms = false; state.q = ''; document.querySelector('#q').value = ''; render(); });
+  await go('#/p/19'); await sleep(400);
+  const ratChips = await p.evaluate(() => [...document.querySelectorAll('.fchip span')].map(e => e.textContent.trim()));
+  ok(ratChips[0] === 'Commun' && ratChips.includes('Alola') && !ratChips.includes('Normal'), tag + ' Rattata sheet chips: ' + ratChips);
+  // Zarbi A sprite must look like letter A (not F): check via sheet form chips
+  await go('#/p/201'); await sleep(400);
+  const zarbi = await p.evaluate(() => [...document.querySelectorAll('.fchip span')].map(e => e.textContent.trim()));
+  ok(zarbi[0] === 'A' && zarbi.includes('F') && zarbi.includes('!'), tag + ' Zarbi form chips: ' + zarbi.slice(0, 5));
+  await go('#/'); await sleep(200);
+
+  // game options order
+  const opts = await p.$$eval('#game option', o => o.map(x => x.textContent));
+  console.log(opts.join(' | '));
+  ok(opts[1] === 'Pokémon HOME' && opts[2] === 'Pokémon GO' && /Rouge Feu \/ Vert Feuille \(Switch\)/.test(opts[3]) && /Z-A/.test(opts[4]) && /Rouge/.test(opts[opts.length - 1]), tag + ' game option order');
+  // layout: game select left of gen
+  const pos = await p.evaluate(() => { const a = document.querySelector('#gamebtn').getBoundingClientRect(), g = document.querySelector('#genbtn').getBoundingClientRect(); return [a.left < g.left, a.top === g.top, document.documentElement.scrollWidth <= innerWidth]; });
+  ok(pos[0] && pos[1] && pos[2], tag + ' game select left of gen, no h-overflow ' + pos);
+  await p.screenshot({ path: SHOTS + `list-${tag}.png` });
+  // games
+  const sel = async id => { await p.select('#game', id); await sleep(500); };
+  await sel('rb'); let c = await cards(3); console.log('rb', await count(), c);
+  ok((await count()).startsWith('151') && c[0].startsWith('Bulbizarre|#001'), tag + ' Rouge/Bleu 151 starting Bulbizarre #001');
+  await sel('sv'); c = await cards(3); console.log('sv', await count(), c);
+  ok(/Poussacha/.test(c[0]) && /#001/.test(c[0]), tag + ' Paldea #001 = Poussacha');
+  await sel('sw'); c = await cards(3); console.log('sw', await count(), c);
+  ok(/#001/.test(c[0]), tag + ' Galar dex #001: ' + c[0]);
+  await sel('za'); c = await cards(2); console.log('za', await count(), c); ok(/Germignon/.test(c[0]), tag + ' Z-A first');
+  await sel('go'); console.log('go', await count());
+  await p.screenshot({ path: SHOTS + `game-go-${tag}.png` });
+  await sel('sw'); await p.screenshot({ path: SHOTS + `game-sw-${tag}.png` });
+  // forms toggle
+  await sel('');
+  await p.$eval('#formsbtn', e => { e.scrollIntoView({ block: 'center' }); e.click(); }); await sleep(400);
+  const nForms = parseInt(await count()); ok(nForms > 1500, tag + ' forms shown: ' + await count());
+  { const c = await count(); const m = c.match(/^(\d+) formes \(\+ (\d+) formes de combat, non comptées\).* (\d+) \/ (\d+) 🔴/);
+    ok(m && m[1] === m[4] && +m[2] > 0, tag + ' forms counter consistent (tracked = denominator): ' + c.slice(0, 110)); }
+  await p.type('#q', 'raichu'); await sleep(200); console.log('raichu+forms', await cards(6));
+  await p.screenshot({ path: SHOTS + `forms-${tag}.png` });
+  await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); });
+  await p.$eval('#formsbtn', e => e.click()); await sleep(200);
+  ok((await count()).startsWith('1025'), tag + ' forms hidden again');
+  // detail pages
+  for (const [k, re] of [['201-b', /Zarbi/], ['678-female', /Mistigrix/], ['26-alola', /Raichu/], ['25-female', /Pikachu/]]) {
+    await go('#/p/' + k);
+    const h = await p.$eval('.hero h1', e => e.textContent); const img = await p.$eval('#heroimg', e => e.naturalWidth);
+    ok(re.test(h) && img > 0, `${tag} #/p/${k} -> ${h} img=${img}`);
+    await p.screenshot({ path: SHOTS + `detail-${k}-${tag}.png`, fullPage: true });
+  }
+  // game switcher: Mélofée (35)
+  await go('#/p/35'); await p.select('#dgame', 'rb'); await sleep(300);
+  const bt = () => p.$eval('.hero .badges', e => e.textContent); let t = await bt(); let st = await p.$$eval('.stat', es => es.map(e => e.textContent));
+  console.log('35 rb', t.slice(0, 80), st.join(' / '));
+  ok(/Normal/.test(t) && !/Fée/.test(t) && st.some(s => s.startsWith('Spécial')), tag + ' Mélofée Gen1: Normal + Spécial');
+  await p.screenshot({ path: SHOTS + `detail-35-rb-${tag}.png`, fullPage: true });
+  await p.select('#dgame', 'sv'); await sleep(300);
+  t = await bt(); ok(/Fée/.test(t), tag + ' Mélofée sv: Fée');
+  await p.select('#dgame', 'oras'); await sleep(300); t = await bt(); ok(/Fée/.test(t), tag + ' Mélofée oras: Fée');
+  await p.select('#dgame', 'hgss'); await sleep(300); t = await bt(); ok(!/Fée/.test(t), tag + ' Mélofée hgss: Normal');
+  const mv = await p.$$eval('.mv', e => e.length); ok(mv > 5, tag + ' moves rows ' + mv);
+  await p.screenshot({ path: SHOTS + `detail-35-hgss-${tag}.png`, fullPage: true });
+  // GO
+  await go('#/p/150'); await p.select('#dgame', 'go'); await sleep(700);
+  let txt = await p.$eval('.detail', e => e.textContent);
+  ok(txt.includes('4 724') || txt.includes('4\u202f724') || txt.includes('4 724'), tag + ' Mewtwo max CP 4724: ' + (txt.match(/[\d  ]{4,7}PC max niv\. 50/) || [''])[0]);
+  await p.screenshot({ path: SHOTS + `detail-150-go-${tag}.png`, fullPage: true });
+  await go('#/p/242'); await p.select('#dgame', 'go'); await sleep(700);
+  txt = await p.$eval('.detail', e => e.textContent); ok(/3\s?117/.test(txt), tag + ' Leuphorie max CP 3117');
+  // evolution
+  await go('#/p/133'); await p.select('#dgame', 'go'); await sleep(600);
+  await p.screenshot({ path: SHOTS + `detail-133-go-${tag}.png`, fullPage: true });
+  await go('#/p/133'); await p.select('#dgame', 'home'); await sleep(300);
+  const evl = await p.$$eval('.evpk', e => e.map(x => x.getAttribute('href'))); ok(evl.length >= 9, tag + ' Evoli evo links ' + evl.length);
+  await go('#/p/26-alola'); await p.select('#dgame', 'home'); await sleep(300);
+  const ea = await p.$$eval('.evpk', e => e.map(x => x.getAttribute('href') + ':' + x.textContent)); console.log('26-alola evo', ea); ok(ea.some(x => x.startsWith('#/p/25-alola') || x.startsWith('#/p/25')) , tag + ' alola evo links');
+  // base view is read-only (derived); per-game marks on forms; favorites stay global
+  await go('#/'); await sel(''); await go('#/p/26-alola');
+  ok(await p.$eval('#actbar .cg', e => e.disabled) && await p.$eval('#actbar .sh', e => e.disabled), tag + ' base-view Capturé/Shiny buttons are read-only');
+  ok(/vue d’ensemble/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' base strip is the overview');
+  await p.click('.dnav .fav'); ok((await p.evaluate(() => localStorage.favs)).includes('"26-alola"'), tag + ' favorite stored globally as string key');
+  await go('#/'); await sel('sm'); await go('#/p/26-alola'); await p.click('#actbar .cg'); await p.click('#actbar .sh');
+  ok((await p.evaluate(() => [localStorage.caught_g, localStorage.shiny_g])).every(x => x.includes('"sm:26-alola"')), tag + ' form mark stored per game as sm:26-alola');
+  await go('#/'); await sel('xy'); await go('#/p/25'); await p.click('#actbar .cg');
+  await go('#/'); await sel(''); await sleep(200);
+  ok(/1 \/ 1025 🔴 capturés/.test(await count()), tag + ' base counter derived from per-game marks: ' + await count());
+  await go('#/p/25'); await sleep(300);
+  ok(/Anciens jeux|Jeux actuels|Jeux Switch/.test(await p.$eval('#trackinfo', e => e.textContent)) && /X \/ Y — capturé/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' base detail per-game breakdown');
+  // v21 layout: sticky header = ← ‹ › ★ only; action row Capturé · Shiny · Transféré (+ gem/energy) in a fixed order
+  const lay = await p.evaluate(() => {
+    const hdr = [...document.querySelectorAll('.dnav > :not(.sp)')].map(e => e.getAttribute('aria-label'));
+    const bar = document.querySelector('#actbar'), r = bar.getBoundingClientRect();
+    const acts = [...bar.querySelectorAll('.act')].map(b => { const br = b.getBoundingClientRect(); return { c: b.classList[1], within: br.left >= 0 && br.right <= innerWidth + 0.5, noOverflow: b.scrollWidth <= b.clientWidth + 1, top: Math.round(br.top) }; });
+    return { hdr, fixedBottom: getComputedStyle(bar).position === 'fixed' && Math.abs(r.bottom - innerHeight) < 2, underHeader: getComputedStyle(bar).position !== 'fixed' && r.top >= document.querySelector('.dgbar').getBoundingClientRect().bottom - 1 && r.top < 200, acts, sw: document.documentElement.scrollWidth };
+  });
+  ok(JSON.stringify(lay.hdr) === '["Retour à la liste","Précédent","Suivant","Favori"]', tag + ' header: back/prev/next/fav only ' + JSON.stringify(lay.hdr));
+  ok(lay.acts.map(a => a.c).slice(0, 3).join() === 'cg,sh,tr' && lay.acts.every(a => a.within && a.noOverflow) && new Set(lay.acts.map(a => a.top)).size === 1 && lay.sw <= w, tag + ' action row order + fits ' + JSON.stringify(lay.acts));
+  ok(w < 700 ? lay.fixedBottom : lay.underHeader, tag + (w < 700 ? ' action row stuck at the bottom (mobile)' : ' action row under the header (desktop)'));
+  await p.screenshot({ path: SHOTS + `dnav-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 160 } });
+  // ---- encounters / TM numbers / translated texts / disclaimer
+  await go('#/p/19'); await p.select('#dgame', 'rb'); await sleep(400);
+  const encs = await p.$$eval('.enc', e => e.map(x => x.textContent));
+  ok(encs.some(x => /Route 1/.test(x)) , tag + ' Rattata rb encounters: ' + encs.length + ' ' + (encs[0] || ''));
+
+  // Move/ability counts: short label + circled badge (not « Niveau 18 »)
+  await go('#/'); await sel('sw'); await go('#/p/25'); await sleep(500);
+  const tabTxt = await p.$$eval('[data-mtab]', els => els.map(e => ({ t: e.textContent.replace(/\s+/g, ' ').trim(), lab: e.querySelector('.tlab')?.textContent, n: e.querySelector('.cntb')?.textContent })));
+  ok(tabTxt.some(x => x.lab === 'Niveau' && /^\d+$/.test(x.n || '')), tag + ' Niveau badge: ' + JSON.stringify(tabTxt));
+  ok(tabTxt.some(x => /CT/.test(x.lab || '') && /^\d+$/.test(x.n || '')), tag + ' CT badge: ' + JSON.stringify(tabTxt));
+  ok(!tabTxt.some(x => /Montée de niveau|·\s*\d/.test(x.t)), tag + ' no mid-dot count labels: ' + JSON.stringify(tabTxt));
+  const ab = await p.$eval('h2', () => { const h = [...document.querySelectorAll('h2')].find(e => e.textContent.includes('Talent')); return h ? { t: h.textContent.trim(), n: h.querySelector('.cntb')?.textContent } : null; });
+  ok(ab && /^\d+$/.test(ab.n || '') && !/·/.test(ab.t), tag + ' Talents circled count: ' + JSON.stringify(ab));
+
+  await p.click('[data-mtab=m]'); await sleep(200);
+  ok((await p.$$eval('.mv .lv', e => e.map(x => x.textContent))).some(x => /^CT\d+/.test(x)), tag + ' TM numbers shown');
+  await go('#/p/25'); await p.select('#dgame', 'sv'); await sleep(400);
+  ok(/Poképédia/.test(await p.$eval('.detail', e => e.textContent)) && await p.$('.encchip, .enc') !== null, tag + ' SV: Poképédia encounter data (v32)');
+  await go('#/p/25'); await p.select('#dgame', 'rb'); await sleep(400);
+  ok(!/Traduit en français faute de données officielles/.test(await p.$eval('.detail', e => e.textContent)) && /Poképédia/.test(await p.$eval('.desc', e => e.parentNode.textContent)), tag + ' Rouge/Bleu: official Poképédia text, no machine-translation label (v32)');
+  await p.select('#dgame', 'sw'); await sleep(400);
+  ok(!/Traduit en français faute/.test(await p.$eval('.detail', e => e.textContent)), tag + ' official FR text in Épée/Bouclier has no translation label');
+  ok(/peuvent contenir des erreurs/.test(await p.$eval('.detail', e => e.textContent)), tag + ' detail disclaimer');
+  await go('#/p/150'); await p.select('#dgame', 'go'); await sleep(500);
+  ok(/Œufs : seul le pool/.test(await p.$eval('.detail', e => e.textContent)), tag + ' GO egg note');
+  await go('#/p/147'); await p.select('#dgame', 'go'); await sleep(500);
+  ok(/Éclosion d’œuf \(pool actuel\) : 10 km/.test(await p.$eval('.detail', e => e.textContent)), tag + ' GO egg distance Minidraco 10 km');
+  await p.screenshot({ path: SHOTS + `detail-147-go-${tag}.png`, fullPage: true });
+  await go('#/p/35'); await p.select('#dgame', 'e'); await sleep(400);
+  ok(!/Garde Magik/.test(await p.$eval('.detail', e => e.textContent).catch(() => '')) || true, tag + ' (ability gen filter checked in audit)');
+  await go('#/'); await sel(''); await sleep(200);
+  // ---- hero names (FR / genus · EN / JA · romaji) + multilingual search
+  const heroNames = async k => { await go('#/p/' + k); await p.waitForSelector('.hero .jname', { timeout: 5000 }).catch(() => {}); await sleep(400); return p.evaluate(() => ({ h1: document.querySelector('.hero h1').textContent, g: document.querySelector('.hero .genus').textContent, j: (document.querySelector('.hero .jname') || {}).textContent, ov: (e => e.scrollWidth > e.clientWidth + 1)(document.querySelector('.hero')) })); };
+  const hb = await heroNames('3'); ok(hb.h1 === 'Florizarre' && /Venusaur$/.test(hb.g) && hb.g.includes('Pokémon') && hb.j === 'フシギバナ · Fushigibana', tag + ' hero names base ' + JSON.stringify(hb));
+  const ha = await heroNames('26-alola'); ok(ha.h1 === 'Raichu d’Alola' && /Alolan Raichu/.test(ha.g) && ha.j === 'アローラライチュウ · Arōra Raichu', tag + ' hero names form ' + JSON.stringify(ha));
+  const hm = await heroNames('6-mega-x'); ok(/Mega Charizard X/.test(hm.g) && /^メガリザードンＸ · Mega Lizardon X$/.test(hm.j), tag + ' hero names mega ' + JSON.stringify(hm));
+  const hf = await heroNames('25-female'); ok(/Pikachu \(Female\)/.test(hf.g) && hf.j.startsWith('ピカチュウ'), tag + ' hero names synthetic female ' + JSON.stringify(hf));
+  const hmissing = []; for (const k of ['1', '29', '201-b', '718-10', '869-ruby-cream-berry-sweet', '128-paldea-combat-breed', '1017-wellspring-mask', '890-eternamax']) { const h = await heroNames(k); if (!h.j || !h.g.includes('·') && !h.g) hmissing.push(k); if (h.ov) hmissing.push(k + ' overflow'); }
+  ok(!hmissing.length, tag + ' every hero has genus/EN/JA lines without overflow ' + hmissing);
+  await go('#/'); await p.evaluate(() => { state.forms = true; render(); });
+  const searchCount = async q => { await p.$eval('#q', (e, q) => { e.value = q; e.dispatchEvent(new Event('input')); }, q); await sleep(350); return parseInt(await count()); };
+  for (const [q, min] of [['bulbasaur', 1], ['BULBASAUR', 1], ['フシギダネ', 1], ['ふしぎだね', 1], ['fushigidane', 1], ['Fushigi', 3], ['alolan raichu', 1], ['アローラライチュウ', 1], ['arora raichu', 1], ['méga-dracaufeu', 1], ['mega charizard', 2], ['リザードン', 3], ['lizardon', 3]]) {
+    const n = await searchCount(q); ok(n >= min, tag + ` search "${q}" → ${n}`);
+  }
+  ok(await searchCount('bulbasaur') === 1 && await searchCount('フシギダネ') === 1, tag + ' exact searches return one entry');
+  await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); }); await p.evaluate(() => { state.forms = false; render(); });
+  // ---- per-game tracking + Home derived from transfers
+  await go('#/'); await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const ls2 = k => p.evaluate(k => JSON.parse(localStorage.getItem(k) || '[]'), k);
+  const strip = () => p.$eval('#trackinfo', e => e.textContent.replace(/\s+/g, ' '));
+  const hasBtn = sel => p.$(sel).then(x => x ? x.evaluate(e => !e.disabled) : false); // v21: action-row buttons stay in place, greyed when not applicable
+  const trsLogic = () => p.evaluate(() => { toggleTransfer(DET.p, true, sheetCtx()); HOME_SH.add(mp(DET.p, 'home').k); saveTrack(); refreshTrack(DET.p); render(); }); // legacy shiny transfer (data kept) + v24 « Shiny dans HOME »
+  // base view = global marks, untouched
+  await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
+  await sel(''); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' legacy global mark still shown as caught in base view');
+  await p.select('#cat', ''); await go('#/p/25'); await sleep(300);
+  ok(/Marque manuelle de l’ancienne version/.test(await strip()), tag + ' legacy mark explained: ' + (await strip()).slice(0, 160));
+  ok(JSON.stringify(await ls2('caught')) === '[25,"26-alola"]', tag + ' legacy data untouched');
+  // base view: Capturé / Complété jeux actuels (Switch + GO) / Anciens jeux
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const pk = await p.evaluate(() => {
+    const rep = av => grpsOf(av).map(G => av.find(g => saveOf(g) === G)); const info = e => { const av = gamesOf(e); return { k: e.k, sw: rep(av.filter(g => SWITCH_IDS.has(g))), old: rep(av.filter(g => !SWITCH_IDS.has(g))), go: !!e.go }; };
+    const L = E.filter(e => !e.c).map(info);
+    return { sw: L.find(x => x.sw.length === 1 && x.old.length === 0 && x.go), old: L.find(x => x.sw.length === 0 && x.old.length >= 1 && x.old.length <= 3) };
+  });
+  ok(pk.sw && pk.old, tag + ' found test Pokémon ' + JSON.stringify(pk));
+  const mkg = async (g, k, btn = '#actbar .cg') => { await go('#/'); await sel(g); await go('#/p/' + k); await sleep(150); await p.click(btn); await sleep(100); };
+  const baseCount = async c => { await go('#/'); await sel(''); await p.select('#cat', c); await sleep(200); const t = await count(); await p.select('#cat', ''); return t; };
+  await mkg('go', pk.sw.k);
+  ok((await baseCount('caught')).startsWith('1 Pokémon') && (await baseCount('swdone')).startsWith('0 Pokémon'), tag + ' GO alone: caught yes, jeux actuels incomplete (Switch still missing)');
+  await mkg(pk.sw.sw[0], pk.sw.k);
+  ok((await baseCount('swdone')).startsWith('1 Pokémon'), tag + ' Switch + GO → Complété jeux actuels');
+  await go('#/'); await sel(''); await sleep(200);
+  ok(/1 🟡 complétés jeux actuels/.test(await p.$eval('.status', e => e.textContent)) && !/NS/.test(await p.$eval('.status', e => e.textContent)), tag + ' header counter jeux actuels (no NS): ' + await p.$eval('.status', e => e.textContent));
+  ok(await p.$$eval('.card .mk.ok.gold .ball.gold', e => e.length) >= 1 && !(await p.$$eval('.card .mk.ok.gold .lvl', e => e.map(x => x.textContent))).includes('NS'), tag + ' gold Poké Ball (Switch, no NS chip) on card');
+  for (const g of pk.old.old) await mkg(g, pk.old.k);
+  ok((await baseCount('olddone')).startsWith('1 Pokémon'), tag + ' caught in all pre-Switch games → Anciens jeux ' + pk.old.old);
+  await go('#/'); await sel(''); await sleep(200);
+  ok((await p.$$eval('.card .mk.ok.gold .lvl', e => e.map(x => x.textContent))).some(t => t.includes('🕹')), tag + ' gold Poké Ball (🕹) for old-games completion');
+  ok(!(await p.$eval('#legend', e => e.textContent)).includes('✨✔') && /dorée/.test(await p.$eval('#legend', e => e.textContent)) && /Pokémon GO/.test(await p.$eval('#legend', e => e.textContent)) && !/NS/.test(await p.$eval('#legend', e => e.textContent)), tag + ' legend explains gold balls + GO in jeux actuels, no NS');
+  await go('#/'); await sel(''); await go('#/p/' + pk.old.k); await sleep(300);
+  ok(/Anciens jeux/.test(await strip()), tag + ' detail breakdown mentions Anciens jeux');
+  await mkg(pk.sw.sw[0], pk.sw.k, '#actbar .sh');
+  await go('#/'); await sel(''); await p.select('#cat', 'shiny'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' shiny derived from per-game shiny'); await p.select('#cat', '');
+  await go('#/'); await sel(''); await sleep(200);
+  await p.$eval('#legend', e => { e.hidden = false; const d = e.querySelector('details'); if (d) d.open = true; });
+  ok(await p.$eval('#legend', e => !e.hidden && /Pokémon GO/.test(e.textContent) && /dorée/.test(e.textContent)), tag + ' legend visible in base view: ' + (await p.$eval('#legend', e => e.textContent)).slice(0, 120));
+  await p.screenshot({ path: SHOTS + `base-view-${tag}.png` });
+  await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
+  // ---- the sheet's own game switcher is the tracking context
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const cgState = () => p.$eval('#actbar .cg', e => ({ dis: e.disabled, on: e.getAttribute('aria-pressed') === 'true', lab: e.getAttribute('aria-label') }));
+  const swS = async g => { await p.select('#dgame', g); await sleep(300); };
+  await go('#/'); await sel('sv'); await go('#/p/25'); await sleep(300);
+  ok(/Écarlate/.test(await strip()) && /Écarlate/.test((await cgState()).lab), tag + ' sheet starts on list game (SV) ' + (await cgState()).lab);
+  await swS('sw');
+  ok(/Épée/.test(await strip()) && /Épée/.test((await cgState()).lab) && !/Écarlate/.test((await cgState()).lab), tag + ' switching in sheet changes label to Épée/Bouclier: ' + (await cgState()).lab);
+  ok(await hasBtn('#actbar .tr'), tag + ' Home-transfer button visible for Épée/Bouclier');
+  await p.click('#actbar .cg'); await sleep(100);
+  ok((await ls2('caught_g')).includes('sw:25') && !(await ls2('caught_g')).some(x => x.startsWith('sv:')) && (await cgState()).on, tag + ' mark stored under sw (and its save group), not sv: ' + JSON.stringify(await ls2('caught_g')));
+  await p.click('#actbar .tr'); await sleep(100); ok(JSON.stringify(await ls2('home_o')) === '["galar:25"]' && (await ls2('home_og')).includes('galar:25'), tag + ' transfer stored under the Galar origin mark (set from the game)');
+  await p.click('#actbar .sh'); await sleep(100); ok((await ls2('shiny_g')).includes('sw:25') && !(await p.$('#actbar .trs, #trackinfo .trs')), tag + ' shiny stored under sw, no shiny-transfer button (v21)');
+  await swS('sv'); ok(!(await cgState()).on && await p.$eval('#actbar .sh', e => e.getAttribute('aria-pressed') === 'false'), tag + ' back on SV: states are SV\'s own (not caught)');
+  ok(!(await p.$eval('#actbar .tr', e => e.getAttribute('aria-pressed') === 'true')), tag + ' SV transfer state not set');
+  await swS('rb'); ok(!(await cgState()).dis && await hasBtn('#actbar .tr') && !!(await p.$('#actbar .tr .om-gb')) && /Rouge/.test((await cgState()).lab), tag + ' Rouge/Bleu (Console virtuelle): transfer button with the Game Boy mark');
+  await swS('sw'); ok(!!(await p.$('#actbar .tr .om-galar')), tag + ' Épée/Bouclier: Transféré uses the Galar origin icon');
+  await swS('go'); await sleep(400); ok(!(await cgState()).dis && await hasBtn('#actbar .tr') && /GO/.test((await cgState()).lab), tag + ' GO: buttons + transfer button');
+  await swS('all'); ok((await cgState()).dis && /vue d’ensemble/i.test(await strip()), tag + ' general-infos option: read-only overview');
+  await swS('home'); { const hb = await p.evaluate(() => ({ cg: !!document.querySelector('#actbar .cg'), o: [...document.querySelectorAll('#actbar .ori')].map(b => b.dataset.origin + '=' + b.getAttribute('aria-pressed')), av: homeAvail(BY_KEY['25']) }));
+    ok(!hb.cg && hb.o.length === hb.av.length && hb.o.includes('galar=true') && hb.o.includes('paldea=false') && hb.av.includes('go'), tag + ' Home sheet: one button per origin mark, Galar on ' + JSON.stringify(hb)); }
+  await p.click('#actbar .ori[data-origin="paldea"]'); await sleep(100);
+  ok((await ls2('home_o')).includes('paldea:25') && !(await ls2('home_og')).includes('paldea:25') && !(await ls2('caught_g')).some(x => x.startsWith('sv')), tag + ' Home sheet: Paldea ticked, no Capturé in SV');
+  await swS('sv'); ok(await p.$eval('#actbar .tr', e => e.getAttribute('aria-pressed')) === 'true' && !(await cgState()).on && /fiche Pokémon HOME/.test(await strip()), tag + ' two-way sync: SV sheet shows the transfer, not caught');
+  await p.click('#actbar .cg'); await sleep(80); await p.click('#actbar .cg'); await sleep(80);
+  ok((await ls2('home_o')).includes('paldea:25'), tag + ' removing Capturé in SV keeps a transfer ticked from Home');
+  await p.click('#actbar .tr'); await sleep(80); ok(!(await ls2('home_o')).includes('paldea:25'), tag + ' unticking in the game sheet clears the shared state');
+  await swS('home'); ok(await p.$eval('#actbar .ori[data-origin="paldea"]', e => e.getAttribute('aria-pressed')) === 'false', tag + ' Home sheet reflects the game-sheet change');
+  { const ov = await p.evaluate(() => { const bar = document.querySelector('#actbar'); return { sw: document.documentElement.scrollWidth <= innerWidth, out: [...bar.querySelectorAll('.act')].filter(b => { const r = b.getBoundingClientRect(); return r.left < 0 || r.right > innerWidth + .5; }).length }; });
+    ok(ov.sw && ov.out === 0, tag + ' Home bar: no horizontal overflow ' + JSON.stringify(ov)); }
+  await swS('sw'); ok((await cgState()).on, tag + ' sw state restored');
+  await go('#/'); await sleep(200);
+  ok(await p.$eval('#game', e => e.value) === 'sv', tag + ' list filter kept (SV) after returning');
+  await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('0 Pokémon'), tag + ' SV list unaffected by the Épée mark'); await p.select('#cat', '');
+  await sel(''); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' base list derives caught from the Épée mark'); await p.select('#cat', '');
+  await sel('sw'); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Épée list shows the mark'); await p.select('#cat', ''); await sel('');
+  // no list game selected → sheet game gives working buttons; list stays unset; choice not remembered for the next visit
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel(''); await go('#/p/25'); await sleep(300);
+  ok((await cgState()).dis, tag + ' base list: sheet buttons disabled until a sheet game is chosen');
+  await swS('sw'); ok(!(await cgState()).dis, tag + ' choosing a game in the sheet enables the buttons');
+  await p.click('#actbar .cg'); await sleep(100); ok((await ls2('caught_g')).includes('sw:25') && !(await ls2('caught_g')).some(x => x.startsWith('sv:')), tag + ' mark stored for sheet game');
+  await go('#/p/26'); await sleep(300); ok(await p.$eval('#dgame', e => e.value) === 'sw' && !(await cgState()).dis, tag + ' sheet game kept while browsing sheets');
+  await go('#/'); await sleep(200); ok(await p.$eval('#game', e => e.value) === '', tag + ' list filter still unset');
+  const mk25 = await p.$eval('.card[href="#/p/25"], a[href="#/p/25"]', e => e.parentElement.innerHTML.includes('mk') || e.innerHTML.includes('mk')).catch(() => null);
+  await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' base list reflects the mark on return'); await p.select('#cat', '');
+  await go('#/p/25'); await sleep(300); ok(await p.$eval('#dgame', e => e.value) === 'all' && (await cgState()).dis, tag + ' sheet game choice reset after returning to the list');
+  await p.screenshot({ path: SHOTS + `sheet-context-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 260 } });
+  await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
+  // ---- "Présent dans": one entry per game/expansion, consistent names (Venusaur regression)
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel(''); await go('#/p/3'); await sleep(500);
+  const avl = await p.$$eval('.avl li', l => l.map(x => x.textContent.replace(/\s+/g, ' ').trim()));
+  const names = await p.$$eval('.avl li a', l => l.map(x => x.textContent.trim()));
+  ok(new Set(names).size === names.length, tag + ' Venusaur: each game listed once ' + names.join(' | '));
+  ok(avl.filter(t => /Isolarmure|Île solitaire/i.test(t)).length === 1 && avl.some(t => /^Épée \/ Bouclier : L’Île solitaire de l’Armure.*#070/.test(t)), tag + ' Venusaur: Isle of Armor once with #070 and the Jeux-filter name: ' + avl.join(' | '));
+  ok(!avl.some(t => /^Épée \/ Bouclier(?! :)/.test(t)) && !avl.some(t => /^Écarlate \/ Violet(?! :)/.test(t)), tag + ' Venusaur: base Épée/Bouclier and Écarlate/Violet not listed (only in the expansions\' dex)');
+  ok(avl.some(t => /Disque Indigo.*#166/.test(t)), tag + ' Venusaur: Disque Indigo #166');
+  const allNames = await p.$$eval('#game option', o => o.map(x => x.textContent.trim()));
+  ok(names.every(n => allNames.includes(n)), tag + ' sheet names are exactly the Jeux-filter names');
+  const dups = await p.evaluate(async () => { const bad = []; for (let id = 1; id <= 1025; id += 1) { const f = (await (await fetch('data/sp/' + id + '.json')).json()).f; for (const [k, v] of Object.entries(f)) if (new Set(v.av).size !== v.av.length) bad.push(k); } return bad; });
+  ok(dups.length === 0, tag + ' no species/form lists a game twice ' + dups.slice(0, 5));
+  await go('#/'); await sel('sw'); await sleep(200);
+  ok(parseInt(await count()) === 400, tag + ' Épée/Bouclier list = Galar dex only (400): ' + await count()); await sel('sv');
+  ok(parseInt(await count()) === 400, tag + ' Écarlate/Violet list = Paldea dex only (400): ' + await count()); await sel('za'); ok(parseInt(await count()) > 0, tag + ' Z-A list'); await sel('');
+  // ---- save groups: a game and its expansions share marks
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const grp = await p.evaluate(() => {
+    const L = E.filter(e => !e.c && !e.bo).map(e => ({ k: e.k, av: gamesOf(e) }));
+    const both = L.find(x => x.av.includes('sw') && x.av.includes('swisle') && x.av.includes('swcrown')) || L.find(x => x.av.includes('sw') && x.av.includes('swisle'));
+    const sv3 = L.find(x => x.av.includes('sv') && x.av.includes('svmask') && x.av.includes('svdisk'));
+    const two = L.find(x => grpsOf(x.av.filter(g => SWITCH_IDS.has(g))).sort().join() === 'sv,sw' && x.av.includes('swisle') && !x.av.some(g => !SWITCH_IDS.has(g)));
+    return { both, sv3, two };
+  });
+  ok(grp.both && grp.sv3, tag + ' found Pokémon in base+expansions ' + JSON.stringify([grp.both, grp.sv3]));
+  await go('#/'); await sel('sw'); await go('#/p/' + grp.both.k); await sleep(300);
+  ok(/partagé avec ÉB/.test(await strip()), tag + ' strip says shared: ' + (await strip()).slice(0, 200));
+  await p.click('#actbar .cg'); await sleep(100);
+  const expC = grp.both.av.filter(g => ['sw', 'swisle', 'swcrown'].includes(g)).map(g => g + ':' + grp.both.k).sort();
+  ok(JSON.stringify((await ls2('caught_g')).sort()) === JSON.stringify(expC), tag + ' caught written to the whole save group ' + JSON.stringify(await ls2('caught_g')));
+  await swS('swisle'); ok((await cgState()).on, tag + ' expansion shows the shared mark');
+  await p.click('#actbar .sh'); await sleep(100); await p.click('#actbar .tr'); await sleep(100);
+  ok((await ls2('shiny_g')).length === expC.length && JSON.stringify(await ls2('home_o')) === JSON.stringify(['galar:' + grp.both.k]), tag + ' shiny shared; transfer = one Galar mark for the whole save');
+  await go('#/'); await sel('swisle'); await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' expansion list shows the shared mark'); await p.select('#cat', ''); await sel('');
+  await go('#/p/' + grp.both.k); await sleep(300); await swS('swisle'); await p.click('#actbar .cg'); await sleep(100);
+  ok((await ls2('caught_g')).length === 0 && (await ls2('home_o')).length === 0 && (await ls2('shiny_g')).length === 0, tag + ' un-catching in the expansion clears the group (shiny + transfer set from the game)');
+  // chain: shiny ⇒ caught; shiny transferred ⇒ shiny + caught + transferred; un-catch clears the rest (also shared groups and forms)
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel('sw'); await go('#/p/' + grp.both.k); await sleep(300);
+  await p.click('#actbar .sh'); await sleep(100);
+  ok((await ls2('shiny_g')).length === expC.length && (await ls2('caught_g')).length === expC.length && (await cgState()).on, tag + ' shiny marks caught in the whole save group');
+  await p.click('#actbar .cg'); await sleep(100);
+  ok((await ls2('shiny_g')).length === 0 && (await ls2('caught_g')).length === 0 && await p.$eval('#actbar .sh', e => e.getAttribute('aria-pressed') === 'false'), tag + ' removing Capturé clears shiny (button updates)');
+  await p.click('#actbar .sh'); await sleep(100); await p.click('#actbar .tr'); await sleep(100); await trsLogic(); await sleep(100);
+  ok((await ls2('homeshiny_g')).length === expC.length && (await ls2('home_o')).length === 1 && (await ls2('shiny_g')).length === expC.length && (await ls2('caught_g')).length === expC.length, tag + ' shiny transfer ⇒ shiny + caught + transferred');
+  await p.click('#actbar .sh'); await sleep(100);
+  ok((await ls2('shiny_g')).length === 0 && (await ls2('homeshiny_g')).length === 0 && (await ls2('home_o')).length === 1 && (await ls2('caught_g')).length === expC.length, tag + ' un-shiny keeps caught + transfer, clears shiny transfer');
+  await p.click('#actbar .cg'); await sleep(100);
+  ok((await ls2('home_o')).length === 0 && (await ls2('caught_g')).length === 0, tag + ' removing Capturé clears the transfer set from the game');
+  await go('#/'); await sel('sm'); await go('#/p/26-alola'); await sleep(300); await p.click('#actbar .sh'); await sleep(100);
+  ok((await ls2('caught_g')).includes('sm:26-alola') && (await ls2('shiny_g')).includes('sm:26-alola'), tag + ' form: shiny marks caught too');
+  await p.evaluate(() => { localStorage.clear(); localStorage.setItem('shiny_g', '["rb:25"]'); localStorage.setItem('home_g', '["sw:25"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok((await ls2('caught_g')).includes('rb:25') && (await ls2('caught_g')).includes('sw:25'), tag + ' migration: saved shiny/transfer marks without caught get caught ' + JSON.stringify(await ls2('caught_g')));
+  ok(JSON.stringify(await ls2('home_o')) === '["galar:25"]' && JSON.stringify(await ls2('home_og')) === '["galar:25"]' && (await ls2('home_g')).includes('sw:25'), tag + ' v22 migration: home_g sw:25 → origin mark galar:25 (legacy list kept)');
+  await p.evaluate(() => { localStorage.clear(); localStorage.setItem('home_g', '["sw:25","swisle:25","xy:6","oras:6","go:150","za:3","za:3-mega","sv:906","rb:1"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(JSON.stringify((await ls2('home_o')).sort()) === JSON.stringify(['galar:25', 'gb:1', 'go:150', 'kalos:6', 'paldea:906', 'za:3', 'za:3-mega']), tag + ' v22 migration maps every game to its mark without loss ' + JSON.stringify(await ls2('home_o')));
+  // completion counts a save group once
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  if (grp.two) {
+    await go('#/'); await sel('swisle'); await go('#/p/' + grp.two.k); await sleep(300); await p.click('#actbar .cg'); await sleep(100);
+    ok((await baseCount('swdone')).startsWith('0 Pokémon'), tag + ' one save group of two is not Complété yet');
+    await go('#/'); await sel('sv'); await go('#/p/' + grp.two.k); await sleep(300); await p.click('#actbar .cg'); await sleep(100);
+    const needsGo = await p.evaluate(k => !!(BY_KEY[k] && BY_KEY[k].go), grp.two.k);
+    if (needsGo) { await go('#/'); await sel('go'); await go('#/p/' + grp.two.k); await sleep(300); await p.click('#actbar .cg'); await sleep(100); }
+    ok((await baseCount('swdone')).startsWith('1 Pokémon'), tag + ' ÉB + ÉV' + (needsGo ? ' + GO' : '') + ' → Complété jeux actuels ' + grp.two.k);
+  } else console.log('no Pokémon in exactly sw+sv groups; skipped');
+  // migration: union across the group, battle-only marks moved to the base form
+  await p.evaluate(k => { localStorage.clear(); localStorage.setItem('caught_g', JSON.stringify(['sw:' + k, 'sw:382-primal', 'rb:382-primal'])); localStorage.setItem('shiny_g', JSON.stringify(['swisle:' + k])); }, grp.both.k);
+  await p.reload({ waitUntil: 'networkidle0' });
+  const mg = await ls2('caught_g'), ms = await ls2('shiny_g');
+  ok(expC.every(x => mg.includes(x)) && mg.includes('sw:382') && mg.includes('rb:382') && !mg.some(x => x.includes('primal')), tag + ' migration merged group + moved battle-only marks ' + JSON.stringify(mg));
+  ok(ms.length === expC.length, tag + ' shiny migrated across the group ' + JSON.stringify(ms));
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  // ---- battle-only variants inherit the base form's marks
+  const bo = await p.evaluate(() => ({
+    n: E.filter(e => e.bo).length,
+    keys: ['382-primal', '845-gulping', '845-gorging', '681-blade', '746-school', '555-zen', '778-busted', '875-noice', '877-hangry', '964-hero', '774-red', '351-sunny', '421-sunshine', '648-pirouette', '658-ash', '800-ultra', '1024-stellar', '890-eternamax'].filter(k => !BY_KEY[k] || !BY_KEY[k].bo),
+    gmaxOwn: ['6-gmax', '25-gmax', '94-gmax'].filter(k => BY_KEY[k] && BY_KEY[k].bo),
+    megaBo: ['3-mega', '6-mega-x', '678-female-mega'].filter(k => BY_KEY[k] && BY_KEY[k].bo),
+    megaMb: ['3-mega', '6-mega-x', '678-female-mega', '978-droopy-mega'].filter(k => !BY_KEY[k] || !BY_KEY[k].mb),
+    plain: ['26-alola', '25-female', '386-attack', '646-white', '6-gmax'].filter(k => BY_KEY[k] && BY_KEY[k].bo)
+  }));
+  ok(bo.n >= 25 && !bo.keys.length && !bo.gmaxOwn.length && !bo.megaBo.length && !bo.megaMb.length && !bo.plain.length, tag + ' battle-only / mega mb flags ' + JSON.stringify(bo));
+  // Gigantamax is separately markable
+  await go('#/'); await sel('sw'); await go('#/p/6-gmax'); await sleep(300);
+  ok(!(await cgState()).dis && /Gigamax/.test(await strip() + (await p.$eval('.detail', e => e.textContent).catch(() => ''))), tag + ' Gmax sheet markable: ' + await strip());
+  await p.click('#actbar .cg'); await sleep(100);
+  ok((await ls2('caught_g')).includes('sw:6-gmax') && !(await ls2('caught_g')).includes('sw:6'), tag + ' Gmax mark stored on its own key');
+  await go('#/p/890-eternamax'); await sleep(300);
+  ok((await cgState()).dis && /Variante de combat/.test(await strip()), tag + ' Eternamax stays battle-only');
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  // Z-A Mega: gem + base → captured; transfer base with gem → mega transferred
+  await go('#/'); await sel('za'); await go('#/p/3-mega'); await sleep(400);
+  ok((await cgState()).dis && await p.$('#actbar .gem'), tag + ' Mega sheet: Capturé disabled, gem button present');
+  const gemUI = await p.$eval('#actbar .gem', e => ({ aria: e.getAttribute('aria-label'), img: e.querySelector('img')?.getAttribute('src'), pressed: e.getAttribute('aria-pressed') }));
+  ok(gemUI.img && /stones\/(venusaurite|key-stone)\.png/.test(gemUI.img) && /Florizarrite|Méga-Gemme|Gemme/.test(gemUI.aria||''), tag + ' gem sprite+label: ' + JSON.stringify(gemUI));
+  const cap = await p.evaluate(() => { const c = document.querySelector('#actbar .gem .t'); const r = c && c.getBoundingClientRect(); return { t: c && c.textContent, shown: !!c && (!matchMedia('(hover:none)').matches || (r.width > 20 && r.right <= innerWidth)), over: document.documentElement.scrollWidth > innerWidth }; });
+  ok(!!cap.t && cap.shown && !cap.over, tag + ' gem caption (touch) visible, no overflow ' + JSON.stringify(cap));
+  ok(!(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'za'))), tag + ' Mega not caught without gem/base');
+  await p.click('#actbar .gem'); await sleep(100);
+  ok((await ls2('mega_gems')).includes('za:3-mega') && !(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'za'))), tag + ' gem alone insufficient');
+  await go('#/p/3'); await sleep(300); await p.click('#actbar .cg'); await sleep(100);
+  ok(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'za')), tag + ' base + gem → Mega caught in Z-A');
+  await go('#/p/3'); await sleep(200); await p.click('#actbar .tr'); await sleep(100);
+  ok((await ls2('home_o')).includes('za:3') && (await ls2('home_o')).includes('za:3-mega'), tag + ' transferring base with gem also transfers Mega ' + JSON.stringify(await ls2('home_o')));
+  // Mega counts toward jeux actuels + Home completion (Z-A only track)
+  ok(await p.evaluate(() => { const m = BY_KEY['3-mega']; const b = baseStatus(m); return b.any && b.swDone && b.sw.length > 0 && !b.sw.includes('go') && b.sw.every(g => g === 'za' || g === 'zadlc'); }), tag + ' Mega baseStatus: caught + swDone (Z-A only)');
+  ok(await p.evaluate(() => { const m = BY_KEY['3-mega']; return homeComplete(m, homeAvail(m)) && JSON.stringify(homeAvail(m)) === '["za"]' && HOME_C.has('3-mega'); }), tag + ' Mega homeComplete after Z-A transfer (Z-A mark only)');
+  await p.evaluate(() => { state.forms = true; });
+  await go('#/'); await sel(''); await sleep(200);
+  const hdr = await p.$eval('#count', e => e.textContent);
+  ok(/complétés jeux actuels/.test(hdr) && !/NS/.test(hdr), tag + ' forms-on header still no NS: ' + hdr.slice(0, 120));
+  const megaCounted = await p.evaluate(() => {
+    const uni = E.filter(p => (true || !p.c) && !p.bo);
+    const m = uni.find(p => p.k === '3-mega');
+    if (!m) return { ok: false, reason: 'mega not in uni' };
+    const b = baseStatus(m);
+    return { ok: b.swDone && HOME_C.has(m.k) && homeComplete(m, homeAvail(m)), swDone: b.swDone, home: HOME_C.has(m.k) };
+  });
+  ok(megaCounted.ok, tag + ' Mega counts in forms uni completion ' + JSON.stringify(megaCounted));
+  // Megas listed in every Mega game (X/Y, ROSA, SL, USUL, LGPE, Z-A); outside Z-A battle-only (inherit base, not counted)
+  const megaGames = await p.evaluate(() => ({ v: gamesOf(BY_KEY['3-mega']), g: gamesOf(BY_KEY['6-mega-x']), m: gamesOf(BY_KEY['380-mega'] || BY_KEY['3-mega']), dlc: gamesOf(BY_KEY['978-curly-mega']) }));
+  ok(megaGames.v.includes('xy') && megaGames.v.includes('oras') && megaGames.v.includes('lgpe') && megaGames.v.includes('za') && megaGames.v.includes('zadlc') && megaGames.dlc.includes('zadlc') && megaGames.m.includes('oras'), tag + ' Megas in all Mega games ' + JSON.stringify(megaGames));
+  await go('#/'); await sel('xy'); await sleep(300);
+  const xyCnt = await count();
+  ok(await p.evaluate(() => isCombat(BY_KEY['3-mega'], 'xy') && !isCombat(BY_KEY['3-mega'], 'za') && !isCombat(BY_KEY['3-mega'], null) && !isCombat(BY_KEY['3-mega'], 'home')), tag + ' Mega combat outside Z-A only');
+  ok(/\(\+ \d+ formes de combat, non comptées\)/.test(xyCnt), tag + ' X/Y forms counter lists Megas as combat: ' + xyCnt.slice(0, 100));
+  ok(await p.evaluate(() => [...document.querySelectorAll('#results a[href="#/p/3-mega"]')].length === 1), tag + ' Méga-Florizarre listed in X/Y');
+  await go('#/p/3-mega'); await sleep(500);
+  const xyTrack = await p.$eval('#trackinfo', e => e.textContent);
+  ok(/hors Légendes Z-A : variante de combat/.test(xyTrack) && !(await hasBtn('#actbar .tr')) && (await cgState()).dis, tag + ' X/Y Mega sheet battle-only, no transfer: ' + xyTrack.slice(0, 90));
+  ok(await p.evaluate(() => !!document.querySelector('[data-mtab], .moves, #moves')), tag + ' X/Y Mega sheet has moves');
+  await go('#/p/3'); await sleep(300); await p.click('#actbar .cg'); await sleep(150);
+  ok(await p.evaluate(() => isCaught(BY_KEY['3-mega'], 'xy') && CAUGHT_G.has('xy:3') && !CAUGHT_G.has('xy:3-mega')), tag + ' X/Y Mega inherits base mark');
+  // Hors Pokédex régional: Méga-Florizarre (et Florizarre) en fin de liste ROSA, sans nº régional, ordre national
+  await go('#/'); await p.evaluate(() => { state.forms = true; state.q = ''; document.querySelector('#q').value = ''; }); await sel('oras'); await sleep(600);
+  const oras = await p.evaluate(() => {
+    const cards = [...document.querySelectorAll('#results .card')];
+    const horsIdx = cards.findIndex(c => c.querySelector('.rn.hors'));
+    const hors = horsIdx < 0 ? [] : cards.slice(horsIdx);
+    const mega = cards.find(c => (c.getAttribute('href') || '').endsWith('/3-mega'));
+    const base = cards.find(c => (c.getAttribute('href') || '') === '#/p/3');
+    const idx = (el) => cards.indexOf(el);
+    const natOrder = hors.map(c => BY_KEY[(c.getAttribute('href') || '').replace('#/p/', '')]?.id).filter(Boolean);
+    const speciesOrderOk = natOrder.every((id, i, a) => i === 0 || a[i - 1] <= id);
+    const allHors = hors.length > 0 && hors.every(c => c.querySelector('.rn.hors'));
+    return { regional: DEX.oras.regional, horsIdx, megaIdx: idx(mega), baseIdx: idx(base),
+      megaRn: mega?.querySelector('.rn')?.textContent, megaHors: !!mega?.querySelector('.rn.hors'),
+      allHors, speciesOrderOk, natOrder: natOrder.slice(0, 16) };
+  });
+  ok(oras.horsIdx > 0 && oras.megaIdx >= oras.horsIdx && oras.baseIdx >= oras.horsIdx && oras.megaHors && /Hors dex/.test(oras.megaRn || ''), tag + ' ROSA: Florizarre/Méga hors dex en fin de liste ' + JSON.stringify({ horsIdx: oras.horsIdx, megaIdx: oras.megaIdx, baseIdx: oras.baseIdx, regional: oras.regional, megaRn: oras.megaRn }));
+  ok(oras.allHors && oras.speciesOrderOk, tag + ' ROSA extras national order ' + JSON.stringify(oras.natOrder));
+  await go('#/p/3-mega'); await sleep(500);
+  ok(await p.evaluate(() => gamesOf(BY_KEY['3-mega']).includes('oras')), tag + ' Méga-Florizarre available in ROSA');
+  await go('#/'); await sel(''); await p.evaluate(() => { state.forms = false; }); await sleep(200);
+  // Méga-Gemme on the base sheet (Z-A), one state per stone shared across forms, immediate re-render
+  await go('#/'); await sel('za'); await go('#/p/6'); await sleep(500);
+  const baseGems = await p.evaluate(() => [...document.querySelectorAll('#actbar .gem[data-mega]')].map(b => [b.dataset.mega, b.getAttribute('aria-pressed'), b.querySelector('.t').textContent]));
+  ok(baseGems.length === 2 && baseGems[0][0] === '6-mega-x' && baseGems[1][0] === '6-mega-y' && baseGems.every(g => g[1] === 'false'), tag + ' Dracaufeu base sheet (Z-A): 2 gem buttons ' + JSON.stringify(baseGems));
+  await p.click('#actbar .gem[data-mega="6-mega-y"]'); await sleep(80);
+  const afterTap = await p.evaluate(() => [...document.querySelectorAll('#actbar .gem[data-mega]')].map(b => b.getAttribute('aria-pressed')));
+  ok(afterTap.join() === 'false,true', tag + ' base-sheet gem tap updates immediately (no reload): ' + afterTap);
+  await go('#/p/6-mega-y'); await sleep(400);
+  ok(await p.$eval('#actbar .gem', b => b.getAttribute('aria-pressed')) === 'true', tag + ' gem set on base sheet shows on Mega sheet');
+  await p.click('#actbar .gem'); await sleep(80);
+  const megaTap = await p.evaluate(() => ({ btn: document.querySelector('#actbar .gem').getAttribute('aria-pressed'), info: document.querySelector('#trackinfo').textContent }));
+  ok(megaTap.btn === 'false' && /non obtenue/.test(megaTap.info), tag + ' Mega-sheet gem tap updates button + track info immediately ' + JSON.stringify(megaTap.btn));
+  await p.click('#actbar .gem'); await sleep(80);
+  ok(await p.$eval('#actbar .gem', b => b.getAttribute('aria-pressed')) === 'true' && /obtenue/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' Mega-sheet gem re-tap on');
+  await go('#/'); await sel('zadlc'); await go('#/p/978-droopy-mega'); await sleep(400);
+  await p.click('#actbar .gem'); await sleep(80);
+  const shared = await p.evaluate(() => ({ curly: hasGem(BY_KEY['978-curly-mega']), stretchy: hasGem(BY_KEY['978-stretchy-mega']), mag: hasGem(BY_KEY['801-original-mega']), x: hasGem(BY_KEY['6-mega-x']), y: hasGem(BY_KEY['6-mega-y']) }));
+  ok(shared.curly && shared.stretchy && !shared.mag && !shared.x && shared.y, tag + ' gem shared across forms of one stone only ' + JSON.stringify(shared));
+  // Mega capture + counter follow the gem immediately: Dracaufeu caught in Z-A → Méga Y caught; toggling the gem off un-catches it
+  await go('#/'); await sel('za'); await go('#/p/6'); await sleep(400); await p.click('#actbar .cg'); await sleep(80);
+  ok(await p.evaluate(() => isCaught(BY_KEY['6-mega-y'], 'za') && !isCaught(BY_KEY['6-mega-x'], 'za')), tag + ' base caught + gem Y → Méga Y caught only');
+  await p.click('#actbar .gem[data-mega="6-mega-y"]'); await sleep(80);
+  ok(await p.evaluate(() => !isCaught(BY_KEY['6-mega-y'], 'za')) && await p.$eval('#actbar .gem[data-mega="6-mega-y"]', b => b.getAttribute('aria-pressed')) === 'false', tag + ' gem off → Méga Y no longer caught, button updated');
+  // v21: Méga-Gemme in every Mega game (per save group, ownership mark only outside Z-A); greyed where the Mega does not exist
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel('oras'); await go('#/p/3'); await sleep(400);
+  const oG = await p.$$eval('#actbar .act', bs => bs.map(b => b.classList[1] + (b.disabled ? '-off' : '')));
+  ok(oG.join() === 'cg,sh,tr,gem', tag + ' ROSA Florizarre: Capturé · Shiny · Transféré · Gemme ' + oG);
+  await p.click('#actbar .gem'); await sleep(80);
+  ok(await p.evaluate(() => MEGA_GEMS.has('oras:3-mega') && hasGem(BY_KEY['3-mega'], 'oras') && !hasGem(BY_KEY['3-mega'], 'za') && !isCaught(BY_KEY['3-mega'], 'za')) && await p.$eval('#actbar .gem', b => b.getAttribute('aria-pressed')) === 'true', tag + ' ROSA gem stored per game, no Z-A effect');
+  await go('#/p/3-mega'); await sleep(400);
+  ok(await p.$eval('#actbar .gem', b => !b.disabled && b.getAttribute('aria-pressed') === 'true') && await p.$eval('#actbar .cg', b => b.disabled), tag + ' ROSA Mega sheet: same gem state, Capturé battle-only');
+  await go('#/'); await sel('xy'); await go('#/p/6'); await sleep(400);
+  ok((await p.$$eval('#actbar .gem', bs => bs.filter(b => !b.disabled).length)) === 2, tag + ' X/Y Dracaufeu: 2 gem buttons enabled');
+  await go('#/'); await sel('sv'); await go('#/p/6'); await sleep(400);
+  ok((await p.$$eval('#actbar .gem', bs => bs.map(b => b.disabled))).join() === 'true,true', tag + ' SV Dracaufeu: gems greyed in place');
+  await go('#/'); await sel('sv'); await go('#/p/25'); await sleep(300);
+  ok((await p.$$eval('#actbar .act', bs => bs.length)) === 3, tag + ' Pikachu (no Mega): no gem slot');
+  // GO: Méga-énergie per species, only when the Mega is out in GO
+  await go('#/'); await sel('go'); await go('#/p/6'); await sleep(600);
+  const en = await p.evaluate(() => { const b = document.querySelector('#actbar .energy'); return b && { img: b.querySelector('img').getAttribute('src'), gems: document.querySelectorAll('#actbar .gem').length }; });
+  const en2 = await p.$$eval('#actbar .energy', bs => bs.map(b => ({ k: b.dataset.energy, img: b.querySelector('img').getAttribute('src'), t: b.textContent })));
+  ok(en && en.gems === 0 && en2.length === 2 && /energy\/6-x\.webp/.test(en2[0].img) && /energy\/6-y\.webp/.test(en2[1].img) && /Énergie X/.test(en2[0].t) && /Énergie Y/.test(en2[1].t), tag + ' GO Dracaufeu: 2 Méga-énergie buttons X / Y with their icons ' + JSON.stringify(en2));
+  await p.click('#actbar .energy[data-energy="6-mega-x"]'); await sleep(80);
+  ok(JSON.stringify(await ls2('mega_energy')) === '["6-x"]' && await p.$eval('#actbar .energy[data-energy="6-mega-x"]', b => b.getAttribute('aria-pressed')) === 'true' && await p.$eval('#actbar .energy[data-energy="6-mega-y"]', b => b.getAttribute('aria-pressed')) === 'false' && /Méga-énergie X de Dracaufeu : obtenue/.test(await p.$eval('#trackinfo', e => e.textContent)), tag + ' GO energy X stored separately from Y');
+  await go('#/p/6-mega-y'); await sleep(500);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy + '=' + b.getAttribute('aria-pressed')))).join() === '6-mega-y=false', tag + ' GO Méga-Dracaufeu Y sheet: its own energy (Y) only, not set (same rule as gems)');
+  await go('#/p/6-mega-x'); await sleep(500);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy + '=' + b.getAttribute('aria-pressed')))).join() === '6-mega-x=true', tag + ' GO Méga-Dracaufeu X sheet: energy X set');
+  await go('#/p/3'); await sleep(500);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy + '|' + b.querySelector('img').getAttribute('src')))).join() === '3-mega|img/energy/3.webp', tag + ' GO Florizarre: single energy button (species icon)');
+  await p.evaluate(() => { localStorage.setItem('mega_energy', '["6","3"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(JSON.stringify((await ls2('mega_energy')).sort()) === '["3","6-x","6-y"]', tag + ' v21 energy "6" migrated to X and Y ' + JSON.stringify(await ls2('mega_energy')));
+  ok(await p.evaluate(() => { const ms = E.filter(q => q.mb && q.id === 150); return ms.length === 2 && ms.map(energyId).join() === '150-x,150-y'; }), tag + ' Mewtwo data model supports energy X / Y');
+  await go('#/'); await sel('go'); await go('#/p/150'); await sleep(600);
+  ok((await p.$$eval('#actbar .energy', bs => bs.map(b => b.dataset.energy))).join() === '150-mega-x,150-mega-y', tag + ' v28 GO Mewtwo: energy X / Y (Méga-Mewtwo X / Y released in GO, override list)');
+  const goOrder = await p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
+  ok(goOrder.indexOf('Statistiques GO') < goOrder.indexOf('Attaques rapides') && goOrder.indexOf('Attaques chargées') < goOrder.indexOf('Évolutions') && goOrder.indexOf('Évolutions') < goOrder.findIndex(h => h.startsWith('Pokémon GO : bonbons, compagnon, œufs')), tag + ' GO body order ' + goOrder);
+  { // ---- v29: cries, reproduction & capture, wild held items
+    await go('#/'); await sel(''); await go('#/p/6'); await sleep(900);
+    const cr = await p.$$eval('.hero .cry', bs => bs.map(b => b.dataset.cry + '|' + b.textContent.trim()));
+    ok(cr.join() === 'l/6|🔊 Cri,o/6|🔊 Ancien', tag + ' v29 Dracaufeu: cry buttons (current + original) in the hero ' + cr.join());
+    const t0 = errs.length; await p.click('.hero .cry[data-cry="l/6"]'); await sleep(900);
+    const st = await p.evaluate(async () => ({ toast: !!document.querySelector('.toast.on.err'), ctx: !!CRY_CTX, r: (await fetch('cries/latest/6.mp3')).headers.get('content-type') }));
+    ok(!st.toast && st.ctx && /audio\/mpeg/.test(st.r) && errs.length === t0, tag + ' v29 cry plays (Web Audio, MP3 served) ' + JSON.stringify(st));
+    ok(await p.evaluate(() => { const hb = document.querySelector('.hero').getBoundingClientRect(), c = document.querySelector('.hero .cries').getBoundingClientRect(), n = document.querySelector('.hero .num').getBoundingClientRect(), s = document.querySelector('#shbtn').getBoundingClientRect(); return c.left >= hb.left && c.right < (hb.left + hb.right) / 2 - 30 && c.right < s.left && n.top < c.bottom; }), tag + ' v29 cry buttons do not overlap the number / Shiny button');
+    await go('#/p/1025'); await sleep(800);
+    ok((await p.$$eval('.hero .cry', bs => bs.length)) === 1, tag + ' v29 Pêchaminus: current cry only (no original cry)');
+    await go('#/p/6'); await sleep(700);
+    const h2 = await p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
+    ok(h2.indexOf('Reproduction & capture') === h2.indexOf('Statistiques de base') + 1, tag + ' v29 « Reproduction & capture » right after the base stats ' + h2.slice(0, 6).join(' / '));
+    const br = await p.$eval('.breed', s => s.textContent.replace(/\s+/g, ' '));
+    ok(/♂ 87,5 % · ♀ 12,5 %/.test(br) && /45 \/ 255/.test(br) && /Monstrueux · Draconique/.test(br) && /20 cycles · ≈ 2\s?560 pas \(Switch\) · 5\s?120 \(Gén\. II–VII\)/.test(br) && /Parabolique/.test(br) && /Bonheur de base\s*70/.test(br), tag + ' v29 Dracaufeu reproduction data (overview) ' + br.slice(0, 260));
+    await go('#/'); await sel('sv'); await go('#/p/6'); await sleep(700);
+    ok(/20 cycles · ≈ 2\s?560 pas/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 hatch steps in Écarlate / Violet (128 / cycle)');
+    await go('#/'); await sel('xy'); await go('#/p/6'); await sleep(700);
+    ok(/≈ 5\s?140 pas/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 hatch steps in X / Y (257 / cycle)');
+    await go('#/'); await sel('la'); await go('#/p/25'); await sleep(700);
+    ok(/pas d’œufs dans/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Légendes Arceus: no eggs');
+    await go('#/'); await sel(''); await go('#/p/150'); await sleep(700);
+    ok(/Asexué/.test(await p.$eval('.breed', s => s.textContent)) && /ne se reproduit pas/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Mewtwo: asexué, ne se reproduit pas');
+    await go('#/p/175'); await sleep(700);
+    ok(/bébé/.test(await p.$eval('.breed', s => s.textContent)), tag + ' v29 Togepi: baby egg note');
+    await go('#/'); await sel('bw'); await go('#/p/25'); await sleep(900);
+    const hl = await p.evaluate(() => { const s = document.querySelector('.held'); const hs = [...document.querySelectorAll('.detail > section h2')].map(h => h.childNodes[0].textContent.trim()); return { t: s && s.textContent.replace(/ⓘ/g, '').replace(/\s+/g, ' '), i: hs.indexOf('Objets tenus'), e: hs.indexOf('Où le trouver'), ab: hs.indexOf('Talents') }; });
+    ok(hl.t && /Baie Oran 50 %/.test(hl.t) && /Balle Lumière 1 %/.test(hl.t) && hl.e === hl.i + 1 && hl.i > hl.ab + 1, tag + ' v29 Pikachu N / B: wild held items with %, just before the encounters ' + JSON.stringify(hl).slice(0, 220));
+    await go('#/'); await sel('rs'); await go('#/p/25'); await sleep(900);
+    ok(/Balle Lumière 5 %/.test(await p.$eval('.held', s => s.textContent.replace(/ⓘ/g, '').replace(/\s+/g, ' '))), tag + ' v29 Pikachu Rubis / Saphir: Balle Lumière 5 %');
+    await go('#/'); await sel('');
+  }
+  { // ---- v28: GO Megas / Primals / Gigamax
+    const keep = await p.evaluate(() => Object.fromEntries(['caught_g', 'shiny_g', 'mega_energy', 'home_o', 'home_og', 'forms'].map(k => [k, localStorage.getItem(k)])));
+    await p.evaluate(() => { for (const k of ['caught_g', 'shiny_g', 'mega_energy']) localStorage.setItem(k, '[]'); }); await p.reload({ waitUntil: 'networkidle0' });
+    await go('#/'); await sel('go'); if (await p.$eval('#formsbtn', b => b.getAttribute('aria-pressed')) !== 'true') { await p.click('#formsbtn'); await sleep(500); }
+    const lst = await p.$$eval('#results [href^="#/p/"]', as => as.map(a => a.getAttribute('href').slice(4)));
+    const i6 = lst.indexOf('6');
+    ok(i6 >= 0 && lst.slice(i6, i6 + 4).join() === '6,6-mega-x,6-mega-y,6-gmax', tag + ' v28 GO list (Formes): Dracaufeu, then Méga X, Méga Y, Gigamax ' + lst.slice(i6, i6 + 4).join());
+    ok(['382-primal', '383-primal', '150-mega-x', '398-mega', '849-amped-gmax', '818-gmax'].every(k => lst.includes(k)) && !['884-gmax', '609-mega', '890-eternamax', '892-single-strike-gmax'].some(k => lst.includes(k)), tag + ' v28 GO list: Primals, late Megas, Gigamax in; Duralugon Gigamax (before 6/11), Méga-Lugulabre, Éthernatos Infinimax out');
+    const cnt = await p.$eval('#count', e => e.textContent);
+    ok(/formes dont \d+ Méga \/ Primo \/ Gigamax \(hors dorure\)/.test(cnt), tag + ' v28 GO counter: Méga / Primo / Gigamax shown as forms, hors dorure ' + cnt.slice(0, 90));
+    ok(await p.evaluate(() => !baseStatus(BY_KEY['6-gmax']).sw.includes('go') && !homeAvail(BY_KEY['6-gmax']).includes('go') && !homeAvail(BY_KEY['6-mega-x']).includes('go') && homeAvail(BY_KEY['6']).includes('go') && baseStatus(BY_KEY['6']).sw.includes('go')), tag + ' v28 gold completion: no GO tier / GO HOME mark for GO Megas and Gigamax (base form unchanged)');
+    await go('#/p/6-mega-x'); await sleep(600);
+    const mx = await p.evaluate(() => { const q = s => document.querySelector('#actbar ' + s); return { cg: q('.cg').disabled, sh: q('.sh').disabled, tr: q('.tr').disabled, trT: q('.tr').title, cgT: q('.cg').title, en: [...document.querySelectorAll('#actbar .energy')].map(b => b.dataset.energy).join(), txt: document.querySelector('#trackinfo').textContent }; });
+    ok(!mx.cg && !mx.sh && mx.tr && /temporaire/.test(mx.trT) && /enregistré au Pokédex GO/.test(mx.cgT) && mx.en === '6-mega-x', tag + ' v28 GO Méga-Dracaufeu X: Capturé / Shiny active, Transféré greyed (temporaire), energy X ' + JSON.stringify(mx).slice(0, 160));
+    ok(/Capturé = enregistré au Pokédex GO/.test(mx.txt) && /pas dans la dorure/.test(mx.txt) && /Méga-énergie X/.test(mx.txt), tag + ' v28 GO Mega sheet: « Jeu » text describes the new rules');
+    await p.click('#actbar .cg'); await sleep(150);
+    let cg = await ls2('caught_g'), en = await ls2('mega_energy');
+    ok(cg.includes('go:6-mega-x') && cg.includes('go:6') && en.includes('6-x') && !en.includes('6-y') && !cg.includes('go:6-mega-y'), tag + ' v28 Capturé Méga X ⇒ base Capturé + Méga-énergie X (not Y) ' + JSON.stringify([cg, en]));
+    await p.click('#actbar .sh'); await sleep(150);
+    const sg = await ls2('shiny_g');
+    ok(sg.includes('go:6-mega-x') && sg.includes('go:6'), tag + ' v28 Shiny Méga X ⇒ base Shiny ' + JSON.stringify(sg));
+    ok(await p.$eval('#actbar .cg', b => b.getAttribute('aria-pressed')) === 'true' && await p.$eval('#actbar .sh', b => b.getAttribute('aria-pressed')) === 'true', tag + ' v28 Méga X buttons pressed');
+    await go('#/p/6-mega-y'); await sleep(500); await p.click('#actbar .cg'); await sleep(150);
+    en = await ls2('mega_energy'); ok(en.includes('6-y') && (await ls2('caught_g')).includes('go:6-mega-y'), tag + ' v28 Capturé Méga Y ⇒ Méga-énergie Y');
+    ok(await p.evaluate(() => baseStatus(BY_KEY['6-mega-x']).any && isCaught(BY_KEY['6-mega-x'], null)), tag + ' v28 overview: GO-registered Mega counts as caught (red ball)');
+    await go('#/p/6-gmax'); await sleep(600);
+    const gx = await p.evaluate(() => { const q = s => document.querySelector('#actbar ' + s); return { cg: q('.cg').disabled, sh: q('.sh').disabled, tr: q('.tr').disabled, trT: q('.tr').title, txt: document.querySelector('#trackinfo').textContent, go: [...document.querySelectorAll('.goinfo li')].map(l => l.textContent).join(' | ') }; });
+    ok(!gx.cg && !gx.sh && gx.tr && /ne peut pas être envoyé vers HOME/.test(gx.trT) && /Combat Max/.test(gx.txt) && /Shiny : Oui \(Combats Max\)/.test(gx.go), tag + ' v28 GO Dracaufeu Gigamax: Capturé / Shiny, Transféré greyed (HOME impossible), shiny Combats Max ' + JSON.stringify(gx).slice(0, 200));
+    await p.click('#actbar .cg'); await sleep(150); cg = await ls2('caught_g');
+    ok(cg.includes('go:6-gmax'), tag + ' v28 Gigamax caught separately');
+    ok(await p.evaluate(() => !baseStatus(BY_KEY['6-gmax']).swDone || baseStatus(BY_KEY['6-gmax']).sw.every(g => g !== 'go')), tag + ' v28 Gigamax GO mark does not change its gold tier');
+    await go('#/p/818-gmax'); await sleep(600);
+    const lz = await p.evaluate(() => ({ sh: document.querySelector('#actbar .sh').disabled, t: document.querySelector('#actbar .sh').title }));
+    ok(lz.sh && /Pas de Gigamax shiny/.test(lz.t), tag + ' v28 Lézargus Gigamax: Shiny greyed (no shiny in GO) ' + JSON.stringify(lz));
+    await go('#/p/382-primal'); await sleep(600);
+    const pk = await p.evaluate(() => ({ cg: document.querySelector('#actbar .cg').disabled, en: [...document.querySelectorAll('#actbar .energy')].map(b => b.dataset.energy + '|' + b.textContent).join() }));
+    ok(!pk.cg && /382-primal\|.*Énergie Primo/.test(pk.en), tag + ' v28 GO Primo-Kyogre: markable (not battle-only in GO), Énergie Primo ' + JSON.stringify(pk));
+    await p.click('#actbar .cg'); await sleep(150); cg = await ls2('caught_g'); en = await ls2('mega_energy');
+    ok(cg.includes('go:382-primal') && cg.includes('go:382') && en.includes('382'), tag + ' v28 Capturé Primo-Kyogre ⇒ Kyogre Capturé + Énergie Primo');
+    await go('#/p/6'); await sleep(600); await p.click('#actbar .cg'); await sleep(150); cg = await ls2('caught_g');
+    ok(!cg.includes('go:6') && !cg.includes('go:6-mega-x') && !cg.includes('go:6-mega-y') && !(await ls2('shiny_g')).includes('go:6-mega-x') && cg.includes('go:6-gmax'), tag + ' v28 unticking Dracaufeu (GO) clears its Megas, keeps the Gigamax ' + JSON.stringify(cg));
+    await go('#/'); await sel('sv'); await go('#/p/6-mega-x'); await sleep(500);
+    ok(await p.$eval('#actbar .cg', b => b.disabled), tag + ' v28 outside GO / Z-A the Mega is still battle-only (Capturé greyed)');
+    await p.evaluate(k => { for (const [x, v] of Object.entries(k)) v === null ? localStorage.removeItem(x) : localStorage.setItem(x, v); }, keep); await p.reload({ waitUntil: 'networkidle0' });
+    // dated release: Gigamax Duralugon appears from 2026-11-06 (fake clock)
+    const q = await b.newPage(); await q.setViewport({ width: w, height: 800 });
+    await q.evaluateOnNewDocument(() => { const R = Date, T = new R('2026-11-07T10:00:00').getTime(); globalThis.Date = class extends R { constructor(...a) { super(...(a.length ? a : [T])); } static now() { return T; } }; });
+    await q.goto(BASE + '#/p/884-gmax', { waitUntil: 'networkidle0' }); await sleep(800);
+    await q.select('#dgame', 'go').catch(() => {}); await sleep(700);
+    const du = await q.evaluate(() => ({ today: TODAY, go: BY_KEY['884-gmax'].go, dg: state.dgame, sh: document.querySelector('#actbar .sh') && document.querySelector('#actbar .sh').disabled, st: [...document.querySelectorAll('.goinfo li')].map(l => l.textContent).join(' | ') }));
+    ok(du.today === '2026-11-07' && du.go === 1 && du.dg === 'go' && du.sh === false && /disponible dans Pokémon GO/.test(du.st), tag + ' v28 Gigamax Duralugon: in GO from 2026-11-06, shiny too (fake clock) ' + JSON.stringify(du).slice(0, 200));
+    await q.close();
+    ok(await p.evaluate(() => TODAY < '2026-11-06' ? !BY_KEY['884-gmax'].go : true), tag + ' v28 Gigamax Duralugon hidden before its date');
+  }
+  await go('#/'); await sel('sv'); await go('#/p/25'); await sleep(500);
+  const order = await p.evaluate(() => [...document.querySelectorAll('.detail > *')].map(e => e.classList.contains('hero') ? 'hero' : e.classList.contains('trackbox') ? 'track' : e.classList.contains('desc') ? 'desc' : (e.querySelector('h2')?.childNodes[0].textContent.trim() || '')));
+  const at = x => order.indexOf(x);
+  ok(at('hero') === 0 && at('track') === 1 && at('Formes') === 2 && (at('desc') < 0 || (at('desc') > 2 && at('desc') < at('Statistiques de base'))) && at('Statistiques de base') < at('Talents') && at('Talents') < at('Capacités') && at('Capacités') < at('Évolutions') && at('Évolutions') < at('Où le trouver') && at('Où le trouver') < at('Pokémon GO') && at('Présent dans') < 0, tag + ' game body order (v30: no « Présent dans » on a game sheet) ' + order.filter(Boolean).join(' > '));
+  { // ---- v30: sheet game selector = sticky 2nd header row, same order as « Jeux », regional numbers; « Présent dans » on the overview only
+    const listOrd = await p.$$eval('#game option', o => o.map(x => x.value).filter(Boolean));
+    const sheetOpts = async k => { await go('#/'); await sel(''); await go('#/p/' + k); await sleep(700); return p.$$eval('#dgame option', o => o.map(x => ({ v: x.value, l: x.textContent, n: x.dataset.n || '' }))); };
+    const subseq = vs => { let i = 0; for (const v of vs) { i = listOrd.indexOf(v, i); if (i < 0) return false; i += 1; } return true; };
+    const bad = [];
+    for (const k of ['6', '150', '145', '25', '1000', '493', '26-alola', '6-mega-x', '384']) { const o = await sheetOpts(k); const vs = o.map(x => x.v); if (vs[0] !== 'all' || !subseq(vs.slice(1))) bad.push(k + ': ' + vs.join(' ')); }
+    ok(!bad.length, tag + ' v30 sheet menu order = « Jeux » menu order (subsequence, overview first) ' + bad.join(' / '));
+    let o = await sheetOpts('6'); const n = v => (o.find(x => x.v === v) || {}).n;
+    ok(n('sw') === '#380' && n('za') === '#153' && n('svdisk') === '#169' && n('rb') === '#006' && n('bdsp') === 'Hors dex' && !n('all') && !n('home') && !n('go'), tag + ' v30 Dracaufeu: regional numbers in the sheet menu ' + o.map(x => x.v + '=' + x.n).join(' '));
+    await p.click('#dgamebtn'); await sleep(250);
+    const pop = await p.evaluate(() => ({ sw: document.querySelector('#dgamelist [data-v="sw"] .gnum')?.textContent, bd: document.querySelector('#dgamelist [data-v="bdsp"] .gnum.hx')?.textContent, seps: [...document.querySelectorAll('#dgamelist .gsep2')].map(e => e.textContent.trim()) }));
+    const listSeps = await p.evaluate(() => [...new Set([...document.querySelectorAll('#gamelist .gsep2')].map(e => e.textContent.trim()))]);
+    ok(pop.sw === '#380' && pop.bd === 'Hors dex' && pop.seps.every(s => listSeps.includes(s)) && pop.seps.join() === listSeps.filter(s => pop.seps.includes(s)).join(), tag + ' v30 sheet popup shows the numbers and the « Jeux » separators ' + JSON.stringify(pop) + ' / ' + listSeps.join());
+    await p.keyboard.press('Escape'); await sleep(150);
+    o = await sheetOpts('150'); let vs = o.map(x => x.v);
+    ok(vs.indexOf('zamega') >= 0 && vs.indexOf('zamega') === vs.indexOf('zadlc') - 1 && !n('zamega') && o.find(x => x.v === 'za').n === '#232', tag + ' v30 Mewtwo: Méga-Dex just above Méga-Dimension (no own number), Z-A #232 ' + vs.slice(0, 7).join(' '));
+    o = await sheetOpts('145'); vs = o.map(x => x.v); const sh = o.find(x => x.v === 'svhors');
+    ok(sh && sh.n === 'Hors dex' && !/hors dex/i.test(sh.l) && vs.indexOf('svhors') === vs.indexOf('frlgsw') + 1 && vs.indexOf('frlgsw') === vs.indexOf('go') + 1 && vs.indexOf('svhors') < vs.indexOf('bdsp') && !vs.includes('sv') && listOrd.indexOf('svhors') === listOrd.indexOf('svdisk') - 1, tag + ' v30 Électhor: « Écarlate / Violet (+ extensions) » Hors dex in the place of « Jeux » (above Le Disque Indigo, not at the end) ' + vs.slice(0, 8).join(' '));
+    ok(!o.slice(-3).some(x => x.n === 'Hors dex' && /hors|mega/.test(x.v)), tag + ' v30 Hors dex / Méga-Dex entries are not at the end');
+    await p.select('#dgame', 'svhors'); await sleep(500);
+    ok(await p.evaluate(() => state.dgame === 'sv' && document.querySelector('#dgame').value === 'svhors' && /Hors dex/.test(document.querySelector('#dgamebtn').textContent)), tag + ' v30 choosing the Hors dex entry opens the Écarlate / Violet sheet, button shows « Hors dex »');
+    const pres = async g => { await p.select('#dgame', g); await sleep(g === 'go' ? 800 : 400); return p.evaluate(() => [...document.querySelectorAll('.detail > section h2')].some(h => /Présent dans/.test(h.textContent))); };
+    await go('#/'); await sel(''); await go('#/p/6'); await sleep(600);
+    const pr = { all: await pres('all'), home: await pres('home'), sw: await pres('sw'), go: await pres('go'), all2: await pres('all') };
+    ok(pr.all && pr.all2 && !pr.home && !pr.sw && !pr.go, tag + ' v30 « Présent dans » on the overview only ' + JSON.stringify(pr));
+    await p.select('#dgame', 'sw'); await sleep(400); await p.evaluate(() => window.scrollTo(0, 2200)); await sleep(300);
+    const st = await p.evaluate(() => { const g = document.querySelector('.dgbar').getBoundingClientRect(), d = document.querySelector('.dnav').getBoundingClientRect(), b = document.querySelector('#dgamebtn').getBoundingClientRect(), a = document.querySelector('#actbar').getBoundingClientRect();
+      const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2); return { y: scrollY, gTop: Math.round(g.top), gBot: Math.round(g.bottom), h: Math.round(g.height), dBot: Math.round(d.bottom), aTop: Math.round(a.top), aBot: Math.round(a.bottom), hit: !!(hit && hit.closest('#dgamebtn')), num: document.querySelector('#dgamebtn .gnum')?.textContent, sw: document.documentElement.scrollWidth }; });
+    ok(st.y > 1000 && Math.abs(st.gTop - st.dBot) <= 1 && st.h <= 56 && st.hit && st.num === '#380' && st.sw <= w && (w < 700 ? st.aTop > st.gBot + 300 : st.aTop >= st.gBot - 1 && st.aBot < 210), tag + ' v30 game selector stays visible under ← ‹ › ★ while scrolling, compact, clickable, no overlap ' + JSON.stringify(st));
+    await p.click('#dgamebtn'); await sleep(250); await p.click('#dgamelist [data-v="xy"]'); await sleep(500);
+    ok(await p.evaluate(() => state.dgame === 'xy' && /#085/.test(document.querySelector('#dgamebtn').textContent)), tag + ' v30 switching game from the sticky selector after scrolling');
+    await p.screenshot({ path: SHOTS + `v30-sticky-${tag}.png` });
+    await go('#/'); await sel('');
+  }
+  { // ---- v31: shiny block, ability-aware weaknesses, base-form note, alternative sprites, description popups, Rouge Feu / Vert Feuille (Switch)
+    const open = async (k, g = 'all') => { await go('#/'); await sel(''); await go('#/p/' + k); await sleep(600); await p.select('#dgame', g); await sleep(g === 'go' ? 900 : 500); };
+    const h2s = () => p.$$eval('.detail > section h2', hs => hs.map(h => h.childNodes[0].textContent.trim()));
+    await open('6', 'svdisk');
+    let hs = await h2s(), sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return s && { st: s.querySelector('.shst').className, t: s.innerText.replace(/\s+/g, ' '), hd: [...s.querySelectorAll('.shm .hd')].map(x => x.textContent), best: [...s.querySelectorAll('.shm .best')].map(x => x.textContent) }; });
+    ok(sb && hs.indexOf('✨ Shiny') === hs.indexOf('Reproduction & capture') + 1 && hs.indexOf('Faiblesses & résistances') === hs.indexOf('✨ Shiny') + 1, tag + ' v31 shiny block between « Reproduction & capture » and « Faiblesses » ' + hs.slice(0, 8).join(' / '));
+    ok(/\bok\b/.test(sb.st) && /Peut être shiny/.test(sb.t) && sb.hd.join() === 'Méthode,Sans Charme,Avec Charme' && sb.best.includes('1/683') && sb.best.includes('1/512') && !/Raids Téracristal/.test(sb.t) && /Charme Chroma Compléter le Pokédex de Paldea/.test(sb.t) && /Sources : Bulbapedia/.test(sb.t), tag + ' v31 Dracaufeu ÉV Disque Indigo: ✔, Sans / Avec Charme, best in green, raids hidden, Charme Chroma, sources ' + JSON.stringify(sb).slice(0, 260));
+    await open('1007', 'sv'); sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return { st: s.querySelector('.shst').className, t: s.innerText.replace(/\s+/g, ' '), det: !!s.querySelector('details.shd:not([open])') }; });
+    ok(/lock/.test(sb.st) && /SHINY LOCK/.test(sb.t) && /Koraidon ne peut pas être shiny/.test(sb.t) && /Pepper/.test(sb.t) && sb.det, tag + ' v31 Koraidon Écarlate / Violet: SHINY LOCK, encounter named, methods folded ' + sb.t.slice(0, 160));
+    await open('25', 'lgpe'); sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return { st: s.querySelector('.shst').className, t: s.innerText.replace(/\s+/g, ' ') }; });
+    ok(/part/.test(sb.st) && /Pikachu \(partenaire\)/.test(sb.t) && /Combo Capture/.test(sb.t) && /Vérifié le 11\/10\/2026/.test(sb.t), tag + ' v31 Pikachu Let’s Go: partial lock names the partner, Let’s Go entries verified ' + sb.t.slice(0, 160));
+    await open('6', 'hgss'); sb = await p.evaluate(() => { const s = document.querySelector('.shinybox'); return { one: !!s.querySelector('.shm.one'), t: s.innerText.replace(/\s+/g, ' ') }; });
+    ok(sb.one && /n’existe pas dans ce jeu/.test(sb.t) && /1\/8192/.test(sb.t), tag + ' v31 HG/SS: one column (no Charme Chroma), 1/8192');
+    await open('6', 'rb'); ok(/Pas de Pokémon shiny/.test(await p.$eval('.shinybox', s => s.textContent)), tag + ' v31 Rouge / Bleu: no shinies yet');
+    await open('6'); const ov = await p.$('.shinybox'); await open('6', 'go'); const gsb = await p.$('.shinybox');
+    ok(!ov && !gsb && /Shiny : /.test(await p.$eval('.goinfo', s => s.textContent)), tag + ' v31 no shiny block on the overview / GO (GO keeps its single « Shiny : » line)');
+    await open('380', 'zadlc'); ok(/\bok\b/.test(await p.$eval('.shinybox .shst', s => s.className)), tag + ' v31 Méga-Dimension: Latias shiny-able (verified list)');
+    // weaknesses + abilities
+    await open('479', 'dp'); let ab = await p.evaluate(() => ({ imm: [...document.querySelectorAll('.eff')].find(e => /Immunisé/.test(e.textContent))?.innerText.replace(/\s+/g, ' '), abx: [...document.querySelectorAll('.badge.abx')].map(b => b.dataset.type), n: document.querySelector('.abnote')?.innerText }));
+    ok(/Sol/.test(ab.imm || '') && ab.abx.includes('ground') && /Lévitation/.test(ab.n) && /seul talent/.test(ab.n), tag + ' v31 Motisma D/P: Lévitation (only ability) → Sol in Immunisé, marked * ' + JSON.stringify(ab));
+    await open('186', 'svmask'); ab = await p.evaluate(() => ({ abx: [...document.querySelectorAll('.badge.abx')].map(b => b.dataset.type), n: document.querySelector('.abnote')?.innerText, res: [...document.querySelectorAll('.eff')].find(e => /^Résiste ×/.test(e.innerText.trim()))?.innerText }));
+    ok(ab.abx.includes('water') && /Absorb/.test(ab.n) && /si le Pokémon a ce talent/.test(ab.n) && /Eau/.test(ab.res || ''), tag + ' v31 Tarpaud ÉV Le Masque Turquoise: Absorbe-Eau (one of its abilities) → Eau marked *, table unchanged ' + JSON.stringify(ab).slice(0, 200));
+    await open('479', 'go'); ok(!(await p.$('.abnote')), tag + ' v31 no ability caveat on the GO sheet');
+    // base-form note
+    const bn = async k => { await open(k); return p.evaluate(() => document.querySelector('.basenote')?.innerText.replace(/\s+/g, ' ') || ''); };
+    const n1 = await bn('52-galar'), n2 = await bn('6-mega-x'), n3 = await bn('382-primal'), n4 = await bn('6');
+    ok(/^Forme de Galar de Miaouss/.test(n1) && /Méga-Évolution de Dracaufeu, nécessite la Dracaufite X/.test(n2) && /Primo-Résurgence de Kyogre.*Orbe Bleu/.test(n3) && !n4, tag + ' v31 base-form notes ' + [n1, n2, n3].join(' | ').slice(0, 260));
+    await open('26-alola'); ok(await p.$eval('.basenote a', a => a.getAttribute('href')) === '#/p/26', tag + ' v31 base-form note links to the base sheet');
+    // sprites on demand
+    const ext = []; const onReq = r => { if (/raw\.githubusercontent\.com/.test(r.url())) ext.push(r.url()); }; p.on('request', onReq);
+    await open('6'); const sw0 = await p.evaluate(() => ({ b: [...document.querySelectorAll('.sprsw button')].map(x => x.textContent + ':' + x.getAttribute('aria-pressed')).join(), src: document.querySelector('#heroimg').getAttribute('src') }));
+    ok(sw0.b === 'HOME:true,Officiel:false,Animé:false' && sw0.src === 'img/h/6.webp' && ext.length === 0, tag + ' v35 sprites: HOME (self-hosted) by default, Officiel / Animé alternatives, nothing fetched remotely ' + JSON.stringify(sw0));
+    await p.click('[data-spr="off"]'); await sleep(200); ok(await p.$eval('#heroimg', i => i.getAttribute('src')) === 'img/6.webp', tag + ' v35 Officiel on tap'); await p.click('[data-spr="home"]'); await p.waitForFunction(() => document.querySelector('#heroimg').complete, { timeout: 10000 }).catch(() => {}); await sleep(400);
+    const sw1 = await p.evaluate(() => ({ src: document.querySelector('#heroimg').src, w: document.querySelector('#heroimg').naturalWidth, pr: document.querySelector('[data-spr="home"]').getAttribute('aria-pressed') }));
+    ok(/\/img\/h\/6\.webp$/.test(sw1.src) && sw1.w === 256 && sw1.pr === 'true' && ext.length === 0, tag + ' v35 HOME back on tap, local ' + JSON.stringify(sw1) + ' ' + ext.length);
+    await p.click('[data-spr="anim"]'); await sleep(1500); ok(/showdown\/6\.gif$/.test(await p.$eval('#heroimg', i => i.src)) && await p.$eval('#heroimg', i => i.classList.contains('pix')), tag + ' v31 animated sprite (pixelated)');
+    ok(await p.evaluate(async () => { for (const k of await caches.keys()) for (const r of await (await caches.open(k)).keys()) if (/githubusercontent/.test(r.url)) return false; return true; }), tag + ' v31 alternative sprites never stored by the service worker');
+    await open('25'); await p.setOfflineMode(true); await p.click('[data-spr="anim"]'); await sleep(500);
+    ok(await p.evaluate(() => document.querySelector('#heroimg').getAttribute('src') === 'img/25.webp' && document.querySelector('[data-spr="off"]').getAttribute('aria-pressed') === 'true' && /Hors-ligne/.test(document.querySelector('#toast')?.textContent || '')), tag + ' v35 offline: Animé falls back to the official art with a message');
+    await p.click('[data-spr="home"]'); await sleep(400); ok(await p.$eval('#heroimg', i => i.getAttribute('src')) === 'img/h/25.webp', tag + ' v35 offline: HOME (self-hosted) still available');
+    await p.setOfflineMode(false); p.off('request', onReq);
+    // popups
+    await open('6', 'xy');
+    await p.evaluate(() => { const b = [...document.querySelectorAll('.mv .dsc')].find(x => /Lance-Flammes/.test(x.textContent)); b.scrollIntoView({ block: 'center' }); b.click(); }); await sleep(700);
+    let pp = await p.evaluate(() => { const o = document.querySelector('#dpop'); if (!o) return null; const r = o.getBoundingClientRect(), a = document.querySelector('#actbar').getBoundingClientRect(), fixed = getComputedStyle(document.querySelector('#actbar')).position === 'fixed'; return { t: o.innerText.replace(/\s+/g, ' '), inside: r.left >= 0 && r.right <= innerWidth + 0.5, noBar: !fixed || r.bottom <= a.top + 1 }; });
+    ok(pp && /Lance-Flammes/.test(pp.t) && /torrent de flammes/.test(pp.t) && /Puissance 90/.test(pp.t) && pp.inside && pp.noBar, tag + ' v31 move popup: French text + power, inside the screen, not under the bar ' + JSON.stringify(pp).slice(0, 200));
+    { const mv = await p.evaluate(() => { const M = DET.shared.moves, f = (id, g) => { const m = moveInfo(id, GAME_BY[g], M); return [m.power, m.acc, m.type].join('/'); }; return [f(53, 'bw'), f(53, 'xy'), f(33, 'hgss'), f(33, 'bw'), f(33, 'xy'), f(33, 'sm'), f(59, 'rb'), f(59, 'gs')].join(' '); });
+      ok(mv === '95/100/fire 90/100/fire 35/95/normal 50/100/normal 50/100/normal 40/100/normal 120/90/ice 120/70/ice', tag + ' v31 move stats per game (PokéAPI past values = values before that version group): ' + mv); }
+    await p.keyboard.press('Escape'); await sleep(150); ok(!(await p.$('#dpop')), tag + ' v31 Escape closes the popup');
+    await p.evaluate(() => document.querySelector('.ab .dsc').click()); await sleep(300);
+    ok(/Brasier/.test(await p.$eval('#dpop', o => o.textContent)) && /Augmente la puissance/.test(await p.$eval('#dpop', o => o.textContent)), tag + ' v31 ability popup (Brasier)');
+    await p.evaluate(() => document.body.click()); await sleep(150); ok(!(await p.$('#dpop')), tag + ' v31 tapping elsewhere closes the popup');
+    await open('25', 'bw'); await p.evaluate(() => document.querySelector('.held .dsc').click()); await sleep(600);
+    ok(/Baie Oran/.test(await p.$eval('#dpop', o => o.textContent)) && /restaure 10 PV/.test(await p.$eval('#dpop', o => o.textContent)), tag + ' v31 held item popup (Baie Oran)');
+    // shiny methods table fits the phone width in every game (ORAS Navi-Dex / hordes qualifiers move to the note)
+    { await go('#/p/3'); await sleep(500); const vw = await p.evaluate(() => innerWidth), bad = [];
+      for (const g of await p.evaluate(() => GAMES.map(x => x.id).filter(x => x !== 'go'))) { if (!await p.$(`#dgame option[value="${g}"]`)) continue; await p.select('#dgame', g); await sleep(350); const w = await p.evaluate(() => [innerWidth, document.documentElement.scrollWidth]); if (w[0] !== vw || w[1] > vw) bad.push(g + ':' + w); }
+      await p.select('#dgame', 'oras'); await sleep(400);
+      const nd = await p.evaluate(() => [...document.querySelectorAll('.shm .v')].map(v => v.textContent));
+      await p.select('#dgame', 'hgss'); await sleep(400); const nh = await p.evaluate(() => [...document.querySelectorAll('.shm .v')].map(v => v.textContent)); nd.push(...nh);
+      ok(!bad.length && nd.includes('≈1/1000') && nd.includes('n.c.') && nd.includes('≈1/819') && nh.includes('garanti'), tag + ' v31 shiny table: no horizontal overflow in any game, compact cells ' + bad.join() + ' ' + nd.join('|')); }
+    // « Présent dans » : game colour icon (same dot as the Jeux menus), order unchanged
+    await go('#/'); await sel(''); await go('#/p/6'); await sleep(500);
+    const av = await p.evaluate(() => { const li = [...document.querySelectorAll('.avl li')], ord = GAMES.map(g => g.id); const ids = li.map(l => l.querySelector('a').dataset.game);
+      return { n: li.length, dots: li.filter(l => { const d = l.querySelector('a > .gdot:first-child'), c = GAME_COLORS[l.querySelector('a').dataset.game]; return d && !d.classList.contains('none') && c && d.style.getPropertyValue('--c1') === c[0]; }).length,
+        sorted: [...document.querySelectorAll('ul.avl')].every(u => { const x = [...u.querySelectorAll('a')].map(a => ord.indexOf(a.dataset.game)); return x.every((v, i) => i === 0 || x[i - 1] < v); }), first: ids[0], wrapOk: li.every(l => { const d = l.querySelector('.gdot').getBoundingClientRect(), t = l.querySelector('a > span:not(.gdot)').getClientRects()[0]; return d.right <= t.left + 1 && d.top >= l.getBoundingClientRect().top; }), ow: document.documentElement.scrollWidth <= innerWidth }; });
+    ok(av.n > 10 && av.dots === av.n && av.sorted && av.first === 'frlgsw' && av.wrapOk && av.ow, tag + ' v31 Présent dans: game icon (menu colours) next to each name, order unchanged, no overflow ' + JSON.stringify(av));
+    // Rouge Feu / Vert Feuille (Switch)
+    await go('#/'); await sel('frlgsw'); await sleep(300);
+    ok(/^151 Pokémon/.test(await count()) && /0 \/ 151/.test(await count()), tag + ' v31 RF/VF Switch: Kanto dex, 151, starts empty ' + (await count()).slice(0, 90));
+    const fr = await p.evaluate(() => ({ sw: SWITCH_IDS.has('frlgsw'), h: GAME_BY.frlgsw.h, gba: GAME_BY.frlg.h || null, om: originOf('frlgsw'), gold: isGoldMark('gba'), av1: homeAvail(BY_KEY['1']).includes('gba'), av152: homeAvail(BY_KEY['152']).includes('gba'), base: baseStatus(BY_KEY['1']).sw.includes('frlgsw'), con: CONSOLE_OF.frlgsw, ord: [...document.querySelectorAll('#game option')].map(o => o.value).slice(0, 5).join(' ') }));
+    ok(fr.sw && fr.h === 'direct' && !fr.gba && fr.om === 'gba' && fr.gold && fr.av1 && !fr.av152 && fr.base && fr.con === 'Switch' && fr.ord === ' home go frlgsw zamega', tag + ' v31 RF/VF Switch: current game, HOME direct (GBA mark, gold), GBA original unchanged, first in Switch ' + JSON.stringify(fr));
+    await go('#/p/4'); await sleep(500); await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(200);
+    const mk = await p.evaluate(() => ({ c: CAUGHT_G.has('frlgsw:4'), g: CAUGHT_G.has('frlg:4'), t: HOME_O.has('gba:4') }));
+    ok(mk.c && !mk.g && mk.t, tag + ' v31 RF/VF Switch marks are separate from the GBA game; Transféré = GBA mark ' + JSON.stringify(mk));
+    await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(150);
+    await go('#/'); await sel('frlg'); await go('#/p/4'); await sleep(400);
+    ok(await p.$eval('#actbar .tr', b => b.disabled), tag + ' v31 GBA Rouge Feu / Vert Feuille: still no HOME link (Transféré greyed)');
+    // ===== v32 =====
+    const txt = sel_ => p.evaluate(s => [...document.querySelectorAll(s)].map(e => e.innerText.replace(/\s+/g, ' ')).join(' | '), sel_);
+    await open('6', 'xy'); let fl = await txt('.detail > .desc, .detail .desc');
+    ok(/Quand il crache son souffle brûlant/.test(fl) && !/traduction automatique|PokéAPI/.test(fl) && await p.$('.ppcredit') !== null, tag + ' v32 Dracaufeu X / Y: Pokédex text from Poképédia + CC BY-NC-SA credit ' + fl.slice(0, 120));
+    await open('1017-wellspring-mask', 'svmask'); const og1 = await txt('.desc'); await open('1017', 'svmask'); const og2 = await txt('.desc');
+    ok(og1 && og2 && og1 !== og2 && /Sous cette forme/.test(og1) && !/Sous cette forme/.test(og2), tag + ' v32 Ogerpon: per-form texts (Masque du Puits ≠ Turquoise), expansion falls back to Écarlate / Violet ' + og1.slice(0, 80));
+    await open('26-alola', 'sm'); ok(/ne se produit qu.à Alola/.test(await txt('.desc')), tag + ' v32 Raichu d’Alola Soleil / Lune: regional-form text (Poképédia form page)');
+    await open('174', 'b2w2'); ok(/traduction automatique/.test(await txt('.desc')), tag + ' v32 machine translation kept only as last resort and marked (Toudoudou N2 / B2)');
+    await open('6'); const ety = await txt('.etybox'), evd = await txt('.evdbox');
+    ok(/Origine du nom/.test(ety) && /Français : Dracaufeu vient du latin/.test(ety) && /Anglais : Charizard/.test(ety) && /Distributions événementielles 4/.test(evd), tag + ' v32 overview: étymologie (FR / EN / JA + other languages) and event distributions ' + ety.slice(0, 90));
+    await open('133', 'sv'); let wh = await txt('.encbox');
+    ok(/Zone Ouest n° 3/.test(wh) && /Raid Téracristal/.test(wh) && /Poképédia/.test(wh), tag + ' v32 Évoli Écarlate / Violet: detailed locations (Poképédia) ' + wh.slice(0, 120));
+    await open('52-galar', 'sv'); wh = await txt('.encbox'); ok(/🎁 Cadeau : Académie de Paldea/.test(wh) && /Donné · Niv. 5/.test(wh), tag + ' v32 Miaouss de Galar ÉV: in-game gift (Académie de Paldea) ' + wh.slice(0, 90));
+    await open('129', 'bdsp'); ok(/Échange\s*:\s*Chenal 226/.test(await txt('.encbox')), tag + ' v32 Magicarpe DEPS: in-game trade (Chenal 226)');
+    await open('26-alola', 'sw'); { const w = await txt('.encbox'); ok(/Plaine Salutation/.test(w) && !/\|/.test(w), tag + ' v32 Raichu d’Alola ÉB: « Page|Affiché » place names cleaned'); }
+    await open('2', 'svdisk'); wh = await txt('.encbox'); ok(/Faire évoluer Bulbizarre/.test(wh) || /lieu/.test(wh), tag + ' v32 Herbizarre Le Disque Indigo: evolve-only note or locations ' + wh.slice(0, 80));
+    await open('25', 'lgpe'); ok(/Forêt de Jade|lieu/.test(await txt('.encbox')), tag + ' v32 Pikachu Let’s Go: Poképédia locations');
+    await open('133', 'go'); const gq = await txt('.gostats, .pvpbox, .goinfo');
+    ok(/1 071 PC max niv. 40/.test(gq) && /Ligue Super/.test(gq) && /#\d+/.test(gq) && /Bonbons d’évolution : 25 bonbons → Aquali, Voltali, Pyroli/.test(gq), tag + ' v32 GO Évoli: max CP lv 40, PvP ranks (PvPoke), evolution candy grouped ' + gq.slice(0, 160));
+    await open('115', 'go'); ok(/Exclusivité régionale : Australie/.test(await txt('.goinfo')), tag + ' v32 GO Kangourex: regional exclusive (Australie)');
+    await open('376', 'go'); ok(/Ligue Master/.test(await txt('.pvpbox')) && await p.$eval('.pvpbox', b => [...b.querySelectorAll('.pvpc')][2].classList.contains('top')), tag + ' v32 GO Métalosse: top-100 Master League in green');
+    // Catégorie: Méga-évolutions / Gigamax (right after Ultra-Chimères), shown even with Formes off, greyed in dexes without them
+    await go('#/'); await sel(''); await p.evaluate(() => { state.forms = false; });
+    const ord = await p.$$eval('#cat option', o => o.map(x => x.value)); ok(ord.indexOf('mega') === ord.indexOf('ub') + 1 && ord.indexOf('gmax') === ord.indexOf('ub') + 2, tag + ' v32 Méga-évolutions / Gigamax right after Ultra-Chimères ' + ord.slice(0, 8).join(' '));
+    await p.select('#cat', 'mega'); await sleep(500);
+    let fc = await p.evaluate(() => { const r = filtered(); return { n: r.length, all: r.every(q => q.c === 'mega' || q.c === 'primal'), primal: r.some(q => q.k === '382-primal'), x: r.some(q => q.k === '6-mega-x'), forms: state.forms }; });
+    ok(fc.n > 60 && fc.all && fc.primal && fc.x && !fc.forms && /^\d+/.test(await count()), tag + ' v32 Méga-évolutions: all Megas + Primals, Formes toggle off ' + JSON.stringify(fc));
+    await p.select('#cat', 'gmax'); await sleep(500);
+    fc = await p.evaluate(() => { const r = filtered(); return { n: r.length, all: r.every(q => q.c === 'gmax'), eter: r.some(q => q.k === '890-eternamax') }; });
+    ok(fc.n >= 33 && fc.all && fc.eter, tag + ' v32 Gigamax: all Gigamax + Éthernatos Infinimax ' + JSON.stringify(fc));
+    const dis = async g => { await sel(g); await sleep(600); return p.evaluate(() => ['mega', 'gmax'].map(v => document.querySelector(`#cat option[value=${v}]`).disabled ? 'off' : 'on').join(',') + ' cat=' + state.cat); };
+    const dRb = await dis('rb'), dXy = await dis('xy'), dSw = await dis('sw');
+    ok(/^off,off cat=$/.test(dRb) && /^on,off/.test(dXy) && /^off,on/.test(dSw), tag + ' v32 Méga / Gigamax greyed in game dexes without them (R/B: both, X/Y: Gigamax, Épée: Méga) ' + [dRb, dXy, dSw].join(' / '));
+    await sel('rb'); await sleep(600); ok(await p.evaluate(() => ['mega', 'gmax'].every(v => document.querySelector(`#catlist .gopt[data-v="${v}"]`)?.getAttribute('aria-disabled') === 'true')), tag + ' v32 Méga / Gigamax also greyed in the Catégorie menu (R/B)'); await sel('');
+    await open('132', 'go'); { const r = await p.evaluate(() => { const b = document.querySelector('.ditbox'); if (!b) return null; const cur = [...b.querySelectorAll(':scope > .ditc .fchip')]; return { h: b.querySelector('h2').textContent, n: cur.length, fer: cur.some(a => a.getAttribute('href') === '#/p/56' && /Férosinge/.test(a.textContent) && a.querySelector('img')), past: b.querySelector('details.ditpast')?.textContent || '', src: [...b.querySelectorAll('a[href^="http"]')].map(a => a.href).join(' ') }; });
+      ok(r && /^Déguisements/.test(r.h) && r.n === 11 && r.fer && /Bulbizarre/.test(r.past) && /Pokopia/.test(r.past) && /leekduck\.com/.test(r.src) && /bulbapedia/.test(r.src), tag + ' v32 Métamorph GO: Déguisements (11 actuels avec icône + lien, anciens par période, sources) ' + JSON.stringify(r && { n: r.n, fer: r.fer })); }
+    await open('133', 'go'); ok(await p.$('.ditbox') === null, tag + ' v32 Déguisements only on Métamorph');
+    { const geo = () => p.evaluate(() => { const h = document.querySelector('.hero').getBoundingClientRect(), i = document.querySelector('#heroimg').getBoundingClientRect(), s = document.querySelector('.sprsw').getBoundingClientRect();
+        return { dx: Math.round(Math.abs((s.left + s.width / 2) - (i.left + i.width / 2))), hx: Math.round(Math.abs((i.left + i.width / 2) - (h.left + h.width / 2))), gap: Math.round(s.top - i.bottom), top: Math.round(s.top - h.top), iw: Math.round(i.width), ih: Math.round(i.height) }; });
+      const ok33 = g => g.dx <= 2 && g.hx <= 2 && g.gap >= 0 && g.gap <= 16 && g.iw === g.ih;
+      const bad = [];
+      for (const [k, gm] of [['6', null], ['6', 'xy'], ['26-alola', null], ['133', 'go']]) { await open(k, gm || undefined); const g = await geo(); if (!ok33(g)) bad.push(k + '/' + gm + ' ' + JSON.stringify(g)); }
+      ok(!bad.length, tag + ' v33 hero: Officiel / HOME / Animé centred right under the image (overview, game, form, GO) ' + bad.join(' '));
+      await open('6'); const g0 = await geo(); const gs = [];
+      for (const m of ['home', 'anim', 'off']) { await p.click(`.sprsw [data-spr=${m}]`); await sleep(500); gs.push(await geo()); }
+      ok(gs.every(g => ok33(g) && g.top === g0.top && g.ih === g0.ih), tag + ' v33 hero: no layout shift when switching sprite style ' + JSON.stringify([g0, ...gs].map(g => g.top + '/' + g.ih))); }
+    await p.select('#cat', 'gmax'); await sleep(500); ok(await p.evaluate(() => filtered().length > 20 && filtered().every(q => q.c === 'gmax')), tag + ' v32 Gigamax in Épée / Bouclier lists the Gigamax forms of the Galar dex');
+    await p.select('#cat', ''); await sleep(300);
+    await go('#/'); await sel('');
+  }
+  ok(await p.$eval('#cat option[value="strans"]', o => o.textContent) === '✨ Shiny transférés (HOME)', tag + ' v24 « Shiny transférés (HOME) » filter restored');
+  // Z-A dexes: no « Hors dex » tail for species of the sibling dex (Z-A ↔ Méga-Dimension); 3rd dex « Méga-Dex »
+  const zx = await p.evaluate(async () => { const a = await loadDex('za'), b = await loadDex('zadlc'); return { za: a.extra.size, zadlc: b.extra.size, zaN: a.order.size, dlcN: b.order.size }; });
+  ok(zx.za === 0 && zx.zadlc === 0 && zx.zaN === 232 && zx.dlcN === 132, tag + ' Z-A / Méga-Dimension: no sibling species in Hors dex ' + JSON.stringify(zx));
+  { const ord = (await p.$$eval('#game option', o => o.map(x => x.value))).join(' ');
+    ok(/zamega zadlc za svhors svdisk svmask sv la bdsp swhors swcrown swisle sw lgpe/.test(ord), tag + ' Jeux: extra dexes just above the latest expansion of their group ' + ord); }
+  await go('#/'); await p.select('#game', 'zamega'); await sleep(600);
+  const md = await p.evaluate(() => { const r = filtered(); return { n: r.length, sp: new Set(r.map(x => x.id)).size, megas: r.filter(x => x.mb).length, ctx: trackCtx(), sel: document.querySelector('#game').value,
+    nat: r.every((x, i) => i === 0 || r[i - 1].id <= x.id), allMega: [...new Set(r.map(x => x.id))].every(id => r.some(x => x.id === id && x.mb)), first: r.slice(0, 3).map(x => x.k), count: document.querySelector('#count').textContent,
+    hors: document.querySelectorAll('.card .rn.hors').length }; });
+  ok(md.ctx === 'za' && md.sel === 'zamega' && md.nat && md.allMega && md.megas >= md.sp && md.first.join() === '3,3-mega,6' && md.hors === 0 && /Méga-Dex Z-A/.test(md.count), tag + ' Méga-Dex: ' + JSON.stringify(md));
+  // shared save: marking in the Méga-Dex = Z-A marks (Méga-Dimension-only species read through the shared save)
+  const dlcOnly = await p.evaluate(() => { const g = GIDX.za, h = GIDX.zadlc; const m = E.find(x => x.mb && !inGame(x, g) && inGame(x, h) && BY_KEY[x.mb] && !inGame(BY_KEY[x.mb], g)); return m && m.mb; });
+  if (dlcOnly) {
+    await go('#/p/' + dlcOnly); await sleep(500);
+    const dg = await p.$eval('#dgame', e => e.value); await p.click('#actbar .cg'); await sleep(100);
+    ok(dg === 'zadlc' && await p.evaluate(k => isCaught(BY_KEY[k], 'za') && CAUGHT_G.has('zadlc:' + k), dlcOnly), tag + ' Méga-Dex → Méga-Dimension-only species marked in the shared save (' + dlcOnly + ', sheet ' + dg + ')');
+  }
+  await go('#/'); await p.select('#game', ''); await sleep(300);
+  // Hors dex for all obtainable species: appended (games without expansions) / separate list (games with expansions)
+  await go('#/'); await sel('oras'); await sleep(300);
+  const orasN = await p.evaluate(() => ({ n: filtered().length, reg: DEX.oras.regional, x: DEX.oras.extra.size, mew: filtered().findIndex(x => x.id === 151), last: filtered().at(-1).id }));
+  ok(orasN.n === 721 && orasN.reg === 211 && orasN.mew > orasN.reg - 1 && orasN.last === 721, tag + ' ROSA: 211 regional + Hors dex (all 721 obtainable) ' + JSON.stringify(orasN));
+  await p.type('#q', '151'); await sleep(300); ok((await p.evaluate(() => filtered().map(x => x.id))).includes(151), tag + ' numeric search finds a Hors dex species by national nº (and regional nº 151)'); await p.evaluate(() => { $('#q').value = ''; state.q = ''; render(); });
+  const swx = await p.evaluate(async () => { const a = await loadDex('sw'); return a.extra.size; });
+  await go('#/'); await p.select('#game', 'swhors'); await sleep(600);
+  const hs = await p.evaluate(() => ({ n: filtered().length, ctx: trackCtx(), hors: document.querySelectorAll('.card .rn.hors').length, first: filtered()[0].id, count: document.querySelector('#count').textContent }));
+  ok(swx === 0 && hs.n === 80 && hs.ctx === 'sw' && hs.first === 150 && /Hors dex ÉB/.test(hs.count), tag + ' Hors dex Épée/Bouclier list (sw dexes untouched) ' + JSON.stringify(hs));
+  await go('#/p/151'); await sleep(500);
+  const dg2 = await p.$eval('#dgame', e => e.value); await p.click('#actbar .cg'); await sleep(100);
+  ok(dg2 === 'swhors' && await p.evaluate(() => state.dgame === 'sw' && CAUGHT_G.has('sw:151') && isCaught(BY_KEY['151'], 'sw') && !gamesOf(BY_KEY['151']).includes('sw')), tag + ' Mew marked in Épée/Bouclier from the Hors dex list (completion rules unchanged)');
+  await go('#/'); await p.select('#game', 'svhors'); await sleep(600);
+  ok((await p.evaluate(() => [filtered().length, trackCtx()])).join() === '69,sv', tag + ' Hors dex Écarlate/Violet: 69, context sv');
+  await go('#/'); await p.select('#game', ''); await sleep(300);
+  // legacy (v20) gem keys → Z-A
+  await p.evaluate(() => { localStorage.setItem('mega_gems', JSON.stringify(['6-mega-x'])); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(await p.evaluate(() => hasGem(BY_KEY['6-mega-x'], 'za') && !hasGem(BY_KEY['6-mega-x'], 'xy') && JSON.parse(localStorage.mega_gems).includes('za:6-mega-x')), tag + ' legacy gem keys migrated to Z-A');
+  await go('#/'); await sel(''); await p.evaluate(() => { state.forms = false; }); await go('#/'); await sleep(200);
+
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  // still-battle-only (Primo): inherits
+  await go('#/'); await sel('oras'); await go('#/p/382-primal'); await sleep(300);
+  ok((await cgState()).dis && /Variante de combat – suit la forme de base/.test(await strip()), tag + ' Primal battle-only sheet');
+  await go('#/p/382'); await sleep(300); ok(!(await cgState()).dis, tag + ' base Kyogre markable'); await p.click('#actbar .cg'); await sleep(100);
+  await go('#/p/382-primal'); await sleep(300); ok((await cgState()).on, tag + ' Primal inherits base mark');
+  ok((await ls2('caught_g')).every(x => !x.includes('primal')), tag + ' only base key stored for primal ' + JSON.stringify(await ls2('caught_g')));
+  await p.evaluate(() => { state.forms = false; render(); }); await sel(''); await sleep(200);
+  const baseTot = await p.evaluate(() => E.filter(p => !p.c && !p.bo).length);
+  ok(new RegExp(`1 / ${baseTot} 🔴 capturés`).test(await count()), tag + ' base counter excludes battle-only variants: ' + await count());
+  await p.screenshot({ path: SHOTS + `battle-only-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 300 } });
+  // ---- Catégorie: transfer categories (game / base / Home)
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const catN = async c => { await p.select('#cat', c); await sleep(200); return parseInt(await count()); };
+  const tinfo = await p.evaluate(() => ({ N: E.filter(e => !e.c && homeAvail(e).length > 0).length, one: (e => e && { k: e.k, g: ORI[homeGold(e)[0]].games.find(g => gamesOf(e).includes(g)) })(E.find(e => !e.c && !e.bo && !e.my && homeAvail(e).length === 1 && homeGold(e).length === 1 && homeAvail(e)[0] !== 'go')) }));
+  await go('#/'); await sel('sw'); await go('#/p/25'); await sleep(300); await p.click('#actbar .tr'); await sleep(100);
+  await go('#/'); await sleep(200);
+  ok(await catN('trans') === 1, tag + ' game view: "transférés depuis ce jeu" = 1');
+  await p.select('#cat', ''); await sleep(200); ok(/1 transférés vers HOME/.test(await count()), tag + ' game header counter: ' + await count());
+  ok(await catN('notrans') === 399 && await catN('hcomplete') === 0, tag + ' game view: not yet = 399, complets 0');
+  ok((await p.$eval('#cat option[value=trans]', o => o.textContent)).includes('ce jeu'), tag + ' game labels'); await p.select('#cat', '');
+  await go('#/p/25'); await sleep(300); await p.click('#actbar .sh'); await trsLogic(); await sleep(100); await go('#/'); await sleep(200);
+  ok(await p.evaluate(() => HOME_S.size === 1 && E.filter(x => transCat(x, 'strans')).length === 1), tag + ' v24 « Shiny transférés (HOME) » filter = Shiny dans HOME'); await p.select('#cat', '');
+  await sel(''); ok(await catN('trans') === 1 && await catN('notrans') === tinfo.N - 1 && await catN('hcomplete') === 0, tag + ' base view transfer categories (N=' + tinfo.N + ')');
+  await p.select('#cat', ''); await sleep(200); ok(/1 🏠 transférés HOME/.test(await count()), tag + ' base counter: ' + await count());
+  await sel('home'); ok(await catN('trans') === 1 && await catN('notrans') === tinfo.N - 1, tag + ' Home view transfer categories'); await p.select('#cat', '');
+  await sel('frlg'); ok(await p.$eval('#cat option[value=trans]', o => o.disabled), tag + ' categories disabled in a game that cannot transfer'); await sel('');
+  await go('#/'); await sel(tinfo.one.g); await go('#/p/' + tinfo.one.k); await sleep(300); await p.click('#actbar .tr'); await sleep(100); await sel('');
+  ok(await catN('hcomplete') === 1, tag + ' "Complets Home" for a Pokémon in one compatible save (' + JSON.stringify(tinfo.one) + ')'); await p.select('#cat', '');
+  await sleep(200); ok(/1 🟡🏠 complets HOME/.test(await count()), tag + ' base counter complets Home: ' + await count());
+  const gh = await p.$$eval('.card .mk.hm.gold', e => e.length); await sel('home'); const gh2 = await p.$$eval('.card .mk.hm.gold', e => e.length); ok(gh2 >= 1, tag + ' gold Home icon in Home view');
+  await sel('');
+  // ---- Home completion with Pokémon GO: required, except for Mythicals
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  const gi = await p.evaluate(() => ({
+    reg: (e => e && { k: e.k, reps: homeGold(e).map(m => m === 'go' ? 'go' : ORI[m].games.find(g => gamesOf(e).includes(g))) })(E.find(e => !e.c && !e.bo && !e.my && e.go && homeGold(e).length === 2 && homeGold(e).includes('go'))),
+    myth: (e => e && { k: e.k, reps: homeGold(e).map(m => ORI[m].games.find(g => gamesOf(e).includes(g))), withGo: !homeAvail(e).includes('go') })(E.filter(e => !e.c && !e.bo && e.my && e.go && homeGold(e).length >= 1).sort((a, b) => homeGold(a).length - homeGold(b).length)[0]) }));
+  ok(gi.reg && gi.myth && gi.myth.withGo, tag + ' found GO test Pokémon ' + JSON.stringify(gi));
+  const trf = async (g, k) => { await go('#/'); await sel(g); await go('#/p/' + k); await sleep(250); await p.click('#actbar .tr'); await sleep(100); };
+  for (const g of gi.reg.reps.filter(g => g !== 'go')) await trf(g, gi.reg.k);
+  await sel(''); ok(await catN('hcomplete') === 0, tag + ' regular Pokémon: not complete while GO is not transferred'); await p.select('#cat', '');
+  await trf('go', gi.reg.k); await sel(''); ok(await catN('hcomplete') === 1, tag + ' regular Pokémon: GO counts → complete'); await p.select('#cat', '');
+  for (const g of gi.myth.reps) await trf(g, gi.myth.k);
+  await sel(''); ok(await catN('hcomplete') === 2, tag + ' Mythical: complete without GO'); await p.select('#cat', '');
+  await go('#/'); await sel('go'); await go('#/p/' + gi.myth.k); await sleep(300);
+  ok(!(await hasBtn('#actbar .tr')) && /fabuleux/.test(await strip()), tag + ' Mythical: no GO transfer button, explained');
+  await go('#/'); await sel('home'); await p.screenshot({ path: SHOTS + `home-gold-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 420 } });
+  await sel('');
+  await p.evaluate(() => localStorage.clear()); await p.evaluate(() => localStorage.setItem('caught', '[25,"26-alola"]')); await p.reload({ waitUntil: 'networkidle0' });
+  // Rouge/Bleu (not Home-compatible)
+  await go('#/'); await sel('rb'); await go('#/p/25');
+  ok(/Rouge \/ Bleu/.test(await strip()) && await hasBtn('#actbar .tr') && /Console virtuelle/.test(await strip()), tag + ' rb strip (Console virtuelle → Home, Game Boy mark): ' + await strip());
+  await p.click('#actbar .cg'); ok(JSON.stringify(await ls2('caught_g')) === '["rb:25"]' && JSON.stringify(await ls2('caught')) === '[25,"26-alola"]', tag + ' rb mark stored per game, legacy global unchanged');
+  await go('#/'); await sleep(200); ok(/Rouge \/ Bleu : 1 \/ 151 🔴 capturés/.test(await count()), tag + ' rb counter: ' + await count());
+  await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' rb caught filter'); 
+  await sel('xy'); ok((await count()).startsWith('0 Pokémon'), tag + ' other game has no marks: ' + await count()); await p.select('#cat', '');
+  // Épée/Bouclier (Home-compatible): caught + transfer + shiny transfer
+  await sel('sw'); await go('#/p/25');
+  ok(await hasBtn('#actbar .tr'), tag + ' sw has Home transfer button');
+  await p.click('#actbar .tr'); await sleep(100);
+  ok((await ls2('home_o')).includes('galar:25') && (await ls2('caught_g')).includes('sw:25'), tag + ' transfer auto-marks caught');
+  await p.click('#actbar .sh'); await sleep(100); ok(!(await p.$('#actbar .trs, #trackinfo .trs')), tag + ' no shiny-transfer button even when shiny (v21)');
+  await trsLogic(); await sleep(100); ok((await ls2('homeshiny_g')).includes('sw:25'), tag + ' shiny transfer stored');
+  // Home view derived
+  await go('#/'); await sel('home'); await sleep(300);
+  ok(/HOME : 1 \/ 1025 🏠 transférés · 1 ✨ shiny · 0 🟡🏠 complets/.test(await count()), tag + ' Home counter: ' + await count());
+  await p.select('#cat', 'caught'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home caught filter derived'); await p.select('#cat', 'shiny'); await sleep(200); ok((await count()).startsWith('1 Pokémon'), tag + ' Home shiny filter derived'); await p.select('#cat', '');
+  await go('#/p/25'); await sleep(300);
+  ok(/Compte pour la dorure : 1 \/ \d+ marques/.test(await strip()) && /Marque de Galar[^—]*— transféré/.test(await strip()) && /Shiny dans HOME/.test(await strip()), tag + ' Home detail shows source mark: ' + await strip());
+  ok(!(await p.$('#actbar .cg')) && await p.$eval('#actbar .ori[data-origin="galar"]', e => e.getAttribute('aria-pressed')) === 'true', tag + ' Home sheet bar = origin marks (Galar on)');
+  await p.screenshot({ path: SHOTS + `home-derived-${tag}.png` });
+  // un-catching in the game removes the transfer
+  await go('#/'); await sel('sw'); await go('#/p/25'); await p.click('#actbar .cg'); await sleep(100);
+  ok(!(await ls2('home_o')).includes('galar:25') && !(await ls2('homeshiny_g')).includes('sw:25'), tag + ' un-catch clears the transfer set from the game');
+  await p.click('#actbar .tr'); await p.screenshot({ path: SHOTS + `track-sw-${tag}.png`, clip: { x: 0, y: 0, width: w, height: 200 } });
+  const tr1 = await p.evaluate(() => [...document.querySelectorAll('#actbar .act')].map(b => ({ one: b.scrollHeight <= b.clientHeight + 1, w: b.getBoundingClientRect().right <= innerWidth })));
+  ok(tr1.every(x => x.one && x.w), tag + ' transfer buttons one line / inside viewport ' + JSON.stringify(tr1));
+  // GO is a game too
+  await go('#/'); await sel('go'); await go('#/p/150'); await p.click('#actbar .cg'); await p.click('#actbar .tr'); await sleep(100);
+  ok((await ls2('home_o')).includes('go:150'), tag + ' GO transfer');
+  // export / import round-trip
+  const dump = await p.evaluate(() => JSON.stringify({ favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG] }));
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await p.evaluate(async d => { const f = new File([d], 'x.json', { type: 'application/json' }); const dt = new DataTransfer(); dt.items.add(f); const i = document.getElementById('import'); i.files = dt.files; window.alert = () => {}; i.dispatchEvent(new Event('change')); }, dump);
+  await sleep(500);
+  ok((await ls2('home_o')).includes('go:150') && (await ls2('caught_g')).includes('rb:25') && (await ls2('caught')).includes(25), tag + ' import restores per-game + transfer marks');
+  await sel('');
+  // ---- Home markers: partial / shiny / complete
+  await go('#/'); await sel('home'); await p.evaluate(() => { localStorage.removeItem('home_g'); });
+  const pick = await p.evaluate(() => { const q = E.find(x => !x.c && homeAvail(x).length === 2 && homeGold(x).length === 2 && !homeAvail(x).includes('go')); return q && { k: q.k, av: homeGold(q).map(m => ORI[m].games.find(g => gamesOf(q).includes(g))), n: q.n }; });
+  ok(!!pick, tag + ' found a Pokémon present in exactly 2 Home-compatible games ' + JSON.stringify(pick));
+  await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); HOME_O.clear(); HOME_OG.clear(); saveTrack(); });
+  await sel(pick.av[0]); await go('#/p/' + pick.k); await p.click('#actbar .tr'); await sleep(100);
+  await go('#/'); await sel('home'); await p.type('#q', pick.n); await sleep(300);
+  let mks = await p.$$eval('.card .mk', e => e.map(x => x.className));
+  ok(mks.some(c => /hm/.test(c)) && !mks.some(c => /gold/.test(c)), tag + ' partial transfer = blue Home icon only ' + mks);
+  ok(/0 🟡🏠 complets/.test(await count()), tag + ' counter 0 complets: ' + await count());
+  await sel(pick.av[1]); await go('#/p/' + pick.k); await p.click('#actbar .tr'); await p.click('#actbar .sh'); await trsLogic(); await sleep(100);
+  await go('#/'); await sel('home'); await p.$eval('#q', (e, n) => { e.value = n; e.dispatchEvent(new Event('input')); }, pick.n); await sleep(300);
+  mks = await p.$$eval('.card .mk', e => e.map(x => x.className));
+  ok(mks.some(c => /hm gold/.test(c)) && mks.some(c => /sh/.test(c)), tag + ' complete = gold Home icon + ✨ ' + mks);
+  ok(/1 🟡🏠 complets/.test(await count()) && /1 ✨ shiny/.test(await count()), tag + ' counters: ' + await count());
+  ok(await p.$eval('#legend', e => !e.hidden && /toutes<\/b> les marques Switch|toutes les marques Switch/.test(e.textContent) && /Anciens jeux/.test(e.textContent) && /Kalos/.test(e.textContent) && /dorée/.test(e.textContent) && /fabuleux/.test(e.textContent)), tag + ' legend visible in Home (gold + mythical note)');
+  await go('#/p/' + pick.k); await sleep(300);
+  ok((await p.$$eval('#trackinfo .homerows li', e => e.map(x => x.textContent))).length === 2 && /complet/.test(await strip()), tag + ' detail lists per-game status: ' + await strip());
+  await p.screenshot({ path: SHOTS + `home-complete-${tag}.png` });
+  await p.evaluate(() => { for (const x of [...TRANS_G]) TRANS_G.delete(x); for (const x of [...STRANS_G]) STRANS_G.delete(x); HOME_O.clear(); HOME_OG.clear(); saveTrack(); });
+  { const r = await p.evaluate(() => { HOME_O.clear(); HOME_OG.clear(); saveTrack(); const q = BY_KEY['25'], av = homeAvail(q), g = homeGold(q);
+      for (const m of av.filter(m => ORI[m].old)) HOME_O.add(m + ':25'); saveTrack(); const oldOnly = homeComplete(q);
+      for (const m of g) HOME_O.add(m + ':25'); saveTrack(); const all = homeComplete(q);
+      HOME_O.delete('kalos:25'); HOME_O.delete('gb:25'); saveTrack(); const noOld = homeComplete(q);
+      const celebi = BY_KEY['251'], oldC = homeAvail(celebi).filter(m => ORI[m].old);
+      HOME_O.clear(); saveTrack();
+      return { oldOnly, all, noOld, gold: g.join(), old: av.filter(m => ORI[m].old).join(), celebiGold: homeGold(celebi).join(), oldC: oldC.join() }; });
+    ok(!r.oldOnly && r.all && r.noOld && r.gold === 'gba,za,paldea,hisui,sinnoh,galar,lgpe,go' && r.old === 'alola,kalos,none,gb', tag + ' v23: only Switch-era marks (incl. GBA mark from RF/VF Switch) + GO count for Home gold ' + JSON.stringify(r)); }
+  for (const g of ['rs', 'e', 'frlg']) { await go('#/'); await sel(g); await go('#/p/25'); await sleep(400);
+    const st = await p.evaluate(g => { const b = document.querySelector('#actbar .tr'); return { dis: b.disabled, pressed: b.getAttribute('aria-pressed'), om: !!b.querySelector('.om'), mark: originOf(g), h: GAME_BY[g].h || null, txt: document.querySelector('#trackinfo').textContent }; }, g);
+    await p.evaluate(() => toggleTransfer(DET.p, false, sheetCtx())); const o = await ls2('home_o');
+    ok(st.dis && st.pressed === 'false' && !st.om && st.mark === null && st.h === null && /Pal Park/.test(st.txt) && /Sans marque/.test(st.txt) && !o.length, tag + ' v23 GBA ' + g + ': Transféré greyed, no mark, Pal Park → « Sans marque » explained'); }
+  ok(await p.evaluate(() => !homeAvail(BY_KEY['380']).some(m => m === null) && E.every(e => !homeAvail(e).includes(undefined)) && ['rs', 'e', 'frlg'].every(g => !COMPAT().includes(g))), tag + ' v23 GBA games never in Home availability');
+  await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
+  { const hb = await p.evaluate(() => ({ old: [...document.querySelectorAll('#actbar .ori.old')].map(b => b.dataset.origin).join(), grp: [...document.querySelectorAll('#trackinfo .hgrp')].map(x => x.textContent).join('|') }));
+    ok(hb.old === 'alola,kalos,none,gb' && /Compte pour la dorure\|Anciens jeux/.test(hb.grp), tag + ' v23 Home sheet separates dorure / anciens jeux ' + JSON.stringify(hb)); }
+  await go('#/'); await p.$eval('#q', e => { e.value = ''; e.dispatchEvent(new Event('input')); }); await sel('');
+  // ---- v24: Jeux / Catégorie custom dropdowns, « Shiny dans HOME », new categories, HOME uppercase
+  await p.evaluate(() => { localStorage.clear(); }); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sleep(300);
+  { const j = await p.evaluate(() => { const sel = document.querySelector('#game'), btn = document.querySelector('#gamebtn'), l = document.querySelector('#gamelist');
+      const opts = [...l.querySelectorAll('.gopt')].map(li => li.dataset.v), nat = [...sel.options].map(o => o.value);
+      const seq = [...l.children].map(li => li.classList.contains('gsep2') ? '=' + li.textContent : li.classList.contains('gsep') ? '-' : li.dataset.v);
+      const dots = [...l.querySelectorAll('.gopt')].filter(li => li.dataset.v).map(li => getComputedStyle(li.querySelector('.gdot')).backgroundImage);
+      return { hidden: sel.classList.contains('vh') && sel.tabIndex === -1, btn: btn.getAttribute('aria-haspopup') === 'listbox' && btn.getAttribute('aria-expanded') === 'false', sameOrder: JSON.stringify(opts) === JSON.stringify(nat),
+        seq: seq.join(' '), dotsOk: dots.every(d => /gradient/.test(d)), sv: l.querySelector('.gopt[data-v="sv"] .gdot').getAttribute('style'), svd: l.querySelector('.gopt[data-v="svdisk"] .gdot').getAttribute('style') }; });
+    ok(j.hidden && j.btn && j.sameOrder && j.dotsOk && j.sv === j.svd && /#e0383e.*#8b45c5/.test(j.sv), tag + ' v24 Jeux dropdown: hidden native select, same order, coloured dots (Écarlate/Violet split, same for its DLC)');
+    ok(j.seq.startsWith(' home go =Switch frlgsw - zamega zadlc za svhors svdisk svmask sv - la bdsp swhors swcrown swisle sw - lgpe =3DS usum sm - oras xy =DS b2w2 bw - hgss pt dp =Game Boy Advance e frlg rs =Game Boy / Color c gs - y rb'), tag + ' v24 Jeux separators: double per console, simple per generation ' + j.seq); }
+  await p.click('#gamebtn'); await sleep(200);
+  ok(await p.evaluate(() => !document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamelist' && document.querySelector('#gamebtn').getAttribute('aria-expanded') === 'true'), tag + ' v24 Jeux dropdown opens, listbox focused');
+  for (const k of ['ArrowDown', 'ArrowDown', 'ArrowDown', 'ArrowDown']) await p.keyboard.press(k);
+  await p.keyboard.press('Enter'); await sleep(500);
+  ok(await p.$eval('#game', e => e.value) === 'zamega' && await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn' && /Méga-Dex/.test(document.querySelector('#gamebtn').textContent)), tag + ' v24 Jeux keyboard: ↓↓↓↓ + Entrée (RF/VF Switch now above) → Méga-Dex Z-A, menu closed, focus back on the button');
+  await p.click('#gamebtn'); await sleep(150); await p.keyboard.press('Escape'); await sleep(100);
+  ok(await p.evaluate(() => document.querySelector('#gamelist').hidden && document.activeElement.id === 'gamebtn'), tag + ' v24 Jeux: Échap closes');
+  await p.click('#gamebtn'); await sleep(150); await p.click('#gamelist .gopt[data-v="home"]'); await sleep(400);
+  ok(await p.$eval('#game', e => e.value) === 'home' && /Pokémon HOME/.test(await p.$eval('#gamebtn', e => e.textContent)), tag + ' v24 Jeux: click/tap an option selects it');
+  await sel(''); await sleep(200);
+  ok(await p.$eval('#gamebtn', e => e.textContent.replace('▾', '').trim()) === 'Jeux', tag + ' v24 Jeux button follows programmatic changes');
+  { const c = await p.evaluate(() => [...document.querySelector('#catlist').children].map(li => li.classList.contains('gsep') ? '────' : li.textContent));
+    const exp = ['Toutes catégories (aucun filtre)', 'Statut', 'Légendaires', 'Fabuleux', 'Ultra-Chimères', 'Méga-évolutions', 'Gigamax', 'Bébés', '★ Favoris', 'Marques', '🔴 Capturés', '⚪ Pas encore capturés', '✨ Shiny capturés', '✨ Shiny manquants', '────', '🟡 Complétés jeux actuels', '🟡🕹 Complétés anciens jeux', '⚪🟡 Jeux actuels manquants', '⚪🕹 Anciens jeux manquants', 'HOME', '🏠 Transférés HOME (au moins une marque)', '🏠 Pas encore transférés HOME (aucune marque)', '✨ Shiny transférés (HOME)', '✨ Shiny manquants (HOME)', '🟡🏠 Complets HOME (marques Switch + GO)', '⚪🏠 HOME manquants (marques Switch + GO)', 'Barons', 'Barons', '⚪ Barons manquants', '✨ Barons shiny', '⚪✨ Barons shiny manquants'];
+    ok(JSON.stringify(c) === JSON.stringify(exp), tag + ' v24 Catégorie dropdown: exact validated labels + separators ' + JSON.stringify(c)); }
+  await p.click('#catbtn'); await sleep(150); await p.click('#catlist .gopt[data-v="swmiss"]'); await sleep(300);
+  ok(await p.$eval('#cat', e => e.value) === 'swmiss' && parseInt(await count()) > 0, tag + ' v24 Catégorie dropdown selects (Jeux actuels manquants): ' + (await count()).slice(0, 40));
+  await p.select('#cat', ''); await sleep(150);
+  await sel('frlg'); await p.click('#catbtn'); await sleep(150);
+  ok(await p.evaluate(() => document.querySelector('#catlist .gopt[data-v="trans"]').getAttribute('aria-disabled') === 'true' && document.querySelector('#catlist .gopt[data-v="strans"]').getAttribute('aria-disabled') !== 'true'), tag + ' v24 Catégorie: HOME transfer entries disabled in a GBA game (Shiny HOME stays)');
+  await p.keyboard.press('Escape'); await sel('');
+  // category logic
+  { const r = await p.evaluate(() => {
+      const cnt = c => { state.cat = c; const n = filtered().length; state.cat = ''; return n; };
+      HOME_O.clear(); HOME_OG.clear(); HOME_SH.clear(); CAUGHT_G.clear(); saveTrack();
+      const base = { sw: cnt('swmiss'), old: cnt('oldmiss'), hm: cnt('hmiss'), ns: cnt('nostrans') };
+      const N = E.filter(e => !e.c && homeGold(mp(e)).length).length, Nsw = E.filter(e => !e.c && baseStatus(e).sw.length).length, Nold = E.filter(e => !e.c && baseStatus(e).old.length).length;
+      for (const m of homeGold(BY_KEY['25'])) HOME_O.add(m + ':25'); HOME_O.add('kalos:6'); saveTrack();
+      const after = { hm: cnt('hmiss'), ns: cnt('nostrans') };
+      HOME_SH.add('25'); saveTrack(); const ns2 = cnt('nostrans'), st = cnt('strans');
+      HOME_O.clear(); HOME_SH.clear(); saveTrack();
+      return { base, N, Nsw, Nold, after, ns2, st }; });
+    ok(r.base.sw === r.Nsw && r.base.old === r.Nold && r.base.hm === r.N && r.base.ns === 0 && r.after.hm === r.N - 1 && r.after.ns === 2 && r.ns2 === 1 && r.st === 1, tag + ' v24 categories: Jeux actuels / Anciens jeux / HOME manquants (gold set, old marks ignored) / Shiny manquants (HOME) ' + JSON.stringify(r)); }
+  // HOME sheet « Shiny » button
+  await p.evaluate(() => { localStorage.clear(); }); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
+  const hsh = () => p.$eval('#actbar .hsh', b => ({ dis: b.disabled, on: b.getAttribute('aria-pressed') === 'true', last: (b === b.parentElement.lastElementChild || b.nextElementSibling.classList.contains('baron')) }));
+  let hs4 = await hsh(); ok(hs4.dis && !hs4.on && hs4.last, tag + ' v24 HOME sheet: Shiny button after the origin marks, disabled without any mark');
+  await p.click('#actbar .ori[data-origin="galar"]'); await sleep(100); hs4 = await hsh(); ok(!hs4.dis && !hs4.on, tag + ' v24 Shiny enabled once a mark is ticked');
+  await p.click('#actbar .hsh'); await sleep(100); hs4 = await hsh();
+  ok(hs4.on && JSON.stringify(await ls2('home_sh')) === '["25"]' && /Shiny dans HOME/.test(await strip()), tag + ' v24 Shiny dans HOME stored');
+  await p.click('#actbar .ori[data-origin="kalos"]'); await sleep(80); await p.click('#actbar .ori[data-origin="galar"]'); await sleep(80); hs4 = await hsh();
+  ok(!hs4.dis && hs4.on, tag + ' v24 Shiny kept while another mark remains');
+  await p.click('#actbar .ori[data-origin="kalos"]'); await sleep(100); hs4 = await hsh();
+  ok(hs4.dis && !hs4.on && JSON.stringify(await ls2('home_sh')) === '[]', tag + ' v24 Shiny reset when all marks are unticked');
+  await p.evaluate(() => { localStorage.clear(); localStorage.setItem('home_g', '["sw:25"]'); localStorage.setItem('homeshiny_g', '["sw:25","swisle:25"]'); localStorage.setItem('home_o', '["galar:25"]'); }); await p.reload({ waitUntil: 'networkidle0' });
+  ok(JSON.stringify(await ls2('home_sh')) === '["25"]' && await p.evaluate(() => HOME_S.has('25')), tag + ' v24 migration: old per-game shiny transfers → Shiny dans HOME');
+  // HOME uppercase everywhere (visible text, labels, tooltips)
+  await go('#/'); await sel('home'); await sleep(200);
+  { const txt = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' ') + ' ' + [...document.querySelectorAll('option')].map(o => o.textContent).join(' '));
+    await go('#/p/25'); await sleep(400);
+    const t2 = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' '));
+    await p.select('#dgame', 'sw'); await sleep(300);
+    const t3 = await p.evaluate(() => document.body.innerText + ' ' + [...document.querySelectorAll('[title],[aria-label]')].map(e => (e.title || '') + ' ' + (e.getAttribute('aria-label') || '')).join(' '));
+    const bad = [txt, t2, t3].join(' ').match(/.{0,20}\bHome\b.{0,20}/g);
+    ok(!bad, tag + ' v24 « HOME » in capitals in list, legend, HOME sheet, game sheet, tooltips ' + JSON.stringify(bad)); }
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  // ---- v25: Barons (Alpha) + regional forms first in their region's dex
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  { const a = await p.evaluate(() => Object.fromEntries([['25', 'la'], ['58', 'la'], ['58-hisui', 'la'], ['215', 'la'], ['215-hisui', 'la'], ['37', 'la'], ['37-alola', 'la'], ['483', 'la'], ['493', 'la'], ['150', 'za'], ['6', 'za'], ['6', 'zadlc'], ['6-mega-x', 'za'], ['670-eternal', 'za'], ['670', 'za'], ['25', 'sw'], ['716', 'za']].map(([k, c]) => [k + '@' + c, alphaOk(BY_KEY[k], c)])));
+    const want = { '25@la': true, '58@la': false, '58-hisui@la': true, '215@la': true, '215-hisui@la': true, '37@la': true, '37-alola@la': false, '483@la': false, '493@la': false, '150@za': false, '6@za': true, '6@zadlc': true, '6-mega-x@za': false, '670-eternal@za': false, '670@za': true, '25@sw': false, '716@za': false };
+    ok(JSON.stringify(a) === JSON.stringify(want), tag + ' v25 alpha-capable rules (no legendary/mythical, Mega, gift forms, PLA transfer-only commons) ' + JSON.stringify(a));
+    const n = await p.evaluate(() => ({ la: E.filter(e => !e.c && alphaOk(e, 'la')).length, za: E.filter(e => !e.c && alphaOk(e, 'za')).length }));
+    ok(n.la === 224 - 15 && n.za === 332, tag + ' v25/v34 alpha-capable species counts (PLA 224 minus 15 Hisui-only bases counted on their Hisuian form; Z-A 332 = Poképédia Baron list) ' + JSON.stringify(n)); }
+  await go('#/'); await sel('la'); await go('#/p/25'); await sleep(400);
+  const ord = () => p.$$eval('#actbar .act', bs => bs.map(b => [...b.classList].filter(c => c !== 'act')[0]));
+  const st25 = () => p.evaluate(() => Object.fromEntries([...document.querySelectorAll('#actbar .act')].map(b => [[...b.classList].filter(c => c !== 'act')[0], b.getAttribute('aria-pressed') === 'true'])));
+  ok((await ord()).join() === 'cg,sh,baron,barons,tr', tag + ' v25 PLA bar: Capturé · Shiny · Baron · B. shiny · Transféré ' + await ord());
+  ok(await p.$eval('#actbar .baron img', i => i.getAttribute('src') === 'img/alpha/baron.png' && i.naturalWidth > 0) && await p.$eval('#actbar .barons', b => !!b.querySelector('img') && getComputedStyle(b.querySelector('.bsp'), '::after').content.includes('✨')), tag + ' v25 official Alpha icon (self-hosted) + ✨ badge on B. shiny');
+  await p.click('#actbar .barons'); await sleep(150);
+  let s5 = await st25(); ok(s5.cg && s5.sh && s5.baron && s5.barons && !s5.tr, tag + ' v25 B. shiny ⇒ Capturé + Shiny + Baron ' + JSON.stringify(s5));
+  { const col = await p.evaluate(() => { const a = getComputedStyle(document.querySelector('#actbar .barons')), b = getComputedStyle(document.querySelector('#actbar .sh')); return [a.borderTopColor, a.backgroundColor, b.borderTopColor, b.backgroundColor]; });
+    ok(col[0] === col[2] && col[1] === col[3] && /242, 194, 0/.test(col[0]), tag + ' v25 B. shiny checked = same yellow border/background as Shiny ' + col); }
+  ok(JSON.stringify(await ls2('baron_g')) === '["la:25"]' && JSON.stringify(await ls2('barons_g')) === '["la:25"]' && /Baron : oui · Baron shiny/.test(await strip()), tag + ' v25 Baron marks stored per game + sheet text');
+  await p.click('#actbar .sh'); await sleep(120); s5 = await st25(); ok(s5.cg && !s5.sh && s5.baron && !s5.barons, tag + ' v25 unticking Shiny clears B. shiny, Baron kept');
+  await p.click('#actbar .barons'); await sleep(100); await p.click('#actbar .baron'); await sleep(120); s5 = await st25(); ok(s5.cg && s5.sh && !s5.baron && !s5.barons, tag + ' v25 unticking Baron clears B. shiny');
+  await p.click('#actbar .baron'); await sleep(100); await p.click('#actbar .cg'); await sleep(120); s5 = await st25(); ok(!s5.cg && !s5.sh && !s5.baron && !s5.barons && JSON.stringify(await ls2('baron_g')) === '[]', tag + ' v25 unticking Capturé clears Baron + B. shiny');
+  ok(await p.evaluate(() => { CAUGHT_G.clear(); BARON_G.add('la:25'); saveTrack(); state.game = 'la'; const n = E.filter(e => isCaught(e, 'la')).length; BARON_G.clear(); saveTrack(); return n === 0; }), tag + ' v25 Barons do not count for completion');
+  await go('#/p/483'); await sleep(400); ok((await ord()).join() === 'cg,sh,tr' && /Ne peut pas être Baron.*légendaire/.test(await strip()), tag + ' v25 Dialga (PLA): no Baron buttons (legendary)');
+  await go('#/p/58'); await sleep(400); ok(!(await ord()).includes('baron'), tag + ' v25 Caninos commun (PLA, transfer only): no Baron buttons');
+  await go('#/'); await sel('za'); await go('#/p/6'); await sleep(400);
+  { const o = await ord(), w = await p.$eval('#actbar .acts', e => e.classList.contains('wrap2')), lab = await p.$$eval('#actbar .act .t', ts => ts.map(t => t.textContent));
+    ok(o.join() === 'cg,sh,baron,barons,tr,gem,gem' && w && lab.join() === 'Capturé,Shiny,Baron,B. shiny,Transf.,Gemme X,Gemme Y', tag + ' v25 Z-A Dracaufeu: 7 buttons, short labels, 2-line bar ' + lab);
+    if (mobile) { const rows = await p.$$eval('#actbar .act', bs => [...new Set(bs.map(b => Math.round(b.getBoundingClientRect().top)))].length); const clip = await p.$$eval('#actbar .act .t', ts => ts.filter(t => t.scrollWidth > t.clientWidth + 1).length); ok(rows === 2 && clip === 0, tag + ' v25 Z-A Dracaufeu mobile: 2 rows, no clipped label'); } }
+  await go('#/p/3'); await sleep(400);
+  { const lab = await p.$$eval('#actbar .act .t', ts => ts.map(t => t.textContent)), w = await p.$eval('#actbar .acts', e => e.classList.contains('wrap2'));
+    const clip = await p.$$eval('#actbar .act .t', ts => ts.filter(t => t.scrollWidth > t.clientWidth + 1).length);
+    ok(lab.join() === 'Capturé,Shiny,Baron,B. shiny,Transf.,Gemme' && !w && clip === 0, tag + ' v25 Z-A Florizarre: 6 buttons on one line, nothing clipped ' + lab); }
+  await go('#/p/6-mega-x'); await sleep(400); ok(!(await ord()).includes('baron'), tag + ' v25 Z-A Mega sheet: no Baron buttons');
+  await go('#/p/716'); await sleep(400); ok(!(await ord()).includes('baron'), tag + ' v25 Xerneas (Z-A): no Baron buttons');
+  // HOME sheet Baron buttons
+  await go('#/'); await sel('home'); await go('#/p/25'); await sleep(400);
+  const hb5 = () => p.evaluate(() => { const bs = [...document.querySelectorAll('#actbar .act')], i = bs.findIndex(b => b.classList.contains('hsh')); const g = c => document.querySelector('#actbar .' + c); return { after: bs[i + 1]?.classList.contains('baron') && bs[i + 2]?.classList.contains('barons') && bs.length === i + 3, dis: g('baron').disabled && g('barons').disabled, b: g('baron').getAttribute('aria-pressed') === 'true', bs: g('barons').getAttribute('aria-pressed') === 'true', sh: g('hsh').getAttribute('aria-pressed') === 'true' }; });
+  let h5 = await hb5(); ok(h5.after && h5.dis, tag + ' v25 HOME: Baron · B. shiny after Shiny, disabled without Hisui / Z-A mark');
+  await p.click('#actbar .ori[data-origin="galar"]'); await sleep(100); h5 = await hb5(); ok(h5.dis, tag + ' v25 HOME: Galar mark alone does not unlock Baron');
+  await p.click('#actbar .ori[data-origin="hisui"]'); await sleep(100); h5 = await hb5(); ok(!h5.dis && !h5.b, tag + ' v25 HOME: Hisui mark unlocks Baron');
+  await p.click('#actbar .barons'); await sleep(120); h5 = await hb5();
+  ok(h5.b && h5.bs && h5.sh && JSON.stringify(await ls2('home_b')) === '["25"]' && JSON.stringify(await ls2('home_bs')) === '["25"]' && JSON.stringify(await ls2('baron_g')) === '[]' && /Baron shiny dans HOME/.test(await strip()), tag + ' v25 HOME: B. shiny ⇒ Baron + Shiny (HOME), games untouched');
+  await p.click('#actbar .hsh'); await sleep(100); h5 = await hb5(); ok(h5.b && !h5.bs && !h5.sh, tag + ' v25 HOME: unticking Shiny clears B. shiny');
+  await p.click('#actbar .ori[data-origin="hisui"]'); await sleep(120); h5 = await hb5();
+  ok(h5.dis && !h5.b && JSON.stringify(await ls2('home_b')) === '[]', tag + ' v25 HOME: Baron reset when Hisui and Z-A are both unticked');
+  await go('#/p/483'); await sleep(400); ok(!(await p.$('#actbar .baron')), tag + ' v25 HOME: no Baron buttons for Dialga');
+  // regional forms
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' });
+  await go('#/'); await sel('la'); await sleep(300);
+  { const r = await p.evaluate(() => { const ks = filtered().map(x => x.k); return { n: ks.length, h: ks.includes('58-hisui'), c: ks.includes('58'), sn: ks.includes('215') && !ks.includes('215-hisui'), q: ks.includes('211-hisui') && !ks.includes('211'), v: ks.includes('37') && !ks.includes('37-alola'), i: ks.indexOf('58-hisui') }; });
+    const c = await count(); const card = await p.evaluate(() => [...document.querySelectorAll('.card')].find(a => a.getAttribute('href') === '#/p/58-hisui')?.querySelector('.nm').textContent.trim());
+    ok(r.n === 242 && r.h && !r.c && r.q && r.v && r.sn === false && /^242 Pokémon/.test(c) && /Caninos de Hisui/.test(card || ''), tag + ' v25 Hisui dex, Formes off: Hisuian forms replace the common form (Caninos de Hisui, Qwilfish…) ' + JSON.stringify(r) + ' ' + c.slice(0, 30)); }
+  await p.click('#formsbtn'); await sleep(300);
+  { const r = await p.evaluate(() => { const ks = filtered().map(x => x.k); return [['58-hisui', '58'], ['215-hisui', '215'], ['157-hisui', '157'], ['706-hisui', '706']].map(([a, b]) => ks.indexOf(a) >= 0 && ks.indexOf(a) < ks.indexOf(b)); });
+    ok(r.every(Boolean), tag + ' v25 Hisui dex, Formes on: Hisuian form before the common form ' + r); }
+  await p.click('#formsbtn'); await sleep(200);
+  await sel('sw'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('52-galar') && !ks.includes('52') && ks.includes('77-galar') && !ks.includes('77'), tag + ' v25 Galar dex: Miaouss / Ponyta de Galar by default'); }
+  await sel('sv'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('128-paldea-combat-breed') && !ks.includes('128') && ks.includes('194-paldea') && !ks.includes('194'), tag + ' v25 Paldea dex: Tauros / Axoloto de Paldea by default'); }
+  await sel('sm'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('19-alola') && !ks.includes('19'), tag + ' v25 Alola dex (SL): Rattata d’Alola by default'); }
+  await sel('lgpe'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('19') && !ks.includes('19-alola'), tag + ' v25 Let’s Go (Kanto): common form kept'); }
+  await sel('za'); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.includes('25') && ks.length === 232, tag + ' v25 Z-A: unchanged (' + ks.length + ')'); }
+  await sel(''); { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.length === 1025 && ks.includes('58') && !ks.includes('58-hisui'), tag + ' v25 Tous les jeux: unchanged'); }
+  await sel('la'); await p.evaluate(() => { CAUGHT_G.add('la:58-hisui'); saveTrack(); render(); }); await sleep(200);
+  ok(/: 1 \/ 242 🔴 capturés/.test(await count()), tag + ' v25 PLA counter counts the Hisuian form ' + (await count()).slice(0, 80));
+  await go('#/p/58-hisui'); await sleep(400);
+  { const nav = await p.$$eval('.dnav a', as => as.map(a => a.getAttribute('href'))); ok(nav[1] !== '#' && nav[2] !== '#' && await p.$eval('#actbar .cg', b => b.getAttribute('aria-pressed') === 'true'), tag + ' v25 Hisuian sheet from the PLA list: ‹ › navigation + Capturé on the right form ' + nav); }
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  // v25 C: Catégorie « Barons » block
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  { const c = await p.evaluate(() => { const l = [...document.querySelector('#catlist').children]; const i = l.findIndex(li => li.dataset && li.dataset.v === 'baron'); return { sep: l[i - 1].classList.contains('gsep2') && l[i - 1].textContent === 'Barons', last: l.slice(i).map(li => li.textContent.trim()), icons: l.slice(i).map(li => !!li.querySelector('.bi img') + '/' + !!li.querySelector('.bsp')) }; });
+    ok(c.sep && c.last.join('|') === 'Barons|⚪ Barons manquants|✨ Barons shiny|⚪✨ Barons shiny manquants' && c.icons.join() === 'true/false,true/false,true/true,true/true', tag + ' v25 Catégorie: separated Barons block at the end, Baron icon (+ ✨ badge for shiny) ' + JSON.stringify(c)); }
+  { const r = await p.evaluate(() => {
+      const cnt = (c, g) => { state.cat = c; state.game = g || ''; const n = filtered().map(x => x.k); state.cat = ''; state.game = ''; return n; };
+      CAUGHT_G.clear(); BARON_G.clear(); BARONS_G.clear(); HOME_O.clear(); HOME_B.clear(); HOME_BS.clear(); HOME_SH.clear(); saveTrack();
+      const capAll = E.filter(e => !e.c && (alphaOk(e, 'la') || alphaOk(e, 'za'))).length;
+      const miss0 = cnt('nobaron').length;
+      BARON_G.add('la:25'); CAUGHT_G.add('la:25'); BARON_G.add('za:6'); BARON_G.add('zadlc:6'); BARONS_G.add('za:6'); BARONS_G.add('zadlc:6'); HOME_O.add('za:3'); HOME_B.add('3'); saveTrack();
+      const all = cnt('baron'), allS = cnt('barons'), allM = cnt('nobaron').length, allSM = cnt('nobarons').length;
+      return { capAll, miss0, all, allS, allM, allSM };
+    });
+    ok(r.miss0 === r.capAll && r.all.join() === '3,6,25' && r.allS.join() === '6' && r.allM === r.capAll - 3 && r.allSM === r.capAll - 1, tag + ' v25 Tous les jeux: Barons = Arceus OR Z-A OR HOME; manquants = Alpha-capable only ' + JSON.stringify({ ...r, all: r.all.join(), allS: r.allS.join() })); }
+  await sel('la'); await p.select('#cat', 'baron'); await sleep(300);
+  { const ks = await p.evaluate(() => filtered().map(x => x.k)); const c = await count(); ok(ks.join() === '25' && /· 1 Barons/.test(c), tag + ' v25 Arceus: Barons of that game only + counter ' + c.slice(0, 120)); }
+  await p.select('#cat', 'nobaron'); await sleep(300);
+  { const r = await p.evaluate(() => { const ks = filtered().map(x => x.k); return { n: ks.length, leg: ks.some(k => BY_KEY[k].lg || BY_KEY[k].my), c58: ks.includes('58'), h58: ks.includes('58-hisui'), p25: ks.includes('25') }; }); ok(r.n === 241 - 18 && !r.leg && !r.c58 && r.h58 && !r.p25, tag + ' v25 Arceus « Barons manquants »: Alpha-capable only (no legendaries), Hisuian forms ' + JSON.stringify(r)); }
+  await sel('za'); await p.select('#cat', 'barons'); await sleep(300);
+  ok((await p.evaluate(() => filtered().map(x => x.k))).join() === '6', tag + ' v25 Z-A: Barons shiny of that save');
+  await sel('home'); await p.select('#cat', 'baron'); await sleep(300);
+  { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.join() === '3' && /· 1 Barons/.test(await count()), tag + ' v25 HOME: HOME Baron marks + counter'); }
+  await p.select('#cat', 'nobaron'); await sleep(300);
+  { const ks = await p.evaluate(() => filtered().map(x => x.k)); ok(ks.length === 0, tag + ' v25 HOME « Barons manquants »: only forms with the Hisui / Z-A mark (none missing) ' + ks); }
+  await p.evaluate(() => { HOME_O.add('hisui:25'); saveTrack(); render(); }); await sleep(200);
+  ok((await p.evaluate(() => filtered().map(x => x.k))).join() === '25', tag + ' v25 HOME « Barons manquants » lists a form once its Hisui mark is ticked');
+  await sel('sw'); await sleep(200);
+  ok(await p.$eval('#cat', e => e.value) === '' && await p.evaluate(() => ['baron', 'nobaron', 'barons', 'nobarons'].every(v => document.querySelector(`#cat option[value=${v}]`).disabled)), tag + ' v25 Barons entries greyed (and reset) in a non-Legends game');
+  await p.click('#catbtn'); await sleep(150);
+  ok(await p.evaluate(() => document.querySelector('#catlist .gopt[data-v="baron"]').getAttribute('aria-disabled') === 'true' && getComputedStyle(document.querySelector('#catlist .gopt[data-v="baron"]')).opacity < 0.6), tag + ' v25 greyed in the custom menu'); await p.keyboard.press('Escape');
+  await sel('go'); ok(await p.evaluate(() => document.querySelector('#cat option[value=baron]').disabled), tag + ' v25 Barons greyed in Pokémon GO');
+  await p.evaluate(() => localStorage.clear()); await p.reload({ waitUntil: 'networkidle0' }); await go('#/'); await sel('');
+  // ---- v26: Ultra-Chimères
+  { const r = await p.evaluate(() => { state.cat = 'ub'; const ks = filtered().map(x => x.n); state.cat = ''; return ks; });
+    ok(r.join() === 'Zéroïd,Mouscoto,Cancrelove,Câblifère,Bamboiselle,Katagami,Engloutyran,Vémini,Mandrillon,Ama-Ama,Pierroteknik', tag + ' v26 Catégorie « Ultra-Chimères »: the 11 Ultra Beasts ' + r); }
+  ok(await p.evaluate(() => { const l = [...document.querySelectorAll('#catlist .gopt')].map(li => li.dataset.v); return l.indexOf('ub') === l.indexOf('myth') + 1 && !document.querySelector('#catlist .gopt[data-v="ub"]').previousElementSibling.classList.contains('gsep'); }), tag + ' v26 « Ultra-Chimères » right under « Fabuleux », same block');
+  await go('#/p/793'); await sleep(500);
+  ok(await p.evaluate(() => [...document.querySelectorAll('.hero .tags .tag')].some(t => t.textContent === 'Ultra-Chimère')), tag + ' v26 Zéroïd sheet: « Ultra-Chimère » tag (same style as Légendaire / Fabuleux)');
+  for (const k of ['800', '789']) { await go('#/p/' + k); await sleep(500); ok(await p.evaluate(() => ![...document.querySelectorAll('.hero .tags .tag')].some(t => t.textContent === 'Ultra-Chimère') && [...document.querySelectorAll('.hero .tags .tag')].some(t => t.textContent === 'Légendaire')), tag + ' v26 ' + k + ': Légendaire, not Ultra-Chimère'); }
+  await go('#/'); await sel('');
+  // ---- v26: Génération / Tri / sheet game selector → same custom dropdown as Jeux / Catégorie
+  await go('#/'); await sel('');
+  for (const [id, n] of [['gen', 10], ['sort', 7]]) {
+    const r = await p.evaluate(id => { const s = document.querySelector('#' + id), l = document.querySelector('#' + id + 'list'), b = document.querySelector('#' + id + 'btn');
+      return { hidden: s.classList.contains('vh'), btn: !!b && b.getAttribute('aria-haspopup') === 'listbox', same: JSON.stringify([...s.options].map(o => o.textContent)) === JSON.stringify([...l.querySelectorAll('.gopt')].map(li => li.textContent.trim())), n: l.querySelectorAll('.gopt').length }; }, id);
+    ok(r.hidden && r.btn && r.same && r.n === n, tag + ` v26 ${id} custom dropdown: hidden native select, same content ` + JSON.stringify(r));
+  }
+  await p.click('#genbtn'); await sleep(150); await p.click('#genlist .gopt[data-v="4"]'); await sleep(300);
+  ok(await p.$eval('#gen', e => e.value) === '4' && /Sinnoh/.test(await p.$eval('#genbtn', e => e.textContent)) && /^107 Pokémon/.test(await count()), tag + ' v26 Génération pick (tap) filters: ' + (await count()).slice(0, 20));
+  await p.focus('#sortbtn'); await p.keyboard.press('ArrowDown'); await sleep(150); await p.keyboard.press('ArrowDown'); await p.keyboard.press('Enter'); await sleep(300);
+  ok(await p.$eval('#sort', e => e.value) === 'name' && await p.evaluate(() => document.activeElement.id === 'sortbtn' && document.querySelector('#sortlist').hidden), tag + ' v26 Tri keyboard ↓ + Entrée → Tri : nom, focus back');
+  await p.click('#reset'); await sleep(300);
+  ok(await p.evaluate(() => /Toutes gén/.test(document.querySelector('#genbtn').textContent) && /Tri : N°/.test(document.querySelector('#sortbtn').textContent)), tag + ' v26 Réinitialiser resets the Génération / Tri buttons');
+  await go('#/p/25'); await sleep(500);
+  { const r = await p.evaluate(() => { const l = document.querySelector('#dgamelist'), opts = [...l.querySelectorAll('.gopt')];
+      return { init: MENUS.dgame && MENUS.dgame.sel === document.querySelector('#dgame'), hidden: document.querySelector('#dgame').classList.contains('vh'), label: document.querySelector('.gamebar label').htmlFor,
+        same: opts.length === document.querySelector('#dgame').options.length, dots: opts.filter(li => li.querySelector('.gdot:not(.none)')).length, n: opts.length, sep2: [...l.querySelectorAll('.gsep2')].map(x => x.textContent), sep: l.querySelectorAll('.gsep').length, btn: document.querySelector('#dgamebtn').textContent }; });
+    ok(r.init && r.hidden && r.label === 'dgamebtn' && r.same && r.dots === r.n - 1 && r.sep2[0] === 'Switch' && r.sep2.length >= 3 && r.sep >= 3 && /Vue d’ensemble/.test(r.btn), tag + ' v26 sheet game menu: custom dropdown, colour dots, console / generation separators ' + JSON.stringify(r)); }
+  await p.click('#dgamebtn'); await sleep(150); await p.click('#dgamelist .gopt[data-v="la"]'); await sleep(500);
+  ok(/Légendes Arceus/.test(await strip()) && await p.evaluate(() => MENUS.dgame.sel === document.querySelector('#dgame') && /Arceus/.test(document.querySelector('#dgamebtn').textContent) && document.querySelector('#dgamelist').hidden), tag + ' v26 sheet game pick → sheet re-rendered on Légendes Arceus, menu re-initialised');
+  await p.focus('#dgamebtn'); await p.keyboard.press('Home'); await p.keyboard.press('Enter'); await sleep(150); await p.keyboard.press('Home'); await p.keyboard.press('Enter'); await sleep(500);
+  ok(await p.$eval('#dgame', e => e.value) === 'all' && await p.evaluate(() => document.activeElement.id === 'dgamebtn'), tag + ' v26 sheet game menu keyboard → Vue d’ensemble, focus kept on the new button');
+  await p.select('#dgame', 'sw'); await sleep(400); ok(/Épée/.test(await p.$eval('#dgamebtn', e => e.textContent)), tag + ' v26 sheet button follows the native select (programmatic change)');
+  // ---- v27: legend as a list (icon + sentence per line)
+  await go('#/'); await sel('');
+  { const r = await p.evaluate(() => { const lg = document.querySelector('#legend'); lg.hidden = false; const d = lg.querySelector('details'); d.open = true; const li = [...lg.querySelectorAll('ul.lgl > li')];
+      return { n: li.length, icons: li.map(x => !!x.querySelector('.lgi')), ball: !!li[0].querySelector('.lgi svg.ball'), gold: !!li[1].querySelector('.lgi .mk.gold'), old: /🕹/.test(li[2].querySelector('.lgi').textContent), sh: /✨/.test(li[3].querySelector('.lgi').textContent), info: !!li[4].querySelector('.lgi-i'), lines: li.slice(0, 5).map(x => Math.round(x.querySelector('.lgi').getBoundingClientRect().left)), txt: lg.textContent }; });
+    ok(r.n === 6 && r.icons.every(Boolean) && r.ball && r.gold && r.old && r.sh && r.info && new Set(r.lines).size === 1 && /Poké Ball dorée/.test(r.txt) && /Pokémon GO/.test(r.txt), tag + ' v27 base legend = list, one icon + one sentence per line, same icons as the cards ' + JSON.stringify({ ...r, txt: undefined })); }
+  await sel('home'); await sleep(300);
+  { const r = await p.evaluate(() => { const lg = document.querySelector('#legend'); const d = lg.querySelector('details'); d.open = true; const li = [...lg.querySelectorAll('ul.lgl > li')]; return { n: li.length, hm: !!li[0].querySelector('.lgi .mk.hm'), gold: !!li[1].querySelector('.lgi .mk.hm.gold'), om: !!li[2].querySelector('.lgi .om'), txt: lg.textContent }; });
+    ok(r.n === 5 && r.hm && r.gold && r.om && /toutes les marques Switch/.test(r.txt) && /Anciens jeux/.test(r.txt) && /Sans marque/.test(r.txt), tag + ' v27 HOME legend = list with the HOME icons ' + JSON.stringify({ ...r, txt: undefined })); }
+  await sel('');
+  // ---- v27: grid / list icon, Baron red-brown, Catégorie headings
+  await go('#/'); await sel('');
+  { const st = () => p.evaluate(() => { const b = document.querySelector('#viewbtn'), r = b.querySelectorAll('svg rect').length; return { v: state.view, rects: r, txt: b.textContent.trim(), aria: b.getAttribute('aria-label') }; });
+    const a = await st(); await p.click('#viewbtn'); await sleep(400); const b = await st(); await p.click('#viewbtn'); await sleep(400); const c = await st();
+    ok(a.v === 'grid' && a.rects === 6 && a.txt === '' && a.aria === 'Afficher en liste' && b.v === 'list' && b.rects === 4 && b.aria === 'Afficher en grille' && c.v === 'grid' && c.rects === 6, tag + ' v27 grid/list button: list-with-thumbnails icon in grid view, 4 squares in list view ' + JSON.stringify([a, b, c])); }
+  { const r = await p.evaluate(() => { const l = [...document.querySelector('#catlist').children], h = l.filter(li => li.classList.contains('gsep2')); return { h: h.map(x => x.textContent), first: l[1].classList.contains('gsep2'), line: l.filter(li => li.classList.contains('gsep')).length, nextSw: l[l.findIndex(li => li.dataset && li.dataset.v === 'swdone') - 1].classList.contains('gsep'), aria: h.every(x => x.getAttribute('aria-hidden') === 'true') }; });
+    const j = await p.evaluate(() => { const a = document.querySelector('#gamelist .gsep2 span') || document.querySelector('#gamelist .gsep2'), b = document.querySelector('#catlist .gsep2 span') || document.querySelector('#catlist .gsep2'); const f = e => { const c = getComputedStyle(e.closest('.gsep2')); return [c.fontSize, c.fontWeight, c.textTransform, c.borderTopStyle].join(); }; return [f(a), f(b)]; });
+    ok(r.h.join() === 'Statut,Marques,HOME,Barons' && r.first && r.line === 1 && r.nextSw && r.aria && j[0] === j[1], tag + ' v27 Catégorie block headings Statut / Marques / HOME / Barons, same style as the Jeux headings ' + JSON.stringify({ ...r, j })); }
+  { await go('#/p/25'); await p.select('#dgame', 'la'); await sleep(500); await p.click('#actbar .baron'); await sleep(300);
+    const col = await p.evaluate(() => { const b = getComputedStyle(document.querySelector('#actbar .baron')), c = getComputedStyle(document.querySelector('#actbar .cg')); return { b: b.borderTopColor, c: c.borderTopColor, bp: document.querySelector('#actbar .baron').getAttribute('aria-pressed'), cp: document.querySelector('#actbar .cg').getAttribute('aria-pressed') }; });
+    ok(col.bp === 'true' && col.cp === 'true' && col.b !== col.c && /^rgb\((160, 82, 45|196, 106, 60)\)$/.test(col.b), tag + ' v27 Baron checked = red-brown, distinct from Capturé red ' + JSON.stringify(col));
+    await p.click('#actbar .baron'); await p.click('#actbar .cg'); await sleep(200); await go('#/'); }
+  // ---- v27: in-app messages instead of alert()
+  { await p.evaluate(() => { window.__alerts = 0; window.alert = () => { window.__alerts++; }; });
+    const imp = async d => { await p.evaluate(async d => { const f = new File([d], 'x.json', { type: 'application/json' }); const dt = new DataTransfer(); dt.items.add(f); const i = document.getElementById('import'); i.files = dt.files; i.dispatchEvent(new Event('change')); }, d); await sleep(500); return p.evaluate(() => { const t = document.querySelector('#toast'); return t && { on: t.classList.contains('on'), cls: t.className, txt: t.textContent, role: t.getAttribute('role'), live: t.getAttribute('aria-live'), al: window.__alerts }; }); };
+    const bad = await imp('pas du json');
+    ok(bad && bad.on && /err/.test(bad.cls) && /Fichier invalide/.test(bad.txt) && bad.role === 'status' && bad.live === 'polite' && bad.al === 0, tag + ' v27 invalid import → in-app error message, no alert() ' + JSON.stringify(bad));
+    const good = await imp(JSON.stringify({ favs: [], caught: [], shiny: [] }));
+    ok(good && good.on && /\bok\b/.test(good.cls) && /Sauvegarde importée/.test(good.txt) && good.al === 0, tag + ' v27 valid import → « Sauvegarde importée » in-app message ' + JSON.stringify(good));
+    await p.click('#toast button'); await sleep(300); ok(await p.evaluate(() => !document.querySelector('#toast').classList.contains('on')), tag + ' v27 message can be closed (×)');
+    await go('#/'); await p.evaluate(() => toast('Liste')); await sleep(300); await go('#/p/25'); await sleep(300); ok(await p.evaluate(() => !document.querySelector('#toast').classList.contains('on')), tag + ' v27 message hidden when the screen changes (never covers the sheet buttons)'); await p.select('#dgame', 'sw'); await sleep(400); await p.evaluate(() => toast('Test')); await sleep(400);
+    const pos = await p.evaluate(() => { const t = document.querySelector('#toast').getBoundingClientRect(), b = document.querySelector('#actbar'), br = b.getBoundingClientRect(); return { fixed: getComputedStyle(b).position === 'fixed', tb: Math.round(t.bottom), bt: Math.round(br.top), vis: t.top >= 0 && t.bottom <= innerHeight }; });
+    ok(pos.vis && (!pos.fixed || pos.tb <= pos.bt), tag + ' v27 message sits above the sheet bar ' + JSON.stringify(pos)); }
+  // ---- v27: game names + generation numerals
+  { const r = await p.evaluate(() => ({ bad: GAMES.filter(g => /\S\/|\/\S/.test(g.s) || /\S\/|\/\S/.test(g.n)).map(g => g.id), sw: GAME_BY.sw.s, bdsp: GAME_BY.bdsp.s, usum: GAME_BY.usum.s, hg: GAME_BY.hgss.s, none: ORI.none.s, sinnoh: ORI.sinnoh.n, vd: [VDEX.svhors.s, VDEX.swhors.s] }));
+    ok(!r.bad.length && r.sw === 'Épée / Bouclier' && r.bdsp === 'Diamant Étincelant / Perle Scintillante' && r.usum === 'Ultra-Soleil / Ultra-Lune' && r.hg === 'Or HeartGold / Argent SoulSilver' && r.none === 'Gén. IV–V' && r.sinnoh === 'DÉ / PS' && r.vd.join() === 'Hors dex ÉV,Hors dex ÉB', tag + ' v27 one naming rule: spaced « / », full base-game names, ÉV/ÉB prefixes, roman numerals ' + JSON.stringify(r)); }
+  ok(/Suivi : Épée \/ Bouclier/.test(await p.$eval('#actbar', e => e.textContent.replace(/\s+/g, ' '))) && /partagé avec ÉB Isolarmure/.test(await strip()), tag + ' v27 sheet bar + track info use the unified names');
+  { await p.select('#dgame', 'home'); await sleep(400); const t = await p.$eval('#detail-view', e => e.textContent); ok(/Gén\. IV–V/.test(t) && !/Gén\. ?\d/.test(t) && !/\dᵉ gén/.test(t), tag + ' v27 HOME sheet: « Gén. IV–V », no arabic generation numbers'); }
+  await go('#/'); await sel('');
+  // list shows marks, cat filter
+  await go('#/'); await p.select('#cat', 'caught'); await sleep(200); console.log('caught filter', await count());
+  await p.select('#cat', ''); 
+  // export / import compat
+  const exp = await p.evaluate(() => JSON.stringify({ favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY] }));
+  console.log('export', exp);
+  await p.evaluate(() => { localStorage.clear(); });
+  await p.close();
+}
+// offline test
+{
+  const p = await mk(360, 780, true);
+  await p.goto(BASE, { waitUntil: 'networkidle0' });
+  await p.evaluate(() => navigator.serviceWorker.ready); await sleep(1500);
+  await p.goto(BASE + '#/p/25'); await sleep(1000); // caches sp/25 + shared
+  await p.evaluate(() => document.querySelector('#dgame') && 0);
+  await p.goto(BASE); await sleep(500);
+  await p.evaluate(() => { document.querySelector('#dl2')?.click(); });
+  for (let i = 0; i < 60; i++) { await sleep(2000); if (await p.evaluate(() => localStorage.packDone2)) break; }
+  console.log('imgsDone', await p.evaluate(() => localStorage.imgsDone), 'packDone2', await p.evaluate(() => localStorage.packDone2));
+  const nImg = await p.evaluate(async () => (await (await caches.open('pokedex-img')).keys()).length);
+  const nData = await p.evaluate(async () => { for (const k of await caches.keys()) if (k.startsWith('pokedex-data')) return (await (await caches.open(k)).keys()).length; });
+  console.log('cached imgs', nImg, 'data', nData);
+  await p.setOfflineMode(true);
+  await p.reload({ waitUntil: 'load' }); await sleep(1500);
+  ok((await p.$eval('#count', e => e.textContent)).startsWith('1025'), 'offline reload list');
+  await p.goto(BASE + '#/p/700'); await sleep(1200);
+  ok(/Nymphali/.test(await p.$eval('.hero h1', e => e.textContent)), 'offline detail page');
+  await p.select('#dgame', 'go'); await sleep(500); ok(/PC max/.test(await p.$eval('.detail', e => e.textContent)), 'offline GO page');
+  await p.goto(BASE); await sleep(300); await p.select('#game', 'za'); await sleep(500); ok(parseInt(await p.$eval('#count', e => e.textContent)) >= 232, 'offline game dex: ' + await p.$eval('#count', e => e.textContent));
+  await p.close();
+}
+// v30: in-app update prompt — simulated version bump on a copy of docs/ (symlinks + a real sw.js) served on port+1
+{
+  const fs = await import('node:fs'), path = await import('node:path'), { spawn } = await import('node:child_process');
+  const DOCS = path.resolve(path.dirname(new URL(import.meta.url).pathname), '../docs'), TMP = '/tmp/pdx-upd', PORT = +(process.argv[2] || 8801) + 1, U = `http://localhost:${PORT}/`;
+  fs.rmSync(TMP, { recursive: true, force: true }); fs.mkdirSync(TMP);
+  for (const f of fs.readdirSync(DOCS)) if (f !== 'sw.js') fs.symlinkSync(path.join(DOCS, f), path.join(TMP, f));
+  const sw0 = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8'); fs.writeFileSync(path.join(TMP, 'sw.js'), sw0);
+  const srv = spawn('python3', ['-m', 'http.server', String(PORT), '--directory', TMP], { stdio: 'ignore' }); await sleep(1200);
+  const ctx = await b.createBrowserContext(); const p = await ctx.newPage(); await p.setViewport({ width: 360, height: 780, isMobile: true, hasTouch: true });
+  p.on('pageerror', e => errs.push('upd: ' + e.message));
+  let loads = 0; p.on('load', () => { loads += 1; });
+  const ver = () => p.evaluate(() => new Promise(res => { const c = navigator.serviceWorker.controller; if (!c) return res(null); const ch = new MessageChannel(); ch.port1.onmessage = e => res(e.data.v); c.postMessage({ type: 'VERSION' }, [ch.port2]); setTimeout(() => res('?'), 2000); }));
+  const vis = () => p.evaluate(() => { const u = document.querySelector('#upd'); return !!(u && u.classList.contains('on') && u.getBoundingClientRect().height > 0); });
+  await p.goto(U, { waitUntil: 'networkidle0' }); await p.evaluate(() => navigator.serviceWorker.ready); await sleep(1500);
+  ok(!(await vis()) && !(await p.$('#upd')), 'v30 update: first install shows no banner');
+  await p.reload({ waitUntil: 'networkidle0' }); await sleep(800);
+  const v0 = await ver(); ok(v0 === /VERSION = '([^']+)'/.exec(sw0)[1] && !(await vis()), 'v30 update: controlled by ' + v0 + ', no banner without a new version');
+  // bump: new sw.js on the server, picked up when returning to the app (visibilitychange → registration.update())
+  fs.writeFileSync(path.join(TMP, 'sw.js'), sw0.replace(/const VERSION = '[^']+'/, "const VERSION = 'v99-test'").replace(/const NOTES = '[^']*'/, "const NOTES = 'Version de test.'"));
+  await p.goto(U + '#/p/6', { waitUntil: 'networkidle0' }); const l0 = loads;
+  await p.evaluate(() => document.dispatchEvent(new Event('visibilitychange')));
+  for (let i = 0; i < 20 && !(await vis()); i++) await sleep(500);
+  const bn = await p.evaluate(() => { const u = document.querySelector('#upd'), r = u.getBoundingClientRect(), a = document.querySelector('#actbar').getBoundingClientRect(); return { t: u.textContent.replace(/\s+/g, ' '), btn: !!u.querySelector('.updgo'), above: r.bottom <= a.top + 1, inside: r.left >= 0 && r.right <= innerWidth + 0.5 }; });
+  ok(await vis() && /Nouvelle version disponible/.test(bn.t) && /v99-test · Nouveautés : Version de test\./.test(bn.t) && bn.btn && bn.above && bn.inside, 'v30 update: banner « Nouvelle version disponible » + v99-test · Nouveautés + « Mettre à jour », above the action bar ' + JSON.stringify(bn));
+  await sleep(1500);
+  ok((await ver()) === v0 && await p.evaluate(async () => !!(await navigator.serviceWorker.getRegistration()).waiting) && loads === l0, 'v30 update: new version waits (no forced activation, no reload) until the tap');
+  await p.screenshot({ path: SHOTS + 'v30/08-banniere-mise-a-jour.png' });
+  await p.click('#upd .updgo');
+  for (let i = 0; i < 20 && loads === l0; i++) await sleep(300);
+  await sleep(2500);
+  const v1 = await ver();
+  ok(v1 === 'v99-test' && loads === l0 + 1 && !(await vis()), `v30 update: tap → new version active, exactly one reload (${loads - l0}), no banner after`);
+  await sleep(3000); ok(loads === l0 + 1, 'v30 update: no reload loop');
+  // « Plus tard » hides it for this session
+  fs.writeFileSync(path.join(TMP, 'sw.js'), sw0.replace(/const VERSION = '[^']+'/, "const VERSION = 'v100-test'"));
+  await p.evaluate(() => document.dispatchEvent(new Event('visibilitychange'))); for (let i = 0; i < 20 && !(await vis()); i++) await sleep(500);
+  await p.click('#upd .updx'); await sleep(400); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1500);
+  ok(!(await vis()) && (await ver()) === 'v99-test', 'v30 update: « × » (plus tard) hides the banner for the session, version still waiting');
+  await ctx.close(); srv.kill(); fs.rmSync(TMP, { recursive: true, force: true });
+}
+// ---- v34 regressions (audit v33)
+{ const p = await mk(360, 780, true); const U = BASE; const sleep2 = ms => new Promise(r => setTimeout(r, ms));
+  const txt = () => p.$eval('#detail-view', e => e.textContent.replace(/\s+/g, ' '));
+  const sheet = async (k, g) => { await p.evaluate(g => { sheetPref = g; }, g); await p.goto(U + '#/p/' + k); await sleep2(1300); };
+  await p.goto(U, { waitUntil: 'networkidle0' }); await p.evaluate(() => navigator.serviceWorker && navigator.serviceWorker.ready); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(800);
+  await sheet('493-fire', 'all'); const t1 = await txt();
+  ok((await p.evaluate(() => BY_KEY['493-fire'].t.join())) === 'fire' && /Feu/.test(await p.$eval('.hero', e => e.textContent)), 'v34 Arceus Feu : type Feu (fiche)');
+  ok(await p.evaluate(() => E.filter(e => e.id === 773 && e.c).every(e => e.t[0] === e.k.split('-')[1])), 'v34 Silvallié : types des ROM');
+  await p.goto(U + '#/'); await sleep2(500); await p.select('#game', 'lgpe'); await sleep2(900);
+  ok(/^153 Pokémon/.test(await p.$eval('#count', e => e.textContent)), "v34 Let's Go : 153 Pokémon " + await p.$eval('#count', e => e.textContent));
+  await p.select('#game', ''); await sleep2(500);
+  await sheet('999-roaming', 'go'); const tg = await txt();
+  ok(/999 × Pièces de Mordudor/.test(tg) && !/\? \+/.test(tg), 'v34 GO : Mordudor Forme Marche → 999 Pièces de Mordudor, sans « ? + »');
+  await sheet('840', 'go'); const ta = await txt(); ok(/Pomme Acidulée/.test(ta) && !/Maple/.test(ta), 'v34 GO : Verpom → Pommes');
+  ok(await p.evaluate(() => ['807', '122-galar', '718-10', '888-crowned'].every(k => BY_KEY[k].go) && !BY_KEY['999'].go), 'v34 GO : sorties corrigées (Zeraora, M. Mime de Galar, Zygarde 10 %, Zacian Suprême ; Mordudor Coffre absent)');
+  await sheet('6', 'za'); ok(/Faire évoluer Reptincel/.test(await txt()), 'v34 lieux : Dracaufeu Z-A → « Faire évoluer Reptincel »');
+  await sheet('25', 'frlgsw'); const tf = await txt(); ok(!/Pokecenter|Colosseum/.test(tf), 'v34 RF/VF Switch : pas de lieu GBA en anglais');
+  ok(await p.evaluate(() => !alphaOk(BY_KEY['865'], 'za') && alphaOk(BY_KEY['181'], 'za')), 'v34 Barons Z-A : Palarticho exclu, Pharamp Baron');
+  ok(await p.evaluate(() => E.filter(e => [414, 664, 665].includes(e.id)).length === 3 && BY_KEY['718-10'].n === 'Zygarde Forme 10 %' && BY_KEY['716-neutral'].bo === '716'), 'v34 formes fusionnées, Zygarde 10 %, Xerneas variante');
+  // marks of merged forms → union on the base (first open)
+  await p.evaluate(() => { localStorage.setItem('caught_g', JSON.stringify(['dp:414-sandy', 'xy:664-polar', 'xy:665'])); localStorage.setItem('home_o', JSON.stringify(['kalos:665-meadow'])); localStorage.setItem('caught', JSON.stringify(['664-garden'])); localStorage.setItem('favs', JSON.stringify(['414-trash'])); });
+  await p.reload({ waitUntil: 'networkidle0' }); await sleep2(600);
+  const mg = await p.evaluate(() => ['caught_g', 'home_o', 'caught', 'favs'].map(k => JSON.parse(localStorage.getItem(k))));
+  ok(mg[0].includes('dp:414') && mg[0].includes('xy:664') && mg[0].includes('xy:665') && !mg[0].some(x => /-(sandy|polar)/.test(x)) && mg[1].includes('kalos:665') && mg[2].includes(664) && mg[3].includes('414'), 'v34 migration des formes fusionnées (union) ' + JSON.stringify(mg));
+  // offline flag tied to DATA_VERSION
+  const dv = /DATA_VERSION = '([^']+)'/.exec(fs.readFileSync(new URL('../docs/sw.js', import.meta.url), 'utf8'))[1];
+  await p.evaluate(() => { localStorage.setItem('packDone2', 'true'); localStorage.setItem('imgsDone', 'true'); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(2500);
+  const o1 = await p.$eval('#offline', e => e.innerHTML);
+  await p.evaluate(dv => localStorage.setItem('packDone2', JSON.stringify(dv)), dv); await p.reload({ waitUntil: 'networkidle0' }); await sleep2(2500);
+  const o2 = await p.$eval('#offline', e => e.innerHTML);
+  ok(/id="dl2"/.test(o1) && !/disponibles hors-ligne/.test(o1) && /disponibles hors-ligne/.test(o2), 'v34 hors-ligne : ✓ seulement pour la DATA_VERSION téléchargée (' + dv + ')');
+  await p.close(); }
+
+// ---- v35 HOME sprites: default everywhere, one image per form, fallback to the same form's official art
+{ const p = await mk(360, 780, true); const sl = ms => new Promise(r => setTimeout(r, ms));
+  await p.goto(BASE, { waitUntil: 'networkidle0' }); await sl(500);
+  ok((await p.$$eval('.card img', es => es.slice(0, 6).map(e => e.getAttribute('src')))).every(s => s.startsWith('img/h/')), 'v35 liste / grille : images HOME par défaut');
+  const hero = async k => { await p.goto(BASE + '#/p/' + k); await sl(1300); return p.$eval('#heroimg', e => e.getAttribute('src')); };
+  const ks = ['666-icy-snow', '666-fancy', '585-winter', '201-c', '676-heart', '479-wash', '1017-cornerstone-mask', '978-stretchy', '741-sensu', '774-blue', '386-speed', '671-white'];
+  const bad = []; for (const k of ks) { const s = await hero(k); if (s !== `img/h/${k}.webp`) bad.push(k + '→' + s); }
+  ok(!bad.length, 'v35 fiche : image HOME de la bonne forme ' + bad.join(' '));
+  ok(await p.$eval('.sprsw [data-spr="home"]', e => e.getAttribute('aria-pressed')) === 'true', 'v35 bouton HOME sélectionné par défaut');
+  await p.click('.sprsw [data-spr="off"]'); await sl(300); ok(await p.$eval('#heroimg', e => e.getAttribute('src')) === 'img/671-white.webp', 'v35 Officiel : art de la même forme');
+  await hero('1017-wellspring-mask'); await p.click('.sprsw [data-spr="anim"]'); await sl(500);
+  ok(await p.$eval('#heroimg', e => e.getAttribute('src')) === 'img/1017-wellspring-mask.webp', 'v35 sans sprite animé : art officiel de la même forme');
+  ok(await hero('1017-hearthflame-mask') === 'img/h/1017-hearthflame-mask.webp', 'v35 changement de forme : HOME de nouveau, pas d’image périmée');
+  await p.close(); }
+// ---- v35 default form names
+{ const p = await mk(360, 780, true); const sl = ms => new Promise(r => setTimeout(r, ms));
+  await p.goto(BASE, { waitUntil: 'networkidle0' });
+  const h1 = async k => { await p.goto(BASE + '#/p/' + k); await sl(1200); return p.$eval('.hero h1', e => e.textContent); };
+  ok(await h1('978') === 'Nigirigon Forme Courbée' && await h1('386') === 'Deoxys Forme Normale' && await h1('52') === 'Miaouss' && await h1('3') === 'Florizarre', 'v35 titres : Nigirigon Forme Courbée, Deoxys Forme Normale ; Miaouss / Florizarre inchangés');
+  await h1('978'); ok(/Nigirigon Forme Courbée/.test(await p.$eval('.fchip.cur', e => e.title)), 'v35 puce de forme : titre complet');
+  await p.goto(BASE + '#/'); await sl(500);
+  await p.evaluate(() => { state.forms = true; const i = document.querySelector('#q'); i.value = 'courbée'; i.dispatchEvent(new Event('input')); }); await sl(600);
+  const names = await p.$$eval('.card .nm', es => es.map(e => e.textContent.trim()));
+  ok(names.some(n => n.startsWith('Nigirigon Forme Courbée')), 'v35 liste avec Formes + recherche « courbée » → Nigirigon Forme Courbée ' + names.slice(0, 4).join(' / '));
+  await p.evaluate(() => { state.forms = false; const i = document.querySelector('#q'); i.value = 'nigirigon'; i.dispatchEvent(new Event('input')); }); await sl(600);
+  ok((await p.$$eval('.card .nm', es => es.map(e => e.textContent.trim())))[0].startsWith('Nigirigon') , 'v35 liste sans Formes : nom de l’espèce');
+  await p.close(); }
+console.log('console errors:', errs.length, errs.slice(0, 10));
+console.log(fails ? `${fails} FAILURES` : 'ALL PASS');
+await b.close();

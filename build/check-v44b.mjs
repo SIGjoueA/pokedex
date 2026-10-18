@@ -1,0 +1,45 @@
+// v44 check: Salarsen Gigamax = one entry, « Gigamax Aigüe » / « Gigamax Grave » marks, migration of the old Grave entry's marks
+import puppeteer from 'puppeteer-core';
+const BASE = 'http://localhost:8811/';
+const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: 'new', args: ['--no-sandbox'] });
+const p = await b.newPage(); const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('console', m => m.type() === 'error' && errs.push(m.text()));
+const sleep = ms => new Promise(r => setTimeout(r, ms)); let fails = 0;
+const ok = (c, m) => { console.log((c ? 'PASS ' : 'FAIL ') + m); if (!c) fails++; };
+const A = '849-amped-gmax', G = '849-low-key-gmax';
+await p.goto(BASE, { waitUntil: 'networkidle0' }); await sleep(600);
+const om = await p.evaluate(() => originOf('sw'));
+// old (v43) state: marks on the separate Grave Gigamax entry
+await p.evaluate((G, om) => { const S = (k, v) => localStorage.setItem(k, JSON.stringify(v));
+  S('caught_g', ['sw:' + G, 'go:' + G, 'sw:849-low-key', 'go:849-low-key']); S('shiny_g', ['sw:' + G]); S('home_o', [om + ':' + G]); S('home_og', [om + ':' + G]); S('home_sh', [G]); S('favs', [G]); }, G, om);
+await p.reload({ waitUntil: 'networkidle0' }); await sleep(800);
+const L = k => p.evaluate(k => JSON.parse(localStorage.getItem(k) || '[]'), k);
+const cg = await L('caught_g'), sg = await L('shiny_g'), ho = await L('home_o'), hs = await L('home_sh'), fv = await L('favs');
+ok(cg.includes('sw:' + G) && cg.includes('go:' + G) && !cg.includes('sw:' + A) && !cg.includes('go:' + A), 'migration: Grave captures kept as « Gigamax Grave » (Aigüe not ticked) ' + JSON.stringify(cg));
+ok(sg.includes('sw:' + A) && !sg.some(x => x.endsWith(G)), 'migration: shiny → shared ' + JSON.stringify(sg));
+ok(ho.includes(om + ':' + A) && !ho.some(x => x.endsWith(G)) && hs.includes(A) && !hs.includes(G) && fv.includes(A), 'migration: HOME origin / HOME shiny / favourite → shared ' + JSON.stringify([ho, hs, fv]));
+const ent = await p.evaluate(G => ({ g: !!BY_KEY[G], n: E.filter(x => x.id === 849 && x.c === 'gmax').map(x => x.k + '|' + x.n + '|' + x.l), cBase: !!baseStatus(BY_KEY['849-amped-gmax']).any }), G);
+ok(!ent.g && ent.n.length === 1, 'one Salarsen Gigamax entry: ' + JSON.stringify(ent.n));
+ok(ent.cBase, 'overview: entry counts as captured (Grave only)');
+const bar = () => p.$$eval('#actbar button', bs => bs.map(x => (x.querySelector('.t')?.textContent || '') + (x.getAttribute('aria-pressed') === 'true' ? '=on' : '=off') + (x.disabled ? '(dis)' : '')));
+const sheet = async (k, g) => { await p.goto(BASE + '#/p/' + k); await sleep(700); await p.select('#dgame', g); await sleep(500); return bar(); };
+let t = await sheet(A, 'sw'); console.log('  Gmax sheet sw:', t.join(' · '));
+ok(t.includes('Gigamax Aigüe=off') && t.includes('Gigamax Grave=on') && t.includes('Shiny=on') && !t.some(x => /^Capturé|^Gigamax=/.test(x)), 'Gmax sheet sw: Aigüe off, Grave on, Shiny on, no Capturé');
+await p.click('#actbar [data-sal="A"]'); await sleep(300); t = await bar();
+ok(t.includes('Gigamax Aigüe=on') && (await L('caught_g')).includes('sw:849'), 'tick Gigamax Aigüe ⇒ Forme Aigüe captured');
+t = await sheet('849', 'sw'); ok(t.includes('Gigamax=on'), 'Forme Aigüe sheet: Gigamax button on ' + t.join(' · '));
+t = await sheet('849-low-key', 'sw'); ok(t.includes('Gigamax=on'), 'Forme Grave sheet: Gigamax button on (Grave mark) ' + t.join(' · '));
+await p.click('#actbar [data-sal="G"]'); await sleep(300); t = await bar(); ok(t.includes('Gigamax=off'), 'untick from Forme Grave sheet');
+t = await sheet(A, 'sw'); ok(t.includes('Gigamax Grave=off') && t.includes('Gigamax Aigüe=on') && t.includes('Shiny=on'), 'Gmax sheet: Grave off, Aigüe on, shiny kept ' + t.join(' · '));
+await p.click('#actbar [data-sal="A"]'); await sleep(300); t = await bar();
+ok(t.includes('Gigamax Aigüe=off') && t.includes('Shiny=off') && !(await p.evaluate(() => isCaught(BY_KEY['849-amped-gmax'], 'sw'))), 'both off ⇒ not captured, shiny cleared');
+await p.click('#actbar [data-sal="G"]'); await sleep(300); await p.click('#actbar .sh'); await sleep(300); t = await bar();
+ok(t.includes('Gigamax Grave=on') && t.includes('Gigamax Aigüe=off') && t.includes('Shiny=on') && (await L('shiny_g')).includes('sw:849-low-key'), 'Grave + Shiny ⇒ Aigüe stays off, Forme Grave shiny ' + t.join(' · '));
+await p.reload({ waitUntil: 'networkidle0' }); await sleep(800); await p.select('#dgame', 'sw'); await sleep(500); t = await bar();
+ok(t.includes('Gigamax Aigüe=off') && t.includes('Shiny=on'), 'after reload (migrateMarks): Aigüe still off ' + t.join(' · '));
+t = await sheet(A, 'go'); console.log('  Gmax sheet GO:', t.join(' · '));
+ok(t.includes('Gigamax Grave=on') && t.includes('Gigamax Aigüe=off'), 'GO: Grave mark migrated, Aigüe off');
+t = await sheet('849-low-key', 'go'); ok(t.includes('Gigamax=on'), 'GO Forme Grave: Gigamax on ' + t.join(' · '));
+// list: one card in Épée/Bouclier with forms
+const n = await p.evaluate(() => E.filter(x => x.id === 849).length); ok(n === 3, 'Salarsen entries: ' + n);
+ok(!errs.length, 'no JS errors ' + JSON.stringify(errs));
+await b.close(); process.exit(fails ? 1 : 0);

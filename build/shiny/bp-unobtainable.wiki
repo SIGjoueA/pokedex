@@ -1,0 +1,845 @@
+This is a '''list of unobtainable [[Shiny Pokémon]]''' in the [[Pokémon games]].
+
+==Availability==
+In all [[generation]]s since Shiny Pokémon debuted, there are a few species that cannot be legitimately obtained as Shiny. These Pokémon are commonly referred to as '''{{DL|Appendix:Fan_terminology|Shiny-locked}}''' by fans. This can happen if the Pokémon is coded not to appear as Shiny in the {{pkmn2|wild}} or via in-game {{pkmn2|gift}}s or [[in-game trade|trades]] and has never been distributed as Shiny via {{pkmn2|event}}s.
+
+All Pokémon have Shiny variants in the games' code, regardless of their availability. However, the Shiny forms of [[Pikachu in a cap]] and the [[Partner Pokémon (Let's Go, Pikachu! and Let's Go, Eevee!)|partner]] {{p|Pikachu}} and {{p|Eevee}} are identical to their regular coloration. This was also true of {{p|Magearna}}'s standard form in [[Generation VII]] only, and {{p|Castform}}'s Sunny, Rainy, and Snowy Forms in the [[core series]] games prior to {{g|Brilliant Diamond and Shining Pearl}} (though they had the coloration in [[Pokémon GO]] and [[Pokémon HOME]] prior). It is also the case for {{p|Floette}}'s Eternal Flower and [[Mega Evolution|Mega-Evolved]] forms in Pokémon HOME, despite them having distinct Shiny colorations in the core series and in {{g|Champions}}.
+
+Starting in {{g|Legends: Arceus}}, all in-game event Pokémon encounters, such as [[Legendary Pokémon]], are programmed to never be Shiny.
+
+===Intentionally unobtainable Shiny Pokémon===
+{{incomplete|needs=Game abbreviations and notes for version exclusive, DLC exclusive, and other conditionally available shinies species/forms}}
+The following is a non-comprehensive list of species that have been subject to Shiny locks in a given game, or generation, with some having extremely limited conditions for being obtained as Shiny.
+
+* Shiny Pokémon denoted with a '''✔''' can be obtained in-game, either in a specific version, denoted by abbreviations for said game(s), or the generation as a whole.
+* Shiny Pokémon denoted with a '''~''' could not be obtained in-game directly, but could be acquired through [[Event Pokémon|event distributions]] or [[transfer]] from other games.
+* Shiny Pokémon denoted with a '''✘''' could not be obtained by any means, either in a specific version, denoted by abbreviations for said game(s), or the generation as a whole.
+<!--* Shiny Pokémon denoted with a '''?''' are yet to be determined.-->
+
+{| class="roundy sortable" style="margin:auto; text-align:center; background-color: #{{gold color dark}}; border: 3px solid #{{gold color}}"
+|-
+! style="background-color:#{{gold color light}}; {{roundytl|5px}}" rowspan="2" colspan="2" | Pokémon
+! style="background-color:#{{gold color light}}; {{roundytr|5px}}" colspan="12" | Generation
+|-
+! style="background-color:#{{johto color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation I|I}} & {{color2|fff|Generation II|II}}
+! style="background-color:#{{hoenn color dark}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation III|III}}
+! style="background-color:#{{sinnoh color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation IV|IV}}
+! style="background-color:#{{unova color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation V|V}}
+! style="background-color:#{{kalos color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation VI|VI}}
+! style="background-color:#{{alola color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation VII|VII}}
+! style="background-color:#{{galar color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation VIII|VIII}}
+! style="background-color:#{{paldea color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Generation IX|IX}}
+|- style="background:#fff"
+| [[File:025Pikachu-Cosplay.png|48px|link=Cosplay Pikachu]][[File:0025Pikachu-Rock Star.png|48px|link=Cosplay Pikachu]][[File:0025Pikachu-Belle.png|48px|link=Cosplay Pikachu]]<br>[[File:0025Pikachu-Pop Star.png|48px|link=Cosplay Pikachu]][[File:0025Pikachu-PhD.png|48px|link=Cosplay Pikachu]][[File:0025Pikachu-Libre.png|48px|link=Cosplay Pikachu]]
+| [[Cosplay Pikachu]]
+| colspan=4 style="background:#999" |  || {{no}} || colspan=3 style="background:#999" |
+|- style="background:#fff"
+| [[File:0025Pikachu-Original Cap.png|48px|link=Pikachu in a cap]]<br>[[File:0025Pikachu-Hoenn Cap.png|48px|link=Pikachu in a cap]][[File:0025Pikachu-Sinnoh Cap.png|48px|link=Pikachu in a cap]][[File:0025Pikachu-Unova Cap.png|48px|link=Pikachu in a cap]]<br>[[File:0025Pikachu-Kalos Cap.png|48px|link=Pikachu in a cap]][[File:0025Pikachu-Alola Cap.png|48px|link=Pikachu in a cap]][[File:0025Pikachu-World Cap.png|48px|link=Pikachu in a cap]]
+| [[Pikachu in a cap]]<br><small>(excluding [[Pikachu in a cap#Partner Cap|Partner Cap]])</small>
+| colspan=5 style="background:#999" |  || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| [[File:0025Pikachu-Partner Cap.png|48px|link=Pikachu in a cap]]
+| {{p|Pikachu}}<ref group="note">Partner Cap Pikachu is available in its Shiny form due to a [[List of glitches in Generation VII#Shiny Partner Cap Pikachu|programming error]] (as long as the player's [[Appendix:Fan_terminology#TSV|TSV]] is not equal to 1009) and can be [[transfer]]red to later games, but it does not have a visually distinct Shiny model or sprite in any game.</ref><br><small>Partner Cap</small>
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|USUM}} || ~ || ~
+|- style="background:#fff"
+| [[File:0025Pikachu-Partner.png|48px|link=Partner Pokémon (Let's Go, Pikachu! and Let's Go, Eevee!)]]
+| [[Partner Pokémon (Let's Go, Pikachu! and Let's Go, Eevee!)|Partner]] {{p|Pikachu}}
+| colspan=5 style="background:#999" |  || {{no}} || colspan=5 style="background:#999" |
+|- style="background:#fff"
+| [[File:0133Eevee-Partner.png|48px|link=Partner Pokémon (Let's Go, Pikachu! and Let's Go, Eevee!)]]
+| [[Partner Pokémon (Let's Go, Pikachu! and Let's Go, Eevee!)|Partner]] {{p|Eevee}}
+| colspan=5 style="background:#999" |  || {{no}} || colspan=5 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0144 s|Articuno}}
+| {{p|Articuno}}
+| {{yes}}<br>{{gameabbrev1|RGBY}} || {{yes}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|Pt}}<br>{{gameabbrev4|HGSS}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|USUM}}<br>{{Gameabbrev7|PE}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|SP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0144G s|Articuno}}
+| {{p|Articuno}}<br><small>Galarian Form</small>
+| colspan=6 style="background:#999" |  || ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0145 s|Zapdos}}
+| {{p|Zapdos}}
+| {{yes}}<br>{{gameabbrev1|RGBY}} || {{yes}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|Pt}}<br>{{gameabbrev4|HGSS}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|USUM}}<br>{{Gameabbrev7|PE}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|SP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0145G s|Zapdos}}
+| {{p|Zapdos}}<br><small>Galarian Form</small>
+| colspan=6 style="background:#999" |  || ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0146 s|Moltres}}
+| {{p|Moltres}}
+| {{yes}}<br>{{gameabbrev1|RGBY}} || {{yes}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|Pt}}<br>{{gameabbrev4|HGSS}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|USUM}}<br>{{Gameabbrev7|PE}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|SP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0146G s|Moltres}}
+| {{p|Moltres}}<br><small>Galarian Form</small>
+| colspan=6 style="background:#999" |  || ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0150 s|Mewtwo}}<br/>{{MSP/HOME|0150MX s|Mewtwo}}{{MSP/HOME|0150MY s|Mewtwo}}
+| {{p|Mewtwo}}
+| {{yes}}<br>{{gameabbrev1|RGBY}} || {{yes}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|USUM}}<br>{{Gameabbrev7|PE}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0151 s|Mew}}
+| {{p|Mew}}<ref group="note">Shiny Mew can be obtained legitimately as part of the [[List of PCNY event Pokémon distributions in Generation II|Gotta catch 'em all! Station]], in the Japanese version of {{game|Emerald}} via the [[Old Sea Map]] event item, or via [[Pokémon GO]]'s [https://www.leekduck.com/shiny-mew-masterwork-research/ Mew Masterwork Research] quest. However, it cannot be obtained legitimately in [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], nor transferred into those games via [[GO Park]].</ref>
+| ~ || ~<br>[[Language of origin|'''JPN''']] {{gameabbrev3|E}} || ~ || ~ || ~ || ~<br>{{gameabbrev7|SMUSUM}} || ~ || ~
+|- style="background:#fff"
+| [[File:Spr 4h 172S s.png|60px|link=Spiky-eared Pichu]]
+| [[Spiky-eared Pichu]]
+| colspan=2 style="background:#999" |  || {{no}} || colspan=5 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0243 s|Raikou}}
+| {{p|Raikou}}
+| {{yes}}<br>{{gameabbrev2|GSC}} || {{yes}}<br>{{Gameabbrevss|Colo}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BD}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0244 s|Entei}}
+| {{p|Entei}}
+| {{yes}}<br>{{gameabbrev2|GSC}} || {{yes}}<br>{{Gameabbrevss|Colo}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BD}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0245 s|Suicune}}
+| {{p|Suicune}}
+| {{yes}}<br>{{gameabbrev2|GSC}} || {{yes}}<br>{{Gameabbrevss|Colo}}<br>{{gameabbrev3|FRLG}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BD}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0249 s|Lugia}}
+| {{p|Lugia}}<ref group="note">Shiny Lugia can only be obtained from [[Navel Rock]] in [[Pokémon FireRed and LeafGreen Versions|Pokémon FireRed, LeafGreen]], and [[Pokémon Emerald]], which requires the [[MysticTicket]] event item to access, which is obtainable without limited-time events in the [[Nintendo Switch]] releases of Pokémon FireRed and LeafGreen.</ref>
+| {{yes}}<br>{{gameabbrev2|GSC}} || {{yes}}<br>{{gameabbrev3|FRLG}}{{gameabbrev3|E}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{gameabbrev6|AS}} || {{yes}}<br>{{gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|SP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0250 s|Ho-Oh}}
+| {{p|Ho-Oh}}<ref group="note">Shiny Ho-Oh can only be obtained from [[Navel Rock]] in [[Pokémon FireRed and LeafGreen Versions|Pokémon FireRed, LeafGreen]], and [[Pokémon Emerald]], which requires the [[MysticTicket]] event item to access, which is obtainable without limited-time events in the [[Nintendo Switch]] releases of Pokémon FireRed and LeafGreen.</ref>
+| {{yes}}<br>{{gameabbrev2|GSC}} || {{yes}}<br>{{gameabbrev3|FRLG}}{{gameabbrev3|E}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{gameabbrev6|OR}} || {{yes}}<br>{{gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BD}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0251 s|Celebi}}
+| {{p|Celebi}}<ref group="note">Shiny Celebi can be obtained legitimately in the original Japanese version of {{game|Crystal}}, through [[Generation II]] event distributions, and via in-game encounter in the [[Virtual Console]] releases of Pokémon Crystal. Virtual Console Pokémon can only be moved forward into [[Generation VII]] or above (via [[Pokémon Bank]]), while those obtained in physical cartridge versions of the game cannot move forward to [[Generation III]] or later.</ref>
+| {{yes}}<br>[[Virtual Console|'''VC''']] {{gameabbrev2|C}} || {{no}}  || {{no}} || {{no}} || {{no}} || ~ || ~ || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0380 s|Latias}}{{MSP/HOME|0380M s|Latias}}
+| {{p|Latias}}
+| style="background:#999" | || {{yes}}<br>{{gameabbrev3|RSE}} || {{yes}}<br>{{gameabbrev4|HGSS}} || {{yes}}<br>{{gameabbrev5|W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BDSP}} || {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|0381 s|Latios}}{{MSP/HOME|0381M s|Latios}}
+| {{p|Latios}}
+| style="background:#999" | || {{yes}}<br>{{gameabbrev3|RSE}} || {{yes}}<br>{{gameabbrev4|HGSS}} || {{yes}}<br>{{gameabbrev5|B2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BDSP}} || {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|0382 s|Kyogre}}{{MSP/HOME|0382P s|Kyogre}}
+| {{p|Kyogre}}
+| style="background:#999" | || {{yes}}<br>{{gameabbrev3|S}}{{gameabbrev3|E}} || {{yes}}<br>{{gameabbrev4|HG}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0383 s|Groudon}}{{MSP/HOME|0383P s|Groudon}}
+| {{p|Groudon}}
+| style="background:#999" | || {{yes}}<br>{{gameabbrev3|R}}{{gameabbrev3|E}} || {{yes}}<br>{{gameabbrev4|SS}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0384 s|Rayquaza}}{{MSP/HOME|0384M s|Rayquaza}}
+| {{p|Rayquaza}}<ref group="note">Shiny Rayquaza is not natively available in [[Generation IX]] unless the player connected online and obtained the [[Poké Portal News/2024#December 19, 2024 to January 5, 2025_2|Poké Portal News/2024 → List of Tera Raid Battle events → December 19, 2024 to January 5, 2025]] event that caused it to appear in 7 star Black [[Tera Raid Battle|Tera Raid]] Crystals.</ref>
+| style="background:#999" | || {{yes}}<br>{{gameabbrev3|RSE}} || {{yes}}<br>{{gameabbrev4|HGSS}} || ~ || ~ || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}}<br>{{Gameabbrev8|BDSP}} || {{yes}}<br>{{gameabbrev9|SV}}
+|- style="background:#fff"
+| {{MSP/HOME|0385 s|Jirachi}}
+| {{p|Jirachi}}<ref group="note">Due to an oversight in the generation methods, Shiny Jirachi can be obtained legitimately in both {{g|Channel}} and the North American version of the [[Pokémon Colosseum Bonus Disc]], but they were largely blocked from online play until after the [[List of Tanabata event Pokémon#2014|2014 Tanabata Shiny Jirachi]] event was released in [[Generation VI]]. It can also be obtained legitimately via [[Pokémon GO]]'s Jirachi Masterwork Research quest.</ref>
+| style="background:#999" | || {{yes}}<br>[[Pokémon Colosseum Bonus Disc#US Bonus Disc|<span style="color:#{{colo color}};">'''Colo Bonus Disc'''</span>]]<br>[[Pokémon Channel|<span style="color:#{{water color}};">'''Channel'''</span>]] || ~ || ~ || ~ || ~ || ~ || ~  
+|- style="background:#fff"
+| {{MSP/HOME|0386 s|Deoxys}}<br>{{MSP/HOME|0386A s|Deoxys}}{{MSP/HOME|0386D s|Deoxys}}{{MSP/HOME|0386S s|Deoxys}}
+| {{p|Deoxys}}<ref group="note">Shiny Deoxys can be obtained legitimately in both {{g|FireRed and LeafGreen}} and {{g|Emerald}} via the [[Aurora Ticket]] event item (excluding the Japanese version of Emerald), which is obtainable without limited-time events in the [[Nintendo Switch]] release of Pokémon FireRed and LeafGreen, or via {{GO|Raid Battle}}s in [[Pokémon GO]].</ref>
+| style="background:#999" | || {{yes}}<br>{{gameabbrev3|FRLG}}<br>[[Language of origin|'''Non-JPN''']] {{gameabbrev3|E}} || ~ || ~ || ~ || ~ || ~ || ~ 
+|- style="background:#fff"
+| {{MSP/HOME|0480 s|Uxie}}
+| {{p|Uxie}}
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|DPPt}} || {{yes}}<br>{{gameabbrev5|B2W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0481 s|Mesprit}}
+| {{p|Mesprit}}
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|DPPt}} || {{yes}}<br>{{gameabbrev5|B2W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0482 s|Azelf}}
+| {{p|Azelf}}
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|DPPt}} || {{yes}}<br>{{gameabbrev5|B2W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0483 s|Dialga}}{{MSP/HOME|0483O s|Dialga}}
+| {{p|Dialga}}<ref group="note">Dialga in [[Pokémon HeartGold and SoulSilver Versions|Pokémon HeartGold and SoulSilver]] could only be obtained in the [[Sinjoh Ruins]], an event only location that could only be visited legitimately with an Arceus that was obtained from [[Arceus (Pokémon)#In events|July 11, 2009 to April 11, 2010]].</ref>
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|D}}{{gameabbrev4|Pt}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{Gameabbrev6|AS}} || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BD}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0484 s|Palkia}}{{MSP/HOME|0484O s|Palkia}}
+| {{p|Palkia}}<ref group="note">Palkia in [[Pokémon HeartGold and SoulSilver Versions|Pokémon HeartGold and SoulSilver]] could only be obtained in the [[Sinjoh Ruins]], an event only location that could only be visited legitimately with an Arceus that was obtained from [[Arceus (Pokémon)#In events|July 11, 2009 to April 11, 2010]].</ref>
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|P}}{{gameabbrev4|Pt}}<br>{{gameabbrev4|HGSS}} || ~ || {{yes}}<br>{{Gameabbrev6|OR}} || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|SP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0485 s|Heatran}}{{MSP/HOME|0485M s|Heatran}}
+| {{p|Heatran}}
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|DPPt}} || {{yes}}<br>{{gameabbrev5|B2W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0486 s|Regigigas}}
+| {{p|Regigigas}}
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|DPPt}} || {{yes}}<br>{{gameabbrev5|B2W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0487 s|Giratina}}{{MSP/HOME|0487O s|Giratina}}
+| {{p|Giratina}}<ref group="note">Giratina in [[Pokémon HeartGold and SoulSilver Versions|Pokémon HeartGold and SoulSilver]] could only be obtained in the [[Sinjoh Ruins]], an event only location that could only be visited legitimately with an Arceus that was obtained from [[Arceus (Pokémon)#In events|July 11, 2009 to April 11, 2010]].</ref>
+| colspan=2 style="background:#999" |  || {{yes}} || ~ || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0488 s|Cresselia}}
+| {{p|Cresselia}}
+| colspan=2 style="background:#999" |  || {{yes}}<br>{{gameabbrev4|DPPt}} || {{yes}}<br>{{gameabbrev5|B2W2}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{gameabbrev8|CT}}<br>{{gameabbrev8|BDSP}}  || ~
+|- style="background:#fff"
+| {{MSP/HOME|0490 s|Manaphy}}
+| {{p|Manaphy}}<ref group="note">While the [[Ranger Net|Ranger Manaphy Egg]] cannot hatch as Shiny for the save file that receives it, it can be Shiny if traded and hatched by another player with a different [[Trainer ID]] and [[Trainer ID number#Secret ID|Secret ID]] from the original recipient. Shiny Manaphy can only be obtained this way in [[Generation IV]], as [[Appendix:Fan_terminology#TSV|TSV]] abuse was fixed in {{g|Sword and Shield}} onward. Additionally, as of 06:00 UTC, January 28, 2025, Shiny Manaphy can be obtained as a gift for completing the [[List of Pokémon by Sinnoh Pokédex number|Sinnoh Pokédex]] from {{g|Brilliant Diamond and Shining Pearl}} in {{g|HOME}}.</ref>
+| colspan=2 style="background:#999" |  || {{yes}}<br>[[Pokémon Ranger (video game)|<span style="color:#{{ranger color}};">'''Ra'''</span>]][[Pokémon Ranger: Shadows of Almia|<span style="color:#{{SoA color}};">'''SoA'''</span>]][[Pokémon Ranger: Guardian Signs|<span style="color:#{{GS color}};">'''GS'''</span>]] || ~ || ~ || ~ || ~<br>{{Gameabbrevss|HOME}}  || ~<br>{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0491 s|Darkrai}}{{MSP/HOME|0491M s|Darkrai}}
+| {{p|Darkrai}}<ref group="note">Requires the [[Member Card]] event item. Shiny Darkrai can also be obtained legitimately via {{GO|Raid Battle}}s in [[Pokémon GO]].</ref>
+| colspan=2 style="background:#999" |  || ~<br>{{gameabbrev4|Pt}} || ~ || ~ || ~ || ~<br>{{gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0492 s|Shaymin}}{{MSP/HOME|0492S s|Shaymin}}
+| {{p|Shaymin}}<ref group="note">Requires the [[Oak's Letter]] event item. Shiny Shaymin can also be obtained legitimately via [[Pokémon GO]]'s Shaymin Masterwork Research quest.</ref>
+| colspan=2 style="background:#999" |  || ~<br>{{gameabbrev4|Pt}} || ~ || ~ || ~ || ~<br>{{gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0493 s|Arceus}}
+| {{p|Arceus}}<ref group="note">The Hall of Origin Arceus in Generation IV can be shiny, however as the Azure Flute to access the event was never distributed, this leaves Shiny Arceus unobtainable until Generation VI, where it was later distributed via an event.</ref>
+| colspan=2 style="background:#999" |  || {{no}} || {{no}} || ~ || ~ || {{yes}}<br>{{gameabbrev8|BDSP}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0494 s|Victini}}
+| {{p|Victini}}
+| colspan=3 style="background:#999" |  || {{no}} || {{no}} || {{no}} || {{no}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0638 s|Cobalion}}
+| {{p|Cobalion}}
+| colspan=3 style="background:#999" |  || {{yes}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|0639 s|Terrakion}}
+| {{p|Terrakion}}
+| colspan=3 style="background:#999" |  || {{yes}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|0640 s|Virizion}}
+| {{p|Virizion}}
+| colspan=3 style="background:#999" |  || {{yes}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|0641 s|Tornadus}}{{MSP/HOME|0641T s|Tornadus}}
+| {{p|Tornadus}}
+| colspan=3 style="background:#999" |  || {{yes}}<br>{{Gameabbrev5|B}} || {{yes}}<br>{{Gameabbrev6|OR}} || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0642 s|Thundurus}}{{MSP/HOME|0642T s|Thundurus}}
+| {{p|Thundurus}}
+| colspan=3 style="background:#999" |  || {{yes}}<br>{{Gameabbrev5|W}} || {{yes}}<br>{{Gameabbrev6|AS}} || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0643 s|Reshiram}}
+| {{p|Reshiram}}
+| colspan=3 style="background:#999" |  || {{no}} || {{yes}}<br>{{Gameabbrev6|OR}} || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0644 s|Zekrom}}
+| {{p|Zekrom}}
+| colspan=3 style="background:#999" |  || {{no}} || {{yes}}<br>{{Gameabbrev6|AS}} || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0645 s|Landorus}}{{MSP/HOME|0645T s|Landorus}}
+| {{p|Landorus}}
+| colspan=3 style="background:#999" |  || {{yes}}<br>{{Gameabbrev5|BW}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0646 s|Kyurem}}<br/>{{MSP/HOME|0646B s|Kyurem}}{{MSP/HOME|0646W s|Kyurem}}
+| {{p|Kyurem}}
+| colspan=3 style="background:#999" |  || {{yes}} || {{yes}}<br>{{Gameabbrev6|ORAS}} || {{yes}}<br>{{Gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0647 s|Keldeo}}{{MSP/HOME|0647R s|Keldeo}}
+| {{p|Keldeo}}<ref group="note">Shiny Keldeo can be obtained from {{g|HOME}} by completing the regional Pokédexes from [[Pokémon Sword and Shield]] (the [[List of Pokémon by Galar Pokédex number|Galar Pokédex]], [[List of Pokémon by Isle of Armor Pokédex number|Isle of Armor Pokédex]], and [[List of Pokémon by Crown Tundra Pokédex number|Crown Tundra Pokédex]]). Shiny Keldeo was also available during the [[Pokémon GO]] "Final Justice" event via purchasing a ticket for the Pony Tales Masterwork Research.</ref>
+| colspan=3 style="background:#999" |  || {{no}} || {{no}} || {{no}} || ~<br>{{Gameabbrevss|HOME}} || ~<br>{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0648 s|Meloetta}}{{MSP/HOME|0648P s|Meloetta}}
+| {{p|Meloetta}}<ref group="note">Shiny Meloetta can be obtained from {{g|HOME}} by completing the regional Pokédexes from [[Pokémon Scarlet and Violet]] (the [[List of Pokémon by Paldea Pokédex number|Paldea Pokédex]], [[List of Pokémon by Kitakami Pokédex number|Kitakami Pokédex]], and [[List of Pokémon by Blueberry Pokédex number|Blueberry Pokédex]]). Shiny Meloetta was also available in [[Pokémon GO]] during the Pokémon GO Tour: Unova event via purchasing a ticket for Masterwork Research.</ref>
+| colspan=3 style="background:#999" |  || {{no}} || {{no}} || {{no}} || style="background:#999" |  || ~<br>{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0649 s|Genesect}}
+| {{p|Genesect}}<ref group="note">Shiny Genesect can also be obtained legitimately via {{GO|Raid Battle}}s in [[Pokémon GO]].</ref>
+| colspan=3 style="background:#999" |  || ~ || ~ || ~ || ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0658 s|Greninja}}{{MSP/HOME|0658A s|Greninja}}
+| {{p|Greninja}}<br><small>{{a|Battle Bond}}</small>
+| colspan=5 style="background:#999" |  || {{no}} || style="background:#999" |  || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0666 s|Vivillon}}
+| {{p|Vivillon}}<br><small>All Patterns</small><br><small>(excluding Fancy & Poké Ball)</small>
+| colspan=4 style="background:#999" |  || {{yes}} || {{yes}}<br>{{Gameabbrev7|SMUSUM}} || style="background:#999" |  || {{yes}}<br>{{gameabbrev9|SV}}
+|- style="background:#fff"
+| {{MSP/HOME|0666Fan s|Vivillon}}
+| {{p|Vivillon}}<br><small>Fancy Pattern</small>
+| colspan=4 style="background:#999" |  || {{no}} || {{no}} || style="background:#999" |  || {{yes}}<br>{{gameabbrev9|SV}}
+|- style="background:#fff"
+| {{MSP/HOME|0666Pok s|Vivillon}}
+| {{p|Vivillon}}<br><small>Poké Ball Pattern</small>
+| colspan=4 style="background:#999" |  || {{no}} || {{no}} || style="background:#999" |  || {{no}}
+|- style="background:#fff"
+| {{MSP/Champs|0670|form=-Eternal shiny|Floette}}{{MSP/Champs|0670|form=-Mega shiny|Floette}}
+| {{p|Floette}}<br><small>Eternal Flower</small>
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0716 s|Xerneas}}{{MSP/HOME|0716N s|Xerneas}}
+| {{p|Xerneas}}
+| colspan=4 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0717 s|Yveltal}}
+| {{p|Yveltal}}
+| colspan=4 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0718 s|Zygarde}}{{MSP/HOME|0718T s|Zygarde}}<br/>{{MSP/HOME|0718C s|Zygarde}}{{MSP/HOME|0718M s|Zygarde}}
+| {{p|Zygarde}}
+| colspan=4 style="background:#999" |  || {{no}} || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0719 s|Diancie}}{{MSP/HOME|0719M s|Diancie}}
+| {{p|Diancie}}<ref group="note">Shiny Diancie was available in [[Pokémon GO]] during the Pokémon GO Tour: Kalos event via purchasing a ticket for Masterwork Research.</ref>
+| colspan=4 style="background:#999" |  || ~ || ~ || ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0720 s|Hoopa}}{{MSP/HOME|0720U s|Hoopa}}
+| {{p|Hoopa}}
+| colspan=4 style="background:#999" |  || {{no}} || {{no}} || colspan=1 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0721 s|Volcanion}}
+| {{p|Volcanion}}<ref group="note">As of 06:00 UTC, April 27, 2026, Shiny Volcanion can be obtained from {{g|HOME}} by completing the regional Pokédexes from {{g|Legends: Z-A}} (the [[List of Pokémon by Lumiose Pokédex number|Lumiose Pokédex]], [[List of Pokémon by Hyperspace Pokédex number|Hyperspace Pokédex]], and [[List of Pokémon in the Mega Evolution Pokédex|Mega Evolution Pokédex]]). Due to it being generated with Legends: Z-A as the [[Game of origin|origin]], Shiny Volcanion cannot be [[transfer]]red to {{pkmn|Sword and Shield}} nor {{pkmn|Scarlet and Violet}}, (as is the case for all Pokémon originating or transferred to Legends: Z-A).</ref>
+| colspan=4 style="background:#999" |  || {{no}} || {{no}} || {{no}} || ~<br>{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0772 s|Type: Null}}
+| {{p|Type: Null}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{Gameabbrev7|SMUSUM}} || ~ || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0773 s|Silvally}}
+| {{p|Silvally}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{Gameabbrev7|SMUSUM}} || ~ || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0785 s|Tapu Koko}}
+| {{p|Tapu Koko}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0786 s|Tapu Lele}}
+| {{p|Tapu Lele}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0787 s|Tapu Bulu}}
+| {{p|Tapu Bulu}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0788 s|Tapu Fini}}
+| {{p|Tapu Fini}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0789 s|Cosmog}}
+| {{p|Cosmog}}
+| colspan=5 style="background:#999" |  || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0790 s|Cosmoem}}
+| {{p|Cosmoem}}
+| colspan=5 style="background:#999" |  || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0791 s|Solgaleo}}
+| {{p|Solgaleo}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0792 s|Lunala}}
+| {{p|Lunala}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0793 s|Nihilego}}
+| {{p|Nihilego}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0794 s|Buzzwole}}
+| {{p|Buzzwole}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0795 s|Pheromosa}}
+| {{p|Pheromosa}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0796 s|Xurkitree}}
+| {{p|Xurkitree}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0797 s|Celesteela}}
+| {{p|Celesteela}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|UM}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0798 s|Kartana}}
+| {{p|Kartana}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|US}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0799 s|Guzzlord}}
+| {{p|Guzzlord}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{gameabbrev7|USUM}} || {{yes}}<br>{{Gameabbrev8|CT}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0800 s|Necrozma}}<br>{{MSP/HOME|0800DM s|Necrozma}}{{MSP/HOME|0800DW s|Necrozma}}{{MSP/HOME|0800U s|Necrozma}}
+| {{p|Necrozma}}
+| colspan=5 style="background:#999" |  || ~ || {{yes}}<br>{{Gameabbrev8|CT}} || ~
+|- style="background:#fff"
+| {{MSP/HOME|0801 s|Magearna}}{{MSP/HOME|0801O s|Magearna}}<br/>{{MSP/HOME|0801M s|Magearna}}{{MSP/HOME|0801MO s|Magearna}}
+| {{p|Magearna}}
+| colspan=5 style="background:#999" |  || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0802 s|Marshadow}}
+| {{p|Marshadow}}
+| colspan=5 style="background:#999" |  || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0803 s|Poipole}}
+| {{p|Poipole}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{Gameabbrev7|USUM}} || ~ || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0804 s|Naganadel}}
+| {{p|Naganadel}}
+| colspan=5 style="background:#999" |  || {{yes}}<br>{{Gameabbrev7|USUM}} || ~ || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0807 s|Zeraora}}{{MSP/HOME|0807M s|Zeraora}}
+| {{p|Zeraora}}
+| colspan=5 style="background:#999" |  || {{no}} || ~<br>{{Gameabbrevss|HOME}} || ~<br>{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0808 s|Meltan}}
+| {{p|Meltan}}<ref group="note">Shiny Meltan can be obtained from {{g|HOME}} by completing the [[List of Pokémon by Kanto Pokédex number|Kanto Pokédex]] from {{LGPE}}. Shiny Meltan can also be obtained legitimately via the [[Mystery Box]] in [[Pokémon GO]] during certain in-game events.</ref>
+| colspan=5 style="background:#999" |  || ~<br>{{Gameabbrevss|GO}}{{Gameabbrevss|HOME}} || ~<br>{{Gameabbrevss|GO}}{{Gameabbrevss|HOME}} || ~<br>{{Gameabbrevss|GO}}{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0809 s|Melmetal}}
+| {{p|Melmetal}}<ref group="note">Shiny Melmetal can be obtained legitimately by evolving Shiny Meltan obtained via the [[Mystery Box]] in [[Pokémon GO]] during certain in-game events.</ref>
+| colspan=5 style="background:#999" |  || ~<br>{{Gameabbrevss|GO}} || ~<br>{{Gameabbrevss|GO}} || ~<br>{{Gameabbrevss|GO}}
+|- style="background:#fff"
+| {{MSP/HOME|0809Gi s|Melmetal}}
+| {{p|Melmetal}}<ref group="note">The [[List of game-based Pokémon distributions in Generation VIII#Pokémon GO Melmetal|Pokémon HOME Melmetal]] (gifted to the player the first time they transfer a Pokémon via [[GO Transporter]]) cannot be Shiny, and other Melmetal cannot be given [[Max Soup]] to gain the Gigantamax Factor. As such, it is impossible to obtain a Shiny Melmetal with the Gigantamax Factor.</ref><br><small>[[Gigantamax]]</small>
+| colspan=6 style="background:#999" | ||  {{no}} || colspan=1 style="background:#999" |
+|- style="background:#fff"
+| {{MSP/HOME|0888 s|Zacian}}{{MSP/HOME|0888C s|Zacian}}
+| {{p|Zacian}}
+| colspan=6 style="background:#999" | ||  ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0889 s|Zamazenta}}{{MSP/HOME|0889C s|Zamazenta}}
+| {{p|Zamazenta}}
+| colspan=6 style="background:#999" | ||  ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0890 s|Eternatus}}{{MSP/HOME|0890E s|Eternatus}}
+| {{p|Eternatus}}<ref group="note">Eternatus's Eternamax form is not obtainable by the player.</ref>
+| colspan=6 style="background:#999" | ||  ~ || ~
+|- style="background:#fff"
+| {{MSP/HOME|0891 s|Kubfu}}
+| {{p|Kubfu}}
+| colspan=6 style="background:#999" | ||  {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0892 s|Urshifu}}{{MSP/HOME|0892R s|Urshifu}}<br/>{{MSP/HOME|0892Gi s|Urshifu}}{{MSP/HOME|0892RGi s|Urshifu}}
+| {{p|Urshifu}}<ref group="note">[https://twitter.com/Sibuna_Switch/status/1537595288894021632 Due to an oversight], from June 17, 2022, to approximately 2:00-11:00 UTC on June 18, 2022, the [[Gigantamax]] Urshifu that appeared during the June 17 to 19, 2022 [[Wild Area News#June 17 to 19, 2022|Wild Area News event]] could appear as Shiny, allowing Urshifu's Shiny to be registered registered in the [[Pokédex]]. However, these Urshifu were impossible to catch.</ref>
+| colspan=6 style="background:#999" | || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0893 s|Zarude}}{{MSP/HOME|0893D s|Zarude}}
+| {{p|Zarude}}
+| colspan=6 style="background:#999" | || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0896 s|Glastrier}}
+| {{p|Glastrier}}
+| colspan=6 style="background:#999" | || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0897 s|Spectrier}}
+| {{p|Spectrier}}
+| colspan=6 style="background:#999" | || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0898 s|Calyrex}}<br>{{MSP/HOME|0898I s|Calyrex}}{{MSP/HOME|0898S s|Calyrex}}
+| {{p|Calyrex}}
+| colspan=6 style="background:#999" | || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0901B s|Ursaluna}}
+| {{p|Ursaluna}}<br><small>Bloodmoon</small>
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0905 s|Enamorus}}{{MSP/HOME|0905T s|Enamorus}}
+| {{p|Enamorus}}<ref group="note">As of 06:00 UTC, January 28, 2025, Shiny Enamorus can be obtained as a gift for completing the [[List of Pokémon by Hisui Pokédex number|Hisui Pokédex]] from {{g|Legends: Arceus}} in {{g|HOME}}.</ref>
+| colspan=6 style="background:#999" | ||  ~<br>{{Gameabbrevss|HOME}} ||  ~<br>{{Gameabbrevss|HOME}}
+|- style="background:#fff"
+| {{MSP/HOME|0999 s|Gimmighoul}}
+| {{p|Gimmighoul}}<ref group="note">Shiny Chest Form Gimmighoul in {{g|Scarlet and Violet}} is only available via 5★ Tera raids (without an increased chance to appear as Shiny) during the [[Poké Portal News#June 21 to July 2, 2023|June 21 to July 2, 2023]] Poké Portal News event, the [[Poké Portal News/2024#August 9 to 22, 2024|August 9 to August 22, 2024]] Poké Portal News event, and the [[Poké Portal News#April 30 to May 8, 2025 2|April 30 to May 8, 2025]] Poké Portal News event. All Chest Form Gimmighoul encountered as static encounters in Scarlet and Violet cannot be Shiny.</ref><br><small>Chest Form</small>
+| colspan=7 style="background:#999" | ||  {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|0999R s|Gimmighoul}}
+| {{p|Gimmighoul}}<ref group="note">Shiny Roaming Form Gimmighoul can be obtained legitimately via the [[Coin Bag]] in [[Pokémon GO]] during certain in-game events.</ref><br><small>Roaming Form</small>
+| colspan=7 style="background:#999" | ||  ~<br>{{gameabbrevss|GO}}
+|- style="background:#fff"
+| {{MSP/HOME|1000 s|Gholdengo}}
+| {{p|Gholdengo}}
+| colspan=7 style="background:#999" | ||  {{yes}}<br>{{gameabbrev9|MD}}
+|- style="background:#fff"
+| {{MSP/HOME|1001 s|Wo-Chien}}
+| {{p|Wo-Chien}}
+| colspan=7 style="background:#999" | || ~
+|- style="background:#fff"
+| {{MSP/HOME|1002 s|Chien-Pao}}
+| {{p|Chien-Pao}}
+| colspan=7 style="background:#999" | || ~
+|- style="background:#fff"
+| {{MSP/HOME|1003 s|Ting-Lu}}
+| {{p|Ting-Lu}}
+| colspan=7 style="background:#999" | || ~
+|- style="background:#fff"
+| {{MSP/HOME|1004 s|Chi-Yu}}
+| {{p|Chi-Yu}}
+| colspan=7 style="background:#999" | || ~
+|- style="background:#fff"
+| {{MSP/HOME|1007 s|Koraidon}}
+| {{p|Koraidon}}
+| colspan=7 style="background:#999" | || ~
+|- style="background:#fff"
+| {{MSP/HOME|1008 s|Miraidon}}
+| {{p|Miraidon}}
+| colspan=7 style="background:#999" | || ~
+|- style="background:#fff"
+| {{MSP/HOME|1009 s|Walking Wake}}
+| {{p|Walking Wake}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1010 s|Iron Leaves}}
+| {{p|Iron Leaves}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1014 s|Okidogi}}
+| {{p|Okidogi}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1015 s|Munkidori}}
+| {{p|Munkidori}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1016 s|Fezandipiti}}
+| {{p|Fezandipiti}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1017 s|Ogerpon}}<br>{{MSP/HOME|1017W s|Ogerpon}}{{MSP/HOME|1017H s|Ogerpon}}{{MSP/HOME|1017C s|Ogerpon}}
+| {{p|Ogerpon}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1020 s|Gouging Fire}}
+| {{p|Gouging Fire}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1021 s|Raging Bolt}}
+| {{p|Raging Bolt}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1022 s|Iron Boulder}}
+| {{p|Iron Boulder}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1023 s|Iron Crown}}
+| {{p|Iron Crown}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1024 s|Terapagos}}{{MSP/HOME|1024T s|Terapagos}}
+| {{p|Terapagos}}
+| colspan=7 style="background:#999" | || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|1025 s|Pecharunt}}
+| {{p|Pecharunt}}
+| colspan=7 style="background:#999" | || {{no}}
+|}
+
+===In Generations I and II===
+In [[Generation II]], shininess is determined by a Pokémon's [[IV|DV]]s. This causes several {{DL|Shiny Pokémon|quirks}} with the availability of certain species and [[List of Pokémon with form differences|forms]] in these games.
+
+====Generation I availability====
+Due to correlations between [[Pseudorandom number generation|pseudorandom numbers]] in the [[Generation I]] games, Pokémon encountered in those games in [[tall grass]], on [[cave tile]]s, or by {{m|Surf}}ing on [[water tile|water]] cannot have a set of DVs that would allow them to be Shiny in Generation II. [[Fishing]] encounters, [[gift Pokémon]] (including from [[Pokémon Stadium]]), stationary Pokémon (such as {{p|Snorlax}} and {{p|Mewtwo}}), and [[in-game trade]]s can have any set of DVs, so they always have the same 1/8192 chance of having a Shiny DV combination.<ref>[http://wiki.pokemonspeedruns.com/index.php?title=Pokémon_Red/Blue_Wild_DVs Pokémon Red/Blue Wild DVs]</ref>
+
+Due to a programming quirk, DVs are generated twice for every encounter in the [[Pokémon Tower]]. This results in the full range of DV combinations being possible, which affects encounters with {{p|Gastly}}, {{p|Haunter}}, and {{p|Cubone}}, and their Evolutions.<ref>[https://youtu.be/2s6QxW-3BcE I Found a Shiny Gastly in Gen I | Pokemon Red & Blue - Porygondolier]</ref>
+
+The following table lists all Pokémon with restricted Shiny availability in a Generation I game which are not covered in the table above due to their availability also being limited in future generations. All Pokémon which cannot be obtained Shiny in Generation I can be found in Generation II with a normal Shiny rate.
+
+{| class="roundy sortable" style="margin:auto; text-align:center; background-color: #{{gold color dark}}; border: 3px solid #{{gold color}}"
+|-
+! style="background-color:#{{gold color light}}; {{roundytl|5px}}" rowspan="2" colspan="2" | Pokémon
+! style="background-color:#{{gold color light}}; {{roundytr|5px}}" colspan="4" | Game
+|-
+! style="background-color:#{{red color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Pokémon Red and Blue Versions|R}}
+! style="background-color:#{{blue color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Pokémon Red and Blue Versions|B}}
+! style="background-color:#{{blue color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Pokémon Blue Version (Japanese)|B<sub>(JP)</sub>}}
+! style="background-color:#{{yellow color}}; font-size:smaller; line-height: 1em" | {{color2|fff|Pokémon Yellow Version|Y}}
+|- style="background:#fff"
+| {{MSP/HOME|0010 s|Caterpie}}
+| {{p|Caterpie}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0011 s|Metapod}}
+| {{p|Metapod}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0012 s|Butterfree}}
+| {{p|Butterfree}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0013 s|Weedle}}
+| {{p|Weedle}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0014 s|Kakuna}}
+| {{p|Kakuna}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0015 s|Beedrill}}
+| {{p|Beedrill}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0016 s|Pidgey}}
+| {{p|Pidgey}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0017 s|Pidgeotto}}
+| {{p|Pidgeotto}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0018 s|Pidgeot}}
+| {{p|Pidgeot}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0019 s|Rattata}}
+| {{p|Rattata}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0020 s|Raticate}}
+| {{p|Raticate}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0021 s|Spearow}}
+| {{p|Spearow}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0022 s|Fearow}}
+| {{p|Fearow}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0023 s|Ekans}}
+| {{p|Ekans}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0024 s|Arbok}}
+| {{p|Arbok}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0025 s|Pikachu}}
+| {{p|Pikachu}} || {{no}} || {{no}} || {{yes}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0026 s|Raichu}}
+| {{p|Raichu}} || {{no}} || {{no}} || {{yes}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0027 s|Sandshrew}}
+| {{p|Sandshrew}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0028 s|Sandslash}}
+| {{p|Sandslash}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0029 s|Nidoran♀}}
+| {{p|Nidoran♀}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0030 s|Nidorina}}
+| {{p|Nidorina}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0031 s|Nidoqueen}}
+| {{p|Nidoqueen}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0032 s|Nidoran♂}}
+| {{p|Nidoran♂}} || {{yes}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0033 s|Nidorino}}
+| {{p|Nidorino}} || {{no}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0034 s|Nidoking}}
+| {{p|Nidoking}} || {{no}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0035 s|Clefairy}}
+| {{p|Clefairy}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0036 s|Clefable}}
+| {{p|Clefable}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0037 s|Vulpix}}
+| {{p|Vulpix}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0038 s|Ninetales}}
+| {{p|Ninetales}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0039 s|Jigglypuff}}
+| {{p|Jigglypuff}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0040 s|Wigglytuff}}
+| {{p|Wigglytuff}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0041 s|Zubat}}
+| {{p|Zubat}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0042 s|Golbat}}
+| {{p|Golbat}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0043 s|Oddish}}
+| {{p|Oddish}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0044 s|Gloom}}
+| {{p|Gloom}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0045 s|Vileplume}}
+| {{p|Vileplume}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0046 s|Paras}}
+| {{p|Paras}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0047 s|Parasect}}
+| {{p|Parasect}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0048 s|Venonat}}
+| {{p|Venonat}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0049 s|Venomoth}}
+| {{p|Venomoth}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0050 s|Diglett}}
+| {{p|Diglett}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0051 s|Dugtrio}}
+| {{p|Dugtrio}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0052 s|Meowth}}
+| {{p|Meowth}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0053 s|Persian}}
+| {{p|Persian}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0054 s|Psyduck}}
+| {{p|Psyduck}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0055 s|Golduck}}
+| {{p|Golduck}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0056 s|Mankey}}
+| {{p|Mankey}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0057 s|Primeape}}
+| {{p|Primeape}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0058 s|Growlithe}}
+| {{p|Growlithe}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0059 s|Arcanine}}
+| {{p|Arcanine}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0066 s|Machop}}
+| {{p|Machop}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0067 s|Machoke}}
+| {{p|Machoke}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0068 s|Machamp}}
+| {{p|Machamp}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0069 s|Bellsprout}}
+| {{p|Bellsprout}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0070 s|Weepinbell}}
+| {{p|Weepinbell}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0071 s|Victreebel}}
+| {{p|Victreebel}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0074 s|Geodude}}
+| {{p|Geodude}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0075 s|Graveler}}
+| {{p|Graveler}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0076 s|Golem}}
+| {{p|Golem}} || {{no}} || {{no}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0077 s|Ponyta}}
+| {{p|Ponyta}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0078 s|Rapidash}}
+| {{p|Rapidash}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0079 s|Slowpoke}}
+| {{p|Slowpoke}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0080 s|Slowbro}}
+| {{p|Slowbro}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0081 s|Magnemite}}
+| {{p|Magnemite}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0082 s|Magneton}}
+| {{p|Magneton}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0083 s|Farfetch'd}}
+| {{p|Farfetch'd}} || {{yes}} || {{yes}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0084 s|Doduo}}
+| {{p|Doduo}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0085 s|Dodrio}}
+| {{p|Dodrio}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0086 s|Seel}}
+| {{p|Seel}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0087 s|Dewgong}}
+| {{p|Dewgong}} || {{yes}} || {{yes}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0088 s|Grimer}}
+| {{p|Grimer}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0089 s|Muk}}
+| {{p|Muk}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0095 s|Onix}}
+| {{p|Onix}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0096 s|Drowzee}}
+| {{p|Drowzee}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0097 s|Hypno}}
+| {{p|Hypno}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0102 s|Exeggcute}}
+| {{p|Exeggcute}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0103 s|Exeggutor}}
+| {{p|Exeggutor}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0108 s|Lickitung}}
+| {{p|Lickitung}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0109 s|Koffing}}
+| {{p|Koffing}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0110 s|Weezing}}
+| {{p|Weezing}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0111 s|Rhyhorn}}
+| {{p|Rhyhorn}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0112 s|Rhydon}}
+| {{p|Rhydon}} || {{no}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0113 s|Chansey}}
+| {{p|Chansey}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0114 s|Tangela}}
+| {{p|Tangela}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0115 s|Kangaskhan}}
+| {{p|Kangaskhan}} || {{no}} || {{no}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0123 s|Scyther}}
+| {{p|Scyther}} || {{yes}} || {{no}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0124 s|Jynx}}
+| {{p|Jynx}} || {{yes}} || {{yes}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0125 s|Electabuzz}}
+| {{p|Electabuzz}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0126 s|Magmar}}
+| {{p|Magmar}} || {{no}} || {{no}} || {{no}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0127 s|Pinsir}}
+| {{p|Pinsir}} || {{no}} || {{yes}} || {{no}} || {{yes}}
+|- style="background:#fff"
+| {{MSP/HOME|0128 s|Tauros}}
+| {{p|Tauros}} || {{no}} || {{no}} || {{yes}} || {{no}}
+|- style="background:#fff"
+| {{MSP/HOME|0132 s|Ditto}}
+| {{p|Ditto}} || {{no}} || {{no}} || {{no}} || {{no}}
+|}
+
+====Other unobtainable Shiny Pokémon====
+{| class="roundy" style="margin:auto; text-align:center; background-color: #{{gold color dark}}; border: 3px solid #{{gold color}}"
+|-
+! style="width:384px; background-color:#{{gold color light}}; {{roundytl|5px}}" | Pokémon
+! style="background-color:#{{gold color light}}; {{roundytr|5px}}" | Explanation
+|- style="background:#fff"
+| {{MSP/HOME|0001 s|Bulbasaur}}{{MSP/HOME|0002 s|Ivysaur}}{{MSP/HOME|0003 f s|Venusaur}}{{MSP/HOME|0004 s|Charmander}}{{MSP/HOME|0005 s|Charmeleon}}{{MSP/HOME|0006 s|Charizard}}{{MSP/HOME|0007 s|Squirtle}}{{MSP/HOME|0008 s|Wartortle}}<br>{{MSP/HOME|0009 s|Blastoise}}{{MSP/HOME|0133 f s|Eevee}}{{MSP/HOME|0134 s|Vaporeon}}{{MSP/HOME|0135 s|Jolteon}}{{MSP/HOME|0136 s|Flareon}}{{MSP/HOME|0138 s|Omanyte}}{{MSP/HOME|0139 s|Omastar}}{{MSP/HOME|0140 s|Kabuto}}<br>{{MSP/HOME|0141 s|Kabutops}}{{MSP/HOME|0142 s|Aerodactyl}}{{MSP/HOME|0143 s|Snorlax}}{{MSP/HOME|0152 s|Chikorita}}{{MSP/HOME|0153 s|Bayleef}}{{MSP/HOME|0154 f s|Meganium}}{{MSP/HOME|0155 s|Cyndaquil}}{{MSP/HOME|0156 s|Quilava}}<br>{{MSP/HOME|0157 s|Typhlosion}}{{MSP/HOME|0158 s|Totodile}}{{MSP/HOME|0159 s|Croconaw}}{{MSP/HOME|0160 s|Feraligatr}}{{MSP/HOME|0176 s|Togetic}}{{MSP/HOME|0196 s|Espeon}}{{MSP/HOME|0197 s|Umbreon}} <font size=6>[[List of Pokémon by gender ratio#1 ♀ : 7 ♂|♀]]</font size>
+| rowspan="2" | Gender is also derived from the Pokémon's DVs. Due to this, Pokémon that have a "1 ♀ : 7 ♂" gender ratio cannot simultaneously be both female and Shiny in Generation II.<br>In v1.2 of [[Poké Transporter]], when transferring Pokémon from Generation I, gender was [https://twitter.com/SciresM/status/824147081698967555 determined randomly] instead of being determined by the Attack DV. As a result, prior to v1.3, it was possible for Transporter to generate 1 ♀ : 7 ♂ gender ratio Pokémon as both female and Shiny.
+|- style="background:#fff"
+| [[Gender|Female]] Pokémon with a [[List of Pokémon by gender ratio#1 ♀ : 7 ♂|gender ratio of 1 Female to 7 Males]]
+|- style="background:#fff"
+| {{MSP/HOME|0201 s|Unown}}{{MSP/HOME|0201B s|Unown}}{{MSP/HOME|0201C s|Unown}}{{MSP/HOME|0201D s|Unown}}{{MSP/HOME|0201E s|Unown}}{{MSP/HOME|0201F s|Unown}}{{MSP/HOME|0201G s|Unown}}{{MSP/HOME|0201H s|Unown}}<br>{{MSP/HOME|0201J s|Unown}}{{MSP/HOME|0201K s|Unown}}{{MSP/HOME|0201L s|Unown}}{{MSP/HOME|0201M s|Unown}}{{MSP/HOME|0201N s|Unown}}{{MSP/HOME|0201O s|Unown}}{{MSP/HOME|0201P s|Unown}}{{MSP/HOME|0201Q s|Unown}}<br>{{MSP/HOME|0201R s|Unown}}{{MSP/HOME|0201S s|Unown}}{{MSP/HOME|0201T s|Unown}}{{MSP/HOME|0201U s|Unown}}{{MSP/HOME|0201W s|Unown}}{{MSP/HOME|0201X s|Unown}}{{MSP/HOME|0201Y s|Unown}}{{MSP/HOME|0201Z s|Unown}}
+| rowspan="2" | An Unown's form is also derived from its DVs in Generation II. Due to this, all forms except the letters I and V cannot be Shiny.
+|- style="background:#fff"
+| {{p|Unown}} ([[List of Pokémon with form differences#Unown|Excluding forms I & V]])
+|}
+
+==Notes==
+{{Reflist|group=note}}
+
+==Related articles==
+{{Pokémon availability}}
+
+[[Category:Lists of Pokémon]]
+
+[[fr:Shiny Lock]]
+[[ja:色違い未解禁のポケモン一覧]]
