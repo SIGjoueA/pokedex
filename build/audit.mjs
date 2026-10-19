@@ -350,5 +350,6 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   eq('v41 compteur Let’s Go', [lg.e.length, ids.size, [...ids].filter(i => !nreq.has(i)).length], [153, 153, 153]);
   const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
   ok('v41 formes interchangeables : FLINK / FSHORT, raccourci, images des formes', /const FLINK = \{ 493: '\*', 773: '\*', 676: \['xy'\], 649: \['bw', 'b2w2', 'home'\]/.test(app) && /Cocher toutes les formes/.test(app) && /✓ Toutes cochées/.test(app) && /new Set\(E\.map\(artOf\)\)/.test(app));
+  ok('v48 Ogerpon lié dans Écarlate / Violet (+ HOME), séparé dans GO, migration idempotente', /1017: \['sv', 'home'\]/.test(app) && /function migrateLinkV48\(\)/.test(app) && /migrateFem\(\); migrateLinkV48\(\);/.test(app) && !/1017: '\*'/.test(app));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

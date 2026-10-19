@@ -227,7 +227,7 @@ const saveOf = g => (GAME_BY[g] && GAME_BY[g].base) || g;
 const saveGames = g => GAMES.filter(x => saveOf(x.id) === saveOf(g)).map(x => x.id);
 // v41: interchangeable forms (REVUE-FORMES-2). FLINK = games where the forms share one mark ('*' = everywhere, 'home' = HOME transfers);
 // FSHORT = species with separate marks + « Cocher toutes les formes » in their Formes block (except where linked).
-const FLINK = { 493: '*', 773: '*', 676: ['xy'], 649: ['bw', 'b2w2', 'home'], 483: ['home'], 484: ['home'], 487: ['home'], 646: ['home'], 800: ['home'], 888: ['home'], 889: ['home'], 898: ['home'], 1017: ['home'] };
+const FLINK = { 493: '*', 773: '*', 676: ['xy'], 649: ['bw', 'b2w2', 'home'], 483: ['home'], 484: ['home'], 487: ['home'], 646: ['home'], 800: ['home'], 888: ['home'], 889: ['home'], 898: ['home'], 1017: ['sv', 'home'] }; // v48: Ogerpon linked in Écarlate / Violet (one Ogerpon, mask = held item)
 const FSHORT = new Set([386, 412, 479, 483, 484, 487, 492, 585, 586, 641, 642, 645, 646, 647, 649, 676, 718, 720, 741, 800, 888, 889, 898, 905, 1017]);
 const fSibs = p => (FORMS[p.id] || []).filter(q => !q.mb && !q.bo && q.c !== 'gmax');
 const fLinked = (p, c) => { const l = FLINK[p.id]; if (!l || !c || p.mb || p.bo || p.c === 'gmax') return false; return l === '*' || l.includes(c) || (!!GAME_BY[c] && l.includes(saveOf(c))); };
@@ -533,8 +533,19 @@ function migrateSal() {
   for (const x of SHINY_G) if (x.endsWith(':' + SAL_A)) { const g = x.slice(0, -SAL_A.length - 1); if (!CAUGHT_G.has(g + ':' + SAL_A) && !CAUGHT_G.has(g + ':' + SAL_G)) { CAUGHT_G.add(g + ':' + SAL_A); ch = true; } } // shiny ⇒ caught
   if (ch) { saveTrack(); store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); }
 }
+// v48 migration (idempotent, nothing removed): species newly linked in a game (Ogerpon in Écarlate / Violet + extensions) → each per-game mark
+// of one linked form is copied to every linked form present in that game (union).
+function migrateLinkV48() {
+  let ch = false;
+  for (const set of [CAUGHT_G, SHINY_G, TRANS_G, STRANS_G, BARON_G, BARONS_G]) for (const x of [...set]) {
+    if (typeof x !== 'string') continue; const i = x.indexOf(':'), g = x.slice(0, i), p = BY_KEY[x.slice(i + 1)];
+    if (!p || p.id !== 1017 || !GAME_BY[g] || !fLinked(p, g)) continue;
+    for (const q of linkSet(p, g)) { const y = g + ':' + q.k; if (!set.has(y)) { set.add(y); ch = true; } }
+  }
+  if (ch) saveTrack();
+}
 function migrateMarks() {
-  migrateMerged(); migrateSal(); migrateFem();
+  migrateMerged(); migrateSal(); migrateFem(); migrateLinkV48();
   let changed = false;
   const salG = x => x.endsWith(':' + SAL_A) && CAUGHT_G.has(x.slice(0, -SAL_A.length) + SAL_G); // v44: Salarsen Gigamax shiny with only « Gigamax Grave » = already caught
   for (const x of [...STRANS_G]) for (const set of [TRANS_G, SHINY_G, CAUGHT_G]) if (!set.has(x) && !(set === CAUGHT_G && salG(x))) { set.add(x); changed = true; }

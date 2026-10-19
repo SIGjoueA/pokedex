@@ -1,4 +1,7 @@
 [
+  { "v": "v48", "d": "2026-10-19", "l": [
+    "Ogerpon : ses quatre masques sont liés dans Écarlate / Violet et leurs extensions (on n'y capture qu'un seul Ogerpon, son masque suit l'objet tenu). Cocher un masque coche les quatre ; vos marques existantes sont recopiées sur les autres masques, rien n'est retiré. HOME reste lié, Pokémon GO reste séparé."
+  ] },
   { "v": "v47", "d": "2026-10-18", "l": [
     "Fiches HOME : nouveau bloc « Dex national HOME » (numéro national, formes de l'espèce dans HOME avec ✅ / ⬜ selon vos marques).",
     "Fiches HOME : nouveau bloc « Shiny » (jeux d'où il peut être ramené shiny dans HOME, ou shiny lock, par exemple Zarude). Ces deux blocs sont informatifs, sans effet sur la complétion.",

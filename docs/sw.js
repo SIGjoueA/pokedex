@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v47';
+const VERSION = 'v48';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiches HOME : blocs « Dex national HOME » et « Shiny ». Données Pokémon GO à jour, images des Méga-Gemmes, bouton « Baron shiny » retiré.';
+const NOTES = 'Ogerpon lié dans Écarlate / Violet : cocher un masque coche les quatre (un seul Ogerpon, le masque suit l\'objet tenu).';
 const DATA_VERSION = 'd24'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
