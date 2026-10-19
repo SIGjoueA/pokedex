@@ -609,7 +609,7 @@ async function boot() {
   store.set('mega_gems', [...MEGA_GEMS]); // legacy un-prefixed gem keys → "za:"
   $('#formsbtn').setAttribute('aria-pressed', state.forms);
   buildControls();
-  render();
+  render(); colInit();
   window.addEventListener('hashchange', route);
   route();
   registerSW();
@@ -802,7 +802,7 @@ function cardHTML(p) {
     (trackCtx() && trackCtx() !== 'home' && isTrans(p) ? homeIcon(false, HOME_T) : '');
   return `<a class="card${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="${artOf(p)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
     `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(state.forms ? fullN(p) : p.n)} ${star}</div></div>` +
-    `<div class="badges">${p.t.map(badge).join('')}</div></a>`;
+    `<div class="badges">${p.t.map(badge).join('')}</div><span class="cadd" role="button" tabindex="0" data-add="${p.k}" aria-label="Ajouter ${esc(fullN(p))} à ma collection">＋</span></a>`;
 }
 // Catégorie filters about HOME transfers: per game (this game) or global (base / HOME view). Not offered for games that cannot send Pokémon to HOME.
 const TRANS_CATS = ['trans', 'notrans', 'strans', 'hcomplete'];
@@ -1157,7 +1157,7 @@ function navHTML(p, extra = '') {
     const seen = new Set(), list = filtered().filter(x => !seen.has(x.id) && seen.add(x.id)); const i = list.findIndex(x => x.id === p.id); // one entry per species (regional form in its region’s dex)
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
-  return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
+  return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="cadd2" type="button" data-add="${p.k}" aria-label="Ajouter à ma collection" title="Ajouter à ma collection">＋</button><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
 function effGroups(types, mode, chart, adj = {}) {
@@ -1727,6 +1727,7 @@ function renderDetail() {
     ${desc}
     ${baseNoteHTML(p)}
     <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
+    <div id="mycol">${myColHTML(p)}</div>
     ${formSwitcher(p, gm)}
     ${pre}
     ${body}
@@ -2080,7 +2081,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX] };
+    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], collection: COLL };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -2106,6 +2107,7 @@ boot();
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(kOk).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
+      if (Array.isArray(d.collection)) colImport(d.collection); // v49: older backups have no collection → nothing changes
       migrateEnergy(); migrateMarks(); rebuildHome(); if (!d.sal_h47) migrateSalHome(true); store.set('mega_energy', [...MEGA_ENERGY]);
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
       render(); toast('Sauvegarde importée.');
@@ -2232,3 +2234,129 @@ const CAT_SEP_BEFORE = new Set(['caught', 'swdone', 'trans', 'baron']);
 const CAT_HEAD = { leg: 'Statut', caught: 'Marques', trans: 'HOME', baron: 'Barons' }; // v27: block headings, same style as the Jeux menu (SWITCH, 3DS…)
 const catSep = v => CAT_HEAD[v] ? ['h', CAT_HEAD[v]] : CAT_SEP_BEFORE.has(v) ? 'sep' : '';
 function initCatMenu() { initMenu('cat', { btnId: 'catbtn', listId: 'catlist', label: 'Catégorie', empty: 'Catégorie', allLabel: 'Toutes catégories (aucun filtre)', sep: catSep, dot: v => v === 'baron' || v === 'nobaron' ? BARON_IC : v === 'barons' || v === 'nobarons' ? BARONS_IC : '' }); }
+
+/* ---------------- v49: mode Collection — a log of individual Pokémon owned (separate from dex tracking) ---------------- */
+// Storage « collection »: [{ id, k (entry key), g (origin game id or 'go', fixed), n (surnom), sh (bool), sx ('m'|'f'|'x'|''), w (where now: game id | 'go' | 'home' | 'other:<text>' | ''), at (ISO created), up (ISO edited) }]
+let COLL = (store.get('collection', []) || []).filter(e => e && typeof e === 'object');
+let colMode = store.get('colmode', false) === true;
+const colSave = () => store.set('collection', COLL);
+const colGames = () => [...GAMES.map(g => [g.id, g.s]), ['go', 'Pokémon GO']];
+const colGName = g => g === 'go' ? 'Pokémon GO' : g === 'home' ? 'Pokémon HOME' : GAME_BY[g] ? GAME_BY[g].s : '';
+const colWhere = w => !w ? '' : w.startsWith('other:') ? w.slice(6) : colGName(w);
+const colOrigOk = g => g === 'go' || !!GAME_BY[g];
+const colId = () => (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2, 10));
+const colImg = e => { const p = BY_KEY[e.k]; return p ? (e.sh && p.sh ? `img/s/${p.k}.webp` : artOf(p)) : ''; };
+const colValid = e => e && typeof e === 'object' && typeof e.k === 'string' && BY_KEY[e.k] && colOrigOk(e.g);
+function colImport(arr) {
+  const have = new Set(COLL.map(e => e.id));
+  for (const e of arr) if (colValid(e)) {
+    const x = { id: typeof e.id === 'string' && e.id ? e.id : colId(), k: e.k, g: e.g, n: typeof e.n === 'string' ? e.n.slice(0, 40) : '', sh: !!e.sh, sx: ['m', 'f', 'x'].includes(e.sx) ? e.sx : '', w: typeof e.w === 'string' ? e.w.slice(0, 60) : '', at: typeof e.at === 'string' ? e.at : new Date().toISOString() };
+    if (typeof e.up === 'string') x.up = e.up;
+    if (!have.has(x.id)) { COLL.push(x); have.add(x.id); }
+  }
+  colSave(); colRender();
+}
+// Adding ticks Capturé (and Shiny) in the dex for the origin game, through the normal linked rules. Never unticks anything.
+function colTickDex(p, g, sh) {
+  if (!p || !colOrigOk(g)) return;
+  try {
+    if (!isCaught(p, g)) toggleMark(p, 'caught', g);
+    if (sh && !isShiny(p, g)) toggleMark(p, 'shiny', g);
+  } catch {}
+}
+const SEX_L = { m: '♂ Mâle', f: '♀ Femelle', x: 'Asexué' };
+function myColHTML(p) {
+  const mine = COLL.filter(e => BY_KEY[e.k] && BY_KEY[e.k].id === p.id);
+  return `<section class="box colbox"><h2>Ma collection <button type="button" class="coladd" data-add="${p.k}" aria-label="Ajouter un exemplaire">＋</button></h2>` +
+    (mine.length ? `<p class="colcnt">Tu en as <b>${mine.length}</b></p><ul class="plain colmini">${mine.map(colRowHTML).join('')}</ul>` : '<p class="note colcnt">Tu n’en as pas encore. Touche ＋ pour en ajouter un.</p>') + '</section>';
+}
+function colRowHTML(e) {
+  const p = BY_KEY[e.k];
+  return `<li><button type="button" class="colrow" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" width="48" height="48" loading="lazy"><span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
+}
+function colCardHTML(e) {
+  const p = BY_KEY[e.k]; if (!p) return '';
+  return `<button type="button" class="card colcard" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+    `<div class="info"><div class="nm">${esc(fullN(p))}${e.sh ? ' <span class="mk sh" aria-label="Shiny">✨</span>' : ''}</div>${e.n ? `<div class="sn">« ${esc(e.n)} »</div>` : ''}<div class="og" title="${esc(colGName(e.g))}">${gdot(e.g)}<span>${esc(colGName(e.g))}</span></div></div></button>`;
+}
+function colRender() {
+  document.body.classList.toggle('colmode', colMode);
+  document.querySelectorAll('#modeseg button').forEach(b => b.setAttribute('aria-pressed', String((b.dataset.m === 'col') === colMode)));
+  const box = $('#collection'); if (!box) return;
+  box.hidden = !colMode;
+  if (colMode) {
+    const list = COLL.slice().sort((a, b) => (b.at || '').localeCompare(a.at || ''));
+    box.innerHTML = list.length ? `<p class="colhead">${list.length} Pokémon dans ta collection</p><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
+      : `<div class="colempty"><div class="ce-ic" aria-hidden="true">${BALL}</div><p><b>Ta collection est vide.</b></p><p>Touche ＋ sur une carte du Dex ou sur la fiche d’un Pokémon pour enregistrer un Pokémon que tu possèdes.</p></div>`;
+  }
+  const mc = $('#mycol'); if (mc && DET && DET.p) mc.innerHTML = myColHTML(DET.p);
+}
+function colSetMode(on) { colMode = on; store.set('colmode', on); colRender(); if (!on) render(); window.scrollTo(0, 0); }
+// Modal: add (prefilled) or edit an entry. Origin game is fixed once added.
+function colPokeOpts() { return E.filter(p => !p.bo).map(p => `<option value="${esc(fullN(p))} #${pad(p.id)}"></option>`).join(''); }
+let COL_DL = false;
+function colOpen(o) {
+  const ed = o.id ? COLL.find(e => e.id === o.id) : null;
+  const e = ed || { k: o.k || '', g: o.g || '', n: '', sh: false, sx: '', w: '' };
+  const p = BY_KEY[e.k];
+  if (!COL_DL) { COL_DL = true; const dl = document.createElement('datalist'); dl.id = 'colpk'; dl.innerHTML = colPokeOpts(); document.body.appendChild(dl); }
+  const gopts = (sel, extra) => `<option value="">${extra ? '—' : 'Choisir le jeu…'}</option>` + colGames().map(([v, n]) => `<option value="${v}"${v === sel ? ' selected' : ''}>${esc(n)}</option>`).join('');
+  const wv = e.w || '', wo = wv.startsWith('other:');
+  const wopts = `<option value="">—</option><option value="home"${wv === 'home' ? ' selected' : ''}>Pokémon HOME</option>` + colGames().map(([v, n]) => `<option value="${v}"${v === wv ? ' selected' : ''}>${esc(n)}</option>`).join('') + `<option value="other"${wo ? ' selected' : ''}>Autre…</option>`;
+  closeCol(); { const t = $('#toast'); if (t) t.classList.remove('on'); }
+  const m = document.createElement('div'); m.id = 'colmodal'; m.className = 'colback';
+  m.innerHTML = `<div class="colsheet" role="dialog" aria-modal="true" aria-labelledby="coltitle">
+    <div class="menuhead"><h2 id="coltitle">${ed ? 'Mon Pokémon' : 'Ajouter à ma collection'}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
+    ${ed ? `<div class="colhero"><img src="${colImg(e)}" alt="" width="96" height="96"><div><b>${esc(fullN(p))}</b>${e.at ? `<small>Ajouté le ${new Date(e.at).toLocaleDateString('fr-FR')}</small>` : ''}</div></div>` : ''}
+    <form id="colform" novalidate>
+      <label class="cf"><span>Pokémon <span class="req">*</span></span><input id="cfpk" list="colpk" autocomplete="off" placeholder="Nom ou forme…" value="${p ? esc(fullN(p)) + ' #' + pad(p.id) : ''}"${ed ? ' disabled' : ''}></label>
+      <label class="cf"><span>Jeu d’origine <span class="req">*</span></span><select id="cfg"${ed ? ' disabled' : ''}>${gopts(e.g)}</select>${ed ? '<small class="note">Le jeu d’origine ne change plus une fois ajouté.</small>' : ''}</label>
+      <label class="cf">Surnom<input id="cfn" maxlength="40" autocomplete="off" value="${esc(e.n || '')}"></label>
+      <div class="cfrow"><label class="cfc"><input type="checkbox" id="cfsh"${e.sh ? ' checked' : ''}> ✨ Shiny</label>
+        <label class="cf cfs">Sexe<select id="cfsx"><option value="">—</option>${Object.entries(SEX_L).map(([v, n]) => `<option value="${v}"${e.sx === v ? ' selected' : ''}>${n}</option>`).join('')}</select></label></div>
+      <label class="cf">Où il est maintenant<select id="cfw">${wopts}</select></label>
+      <input id="cfwo" class="cfo" maxlength="60" placeholder="Précise (ex. : Pokémon Bank)" value="${wo ? esc(wv.slice(6)) : ''}"${wo ? '' : ' hidden'}>
+      <p id="cferr" class="cferr" role="alert" hidden></p>
+      <div class="cfbtns">${ed ? '<button type="button" id="cfdel" class="cfdel">Supprimer</button>' : ''}<button type="submit" id="cfok" class="cfok">${ed ? 'Enregistrer' : 'Ajouter'}</button></div>
+    </form></div>`;
+  document.body.appendChild(m); document.body.classList.add('colopen');
+  const q = s => m.querySelector(s);
+  m.addEventListener('click', ev => { if (ev.target === m) closeCol(); });
+  q('#colx').onclick = closeCol;
+  q('#cfw').onchange = () => { q('#cfwo').hidden = q('#cfw').value !== 'other'; };
+  const findPk = v => { const mm = /#(\d{4})\s*$/.exec(v); const t = norm(v.replace(/#\d+\s*$/, '').trim()); if (!t) return null;
+    return E.find(p => !p.bo && norm(fullN(p)) === t && (!mm || p.id === +mm[1])) || E.find(p => !p.bo && p.nn === t) || null; };
+  if (ed) { const del = q('#cfdel'); del.onclick = () => {
+    if (del.dataset.c !== '1') { del.dataset.c = '1'; del.textContent = 'Confirmer la suppression ?'; del.classList.add('on'); return; }
+    COLL = COLL.filter(x => x.id !== ed.id); colSave(); closeCol(); colRender(); toast('Pokémon retiré de ta collection (le dex n’est pas modifié).'); }; }
+  q('#colform').onsubmit = ev => {
+    ev.preventDefault();
+    const pk = ed ? p : findPk(q('#cfpk').value), g = ed ? e.g : q('#cfg').value, err = [];
+    if (!pk) err.push('choisis un Pokémon de la liste'); if (!colOrigOk(g)) err.push('choisis le jeu d’origine');
+    const er = q('#cferr'); q('#cfpk').classList.toggle('bad', !pk); q('#cfg').classList.toggle('bad', !colOrigOk(g));
+    if (err.length) { er.hidden = false; er.textContent = cap(err.join(' et ')) + '.'; return; }
+    const wsel = q('#cfw').value, w = wsel === 'other' ? (q('#cfwo').value.trim() ? 'other:' + q('#cfwo').value.trim() : '') : wsel;
+    const x = { n: q('#cfn').value.trim(), sh: q('#cfsh').checked, sx: q('#cfsx').value, w };
+    if (ed) { Object.assign(ed, x, { up: new Date().toISOString() }); if (x.sh) colTickDex(pk, g, true); }
+    else { COLL.push({ id: colId(), k: pk.k, g, ...x, at: new Date().toISOString() }); colTickDex(pk, g, x.sh); }
+    colSave(); closeCol(); colRender();
+    if (DET && DET.p && !$('#detail-view').hidden) { try { refreshTrack(DET.p); } catch {} }
+    if (!colMode) render();
+    toast(ed ? 'Modifications enregistrées.' : `${fullN(pk)} ajouté à ta collection · Capturé coché dans ${colGName(g)}.`);
+  };
+  setTimeout(() => (ed ? q('#cfn') : (p ? q('#cfg') : q('#cfpk'))).focus({ preventScroll: true }), 30);
+}
+function closeCol() { const m = $('#colmodal'); if (m) m.remove(); document.body.classList.remove('colopen'); }
+function colInit() {
+  const seg = $('#modeseg'); if (seg) seg.addEventListener('click', e => { const b = e.target.closest('button'); if (b) colSetMode(b.dataset.m === 'col'); });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-add]');
+    if (a) { e.preventDefault(); e.stopPropagation();
+      const onSheet = !$('#detail-view').hidden, c = onSheet ? sheetCtx() : trackCtx();
+      colOpen({ k: a.dataset.add, g: c && colOrigOk(c) ? c : '' }); return; }
+    const r = e.target.closest('[data-cid]'); if (r && !e.target.closest('#colmodal')) { e.preventDefault(); colOpen({ id: r.dataset.cid }); }
+  }, true);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#colmodal')) closeCol(); else if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.cadd')) { e.preventDefault(); e.target.click(); } });
+  addEventListener('hashchange', closeCol);
+  colRender();
+}

@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v48';
+const VERSION = 'v49';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Ogerpon lié dans Écarlate / Violet : cocher un masque coche les quatre (un seul Ogerpon, le masque suit l\'objet tenu).';
+const NOTES = 'Nouveau mode Collection : enregistre chaque Pokémon que tu possèdes (bouton ＋ sur les cartes et les fiches), avec jeu d\'origine, surnom, shiny…';
 const DATA_VERSION = 'd24'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
