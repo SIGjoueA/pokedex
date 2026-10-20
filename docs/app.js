@@ -2081,7 +2081,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], collection: COLL, pocket: [...PKO] };
+    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], collection: COLL, pocket: PKQ };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -2107,7 +2107,7 @@ boot();
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(kOk).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
-      if (Array.isArray(d.pocket)) { d.pocket.forEach(x => { if (typeof x === 'string' && /^[A-Za-z0-9-]+-[A-Za-z0-9]+$/.test(x)) PKO.add(x); }); pkSave(); pkRender(); } // v50: Pocket cards (merged, never removed)
+      if (d.pocket && typeof d.pocket === 'object') pkMerge(d.pocket); // v50: Pocket copies, max per language (old format = array of ids)
       if (Array.isArray(d.collection)) colImport(d.collection); // v49: older backups have no collection → nothing changes
       migrateEnergy(); migrateMarks(); rebuildHome(); if (!d.sal_h47) migrateSalHome(true); store.set('mega_energy', [...MEGA_ENERGY]);
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
@@ -2467,8 +2467,24 @@ function colInit() {
 /* ---------------- v50: Cartodex Pokémon TCG Pocket (data/pocket.json from TCGdex; card images loaded on demand from assets.tcgdex.net) ---------------- */
 // Storage « pocket »: array of owned card ids "A1-001". Mode « Pocket » = third segment next to Dex | Collection.
 let PK = null, PKP = null, pkMode = store.get('pkmode', false) === true, pkSet = '', pkOwn = 'all', pkRar = new Set();
-const PKO = new Set((store.get('pocket', []) || []).filter(x => typeof x === 'string'));
-const pkSave = () => store.set('pocket', [...PKO]);
+// v50b: « pocket » = { cardId: { lang: count } }. Old format (array of ids, v50 preview) → 1 copy in French.
+const PK_LANGS = [['fr', 'FR', 'Français'], ['en', 'EN', 'Anglais'], ['ja', 'JA', 'Japonais'], ['de', 'DE', 'Allemand'], ['it', 'IT', 'Italien'], ['es', 'ES', 'Espagnol'], ['pt', 'PT', 'Portugais (Brésil)'], ['ko', 'KO', 'Coréen'], ['zh', 'ZH', 'Chinois traditionnel']];
+const PK_LS = new Set(PK_LANGS.map(l => l[0])), PK_ID = /^[A-Za-z0-9-]+-[A-Za-z0-9]+$/;
+function pkNorm(raw) { // → clean map; arrays (old format) give 1 French copy per id
+  const out = {};
+  if (Array.isArray(raw)) { for (const x of raw) if (typeof x === 'string' && PK_ID.test(x)) out[x] = { fr: 1 }; return out; }
+  if (raw && typeof raw === 'object') for (const [id, m] of Object.entries(raw)) if (PK_ID.test(id) && m && typeof m === 'object') {
+    const q = {}; for (const [l, n] of Object.entries(m)) if (PK_LS.has(l) && Number.isInteger(n) && n > 0) q[l] = Math.min(n, 999); if (Object.keys(q).length) out[id] = q; }
+  return out;
+}
+const PKQ = pkNorm(store.get('pocket', {}));
+if (Array.isArray(store.get('pocket', null))) store.set('pocket', PKQ); // one-time migration
+let pkLang = PK_LS.has(store.get('pklang', 'fr')) ? store.get('pklang', 'fr') : 'fr';
+const pkSave = () => store.set('pocket', PKQ);
+const pkN = id => { const m = PKQ[id]; return m ? Object.values(m).reduce((a, n) => a + n, 0) : 0; };
+const PKO = { has: id => pkN(id) > 0 };
+function pkAdd(id, l, d) { const m = PKQ[id] || (PKQ[id] = {}); const n = Math.max(0, Math.min(999, (m[l] || 0) + d)); if (n) m[l] = n; else delete m[l]; if (!Object.keys(m).length) delete PKQ[id]; pkSave(); }
+function pkMerge(raw) { const inc = pkNorm(raw); for (const [id, m] of Object.entries(inc)) { const t = PKQ[id] || (PKQ[id] = {}); for (const [l, n] of Object.entries(m)) t[l] = Math.max(t[l] || 0, n); } pkSave(); pkRender(); const mp = $('#mypocket'); if (mp && DET && DET.p) pkSheet(DET.p); }
 const pkLoad = () => PKP || (PKP = getJSON('data/pocket.json').then(d => { PK = d; for (const s of d.s) for (const c of s.cards) c.id = s.id + '-' + c[0]; return d; }).catch(e => { PKP = null; throw e; }));
 // rarity index → short symbol (◆ diamonds, ☆ stars, ✨ chromatiques, 👑 couronne, Promo = sans rareté)
 const PK_SYM = ['◆', '◆◆', '◆◆◆', '◆◆◆◆', '☆', '☆☆', '☆☆☆', '✨', '✨✨', '👑', 'Promo'];
@@ -2477,9 +2493,9 @@ const pkPct = (a, b) => b ? Math.floor(a / b * 1000) / 10 : 0;
 const pkCnt = s => s.cards.reduce((a, c) => a + PKO.has(c.id), 0);
 const pkBar = (a, b) => `<div class="pkbar" role="progressbar" aria-valuemin="0" aria-valuemax="${b}" aria-valuenow="${a}"><i style="width:${pkPct(a, b)}%"></i></div>`;
 function pkCardHTML(s, c, withSet) {
-  const o = PKO.has(c.id), im = pkImg(s, c);
-  return `<div class="pkcard${o ? ' own' : ''}" data-pk="${c.id}"><button type="button" class="pkim" data-pkv="${c.id}" aria-label="Voir ${esc(c[1])}">${im ? `<img src="${im}" alt="" loading="lazy" decoding="async" width="245" height="337">` : `<span class="pkno">${esc(c[1])}</span>`}</button>` +
-    `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.id}" aria-pressed="${o}" aria-label="${o ? 'Possédée' : 'Non possédée'} : ${esc(c[1])}">${o ? '✓' : '＋'}</button></div></div>`;
+  const n = pkN(c.id), o = n > 0, im = pkImg(s, c);
+  return `<div class="pkcard${o ? ' own' : ''}" data-pk="${c.id}"><button type="button" class="pkim" data-pkv="${c.id}" aria-label="Voir ${esc(c[1])}">${im ? `<img src="${im}" alt="" loading="lazy" decoding="async" width="245" height="337">` : `<span class="pkno">${esc(c[1])}</span>`}${n ? `<b class="pkq">×${n}</b>` : ''}</button>` +
+    `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.id}" aria-label="Ajouter 1 exemplaire (${pkLangName()}) : ${esc(c[1])}">＋</button></div></div>`;
 }
 function pkRender() {
   const box = $('#pocket'); if (!box) return;
@@ -2494,10 +2510,10 @@ function pkRender() {
     return;
   }
   const rs = [...new Set(s.cards.map(c => c[2]))].sort((a, b) => a - b);
-  const list = s.cards.filter(c => (!pkRar.size || pkRar.has(c[2])) && (pkOwn === 'all' || (pkOwn === 'own') === PKO.has(c.id)));
+  const list = s.cards.filter(c => (!pkRar.size || pkRar.has(c[2])) && (pkOwn === 'all' || (pkOwn === 'dup' ? pkN(c.id) >= 2 : (pkOwn === 'own') === PKO.has(c.id))));
   const n = pkCnt(s);
   box.innerHTML = `<div class="pkhead"><button type="button" class="pkback" data-pks="">← Extensions</button><h2>${esc(s.n)}</h2><p><b>${n}</b> / ${s.cards.length} cartes · ${dec(pkPct(n, s.cards.length))} %${s.o && s.o < s.cards.length ? ` <small>(${s.o} de base + ${s.cards.length - s.o} secrètes)</small>` : ''}</p>${pkBar(n, s.cards.length)}</div>` +
-    `<div class="pkfil"><div class="seg" id="pkown">${[['all', 'Toutes'], ['own', 'Possédées'], ['miss', 'Manquantes']].map(([v, t]) => `<button type="button" data-pko="${v}" aria-pressed="${pkOwn === v}">${t}</button>`).join('')}</div>` +
+    `<div class="pkfil"><div class="seg" id="pkown">${[['all', 'Toutes'], ['own', 'Possédées'], ['miss', 'Manquantes'], ['dup', 'Doublons']].map(([v, t]) => `<button type="button" data-pko="${v}" aria-pressed="${pkOwn === v}">${t}</button>`).join('')}</div>` +
     `<div class="pkrar" id="pkrar">${rs.map(r => `<button type="button" class="chip pkr r${r}" data-pkr="${r}" aria-pressed="${pkRar.has(r)}" title="${esc(PK.r[r])}">${PK_SYM[r]}</button>`).join('')}</div></div>` +
     `<p class="note pkcnt">${list.length} carte${list.length > 1 ? 's' : ''} affichée${list.length > 1 ? 's' : ''}</p><div class="pkgrid">${list.map(c => pkCardHTML(s, c)).join('')}</div>` + credit;
 }
@@ -2507,11 +2523,16 @@ function pkSetMode(m) { // m: 'dex' | 'col' | 'pk'
   colSetMode(m === 'col'); pkSeg(); pkRender();
 }
 function pkSeg() { document.querySelectorAll('#modeseg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.m === (pkMode ? 'pk' : colMode ? 'col' : 'dex')))); }
-function pkToggle(id) {
-  if (PKO.has(id)) PKO.delete(id); else PKO.add(id); pkSave();
-  document.querySelectorAll(`[data-pk="${id}"]`).forEach(el => { const o = PKO.has(id); el.classList.toggle('own', o); const b = el.querySelector('.pktk'); b.setAttribute('aria-pressed', o); b.textContent = o ? '✓' : '＋'; b.setAttribute('aria-label', b.getAttribute('aria-label').replace(/^[^:]+/, o ? 'Possédée ' : 'Non possédée ')); });
-  if (pkMode && (pkOwn !== 'all')) pkRender(); else { const h = $('#pocket .pkhead'); if (h && pkMode) pkRender(); }
+const pkLangName = () => PK_LANGS.find(l => l[0] === pkLang)[2];
+function pkToggle(id) { pkAdd(id, pkLang, 1); pkRefresh(id); toast(`+1 exemplaire en ${pkLangName()} (×${pkN(id)}). Touchez la carte pour gérer les langues.`); }
+function pkRefresh(id) {
+  if (pkMode) { const y = scrollY; pkRender(); scrollTo(0, y); }
   const mp = $('#mypocket'); if (mp && DET && DET.p) pkSheet(DET.p);
+  const st = $('#pksteps'); if (st && st.dataset.id === id) st.outerHTML = pkStepsHTML(id);
+}
+function pkStepsHTML(id) {
+  const m = PKQ[id] || {};
+  return `<div id="pksteps" data-id="${id}"><p class="pktot">Total : <b>${pkN(id)}</b> exemplaire${pkN(id) > 1 ? 's' : ''}</p><ul class="plain pklangs">${PK_LANGS.map(([l, c, n]) => `<li class="${m[l] ? 'on' : ''}"><span class="pklc">${c}</span><span class="pkln2">${n}</span><button type="button" class="pkst" data-pkl="${l}" data-d="-1" aria-label="Retirer un exemplaire en ${n}"${m[l] ? '' : ' disabled'}>−</button><b class="pkn">${m[l] || 0}</b><button type="button" class="pkst" data-pkl="${l}" data-d="1" aria-label="Ajouter un exemplaire en ${n}">+</button></li>`).join('')}</ul><p class="note">Le bouton ＋ des grilles ajoute en ${pkLangName()} (dernière langue utilisée).</p></div>`;
 }
 function pkView(id) {
   const [sid] = id.split('-'), s = PK.s.find(x => x.id === id.slice(0, id.lastIndexOf('-'))) || PK.s.find(x => x.id === sid), c = s && s.cards.find(x => x.id === id); if (!c) return;
@@ -2520,7 +2541,7 @@ function pkView(id) {
   m.innerHTML = `<div class="colsheet pkbig" role="dialog" aria-modal="true" aria-labelledby="pktitle"><div class="menuhead"><h2 id="pktitle">${esc(c[1])}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
     ${pkImg(s, c) ? `<img class="pkhi" src="${pkImg(s, c, 'high')}" alt="${esc(c[1])}">` : ''}<p><b>${esc(s.n)}</b> · n° ${esc(c[0])} · ${esc(PK.r[c[2]])} <span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span></p>
     ${sp.length ? `<p>${sp.map(p => `<a href="#/p/${p.k}">Voir la fiche ${esc(fullN(p))}</a>`).join(' · ')}</p>` : ''}
-    <div class="cfbtns"><button type="button" class="cfok pktk2" data-pkt="${c.id}">${PKO.has(c.id) ? '✓ Possédée (retirer)' : '＋ Je l’ai'}</button></div></div>`;
+    ${pkStepsHTML(c.id)}</div>`;
   document.body.appendChild(m); document.body.classList.add('colopen');
   m.addEventListener('click', ev => { if (ev.target === m) closeCol(); }); m.querySelector('#colx').onclick = closeCol;
 }
@@ -2529,14 +2550,16 @@ function pkSheet(p) {
   pkLoad().then(() => { if (!box.isConnected) return;
     const cs = []; for (const s of PK.s) for (const c of s.cards) if (c[3].includes(p.id)) cs.push([s, c]);
     if (!cs.length) { box.innerHTML = ''; return; }
-    const n = cs.filter(([, c]) => PKO.has(c.id)).length;
-    box.innerHTML = `<section class="box pkbox"><h2>Cartes Pocket <small class="cnt">${n} / ${cs.length}</small></h2><div class="pkgrid pkmini">${cs.slice().reverse().map(([s, c]) => pkCardHTML(s, c, true)).join('')}</div><p class="note">Touchez ＋ pour cocher une carte possédée. Données : TCGdex.</p></section>`;
+    const n = cs.filter(([, c]) => PKO.has(c.id)).length, tot = cs.reduce((a, [, c]) => a + pkN(c.id), 0);
+    box.innerHTML = `<section class="box pkbox"><h2>Cartes Pocket <small class="cnt">${n} / ${cs.length}${tot > n ? ` · ${tot} exemplaires` : ''}</small></h2><div class="pkgrid pkmini">${cs.slice().reverse().map(([s, c]) => pkCardHTML(s, c, true)).join('')}</div><p class="note">Touchez ＋ pour cocher une carte possédée. Données : TCGdex.</p></section>`;
   }).catch(() => { box.innerHTML = ''; });
 }
 function pkInit() {
   document.body.classList.toggle('pkmode', pkMode); if (pkMode && colMode) colSetMode(false);
   document.addEventListener('click', e => {
-    const t = e.target.closest('[data-pkt]'); if (t) { e.preventDefault(); e.stopPropagation(); pkToggle(t.dataset.pkt); if (t.classList.contains('pktk2')) t.textContent = PKO.has(t.dataset.pkt) ? '✓ Possédée (retirer)' : '＋ Je l’ai'; return; }
+    const t = e.target.closest('[data-pkt]'); if (t) { e.preventDefault(); e.stopPropagation(); pkToggle(t.dataset.pkt); return; }
+    const st = e.target.closest('[data-pkl]'); if (st) { e.preventDefault(); e.stopPropagation(); const id = st.closest('#pksteps').dataset.id, d = +st.dataset.d;
+      if (d > 0) { pkLang = st.dataset.pkl; store.set('pklang', pkLang); } pkAdd(id, st.dataset.pkl, d); pkRefresh(id); return; }
     const v = e.target.closest('[data-pkv]'); if (v) { e.preventDefault(); pkView(v.dataset.pkv); return; }
     const s = e.target.closest('[data-pks]'); if (s) { e.preventDefault(); pkSet = s.dataset.pks; pkRar.clear(); pkOwn = 'all'; pkRender(); window.scrollTo(0, 0); return; }
     const o = e.target.closest('[data-pko]'); if (o) { pkOwn = o.dataset.pko; pkRender(); return; }
