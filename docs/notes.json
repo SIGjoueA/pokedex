@@ -1,5 +1,14 @@
 [
  {
+  "v": "v50",
+  "d": "2026-10-20",
+  "l": [
+   "Nouveau mode Pocket : le cartodex de Pokémon TCG Pocket, 15 extensions et 2480 cartes, avec la complétion par extension, des filtres (possédées, manquantes, doublons, rareté) et la vue en grand.",
+   "Quantités par langue pour chaque carte (9 langues), et bloc « Cartes Pocket » sur les fiches Pokémon.",
+   "Collection : « Faire évoluer » respecte maintenant le sexe (par exemple, Gallame seulement depuis une Kirlia mâle)."
+  ]
+ },
+ {
   "v": "v49",
   "d": "2026-10-20",
   "l": [

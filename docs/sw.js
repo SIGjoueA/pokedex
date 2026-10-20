@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v49';
+const VERSION = 'v50';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Nouveau mode Collection : enregistrez chaque Pokémon que vous possédez (bouton ＋), faites-le évoluer ou notez-le comme échangé.';
+const NOTES = 'Nouveau : le cartodex Pokémon TCG Pocket, carte par carte avec raretés et quantités par langue.';
 const DATA_VERSION = 'd24'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
