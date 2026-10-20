@@ -2251,33 +2251,45 @@ function colImport(arr) {
   const have = new Set(COLL.map(e => e.id));
   for (const e of arr) if (colValid(e)) {
     const x = { id: typeof e.id === 'string' && e.id ? e.id : colId(), k: e.k, g: e.g, n: typeof e.n === 'string' ? e.n.slice(0, 40) : '', sh: !!e.sh, sx: ['m', 'f', 'x'].includes(e.sx) ? e.sx : '', w: typeof e.w === 'string' ? e.w.slice(0, 60) : '', at: typeof e.at === 'string' ? e.at : new Date().toISOString() };
+    if (typeof e.bn === 'boolean') x.bn = e.bn; if (typeof e.gx === 'boolean') x.gx = e.gx;
     if (typeof e.up === 'string') x.up = e.up;
     if (!have.has(x.id)) { COLL.push(x); have.add(x.id); }
   }
   colSave(); colRender();
 }
 // Adding ticks Capturé (and Shiny) in the dex for the origin game, through the normal linked rules. Never unticks anything.
-function colTickDex(p, g, sh) {
+function colTickDex(p, g, sh, bn, gx) {
   if (!p || !colOrigOk(g)) return;
   try {
     if (!isCaught(p, g)) toggleMark(p, 'caught', g);
     if (sh && !isShiny(p, g)) toggleMark(p, 'shiny', g);
+    if (bn && colBaronOk(p, g) && !isBaron(p, g)) toggleBaron(p, false, g);
+    const m = gx && colGmax(p, g);
+    if (m) { if (m.v) { if (!salOn(m.v, g)) toggleSal(m.v, g); } else if (!isCaught(m.g, g)) toggleMark(m.g, 'caught', g, p !== m.g ? p : null); }
   } catch {}
+}
+// v49b: Baron = Legends games with Barons (as in the dex) and an Alpha-capable form. Gigamax = Épée / Bouclier (+ extensions) or GO, species with a Gigamax form.
+const colBaronOk = (p, g) => ALPHA_GAMES.has(g) && !p.bo && !p.mb && alphaOk(p, g);
+function colGmax(p, g) {
+  if (!(g === 'go' || ['sw', 'swisle', 'swcrown'].includes(g))) return null;
+  if (isGmx(p)) return gmaxInGame(p, g) ? { g: p, v: isSal(p) ? 'A' : '' } : null;
+  const x = gmaxBtnsOf(p)[0]; if (!x || !gmaxInGame(x, g)) return null;
+  return { g: x, v: isSal(x) ? (p.k === SAL_BASE.G ? 'G' : 'A') : '' };
 }
 const SEX_L = { m: '♂ Mâle', f: '♀ Femelle', x: 'Asexué' };
 function myColHTML(p) {
   const mine = COLL.filter(e => BY_KEY[e.k] && BY_KEY[e.k].id === p.id);
   return `<section class="box colbox"><h2>Ma collection <button type="button" class="coladd" data-add="${p.k}" aria-label="Ajouter un exemplaire">＋</button></h2>` +
-    (mine.length ? `<p class="colcnt">Tu en as <b>${mine.length}</b></p><ul class="plain colmini">${mine.map(colRowHTML).join('')}</ul>` : '<p class="note colcnt">Tu n’en as pas encore. Touche ＋ pour en ajouter un.</p>') + '</section>';
+    (mine.length ? `<p class="colcnt">Vous en avez <b>${mine.length}</b></p><ul class="plain colmini">${mine.map(colRowHTML).join('')}</ul>` : '<p class="note colcnt">Vous n’en avez pas encore. Touchez ＋ pour en ajouter un.</p>') + '</section>';
 }
 function colRowHTML(e) {
   const p = BY_KEY[e.k];
-  return `<li><button type="button" class="colrow" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" width="48" height="48" loading="lazy"><span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
+  return `<li><button type="button" class="colrow" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" width="48" height="48" loading="lazy"><span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.bn ? ' · Baron' : ''}${e.gx ? ' · Gigamax' : ''}${e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
 }
 function colCardHTML(e) {
   const p = BY_KEY[e.k]; if (!p) return '';
   return `<button type="button" class="card colcard" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
-    `<div class="info"><div class="nm">${esc(fullN(p))}${e.sh ? ' <span class="mk sh" aria-label="Shiny">✨</span>' : ''}</div>${e.n ? `<div class="sn">« ${esc(e.n)} »</div>` : ''}<div class="og" title="${esc(colGName(e.g))}">${gdot(e.g)}<span>${esc(colGName(e.g))}</span></div></div></button>`;
+    `<div class="info"><div class="nm">${esc(fullN(p))}${e.sh ? ' <span class="mk sh" aria-label="Shiny">✨</span>' : ''}</div>${e.n ? `<div class="sn">« ${esc(e.n)} »</div>` : ''}${e.bn || e.gx ? `<div class="cbad">${e.bn ? '<span class="cb bn">Baron</span>' : ''}${e.gx ? '<span class="cb gx">Gigamax</span>' : ''}</div>` : ''}<div class="og" title="${esc(colGName(e.g))}">${gdot(e.g)}<span>${esc(colGName(e.g))}</span></div></div></button>`;
 }
 function colRender() {
   document.body.classList.toggle('colmode', colMode);
@@ -2286,8 +2298,8 @@ function colRender() {
   box.hidden = !colMode;
   if (colMode) {
     const list = COLL.slice().sort((a, b) => (b.at || '').localeCompare(a.at || ''));
-    box.innerHTML = list.length ? `<p class="colhead">${list.length} Pokémon dans ta collection</p><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
-      : `<div class="colempty"><div class="ce-ic" aria-hidden="true">${BALL}</div><p><b>Ta collection est vide.</b></p><p>Touche ＋ sur une carte du Dex ou sur la fiche d’un Pokémon pour enregistrer un Pokémon que tu possèdes.</p></div>`;
+    box.innerHTML = list.length ? `<p class="colhead">${list.length} Pokémon dans votre collection</p><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
+      : `<div class="colempty"><div class="ce-ic" aria-hidden="true">${BALL}</div><p><b>Votre collection est vide.</b></p><p>Touchez ＋ sur une carte du Dex ou sur la fiche d’un Pokémon pour enregistrer un Pokémon que vous possédez.</p></div>`;
   }
   const mc = $('#mycol'); if (mc && DET && DET.p) mc.innerHTML = myColHTML(DET.p);
 }
@@ -2313,9 +2325,10 @@ function colOpen(o) {
       <label class="cf"><span>Jeu d’origine <span class="req">*</span></span><select id="cfg"${ed ? ' disabled' : ''}>${gopts(e.g)}</select>${ed ? '<small class="note">Le jeu d’origine ne change plus une fois ajouté.</small>' : ''}</label>
       <label class="cf">Surnom<input id="cfn" maxlength="40" autocomplete="off" value="${esc(e.n || '')}"></label>
       <div class="cfrow"><label class="cfc"><input type="checkbox" id="cfsh"${e.sh ? ' checked' : ''}> ✨ Shiny</label>
-        <label class="cf cfs">Sexe<select id="cfsx"><option value="">—</option>${Object.entries(SEX_L).map(([v, n]) => `<option value="${v}"${e.sx === v ? ' selected' : ''}>${n}</option>`).join('')}</select></label></div>
+        <label class="cf cfs">Sexe<select id="cfsx"><option value="">—</option></select></label></div>
+      <div class="cfrow cfx"><label class="cfc" id="cfbnw" hidden><input type="checkbox" id="cfbn"${e.bn ? ' checked' : ''}> Baron</label><label class="cfc" id="cfgxw" hidden><input type="checkbox" id="cfgx"${e.gx ? ' checked' : ''}> Gigamax</label></div>
       <label class="cf">Où il est maintenant<select id="cfw">${wopts}</select></label>
-      <input id="cfwo" class="cfo" maxlength="60" placeholder="Précise (ex. : Pokémon Bank)" value="${wo ? esc(wv.slice(6)) : ''}"${wo ? '' : ' hidden'}>
+      <input id="cfwo" class="cfo" maxlength="60" placeholder="Précisez (ex. : Pokémon Bank)" value="${wo ? esc(wv.slice(6)) : ''}"${wo ? '' : ' hidden'}>
       <p id="cferr" class="cferr" role="alert" hidden></p>
       <div class="cfbtns">${ed ? '<button type="button" id="cfdel" class="cfdel">Supprimer</button>' : ''}<button type="submit" id="cfok" class="cfok">${ed ? 'Enregistrer' : 'Ajouter'}</button></div>
     </form></div>`;
@@ -2323,26 +2336,41 @@ function colOpen(o) {
   const q = s => m.querySelector(s);
   m.addEventListener('click', ev => { if (ev.target === m) closeCol(); });
   q('#colx').onclick = closeCol;
+  // v49b: gender from the species ratio (sp.gr), Baron / Gigamax only where the dex allows them
+  let updTok = 0;
+  const upd = async () => {
+    const tk = ++updTok, pk = ed ? p : findPk(q('#cfpk').value), g = ed ? e.g : q('#cfg').value, sx = q('#cfsx');
+    const cur = sx.value || e.sx || ''; let gr = null;
+    if (pk) try { gr = (await loadSp(pk.id)).gr; } catch {} if (tk !== updTok) return;
+    const opts = gr === -1 ? ['x'] : gr === 0 ? ['m'] : gr === 8 ? ['f'] : gr == null ? ['m', 'f', 'x'] : ['m', 'f'];
+    sx.innerHTML = (gr === -1 ? '' : '<option value="">—</option>') + opts.map(v => `<option value="${v}">${SEX_L[v]}</option>`).join('');
+    sx.value = gr === -1 ? 'x' : opts.includes(cur) ? cur : ''; sx.disabled = gr === -1;
+    const bOk = !!pk && colBaronOk(pk, g), gOk = !!pk && !!colGmax(pk, g);
+    q('#cfbnw').hidden = !bOk; q('#cfgxw').hidden = !gOk; if (!bOk) q('#cfbn').checked = false; if (!gOk) q('#cfgx').checked = false;
+    if (gOk && isGmx(pk)) { q('#cfgx').checked = true; q('#cfgx').disabled = true; } else q('#cfgx').disabled = false;
+  };
+  q('#cfpk').addEventListener('change', upd); q('#cfpk').addEventListener('input', () => { if (findPk(q('#cfpk').value)) upd(); }); q('#cfg').addEventListener('change', upd);
   q('#cfw').onchange = () => { q('#cfwo').hidden = q('#cfw').value !== 'other'; };
   const findPk = v => { const mm = /#(\d{4})\s*$/.exec(v); const t = norm(v.replace(/#\d+\s*$/, '').trim()); if (!t) return null;
     return E.find(p => !p.bo && norm(fullN(p)) === t && (!mm || p.id === +mm[1])) || E.find(p => !p.bo && p.nn === t) || null; };
+  upd();
   if (ed) { const del = q('#cfdel'); del.onclick = () => {
     if (del.dataset.c !== '1') { del.dataset.c = '1'; del.textContent = 'Confirmer la suppression ?'; del.classList.add('on'); return; }
-    COLL = COLL.filter(x => x.id !== ed.id); colSave(); closeCol(); colRender(); toast('Pokémon retiré de ta collection (le dex n’est pas modifié).'); }; }
+    COLL = COLL.filter(x => x.id !== ed.id); colSave(); closeCol(); colRender(); toast('Pokémon retiré de votre collection (le dex n’est pas modifié).'); }; }
   q('#colform').onsubmit = ev => {
     ev.preventDefault();
     const pk = ed ? p : findPk(q('#cfpk').value), g = ed ? e.g : q('#cfg').value, err = [];
-    if (!pk) err.push('choisis un Pokémon de la liste'); if (!colOrigOk(g)) err.push('choisis le jeu d’origine');
+    if (!pk) err.push('choisissez un Pokémon de la liste'); if (!colOrigOk(g)) err.push('choisissez le jeu d’origine');
     const er = q('#cferr'); q('#cfpk').classList.toggle('bad', !pk); q('#cfg').classList.toggle('bad', !colOrigOk(g));
     if (err.length) { er.hidden = false; er.textContent = cap(err.join(' et ')) + '.'; return; }
     const wsel = q('#cfw').value, w = wsel === 'other' ? (q('#cfwo').value.trim() ? 'other:' + q('#cfwo').value.trim() : '') : wsel;
-    const x = { n: q('#cfn').value.trim(), sh: q('#cfsh').checked, sx: q('#cfsx').value, w };
-    if (ed) { Object.assign(ed, x, { up: new Date().toISOString() }); if (x.sh) colTickDex(pk, g, true); }
-    else { COLL.push({ id: colId(), k: pk.k, g, ...x, at: new Date().toISOString() }); colTickDex(pk, g, x.sh); }
+    const x = { n: q('#cfn').value.trim(), sh: q('#cfsh').checked, sx: q('#cfsx').value, w, bn: !q('#cfbnw').hidden && q('#cfbn').checked, gx: !q('#cfgxw').hidden && q('#cfgx').checked };
+    if (ed) { Object.assign(ed, x, { up: new Date().toISOString() }); if (x.sh || x.bn || x.gx) colTickDex(pk, g, x.sh, x.bn, x.gx); }
+    else { COLL.push({ id: colId(), k: pk.k, g, ...x, at: new Date().toISOString() }); colTickDex(pk, g, x.sh, x.bn, x.gx); }
     colSave(); closeCol(); colRender();
     if (DET && DET.p && !$('#detail-view').hidden) { try { refreshTrack(DET.p); } catch {} }
     if (!colMode) render();
-    toast(ed ? 'Modifications enregistrées.' : `${fullN(pk)} ajouté à ta collection · Capturé coché dans ${colGName(g)}.`);
+    toast(ed ? 'Modifications enregistrées.' : `${fullN(pk)} ajouté à votre collection · Capturé coché dans ${colGName(g)}.`);
   };
   setTimeout(() => (ed ? q('#cfn') : (p ? q('#cfg') : q('#cfpk'))).focus({ preventScroll: true }), 30);
 }

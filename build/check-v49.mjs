@@ -60,9 +60,9 @@ cg = await L('caught_g'); ok(cg.some(k => k.startsWith('sm:37-alola')) || cg.inc
 // second specimen from the block
 await tap('#mycol .coladd'); await sleep(300); await p.click('#cfok'); await sleep(500);
 v = await p.evaluate(() => ({ t: $('#mycol .colcnt').textContent, n: document.querySelectorAll('#mycol .colrow').length }));
-ok(/Tu en as 2/.test(v.t) && v.n === 2, '« Ma collection »: Tu en as 2 ' + JSON.stringify(v));
+ok(/Vous en avez 2/.test(v.t) && v.n === 2, '« Ma collection »: Vous en avez 2 ' + JSON.stringify(v));
 await p.evaluate(() => { location.hash = '#/p/37'; }); await sleep(1500);
-ok(await p.evaluate(() => /Tu en as 2/.test($('#mycol').textContent)), 'block counts the species (all forms) on the base sheet');
+ok(await p.evaluate(() => /Vous en avez 2/.test($('#mycol').textContent)), 'block counts the species (all forms) on the base sheet');
 await p.evaluate(() => window.scrollTo(0, $('#mycol').getBoundingClientRect().top + scrollY - 120)); await sleep(300); await shot('3-ma-collection-fiche.png');
 // edit: origin fixed
 await tap('#mycol .colrow'); await sleep(300);
@@ -75,7 +75,7 @@ ok((await L('collection')).length === 3 && await p.evaluate(() => /Confirmer/.te
 await p.click('#cfdel'); await sleep(400);
 ok((await L('collection')).length === 2, 'confirmed delete');
 cg = await L('caught_g'); ok(cg.includes('sm:37-alola') || cg.some(k => k.startsWith('sm:37-alola')), 'dex tick kept after delete');
-ok(await p.evaluate(() => /Tu en as 1/.test($('#mycol').textContent)), 'block updated: Tu en as 1');
+ok(await p.evaluate(() => /Vous en avez 1/.test($('#mycol').textContent)), 'block updated: Vous en avez 1');
 // ticking Capturé in dex adds nothing
 await p.evaluate(() => { location.hash = '#/p/906'; }); await sleep(1400); await p.evaluate(() => changeGame('sv')); await sleep(1400);
 await p.evaluate(() => { const b = $('#actbar .cg'); if (b) b.click(); }); await sleep(400);
@@ -95,9 +95,49 @@ ok(Array.isArray(exp.collection) && exp.collection.length === 3, 'export contain
 const imp = async d => { await p.evaluate(() => { localStorage.setItem('collection', '[]'); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1200);
   const h = await p.$('#import'); fs.writeFileSync('/tmp/v49imp.json', JSON.stringify(d)); await h.uploadFile('/tmp/v49imp.json'); await sleep(800); };
 await imp(exp); let after = await L('collection');
-ok(JSON.stringify(after) === JSON.stringify(before), 'import restores the collection identically');
+const nz = a => JSON.stringify(a.map(e => Object.fromEntries(Object.entries(e).sort())));
+ok(nz(after) === nz(before), 'import restores the collection identically');
 await imp(exp); ok((await L('collection')).length === 3, 'importing twice adds no duplicates (same ids)');
 const old = { ...exp }; delete old.collection; await imp(old);
 ok((await L('collection')).length === 0 && (await L('caught_g')).includes('sv:25'), 'old backup without collection imports fine');
+// v49b: gender from sp.gr, Baron / Gigamax options + dex ticks
+const openAdd = async (k, g) => { await p.evaluate(() => { location.hash = '#/'; }); await sleep(500); await p.evaluate((k, g) => { colOpen({ k, g }); }, k, g); await sleep(700); };
+const sx = () => p.evaluate(() => ({ o: [...$('#cfsx').options].map(o => o.value).join(','), v: $('#cfsx').value, d: $('#cfsx').disabled, bn: !$('#cfbnw').hidden, gx: !$('#cfgxw').hidden }));
+await openAdd('81', 'sv'); let x = await sx();
+ok(x.o === 'x' && x.v === 'x' && x.d, 'Magnéti (gr -1): Asexué preset + locked ' + JSON.stringify(x));
+await openAdd('128', 'sv'); x = await sx(); ok(x.o === ',m' && !x.d, 'Tauros (gr 0): ♂ only ' + x.o);
+await openAdd('29', 'sv'); x = await sx(); ok(x.o === ',f', 'Nidoran♀ (gr 8): ♀ only ' + x.o);
+await openAdd('25', 'sv'); x = await sx(); ok(x.o === ',m,f' && !x.bn && !x.gx, 'Pikachu in ÉV: ♂/♀, no Baron, no Gigamax ' + JSON.stringify(x));
+await p.evaluate(() => { $('#cfg').value = 'sw'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(500); x = await sx();
+ok(x.gx && !x.bn, 'changing origin to Épée / Bouclier shows Gigamax');
+await p.click('#cfgx'); await shot('8-modal-baron-gigamax.png'); await p.click('#cfok'); await sleep(500);
+let cgx = await L('caught_g'); ok(cgx.includes('sw:25') && cgx.includes('sw:25-gmax'), 'Gigamax ticked → dex Pikachu + Pikachu Gigamax in Épée / Bouclier');
+await openAdd('849-low-key', 'sw'); x = await sx(); ok(x.gx, 'Salarsen Grave in ÉB: Gigamax offered');
+await p.click('#cfgx'); await p.click('#cfok'); await sleep(500); cgx = await L('caught_g');
+ok(cgx.includes('sw:849-low-key-gmax') && !cgx.includes('sw:849-amped-gmax'), 'Salarsen Grave → « Gigamax Grave » mark only');
+await openAdd('869-matcha-cream-strawberry-sweet', 'sw').catch(() => {}); x = await sx(); ok(x.gx, 'Charmilly (a sweet form) in ÉB: Gigamax offered');
+await p.evaluate(() => { $('#cfg').value = 'go'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(400); x = await sx(); ok(!x.gx, 'Charmilly in GO: no Gigamax (not released in GO)');
+await p.evaluate(() => { $('#cfg').value = 'la'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(400); x = await sx(); ok(!x.gx && !x.bn, 'Charmilly in Légendes Arceus: neither');
+await p.click('#colx');
+await openAdd('403', 'la'); x = await sx(); ok(x.bn && !x.gx, 'Lixy in Légendes Arceus: Baron offered');
+await p.click('#cfbn'); await p.click('#cfok'); await sleep(500);
+ok((await L('baron_g')).includes('la:403') && (await L('caught_g')).includes('la:403'), 'Baron ticked → dex Baron + Capturé in Légendes Arceus');
+await p.click('#modeseg button[data-m=col]'); await sleep(500);
+ok(await p.evaluate(() => !!($('#collection .cb.bn') && $('#collection .cb.gx'))), 'Baron / Gigamax badges on collection cards');
+await p.evaluate(() => [...document.querySelectorAll('#collection .colcard')].find(c => c.querySelector('.cb.bn')).click()); await sleep(600);
+ok(await p.evaluate(() => $('#cfbn').checked && !$('#cfbnw').hidden), 'detail shows Baron ticked');
+await p.click('#colx'); await p.click('#modeseg button[data-m=dex]'); await sleep(400);
+// ➕ placement screenshots (red ring around the ➕)
+const ring = sel => p.evaluate(s => { document.querySelectorAll('.v49ring').forEach(e => e.classList.remove('v49ring')); if (!document.getElementById('v49st')) { const st = document.createElement('style'); st.id = 'v49st'; st.textContent = '.v49ring{outline:4px solid #ff2d55!important;outline-offset:3px;box-shadow:0 0 0 10px rgba(255,45,85,.3)!important}'; document.head.appendChild(st); } document.querySelectorAll(s).forEach(e => e.classList.add('v49ring')); }, sel);
+if (SHOT) {
+  await p.evaluate(() => { localStorage.setItem('view', '"grid"'); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1500);
+  await p.evaluate(() => window.scrollTo(0, 0)); await ring('#results .card .cadd'); await sleep(500); await shot('4-plus-grille.png');
+  await p.evaluate(() => $('#viewbtn').click()); await sleep(600); await p.evaluate(() => window.scrollTo(0, 0)); await ring('#results .card .cadd'); await sleep(500); await shot('5-plus-liste.png');
+  await p.evaluate(() => $('#viewbtn').click()); await sleep(300);
+  await p.evaluate(() => { location.hash = '#/p/25'; }); await sleep(1500); await p.evaluate(() => changeGame('sw')); await sleep(1500);
+  await p.evaluate(() => window.scrollTo(0, 0)); await ring('.dnav .cadd2'); await sleep(300); await shot('6-plus-fiche-haut.png');
+  await p.evaluate(() => window.scrollTo(0, $('#mycol').getBoundingClientRect().top + scrollY - 150)); await ring('#mycol .coladd'); await sleep(400); await shot('7-plus-bloc.png');
+  await ring('none');
+}
 ok(!errs.length, 'no JS errors ' + errs.join(' | '));
 await b.close(); console.log(fails ? `${fails} FAIL` : 'ALL PASS'); process.exit(fails ? 1 : 0);

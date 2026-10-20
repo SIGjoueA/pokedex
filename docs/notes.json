@@ -1,8 +1,8 @@
 [
   { "v": "v49", "d": "2026-10-19", "l": [
-    "Nouveau mode Collection (bascule « Dex | Collection » en haut) : un journal des Pokémon que tu possèdes, un exemplaire par entrée, doublons possibles.",
-    "Bouton ＋ sur les cartes de la liste et sur les fiches : Pokémon et jeu d'origine préremplis (obligatoires), surnom, shiny, sexe et « Où il est maintenant » facultatifs. Ajouter coche Capturé (et Shiny) dans le dex de ce jeu ; supprimer ne décoche rien.",
-    "Fiches : bloc « Ma collection » (Tu en as N). La collection est incluse dans l'export / import."
+    "Nouveau mode Collection (bascule « Dex | Collection » en haut) : un journal des Pokémon que vous possédez, un exemplaire par entrée, doublons possibles.",
+    "Bouton ＋ sur les cartes de la liste et sur les fiches : Pokémon et jeu d'origine préremplis (obligatoires), surnom, shiny, sexe (selon l'espèce), Baron, Gigamax et « Où il est maintenant » facultatifs. Ajouter coche Capturé (et Shiny, Baron, Gigamax) dans le dex de ce jeu ; supprimer ne décoche rien.",
+    "Fiches : bloc « Ma collection » (Vous en avez N). La collection est incluse dans l'export / import."
   ] },
   { "v": "v48", "d": "2026-10-19", "l": [
     "Ogerpon : ses quatre masques sont liés dans Écarlate / Violet et leurs extensions (on n'y capture qu'un seul Ogerpon, son masque suit l'objet tenu). Cocher un masque coche les quatre ; vos marques existantes sont recopiées sur les autres masques, rien n'est retiré. HOME reste lié, Pokémon GO reste séparé."
