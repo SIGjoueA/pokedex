@@ -2253,6 +2253,8 @@ function colImport(arr) {
     const x = { id: typeof e.id === 'string' && e.id ? e.id : colId(), k: e.k, g: e.g, n: typeof e.n === 'string' ? e.n.slice(0, 40) : '', sh: !!e.sh, sx: ['m', 'f', 'x'].includes(e.sx) ? e.sx : '', w: typeof e.w === 'string' ? e.w.slice(0, 60) : '', at: typeof e.at === 'string' ? e.at : new Date().toISOString() };
     if (typeof e.bn === 'boolean') x.bn = e.bn; if (typeof e.gx === 'boolean') x.gx = e.gx;
     if (typeof e.up === 'string') x.up = e.up;
+    const gn = colGoneOk(e.gone); if (gn) x.gone = gn;
+    if (Array.isArray(e.h)) { const h = e.h.filter(r => r && r.t === 'evo' && typeof r.from === 'string').map(r => ({ t: 'evo', from: r.from, d: typeof r.d === 'string' ? r.d : '' })); if (h.length) x.h = h; }
     if (!have.has(x.id)) { COLL.push(x); have.add(x.id); }
   }
   colSave(); colRender();
@@ -2276,20 +2278,44 @@ function colGmax(p, g) {
   const x = gmaxBtnsOf(p)[0]; if (!x || !gmaxInGame(x, g)) return null;
   return { g: x, v: isSal(x) ? (p.k === SAL_BASE.G ? 'G' : 'A') : '' };
 }
+// v49d: « Plus en ma possession » (gone: { s: 'trade'|'free'|'gift', d: 'YYYY-MM-DD'|'', n: note }) + history h: [{ t: 'evo', from: key, d: ISO }]
+const GONE_L = { trade: 'Échangé', free: 'Relâché', gift: 'Donné' };
+const colGoneOk = g => g && typeof g === 'object' && GONE_L[g.s] ? { s: g.s, d: typeof g.d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(g.d) ? g.d : '', n: typeof g.n === 'string' ? g.n.slice(0, 120) : '' } : null;
+const colGoneTxt = g => GONE_L[g.s] + (g.d ? ' le ' + new Date(g.d + 'T12:00:00').toLocaleDateString('fr-FR') : '');
+const colAct = e => !e.gone;
+// Evolutions of an entry (evo.json edges are form-aware: Goupix d’Alola → Feunard d’Alola, Miaouss de Galar → Berserkatt).
+// A non-regional form without its own edges (Gigamax, cosmetic forms) uses the base species' edges.
+async function colEvos(p) {
+  if (!p) return [];
+  const sh = await loadShared(); const out = [], seen = new Set();
+  const from = k => sh.evo.filter(([f]) => f === k).forEach(([, t, d]) => { const b = BY_KEY[t]; if (b && !b.bo && !seen.has(t)) { seen.add(t); out.push({ p: b, how: ((d || []).slice(-1)[0] || {}).x || [] }); } });
+  from(p.k); if (!out.length && p.c !== 'reg' && p.k !== String(p.id)) from(String(p.id));
+  return out;
+}
+async function colEvolve(e, np) {
+  const op = BY_KEY[e.k]; let gr = null; try { gr = (await loadSp(np.id)).gr; } catch {}
+  if (gr === -1) e.sx = 'x'; else if (gr === 0) e.sx = e.sx === 'f' ? '' : (e.sx === 'x' ? '' : e.sx); else if (gr === 8) e.sx = e.sx === 'm' ? '' : (e.sx === 'x' ? '' : e.sx); else if (e.sx === 'x') e.sx = '';
+  if (gr === 0 && !e.sx) e.sx = 'm'; if (gr === 8 && !e.sx) e.sx = 'f';
+  if (e.bn && !colBaronOk(np, e.g)) delete e.bn; if (e.gx && !colGmax(np, e.g)) delete e.gx;
+  const now = new Date().toISOString();
+  e.h = [...(Array.isArray(e.h) ? e.h : []), { t: 'evo', from: e.k, d: now }]; e.k = np.k; e.up = now;
+  colTickDex(np, e.g, e.sh, e.bn, e.gx); colSave();
+  return op;
+}
 const SEX_L = { m: '♂ Mâle', f: '♀ Femelle', x: 'Asexué' };
 function myColHTML(p) {
-  const mine = COLL.filter(e => BY_KEY[e.k] && BY_KEY[e.k].id === p.id);
+  const all = COLL.filter(e => BY_KEY[e.k] && BY_KEY[e.k].id === p.id), mine = all.filter(colAct), gone = all.length - mine.length;
   return `<section class="box colbox"><h2>Ma collection <button type="button" class="coladd" data-add="${p.k}" aria-label="Ajouter un exemplaire">＋</button></h2>` +
-    (mine.length ? `<p class="colcnt">Vous en avez <b>${mine.length}</b></p><ul class="plain colmini">${mine.map(colRowHTML).join('')}</ul>` : '<p class="note colcnt">Vous n’en avez pas encore. Touchez ＋ pour en ajouter un.</p>') + '</section>';
+    (mine.length ? `<p class="colcnt">Vous en avez <b>${mine.length}</b>${gone ? ` <small class="colgone">+ ${gone} plus en votre possession</small>` : ''}</p>` : `<p class="note colcnt">${gone ? `Vous n’en avez plus (${gone} plus en votre possession).` : 'Vous n’en avez pas encore.'} Touchez ＋ pour en ajouter un.</p>`) + (all.length ? `<ul class="plain colmini">${[...mine, ...all.filter(e => !colAct(e))].map(colRowHTML).join('')}</ul>` : '') + '</section>';
 }
 function colRowHTML(e) {
   const p = BY_KEY[e.k];
-  return `<li><button type="button" class="colrow" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" width="48" height="48" loading="lazy"><span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.bn ? ' · Baron' : ''}${e.gx ? ' · Gigamax' : ''}${e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
+  return `<li${e.gone ? ' class="gone"' : ''}><button type="button" class="colrow" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" width="48" height="48" loading="lazy"><span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.bn ? ' · Baron' : ''}${e.gx ? ' · Gigamax' : ''}${e.gone ? ' · ' + esc(colGoneTxt(e.gone)) : e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
 }
 function colCardHTML(e) {
   const p = BY_KEY[e.k]; if (!p) return '';
-  return `<button type="button" class="card colcard" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
-    `<div class="info"><div class="nm">${esc(fullN(p))}${e.sh ? ' <span class="mk sh" aria-label="Shiny">✨</span>' : ''}</div>${e.n ? `<div class="sn">« ${esc(e.n)} »</div>` : ''}${e.bn || e.gx ? `<div class="cbad">${e.bn ? '<span class="cb bn">Baron</span>' : ''}${e.gx ? '<span class="cb gx">Gigamax</span>' : ''}</div>` : ''}<div class="og" title="${esc(colGName(e.g))}">${gdot(e.g)}<span>${esc(colGName(e.g))}</span></div></div></button>`;
+  return `<button type="button" class="card colcard${e.gone ? ' gone' : ''}" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+    `<div class="info"><div class="nm">${esc(fullN(p))}${e.sh ? ' <span class="mk sh" aria-label="Shiny">✨</span>' : ''}</div>${e.n ? `<div class="sn">« ${esc(e.n)} »</div>` : ''}${e.bn || e.gx ? `<div class="cbad">${e.bn ? '<span class="cb bn">Baron</span>' : ''}${e.gx ? '<span class="cb gx">Gigamax</span>' : ''}</div>` : ''}<div class="og" title="${esc(colGName(e.g))}">${gdot(e.g)}<span>${esc(colGName(e.g))}</span></div>${e.gone ? `<div class="gn">${esc(colGoneTxt(e.gone))}</div>` : ''}</div></button>`;
 }
 function colRender() {
   document.body.classList.toggle('colmode', colMode);
@@ -2297,8 +2323,8 @@ function colRender() {
   const box = $('#collection'); if (!box) return;
   box.hidden = !colMode;
   if (colMode) {
-    const list = COLL.slice().sort((a, b) => (b.at || '').localeCompare(a.at || ''));
-    box.innerHTML = list.length ? `<div class="colhead"><span>${list.length} Pokémon dans votre collection</span><button type="button" class="coladd colnew" aria-label="Ajouter un Pokémon">＋ Ajouter</button></div><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
+    const list = COLL.slice().sort((a, b) => (!!a.gone - !!b.gone) || (b.at || '').localeCompare(a.at || '')), nAct = list.filter(colAct).length, nG = list.length - nAct;
+    box.innerHTML = list.length ? `<div class="colhead"><span>${nAct} Pokémon dans votre collection${nG ? `<small class="colgone">+ ${nG} plus en votre possession</small>` : ''}</span><button type="button" class="coladd colnew" aria-label="Ajouter un Pokémon">＋ Ajouter</button></div><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
       : `<div class="colempty"><div class="ce-ic" aria-hidden="true">${BALL}</div><p><b>Votre collection est vide.</b></p><p>Touchez ＋ sur une carte du Dex ou sur la fiche d’un Pokémon pour enregistrer un Pokémon que vous possédez.</p><p><button type="button" class="cfok colnew colnew0">＋ Ajouter un Pokémon</button></p></div>`;
   }
   const mc = $('#mycol'); if (mc && DET && DET.p) mc.innerHTML = myColHTML(DET.p);
@@ -2319,7 +2345,9 @@ function colOpen(o) {
   const m = document.createElement('div'); m.id = 'colmodal'; m.className = 'colback';
   m.innerHTML = `<div class="colsheet" role="dialog" aria-modal="true" aria-labelledby="coltitle">
     <div class="menuhead"><h2 id="coltitle">${ed ? 'Mon Pokémon' : 'Ajouter à ma collection'}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
-    ${ed ? `<div class="colhero"><img src="${colImg(e)}" alt="" width="96" height="96"><div><b>${esc(fullN(p))}</b>${e.at ? `<small>Ajouté le ${new Date(e.at).toLocaleDateString('fr-FR')}</small>` : ''}</div></div>` : ''}
+    ${ed ? `<div class="colhero"><img src="${colImg(e)}" alt="" width="96" height="96"><div><b>${esc(fullN(p))}</b>${e.at ? `<small>Ajouté le ${new Date(e.at).toLocaleDateString('fr-FR')}</small>` : ''}${(e.h || []).filter(r => r.t === 'evo' && BY_KEY[r.from]).map(r => `<small class="colevo">A évolué de ${esc(fullN(BY_KEY[r.from]))}${r.d ? ' le ' + new Date(r.d).toLocaleDateString('fr-FR') : ''}</small>`).join('')}</div></div>
+    ${e.gone ? `<div class="colgonebar"><span><b>Plus en votre possession</b> · ${esc(colGoneTxt(e.gone))}${e.gone.n ? `<br><i>${esc(e.gone.n)}</i>` : ''}</span><button type="button" id="cfrest" class="cfrest">Restaurer</button></div>` : ''}
+    <div id="cfevow"></div><div id="cfevol" class="cfevol" hidden></div>` : ''}
     <form id="colform" novalidate>
       <label class="cf"><span>Pokémon <span class="req">*</span></span><input id="cfpk" list="${ed ? 'colpk' : 'colpkf'}" autocomplete="off" placeholder="Nom ou forme…" value="${p ? esc(fullN(p)) + ' #' + pad(p.id) : ''}"${ed ? ' disabled' : ''}></label>
       <label class="cf"><span>Jeu d’origine <span class="req">*</span></span><select id="cfg"${ed ? ' disabled' : ''}>${gopts(e.g)}</select>${ed ? '<small class="note">Le jeu d’origine ne change plus une fois ajouté.</small>' : ''}</label>
@@ -2329,6 +2357,11 @@ function colOpen(o) {
       <div class="cfrow cfx"><label class="cfc" id="cfbnw" hidden><input type="checkbox" id="cfbn"${e.bn ? ' checked' : ''}> Baron</label><label class="cfc" id="cfgxw" hidden><input type="checkbox" id="cfgx"${e.gx ? ' checked' : ''}> Gigamax</label></div>
       <label class="cf">Jeu actuel<select id="cfw">${wopts}</select></label>
       <input id="cfwo" class="cfo" maxlength="60" placeholder="Précisez (ex. : Pokémon Bank)" value="${wo ? esc(wv.slice(6)) : ''}"${wo ? '' : ' hidden'}>
+      ${ed ? `<fieldset class="cfgone"><legend>Plus en ma possession</legend>
+        <label class="cf">Statut<select id="cfgs"><option value="">— Toujours à moi</option>${Object.entries(GONE_L).map(([v, n]) => `<option value="${v}"${e.gone && e.gone.s === v ? ' selected' : ''}>${n}</option>`).join('')}</select></label>
+        <div id="cfgx2"${e.gone ? '' : ' hidden'}><label class="cf">Date (facultatif)<input type="date" id="cfgd" value="${e.gone ? esc(e.gone.d) : ''}"></label>
+        <label class="cf">Note (facultatif)<input id="cfgn" maxlength="120" autocomplete="off" placeholder="Ex. : échangé avec un ami contre un Évoli" value="${e.gone ? esc(e.gone.n) : ''}"></label>
+        <small class="note">Le dex n’est pas modifié : Capturé reste coché.</small></div></fieldset>` : ''}
       <p id="cfnote" class="note cfnote" role="status" hidden></p>
       <p id="cferr" class="cferr" role="alert" hidden></p>
       <div class="cfbtns">${ed ? '<button type="button" id="cfdel" class="cfdel">Supprimer</button>' : ''}<button type="submit" id="cfok" class="cfok">${ed ? 'Enregistrer' : 'Ajouter'}</button></div>
@@ -2360,7 +2393,18 @@ function colOpen(o) {
   const findPk = v => { const mm = /#(\d{4})\s*$/.exec(v); const t = norm(v.replace(/#\d+\s*$/, '').trim()); if (!t) return null;
     return E.find(p => !p.bo && norm(fullN(p)) === t && (!mm || p.id === +mm[1])) || E.find(p => !p.bo && p.nn === t) || null; };
   upd();
-  if (ed) { const del = q('#cfdel'); del.onclick = () => {
+  if (ed) {
+    q('#cfgs').onchange = () => { q('#cfgx2').hidden = !q('#cfgs').value; };
+    const rs = q('#cfrest'); if (rs) rs.onclick = () => { delete ed.gone; ed.up = new Date().toISOString(); colSave(); colRender(); colOpen({ id: ed.id }); toast('Pokémon remis dans votre collection.'); };
+    colEvos(p).then(ev => { const w = q('#cfevow'); if (!ev.length || !w || !w.isConnected) return;
+      w.innerHTML = '<button type="button" id="cfevo" class="cfevo">Faire évoluer</button>';
+      q('#cfevo').onclick = () => { const l = q('#cfevol'); l.hidden = !l.hidden; if (l.hidden) return;
+        l.innerHTML = '<p class="cfevoh">En quel Pokémon a-t-il évolué ?</p>' + ev.map(x => `<button type="button" class="colrow cfevopick" data-evo="${esc(x.p.k)}"><img src="${e.sh && x.p.sh ? `img/s/${x.p.k}.webp` : artOf(x.p)}" alt="" width="48" height="48"><span class="ct"><b>${esc(fullN(x.p))}</b>${x.how.length ? `<small>${esc(x.how.join(', '))}</small>` : ''}</span></button>`).join('') + '<small class="note">Le jeu d’origine, le surnom, le Shiny et le sexe sont conservés. Capturé est coché pour la nouvelle espèce.</small>';
+        l.querySelectorAll('[data-evo]').forEach(bt => bt.onclick = async () => { const np = BY_KEY[bt.dataset.evo]; const op = await colEvolve(ed, np);
+          colRender(); if (DET && DET.p && !$('#detail-view').hidden) { try { refreshTrack(DET.p); } catch {} } if (!colMode) render();
+          colOpen({ id: ed.id }); toast(`${fullN(op)} a évolué en ${fullN(np)} · Capturé coché dans ${colGName(ed.g)}.`); }); };
+    }).catch(() => {});
+    const del = q('#cfdel'); del.onclick = () => {
     if (del.dataset.c !== '1') { del.dataset.c = '1'; del.textContent = 'Confirmer la suppression ?'; del.classList.add('on'); return; }
     COLL = COLL.filter(x => x.id !== ed.id); colSave(); closeCol(); colRender(); toast('Pokémon retiré de votre collection (le dex n’est pas modifié).'); }; }
   q('#colform').onsubmit = ev => {
@@ -2371,7 +2415,8 @@ function colOpen(o) {
     if (err.length) { er.hidden = false; er.textContent = cap(err.join(' et ')) + '.'; return; }
     const wsel = q('#cfw').value, w = wsel === 'other' ? (q('#cfwo').value.trim() ? 'other:' + q('#cfwo').value.trim() : '') : wsel;
     const x = { n: q('#cfn').value.trim(), sh: q('#cfsh').checked, sx: q('#cfsx').value, w, bn: !q('#cfbnw').hidden && q('#cfbn').checked, gx: !q('#cfgxw').hidden && q('#cfgx').checked };
-    if (ed) { Object.assign(ed, x, { up: new Date().toISOString() }); if (x.sh || x.bn || x.gx) colTickDex(pk, g, x.sh, x.bn, x.gx); }
+    if (ed) { const gs = q('#cfgs').value; if (gs) ed.gone = { s: gs, d: q('#cfgd').value || '', n: q('#cfgn').value.trim().slice(0, 120) }; else delete ed.gone;
+      Object.assign(ed, x, { up: new Date().toISOString() }); if (x.sh || x.bn || x.gx) colTickDex(pk, g, x.sh, x.bn, x.gx); }
     else { COLL.push({ id: colId(), k: pk.k, g, ...x, at: new Date().toISOString() }); colTickDex(pk, g, x.sh, x.bn, x.gx); }
     colSave(); closeCol(); colRender();
     if (DET && DET.p && !$('#detail-view').hidden) { try { refreshTrack(DET.p); } catch {} }

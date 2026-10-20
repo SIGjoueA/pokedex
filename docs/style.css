@@ -540,3 +540,12 @@ body.colopen{overflow:hidden}
 .colhead{display:flex;align-items:center;justify-content:space-between;gap:8px}.colhead .colnew{font-size:15px;padding:0 14px;min-height:44px}
 .colnew0{min-height:48px;padding:0 20px;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer}
 .cfnote{margin:8px 0;color:var(--mute)}
+/* v49d: evolve + « Plus en ma possession » */
+.colcard.gone,.colmini li.gone{opacity:.45;filter:grayscale(.9)}.colcard .gn{font-size:12px;font-weight:700;color:var(--mute);margin-top:3px}
+.colgone{display:block;font-size:12px;font-weight:400;color:var(--mute)}.colcnt .colgone{display:inline}
+.colevo{font-weight:600;color:var(--accent)!important}
+.cfevo{width:100%;min-height:44px;border-radius:12px;border:2px solid var(--accent);background:var(--bg2);color:var(--fg);font:inherit;font-weight:700;cursor:pointer;margin:4px 0}
+.cfevol{border:2px solid var(--line);border-radius:12px;padding:6px 10px;margin:6px 0;background:var(--bg2)}.cfevoh{font-weight:700;margin:4px 0}
+.cfgone{border:2px solid var(--line);border-radius:12px;padding:0 10px 8px;margin:12px 0}.cfgone legend{font-weight:700;padding:0 4px}
+.colgonebar{display:flex;align-items:center;gap:10px;justify-content:space-between;background:var(--bg3);border-radius:12px;padding:8px 10px;margin:4px 0 8px;font-size:14px}
+.cfrest{flex:none;min-height:40px;padding:0 12px;border-radius:10px;border:0;background:var(--accent);color:var(--accent-fg);font:inherit;font-weight:700;cursor:pointer}

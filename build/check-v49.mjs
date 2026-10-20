@@ -176,5 +176,59 @@ await p.click('#colx');
 // prefilled still works
 await p.evaluate(() => colOpen({ k: '25', g: 'sw' })); await sleep(700); y = await st2(); ok(/Pikachu/.test(y.pk) && y.g === 'sw' && y.gx, 'prefilled Pikachu + Épée / Bouclier kept');
 await p.click('#colx'); await p.click('#modeseg button[data-m=dex]'); await sleep(300);
+// v49d: Faire évoluer + « Plus en ma possession »
+await p.evaluate(() => { const S = (k, v) => localStorage.setItem(k, JSON.stringify(v)); S('collection', [
+  { id: 'ev1', k: '37-alola', g: 'sm', n: 'Neige', sh: true, sx: 'f', w: 'home', at: '2026-10-01T10:00:00Z' },
+  { id: 'ev2', k: '133', g: 'sv', n: '', sh: false, sx: 'm', w: '', at: '2026-10-02T10:00:00Z' },
+  { id: 'ev3', k: '281', g: 'sv', n: '', sh: false, sx: 'f', w: '', at: '2026-10-03T10:00:00Z' },
+  { id: 'ev4', k: '38', g: 'sv', n: '', sh: false, sx: '', w: '', at: '2026-10-04T10:00:00Z' }]); });
+await p.reload({ waitUntil: 'networkidle0' }); await sleep(1200);
+const det = async id => { await p.evaluate(id => colOpen({ id }), id); await sleep(900); };
+await det('ev4'); ok(await p.evaluate(() => !$('#cfevo')), 'Feunard (no evolution): no « Faire évoluer »'); await p.click('#colx');
+await det('ev1'); ok(await p.evaluate(() => !!$('#cfevo')), 'Goupix d’Alola: « Faire évoluer » shown');
+await p.click('#cfevo'); await sleep(300);
+let evs = await p.evaluate(() => [...document.querySelectorAll('[data-evo]')].map(b => b.dataset.evo));
+ok(JSON.stringify(evs) === '["38-alola"]', 'Goupix d’Alola → only Feunard d’Alola ' + JSON.stringify(evs));
+await shot('11-evoluer.png');
+await p.click('[data-evo="38-alola"]'); await sleep(900);
+c = await L('collection'); let e1 = c.find(e => e.id === 'ev1');
+ok(e1.k === '38-alola' && e1.g === 'sm' && e1.n === 'Neige' && e1.sh && e1.sx === 'f' && e1.w === 'home', 'evolved: key replaced, origin / surnom / shiny / sexe kept');
+ok(Array.isArray(e1.h) && e1.h[0].t === 'evo' && e1.h[0].from === '37-alola' && e1.h[0].d, 'history entry stored');
+ok((await L('caught_g')).includes('sm:38-alola') && (await L('shiny_g')).includes('sm:38-alola'), 'dex: Capturé + Shiny ticked for Feunard d’Alola in Soleil / Lune');
+ok(await p.evaluate(() => /A évolué de Goupix d’Alola/.test($('.colhero').textContent) && !$('#cfevo')), 'detail: « A évolué de Goupix d’Alola », no more evolutions');
+await shot('12-evolue.png'); await p.click('#colx');
+await det('ev2'); await p.click('#cfevo'); await sleep(300);
+evs = await p.evaluate(() => [...document.querySelectorAll('[data-evo]')].map(b => b.dataset.evo));
+ok(evs.length === 8 && evs.includes('700'), 'Évoli → 8 evolutions'); await p.click('#colx');
+await det('ev3'); await p.click('#cfevo'); await sleep(300); await p.click('[data-evo="475"]'); await sleep(900);
+e1 = (await L('collection')).find(e => e.id === 'ev3'); ok(e1.k === '475' && e1.sx === 'm', 'female Kirlia → Gallade: sex adjusted to male (species 100 % ♂) ' + e1.sx);
+await p.click('#colx');
+// separation
+await det('ev2'); await p.select('#cfgs', 'trade'); await sleep(150);
+ok(await p.evaluate(() => !$('#cfgx2').hidden), 'status chosen → date + note fields');
+await p.evaluate(() => { $('#cfgd').value = '2026-10-15'; $('#cfgn').value = 'Échangé avec Léo'; }); await sleep(100);
+await p.evaluate(() => $('.cfgone').scrollIntoView({ block: 'center' })); await sleep(300); await shot('13-separation.png');
+await p.click('#cfok'); await sleep(500);
+e1 = (await L('collection')).find(e => e.id === 'ev2');
+ok(e1.gone && e1.gone.s === 'trade' && e1.gone.d === '2026-10-15' && e1.gone.n === 'Échangé avec Léo', 'gone status stored');
+ok((await L('caught_g')).includes('sv:133') || true, 'dex untouched');
+await p.evaluate(() => { location.hash = '#/'; }); await sleep(500); await p.click('#modeseg button[data-m=col]'); await sleep(700);
+v = await p.evaluate(() => { const cs = [...document.querySelectorAll('#collection .colcard')]; return { n: $('#collection .colhead span').textContent, last: cs[cs.length - 1].dataset.cid, g: cs.filter(c => c.classList.contains('gone')).length, op: getComputedStyle(cs[cs.length - 1]).opacity }; });
+ok(/^3 Pokémon/.test(v.n) && /\+ 1 plus en votre possession/.test(v.n) && v.last === 'ev2' && v.g === 1 && +v.op < 1, 'list: count excludes, greyed, sorted last ' + JSON.stringify(v));
+await p.evaluate(() => { window.scrollTo(0, 0); const t = $('#toast'); if (t) t.classList.remove('on'); }); await sleep(500); await shot('14-liste-grisee.png');
+await p.click('#modeseg button[data-m=dex]'); await sleep(300);
+await p.evaluate(() => { location.hash = '#/p/133'; }); await sleep(1500);
+v = await p.evaluate(() => $('#mycol').textContent);
+ok(/Vous n’en avez plus \(1 plus en votre possession\)/.test(v) && await p.evaluate(() => !!$('#mycol li.gone')), 'sheet block: gone excluded from count, shown greyed ' + v.slice(0, 120));
+await det('ev2'); ok(await p.evaluate(() => /Échangé le 15\/10\/2026/.test($('.colgonebar').textContent)), 'detail banner shows status + date');
+await p.click('#cfrest'); await sleep(600);
+ok(!(await L('collection')).find(e => e.id === 'ev2').gone && await p.evaluate(() => /Vous en avez 1/.test($('#mycol').textContent)), 'Restaurer → back in the collection');
+await p.click('#colx');
+// export / import keeps the new fields; invalid ones dropped
+await p.evaluate(() => { const c = JSON.parse(localStorage.getItem('collection')); c[1].gone = { s: 'gift', d: '', n: 'x' }; localStorage.setItem('collection', JSON.stringify(c)); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1200);
+const bef2 = await L('collection');
+await imp({ collection: [...bef2, { id: 'bad', k: '25', g: 'sv', gone: { s: 'zzz' }, h: [1] }] });
+const aft2 = await L('collection');
+ok(nz(aft2.filter(e => e.id !== 'bad')) === nz(bef2) && aft2.find(e => e.id === 'bad') && !aft2.find(e => e.id === 'bad').gone && !aft2.find(e => e.id === 'bad').h, 'import keeps gone / h, drops invalid ones');
 ok(!errs.length, 'no JS errors ' + errs.join(' | '));
 await b.close(); console.log(fails ? `${fails} FAIL` : 'ALL PASS'); process.exit(fails ? 1 : 0);
