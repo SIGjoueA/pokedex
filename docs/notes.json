@@ -1,74 +1,137 @@
 [
-  { "v": "v49", "d": "2026-10-19", "l": [
-    "Nouveau mode Collection (bascule « Dex | Collection » en haut) : un journal des Pokémon que vous possédez, un exemplaire par entrée, doublons possibles.",
-    "Bouton ＋ sur les cartes de la liste et sur les fiches : Pokémon et jeu d'origine préremplis (obligatoires), surnom, shiny, sexe (selon l'espèce), Baron, Gigamax et « Jeu actuel » facultatifs. Ajouter coche Capturé (et Shiny, Baron, Gigamax) dans le dex de ce jeu ; supprimer ne décoche rien.",
-    "Fiches : bloc « Ma collection » (Vous en avez N). La collection est incluse dans l'export / import."
-  ] },
-  { "v": "v48", "d": "2026-10-19", "l": [
-    "Ogerpon : ses quatre masques sont liés dans Écarlate / Violet et leurs extensions (on n'y capture qu'un seul Ogerpon, son masque suit l'objet tenu). Cocher un masque coche les quatre ; vos marques existantes sont recopiées sur les autres masques, rien n'est retiré. HOME reste lié, Pokémon GO reste séparé."
-  ] },
-  { "v": "v47", "d": "2026-10-18", "l": [
-    "Fiches HOME : nouveau bloc « Dex national HOME » (numéro national, formes de l'espèce dans HOME avec ✅ / ⬜ selon vos marques).",
-    "Fiches HOME : nouveau bloc « Shiny » (jeux d'où il peut être ramené shiny dans HOME, ou shiny lock, par exemple Zarude). Ces deux blocs sont informatifs, sans effet sur la complétion.",
-    "Données Pokémon GO mises à jour depuis une nouvelle source (stats, attaques, coûts d'évolution), avec les sorties annoncées : Météno, Méga-Lugulabre, Colimucus et Muplodocus de Hisui.",
-    "Images officielles pour les Méga-Gemmes de Légendes Z-A et Méga-Dimension.",
-    "Quelques descriptions du Pokédex remplacées par les textes officiels.",
-    "Rouge Feu / Vert Feuille et Émeraude : retrait des Pokémon de la Grotte Métamo jamais distribués.",
-    "Fiches HOME : bouton « Gigamax » en fin de suivi pour les Pokémon qui ont un Gigamax (lié à la fiche Gigamax ; une seule pour les 63 formes de Charmilly ; « Gigamax Aigüe » / « Gigamax Grave » pour Salarsen, deux marques HOME séparées).", "Le bouton « Baron shiny » et ses filtres sont retirés (le bouton « Baron » reste). Vos marques Baron shiny déjà cochées sont conservées et toujours exportées."
-  ] },
-  { "v": "v46", "d": "2026-10-18", "l": [
-    "Nouvelle rubrique « Notes de version » dans le menu ☰.",
-    "Après une mise à jour, un message propose de voir les nouveautés.",
-    "Bouton « 🐞 Signaler un bug / proposer une idée » dans le menu ☰ : il ouvre un mail déjà prêt."
-  ] },
-  { "v": "v45", "d": "2026-10-17", "l": [
-    "Boutons ⬆︎ et ⬇︎ pour aller d'un coup en haut ou en bas de la liste.",
-    "Menu ☰ en haut à droite : pack hors-ligne, export / import, légende et version."
-  ] },
-  { "v": "v44", "d": "2026-10-17", "l": [
-    "La Poké Ball dorée est réservée aux jeux actuels ; les anciens jeux complets ont le badge 🕹.",
-    "Une seule fiche pour Salarsen Gigamax (Aigüe et Grave) et pour Méga-Mistigrix.",
-    "Les femelles qui ne diffèrent que par l'apparence rejoignent leur espèce, avec un bouton pour voir l'image ♀."
-  ] },
-  { "v": "v43", "d": "2026-10-17", "l": [
-    "Les blocs des fiches sont rangés dans un ordre adapté à chaque vue (jeu, GO, HOME, vue d'ensemble).",
-    "Nouveau bloc Costumes GO, encore en chantier."
-  ] },
-  { "v": "v42", "d": "2026-10-16", "l": [
-    "Lieux de capture des jeux GBA et DS, de Rubis / Saphir à Noire 2 / Blanche 2.",
-    "458 espèces qui n'avaient aucun lieu en ont maintenant un."
-  ] },
-  { "v": "v41", "d": "2026-10-16", "l": [
-    "Bouton « Cocher toutes les formes » pour les Pokémon qui changent de forme (Arceus, Silvallié…).",
-    "Les images des formes sont incluses dans le pack hors-ligne."
-  ] },
-  { "v": "v40", "d": "2026-10-16", "l": [
-    "Les Ultra-Chimères n'apparaissent plus dans les jeux où elles n'existent pas.",
-    "Nouveaux tris par Attaque Spéciale et Défense Spéciale.",
-    "Données et images mises à jour plus vite quand elles changent."
-  ] },
-  { "v": "v39", "d": "2026-10-16", "l": [
-    "Disponibilités dans Pokémon GO corrigées.",
-    "Noms français des Méga-Gemmes et des Orbes, noms de formes officiels.",
-    "Corrections de plusieurs dex, dont Rouge Feu / Vert Feuille sur Switch."
-  ] },
-  { "v": "v38", "d": "2026-10-16", "l": [
-    "Icônes officielles Gigamax et Dynamax.",
-    "Bouton Dynamax sur les fiches Pokémon GO.",
-    "Icônes d'Énergie Primo pour Kyogre et Groudon."
-  ] },
-  { "v": "v37", "d": "2026-10-16", "l": [
-    "Cocher un Gigamax coche aussi sa forme de base.",
-    "Fiches Méga et Gigamax avec leurs propres boutons (Méga-Gemme ou Gigamax, Shiny, HOME).",
-    "Charmilly : un seul Gigamax pour ses 63 formes."
-  ] },
-  { "v": "v36", "d": "2026-10-14", "l": [
-    "Théffroi et Polthégeist : Forme Contrefaçon et Forme Authentique.",
-    "Noms corrigés pour Salarsen Gigamax et Éthernatos Infinimax.",
-    "Meilleure marge en bas de l'écran sur iPhone."
-  ] },
-  { "v": "v35", "d": "2026-10-14", "l": [
-    "Nom officiel de la forme par défaut (ex. Nigirigon Forme Courbée).",
-    "Images HOME et animées propres à chaque forme, disponibles hors-ligne."
-  ] }
+ {
+  "v": "v49",
+  "d": "2026-10-20",
+  "l": [
+   "Nouveau mode Collection (bascule « Dex | Collection » en haut) : un journal des Pokémon que vous possédez, un exemplaire par entrée, doublons possibles.",
+   "Bouton ＋ sur les cartes de la liste et sur les fiches : Pokémon et jeu d'origine préremplis (obligatoires), surnom, shiny, sexe (selon l'espèce), Baron, Gigamax et « Jeu actuel » facultatifs. Ajouter coche Capturé (et Shiny, Baron, Gigamax) dans le dex de ce jeu ; supprimer ne décoche rien.",
+   "Fiches : bloc « Ma collection » (Vous en avez N). La collection est incluse dans l'export / import.",
+   "Bouton ＋ Ajouter dans la vue Collection : les listes Pokémon et jeu se filtrent entre elles, Baron et Gigamax les limitent aussi.",
+   "« Faire évoluer » un Pokémon de la collection (jeu d'origine, surnom, shiny et sexe conservés) et statut « Plus en ma possession » (échangé, relâché, donné) : il reste grisé en bas de la liste sans compter dans le total."
+  ]
+ },
+ {
+  "v": "v48",
+  "d": "2026-10-19",
+  "l": [
+   "Ogerpon : ses quatre masques sont liés dans Écarlate / Violet et leurs extensions (on n'y capture qu'un seul Ogerpon, son masque suit l'objet tenu). Cocher un masque coche les quatre ; vos marques existantes sont recopiées sur les autres masques, rien n'est retiré. HOME reste lié, Pokémon GO reste séparé."
+  ]
+ },
+ {
+  "v": "v47",
+  "d": "2026-10-18",
+  "l": [
+   "Fiches HOME : nouveau bloc « Dex national HOME » (numéro national, formes de l'espèce dans HOME avec ✅ / ⬜ selon vos marques).",
+   "Fiches HOME : nouveau bloc « Shiny » (jeux d'où il peut être ramené shiny dans HOME, ou shiny lock, par exemple Zarude). Ces deux blocs sont informatifs, sans effet sur la complétion.",
+   "Données Pokémon GO mises à jour depuis une nouvelle source (stats, attaques, coûts d'évolution), avec les sorties annoncées : Météno, Méga-Lugulabre, Colimucus et Muplodocus de Hisui.",
+   "Images officielles pour les Méga-Gemmes de Légendes Z-A et Méga-Dimension.",
+   "Quelques descriptions du Pokédex remplacées par les textes officiels.",
+   "Rouge Feu / Vert Feuille et Émeraude : retrait des Pokémon de la Grotte Métamo jamais distribués.",
+   "Fiches HOME : bouton « Gigamax » en fin de suivi pour les Pokémon qui ont un Gigamax (lié à la fiche Gigamax ; une seule pour les 63 formes de Charmilly ; « Gigamax Aigüe » / « Gigamax Grave » pour Salarsen, deux marques HOME séparées).",
+   "Le bouton « Baron shiny » et ses filtres sont retirés (le bouton « Baron » reste). Vos marques Baron shiny déjà cochées sont conservées et toujours exportées."
+  ]
+ },
+ {
+  "v": "v46",
+  "d": "2026-10-18",
+  "l": [
+   "Nouvelle rubrique « Notes de version » dans le menu ☰.",
+   "Après une mise à jour, un message propose de voir les nouveautés.",
+   "Bouton « 🐞 Signaler un bug / proposer une idée » dans le menu ☰ : il ouvre un mail déjà prêt."
+  ]
+ },
+ {
+  "v": "v45",
+  "d": "2026-10-17",
+  "l": [
+   "Boutons ⬆︎ et ⬇︎ pour aller d'un coup en haut ou en bas de la liste.",
+   "Menu ☰ en haut à droite : pack hors-ligne, export / import, légende et version."
+  ]
+ },
+ {
+  "v": "v44",
+  "d": "2026-10-17",
+  "l": [
+   "La Poké Ball dorée est réservée aux jeux actuels ; les anciens jeux complets ont le badge 🕹.",
+   "Une seule fiche pour Salarsen Gigamax (Aigüe et Grave) et pour Méga-Mistigrix.",
+   "Les femelles qui ne diffèrent que par l'apparence rejoignent leur espèce, avec un bouton pour voir l'image ♀."
+  ]
+ },
+ {
+  "v": "v43",
+  "d": "2026-10-17",
+  "l": [
+   "Les blocs des fiches sont rangés dans un ordre adapté à chaque vue (jeu, GO, HOME, vue d'ensemble).",
+   "Nouveau bloc Costumes GO, encore en chantier."
+  ]
+ },
+ {
+  "v": "v42",
+  "d": "2026-10-16",
+  "l": [
+   "Lieux de capture des jeux GBA et DS, de Rubis / Saphir à Noire 2 / Blanche 2.",
+   "458 espèces qui n'avaient aucun lieu en ont maintenant un."
+  ]
+ },
+ {
+  "v": "v41",
+  "d": "2026-10-16",
+  "l": [
+   "Bouton « Cocher toutes les formes » pour les Pokémon qui changent de forme (Arceus, Silvallié…).",
+   "Les images des formes sont incluses dans le pack hors-ligne."
+  ]
+ },
+ {
+  "v": "v40",
+  "d": "2026-10-16",
+  "l": [
+   "Les Ultra-Chimères n'apparaissent plus dans les jeux où elles n'existent pas.",
+   "Nouveaux tris par Attaque Spéciale et Défense Spéciale.",
+   "Données et images mises à jour plus vite quand elles changent."
+  ]
+ },
+ {
+  "v": "v39",
+  "d": "2026-10-16",
+  "l": [
+   "Disponibilités dans Pokémon GO corrigées.",
+   "Noms français des Méga-Gemmes et des Orbes, noms de formes officiels.",
+   "Corrections de plusieurs dex, dont Rouge Feu / Vert Feuille sur Switch."
+  ]
+ },
+ {
+  "v": "v38",
+  "d": "2026-10-16",
+  "l": [
+   "Icônes officielles Gigamax et Dynamax.",
+   "Bouton Dynamax sur les fiches Pokémon GO.",
+   "Icônes d'Énergie Primo pour Kyogre et Groudon."
+  ]
+ },
+ {
+  "v": "v37",
+  "d": "2026-10-16",
+  "l": [
+   "Cocher un Gigamax coche aussi sa forme de base.",
+   "Fiches Méga et Gigamax avec leurs propres boutons (Méga-Gemme ou Gigamax, Shiny, HOME).",
+   "Charmilly : un seul Gigamax pour ses 63 formes."
+  ]
+ },
+ {
+  "v": "v36",
+  "d": "2026-10-14",
+  "l": [
+   "Théffroi et Polthégeist : Forme Contrefaçon et Forme Authentique.",
+   "Noms corrigés pour Salarsen Gigamax et Éthernatos Infinimax.",
+   "Meilleure marge en bas de l'écran sur iPhone."
+  ]
+ },
+ {
+  "v": "v35",
+  "d": "2026-10-14",
+  "l": [
+   "Nom officiel de la forme par défaut (ex. Nigirigon Forme Courbée).",
+   "Images HOME et animées propres à chaque forme, disponibles hors-ligne."
+  ]
+ }
 ]

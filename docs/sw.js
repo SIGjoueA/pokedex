@@ -1,7 +1,7 @@
 'use strict';
 const VERSION = 'v49';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Nouveau mode Collection : enregistre chaque Pokémon que tu possèdes (bouton ＋ sur les cartes et les fiches), avec jeu d\'origine, surnom, shiny…';
+const NOTES = 'Nouveau mode Collection : enregistrez chaque Pokémon que vous possédez (bouton ＋), faites-le évoluer ou notez-le comme échangé.';
 const DATA_VERSION = 'd24'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
