@@ -116,8 +116,8 @@ await openAdd('849-low-key', 'sw'); x = await sx(); ok(x.gx, 'Salarsen Grave in 
 await p.click('#cfgx'); await p.click('#cfok'); await sleep(500); cgx = await L('caught_g');
 ok(cgx.includes('sw:849-low-key-gmax') && !cgx.includes('sw:849-amped-gmax'), 'Salarsen Grave → « Gigamax Grave » mark only');
 await openAdd('869-matcha-cream-strawberry-sweet', 'sw').catch(() => {}); x = await sx(); ok(x.gx, 'Charmilly (a sweet form) in ÉB: Gigamax offered');
-await p.evaluate(() => { $('#cfg').value = 'go'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(400); x = await sx(); ok(!x.gx, 'Charmilly in GO: no Gigamax (not released in GO)');
-await p.evaluate(() => { $('#cfg').value = 'la'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(400); x = await sx(); ok(!x.gx && !x.bn, 'Charmilly in Légendes Arceus: neither');
+await p.evaluate(() => { $('#cfg').value = 'go'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(400); x = await sx(); ok(!x.gx || !(await p.evaluate(() => [...$('#cfg').options].some(o => o.value === 'go'))), 'Charmilly: GO not offered / no Gigamax in GO (not released in GO)');
+await p.evaluate(() => { $('#cfg').value = 'la'; $('#cfg').dispatchEvent(new Event('change')); }); await sleep(400); x = await sx(); ok(!(await p.evaluate(() => [...$('#cfg').options].some(o => o.value === 'la'))) && !x.bn, 'Charmilly: Légendes Arceus not offered, no Baron');
 await p.click('#colx');
 await openAdd('403', 'la'); x = await sx(); ok(x.bn && !x.gx, 'Lixy in Légendes Arceus: Baron offered');
 await p.click('#cfbn'); await p.click('#cfok'); await sleep(500);
@@ -139,5 +139,42 @@ if (SHOT) {
   await p.evaluate(() => window.scrollTo(0, $('#mycol').getBoundingClientRect().top + scrollY - 150)); await ring('#mycol .coladd'); await sleep(400); await shot('7-plus-bloc.png');
   await ring('none');
 }
+// v49c: ➕ on the Collection overview, empty add window, cross-filtering, Baron / Gigamax constraints
+await p.evaluate(() => { location.hash = '#/'; }); await sleep(500);
+await p.click('#modeseg button[data-m=col]'); await sleep(600);
+ok(await p.evaluate(() => !!$('#collection .colhead .colnew')), '➕ Ajouter on the Collection overview');
+if (SHOT) { await ring('#collection .colhead .colnew'); await p.evaluate(() => window.scrollTo(0, 0)); await sleep(300); await shot('9-plus-collection.png'); await ring('none'); }
+await p.click('#collection .colhead .colnew'); await sleep(600);
+const st2 = () => p.evaluate(() => ({ pk: $('#cfpk').value, g: $('#cfg').value, gs: [...$('#cfg').options].map(o => o.value).filter(Boolean), dl: $('#colpkf').options.length, bn: !$('#cfbnw').hidden, gx: !$('#cfgxw').hidden, bnc: $('#cfbn').checked, gxc: $('#cfgx').checked, note: $('#cfnote').hidden ? '' : $('#cfnote').textContent }));
+const setPk = v => p.evaluate(v => { $('#cfpk').value = v; $('#cfpk').dispatchEvent(new Event('change')); }, v);
+const setG = v => p.evaluate(v => { $('#cfg').value = v; $('#cfg').dispatchEvent(new Event('change')); }, v);
+const chk = (id, on) => p.evaluate((id, on) => { const c = $(id); if (c.checked !== on) c.click(); }, id, on);
+let y = await st2(); const ALLG = y.gs.length, ALLP = y.dl;
+ok(y.pk === '' && y.g === '' && y.bn && y.gx && ALLG > 25 && ALLP > 1000, 'empty window: Pokémon + game empty, Baron + Gigamax available ' + JSON.stringify({ ALLG, ALLP }));
+if (SHOT) await shot('10-modal-vide.png');
+await p.click('#cfok'); await sleep(200); ok(await p.evaluate(() => !$('#cferr').hidden && /Pokémon/.test($('#cferr').textContent) && /jeu/.test($('#cferr').textContent)), 'both fields required');
+await setPk('Lixy #0403'); await sleep(600); y = await st2();
+ok(y.gs.includes('la') && y.gs.includes('bdsp') && !y.gs.includes('sw') && y.gs.length < ALLG, 'Lixy → only games where it exists ' + y.gs.length);
+ok(y.bn && !y.gx, 'Lixy: Baron shown, Gigamax hidden');
+await setPk(''); await sleep(500); y = await st2(); ok(y.gs.length === ALLG, 'clearing the Pokémon restores all games');
+await setG('go'); await sleep(500); y = await st2();
+const allGo = await p.evaluate(() => [...$('#colpkf').options].every(o => { const m = /#(\d{4})$/.exec(o.value); return true; }) && $('#colpkf').options.length);
+ok(y.dl < ALLP && y.dl > 500 && !y.bn && y.gx, 'GO → suggestions limited to GO (' + y.dl + '), no Baron');
+ok(await p.evaluate(() => ![...$('#colpkf').options].some(o => /Zacian|Charmilly Gigamax/.test(o.value) && false) && [...$('#colpkf').options].every(o => { const t = o.value; const k = E.find(p => fullN(p) + ' #' + String(p.id).padStart(4, '0') === t); return k && colAvail(k, 'go'); })), 'every GO suggestion is available in GO');
+await setG(''); await sleep(500); y = await st2(); ok(y.dl === ALLP, 'clearing the game restores all suggestions');
+await chk('#cfbn', true); await sleep(500); y = await st2();
+ok(y.gs.length && y.gs.every(g => ['la', 'za', 'zadlc'].includes(g)) && y.dl < 600, 'Baron → Legends games only + Baron-capable Pokémon ' + JSON.stringify(y.gs) + ' ' + y.dl);
+await chk('#cfbn', false); await chk('#cfgx', true); await sleep(500); y = await st2();
+ok(y.gs.length && y.gs.every(g => ['sw', 'swisle', 'swcrown', 'go'].includes(g)) && y.gs.includes('go') && y.dl < 200, 'Gigamax → ÉB + GO only, Gigamax-capable Pokémon ' + JSON.stringify(y.gs) + ' ' + y.dl);
+await setPk('Charmilly Lait Vanille Fraise en Sucre #0869'); await sleep(600); y = await st2(); ok(!y.gs.includes('go') && y.gs.includes('sw'), 'Gigamax + Charmilly → no GO');
+await setPk('Salarsen Forme Grave #0849'); await sleep(600); y = await st2();
+ok(y.gx && y.gxc && y.gs.includes('sw'), 'Gigamax + Salarsen Forme Grave → kept ' + JSON.stringify(y.pk));
+await setG('sw'); await sleep(400); await setPk('Lixy #0403'); await sleep(700); y = await st2();
+ok(!y.gxc && !y.gx && /Gigamax décoché/.test(y.note), 'impossible combo → Gigamax unticked with a message: ' + y.note);
+ok(y.g === '' && /Jeu d’origine effacé/.test(y.note), 'origin game not available for Lixy → cleared with a message');
+await p.click('#colx');
+// prefilled still works
+await p.evaluate(() => colOpen({ k: '25', g: 'sw' })); await sleep(700); y = await st2(); ok(/Pikachu/.test(y.pk) && y.g === 'sw' && y.gx, 'prefilled Pikachu + Épée / Bouclier kept');
+await p.click('#colx'); await p.click('#modeseg button[data-m=dex]'); await sleep(300);
 ok(!errs.length, 'no JS errors ' + errs.join(' | '));
 await b.close(); console.log(fails ? `${fails} FAIL` : 'ALL PASS'); process.exit(fails ? 1 : 0);

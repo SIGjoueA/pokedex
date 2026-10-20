@@ -2298,8 +2298,8 @@ function colRender() {
   box.hidden = !colMode;
   if (colMode) {
     const list = COLL.slice().sort((a, b) => (b.at || '').localeCompare(a.at || ''));
-    box.innerHTML = list.length ? `<p class="colhead">${list.length} Pokémon dans votre collection</p><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
-      : `<div class="colempty"><div class="ce-ic" aria-hidden="true">${BALL}</div><p><b>Votre collection est vide.</b></p><p>Touchez ＋ sur une carte du Dex ou sur la fiche d’un Pokémon pour enregistrer un Pokémon que vous possédez.</p></div>`;
+    box.innerHTML = list.length ? `<div class="colhead"><span>${list.length} Pokémon dans votre collection</span><button type="button" class="coladd colnew" aria-label="Ajouter un Pokémon">＋ Ajouter</button></div><div class="grid colgrid">${list.map(colCardHTML).join('')}</div>`
+      : `<div class="colempty"><div class="ce-ic" aria-hidden="true">${BALL}</div><p><b>Votre collection est vide.</b></p><p>Touchez ＋ sur une carte du Dex ou sur la fiche d’un Pokémon pour enregistrer un Pokémon que vous possédez.</p><p><button type="button" class="cfok colnew colnew0">＋ Ajouter un Pokémon</button></p></div>`;
   }
   const mc = $('#mycol'); if (mc && DET && DET.p) mc.innerHTML = myColHTML(DET.p);
 }
@@ -2321,7 +2321,7 @@ function colOpen(o) {
     <div class="menuhead"><h2 id="coltitle">${ed ? 'Mon Pokémon' : 'Ajouter à ma collection'}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
     ${ed ? `<div class="colhero"><img src="${colImg(e)}" alt="" width="96" height="96"><div><b>${esc(fullN(p))}</b>${e.at ? `<small>Ajouté le ${new Date(e.at).toLocaleDateString('fr-FR')}</small>` : ''}</div></div>` : ''}
     <form id="colform" novalidate>
-      <label class="cf"><span>Pokémon <span class="req">*</span></span><input id="cfpk" list="colpk" autocomplete="off" placeholder="Nom ou forme…" value="${p ? esc(fullN(p)) + ' #' + pad(p.id) : ''}"${ed ? ' disabled' : ''}></label>
+      <label class="cf"><span>Pokémon <span class="req">*</span></span><input id="cfpk" list="${ed ? 'colpk' : 'colpkf'}" autocomplete="off" placeholder="Nom ou forme…" value="${p ? esc(fullN(p)) + ' #' + pad(p.id) : ''}"${ed ? ' disabled' : ''}></label>
       <label class="cf"><span>Jeu d’origine <span class="req">*</span></span><select id="cfg"${ed ? ' disabled' : ''}>${gopts(e.g)}</select>${ed ? '<small class="note">Le jeu d’origine ne change plus une fois ajouté.</small>' : ''}</label>
       <label class="cf">Surnom<input id="cfn" maxlength="40" autocomplete="off" value="${esc(e.n || '')}"></label>
       <div class="cfrow"><label class="cfc"><input type="checkbox" id="cfsh"${e.sh ? ' checked' : ''}> ✨ Shiny</label>
@@ -2329,9 +2329,11 @@ function colOpen(o) {
       <div class="cfrow cfx"><label class="cfc" id="cfbnw" hidden><input type="checkbox" id="cfbn"${e.bn ? ' checked' : ''}> Baron</label><label class="cfc" id="cfgxw" hidden><input type="checkbox" id="cfgx"${e.gx ? ' checked' : ''}> Gigamax</label></div>
       <label class="cf">Jeu actuel<select id="cfw">${wopts}</select></label>
       <input id="cfwo" class="cfo" maxlength="60" placeholder="Précisez (ex. : Pokémon Bank)" value="${wo ? esc(wv.slice(6)) : ''}"${wo ? '' : ' hidden'}>
+      <p id="cfnote" class="note cfnote" role="status" hidden></p>
       <p id="cferr" class="cferr" role="alert" hidden></p>
       <div class="cfbtns">${ed ? '<button type="button" id="cfdel" class="cfdel">Supprimer</button>' : ''}<button type="submit" id="cfok" class="cfok">${ed ? 'Enregistrer' : 'Ajouter'}</button></div>
     </form></div>`;
+  if (!ed) m.insertAdjacentHTML('beforeend', '<datalist id="colpkf"></datalist>');
   document.body.appendChild(m); document.body.classList.add('colopen');
   const q = s => m.querySelector(s);
   m.addEventListener('click', ev => { if (ev.target === m) closeCol(); });
@@ -2339,17 +2341,21 @@ function colOpen(o) {
   // v49b: gender from the species ratio (sp.gr), Baron / Gigamax only where the dex allows them
   let updTok = 0;
   const upd = async () => {
-    const tk = ++updTok, pk = ed ? p : findPk(q('#cfpk').value), g = ed ? e.g : q('#cfg').value, sx = q('#cfsx');
+    const tk = ++updTok, pk = ed ? p : findPk(q('#cfpk').value), sx = q('#cfsx'); let g = ed ? e.g : q('#cfg').value;
     const cur = sx.value || e.sx || ''; let gr = null;
     if (pk) try { gr = (await loadSp(pk.id)).gr; } catch {} if (tk !== updTok) return;
     const opts = gr === -1 ? ['x'] : gr === 0 ? ['m'] : gr === 8 ? ['f'] : gr == null ? ['m', 'f', 'x'] : ['m', 'f'];
     sx.innerHTML = (gr === -1 ? '' : '<option value="">—</option>') + opts.map(v => `<option value="${v}">${SEX_L[v]}</option>`).join('');
     sx.value = gr === -1 ? 'x' : opts.includes(cur) ? cur : ''; sx.disabled = gr === -1;
-    const bOk = !!pk && colBaronOk(pk, g), gOk = !!pk && !!colGmax(pk, g);
+    const msg = []; if (!ed) { colFilter(q, pk, msg); g = q('#cfg').value; }
+    const bOk = colBVis(pk, g), gOk = colGVis(pk, g);
+    if (!bOk && q('#cfbn').checked) msg.push('Baron décoché : impossible pour ce Pokémon dans ce jeu.');
+    if (!gOk && q('#cfgx').checked && !q('#cfgx').disabled) msg.push('Gigamax décoché : impossible pour ce Pokémon dans ce jeu.');
     q('#cfbnw').hidden = !bOk; q('#cfgxw').hidden = !gOk; if (!bOk) q('#cfbn').checked = false; if (!gOk) q('#cfgx').checked = false;
+    const nt = q('#cfnote'); if (msg.length) { nt.hidden = false; nt.textContent = msg.join(' '); } else if (!nt.dataset.keep) nt.hidden = true;
     if (gOk && isGmx(pk)) { q('#cfgx').checked = true; q('#cfgx').disabled = true; } else q('#cfgx').disabled = false;
   };
-  q('#cfpk').addEventListener('change', upd); q('#cfpk').addEventListener('input', () => { if (findPk(q('#cfpk').value)) upd(); }); q('#cfg').addEventListener('change', upd);
+  q('#cfpk').addEventListener('change', upd); q('#cfpk').addEventListener('input', () => { if (findPk(q('#cfpk').value)) upd(); }); q('#cfg').addEventListener('change', upd); q('#cfbn').addEventListener('change', upd); q('#cfgx').addEventListener('change', upd);
   q('#cfw').onchange = () => { q('#cfwo').hidden = q('#cfw').value !== 'other'; };
   const findPk = v => { const mm = /#(\d{4})\s*$/.exec(v); const t = norm(v.replace(/#\d+\s*$/, '').trim()); if (!t) return null;
     return E.find(p => !p.bo && norm(fullN(p)) === t && (!mm || p.id === +mm[1])) || E.find(p => !p.bo && p.nn === t) || null; };
@@ -2374,6 +2380,23 @@ function colOpen(o) {
   };
   setTimeout(() => (ed ? q('#cfn') : (p ? q('#cfg') : q('#cfpk'))).focus({ preventScroll: true }), 30);
 }
+// v49c: cross-filtering of the add window (availability from core data: game bitmask, GO flag) + Baron / Gigamax constraints
+const GMAX_GAMES = ['sw', 'swisle', 'swcrown', 'go'];
+const colAvail = (p, g) => g === 'go' ? !!(p.go || (isGmx(p) && gmaxInGame(p, 'go'))) : GIDX[g] != null && inGame(p, GIDX[g]);
+const colBVis = (pk, g) => pk && g ? colBaronOk(pk, g) : pk ? [...ALPHA_GAMES].some(a => colBaronOk(pk, a)) : g ? ALPHA_GAMES.has(g) : true;
+const colGVis = (pk, g) => pk && g ? !!colGmax(pk, g) : pk ? GMAX_GAMES.some(x => colGmax(pk, x)) : g ? GMAX_GAMES.includes(g) : true;
+const colPkOk = (p, g, bn, gx) => !p.bo && (!g || colAvail(p, g)) && (!bn || (g ? colBaronOk(p, g) : [...ALPHA_GAMES].some(a => colBaronOk(p, a)))) && (!gx || (g ? !!colGmax(p, g) : GMAX_GAMES.some(x => colGmax(p, x))));
+const colGOk = (g, pk, bn, gx) => (!pk || colAvail(pk, g)) && (!bn || (ALPHA_GAMES.has(g) && (!pk || colBaronOk(pk, g)))) && (!gx || (GMAX_GAMES.includes(g) && (!pk || !!colGmax(pk, g))));
+function colFilter(q, pk, msg) {
+  const sel = q('#cfg'), bn = q('#cfbn').checked, gx = q('#cfgx').checked && !q('#cfgx').disabled, cur = sel.value;
+  const gs = colGames().filter(([v]) => colGOk(v, pk, bn, gx));
+  sel.innerHTML = '<option value="">Choisir le jeu…</option>' + gs.map(([v, n]) => `<option value="${v}">${esc(n)}</option>`).join('');
+  if (cur && gs.some(([v]) => v === cur)) sel.value = cur;
+  else if (cur) { sel.value = ''; msg.push(`Jeu d’origine effacé : ${pk ? fullN(pk) : 'ce Pokémon'} n’est pas disponible dans ${colGName(cur)}.`); }
+  const g = sel.value, key = [g, bn, gx].join('|'), dl = q('#colpkf');
+  if (dl.dataset.k !== key) { dl.dataset.k = key; dl.innerHTML = E.filter(p => colPkOk(p, g, bn, gx)).map(p => `<option value="${esc(fullN(p))} #${pad(p.id)}"></option>`).join(''); }
+  q('#cfpk').placeholder = g || bn || gx ? `Nom ou forme (${dl.options.length} possibles)…` : 'Nom ou forme…';
+}
 function closeCol() { const m = $('#colmodal'); if (m) m.remove(); document.body.classList.remove('colopen'); }
 function colInit() {
   const seg = $('#modeseg'); if (seg) seg.addEventListener('click', e => { const b = e.target.closest('button'); if (b) colSetMode(b.dataset.m === 'col'); });
@@ -2382,6 +2405,7 @@ function colInit() {
     if (a) { e.preventDefault(); e.stopPropagation();
       const onSheet = !$('#detail-view').hidden, c = onSheet ? sheetCtx() : trackCtx();
       colOpen({ k: a.dataset.add, g: c && colOrigOk(c) ? c : '' }); return; }
+    if (e.target.closest('.colnew')) { e.preventDefault(); colOpen({}); return; }
     const r = e.target.closest('[data-cid]'); if (r && !e.target.closest('#colmodal')) { e.preventDefault(); colOpen({ id: r.dataset.cid }); }
   }, true);
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#colmodal')) closeCol(); else if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.cadd')) { e.preventDefault(); e.target.click(); } });
