@@ -1,7 +1,7 @@
 [
   { "v": "v49", "d": "2026-10-19", "l": [
     "Nouveau mode Collection (bascule « Dex | Collection » en haut) : un journal des Pokémon que vous possédez, un exemplaire par entrée, doublons possibles.",
-    "Bouton ＋ sur les cartes de la liste et sur les fiches : Pokémon et jeu d'origine préremplis (obligatoires), surnom, shiny, sexe (selon l'espèce), Baron, Gigamax et « Où il est maintenant » facultatifs. Ajouter coche Capturé (et Shiny, Baron, Gigamax) dans le dex de ce jeu ; supprimer ne décoche rien.",
+    "Bouton ＋ sur les cartes de la liste et sur les fiches : Pokémon et jeu d'origine préremplis (obligatoires), surnom, shiny, sexe (selon l'espèce), Baron, Gigamax et « Jeu actuel » facultatifs. Ajouter coche Capturé (et Shiny, Baron, Gigamax) dans le dex de ce jeu ; supprimer ne décoche rien.",
     "Fiches : bloc « Ma collection » (Vous en avez N). La collection est incluse dans l'export / import."
   ] },
   { "v": "v48", "d": "2026-10-19", "l": [

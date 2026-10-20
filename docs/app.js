@@ -2327,7 +2327,7 @@ function colOpen(o) {
       <div class="cfrow"><label class="cfc"><input type="checkbox" id="cfsh"${e.sh ? ' checked' : ''}> ✨ Shiny</label>
         <label class="cf cfs">Sexe<select id="cfsx"><option value="">—</option></select></label></div>
       <div class="cfrow cfx"><label class="cfc" id="cfbnw" hidden><input type="checkbox" id="cfbn"${e.bn ? ' checked' : ''}> Baron</label><label class="cfc" id="cfgxw" hidden><input type="checkbox" id="cfgx"${e.gx ? ' checked' : ''}> Gigamax</label></div>
-      <label class="cf">Où il est maintenant<select id="cfw">${wopts}</select></label>
+      <label class="cf">Jeu actuel<select id="cfw">${wopts}</select></label>
       <input id="cfwo" class="cfo" maxlength="60" placeholder="Précisez (ex. : Pokémon Bank)" value="${wo ? esc(wv.slice(6)) : ''}"${wo ? '' : ' hidden'}>
       <p id="cferr" class="cferr" role="alert" hidden></p>
       <div class="cfbtns">${ed ? '<button type="button" id="cfdel" class="cfdel">Supprimer</button>' : ''}<button type="submit" id="cfok" class="cfok">${ed ? 'Enregistrer' : 'Ajouter'}</button></div>
