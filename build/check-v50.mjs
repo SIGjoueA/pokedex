@@ -40,6 +40,16 @@ ok(await p.evaluate(() => !$('#pocket').hidden && $('#modeseg button[data-m=pk]'
 v = await p.evaluate(() => ({ h: $('.pkhead').textContent, a1: $('[data-pks="A1"] .pksc').textContent }));
 ok(/^.*4 \/ /.test(v.h) && v.a1 === '3 / 286', 'completion overall + per set ' + JSON.stringify(v));
 await shot('1-extensions.png');
+v = await p.evaluate(() => [...document.querySelectorAll('.pkblk')].map(d => ({ b: d.dataset.blk, t: d.querySelector('.pkbn b').textContent, n: d.querySelector('summary .pksc').textContent, ids: [...d.querySelectorAll('[data-pks]')].map(x => x.dataset.pks) })));
+ok(v.length === 2 && v[0].b === 'B' && v[1].b === 'A' && v[0].t === 'Série B', 'blocks: Série B then Série A ' + JSON.stringify(v.map(x => x.t)));
+ok(v[0].ids[0] === 'B4b' && v[0].ids.at(-1) === 'P-B' && v[1].ids[0] === 'A4b' && v[1].ids.at(-1) === 'P-A' && v[1].ids.includes('A1'), 'sets newest first, promo last ' + JSON.stringify(v.map(x => x.ids)));
+ok(/^4 \//.test(v[1].n) && /^0 \//.test(v[0].n), 'per-block completion ' + v.map(x => x.n));
+await p.evaluate(() => { $('.pkblk[data-blk=A] summary').click(); window.scrollTo(0, 0); }); await sleep(300); await shot('7-blocs.png'); await p.evaluate(() => { $('.pkblk[data-blk=A] summary').click(); }); await sleep(200);
+await p.evaluate(() => { $('.pkblk[data-blk=B] summary').click(); }); await sleep(300);
+ok(await p.evaluate(() => !$('.pkblk[data-blk=B]').open) && (await L('pkfold')).includes('B'), 'block folded + remembered');
+await p.reload({ waitUntil: 'networkidle0' }); await sleep(1800);
+ok(await p.evaluate(() => !$('.pkblk[data-blk=B]').open && $('.pkblk[data-blk=A]').open), 'fold state kept after reload');
+await p.evaluate(() => { $('.pkblk[data-blk=B] summary').click(); }); await sleep(300);
 await p.click('[data-pks="A1"]'); await sleep(1500);
 v = await p.evaluate(() => ({ n: document.querySelectorAll('#pocket .pkcard').length, own: document.querySelectorAll('#pocket .pkcard.own').length, img: $('#pocket .pkcard img').getAttribute('src'), h: $('#pocket h2').textContent }));
 ok(v.n === 286 && v.own === 3 && /assets\.tcgdex\.net\/fr\/tcgp\/A1\/001\/low\.webp/.test(v.img) && v.h === 'Puissance Génétique', 'set grid: 286 cards, 3 owned, TCGdex low webp ' + JSON.stringify(v));

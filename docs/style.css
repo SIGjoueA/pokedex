@@ -584,3 +584,7 @@ body.colopen{overflow:hidden}
 .pklc{font-weight:800;width:28px;font-size:13px}.pkln2{flex:1;font-size:14px}.pkn{min-width:26px;text-align:center;font-variant-numeric:tabular-nums}
 .pkst{width:38px;height:38px;border-radius:10px;border:2px solid var(--line);background:var(--bg2);color:var(--fg);font-size:18px;font-weight:700;cursor:pointer}.pkst:disabled{opacity:.35}
 .pkbig .pkhi{width:min(70%,240px)}
+.pkblk{margin:12px 0}.pkblk>summary{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center;list-style:none;cursor:pointer;padding:10px 12px;border-radius:14px;background:var(--bg3);min-height:44px}
+.pkblk>summary::-webkit-details-marker{display:none}.pkblk>summary .pkbar{grid-column:1/-1}.pkbn{display:flex;flex-direction:column}.pkbn b{font-size:18px}.pkbn b::before{content:'▸ ';display:inline-block}.pkblk[open] .pkbn b::before{content:'▾ '}.pkbn small{color:var(--mute);font-size:12px}
+.pkblk .pksets{margin:8px 0 0}
+.pkblk>summary,.pkbn b{color:var(--fg)}

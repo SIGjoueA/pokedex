@@ -2499,6 +2499,16 @@ function pkCardHTML(s, c, withSet) {
   return `<div class="pkcard${o ? ' own' : ''}" data-pk="${c.id}"><button type="button" class="pkim" data-pkv="${c.id}" aria-label="Voir ${esc(c[1])}">${im ? `<img src="${im}" alt="" loading="lazy" decoding="async" width="245" height="337">` : `<span class="pkno">${esc(c[1])}</span>`}${n ? `<b class="pkq">×${n}</b>` : ''}</button>` +
     `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.id}" aria-label="Ajouter 1 exemplaire (${pkLangName()}) : ${esc(c[1])}">＋</button></div></div>`;
 }
+// v51: sets grouped by block (« Série A », « Série B »… as on Poképédia), newest block first, sets newest first, promo set last
+const pkBlk = x => /^P-/.test(x.id) ? x.id.slice(2, 3) : x.id[0];
+let PK_FOLD = new Set(store.get('pkfold', []) || []);
+function pkSetRow(x) { const n = pkCnt(x); return `<li><button type="button" class="pkset${n === x.cards.length ? ' done' : ''}" data-pks="${x.id}"><span class="pksn"><b>${esc(x.n)}</b><small>${esc(x.id)}${x.d ? ' · ' + new Date(x.d + 'T12:00:00').toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }) : ''}</small></span><span class="pksc">${n} / ${x.cards.length}</span>${pkBar(n, x.cards.length)}</button></li>`; }
+function pkBlocks() {
+  const bl = [...new Set(PK.s.map(pkBlk))].sort().reverse();
+  return bl.map(b => { const ss = PK.s.filter(x => pkBlk(x) === b).sort((x, y) => (/^P-/.test(x.id) - /^P-/.test(y.id)) || (y.d || '').localeCompare(x.d || '') || y.id.localeCompare(x.id));
+    const t = ss.reduce((a, x) => a + x.cards.length, 0), n = ss.reduce((a, x) => a + pkCnt(x), 0);
+    return `<details class="pkblk" data-blk="${b}"${PK_FOLD.has(b) ? '' : ' open'}><summary><span class="pkbn"><b>Série ${b}</b><small>${ss.length} extensions</small></span><span class="pksc">${n} / ${t}</span>${pkBar(n, t)}</summary><ul class="plain pksets">${ss.map(pkSetRow).join('')}</ul></details>`; }).join('');
+}
 function pkRender() {
   const box = $('#pocket'); if (!box) return;
   box.hidden = !pkMode; if (!pkMode) return;
@@ -2508,7 +2518,7 @@ function pkRender() {
   const s = pkSet && PK.s.find(x => x.id === pkSet);
   if (!s) {
     box.innerHTML = `<div class="pkhead"><h2>Cartodex Pocket</h2><p><b>${own}</b> / ${all} cartes · ${dec(pkPct(own, all))} %</p>${pkBar(own, all)}</div>` +
-      `<ul class="plain pksets">${PK.s.slice().reverse().map(x => { const n = pkCnt(x); return `<li><button type="button" class="pkset${n === x.cards.length ? ' done' : ''}" data-pks="${x.id}"><span class="pksn"><b>${esc(x.n)}</b><small>${esc(x.id)}${x.d ? ' · ' + new Date(x.d + 'T12:00:00').toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }) : ''}</small></span><span class="pksc">${n} / ${x.cards.length}</span>${pkBar(n, x.cards.length)}</button></li>`; }).join('')}</ul>` + credit;
+      pkBlocks() + credit;
     return;
   }
   const rs = [...new Set(s.cards.map(c => c[2]))].sort((a, b) => a - b);
@@ -2567,5 +2577,6 @@ function pkInit() {
     const o = e.target.closest('[data-pko]'); if (o) { pkOwn = o.dataset.pko; pkRender(); return; }
     const r = e.target.closest('[data-pkr]'); if (r) { const k = +r.dataset.pkr; pkRar.has(k) ? pkRar.delete(k) : pkRar.add(k); pkRender(); }
   }, true);
+  document.addEventListener('toggle', e => { const d = e.target; if (!d.classList || !d.classList.contains('pkblk')) return; d.open ? PK_FOLD.delete(d.dataset.blk) : PK_FOLD.add(d.dataset.blk); store.set('pkfold', [...PK_FOLD]); }, true);
   pkSeg(); pkRender();
 }
