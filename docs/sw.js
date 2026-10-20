@@ -35,7 +35,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
-  if (url.hostname === 'assets.tcgdex.net') { // v50: Pocket card images (TCGdex), cache-first once seen
+  if (url.hostname === 'assets.tcgdex.net' || url.hostname === 'limitlesstcg.nyc3.cdn.digitaloceanspaces.com') { // v50: Pocket card images (TCGdex), cache-first once seen
     e.respondWith(caches.open('pokedex-pocket').then(async c => { const hit = await c.match(req); if (hit) return hit; const res = await fetch(req); if (res.ok) c.put(req, res.clone()); return res; }));
     return;
   }

@@ -17,6 +17,14 @@ const ALL = PKD.s.reduce((a, s) => a + s.cards.length, 0);
 ok(PKD.s.length >= 15 && ALL > 2000, `pocket.json: ${PKD.s.length} sets, ${ALL} cards`);
 ok(PKD.s.every(s => s.id && s.n && s.cards.length) && PKD.s.flatMap(s => s.cards).every(c => c.length === 6 && PKD.r[c[2]]), 'every card has localId, name, rarity');
 ok(PKD.s.find(s => s.id === 'A1').n === 'Puissance Génétique', 'French set names');
+// v50c: sets missing from TCGdex merged from Limitless + Pokékalos
+const NEW = { A4b: 379, 'P-B': 103, B2b: 117, B3: 234, B3a: 109, B3b: 106, B4: 233, B4a: 110, B4b: 429 };
+ok(Object.entries(NEW).every(([id, n]) => { const x = PKD.s.find(s => s.id === id); return x && x.cards.length === n && x.n && x.d; }), 'merged sets A4b, P-B, B2b…B4b present with expected counts');
+ok(PKD.s.find(s => s.id === 'P-A').cards.length === 117, 'Promo-A completed to 117');
+ok(PKD.s.find(s => s.id === 'B3').n === 'Aura Palpitante' && PKD.s.find(s => s.id === 'B3').cards[0][1] === 'Saquedeneu', 'French names for merged sets');
+const nc = PKD.s.flatMap(s => s.cards.filter(c => !c[4] && !c[3].length)); ok(nc.length === 0, 'every Pokémon card linked to a species ' + nc.length);
+ok(PKD.s.filter(s => s.src).flatMap(s => s.cards).some(c => c[2] === 7) && PKD.s.filter(s => s.src).flatMap(s => s.cards).some(c => c[2] === 9), 'shiny + crown rarities in merged sets');
+const idsAll = PKD.s.flatMap(s => s.cards.map(c => s.id + '-' + c[0])); ok(idsAll.includes('A1-001') && idsAll.includes('B4b-429') && idsAll.includes('P-A-117'), 'card ids stable / TCGdex style');
 const ids = PKD.s.flatMap(s => s.cards.map(c => s.id + '-' + c[0])); ok(new Set(ids).size === ids.length, 'unique card ids');
 const rr = new Set(PKD.s.flatMap(s => s.cards.map(c => c[2]))); ok([0, 3, 4, 6, 7, 8, 9].every(r => rr.has(r)), 'diamonds, stars, shiny and crown rarities present');
 await p.goto(BASE + '#/', { waitUntil: 'networkidle0' }); await sleep(600);
@@ -68,6 +76,11 @@ ok(await p.evaluate(n => document.querySelectorAll('#pocket .pkcard').length ===
 await shot('3-filtre-rarete.png');
 await p.click('[data-pkv]'); await sleep(600); ok(await p.evaluate(() => !!$('#colmodal .pkhi') && /high\.webp/.test($('#colmodal .pkhi').src)), 'tap image → large view');
 await p.click('#colx'); await sleep(200);
+await p.click('.pkback'); await sleep(500);
+await p.click('[data-pks="B3"]'); await sleep(1500);
+v = await p.evaluate(() => ({ n: document.querySelectorAll('#pocket .pkcard').length, img: $('#pocket .pkcard img').getAttribute('src') }));
+ok(v.n === 234 && /limitlesstcg.*\/B3\/B3_001_EN_SM\.webp/.test(v.img), 'B3 grid with Limitless images ' + JSON.stringify(v));
+ok(await p.evaluate(() => $('#pocket .pkcard img').decode().then(() => true, () => false)), 'Limitless image loads');
 await p.click('.pkback'); await sleep(500); ok(await p.evaluate(() => document.querySelectorAll('.pkset').length > 10), 'back to sets');
 // sheet block
 await p.evaluate(() => { location.hash = '#/p/25'; }); await sleep(2500);

@@ -2488,7 +2488,9 @@ function pkMerge(raw) { const inc = pkNorm(raw); for (const [id, m] of Object.en
 const pkLoad = () => PKP || (PKP = getJSON('data/pocket.json').then(d => { PK = d; for (const s of d.s) for (const c of s.cards) c.id = s.id + '-' + c[0]; return d; }).catch(e => { PKP = null; throw e; }));
 // rarity index → short symbol (◆ diamonds, ☆ stars, ✨ chromatiques, 👑 couronne, Promo = sans rareté)
 const PK_SYM = ['◆', '◆◆', '◆◆◆', '◆◆◆◆', '☆', '☆☆', '☆☆☆', '✨', '✨✨', '👑', 'Promo'];
-const pkImg = (s, c, q = 'low') => c[5] === 2 ? '' : `${PK.img}${c[5] ? 'fr' : 'en'}/tcgp/${s.id}/${c[0]}/${q}.webp`;
+// v50c: image source 0 TCGdex EN, 1 TCGdex FR, 2 none, 3 Limitless TCG (English, sets missing from TCGdex)
+const PK_LL = 'https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/';
+const pkImg = (s, c, q = 'low') => c[5] === 2 ? '' : c[5] === 3 ? `${PK_LL}${s.id}/${s.id}_${c[0]}_EN${q === 'low' ? '_SM' : ''}.webp` : `${PK.img}${c[5] ? 'fr' : 'en'}/tcgp/${s.id}/${c[0]}/${q}.webp`;
 const pkPct = (a, b) => b ? Math.floor(a / b * 1000) / 10 : 0;
 const pkCnt = s => s.cards.reduce((a, c) => a + PKO.has(c.id), 0);
 const pkBar = (a, b) => `<div class="pkbar" role="progressbar" aria-valuemin="0" aria-valuemax="${b}" aria-valuenow="${a}"><i style="width:${pkPct(a, b)}%"></i></div>`;
@@ -2502,7 +2504,7 @@ function pkRender() {
   box.hidden = !pkMode; if (!pkMode) return;
   if (!PK) { box.innerHTML = '<p class="note">Chargement des cartes…</p>'; pkLoad().then(pkRender).catch(() => { box.innerHTML = '<p class="note">Impossible de charger les cartes Pocket (hors ligne ?).</p>'; }); return; }
   const all = PK.s.reduce((a, s) => a + s.cards.length, 0), own = PK.s.reduce((a, s) => a + pkCnt(s), 0);
-  const credit = `<p class="note pkcred">Données et images : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>. Pokémon TCG Pocket © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA.</p>`;
+  const credit = `<p class="note pkcred">Données et images : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>, <a href="https://pocket.limitlesstcg.com" target="_blank" rel="noopener">Limitless TCG</a> et <a href="https://www.pokekalos.fr" target="_blank" rel="noopener">Pokékalos</a> (extensions récentes). Pokémon TCG Pocket © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA.</p>`;
   const s = pkSet && PK.s.find(x => x.id === pkSet);
   if (!s) {
     box.innerHTML = `<div class="pkhead"><h2>Cartodex Pocket</h2><p><b>${own}</b> / ${all} cartes · ${dec(pkPct(own, all))} %</p>${pkBar(own, all)}</div>` +
