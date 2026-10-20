@@ -200,9 +200,24 @@ await shot('12-evolue.png'); await p.click('#colx');
 await det('ev2'); await p.click('#cfevo'); await sleep(300);
 evs = await p.evaluate(() => [...document.querySelectorAll('[data-evo]')].map(b => b.dataset.evo));
 ok(evs.length === 8 && evs.includes('700'), 'Évoli → 8 evolutions'); await p.click('#colx');
-await det('ev3'); await p.click('#cfevo'); await sleep(300); await p.click('[data-evo="475"]'); await sleep(900);
-e1 = (await L('collection')).find(e => e.id === 'ev3'); ok(e1.k === '475' && e1.sx === 'm', 'female Kirlia → Gallade: sex adjusted to male (species 100 % ♂) ' + e1.sx);
-await p.click('#colx');
+// v49e: gender-conditioned evolutions
+await p.evaluate(() => { const c = JSON.parse(localStorage.getItem('collection')); const a = (id, k, sx) => c.push({ id, k, g: 'sv', n: '', sh: false, sx, w: '', at: '2026-09-01T10:00:00Z' });
+  a('gk1', '281', 'm'); a('gk2', '281', ''); a('gc1', '412', 'f'); a('gc2', '412', 'm'); a('gc3', '412-sandy', 'f'); a('gs1', '361', 'm'); a('gs2', '361', 'f'); a('gp1', '677', 'f'); a('gh1', '667', 'f');
+  localStorage.setItem('collection', JSON.stringify(c)); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1200);
+const evl = async id => { await det(id); const b = await p.$('#cfevo'); if (!b) return []; await p.click('#cfevo'); await sleep(300); return p.evaluate(() => [...document.querySelectorAll('[data-evo]')].map(b => b.dataset.evo)); };
+let L1 = await evl('ev3'); ok(JSON.stringify(L1) === '["282"]', 'female Kirlia → Gardevoir only (no Gallame) ' + JSON.stringify(L1)); await p.click('#colx');
+L1 = await evl('gk1'); ok(L1.includes('282') && L1.includes('475'), 'male Kirlia → Gardevoir + Gallame'); await p.click('#colx');
+L1 = await evl('gk2'); ok(L1.includes('475'), 'Kirlia, sex unknown → Gallame offered');
+await p.click('[data-evo="475"]'); await sleep(900); ok((await L('collection')).find(e => e.id === 'gk2').sx === 'm', 'unknown sex → set to ♂ by the Gallame condition'); await p.click('#colx');
+L1 = await evl('gc1'); ok(JSON.stringify(L1) === '["413"]', 'female Cheniti → Cheniselle only ' + JSON.stringify(L1)); await p.click('#colx');
+L1 = await evl('gc2'); ok(JSON.stringify(L1) === '["414"]', 'male Cheniti → Papilord only ' + JSON.stringify(L1)); await p.click('#colx');
+L1 = await evl('gc3'); ok(JSON.stringify(L1) === '["413-sandy"]', 'female Cheniti Sable → Cheniselle Sable only ' + JSON.stringify(L1)); await p.click('#colx');
+L1 = await evl('gs1'); ok(JSON.stringify(L1) === '["362"]', 'male Stalgamin → Oniglali only ' + JSON.stringify(L1)); await p.click('#colx');
+L1 = await evl('gs2'); ok(L1.includes('478') && L1.includes('362'), 'female Stalgamin → Oniglali + Momartik');
+await p.click('[data-evo="478"]'); await sleep(900); ok((await L('collection')).find(e => e.id === 'gs2').sx === 'f', 'Momartik keeps ♀'); await p.click('#colx');
+L1 = await evl('gp1'); ok(JSON.stringify(L1) === '["678-female"]', 'female Psystigri → Mistigrix femelle only ' + JSON.stringify(L1)); await p.click('#colx');
+L1 = await evl('gh1'); ok(JSON.stringify(L1) === '["668"]', 'female Hélionceau → Némélios (visual difference only) ' + JSON.stringify(L1)); await p.click('#colx');
+await p.evaluate(() => { const c = JSON.parse(localStorage.getItem('collection')).filter(e => !/^g[kcsph]\d$/.test(e.id)); localStorage.setItem('collection', JSON.stringify(c)); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1200);
 // separation
 await det('ev2'); await p.select('#cfgs', 'trade'); await sleep(150);
 ok(await p.evaluate(() => !$('#cfgx2').hidden), 'status chosen → date + note fields');

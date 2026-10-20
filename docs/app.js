@@ -2285,16 +2285,21 @@ const colGoneTxt = g => GONE_L[g.s] + (g.d ? ' le ' + new Date(g.d + 'T12:00:00'
 const colAct = e => !e.gone;
 // Evolutions of an entry (evo.json edges are form-aware: Goupix d’Alola → Feunard d’Alola, Miaouss de Galar → Berserkatt).
 // A non-regional form without its own edges (Gigamax, cosmetic forms) uses the base species' edges.
-async function colEvos(p) {
+// v49e: gender-conditioned evolutions (Kirlia → Gallame ♂, Cheniti → Cheniselle ♀ / Papilord ♂, Stalgamin → Momartik ♀, Apitrini → Apireine ♀,
+// Tritox → Malamandre ♀, Psystigri / Gourmelet / Bargantua → male / female entries): game gender code (1 ♀, 2 ♂), else the GO flag unless the
+// target only differs visually (core « fe », e.g. Némélios). A specimen of the other sex is not offered the evolution.
+const colEvoSex = (d, o, b) => { const c = (d || []).map(x => (x.g || '').split('|')[2]).find(Boolean); return c === '1' ? 'f' : c === '2' ? 'm' : o && o.g && !b.fe ? (o.g === 'mâle' ? 'm' : 'f') : ''; };
+async function colEvos(p, sx) {
   if (!p) return [];
   const sh = await loadShared(); const out = [], seen = new Set();
-  const from = k => sh.evo.filter(([f]) => f === k).forEach(([, t, d]) => { const b = BY_KEY[t]; if (b && !b.bo && !seen.has(t)) { seen.add(t); out.push({ p: b, how: ((d || []).slice(-1)[0] || {}).x || [] }); } });
+  const from = k => sh.evo.filter(([f]) => f === k).forEach(([, t, d, o]) => { const b = BY_KEY[t]; if (!b || b.bo || seen.has(t)) return; const req = colEvoSex(d, o, b);
+    if (req && (sx === 'm' || sx === 'f') && sx !== req) return; seen.add(t); out.push({ p: b, sx: req, how: ((d || []).slice(-1)[0] || {}).x || [] }); });
   from(p.k); if (!out.length && p.c !== 'reg' && p.k !== String(p.id)) from(String(p.id));
   return out;
 }
-async function colEvolve(e, np) {
+async function colEvolve(e, np, req) {
   const op = BY_KEY[e.k]; let gr = null; try { gr = (await loadSp(np.id)).gr; } catch {}
-  if (gr === -1) e.sx = 'x'; else if (gr === 0) e.sx = e.sx === 'f' ? '' : (e.sx === 'x' ? '' : e.sx); else if (gr === 8) e.sx = e.sx === 'm' ? '' : (e.sx === 'x' ? '' : e.sx); else if (e.sx === 'x') e.sx = '';
+  if (req) e.sx = req; else if (gr === -1) e.sx = 'x'; else if (gr === 0) e.sx = e.sx === 'f' ? '' : (e.sx === 'x' ? '' : e.sx); else if (gr === 8) e.sx = e.sx === 'm' ? '' : (e.sx === 'x' ? '' : e.sx); else if (e.sx === 'x') e.sx = '';
   if (gr === 0 && !e.sx) e.sx = 'm'; if (gr === 8 && !e.sx) e.sx = 'f';
   if (e.bn && !colBaronOk(np, e.g)) delete e.bn; if (e.gx && !colGmax(np, e.g)) delete e.gx;
   const now = new Date().toISOString();
@@ -2396,11 +2401,11 @@ function colOpen(o) {
   if (ed) {
     q('#cfgs').onchange = () => { q('#cfgx2').hidden = !q('#cfgs').value; };
     const rs = q('#cfrest'); if (rs) rs.onclick = () => { delete ed.gone; ed.up = new Date().toISOString(); colSave(); colRender(); colOpen({ id: ed.id }); toast('Pokémon remis dans votre collection.'); };
-    colEvos(p).then(ev => { const w = q('#cfevow'); if (!ev.length || !w || !w.isConnected) return;
+    colEvos(p, e.sx).then(ev => { const w = q('#cfevow'); if (!ev.length || !w || !w.isConnected) return;
       w.innerHTML = '<button type="button" id="cfevo" class="cfevo">Faire évoluer</button>';
       q('#cfevo').onclick = () => { const l = q('#cfevol'); l.hidden = !l.hidden; if (l.hidden) return;
-        l.innerHTML = '<p class="cfevoh">En quel Pokémon a-t-il évolué ?</p>' + ev.map(x => `<button type="button" class="colrow cfevopick" data-evo="${esc(x.p.k)}"><img src="${e.sh && x.p.sh ? `img/s/${x.p.k}.webp` : artOf(x.p)}" alt="" width="48" height="48"><span class="ct"><b>${esc(fullN(x.p))}</b>${x.how.length ? `<small>${esc(x.how.join(', '))}</small>` : ''}</span></button>`).join('') + '<small class="note">Le jeu d’origine, le surnom, le Shiny et le sexe sont conservés. Capturé est coché pour la nouvelle espèce.</small>';
-        l.querySelectorAll('[data-evo]').forEach(bt => bt.onclick = async () => { const np = BY_KEY[bt.dataset.evo]; const op = await colEvolve(ed, np);
+        l.innerHTML = '<p class="cfevoh">En quel Pokémon a-t-il évolué ?</p>' + ev.map(x => `<button type="button" class="colrow cfevopick" data-evo="${esc(x.p.k)}" data-sx="${x.sx}"><img src="${e.sh && x.p.sh ? `img/s/${x.p.k}.webp` : artOf(x.p)}" alt="" width="48" height="48"><span class="ct"><b>${esc(fullN(x.p))}</b>${x.how.length ? `<small>${esc(x.how.join(', '))}</small>` : ''}</span></button>`).join('') + '<small class="note">Le jeu d’origine, le surnom, le Shiny et le sexe sont conservés. Capturé est coché pour la nouvelle espèce.</small>';
+        l.querySelectorAll('[data-evo]').forEach(bt => bt.onclick = async () => { const np = BY_KEY[bt.dataset.evo]; const op = await colEvolve(ed, np, bt.dataset.sx || '');
           colRender(); if (DET && DET.p && !$('#detail-view').hidden) { try { refreshTrack(DET.p); } catch {} } if (!colMode) render();
           colOpen({ id: ed.id }); toast(`${fullN(op)} a évolué en ${fullN(np)} · Capturé coché dans ${colGName(ed.g)}.`); }); };
     }).catch(() => {});
