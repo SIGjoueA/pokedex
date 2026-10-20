@@ -35,6 +35,10 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
+  if (url.hostname === 'assets.tcgdex.net') { // v50: Pocket card images (TCGdex), cache-first once seen
+    e.respondWith(caches.open('pokedex-pocket').then(async c => { const hit = await c.match(req); if (hit) return hit; const res = await fetch(req); if (res.ok) c.put(req, res.clone()); return res; }));
+    return;
+  }
   if (url.origin !== location.origin) return;
   if (url.pathname.includes('/img/')) { // cache-first for images, v40: one background revalidation per IMG_VERSION
     e.respondWith(caches.open(IMGS).then(async c => {

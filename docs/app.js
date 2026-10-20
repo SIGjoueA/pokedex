@@ -609,7 +609,7 @@ async function boot() {
   store.set('mega_gems', [...MEGA_GEMS]); // legacy un-prefixed gem keys → "za:"
   $('#formsbtn').setAttribute('aria-pressed', state.forms);
   buildControls();
-  render(); colInit();
+  render(); colInit(); pkInit();
   window.addEventListener('hashchange', route);
   route();
   registerSW();
@@ -1727,13 +1727,13 @@ function renderDetail() {
     ${desc}
     ${baseNoteHTML(p)}
     <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
-    <div id="mycol">${myColHTML(p)}</div>
+    <div id="mycol">${myColHTML(p)}</div><div id="mypocket"></div>
     ${formSwitcher(p, gm)}
     ${pre}
     ${body}
     <p class="note disclaimer">Les données proviennent de PokéAPI, de Poképédia (CC BY-NC-SA 3.0 FR) et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
-  setBarH(); initSheetGameMenu(); setSprite(spriteMode, true); // v35: HOME (default) or the mode chosen on this sheet
+  setBarH(); initSheetGameMenu(); pkSheet(p); setSprite(spriteMode, true); // v35: HOME (default) or the mode chosen on this sheet
 }
 // hero names: French (h1) → genus · English → Japanese · romaji
 function namesHTML(p, sp) {
@@ -1983,7 +1983,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2081,7 +2081,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], collection: COLL };
+    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], collection: COLL, pocket: [...PKO] };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -2107,6 +2107,7 @@ boot();
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(kOk).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
+      if (Array.isArray(d.pocket)) { d.pocket.forEach(x => { if (typeof x === 'string' && /^[A-Za-z0-9-]+-[A-Za-z0-9]+$/.test(x)) PKO.add(x); }); pkSave(); pkRender(); } // v50: Pocket cards (merged, never removed)
       if (Array.isArray(d.collection)) colImport(d.collection); // v49: older backups have no collection → nothing changes
       migrateEnergy(); migrateMarks(); rebuildHome(); if (!d.sal_h47) migrateSalHome(true); store.set('mega_energy', [...MEGA_ENERGY]);
       store.set('favs', [...FAVS]); store.set('caught', [...CAUGHT]); store.set('shiny', [...SHINY]); store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]);
@@ -2324,7 +2325,7 @@ function colCardHTML(e) {
 }
 function colRender() {
   document.body.classList.toggle('colmode', colMode);
-  document.querySelectorAll('#modeseg button').forEach(b => b.setAttribute('aria-pressed', String((b.dataset.m === 'col') === colMode)));
+  if (typeof pkSeg === 'function') pkSeg();
   const box = $('#collection'); if (!box) return;
   box.hidden = !colMode;
   if (colMode) {
@@ -2334,7 +2335,7 @@ function colRender() {
   }
   const mc = $('#mycol'); if (mc && DET && DET.p) mc.innerHTML = myColHTML(DET.p);
 }
-function colSetMode(on) { colMode = on; store.set('colmode', on); colRender(); if (!on) render(); window.scrollTo(0, 0); }
+function colSetMode(on) { colMode = on; store.set('colmode', on); colRender(); if (!on && !pkMode) render(); window.scrollTo(0, 0); }
 // Modal: add (prefilled) or edit an entry. Origin game is fixed once added.
 function colPokeOpts() { return E.filter(p => !p.bo).map(p => `<option value="${esc(fullN(p))} #${pad(p.id)}"></option>`).join(''); }
 let COL_DL = false;
@@ -2449,7 +2450,7 @@ function colFilter(q, pk, msg) {
 }
 function closeCol() { const m = $('#colmodal'); if (m) m.remove(); document.body.classList.remove('colopen'); }
 function colInit() {
-  const seg = $('#modeseg'); if (seg) seg.addEventListener('click', e => { const b = e.target.closest('button'); if (b) colSetMode(b.dataset.m === 'col'); });
+  const seg = $('#modeseg'); if (seg) seg.addEventListener('click', e => { const b = e.target.closest('button'); if (b) pkSetMode(b.dataset.m); });
   document.addEventListener('click', e => {
     const a = e.target.closest('[data-add]');
     if (a) { e.preventDefault(); e.stopPropagation();
@@ -2461,4 +2462,85 @@ function colInit() {
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#colmodal')) closeCol(); else if ((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.cadd')) { e.preventDefault(); e.target.click(); } });
   addEventListener('hashchange', closeCol);
   colRender();
+}
+
+/* ---------------- v50: Cartodex Pokémon TCG Pocket (data/pocket.json from TCGdex; card images loaded on demand from assets.tcgdex.net) ---------------- */
+// Storage « pocket »: array of owned card ids "A1-001". Mode « Pocket » = third segment next to Dex | Collection.
+let PK = null, PKP = null, pkMode = store.get('pkmode', false) === true, pkSet = '', pkOwn = 'all', pkRar = new Set();
+const PKO = new Set((store.get('pocket', []) || []).filter(x => typeof x === 'string'));
+const pkSave = () => store.set('pocket', [...PKO]);
+const pkLoad = () => PKP || (PKP = getJSON('data/pocket.json').then(d => { PK = d; for (const s of d.s) for (const c of s.cards) c.id = s.id + '-' + c[0]; return d; }).catch(e => { PKP = null; throw e; }));
+// rarity index → short symbol (◆ diamonds, ☆ stars, ✨ chromatiques, 👑 couronne, Promo = sans rareté)
+const PK_SYM = ['◆', '◆◆', '◆◆◆', '◆◆◆◆', '☆', '☆☆', '☆☆☆', '✨', '✨✨', '👑', 'Promo'];
+const pkImg = (s, c, q = 'low') => c[5] === 2 ? '' : `${PK.img}${c[5] ? 'fr' : 'en'}/tcgp/${s.id}/${c[0]}/${q}.webp`;
+const pkPct = (a, b) => b ? Math.floor(a / b * 1000) / 10 : 0;
+const pkCnt = s => s.cards.reduce((a, c) => a + PKO.has(c.id), 0);
+const pkBar = (a, b) => `<div class="pkbar" role="progressbar" aria-valuemin="0" aria-valuemax="${b}" aria-valuenow="${a}"><i style="width:${pkPct(a, b)}%"></i></div>`;
+function pkCardHTML(s, c, withSet) {
+  const o = PKO.has(c.id), im = pkImg(s, c);
+  return `<div class="pkcard${o ? ' own' : ''}" data-pk="${c.id}"><button type="button" class="pkim" data-pkv="${c.id}" aria-label="Voir ${esc(c[1])}">${im ? `<img src="${im}" alt="" loading="lazy" decoding="async" width="245" height="337">` : `<span class="pkno">${esc(c[1])}</span>`}</button>` +
+    `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.id}" aria-pressed="${o}" aria-label="${o ? 'Possédée' : 'Non possédée'} : ${esc(c[1])}">${o ? '✓' : '＋'}</button></div></div>`;
+}
+function pkRender() {
+  const box = $('#pocket'); if (!box) return;
+  box.hidden = !pkMode; if (!pkMode) return;
+  if (!PK) { box.innerHTML = '<p class="note">Chargement des cartes…</p>'; pkLoad().then(pkRender).catch(() => { box.innerHTML = '<p class="note">Impossible de charger les cartes Pocket (hors ligne ?).</p>'; }); return; }
+  const all = PK.s.reduce((a, s) => a + s.cards.length, 0), own = PK.s.reduce((a, s) => a + pkCnt(s), 0);
+  const credit = `<p class="note pkcred">Données et images : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>. Pokémon TCG Pocket © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA.</p>`;
+  const s = pkSet && PK.s.find(x => x.id === pkSet);
+  if (!s) {
+    box.innerHTML = `<div class="pkhead"><h2>Cartodex Pocket</h2><p><b>${own}</b> / ${all} cartes · ${dec(pkPct(own, all))} %</p>${pkBar(own, all)}</div>` +
+      `<ul class="plain pksets">${PK.s.slice().reverse().map(x => { const n = pkCnt(x); return `<li><button type="button" class="pkset${n === x.cards.length ? ' done' : ''}" data-pks="${x.id}"><span class="pksn"><b>${esc(x.n)}</b><small>${esc(x.id)}${x.d ? ' · ' + new Date(x.d + 'T12:00:00').toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }) : ''}</small></span><span class="pksc">${n} / ${x.cards.length}</span>${pkBar(n, x.cards.length)}</button></li>`; }).join('')}</ul>` + credit;
+    return;
+  }
+  const rs = [...new Set(s.cards.map(c => c[2]))].sort((a, b) => a - b);
+  const list = s.cards.filter(c => (!pkRar.size || pkRar.has(c[2])) && (pkOwn === 'all' || (pkOwn === 'own') === PKO.has(c.id)));
+  const n = pkCnt(s);
+  box.innerHTML = `<div class="pkhead"><button type="button" class="pkback" data-pks="">← Extensions</button><h2>${esc(s.n)}</h2><p><b>${n}</b> / ${s.cards.length} cartes · ${dec(pkPct(n, s.cards.length))} %${s.o && s.o < s.cards.length ? ` <small>(${s.o} de base + ${s.cards.length - s.o} secrètes)</small>` : ''}</p>${pkBar(n, s.cards.length)}</div>` +
+    `<div class="pkfil"><div class="seg" id="pkown">${[['all', 'Toutes'], ['own', 'Possédées'], ['miss', 'Manquantes']].map(([v, t]) => `<button type="button" data-pko="${v}" aria-pressed="${pkOwn === v}">${t}</button>`).join('')}</div>` +
+    `<div class="pkrar" id="pkrar">${rs.map(r => `<button type="button" class="chip pkr r${r}" data-pkr="${r}" aria-pressed="${pkRar.has(r)}" title="${esc(PK.r[r])}">${PK_SYM[r]}</button>`).join('')}</div></div>` +
+    `<p class="note pkcnt">${list.length} carte${list.length > 1 ? 's' : ''} affichée${list.length > 1 ? 's' : ''}</p><div class="pkgrid">${list.map(c => pkCardHTML(s, c)).join('')}</div>` + credit;
+}
+function pkSetMode(m) { // m: 'dex' | 'col' | 'pk'
+  pkMode = m === 'pk'; store.set('pkmode', pkMode);
+  document.body.classList.toggle('pkmode', pkMode);
+  colSetMode(m === 'col'); pkSeg(); pkRender();
+}
+function pkSeg() { document.querySelectorAll('#modeseg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.m === (pkMode ? 'pk' : colMode ? 'col' : 'dex')))); }
+function pkToggle(id) {
+  if (PKO.has(id)) PKO.delete(id); else PKO.add(id); pkSave();
+  document.querySelectorAll(`[data-pk="${id}"]`).forEach(el => { const o = PKO.has(id); el.classList.toggle('own', o); const b = el.querySelector('.pktk'); b.setAttribute('aria-pressed', o); b.textContent = o ? '✓' : '＋'; b.setAttribute('aria-label', b.getAttribute('aria-label').replace(/^[^:]+/, o ? 'Possédée ' : 'Non possédée ')); });
+  if (pkMode && (pkOwn !== 'all')) pkRender(); else { const h = $('#pocket .pkhead'); if (h && pkMode) pkRender(); }
+  const mp = $('#mypocket'); if (mp && DET && DET.p) pkSheet(DET.p);
+}
+function pkView(id) {
+  const [sid] = id.split('-'), s = PK.s.find(x => x.id === id.slice(0, id.lastIndexOf('-'))) || PK.s.find(x => x.id === sid), c = s && s.cards.find(x => x.id === id); if (!c) return;
+  const sp = c[3].map(d => E.find(p => p.id === d && !p.c)).filter(Boolean);
+  closeCol(); const m = document.createElement('div'); m.id = 'colmodal'; m.className = 'colback';
+  m.innerHTML = `<div class="colsheet pkbig" role="dialog" aria-modal="true" aria-labelledby="pktitle"><div class="menuhead"><h2 id="pktitle">${esc(c[1])}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
+    ${pkImg(s, c) ? `<img class="pkhi" src="${pkImg(s, c, 'high')}" alt="${esc(c[1])}">` : ''}<p><b>${esc(s.n)}</b> · n° ${esc(c[0])} · ${esc(PK.r[c[2]])} <span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span></p>
+    ${sp.length ? `<p>${sp.map(p => `<a href="#/p/${p.k}">Voir la fiche ${esc(fullN(p))}</a>`).join(' · ')}</p>` : ''}
+    <div class="cfbtns"><button type="button" class="cfok pktk2" data-pkt="${c.id}">${PKO.has(c.id) ? '✓ Possédée (retirer)' : '＋ Je l’ai'}</button></div></div>`;
+  document.body.appendChild(m); document.body.classList.add('colopen');
+  m.addEventListener('click', ev => { if (ev.target === m) closeCol(); }); m.querySelector('#colx').onclick = closeCol;
+}
+function pkSheet(p) {
+  const box = $('#mypocket'); if (!box) return;
+  pkLoad().then(() => { if (!box.isConnected) return;
+    const cs = []; for (const s of PK.s) for (const c of s.cards) if (c[3].includes(p.id)) cs.push([s, c]);
+    if (!cs.length) { box.innerHTML = ''; return; }
+    const n = cs.filter(([, c]) => PKO.has(c.id)).length;
+    box.innerHTML = `<section class="box pkbox"><h2>Cartes Pocket <small class="cnt">${n} / ${cs.length}</small></h2><div class="pkgrid pkmini">${cs.slice().reverse().map(([s, c]) => pkCardHTML(s, c, true)).join('')}</div><p class="note">Touchez ＋ pour cocher une carte possédée. Données : TCGdex.</p></section>`;
+  }).catch(() => { box.innerHTML = ''; });
+}
+function pkInit() {
+  document.body.classList.toggle('pkmode', pkMode); if (pkMode && colMode) colSetMode(false);
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-pkt]'); if (t) { e.preventDefault(); e.stopPropagation(); pkToggle(t.dataset.pkt); if (t.classList.contains('pktk2')) t.textContent = PKO.has(t.dataset.pkt) ? '✓ Possédée (retirer)' : '＋ Je l’ai'; return; }
+    const v = e.target.closest('[data-pkv]'); if (v) { e.preventDefault(); pkView(v.dataset.pkv); return; }
+    const s = e.target.closest('[data-pks]'); if (s) { e.preventDefault(); pkSet = s.dataset.pks; pkRar.clear(); pkOwn = 'all'; pkRender(); window.scrollTo(0, 0); return; }
+    const o = e.target.closest('[data-pko]'); if (o) { pkOwn = o.dataset.pko; pkRender(); return; }
+    const r = e.target.closest('[data-pkr]'); if (r) { const k = +r.dataset.pkr; pkRar.has(k) ? pkRar.delete(k) : pkRar.add(k); pkRender(); }
+  }, true);
+  pkSeg(); pkRender();
 }

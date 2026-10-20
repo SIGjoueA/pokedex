@@ -17,7 +17,7 @@
 <body>
 <div id="list-view">
   <header class="top">
-    <div id="modeseg" class="seg modeseg" role="group" aria-label="Mode"><button type="button" data-m="dex" aria-pressed="true">Dex</button><button type="button" data-m="col" aria-pressed="false">Collection</button></div>
+    <div id="modeseg" class="seg modeseg" role="group" aria-label="Mode"><button type="button" data-m="dex" aria-pressed="true">Dex</button><button type="button" data-m="col" aria-pressed="false">Collection</button><button type="button" data-m="pk" aria-pressed="false">Pocket</button></div>
     <div class="searchrow">
       <input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nom ou n°…" aria-label="Rechercher">
       <button id="formsbtn" class="toggle" type="button" aria-pressed="false" title="Afficher / masquer les formes (Alola, Galar, Méga, Gigamax, femelles…)">Formes</button>
@@ -70,8 +70,9 @@
   </header>
   <main id="results" class="grid" aria-live="polite"></main>
   <main id="collection" class="collection" hidden></main>
+  <main id="pocket" class="collection pocket" hidden></main>
   <footer class="foot">
-    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Descriptions du Pokédex, étymologies, distributions et lieux de capture des jeux Switch : <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a>, licence <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 FR</a> (usage personnel non commercial). Classements PvP : <a href="https://pvpoke.com" target="_blank" rel="noopener">PvPoke</a>. Données GO : communautaires, non officielles (<a href="https://github.com/PokeMiners/game_masters" target="_blank" rel="noopener">PokeMiners game_masters</a>, <a href="https://pogoapi.net" target="_blank" rel="noopener">pogoapi.net</a>). Ces données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux ; les données Pokémon GO sont non officielles. Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
+    <p>Données : <a href="https://pokeapi.co" target="_blank" rel="noopener">PokéAPI</a>. Descriptions du Pokédex, étymologies, distributions et lieux de capture des jeux Switch : <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a>, licence <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/fr/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 FR</a> (usage personnel non commercial). Cartes Pokémon TCG Pocket : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a> (licence MIT ; images des cartes © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA). Classements PvP : <a href="https://pvpoke.com" target="_blank" rel="noopener">PvPoke</a>. Données GO : communautaires, non officielles (<a href="https://github.com/PokeMiners/game_masters" target="_blank" rel="noopener">PokeMiners game_masters</a>, <a href="https://pogoapi.net" target="_blank" rel="noopener">pogoapi.net</a>). Ces données proviennent de PokéAPI et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux ; les données Pokémon GO sont non officielles. Pokémon et ses personnages sont © Nintendo / Game Freak / The Pokémon Company. Application non officielle.</p>
   </footer>
 </div>
 <div id="detail-view" hidden></div>
