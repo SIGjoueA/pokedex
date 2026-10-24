@@ -2,20 +2,24 @@
 // French first, English fallback for names. Images are not bundled: the app loads `${img}/low.webp` on demand.
 // Output: { v, src, r: [rarity labels], s: [{ id, n, d, c (cards) , cards: [[localId, name, rarityIdx, [dexIds], cat]] }] }
 import fs from 'fs';
+const CD = process.env.POCKET_CACHE; if (CD) fs.mkdirSync(CD, { recursive: true }); // optional cache dir for reruns
+const ck = u => CD + '/' + u.replace(/[^A-Za-z0-9.-]+/g, '_').slice(-180);
 const API = 'https://api.tcgdex.net/v2/';
-const get = async (u, t = 4) => { for (;;) { try { const r = await fetch(API + u); if (r.status === 404) return null; if (!r.ok) throw new Error(r.status); return await r.json(); } catch (e) { if (!--t) throw new Error(u + ' ' + e.message); await new Promise(r => setTimeout(r, 1500)); } } };
+const get = async (u, t = 4) => { if (CD && fs.existsSync(ck(u))) return JSON.parse(fs.readFileSync(ck(u))); const j = await get0(u, t); if (CD) fs.writeFileSync(ck(u), JSON.stringify(j)); return j; };
+const get0 = async (u, t) => { for (;;) { try { const r = await fetch(API + u); if (r.status === 404) return null; if (!r.ok) throw new Error(r.status); return await r.json(); } catch (e) { if (!--t) throw new Error(u + ' ' + e.message); await new Promise(r => setTimeout(r, 1500)); } } };
 const RAR = ['Un Diamant', 'Deux Diamants', 'Trois Diamants', 'Quatre Diamants', 'Une Étoile', 'Deux Étoiles', 'Trois Étoiles', 'Un chromatique', 'Deux chromatiques', 'Couronne', 'Sans Rareté'];
 const RMAP = { 'One Diamond': 0, 'Two Diamond': 1, 'Three Diamond': 2, 'Four Diamond': 3, 'One Star': 4, 'Two Star': 5, 'Three Star': 6, 'One Shiny': 7, 'Two Shiny': 8, 'Crown': 9, 'None': 10 };
 const pool = async (items, n, fn) => { const out = new Array(items.length); let i = 0; await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const k = i++; out[k] = await fn(items[k], k); } })); return out; };
 const ser = await get('fr/series/tcgp'), serEn = await get('en/series/tcgp');
 const ids = [...new Set([...serEn.sets.map(s => s.id), ...ser.sets.map(s => s.id)])];
-const sets = [], unk = new Set();
+const sets = [], unk = new Set(), tdxB = new Map(); // v52: TCGdex `boosters` (French names when available)
 for (const id of ids) {
   const fr = await get('fr/sets/' + id), en = await get('en/sets/' + id); const base = fr || en; if (!base) continue;
   const enC = new Map((en ? en.cards : []).map(c => [c.localId, c])), frC = new Map((fr ? fr.cards : []).map(c => [c.localId, c]));
   const lids = [...new Set([...(en ? en.cards : []), ...(fr ? fr.cards : [])].map(c => c.localId))];
   const cards = await pool(lids, 12, async lid => {
-    const d = await get('en/cards/' + id + '-' + lid) || {}; const f = frC.get(lid), e = enC.get(lid);
+    const d = await get('en/cards/' + id + '-' + lid) || {}, df = await get('fr/cards/' + id + '-' + lid) || {}; const f = frC.get(lid), e = enC.get(lid);
+    tdxB.set(id + '-' + lid, (df.boosters || d.boosters || []).map(b => b.name || (d.boosters || []).find(x => x.id === b.id)?.name).filter(Boolean));
     let r = RMAP[d.rarity]; if (r == null) { unk.add(d.rarity); r = 10; }
     const img = (f && f.image) || (e && e.image) || d.image || '';
     return [lid, (f && f.name) || (e && e.name) || d.name || '?', r, d.dexId || [], d.category === 'Pokemon' || d.category === 'Pokémon' ? 0 : 1, img ? (img.includes('/fr/') ? 1 : 0) : 2];
@@ -30,7 +34,8 @@ for (const id of ids) {
 // Card ids stay « <set>-<NNN> » (TCGdex style), so existing user data keeps working.
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const UA = { 'user-agent': 'Mozilla/5.0 (personal Pokédex PWA; contact pokedexsigjouea@gmail.com)' };
-const page = async u => { for (let t = 0; t < 4; t++) { await sleep(2000 + t * 8000); const r = await fetch(u, { headers: UA }).catch(() => null); if (r && r.ok) return r.text(); console.log('retry', u, r && r.status); } return ''; };
+const page = async u => { if (CD && fs.existsSync(ck(u))) return fs.readFileSync(ck(u), 'utf8'); const h = await page0(u); if (CD && h) fs.writeFileSync(ck(u), h); return h; };
+const page0 = async u => { for (let t = 0; t < 4; t++) { await sleep(2000 + t * 8000); const r = await fetch(u, { headers: UA }).catch(() => null); if (r && r.ok) return r.text(); if (r && r.status === 404) { console.log('404', u); return ''; } console.log('retry', u, r && r.status); } return ''; };
 const txt = h => h.replace(/<[^>]+>/g, ' ').replace(/&#0?39;|&rsquo;/g, "'").replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 const LSYM = { '◊': 0, '◊◊': 1, '◊◊◊': 2, '◊◊◊◊': 3, '☆': 4, '☆☆': 5, '☆☆☆': 6, 'Crown Rare': 9, 'Promo': 10 };
 const KSYM = { '1 losange': 0, '2 losanges': 1, '3 losanges': 2, '4 losanges': 3, '1 étoile': 4, '2 étoiles': 5, '3 étoiles': 6, '1 étoile chromatique': 7, '2 étoiles chromatiques': 8, '1 couronne': 9 };
@@ -67,6 +72,36 @@ for (const L of lsets) {
   else { sets.push({ id: L.id, n: KNAME[L.id] || (K && K.n) || L.en, en: L.en, d: date, o: 0, cards, src: 'll' }); added += cards.length; console.log(L.id, sets.at(-1).n, cards.length, kc.size ? 'FR ok' : 'no FR'); }
 }
 console.log('merged cards', added);
+// v52: boosters per card. Pokékalos lists every booster of a set with its own page (« Cartes disponibles dans ce Booster »);
+// TCGdex `boosters` is merged in (union, by normalised name). Card field 6 = indices into set.b (booster names, French).
+// Promo sets: the « Booster promo série X, vol. N » packs (events / missions / shop) are the sources when known.
+const bt = x => x.replace(/^Boosters? /, '').replace(/^[^:]+:\s*/, '').replace(/^(?=[a-zé])/, 'Booster '); // « Méga-Ascension: Méga-Altaria » → « Méga-Altaria », « de Luxe ex » → « Booster de Luxe ex »
+const bn = x => bt(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/^booster (de )?/, '').replace(/[^a-z0-9]+/g, ' ').trim();
+const nav = await page('https://www.pokekalos.fr/jeux/mobile/pocket/cartodex/extensions/booster-de-luxe-ex/cartes/1.html');
+for (const m of nav.matchAll(/href="(\/jeux\/mobile\/pocket\/cartodex\/extensions\/[^"/]+\.html)"[^>]*>\s*(?:<[^>]+>\s*)*\[([A-Z0-9a-z-]+)\]/g)) kslug[m[2]] ||= { u: m[1] };
+let bTot = 0, bTdx = 0, bK = 0;
+for (const st of sets) {
+  const K = kslug[st.id], kh = K ? await page('https://www.pokekalos.fr' + K.u) : '';
+  const names = [], idx = new Map(), add = n0 => { const v = st.id.startsWith('P-') && /vol\.?\s*(\d+)/i.exec(n0), n = v ? `Booster promo série ${st.id[2]}, vol. ${v[1]}` : n0; // promo: Pokékalos « promo de la série A, vol. 1 » and TCGdex « Vol. 1 » are the same pack
+    const k = bn(n); if (!idx.has(k)) { idx.set(k, names.length); names.push(bt(n)); } return idx.get(k); };
+  const per = new Map(st.cards.map(c => [c[0], new Set()]));
+  for (const m of kh.matchAll(/href="([^"]*\/booster\/[^"]+\.html)" class="pkp-booster"[^]*?<h3>([^<]*)<\/h3>/g)) {
+    const i = add(txt(m[2])); const bh = await page(new URL(m[1], 'https://www.pokekalos.fr' + K.u).href);
+    for (const n of bh.matchAll(/class="carte" href="[^"]*\/cartes\/(\d+)\.html"/g)) { const s = per.get(String(n[1]).padStart(3, '0')); if (s) { s.add(i); bK++; } }
+  }
+  for (const c of st.cards) for (const n of tdxB.get(st.id + '-' + c[0]) || []) { per.get(c[0]).add(add(n)); bTdx++; }
+  if (names.length) st.b = names;
+  if (names.length === 1 && !st.id.startsWith('P-')) for (const c of st.cards) per.get(c[0]).add(0); // single-booster set: every card comes from it
+  const used = [...new Set([...per.values()].flatMap(x => [...x]))].sort((a, b) => a - b), re = new Map(used.map((o, i) => [o, i])); // drop packs with no known card
+  if (names.length) st.b = used.map(o => names[o]); if (!used.length) delete st.b;
+  for (const c of st.cards) { c[6] = [...per.get(c[0])].map(o => re.get(o)).sort((a, b) => a - b); if (c[6].length) bTot++; }
+  console.log(st.id, 'boosters', names.join(' / ') || '—', st.cards.filter(c => c[6].length).length + '/' + st.cards.length);
+}
+console.log('cards with boosters', bTot, '(links Pokékalos', bK, ', TCGdex', bTdx + ')');
+// v52: Deluxe reprints (A4b, B4b) that are the same card as an original → field 7 = original id (see build/pocket-deluxe.py)
+const DLX = JSON.parse(fs.readFileSync(new URL('./pocket-deluxe.json', import.meta.url)));
+for (const st of sets) for (const c of st.cards) { const o = DLX[st.id + '-' + c[0]]; if (o) c[7] = o; }
+console.log('deluxe aliases', Object.keys(DLX).length);
 sets.sort((a, b) => (a.d || '').localeCompare(b.d || '') || a.id.localeCompare(b.id));
 if (unk.size) console.log('unknown rarities', [...unk]);
 const out = { v: new Date().toISOString().slice(0, 10), src: 'TCGdex', img: 'https://assets.tcgdex.net/', r: RAR, s: sets };

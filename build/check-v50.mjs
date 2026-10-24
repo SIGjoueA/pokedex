@@ -14,8 +14,9 @@ const K = o => Object.keys(o || {});
 const L = k => p.evaluate(k => JSON.parse(localStorage.getItem(k) || 'null'), k);
 // data
 const ALL = PKD.s.reduce((a, s) => a + s.cards.length, 0);
+const UNI = PKD.s.reduce((a, s) => a + s.cards.filter(c => !c[7]).length, 0); // v52: Deluxe reprints of an original are not counted twice
 ok(PKD.s.length >= 15 && ALL > 2000, `pocket.json: ${PKD.s.length} sets, ${ALL} cards`);
-ok(PKD.s.every(s => s.id && s.n && s.cards.length) && PKD.s.flatMap(s => s.cards).every(c => c.length === 6 && PKD.r[c[2]]), 'every card has localId, name, rarity');
+ok(PKD.s.every(s => s.id && s.n && s.cards.length) && PKD.s.flatMap(s => s.cards).every(c => c.length >= 7 && PKD.r[c[2]]), 'every card has localId, name, rarity');
 ok(PKD.s.find(s => s.id === 'A1').n === 'Puissance Génétique', 'French set names');
 // v50c: sets missing from TCGdex merged from Limitless + Pokékalos
 const NEW = { A4b: 379, 'P-B': 103, B2b: 117, B3: 234, B3a: 109, B3b: 106, B4: 233, B4a: 110, B4b: 429 };
@@ -33,7 +34,7 @@ await p.reload({ waitUntil: 'networkidle0' }); await sleep(1500);
 ok(await p.$('#modeseg button[data-m=pk]'), 'Pocket segment present');
 await p.click('#modeseg button[data-m=pk]'); await sleep(1500);
 let v = await p.evaluate(() => ({ pk: !$('#pocket').hidden, col: $('#collection').hidden, res: getComputedStyle($('#results')).display, sets: document.querySelectorAll('.pkset').length, h: $('.pkhead').textContent, cred: /TCGdex/.test($('#pocket').textContent) }));
-ok(v.pk && v.col && v.res === 'none' && v.sets === PKD.s.length && new RegExp('0 / ' + ALL).test(v.h) && v.cred, 'Pocket mode: sets list, overall 0 / N, credit ' + JSON.stringify(v));
+ok(v.pk && v.col && v.res === 'none' && v.sets === PKD.s.length && new RegExp('0 / ' + UNI + ' ').test(v.h) && v.cred, 'Pocket mode: sets list, overall 0 / N, credit ' + JSON.stringify(v));
 await p.evaluate(() => { const S = (k, v) => localStorage.setItem(k, JSON.stringify(v)); S('pocket', ['A1-001', 'A1-002', 'A1-003', 'A1a-001']); }); await p.reload({ waitUntil: 'networkidle0' }); await sleep(1800);
 ok(JSON.stringify(await L('pocket')) === JSON.stringify({ 'A1-001': { fr: 1 }, 'A1-002': { fr: 1 }, 'A1-003': { fr: 1 }, 'A1a-001': { fr: 1 } }), 'old format (array) migrated to 1 French copy each');
 ok(await p.evaluate(() => !$('#pocket').hidden && $('#modeseg button[data-m=pk]').getAttribute('aria-pressed') === 'true'), 'Pocket mode remembered after reload');
@@ -94,7 +95,7 @@ ok(await p.evaluate(() => $('#pocket .pkcard img').decode().then(() => true, () 
 await p.click('.pkback'); await sleep(500); ok(await p.evaluate(() => document.querySelectorAll('.pkset').length > 10), 'back to sets');
 // sheet block
 await p.evaluate(() => { location.hash = '#/p/25'; }); await sleep(2500);
-const pika = PKD.s.reduce((a, s) => a + s.cards.filter(c => c[3].includes(25)).length, 0);
+const pika = PKD.s.reduce((a, s) => a + s.cards.filter(c => c[3].includes(25) && !c[7]).length, 0); // v52: Deluxe reprints listed once (under the original)
 v = await p.evaluate(() => ({ h: $('#mypocket h2') && $('#mypocket h2').textContent, n: document.querySelectorAll('#mypocket .pkcard').length }));
 ok(v.n === pika && new RegExp('0 / ' + pika).test(v.h), 'Pikachu sheet: « Cartes Pocket » ' + JSON.stringify(v));
 await p.evaluate(() => $('#mypocket .pktk').click()); await sleep(500);

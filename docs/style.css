@@ -588,3 +588,7 @@ body.colopen{overflow:hidden}
 .pkblk>summary::-webkit-details-marker{display:none}.pkblk>summary .pkbar{grid-column:1/-1}.pkbn{display:flex;flex-direction:column}.pkbn b{font-size:18px}.pkbn b::before{content:'▸ ';display:inline-block}.pkblk[open] .pkbn b::before{content:'▾ '}.pkbn small{color:var(--mute);font-size:12px}
 .pkblk .pksets{margin:8px 0 0}
 .pkblk>summary,.pkbn b{color:var(--fg)}
+/* v52: booster filter + booster line + Deluxe reprints */
+.pkboo{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.pkboo .chip{min-height:36px;padding:0 12px;border-radius:999px;border:2px solid var(--line);background:var(--bg2);font-size:14px;cursor:pointer;color:var(--fg)}
+.pkboo .chip small{opacity:.7;margin-left:2px}.pkboo .chip[aria-pressed=true]{background:var(--accent);color:var(--accent-fg);border-color:transparent}
+.pkboos{margin:.4em 0}.pkrepn{margin:.5em 0 0}.pkcard.pkrep .pkid::after{content:" ⇄";opacity:.6}

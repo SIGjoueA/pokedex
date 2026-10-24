@@ -2466,7 +2466,7 @@ function colInit() {
 
 /* ---------------- v50: Cartodex Pokémon TCG Pocket (data/pocket.json from TCGdex; card images loaded on demand from assets.tcgdex.net) ---------------- */
 // Storage « pocket »: array of owned card ids "A1-001". Mode « Pocket » = third segment next to Dex | Collection.
-let PK = null, PKP = null, pkMode = store.get('pkmode', false) === true, pkSet = '', pkOwn = 'all', pkRar = new Set();
+let PK = null, PKP = null, pkMode = store.get('pkmode', false) === true, pkSet = '', pkOwn = 'all', pkRar = new Set(), pkBoo = -1, PK_REV = new Map();
 // v50b: « pocket » = { cardId: { lang: count } }. Old format (array of ids, v50 preview) → 1 copy in French.
 const PK_LANGS = [['fr', 'FR', 'Français'], ['en', 'EN', 'Anglais'], ['ja', 'JA', 'Japonais'], ['de', 'DE', 'Allemand'], ['it', 'IT', 'Italien'], ['es', 'ES', 'Espagnol'], ['pt', 'PT', 'Portugais (Brésil)'], ['ko', 'KO', 'Coréen'], ['zh', 'ZH', 'Chinois traditionnel']];
 const PK_LS = new Set(PK_LANGS.map(l => l[0])), PK_ID = /^[A-Za-z0-9-]+-[A-Za-z0-9]+$/;
@@ -2484,20 +2484,28 @@ const pkSave = () => store.set('pocket', PKQ);
 const pkN = id => { const m = PKQ[id]; return m ? Object.values(m).reduce((a, n) => a + n, 0) : 0; };
 const PKO = { has: id => pkN(id) > 0 };
 function pkAdd(id, l, d) { const m = PKQ[id] || (PKQ[id] = {}); const n = Math.max(0, Math.min(999, (m[l] || 0) + d)); if (n) m[l] = n; else delete m[l]; if (!Object.keys(m).length) delete PKQ[id]; pkSave(); }
-function pkMerge(raw) { const inc = pkNorm(raw); for (const [id, m] of Object.entries(inc)) { const t = PKQ[id] || (PKQ[id] = {}); for (const [l, n] of Object.entries(m)) t[l] = Math.max(t[l] || 0, n); } pkSave(); pkRender(); const mp = $('#mypocket'); if (mp && DET && DET.p) pkSheet(DET.p); }
-const pkLoad = () => PKP || (PKP = getJSON('data/pocket.json').then(d => { PK = d; for (const s of d.s) for (const c of s.cards) c.id = s.id + '-' + c[0]; return d; }).catch(e => { PKP = null; throw e; }));
+function pkMerge(raw) { const inc = pkNorm(raw); for (const [id, m] of Object.entries(inc)) { const t = PKQ[id] || (PKQ[id] = {}); for (const [l, n] of Object.entries(m)) t[l] = Math.max(t[l] || 0, n); } if (PK) pkAlias(); pkSave(); pkRender(); const mp = $('#mypocket'); if (mp && DET && DET.p) pkSheet(DET.p); }
+// v52: card field 6 = booster indices into set.b; field 7 = original card id for Deluxe reprints (A4b, B4b) that the game treats as the
+// same card (shared copies, registered in every card dex since 2026-07). c.k = ownership key. Parallel foils / new art keep their own id.
+const pkLoad = () => PKP || (PKP = getJSON('data/pocket.json').then(d => { PK = d; PK_REV = new Map();
+  for (const s of d.s) for (const c of s.cards) { c.id = s.id + '-' + c[0]; c.k = c[7] || c.id; if (c[7]) { if (!PK_REV.has(c[7])) PK_REV.set(c[7], []); PK_REV.get(c[7]).push([s, c]); } }
+  if (pkAlias()) pkSave(); return d; }).catch(e => { PKP = null; throw e; }));
+// copies stored on a Deluxe reprint id (before v52, or from an old backup) move to the original id: max per language
+// (the same copy may have been ticked in both places; a sum would count it twice).
+function pkAlias() { let ch = false; for (const s of PK.s) for (const c of s.cards) if (c[7] && PKQ[c.id]) { const t = PKQ[c[7]] || (PKQ[c[7]] = {}); for (const [l, n] of Object.entries(PKQ[c.id])) t[l] = Math.max(t[l] || 0, n); delete PKQ[c.id]; ch = true; } return ch; }
+const pkUniq = s => s.cards.filter(c => !c[7]); // global / block totals: a reprint is not a second card
 // rarity index → short symbol (◆ diamonds, ☆ stars, ✨ chromatiques, 👑 couronne, Promo = sans rareté)
 const PK_SYM = ['◆', '◆◆', '◆◆◆', '◆◆◆◆', '☆', '☆☆', '☆☆☆', '✨', '✨✨', '👑', 'Promo'];
 // v50c: image source 0 TCGdex EN, 1 TCGdex FR, 2 none, 3 Limitless TCG (English, sets missing from TCGdex)
 const PK_LL = 'https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/';
 const pkImg = (s, c, q = 'low') => c[5] === 2 ? '' : c[5] === 3 ? `${PK_LL}${s.id}/${s.id}_${c[0]}_EN${q === 'low' ? '_SM' : ''}.webp` : `${PK.img}${c[5] ? 'fr' : 'en'}/tcgp/${s.id}/${c[0]}/${q}.webp`;
 const pkPct = (a, b) => b ? Math.floor(a / b * 1000) / 10 : 0;
-const pkCnt = s => s.cards.reduce((a, c) => a + PKO.has(c.id), 0);
+const pkCnt = (s, cs = s.cards) => cs.reduce((a, c) => a + PKO.has(c.k), 0);
 const pkBar = (a, b) => `<div class="pkbar" role="progressbar" aria-valuemin="0" aria-valuemax="${b}" aria-valuenow="${a}"><i style="width:${pkPct(a, b)}%"></i></div>`;
 function pkCardHTML(s, c, withSet) {
-  const n = pkN(c.id), o = n > 0, im = pkImg(s, c);
-  return `<div class="pkcard${o ? ' own' : ''}" data-pk="${c.id}"><button type="button" class="pkim" data-pkv="${c.id}" aria-label="Voir ${esc(c[1])}">${im ? `<img src="${im}" alt="" loading="lazy" decoding="async" width="245" height="337">` : `<span class="pkno">${esc(c[1])}</span>`}${n ? `<b class="pkq">×${n}</b>` : ''}</button>` +
-    `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.id}" aria-label="Ajouter 1 exemplaire (${pkLangName()}) : ${esc(c[1])}">＋</button></div></div>`;
+  const n = pkN(c.k), o = n > 0, im = pkImg(s, c);
+  return `<div class="pkcard${o ? ' own' : ''}${c[7] ? ' pkrep' : ''}" data-pk="${c.k}"><button type="button" class="pkim" data-pkv="${c.id}" aria-label="Voir ${esc(c[1])}">${im ? `<img src="${im}" alt="" loading="lazy" decoding="async" width="245" height="337">` : `<span class="pkno">${esc(c[1])}</span>`}${n ? `<b class="pkq">×${n}</b>` : ''}</button>` +
+    `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.k}" aria-label="Ajouter 1 exemplaire (${pkLangName()}) : ${esc(c[1])}">＋</button></div></div>`;
 }
 // v51: sets grouped by block (« Série A », « Série B »… as on Poképédia), newest block first, sets newest first, promo set last
 const pkBlk = x => /^P-/.test(x.id) ? x.id.slice(2, 3) : x.id[0];
@@ -2506,14 +2514,14 @@ function pkSetRow(x) { const n = pkCnt(x); return `<li><button type="button" cla
 function pkBlocks() {
   const bl = [...new Set(PK.s.map(pkBlk))].sort().reverse();
   return bl.map(b => { const ss = PK.s.filter(x => pkBlk(x) === b).sort((x, y) => (/^P-/.test(x.id) - /^P-/.test(y.id)) || (y.d || '').localeCompare(x.d || '') || y.id.localeCompare(x.id));
-    const t = ss.reduce((a, x) => a + x.cards.length, 0), n = ss.reduce((a, x) => a + pkCnt(x), 0);
+    const t = ss.reduce((a, x) => a + pkUniq(x).length, 0), n = ss.reduce((a, x) => a + pkCnt(x, pkUniq(x)), 0);
     return `<details class="pkblk" data-blk="${b}"${PK_FOLD.has(b) ? '' : ' open'}><summary><span class="pkbn"><b>Série ${b}</b><small>${ss.length} extensions</small></span><span class="pksc">${n} / ${t}</span>${pkBar(n, t)}</summary><ul class="plain pksets">${ss.map(pkSetRow).join('')}</ul></details>`; }).join('');
 }
 function pkRender() {
   const box = $('#pocket'); if (!box) return;
   box.hidden = !pkMode; if (!pkMode) return;
   if (!PK) { box.innerHTML = '<p class="note">Chargement des cartes…</p>'; pkLoad().then(pkRender).catch(() => { box.innerHTML = '<p class="note">Impossible de charger les cartes Pocket (hors ligne ?).</p>'; }); return; }
-  const all = PK.s.reduce((a, s) => a + s.cards.length, 0), own = PK.s.reduce((a, s) => a + pkCnt(s), 0);
+  const all = PK.s.reduce((a, s) => a + pkUniq(s).length, 0), own = PK.s.reduce((a, s) => a + pkCnt(s, pkUniq(s)), 0);
   const credit = `<p class="note pkcred">Données et images : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>, <a href="https://pocket.limitlesstcg.com" target="_blank" rel="noopener">Limitless TCG</a> et <a href="https://www.pokekalos.fr" target="_blank" rel="noopener">Pokékalos</a> (extensions récentes). Pokémon TCG Pocket © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA.</p>`;
   const s = pkSet && PK.s.find(x => x.id === pkSet);
   if (!s) {
@@ -2522,11 +2530,14 @@ function pkRender() {
     return;
   }
   const rs = [...new Set(s.cards.map(c => c[2]))].sort((a, b) => a - b);
-  const list = s.cards.filter(c => (!pkRar.size || pkRar.has(c[2])) && (pkOwn === 'all' || (pkOwn === 'dup' ? pkN(c.id) >= 2 : (pkOwn === 'own') === PKO.has(c.id))));
+  const nb = (s.b || []).length; if (pkBoo >= nb) pkBoo = -1;
+  const list = s.cards.filter(c => (!pkRar.size || pkRar.has(c[2])) && (pkBoo < 0 || (c[6] || []).includes(pkBoo)) && (pkOwn === 'all' || (pkOwn === 'dup' ? pkN(c.k) >= 2 : (pkOwn === 'own') === PKO.has(c.k))));
+  const rep = s.cards.filter(c => c[7]).length;
   const n = pkCnt(s);
-  box.innerHTML = `<div class="pkhead"><button type="button" class="pkback" data-pks="">← Extensions</button><h2>${esc(s.n)}</h2><p><b>${n}</b> / ${s.cards.length} cartes · ${dec(pkPct(n, s.cards.length))} %${s.o && s.o < s.cards.length ? ` <small>(${s.o} de base + ${s.cards.length - s.o} secrètes)</small>` : ''}</p>${pkBar(n, s.cards.length)}</div>` +
+  box.innerHTML = `<div class="pkhead"><button type="button" class="pkback" data-pks="">← Extensions</button><h2>${esc(s.n)}</h2><p><b>${n}</b> / ${s.cards.length} cartes · ${dec(pkPct(n, s.cards.length))} %${s.o && s.o < s.cards.length ? ` <small>(${s.o} de base + ${s.cards.length - s.o} secrètes)</small>` : ''}</p>${pkBar(n, s.cards.length)}${rep ? `<p class="note pkrepn">${rep} cartes sont des rééditions identiques d’une carte d’une autre extension : le jeu les considère comme la même carte, vos exemplaires sont donc partagés (et comptés une seule fois dans les totaux).</p>` : ''}</div>` +
     `<div class="pkfil"><div class="seg" id="pkown">${[['all', 'Toutes'], ['own', 'Possédées'], ['miss', 'Manquantes'], ['dup', 'Doublons']].map(([v, t]) => `<button type="button" data-pko="${v}" aria-pressed="${pkOwn === v}">${t}</button>`).join('')}</div>` +
-    `<div class="pkrar" id="pkrar">${rs.map(r => `<button type="button" class="chip pkr r${r}" data-pkr="${r}" aria-pressed="${pkRar.has(r)}" title="${esc(PK.r[r])}">${PK_SYM[r]}</button>`).join('')}</div></div>` +
+    `<div class="pkrar" id="pkrar">${rs.map(r => `<button type="button" class="chip pkr r${r}" data-pkr="${r}" aria-pressed="${pkRar.has(r)}" title="${esc(PK.r[r])}">${PK_SYM[r]}</button>`).join('')}</div>` +
+    (nb > 1 ? `<div class="pkboo" id="pkboo" role="group" aria-label="Filtrer par booster"><button type="button" class="chip" data-pkb="-1" aria-pressed="${pkBoo < 0}">Tous les boosters</button>${s.b.map((b, i) => `<button type="button" class="chip" data-pkb="${i}" aria-pressed="${pkBoo === i}">${esc(b)} <small>${s.cards.filter(c => (c[6] || []).includes(i)).length}</small></button>`).join('')}</div>` : '') + `</div>` +
     `<p class="note pkcnt">${list.length} carte${list.length > 1 ? 's' : ''} affichée${list.length > 1 ? 's' : ''}</p><div class="pkgrid">${list.map(c => pkCardHTML(s, c)).join('')}</div>` + credit;
 }
 function pkSetMode(m) { // m: 'dex' | 'col' | 'pk'
@@ -2546,6 +2557,17 @@ function pkStepsHTML(id) {
   const m = PKQ[id] || {};
   return `<div id="pksteps" data-id="${id}"><p class="pktot">Total : <b>${pkN(id)}</b> exemplaire${pkN(id) > 1 ? 's' : ''}</p><ul class="plain pklangs">${PK_LANGS.map(([l, c, n]) => `<li class="${m[l] ? 'on' : ''}"><span class="pklc">${c}</span><span class="pkln2">${n}</span><button type="button" class="pkst" data-pkl="${l}" data-d="-1" aria-label="Retirer un exemplaire en ${n}"${m[l] ? '' : ' disabled'}>−</button><b class="pkn">${m[l] || 0}</b><button type="button" class="pkst" data-pkl="${l}" data-d="1" aria-label="Ajouter un exemplaire en ${n}">+</button></li>`).join('')}</ul><p class="note">Le bouton ＋ des grilles ajoute en ${pkLangName()} (dernière langue utilisée).</p></div>`;
 }
+// v52: « Boosters : Mewtwo, Dracaufeu » (+ Deluxe reprints of the same card); promo sets: « Source : … »
+function pkBooHTML(s, c) {
+  const promo = /^P-/.test(s.id), own = (c[6] || []).map(i => s.b[i]), out = [];
+  if (c[7]) { const [os, oc] = pkFind(c[7]) || []; if (oc) { const ob = (oc[6] || []).map(i => os.b[i]);
+    out.push(`<p class="pkboos">Même carte que <b>${esc(os.n)}</b> n° ${esc(oc[0])} : le jeu la considère comme une seule carte, les exemplaires sont partagés.</p>`);
+    if (ob.length) own.unshift(...ob.map(b => `${b} (${os.id})`)); } }
+  for (const [ds, dc] of PK_REV.get(c.id) || []) own.push(`${(ds.b && ds.b[0]) || ds.n} (${ds.id} n° ${dc[0]})`);
+  out.unshift(own.length ? `<p class="pkboos"><b>${promo ? 'Source' : own.length > 1 ? 'Boosters' : 'Booster'} :</b> ${own.map(esc).join(', ')}</p>` : promo ? '<p class="pkboos note">Source : non renseignée (événement, mission ou boutique).</p>' : '');
+  return out.join('');
+}
+const pkFind = id => { const i = id.lastIndexOf('-'), s = PK.s.find(x => x.id === id.slice(0, i)), c = s && s.cards.find(x => x.id === id); return c ? [s, c] : null; };
 function pkView(id) {
   const [sid] = id.split('-'), s = PK.s.find(x => x.id === id.slice(0, id.lastIndexOf('-'))) || PK.s.find(x => x.id === sid), c = s && s.cards.find(x => x.id === id); if (!c) return;
   const sp = c[3].map(d => E.find(p => p.id === d && !p.c)).filter(Boolean);
@@ -2553,16 +2575,17 @@ function pkView(id) {
   m.innerHTML = `<div class="colsheet pkbig" role="dialog" aria-modal="true" aria-labelledby="pktitle"><div class="menuhead"><h2 id="pktitle">${esc(c[1])}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
     ${pkImg(s, c) ? `<img class="pkhi" src="${pkImg(s, c, 'high')}" alt="${esc(c[1])}">` : ''}<p><b>${esc(s.n)}</b> · n° ${esc(c[0])} · ${esc(PK.r[c[2]])} <span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span></p>
     ${sp.length ? `<p>${sp.map(p => `<a href="#/p/${p.k}">Voir la fiche ${esc(fullN(p))}</a>`).join(' · ')}</p>` : ''}
-    ${pkStepsHTML(c.id)}</div>`;
+    ${pkBooHTML(s, c)}
+    ${pkStepsHTML(c.k)}</div>`;
   document.body.appendChild(m); document.body.classList.add('colopen');
   m.addEventListener('click', ev => { if (ev.target === m) closeCol(); }); m.querySelector('#colx').onclick = closeCol;
 }
 function pkSheet(p) {
   const box = $('#mypocket'); if (!box) return;
   pkLoad().then(() => { if (!box.isConnected) return;
-    const cs = []; for (const s of PK.s) for (const c of s.cards) if (c[3].includes(p.id)) cs.push([s, c]);
+    const cs = []; for (const s of PK.s) for (const c of s.cards) if (c[3].includes(p.id) && !c[7]) cs.push([s, c]);
     if (!cs.length) { box.innerHTML = ''; return; }
-    const n = cs.filter(([, c]) => PKO.has(c.id)).length, tot = cs.reduce((a, [, c]) => a + pkN(c.id), 0);
+    const n = cs.filter(([, c]) => PKO.has(c.k)).length, tot = cs.reduce((a, [, c]) => a + pkN(c.k), 0);
     box.innerHTML = `<section class="box pkbox"><h2>Cartes Pocket <small class="cnt">${n} / ${cs.length}${tot > n ? ` · ${tot} exemplaires` : ''}</small></h2><div class="pkgrid pkmini">${cs.slice().reverse().map(([s, c]) => pkCardHTML(s, c, true)).join('')}</div><p class="note">Touchez ＋ pour cocher une carte possédée. Données : TCGdex.</p></section>`;
   }).catch(() => { box.innerHTML = ''; });
 }
@@ -2573,8 +2596,9 @@ function pkInit() {
     const st = e.target.closest('[data-pkl]'); if (st) { e.preventDefault(); e.stopPropagation(); const id = st.closest('#pksteps').dataset.id, d = +st.dataset.d;
       if (d > 0) { pkLang = st.dataset.pkl; store.set('pklang', pkLang); } pkAdd(id, st.dataset.pkl, d); pkRefresh(id); return; }
     const v = e.target.closest('[data-pkv]'); if (v) { e.preventDefault(); pkView(v.dataset.pkv); return; }
-    const s = e.target.closest('[data-pks]'); if (s) { e.preventDefault(); pkSet = s.dataset.pks; pkRar.clear(); pkOwn = 'all'; pkRender(); window.scrollTo(0, 0); return; }
+    const s = e.target.closest('[data-pks]'); if (s) { e.preventDefault(); pkSet = s.dataset.pks; pkRar.clear(); pkOwn = 'all'; pkBoo = -1; pkRender(); window.scrollTo(0, 0); return; }
     const o = e.target.closest('[data-pko]'); if (o) { pkOwn = o.dataset.pko; pkRender(); return; }
+    const b = e.target.closest('[data-pkb]'); if (b) { pkBoo = +b.dataset.pkb; pkRender(); return; }
     const r = e.target.closest('[data-pkr]'); if (r) { const k = +r.dataset.pkr; pkRar.has(k) ? pkRar.delete(k) : pkRar.add(k); pkRender(); }
   }, true);
   document.addEventListener('toggle', e => { const d = e.target; if (!d.classList || !d.classList.contains('pkblk')) return; d.open ? PK_FOLD.delete(d.dataset.blk) : PK_FOLD.add(d.dataset.blk); store.set('pkfold', [...PK_FOLD]); }, true);
