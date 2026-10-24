@@ -12,7 +12,7 @@ const RMAP = { 'One Diamond': 0, 'Two Diamond': 1, 'Three Diamond': 2, 'Four Dia
 const pool = async (items, n, fn) => { const out = new Array(items.length); let i = 0; await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const k = i++; out[k] = await fn(items[k], k); } })); return out; };
 const ser = await get('fr/series/tcgp'), serEn = await get('en/series/tcgp');
 const ids = [...new Set([...serEn.sets.map(s => s.id), ...ser.sets.map(s => s.id)])];
-const sets = [], unk = new Set(), tdxB = new Map(); // v52: TCGdex `boosters` (French names when available)
+const sets = [], unk = new Set(), tdxB = new Map(), enOnly = new Set(); // v52: TCGdex `boosters` (French names when available)
 for (const id of ids) {
   const fr = await get('fr/sets/' + id), en = await get('en/sets/' + id); const base = fr || en; if (!base) continue;
   const enC = new Map((en ? en.cards : []).map(c => [c.localId, c])), frC = new Map((fr ? fr.cards : []).map(c => [c.localId, c]));
@@ -20,6 +20,7 @@ for (const id of ids) {
   const cards = await pool(lids, 12, async lid => {
     const d = await get('en/cards/' + id + '-' + lid) || {}, df = await get('fr/cards/' + id + '-' + lid) || {}; const f = frC.get(lid), e = enC.get(lid);
     tdxB.set(id + '-' + lid, (df.boosters || d.boosters || []).map(b => b.name || (d.boosters || []).find(x => x.id === b.id)?.name).filter(Boolean));
+    if (!(f && f.name)) enOnly.add(id + '-' + lid); // no French name on TCGdex → Pokékalos fills it below
     let r = RMAP[d.rarity]; if (r == null) { unk.add(d.rarity); r = 10; }
     const img = (f && f.image) || (e && e.image) || d.image || '';
     return [lid, (f && f.name) || (e && e.name) || d.name || '?', r, d.dexId || [], d.category === 'Pokemon' || d.category === 'Pokémon' ? 0 : 1, img ? (img.includes('/fr/') ? 1 : 0) : 2];
@@ -79,25 +80,27 @@ const bt = x => x.replace(/^Boosters? /, '').replace(/^[^:]+:\s*/, '').replace(/
 const bn = x => bt(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/^booster (de )?/, '').replace(/[^a-z0-9]+/g, ' ').trim();
 const nav = await page('https://www.pokekalos.fr/jeux/mobile/pocket/cartodex/extensions/booster-de-luxe-ex/cartes/1.html');
 for (const m of nav.matchAll(/href="(\/jeux\/mobile\/pocket\/cartodex\/extensions\/[^"/]+\.html)"[^>]*>\s*(?:<[^>]+>\s*)*\[([A-Z0-9a-z-]+)\]/g)) kslug[m[2]] ||= { u: m[1] };
-let bTot = 0, bTdx = 0, bK = 0;
+const nameDiff = []; let bTot = 0, bTdx = 0, bK = 0;
 for (const st of sets) {
   const K = kslug[st.id], kh = K ? await page('https://www.pokekalos.fr' + K.u) : '';
   const names = [], idx = new Map(), add = n0 => { const v = st.id.startsWith('P-') && /vol\.?\s*(\d+)/i.exec(n0), n = v ? `Booster promo série ${st.id[2]}, vol. ${v[1]}` : n0; // promo: Pokékalos « promo de la série A, vol. 1 » and TCGdex « Vol. 1 » are the same pack
     const k = bn(n); if (!idx.has(k)) { idx.set(k, names.length); names.push(bt(n)); } return idx.get(k); };
-  const per = new Map(st.cards.map(c => [c[0], new Set()]));
+  const per = new Map(st.cards.map(c => [c[0], new Set()])), kName = new Map(); // kName: French card names listed on the Pokékalos booster pages
   for (const m of kh.matchAll(/href="([^"]*\/booster\/[^"]+\.html)" class="pkp-booster"[^]*?<h3>([^<]*)<\/h3>/g)) {
     const i = add(txt(m[2])); const bh = await page(new URL(m[1], 'https://www.pokekalos.fr' + K.u).href);
-    for (const n of bh.matchAll(/class="carte" href="[^"]*\/cartes\/(\d+)\.html"/g)) { const s = per.get(String(n[1]).padStart(3, '0')); if (s) { s.add(i); bK++; } }
+    for (const n of bh.matchAll(/class="carte" href="[^"]*\/cartes\/(\d+)\.html">\s*<div>\s*<div class="carte_nom">([^<]*)</g)) { const l = String(n[1]).padStart(3, '0'), s = per.get(l); if (s) { s.add(i); bK++; } if (txt(n[2]).trim()) kName.set(l, txt(n[2]).trim()); }
   }
   for (const c of st.cards) for (const n of tdxB.get(st.id + '-' + c[0]) || []) { per.get(c[0]).add(add(n)); bTdx++; }
   if (names.length) st.b = names;
+  if (K) for (const c of st.cards) if (!kName.has(c[0]) && enOnly.has(st.id + '-' + c[0])) { const h1 = /<h1>([^<]+)<\/h1>/.exec(await page('https://www.pokekalos.fr' + K.u.replace(/\.html$/, '/cartes/' + (+c[0]) + '.html'))); if (h1) kName.set(c[0], txt(h1[1])); } // card not on a booster page: its own Pokékalos page
+  for (const c of st.cards) { const f = kName.get(c[0]); if (f && f !== c[1]) { nameDiff.push(st.id + '-' + c[0] + ' ' + c[1] + ' → ' + f); c[1] = f; } c[1] = c[1].replace(/ ex$/, '-ex'); } // French spelling « …-ex »; Pokékalos French name wins (TCGdex has no FR for some sets)
   if (names.length === 1 && !st.id.startsWith('P-')) for (const c of st.cards) per.get(c[0]).add(0); // single-booster set: every card comes from it
   const used = [...new Set([...per.values()].flatMap(x => [...x]))].sort((a, b) => a - b), re = new Map(used.map((o, i) => [o, i])); // drop packs with no known card
   if (names.length) st.b = used.map(o => names[o]); if (!used.length) delete st.b;
   for (const c of st.cards) { c[6] = [...per.get(c[0])].map(o => re.get(o)).sort((a, b) => a - b); if (c[6].length) bTot++; }
   console.log(st.id, 'boosters', names.join(' / ') || '—', st.cards.filter(c => c[6].length).length + '/' + st.cards.length);
 }
-console.log('cards with boosters', bTot, '(links Pokékalos', bK, ', TCGdex', bTdx + ')');
+console.log('names from Pokékalos', nameDiff.length, nameDiff.filter((x, i) => i % 40 === 0).join(' | ')); console.log('cards with boosters', bTot, '(links Pokékalos', bK, ', TCGdex', bTdx + ')');
 // v52: Deluxe reprints (A4b, B4b) that are the same card as an original → field 7 = original id (see build/pocket-deluxe.py)
 const DLX = JSON.parse(fs.readFileSync(new URL('./pocket-deluxe.json', import.meta.url)));
 for (const st of sets) for (const c of st.cards) { const o = DLX[st.id + '-' + c[0]]; if (o) c[7] = o; }
