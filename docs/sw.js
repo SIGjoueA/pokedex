@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v51';
+const VERSION = 'v52';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Pocket : 9 nouvelles extensions (jusqu\'à Booster de Luxe Méga), promos complétées, extensions rangées par série.';
+const NOTES = 'Pocket : boosters de chaque carte, reprises des Boosters de Luxe comptées comme l\'original, tous les noms en français.';
 const DATA_VERSION = 'd25'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

@@ -1,5 +1,14 @@
 [
  {
+  "v": "v52",
+  "d": "2026-10-24",
+  "l": [
+   "Pocket : chaque carte indique ses boosters, avec un filtre par booster dans les extensions qui en ont plusieurs.",
+   "Les cartes des Boosters de Luxe qui reprennent une carte avec la même illustration sont la même carte (⇄) : les ajouter coche l'original, sans double compte. Les versions brillantes et les nouvelles illustrations restent à part.",
+   "Tous les noms de cartes sont maintenant en français."
+  ]
+ },
+ {
   "v": "v51",
   "d": "2026-10-20",
   "l": [
