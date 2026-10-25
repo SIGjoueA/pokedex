@@ -637,3 +637,5 @@ body:not(.colmode):not(.pkmode) .top #menubtn{top:10px}
 .cfd input[type=date]{-webkit-appearance:none;appearance:none;display:block;height:44px;min-height:44px;line-height:40px;box-sizing:border-box;text-align:left}
 .cfd input[type=date]::-webkit-date-and-time-value{text-align:left;margin:0;line-height:40px}
 .cfd input[type=date]::-webkit-datetime-edit{padding:0}
+/* v55: ⇄ line in the GO « Disponibilité » block */
+.gol li.trl{border-left:3px solid var(--trade);padding-left:8px;margin-left:-11px}.gol li.trl.opt{border-left-style:dashed}

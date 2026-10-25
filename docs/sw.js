@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v54';
+const VERSION = 'v55';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Jeux et GO : ⇄ et fond violet pour les Pokémon obtenus seulement par échange, raison sur la fiche, filtre « Échange requis ». GO en tête des jeux.';
+const NOTES = 'Fiche Pokémon GO : l’info ⇄ échange (requis ou facultatif) est maintenant dans le bloc Disponibilité, sans encadré en double.';
 const DATA_VERSION = 'd26'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

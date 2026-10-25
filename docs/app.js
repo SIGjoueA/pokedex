@@ -688,8 +688,12 @@ function tradeIdx(g) {
 const tradeLook = (map, p, g) => map.get(p.k) ?? (g !== 'go' && regionOf(p) && regionOf(p) === REGION_OF_GAME[g] ? map.get(String(p.id)) : undefined);
 // → { r: reason, opt: optional } | null
 function tradeOf(p, g) { if (!TRADE || !g || g === 'home' || g === 'all') return null; const m = tradeIdx(g), r = tradeLook(m.t, p, g); if (r) return { r, opt: false }; const o = tradeLook(m.f, p, g); return o ? { r: o, opt: true } : null; }
+// v55: GO sheet: ⇄ line inside « Disponibilité », reason without its region part (already in the 🌍 line)
+function goTradeLi(p) { const t = tradeOf(p, 'go'); if (!t) return ''; const tail = t.r.includes(' : ') ? t.r.slice(t.r.lastIndexOf(' : ') + 3) : t.r;
+  return `<li class="trl${t.opt ? ' opt' : ''}"><span class="trk">⇄</span> ${t.opt ? 'Échange facultatif' : 'Échange requis'} : <b>${esc(tail)}</b></li>`; }
 // v54: sheet line « ⇄ Échange requis » (reason) or « Indisponible » note, at the top of a game / GO sheet
 function tradeBoxHTML(p, g) {
+  if (g === 'go') return ''; // v55: GO folds it into Disponibilité (goTradeLi)
   const t = tradeOf(p, g), x = !t && indispoOf(p, g);
   if (t) return `<section class="box tradebox${t.opt ? ' opt' : ''}"><h2><span class="trk">⇄</span> ${t.opt ? 'Échange facultatif' : 'Échange requis'}</h2><p>${esc(t.r)}</p></section>`;
   return x ? `<section class="box tradebox indispo"><h2>Indisponible dans ce jeu</h2><p>${esc(x)}</p></section>` : '';
@@ -1666,6 +1670,7 @@ function goHTML(p, f, sp, shared, go) {
         <li>Statut : <b>${goRel(d) ? 'disponible dans Pokémon GO' : d.rf ? `annoncé pour le ${frDate(d.rf)}` : 'pas encore sorti'}</b>${p.c === 'gmax' ? ' · Gigamax : capturé en Combat Max, ne peut pas être envoyé vers HOME' : goTemp(p) ? ` · ${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire (énergie), enregistrée au Pokédex GO à la première transformation` : ''}</li>
         ${d.rg ? `<li class="rgl">🌍 Exclusivité régionale : <b>${esc(d.rg)}</b>${d.rgm ? ' <span class="mute">(migrateur : échange parfois sa zone avec son pendant)</span>' : ''}</li>` : ''}
         ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
+        ${goTradeLi(p)}
         ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
       </ul>
       <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>`,
