@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v53';
+const VERSION = 'v54';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Collection : Balls du jeu d’origine, niveau (GO : 40/50), PC et IV en GO, lieu et date de capture, Méga dans le jeu actuel, recherche, filtres et tri.';
-const DATA_VERSION = 'd25'; // bump when the schema of data/*.json changes
+const NOTES = 'Jeux et GO : ⇄ et fond violet pour les Pokémon obtenus seulement par échange, raison sur la fiche, filtre « Échange requis ». GO en tête des jeux.';
+const DATA_VERSION = 'd26'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

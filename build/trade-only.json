@@ -1,0 +1,3351 @@
+{
+ "rb": [
+  {
+   "id": 23,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 24,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 27,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 28,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 37,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 38,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 43,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 44,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 45,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 52,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 53,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 56,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 57,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 58,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 59,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 69,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 70,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 71,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 83,
+   "reason": "Échange avec un PNJ contre Piafabec uniquement"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 108,
+   "reason": "Échange avec un PNJ contre Flagadoss uniquement"
+  },
+  {
+   "id": 122,
+   "reason": "Échange avec un PNJ contre Abra uniquement"
+  },
+  {
+   "id": 123,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 124,
+   "reason": "Échange avec un PNJ contre Têtarte uniquement"
+  },
+  {
+   "id": 125,
+   "reason": "Exclusif à Rouge : échange nécessaire dans Bleu"
+  },
+  {
+   "id": 126,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  },
+  {
+   "id": 127,
+   "reason": "Exclusif à Bleu : échange nécessaire dans Rouge"
+  }
+ ],
+ "y": [
+  {
+   "id": 13,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 14,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 15,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 23,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 24,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 52,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 53,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 109,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 110,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 122,
+   "reason": "Échange avec un PNJ contre Mélofée uniquement"
+  },
+  {
+   "id": 124,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 125,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 126,
+   "reason": "Absent de Jaune : échange depuis Rouge/Bleu"
+  },
+  {
+   "id": 26,
+   "reason": "Pikachu de départ ne peut pas évoluer et aucun autre Pikachu : échange depuis Rouge/Bleu"
+  }
+ ],
+ "gs": [
+  {
+   "id": 10,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 11,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 12,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 13,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 14,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 15,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 165,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 166,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 167,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 168,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 208,
+   "reason": "Évolution par échange (Onix, en tenant Peau Métal)"
+  },
+  {
+   "id": 186,
+   "reason": "Évolution par échange (Têtarte, en tenant Roche Royale)"
+  },
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale)"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 37,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 38,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 58,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 59,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 56,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 57,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 52,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 53,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 207,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 225,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 216,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 217,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 231,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 232,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 226,
+   "reason": "Exclusif à Or : échange nécessaire dans Argent"
+  },
+  {
+   "id": 227,
+   "reason": "Exclusif à Argent : échange nécessaire dans Or"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  },
+  {
+   "id": 138,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 139,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 140,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 141,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 142,
+   "reason": "Échange avec un PNJ contre Leveinard uniquement"
+  },
+  {
+   "id": 1,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 2,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 3,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 4,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 5,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 6,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 7,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 8,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 9,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 144,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 145,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 146,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 150,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  }
+ ],
+ "c": [
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 179,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 180,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 181,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 208,
+   "reason": "Évolution par échange (Onix, en tenant Peau Métal)"
+  },
+  {
+   "id": 186,
+   "reason": "Évolution par échange (Têtarte, en tenant Roche Royale)"
+  },
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale)"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 37,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 38,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 56,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 57,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 203,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 223,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 224,
+   "reason": "Absent de Cristal : échange depuis Or/Argent"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  },
+  {
+   "id": 138,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 139,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 140,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 141,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 142,
+   "reason": "Échange avec un PNJ contre Leveinard uniquement"
+  },
+  {
+   "id": 1,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 2,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 3,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 4,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 5,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 6,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 7,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 8,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 9,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 144,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 145,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 146,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 150,
+   "reason": "Absent : échange depuis la 1re génération (Capsule Temporelle)"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  }
+ ],
+ "rs": [
+  {
+   "id": 270,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 271,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 272,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 273,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  },
+  {
+   "id": 274,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  },
+  {
+   "id": 275,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 302,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 303,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 335,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  },
+  {
+   "id": 336,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 337,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 338,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  },
+  {
+   "id": 367,
+   "reason": "Évolution par échange (Coquiperl, en tenant Dent Océan)"
+  },
+  {
+   "id": 368,
+   "reason": "Évolution par échange (Coquiperl, en tenant Écaille Océan)"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 382,
+   "reason": "Exclusif à Saphir : échange nécessaire dans Rubis"
+  },
+  {
+   "id": 383,
+   "reason": "Exclusif à Rubis : échange nécessaire dans Saphir"
+  }
+ ],
+ "frlg": [
+  {
+   "id": 23,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 24,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 27,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 28,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 37,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 38,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 43,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 44,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 45,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 54,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 55,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 58,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 59,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 69,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 70,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 71,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 79,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 80,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 83,
+   "reason": "Échange avec un PNJ contre Piafabec uniquement"
+  },
+  {
+   "id": 90,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 91,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 108,
+   "reason": "Échange avec un PNJ contre Akwakwak (Rouge Feu) / Flagadoss (Vert Feuille) uniquement"
+  },
+  {
+   "id": 120,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 121,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 122,
+   "reason": "Échange avec un PNJ contre Abra uniquement"
+  },
+  {
+   "id": 123,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 124,
+   "reason": "Échange avec un PNJ contre Têtarte uniquement"
+  },
+  {
+   "id": 125,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 126,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 127,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  }
+ ],
+ "e": [
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 307,
+   "reason": "Absent d’Émeraude : échange depuis Rubis/Saphir ou RFVF"
+  },
+  {
+   "id": 308,
+   "reason": "Absent d’Émeraude : échange depuis Rubis/Saphir ou RFVF"
+  },
+  {
+   "id": 315,
+   "reason": "Absent d’Émeraude : échange depuis Rubis/Saphir ou RFVF"
+  },
+  {
+   "id": 335,
+   "reason": "Absent d’Émeraude : échange depuis Rubis/Saphir ou RFVF"
+  },
+  {
+   "id": 337,
+   "reason": "Absent d’Émeraude : échange depuis Rubis/Saphir ou RFVF"
+  },
+  {
+   "id": 367,
+   "reason": "Évolution par échange (Coquiperl, en tenant Dent Océan)"
+  },
+  {
+   "id": 368,
+   "reason": "Évolution par échange (Coquiperl, en tenant Écaille Océan)"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 283,
+   "reason": "Essaim uniquement via mélange de records : échange depuis Rubis/Saphir"
+  },
+  {
+   "id": 284,
+   "reason": "Essaim uniquement via mélange de records (Arakdo) : échange depuis Rubis/Saphir"
+  }
+ ],
+ "dp": [
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 200,
+   "reason": "Exclusif à Perle : échange nécessaire dans Diamant"
+  },
+  {
+   "id": 429,
+   "reason": "Exclusif à Perle : échange nécessaire dans Diamant"
+  },
+  {
+   "id": 198,
+   "reason": "Exclusif à Diamant : échange nécessaire dans Perle"
+  },
+  {
+   "id": 430,
+   "reason": "Exclusif à Diamant : échange nécessaire dans Perle"
+  },
+  {
+   "id": 431,
+   "reason": "Exclusif à Perle : échange nécessaire dans Diamant"
+  },
+  {
+   "id": 432,
+   "reason": "Exclusif à Perle : échange nécessaire dans Diamant"
+  },
+  {
+   "id": 434,
+   "reason": "Exclusif à Diamant : échange nécessaire dans Perle"
+  },
+  {
+   "id": 435,
+   "reason": "Exclusif à Diamant : échange nécessaire dans Perle"
+  },
+  {
+   "id": 483,
+   "reason": "Exclusif à Diamant : échange nécessaire dans Perle"
+  },
+  {
+   "id": 484,
+   "reason": "Exclusif à Perle : échange nécessaire dans Diamant"
+  }
+ ],
+ "pt": [
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 464,
+   "reason": "Évolution par échange (Rhinoféros, en tenant Protecteur)"
+  },
+  {
+   "id": 477,
+   "reason": "Évolution par échange (Téraclope, en tenant Tissu Fauche)"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  },
+  {
+   "id": 466,
+   "reason": "Évolution par échange (Élektek, en tenant Électriseur)"
+  },
+  {
+   "id": 467,
+   "reason": "Évolution par échange (Magmar, en tenant Magmariseur)"
+  },
+  {
+   "id": 474,
+   "reason": "Évolution par échange (Porygon2, en tenant CD Douteux)"
+  }
+ ],
+ "hgss": [
+  {
+   "id": 165,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 166,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 167,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 168,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 186,
+   "reason": "Évolution par échange (Têtarte, en tenant Roche Royale)"
+  },
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale)"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  },
+  {
+   "id": 37,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 38,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 58,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 59,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 56,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 57,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 52,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 53,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 207,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 225,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 216,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 217,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 231,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 232,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 226,
+   "reason": "Exclusif à Or HeartGold : échange nécessaire dans Argent SoulSilver"
+  },
+  {
+   "id": 227,
+   "reason": "Exclusif à Argent SoulSilver : échange nécessaire dans Or HeartGold"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  }
+ ],
+ "bw": [
+  {
+   "id": 526,
+   "reason": "Évolution par échange (Géolithe)"
+  },
+  {
+   "id": 534,
+   "reason": "Évolution par échange (Ouvrifier)"
+  },
+  {
+   "id": 546,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 547,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 548,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 549,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 574,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 575,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 576,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 577,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 578,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 579,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 627,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 628,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 629,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 630,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 641,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 642,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  },
+  {
+   "id": 643,
+   "reason": "Exclusif à Noir : échange nécessaire dans Blanc"
+  },
+  {
+   "id": 644,
+   "reason": "Exclusif à Blanc : échange nécessaire dans Noir"
+  }
+ ],
+ "b2w2": [
+  {
+   "id": 240,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 126,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 467,
+   "reason": "Évolution par échange (Magmar, en tenant Magmariseur)"
+  },
+  {
+   "id": 239,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 125,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 466,
+   "reason": "Évolution par échange (Élektek, en tenant Électriseur)"
+  },
+  {
+   "id": 526,
+   "reason": "Évolution par échange (Géolithe)"
+  },
+  {
+   "id": 534,
+   "reason": "Évolution par échange (Ouvrifier)"
+  },
+  {
+   "id": 300,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 301,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 427,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 428,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 546,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 547,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 548,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 549,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 627,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 628,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 629,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 630,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 574,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 575,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 576,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 577,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 578,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 579,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 322,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 323,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 325,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 326,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  },
+  {
+   "id": 643,
+   "reason": "Exclusif à Blanc 2 : échange nécessaire dans Noir 2"
+  },
+  {
+   "id": 644,
+   "reason": "Exclusif à Noir 2 : échange nécessaire dans Blanc 2"
+  }
+ ],
+ "xy": [
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 683,
+   "reason": "Évolution par échange (Fluvetin, en tenant Sachet Senteur)"
+  },
+  {
+   "id": 685,
+   "reason": "Évolution par échange (Sucroquin, en tenant Chantibonbon)"
+  },
+  {
+   "id": 690,
+   "reason": "Exclusif à Y : échange nécessaire dans X"
+  },
+  {
+   "id": 691,
+   "reason": "Exclusif à Y : échange nécessaire dans X"
+  },
+  {
+   "id": 692,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 693,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 120,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 121,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 464,
+   "reason": "Évolution par échange (Rhinoféros, en tenant Protecteur)"
+  },
+  {
+   "id": 208,
+   "reason": "Évolution par échange (Onix, en tenant Peau Métal)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 228,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 229,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 526,
+   "reason": "Évolution par échange (Géolithe)"
+  },
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale)"
+  },
+  {
+   "id": 367,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 368,
+   "reason": "Exclusif à Y : échange nécessaire dans X"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 711,
+   "reason": "Évolution par échange (Pitrouille)"
+  },
+  {
+   "id": 534,
+   "reason": "Évolution par échange (Ouvrifier)"
+  },
+  {
+   "id": 304,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 305,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 306,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  },
+  {
+   "id": 716,
+   "reason": "Exclusif à X : échange nécessaire dans Y"
+  },
+  {
+   "id": 717,
+   "reason": "Exclusif à Y : échange nécessaire dans X"
+  }
+ ],
+ "oras": [
+  {
+   "id": 270,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 271,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 272,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 273,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 274,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 275,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 302,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 303,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 88,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 89,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 109,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 110,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 382,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 383,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 335,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 336,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 338,
+   "reason": "Exclusif à Rubis Oméga : échange nécessaire dans Saphir Alpha"
+  },
+  {
+   "id": 337,
+   "reason": "Exclusif à Saphir Alpha : échange nécessaire dans Rubis Oméga"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 367,
+   "reason": "Évolution par échange (Coquiperl, en tenant Dent Océan)"
+  },
+  {
+   "id": 368,
+   "reason": "Évolution par échange (Coquiperl, en tenant Écaille Océan)"
+  },
+  {
+   "id": 230,
+   "reason": "Évolution par échange (Hypocéan, en tenant Écaille Draco)"
+  },
+  {
+   "id": 464,
+   "reason": "Évolution par échange (Rhinoféros, en tenant Protecteur)"
+  },
+  {
+   "id": 477,
+   "reason": "Évolution par échange (Téraclope, en tenant Tissu Fauche)"
+  }
+ ],
+ "sm": [
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale)"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 627,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 628,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 629,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 630,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 548,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 549,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 546,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 547,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 526,
+   "reason": "Évolution par échange (Géolithe)"
+  },
+  {
+   "id": 350,
+   "reason": "Évolution par échange (Barpau)"
+  },
+  {
+   "id": 467,
+   "reason": "Évolution par échange (Magmar, en tenant Magmariseur)"
+  },
+  {
+   "id": 765,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 766,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  },
+  {
+   "id": 776,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 466,
+   "reason": "Évolution par échange (Élektek, en tenant Électriseur)"
+  },
+  {
+   "id": 780,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  },
+  {
+   "id": 794,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 795,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 797,
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 798,
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch d’Alola)"
+  },
+  {
+   "id": 474,
+   "reason": "Évolution par échange (Porygon2, en tenant CD Douteux)"
+  },
+  {
+   "id": 37,
+   "k": "37-alola",
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 38,
+   "k": "38-alola",
+   "reason": "Exclusif à Soleil : échange nécessaire dans Lune"
+  },
+  {
+   "id": 27,
+   "k": "27-alola",
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  },
+  {
+   "id": 28,
+   "k": "28-alola",
+   "reason": "Exclusif à Lune : échange nécessaire dans Soleil"
+  }
+ ],
+ "usum": [
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 627,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 628,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 629,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 630,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 548,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 549,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 546,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 547,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 526,
+   "reason": "Évolution par échange (Géolithe)"
+  },
+  {
+   "id": 350,
+   "reason": "Évolution par échange (Barpau)"
+  },
+  {
+   "id": 467,
+   "reason": "Évolution par échange (Magmar, en tenant Magmariseur)"
+  },
+  {
+   "id": 765,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 766,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 709,
+   "reason": "Évolution par échange (Brocélôme)"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  },
+  {
+   "id": 776,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 228,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 229,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 309,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 310,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 466,
+   "reason": "Évolution par échange (Élektek, en tenant Électriseur)"
+  },
+  {
+   "id": 343,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 344,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 622,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 623,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 780,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 690,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 691,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 692,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 693,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  },
+  {
+   "id": 805,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 806,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 794,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 795,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 797,
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 798,
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch d’Alola)"
+  },
+  {
+   "id": 474,
+   "reason": "Évolution par échange (Porygon2, en tenant CD Douteux)"
+  },
+  {
+   "id": 37,
+   "k": "37-alola",
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 38,
+   "k": "38-alola",
+   "reason": "Exclusif à Ultra-Soleil : échange nécessaire dans Ultra-Lune"
+  },
+  {
+   "id": 27,
+   "k": "27-alola",
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  },
+  {
+   "id": 28,
+   "k": "28-alola",
+   "reason": "Exclusif à Ultra-Lune : échange nécessaire dans Ultra-Soleil"
+  }
+ ],
+ "lgpe": [
+  {
+   "id": 23,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 24,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 27,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 28,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 37,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 38,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 43,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 44,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 45,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 52,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 56,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 57,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 58,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 69,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 70,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 71,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 88,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 89,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 109,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 110,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  },
+  {
+   "id": 123,
+   "reason": "Exclusif à Let’s Go, Pikachu : échange nécessaire dans Let’s Go, Évoli"
+  },
+  {
+   "id": 127,
+   "reason": "Exclusif à Let’s Go, Évoli : échange nécessaire dans Let’s Go, Pikachu"
+  }
+ ],
+ "sw": [
+  {
+   "id": 270,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 271,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 272,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 273,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 274,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 275,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 684,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 685,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 682,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 683,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 865,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 453,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 454,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 559,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 560,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 864,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 538,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 539,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 574,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 575,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 576,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 577,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 578,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 579,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 627,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 628,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 629,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 630,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 302,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 303,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 765,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 766,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 780,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 776,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 337,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 338,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 874,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 875,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 246,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 247,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 248,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 633,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 634,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 635,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 704,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 705,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 706,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 782,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 783,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 784,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 888,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 889,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 83,
+   "k": "83-galar",
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 222,
+   "k": "222-galar",
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 77,
+   "k": "77-galar",
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 78,
+   "k": "78-galar",
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 554,
+   "k": "554-galar",
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 555,
+   "k": "555-galar-standard",
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 550,
+   "reason": "Exclusif à Épée (Motif Rouge) : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 550,
+   "k": "550-blue-striped",
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 841,
+   "reason": "Pomme Acidulée (évolution de Verpom) exclusive à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 842,
+   "reason": "Pomme Sucrée (évolution de Verpom) exclusive à Bouclier : échange nécessaire dans Épée"
+  }
+ ],
+ "swisle": [
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale)"
+  },
+  {
+   "id": 704,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 705,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 706,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 453,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 454,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 127,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 214,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 559,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 560,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 782,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 783,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 784,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 627,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 628,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 629,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 630,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 690,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 691,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 692,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 693,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 233,
+   "reason": "Évolution par échange (Porygon, en tenant Améliorator)"
+  },
+  {
+   "id": 474,
+   "reason": "Évolution par échange (Porygon2, en tenant CD Douteux)"
+  }
+ ],
+ "swcrown": [
+  {
+   "id": 574,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 575,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 576,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 577,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 578,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 579,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 874,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 875,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 371,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 372,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 373,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 443,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 444,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 445,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 138,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 139,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 140,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 141,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 633,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 634,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 635,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 246,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 247,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 248,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 302,
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 303,
+   "reason": "Exclusif à Épée : échange nécessaire dans Bouclier"
+  },
+  {
+   "id": 77,
+   "k": "77-galar",
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  },
+  {
+   "id": 78,
+   "k": "78-galar",
+   "reason": "Exclusif à Bouclier : échange nécessaire dans Épée"
+  }
+ ],
+ "bdsp": [
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 408,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 409,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 410,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  },
+  {
+   "id": 411,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 431,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  },
+  {
+   "id": 432,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  },
+  {
+   "id": 434,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 435,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 483,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 484,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  },
+  {
+   "id": 198,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 430,
+   "reason": "Exclusif à Diamant Étincelant : échange nécessaire dans Perle Scintillante"
+  },
+  {
+   "id": 200,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  },
+  {
+   "id": 429,
+   "reason": "Exclusif à Perle Scintillante : échange nécessaire dans Diamant Étincelant"
+  }
+ ],
+ "la": [],
+ "sv": [
+  {
+   "id": 194,
+   "reason": "Échange avec un PNJ contre Axoloto de Paldea uniquement"
+  },
+  {
+   "id": 316,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 317,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 425,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 426,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 434,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 435,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 371,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 372,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 373,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 765,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 766,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 874,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 875,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 690,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 691,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 633,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 634,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 635,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 984,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 985,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 986,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 987,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 988,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 989,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 990,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 991,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 992,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 993,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 994,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 995,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 1005,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 1006,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 1007,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 1008,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 128,
+   "k": "128-paldea-blaze-breed",
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 128,
+   "k": "128-paldea-aqua-breed",
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  }
+ ],
+ "svmask": [
+  {
+   "id": 190,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 424,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 877,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  }
+ ],
+ "svdisk": [
+  {
+   "id": 408,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 409,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 410,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 411,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 1020,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 1021,
+   "reason": "Exclusif à Écarlate : échange nécessaire dans Violet"
+  },
+  {
+   "id": 1022,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  },
+  {
+   "id": 1023,
+   "reason": "Exclusif à Violet : échange nécessaire dans Écarlate"
+  }
+ ],
+ "za": [
+  {
+   "id": 683,
+   "reason": "Évolution par échange (Fluvetin, en tenant Sachet Senteur)"
+  },
+  {
+   "id": 685,
+   "reason": "Évolution par échange (Sucroquin, en tenant Chantibonbon)"
+  },
+  {
+   "id": 212,
+   "reason": "Évolution par échange (Insécateur, en tenant Peau Métal)"
+  },
+  {
+   "id": 199,
+   "reason": "Évolution par échange (Ramoloss, en tenant Roche Royale) — un Roigada de Galar s’obtient par mission"
+  }
+ ],
+ "zadlc": [
+  {
+   "id": 350,
+   "reason": "Évolution par échange (Barpau, en tenant Écaille Lavande) — seule évolution par échange absente des distorsions 3★"
+  }
+ ],
+ "frlgsw": [
+  {
+   "id": 23,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 24,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 27,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 28,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 37,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 38,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 43,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 44,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 45,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 54,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 55,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 58,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 59,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 65,
+   "reason": "Évolution par échange (Kadabra)"
+  },
+  {
+   "id": 68,
+   "reason": "Évolution par échange (Machopeur)"
+  },
+  {
+   "id": 69,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 70,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 71,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 76,
+   "reason": "Évolution par échange (Gravalanch)"
+  },
+  {
+   "id": 79,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 80,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 83,
+   "reason": "Échange avec un PNJ contre Piafabec uniquement"
+  },
+  {
+   "id": 90,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 91,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 94,
+   "reason": "Évolution par échange (Spectrum)"
+  },
+  {
+   "id": 108,
+   "reason": "Échange avec un PNJ contre Akwakwak (Rouge Feu) / Flagadoss (Vert Feuille) uniquement"
+  },
+  {
+   "id": 120,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 121,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 122,
+   "reason": "Échange avec un PNJ contre Abra uniquement"
+  },
+  {
+   "id": 123,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 124,
+   "reason": "Échange avec un PNJ contre Têtarte uniquement"
+  },
+  {
+   "id": 125,
+   "reason": "Exclusif à Rouge Feu : échange nécessaire dans Vert Feuille"
+  },
+  {
+   "id": 126,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  },
+  {
+   "id": 127,
+   "reason": "Exclusif à Vert Feuille : échange nécessaire dans Rouge Feu"
+  }
+ ],
+ "go": [
+  {
+   "id": 83,
+   "reason": "Exclusivité régionale (Corée du Sud, Taïwan, Japon, Hong Kong) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 115,
+   "reason": "Exclusivité régionale (Australie) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 122,
+   "reason": "Exclusivité régionale (Europe) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 128,
+   "reason": "Exclusivité régionale (Amérique du Nord) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 214,
+   "reason": "Exclusivité régionale (Mexique, Amérique centrale et du Sud, sud de la Floride et du Texas) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 222,
+   "reason": "Exclusivité régionale (Zones côtières tropicales (≈ 31° N – 26° S)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 313,
+   "reason": "Exclusivité régionale (Europe, Asie, Australie) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 314,
+   "reason": "Exclusivité régionale (Amériques, Afrique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 324,
+   "reason": "Exclusivité régionale (Asie de l’Ouest, du Sud et du Sud-Est, Inde) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 335,
+   "reason": "Exclusivité régionale (Europe, Asie, Australie) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 336,
+   "reason": "Exclusivité régionale (Amériques, Afrique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 337,
+   "reason": "Exclusivité régionale (Hémisphère ouest) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 338,
+   "reason": "Exclusivité régionale (Hémisphère est) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 357,
+   "reason": "Exclusivité régionale (Afrique, Levant, Malte, sud de l’Espagne) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 369,
+   "reason": "Exclusivité régionale (Nouvelle-Zélande, Fidji, Nouvelle-Calédonie (UTC+13)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 417,
+   "reason": "Exclusivité régionale (Régions arctiques (Alaska, nord du Canada, Russie)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 441,
+   "reason": "Exclusivité régionale (Hémisphère sud) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 455,
+   "reason": "Exclusivité régionale (Sud-est des États-Unis) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 422,
+   "reason": "Exclusivité régionale (Hémisphère ouest (Mer Occident)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 423,
+   "reason": "Exclusivité régionale (Hémisphère ouest (Mer Occident)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 422,
+   "k": "422-east",
+   "reason": "Exclusivité régionale (Hémisphère est) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 423,
+   "k": "423-east",
+   "reason": "Exclusivité régionale (Hémisphère est) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 439,
+   "reason": "Exclusivité régionale (Europe (Œufs 5 km)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 480,
+   "reason": "Exclusivité régionale (Asie-Pacifique (raids, rare sauvage)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 481,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique, Inde (raids, rare sauvage)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 482,
+   "reason": "Exclusivité régionale (Amériques, Groenland (raids, rare sauvage)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 511,
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 512,
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 513,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique, Inde) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 514,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique, Inde) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 515,
+   "reason": "Exclusivité régionale (Amériques, Groenland) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 516,
+   "reason": "Exclusivité régionale (Amériques, Groenland) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 538,
+   "reason": "Exclusivité régionale (Amériques, Afrique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 539,
+   "reason": "Exclusivité régionale (Europe, Asie, Australie) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 550,
+   "reason": "Exclusivité régionale (Hémisphère est (Motif Rouge)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 550,
+   "k": "550-blue-striped",
+   "reason": "Exclusivité régionale (Hémisphère ouest) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 556,
+   "reason": "Exclusivité régionale (Sud des États-Unis, Mexique, Amérique centrale, Caraïbes, Amérique du Sud) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 561,
+   "reason": "Exclusivité régionale (Égypte, Grèce) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 626,
+   "reason": "Exclusivité régionale (New York et environs) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 631,
+   "reason": "Exclusivité régionale (Europe, Asie, Australie) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 632,
+   "reason": "Exclusivité régionale (Amériques, Afrique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 707,
+   "reason": "Exclusivité régionale (France et zones frontalières (Luxembourg, ouest de la Suisse, sud-est de l’Angleterre)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 741,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique (Style Flamenco)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 741,
+   "k": "741-pom-pom",
+   "reason": "Exclusivité régionale (Amériques) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 741,
+   "k": "741-pau",
+   "reason": "Exclusivité régionale (Îles d’Afrique, d’Asie, du Pacifique et des Caraïbes) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 741,
+   "k": "741-sensu",
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 676,
+   "k": "676-debutante",
+   "reason": "Exclusivité régionale (Amériques (coupe)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 676,
+   "k": "676-diamond",
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique (coupe)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 676,
+   "k": "676-star",
+   "reason": "Exclusivité régionale (Asie-Pacifique (coupe)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 676,
+   "k": "676-la-reine",
+   "reason": "Exclusivité régionale (France (coupe)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 676,
+   "k": "676-kabuki",
+   "reason": "Exclusivité régionale (Japon (coupe)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 676,
+   "k": "676-pharaoh",
+   "reason": "Exclusivité régionale (Égypte (coupe)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 764,
+   "reason": "Exclusivité régionale (Hawaï) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 669,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique (Fleur Rouge)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 670,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique (Fleur Rouge)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 671,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique (Fleur Rouge)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 669,
+   "k": "669-yellow",
+   "reason": "Exclusivité régionale (Amériques, Groenland) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 670,
+   "k": "670-yellow",
+   "reason": "Exclusivité régionale (Amériques, Groenland) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 671,
+   "k": "671-yellow",
+   "reason": "Exclusivité régionale (Amériques, Groenland) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 669,
+   "k": "669-blue",
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 670,
+   "k": "670-blue",
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 671,
+   "k": "671-blue",
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 701,
+   "reason": "Exclusivité régionale (Mexique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 794,
+   "reason": "Exclusivité régionale (Amériques, Groenland (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 795,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique, Inde (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 796,
+   "reason": "Exclusivité régionale (Asie-Pacifique (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 797,
+   "reason": "Exclusivité régionale (Hémisphère sud (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 798,
+   "reason": "Exclusivité régionale (Hémisphère nord (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 805,
+   "reason": "Exclusivité régionale (Hémisphère est (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 806,
+   "reason": "Exclusivité régionale (Hémisphère ouest (raids)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 874,
+   "reason": "Exclusivité régionale (Royaume-Uni) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 128,
+   "k": "128-paldea-blaze-breed",
+   "reason": "Exclusivité régionale (Hémisphère est) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 128,
+   "k": "128-paldea-aqua-breed",
+   "reason": "Exclusivité régionale (Hémisphère ouest) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 128,
+   "k": "128-paldea-combat-breed",
+   "reason": "Exclusivité régionale (Péninsule Ibérique (Espagne, Portugal)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 978,
+   "reason": "Exclusivité régionale (Europe, Moyen-Orient, Afrique (Forme Courbée)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 978,
+   "k": "978-droopy",
+   "reason": "Exclusivité régionale (Amériques) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 978,
+   "k": "978-stretchy",
+   "reason": "Exclusivité régionale (Asie-Pacifique) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 931,
+   "reason": "Exclusivité régionale (Hémisphère est (Plumage Vert)) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 931,
+   "k": "931-blue-plumage",
+   "reason": "Exclusivité régionale (Hémisphère ouest) : échange hors de la région (hors événements)"
+  },
+  {
+   "id": 666,
+   "reason": "Motifs selon la région des Cartes Postales (pas de localisation directe) : motifs d’autres régions via cartes postales ou échange"
+  }
+ ],
+ "go-facultatif": [
+  {
+   "id": 65,
+   "k": "65",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (100 bonbons sinon)"
+  },
+  {
+   "id": 68,
+   "k": "68",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (100 bonbons sinon)"
+  },
+  {
+   "id": 76,
+   "k": "76",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (100 bonbons sinon)"
+  },
+  {
+   "id": 76,
+   "k": "76-alola",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (100 bonbons sinon)"
+  },
+  {
+   "id": 94,
+   "k": "94",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (100 bonbons sinon)"
+  },
+  {
+   "id": 526,
+   "k": "526",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 534,
+   "k": "534",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 589,
+   "k": "589",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 617,
+   "k": "617",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 709,
+   "k": "709",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 711,
+   "k": "711",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 711,
+   "k": "711-small",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 711,
+   "k": "711-large",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 711,
+   "k": "711-super",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  },
+  {
+   "id": 711,
+   "k": "711-small",
+   "reason": "Facultatif : évolution gratuite en bonbons après échange (200 bonbons sinon)"
+  }
+ ],
+ "_indisponible": {
+  "za": [
+   {
+    "id": 719,
+    "note": "Cadeau Mystère (mission « Shine Bright Like a Gemstone »)"
+   }
+  ],
+  "svdisk": [
+   {
+    "id": 1025,
+    "note": "Épilogue « Le Mochi Mayhem » (accessible après les deux DLC) — pas un échange"
+   }
+  ],
+  "bdsp": [
+   {
+    "id": 490,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "usum": [
+   {
+    "id": 802,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   },
+   {
+    "id": 807,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "sm": [
+   {
+    "id": 801,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   },
+   {
+    "id": 802,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "oras": [
+   {
+    "id": 385,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "xy": [
+   {
+    "id": 719,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   },
+   {
+    "id": 720,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   },
+   {
+    "id": 721,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "b2w2": [
+   {
+    "id": 494,
+    "note": "Événement uniquement"
+   },
+   {
+    "id": 641,
+    "note": "Poké Radar Rêve (appli 3DS) ou événement"
+   },
+   {
+    "id": 642,
+    "note": "Poké Radar Rêve (appli 3DS) ou événement"
+   },
+   {
+    "id": 645,
+    "note": "Poké Radar Rêve (appli 3DS) ou événement"
+   }
+  ],
+  "rs": [
+   {
+    "id": 386,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "c": [
+   {
+    "id": 151,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "gs": [
+   {
+    "id": 151,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   },
+   {
+    "id": 251,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "y": [
+   {
+    "id": 151,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ],
+  "rb": [
+   {
+    "id": 151,
+    "note": "Distribution événementielle / Cadeau Mystère uniquement"
+   }
+  ]
+ }
+}

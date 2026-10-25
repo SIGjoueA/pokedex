@@ -590,6 +590,7 @@ async function boot() {
   try {
     DATA = await getJSON('data/core.json');
     try { const me = await getJSON('data/mega-energy.json'); if (me?.ids) ENERGY_ICONS = { generic: me.generic || ENERGY_ICONS.generic, ids: new Set(me.ids.map(String)) }; } catch {}
+    try { TRADE = await getJSON('data/trade.json'); } catch {} // v54: Pokémon obtainable only by trade, per game
     try { const ms = await getJSON('data/mega-stones.json'); if (ms?.stones) MEGA_STONES = ms; else if (ms && !ms.fallback) MEGA_STONES = { fallback: MEGA_STONES.fallback, stones: ms }; } catch {}
   } catch (e) {
     $('#results').innerHTML = '<p class="empty">Impossible de charger les données. Ouvrez l’application une fois avec une connexion Internet.</p>';
@@ -675,6 +676,25 @@ const inGame = (p, gi) => !!((p.gb >> gi) & 1);
 // Alola = Soleil/Lune, Ultra-Soleil/Ultra-Lune · Galar = Épée/Bouclier + extensions · Hisui = Légendes Arceus · Paldea = Écarlate/Violet + extensions. Let’s Go = Kanto (common first). Z-A: no Kalos forms.
 const REGION_GAMES = { alola: ['sm', 'usum'], galar: ['sw', 'swisle', 'swcrown'], hisui: ['la'], paldea: ['sv', 'svmask', 'svdisk'] };
 const REGION_OF_GAME = {}; for (const [r, gs] of Object.entries(REGION_GAMES)) gs.forEach(g => REGION_OF_GAME[g] = r);
+// v54: trade-only rows. Keyed rows (« 76-alola ») match that form only; plain ids match the default form or, in a game, the game's regional form.
+// GO: exact keys (plain id = default form). f.go = optional trades (free candy evolution): subtle tile, sheet line only.
+let TRADE = null; const TRADE_IDX = {};
+function tradeIdx(g) {
+  if (TRADE_IDX[g]) return TRADE_IDX[g];
+  const m = { t: new Map(), f: new Map(), x: new Map() };
+  if (TRADE) { for (const [x, r] of (TRADE.g || {})[g] || []) m.t.set(String(x), r); for (const [x, r] of (TRADE.f || {})[g] || []) m.f.set(String(x), r); for (const [x, r] of (TRADE.x || {})[g] || []) m.x.set(String(x), r); }
+  return TRADE_IDX[g] = m;
+}
+const tradeLook = (map, p, g) => map.get(p.k) ?? (g !== 'go' && regionOf(p) && regionOf(p) === REGION_OF_GAME[g] ? map.get(String(p.id)) : undefined);
+// → { r: reason, opt: optional } | null
+function tradeOf(p, g) { if (!TRADE || !g || g === 'home' || g === 'all') return null; const m = tradeIdx(g), r = tradeLook(m.t, p, g); if (r) return { r, opt: false }; const o = tradeLook(m.f, p, g); return o ? { r: o, opt: true } : null; }
+// v54: sheet line « ⇄ Échange requis » (reason) or « Indisponible » note, at the top of a game / GO sheet
+function tradeBoxHTML(p, g) {
+  const t = tradeOf(p, g), x = !t && indispoOf(p, g);
+  if (t) return `<section class="box tradebox${t.opt ? ' opt' : ''}"><h2><span class="trk">⇄</span> ${t.opt ? 'Échange facultatif' : 'Échange requis'}</h2><p>${esc(t.r)}</p></section>`;
+  return x ? `<section class="box tradebox indispo"><h2>Indisponible dans ce jeu</h2><p>${esc(x)}</p></section>` : '';
+}
+function indispoOf(p, g) { if (!TRADE || !g || g === 'go' || g === 'home' || g === 'all') return null; return tradeLook(tradeIdx(g).x, p, g) || null; }
 const regionOf = q => (q.k.match(/-(alola|galar|hisui|paldea)(?:-(?!cap)|$)/) || [])[1] || null;
 const REG_REPS = {};
 function regionalReps(g) { // species id -> regional form shown first / instead of the common form in this game's regional dex
@@ -713,6 +733,7 @@ function filtered() {
     if (state.gen && p.g !== +state.gen) return false;
     for (const t of state.types) if (!p.t.includes(t)) return false;
     const key = ik(p);
+    if (state.cat === 'trade' && !(tradeOf(p, trackCtx()) && !tradeOf(p, trackCtx()).opt)) return false;
     if (state.cat === 'leg' && !p.lg) return false;
     if (state.cat === 'myth' && !p.my) return false;
     if (state.cat === 'ub' && !isUB(p)) return false;
@@ -800,8 +821,10 @@ function cardHTML(p) {
     (hm ? (isCaught(p) ? homeIcon(homeComplete(p, homeAvail(p)), homeComplete(p, homeAvail(p)) ? HOME_C_T : HOME_T) : '') : !trackCtx() ? baseBall(p) : isCaught(p) ? `<span class="mk ok" aria-label="Capturé">${BALL}</span>` : '') +
     (isShiny(p) ? `<span class="mk sh" aria-label="Shiny ${hm ? 'transféré' : 'capturé'}">✨</span>` : '') +
     (trackCtx() && trackCtx() !== 'home' && isTrans(p) ? homeIcon(false, HOME_T) : '');
-  return `<a class="card${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="${artOf(p)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
-    `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(state.forms ? fullN(p) : p.n)} ${star}</div></div>` +
+  const tr = tradeOf(p, trackCtx()), trc = tr ? (tr.opt ? ' tradeo' : ' trade') : '';
+  const trI = tr ? `<span class="trk" aria-label="${tr.opt ? 'Échange facultatif' : 'Échange requis'}" title="${esc(tr.r)}">⇄</span>` : '';
+  return `<a class="card${trc}${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="${artOf(p)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+    `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(state.forms ? fullN(p) : p.n)} ${trI}${star}</div></div>` +
     `<div class="badges">${p.t.map(badge).join('')}</div><span class="cadd" role="button" tabindex="0" data-add="${p.k}" aria-label="Ajouter ${esc(fullN(p))} à ma collection">＋</span></a>`;
 }
 // Catégorie filters about HOME transfers: per game (this game) or global (base / HOME view). Not offered for games that cannot send Pokémon to HOME.
@@ -843,6 +866,7 @@ function updateCatOptions() {
   // v32: Méga-évolutions / Gigamax greyed in a game (dex) that has none of these forms
   const gm = GAME_BY[state.game], gi = gm ? GIDX[gm.id] : -1, dex = gm ? listDex() : null;
   // v40: Ultra-Chimères too (none before Soleil / Lune)
+  { const o = $('#cat option[value=trade]'), has = !!(c && c !== 'home' && tradeIdx(c).t.size); if (o) o.disabled = !has; if (!has && state.cat === 'trade') { state.cat = ''; $('#cat').value = ''; } }
   for (const v of [...Object.keys(FORM_CATS), 'ub']) {
     const o = $(`#cat option[value=${v}]`); if (!o) continue;
     const isV = v === 'ub' ? isUB : p => formCat(p, v);
@@ -1683,7 +1707,7 @@ function renderDetail() {
     const g = goHTML(p, f, sp, shared, DET.go);
     desc = flavorHTML(sp, null, f);
     pre = costumesHTML('Costumes');
-    body = g.stats +
+    body = tradeBoxHTML(p, 'go') + g.stats +
       `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` +
       g.dispo + g.shiny + g.eff + g.moves + g.pvp + g.comp + g.dit;
   } else {
@@ -1706,7 +1730,7 @@ function renderDetail() {
     const abB = (() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })();
     const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
-    if (gm) body = regB + statsB + evoB + encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + breedHTML(p, sp, gm) + shinyHTML(p, gm) + effB + abB + movesHTML(f, sp, gm, shared) + E.ev;
+    if (gm) body = tradeBoxHTML(p, gm.id) + regB + statsB + evoB + encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + breedHTML(p, sp, gm) + shinyHTML(p, gm) + effB + abB + movesHTML(f, sp, gm, shared) + E.ev;
     else if (mode === 'home') { pre = homeDexHTML(p); body = statsB + evoB + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f) + effB + abB; } // v47: Dex national HOME after Formes, Shiny after Compatibilité
     else { pre = homeSrcHTML(p, f); body = statsB + evoB + breedHTML(p, sp, gm) + effB + abB + availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + E.ety + E.ev + goBox + costumesHTML('Costumes GO'); }
   }
@@ -2241,7 +2265,7 @@ function initCatMenu() { initMenu('cat', { btnId: 'catbtn', listId: 'catlist', l
 let COLL = (store.get('collection', []) || []).filter(e => e && typeof e === 'object');
 let colMode = store.get('colmode', false) === true;
 const colSave = () => { store.set('collection', COLL); const t = document.getElementById('coltools'); if (t) { const op = !t.querySelector('#colfp').hidden; t.parentNode.innerHTML = ''; colRender(); const pn = document.getElementById('colfp'); if (pn && op) pn.hidden = false; } };
-const colGames = () => [...GAMES.map(g => [g.id, g.s]), ['go', 'Pokémon GO']];
+const colGames = () => [['go', 'Pokémon GO'], ...GAMES.map(g => [g.id, g.s])]; // v54: GO first (then right under HOME in « Jeu actuel »)
 const colGName = g => g === 'go' ? 'Pokémon GO' : g === 'home' ? 'Pokémon HOME' : GAME_BY[g] ? GAME_BY[g].s : '';
 const colWhere = w => !w ? '' : w.startsWith('other:') ? w.slice(6) : colGName(w);
 const colOrigOk = g => g === 'go' || !!GAME_BY[g];

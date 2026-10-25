@@ -1,5 +1,14 @@
 [
  {
+  "v": "v54",
+  "d": "2026-10-25",
+  "l": [
+   "Dans un jeu et dans Pokémon GO, les Pokémon qu’on ne peut obtenir que par échange (version exclusive, échange avec un PNJ, évolution par échange, exclusivité régionale GO) ont un ⇄ et un fond violet ; leur fiche indique pourquoi.",
+   "Nouveau filtre « ⇄ Échange requis ». En GO, les évolutions où l’échange est seulement facultatif ont un simple contour pointillé. Les Pokémon réservés aux événements ont une note sur leur fiche.",
+   "Collection : Pokémon GO en tête du jeu d’origine et juste sous HOME pour le jeu actuel ; « Peut méga-évoluer » ne déborde plus sur téléphone. Le bouton ☰ du Dex est à la même place qu’en Collection et Pocket."
+  ]
+ },
+ {
   "v": "v53",
   "d": "2026-10-25",
   "l": [

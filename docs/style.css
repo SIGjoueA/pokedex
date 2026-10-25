@@ -615,3 +615,25 @@ body.colopen{overflow:hidden}
 .cfrow .cflv{margin-bottom:0}.cfmgl{white-space:nowrap}
 .collv.hl{color:#fff;background:#d0245a;border-radius:8px;padding:0 6px;font-weight:700}
 .cfgo{flex-wrap:wrap}.cfgo .cf{flex:1 1 22%;min-width:64px}.cb.iv{background:#e8eef9;color:#1d3f7a}.cb.iv.hl{background:#d0245a;color:#fff}.colgo{display:block;font-weight:600;margin-top:2px}
+/* v54: trade-only Pokémon in a game / GO (⇄ + violet tint; optional GO trades: dashed border only) */
+:root{--trade:#8b5cf6;--tradebg:rgba(139,92,246,.16)}
+.card.trade{background:linear-gradient(var(--tradebg),var(--tradebg)),var(--bg2);border-color:var(--trade)}
+.card.tradeo{border-style:dashed;border-color:var(--trade)}
+.trk{color:var(--trade);font-weight:800;font-size:.95em;margin-right:2px}
+.card.tradeo .trk{opacity:.6}
+.tradebox{border-left:4px solid var(--trade)}.tradebox h2{display:flex;align-items:center;gap:6px}.tradebox p{margin:4px 0 0}
+.tradebox.opt{border-left-style:dashed}.tradebox.indispo{border-left-color:var(--mute)}
+/* v54: « Peut méga-évoluer » row wraps on phones (no overflow) */
+.cfx{flex-wrap:wrap;row-gap:4px;align-items:center}.cfx .cfmgv{flex:1 1 140px;min-width:0;max-width:100%}
+/* v54: ☰ at the same place in Dex as in Collection / Pocket (top row, beside Dex | Collection | Pocket) */
+body:not(.colmode):not(.pkmode) .modeseg{width:calc(100% - var(--tap) - 8px)}
+body:not(.colmode):not(.pkmode) .top #menubtn{position:absolute;top:12px;right:12px}
+/* v54: Dex | Collection | Pocket as tall as ☰ (var(--tap)), both on the same top line in all three modes */
+.modeseg{height:var(--tap);box-sizing:border-box}.modeseg button{min-height:0;height:100%}
+body.colmode .searchrow,body.pkmode .searchrow{margin-top:calc(-1 * var(--tap) - 8px)}
+body:not(.colmode):not(.pkmode) .top #menubtn{top:10px}
+/* v54: « Lieu de capture » / « Date de capture » on the same lines (labels + 44 px inputs); iOS Safari date input reset */
+.cfrow:has(> .cfd){align-items:flex-start}.cfrow > .cfd,.cfrow:has(> .cfd) > .cfs{margin:10px 0}
+.cfd input[type=date]{-webkit-appearance:none;appearance:none;display:block;height:44px;min-height:44px;line-height:40px;box-sizing:border-box;text-align:left}
+.cfd input[type=date]::-webkit-date-and-time-value{text-align:left;margin:0;line-height:40px}
+.cfd input[type=date]::-webkit-datetime-edit{padding:0}
