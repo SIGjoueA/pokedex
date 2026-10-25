@@ -952,7 +952,7 @@ function cryBtns(p) {
   const [l, o] = c, same = l && o && l === o;
   return `<div class="cries">${l ? `<button class="cry" type="button" data-cry="${l}" aria-label="Écouter le cri" title="Écouter le cri (version actuelle)"><span aria-hidden="true">🔊</span> Cri</button>` : ''}${o && !same ? `<button class="cry" type="button" data-cry="${o}" aria-label="Écouter le cri d’origine" title="Cri d’origine (jeux Gén. I–V, avant la refonte des cris)"><span aria-hidden="true">🔊</span> Ancien</button>` : ''}</div>`;
 }
-async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null)]).then(([g, pv]) => { g.pvp = pv; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP rankings (data/pvp.json, optional)
+async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null), getJSON('data/pvp-moves.json').catch(() => null)]).then(([g, pv, pm]) => { g.pvp = pv; g.pvm = pm; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP rankings (data/pvp.json, optional)
 async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).catch(e => { delete SP[id]; throw e; }); return SP[id]; }
 
 /* ---------------- detail ---------------- */
@@ -1647,8 +1647,20 @@ function goHTML(p, f, sp, shared, go) {
     const dps = s ? (power / s) : 0, eps = s ? energy / s : 0;
     return `<div class="mv"><span class="lv"></span><span class="mn"><b>${esc(fr)}${elite ? ' †' : ''}</b> ${badge(type)}</span><span class="ms">Puis. ${power} · ${fast ? 'Énergie +' : 'Énergie −'}${energy} · ${dec(s.toFixed(1))} s · DPS ${dec(dps.toFixed(1))}${fast ? ` · EPS ${dec(eps.toFixed(1))}` : ''}</span></div>`;
   };
-  const fm = d.fm.map(k => moveRowGo(k, true, false)).join('') + (d.fe || []).map(k => moveRowGo(k, true, true)).join('');
-  const cm = d.cm.map(k => moveRowGo(k, false, false)).join('') + (d.ce || []).map(k => moveRowGo(k, false, true)).join('');
+  const PM = go.pvm && go.pvm.m || {};
+  const moveRowPvp = (key, fast, elite) => { // v55: PvP (combats de dresseurs) — PvPoke
+    const m = go.moves[key], v = PM[key]; if (!m) return '';
+    const st = !v ? 'Pas de donnée PvP' : fast ? `Dégâts ${v[0]} · Énergie +${v[1]} · ${v[2]} tour${v[2] > 1 ? 's' : ''} · DPT ${dec((v[0] / v[2]).toFixed(1))} · EPT ${dec((v[1] / v[2]).toFixed(1))}`
+      : `Dégâts ${v[0]} · Énergie −${v[1]} · DPE ${dec((v[0] / v[1]).toFixed(2))}`;
+    return `<div class="mv"><span class="lv"></span><span class="mn"><b>${esc(m[0])}${elite ? ' †' : ''}</b> ${badge(m[1])}</span><span class="ms">${st}</span></div>`;
+  };
+  const rows = (fn, ks, fast, el) => (ks || []).map(k => fn(k, fast, el)).join('');
+  const both = fn => [rows(fn, d.fm, true, false) + rows(fn, d.fe, true, true), rows(fn, d.cm, false, false) + rows(fn, d.ce, false, true)];
+  const [fm, cm] = both(moveRowGo), [fp, cp] = both(moveRowPvp);
+  const rs = go.pvm && go.pvm.ms && (go.pvm.ms[p.k] || (p.c === 'sex' ? go.pvm.ms[String(p.id)] : null));
+  const mvn = k => esc(go.moves[k]?.[0] || k);
+  const rec = rs ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec">${[['g', 'Ligue Super'], ['u', 'Ligue Hyper'], ['m', 'Ligue Master']].filter(([l]) => rs[l]).map(([l, n]) => `<li><b>${n}</b> : ${mvn(rs[l][0])} + ${rs[l].slice(1).map(mvn).join(' / ')}</li>`).join('')}</ul>` : '';
+  const mvMode = store.get('gomvmode', 'raid') === 'pvp' ? 'pvp' : 'raid';
   const shadow = d.shm && go.moves[d.shm] ? `<p class="note">Obscur : ${esc(go.moves[d.shm][0])} · Purifié : ${esc(go.moves[d.pum]?.[0] || '—')}</p>` : '';
   const sh = d.nosh ? 'Non disponible (pas de shiny pour ce Gigamax pour l’instant)' : d.shf && TODAY < d.shf ? `Pas encore (à partir du ${frDate(d.shf)})` : d.sh ? (d.sh.length ? `Oui (${d.sh.map(s => ({ wild: 'sauvage', raid: 'raid', egg: 'œuf', evolution: 'évolution', research: 'recherche', photobomb: 'photobomb', alola: 'forme d’Alola', mega: 'Méga-Évolution d’un Pokémon shiny', max: 'Combats Max' }[s] || s)).join(', ')})` : 'Oui') : (p.c ? 'Non vérifié pour cette forme' : 'Non disponible');
   const types = d.t;
@@ -1677,8 +1689,13 @@ function goHTML(p, f, sp, shared, go) {
     shiny: `
     <section class="box shinybox goshiny"><h2>✨ Shiny <small class="cnt">GO</small></h2><ul class="plain gol"><li>Shiny : <b>${sh}</b></li></ul></section>`,
     moves: `
-    <section class="box"><h2>Attaques rapides</h2><div class="mvs">${fm || '<p class="note">—</p>'}</div></section>
-    <section class="box"><h2>Attaques chargées</h2><div class="mvs">${cm || '<p class="note">—</p>'}</div>${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite). DPS = puissance ÷ durée.</p></section>`,
+    <section class="box gomoves mv-${mvMode}"><h2>Attaques</h2>
+      <div class="seg mvseg" role="tablist"><button type="button" data-mvm="raid" aria-pressed="${mvMode === 'raid'}">Raids &amp; arènes</button><button type="button" data-mvm="pvp" aria-pressed="${mvMode === 'pvp'}">Combats (PvP)</button></div>
+      <div class="mvraid"><h3 class="mvh">Attaques rapides</h3><div class="mvs">${fm || '<p class="note">—</p>'}</div><h3 class="mvh">Attaques chargées</h3><div class="mvs">${cm || '<p class="note">—</p>'}</div>
+        <p class="note">DPS = puissance ÷ durée.</p></div>
+      <div class="mvpvp"><h3 class="mvh">Attaques rapides</h3><div class="mvs">${fp || '<p class="note">—</p>'}</div><h3 class="mvh">Attaques chargées</h3><div class="mvs">${cp || '<p class="note">—</p>'}</div>${rec}
+        <p class="note">1 tour = 0,5 s. DPT = dégâts par tour, EPT = énergie par tour, DPE = dégâts par point d’énergie. Moveset recommandé : classement PvPoke « overall »${go.pvm ? ` (au ${go.pvm.date.split('-').reverse().join('/')})` : ''}.</p></div>
+      ${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p></section>`,
     comp: `
     <section class="box goinfo gocomp"><h2>Compagnon &amp; bonbons</h2>
       <ul class="plain gol">
@@ -1707,14 +1724,15 @@ function renderDetail() {
   const ap = showFemArt && p.fe ? femP(p) : p, gimg = spriteMode === 'off' ? `img/${ap.k}.webp` : artOf(ap), simg = `img/s/${ap.k}.webp`; // v35: HOME by default
   const regional = gm ? dexNumbers(sp, gm.id) : '';
   // v43: sheet order chosen per view; description, tracking and forms are placed in the template below
-  let body = '', desc = '', pre = '';
+  // v55: one order for every view — identity (hero, taille, suivi, collection, formes) → statut / présence (P) → stats, faiblesses, talents (S)
+  // → capture, reproduction, évolutions (C) → attaques (M) → cartes Pocket, descriptions et divers (D). Large blocks fold (applyFolds).
+  let P = '', S = '', C = '', M = '', D = '', desc = '', size = '';
   if (isGo && f.go && DET.go) {
     const g = goHTML(p, f, sp, shared, DET.go);
     desc = flavorHTML(sp, null, f);
-    pre = costumesHTML('Costumes');
-    body = tradeBoxHTML(p, 'go') + g.stats +
-      `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` +
-      g.dispo + g.shiny + g.eff + g.moves + g.pvp + g.comp + g.dit;
+    P = g.dispo + g.shiny; S = g.stats + g.eff;
+    C = `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` + g.comp + g.dit;
+    M = g.moves + g.pvp; D = costumesHTML('Costumes');
   } else {
     const sArr = gm ? pickGen(f.ps, gen, f.s) : f.s;
     const gen1 = gm && gen === 1;
@@ -1723,9 +1741,8 @@ function renderDetail() {
     const abE = abilityEff(f, gm, shared.ref, types, chart); // v31
     const goBox = goOk ? `<section class="box gobox"><h2>Pokémon GO</h2><p class="gol1">Disponible dans Pokémon GO${f.go.m50 ? ` · PC max niv. 50 : <b>${fmt(f.go.m50)}</b>` : ''}${f.go.bd ? ` · compagnon : <b>${dec(f.go.bd)} km</b>` : ''}</p><p><a href="#" class="golink" data-game="go">Voir les données Pokémon GO →</a></p></section>` : '';
     const E = etyHTML(sp);
-    desc = `${flavorHTML(sp, gm, f)}
-    <section class="box"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div>
-</section>`;
+    desc = flavorHTML(sp, gm, f);
+    size = `<section class="box sizebox"><div class="kv"><div><b>${dec(f.h)} m</b><span>Taille</span></div><div><b>${dec(f.w)} kg</b><span>Poids</span></div></div></section>`;
     const regB = regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : '';
     const statsB = `<section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>`;
@@ -1735,9 +1752,10 @@ function renderDetail() {
     const abB = (() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })();
     const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
-    if (gm) body = tradeBoxHTML(p, gm.id) + regB + statsB + evoB + encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + breedHTML(p, sp, gm) + shinyHTML(p, gm) + effB + abB + movesHTML(f, sp, gm, shared) + E.ev;
-    else if (mode === 'home') { pre = homeDexHTML(p); body = statsB + evoB + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f) + effB + abB; } // v47: Dex national HOME after Formes, Shiny after Compatibilité
-    else { pre = homeSrcHTML(p, f); body = statsB + evoB + breedHTML(p, sp, gm) + effB + abB + availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + E.ety + E.ev + goBox + costumesHTML('Costumes GO'); }
+    S = statsB + effB + abB;
+    if (gm) { P = tradeBoxHTML(p, gm.id) + regB; C = encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + shinyHTML(p, gm) + breedHTML(p, sp, gm) + evoB; M = movesHTML(f, sp, gm, shared); D = E.ev; }
+    else if (mode === 'home') { P = homeDexHTML(p) + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f); C = evoB; }
+    else { P = availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + homeSrcHTML(p, f) + goBox; C = breedHTML(p, sp, gm) + evoB; D = E.ety + E.ev + costumesHTML('Costumes GO'); } // « Présent dans »: overview only
   }
   $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
   <div class="detail">
@@ -1753,22 +1771,42 @@ function renderDetail() {
       <div class="badges">${types.map(t => `<a class="badge" href="#" data-type="${t}">${esc(TYPE_FR[t])}</a>`).join('')}</div>
       <div class="tags">${flags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     </div>
-    ${desc}
+    ${size}
     ${baseNoteHTML(p)}
     <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
-    <div id="mycol">${myColHTML(p)}</div><div id="mypocket"></div>
+    <div id="mycol">${myColHTML(p)}</div>
     ${formSwitcher(p, gm)}
-    ${pre}
-    ${body}
+    ${P}${S}${C}${M}
+    <div id="mypocket"></div>
+    ${desc ? `<section class="box descbox"><h2>Pokédex${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${desc}</section>` : ''}
+    ${D}
     <p class="note disclaimer">Les données proviennent de PokéAPI, de Poképédia (CC BY-NC-SA 3.0 FR) et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
-  setBarH(); initSheetGameMenu(); pkSheet(p); setSprite(spriteMode, true); // v35: HOME (default) or the mode chosen on this sheet
+  setBarH(); initSheetGameMenu(); applyFolds(); pkSheet(p); setSprite(spriteMode, true); // v35: HOME (default) or the mode chosen on this sheet
 }
 // hero names: French (h1) → genus · English → Japanese · romaji
 function namesHTML(p, sp) {
   const l1 = [sp && sp.gn, p.en].filter(Boolean).map((t, i, a) => (sp && sp.gn && i === 0) ? `<span class="gn">${esc(t)}</span>` : `<span lang="en" class="en">${esc(t)}</span>`).join(' · ');
   const l2 = p.ja ? `<span lang="ja" class="ja">${esc(p.ja)}</span>${p.ro ? ` · <span class="ro">${esc(p.ro)}</span>` : ''}` : '';
   return `<div class="genus">${l1}</div>${l2 ? `<div class="jname">${l2}</div>` : ''}`;
+}
+// v55: GO moves Raid / PvP toggle, remembered (localStorage « gomvmode »)
+document.addEventListener('click', e => { const b = e.target.closest('.mvseg [data-mvm]'); if (!b) return; const m = b.dataset.mvm; store.set('gomvmode', m);
+  for (const s of document.querySelectorAll('.gomoves')) { s.classList.toggle('mv-pvp', m === 'pvp'); s.classList.toggle('mv-raid', m !== 'pvp'); s.querySelectorAll('[data-mvm]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mvm === m))); } });
+// v55: large sheet blocks fold to a compact view (« Voir plus » / « Réduire »), state remembered per block title (localStorage « folds »: title → 1 = open)
+const FOLD_H = 420;
+const foldKey = sec => { const h = sec.querySelector('h2'); if (!h) return ''; const c = h.cloneNode(true); c.querySelectorAll('small,.cntb').forEach(x => x.remove()); return c.textContent.replace(/\s+/g, ' ').trim(); };
+function applyFolds() {
+  const O = store.get('folds', {});
+  for (const sec of document.querySelectorAll('#detail-view .detail section.box:not(.trackbox):not(.foldok)')) {
+    const k = foldKey(sec); if (!k) continue;
+    if (sec.scrollHeight <= FOLD_H + 80) continue; // short enough: no fold
+    sec.classList.add('foldok', 'fold'); sec.dataset.fold = k; sec.classList.toggle('open', !!O[k]);
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'foldbtn'; b.setAttribute('aria-expanded', String(!!O[k])); b.textContent = O[k] ? 'Réduire ▲' : 'Voir plus ▼';
+    b.onclick = () => { const on = !sec.classList.contains('open'), S = store.get('folds', {}); sec.classList.toggle('open', on); if (on) S[k] = 1; else delete S[k]; store.set('folds', S);
+      b.textContent = on ? 'Réduire ▲' : 'Voir plus ▼'; b.setAttribute('aria-expanded', String(on)); if (!on) { const t = sec.getBoundingClientRect().top; if (t < 0) window.scrollBy(0, t - 70); } };
+    sec.appendChild(b);
+  }
 }
 function renderDetailKeepScroll() { const y = window.scrollY; renderDetail(); window.scrollTo(0, y); }
 function homeSrcHTML(p, f, title = 'Transferts vers HOME') {
@@ -2012,7 +2050,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2737,7 +2775,7 @@ function pkSheet(p) {
     const cs = []; for (const s of PK.s) for (const c of s.cards) if (c[3].includes(p.id) && !c[7]) cs.push([s, c]);
     if (!cs.length) { box.innerHTML = ''; return; }
     const n = cs.filter(([, c]) => PKO.has(c.k)).length, tot = cs.reduce((a, [, c]) => a + pkN(c.k), 0);
-    box.innerHTML = `<section class="box pkbox"><h2>Cartes Pocket <small class="cnt">${n} / ${cs.length}${tot > n ? ` · ${tot} exemplaires` : ''}</small></h2><div class="pkgrid pkmini">${cs.slice().reverse().map(([s, c]) => pkCardHTML(s, c, true)).join('')}</div><p class="note">Touchez ＋ pour cocher une carte possédée. Données : TCGdex.</p></section>`;
+    setTimeout(applyFolds, 0); box.innerHTML = `<section class="box pkbox"><h2>Cartes Pocket <small class="cnt">${n} / ${cs.length}${tot > n ? ` · ${tot} exemplaires` : ''}</small></h2><div class="pkgrid pkmini">${cs.slice().reverse().map(([s, c]) => pkCardHTML(s, c, true)).join('')}</div><p class="note">Touchez ＋ pour cocher une carte possédée. Données : TCGdex.</p></section>`;
   }).catch(() => { box.innerHTML = ''; });
 }
 function pkInit() {

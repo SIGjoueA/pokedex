@@ -1,8 +1,8 @@
 'use strict';
 const VERSION = 'v55';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiche Pokémon GO : l’info ⇄ échange (requis ou facultatif) est maintenant dans le bloc Disponibilité, sans encadré en double.';
-const DATA_VERSION = 'd26'; // bump when the schema of data/*.json changes
+const NOTES = 'Fiches réorganisées (présence, stats, capture, attaques, divers), grands blocs repliables « Voir plus ». GO : attaques Raids / PvP et moveset conseillé.';
+const DATA_VERSION = 'd27'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
