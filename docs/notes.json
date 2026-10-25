@@ -1,5 +1,14 @@
 [
  {
+  "v": "v53",
+  "d": "2026-10-25",
+  "l": [
+   "Collection : nouveaux champs facultatifs Ball (seulement celles du jeu d’origine), niveau, lieu et date de capture. Dans Pokémon GO : niveau 1 à 50 avec demi-niveaux (40 et 50 mis en avant), PC et IV Attaque / Défense / PV avec leur pourcentage.",
+   "« Peut méga-évoluer » (avec le choix X / Y) : vous avez de quoi le faire méga-évoluer dans son jeu actuel ; badge dans la liste et la fiche. Le jeu actuel est par défaut le jeu de capture.",
+   "Vue Collection : recherche par nom ou surnom, filtres (jeu d’origine, jeu actuel, shiny, sexe, Ball, Baron / Gigamax / Méga, plus en votre possession) et tri (dont niveau)."
+  ]
+ },
+ {
   "v": "v52",
   "d": "2026-10-24",
   "l": [

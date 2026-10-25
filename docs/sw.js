@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v52';
+const VERSION = 'v53';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Pocket : boosters de chaque carte, reprises des Boosters de Luxe comptées comme l\'original, tous les noms en français.';
+const NOTES = 'Collection : Balls du jeu d’origine, niveau (GO : 40/50), PC et IV en GO, lieu et date de capture, Méga dans le jeu actuel, recherche, filtres et tri.';
 const DATA_VERSION = 'd25'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
