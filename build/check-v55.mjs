@@ -52,5 +52,14 @@ ok(/Fouet Lianes[\s\S]*Dégâts 5 · Énergie \+8 · 2 tours · DPT 2,5 · EPT 4
 await p.reload({ waitUntil: 'networkidle0' }); await sleep(1000); await p.select('#dgame', 'go'); await sleep(2000);
 ok(await p.evaluate(() => $('.gomoves').classList.contains('mv-pvp') && localStorage.getItem('gomvmode') === '"pvp"'), 'PvP choice remembered');
 if (SHOT) { await p.evaluate(() => { const b = $('.gomoves:not(.open) .foldbtn'); if (b) b.click(); $('.gomoves').scrollIntoView(); scrollBy(0, -110); }); await sleep(300); await p.screenshot({ path: DIR + '6-go-attaques-pvp.png' }); }
+// --- v55c: Raid recommended moveset
+p.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
+for (const [k, re, n] of [['150', /Meilleur : Coupe Psycho \+ Frappe Psy †[\s\S]*Sans attaque exclusive : Coupe Psycho \+ Psyko/, '7-go-raid-mewtwo'], ['6', /Meilleur : Danse Flammes \+ Rafale Feu/, '8-go-raid-dracaufeu']]) {
+  await p.goto(BASE + '#/p/' + k, { waitUntil: 'networkidle0' }); await sleep(1000); await p.select('#dgame', 'go'); await sleep(2000);
+  await p.evaluate(() => $('.mvseg [data-mvm="raid"]').click()); await sleep(200);
+  const t = await p.evaluate(() => $('.gomoves .mvraid .rdrec')?.innerText || '');
+  ok(re.test(t), 'Raid moveset ' + k + ' : ' + t.replace(/\n/g, ' / '));
+  if (SHOT) { await p.evaluate(() => { const b = $('.gomoves:not(.open) .foldbtn'); if (b) b.click(); $('.gomoves .rdrec').scrollIntoView({ block: 'center' }); }); await sleep(300); await p.screenshot({ path: DIR + n + '.png' }); }
+}
 ok(!errs.length, 'no page errors ' + errs.join(' | '));
 await b.close(); console.log(fails ? `${fails} FAIL` : 'ALL PASS'); process.exit(fails ? 1 : 0);

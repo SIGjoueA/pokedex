@@ -6,7 +6,7 @@
    "Fiche Pokémon GO : l’encadré « ⇄ Échange requis » est intégré au bloc Disponibilité (ligne ⇄ en violet), sans répéter la zone de l’exclusivité régionale. Idem pour les échanges facultatifs. Les jeux principaux gardent leur encadré.",
    "Fiches Pokémon réorganisées dans le même ordre partout : identité et suivi, puis présence dans les jeux, stats / faiblesses / talents, capture / reproduction / évolutions, attaques, et enfin cartes Pocket, descriptions du Pokédex et divers.",
    "Les blocs très longs (Présent dans, cartes Pocket, capacités, formes…) sont repliés : touchez « Voir plus » pour les déplier ; votre choix est retenu pour chaque bloc.",
-   "Pokémon GO : le bloc Attaques bascule entre « Raids & arènes » et « Combats (PvP) » (dégâts, énergie, tours, DPT / EPT, DPE) avec le moveset recommandé par ligue (PvPoke). Votre choix est retenu."
+   "Pokémon GO : le bloc Attaques bascule entre « Raids & arènes » et « Combats (PvP) » (dégâts, énergie, tours, DPT / EPT, DPE) avec le moveset recommandé par ligue (PvPoke). En mode Raids & arènes, un moveset recommandé est calculé (meilleur DPS contre une cible neutre), avec une alternative sans attaque exclusive † si besoin. Votre choix est retenu."
   ]
  },
  {

@@ -952,7 +952,7 @@ function cryBtns(p) {
   const [l, o] = c, same = l && o && l === o;
   return `<div class="cries">${l ? `<button class="cry" type="button" data-cry="${l}" aria-label="Écouter le cri" title="Écouter le cri (version actuelle)"><span aria-hidden="true">🔊</span> Cri</button>` : ''}${o && !same ? `<button class="cry" type="button" data-cry="${o}" aria-label="Écouter le cri d’origine" title="Cri d’origine (jeux Gén. I–V, avant la refonte des cris)"><span aria-hidden="true">🔊</span> Ancien</button>` : ''}</div>`;
 }
-async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null), getJSON('data/pvp-moves.json').catch(() => null)]).then(([g, pv, pm]) => { g.pvp = pv; g.pvm = pm; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP rankings (data/pvp.json, optional)
+async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null), getJSON('data/pvp-moves.json').catch(() => null), getJSON('data/raid-moves.json').catch(() => null)]).then(([g, pv, pm, rm]) => { g.pvp = pv; g.pvm = pm; g.rdm = rm; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP rankings (data/pvp.json, optional)
 async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).catch(e => { delete SP[id]; throw e; }); return SP[id]; }
 
 /* ---------------- detail ---------------- */
@@ -1660,6 +1660,8 @@ function goHTML(p, f, sp, shared, go) {
   const rs = go.pvm && go.pvm.ms && (go.pvm.ms[p.k] || (p.c === 'sex' ? go.pvm.ms[String(p.id)] : null));
   const mvn = k => esc(go.moves[k]?.[0] || k);
   const rec = rs ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec">${[['g', 'Ligue Super'], ['u', 'Ligue Hyper'], ['m', 'Ligue Master']].filter(([l]) => rs[l]).map(([l, n]) => `<li><b>${n}</b> : ${mvn(rs[l][0])} + ${rs[l].slice(1).map(mvn).join(' / ')}</li>`).join('')}</ul>` : '';
+  const rr = go.rdm && go.rdm.ms && go.rdm.ms[p.k], isEl = k => (d.fe || []).includes(k) || (d.ce || []).includes(k), mve = k => mvn(k) + (isEl(k) ? ' †' : '');
+  const rrec = rr ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec rdrec">${rr.map((c, i) => `<li><b>${i ? 'Sans attaque exclusive' : 'Meilleur'}</b> : ${mve(c[0])} + ${mve(c[1])} <span class="mute">(≈ ${dec(c[2].toFixed(1))} DPS)</span></li>`).join('')}</ul>` : '';
   const mvMode = store.get('gomvmode', 'raid') === 'pvp' ? 'pvp' : 'raid';
   const shadow = d.shm && go.moves[d.shm] ? `<p class="note">Obscur : ${esc(go.moves[d.shm][0])} · Purifié : ${esc(go.moves[d.pum]?.[0] || '—')}</p>` : '';
   const sh = d.nosh ? 'Non disponible (pas de shiny pour ce Gigamax pour l’instant)' : d.shf && TODAY < d.shf ? `Pas encore (à partir du ${frDate(d.shf)})` : d.sh ? (d.sh.length ? `Oui (${d.sh.map(s => ({ wild: 'sauvage', raid: 'raid', egg: 'œuf', evolution: 'évolution', research: 'recherche', photobomb: 'photobomb', alola: 'forme d’Alola', mega: 'Méga-Évolution d’un Pokémon shiny', max: 'Combats Max' }[s] || s)).join(', ')})` : 'Oui') : (p.c ? 'Non vérifié pour cette forme' : 'Non disponible');
@@ -1692,7 +1694,8 @@ function goHTML(p, f, sp, shared, go) {
     <section class="box gomoves mv-${mvMode}"><h2>Attaques</h2>
       <div class="seg mvseg" role="tablist"><button type="button" data-mvm="raid" aria-pressed="${mvMode === 'raid'}">Raids &amp; arènes</button><button type="button" data-mvm="pvp" aria-pressed="${mvMode === 'pvp'}">Combats (PvP)</button></div>
       <div class="mvraid"><h3 class="mvh">Attaques rapides</h3><div class="mvs">${fm || '<p class="note">—</p>'}</div><h3 class="mvh">Attaques chargées</h3><div class="mvs">${cm || '<p class="note">—</p>'}</div>
-        <p class="note">DPS = puissance ÷ durée.</p></div>
+${rrec}
+        <p class="note">DPS = puissance ÷ durée.${rr ? ' Moveset recommandé : meilleur DPS estimé (cycle attaque rapide + chargée, bonus de type ×1,2, énergie reçue en encaissant) contre une cible neutre au niveau 40, sans météo ni esquive.' : ''}</p></div>
       <div class="mvpvp"><h3 class="mvh">Attaques rapides</h3><div class="mvs">${fp || '<p class="note">—</p>'}</div><h3 class="mvh">Attaques chargées</h3><div class="mvs">${cp || '<p class="note">—</p>'}</div>${rec}
         <p class="note">1 tour = 0,5 s. DPT = dégâts par tour, EPT = énergie par tour, DPE = dégâts par point d’énergie. Moveset recommandé : classement PvPoke « overall »${go.pvm ? ` (au ${go.pvm.date.split('-').reverse().join('/')})` : ''}.</p></div>
       ${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p></section>`,
@@ -2050,7 +2053,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
