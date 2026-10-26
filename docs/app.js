@@ -1697,7 +1697,7 @@ function goHTML(p, f, sp, shared, go) {
         ${d.fco ? `<li class="rgl">✂️ Obtention : <b>${esc(d.fco)}</b></li>` : ''}
         ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
         ${d.fch ? `<li class="rgl">✂️ ${esc(d.fch)}</li>` : ''}
-        ${d.fch ? '' : goTradeLi(p)}
+        ${!d.fch || d.rg ? goTradeLi(p) : ''}${d.fch && d.rgf?.some(([, z]) => !/partout/.test(z)) ? `<li class="trl"><span class="trk">⇄</span> Échange requis (coupes régionales) : <b>échange hors de la région (hors événements)</b></li>` : ''}
         ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
       </ul>
       <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>`,
