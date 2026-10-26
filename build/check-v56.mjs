@@ -18,5 +18,11 @@ for (const [k, g, exp, n] of [['25', 'sv', ['Formes', 'Évolutions', 'Où le tro
   ok(i >= 0 && exp.every((e, j) => (L[i + j] || '').startsWith(e)), `${k} ${g}: ${L.join(' | ')}`);
   if (SHOT) { await p.evaluate(() => { const s = [...document.querySelectorAll('.detail section.box')].find(x => /^Formes/.test(x.querySelector('h2')?.innerText || '')); s.scrollIntoView(); scrollBy(0, -110); }); await sleep(300); await p.screenshot({ path: DIR + n + '.png' }); }
 }
+// --- v56b: Pocket promo sources
+await p.goto(BASE + '#/p/25', { waitUntil: 'networkidle0' }); await sleep(1000); await p.select('#dgame', 'all'); await sleep(2500);
+await p.evaluate(() => { const s = document.querySelector('section.fold[data-fold^="Cartes Pocket"] .foldbtn'); if (s) s.click(); const c = document.querySelector('[data-pkv="P-B-001"]'); c.scrollIntoView(); c.click(); }); await sleep(1200);
+const src = await p.evaluate(() => [...document.querySelectorAll('.pkbig .pkboos')].map(x => x.textContent).join(' | '));
+ok(/Source : Missions Premium/.test(src), 'P-B-001 source ' + src);
+if (SHOT) await p.screenshot({ path: DIR + '7-pocket-promo-source.png' });
 ok(!errs.length, 'no page errors ' + errs.join(' | '));
 await b.close(); console.log(fails ? `${fails} FAIL` : 'ALL PASS'); process.exit(fails ? 1 : 0);
