@@ -2,7 +2,7 @@
 const VERSION = 'v56';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
 const NOTES = 'Fiches : Évolutions et Où le trouver juste sous Formes. Pocket : source de chaque carte promo.';
-const DATA_VERSION = 'd29'; // bump when the schema of data/*.json changes
+const DATA_VERSION = 'd30'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -265,7 +265,7 @@
     }
   },
   "dynamax": {
-    "_doc": "v38 : formes utilisables en Combats Max (Dynamax) dans Pokémon GO → bouton « Dynamax » sur la fiche GO. Clé d’entrée → date de sortie (AAAA-MM-JJ) ; une date future = bouton affiché à partir de cette date. Liste maintenue à la main (routine GO hebdo). Source : Bulbapedia « Dynamax (GO) » (vérifié le 2026-10-16), recoupé avec Leek Duck. Les Gigamax ont leur propre clé (gmax).",
+    "_doc": "v38 : formes utilisables en Combats Max (Dynamax) dans Pokémon GO → bouton « Dynamax » sur la fiche GO. Clé d’entrée → date de sortie (AAAA-MM-JJ) ; une date future = bouton affiché à partir de cette date. Liste maintenue à la main (routine GO hebdo). Source : Bulbapedia « Dynamax (GO) » (vérifié le 2026-10-16), recoupé avec Leek Duck (Max Mondays, relevé du 2026-10-26 : Psystigri le 23/11/2026). Les Gigamax ont leur propre clé (gmax).",
     "keys": {
       "831": "2024-09-04",
       "832": "2024-09-04",
@@ -421,7 +421,10 @@
       "484": "2026-11-06",
       "808": "2026-11-09",
       "809": "2026-11-09",
-      "895": "2026-11-12"
+      "895": "2026-11-12",
+      "677": "2026-11-23",
+      "678": "2026-11-23",
+      "678-female": "2026-11-23"
     }
   }
 }
