@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v55';
+const VERSION = 'v56';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiches réorganisées (présence, stats, capture, attaques, divers), grands blocs repliables « Voir plus ». GO : attaques et moveset conseillé Raids / PvP.';
+const NOTES = 'Fiches : Évolutions et Où le trouver juste sous Formes.';
 const DATA_VERSION = 'd28'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

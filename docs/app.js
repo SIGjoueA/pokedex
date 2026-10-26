@@ -1729,12 +1729,12 @@ function renderDetail() {
   // v43: sheet order chosen per view; description, tracking and forms are placed in the template below
   // v55: one order for every view — identity (hero, taille, suivi, collection, formes) → statut / présence (P) → stats, faiblesses, talents (S)
   // → capture, reproduction, évolutions (C) → attaques (M) → cartes Pocket, descriptions et divers (D). Large blocks fold (applyFolds).
-  let P = '', S = '', C = '', M = '', D = '', desc = '', size = '';
+  let N = '', P = '', S = '', C = '', M = '', D = '', desc = '', size = ''; // v56: N = right after Formes (Évolutions, then Où le trouver)
   if (isGo && f.go && DET.go) {
     const g = goHTML(p, f, sp, shared, DET.go);
     desc = flavorHTML(sp, null, f);
     P = g.dispo + g.shiny; S = g.stats + g.eff;
-    C = `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>` + g.comp + g.dit;
+    N = `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>`; C = g.comp + g.dit;
     M = g.moves + g.pvp; D = costumesHTML('Costumes');
   } else {
     const sArr = gm ? pickGen(f.ps, gen, f.s) : f.s;
@@ -1756,9 +1756,9 @@ function renderDetail() {
     const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
       <p class="note">Conditions issues de PokéAPI${gm ? ' pour l’époque de ce jeu' : ' (dernière version)'} ; les Pokémon trop récents pour la génération choisie sont masqués. Les coûts en bonbons GO sont dans l’onglet Pokémon GO.</p></section>`;
     S = statsB + effB + abB;
-    if (gm) { P = tradeBoxHTML(p, gm.id) + regB; C = encHTML(f, sp, gm, shared) + heldHTML(f, gm, shared.ref) + shinyHTML(p, gm) + breedHTML(p, sp, gm) + evoB; M = movesHTML(f, sp, gm, shared); D = E.ev; }
-    else if (mode === 'home') { P = homeDexHTML(p) + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f); C = evoB; }
-    else { P = availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + homeSrcHTML(p, f) + goBox; C = breedHTML(p, sp, gm) + evoB; D = E.ety + E.ev + costumesHTML('Costumes GO'); } // « Présent dans »: overview only
+    if (gm) { P = tradeBoxHTML(p, gm.id) + regB; N = evoB + encHTML(f, sp, gm, shared); C = heldHTML(f, gm, shared.ref) + shinyHTML(p, gm) + breedHTML(p, sp, gm); M = movesHTML(f, sp, gm, shared); D = E.ev; }
+    else if (mode === 'home') { P = homeDexHTML(p) + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f); N = evoB; }
+    else { P = availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + homeSrcHTML(p, f) + goBox; N = evoB; C = breedHTML(p, sp, gm); D = E.ety + E.ev + costumesHTML('Costumes GO'); } // « Présent dans »: overview only
   }
   $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
   <div class="detail">
@@ -1779,7 +1779,7 @@ function renderDetail() {
     <section class="box trackbox"><div class="trackinfo" id="trackinfo">${trackHTML(p)}</div></section>
     <div id="mycol">${myColHTML(p)}</div>
     ${formSwitcher(p, gm)}
-    ${P}${S}${C}${M}
+    ${N}${P}${S}${C}${M}
     <div id="mypocket"></div>
     ${desc ? `<section class="box descbox"><h2>Pokédex${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${desc}</section>` : ''}
     ${D}
