@@ -12,11 +12,15 @@ await p.evaluate(() => { localStorage.clear(); localStorage.setItem('imgsDoneF',
 if (SHOT) fs.mkdirSync(DIR, { recursive: true });
 const shotAt = async (re, n, sel = '.detail section.box') => { if (!SHOT) return; await p.evaluate((r, s) => { const x = [...document.querySelectorAll(s)].find(e => new RegExp(r).test(e.innerText)); (x || document.body).scrollIntoView(); scrollBy(0, -110); }, re, sel); await sleep(300); await p.screenshot({ path: DIR + n + '.png' }); };
 for (const [k, g, re, n] of [['181', 'b2w2', 'fanal pour guider les bateaux', '1-pharamp-n2b2-description'], ['55', 'la', 'membres palmés pour sillonner', '2-akwakwak-la-description'],
-  ['676-pharaoh', 'go', 'Égypte', '3-couafarel-pharaon-go'], ['676', 'go', 'Asie-Pacifique', '4-couafarel-go-zones'], ['676', 'xy', 'Au Fringant Pokémon', '5-couafarel-xy-toiletteur'], ['676-kabuki', 'za', 'Onraz', '6-couafarel-za']]) {
+  ['676-pharaoh', 'go', 'Égypte', '3-couafarel-pharaon-go'], ['676', 'go', 'Asie-Pacifique', '4-couafarel-go-zones'], ['676', 'xy', 'Au Fringant Pokémon', '5-couafarel-xy-toiletteur'], ['676-kabuki', 'za', 'Onraz', '6-couafarel-za'], ['676-la-reine', 'go', 'France uniquement', '7-couafarel-reine-go']]) {
   await p.goto(BASE + '#/p/' + k, { waitUntil: 'networkidle0' }); await sleep(1000); await p.select('#dgame', g); await sleep(2000);
   const t = await p.evaluate(() => document.querySelector('.detail')?.innerText || '');
   ok(new RegExp(re).test(t), `${k} ${g}: /${re}/`);
-  await shotAt(re, n);
+  if (k.startsWith('676')) {
+    const f = await p.evaluate(() => { const b = document.querySelector('#formesbox'); const w = [...b.querySelectorAll('.fchip')].map(c => Math.round(c.getBoundingClientRect().width)); return { fold: !!b.querySelector('.foldbtn') || b.classList.contains('fold'), w: [...new Set(w)], z: [...b.querySelectorAll('.fz')].length }; });
+    ok(!f.fold && f.w.length === 1 && (g !== 'go' || f.z === 10), `${k} ${g} formes: no fold, chip widths ${f.w}, zone lines ${f.z}`);
+    if (SHOT) { const el = await p.$('#formesbox'); await p.evaluate(() => { document.querySelector('#formesbox').scrollIntoView(); scrollBy(0, -120); }); await sleep(300); await el.screenshot({ path: DIR + n + '.png' }); }
+  } else await shotAt(re, n);
 }
 ok(!errs.length, 'no page errors ' + errs.join(' | '));
 await b.close(); console.log(fails ? `${fails} FAIL` : 'ALL PASS'); process.exit(fails ? 1 : 0);

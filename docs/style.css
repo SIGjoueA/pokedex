@@ -650,3 +650,11 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .gomoves.mv-raid .mvpvp,.gomoves.mv-pvp .mvraid{display:none}
 .mvh{font-size:15px;margin:12px 0 4px}
 .pvrec li{margin:4px 0}
+/* v57: Couafarel trims — equal-width grid, zone under the name */
+.fchips.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+@media (min-width:430px){.fchips.fgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.fchips.fgrid .fchip{width:100%;box-sizing:border-box;border-radius:14px;min-width:0}
+.fchip span{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.fchip .fz{font-size:11px;font-weight:500;color:var(--mute,#888);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.trimsel{margin:8px 0 2px;font-size:14px}
+.trimhow{margin:4px 0 0}
