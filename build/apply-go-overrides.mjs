@@ -80,6 +80,13 @@ for (const [k, o] of Object.entries(gmax)) {
     const sp = spOf(e.id), f = sp.f[k]; if (!f || !f.go) { const b = sp.f[String(e.id)]; if (b && b.go) { (b.go.rgf ||= []).push([e.l || e.n, z]); continue; } log.push(`! régional ${k} sans données GO`); continue; }
     f.go.rg = z; if (mig) f.go.rgm = 1; }
   log.push(`régionaux GO : ${Object.keys(RG.keys || {}).filter(k => !k.startsWith('_')).length} + ${Object.keys(RG.migratory || {}).length} migrateurs`); }
+// v57: form changes (Couafarel trims): go.fch = cost line, go.fco = non-regional condition, base go.rgf = every changeable form with its zone/condition
+{ const FC = OV.formChange || {};
+  for (const [id, o] of Object.entries(FC)) { if (id.startsWith('_')) continue; const sp = spOf(+id), base = sp.f[id]; if (!base?.go) { log.push(`! formChange ${id} sans données GO`); continue; }
+    const all = []; for (const [k, f] of Object.entries(sp.f)) { if (!f.go) continue; f.go.fch = o.how; if (o.cond[k]) f.go.fco = o.cond[k]; else delete f.go.fco;
+      if (k !== id) { const e = byKey[k]; all.push([e ? (e.l || e.n) : k, f.go.rg || o.cond[k] || '?']); } }
+    base.go.rgf = all; }
+  log.push(`changements de forme GO : ${Object.keys(FC).filter(k => !k.startsWith('_')).length}`); }
 // v32: Ditto (Métamorph) disguises in GO from build/go-ditto.json (manual, cited) → sp/132.json f['132'].go.dit
 { const DT = JSON.parse(fs.readFileSync(new URL('./go-ditto.json', import.meta.url)));
   const byEn = new Map(core.e.filter(e => !e.c).map(e => [e.en, e.id]));
