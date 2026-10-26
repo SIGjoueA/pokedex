@@ -1243,6 +1243,24 @@ function statsHTML(arr, gen1, max = 255) {
     `<div class="stat total"><span class="lb">Total</span><span class="v">${tot}</span><div class="bar"><i style="width:${Math.min(100, tot / (gen1 ? 600 : 720) * 100)}%;background:var(--accent)"></i></div></div>`;
 }
 function formLabel(q) { return q.l || (q.c ? q.n : 'Commun'); }
+// v57: Couafarel trims — where/how each trim is obtained (GO: verified Leek Duck + Bulbapedia; main games: Poképédia)
+const TRIM_GO = { '676': 'forme de départ (dans la nature, partout)', '676-heart': 'événements uniquement (Saint-Valentin), partout', '676-star': 'Asie-Pacifique', '676-diamond': 'Europe, Moyen-Orient et Afrique', '676-debutante': 'Amériques', '676-matron': 'partout', '676-dandy': 'partout', '676-la-reine': 'France', '676-kabuki': 'Japon', '676-pharaoh': 'Égypte' };
+const TRIM_GO_HOW = 'Changement de forme depuis la fiche du Pokémon : 25 Bonbons Couafarel + 10 000 Poussière Étoile ; vous devez vous trouver dans la zone au moment du changement.';
+const TRIM_MAIN = [
+  [['xy'], 'X et Y', 'faites-le toiletter Au Fringant Pokémon (Avenue Floréal, Illumis) ; plus vous en prenez soin, plus de coupes vous sont proposées. La coupe disparaît après quelques jours ou s’il est déposé au PC.'],
+  [['oras'], 'Rubis Oméga et Saphir Alpha', 'faites-le toiletter au Fan Club Pokémon de Poivressel. La coupe disparaît après quelques jours ou s’il est déposé au PC.'],
+  [['sm'], 'Soleil et Lune', 'salon de coiffure de Malié (île d’Ula-Ula), 500 ₽. La coupe disparaît après quelques jours ou s’il est déposé au PC.'],
+  [['usum'], 'Ultra-Soleil et Ultra-Lune', 'salon de Malié (Ula-Ula) ou d’Ekaeka (Mele-Mele), 500 ₽. La coupe disparaît après quelques jours ou s’il est déposé au PC.'],
+  [['za', 'zadlc'], 'Légendes Pokémon : Z-A', 'auprès d’Onraz (6e arrondissement de Jaunemont, au nord de la zone sauvage n° 11), 500 ₽. Coupes Cœur, Étoile et Diamant dès le début ; les autres se débloquent avec les missions secondaires 047, 062 et 087. La coupe est conservée.'],
+];
+function trimHTML(p, gm) {
+  if (p.id !== 676) return '';
+  const g = state.dgame === 'go' ? 'go' : state.dgame === 'home' ? 'home' : gm?.id, goL = `<li>Pokémon GO — ${esc(p.k === '676' ? 'coupes' : 'cette coupe')} : ${p.k === '676' ? Object.entries(TRIM_GO).filter(([k]) => k !== '676').map(([k, z]) => `${esc(formLabel(BY_KEY[k] || { l: k }))} : <b>${esc(z)}</b>`).join(' · ') : `<b>${esc(TRIM_GO[p.k] || '')}</b>`}. ${TRIM_GO_HOW}</li>`;
+  const main = TRIM_MAIN.filter(([ids]) => !g || g === 'home' || ids.includes(g)).map(([, n, t]) => `<li>${esc(n)} : ${t}</li>`).join('');
+  const goPart = !g || g === 'go' ? goL : '';
+  if (!main && !goPart) return '';
+  return `<div class="trimnote"><p class="note"><b>✂️ Obtenir les coupes</b></p><ul class="plain note">${main}${goPart}${!g || g === 'home' ? '<li>HOME : une coupe venant de Z-A ou de GO est conservée.</li>' : ''}</ul></div>`;
+}
 function formSwitcher(p, gm) {
   let list = FORMS[p.id]; if (!list || list.length < 2) return '';
   const SZ = ['Taille S', 'Taille M', 'Taille L', 'Taille XL']; // Pitrouille / Banshitrouye: chips in size order
@@ -1252,7 +1270,7 @@ function formSwitcher(p, gm) {
     const na = gm && q.c && !inGame(q, gi);
     return `<a class="fchip${q.k === p.k ? ' cur' : ''}${na ? ' na' : ''}" href="#/p/${q.k}" title="${esc(fullN(q))}"><img src="${artOf(q)}" alt="" loading="lazy" width="36" height="36"><span>${esc(formLabel(q))}</span></a>`;
   }).join('');
-  return `<section class="box" id="formesbox"><h2>Formes <small class="cnt">${list.length}</small></h2><div class="fchips${list.length > 14 ? ' many' : ''}">${chips}</div>${gm ? '<p class="note">Formes grisées : absentes de ce jeu.</p>' : ''}${allFormsHTML(p)}</section>`;
+  return `<section class="box" id="formesbox"><h2>Formes <small class="cnt">${list.length}</small></h2><div class="fchips${list.length > 14 ? ' many' : ''}">${chips}</div>${gm ? '<p class="note">Formes grisées : absentes de ce jeu.</p>' : ''}${trimHTML(p, gm)}${allFormsHTML(p)}</section>`;
 }
 // v41: « Cocher toutes les formes » — marks Capturé for every form of the species in the sheet's game only (separate marks, S* species)
 const allFormsList = (p, c = sheetCtx()) => (!c || c === 'home' || !FSHORT.has(p.id) || p.mb || p.bo || p.c === 'gmax' || fLinked(p, c)) ? [] : fSibs(p).filter(q => fIn(q, c));
@@ -1683,6 +1701,7 @@ function goHTML(p, f, sp, shared, go) {
       <ul class="plain gol">
         <li>Statut : <b>${goRel(d) ? 'disponible dans Pokémon GO' : d.rf ? `annoncé pour le ${frDate(d.rf)}` : 'pas encore sorti'}</b>${p.c === 'gmax' ? ' · Gigamax : capturé en Combat Max, ne peut pas être envoyé vers HOME' : goTemp(p) ? ` · ${p.c === 'primal' ? 'Primo-Résurgence' : 'Méga-Évolution'} temporaire (énergie), enregistrée au Pokédex GO à la première transformation` : ''}</li>
         ${d.rg ? `<li class="rgl">🌍 Exclusivité régionale : <b>${esc(d.rg)}</b>${d.rgm ? ' <span class="mute">(migrateur : échange parfois sa zone avec son pendant)</span>' : ''}</li>` : ''}
+        ${p.id === 676 && TRIM_GO[p.k] ? `<li class="rgl">✂️ ${p.k === '676' ? 'Coupes' : 'Coupe obtenue par changement de forme'} : <b>${esc(p.k === '676' ? 'Étoile (Asie-Pacifique), Diamant (Europe, Moyen-Orient, Afrique), Demoiselle (Amériques), Reine (France), Kabuki (Japon), Pharaon (Égypte) ; Madame et Monsieur partout ; Cœur lors des événements' : TRIM_GO[p.k])}</b> <span class="mute">(25 Bonbons + 10 000 Poussière Étoile, en étant dans la zone)</span></li>` : ''}
         ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
         ${goTradeLi(p)}
         ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}

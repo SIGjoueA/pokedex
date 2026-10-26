@@ -1,0 +1,1877 @@
+{
+ "slots": {
+  "100:39": {
+   "fr": "Ce Pokémon mystérieux ressemble étrangement à une Poké Ball. Lorsqu'il est agité, il relâche le courant électrique emmagasiné dans son abdomen et laisse échapper des éclats de rire.",
+   "how": "Poképédia",
+   "tr": "Un Pokémon énigmatique qui ressemble à un Poké Ball. Lorsqu'il est excité, il décharge le courant électrique qu'il a stocké dans son ventre, puis laisse sortir un grand rire, déroutant."
+  },
+  "101:39": {
+   "fr": "Son enveloppe corporelle est étrangement semblable à celle des Noigrumes. S'il est irrité, il relâche un courant électrique dont l'intensité atteint vingt fois celle de la foudre.",
+   "how": "Poképédia",
+   "tr": "Le tissu à la surface de son corps est curieusement similaire en composition à un abricorn. Lorsqu'il est irrité, ce Pokémon laisse perdre un courant électrique égal à 20 boulons éclair."
+  },
+  "1012:40": {
+   "fr": "Ce Pokémon serait l'incarnation, sous la forme d'un pot de matcha, des regrets d'une personne décédée avant d'avoir maîtrisé l'art du thé.",
+   "how": "Poképédia",
+   "tr": "Supposons que les regrets d'un maître de cérémonie de thé qui est mort avant de perfectionner son métier s'attardèrent dans un matcha et devinrent un Pokémon."
+  },
+  "1012:41": {
+   "fr": "On pourrait le prendre pour une forme régionale de Théffroi, mais des recherches ont récemment démontré l'absence de lien entre ces Pokémon.",
+   "how": "Poképédia",
+   "tr": "Le Poltchageist ressemble à une forme régionale de Théffroi, mais il a été récemment découvert que les deux Pokémon sont totalement indépendants."
+  },
+  "1013:40": {
+   "fr": "Il se fait passer pour un bol de thé afin d'aspirer la force vitale de quiconque ferait l'erreur de le boire, mais en général, personne n'est dupe.",
+   "how": "Poképédia",
+   "tr": "Il fait semblant d'être du thé, essayant de tromper les gens à boire pour qu'il puisse drainer leur force de vie. Sa ruse est généralement infructueuse."
+  },
+  "1013:41": {
+   "fr": "Il aime les endroits frais et sombres, comme le dessous d'un plancher ou le fond d'une étagère. À la nuit tombée, il erre en quête de proies.",
+   "how": "Poképédia",
+   "tr": "Il préfère les endroits frais et sombres, comme l'arrière d'une étagère ou l'espace sous les planchers d'une maison. Elle erre à la recherche de proies après le coucher du soleil."
+  },
+  "1017:40": {
+   "fr": "Son type change selon le masque qu'il porte. Son agilité et ses coups de pied habiles lui permettent de malmener ses adversaires.",
+   "how": "Poképédia",
+   "tr": "Ce type de Pokémon change en fonction du masque qu'il porte. Il confond ses ennemis avec des mouvements agiles et des coups de pied."
+  },
+  "1017:41": {
+   "fr": "Ce Pokémon est curieux et facétieux. Lorsqu'il se bat, il puise dans l'énergie de son masque. Cette énergie est du même type que ce dernier.",
+   "how": "Poképédia",
+   "tr": "Ce Pokémon affectueux est plein de curiosité. Il se bat en dessinant l'énergie basée sur le type contenue dans ses masques."
+  },
+  "1024:40": {
+   "fr": "Il se protège en transformant de l'énergie en cristal solide. Ce Pokémon est à l'origine du phénomène de Téracristallisation.",
+   "how": "Poképédia",
+   "tr": "Terapagos se protège en utilisant sa puissance pour transformer l'énergie en cristaux durs. Ce Pokémon est la source du phénomène Terastal."
+  },
+  "1024:41": {
+   "fr": "Il vivait à Paldea en des temps reculés. On le croyait disparu, emporté par un bouleversement tectonique.",
+   "how": "Poképédia",
+   "tr": "Il a pensé que ce Pokémon vivait dans l'ancienne Paldea jusqu'à ce qu'il ait été pris dans des déplacements sismiques et est allé éteint."
+  },
+  "104:21": {
+   "fr": "Il pleure en pensant à sa mère disparue, et ses larmes résonnent dans son crâne creux.",
+   "how": "même texte que diamond",
+   "tr": "Quand il pense à sa mère morte, il pleure. herein Ses pleurs rendent le crâne creux."
+  },
+  "104:22": {
+   "fr": "Il pleure en pensant à sa mère disparue, et ses larmes résonnent dans son crâne creux.",
+   "how": "même texte que diamond",
+   "tr": "Quand il pense à sa mère morte, il pleure. herein Ses pleurs rendent le crâne creux."
+  },
+  "106:21": {
+   "fr": "Ses pattes élastiques s'allongent, ce qui ne manque jamais de surprendre au premier combat.",
+   "how": "même texte que diamond",
+   "tr": "Ses jambes peuvent s'étirer deux fois. La première fois, les ennemis sont surpris par sa portée extensible."
+  },
+  "106:22": {
+   "fr": "Ses pattes élastiques s'allongent, ce qui ne manque jamais de surprendre au premier combat.",
+   "how": "même texte que diamond",
+   "tr": "Ses jambes peuvent s'étirer deux fois. La première fois, les ennemis sont surpris par sa portée extensible."
+  },
+  "108:21": {
+   "fr": "Sa queue rétrécit quand sa langue très baveuse, propre à vous engourdir à chaque Léchouille, s'allonge.",
+   "how": "même texte que white-2",
+   "tr": "Être léché par sa longue langue recouverte de salive laisse une sensation de picotements. L'extension de sa langue rétracte sa queue."
+  },
+  "109:21": {
+   "fr": "Son corps en fine baudruche est rempli de gaz toxiques qui peuvent exploser violemment à la moindre occasion.",
+   "how": "même texte que white-2",
+   "tr": "Le gaz toxique est maintenu dans son corps mince, en forme de ballon, de sorte qu'il peut causer des explosions massives."
+  },
+  "111:21": {
+   "fr": "Ses puissantes charges pourraient démolir n'importe quel bâtiment. Dommage qu'il soit stupide.",
+   "how": "même texte que platinum",
+   "tr": "Ses attaques puissantes peuvent tout détruire. Cependant, il est trop lent pour aider les gens à travailler."
+  },
+  "111:22": {
+   "fr": "Ses puissantes charges pourraient démolir n'importe quel bâtiment. Dommage qu'il soit stupide.",
+   "how": "même texte que platinum",
+   "tr": "Ses attaques puissantes peuvent tout détruire. Cependant, il est trop lent pour aider les gens à travailler."
+  },
+  "112:21": {
+   "fr": "La station debout a libéré ses pattes avant et l'a rendu plus intelligent, mais il est distrait.",
+   "how": "même texte que platinum",
+   "tr": "Se Transitional debout sur ses pattes arrières a libéré ses pattes antérieures et l'a rendu plus intelligent. Elle est cependant très oubliée."
+  },
+  "112:22": {
+   "fr": "La station debout a libéré ses pattes avant et l'a rendu plus intelligent, mais il est distrait.",
+   "how": "même texte que platinum",
+   "tr": "Se Transitional debout sur ses pattes arrières a libéré ses pattes antérieures et l'a rendu plus intelligent. Elle est cependant très oubliée."
+  },
+  "113:21": {
+   "fr": "Ce Pokémon très serviable distribue ses œufs hautement nutritifs aux humains et Pokémon blessés.",
+   "how": "même texte que platinum",
+   "tr": "Un Pokémon gentiment qui pond des œufs très nutritifs et les partage avec les Pokémon blessés ou les gens."
+  },
+  "115:21": {
+   "fr": "Il élève ses petits dans sa poche ventrale. Il attend d'être en lieu sûr pour les laisser jouer dehors.",
+   "how": "même texte que diamond",
+   "tr": "Elle élève sa progéniture dans sa poche abdominale. Il laisse le bébé jouer seulement quand il se sent en sécurité."
+  },
+  "115:22": {
+   "fr": "Il élève ses petits dans sa poche ventrale. Il attend d'être en lieu sûr pour les laisser jouer dehors.",
+   "how": "même texte que diamond",
+   "tr": "Elle élève sa progéniture dans sa poche abdominale. Il laisse le bébé jouer seulement quand il se sent en sécurité."
+  },
+  "118:21": {
+   "fr": "Malgré son élégance quand il nage, ses coups de corne sont redoutables.",
+   "how": "même texte que platinum",
+   "tr": "Bien qu'il semble très élégant en nageant avec des nageoires défournées, il peut jaber avec puissance avec sa corne."
+  },
+  "118:22": {
+   "fr": "Malgré son élégance quand il nage, ses coups de corne sont redoutables.",
+   "how": "même texte que platinum",
+   "tr": "Bien qu'il semble très élégant en nageant avec des nageoires défournées, il peut jaber avec puissance avec sa corne."
+  },
+  "119:21": {
+   "fr": "En automne, à la saison des amours, il fait des réserves de graisse et arbore des couleurs chatoyantes.",
+   "how": "même texte que platinum",
+   "tr": "En automne, son corps devient plus gras en se préparant à proposer à un conjoint. Il prend de belles couleurs."
+  },
+  "119:22": {
+   "fr": "En automne, à la saison des amours, il fait des réserves de graisse et arbore des couleurs chatoyantes.",
+   "how": "même texte que platinum",
+   "tr": "En automne, son corps devient plus gras en se préparant à proposer à un conjoint. Il prend de belles couleurs."
+  },
+  "123:21": {
+   "fr": "À force de trancher des objets solides, les faux de ses bras sont très aiguisés.",
+   "how": "même texte que platinum",
+   "tr": "Les faux tranchants sur ses avant-bras deviennent de plus en plus tranchants en coupant des objets durs."
+  },
+  "123:22": {
+   "fr": "À force de trancher des objets solides, les faux de ses bras sont très aiguisés.",
+   "how": "même texte que platinum",
+   "tr": "Les faux tranchants sur ses avant-bras deviennent de plus en plus tranchants en coupant des objets durs."
+  },
+  "124:21": {
+   "fr": "Son cri ressemble à des paroles humaines. Mais nul n'est jamais parvenu à les comprendre.",
+   "how": "même texte que diamond",
+   "tr": "Ses cris sonnent comme un discours humain. Cependant, il est impossible de dire ce qu'il essaie de dire."
+  },
+  "124:22": {
+   "fr": "Son cri ressemble à des paroles humaines. Mais nul n'est jamais parvenu à les comprendre.",
+   "how": "même texte que diamond",
+   "tr": "Ses cris sonnent comme un discours humain. Cependant, il est impossible de dire ce qu'il essaie de dire."
+  },
+  "128:21": {
+   "fr": "Après avoir choisi sa cible, il fonce dessus tête baissée. Il est réputé pour sa nature violente.",
+   "how": "même texte que diamond",
+   "tr": "Une fois qu'il prend le but à son ennemi, il fait une charge tête longue. Il est célèbre pour sa nature violente."
+  },
+  "128:22": {
+   "fr": "Après avoir choisi sa cible, il fonce dessus tête baissée. Il est réputé pour sa nature violente.",
+   "how": "même texte que diamond",
+   "tr": "Une fois qu'il prend le but à son ennemi, il fait une charge tête longue. Il est célèbre pour sa nature violente."
+  },
+  "129:21": {
+   "fr": "Un vénérable Magicarpe peut franchir une montagne en utilisant Trempette. Mais c'est tout...",
+   "how": "même texte que platinum",
+   "tr": "Un Magicarpe vivant pendant de nombreuses années peut sauter une montagne en utilisant Splash. Le mouvement reste inutile."
+  },
+  "129:22": {
+   "fr": "Un vénérable Magicarpe peut franchir une montagne en utilisant Trempette. Mais c'est tout...",
+   "how": "même texte que platinum",
+   "tr": "Un Magicarpe vivant pendant de nombreuses années peut sauter une montagne en utilisant Splash. Le mouvement reste inutile."
+  },
+  "130:21": {
+   "fr": "Quand il se laisse emporter par la rage, il ne se calme qu'après avoir détruit tout ce qui l'entoure.",
+   "how": "même texte que platinum",
+   "tr": "Une fois qu'il commence à se défouler, un Léviator brûlera tout, même dans une forte tempête."
+  },
+  "130:22": {
+   "fr": "Quand il se laisse emporter par la rage, il ne se calme qu'après avoir détruit tout ce qui l'entoure.",
+   "how": "même texte que platinum",
+   "tr": "Une fois qu'il commence à se défouler, un Léviator brûlera tout, même dans une forte tempête."
+  },
+  "137:21": {
+   "fr": "Ce Pokémon créé par des scientifiques peut arpenter librement le cyberespace.",
+   "how": "même texte que platinum",
+   "tr": "Un Pokémon artificiel créé par des moyens Currently. Il peut se déplacer librement dans le cyberespace. Currently"
+  },
+  "137:22": {
+   "fr": "Ce Pokémon créé par des scientifiques peut arpenter librement le cyberespace.",
+   "how": "même texte que platinum",
+   "tr": "Un Pokémon artificiel créé par des moyens Currently. Il peut se déplacer librement dans le cyberespace. Currently"
+  },
+  "138:21": {
+   "fr": "Un Pokémon ramené à la vie par la science à partir d'un fossile. Il peuplait autrefois les mers.",
+   "how": "même texte que diamond",
+   "tr": "Un Pokémon ressuscité d'un fossile par la science moderne. Elle nageait dans les mers anciennes."
+  },
+  "138:22": {
+   "fr": "Un Pokémon ramené à la vie par la science à partir d'un fossile. Il peuplait autrefois les mers.",
+   "how": "même texte que diamond",
+   "tr": "Un Pokémon ressuscité d'un fossile par la science moderne. Elle nageait dans les mers anciennes."
+  },
+  "139:21": {
+   "fr": "On pense que ce Pokémon a disparu parce que sa coquille en spirale était devenue trop grosse.",
+   "how": "même texte que diamond",
+   "tr": "On pense que ce Pokémon s'est éteint parce que sa coquille spirale était trop grande."
+  },
+  "139:22": {
+   "fr": "On pense que ce Pokémon a disparu parce que sa coquille en spirale était devenue trop grosse.",
+   "how": "même texte que diamond",
+   "tr": "On pense que ce Pokémon s'est éteint parce que sa coquille spirale était trop grande."
+  },
+  "140:21": {
+   "fr": "On pense qu'il peuplait les plages il y a 300 millions d'années. Il est protégé par une coquille robuste.",
+   "how": "même texte que diamond",
+   "tr": "On pense qu'elle a habité des plages il y a 300 millions d'années. Il est protégé par une coquille rigide."
+  },
+  "140:22": {
+   "fr": "On pense qu'il peuplait les plages il y a 300 millions d'années. Il est protégé par une coquille robuste.",
+   "how": "même texte que diamond",
+   "tr": "On pense qu'elle a habité des plages il y a 300 millions d'années. Il est protégé par une coquille rigide."
+  },
+  "141:21": {
+   "fr": "On pense que ce Pokémon est venu sur la terre ferme pour suivre l'évolution de ses proies.",
+   "how": "même texte que diamond",
+   "tr": "On pense que ce Pokémon est venu sur terre parce que sa proie s'est adaptée à la vie sur terre."
+  },
+  "141:22": {
+   "fr": "On pense que ce Pokémon est venu sur la terre ferme pour suivre l'évolution de ses proies.",
+   "how": "même texte que diamond",
+   "tr": "On pense que ce Pokémon est venu sur terre parce que sa proie s'est adaptée à la vie sur terre."
+  },
+  "142:21": {
+   "fr": "Un Pokémon qui arpentait le ciel au temps des dinosaures. Ses crocs sont pareils à des scies.",
+   "how": "même texte que diamond",
+   "tr": "Un Pokémon qui a parcouru le ciel à l'époque des dinosaures. Ses dents sont comme des lames de scie."
+  },
+  "142:22": {
+   "fr": "Un Pokémon qui arpentait le ciel au temps des dinosaures. Ses crocs sont pareils à des scies.",
+   "how": "même texte que diamond",
+   "tr": "Un Pokémon qui a parcouru le ciel à l'époque des dinosaures. Ses dents sont comme des lames de scie."
+  },
+  "153:21": {
+   "fr": "Le collier de bourgeons à son cou répand un arôme épicé qui vous donne du tonus.",
+   "how": "même texte que diamond",
+   "tr": "Les bourgeons qui sonnent son cou donnent un arôme épicé qui attire les gens."
+  },
+  "153:22": {
+   "fr": "Le collier de bourgeons à son cou répand un arôme épicé qui vous donne du tonus.",
+   "how": "même texte que diamond",
+   "tr": "Les bourgeons qui sonnent son cou donnent un arôme épicé qui attire les gens."
+  },
+  "155:21": {
+   "fr": "Ce Pokémon est un grand timide. Les flammes sur son dos s'intensifient lorsqu'il prend peur.",
+   "how": "même texte que diamond",
+   "tr": "Il a une duck nature timide. S'il ducka, les flammes sur son dos brûlent plus vigoureusement."
+  },
+  "155:22": {
+   "fr": "Ce Pokémon est un grand timide. Les flammes sur son dos s'intensifient lorsqu'il prend peur.",
+   "how": "même texte que diamond",
+   "tr": "Il a une duck nature timide. S'il ducka, les flammes sur son dos brûlent plus vigoureusement."
+  },
+  "156:21": {
+   "fr": "La chaleur de ses flammes intimide l'ennemi. Elles s'intensifient lorsqu'il se prépare au combat.",
+   "how": "même texte que diamond",
+   "tr": "Il intimide les ennemis avec la chaleur de ses flammes. Le feu brûle plus fort quand il se prépare à se battre."
+  },
+  "156:22": {
+   "fr": "La chaleur de ses flammes intimide l'ennemi. Elles s'intensifient lorsqu'il se prépare au combat.",
+   "how": "même texte que diamond",
+   "tr": "Il intimide les ennemis avec la chaleur de ses flammes. Le feu brûle plus fort quand il se prépare à se battre."
+  },
+  "157:21": {
+   "fr": "Il attaque en projetant des flammes. Il se dissimule derrière les vagues de chaleur qu'il produit.",
+   "how": "même texte que diamond",
+   "tr": "Il attaque à l'aide de tirs. Il crée des éclats de chaleur avec un feu intense pour se cacher."
+  },
+  "157:22": {
+   "fr": "Il attaque en projetant des flammes. Il se dissimule derrière les vagues de chaleur qu'il produit.",
+   "how": "même texte que diamond",
+   "tr": "Il attaque à l'aide de tirs. Il crée des éclats de chaleur avec un feu intense pour se cacher."
+  },
+  "157:39": {
+   "fr": "On dit qu'il purifie les âmes perdues à l'aide de ses flammes avant de les envoyer dans l'au-delà. Je pense que sa forme est influencée par la montagne sacrée située au cœur de Hisui.",
+   "how": "Poképédia",
+   "tr": "Il a dit de purifier les âmes perdues, abandonnées par ses flammes et les guider vers l'au-delà. Je crois que sa forme a été influencée par l'énergie de la montagne sacrée qui domine au centre d'Hisui."
+  },
+  "158:21": {
+   "fr": "Il broie tout ce qu'il trouve avec ses mâchoires puissantes. Même son Dresseur doit s'en méfier.",
+   "how": "même texte que diamond",
+   "tr": "Il a l'habitude de mordre n'importe quoi avec ses mâchoires développées. Même son formateur doit être prudent."
+  },
+  "158:22": {
+   "fr": "Il broie tout ce qu'il trouve avec ses mâchoires puissantes. Même son Dresseur doit s'en méfier.",
+   "how": "même texte que diamond",
+   "tr": "Il a l'habitude de mordre n'importe quoi avec ses mâchoires développées. Même son formateur doit être prudent."
+  },
+  "159:21": {
+   "fr": "Quand il mord, il ne lâche pas prise avant que ses crocs se brisent. Ils repoussent par la suite.",
+   "how": "même texte que diamond",
+   "tr": "Une fois qu'il mord, il ne lâche pas jusqu'à ce qu'il perde ses crocs. De nouveaux crocs se mettent rapidement en place."
+  },
+  "159:22": {
+   "fr": "Quand il mord, il ne lâche pas prise avant que ses crocs se brisent. Ils repoussent par la suite.",
+   "how": "même texte que diamond",
+   "tr": "Une fois qu'il mord, il ne lâche pas jusqu'à ce qu'il perde ses crocs. De nouveaux crocs se mettent rapidement en place."
+  },
+  "160:21": {
+   "fr": "Ce Pokémon à l'air pataud est capable d'attaquer à la vitesse de l'éclair pour mordre sa proie.",
+   "how": "même texte que diamond",
+   "tr": "Il se déplace généralement lentement, mais il va à une vitesse aveuglante quand il attaque et mord des proies."
+  },
+  "160:22": {
+   "fr": "Ce Pokémon à l'air pataud est capable d'attaquer à la vitesse de l'éclair pour mordre sa proie.",
+   "how": "même texte que diamond",
+   "tr": "Il se déplace généralement lentement, mais il va à une vitesse aveuglante quand il attaque et mord des proies."
+  },
+  "161:21": {
+   "fr": "Ce Pokémon très nerveux prend appui sur sa queue pour observer ses alentours.",
+   "how": "même texte que diamond",
+   "tr": "Il a une nature très nerveuse. Il se tient haut sur sa queue pour pouvoir scanner de larges zones."
+  },
+  "161:22": {
+   "fr": "Ce Pokémon très nerveux prend appui sur sa queue pour observer ses alentours.",
+   "how": "même texte que diamond",
+   "tr": "Il a une nature très nerveuse. Il se tient haut sur sa queue pour pouvoir scanner de larges zones."
+  },
+  "162:21": {
+   "fr": "La femelle s'enroule autour des petits pour les bercer. Il accule l'ennemi grâce à sa vitesse.",
+   "how": "même texte que diamond",
+   "tr": "La mère dort sa progéniture en se fronçant autour d'eux. Il coince les ennemis avec la vitesse."
+  },
+  "162:22": {
+   "fr": "La femelle s'enroule autour des petits pour les bercer. Il accule l'ennemi grâce à sa vitesse.",
+   "how": "même texte que diamond",
+   "tr": "La mère dort sa progéniture en se fronçant autour d'eux. Il coince les ennemis avec la vitesse."
+  },
+  "164:12": {
+   "fr": "Ses yeux sont particuliers. La plus petite source de lumière leur permet de distinguer les objets.",
+   "how": "Pokébip (Diamant)",
+   "tr": "Ses yeux sont spéciaux. Ils peuvent choisir des objets aussi longtemps qu'il y a la plus petite quantité de lumière."
+  },
+  "165:21": {
+   "fr": "Il est si timide qu'il ne se déplace qu'au milieu d'un essaim. Il exprime ses émotions par l'odeur.",
+   "how": "même texte que diamond",
+   "tr": "Il est si timide, il ne peut pas bouger s'il n'est pas avec un essaim des autres. Il transmet ses sentiments avec parfum."
+  },
+  "165:22": {
+   "fr": "Il est si timide qu'il ne se déplace qu'au milieu d'un essaim. Il exprime ses émotions par l'odeur.",
+   "how": "même texte que diamond",
+   "tr": "Il est si timide, il ne peut pas bouger s'il n'est pas avec un essaim des autres. Il transmet ses sentiments avec parfum."
+  },
+  "166:21": {
+   "fr": "Il tire sa force de la lumière des étoiles. Plus il y en a et plus ses motifs dorsaux sont grands.",
+   "how": "même texte que diamond",
+   "tr": "Il utilise la lumière des étoiles comme énergie maintained. Quand d'autres étoiles apparaissent la nuit maintained Les motifs sur le dos grandissent."
+  },
+  "166:22": {
+   "fr": "Il tire sa force de la lumière des étoiles. Plus il y en a et plus ses motifs dorsaux sont grands.",
+   "how": "même texte que diamond",
+   "tr": "Il utilise la lumière des étoiles comme énergie maintained. Quand d'autres étoiles apparaissent la nuit maintained Les motifs sur le dos grandissent."
+  },
+  "167:21": {
+   "fr": "Il tisse une toile fine mais solide pour poser des pièges et se poste dans l'attente d'une proie.",
+   "how": "même texte que diamond",
+   "tr": "Il pose un piège en tournant une toile avec de la soie mince mais forte. Il attend immobile que la proie arrive."
+  },
+  "167:22": {
+   "fr": "Il tisse une toile fine mais solide pour poser des pièges et se poste dans l'attente d'une proie.",
+   "how": "même texte que diamond",
+   "tr": "Il pose un piège en tournant une toile avec de la soie mince mais forte. Il attend immobile que la proie arrive."
+  },
+  "168:21": {
+   "fr": "Il attache un fil à sa proie avant de la libérer. Il s'en servira pour la retrouver, elle et ses amis.",
+   "how": "même texte que diamond",
+   "tr": "Elle attache de la soie à sa proie et la libère. Plus tard, elle traque la soie à la proie et à ses amis."
+  },
+  "168:22": {
+   "fr": "Il attache un fil à sa proie avant de la libérer. Il s'en servira pour la retrouver, elle et ses amis.",
+   "how": "même texte que diamond",
+   "tr": "Elle attache de la soie à sa proie et la libère. Plus tard, elle traque la soie à la proie et à ses amis."
+  },
+  "172:21": {
+   "fr": "Les poches électriques de ses joues sont encore petites, mais risquent de l'électrocuter.",
+   "how": "même texte que platinum",
+   "tr": "Les sacs électriques dans ses joues sont petits. Si même un peu d'électricité fuit, il devient choqué."
+  },
+  "172:22": {
+   "fr": "Les poches électriques de ses joues sont encore petites, mais risquent de l'électrocuter.",
+   "how": "même texte que platinum",
+   "tr": "Les sacs électriques dans ses joues sont petits. Si même un peu d'électricité fuit, il devient choqué."
+  },
+  "174:21": {
+   "fr": "Son corps dégage un parfum sucré. Quand il commence à rebondir, on ne peut plus l'arrêter.",
+   "how": "même texte que white-2",
+   "tr": "Son corps a un parfum légèrement sucré et est bon et doux. S'il rebondit même une fois, il ne peut s'arrêter."
+  },
+  "175:21": {
+   "fr": "Il transforme les émotions positives des autres en bonheur qu'il stocke dans sa coquille.",
+   "how": "même texte que platinum",
+   "tr": "Elle transforme la bonté et la joie des autres en bonheur, qu'elle conserve dans sa coquille."
+  },
+  "175:22": {
+   "fr": "Il transforme les émotions positives des autres en bonheur qu'il stocke dans sa coquille.",
+   "how": "même texte que platinum",
+   "tr": "Elle transforme la bonté et la joie des autres en bonheur, qu'elle conserve dans sa coquille."
+  },
+  "181:21": {
+   "fr": "Le bout de sa queue brille intensément. On l'utilise comme fanal pour guider les bateaux jusque dans les pays lointains.",
+   "how": "Pokémon Trash (Noire 2 / Blanche 2)",
+   "tr": "L'extrémité de sa queue brille si bien qu'elle peut être utilisée pour envoyer des balises de navigation maritime sur des rivages étrangers éloignés."
+  },
+  "181:22": {
+   "fr": "Le bout de sa queue brille intensément. On l'utilise comme fanal pour guider les bateaux jusque dans les pays lointains.",
+   "how": "Pokémon Trash (Noire 2 / Blanche 2)",
+   "tr": "L'extrémité de sa queue brille si bien qu'elle peut être utilisée pour envoyer des balises de navigation maritime sur des rivages étrangers éloignés."
+  },
+  "182:21": {
+   "fr": "À la fin de la saison des pluies, il sort danser en plein air, attiré par la chaleur du soleil.",
+   "how": "même texte que diamond",
+   "tr": "Lorsque la saison des pluies se termine, elle est attirée par le soleil chaud pour danser en plein air."
+  },
+  "182:22": {
+   "fr": "À la fin de la saison des pluies, il sort danser en plein air, attiré par la chaleur du soleil.",
+   "how": "même texte que diamond",
+   "tr": "Lorsque la saison des pluies se termine, elle est attirée par le soleil chaud pour danser en plein air."
+  },
+  "185:21": {
+   "fr": "Il prend l'apparence d'un arbre pour éviter les attaques, mais il déteste l'eau et fuit la pluie.",
+   "how": "même texte que platinum",
+   "tr": "Pour éviter d'être attaqué, il ne fait que imiter un arbre. Il déteste l'eau et fuit la pluie."
+  },
+  "185:22": {
+   "fr": "Il prend l'apparence d'un arbre pour éviter les attaques, mais il déteste l'eau et fuit la pluie.",
+   "how": "même texte que platinum",
+   "tr": "Pour éviter d'être attaqué, il ne fait que imiter un arbre. Il déteste l'eau et fuit la pluie."
+  },
+  "187:21": {
+   "fr": "Il dérive avec le vent. Sa présence en nombre dans les champs et les montagnes annonce le printemps.",
+   "how": "même texte que diamond",
+   "tr": "Il dérive sur les vents. On dit que lorsque Granivol se rassemble dans les champs et les montagnes, le printemps est en route."
+  },
+  "187:22": {
+   "fr": "Il dérive avec le vent. Sa présence en nombre dans les champs et les montagnes annonce le printemps.",
+   "how": "même texte que diamond",
+   "tr": "Il dérive sur les vents. On dit que lorsque Granivol se rassemble dans les champs et les montagnes, le printemps est en route."
+  },
+  "188:21": {
+   "fr": "Il fleurit lorsque les température remontent. Il flotte dans le ciel pour absorber les rayons du soleil.",
+   "how": "même texte que diamond",
+   "tr": "Il fleurit quand le temps se réchauffe. Il flotte dans le ciel pour absorber autant de lumière que possible."
+  },
+  "188:22": {
+   "fr": "Il fleurit lorsque les température remontent. Il flotte dans le ciel pour absorber les rayons du soleil.",
+   "how": "même texte que diamond",
+   "tr": "Il fleurit quand le temps se réchauffe. Il flotte dans le ciel pour absorber autant de lumière que possible."
+  },
+  "189:21": {
+   "fr": "Poussé par les vents saisonniers, il fait le tour du globe en semant des spores de coton.",
+   "how": "même texte que diamond",
+   "tr": "Bloquée par des vents saisonniers, elle tourne autour du globe, dispersant des spores de coton comme elle va."
+  },
+  "189:22": {
+   "fr": "Poussé par les vents saisonniers, il fait le tour du globe en semant des spores de coton.",
+   "how": "même texte que diamond",
+   "tr": "Bloquée par des vents saisonniers, elle tourne autour du globe, dispersant des spores de coton comme elle va."
+  },
+  "199:21": {
+   "fr": "La morsure de Kokiyas a fait de lui un génie dont l'intelligence rivalise avec celle d'un prix Nobel.",
+   "how": "même texte que diamond",
+   "tr": "Être mordu par Kokiyas lui a donné une intelligence comparable à celle des scientifiques primés."
+  },
+  "199:22": {
+   "fr": "La morsure de Kokiyas a fait de lui un génie dont l'intelligence rivalise avec celle d'un prix Nobel.",
+   "how": "même texte que diamond",
+   "tr": "Être mordu par Kokiyas lui a donné une intelligence comparable à celle des scientifiques primés."
+  },
+  "202:21": {
+   "fr": "Il cherche désespérément à cacher sa queue noire. Certains pensent qu'elle renferme un secret.",
+   "how": "même texte que diamond",
+   "tr": "Il essaie désespérément de garder sa queue noire cachée. On dit que la queue cache un secret."
+  },
+  "202:22": {
+   "fr": "Il cherche désespérément à cacher sa queue noire. Certains pensent qu'elle renferme un secret.",
+   "how": "même texte que diamond",
+   "tr": "Il essaie désespérément de garder sa queue noire cachée. On dit que la queue cache un secret."
+  },
+  "203:21": {
+   "fr": "La tête qu'il a sur la queue dispose de son propre cerveau et lui permet de couvrir ses arrières.",
+   "how": "même texte que platinum",
+   "tr": "La tête sur la queue contient un petitease. Il peut se battre instinctivement même en faisant face à l'arrière."
+  },
+  "203:22": {
+   "fr": "La tête qu'il a sur la queue dispose de son propre cerveau et lui permet de couvrir ses arrières.",
+   "how": "même texte que platinum",
+   "tr": "La tête sur la queue contient un petitease. Il peut se battre instinctivement même en faisant face à l'arrière."
+  },
+  "205:21": {
+   "fr": "Il est prisonnier d'une coquille d'acier. Ses yeux vigilants sont la seule partie visible de son corps.",
+   "how": "même texte que diamond",
+   "tr": "Il est encastré dans une coque en acier. Ses yeux de regard sont tout ce qu'on peut voir de ses mystérieux entrailles."
+  },
+  "205:22": {
+   "fr": "Il est prisonnier d'une coquille d'acier. Ses yeux vigilants sont la seule partie visible de son corps.",
+   "how": "même texte que diamond",
+   "tr": "Il est encastré dans une coque en acier. Ses yeux de regard sont tout ce qu'on peut voir de ses mystérieux entrailles."
+  },
+  "209:21": {
+   "fr": "Son visage horrible fait fuir les petits Pokémon. Par contre, les femmes le trouvent mignon.",
+   "how": "même texte que diamond",
+   "tr": "Petit Pokémon fuit son visage effrayant. Il est cependant considéré par les femmes comme mignon."
+  },
+  "209:22": {
+   "fr": "Son visage horrible fait fuir les petits Pokémon. Par contre, les femmes le trouvent mignon.",
+   "how": "même texte que diamond",
+   "tr": "Petit Pokémon fuit son visage effrayant. Il est cependant considéré par les femmes comme mignon."
+  },
+  "210:21": {
+   "fr": "En dépit des apparences, c'est un grand timide. Quand il s'énerve, il mord de ses énormes crocs.",
+   "how": "même texte que diamond",
+   "tr": "Il est timide malgré son apparence. Si elle devient enragée, cependant, elle frappera avec ses énormes crocs."
+  },
+  "210:22": {
+   "fr": "En dépit des apparences, c'est un grand timide. Quand il s'énerve, il mord de ses énormes crocs.",
+   "how": "même texte que diamond",
+   "tr": "Il est timide malgré son apparence. Si elle devient enragée, cependant, elle frappera avec ses énormes crocs."
+  },
+  "211:21": {
+   "fr": "Il envoie ses piquants empoisonnés à la ronde. Sa forme sphérique en fait un piètre nageur.",
+   "how": "même texte que diamond",
+   "tr": "Il tire les épines de poison sur son corps dans toutes les directions. Sa forme ronde en fait un pauvre nageur."
+  },
+  "211:22": {
+   "fr": "Il envoie ses piquants empoisonnés à la ronde. Sa forme sphérique en fait un piètre nageur.",
+   "how": "même texte que diamond",
+   "tr": "Il tire les épines de poison sur son corps dans toutes les directions. Sa forme ronde en fait un pauvre nageur."
+  },
+  "211:39": {
+   "fr": "Les pêcheurs exècrent les Qwilfish, car leurs épines expulsent des toxines. Les spécimens d'autres régions se présentent sous une forme dissemblable.",
+   "how": "Poképédia",
+   "tr": "Les pêcheurs détestent ce Pokémon gênant parce qu'il pulvérise le poison de ses épines, l'amenant partout. Une autre forme de Qwilfish vit dans d'autres régions."
+  },
+  "216:21": {
+   "fr": "Il baigne ses griffes dans le miel pour les lécher. Chaque paire de pattes a un goût unique.",
+   "how": "même texte que diamond",
+   "tr": "Il laisse le miel tremper dans ses pattes pour qu'il puisse les lécher tout le temps. Chaque ensemble de pattes a un goût unique."
+  },
+  "216:22": {
+   "fr": "Il baigne ses griffes dans le miel pour les lécher. Chaque paire de pattes a un goût unique.",
+   "how": "même texte que diamond",
+   "tr": "Il laisse le miel tremper dans ses pattes pour qu'il puisse les lécher tout le temps. Chaque ensemble de pattes a un goût unique."
+  },
+  "217:21": {
+   "fr": "Il marque de ses griffes les arbres de son territoire qui portent des Baies ou des fruits.",
+   "how": "même texte que diamond",
+   "tr": "Sur son territoire, il laisse des rayures sur des arbres qui portent de délicieuses baies ou fruits."
+  },
+  "217:22": {
+   "fr": "Il marque de ses griffes les arbres de son territoire qui portent des Baies ou des fruits.",
+   "how": "même texte que diamond",
+   "tr": "Sur son territoire, il laisse des rayures sur des arbres qui portent de délicieuses baies ou fruits."
+  },
+  "218:21": {
+   "fr": "Son corps est fait de magma. S'il cesse de bouger, il refroidit et durcit.",
+   "how": "même texte que diamond",
+   "tr": "Son corps est fait de magma. Si elle ne continue pas à bouger, son corps va refroidir et durcir."
+  },
+  "218:22": {
+   "fr": "Son corps est fait de magma. S'il cesse de bouger, il refroidit et durcit.",
+   "how": "même texte que diamond",
+   "tr": "Son corps est fait de magma. Si elle ne continue pas à bouger, son corps va refroidir et durcir."
+  },
+  "219:21": {
+   "fr": "Sa température corporelle avoisine les 10 000 °C. Des flammes fusent des fissures de sa coquille.",
+   "how": "même texte que diamond",
+   "tr": "Sa température corporelle est d'environ 18 000 degrés F. Les flammes jaillissent des trous dans sa coquille durcie."
+  },
+  "219:22": {
+   "fr": "Sa température corporelle avoisine les 10 000 °C. Des flammes fusent des fissures de sa coquille.",
+   "how": "même texte que diamond",
+   "tr": "Sa température corporelle est d'environ 18 000 degrés F. Les flammes jaillissent des trous dans sa coquille durcie."
+  },
+  "228:21": {
+   "fr": "Il est assez évolué pour chasser en meute et communiquer par des séries de cris modulés.",
+   "how": "même texte que platinum",
+   "tr": "C'est assez intelligent pour chasser en me Eight. Il utilise une variété de cris pour communiquer avec Eight."
+  },
+  "228:22": {
+   "fr": "Il est assez évolué pour chasser en meute et communiquer par des séries de cris modulés.",
+   "how": "même texte que platinum",
+   "tr": "C'est assez intelligent pour chasser en me Eight. Il utilise une variété de cris pour communiquer avec Eight."
+  },
+  "229:21": {
+   "fr": "En colère, il crache des flammes contenant une toxine qui peut causer des dégâts irréversibles.",
+   "how": "même texte que platinum",
+   "tr": "Les flammes qu'elle respire en colère contiennent des toxines. S'ils causent une brûlure, ça fera mal pour toujours."
+  },
+  "229:22": {
+   "fr": "En colère, il crache des flammes contenant une toxine qui peut causer des dégâts irréversibles.",
+   "how": "même texte que platinum",
+   "tr": "Les flammes qu'elle respire en colère contiennent des toxines. S'ils causent une brûlure, ça fera mal pour toujours."
+  },
+  "231:21": {
+   "fr": "Il est fort malgré son aspect ramassé. Il n'a aucun mal à porter un humain adulte sur son dos.",
+   "how": "même texte que diamond",
+   "tr": "Il est fort malgré sa taille compacte. Il peut facilement prendre et porter un adulte humain sur son dos."
+  },
+  "231:22": {
+   "fr": "Il est fort malgré son aspect ramassé. Il n'a aucun mal à porter un humain adulte sur son dos.",
+   "how": "même texte que diamond",
+   "tr": "Il est fort malgré sa taille compacte. Il peut facilement prendre et porter un adulte humain sur son dos."
+  },
+  "238:21": {
+   "fr": "Il goûte à tout du bout des lèvres. Elles gardent en mémoire ses goûts et ses dégoûts.",
+   "how": "même texte que diamond",
+   "tr": "Il teste tout en touchant avec ses lèvres, qui se souviennent de ce qu'il aime et n'aiment pas."
+  },
+  "238:22": {
+   "fr": "Il goûte à tout du bout des lèvres. Elles gardent en mémoire ses goûts et ses dégoûts.",
+   "how": "même texte que diamond",
+   "tr": "Il teste tout en touchant avec ses lèvres, qui se souviennent de ce qu'il aime et n'aiment pas."
+  },
+  "243:21": {
+   "fr": "On prétend qu'il est tombé avec la foudre. Il peut lancer des éclairs grâce aux nuages sur son dos.",
+   "how": "même texte que diamond",
+   "tr": "On dit qu'il est tombé avec la foudre. Il peut tirer des coups de tonnerre des nuages de pluie sur son dos."
+  },
+  "243:22": {
+   "fr": "On prétend qu'il est tombé avec la foudre. Il peut lancer des éclairs grâce aux nuages sur son dos.",
+   "how": "même texte que diamond",
+   "tr": "On dit qu'il est tombé avec la foudre. Il peut tirer des coups de tonnerre des nuages de pluie sur son dos."
+  },
+  "245:21": {
+   "fr": "Il parcourt le vaste monde pour purifier les eaux polluées. Il accompagne le vent du nord.",
+   "how": "même texte que diamond",
+   "tr": "Il fait le tour du monde pour purifier l'eau souillée. Il s'éloigne du vent du nord."
+  },
+  "245:22": {
+   "fr": "Il parcourt le vaste monde pour purifier les eaux polluées. Il accompagne le vent du nord.",
+   "how": "même texte que diamond",
+   "tr": "Il fait le tour du monde pour purifier l'eau souillée. Il s'éloigne du vent du nord."
+  },
+  "25:39": {
+   "fr": "Cet astucieux Pokémon gîte en forêt. Ses bajoues contiennent des poches qui emmagasinent l'électricité dont il se sert pour griller les Baies avant de s'en repaître.",
+   "how": "Poképédia",
+   "tr": "Possesses sacs de joue dans lequel il stocke l'électricité. Cet astucieux habitant de la forêt rôtit des baies difficiles avec un choc électrique avant de les consommer."
+  },
+  "256:21": {
+   "fr": "Ce maître du coup de pied peut donner 10 coups par seconde. Ses cris aigus intimident l'ennemi.",
+   "how": "même texte que diamond",
+   "tr": "Sa maîtrise des coups de pied lui permet de perdre 10 coups par seconde. Il émet des cris aigus pour intimider les ennemis."
+  },
+  "256:22": {
+   "fr": "Ce maître du coup de pied peut donner 10 coups par seconde. Ses cris aigus intimident l'ennemi.",
+   "how": "même texte que diamond",
+   "tr": "Sa maîtrise des coups de pied lui permet de perdre 10 coups par seconde. Il émet des cris aigus pour intimider les ennemis."
+  },
+  "257:21": {
+   "fr": "Des flammes fusent de ses poignets et ses coups brûlent l'ennemi.",
+   "how": "même texte que diamond",
+   "tr": "Les flammes jaillissent de ses poignets, enveloppant ses crampons. Ses poinçons assombrissent ses ennemis."
+  },
+  "257:22": {
+   "fr": "Des flammes fusent de ses poignets et ses coups brûlent l'ennemi.",
+   "how": "même texte que diamond",
+   "tr": "Les flammes jaillissent de ses poignets, enveloppant ses crampons. Ses poinçons assombrissent ses ennemis."
+  },
+  "262:21": {
+   "fr": "Il traque ses proies en groupe. Il ne désobéira jamais aux ordres d'un bon Dresseur.",
+   "how": "même texte que diamond",
+   "tr": "Il chasse les proies dans une meute. Il ne désobéira jamais aux commandes d'un formateur qualifié."
+  },
+  "262:22": {
+   "fr": "Il traque ses proies en groupe. Il ne désobéira jamais aux ordres d'un bon Dresseur.",
+   "how": "même texte que diamond",
+   "tr": "Il chasse les proies dans une meute. Il ne désobéira jamais aux commandes d'un formateur qualifié."
+  },
+  "263:21": {
+   "fr": "Il marche en zigzaguant et n'a pas son pareil pour trouver des objets dans l'herbe ou sous terre.",
+   "how": "même texte que diamond",
+   "tr": "Il marche en mode zigzag. Il est bon pour trouver des articles dans l'herbe et même dans le sol."
+  },
+  "263:22": {
+   "fr": "Il marche en zigzaguant et n'a pas son pareil pour trouver des objets dans l'herbe ou sous terre.",
+   "how": "même texte que diamond",
+   "tr": "Il marche en mode zigzag. Il est bon pour trouver des articles dans l'herbe et même dans le sol."
+  },
+  "264:21": {
+   "fr": "Il fonce sur sa proie à plus de 100 km/h. Mais il ne peut pas dévier sa course et loupe souvent sa cible.",
+   "how": "même texte que diamond",
+   "tr": "Il charge les proies à des vitesses supérieures à 60 mi/h. Cependant, parce qu'il ne peut courir que droit, il échoue souvent."
+  },
+  "264:22": {
+   "fr": "Il fonce sur sa proie à plus de 100 km/h. Mais il ne peut pas dévier sa course et loupe souvent sa cible.",
+   "how": "même texte que diamond",
+   "tr": "Il charge les proies à des vitesses supérieures à 60 mi/h. Cependant, parce qu'il ne peut courir que droit, il échoue souvent."
+  },
+  "268:21": {
+   "fr": "Rancunier, il n'oublie aucune des attaques subies dans le cocon et se venge une fois qu'il a évolué.",
+   "how": "même texte que platinum",
+   "tr": "Il n'oublie jamais aucune attaque qu'il a enduré dans le cocon. Après l'évolution, il cherche le remboursement."
+  },
+  "268:22": {
+   "fr": "Rancunier, il n'oublie aucune des attaques subies dans le cocon et se venge une fois qu'il a évolué.",
+   "how": "même texte que platinum",
+   "tr": "Il n'oublie jamais aucune attaque qu'il a enduré dans le cocon. Après l'évolution, il cherche le remboursement."
+  },
+  "270:21": {
+   "fr": "Il ressemble à une plante aquatique et fait la navette pour les Pokémon qui ne savent pas nager.",
+   "how": "même texte que diamond",
+   "tr": "Il ressemble à une plante aquatique et sert de ferry à Pokémon qui ne sait pas nager."
+  },
+  "270:22": {
+   "fr": "Il ressemble à une plante aquatique et fait la navette pour les Pokémon qui ne savent pas nager.",
+   "how": "même texte que diamond",
+   "tr": "Il ressemble à une plante aquatique et sert de ferry à Pokémon qui ne sait pas nager."
+  },
+  "271:21": {
+   "fr": "C'est un mauvais plaisantin. Quand il repère un pêcheur, il tire sur sa ligne pour le déranger.",
+   "how": "même texte que diamond",
+   "tr": "Il a un esprit malicieux. S'il repère un pêcheur, il remorquera sur la ligne de pêche pour interférer."
+  },
+  "271:22": {
+   "fr": "C'est un mauvais plaisantin. Quand il repère un pêcheur, il tire sur sa ligne pour le déranger.",
+   "how": "même texte que diamond",
+   "tr": "Il a un esprit malicieux. S'il repère un pêcheur, il remorquera sur la ligne de pêche pour interférer."
+  },
+  "273:21": {
+   "fr": "Il ressemble à un gland pendu à une branche. Il adore effrayer les autres Pokémon.",
+   "how": "même texte que diamond",
+   "tr": "Quand il s'écarte d'une branche d'arbre, ça ressemble à un gland. Il aime effrayer les autres Pokémon."
+  },
+  "273:22": {
+   "fr": "Il ressemble à un gland pendu à une branche. Il adore effrayer les autres Pokémon.",
+   "how": "même texte que diamond",
+   "tr": "Quand il s'écarte d'une branche d'arbre, ça ressemble à un gland. Il aime effrayer les autres Pokémon."
+  },
+  "274:21": {
+   "fr": "Les son de sa flûte d'herbe déstabilise l'auditeur. Il vit au plus profond des forêts.",
+   "how": "même texte que diamond",
+   "tr": "Le son de sa flûte à gazon rend ses auditeurs malaisés. Il vit profondément dans les forêts."
+  },
+  "274:22": {
+   "fr": "Les son de sa flûte d'herbe déstabilise l'auditeur. Il vit au plus profond des forêts.",
+   "how": "même texte que diamond",
+   "tr": "Le son de sa flûte à gazon rend ses auditeurs malaisés. Il vit profondément dans les forêts."
+  },
+  "275:21": {
+   "fr": "D'un coup de sa feuille éventail, il génère des bourrasques de 30 m/s capables de souffler une maison.",
+   "how": "même texte que diamond",
+   "tr": "En agitant ses éventails de feuilles, il déclenche des rafales de 30 m/s capables de renverser des maisons."
+  },
+  "275:22": {
+   "fr": "D'un coup de sa feuille éventail, il génère des bourrasques de 30 m/s capables de souffler une maison.",
+   "how": "même texte que diamond",
+   "tr": "En agitant ses éventails de feuilles, il déclenche des rafales de 30 m/s capables de renverser des maisons."
+  },
+  "276:10": {
+   "fr": "Nirondelle ne supporte pas les saisons froides. Il vole vers d'autres terres à la recherche de chaleur et peut ainsi parcourir 300 km par jour.",
+   "how": "même texte que y",
+   "tr": "Il n'aime pas le froid. Il migre vers d'autres pays à la recherche de chaleur et parcourt plus de 300 km par jour."
+  },
+  "276:11": {
+   "fr": "Nirondelle ne supporte pas les saisons froides. Il vole vers d'autres terres à la recherche de chaleur et peut ainsi parcourir 300 km par jour.",
+   "how": "même texte que y",
+   "tr": "Il n'aime pas le froid. Il migre vers d'autres pays à la recherche de chaleur et parcourt plus de 300 km par jour."
+  },
+  "276:21": {
+   "fr": "Ce Pokémon téméraire n'a pas peur d'affronter des ennemis puissants. Il vole en quête de climats chauds.",
+   "how": "même texte que diamond",
+   "tr": "Son courage le pousse à affronter sans crainte des ennemis redoutables. Il vole à la recherche de climats chauds."
+  },
+  "276:22": {
+   "fr": "Ce Pokémon téméraire n'a pas peur d'affronter des ennemis puissants. Il vole en quête de climats chauds.",
+   "how": "même texte que diamond",
+   "tr": "Son courage le pousse à affronter sans crainte des ennemis redoutables. Il vole à la recherche de climats chauds."
+  },
+  "277:21": {
+   "fr": "Il vole en cercle en quête d'une proie. Dès qu'il l'a repérée, il fond sur elle en un éclair.",
+   "how": "même texte que diamond",
+   "tr": "Il tourne le ciel à la recherche de proies. Quand il en repère un, il plonge fortement pour attraper la proie."
+  },
+  "277:22": {
+   "fr": "Il vole en cercle en quête d'une proie. Dès qu'il l'a repérée, il fond sur elle en un éclair.",
+   "how": "même texte que diamond",
+   "tr": "Il tourne le ciel à la recherche de proies. Quand il en repère un, il plonge fortement pour attraper la proie."
+  },
+  "282:21": {
+   "fr": "Prêt à tout pour protéger son Dresseur, il peut créer un mini trou noir par sa seule force mentale.",
+   "how": "même texte que platinum",
+   "tr": "Pour protéger son formateur, il dépensera toute sa puissance psychique pour créer un petit trou noir."
+  },
+  "282:22": {
+   "fr": "Prêt à tout pour protéger son Dresseur, il peut créer un mini trou noir par sa seule force mentale.",
+   "how": "même texte que platinum",
+   "tr": "Pour protéger son formateur, il dépensera toute sa puissance psychique pour créer un petit trou noir."
+  },
+  "290:21": {
+   "fr": "Il grandit sous terre et se repère grâce à ses antennes car ses yeux sont quasiment aveugles.",
+   "how": "même texte que diamond",
+   "tr": "Il pousse sous terre, sentant son environnement en utilisant des antennes au lieu de ses yeux pratiquement aveugles."
+  },
+  "290:22": {
+   "fr": "Il grandit sous terre et se repère grâce à ses antennes car ses yeux sont quasiment aveugles.",
+   "how": "même texte que diamond",
+   "tr": "Il pousse sous terre, sentant son environnement en utilisant des antennes au lieu de ses yeux pratiquement aveugles."
+  },
+  "291:21": {
+   "fr": "Il bouge si vite que l'œil a parfois du mal à le suivre. Ils se regroupent près de la sève des arbres.",
+   "how": "même texte que diamond",
+   "tr": "Parce qu'il bouge si rapidement, il devient parfois invisible. Il se rassemble autour de la sève des arbres."
+  },
+  "291:22": {
+   "fr": "Il bouge si vite que l'œil a parfois du mal à le suivre. Ils se regroupent près de la sève des arbres.",
+   "how": "même texte que diamond",
+   "tr": "Parce qu'il bouge si rapidement, il devient parfois invisible. Il se rassemble autour de la sève des arbres."
+  },
+  "292:21": {
+   "fr": "Une carapace d'insecte laissée à l'abandon. On dit qu'il vole l'âme de celui qui regarde à l'intérieur.",
+   "how": "même texte que diamond",
+   "tr": "Un shell de bug jeté qui a pris vie. On dit qu'on vole l'esprit de l'un d'entre eux."
+  },
+  "292:22": {
+   "fr": "Une carapace d'insecte laissée à l'abandon. On dit qu'il vole l'âme de celui qui regarde à l'intérieur.",
+   "how": "même texte que diamond",
+   "tr": "Un shell de bug jeté qui a pris vie. On dit qu'on vole l'esprit de l'un d'entre eux."
+  },
+  "293:21": {
+   "fr": "En temps normal, son cri est pareil à un murmure. Effrayé, il atteint le volume d'un avion à réaction.",
+   "how": "même texte que diamond",
+   "tr": "Habituellement, ses cris sont comme des murmures silencieux. Si elle a peur, elle hurle au même volume qu'un avion à réaction."
+  },
+  "293:22": {
+   "fr": "En temps normal, son cri est pareil à un murmure. Effrayé, il atteint le volume d'un avion à réaction.",
+   "how": "même texte que diamond",
+   "tr": "Habituellement, ses cris sont comme des murmures silencieux. Si elle a peur, elle hurle au même volume qu'un avion à réaction."
+  },
+  "307:21": {
+   "fr": "Son entraînement d'ermite lui permet de léviter par le seul pouvoir de la méditation.",
+   "how": "même texte que platinum",
+   "tr": "Il s'entraîne toujours en montagne. Elle lévite quand elle augmente sa puissance spirituelle par la méditation."
+  },
+  "307:22": {
+   "fr": "Son entraînement d'ermite lui permet de léviter par le seul pouvoir de la méditation.",
+   "how": "même texte que platinum",
+   "tr": "Il s'entraîne toujours en montagne. Elle lévite quand elle augmente sa puissance spirituelle par la méditation."
+  },
+  "308:21": {
+   "fr": "Le jeûne lui permet de concentrer son esprit au point de déceler l'aura de ses adversaires.",
+   "how": "même texte que platinum",
+   "tr": "Il gagne la capacité de voir l'aura de ses adversaires en affinant son esprit par la famine."
+  },
+  "308:22": {
+   "fr": "Le jeûne lui permet de concentrer son esprit au point de déceler l'aura de ses adversaires.",
+   "how": "même texte que platinum",
+   "tr": "Il gagne la capacité de voir l'aura de ses adversaires en affinant son esprit par la famine."
+  },
+  "309:21": {
+   "fr": "Il améliore ses réflexes en stimulant ses muscles grâce à l'électricité dans sa fourrure.",
+   "how": "même texte que diamond",
+   "tr": "Utilisant l'électricité stockée dans sa fourrure, elle stimule ses muscles pour augmenter sa vitesse de réaction."
+  },
+  "309:22": {
+   "fr": "Il améliore ses réflexes en stimulant ses muscles grâce à l'électricité dans sa fourrure.",
+   "how": "même texte que diamond",
+   "tr": "Utilisant l'électricité stockée dans sa fourrure, elle stimule ses muscles pour augmenter sa vitesse de réaction."
+  },
+  "310:21": {
+   "fr": "Il libère l'électricité par sa crinière. Il crée un nuage d'orage pour appeler la foudre.",
+   "how": "même texte que diamond",
+   "tr": "Il rejette l'électricité de sa cri Il rejette l'électricité de sa crinière. Il crée un nuage de tonnerre pour tomber des éclairs."
+  },
+  "310:22": {
+   "fr": "Il libère l'électricité par sa crinière. Il crée un nuage d'orage pour appeler la foudre.",
+   "how": "même texte que diamond",
+   "tr": "Il rejette l'électricité de sa cri Il rejette l'électricité de sa crinière. Il crée un nuage de tonnerre pour tomber des éclairs."
+  },
+  "311:21": {
+   "fr": "Il absorbe l'énergie des poteaux électriques et encourage ses amis avec des pompons d'étincelles.",
+   "how": "même texte que diamond",
+   "tr": "Il encourage les amis avec des pom-poms faits d'étincelles. Il d teae l'énergie des poteaux téléphoniques."
+  },
+  "311:22": {
+   "fr": "Il absorbe l'énergie des poteaux électriques et encourage ses amis avec des pompons d'étincelles.",
+   "how": "même texte que diamond",
+   "tr": "Il encourage les amis avec des pom-poms faits d'étincelles. Il d teae l'énergie des poteaux téléphoniques."
+  },
+  "312:21": {
+   "fr": "Il encourage ses amis. Son corps produit plus d'étincelles quand il est en mauvaise posture.",
+   "how": "même texte que diamond",
+   "tr": "Ça encourage les amis. Si ses amis perdent, son corps laisse échapper de plus en plus d'étincelles."
+  },
+  "312:22": {
+   "fr": "Il encourage ses amis. Son corps produit plus d'étincelles quand il est en mauvaise posture.",
+   "how": "même texte que diamond",
+   "tr": "Ça encourage les amis. Si ses amis perdent, son corps laisse échapper de plus en plus d'étincelles."
+  },
+  "313:21": {
+   "fr": "Il communique avec ses pairs en allumant son postérieur la nuit. Il adore le doux parfum de Lumivole.",
+   "how": "même texte que diamond",
+   "tr": "Il communique avec les autres en éclairant son arrière la nuit. Il aime les arômes doux de Lumivole."
+  },
+  "313:22": {
+   "fr": "Il communique avec ses pairs en allumant son postérieur la nuit. Il adore le doux parfum de Lumivole.",
+   "how": "même texte que diamond",
+   "tr": "Il communique avec les autres en éclairant son arrière la nuit. Il aime les arômes doux de Lumivole."
+  },
+  "314:21": {
+   "fr": "Il utilise son doux parfum pour aider Muciole à décrire des arabesques dans le ciel nocturne.",
+   "how": "même texte que diamond",
+   "tr": "Avec son arôme doux, il guide Muciole pour dessiner des signes avec lumière dans le ciel nocturne."
+  },
+  "314:22": {
+   "fr": "Il utilise son doux parfum pour aider Muciole à décrire des arabesques dans le ciel nocturne.",
+   "how": "même texte que diamond",
+   "tr": "Avec son arôme doux, il guide Muciole pour dessiner des signes avec lumière dans le ciel nocturne."
+  },
+  "316:15": {
+   "fr": "Son corps est principalement constitué d'un estomac dont les sucs digestifs dissolvent tout.",
+   "how": "même texte que soulsilver",
+   "tr": "Il a un petit cœur et un cerveau. Son estomac comprend la plupart de son corps, avec des enzymes pour dissoudre quoi que ce soit."
+  },
+  "317:15": {
+   "fr": "Il avale tout en une bouchée. Ses sucs digestifs peuvent digérer n'importe quoi.",
+   "how": "même texte que soulsilver",
+   "tr": "Ça gâche tout ce qui rentre dans sa bouche. Ses enzymes spéciales peuvent tout dissoudre."
+  },
+  "317:21": {
+   "fr": "Il avale tout en une bouchée. Ses follicules sécrètent des fluides toxiques qui endorment l'ennemi.",
+   "how": "même texte que diamond",
+   "tr": "Ça avale n'importe quoi. Il transpire des fluides toxiques de ses follicules pour douer les ennemis."
+  },
+  "317:22": {
+   "fr": "Il avale tout en une bouchée. Ses follicules sécrètent des fluides toxiques qui endorment l'ennemi.",
+   "how": "même texte que diamond",
+   "tr": "Ça avale n'importe quoi. Il transpire des fluides toxiques de ses follicules pour douer les ennemis."
+  },
+  "324:21": {
+   "fr": "Il tire son énergie du charbon qu'il brûle dans sa carapace et crache de la suie noire en cas de danger.",
+   "how": "même texte que diamond",
+   "tr": "Il brûle du charbon à l'intérieur de sa coquille pour de l'énergie. Il fait exploser la suie noire si elle est en danger."
+  },
+  "324:22": {
+   "fr": "Il tire son énergie du charbon qu'il brûle dans sa carapace et crache de la suie noire en cas de danger.",
+   "how": "même texte que diamond",
+   "tr": "Il brûle du charbon à l'intérieur de sa coquille pour de l'énergie. Il fait exploser la suie noire si elle est en danger."
+  },
+  "327:21": {
+   "fr": "Les motifs sur leur fourrure sont propres à chaque Spinda. Son pas chancelant le rend difficile à viser.",
+   "how": "même texte que diamond",
+   "tr": "Pas deux Spinda ont le même motif de taches. Son pas de torpeur sape le but des ennemis."
+  },
+  "327:22": {
+   "fr": "Les motifs sur leur fourrure sont propres à chaque Spinda. Son pas chancelant le rend difficile à viser.",
+   "how": "même texte que diamond",
+   "tr": "Pas deux Spinda ont le même motif de taches. Son pas de torpeur sape le but des ennemis."
+  },
+  "339:21": {
+   "fr": "Son corps glissant est difficile à attraper. On dit qu'il a été créé dans la boue solidifiée.",
+   "how": "même texte que platinum",
+   "tr": "Son corps visqueux est difficile à saisir. Dans une région, on dit qu'il est né de boue durcie."
+  },
+  "345:21": {
+   "fr": "Il vivait au fond de la mer il y a 100 millions d'années. La science a permis de le ressusciter.",
+   "how": "même texte que diamond",
+   "tr": "Il vivait sur le fond marin il y a 100 millions d'années et a été réanimé scientifiquement."
+  },
+  "345:22": {
+   "fr": "Il vivait au fond de la mer il y a 100 millions d'années. La science a permis de le ressusciter.",
+   "how": "même texte que diamond",
+   "tr": "Il vivait sur le fond marin il y a 100 millions d'années et a été réanimé scientifiquement."
+  },
+  "346:21": {
+   "fr": "Vit dans les hauts-fonds des mers chaudes. Il déterre sa proie du sable quand la marée se retire.",
+   "how": "même texte que diamond",
+   "tr": "Il vit dans les eaux peu profondes des mers chaudes. Quand la marée s'éteint, elle déterre les proies des plages."
+  },
+  "346:22": {
+   "fr": "Vit dans les hauts-fonds des mers chaudes. Il déterre sa proie du sable quand la marée se retire.",
+   "how": "même texte que diamond",
+   "tr": "Il vit dans les eaux peu profondes des mers chaudes. Quand la marée s'éteint, elle déterre les proies des plages."
+  },
+  "347:21": {
+   "fr": "Un ancêtre Pokémon réanimé à partir d'un fossile. Il vivait en mer et chassait avec ses pinces.",
+   "how": "même texte que diamond",
+   "tr": "Un ancêtre de Pokémon réanimé d'un fossile. Il vivait dans la mer et chassait avec des griffes."
+  },
+  "347:22": {
+   "fr": "Un ancêtre Pokémon réanimé à partir d'un fossile. Il vivait en mer et chassait avec ses pinces.",
+   "how": "même texte que diamond",
+   "tr": "Un ancêtre de Pokémon réanimé d'un fossile. Il vivait dans la mer et chassait avec des griffes."
+  },
+  "348:21": {
+   "fr": "Il a gagné la côte après son évolution. Une armure robuste recouvre son corps.",
+   "how": "même texte que diamond",
+   "tr": "Il est tombé à terre après avoir évolué. L'ensemble de son corps est revêtu d'une armure robuste."
+  },
+  "348:22": {
+   "fr": "Il a gagné la côte après son évolution. Une armure robuste recouvre son corps.",
+   "how": "même texte que diamond",
+   "tr": "Il est tombé à terre après avoir évolué. L'ensemble de son corps est revêtu d'une armure robuste."
+  },
+  "349:21": {
+   "fr": "Ce Pokémon a peut-être un physique disgracieux, mais il est robuste et peut survivre dans très peu d'eau.",
+   "how": "même texte que platinum",
+   "tr": "C'est un Pokémon shabby et laid. Cependant, il est très robuste et peut survivre sur peu d'eau."
+  },
+  "349:22": {
+   "fr": "Ce Pokémon a peut-être un physique disgracieux, mais il est robuste et peut survivre dans très peu d'eau.",
+   "how": "même texte que platinum",
+   "tr": "C'est un Pokémon shabby et laid. Cependant, il est très robuste et peut survivre sur peu d'eau."
+  },
+  "352:21": {
+   "fr": "Il change de couleur à volonté, mais le motif en zigzag qui orne son ventre reste le même.",
+   "how": "même texte que diamond",
+   "tr": "Il peut changer librement sa couleur de corps. Le motif zigzag sur son ventre ne change cependant pas."
+  },
+  "352:22": {
+   "fr": "Il change de couleur à volonté, mais le motif en zigzag qui orne son ventre reste le même.",
+   "how": "même texte que diamond",
+   "tr": "Il peut changer librement sa couleur de corps. Le motif zigzag sur son ventre ne change cependant pas."
+  },
+  "355:21": {
+   "fr": "Les cris des enfants l'amusent. Il effraie les moins sages d'entre eux en traversant les murs.",
+   "how": "même texte que platinum",
+   "tr": "Il aime les pleurs des enfants. Ça surprend les enfants en passant par les murs et en les faisant pleurer."
+  },
+  "355:22": {
+   "fr": "Les cris des enfants l'amusent. Il effraie les moins sages d'entre eux en traversant les murs.",
+   "how": "même texte que platinum",
+   "tr": "Il aime les pleurs des enfants. Ça surprend les enfants en passant par les murs et en les faisant pleurer."
+  },
+  "358:21": {
+   "fr": "Ses cris se répercutent dans son corps creux avant d'exploser en notes mélodieuses et saisissantes.",
+   "how": "même texte que platinum",
+   "tr": "Ses cris résonnent à l'intérieur de son corps creux pour émerger comme de belles notes pour surprendre et repousser les ennemis."
+  },
+  "358:22": {
+   "fr": "Ses cris se répercutent dans son corps creux avant d'exploser en notes mélodieuses et saisissantes.",
+   "how": "même texte que platinum",
+   "tr": "Ses cris résonnent à l'intérieur de son corps creux pour émerger comme de belles notes pour surprendre et repousser les ennemis."
+  },
+  "362:15": {
+   "fr": "Il a le pouvoir de geler l'humidité ambiante en un instant et peut ainsi pétrifier ses proies.",
+   "how": "même texte que soulsilver",
+   "tr": "Il peut instantanément congeler l'humidité dans l'atmosphère. Il utilise ce pouvoir pour geler ses ennemis."
+  },
+  "362:21": {
+   "fr": "Il empêche ses proies de prendre la fuite en gelant instantanément l'humidité de l'air.",
+   "how": "même texte que platinum",
+   "tr": "Il empêche les proies de s'échapper en gelant instantanément l'humidité dans l'air."
+  },
+  "362:22": {
+   "fr": "Il empêche ses proies de prendre la fuite en gelant instantanément l'humidité de l'air.",
+   "how": "même texte que platinum",
+   "tr": "Il empêche les proies de s'échapper en gelant instantanément l'humidité dans l'air."
+  },
+  "366:21": {
+   "fr": "Il ne produit qu'une perle durant son existence. On raconte qu'elle amplifie les pouvoirs psychiques.",
+   "how": "même texte que diamond",
+   "tr": "Il fait une seule perle pendant sa vie. On dit que la perle amplifie le pouvoir psychique."
+  },
+  "366:22": {
+   "fr": "Il ne produit qu'une perle durant son existence. On raconte qu'elle amplifie les pouvoirs psychiques.",
+   "how": "même texte que diamond",
+   "tr": "Il fait une seule perle pendant sa vie. On dit que la perle amplifie le pouvoir psychique."
+  },
+  "367:15": {
+   "fr": "Ce Pokémon des abysses appâte ses proies en agitant sa queue en forme de petite créature.",
+   "how": "même texte que soulsilver",
+   "tr": "Elle vit au fond de la mer noire. Il attire les proies en déplaçant sa queue dans l'imitation d'un petit animal."
+  },
+  "367:21": {
+   "fr": "Il vit loin sous la mer. Il appâte les proies crédules avec sa queue qui rappelle un petit poisson.",
+   "how": "même texte que diamond",
+   "tr": "Il vit au fond de la mer. Avec une queue en forme de petit poisson, elle attire des proies insoupçonnées."
+  },
+  "367:22": {
+   "fr": "Il vit loin sous la mer. Il appâte les proies crédules avec sa queue qui rappelle un petit poisson.",
+   "how": "même texte que diamond",
+   "tr": "Il vit au fond de la mer. Avec une queue en forme de petit poisson, elle attire des proies insoupçonnées."
+  },
+  "370:21": {
+   "fr": "Un habitant des mers chaudes. On dit que le couple qui tombe sur ce Pokémon connaîtra l'amour éternel.",
+   "how": "même texte que diamond",
+   "tr": "Elle vit dans des mers chaudes. On dit qu'un couple qui retrouvera ce Pokémon sera béni d'un amour éternel."
+  },
+  "370:22": {
+   "fr": "Un habitant des mers chaudes. On dit que le couple qui tombe sur ce Pokémon connaîtra l'amour éternel.",
+   "how": "même texte que diamond",
+   "tr": "Elle vit dans des mers chaudes. On dit qu'un couple qui retrouvera ce Pokémon sera béni d'un amour éternel."
+  },
+  "371:21": {
+   "fr": "Il rêve de pouvoir voler un jour. Pour l'heure, il s'entraîne en sautant du haut des falaises.",
+   "how": "même texte que diamond",
+   "tr": "En rêvant d'un jour de vol, il pratique en sautant des falaises chaque jour."
+  },
+  "371:22": {
+   "fr": "Il rêve de pouvoir voler un jour. Pour l'heure, il s'entraîne en sautant du haut des falaises.",
+   "how": "même texte que diamond",
+   "tr": "En rêvant d'un jour de vol, il pratique en sautant des falaises chaque jour."
+  },
+  "372:21": {
+   "fr": "Ses cellules ont commencé à changer dans sa robuste coquille. Il la perd en évoluant.",
+   "how": "même texte que diamond",
+   "tr": "Dans sa coquille accidentée, ses cellules ont commencé à changer. La coquille se détache à l'instant où elle évolue."
+  },
+  "372:22": {
+   "fr": "Ses cellules ont commencé à changer dans sa robuste coquille. Il la perd en évoluant.",
+   "how": "même texte que diamond",
+   "tr": "Dans sa coquille accidentée, ses cellules ont commencé à changer. La coquille se détache à l'instant où elle évolue."
+  },
+  "373:21": {
+   "fr": "À force de rêver de pouvoir voler, sa structure cellulaire a évolué et il s'est vu pousser des ailes.",
+   "how": "même texte que diamond",
+   "tr": "En raison de son rêve de vol, sa structure cellulaire a changé, et des ailes se sont développées."
+  },
+  "373:22": {
+   "fr": "À force de rêver de pouvoir voler, sa structure cellulaire a évolué et il s'est vu pousser des ailes.",
+   "how": "même texte que diamond",
+   "tr": "En raison de son rêve de vol, sa structure cellulaire a changé, et des ailes se sont développées."
+  },
+  "377:21": {
+   "fr": "Tout son corps est fait de roche. S'il s'ébrèche au combat, il utilise des pierres pour le réparer.",
+   "how": "même texte que diamond",
+   "tr": "Son corps entier est fait de roche. Si une partie se détache au combat, elle attache des rochers pour se réparer."
+  },
+  "377:22": {
+   "fr": "Tout son corps est fait de roche. S'il s'ébrèche au combat, il utilise des pierres pour le réparer.",
+   "how": "même texte que diamond",
+   "tr": "Son corps entier est fait de roche. Si une partie se détache au combat, elle attache des rochers pour se réparer."
+  },
+  "378:21": {
+   "fr": "Son corps est fait de glace datant de l'ère glaciaire. Il contrôle un air gelé de -200 °C.",
+   "how": "même texte que diamond",
+   "tr": "Son corps est fait de glace à partir de l'âge de la glace. Il contrôle l'air glacial de -328 degrés Fahrenheit."
+  },
+  "378:22": {
+   "fr": "Son corps est fait de glace datant de l'ère glaciaire. Il contrôle un air gelé de -200 °C.",
+   "how": "même texte que diamond",
+   "tr": "Son corps est fait de glace à partir de l'âge de la glace. Il contrôle l'air glacial de -328 degrés Fahrenheit."
+  },
+  "379:21": {
+   "fr": "Son corps invulnérable fut forgé par la pression souterraine durant des dizaines de milliers d'années.",
+   "how": "même texte que diamond",
+   "tr": "Tempéré par la pression sous terre pendant des dizaines de milliers d'années, son corps ne peut être éraflé."
+  },
+  "379:22": {
+   "fr": "Son corps invulnérable fut forgé par la pression souterraine durant des dizaines de milliers d'années.",
+   "how": "même texte que diamond",
+   "tr": "Tempéré par la pression sous terre pendant des dizaines de milliers d'années, son corps ne peut être éraflé."
+  },
+  "380:21": {
+   "fr": "Son corps est recouvert d'un duvet qui reflète la lumière et le rend invisible.",
+   "how": "même texte que diamond",
+   "tr": "Son corps est recouvert d'un duvet qui peut réfracter la lumière de telle manière qu'elle devient invisible."
+  },
+  "382:21": {
+   "fr": "On dit qu'il a fait monter les eaux en causant des pluies diluviennes. Il somnolait dans une fosse marine.",
+   "how": "même texte que diamond",
+   "tr": "On dit qu'elle a élargi les mers en provoquant des inondations. Elle avait dormi dans une tranchée marine."
+  },
+  "382:22": {
+   "fr": "On dit qu'il a fait monter les eaux en causant des pluies diluviennes. Il somnolait dans une fosse marine.",
+   "how": "même texte que diamond",
+   "tr": "On dit qu'elle a élargi les mers en provoquant des inondations. Elle avait dormi dans une tranchée marine."
+  },
+  "383:21": {
+   "fr": "Il dormait dans le magma souterrain depuis sa lutte féroce contre Kyogre, il y a longtemps de cela.",
+   "how": "même texte que diamond",
+   "tr": "Il dormait dans le magma souterrain depuis qu'il a combattu avec violence Kyogre il y a longtemps."
+  },
+  "383:22": {
+   "fr": "Il dormait dans le magma souterrain depuis sa lutte féroce contre Kyogre, il y a longtemps de cela.",
+   "how": "même texte que diamond",
+   "tr": "Il dormait dans le magma souterrain depuis qu'il a combattu avec violence Kyogre il y a longtemps."
+  },
+  "386:21": {
+   "fr": "Il vient d'un virus extraterrestre arrivé avec une météorite et ayant subi une mutation génétique.",
+   "how": "même texte que diamond",
+   "tr": "Un virus extraterrestre tombé sur terre sur un météore a subi une mutation ADN pour devenir ce Pokémon."
+  },
+  "386:22": {
+   "fr": "Il vient d'un virus extraterrestre arrivé avec une météorite et ayant subi une mutation génétique.",
+   "how": "même texte que diamond",
+   "tr": "Un virus extraterrestre tombé sur terre sur un météore a subi une mutation ADN pour devenir ce Pokémon."
+  },
+  "393:21": {
+   "fr": "Malgré sa démarche maladroite et ses pertes d'équilibre, il bombe toujours fièrement le torse.",
+   "how": "même texte que platinum",
+   "tr": "Pauvre marcheur, il tombe souvent. Cependant, sa forte fierté lui fait gonfler la poitrine sans soins."
+  },
+  "393:22": {
+   "fr": "Malgré sa démarche maladroite et ses pertes d'équilibre, il bombe toujours fièrement le torse.",
+   "how": "même texte que platinum",
+   "tr": "Pauvre marcheur, il tombe souvent. Cependant, sa forte fierté lui fait gonfler la poitrine sans soins."
+  },
+  "394:21": {
+   "fr": "La fierté du Prinplouf est si grande qu'il lui est impossible de vivre en groupe.",
+   "how": "même texte que platinum",
+   "tr": "Parce que chaque Prinplouf se considère comme le plus important, ils ne peuvent jamais former un groupe."
+  },
+  "394:22": {
+   "fr": "La fierté du Prinplouf est si grande qu'il lui est impossible de vivre en groupe.",
+   "how": "même texte que platinum",
+   "tr": "Parce que chaque Prinplouf se considère comme le plus important, ils ne peuvent jamais former un groupe."
+  },
+  "395:21": {
+   "fr": "S'il voit son honneur bafoué, il est capable de faire des ravages avec ses ailes tranchantes.",
+   "how": "même texte que platinum",
+   "tr": "Si quelqu'un devait blesser sa fierté, il les briserait avec des ailes qui peuvent s'écrouler à travers une banquise."
+  },
+  "395:22": {
+   "fr": "S'il voit son honneur bafoué, il est capable de faire des ravages avec ses ailes tranchantes.",
+   "how": "même texte que platinum",
+   "tr": "Si quelqu'un devait blesser sa fierté, il les briserait avec des ailes qui peuvent s'écrouler à travers une banquise."
+  },
+  "399:21": {
+   "fr": "Une étude a montré que les dents du Keunotor poussaient aussi vite que celles du Rattata.",
+   "how": "même texte que platinum",
+   "tr": "Une comparaison a révélé que les dents avant de Keuntor se développent au même rythme que les Rattata."
+  },
+  "399:22": {
+   "fr": "Une étude a montré que les dents du Keunotor poussaient aussi vite que celles du Rattata.",
+   "how": "même texte que platinum",
+   "tr": "Une comparaison a révélé que les dents avant de Keuntor se développent au même rythme que les Rattata."
+  },
+  "402:21": {
+   "fr": "Ses cris sont tellement variés qu'il existe un village où on organise des concours en leur honneur.",
+   "how": "même texte que platinum",
+   "tr": "Il y a un village qui accueille un concours basé sur les cris incroyablement variables de ce Pokémon."
+  },
+  "402:22": {
+   "fr": "Ses cris sont tellement variés qu'il existe un village où on organise des concours en leur honneur.",
+   "how": "même texte que platinum",
+   "tr": "Il y a un village qui accueille un concours basé sur les cris incroyablement variables de ce Pokémon."
+  },
+  "403:21": {
+   "fr": "Ses muscles génèrent un courant électrique lorsqu'ils travaillent. Il s'illumine en cas de danger.",
+   "how": "même texte que platinum",
+   "tr": "L'extension et la contraction de ses muscles génèrent de l'électricité. Il brille quand il a des ennuis."
+  },
+  "403:22": {
+   "fr": "Ses muscles génèrent un courant électrique lorsqu'ils travaillent. Il s'illumine en cas de danger.",
+   "how": "même texte que platinum",
+   "tr": "L'extension et la contraction de ses muscles génèrent de l'électricité. Il brille quand il a des ennuis."
+  },
+  "404:21": {
+   "fr": "Le courant qui circule à la pointe de ses griffes est capables de faire perdre connaissance à ses proies.",
+   "how": "même texte que platinum",
+   "tr": "L'électricité est forte à travers les bouts de ses griffes pointues. Une égratignure légère provoque des évanouissements chez les ennemis."
+  },
+  "404:22": {
+   "fr": "Le courant qui circule à la pointe de ses griffes est capables de faire perdre connaissance à ses proies.",
+   "how": "même texte que platinum",
+   "tr": "L'électricité est forte à travers les bouts de ses griffes pointues. Une égratignure légère provoque des évanouissements chez les ennemis."
+  },
+  "405:21": {
+   "fr": "Il est capable de voir à travers les murs pour chasser des proies ou retrouver ses petits égarés.",
+   "how": "même texte que platinum",
+   "tr": "Il peut voir clairement à travers les murs pour traquer sa proie et chercher ses jeunes disparus."
+  },
+  "405:22": {
+   "fr": "Il est capable de voir à travers les murs pour chasser des proies ou retrouver ses petits égarés.",
+   "how": "même texte que platinum",
+   "tr": "Il peut voir clairement à travers les murs pour traquer sa proie et chercher ses jeunes disparus."
+  },
+  "408:21": {
+   "fr": "Il vivait dans la jungle il y a 100 millions d'années. Il abat un arbre d'un coup de tête.",
+   "how": "même texte que platinum",
+   "tr": "Un vieil habitant de jungle il y a 100 millions d'années, il allait casser des arbres obstruant avec des fesses de tête."
+  },
+  "408:22": {
+   "fr": "Il vivait dans la jungle il y a 100 millions d'années. Il abat un arbre d'un coup de tête.",
+   "how": "même texte que platinum",
+   "tr": "Un vieil habitant de jungle il y a 100 millions d'années, il allait casser des arbres obstruant avec des fesses de tête."
+  },
+  "409:21": {
+   "fr": "Quand deux Charkos se rentrent dedans, leur crâne extrêmement épais les empêche de s'assommer.",
+   "how": "même texte que platinum",
+   "tr": "Quand deux d'entre eux se cognent la tête, leur crâne épais de 30 cm les empêche de s'évanouir."
+  },
+  "409:22": {
+   "fr": "Quand deux Charkos se rentrent dedans, leur crâne extrêmement épais les empêche de s'assommer.",
+   "how": "même texte que platinum",
+   "tr": "Quand deux d'entre eux se cognent la tête, leur crâne épais de 30 cm les empêche de s'évanouir."
+  },
+  "410:21": {
+   "fr": "Il est si bien protégé qu'il peut déguster Baies et herbe fraîche sans craindre de prédateurs.",
+   "how": "même texte que platinum",
+   "tr": "Elle est exceptionnellement blindée. En conséquence, il peut manger de l'herbe et des baies sans avoir à se battre."
+  },
+  "410:22": {
+   "fr": "Il est si bien protégé qu'il peut déguster Baies et herbe fraîche sans craindre de prédateurs.",
+   "how": "même texte que platinum",
+   "tr": "Elle est exceptionnellement blindée. En conséquence, il peut manger de l'herbe et des baies sans avoir à se battre."
+  },
+  "411:21": {
+   "fr": "En groupe, ils protègent leurs petits en formant autour d'eux une impénétrable muraille.",
+   "how": "même texte que platinum",
+   "tr": "Quand ils se sont alignés côte à côte, aucun ennemi n'a pu percer. Ils protégeaient ainsi leurs jeunes."
+  },
+  "411:22": {
+   "fr": "En groupe, ils protègent leurs petits en formant autour d'eux une impénétrable muraille.",
+   "how": "même texte que platinum",
+   "tr": "Quand ils se sont alignés côte à côte, aucun ennemi n'a pu percer. Ils protégeaient ainsi leurs jeunes."
+  },
+  "412:21": {
+   "fr": "Nul ne sait comment il y parvient, mais il arrive toujours à se former une cape, où qu'il soit.",
+   "how": "même texte que platinum",
+   "tr": "Même s'il est né là où il n'y a pas de matériaux de cocooning, il finit toujours avec un manteau."
+  },
+  "412:22": {
+   "fr": "Nul ne sait comment il y parvient, mais il arrive toujours à se former une cape, où qu'il soit.",
+   "how": "même texte que platinum",
+   "tr": "Même s'il est né là où il n'y a pas de matériaux de cocooning, il finit toujours avec un manteau."
+  },
+  "412:39": {
+   "fr": "Dès que sa cape est légèrement abîmée, il s'attelle aussitôt à la réparer en utilisant tout matériau qu'il trouve à proximité. Sous cette cape se cache un corps frêle qui craint le froid.",
+   "how": "Poképédia",
+   "tr": "Si son manteau est même légèrement endommagé, Cheniti le réparera immédiatement avec tout ce qui est à portée de main. Le Pokémon à l'intérieur du manteau est brouillé et vulnérable au froid."
+  },
+  "413:21": {
+   "fr": "À l'évolution, son corps absorbe les matériaux à proximité et peut ainsi présenter divers aspects.",
+   "how": "même texte que platinum",
+   "tr": "En évoluant, son corps prend des matériaux environnants. En conséquence, il y a beaucoup de variations du corps."
+  },
+  "413:22": {
+   "fr": "À l'évolution, son corps absorbe les matériaux à proximité et peut ainsi présenter divers aspects.",
+   "how": "même texte que platinum",
+   "tr": "En évoluant, son corps prend des matériaux environnants. En conséquence, il y a beaucoup de variations du corps."
+  },
+  "414:21": {
+   "fr": "Il adore le nectar des fleurs mais n'en récolte pas lui-même. Il préfère en voler à un Apitrini.",
+   "how": "même texte que platinum",
+   "tr": "Elle aime le miel floral, elle ne s'assemble pas elle-même. Au lieu de cela, il s'agit de dérober quelque chose d'Apitrini."
+  },
+  "414:22": {
+   "fr": "Il adore le nectar des fleurs mais n'en récolte pas lui-même. Il préfère en voler à un Apitrini.",
+   "how": "même texte que platinum",
+   "tr": "Elle aime le miel floral, elle ne s'assemble pas elle-même. Au lieu de cela, il s'agit de dérober quelque chose d'Apitrini."
+  },
+  "422:21": {
+   "fr": "Un étrange liquide mauve s'échappe de son corps, ne lui appuyez pas dessus.",
+   "how": "même texte que platinum",
+   "tr": "Méfiez-vous de pousser fortement sur son corps squishy, car il fait un mystérieux liquide pourpre ooze dehors."
+  },
+  "422:22": {
+   "fr": "Un étrange liquide mauve s'échappe de son corps, ne lui appuyez pas dessus.",
+   "how": "même texte que platinum",
+   "tr": "Méfiez-vous de pousser fortement sur son corps squishy, car il fait un mystérieux liquide pourpre ooze dehors."
+  },
+  "422:39": {
+   "fr": "Ce Pokémon gîte près des étendues d'eau froide. Si on le caresse trop vigoureusement, sa peau secrète un liquide mauve qui tache les vêtements.",
+   "how": "Poképédia",
+   "tr": "Trouvé en abondance sur les côtes bordant les eaux chaudes. Sancoki sont inattenduement amical et rampera vers toute personne qu'ils voient. Prenez soin de ne pas être enduit de mucus !"
+  },
+  "423:21": {
+   "fr": "Ses gènes ont démontré qu'il avait jadis une carapace couvrant la totalité de son dos.",
+   "how": "même texte que platinum",
+   "tr": "Il y alocated Il y a longtemps, tout son dos était protégé par une coque robuste. Il reste des MACs dans ses cellules."
+  },
+  "423:22": {
+   "fr": "Ses gènes ont démontré qu'il avait jadis une carapace couvrant la totalité de son dos.",
+   "how": "même texte que platinum",
+   "tr": "Il y alocated Il y a longtemps, tout son dos était protégé par une coque robuste. Il reste des MACs dans ses cellules."
+  },
+  "423:39": {
+   "fr": "On observe davantage ce Pokémon sur terre qu'en mer. Il est plus actif lorsque le temps est pluvieux ou couvert que lorsqu'il fait beau.",
+   "how": "Poképédia",
+   "tr": "Mange du sable de plage pour la nourriture. Si un Tritosoroe rencontre une autre de couleur différente, une bataille féroce s'ensuivra inévitablement."
+  },
+  "424:21": {
+   "fr": "Ses queues jumelles sont si agiles et efficaces qu'il ne sert que très rarement de ses bras.",
+   "how": "même texte que platinum",
+   "tr": "Séparés en deux, les queues sont si habiles à manipuler et à faire des choses, Capidextre utilise rarement ses mains."
+  },
+  "429:21": {
+   "fr": "Pareil à une incantation magique, son cri n'est que très rarement source de joie.",
+   "how": "même texte que platinum",
+   "tr": "Son cri ressemble à une incantation. On dit que le cri peut rarement être imprégné d'un pouvoir qui donne le bonheur."
+  },
+  "429:22": {
+   "fr": "Pareil à une incantation magique, son cri n'est que très rarement source de joie.",
+   "how": "même texte que platinum",
+   "tr": "Son cri ressemble à une incantation. On dit que le cri peut rarement être imprégné d'un pouvoir qui donne le bonheur."
+  },
+  "431:21": {
+   "fr": "Il a tendance à planter ses griffes dans le nez de son Dresseur s'il n'a pas été nourri à temps.",
+   "how": "même texte que platinum",
+   "tr": "Il cache sa tendance malgré tout à accrocher ses griffes dans le nez de son formateur s'il n'est pas nourri."
+  },
+  "431:22": {
+   "fr": "Il a tendance à planter ses griffes dans le nez de son Dresseur s'il n'a pas été nourri à temps.",
+   "how": "même texte que platinum",
+   "tr": "Il cache sa tendance malgré tout à accrocher ses griffes dans le nez de son formateur s'il n'est pas nourri."
+  },
+  "432:21": {
+   "fr": "Il plaque ses queues contre son dos pour paraître plus grand. Il soutient un regard des heures.",
+   "how": "même texte que platinum",
+   "tr": "Il lie son corps avec ses queues pour se rendre plus grand. S'il ferme les yeux, il brillera sans cesse."
+  },
+  "432:22": {
+   "fr": "Il plaque ses queues contre son dos pour paraître plus grand. Il soutient un regard des heures.",
+   "how": "même texte que platinum",
+   "tr": "Il lie son corps avec ses queues pour se rendre plus grand. S'il ferme les yeux, il brillera sans cesse."
+  },
+  "433:21": {
+   "fr": "Quand il sautille, l'orbe qu'il a dans la bouche s'agite et tinte comme une cloche.",
+   "how": "même texte que platinum",
+   "tr": "Il y a un orbe dans sa bouche. Quand il saute, l'orbe rebondit partout et fait sonner."
+  },
+  "433:22": {
+   "fr": "Quand il sautille, l'orbe qu'il a dans la bouche s'agite et tinte comme une cloche.",
+   "how": "même texte que platinum",
+   "tr": "Il y a un orbe dans sa bouche. Quand il saute, l'orbe rebondit partout et fait sonner."
+  },
+  "434:21": {
+   "fr": "Son derrière propulse un fluide nauséabond qui peut faire fuir les Pokémon dans un rayon de 2 Km.",
+   "how": "même texte que platinum",
+   "tr": "Il pulvérise un fluide sale de l'arrière. Sa puanteur s'étend sur un rayon de mille, conduisant Pokémon loin."
+  },
+  "434:22": {
+   "fr": "Son derrière propulse un fluide nauséabond qui peut faire fuir les Pokémon dans un rayon de 2 Km.",
+   "how": "même texte que platinum",
+   "tr": "Il pulvérise un fluide sale de l'arrière. Sa puanteur s'étend sur un rayon de mille, conduisant Pokémon loin."
+  },
+  "435:21": {
+   "fr": "Il attaque en projetant un liquide fétide du bout de sa queue. Mieux vaut l'attaquer par les airs.",
+   "how": "même texte que platinum",
+   "tr": "Il attaque en pulvérisant un fluide horriblement puant de l'extrémité de sa queue. Les attaques d'en haut le confondent."
+  },
+  "435:22": {
+   "fr": "Il attaque en projetant un liquide fétide du bout de sa queue. Mieux vaut l'attaquer par les airs.",
+   "how": "même texte que platinum",
+   "tr": "Il attaque en pulvérisant un fluide horriblement puant de l'extrémité de sa queue. Les attaques d'en haut le confondent."
+  },
+  "438:21": {
+   "fr": "Adepte des climats secs, il régule son humidité en laissant couler ce qui ressemble à des larmes.",
+   "how": "même texte que platinum",
+   "tr": "Il préfère une atmosphère aride. Il fuit l'eau qui ressemble à des larmes lors de l'ajustement de son niveau d'humidité."
+  },
+  "438:22": {
+   "fr": "Adepte des climats secs, il régule son humidité en laissant couler ce qui ressemble à des larmes.",
+   "how": "même texte que platinum",
+   "tr": "Il préfère une atmosphère aride. Il fuit l'eau qui ressemble à des larmes lors de l'ajustement de son niveau d'humidité."
+  },
+  "439:21": {
+   "fr": "Il imite les mouvements et les expressions des autres pour comprendre leurs sentiments.",
+   "how": "même texte que platinum",
+   "tr": "Il imite les expressions et les mouvements de ceux qu'il voit pour comprendre les sentiments des autres."
+  },
+  "439:22": {
+   "fr": "Il imite les mouvements et les expressions des autres pour comprendre leurs sentiments.",
+   "how": "même texte que platinum",
+   "tr": "Il imite les expressions et les mouvements de ceux qu'il voit pour comprendre les sentiments des autres."
+  },
+  "441:21": {
+   "fr": "Sa langue comparable à celle de l'homme lui permet d'imiter habilement le langage humain.",
+   "how": "même texte que platinum",
+   "tr": "Sa langue est comme un humain. En conséquence, il peut astucieusement imiter la parole humaine."
+  },
+  "441:22": {
+   "fr": "Sa langue comparable à celle de l'homme lui permet d'imiter habilement le langage humain.",
+   "how": "même texte que platinum",
+   "tr": "Sa langue est comme un humain. En conséquence, il peut astucieusement imiter la parole humaine."
+  },
+  "443:21": {
+   "fr": "Malgré sa maladresse, son énorme gueule lui permet de lancer des attaques puissantes.",
+   "how": "même texte que platinum",
+   "tr": "Il attaque en utilisant sa bouche énorme. Bien que ses attaques soient puissantes, elles se blessent aussi par maladresse."
+  },
+  "443:22": {
+   "fr": "Malgré sa maladresse, son énorme gueule lui permet de lancer des attaques puissantes.",
+   "how": "même texte que platinum",
+   "tr": "Il attaque en utilisant sa bouche énorme. Bien que ses attaques soient puissantes, elles se blessent aussi par maladresse."
+  },
+  "444:21": {
+   "fr": "Toujours à la recherche d'objets brillants, il arpente les grottes pour constituer son butin.",
+   "how": "même texte que platinum",
+   "tr": "Il aime les choses étincelantes. Il cherche des trésors dans les grottes et garde le butin dans son nid."
+  },
+  "444:22": {
+   "fr": "Toujours à la recherche d'objets brillants, il arpente les grottes pour constituer son butin.",
+   "how": "même texte que platinum",
+   "tr": "Il aime les choses étincelantes. Il cherche des trésors dans les grottes et garde le butin dans son nid."
+  },
+  "446:21": {
+   "fr": "Obnubilé par sa quête incessante de nourriture, il oublie parfois qu'il en a caché dans sa fourrure.",
+   "how": "même texte que platinum",
+   "tr": "Dans son désespoir de gâcher la nourriture, il oublie la nourriture qu'il a cachée sous sa fourrure."
+  },
+  "446:22": {
+   "fr": "Obnubilé par sa quête incessante de nourriture, il oublie parfois qu'il en a caché dans sa fourrure.",
+   "how": "même texte que platinum",
+   "tr": "Dans son désespoir de gâcher la nourriture, il oublie la nourriture qu'il a cachée sous sa fourrure."
+  },
+  "454:21": {
+   "fr": "Avant de se battre, il coasse pour remuer le poison stocké sous sa gorge et le rendre plus efficace.",
+   "how": "même texte que white-2",
+   "tr": "Le croquement que Coatox produit avant une bataille est pour écraser le poison qu'il a stocké dans son sac de poison."
+  },
+  "456:21": {
+   "fr": "La ligne qui fait le tour de son corps stocke l'énergie solaire et brille dans la nuit.",
+   "how": "même texte que platinum",
+   "tr": "La ligne descendant de son côté peut stocker la lumière du soleil. Il brille vivement la nuit."
+  },
+  "456:22": {
+   "fr": "La ligne qui fait le tour de son corps stocke l'énergie solaire et brille dans la nuit.",
+   "how": "même texte que platinum",
+   "tr": "La ligne descendant de son côté peut stocker la lumière du soleil. Il brille vivement la nuit."
+  },
+  "457:21": {
+   "fr": "Il rampe au fond de l'océan grâce aux nageoires de son torse. Le Lanturn est son rival.",
+   "how": "même texte que platinum",
+   "tr": "Il rampe le long du fond marin en utilisant ses longues nageoires avant comme des jambes. Il rivalise pour la nourriture avec Lanturn."
+  },
+  "457:22": {
+   "fr": "Il rampe au fond de l'océan grâce aux nageoires de son torse. Le Lanturn est son rival.",
+   "how": "même texte que platinum",
+   "tr": "Il rampe le long du fond marin en utilisant ses longues nageoires avant comme des jambes. Il rivalise pour la nourriture avec Lanturn."
+  },
+  "459:21": {
+   "fr": "Curieux de rencontrer des gens, ils se rassemblent autour des traces de pas trouvées dans la montagne.",
+   "how": "même texte que platinum",
+   "tr": "Semblablement curieux des gens, ils se rassemblent autour de pas qu'ils trouvent sur les montagnes enneigées."
+  },
+  "459:22": {
+   "fr": "Curieux de rencontrer des gens, ils se rassemblent autour des traces de pas trouvées dans la montagne.",
+   "how": "même texte que platinum",
+   "tr": "Semblablement curieux des gens, ils se rassemblent autour de pas qu'ils trouvent sur les montagnes enneigées."
+  },
+  "460:21": {
+   "fr": "Il apparaît quand les fleurs des terres enneigées fleurissent et se retire quand elles se fanent.",
+   "how": "même texte que platinum",
+   "tr": "Ils apparaissent quand les fleurs de neige fleurissent. Quand les pétales tombent, ils reculent dans des endroits inconnus à nouveau."
+  },
+  "460:22": {
+   "fr": "Il apparaît quand les fleurs des terres enneigées fleurissent et se retire quand elles se fanent.",
+   "how": "même texte que platinum",
+   "tr": "Ils apparaissent quand les fleurs de neige fleurissent. Quand les pétales tombent, ils reculent dans des endroits inconnus à nouveau."
+  },
+  "464:21": {
+   "fr": "Il peut lancer des pierres à une vitesse saisissante en bandant et relâchant ses muscles en un éclair.",
+   "how": "même texte que platinum",
+   "tr": "Il peut lancer une roche tenue dans sa main comme un missile en resserrant puis en élargissant les muscles instantanément."
+  },
+  "464:22": {
+   "fr": "Il peut lancer des pierres à une vitesse saisissante en bandant et relâchant ses muscles en un éclair.",
+   "how": "même texte que platinum",
+   "tr": "Il peut lancer une roche tenue dans sa main comme un missile en resserrant puis en élargissant les muscles instantanément."
+  },
+  "474:21": {
+   "fr": "Il a été modifié pour être capable de travailler dans des dimensions parallèles, mais c'est un échec.",
+   "how": "même texte que platinum",
+   "tr": "Sa programmation a été modifiée pour permettre le travail dans des dimensions extraterrestres. Il n'a pas fonctionné comme prévu."
+  },
+  "474:22": {
+   "fr": "Il a été modifié pour être capable de travailler dans des dimensions parallèles, mais c'est un échec.",
+   "how": "même texte que platinum",
+   "tr": "Sa programmation a été modifiée pour permettre le travail dans des dimensions extraterrestres. Il n'a pas fonctionné comme prévu."
+  },
+  "475:21": {
+   "fr": "Toujours prêt à protéger son prochain, il se bat férocement avec ses coudes en forme d'épées.",
+   "how": "même texte que platinum",
+   "tr": "En essayant de protéger quelqu'un, il étend ses coudes comme s'ils étaient épées et se bat sauvagement."
+  },
+  "475:22": {
+   "fr": "Toujours prêt à protéger son prochain, il se bat férocement avec ses coudes en forme d'épées.",
+   "how": "même texte que platinum",
+   "tr": "En essayant de protéger quelqu'un, il étend ses coudes comme s'ils étaient épées et se bat sauvagement."
+  },
+  "476:21": {
+   "fr": "Il utilise sa force magnétique pour diriger trois petites unités appelées Mini-Nez.",
+   "how": "Pokémon Trash (Noire 2 / Blanche 2)",
+   "tr": "Il contrôle librement trois unités appelées Mini-Nose en utilisant la force magnétique."
+  },
+  "476:22": {
+   "fr": "Il utilise sa force magnétique pour diriger trois petites unités appelées Mini-Nez.",
+   "how": "Pokémon Trash (Noire 2 / Blanche 2)",
+   "tr": "Il contrôle librement trois unités appelées Mini-Nose en utilisant la force magnétique."
+  },
+  "478:21": {
+   "fr": "On dit que Momartik gèle ses proies grâce à son souffle à -50°C avant de les exposer dans sa tanière.",
+   "how": "même texte que platinum",
+   "tr": "Il gèle les proies en soufflant son souffle de -58 degrés F. On dit alors qu'il montre secrètement sa proie."
+  },
+  "478:22": {
+   "fr": "On dit que Momartik gèle ses proies grâce à son souffle à -50°C avant de les exposer dans sa tanière.",
+   "how": "même texte que platinum",
+   "tr": "Il gèle les proies en soufflant son souffle de -58 degrés F. On dit alors qu'il montre secrètement sa proie."
+  },
+  "485:16": {
+   "fr": "Le sang de ce Pokémon des cratères bouillonne dans son corps comme du magma.",
+   "how": "même texte que heartgold",
+   "tr": "Le sang bouillant, comme le maATIVE, circule dans son corps. Il fait sa place dans les grottesATIVEs volcaniques."
+  },
+  "487:39": {
+   "fr": "Voici une ancienne expression transmise à travers Hisui. « Plus forte est la lumière, plus profonde sera l'ombre qu'elle génère. » Je pense que ce Pokémon est l'ombre en question.",
+   "how": "Poképédia",
+   "tr": "Il y a un verset hisuien qui raconte une lumière puissante créant une ombre profonde. J'imagine que cette ombre profonde est Giratina."
+  },
+  "492:39": {
+   "fr": "Lorsque la rudesse de l'hiver fait place à des cieux plus cléments, suscitant joie et gratitude à l'adresse du soleil, Shaymin apparait pour couvrir de fleurs les terres éprouvées par le froid.",
+   "how": "Poképédia",
+   "tr": "Quand le tournant des saisons met fin à l'hiver cruel et que le peuple joyeux rend grâce aux cieux, Shaymin apparaît et couvre la terre desséchée de fleurs."
+  },
+  "503:39": {
+   "fr": "Cette fine lame au tempérament impitoyable est une évolution rare qui ne se produit qu'à Hisui. Ses attaques sont aussi ravageuses que les vagues déferlantes.",
+   "how": "Poképédia",
+   "tr": "Dur de cœur et de lame, cette forme rare de Clamiral est le produit de l'évolution du Pokémon dans la région d'Hisui. Ses coups turbulents s'écrasent dans les ennemis comme des vagues sans arrêt."
+  },
+  "549:39": {
+   "fr": "Je spécule que ce Pokémon doit ses jambes musclées à son habitat dans les montagnes couvertes de neige épaisse. La fleur sur sa couronne exhale un parfum stimulant tout être alentour.",
+   "how": "Poképédia",
+   "tr": "Je soupçonne que ses jambes bien développées sont le résultat d'une vie passée sur des montagnes couvertes de neige profonde. L'odeur qu'elle dégage de sa couronne florale nourrit ceux qui sont à proximité."
+  },
+  "55:39": {
+   "fr": "De constitution robuste, il use de ses membres palmés pour sillonner les mers tumultueuses, fendant les hautes vagues sans la moindre difficulté.",
+   "how": "Eternia + SuperSoluce + SkyGalaxya (Légendes Pokémon : Arceus)",
+   "tr": "Son corps est fort, et il a une toile sur ses mains et ses pieds. Akwakak peut nager facilement à travers les mers rugueuses, griffant son chemin à travers les hautes vagues."
+  },
+  "570:39": {
+   "fr": "Zorua serait une âme disparue, ressuscitée à Hisui. Sa rancœur émane sous forme d'énergie au-dessus de sa tête, puis adopte l'apparence de ses ennemis, et finit par se dissiper.",
+   "how": "Poképédia",
+   "tr": "Une âme une fois partie, est revenue à la vie en Hisui. Dérive la puissance du ressentiment, qui monte comme l'énergie au sommet de sa tête et prend les formes d'ennemis. De cette façon, Zorua évacue la malice persistante."
+  },
+  "571:39": {
+   "fr": "Sa crinière blanche échevelée lui donne l'allure d'un dieu de la mort. Le ressentiment qu'il éprouve le déchire physiquement, mais lui donne une énergie telle qu'elle peut occire tout ennemi.",
+   "how": "Poképédia",
+   "tr": "Avec sa fourrure blanche déshonorée, elle ressemble à une incarnation de la mort. Sans tenir compte de sa propre sécurité Ephraim Zoroark attaque ses némes avec une énergie amère si intense, elle lacère son propre corps."
+  },
+  "58:39": {
+   "fr": "Ils patrouillent sur leur territoire en duo. Je pense que les roches magmatiques qui constituent en partie leur toison sont liées à l'activité volcanique.",
+   "how": "Poképédia",
+   "tr": "Ils patrouillent leur territoire par paires. Je crois que les composantes rocheuses ignées de la fourrure de cette espèce sont le résultat de l'activité volcanique de son habitat."
+  },
+  "59:39": {
+   "fr": "Il inflige des morsures grâce à ses canines enveloppées de flammes ardentes. Malgré sa grande taille, il est très agile : il semble danser autour de ses ennemis déconcertés.",
+   "how": "Poképédia",
+   "tr": "Souffle à ses ennemis avec des crocs enveloppés de flammes. Malgré sa masse, il feint de toute façon, menant des adversaires sur une chasse faussement joyeuse comme tout sauf danse autour d'eux."
+  },
+  "627:21": {
+   "fr": "Il brave n'importe quel ennemi, non par courage, mais par inconscience. Il se renforce en multipliant les combats.",
+   "how": "même texte que white-2",
+   "tr": "Elle se dresse devant des opposants massifs, non par courage, mais par imprudence. Mais c'est ainsi que ça devient plus fort."
+  },
+  "628:39": {
+   "fr": "De taille imposante, ce preux volatile chasse en lançant de terribles cris de guerre. Il propage des ondes de choc dans les lacs, puis se saisit des proies remontées à la surface.",
+   "how": "Poképédia",
+   "tr": "Criant un cri de guerre sanglant, cet énorme et féroce oiseau Pokémon sort à la chasse. Il fait exploser des lacs avec des ondes de choc, puis s'empare de n'importe quelle proie qui flotte à la surface de l'eau."
+  },
+  "641:21": {
+   "fr": "Il voyage aux quatre vents. Son passage provoque des tempêtes qui balayent tout aux alentours.",
+   "how": "même texte que white-2",
+   "tr": "Dans chaque direction, il vole, créant des vents si puissants, ils soufflent tout."
+  },
+  "641:39": {
+   "fr": "Ce Pokémon, connu pour causer des tempêtes, provoquerait aussi le changement des saisons en agitant l'air. Je suspecte son apparence humaine de ne pas être sa véritable forme.",
+   "how": "Poképédia",
+   "tr": "Ce Pokémon à l'orage aurait fait tourner les saisons en fouettant l'air. Je soupçonne que sa forme humaine est fausse."
+  },
+  "642:39": {
+   "fr": "On raconte qu'il se bat depuis les temps anciens contre Boréas, son ennemi juré, en maniant la foudre. Les éclairs qu'il lance traversent la terre et enrichissent les sols.",
+   "how": "Poképédia",
+   "tr": "Ils disent que ce wielder de l'électricité a fait la guerre avec son némésis, Boréas, depuis des temps immémoriaux. La foudre l'épercule perce la terre et enrichit le sol."
+  },
+  "645:39": {
+   "fr": "Lorsque les incarnations du vent et des éclairs s'affrontent avec rage, il apparaît pour les apaiser. Une fois la tempête et la foudre calmées, d'abondantes récoltes sont assurées.",
+   "how": "Poképédia",
+   "tr": "Lorsque les incarnations du vent et de la foudre s'affrontent, Démétros arrive pour calmer le conflit. Après les tempêtes et les coups de tonnerre s'abattent, la terre est sûre d'être bénie de récoltes abondantes."
+  },
+  "705:39": {
+   "fr": "Ce Pokémon est de nature plutôt mélancolique. Je spécule que le fer contenu dans les eaux de Hisui a agi sur son mucus épidermique et a changé sa peau en carapace de métal.",
+   "how": "Poképédia",
+   "tr": "Une créature donnée à la mélancolie. Je soupçonne que sa coquille métallique se développe à la suite du mucus sur sa peau qui réagit avec le fer dans l'eau d'Hisui."
+  },
+  "706:39": {
+   "fr": "Il peut moduler la rigidité de sa carapace de métal à volonté. Il abhorre la solitude et enrage si un être qu'il affectionne profondément l'abandonne.",
+   "how": "Poképédia",
+   "tr": "Capable de contrôler librement la dureté de sa coque métallique. Il déteste la solitude et est extrêmement collant, il va se fâcher et courir des émeutes si ceux qui lui sont le plus chers laissent leur côté."
+  },
+  "71:8": {
+   "fr": "Empiflor est doté d'une longue liane qui part de sa tête. Cette liane se balance et remue comme un animal pour attirer ses proies. Lorsqu'une proie d'approche un peu trop près, ce Pokémon l'avale facilement.",
+   "how": "même texte que ruby",
+   "tr": "Empiflor a une longue vigne qui s'étend de sa tête. Cette vigne est agitée et scindée comme si c'était un animal pour attirer les proies. Quand une proie insoupçonnée s'approche, ce Pokémon l'avale complètement."
+  },
+  "713:39": {
+   "fr": "L'armure de glace qui enveloppe sa mâchoire inférieure peut briser des rocs plus durs que l'acier. Il se meut vélocement en fendant la neige épaisse des chemins de montagne.",
+   "how": "Poképédia",
+   "tr": "L'armure de glace couvrant sa mâchoire inférieure met l'acier à la honte et peut briser les roches avec facilité. Ce Pokémon barils le long de sentiers montagneux escarpés, en creusant à travers la neige profonde."
+  },
+  "724:39": {
+   "fr": "Les plumes d'Archéduc le protègent de la froideur glaciale de Hisui grâce à l'air logé dans leur tige. Voici une preuve que l'environnement agit sur l'évolution des Pokémon.",
+   "how": "Poképédia",
+   "tr": "L'air entreposé à l'intérieur des plumes d'Archéduc insère le Pokémon contre le froid extrême d'Hisui. C'est la preuve que l'évolution peut être influencée par l'environnement."
+  },
+  "83:21": {
+   "fr": "Il ne peut pas vivre sans son légume, c'est pourquoi il le protégera au péril de sa vie.",
+   "how": "même texte que diamond",
+   "tr": "Il ne peut pas vivre sans la tige qu'il tient. C'est pourquoi il défend la tige contre les agresseurs avec sa vie."
+  },
+  "83:22": {
+   "fr": "Il ne peut pas vivre sans son légume, c'est pourquoi il le protégera au péril de sa vie.",
+   "how": "même texte que diamond",
+   "tr": "Il ne peut pas vivre sans la tige qu'il tient. C'est pourquoi il défend la tige contre les agresseurs avec sa vie."
+  },
+  "90:21": {
+   "fr": "Il nage à reculons en ouvrant et en refermant ses deux coquilles. Il laisse traîner sa large langue.",
+   "how": "même texte que diamond",
+   "tr": "Il nage en arrière en ouvrant et en fermant ses deux coquilles. Sa grande langue est toujours accrochée."
+  },
+  "90:22": {
+   "fr": "Il nage à reculons en ouvrant et en refermant ses deux coquilles. Il laisse traîner sa large langue.",
+   "how": "même texte que diamond",
+   "tr": "Il nage en arrière en ouvrant et en fermant ses deux coquilles. Sa grande langue est toujours accrochée."
+  },
+  "905:39": {
+   "fr": "Son arrivée par les mers annonce la fin des hivers rigoureux. On raconte que c'est l'amour que ce Pokémon ressent qui fait bourgeonner de nouvelles vies dans la région de Hisui.",
+   "how": "Poképédia",
+   "tr": "Quand il vole vers cette terre de l'autre côté de la mer, l'hiver amer prend fin. Selon la légende, l'amour de ce Pokémon donne naissance à l'émergence d'une vie fraîche à travers Hisui."
+  },
+  "91:21": {
+   "fr": "Il se défend en fermant sa coquille et projette des piquants qui repoussent ses agresseurs.",
+   "how": "même texte que diamond",
+   "tr": "Il se bat en gardant sa coquille bien fermée pour la protection et en tirant des pics pour repousser les ennemis."
+  },
+  "91:22": {
+   "fr": "Il se défend en fermant sa coquille et projette des piquants qui repoussent ses agresseurs.",
+   "how": "même texte que diamond",
+   "tr": "Il se bat en gardant sa coquille bien fermée pour la protection et en tirant des pics pour repousser les ennemis."
+  },
+  "916:40": {
+   "fr": "Sa peau lisse à l'aspect satiné fait sa fierté. Le bout de sa queue dégage un parfum puissant.",
+   "how": "Poképédia",
+   "tr": "Fragroin est fière de sa peau fine et brillante. Il émet un parfum concentré de l'extrémité de sa queue."
+  },
+  "916:41": {
+   "fr": "Leur corps entier exhale un doux parfum envoûtant qui séduit les Pokémon femelles.",
+   "how": "Poképédia",
+   "tr": "Elle entre chez la femelle Pokémon avec un parfum doux et séduisant qui jaillit de tout son corps."
+  },
+  "92:21": {
+   "fr": "Son corps composé de gaz toxique pourrait asphyxier n'importe qui en quelques secondes.",
+   "how": "même texte que platinum",
+   "tr": "Née de gaz, toute personne s'évanouirait si elle était engloutie par son corps gazeux, qui contient du poison."
+  },
+  "92:22": {
+   "fr": "Son corps composé de gaz toxique pourrait asphyxier n'importe qui en quelques secondes.",
+   "how": "même texte que platinum",
+   "tr": "Née de gaz, toute personne s'évanouirait si elle était engloutie par son corps gazeux, qui contient du poison."
+  },
+  "925:40": {
+   "fr": "Ils construisent des nids gigantesques divisés en espaces distincts qui répondent à différents besoins, comme dormir ou s'alimenter.",
+   "how": "Poképédia",
+   "tr": "Les deux petits sont apparus un jour. Le groupe est peut-être une famille de Pokémon, mais personne n'en est sûr."
+  },
+  "925:41": {
+   "fr": "Leur nombre a soudainement augmenté. Ils vivent ensemble comme une famille, mais on ignore la véritable nature de leurs liens.",
+   "how": "Poképédia",
+   "tr": "La plus grande paire protège les petits pendant les batailles. Face à de forts adversaires, tout le groupe se joindra au combat."
+  },
+  "93:21": {
+   "fr": "Il adore se tapir dans l'ombre et faire frissonner ses proies en leur touchant l'épaule.",
+   "how": "même texte que platinum",
+   "tr": "Il aime se cacher dans l'obscurité et tapoter les épaules avec une main gazeuse. Son toucher provoque des frissons sans fin."
+  },
+  "93:22": {
+   "fr": "Il adore se tapir dans l'ombre et faire frissonner ses proies en leur touchant l'épaule.",
+   "how": "même texte que platinum",
+   "tr": "Il aime se cacher dans l'obscurité et tapoter les épaules avec une main gazeuse. Son toucher provoque des frissons sans fin."
+  },
+  "931:40": {
+   "fr": "Ces Pokémon préfèrent vivre en ville. Ils forment des groupes selon la couleur de leur plumage et se livrent à des luttes de territoire.",
+   "how": "Poképédia",
+   "tr": "Ces Pokémon préfèrent vivre en ville. Ils forment des troupeaux en fonction de la couleur de leurs plumes, et ils se battent sur le territoire."
+  },
+  "931:41": {
+   "fr": "Ceux qui arborent un plumage vert ont le plus d'influence. Ils font un véritable vacarme le matin et le soir, quand ils cherchent de la nourriture.",
+   "how": "Poképédia",
+   "tr": "Les troupeaux à plumes vertes ont le plus d'influence. Quand ils sont à la recherche de nourriture le matin et le soir, ça devient très bruyant."
+  },
+  "94:21": {
+   "fr": "Si vous croisez un regard inquiétant qui perce la nuit, c'est sûrement un Ectoplasma.",
+   "how": "même texte que platinum",
+   "tr": "Le sang qui flotte dans les ténèbres appartient à un Ectoplasma qui se réjouit de jeter des malédictions sur les gens."
+  },
+  "94:22": {
+   "fr": "Si vous croisez un regard inquiétant qui perce la nuit, c'est sûrement un Ectoplasma.",
+   "how": "même texte que platinum",
+   "tr": "Le sang qui flotte dans les ténèbres appartient à un Ectoplasma qui se réjouit de jeter des malédictions sur les gens."
+  },
+  "96:21": {
+   "fr": "Son grand nez lui permet de lire les rêves d'autrui. Il adore les songes amusants.",
+   "how": "même texte que diamond",
+   "tr": "Il peut dire ce que les gens rêvent en reniflant avec son grand nez. Il aime les rêves amusants."
+  },
+  "96:22": {
+   "fr": "Son grand nez lui permet de lire les rêves d'autrui. Il adore les songes amusants.",
+   "how": "même texte que diamond",
+   "tr": "Il peut dire ce que les gens rêvent en reniflant avec son grand nez. Il aime les rêves amusants."
+  },
+  "964:40": {
+   "fr": "Il change de forme dès qu'il entend les cris de détresse de ses congénères, mais il ne laissera jamais personne assister à sa transformation.",
+   "how": "Poképédia",
+   "tr": "Ce Pokémon change d'apparence s'il entend ses alliés appeler à l'aide. Superdofin ne montrera jamais à personne son moment de transformation."
+  },
+  "964:41": {
+   "fr": "Il a les mêmes capacités physiques qu'avant son évolution, mais quand ses congénères sont en danger, il change de forme et devient plus fort.",
+   "how": "Poképédia",
+   "tr": "Ses capacités physiques ne sont pas différentes d'un Dofin, mais quand ses alliés sont en danger, il se transforme et se renforce."
+  },
+  "978:40": {
+   "fr": "Ce petit Pokémon Dragon vit dans la gueule d'Oyacata, à l'abri de ses adversaires.",
+   "how": "Poképédia",
+   "tr": "Voici un petit dragon Pokémon. Il vit à l'intérieur de la bouche d'Oyacata pour se protéger des ennemis de l'extérieur."
+  },
+  "978:41": {
+   "fr": "Très rusé, il fait mine d'être vulnérable et attire ainsi des proies qui se font ensuite attaquer par son redoutable partenaire.",
+   "how": "Poképédia",
+   "tr": "Nigirigon est un Pokémon extrêmement rusé. Il feigne la faiblesse à attirer dans les proies, puis ordonne à son partenaire d'attaquer."
+  },
+  "98:21": {
+   "fr": "Il creuse son terrier sur des plages sablonneuses. Ses pinces repoussent si on les brise.",
+   "how": "même texte que diamond",
+   "tr": "Il vit dans des terriers creusés sur des plages de sable. Ses épingles repoussent complètement si elles sont brisées dans la bataille."
+  },
+  "98:22": {
+   "fr": "Il creuse son terrier sur des plages sablonneuses. Ses pinces repoussent si on les brise.",
+   "how": "même texte que diamond",
+   "tr": "Il vit dans des terriers creusés sur des plages de sable. Ses épingles repoussent complètement si elles sont brisées dans la bataille."
+  },
+  "982:40": {
+   "fr": "Il se sert de sa queue pour creuser son terrier dans les profondeurs rocheuses de la terre. Celui-ci peut faire jusqu'à 10 km de long.",
+   "how": "Poképédia",
+   "tr": "Ce Pokémon utilise sa queue dure pour faire son nid par des trous ennuyeux dans le substratum profond souterrain. Le nid peut atteindre des longueurs de plus de six milles."
+  },
+  "982:41": {
+   "fr": "Il chasse ses adversaires de son nid avec de violentes bourrasques qu'il génère en expirant l'air accumulé dans ses poumons longs et fins.",
+   "how": "Poképédia",
+   "tr": "Il chasse les ennemis de son nid en aspirant suffisamment d'air pour remplir ses poumons longs et étroits, puis libère l'air dans une explosion intense."
+  },
+  "99:21": {
+   "fr": "Sa grande pince possède une puissance de 10 000 chevaux. Son poids la rend difficile à manier.",
+   "how": "même texte que diamond",
+   "tr": "Le luxury est de 10 000 chevaux. Cependant luxury est si lourd, il est difficile de viser."
+  },
+  "99:22": {
+   "fr": "Sa grande pince possède une puissance de 10 000 chevaux. Son poids la rend difficile à manier.",
+   "how": "même texte que diamond",
+   "tr": "Le luxury est de 10 000 chevaux. Cependant luxury est si lourd, il est difficile de viser."
+  },
+  "999:40": {
+   "fr": "Ce Pokémon est né dans un coffre au trésor, il y a environ 1 500 ans. Il absorbe l'énergie vitale des voyous qui osent voler son magot.",
+   "how": "Poképédia",
+   "tr": "Ce Pokémon est né dans un coffre à trésor il y a environ 1 500 ans. Ça suce la force de vie des crapules qui essaient de voler le trésor."
+  },
+  "999:41": {
+   "fr": "Il vit dans un vieux coffre au trésor. On le trouve parfois dans un coin chez l'antiquaire, quand personne ne s'est aperçu que c'était un Pokémon.",
+   "how": "Poképédia",
+   "tr": "Il vit dans un vieux coffre à trésor. Parfois, il est laissé dans les coins du magasin puisque personne ne se rend compte qu'il est en fait un Pokémon."
+  }
+ },
+ "missing": [
+  "265:10 Chenipotte",
+  "265:11 Chenipotte",
+  "449:21 Hippopotas",
+  "449:22 Hippopotas",
+  "71:21 Empiflor",
+  "71:22 Empiflor"
+ ]
+}

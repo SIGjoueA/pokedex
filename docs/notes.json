@@ -1,9 +1,18 @@
 [
  {
+  "v": "v57",
+  "d": "2026-10-26",
+  "l": [
+   "Descriptions du Pokédex : 373 textes traduits automatiquement (Noir 2 / Blanc 2, Légendes Arceus, Écarlate / Violet, Diamant, etc.) sont remplacés par les textes officiels en français. Pensez à retélécharger le pack hors-ligne.",
+   "Couafarel : chaque fiche indique comment obtenir les coupes — zones de Pokémon GO (Étoile : Asie-Pacifique, Diamant : Europe-Moyen-Orient-Afrique, Demoiselle : Amériques, Reine : France, Kabuki : Japon, Pharaon : Égypte…) et toiletteurs des jeux (X/Y, ROSA, SL, USUL, Z-A)."
+  ]
+ },
+ {
   "v": "v56",
   "d": "2026-10-26",
   "l": [
-   "Fiches Pokémon : les blocs « Évolutions » puis « Où le trouver » sont placés juste après « Formes », pour que vous retrouviez ensemble formes, évolutions et lieux de capture (jeux, HOME et Pokémon GO).","JCC Pokémon Pocket : la source des cartes promo P-A et P-B est indiquée sur chaque carte (Booster promo, Pioche Miracle, Missions Premium, Boutique, Missions, Campagne). Pensez à retélécharger le pack hors-ligne."
+   "Fiches Pokémon : les blocs « Évolutions » puis « Où le trouver » sont placés juste après « Formes », pour que vous retrouviez ensemble formes, évolutions et lieux de capture (jeux, HOME et Pokémon GO).",
+   "JCC Pokémon Pocket : la source des cartes promo P-A et P-B est indiquée sur chaque carte (Booster promo, Pioche Miracle, Missions Premium, Boutique, Missions, Campagne). Pensez à retélécharger le pack hors-ligne."
   ]
  },
  {

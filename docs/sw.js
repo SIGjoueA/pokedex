@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v56';
+const VERSION = 'v57';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiches : Évolutions et Où le trouver juste sous Formes. Pocket : source de chaque carte promo.';
-const DATA_VERSION = 'd30'; // bump when the schema of data/*.json changes
+const NOTES = 'Descriptions : textes officiels du Pokédex en français pour 373 entrées. Couafarel : où obtenir chaque coupe (GO et jeux).';
+const DATA_VERSION = 'd31'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
