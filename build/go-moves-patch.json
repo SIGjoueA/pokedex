@@ -1,0 +1,580 @@
+{
+ "_doc": "PROPOSITION (non appliquée). Attaques du game master PokeMiners absentes de docs/data/go.json ou des movepools. Format des attaques identique à go.json : [nom FR, type, puissance raid, énergie, durée ms, rapide?]. Noms FR : PokeAPI (noms officiels des jeux) ; attaques « + » des Méga = nom FR de l’attaque de base + « + » (convention du jeu en FR, à vérifier en jeu).",
+ "gm": "1787902550208",
+ "moves": {
+  "LIQUIDATION_PLUS": [
+   "Aqua-Brèche+",
+   "water",
+   180,
+   100,
+   3000,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0121_POKEMON_STARMIE"
+  ],
+  "OUTRAGE_PLUS": [
+   "Colère+",
+   "dragon",
+   185,
+   100,
+   4000,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0149_POKEMON_DRAGONITE"
+  ],
+  "DYNAMIC_PUNCH_PLUS": [
+   "Dynamo-Poing+",
+   "fighting",
+   130,
+   100,
+   2500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_X_V0150_POKEMON_MEWTWO"
+  ],
+  "FUTURE_SIGHT_PLUS": [
+   "Prescience+",
+   "psychic",
+   140,
+   100,
+   2500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_Y_V0150_POKEMON_MEWTWO"
+  ],
+  "DRILL_PECK_PLUS": [
+   "Bec Vrille+",
+   "flying",
+   170,
+   100,
+   2500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0227_POKEMON_SKARMORY"
+  ],
+  "VOLT_TACKLE_PLUS": [
+   "Électacle+",
+   "electric",
+   170,
+   100,
+   3500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_X_V0026_POKEMON_RAICHU"
+  ],
+  "ZAP_CANNON_PLUS": [
+   "Élecanon+",
+   "electric",
+   160,
+   100,
+   3500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_Y_V0026_POKEMON_RAICHU"
+  ],
+  "DRAGON_ASCENT": [
+   "Draco-Ascension",
+   "flying",
+   140,
+   50,
+   3500,
+   0,
+   "GM DRAGON_ASCENT (sans attribution GM ; Pokebattler/GO Hub)"
+  ],
+  "ROAR_OF_TIME": [
+   "Hurle-Temps",
+   "dragon",
+   160,
+   100,
+   2000,
+   0,
+   "GM ROAR_OF_TIME (sans attribution GM ; Pokebattler/GO Hub)"
+  ],
+  "SPACIAL_REND": [
+   "Spatio-Rift",
+   "dragon",
+   160,
+   100,
+   2500,
+   0,
+   "GM SPACIAL_REND (sans attribution GM ; Pokebattler/GO Hub)"
+  ],
+  "ICE_BURN": [
+   "Feu Glacé",
+   "ice",
+   90,
+   50,
+   2000,
+   0,
+   "GM formChange KYUREM"
+  ],
+  "FREEZE_SHOCK": [
+   "Éclair Gelé",
+   "ice",
+   160,
+   100,
+   1500,
+   0,
+   "GM formChange KYUREM"
+  ],
+  "SEED_BOMB_PLUS": [
+   "Canon Graine+",
+   "grass",
+   150,
+   100,
+   2000,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0652_POKEMON_CHESNAUGHT"
+  ],
+  "MYST_FIRE_PLUS": [
+   "Feu Ensorcelé+",
+   "fire",
+   140,
+   100,
+   2000,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0655_POKEMON_DELPHOX"
+  ],
+  "SURF_PLUS": [
+   "Surf+",
+   "water",
+   130,
+   100,
+   1500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0658_POKEMON_GRENINJA"
+  ],
+  "PSYBEAM_PLUS": [
+   "Rafale Psy+",
+   "psychic",
+   170,
+   100,
+   3000,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0687_POKEMON_MALAMAR"
+  ],
+  "ACID_SPRAY_PLUS": [
+   "Bombe Acide+",
+   "poison",
+   160,
+   100,
+   3000,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0071_POKEMON_VICTREEBEL"
+  ],
+  "SUNSTEEL_STRIKE": [
+   "Choc Météore",
+   "steel",
+   230,
+   100,
+   3000,
+   0,
+   "GM formChange NECROZMA"
+  ],
+  "MOONGEIST_BEAM": [
+   "Rayon Spectral",
+   "ghost",
+   230,
+   100,
+   3000,
+   0,
+   "GM formChange NECROZMA"
+  ],
+  "BRICK_BREAK_PLUS": [
+   "Casse-Brique+",
+   "fighting",
+   150,
+   100,
+   1500,
+   0,
+   "VM_MOVE_TEMP_EVOLUTION_MEGA_V0870_POKEMON_FALINKS"
+  ],
+  "BEHEMOTH_BLADE": [
+   "Gladius Maximus",
+   "steel",
+   200,
+   100,
+   3500,
+   0,
+   "GM formChange ZACIAN"
+  ],
+  "BEHEMOTH_BASH": [
+   "Aegis Maxima",
+   "steel",
+   125,
+   50,
+   1500,
+   0,
+   "GM formChange ZAMAZENTA"
+  ]
+ },
+ "movepool": {
+  "384": {
+   "n": "Rayquaza",
+   "ce": [
+    "DRAGON_ASCENT"
+   ]
+  },
+  "942": {
+   "n": "Grondogue",
+   "cm": [
+    "PAYBACK"
+   ]
+  },
+  "943": {
+   "n": "Dogrino",
+   "cm": [
+    "PAYBACK"
+   ]
+  },
+  "121-mega": {
+   "n": "Méga-Staross",
+   "cm": [
+    "LIQUIDATION_PLUS"
+   ]
+  },
+  "149-mega": {
+   "n": "Méga-Dracolosse",
+   "cm": [
+    "OUTRAGE_PLUS"
+   ]
+  },
+  "150-mega-x": {
+   "n": "Méga-Mewtwo X",
+   "cm": [
+    "DYNAMIC_PUNCH_PLUS"
+   ]
+  },
+  "150-mega-y": {
+   "n": "Méga-Mewtwo Y",
+   "cm": [
+    "FUTURE_SIGHT_PLUS"
+   ]
+  },
+  "227-mega": {
+   "n": "Méga-Airmure",
+   "cm": [
+    "DRILL_PECK_PLUS"
+   ]
+  },
+  "26-mega-x": {
+   "n": "Méga-Raichu X",
+   "cm": [
+    "VOLT_TACKLE_PLUS"
+   ]
+  },
+  "26-mega-y": {
+   "n": "Méga-Raichu Y",
+   "cm": [
+    "ZAP_CANNON_PLUS"
+   ]
+  },
+  "384-mega": {
+   "n": "Méga-Rayquaza",
+   "cm": [
+    "DRAGON_ASCENT"
+   ]
+  },
+  "483-origin": {
+   "n": "Dialga Originel",
+   "ce": [
+    "ROAR_OF_TIME"
+   ]
+  },
+  "484-origin": {
+   "n": "Palkia Originel",
+   "ce": [
+    "SPACIAL_REND"
+   ]
+  },
+  "646-white": {
+   "n": "Kyurem Blanc",
+   "cm": [
+    "ICE_BURN"
+   ]
+  },
+  "646-black": {
+   "n": "Kyurem Noir",
+   "cm": [
+    "FREEZE_SHOCK"
+   ]
+  },
+  "652-mega": {
+   "n": "Méga-Blindépique",
+   "cm": [
+    "SEED_BOMB_PLUS"
+   ]
+  },
+  "655-mega": {
+   "n": "Méga-Goupelin",
+   "cm": [
+    "MYST_FIRE_PLUS"
+   ]
+  },
+  "658-mega": {
+   "n": "Méga-Amphinobi",
+   "cm": [
+    "SURF_PLUS"
+   ]
+  },
+  "687-mega": {
+   "n": "Méga-Sepiatroce",
+   "cm": [
+    "PSYBEAM_PLUS"
+   ]
+  },
+  "71-mega": {
+   "n": "Méga-Empiflor",
+   "cm": [
+    "ACID_SPRAY_PLUS"
+   ]
+  },
+  "800-dusk": {
+   "n": "Necrozma Crinière du Couchant",
+   "cm": [
+    "SUNSTEEL_STRIKE"
+   ]
+  },
+  "800-dawn": {
+   "n": "Necrozma Ailes de l’Aurore",
+   "cm": [
+    "MOONGEIST_BEAM"
+   ]
+  },
+  "870-mega": {
+   "n": "Méga-Hexadron",
+   "cm": [
+    "BRICK_BREAK_PLUS"
+   ]
+  },
+  "888-crowned": {
+   "n": "Zacian Épée Suprême",
+   "cm": [
+    "BEHEMOTH_BLADE"
+   ]
+  },
+  "889-crowned": {
+   "n": "Zamazenta Bouclier Suprême",
+   "cm": [
+    "BEHEMOTH_BASH"
+   ]
+  },
+  "235": {
+   "n": "Queulorior",
+   "src": "https://github.com/pvpoke/pvpoke/blob/master/src/data/gamemaster.json (Gribouille)",
+   "fm": [
+    "TACKLE_FAST",
+    "FURY_CUTTER_FAST",
+    "BUG_BITE_FAST",
+    "BITE_FAST",
+    "SUCKER_PUNCH_FAST",
+    "DRAGON_BREATH_FAST",
+    "THUNDER_SHOCK_FAST",
+    "SPARK_FAST",
+    "LOW_KICK_FAST",
+    "KARATE_CHOP_FAST",
+    "EMBER_FAST",
+    "WING_ATTACK_FAST",
+    "PECK_FAST",
+    "LICK_FAST",
+    "SHADOW_CLAW_FAST",
+    "VINE_WHIP_FAST",
+    "RAZOR_LEAF_FAST",
+    "MUD_SHOT_FAST",
+    "ICE_SHARD_FAST",
+    "FROST_BREATH_FAST",
+    "QUICK_ATTACK_FAST",
+    "SCRATCH_FAST",
+    "POUND_FAST",
+    "CUT_FAST",
+    "POISON_JAB_FAST",
+    "ACID_FAST",
+    "PSYCHO_CUT_FAST",
+    "ROCK_THROW_FAST",
+    "METAL_CLAW_FAST",
+    "BULLET_PUNCH_FAST",
+    "WATER_GUN_FAST",
+    "SPLASH_FAST",
+    "MUD_SLAP_FAST",
+    "ZEN_HEADBUTT_FAST",
+    "CONFUSION_FAST",
+    "POISON_STING_FAST",
+    "BUBBLE_FAST",
+    "FEINT_ATTACK_FAST",
+    "STEEL_WING_FAST",
+    "FIRE_FANG_FAST",
+    "ROCK_SMASH_FAST",
+    "COUNTER_FAST",
+    "POWDER_SNOW_FAST",
+    "CHARGE_BEAM_FAST",
+    "VOLT_SWITCH_FAST",
+    "DRAGON_TAIL_FAST",
+    "AIR_SLASH_FAST",
+    "INFESTATION_FAST",
+    "STRUGGLE_BUG_FAST",
+    "ASTONISH_FAST",
+    "HEX_FAST",
+    "IRON_TAIL_FAST",
+    "FIRE_SPIN_FAST",
+    "BULLET_SEED_FAST",
+    "EXTRASENSORY_FAST",
+    "SNARL_FAST",
+    "TAKE_DOWN_FAST",
+    "WATERFALL_FAST",
+    "YAWN_FAST",
+    "PRESENT_FAST",
+    "CHARM_FAST",
+    "LOCK_ON_FAST",
+    "THUNDER_FANG_FAST",
+    "ICE_FANG_FAST",
+    "GUST_FAST",
+    "INCINERATE_FAST"
+   ],
+   "cm": [
+    "STRUGGLE",
+    "WRAP",
+    "HYPER_BEAM",
+    "DARK_PULSE",
+    "SLUDGE",
+    "VICE_GRIP",
+    "FLAME_WHEEL",
+    "MEGAHORN",
+    "FLAMETHROWER",
+    "DIG",
+    "CROSS_CHOP",
+    "PSYBEAM",
+    "EARTHQUAKE",
+    "STONE_EDGE",
+    "ICE_PUNCH",
+    "DISCHARGE",
+    "FLASH_CANNON",
+    "DRILL_PECK",
+    "ICE_BEAM",
+    "BLIZZARD",
+    "HEAT_WAVE",
+    "AERIAL_ACE",
+    "DRILL_RUN",
+    "PETAL_BLIZZARD",
+    "BUG_BUZZ",
+    "POISON_FANG",
+    "NIGHT_SLASH",
+    "BUBBLE_BEAM",
+    "SUBMISSION",
+    "LOW_SWEEP",
+    "AQUA_JET",
+    "AQUA_TAIL",
+    "SEED_BOMB",
+    "PSYSHOCK",
+    "ANCIENT_POWER",
+    "ROCK_TOMB",
+    "ROCK_SLIDE",
+    "POWER_GEM",
+    "SHADOW_SNEAK",
+    "SHADOW_PUNCH",
+    "OMINOUS_WIND",
+    "SHADOW_BALL",
+    "MAGNET_BOMB",
+    "IRON_HEAD",
+    "THUNDER_PUNCH",
+    "THUNDER",
+    "THUNDERBOLT",
+    "TWISTER",
+    "DRAGON_PULSE",
+    "DRAGON_CLAW",
+    "DISARMING_VOICE",
+    "DRAINING_KISS",
+    "DAZZLING_GLEAM",
+    "MOONBLAST",
+    "PLAY_ROUGH",
+    "CROSS_POISON",
+    "SLUDGE_BOMB",
+    "SLUDGE_WAVE",
+    "GUNK_SHOT",
+    "BONE_CLUB",
+    "BULLDOZE",
+    "MUD_BOMB",
+    "SIGNAL_BEAM",
+    "X_SCISSOR",
+    "FLAME_CHARGE",
+    "FLAME_BURST",
+    "FIRE_BLAST",
+    "WATER_PULSE",
+    "HYDRO_PUMP",
+    "PSYCHIC",
+    "ICY_WIND",
+    "FIRE_PUNCH",
+    "SOLAR_BEAM",
+    "LEAF_BLADE",
+    "POWER_WHIP",
+    "AIR_CUTTER",
+    "HURRICANE",
+    "BRICK_BREAK",
+    "SWIFT",
+    "HORN_ATTACK",
+    "STOMP",
+    "HYPER_FANG",
+    "BODY_SLAM",
+    "CLOSE_COMBAT",
+    "DYNAMIC_PUNCH",
+    "FOCUS_BLAST",
+    "AURORA_BEAM",
+    "WILD_CHARGE",
+    "ZAP_CANNON",
+    "AVALANCHE",
+    "BRAVE_BIRD",
+    "SKY_ATTACK",
+    "SAND_TOMB",
+    "ROCK_BLAST",
+    "SILVER_WIND",
+    "NIGHT_SHADE",
+    "GYRO_BALL",
+    "HEAVY_SLAM",
+    "OVERHEAT",
+    "GRASS_KNOT",
+    "ENERGY_BALL",
+    "MIRROR_COAT",
+    "OUTRAGE",
+    "CRUNCH",
+    "FOUL_PLAY",
+    "SURF",
+    "DRACO_METEOR",
+    "PSYCHO_BOOST",
+    "FRENZY_PLANT",
+    "BLAST_BURN",
+    "HYDRO_CANNON",
+    "LAST_RESORT",
+    "METEOR_MASH",
+    "BRINE",
+    "SCALD",
+    "PSYSTRIKE",
+    "DOOM_DESIRE",
+    "WEATHER_BALL_FIRE",
+    "WEATHER_BALL_ICE",
+    "WEATHER_BALL_ROCK",
+    "WEATHER_BALL_WATER",
+    "SKULL_BASH",
+    "ACID_SPRAY",
+    "EARTH_POWER",
+    "CRABHAMMER",
+    "LUNGE",
+    "OCTAZOOKA",
+    "MIRROR_SHOT",
+    "SUPER_POWER",
+    "FELL_STINGER",
+    "LEAF_TORNADO",
+    "SHADOW_BONE",
+    "MUDDY_WATER",
+    "BLAZE_KICK",
+    "POWER_UP_PUNCH",
+    "GIGA_IMPACT",
+    "SYNCHRONOISE",
+    "SACRED_SWORD",
+    "FLYING_PRESS",
+    "AURA_SPHERE",
+    "PAYBACK",
+    "ROCK_WRECKER",
+    "AEROBLAST",
+    "TECHNO_BLAST_NORMAL",
+    "TECHNO_BLAST_BURN",
+    "TECHNO_BLAST_CHILL",
+    "TECHNO_BLAST_SHOCK",
+    "FLY",
+    "V_CREATE",
+    "TRI_ATTACK"
+   ]
+  }
+ }
+}

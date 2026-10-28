@@ -1,5 +1,14 @@
 [
  {
+  "v": "v58",
+  "d": "2026-10-28",
+  "l": [
+   "Pokémon GO, bloc « Attaques » : nouveau moveset recommandé en raid, calculé contre 164 boss réels (le plus souvent n° 1), avec la ligne « Obscur », les meilleurs choix selon le type du boss et les changements selon la météo. Pensez à retélécharger le pack hors-ligne.",
+   "Nouvel onglet « Combats Max » pour les Pokémon Dynamax et Gigamax : moveset conseillé pour les rôles attaquant, tank et soigneur.",
+   "Données GO corrigées : attaques « + » des Méga (dont Ombre Nocturne+ de Méga-Ténéfix à partir du 1er novembre), Zacian et Zamazenta de type Fée et Combat, Représailles pour Grondogue et Dogrino, attaques de Queulorior, et nouvelle fiche Mewtwo Armuré."
+  ]
+ },
+ {
   "v": "v57",
   "d": "2026-10-26",
   "l": [

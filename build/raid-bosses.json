@@ -1,0 +1,1397 @@
+{
+ "_doc": "Boss de raid du système actuel (depuis le 26/08/2020 : 5★, Ultra-Chimères, Méga, Méga légendaires, Primo, 5★ obscurs, Élite). Les anciens 4★/2★ ne sont pas pris en compte. Un boss = forme déjà apparue en raid. Maintenir à la main : ajouter une entrée {k, n, tier} (k = clé de forme de l’appli, ou go{} inline si la forme manque). hp/cpm viennent de « tiers ».",
+ "sources": {
+  "tiers": "https://pokemongo.fandom.com/wiki/Raid_Battle (PV par niveau)",
+  "obscurs": "https://bulbapedia.bulbagarden.net/wiki/Shadow_Raid (CPM 0,82, enrage) ; https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Raid_Boss_changes",
+  "refonte": "https://pokemongohub.net/post/news/pokemon-go-removes-tier-2-and-tier-4-raids/",
+  "historique": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+ },
+ "tiers": {
+  "5★": {
+   "hp": 15000,
+   "cpm": 0.7903
+  },
+  "Ultra-Chimère": {
+   "hp": 15000,
+   "cpm": 0.7903
+  },
+  "Méga": {
+   "hp": 9000,
+   "cpm": 0.7903
+  },
+  "Méga légendaire": {
+   "hp": 22500,
+   "cpm": 0.7903
+  },
+  "Primo": {
+   "hp": 22500,
+   "cpm": 0.7903
+  },
+  "5★ obscur": {
+   "hp": 15000,
+   "cpm": 0.82
+  },
+  "Élite": {
+   "hp": 20000,
+   "cpm": 0.7903
+  }
+ },
+ "bosses": [
+  {
+   "k": "115-mega",
+   "n": "Méga-Kangourex",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "121-mega",
+   "n": "Méga-Staross",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "127-mega",
+   "n": "Méga-Scarabrute",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "130-mega",
+   "n": "Méga-Léviator",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "142-mega",
+   "n": "Méga-Ptéra",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "144",
+   "n": "Artikodin",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "145",
+   "n": "Électhor",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "146",
+   "n": "Sulfura",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "149-mega",
+   "n": "Méga-Dracolosse",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "15-mega",
+   "n": "Méga-Dardargnan",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "150",
+   "n": "Mewtwo",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "150-mega-x",
+   "n": "Méga-Mewtwo X",
+   "tier": "Méga légendaire",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "150-mega-y",
+   "n": "Méga-Mewtwo Y",
+   "tier": "Méga légendaire",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "18-mega",
+   "n": "Méga-Roucarnage",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "181-mega",
+   "n": "Méga-Pharamp",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "208-mega",
+   "n": "Méga-Steelix",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "212-mega",
+   "n": "Méga-Cizayox",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "214-mega",
+   "n": "Méga-Scarhino",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "227-mega",
+   "n": "Méga-Airmure",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "229-mega",
+   "n": "Méga-Démolosse",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "243",
+   "n": "Raikou",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "244",
+   "n": "Entei",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "245",
+   "n": "Suicune",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "248-mega",
+   "n": "Méga-Tyranocif",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "249",
+   "n": "Lugia",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "250",
+   "n": "Ho-Oh",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "254-mega",
+   "n": "Méga-Jungko",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "257-mega",
+   "n": "Méga-Braségali",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "26-mega-x",
+   "n": "Méga-Raichu X",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "26-mega-y",
+   "n": "Méga-Raichu Y",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "260-mega",
+   "n": "Méga-Laggron",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "282-mega",
+   "n": "Méga-Gardevoir",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "3-mega",
+   "n": "Méga-Florizarre",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "302-mega",
+   "n": "Méga-Ténéfix",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "303-mega",
+   "n": "Méga-Mysdibule",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "306-mega",
+   "n": "Méga-Galeking",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "308-mega",
+   "n": "Méga-Charmina",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "310-mega",
+   "n": "Méga-Élecsprint",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "319-mega",
+   "n": "Méga-Sharpedo",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "323-mega",
+   "n": "Méga-Camérupt",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "334-mega",
+   "n": "Méga-Altaria",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "354-mega",
+   "n": "Méga-Branette",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "359-mega",
+   "n": "Méga-Absol",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "362-mega",
+   "n": "Méga-Oniglali",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "373-mega",
+   "n": "Méga-Drattak",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "376-mega",
+   "n": "Méga-Métalosse",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "377",
+   "n": "Regirock",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "378",
+   "n": "Regice",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "379",
+   "n": "Registeel",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "380",
+   "n": "Latias",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "380-mega",
+   "n": "Méga-Latias",
+   "tier": "Méga légendaire",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "381",
+   "n": "Latios",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "381-mega",
+   "n": "Méga-Latios",
+   "tier": "Méga légendaire",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "382",
+   "n": "Kyogre",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "382-primal",
+   "n": "Primo-Kyogre",
+   "tier": "Primo",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "383",
+   "n": "Groudon",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "383-primal",
+   "n": "Primo-Groudon",
+   "tier": "Primo",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "384",
+   "n": "Rayquaza",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "384-mega",
+   "n": "Méga-Rayquaza",
+   "tier": "Méga légendaire",
+   "hp": 22500,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "386",
+   "n": "Deoxys",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "386-attack",
+   "n": "Deoxys Forme Attaque",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "386-defense",
+   "n": "Deoxys Forme Défense",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "386-speed",
+   "n": "Deoxys Forme Vitesse",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "398-mega",
+   "n": "Méga-Étouraptor",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "428-mega",
+   "n": "Méga-Lockpin",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "445-mega",
+   "n": "Méga-Carchacrok",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "448-mega",
+   "n": "Méga-Lucario",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "460-mega",
+   "n": "Méga-Blizzaroi",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "475-mega",
+   "n": "Méga-Gallame",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "480",
+   "n": "Créhelf",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "481",
+   "n": "Créfollet",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "482",
+   "n": "Créfadet",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "483",
+   "n": "Dialga",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "483-origin",
+   "n": "Dialga Originel",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "484",
+   "n": "Palkia",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "484-origin",
+   "n": "Palkia Originel",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "485",
+   "n": "Heatran",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "486",
+   "n": "Regigigas",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "487",
+   "n": "Giratina",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "487-origin",
+   "n": "Giratina Originel",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "488",
+   "n": "Cresselia",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "491",
+   "n": "Darkrai",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "531-mega",
+   "n": "Méga-Nanméouïe",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "6-mega-x",
+   "n": "Méga-Dracaufeu X",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "6-mega-y",
+   "n": "Méga-Dracaufeu Y",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "638",
+   "n": "Cobaltium",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "639",
+   "n": "Terrakium",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "640",
+   "n": "Viridium",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "641",
+   "n": "Boréas",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "641-therian",
+   "n": "Boréas Forme Totémique",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "642",
+   "n": "Fulguris",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "642-therian",
+   "n": "Fulguris Forme Totémique",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "643",
+   "n": "Reshiram",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "644",
+   "n": "Zekrom",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "645",
+   "n": "Démétéros",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "645-therian",
+   "n": "Démétéros Forme Totémique",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "646",
+   "n": "Kyurem",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "646-white",
+   "n": "Kyurem Blanc",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "646-black",
+   "n": "Kyurem Noir",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "649",
+   "n": "Genesect",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "649-douse",
+   "n": "Genesect Aqua",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "649-shock",
+   "n": "Genesect Choc",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "649-burn",
+   "n": "Genesect Pyro",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "649-chill",
+   "n": "Genesect Cryo",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "65-mega",
+   "n": "Méga-Alakazam",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "687-mega",
+   "n": "Méga-Sepiatroce",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "71-mega",
+   "n": "Méga-Empiflor",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "716",
+   "n": "Xerneas",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "717",
+   "n": "Yveltal",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "785",
+   "n": "Tokorico",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "786",
+   "n": "Tokopiyon",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "787",
+   "n": "Tokotoro",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "788",
+   "n": "Tokopisco",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "791",
+   "n": "Solgaleo",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "792",
+   "n": "Lunala",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "793",
+   "n": "Zéroïd",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "794",
+   "n": "Mouscoto",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "795",
+   "n": "Cancrelove",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "796",
+   "n": "Câblifère",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "797",
+   "n": "Bamboiselle",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "798",
+   "n": "Katagami",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "799",
+   "n": "Engloutyran",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "80-mega",
+   "n": "Méga-Flagadoss",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "800",
+   "n": "Necrozma",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "800-dusk",
+   "n": "Necrozma Crinière du Couchant",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "800-dawn",
+   "n": "Necrozma Ailes de l’Aurore",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "805",
+   "n": "Ama-Ama",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "806",
+   "n": "Pierroteknik",
+   "tier": "Ultra-Chimère",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "870-mega",
+   "n": "Méga-Hexadron",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "888",
+   "n": "Zacian",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "889",
+   "n": "Zamazenta",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "894",
+   "n": "Regieleki",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "895",
+   "n": "Regidrago",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "9-mega",
+   "n": "Méga-Tortank",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "905",
+   "n": "Amovénus",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "905-therian",
+   "n": "Amovénus Forme Totémique",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "94-mega",
+   "n": "Méga-Ectoplasma",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "150",
+   "n": "Mewtwo obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "144",
+   "n": "Artikodin obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "145",
+   "n": "Électhor obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "146",
+   "n": "Sulfura obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "249",
+   "n": "Lugia obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "250",
+   "n": "Ho-Oh obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "243",
+   "n": "Raikou obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "244",
+   "n": "Entei obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "245",
+   "n": "Suicune obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "377",
+   "n": "Regirock obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "378",
+   "n": "Regice obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "379",
+   "n": "Registeel obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "486",
+   "n": "Regigigas obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "382",
+   "n": "Kyogre obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "383",
+   "n": "Groudon obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "380",
+   "n": "Latias obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "381",
+   "n": "Latios obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "488",
+   "n": "Cresselia obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "491",
+   "n": "Darkrai obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "485",
+   "n": "Heatran obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "483",
+   "n": "Dialga obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "484",
+   "n": "Palkia obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "487",
+   "n": "Giratina obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "642",
+   "n": "Fulguris obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "645",
+   "n": "Démétéros obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2020 … /2026 (lu le 27/10/2026)"
+  },
+  {
+   "k": "720-unbound",
+   "n": "Hoopa Déchaîné",
+   "tier": "Élite",
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2023 (Élite)",
+   "hp": 20000,
+   "cpm": 0.7903
+  },
+  {
+   "k": "150-armored",
+   "n": "Mewtwo Armuré",
+   "tier": "5★",
+   "src": "https://pokemongo.fandom.com/wiki/List_of_Raid_Bosses_changes/2019 ; game master V0150_POKEMON_MEWTWO_A",
+   "go": {
+    "t": [
+     "psychic"
+    ],
+    "a": 182,
+    "d": 278,
+    "s": 214,
+    "fm": [
+     "CONFUSION_FAST",
+     "IRON_TAIL_FAST"
+    ],
+    "cm": [
+     "ROCK_SLIDE",
+     "DYNAMIC_PUNCH",
+     "EARTHQUAKE",
+     "FUTURESIGHT"
+    ]
+   },
+   "_note": "Forme absente des données de l’appli : définie ici depuis le game master.",
+   "hp": 15000,
+   "cpm": 0.7903
+  }
+ ]
+}

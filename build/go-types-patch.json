@@ -1,0 +1,27 @@
+{
+ "_doc": "PROPOSITION (non appliquée). Formes reliées au modèle GM sans « form » alors que le modèle de la forme par défaut (même stats, mêmes attaques) a un autre type. Corriger aussi build/go-templates.json.",
+ "types": {
+  "888": {
+   "n": "Zacian",
+   "app": [
+    "fairy",
+    "steel"
+   ],
+   "t": [
+    "fairy"
+   ],
+   "tpl": "V0888_POKEMON_ZACIAN_HERO"
+  },
+  "889": {
+   "n": "Zamazenta",
+   "app": [
+    "fighting",
+    "steel"
+   ],
+   "t": [
+    "fighting"
+   ],
+   "tpl": "V0889_POKEMON_ZAMAZENTA_HERO"
+  }
+ }
+}

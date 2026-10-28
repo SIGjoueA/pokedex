@@ -494,4 +494,5 @@ await import('./apply-go-overrides.mjs'); // v28: manual GO overrides (build/go-
 await import('./add-frlgsw.mjs'); // v31: Rouge Feu / Vert Feuille (Switch), separate HOME-compatible game (idempotent)
 await import('./pokepedia.mjs').then(m => m.apply()); // v32: Poképédia descriptions, étymologies, distributions, lieux Switch (build/pokepedia/extract.json.gz)
 await import('./apply-v34.mjs'); // v34: audit fixes (types, Let's Go, merged forms, names, Barons Z-A, GO), after Poképédia
+{ const { execFileSync } = await import('node:child_process'); execFileSync('python3', [new URL('./apply-v58.py', import.meta.url).pathname], { stdio: 'inherit' }); } // v58: corrections GO + recommandations raid v2 / Max (idempotent)
 console.log('entries', coreEntries.length, 'edges', evoOut.length, 'sizes (bytes, raw):', sizes);

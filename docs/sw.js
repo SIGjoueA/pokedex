@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v57';
+const VERSION = 'v58';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Descriptions : textes officiels du Pokédex en français pour 373 entrées. Couafarel : où obtenir chaque coupe (GO et jeux).';
-const DATA_VERSION = 'd31'; // bump when the schema of data/*.json changes
+const NOTES = 'Pokémon GO : movesets recommandés en raid (par type de boss et selon la météo) et en Combats Max. Mewtwo Armuré et attaques « + » des Méga ajoutés.';
+const DATA_VERSION = 'd32'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

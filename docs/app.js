@@ -1671,9 +1671,20 @@ function goHTML(p, f, sp, shared, go) {
   const rs = go.pvm && go.pvm.ms && (go.pvm.ms[p.k] || (p.c === 'sex' ? go.pvm.ms[String(p.id)] : null));
   const mvn = k => esc(go.moves[k]?.[0] || k);
   const rec = rs ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec">${[['g', 'Ligue Super'], ['u', 'Ligue Hyper'], ['m', 'Ligue Master']].filter(([l]) => rs[l]).map(([l, n]) => `<li><b>${n}</b> : ${mvn(rs[l][0])} + ${rs[l].slice(1).map(mvn).join(' / ')}</li>`).join('')}</ul>` : '';
-  const rr = go.rdm && go.rdm.ms && go.rdm.ms[p.k], isEl = k => (d.fe || []).includes(k) || (d.ce || []).includes(k), mve = k => mvn(k) + (isEl(k) ? ' †' : '');
-  const rrec = rr ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec rdrec">${rr.map((c, i) => `<li><b>${i ? 'Sans attaque exclusive' : 'Meilleur'}</b> : ${mve(c[0])} + ${mve(c[1])} <span class="mute">(≈ ${dec(c[2].toFixed(1))} DPS)</span></li>`).join('')}</ul>` : '';
-  const mvMode = store.get('gomvmode', 'raid') === 'pvp' ? 'pvp' : 'raid';
+  // v58: raid v2 (moveset le plus souvent n° 1, lignes par type, météo, capacités « + ») et Combats Max v1 — data/raid-moves.json v2
+  const isEl = k => (d.fe || []).includes(k) || (d.ce || []).includes(k), mve = k => mvn(k) + (isEl(k) ? ' †' : '');
+  const RD = go.rdm && go.rdm.v === 2 ? go.rdm : null, rr = RD && (RD.r[p.k] || (p.c === 'sex' ? RD.r[String(p.id)] : null));
+  const ms2 = m => esc(m[0]) + ' + ' + esc(m[1]);
+  const WXN = { sunny: '☀️ Ensoleillé', rainy: '🌧️ Pluvieux', partly: '⛅ Partiellement nuageux', cloudy: '☁️ Nuageux', windy: '💨 Venteux', snow: '❄️ Neige', fog: '🌫️ Brouillard' };
+  const rLine = (lab, e) => `<li><b>${lab}</b> : ${ms2(e.m)} <span class="mute">(n° 1 contre ${e.w} des ${e.n} boss où il est utile)</span>${e.a ? `<br><span class="mute">≈ ${ms2(e.a)} : presque aussi bon</span>` : ''}</li>`;
+  const rTypes = e => e.l ? `<h3 class="mvh">Selon le boss</h3><ul class="plain gol pvrec rdty">${e.l.map(([t, fx, cx, b]) => `<li>${badge(t)} ${ms2([fx, cx])} <span class="mute">(${b.length} boss : ${esc(b.slice(0, 6).join(', '))}${b.length > 6 ? '…' : ''})</span></li>`).join('')}</ul>` : '';
+  const rWx = e => { const it = Object.entries(e.x || {}).map(([w, [up, dn, n1, ms]]) => { const pt = [n1 ? `n° 1 contre ${n1} boss` : '', up >= dn + 5 ? `mieux classé contre ${up} boss` : '', ms ? `préférez ${esc(ms)}` : ''].filter(Boolean); return pt.length ? `<li>${WXN[w]} : ${pt.join(', ')}</li>` : ''; }).join('');
+    return it ? `<details class="rdwx"><summary>Selon la météo (bonus ×1,2)</summary><ul class="plain gol">${it}</ul></details>` : ''; };
+  const rrec = !RD || d.nost ? '' : `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec rdrec">${rr && rr.n ? rLine('Principal', rr.n) : '<li class="mute">Peu utile contre les boss de raid testés</li>'}${rr && rr.o ? rLine('Obscur', rr.o) : ''}</ul>${rr && rr.n ? rTypes(rr.n) + (rr.n.p ? `<p class="note">Au niveau Méga super max (attaque + ×1,3), préférez <b>${esc(rr.n.p)}</b>.</p>` : '') + rWx(rr.n) : ''}`;
+  const MX = RD && RD.mx && RD.mx[p.k], ROLE = { A: 'Attaquant', T: 'Tank', H: 'Soigneur' };
+  const mxrec = MX ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec mxrec">${'ATH'.split('').map(r => { const [f, c, n] = MX[r]; return `<li><b>${ROLE[r]}</b> : ${n ? `${f.map(mve).join(' / ')} + ${c.map(mve).join(' / ')} <span class="mute">(parmi les 5 meilleurs contre ${n} des ${RD.mxb} boss)</span>` : '<span class="mute">peu utile dans ce rôle</span>'}</li>`; }).join('')}</ul>
+        <p class="note">Le plus souvent le meilleur contre les ${RD.mxb} boss Dynamax et Gigamax testés où ce Pokémon est utile (niveau 40, Gardomax et Régémax niveau 3, sans esquive). Tank : jauge Max, tenue et bouclier ; soigneur : soins et survie. En combat Max, l’attaque rapide remplit la jauge ; son type donne celui de l’attaque Max.</p>` : '';
+  const mvMode0 = store.get('gomvmode', 'raid'), mvMode = mvMode0 === 'pvp' ? 'pvp' : mvMode0 === 'max' && MX ? 'max' : 'raid';
   const shadow = d.shm && go.moves[d.shm] ? `<p class="note">Obscur : ${esc(go.moves[d.shm][0])} · Purifié : ${esc(go.moves[d.pum]?.[0] || '—')}</p>` : '';
   const sh = d.nosh ? 'Non disponible (pas de shiny pour ce Gigamax pour l’instant)' : d.shf && TODAY < d.shf ? `Pas encore (à partir du ${frDate(d.shf)})` : d.sh ? (d.sh.length ? `Oui (${d.sh.map(s => ({ wild: 'sauvage', raid: 'raid', egg: 'œuf', evolution: 'évolution', research: 'recherche', photobomb: 'photobomb', alola: 'forme d’Alola', mega: 'Méga-Évolution d’un Pokémon shiny', max: 'Combats Max' }[s] || s)).join(', ')})` : 'Oui') : (p.c ? 'Non vérifié pour cette forme' : 'Non disponible');
   const types = d.t;
@@ -1705,10 +1716,11 @@ function goHTML(p, f, sp, shared, go) {
     <section class="box shinybox goshiny"><h2>✨ Shiny <small class="cnt">GO</small></h2><ul class="plain gol"><li>Shiny : <b>${sh}</b></li></ul></section>`,
     moves: `
     <section class="box gomoves mv-${mvMode}"><h2>Attaques</h2>
-      <div class="seg mvseg" role="tablist"><button type="button" data-mvm="raid" aria-pressed="${mvMode === 'raid'}">Raids &amp; arènes</button><button type="button" data-mvm="pvp" aria-pressed="${mvMode === 'pvp'}">Combats (PvP)</button></div>
+      <div class="seg mvseg" role="tablist"><button type="button" data-mvm="raid" aria-pressed="${mvMode === 'raid'}">Raids &amp; arènes</button>${MX ? `<button type="button" data-mvm="max" aria-pressed="${mvMode === 'max'}">Combats Max</button>` : ''}<button type="button" data-mvm="pvp" aria-pressed="${mvMode === 'pvp'}">Combats (PvP)</button></div>
       <div class="mvraid"><h3 class="mvh">Attaques rapides</h3><div class="mvs">${fm || '<p class="note">—</p>'}</div><h3 class="mvh">Attaques chargées</h3><div class="mvs">${cm || '<p class="note">—</p>'}</div>
 ${rrec}
-        <p class="note">DPS = puissance ÷ durée.${rr ? ' Moveset recommandé : meilleur DPS estimé (cycle attaque rapide + chargée, bonus de type ×1,2, énergie reçue en encaissant) contre une cible neutre au niveau 40, sans météo ni esquive.' : ''}</p></div>
+        <p class="note">DPS = puissance ÷ durée.${RD && !d.nost ? ` Moveset recommandé : celui qui est le plus souvent le meilleur contre les ${RD.nb} boss de raid testés où ce Pokémon est utile (au moins 60 % du meilleur ; dégâts par seconde pondérés par la survie, niveau 40, sans météo ni esquive). ≈ : presque aussi bon (2 victoires d’écart ou moins).` : ''}</p></div>
+      ${MX ? `<div class="mvmax">${mxrec}</div>` : ''}
       <div class="mvpvp"><h3 class="mvh">Attaques rapides</h3><div class="mvs">${fp || '<p class="note">—</p>'}</div><h3 class="mvh">Attaques chargées</h3><div class="mvs">${cp || '<p class="note">—</p>'}</div>${rec}
         <p class="note">1 tour = 0,5 s. DPT = dégâts par tour, EPT = énergie par tour, DPE = dégâts par point d’énergie. Moveset recommandé : classement PvPoke « overall »${go.pvm ? ` (au ${go.pvm.date.split('-').reverse().join('/')})` : ''}.</p></div>
       ${shadow}<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p></section>`,
@@ -1808,7 +1820,7 @@ function namesHTML(p, sp) {
 }
 // v55: GO moves Raid / PvP toggle, remembered (localStorage « gomvmode »)
 document.addEventListener('click', e => { const b = e.target.closest('.mvseg [data-mvm]'); if (!b) return; const m = b.dataset.mvm; store.set('gomvmode', m);
-  for (const s of document.querySelectorAll('.gomoves')) { s.classList.toggle('mv-pvp', m === 'pvp'); s.classList.toggle('mv-raid', m !== 'pvp'); s.querySelectorAll('[data-mvm]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mvm === m))); } });
+  for (const s of document.querySelectorAll('.gomoves')) { const mm = m === 'max' && !s.querySelector('[data-mvm=max]') ? 'raid' : m; s.classList.toggle('mv-pvp', mm === 'pvp'); s.classList.toggle('mv-max', mm === 'max'); s.classList.toggle('mv-raid', mm === 'raid'); s.querySelectorAll('[data-mvm]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.mvm === m))); } });
 // v55: large sheet blocks fold to a compact view (« Voir plus » / « Réduire »), state remembered per block title (localStorage « folds »: title → 1 = open)
 const FOLD_H = 420;
 const foldKey = sec => { const h = sec.querySelector('h2'); if (!h) return ''; const c = h.cloneNode(true); c.querySelectorAll('small,.cntb').forEach(x => x.remove()); return c.textContent.replace(/\s+/g, ' ').trim(); };

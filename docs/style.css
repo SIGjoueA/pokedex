@@ -647,7 +647,8 @@ section.box.fold:not(.open)::after{content:"";position:absolute;left:0;right:0;b
 section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:translateX(-50%);bottom:10px;z-index:1;margin:0}
 .descbox .desc{margin:6px 0}
 .mvseg{display:flex;width:100%;margin:2px 0 6px}.mvseg button{flex:1;font-size:14px;color:var(--fg)}
-.gomoves.mv-raid .mvpvp,.gomoves.mv-pvp .mvraid{display:none}
+.gomoves.mv-raid .mvpvp,.gomoves.mv-pvp .mvraid,.gomoves.mv-raid .mvmax,.gomoves.mv-pvp .mvmax,.gomoves.mv-max .mvraid,.gomoves.mv-max .mvpvp{display:none}
+.rdty li{margin:6px 0}.rdwx{margin:6px 0}.rdwx summary{cursor:pointer;font-weight:600}
 .mvh{font-size:15px;margin:12px 0 4px}
 .pvrec li{margin:4px 0}
 /* v57: Couafarel trims — equal-width grid, zone under the name */
