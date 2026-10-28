@@ -1,5 +1,15 @@
 [
  {
+  "v": "v59",
+  "d": "2026-10-28",
+  "l": [
+   "Nouvel écran « 🏆 Classements » dans le menu ☰ (section Pokémon GO) : classements des ligues PvP, dont la Coupe des Jeunes.",
+   "Classements de raid en vue globale, par boss et par type, et classements des Combats Max en vue globale et par boss pour les rôles Attaquant, Tank et Soigneur. Le classement global ne fait aucune moyenne : il compte les boss où le Pokémon est n° 1, puis ceux où il est utile. Pensez à retélécharger le pack hors-ligne.",
+   "Le retour depuis une fiche vous ramène aux Classements, au même onglet et à la même position.",
+   "Les attaques exclusives sont marquées d’un † dans les classements."
+  ]
+ },
+ {
   "v": "v58",
   "d": "2026-10-28",
   "l": [

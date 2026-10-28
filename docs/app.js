@@ -90,6 +90,7 @@ function gemBtnHTML(m, c, on, short) {
 }
 // Pokémon GO: species whose Mega is released in GO (needs the sheet data)
 // v28: today's date (local, AAAA-MM-JJ) for GO releases announced with a date (go-overrides.json: Gigamax Duralugon…)
+let fromRank = false, rankScroll = 0; // v59: a sheet opened from « Classements » goes back there (same tab, same scroll)
 const TODAY = (() => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; })();
 const goRel = g => !!(g && (g.r || (g.rf && TODAY >= g.rf))); // released in GO (now, or from its announced date)
 const goShinyOk = g => !(g && (g.nosh || (g.shf && TODAY < g.shf))); // shiny available in GO (Gigamax: per form)
@@ -959,7 +960,9 @@ async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).
 let detailTok = 0, DET = null, showShinyArt = false, showFemArt = false; // v44c: showFemArt = female image of a single-entry species (hero « ♀ » button)
 function route() {
   const m = location.hash.match(/^#\/p\/(\d+(?:-[a-z0-9-]+)?)/);
-  const lv = $('#list-view'), dv = $('#detail-view');
+  const lv = $('#list-view'), dv = $('#detail-view'), rv = $('#rank-view');
+  if (/^#\/classements/.test(location.hash)) { if (!lv.hidden) listScroll = window.scrollY; detailTok++; lv.hidden = true; dv.hidden = true; rv.hidden = false; document.title = 'Classements – Pokédex'; const back = fromRank, y = rankScroll; fromRank = false; window.scrollTo(0, 0); renderRank().then(() => { if (back) window.scrollTo(0, y); }); return; }
+  if (rv) rv.hidden = true;
   const rp = m && (BY_KEY[m[1]] || FEM_OF[m[1]]); // v44c: an old female link (#/p/3-female) opens the species sheet, female image
   if (rp) {
     if (!lv.hidden) listScroll = window.scrollY;
@@ -968,7 +971,7 @@ function route() {
     openDetail(rp);
     window.scrollTo(0, 0);
   } else {
-    detailTok++; sheetPref = null;
+    detailTok++; sheetPref = null; fromRank = false;
     dv.hidden = true; lv.hidden = false;
     document.title = 'Pokédex';
     window.scrollTo(0, listScroll);
@@ -1185,7 +1188,7 @@ function navHTML(p, extra = '') {
     const seen = new Set(), list = filtered().filter(x => !seen.has(x.id) && seen.add(x.id)); const i = list.findIndex(x => x.id === p.id); // one entry per species (regional form in its region’s dex)
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
-  return `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="cadd2" type="button" data-add="${p.k}" aria-label="Ajouter à ma collection" title="Ajouter à ma collection">＋</button><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
+  return `<div class="dtop"><div class="dnav">${fromRank ? '<a href="#/classements" aria-label="Retour aux classements">←</a>' : '<a href="#/" aria-label="Retour à la liste">←</a>'}<a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="cadd2" type="button" data-add="${p.k}" aria-label="Ajouter à ma collection" title="Ajouter à ma collection">＋</button><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
 function effGroups(types, mode, chart, adj = {}) {
@@ -2078,7 +2081,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2821,3 +2824,58 @@ function pkInit() {
   document.addEventListener('toggle', e => { const d = e.target; if (!d.classList || !d.classList.contains('pkblk')) return; d.open ? PK_FOLD.delete(d.dataset.blk) : PK_FOLD.add(d.dataset.blk); store.set('pkfold', [...PK_FOLD]); }, true);
   pkSeg(); pkRender();
 }
+
+/* ---------------- v59: « Classements » (PvP PvPoke, raids, Combats Max) ---------------- */
+let RANKD = null;
+const RK = Object.assign({ s: 'pvp', lg: 'g', sh: 1, rv: 'g', boss: '', ty: 'dragon', ro: 'A', mv: 'g', mb: '', q: '' }, store.get('rank', {}));
+async function loadRank() { if (!RANKD) RANKD = Promise.all([loadGo(), getJSON('data/rank-pvp.json'), getJSON('data/rank-raid.json'), getJSON('data/rank-max.json').catch(() => null)]).then(([go, pv, rd, mx]) => ({ go, pv, rd, mx })).catch(e => { RANKD = null; throw e; }); return RANKD; }
+const rkSeg = (k, opts) => `<div class="seg rkseg" role="group">${opts.map(([v, l]) => `<button type="button" data-rk="${k}" data-v="${v}" aria-pressed="${RK[k] === v}">${l}</button>`).join('')}</div>`;
+function rkRow(i, k, sh, sub, right, tag) {
+  const p = BY_KEY[k]; const nm = p ? fullN(p) : k;
+  return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-go="1"><span class="rkn">${i}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(nm)}${sh ? ' <span class="rksh">Obscur</span>' : ''}${tag || ''}</b><span class="rkty">${p ? p.t.map(badge).join('') : ''}</span><small>${sub}</small></span><span class="rkv">${right}</span></a></li>`;
+}
+async function renderRank() {
+  const rv = $('#rank-view'); store.set('rank', { ...RK, q: '' });
+  const head = `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><h1 class="rkh">Classements</h1><span class="sp"></span></div></div>`;
+  let D; try { D = await loadRank(); } catch { rv.innerHTML = head + '<div class="rkwrap"><p class="note">Classements indisponibles hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p></div>'; return; }
+  const { go, pv, rd, mx } = D, M = go.moves; let EL = [];
+  const mn = k => k ? esc(M[k] ? M[k][0] : k) + (EL.includes(k) ? ' †' : '') : '', ms = (f, c, c2) => [mn(f), [mn(c), mn(c2)].filter(Boolean).join(', ')].filter(Boolean).join(' + ');
+  const msE = (E, k, f, c, c2) => { EL = (E && E[k]) || []; const r = ms(f, c, c2); EL = []; return r; }; // « † » = attaque exclusive, comme sur la fiche
+  const ELN = '<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p>';
+  let body = rkSeg('s', [['pvp', 'PvP'], ['raid', 'Raids'], ['max', 'Combats Max']]);
+  if (RK.s === 'pvp') {
+    const L = pv.L; if (!L[RK.lg]) RK.lg = 'g'; const cur = L[RK.lg];
+    body += `<div class="rkctl"><select id="rklg" aria-label="Ligue">${Object.entries(L).map(([k, v]) => `<option value="${k}"${k === RK.lg ? ' selected' : ''}>${esc(v.t)} — ${v.cp >= 10000 ? 'sans limite' : '≤ ' + v.cp.toLocaleString('fr-FR') + ' PC'}</option>`).join('')}</select>${rkSeg('sh', [[1, 'Avec Obscurs'], [0, 'Sans Obscurs']])}</div>`;
+    const rows = cur.r.filter(r => RK.sh || !r[1]);
+    body += `<ol class="rklist">${rows.map((r, i) => rkRow(i + 1, r[0], r[1], msE(pv.E, r[0], r[3], r[4], r[5]), `<b>${String(r[2]).replace('.', ',')}</b><small>score</small>`)).join('')}</ol>
+      <p class="note">${RK.lg === 'c' && pv.cup && pv.cup.c ? `Coupe en cours (${esc(pv.cup.c)}), Méga-Évolutions admises. ` : ''}${RK.lg === 'l' ? 'Coupe des Jeunes : ≤ 500 PC, seuls les Pokémon qui peuvent évoluer et n’ont jamais évolué sont admis. ' : ''}Les ${cur.r.length} premiers sur ${cur.n} classés. Score PvPoke sur 100 et moveset le plus joué. Source : <a href="https://pvpoke.com/rankings/" target="_blank" rel="noopener">PvPoke</a>, classement « overall », données du ${new Date(pv.date).toLocaleDateString('fr-FR')}.</p>` + ELN;
+  } else if (RK.s === 'raid') {
+    const P = rd.P[RK.sh ? 's' : 'n'], F = rd.F, mvk = i => rd.mv[i];
+    body += `<div class="rkctl">${rkSeg('rv', [['g', 'Global'], ['b', 'Par boss'], ['t', 'Par type de boss']])}${rkSeg('sh', [[1, 'Obscurs inclus'], [0, 'Sans Obscurs']])}</div>`;
+    const cntRow = (r, i, nb) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${r[3]}</b><small>n° 1</small>`, '') .replace('</small></span><span class="rkv">', ` · utile contre ${r[4]}${nb ? ' / ' + nb : ''} boss · meilleur ${String(r[5]).replace('.', ',')} %</small></span><span class="rkv">`);
+    if (RK.rv === 'g') body += `<ol class="rklist">${P.g.map((r, i) => cntRow(r, i, rd.nb)).join('')}</ol><p class="note">Classement contre les ${rd.nb} boss de raid testés, sans moyenne : d’abord le nombre de boss où ce Pokémon est n° 1, puis le nombre de boss où il est utile (au moins 60 % du meilleur), puis son meilleur % contre un boss.</p>`;
+    else if (RK.rv === 't') { const T = Object.keys(P.t).sort((a, b) => TYPE_FR[a].localeCompare(TYPE_FR[b], 'fr')); if (!P.t[RK.ty]) RK.ty = T[0]; const [nb, L] = P.t[RK.ty];
+      body += `<div class="rkctl"><select id="rkty" aria-label="Type du boss">${T.map(t => `<option value="${t}"${t === RK.ty ? ' selected' : ''}>${esc(TYPE_FR[t])} (${P.t[t][0]} boss)</option>`).join('')}</select></div><ol class="rklist">${L.map((r, i) => cntRow(r, i, nb)).join('')}</ol><p class="note">Boss de type ${esc(TYPE_FR[RK.ty])} (y compris double type) : même règle que le classement global, sur ces ${nb} boss seulement.</p>`; }
+    else { const Bi = rd.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr')); let j = rd.B.findIndex(b => b[0] + '|' + b[2] === RK.boss); if (j < 0) j = Bi[0][0]; const b = rd.B[j];
+      body += `<div class="rkctl rkboss"><input id="rkq" type="search" placeholder="Chercher un boss…" value="${esc(RK.q)}" autocomplete="off"><select id="rkb" aria-label="Boss">${Bi.filter(([, x]) => !RK.q || x[1].toLowerCase().includes(RK.q.toLowerCase())).map(([i, x]) => `<option value="${esc(x[0] + '|' + x[2])}"${i === j ? ' selected' : ''}>${esc(x[1])} (${esc(x[2])})</option>`).join('')}</select></div>
+        <p class="rkbt">${esc(b[1])} · ${esc(b[2])} · ${b[3].map(badge).join('')}</p><ol class="rklist">${P.b[j].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs attaquants contre ce boss, chacun avec son meilleur moveset. % = dégâts par seconde pondérés par la survie, comparés au n° 1.</p>`; }
+    body += ELN + `<p class="note">${esc(rd.src)}, ${new Date(rd.date).toLocaleDateString('fr-FR')}.</p>`;
+  } else {
+    const R = { A: 'Attaquant', T: 'Tank', H: 'Soigneur' }, RD = { A: 'dégâts infligés', T: '0,6 × jauge Max remplie + 0,2 × tenue + 0,2 × dégâts absorbés par Gardomax', H: '0,7 × PV soignés + 0,3 × survie' };
+    if (!mx) body += '<p class="note">Classement des Combats Max indisponible hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p>';
+    else { const F = mx.F, mvk = i => mx.mv[i], X = mx.R[RK.ro];
+      body += `<div class="rkctl">${rkSeg('mv', [['g', 'Global'], ['b', 'Par boss']])}${rkSeg('ro', Object.entries(R))}</div>`;
+      if (RK.mv === 'g') body += `<ol class="rklist">${X.g.map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${r[3]}</b><small>n° 1</small>`).replace('</small></span><span class="rkv">', ` · utile contre ${r[4]} / ${mx.nb} boss · meilleur ${String(r[5]).replace('.', ',')} %</small></span><span class="rkv">`)).join('')}</ol><p class="note">${esc(R[RK.ro])} (${RD[RK.ro]}) : classement contre les ${mx.nb} boss Dynamax et Gigamax testés, sans moyenne : d’abord le nombre de boss où ce Pokémon est n° 1 dans ce rôle, puis le nombre de boss où il est utile (au moins 60 % du meilleur), puis son meilleur % contre un boss.</p>`;
+      else { const Bi = mx.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr') || x[1][2] - y[1][2]); let j = mx.B.findIndex(b => b[0] === RK.mb); if (j < 0) j = Bi[0][0]; const b = mx.B[j], tl = t => t >= 6 ? 'Gigamax 6★' : 'Dynamax ' + t + '★';
+        body += `<div class="rkctl rkboss"><select id="rkmb" aria-label="Boss">${Bi.map(([i, x]) => `<option value="${esc(x[0])}"${i === j ? ' selected' : ''}>${esc(x[1])} (${tl(x[2])})</option>`).join('')}</select></div>
+          <p class="rkbt">${esc(b[1])} · ${tl(b[2])} · ${b[3].map(badge).join('')}</p><ol class="rklist">${X.b[j].map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs ${{ A: 'attaquants', T: 'tanks', H: 'soigneurs' }[RK.ro]} contre ce boss, chacun avec son meilleur moveset pour ce rôle. % = score du rôle (${RD[RK.ro]}), comparé au n° 1.</p>`; }
+      body += ELN + `<p class="note">${esc(mx.src)}, ${new Date(mx.date).toLocaleDateString('fr-FR')}.</p>`; }
+  }
+  rv.innerHTML = head + `<div class="rkwrap">${body}</div>`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('#rank-view [data-rk]'); if (b) { const k = b.dataset.rk, v = b.dataset.v; RK[k] = k === 'sh' ? +v : v; renderRank(); return; }
+  if (e.target.closest('#rank-view a[data-go]')) { sheetPref = 'go'; fromRank = true; rankScroll = window.scrollY; }
+});
+document.addEventListener('change', e => { const t = e.target; if (!t.closest || !t.closest('#rank-view')) return; if (t.id === 'rklg') RK.lg = t.value; else if (t.id === 'rkty') RK.ty = t.value; else if (t.id === 'rkb') RK.boss = t.value; else if (t.id === 'rkmb') RK.mb = t.value; else return; renderRank(); });
+document.addEventListener('input', e => { if (e.target.id !== 'rkq') return; RK.q = e.target.value; const s = $('#rkb'), q = RK.q.toLowerCase(); if (!s) return; const D0 = RANKD; D0 && D0.then(({ rd }) => { const opts = rd.B.map(x => [x[0] + '|' + x[2], x]).filter(([, x]) => !q || x[1].toLowerCase().includes(q)).sort((a, b) => a[1][1].localeCompare(b[1][1], 'fr')); s.innerHTML = opts.map(([v, x]) => `<option value="${esc(v)}">${esc(x[1])} (${esc(x[2])})</option>`).join(''); if (opts[0]) { RK.boss = opts[0][0]; const k = RK.q; renderRank().then(() => { const i = $('#rkq'); if (i) { i.value = k; i.focus(); } }); } }); });

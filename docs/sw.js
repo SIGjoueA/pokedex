@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v58';
+const VERSION = 'v59';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Pokémon GO : movesets recommandés en raid (par type de boss et selon la météo) et en Combats Max. Mewtwo Armuré et attaques « + » des Méga ajoutés.';
-const DATA_VERSION = 'd32'; // bump when the schema of data/*.json changes
+const NOTES = 'Nouvel écran « 🏆 Classements » (menu ☰) : ligues PvP, raids et Combats Max, en vue globale et par boss.';
+const DATA_VERSION = 'd33'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
