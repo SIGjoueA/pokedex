@@ -1392,6 +1392,23 @@
    "_note": "Forme absente des données de l’appli : définie ici depuis le game master.",
    "hp": 15000,
    "cpm": 0.7903
+  },
+  {
+   "k": "609-mega",
+   "n": "Méga-Lugulabre",
+   "tier": "Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "Paramètres par défaut du niveau (build/raid-bosses.json → tiers) ; planning Leek Duck (lu le 29/10/2026)"
+  },
+  {
+   "k": "641",
+   "n": "Boréas obscur",
+   "tier": "5★ obscur",
+   "shadow": 1,
+   "hp": 15000,
+   "cpm": 0.82,
+   "src": "Paramètres par défaut du niveau (build/raid-bosses.json → tiers) ; planning Leek Duck (lu le 29/10/2026)"
   }
  ]
 }

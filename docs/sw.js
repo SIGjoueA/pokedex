@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.1';
+const VERSION = 'v60.2';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Boss en cours et à venir mis en avant dans la vue par boss des classements raid et Combats Max.';
-const DATA_VERSION = 'd36'; // bump when the schema of data/*.json changes
+const NOTES = 'Nouveaux boss dans les classements : Méga-Lugulabre, Boréas obscur (raids) et Regidrago (Combats Max).';
+const DATA_VERSION = 'd37'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
