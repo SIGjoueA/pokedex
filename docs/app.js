@@ -2732,10 +2732,10 @@ const pkLoad = () => PKP || (PKP = getJSON('data/pocket.json').then(d => { PK = 
 function pkAlias() { let ch = false; for (const s of PK.s) for (const c of s.cards) if (c[7] && PKQ[c.id]) { const t = PKQ[c[7]] || (PKQ[c[7]] = {}); for (const [l, n] of Object.entries(PKQ[c.id])) t[l] = Math.max(t[l] || 0, n); delete PKQ[c.id]; ch = true; } return ch; }
 const pkUniq = s => s.cards.filter(c => !c[7]); // global / block totals: a reprint is not a second card
 // rarity index → short symbol (◆ diamonds, ☆ stars, ✨ chromatiques, 👑 couronne, Promo = sans rareté)
-const PK_SYM = ['◆', '◆◆', '◆◆◆', '◆◆◆◆', '☆', '☆☆', '☆☆☆', '✨', '✨✨', '👑', 'Promo'];
+const PK_SYM = ['◆', '◆◆', '◆◆◆', '◆◆◆◆', '☆', '☆☆', '☆☆☆', '✨', '✨✨', '👑', 'Promo', '✦'];
 // v50c: image source 0 TCGdex EN, 1 TCGdex FR, 2 none, 3 Limitless TCG (English, sets missing from TCGdex)
 const PK_LL = 'https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/pocket/';
-const pkImg = (s, c, q = 'low') => c[5] === 2 ? '' : c[5] === 3 ? `${PK_LL}${s.id}/${s.id}_${c[0]}_EN${q === 'low' ? '_SM' : ''}.webp` : `${PK.img}${c[5] ? 'fr' : 'en'}/tcgp/${s.id}/${c[0]}/${q}.webp`;
+const pkImg = (s, c, q = 'low') => c[5] === 2 ? '' : c[5] === 4 ? `${q === 'low' ? s.ims.replace('/tcgpocket/', '/tcgpocket/th/') : s.ims}${+c[0]}.jpg` : c[5] === 3 ? `${PK_LL}${s.id}/${s.id}_${c[0]}_EN${q === 'low' ? '_SM' : ''}.webp` : `${PK.img}${c[5] ? 'fr' : 'en'}/tcgp/${s.id}/${c[0]}/${q}.webp`;
 const pkPct = (a, b) => b ? Math.floor(a / b * 1000) / 10 : 0;
 const pkCnt = (s, cs = s.cards) => cs.reduce((a, c) => a + PKO.has(c.k), 0);
 const pkBar = (a, b) => `<div class="pkbar" role="progressbar" aria-valuemin="0" aria-valuemax="${b}" aria-valuenow="${a}"><i style="width:${pkPct(a, b)}%"></i></div>`;
@@ -2745,21 +2745,22 @@ function pkCardHTML(s, c, withSet) {
     `<div class="pkln"><span class="pkid">${withSet ? esc(s.id) + ' ' : ''}${esc(c[0])}</span><span class="pkr r${c[2]}">${PK_SYM[c[2]]}</span><button type="button" class="pktk" data-pkt="${c.k}" aria-label="Ajouter 1 exemplaire (${pkLangName()}) : ${esc(c[1])}">＋</button></div></div>`;
 }
 // v51: sets grouped by block (« Série A », « Série B »… as on Poképédia), newest block first, sets newest first, promo set last
-const pkBlk = x => /^P-/.test(x.id) ? x.id.slice(2, 3) : x.id[0];
+const pkBlk = x => x.blk || (/^P-/.test(x.id) ? x.id.slice(2, 3) : x.id[0]); // v60.3: special packs (SP1) carry blk 'SP' (own group)
 let PK_FOLD = new Set(store.get('pkfold', []) || []);
 function pkSetRow(x) { const n = pkCnt(x); return `<li><button type="button" class="pkset${n === x.cards.length ? ' done' : ''}" data-pks="${x.id}"><span class="pksn"><b>${esc(x.n)}</b><small>${esc(x.id)}${x.d ? ' · ' + new Date(x.d + 'T12:00:00').toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' }) : ''}</small></span><span class="pksc">${n} / ${x.cards.length}</span>${pkBar(n, x.cards.length)}</button></li>`; }
 function pkBlocks() {
-  const bl = [...new Set(PK.s.map(pkBlk))].sort().reverse();
+  const bk = b => b === 'SP' ? 'B~' : b; // v60.3: « Boosters spéciaux » right after the newest series, as in the game
+  const bl = [...new Set(PK.s.map(pkBlk))].sort((x, y) => bk(y).localeCompare(bk(x)));
   return bl.map(b => { const ss = PK.s.filter(x => pkBlk(x) === b).sort((x, y) => (/^P-/.test(x.id) - /^P-/.test(y.id)) || (y.d || '').localeCompare(x.d || '') || y.id.localeCompare(x.id));
     const t = ss.reduce((a, x) => a + pkUniq(x).length, 0), n = ss.reduce((a, x) => a + pkCnt(x, pkUniq(x)), 0);
-    return `<details class="pkblk" data-blk="${b}"${PK_FOLD.has(b) ? '' : ' open'}><summary><span class="pkbn"><b>Série ${b}</b><small>${ss.length} extensions</small></span><span class="pksc">${n} / ${t}</span>${pkBar(n, t)}</summary><ul class="plain pksets">${ss.map(pkSetRow).join('')}</ul></details>`; }).join('');
+    return `<details class="pkblk" data-blk="${b}"${PK_FOLD.has(b) ? '' : ' open'}><summary><span class="pkbn"><b>${b === 'SP' ? 'Boosters spéciaux' : 'Série ' + b}</b><small>${ss.length} extension${ss.length > 1 ? 's' : ''}</small></span><span class="pksc">${n} / ${t}</span>${pkBar(n, t)}</summary><ul class="plain pksets">${ss.map(pkSetRow).join('')}</ul></details>`; }).join('');
 }
 function pkRender() {
   const box = $('#pocket'); if (!box) return;
   box.hidden = !pkMode; if (!pkMode) return;
   if (!PK) { box.innerHTML = '<p class="note">Chargement des cartes…</p>'; pkLoad().then(pkRender).catch(() => { box.innerHTML = '<p class="note">Impossible de charger les cartes Pocket (hors ligne ?).</p>'; }); return; }
   const all = PK.s.reduce((a, s) => a + pkUniq(s).length, 0), own = PK.s.reduce((a, s) => a + pkCnt(s, pkUniq(s)), 0);
-  const credit = `<p class="note pkcred">Données et images : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>, <a href="https://pocket.limitlesstcg.com" target="_blank" rel="noopener">Limitless TCG</a> et <a href="https://www.pokekalos.fr" target="_blank" rel="noopener">Pokékalos</a> (extensions récentes). Pokémon TCG Pocket © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA.</p>`;
+  const credit = `<p class="note pkcred">Données et images : <a href="https://tcgdex.dev" target="_blank" rel="noopener">TCGdex</a>, <a href="https://pocket.limitlesstcg.com" target="_blank" rel="noopener">Limitless TCG</a> et <a href="https://www.pokekalos.fr" target="_blank" rel="noopener">Pokékalos</a> (extensions récentes), <a href="https://www.serebii.net/tcgpocket/" target="_blank" rel="noopener">Serebii</a> (boosters spéciaux). Pokémon TCG Pocket © The Pokémon Company / Nintendo / Creatures / GAME FREAK / DeNA.</p>`;
   const s = pkSet && PK.s.find(x => x.id === pkSet);
   if (!s) {
     box.innerHTML = `<div class="pkhead"><h2>Cartodex Pocket</h2><p><b>${own}</b> / ${all} cartes · ${dec(pkPct(own, all))} %</p>${pkBar(own, all)}</div>` +

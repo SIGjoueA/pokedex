@@ -7,7 +7,7 @@ const ck = u => CD + '/' + u.replace(/[^A-Za-z0-9.-]+/g, '_').slice(-180);
 const API = 'https://api.tcgdex.net/v2/';
 const get = async (u, t = 4) => { if (CD && fs.existsSync(ck(u))) return JSON.parse(fs.readFileSync(ck(u))); const j = await get0(u, t); if (CD) fs.writeFileSync(ck(u), JSON.stringify(j)); return j; };
 const get0 = async (u, t) => { for (;;) { try { const r = await fetch(API + u); if (r.status === 404) return null; if (!r.ok) throw new Error(r.status); return await r.json(); } catch (e) { if (!--t) throw new Error(u + ' ' + e.message); await new Promise(r => setTimeout(r, 1500)); } } };
-const RAR = ['Un Diamant', 'Deux Diamants', 'Trois Diamants', 'Quatre Diamants', 'Une Étoile', 'Deux Étoiles', 'Trois Étoiles', 'Un chromatique', 'Deux chromatiques', 'Couronne', 'Sans Rareté'];
+const RAR = ['Un Diamant', 'Deux Diamants', 'Trois Diamants', 'Quatre Diamants', 'Une Étoile', 'Deux Étoiles', 'Trois Étoiles', 'Un chromatique', 'Deux chromatiques', 'Couronne', 'Sans Rareté', 'Spéciale (hors numérotation)'];
 const RMAP = { 'One Diamond': 0, 'Two Diamond': 1, 'Three Diamond': 2, 'Four Diamond': 3, 'One Star': 4, 'Two Star': 5, 'Three Star': 6, 'One Shiny': 7, 'Two Shiny': 8, 'Crown': 9, 'None': 10 };
 const pool = async (items, n, fn) => { const out = new Array(items.length); let i = 0; await Promise.all(Array.from({ length: n }, async () => { while (i < items.length) { const k = i++; out[k] = await fn(items[k], k); } })); return out; };
 const ser = await get('fr/series/tcgp'), serEn = await get('en/series/tcgp');
@@ -52,9 +52,9 @@ const lidx = await page('https://pocket.limitlesstcg.com/cards');
 const lsets = [...lidx.matchAll(/<a href="\/cards\/([^"]+)">\s*<span class="set-icon">.*?<\/span>\s*(.*?)\s*<span[^]*?<a href="\/cards\/\1">([^<]*)<\/a>[^]*?<a href="\/cards\/\1">(\d+)<\/a>/g)].map(m => ({ id: m[1], en: txt(m[2]), date: m[3], n: +m[4] }));
 const kidx = await page('https://www.pokekalos.fr/jeux/mobile/pocket/cartodex/extensions.html');
 const kslug = {}; for (const m of kidx.matchAll(/href="(\/jeux\/mobile\/pocket\/cartodex\/extensions\/[^"]+\.html)"[^>]*data-name="([^"]*)"[^>]*data-date="([^"]*)"[^>]*>[^]*?class="pkpi-code">([^<]+)</g)) kslug[txt(m[4]).replace(/^PROMO-/i, 'P-')] = { u: m[1], n: txt(m[2]), d: m[3] };
-for (const [c, u] of [['P-A', 'promo-a'], ['P-B', 'promo-b']]) kslug[c] ||= { u: `/jeux/mobile/pocket/cartodex/extensions/${u}.html`, n: c.replace('P-', 'Promo-') };
+for (const [c, u] of [['P-A', 'promo-a'], ['P-B', 'promo-b'], ['P-C', 'promo-c']]) kslug[c] ||= { u: `/jeux/mobile/pocket/cartodex/extensions/${u}.html`, n: c.replace('P-', 'Promo-') };
 console.log('Pokékalos sets', Object.keys(kslug).join(' '));
-const KNAME = { B2b: 'Méga-Rayonnement', B3: 'Aura Palpitante', B3a: 'Propulsion Paradoxe', B3b: 'Jours Heureux', B4: 'Domination Céleste', B4a: 'L’Ambition de la Team Rocket', B4b: 'Booster de Luxe Méga', A4b: 'Booster de Luxe ex', 'P-B': 'Promo-B' }; // Poképédia / Pokékalos, if the index layout changes
+const KNAME = { B2b: 'Méga-Rayonnement', B3: 'Aura Palpitante', B3a: 'Propulsion Paradoxe', B3b: 'Jours Heureux', B4: 'Domination Céleste', B4a: 'L’Ambition de la Team Rocket', B4b: 'Booster de Luxe Méga', A4b: 'Booster de Luxe ex', 'P-B': 'Promo-B', C1: 'Fusion Double', 'P-C': 'Promo-C', SP1: 'Premiers Partenaires' }; // Poképédia / Pokékalos, if the index layout changes
 const enFr = new Map(); for (const st of sets) for (const c of st.cards) if (c[4]) enFr.set(c[1], c[1]);
 let added = 0;
 for (const L of lsets) {

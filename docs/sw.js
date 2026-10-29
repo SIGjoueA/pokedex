@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.2';
+const VERSION = 'v60.3';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Nouveaux boss dans les classements : Méga-Lugulabre, Boréas obscur (raids) et Regidrago (Combats Max).';
-const DATA_VERSION = 'd37'; // bump when the schema of data/*.json changes
+const NOTES = 'Pokémon TCG Pocket : nouvelle Série C avec l’extension Fusion Double, les cartes Promo-C et le booster spécial Premiers Partenaires.';
+const DATA_VERSION = 'd38'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

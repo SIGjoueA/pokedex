@@ -1,4 +1,4 @@
-// v56: sources of the promo cards (P-A, P-B) without a known « Booster promo » volume, from Limitless TCG Pocket card pages
+// v56: sources of the promo cards (P-A, P-B, P-C) without a known « Booster promo » volume, from Limitless TCG Pocket card pages
 // (« Promo-B #1 · Premium Missions »). Run after fetch-pocket.mjs. Pages cached in build/cache/ll-promo/ (1 request / s).
 import fs from 'fs';
 const F = new URL('../docs/data/pocket.json', import.meta.url), CD = new URL('./cache/ll-promo/', import.meta.url).pathname;
