@@ -1,4 +1,45 @@
 {
   "_doc": "Calendrier Combats Max saisi à la main (la source ScrapedDuck ne donne pas la rotation Dynamax 5★ / Gigamax 6★). Fusionné par build/fetch-boss-schedule.mjs dans docs/data/boss-schedule.json. Entrée : {\"name\": nom FR ou EN (ex. « Dracaufeu », « Gigantamax Charizard »), \"kind\": \"max\", \"tier\": \"5\" ou \"6\" (6 = Gigamax), \"start\": \"2026-11-02T06:00\", \"end\": \"2026-11-08T21:00\" (heure de Paris, sans Z), \"label\": facultatif}. Non reconnu ou absent de nos classements → liste nm.",
-  "entries": []
+  "entries": [
+    {
+      "name": "Registeel",
+      "kind": "max",
+      "tier": "5",
+      "start": "2026-11-11T18:00",
+      "end": "2026-11-11T19:00",
+      "label": "Âme sauvage – heure du boss"
+    },
+    {
+      "name": "Regidrago",
+      "kind": "max",
+      "tier": "5",
+      "start": "2026-11-12T18:00",
+      "end": "2026-11-12T19:00",
+      "label": "Âme sauvage – heure du boss"
+    },
+    {
+      "name": "Latias",
+      "kind": "max",
+      "tier": "5",
+      "start": "2026-11-13T18:00",
+      "end": "2026-11-13T19:00",
+      "label": "Âme sauvage – heure du boss"
+    },
+    {
+      "name": "Latios",
+      "kind": "max",
+      "tier": "5",
+      "start": "2026-11-13T18:00",
+      "end": "2026-11-13T19:00",
+      "label": "Âme sauvage – heure du boss"
+    },
+    {
+      "name": "Duralugon",
+      "kind": "max",
+      "tier": "6",
+      "start": "2026-11-14T10:00",
+      "end": "2026-11-15T18:00",
+      "label": "Zone Sauvage GO : Global (10h–18h)"
+    }
+  ]
 }

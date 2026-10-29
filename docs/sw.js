@@ -2,7 +2,7 @@
 const VERSION = 'v60.1';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
 const NOTES = 'Boss en cours et à venir mis en avant dans la vue par boss des classements raid et Combats Max.';
-const DATA_VERSION = 'd35'; // bump when the schema of data/*.json changes
+const DATA_VERSION = 'd36'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
