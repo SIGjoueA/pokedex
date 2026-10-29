@@ -1623,6 +1623,23 @@ function evoHTML(p, f, mode, gm) {
 
 /* Pokémon GO */
 const frDate = s => s.split('-').reverse().join('/');
+// v60: « PC à la capture » — PC d'un boss de raid attrapé (niv. 20, ou 25 avec météo boostée), IV 10–15 chacun
+let RAIDB = new Set(), RAIDSH = new Set(); // v60: data/raid-bosses.json (build/raid-bosses-export.py)
+let RBP = null; const loadRB = () => RBP || (RBP = getJSON('data/raid-bosses.json').then(j => { RAIDB = new Set(j.b); RAIDSH = new Set(j.sh); }).catch(() => { RBP = null; }));
+const raidBase = k => k.replace(/-(mega|primal)(-[xy])?$/, '');
+const pcCap = (d, cpm) => { let mn = 1e9, mx = 0, t37 = 1e9, t41 = 1e9;
+  for (let a = 10; a <= 15; a++) for (let e = 10; e <= 15; e++) for (let s = 10; s <= 15; s++) {
+    const c = Math.max(10, Math.floor((d.a + a) * Math.sqrt(d.d + e) * Math.sqrt(d.s + s) * cpm * cpm / 10)), n = a + e + s;
+    if (c < mn) mn = c; if (c > mx) mx = c; if (n >= 37 && c < t37) t37 = c; if (n >= 41 && c < t41) t41 = c; }
+  return { mn, mx, t37, t41 }; };
+function pcBoxHTML(k, d, ctx) { // ctx : undefined = fiche ; { sh: 0/1, mega: 0/1 } = vue d'un boss
+  if (!d || d.a == null) return '';
+  const r20 = pcCap(d, 0.5974), r25 = pcCap(d, 0.667934), col = (r, L) => `<div class="pcc"><h3>${L}</h3><p class="pcr"><b>${fmt(r.mn)}–${fmt(r.mx)}</b> PC</p><ul><li>Possible 3★ (≥ 37/45, 82 %) à partir de <b>${fmt(r.t37)}</b> PC</li><li>90 % ou plus (≥ 41/45) à partir de <b>${fmt(r.t41)}</b> PC</li><li>100 % (15/15/15) : <b>${fmt(r.mx)}</b> PC</li></ul></div>`;
+  return `<section class="box pcbox"><h2>PC à la capture <small class="cnt">raid</small></h2><div class="pcg">${col(r20, 'Niveau 20 (normal)')}${col(r25, 'Niveau 25 (météo boostée)')}</div><p class="note">IV de 10 à 15 dans chaque stat pour une capture de raid. Les seuils sont les PC minimum à partir desquels le pourcentage devient <i>possible</i> : ce n’est pas une garantie (un PC plus haut peut encore cacher moins d’IV).${ctx ? (ctx.sh ? ' Boss obscur : le Pokémon attrapé est obscur, avec les mêmes PC (le bonus d’attaque obscur n’apparaît pas dans les PC).' : '') : RAIDSH.has(k) ? ' Aussi en raid obscur : le Pokémon attrapé est alors obscur, avec les mêmes PC (le bonus d’attaque obscur n’apparaît pas dans les PC).' : ''}${!ctx || ctx.mega ? ' Une Méga ou une Primo s’attrape sous sa forme de base : PC de la forme de base.' : ''}</p></section>`;
+}
+new MutationObserver(() => { if (document.querySelector('.pcslot[data-pck]')) fillPcBoxes(); }).observe(document.documentElement, { childList: true, subtree: true });
+function fillPcBoxes() { document.querySelectorAll('.pcslot[data-pck]').forEach(el => { const k = el.dataset.pck, p = BY_KEY[k]; el.removeAttribute('data-pck'); if (!p) return;
+  loadRB().then(() => el.dataset.pf && !RAIDB.has(k) ? null : loadSp(p.id)).then(sp => { if (!sp) return; const f = sp.f && sp.f[k]; if (f && f.go) el.innerHTML = pcBoxHTML(k, f.go, el.dataset.pf ? undefined : { sh: el.dataset.psh === '1', mega: el.dataset.pmg === '1' }); }).catch(() => {}); }); }
 // v32: GO extras — max CP at level 40 (CPM 0.7903), PvP rankings (PvPoke), evolution candy of this form
 const goCp = (d, L) => { const cpm = { 40: 0.7903, 50: 0.8403, 51: 0.8453 }[L]; return Math.max(10, Math.floor((d.a + 15) * Math.sqrt(d.d + 15) * Math.sqrt(d.s + 15) * cpm * cpm / 10)); };
 function pvpHTML(p, go) {
@@ -1699,7 +1716,7 @@ function goHTML(p, f, sp, shared, go) {
     <section class="box gostats"><h2>Statistiques GO <small class="cnt">${esc(p.c ? p.n : '')}</small></h2>
       <div class="kv kv3"><div><b>${d.a}</b><span>Attaque</span></div><div><b>${d.d}</b><span>Défense</span></div><div><b>${d.s}</b><span>Endurance</span></div></div>
       <div class="kv kv3 cpmax"><div><b>${fmt(goCp(d, 40))}</b><span>PC max niv. 40</span></div><div><b>${fmt(d.m50)}</b><span>PC max niv. 50</span></div><div><b>${fmt(d.m51)}</b><span>niv. 51 (meilleur compagnon)</span></div></div>
-      <p class="note">PC max avec IV 15/15/15 = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Niveau 40 : maximum avant les Bonbons L.</p></section>`,
+      <p class="note">PC max avec IV 15/15/15 = formule officielle avec le multiplicateur de PC du niveau (vérifiée : Mewtwo 4 724 au niv. 50). Niveau 40 : maximum avant les Bonbons L.</p></section><div class="pcslot" data-pck="${esc(p.k)}" data-pf="1"></div>`,
     pvp: d.nost ? '' : pvpHTML(p, go),
     eff: effB,
     candy: goCandyHTML(p),
@@ -2081,7 +2098,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2827,8 +2844,8 @@ function pkInit() {
 
 /* ---------------- v59: « Classements » (PvP PvPoke, raids, Combats Max) ---------------- */
 let RANKD = null;
-const RK = Object.assign({ s: 'pvp', lg: 'g', sh: 1, rv: 'g', boss: '', ty: 'dragon', ro: 'A', mv: 'g', mb: '', q: '' }, store.get('rank', {}));
-async function loadRank() { if (!RANKD) RANKD = Promise.all([loadGo(), getJSON('data/rank-pvp.json'), getJSON('data/rank-raid.json'), getJSON('data/rank-max.json').catch(() => null)]).then(([go, pv, rd, mx]) => ({ go, pv, rd, mx })).catch(e => { RANKD = null; throw e; }); return RANKD; }
+const RK = Object.assign({ s: 'pvp', lg: 'g', sh: 1, rv: 'g', boss: '', ty: 'dragon', ro: 'A', mv: 'g', mb: '', q: '', rl: 'giovanni', rr: 'g', rop: '' }, store.get('rank', {}));
+async function loadRank() { if (!RANKD) RANKD = Promise.all([loadGo(), getJSON('data/rank-pvp.json'), getJSON('data/rank-raid.json'), getJSON('data/rank-max.json').catch(() => null), getJSON('data/rank-rocket.json').catch(() => null)]).then(([go, pv, rd, mx, rk]) => ({ go, pv, rd, mx, rk })).catch(e => { RANKD = null; throw e; }); return RANKD; }
 const rkSeg = (k, opts) => `<div class="seg rkseg" role="group">${opts.map(([v, l]) => `<button type="button" data-rk="${k}" data-v="${v}" aria-pressed="${RK[k] === v}">${l}</button>`).join('')}</div>`;
 function rkRow(i, k, sh, sub, right, tag) {
   const p = BY_KEY[k]; const nm = p ? fullN(p) : k;
@@ -2838,11 +2855,11 @@ async function renderRank() {
   const rv = $('#rank-view'); store.set('rank', { ...RK, q: '' });
   const head = `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><h1 class="rkh">Classements</h1><span class="sp"></span></div></div>`;
   let D; try { D = await loadRank(); } catch { rv.innerHTML = head + '<div class="rkwrap"><p class="note">Classements indisponibles hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p></div>'; return; }
-  const { go, pv, rd, mx } = D, M = go.moves; let EL = [];
+  const { go, pv, rd, mx, rk } = D, M = go.moves; let EL = [];
   const mn = k => k ? esc(M[k] ? M[k][0] : k) + (EL.includes(k) ? ' †' : '') : '', ms = (f, c, c2) => [mn(f), [mn(c), mn(c2)].filter(Boolean).join(', ')].filter(Boolean).join(' + ');
   const msE = (E, k, f, c, c2) => { EL = (E && E[k]) || []; const r = ms(f, c, c2); EL = []; return r; }; // « † » = attaque exclusive, comme sur la fiche
   const ELN = '<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p>';
-  let body = rkSeg('s', [['pvp', 'PvP'], ['raid', 'Raids'], ['max', 'Combats Max']]);
+  let body = rkSeg('s', [['pvp', 'PvP'], ['raid', 'Raids'], ['max', 'Combats Max'], ['rocket', 'Team GO Rocket']]);
   if (RK.s === 'pvp') {
     const L = pv.L; if (!L[RK.lg]) RK.lg = 'g'; const cur = L[RK.lg];
     body += `<div class="rkctl"><select id="rklg" aria-label="Ligue">${Object.entries(L).map(([k, v]) => `<option value="${k}"${k === RK.lg ? ' selected' : ''}>${esc(v.t)} — ${v.cp >= 10000 ? 'sans limite' : '≤ ' + v.cp.toLocaleString('fr-FR') + ' PC'}</option>`).join('')}</select>${rkSeg('sh', [[1, 'Avec Obscurs'], [0, 'Sans Obscurs']])}</div>`;
@@ -2858,8 +2875,25 @@ async function renderRank() {
       body += `<div class="rkctl"><select id="rkty" aria-label="Type du boss">${T.map(t => `<option value="${t}"${t === RK.ty ? ' selected' : ''}>${esc(TYPE_FR[t])} (${P.t[t][0]} boss)</option>`).join('')}</select></div><ol class="rklist">${L.map((r, i) => cntRow(r, i, nb)).join('')}</ol><p class="note">Boss de type ${esc(TYPE_FR[RK.ty])} (y compris double type) : même règle que le classement global, sur ces ${nb} boss seulement.</p>`; }
     else { const Bi = rd.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr')); let j = rd.B.findIndex(b => b[0] + '|' + b[2] === RK.boss); if (j < 0) j = Bi[0][0]; const b = rd.B[j];
       body += `<div class="rkctl rkboss"><input id="rkq" type="search" placeholder="Chercher un boss…" value="${esc(RK.q)}" autocomplete="off"><select id="rkb" aria-label="Boss">${Bi.filter(([, x]) => !RK.q || x[1].toLowerCase().includes(RK.q.toLowerCase())).map(([i, x]) => `<option value="${esc(x[0] + '|' + x[2])}"${i === j ? ' selected' : ''}>${esc(x[1])} (${esc(x[2])})</option>`).join('')}</select></div>
-        <p class="rkbt">${esc(b[1])} · ${esc(b[2])} · ${b[3].map(badge).join('')}</p><ol class="rklist">${P.b[j].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs attaquants contre ce boss, chacun avec son meilleur moveset. % = dégâts par seconde pondérés par la survie, comparés au n° 1.</p>`; }
+        <p class="rkbt">${esc(b[1])} · ${esc(b[2])} · ${b[3].map(badge).join('')}</p><div class="pcslot" data-pck="${esc(raidBase(b[0]))}" data-psh="${/obscur/.test(b[2]) ? 1 : 0}" data-pmg="${raidBase(b[0]) !== b[0] ? 1 : 0}"></div><ol class="rklist">${P.b[j].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs attaquants contre ce boss, chacun avec son meilleur moveset. % = dégâts par seconde pondérés par la survie, comparés au n° 1.</p>`; }
     body += ELN + `<p class="note">${esc(rd.src)}, ${new Date(rd.date).toLocaleDateString('fr-FR')}.</p>`;
+  } else if (RK.s === 'rocket') {
+    if (!rk) body += '<p class="note">Classement Team GO Rocket indisponible hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p>';
+    else { const F = rk.F, mvk = i => rk.mv[i]; const L = rk.L.find(x => x.id === RK.rl) || rk.L[0]; RK.rl = L.id;
+      const ops = L.S.flat(), sp = o => { const p = BY_KEY[o[0]]; return p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="40" height="40">` : ''; };
+      body += `<div class="rkctl">${rkSeg('rl', rk.L.map(x => [x.id, x.n]))}${rkSeg('rr', [['g', 'Équipe complète'], ['o', 'Par adversaire']])}</div>`;
+      body += `<div class="rklu">${L.S.map((sl, i) => `<div class="rkslot"><span class="rkslh">${i + 1}<small>${sl.length > 1 ? '1 parmi ' + sl.length : 'fixe'}</small></span>${sl.map(o => `<button type="button" class="rkop${RK.rr === 'o' && RK.rop === o[0] ? ' on' : ''}" data-rop="${esc(o[0])}">${sp(o)}<small>${esc(o[1])}${o[0] === L.catch ? ' ✦' : ''}</small></button>`).join('')}</div>`).join('')}</div>
+        <p class="note">${L.role === 'Boss' ? 'Boss' : 'Leader'} de la Team GO Rocket · ✦ Pokémon Obscur à capturer après la victoire${L.catchNote ? ' (' + esc(L.catchNote) + ')' : ''}. Touchez un adversaire pour voir ses meilleurs contres.</p>`;
+      const cc = v => v >= 2 ? 'g' : v >= 1 ? 'o' : 'n l', pf = x => String(Math.abs(x)).replace('.', ',');
+      const chip = (o, [x, v]) => `<span class="rkc ${cc(v)}" title="${esc(o[1])} : ${v >= 2 ? 'gagne largement' : v >= 1 ? 'gagne de justesse' : 'perd'} (${pf(x)} % du meilleur contre)">${sp(o).replace(/40/g, '24')}<i>${v < 1 ? '✗' : Math.round(Math.abs(x))}</i></span>`;
+      const covH = c => { let j = 0; return `<span class="rkcov">${L.S.map(sl => `<span class="rkcs">${sl.map(o => chip(o, c[j++])).join('')}</span>`).join('')}</span>`; };
+      const withCov = (h, cov) => h.replace('</small></span><span class="rkv">', `</small>${cov}</span><span class="rkv">`);
+      const teamH = (T, t, extra) => `<h3 class="rkh">${t}</h3><ol class="rklist">${T.map((r, i) => { const w = Math.min(...r[4].map(x => x[1])); return withCov(rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rk.E, F[r[0]][0], mvk(r[1]), mvk(r[2]), r[3] >= 0 ? mvk(r[3]) : undefined) + ` · pour l’emplacement ${i + 1}`, `<b>${w >= 1 ? '✓' : '✗'}</b><small>${w >= 2 ? 'gagne largement' : w >= 1 ? 'gagne' : 'peut perdre'}</small>`), `<span class="rkcov"><span class="rkcs">${L.S[i].map((o, j) => chip(o, r[4][j])).join('')}</span></span>`); }).join('')}</ol>${extra}`;
+      if (RK.rr === 'g' && L.team) body += teamH(L.team, 'Équipe conseillée', '') + (L.team2 ? teamH(L.team2, 'Équipe conseillée sans légendaires', `<p class="note">Sans Pokémon légendaires, fabuleux, Ultra-Chimères ni Paradoxes.${L.team2.some(r => Math.min(...r[4].map(x => x[1])) < 1) ? ' ✗ : aucun Pokémon de cette catégorie ne gagne contre toutes les options de cet emplacement ; celui-ci limite les dégâts face à la pire.' : ''}</p>`) : '') + `<p class="note">Un contre par emplacement : pour chacun, le Pokémon qui s’en sort le mieux face au PIRE des adversaires possibles à cet emplacement (pas de moyenne), sans prendre deux fois la même espèce. Le n° 1 vise le Pokémon fixe de l’emplacement 1. Vous ne savez pas à l’avance qui sortira aux emplacements 2 et 3 : ce choix limite le risque.</p><h3 class="rkh">Tous les contres</h3>`;
+      if (RK.rr === 'g') body += `<ol class="rklist">${L.g.map((r, i) => withCov(rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rk.E, F[r[0]][0], mvk(r[1]), mvk(r[2]), r[6] >= 0 ? mvk(r[6]) : undefined), `<b>${r[4]} / ${L.nOpp}</b><small>adversaires</small>`), r[7] ? covH(r[7]) : '')).join('')}</ol><p class="note">Sous chaque contre, son résultat face à chaque Pokémon possible de ${esc(L.n)}, emplacement par emplacement : en vert, vous gagnez largement (moins de la moitié de vos PV perdus) ; en orange, vous gagnez de justesse ; en gris avec ✗, vous perdez. Le nombre indique le % atteint par rapport au meilleur contre de cet adversaire. Classement sans moyenne : d’abord le nombre d’adversaires couverts (au moins 60 % du meilleur et duel gagné), puis le nombre d’adversaires où il est n° 1, puis son meilleur %.</p>`;
+      else { const o = ops.find(x => x[0] === RK.rop) || ops[0]; RK.rop = o[0];
+        body += `<p class="rkbt">${esc(o[1])} ${o[2].map(badge).join('')}</p><ol class="rklist">${o[3].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rk.E, F[r[0]][0], mvk(r[1]), mvk(r[2]), r[5] >= 0 ? mvk(r[5]) : undefined), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 10 meilleurs contres face à ${esc(o[1])} de ${esc(L.n)}, chacun avec son meilleur moveset. % : rapport entre les PV adverses retirés et les PV perdus, comparé au n° 1, dans le pire cas parmi les attaques possibles de l’adversaire.</p>`; }
+      body += `<p class="note">${esc(L.n)} a 2 boucliers pour tout le combat et les utilise sur vos premières attaques chargées, en général contre votre 1er Pokémon (lancez d’abord l’attaque la moins chère pour les faire tomber) et ses Pokémon ont des statistiques gonflées. Méga-Évolutions non utilisables. Vos contres : niveau 40, deux attaques chargées, un de vos 2 boucliers utilisé par duel ; on suppose ses boucliers épuisés après son 1er Pokémon (estimations calées sur Pokebattler). Pour les sbires, un Pokémon costaud qui frappe fort suffit en général.</p>${ELN}<p class="note">Équipes : ${esc(rk.src)}, valables jusqu’au ${new Date(rk.valid).toLocaleDateString('fr-FR')}. Calcul du ${new Date(rk.date).toLocaleDateString('fr-FR')}.</p>`; }
   } else {
     const R = { A: 'Attaquant', T: 'Tank', H: 'Soigneur' }, RD = { A: 'dégâts infligés', T: '0,6 × jauge Max remplie + 0,2 × tenue + 0,2 × dégâts absorbés par Gardomax', H: '0,7 × PV soignés + 0,3 × survie' };
     if (!mx) body += '<p class="note">Classement des Combats Max indisponible hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p>';
@@ -2875,6 +2909,7 @@ async function renderRank() {
 }
 document.addEventListener('click', e => {
   const b = e.target.closest('#rank-view [data-rk]'); if (b) { const k = b.dataset.rk, v = b.dataset.v; RK[k] = k === 'sh' ? +v : v; renderRank(); return; }
+  const op = e.target.closest('#rank-view [data-rop]'); if (op) { RK.rop = op.dataset.rop; RK.rr = 'o'; renderRank(); return; }
   if (e.target.closest('#rank-view a[data-go]')) { sheetPref = 'go'; fromRank = true; rankScroll = window.scrollY; }
 });
 document.addEventListener('change', e => { const t = e.target; if (!t.closest || !t.closest('#rank-view')) return; if (t.id === 'rklg') RK.lg = t.value; else if (t.id === 'rkty') RK.ty = t.value; else if (t.id === 'rkb') RK.boss = t.value; else if (t.id === 'rkmb') RK.mb = t.value; else return; renderRank(); });

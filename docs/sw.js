@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v59';
+const VERSION = 'v60';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Nouvel écran « 🏆 Classements » (menu ☰) : ligues PvP, raids et Combats Max, en vue globale et par boss.';
-const DATA_VERSION = 'd33'; // bump when the schema of data/*.json changes
+const NOTES = 'Nouvel onglet « Team GO Rocket » dans Classements et encadré « PC à la capture » pour les boss de raid.';
+const DATA_VERSION = 'd34'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -1,0 +1,12 @@
+{
+  "src": "Leek Duck « Team GO Rocket Lineups » (mis à jour le 2 oct. 2026, revérifié sur la page le 28 oct. 2026), recoupé avec RotomLabs, Pokémon GO Hub et PokeDaily",
+  "upd": "2026-10-02",
+  "valid": "2026-12-01",
+  "leaders": [
+    { "id": "giovanni", "n": "Giovanni", "role": "Boss", "rank": 1.15, "catch": "644", "catchNote": "Super Radar Rocket : uniquement via le GO Pass Fête des Récoltes (récompenses jusqu’au 7 oct. 2026)",
+      "slots": [["53"], ["115", "464", "68"], ["644"]] },
+    { "id": "cliff", "n": "Cliff", "role": "Leader", "rank": 1.05, "catch": "104", "slots": [["104"], ["143", "623", "110-galar"], ["248", "323", "475"]] },
+    { "id": "arlo", "n": "Arlo", "role": "Leader", "rank": 1.05, "catch": "88-alola", "slots": [["88-alola"], ["208", "623", "80"], ["65", "6", "212"]] },
+    { "id": "sierra", "n": "Sierra", "role": "Leader", "rank": 1.05, "catch": "674", "slots": [["674"], ["9", "330", "598"], ["350", "229", "208"]] }
+  ]
+}

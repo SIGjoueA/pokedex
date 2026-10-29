@@ -65,3 +65,6 @@ x={k:{ro:[v[ro]['f'],v[ro]['c'],cnt[(k,ro)]] for ro in 'ATH'} for k,v in X['form
 wr('raid-moves.json',{'date':'2026-10-28','v':2,'nb':164,'r':r,'mx':x,'mxb':len(X['boss'])})
 log.append('raid %d formes, max %d formes'%(len(r),len(x)))
 print('\n'.join(log))
+# v60 : liste des boss de raid pour l'encadré « PC à la capture »
+import subprocess, sys
+subprocess.run([sys.executable, 'build/raid-bosses-export.py'], check=True)
