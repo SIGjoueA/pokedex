@@ -2098,7 +2098,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2845,7 +2845,34 @@ function pkInit() {
 /* ---------------- v59: « Classements » (PvP PvPoke, raids, Combats Max) ---------------- */
 let RANKD = null;
 const RK = Object.assign({ s: 'pvp', lg: 'g', sh: 1, rv: 'g', boss: '', ty: 'dragon', ro: 'A', mv: 'g', mb: '', q: '', rl: 'giovanni', rr: 'g', rop: '' }, store.get('rank', {}));
-async function loadRank() { if (!RANKD) RANKD = Promise.all([loadGo(), getJSON('data/rank-pvp.json'), getJSON('data/rank-raid.json'), getJSON('data/rank-max.json').catch(() => null), getJSON('data/rank-rocket.json').catch(() => null)]).then(([go, pv, rd, mx, rk]) => ({ go, pv, rd, mx, rk })).catch(e => { RANKD = null; throw e; }); return RANKD; }
+// v61: boss du moment / de la semaine en tête des listes de boss (data/boss-schedule.json, build/fetch-boss-schedule.mjs)
+const JF = ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'], MF = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+const pdt = t => new Date(t); // heure locale (pas de Z) ou UTC (Z)
+const jd = d => `${JF[d.getDay()]} ${d.getDate() === 1 ? '1er' : d.getDate()} ${MF[d.getMonth()]}`;
+const hh = d => `${d.getHours()} h${d.getMinutes() ? String(d.getMinutes()).padStart(2, '0') : ''}`;
+function bossStatus(sc, kind, match) { // → null | { now: 1|0, txt }
+  if (!sc || !sc.S) return null; const now = Date.now(), wk = now + 7 * 864e5; let best = null;
+  for (const x of sc.S) { if (x.kind !== kind || !match(x)) continue; const a = pdt(x.s), b = pdt(x.e);
+    const short = b - a <= 12 * 36e5, when = short ? `${jd(a)} ${hh(a)}–${hh(b)}` : '';
+    if (a <= now && now < b) { const r = { now: 1, t: a, txt: short ? `${x.l} jusqu’à ${hh(b)}` : `${x.l} jusqu’au ${jd(b)}` }; if (!best || !best.now || (best.short && !short)) best = { ...r, short }; }
+    else if (a > now && a <= wk && (!best || (!best.now && a < best.t))) best = { now: 0, t: a, short, txt: short ? `${x.l} ${when}` : `${x.l} dès ${jd(a)}` }; }
+  return best;
+}
+function bossOpts(list, kind, sc, match, val, lab, selV) { // list = [[j, b]] déjà trié ; optgroups « En ce moment » / « Cette semaine »
+  const st = list.map(([i, x]) => [i, x, bossStatus(sc, kind, y => match(y, x))]);
+  const o = ([i, x, z]) => `<option value="${esc(val(x))}"${val(x) === selV ? ' selected' : ''}>${esc(lab(x))}${z ? ' · ' + esc(z.txt) : ''}</option>`;
+  const A = st.filter(r => r[2] && r[2].now), U = st.filter(r => r[2] && !r[2].now).sort((p, q) => p[2].t - q[2].t), rest = st.filter(r => !r[2]);
+  if (!A.length && !U.length) return st.map(o).join('');
+  return (A.length ? `<optgroup label="🔴 En ce moment">${A.map(o).join('')}</optgroup>` : '') + (U.length ? `<optgroup label="📅 Cette semaine / à venir">${U.map(o).join('')}</optgroup>` : '') + `<optgroup label="Tous les boss">${rest.map(o).join('')}</optgroup>`;
+}
+function schedNote(sc, kind) { // v61: boss du moment / de la semaine absents de nos classements (signalés, pas masqués)
+  if (!sc || !sc.nm) return ''; const now = Date.now(), wk = now + 7 * 864e5;
+  const L = sc.nm.filter(x => x.kind === kind && x.s && pdt(x.e) > now && pdt(x.s) <= wk).map(x => { const p = x.k && BY_KEY[x.k], a = pdt(x.s), b = pdt(x.e), short = b - a <= 12 * 36e5;
+    const n = p ? (p.fn || p.n) + (x.sh ? ' obscur' : '') : x.n; return `${esc(n)} (${esc(x.l)}, ${a <= now ? (short ? 'jusqu’à ' + hh(b) : 'jusqu’au ' + jd(b)) : short ? jd(a) + ' ' + hh(a) + '–' + hh(b) : 'dès ' + jd(a)})`; });
+  return L.length ? `<p class="note rksch">Aussi en ce moment ou cette semaine, mais hors de nos classements : ${L.join(' · ')}.</p>` : '';
+}
+const raidMatch = (y, x) => y.k === x[0] && !!y.sh === /obscur/.test(x[2]), maxMatch = (y, x) => y.k === x[0];
+async function loadRank() { if (!RANKD) RANKD = Promise.all([loadGo(), getJSON('data/rank-pvp.json'), getJSON('data/rank-raid.json'), getJSON('data/rank-max.json').catch(() => null), getJSON('data/rank-rocket.json').catch(() => null), getJSON('data/boss-schedule.json').catch(() => null)]).then(([go, pv, rd, mx, rk, sc]) => ({ go, pv, rd, mx, rk, sc })).catch(e => { RANKD = null; throw e; }); return RANKD; }
 const rkSeg = (k, opts) => `<div class="seg rkseg" role="group">${opts.map(([v, l]) => `<button type="button" data-rk="${k}" data-v="${v}" aria-pressed="${RK[k] === v}">${l}</button>`).join('')}</div>`;
 function rkRow(i, k, sh, sub, right, tag) {
   const p = BY_KEY[k]; const nm = p ? fullN(p) : k;
@@ -2855,7 +2882,7 @@ async function renderRank() {
   const rv = $('#rank-view'); store.set('rank', { ...RK, q: '' });
   const head = `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><h1 class="rkh">Classements</h1><span class="sp"></span></div></div>`;
   let D; try { D = await loadRank(); } catch { rv.innerHTML = head + '<div class="rkwrap"><p class="note">Classements indisponibles hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p></div>'; return; }
-  const { go, pv, rd, mx, rk } = D, M = go.moves; let EL = [];
+  const { go, pv, rd, mx, rk, sc } = D, M = go.moves; let EL = [];
   const mn = k => k ? esc(M[k] ? M[k][0] : k) + (EL.includes(k) ? ' †' : '') : '', ms = (f, c, c2) => [mn(f), [mn(c), mn(c2)].filter(Boolean).join(', ')].filter(Boolean).join(' + ');
   const msE = (E, k, f, c, c2) => { EL = (E && E[k]) || []; const r = ms(f, c, c2); EL = []; return r; }; // « † » = attaque exclusive, comme sur la fiche
   const ELN = '<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p>';
@@ -2873,8 +2900,8 @@ async function renderRank() {
     if (RK.rv === 'g') body += `<ol class="rklist">${P.g.map((r, i) => cntRow(r, i, rd.nb)).join('')}</ol><p class="note">Classement contre les ${rd.nb} boss de raid testés, sans moyenne : d’abord le nombre de boss où ce Pokémon est n° 1, puis le nombre de boss où il est utile (au moins 60 % du meilleur), puis son meilleur % contre un boss.</p>`;
     else if (RK.rv === 't') { const T = Object.keys(P.t).sort((a, b) => TYPE_FR[a].localeCompare(TYPE_FR[b], 'fr')); if (!P.t[RK.ty]) RK.ty = T[0]; const [nb, L] = P.t[RK.ty];
       body += `<div class="rkctl"><select id="rkty" aria-label="Type du boss">${T.map(t => `<option value="${t}"${t === RK.ty ? ' selected' : ''}>${esc(TYPE_FR[t])} (${P.t[t][0]} boss)</option>`).join('')}</select></div><ol class="rklist">${L.map((r, i) => cntRow(r, i, nb)).join('')}</ol><p class="note">Boss de type ${esc(TYPE_FR[RK.ty])} (y compris double type) : même règle que le classement global, sur ces ${nb} boss seulement.</p>`; }
-    else { const Bi = rd.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr')); let j = rd.B.findIndex(b => b[0] + '|' + b[2] === RK.boss); if (j < 0) j = Bi[0][0]; const b = rd.B[j];
-      body += `<div class="rkctl rkboss"><input id="rkq" type="search" placeholder="Chercher un boss…" value="${esc(RK.q)}" autocomplete="off"><select id="rkb" aria-label="Boss">${Bi.filter(([, x]) => !RK.q || x[1].toLowerCase().includes(RK.q.toLowerCase())).map(([i, x]) => `<option value="${esc(x[0] + '|' + x[2])}"${i === j ? ' selected' : ''}>${esc(x[1])} (${esc(x[2])})</option>`).join('')}</select></div>
+    else { const Bi = rd.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr')); let j = rd.B.findIndex(b => b[0] + '|' + b[2] === RK.boss); if (j < 0) { const c = Bi.find(([, x]) => bossStatus(sc, 'raid', y => raidMatch(y, x))?.now); j = (c || Bi[0])[0]; } const b = rd.B[j];
+      body += `<div class="rkctl rkboss"><input id="rkq" type="search" placeholder="Chercher un boss…" value="${esc(RK.q)}" autocomplete="off"><select id="rkb" aria-label="Boss">${bossOpts(Bi.filter(([, x]) => !RK.q || x[1].toLowerCase().includes(RK.q.toLowerCase())), 'raid', sc, raidMatch, x => x[0] + '|' + x[2], x => `${x[1]} (${x[2]})`, b[0] + '|' + b[2])}</select></div>${schedNote(sc, 'raid')}
         <p class="rkbt">${esc(b[1])} · ${esc(b[2])} · ${b[3].map(badge).join('')}</p><div class="pcslot" data-pck="${esc(raidBase(b[0]))}" data-psh="${/obscur/.test(b[2]) ? 1 : 0}" data-pmg="${raidBase(b[0]) !== b[0] ? 1 : 0}"></div><ol class="rklist">${P.b[j].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs attaquants contre ce boss, chacun avec son meilleur moveset. % = dégâts par seconde pondérés par la survie, comparés au n° 1.</p>`; }
     body += ELN + `<p class="note">${esc(rd.src)}, ${new Date(rd.date).toLocaleDateString('fr-FR')}.</p>`;
   } else if (RK.s === 'rocket') {
@@ -2900,8 +2927,8 @@ async function renderRank() {
     else { const F = mx.F, mvk = i => mx.mv[i], X = mx.R[RK.ro];
       body += `<div class="rkctl">${rkSeg('mv', [['g', 'Global'], ['b', 'Par boss']])}${rkSeg('ro', Object.entries(R))}</div>`;
       if (RK.mv === 'g') body += `<ol class="rklist">${X.g.map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${r[3]}</b><small>n° 1</small>`).replace('</small></span><span class="rkv">', ` · utile contre ${r[4]} / ${mx.nb} boss · meilleur ${String(r[5]).replace('.', ',')} %</small></span><span class="rkv">`)).join('')}</ol><p class="note">${esc(R[RK.ro])} (${RD[RK.ro]}) : classement contre les ${mx.nb} boss Dynamax et Gigamax testés, sans moyenne : d’abord le nombre de boss où ce Pokémon est n° 1 dans ce rôle, puis le nombre de boss où il est utile (au moins 60 % du meilleur), puis son meilleur % contre un boss.</p>`;
-      else { const Bi = mx.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr') || x[1][2] - y[1][2]); let j = mx.B.findIndex(b => b[0] === RK.mb); if (j < 0) j = Bi[0][0]; const b = mx.B[j], tl = t => t >= 6 ? 'Gigamax 6★' : 'Dynamax ' + t + '★';
-        body += `<div class="rkctl rkboss"><select id="rkmb" aria-label="Boss">${Bi.map(([i, x]) => `<option value="${esc(x[0])}"${i === j ? ' selected' : ''}>${esc(x[1])} (${tl(x[2])})</option>`).join('')}</select></div>
+      else { const Bi = mx.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr') || x[1][2] - y[1][2]); let j = mx.B.findIndex(b => b[0] === RK.mb); if (j < 0) { const c = Bi.find(([, x]) => bossStatus(sc, 'max', y => maxMatch(y, x))?.now); j = (c || Bi[0])[0]; } const b = mx.B[j], tl = t => t >= 6 ? 'Gigamax 6★' : 'Dynamax ' + t + '★';
+        body += `<div class="rkctl rkboss"><select id="rkmb" aria-label="Boss">${bossOpts(Bi, 'max', sc, maxMatch, x => x[0], x => `${x[1]} (${tl(x[2])})`, b[0])}</select></div>${schedNote(sc, 'max')}
           <p class="rkbt">${esc(b[1])} · ${tl(b[2])} · ${b[3].map(badge).join('')}</p><ol class="rklist">${X.b[j].map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs ${{ A: 'attaquants', T: 'tanks', H: 'soigneurs' }[RK.ro]} contre ce boss, chacun avec son meilleur moveset pour ce rôle. % = score du rôle (${RD[RK.ro]}), comparé au n° 1.</p>`; }
       body += ELN + `<p class="note">${esc(mx.src)}, ${new Date(mx.date).toLocaleDateString('fr-FR')}.</p>`; }
   }
@@ -2913,4 +2940,4 @@ document.addEventListener('click', e => {
   if (e.target.closest('#rank-view a[data-go]')) { sheetPref = 'go'; fromRank = true; rankScroll = window.scrollY; }
 });
 document.addEventListener('change', e => { const t = e.target; if (!t.closest || !t.closest('#rank-view')) return; if (t.id === 'rklg') RK.lg = t.value; else if (t.id === 'rkty') RK.ty = t.value; else if (t.id === 'rkb') RK.boss = t.value; else if (t.id === 'rkmb') RK.mb = t.value; else return; renderRank(); });
-document.addEventListener('input', e => { if (e.target.id !== 'rkq') return; RK.q = e.target.value; const s = $('#rkb'), q = RK.q.toLowerCase(); if (!s) return; const D0 = RANKD; D0 && D0.then(({ rd }) => { const opts = rd.B.map(x => [x[0] + '|' + x[2], x]).filter(([, x]) => !q || x[1].toLowerCase().includes(q)).sort((a, b) => a[1][1].localeCompare(b[1][1], 'fr')); s.innerHTML = opts.map(([v, x]) => `<option value="${esc(v)}">${esc(x[1])} (${esc(x[2])})</option>`).join(''); if (opts[0]) { RK.boss = opts[0][0]; const k = RK.q; renderRank().then(() => { const i = $('#rkq'); if (i) { i.value = k; i.focus(); } }); } }); });
+document.addEventListener('input', e => { if (e.target.id !== 'rkq') return; RK.q = e.target.value; const s = $('#rkb'), q = RK.q.toLowerCase(); if (!s) return; const D0 = RANKD; D0 && D0.then(({ rd, sc }) => { const opts = rd.B.map(x => [x[0] + '|' + x[2], x]).filter(([, x]) => !q || x[1].toLowerCase().includes(q)).sort((a, b) => a[1][1].localeCompare(b[1][1], 'fr')); s.innerHTML = bossOpts(opts, 'raid', sc, raidMatch, x => x[0] + '|' + x[2], x => `${x[1]} (${x[2]})`, null); if (opts[0]) { RK.boss = opts[0][0]; const k = RK.q; renderRank().then(() => { const i = $('#rkq'); if (i) { i.value = k; i.focus(); } }); } }); });
