@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.3';
+const VERSION = 'v60.4';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Pokémon TCG Pocket : nouvelle Série C avec l’extension Fusion Double, les cartes Promo-C et le booster spécial Premiers Partenaires.';
-const DATA_VERSION = 'd38'; // bump when the schema of data/*.json changes
+const NOTES = 'Classements : équipes conseillées par boss en raid et en Combat Max, et équipe avec votre collection recalculée avec les attaques, le niveau et les IV saisis dans la fiche, y compris la Méga et son niveau.';
+const DATA_VERSION = 'd39'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
@@ -10,7 +10,7 @@ const IMGS = 'pokedex-img';
 // then revalidated in the background once (conditional request, usually a 304) and replaced only if it changed.
 const IMG_VERSION = 'i40';
 const CRIES = 'pokedex-cries'; // v29: cries (MP3), cached when first played
-const SHELL_FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest', 'notes.json',
+const SHELL_FILES = ['./', 'index.html', 'style.css', 'sim.js', 'app.js', 'manifest.webmanifest', 'notes.json',
   'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'img/alpha/baron.png', 'img/max/gigamax.webp', 'img/max/dynamax.webp'];
 
 // v30: a new version waits until the user taps « Mettre à jour » (in-app banner) — no forced activation.

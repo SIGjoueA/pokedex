@@ -688,3 +688,11 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .pcbox .pcr{margin:0 0 4px;font-size:1.05rem}
 .pcbox ul{margin:0;padding-left:16px;font-size:.82rem}
 .pcbox li{margin:2px 0}
+/* v60.4: combat dans Pokémon GO (fiche de collection) */
+.cfbat .cfseg{display:flex;width:100%}.cfbat .cfseg button{flex:1;min-width:0;color:var(--fg)}
+.cfbat .cf select{width:100%;box-sizing:border-box}
+.cfml{gap:8px}.cfml .cfs{flex:1;min-width:0}.cfml select{width:100%}
+.cfbat .note{display:block;margin-top:6px}
+.rkov sup{font-size:9px;margin-left:1px;opacity:.7}.rkv .rkov{white-space:nowrap}
+.cfseg.off button:disabled{opacity:.45}
+.cfmer{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;margin:.25rem 0}.cfmer .cfs select{margin-left:.4rem}.cfme.off .cfc{opacity:.45}

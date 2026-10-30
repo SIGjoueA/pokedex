@@ -2369,7 +2369,7 @@ function colImport(arr) {
   for (const e of arr) if (colValid(e)) {
     const x = { id: typeof e.id === 'string' && e.id ? e.id : colId(), k: e.k, g: e.g, n: typeof e.n === 'string' ? e.n.slice(0, 40) : '', sh: !!e.sh, sx: ['m', 'f', 'x'].includes(e.sx) ? e.sx : '', w: typeof e.w === 'string' ? e.w.slice(0, 60) : '', at: typeof e.at === 'string' ? e.at : new Date().toISOString() };
     if (typeof e.bn === 'boolean') x.bn = e.bn; if (typeof e.gx === 'boolean') x.gx = e.gx;
-    if (BALL_N[e.b]) x.b = e.b; if (typeof e.l === 'string' && e.l) x.l = e.l.slice(0, 80); if (colLvOk(e.lv, (e.w || e.g) === 'go')) x.lv = e.lv; if ((e.w || e.g) === 'go') { if (Number.isInteger(e.cp) && e.cp >= 10 && e.cp <= 99999) x.cp = e.cp; if (colIvOk(e.iv)) x.iv = e.iv.slice(); } if (typeof e.cd === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(e.cd)) x.cd = e.cd;
+    if (BALL_N[e.b]) x.b = e.b; if (typeof e.l === 'string' && e.l) x.l = e.l.slice(0, 80); if (colLvOk(e.lv, (e.w || e.g) === 'go')) x.lv = e.lv; if ((e.w || e.g) === 'go') { if (Number.isInteger(e.cp) && e.cp >= 10 && e.cp <= 99999) x.cp = e.cp; if (colIvOk(e.iv)) x.iv = e.iv.slice(); colGoFields(e, x); } if (typeof e.cd === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(e.cd)) x.cd = e.cd;
     if (typeof e.mg === 'string' && BY_KEY[e.mg] && BY_KEY[e.mg].mb) x.mg = e.mg;
     if (typeof e.up === 'string') x.up = e.up;
     const gn = colGoneOk(e.gone); if (gn) x.gone = gn;
@@ -2450,6 +2450,11 @@ const colLvOk = (v, go) => typeof v === 'number' && (go ? v >= 1 && v <= 50 && N
 const colLvHTML = e => !e.lv ? '' : (colCur(e) === 'go' && (e.lv === 40 || e.lv === 50)) ? ` <span class="collv hl">N. ${e.lv}</span>` : ` <span class="collv">N. ${String(e.lv).replace('.', ',')}</span>`;
 // v53c: GO only — PC (CP) and IV Attaque / Défense / PV (0–15)
 const colIvOk = v => Array.isArray(v) && v.length === 3 && v.every(n => Number.isInteger(n) && n >= 0 && n <= 15);
+// v60.4: GO battle fields of a specimen (all optional; empty = previous behaviour: best moveset, level 40): fm = fast move, c1 / c2 = charged moves (c2 '' = none),
+// st = 's' Obscur | 'p' Purifié (absent = normal), dm = Dynamax, gx = Gigamax (existing field), ml = [Attaque Max, Gardomax, Régémax] levels 0 (not given) – 3
+const colMvOk = v => typeof v === 'string' && /^[A-Z0-9_]{2,40}$/.test(v);
+function colGoFields(e, x) { for (const f of ['fm', 'c1', 'c2']) if (colMvOk(e[f])) x[f] = e[f]; if (e.st === 's' || e.st === 'p') x.st = e.st; if (e.dm === true) x.dm = true; if (Number.isInteger(e.mgl) && e.mgl >= 0 && e.mgl <= 4) x.mgl = e.mgl; if (typeof e.mg2 === 'string' && BY_KEY[e.mg2] && BY_KEY[e.mg2].mb && e.mg2 !== e.mg) { x.mg2 = e.mg2; if (Number.isInteger(e.mgl2) && e.mgl2 >= 1 && e.mgl2 <= 4) x.mgl2 = e.mgl2; }
+  if (Array.isArray(e.ml) && e.ml.length === 3 && e.ml.every(n => Number.isInteger(n) && n >= 0 && n <= 3) && e.ml.some(Boolean)) x.ml = e.ml.slice(); }
 const colIvPct = v => Math.round((v[0] + v[1] + v[2]) / 45 * 100);
 const colIvBadge = e => colCur(e) === 'go' && colIvOk(e.iv) ? `<span class="cb iv${colIvPct(e.iv) === 100 ? ' hl' : ''}" title="IV Attaque / Défense / PV">${e.iv.join('/')} · ${colIvPct(e.iv)} %</span>` : '';
 const colGoHTML = e => colCur(e) !== 'go' || !(e.cp || colIvOk(e.iv)) ? '' : `<small class="colgo">${e.cp ? 'PC ' + e.cp.toLocaleString('fr-FR') : ''}${e.cp && colIvOk(e.iv) ? ' · ' : ''}${colIvOk(e.iv) ? `IV ${e.iv.join('/')} (${colIvPct(e.iv)} %)` : ''}</small>`;
@@ -2570,6 +2575,16 @@ function colOpen(o) {
       <div class="cfrow"><label class="cf cfs">Surnom<input id="cfn" maxlength="40" autocomplete="off" value="${esc(e.n || '')}"></label>
         <label class="cf cflv" id="cflvw">Niveau<input id="cflv" type="number" inputmode="decimal" min="1" max="100" step="1" placeholder="1–100" value="${e.lv || ''}"></label></div>
       <div class="cfrow cfgo" id="cfgow" hidden><label class="cf">PC<input id="cfcp" type="number" inputmode="numeric" min="10" max="99999" step="1" value="${e.cp || ''}"></label>${['Attaque', 'Défense', 'PV'].map((t, i) => `<label class="cf cfiv">IV ${t}<input id="cfiv${i}" type="number" inputmode="numeric" min="0" max="15" step="1" placeholder="0–15" value="${e.iv ? e.iv[i] : ''}"></label>`).join('')}</div>
+      <fieldset class="cfgone cfbat" id="cfbat" hidden><legend>Combat dans Pokémon GO</legend>
+        <div class="cf"><span>État</span><div class="seg cfseg" id="cfst" role="group" aria-label="État">${[['', 'Normal'], ['s', 'Obscur'], ['p', 'Purifié']].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(e.st || '') === v}">${l}</button>`).join('')}</div></div>
+        <label class="cf">Attaque immédiate<select id="cffm"></select></label>
+        <label class="cf">Attaque chargée<select id="cfc1"></select></label>
+        <label class="cf">Deuxième attaque chargée<select id="cfc2"></select></label>
+        <div class="cf" id="cfdxw"><span>Combats Max</span><div class="seg cfseg" id="cfdx" role="group" aria-label="Combats Max">${[['', 'Non'], ['d', 'Dynamax'], ['g', 'Gigamax']].map(([v, l]) => `<button type="button" data-v="${v}" aria-pressed="${(e.gx && (e.w || e.g) === 'go' ? 'g' : e.dm ? 'd' : '') === v}">${l}</button>`).join('')}</div><small class="note" id="cfdxn" hidden>Un Pokémon Obscur ne peut pas être Dynamax ni Gigamax dans Pokémon GO : purifiez-le d’abord.</small></div>
+        <div class="cfrow cfml" id="cfmlw" hidden>${['Attaque Max', 'Gardomax', 'Régémax'].map((t, i) => `<label class="cf cfs">${t}<select id="cfml${i}"><option value="0">—</option>${[1, 2, 3].map(n => `<option value="${n}"${e.ml && e.ml[i] === n ? ' selected' : ''}>Niv. ${n}</option>`).join('')}</select></label>`).join('')}</div>
+        <div class="cf" id="cfmew" hidden><span>Méga-évolution</span><div class="cfme" id="cfme" data-v0="${esc(JSON.stringify(colMeInit(e)))}"></div><small class="note" id="cfmen" hidden>Un Pokémon Obscur ne peut pas méga-évoluer : purifiez-le d’abord.</small></div>
+        <small class="note">Facultatif : servent aux équipes « avec ma collection » des Classements. Sans attaques, on suppose le meilleur moveset ; sans niveau, le niveau 40 ; niveaux Max non renseignés = niveau 3. † : attaque exclusive (événement / MT élite).</small>
+      </fieldset>
       <div class="cfrow"><label class="cfc"><input type="checkbox" id="cfsh"${e.sh ? ' checked' : ''}> ✨ Shiny</label>
         <label class="cf cfs">Sexe<select id="cfsx"><option value="">—</option></select></label></div>
       <div class="cfrow cfx"><label class="cfc" id="cfbnw" hidden><input type="checkbox" id="cfbn"${e.bn ? ' checked' : ''}> Baron</label><label class="cfc" id="cfgxw" hidden><input type="checkbox" id="cfgx"${e.gx ? ' checked' : ''}> Gigamax</label><label class="cfc cfmgl" id="cfmgw" title="Vous avez de quoi le faire méga-évoluer dans son jeu actuel" hidden><input type="checkbox" id="cfmg"${e.mg ? ' checked' : ''}> Peut méga-évoluer</label><select id="cfmgv" class="cfmgv" aria-label="Méga-évolution" hidden></select></div>
@@ -2610,11 +2625,16 @@ function colOpen(o) {
     [...wsl.options].forEach(o => { o.disabled = mgOn && !!o.value && !(MEGA_GAMES.includes(o.value) && (!pk || colMegasIn(pk, o.value).length)); }); // Méga ticked first: only Mega-capable current games
     { const lw = q('#cfw').value === 'go', li = q('#cflv'); li.max = lw ? 50 : 100; li.step = lw ? 0.5 : 1; li.placeholder = lw ? '1–50' : '1–100'; } // v53c: GO level 1–50 (half levels)
     q('#cfgow').hidden = wsl.value !== 'go'; // v53c: PC / IV only in GO
+    q('#cfbat').hidden = wsl.value !== 'go'; if (wsl.value === 'go') colBatUpd(q, pk, e);
     const w = wsl.value, bOk = colBVis(pk, g), gOk = colGVis(pk, g), mgs = pk ? (w ? colMegasCur(pk, w) : colMegasIn(pk, '')) : [], mOk = pk ? mgs.length > 0 : (!w || MEGA_GAMES.includes(w));
     if (!mOk && mgOn && pk) msg.push('« Peut méga-évoluer » décoché : impossible pour ce Pokémon dans son jeu actuel.');
     q('#cfmgw').hidden = !mOk; if (!mOk) q('#cfmg').checked = false;
     const mv = q('#cfmgv'), mcur = mv.value || (pk && pk.mb ? pk.k : e.mg) || ''; mv.innerHTML = mgs.map(m => `<option value="${m.k}">${esc(m.l || 'Méga')}</option>`).join('');
     if (mgs.some(m => m.k === mcur)) mv.value = mcur; mv.hidden = !(q('#cfmg').checked && mgs.length > 1);
+    { const me = q('#cfme'), go = w === 'go', gm = go && pk ? mgs : [], sig = gm.map(m => m.k).join(); // v60.5: Méga forms inside « Combat dans Pokémon GO », one box + Méga level each (X and Y can both be unlocked)
+      if (me.dataset.sig !== sig) { const cv = me.dataset.sig == null ? JSON.parse(me.dataset.v0 || '{}') : Object.fromEntries(colMeRead(q)); me.dataset.sig = sig;
+        me.innerHTML = gm.map(m => `<div class="cfmer"><label class="cfc"><input type="checkbox" data-k="${m.k}"${cv[m.k] ? ' checked' : ''}> ${esc(megaBtnL(m))}</label><label class="cfs">Niveau Méga<select data-k="${m.k}">${MEGA_LV.map((t, n) => `<option value="${n + 1}"${(cv[m.k] || 1) === n + 1 ? ' selected' : ''}>${t}</option>`).join('')}</select></label></div>`).join(''); }
+      q('#cfmew').hidden = !gm.length; if (go) q('#cfmgw').hidden = true, mv.hidden = true; colBatMe(q); }
     if (!bOk && q('#cfbn').checked) msg.push('Baron décoché : impossible pour ce Pokémon dans ce jeu.');
     if (!gOk && q('#cfgx').checked && !q('#cfgx').disabled) msg.push('Gigamax décoché : impossible pour ce Pokémon dans ce jeu.');
     q('#cfbnw').hidden = !bOk; q('#cfgxw').hidden = !gOk; if (!bOk) q('#cfbn').checked = false; if (!gOk) q('#cfgx').checked = false;
@@ -2623,6 +2643,7 @@ function colOpen(o) {
   };
   q('#cfpk').addEventListener('change', upd); q('#cfpk').addEventListener('input', () => { if (findPk(q('#cfpk').value)) upd(); }); q('#cfg').addEventListener('change', upd); q('#cfbn').addEventListener('change', upd); q('#cfgx').addEventListener('change', upd); q('#cfmg').addEventListener('change', upd);
   q('#cfb').onchange = () => { q('#cfbi').innerHTML = ballImg(q('#cfb').value); };
+  q('#cfme').addEventListener('change', () => colBatMe(q)); for (const id of ['#cfst', '#cfdx']) q(id).addEventListener('click', ev => { const b = ev.target.closest('button[data-v]'); if (!b || b.disabled) return; q(id).querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); if (id === '#cfdx') colBatMax(q); else colBatSh(q); });
   q('#cfw').onchange = () => { q('#cfwo').hidden = q('#cfw').value !== 'other'; upd(); };
   const findPk = v => { const mm = /#(\d{4})\s*$/.exec(v); const t = norm(v.replace(/#\d+\s*$/, '').trim()); if (!t) return null;
     return E.find(p => !p.bo && norm(fullN(p)) === t && (!mm || p.id === +mm[1])) || E.find(p => !p.bo && p.nn === t) || null; };
@@ -2654,8 +2675,9 @@ function colOpen(o) {
     if (err.length) { er.hidden = false; er.textContent = cap(err.join(' et ')) + '.'; return; }
     const wsel = q('#cfw').value, w = wsel === 'other' ? (q('#cfwo').value.trim() ? 'other:' + q('#cfwo').value.trim() : '') : wsel;
     const x = { n: q('#cfn').value.trim(), sh: q('#cfsh').checked, sx: q('#cfsx').value, w, bn: !q('#cfbnw').hidden && q('#cfbn').checked, gx: !q('#cfgxw').hidden && q('#cfgx').checked };
-    { const mgs = colMegasCur(pk, w), on = !q('#cfmgw').hidden && q('#cfmg').checked && mgs.length; x.mg = on ? (mgs.find(m => m.k === q('#cfmgv').value) || mgs[0]).k : '';
-      x.b = q('#cfb').value; x.l = q('#cfl').value.trim().slice(0, 80); x.cd = q('#cfcd').value || ''; x.lv = lv || ''; x.cp = cp || ''; x.iv = ivn === 3 ? iv : ''; for (const kk of ['mg', 'b', 'l', 'cd', 'lv', 'cp', 'iv']) if (!x[kk]) { x[kk] = undefined; if (ed) delete ed[kk]; } }
+    { const mgs = colMegasCur(pk, w), on = !q('#cfmgw').hidden && q('#cfmg').checked && mgs.length; x.mg = on ? (mgs.find(m => m.k === q('#cfmgv').value) || mgs[0]).k : ''; let mgl, mg2, mgl2; if (w === 'go' && !q('#cfmew').hidden) { const v = colMeRead(q).filter(([k]) => mgs.some(m => m.k === k)); x.mg = v[0] ? v[0][0] : ''; mgl = v[0] ? v[0][1] : 0; if (v[1]) [mg2, mgl2] = v[1]; }
+      x.b = q('#cfb').value; x.l = q('#cfl').value.trim().slice(0, 80); x.cd = q('#cfcd').value || ''; x.lv = lv || ''; x.cp = cp || ''; x.iv = ivn === 3 ? iv : ''; const bat = w === 'go' ? colBatRead(q) : {}; Object.assign(x, { fm: bat.fm, c1: bat.c1, c2: bat.c2, st: bat.st, dm: bat.dm, ml: bat.ml }); if (bat.gx != null) x.gx = bat.gx;
+      for (const kk of ['mg', 'b', 'l', 'cd', 'lv', 'cp', 'iv', 'fm', 'c1', 'c2', 'st', 'dm', 'ml', 'mgl', 'mg2', 'mgl2']) if (!x[kk]) { x[kk] = undefined; if (ed) delete ed[kk]; } if (mgl != null) x.mgl = mgl; if (mg2) Object.assign(x, { mg2, mgl2 }); }
     const bk = colMegaBase(pk) || pk;
     if (ed) { const gs = q('#cfgs').value; if (gs) ed.gone = { s: gs, d: q('#cfgd').value || '', n: q('#cfgn').value.trim().slice(0, 120) }; else delete ed.gone;
       for (const kk in x) if (x[kk] === undefined) delete x[kk]; Object.assign(ed, x, { up: new Date().toISOString() }); if (x.sh || x.bn || x.gx || x.mg) colTickDex(pk, g, x.sh, x.bn, x.gx, x.mg, w); }
@@ -2667,6 +2689,42 @@ function colOpen(o) {
   };
   setTimeout(() => (ed ? q('#cfn') : (p ? q('#cfg') : q('#cfpk'))).focus({ preventScroll: true }), 30);
 }
+// v60.4: « Combat dans Pokémon GO » block — moves of this form only (sp data), † = exclusive; Dynamax / Gigamax only if the form allows it in GO
+let colBatTok = 0;
+const GO_MP = {"384":{"ce":["DRAGON_ASCENT"]},"942":{"cm":["PAYBACK"]},"943":{"cm":["PAYBACK"]},"121-mega":{"cm":["LIQUIDATION_PLUS"]},"149-mega":{"cm":["OUTRAGE_PLUS"]},"150-mega-x":{"cm":["DYNAMIC_PUNCH_PLUS"]},"150-mega-y":{"cm":["FUTURE_SIGHT_PLUS"]},"227-mega":{"cm":["DRILL_PECK_PLUS"]},"26-mega-x":{"cm":["VOLT_TACKLE_PLUS"]},"26-mega-y":{"cm":["ZAP_CANNON_PLUS"]},"384-mega":{"cm":["DRAGON_ASCENT"]},"483-origin":{"ce":["ROAR_OF_TIME"]},"484-origin":{"ce":["SPACIAL_REND"]},"646-white":{"cm":["ICE_BURN"]},"646-black":{"cm":["FREEZE_SHOCK"]},"652-mega":{"cm":["SEED_BOMB_PLUS"]},"655-mega":{"cm":["MYST_FIRE_PLUS"]},"658-mega":{"cm":["SURF_PLUS"]},"687-mega":{"cm":["PSYBEAM_PLUS"]},"71-mega":{"cm":["ACID_SPRAY_PLUS"]},"800-dusk":{"cm":["SUNSTEEL_STRIKE"]},"800-dawn":{"cm":["MOONGEIST_BEAM"]},"870-mega":{"cm":["BRICK_BREAK_PLUS"]},"888-crowned":{"cm":["BEHEMOTH_BLADE"]},"889-crowned":{"cm":["BEHEMOTH_BASH"]},"235":{"fm":["TACKLE_FAST","FURY_CUTTER_FAST","BUG_BITE_FAST","BITE_FAST","SUCKER_PUNCH_FAST","DRAGON_BREATH_FAST","THUNDER_SHOCK_FAST","SPARK_FAST","LOW_KICK_FAST","KARATE_CHOP_FAST","EMBER_FAST","WING_ATTACK_FAST","PECK_FAST","LICK_FAST","SHADOW_CLAW_FAST","VINE_WHIP_FAST","RAZOR_LEAF_FAST","MUD_SHOT_FAST","ICE_SHARD_FAST","FROST_BREATH_FAST","QUICK_ATTACK_FAST","SCRATCH_FAST","POUND_FAST","CUT_FAST","POISON_JAB_FAST","ACID_FAST","PSYCHO_CUT_FAST","ROCK_THROW_FAST","METAL_CLAW_FAST","BULLET_PUNCH_FAST","WATER_GUN_FAST","SPLASH_FAST","MUD_SLAP_FAST","ZEN_HEADBUTT_FAST","CONFUSION_FAST","POISON_STING_FAST","BUBBLE_FAST","FEINT_ATTACK_FAST","STEEL_WING_FAST","FIRE_FANG_FAST","ROCK_SMASH_FAST","COUNTER_FAST","POWDER_SNOW_FAST","CHARGE_BEAM_FAST","VOLT_SWITCH_FAST","DRAGON_TAIL_FAST","AIR_SLASH_FAST","INFESTATION_FAST","STRUGGLE_BUG_FAST","ASTONISH_FAST","HEX_FAST","IRON_TAIL_FAST","FIRE_SPIN_FAST","BULLET_SEED_FAST","EXTRASENSORY_FAST","SNARL_FAST","TAKE_DOWN_FAST","WATERFALL_FAST","YAWN_FAST","PRESENT_FAST","CHARM_FAST","LOCK_ON_FAST","THUNDER_FANG_FAST","ICE_FANG_FAST","GUST_FAST","INCINERATE_FAST"],"cm":["STRUGGLE","WRAP","HYPER_BEAM","DARK_PULSE","SLUDGE","VICE_GRIP","FLAME_WHEEL","MEGAHORN","FLAMETHROWER","DIG","CROSS_CHOP","PSYBEAM","EARTHQUAKE","STONE_EDGE","ICE_PUNCH","DISCHARGE","FLASH_CANNON","DRILL_PECK","ICE_BEAM","BLIZZARD","HEAT_WAVE","AERIAL_ACE","DRILL_RUN","PETAL_BLIZZARD","BUG_BUZZ","POISON_FANG","NIGHT_SLASH","BUBBLE_BEAM","SUBMISSION","LOW_SWEEP","AQUA_JET","AQUA_TAIL","SEED_BOMB","PSYSHOCK","ANCIENT_POWER","ROCK_TOMB","ROCK_SLIDE","POWER_GEM","SHADOW_SNEAK","SHADOW_PUNCH","OMINOUS_WIND","SHADOW_BALL","MAGNET_BOMB","IRON_HEAD","THUNDER_PUNCH","THUNDER","THUNDERBOLT","TWISTER","DRAGON_PULSE","DRAGON_CLAW","DISARMING_VOICE","DRAINING_KISS","DAZZLING_GLEAM","MOONBLAST","PLAY_ROUGH","CROSS_POISON","SLUDGE_BOMB","SLUDGE_WAVE","GUNK_SHOT","BONE_CLUB","BULLDOZE","MUD_BOMB","SIGNAL_BEAM","X_SCISSOR","FLAME_CHARGE","FLAME_BURST","FIRE_BLAST","WATER_PULSE","HYDRO_PUMP","PSYCHIC","ICY_WIND","FIRE_PUNCH","SOLAR_BEAM","LEAF_BLADE","POWER_WHIP","AIR_CUTTER","HURRICANE","BRICK_BREAK","SWIFT","HORN_ATTACK","STOMP","HYPER_FANG","BODY_SLAM","CLOSE_COMBAT","DYNAMIC_PUNCH","FOCUS_BLAST","AURORA_BEAM","WILD_CHARGE","ZAP_CANNON","AVALANCHE","BRAVE_BIRD","SKY_ATTACK","SAND_TOMB","ROCK_BLAST","SILVER_WIND","NIGHT_SHADE","GYRO_BALL","HEAVY_SLAM","OVERHEAT","GRASS_KNOT","ENERGY_BALL","MIRROR_COAT","OUTRAGE","CRUNCH","FOUL_PLAY","SURF","DRACO_METEOR","PSYCHO_BOOST","FRENZY_PLANT","BLAST_BURN","HYDRO_CANNON","LAST_RESORT","METEOR_MASH","BRINE","SCALD","PSYSTRIKE","DOOM_DESIRE","WEATHER_BALL_FIRE","WEATHER_BALL_ICE","WEATHER_BALL_ROCK","WEATHER_BALL_WATER","SKULL_BASH","ACID_SPRAY","EARTH_POWER","CRABHAMMER","LUNGE","OCTAZOOKA","MIRROR_SHOT","SUPER_POWER","FELL_STINGER","LEAF_TORNADO","SHADOW_BONE","MUDDY_WATER","BLAZE_KICK","POWER_UP_PUNCH","GIGA_IMPACT","SYNCHRONOISE","SACRED_SWORD","FLYING_PRESS","AURA_SPHERE","PAYBACK","ROCK_WRECKER","AEROBLAST","TECHNO_BLAST_NORMAL","TECHNO_BLAST_BURN","TECHNO_BLAST_CHILL","TECHNO_BLAST_SHOCK","FLY","V_CREATE","TRI_ATTACK"]}}; // v60.4: movepools patched for the ranking simulation (build/go-moves-patch.json), also offered in the collection sheet
+const goPatch = (k, g) => { const p = GO_MP[k]; if (!g || !p) return g; const r = { ...g }; for (const f in p) r[f] = [...(r[f] || []), ...p[f].filter(m => !(r[f] || []).includes(m))]; return r; };
+async function colBatUpd(q, pk, e) {
+  const tk = ++colBatTok, fs = q('#cffm'), c1 = q('#cfc1'), c2 = q('#cfc2'), cur = s => s.dataset.init ? s.value : (s.dataset.init = '1', e[s.id.slice(2)] || '');
+  const same = !fs.dataset.pk || fs.dataset.pk === (pk ? pk.k : ''), v0 = [fs, c1, c2].map(x => same ? cur(x) : ''); fs.dataset.pk = pk ? pk.k : '';
+  let g = null, M = {}; if (pk) try { const [sp, go] = await Promise.all([loadSp(pk.id), loadGo()]); g = goPatch(pk.k, sp.f[pk.k] && sp.f[pk.k].go); M = go.moves; } catch {} if (tk !== colBatTok || !fs.isConnected) return;
+  const ex = new Set([...((g && g.fe) || []), ...((g && g.ce) || [])]), nm = k => (M[k] ? M[k][0] : k) + (ex.has(k) ? ' †' : '');
+  const opts = (L, v, first) => { const all = [...new Set(L)].filter(k => M[k]); if (v && !all.includes(v)) all.push(v); return first + all.sort((a, b) => nm(a).localeCompare(nm(b), 'fr')).map(k => `<option value="${k}"${k === v ? ' selected' : ''}>${esc(nm(k))}${M[k] ? ' · ' + esc(TYPE_FR[M[k][1]] || M[k][1]) : ''}</option>`).join(''); };
+  const F = g ? [...(g.fm || []), ...(g.fe || [])] : [], Cm = g ? [...(g.cm || []), ...(g.ce || [])] : [];
+  fs.innerHTML = opts(F, v0[0], '<option value="">— Non renseignée</option>'); c1.innerHTML = opts(Cm, v0[1], '<option value="">— Non renseignée</option>'); c2.innerHTML = opts(Cm, v0[2], '<option value="">Aucune</option>');
+  fs.disabled = c1.disabled = c2.disabled = !g;
+  const dOk = !!(pk && pk.dmx && TODAY >= pk.dmx && !isGmx(pk)), gOk = !!(pk && colGmax(pk, 'go')), dx = q('#cfdx'), bs = dx.querySelectorAll('button');
+  dx.dataset.d = dOk ? 1 : ''; dx.dataset.g = gOk ? 1 : ''; q('#cfdxw').hidden = !dOk && !gOk; colBatSh(q);
+  if (pk && isGmx(pk)) bs.forEach(b => b.setAttribute('aria-pressed', b.dataset.v === 'g'));
+  const on = dx.querySelector('[aria-pressed="true"]'); if (!on || on.disabled) bs.forEach(b => b.setAttribute('aria-pressed', b.dataset.v === ''));
+  colBatMax(q);
+}
+// v60.5: Méga levels in GO (Base, High, Max, Super Max): the level multiplies the base power of the extra « + » charged move (×1 / 1,1 / 1,2 / 1,3); Super Max also raises the level by 2 while Mega-Evolved
+const MEGA_LV = ['Base', 'Élevé', 'Max', 'Super Max'], MEGA_PP = [1, 1.1, 1.2, 1.3];
+const megaBtnL = m => m.l || 'Méga';
+// e.mg / e.mgl = first Méga form and its level; e.mg2 / e.mgl2 = the other one (Méga X and Y both unlocked). The Méga level is kept per form in GO.
+const colMeInit = e => { const o = {}; if (e.mg) o[e.mg] = e.mgl || 1; if (e.mg2) o[e.mg2] = e.mgl2 || 1; return o; };
+const colMeRead = q => [...q('#cfme').querySelectorAll('input:checked:not(:disabled)')].map(c => [c.dataset.k, +q('#cfme').querySelector(`select[data-k="${c.dataset.k}"]`).value || 1]);
+function colBatMe(q, sh = ((q('#cfst [aria-pressed="true"]') || {}).dataset?.v || '') === 's') { const me = q('#cfme'); if (!me) return; me.classList.toggle('off', sh); q('#cfmen').hidden = !sh || q('#cfmew').hidden;
+  me.querySelectorAll('input').forEach(c => { c.disabled = sh; const sl = me.querySelector(`select[data-k="${c.dataset.k}"]`); sl.disabled = sh || !c.checked; sl.parentElement.hidden = !c.checked || sh; }); }
+// v60.4: an Obscur cannot be Dynamax / Gigamax in Pokémon GO — v60.5: nor Mega Evolve
+function colBatSh(q) { const dx = q('#cfdx'); if (!dx) return; const sh = ((q('#cfst [aria-pressed="true"]') || {}).dataset?.v || '') === 's', bs = dx.querySelectorAll('button');
+  bs[1].disabled = sh || !dx.dataset.d; bs[2].disabled = sh || !dx.dataset.g; q('#cfdxn').hidden = !sh;
+  colBatMe(q, sh);
+  const on = dx.querySelector('[aria-pressed="true"]'); if (!on || on.disabled) bs.forEach(b => b.setAttribute('aria-pressed', b.dataset.v === '')); colBatMax(q); }
+function colBatMax(q) { const v = (q('#cfdx [aria-pressed="true"]') || {}).dataset?.v || ''; q('#cfmlw').hidden = !v || q('#cfdxw').hidden; const gx = q('#cfgx'); if (v && !q('#cfgxw').hidden && !gx.disabled) gx.checked = v === 'g'; }
+function colBatRead(q) { const pv = id => (q(id + ' [aria-pressed="true"]') || {}).dataset?.v || '', dx = q('#cfdxw').hidden ? '' : pv('#cfdx');
+  const ml = [0, 1, 2].map(i => +q('#cfml' + i).value), c1 = q('#cfc1').value, c2 = q('#cfc2').value;
+  return { fm: q('#cffm').value || undefined, c1: c1 || c2 || undefined, c2: c1 && c2 && c2 !== c1 ? c2 : undefined, st: pv('#cfst') || undefined, dm: dx === 'd' || undefined, gx: q('#cfdxw').hidden || q('#cfdx button[data-v="g"]').disabled ? null : dx === 'g', ml: dx && ml.some(Boolean) ? ml : undefined }; }
 // v49c: cross-filtering of the add window (availability from core data: game bitmask, GO flag) + Baron / Gigamax constraints
 const GMAX_GAMES = ['sw', 'swisle', 'swcrown', 'go'];
 const colAvail = (p, g) => g === 'go' ? !!(p.go || (isGmx(p) && gmaxInGame(p, 'go'))) : GIDX[g] != null && inGame(p, GIDX[g]);
@@ -2845,7 +2903,7 @@ function pkInit() {
 
 /* ---------------- v59: « Classements » (PvP PvPoke, raids, Combats Max) ---------------- */
 let RANKD = null;
-const RK = Object.assign({ s: 'pvp', lg: 'g', sh: 1, rv: 'g', boss: '', ty: 'dragon', ro: 'A', mv: 'g', mb: '', q: '', rl: 'giovanni', rr: 'g', rop: '' }, store.get('rank', {}));
+const RK = Object.assign({ s: 'pvp', lg: 'g', sh: 1, rv: 'g', boss: '', ty: 'dragon', ro: 'A', mv: 'g', mb: '', q: '', rl: 'giovanni', rr: 'g', rop: '', bt: 't' }, store.get('rank', {}));
 // v61: boss du moment / de la semaine en tête des listes de boss (data/boss-schedule.json, build/fetch-boss-schedule.mjs)
 const JF = ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'], MF = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
 const pdt = t => new Date(t); // heure locale (pas de Z) ou UTC (Z)
@@ -2879,11 +2937,88 @@ function rkRow(i, k, sh, sub, right, tag) {
   const p = BY_KEY[k]; const nm = p ? fullN(p) : k;
   return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-go="1"><span class="rkn">${i}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(nm)}${sh ? ' <span class="rksh">Obscur</span>' : ''}${tag || ''}</b><span class="rkty">${p ? p.t.map(badge).join('') : ''}</span><small>${sub}</small></span><span class="rkv">${right}</span></a></li>`;
 }
+// v60.4: recommended teams per boss (raids: 6, Combats Max: 3), built on the device from the per-boss lists (top 20 + « x » = next ranks).
+const NOLEG_X = new Set([793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806, ...Array.from({ length: 12 }, (_, i) => 984 + i), 1005, 1006, 1007, 1008, 1009, 1010, 1020, 1021, 1022, 1023]); // Ultra-Chimères + Paradoxes (same list as the Rocket teams)
+const tmLeg = k => { const p = BY_KEY[k]; if (!p) return false; const b = BY_KEY[String(p.id)] || p; return !!(p.lg || p.my || b.lg || b.my || NOLEG_X.has(p.id)); };
+const tmMega = k => { const p = BY_KEY[k]; return !!(p && p.mb) || /-(mega|primal)/.test(k); };
+const tmSp = k => { const p = BY_KEY[k]; return p ? p.id : parseInt(k); };
+// GO collection = what the app already stores: « Capturé » in the GO dex or a collection specimen now in GO; Méga = Méga registered or Méga-énergie; Dynamax = « Dynamax » mark; Gigamax = Gigamax form caught in GO. No Obscur info → never owned.
+const tmHasGo = k => { const p = BY_KEY[k]; if (!p) return false; if (p.mb) return goMegaOn(p); return isCaught(p, 'go') || COLL.some(e => e.k === k && !e.gone && colCur(e) === 'go'); };
+const tmHasMax = k => { const p = BY_KEY[k]; if (!p) return false; return p.c === 'gmax' ? isCaught(p, 'go') : DYNAMAX.has(k); };
+const tmAnyGo = () => CAUGHT_G.size > 0 || COLL.some(e => colCur(e) === 'go');
+function raidTeam(L, F, ok) { const T = [], used = new Set(); let mega = 0; // 6 different Pokémon (Méga ≠ base, Obscur ≠ normal), at most 1 Méga
+  for (const r of L) { const [k, sh] = F[r[0]], id = k + '|' + sh; if (used.has(id) || !ok(k, sh)) continue; const m = tmMega(k); if (m && mega) continue; used.add(id); mega += m; T.push(r); if (T.length === 6) break; }
+  return T; }
+function raidMono(L, F) { const a = L[0]; if (!a) return null; if (!tmMega(F[a[0]][0])) return [a, a]; const b = L.find(r => !tmMega(F[r[0]][0])); return [a, b]; } // [1st, the 5 others]
+// Max: 1 per role; X3 = [rows A, rows T, rows H], each row = [.., .., .., pct, id?]. The same Pokémon may hold 2 roles; in the collection a row carries the
+// specimen id and one specimen cannot be used twice. Choice = the trio whose WEAKEST member is the best (then the 2nd weakest, then the 3rd) — no average
+function maxTeam(X3) { const Ls = X3.map(L => L.slice(0, 30)); let best = null, bk = null;
+  for (const a of Ls[0]) for (const t of Ls[1]) for (const h of Ls[2]) { if (a[4] != null && (a[4] === t[4] || a[4] === h[4] || t[4] === h[4])) continue;
+    const key = [a[3], t[3], h[3]].sort((x, y) => x - y); if (!bk || key[0] > bk[0] || key[0] === bk[0] && (key[1] > bk[1] || key[1] === bk[1] && key[2] > bk[2])) { bk = key; best = [a, t, h]; } }
+  return best; }
+const maxRows = (X, j, F, ro, ok) => [...X[ro].b[j], ...((X[ro].x || [])[j] || [])].filter(r => ok(F[r[0]]));
+const tmLegMax = k => tmLeg(k) || /-gmax$/.test(k) || /eternamax/.test(k); // Combats Max: Gigamax count as legendaries
+// ---- v60.4: collection teams recalculated on the device (docs/sim.js = raid v2 / Max v1 simulations, same results at level 40, IV 15)
+const SPGO = {}; // form key → GO data of the sp file
+async function colSimPrep(keys) { const ids = [...new Set(keys.map(k => BY_KEY[k] ? BY_KEY[k].id : parseInt(k)).filter(Boolean))];
+  await Promise.all(ids.map(id => loadSp(id).then(sp => { for (const [k, f] of Object.entries(sp.f || {})) if (f.go) SPGO[k] = goPatch(k, f.go); }).catch(() => {}))); }
+const colGoSpecs = () => COLL.filter(e => !e.gone && colCur(e) === 'go' && BY_KEY[e.k]);
+const specMax = e => e.st !== 's' && (e.dm || e.gx); // an Obscur cannot be Dynamax / Gigamax in GO (ignored if present in old data)
+const specPlain = e => !e.fm && !e.c1 && !e.c2 && !e.lv && !colIvOk(e.iv) && e.st !== 's' && !(e.ml && e.ml.some(Boolean)); // = what the precomputed ranking assumes
+function specLv(e, g) { if (e.lv) return e.lv; if (e.cp && colIvOk(e.iv) && g) for (let l = 1; l <= 50; l += 0.5) if (PKSIM.cp(g, e.iv, l) === e.cp) return l; return 40; } // level from CP + IV when not given
+const specIv = e => colIvOk(e.iv) ? e.iv : [15, 15, 15];
+const megasGo = p => p.mb ? [] : megasOf(p).filter(goMegaOn);
+const specTag = e => !e ? 'marqué « Capturé » dans le dex GO' : [e.n ? '« ' + esc(e.n) + ' »' : '', e.st === 's' ? 'Obscur' : e.st === 'p' ? 'Purifié' : '', 'niv. ' + String(specLv(e, SPGO[e.k])).replace('.', ',') + (e.lv ? '' : (e.cp && colIvOk(e.iv) ? ' (d’après les PC)' : ' (supposé)')), colIvOk(e.iv) ? 'IV ' + e.iv.join('/') : 'IV 15/15/15 supposés', e.fm || e.c1 ? '' : 'meilleur moveset supposé'].filter(Boolean).join(' · ');
+// v60.5: which Méga(s) a GO specimen brings to a raid. Sheet with the new field: only the form(s) ticked in « Combat dans Pokémon GO » (mgl 0 = Non), at its Méga level.
+// Older sheet (no mgl): previous behaviour, every Méga registered in the GO dex or with Méga Énergie. An Obscur never Mega Evolves.
+function specMega(e, p) { if (e.st === 's' || p.mb) return [];
+  const ok = k => k && BY_KEY[k] && BY_KEY[k].mb === p.k, v = [[e.mg, e.mgl], [e.mg2, e.mgl2]].filter(([k]) => ok(k)).map(([k, l]) => ({ k, l: l || 1 }));
+  if (v.length || e.mgl === 0 || e.mg) return v; return megasGo(p).map(m => ({ k: m.k, l: 1 })); }
+const SIMC = new Map(); // cache: boss|pool|specimen signature → result
+function colSig(e) { return JSON.stringify([e.id, e.k, e.fm, e.c1, e.c2, e.st, e.lv, e.iv, e.cp, e.dm, e.gx, e.ml, e.mg, e.mgl, e.mg2, e.mgl2]); }
+// moves to test: the specimen's own moves when given (and valid for this form), else every move of the form, as the precomputed ranking
+function specMoves(e, g) { const F = [...(g.fm || []), ...(g.fe || [])], C = [...(g.cm || []), ...(g.ce || [])].filter(c => !['FRUSTRATION', 'RETURN'].includes(c));
+  const fm = e.fm && F.includes(e.fm) ? [e.fm] : F, cs = [e.c1, e.c2].filter(c => c && [...(g.cm || []), ...(g.ce || [])].includes(c)); return [fm, cs.length ? cs : C]; }
+// Raid: candidates [k, sh, f, c, pct, specimen|null], best per specimen; % = score / n° 1 of the pool (same as the ranking)
+function raidColl(rd, j, pool) { const L = [...rd.P[pool].b[j], ...((rd.P[pool].x || [])[j] || [])], F = rd.F, out = [], seen = new Set(), bs = rd.BS && rd.BS[j];
+  const B = bs && { a: bs[0], d: bs[1], t: rd.B[j][3], fm: bs[2], cm: bs[3], cpm: bs[4], shadow: !!bs[5] }, top = rd.TOP && rd.TOP[pool][j];
+  const pre = (k, sh) => L.find(r => F[r[0]][0] === k && F[r[0]][1] === sh);
+  for (const e of colGoSpecs()) { const p = BY_KEY[e.k], sh = e.st === 's' ? 1 : 0; if (sh && pool === 'n') continue;
+    const ml = sh ? [] : specMega(e, p); for (const k of [e.k, ...ml.map(m => m.k)]) { seen.add(k + '|' + sh); const mL = k === e.k ? 1 : ml.find(m => m.k === k).l;
+      if ((specPlain(e) && mL === 1) || !B || !top) { const r = pre(k, sh); if (r) out.push([k, sh, rd.mv[r[1]], rd.mv[r[2]], r[3], e]); continue; }
+      const g = SPGO[k]; if (!g || !g.a) continue; const ck = 'r|' + j + '|' + pool + '|' + k + '|' + colSig(e);
+      if (!SIMC.has(ck)) { const [fm, cm] = specMoves(e, g), lv = specLv(e, SPGO[e.k]), iv = specIv(e); let best = null;
+        for (const f of fm) for (const c of cm) { const v = PKSIM.raidScore({ a: g.a, d: g.d, s: g.s, t: (rd.TY && rd.TY[k]) || g.t, f, c, sh: !!sh, lv: lv + (mL === 4 ? 2 : 0), iv, pp: MEGA_PP[mL - 1] }, B); if (!best || v > best[2]) best = [f, c, v]; }
+        SIMC.set(ck, best && [best[0], best[1], Math.round(best[2] / top * 1000) / 10]); }
+      const r = SIMC.get(ck); if (r) out.push([k, sh, r[0], r[1], r[2], e]); } }
+  for (const r of L) { const [k, sh] = F[r[0]]; if (sh || seen.has(k + '|0') || !tmHasGo(k)) continue; out.push([k, 0, rd.mv[r[1]], rd.mv[r[2]], r[3], null]); } // dex marks without specimen
+  return out.sort((a, b) => b[4] - a[4]); }
+function raidCollTeam(C) { const T = [], used = new Set(); let mega = 0; // 6 different Pokémon, at most 1 Méga, ≥ 40 % of the best
+  for (const r of C) { const id = r[0] + '|' + r[1]; if (r[4] < 40 || used.has(id) || (r[5] && used.has(r[5].id))) continue; if (r[5]) used.add(r[5].id); const m = tmMega(r[0]); if (m && mega) continue; used.add(id); mega += m; T.push(r); if (T.length === 6) break; }
+  return T; }
+// Max: per role, candidates [k, f, c, pct, specimenId, specimen|null]; one row per specimen (Dynamax / Gigamax set in the collection) + dex marks without specimen
+function maxColl(mx, j) { const F = mx.F, bs = mx.BS && mx.BS[j], N = mx.NM && mx.NM[j], out = { A: [], T: [], H: [] }, seen = new Set();
+  const B = bs && { a: bs[0], d: bs[1], t: mx.B[j][3], hp: bs[2], cpm: bs[3], atkMult: bs[4], meMult: bs[5], rate: bs[6], limit: bs[7], enrageAt: bs[8], enrage: bs[9], moves: bs[10] };
+  const pre = (ro, k) => maxRows(mx.R, j, F, ro, x => x === k)[0];
+  for (const e of colGoSpecs()) { const p = BY_KEY[e.k]; let k = null; if (!specMax(e)) continue;
+    if (e.gx) { const x = isGmx(p) ? { g: p } : colGmax(p, 'go'); if (x) k = x.g.k; } if (!k && e.dm) k = e.k; if (!k) continue; seen.add(k);
+    if (!B || !N || specPlain(e) && [...'ATH'].every(ro => pre(ro, k))) { for (const ro of 'ATH') { const r = pre(ro, k); if (r) out[ro].push([k, mx.mv[r[1]], mx.mv[r[2]], r[3], e.id, e]); } continue; } // not in the precomputed lists (too weak) → simulated
+    const g = SPGO[k] || SPGO[e.k]; if (!g || !g.a) continue; const ck = 'm|' + j + '|' + k + '|' + colSig(e);
+    if (!SIMC.has(ck)) { const [fm, cm] = specMoves(e, g), lv = specLv(e, SPGO[e.k]), iv = specIv(e), ml = (e.ml || [0, 0, 0]).map(n => n || 3), best = {};
+      for (const f of fm) for (const c of cm) { const r = PKSIM.maxEval({ a: g.a, d: g.d, s: g.s, t: g.t, f, c, k, lv, iv, ml }, B); if (!r) continue; const v = PKSIM.maxRoles(r, N);
+        for (const ro of 'ATH') if (!best[ro] || v[ro] > best[ro][2]) best[ro] = [f, c, v[ro]]; }
+      SIMC.set(ck, Object.fromEntries(Object.entries(best).map(([ro, b]) => [ro, [b[0], b[1], Math.round(b[2] / N[ro] * 1000) / 10]]))); }
+    const r = SIMC.get(ck); for (const ro of 'ATH') if (r[ro]) out[ro].push([k, r[ro][0], r[ro][1], r[ro][2], e.id, e]); }
+  for (const ro of 'ATH') { for (const r of maxRows(mx.R, j, F, ro, k => !seen.has(k) && tmHasMax(k))) out[ro].push([F[r[0]], mx.mv[r[1]], mx.mv[r[2]], r[3], 'dex:' + F[r[0]], null]);
+    out[ro].sort((a, b) => b[3] - a[3]); }
+  return out; }
+const OVT = 'Au-dessus de la référence calculée au niveau 40', pcB = x => `<b${x > 100 ? ` class="rkov" title="${OVT}"` : ''}>${String(x).replace('.', ',')} %${x > 100 ? '<sup aria-hidden="true">ⓘ</sup>' : ''}</b>`, ovN = xs => xs.some(x => x > 100) ? `<p class="note">ⓘ Plus de 100 % : votre Pokémon fait mieux que la référence du classement, calculée au niveau 40 avec les IV 15/15/15 (par exemple grâce à une meilleure attaque contre ce boss).</p>` : '';
 async function renderRank() {
   const rv = $('#rank-view'); store.set('rank', { ...RK, q: '' });
   const head = `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><h1 class="rkh">Classements</h1><span class="sp"></span></div></div>`;
   let D; try { D = await loadRank(); } catch { rv.innerHTML = head + '<div class="rkwrap"><p class="note">Classements indisponibles hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p></div>'; return; }
   const { go, pv, rd, mx, rk, sc } = D, M = go.moves; let EL = [];
+  if (window.PKSIM) { PKSIM.setMoves(M); if (RK.s === 'raid' || RK.s === 'max') { const ks = []; for (const e of colGoSpecs()) { const p = BY_KEY[e.k]; ks.push(e.k, ...megasGo(p).map(m => m.k)); const g = e.gx && colGmax(p, 'go'); if (g) ks.push(g.g.k); } await colSimPrep(ks); if (!/^#\/classements/.test(location.hash)) return; } }
   const mn = k => k ? esc(M[k] ? M[k][0] : k) + (EL.includes(k) ? ' †' : '') : '', ms = (f, c, c2) => [mn(f), [mn(c), mn(c2)].filter(Boolean).join(', ')].filter(Boolean).join(' + ');
   const msE = (E, k, f, c, c2) => { EL = (E && E[k]) || []; const r = ms(f, c, c2); EL = []; return r; }; // « † » = attaque exclusive, comme sur la fiche
   const ELN = '<p class="note">† : attaque exclusive (disponible via événement / MT élite).</p>';
@@ -2898,12 +3033,21 @@ async function renderRank() {
     const P = rd.P[RK.sh ? 's' : 'n'], F = rd.F, mvk = i => rd.mv[i];
     body += `<div class="rkctl">${rkSeg('rv', [['g', 'Global'], ['b', 'Par boss'], ['t', 'Par type de boss']])}${rkSeg('sh', [[1, 'Obscurs inclus'], [0, 'Sans Obscurs']])}</div>`;
     const cntRow = (r, i, nb) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${r[3]}</b><small>n° 1</small>`, '') .replace('</small></span><span class="rkv">', ` · utile contre ${r[4]}${nb ? ' / ' + nb : ''} boss · meilleur ${String(r[5]).replace('.', ',')} %</small></span><span class="rkv">`);
+    const pc = x => `<b>${String(x).replace('.', ',')} %</b><small>du meilleur</small>`;
+    const tRows = T => `<ol class="rklist">${T.map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), pc(r[3]))).join('')}</ol>`;
+    const raidTeamsH = j => { const L = [...P.b[j], ...((P.x || [])[j] || [])], N = rd.P.n, LN = [...N.b[j], ...((N.x || [])[j] || [])];
+      const t1 = raidTeam(L, F, () => true), t2 = raidTeam(L, F, k => !tmLeg(k)), pool = RK.sh ? 's' : 'n', t3 = raidCollTeam(raidColl(rd, j, pool)), mo = raidMono(L, F);
+      const nm = r => { const p = BY_KEY[F[r[0]][0]]; return esc(p ? fullN(p) : F[r[0]][0]) + (F[r[0]][1] ? ' obscur' : ''); };
+      const monoH = mo ? `<p class="note"><b>Équipe mono</b> (6 fois le même, plus simple à préparer) : ${mo[0] === mo[1] ? '6 × ' + nm(mo[0]) : nm(mo[0]) + ' + 5 × ' + nm(mo[1]) + ' (un seul Méga par équipe)'}.</p>` : '';
+      const cRows = T => `<ol class="rklist">${T.map((r, i) => rkRow(i + 1, r[0], r[1], msE(rd.E, r[0], r[2], r[3]) + `<br>${specTag(r[5])}${r[5] && r[0] !== r[5].k ? ' · ' + (r[5].mg ? 'niveau Méga ' + MEGA_LV[((r[0] === r[5].mg2 ? r[5].mgl2 : r[5].mgl) || 1) - 1] : 'Méga supposée (non indiquée sur la fiche), niveau Base') : ''}`, `${pcB(r[4])}<small>du meilleur</small>`)).join('')}</ol>`;
+      const col = !tmAnyGo() ? '<p class="note">Marquez vos Pokémon « Capturé » dans Pokémon GO (fiche ou collection) pour voir cette équipe.</p>' : t3.length ? cRows(t3) + ovN(t3.map(r => r[4])) + (t3.length < 6 ? `<p class="note">Seulement ${t3.length} de vos Pokémon sont utiles ici (au moins 40 % du meilleur).</p>` : '') : '<p class="note">Aucun de vos Pokémon n’atteint 40 % du meilleur contre ce boss.</p>';
+      return `<h3 class="rkh">Équipe conseillée</h3>${tRows(t1)}${monoH}<h3 class="rkh">Équipe conseillée sans légendaires</h3>${tRows(t2)}<p class="note">Sans Pokémon légendaires, fabuleux, Ultra-Chimères ni Paradoxes.</p><h3 class="rkh">Équipe avec ma collection</h3>${col}<p class="note">Vos Pokémon de la collection actuellement dans Pokémon GO, recalculés sur cet appareil avec leurs vraies attaques, leur niveau (ou celui déduit des PC et IV), leurs IV et leur état (Obscur : Attaque ×1,2, Défense ×0,83 ; Purifié : comme un normal). Ce qui n’est pas renseigné est supposé comme dans le classement : meilleur moveset, niveau 40, IV 15/15/15. S’y ajoutent les Pokémon marqués « Capturé » dans le dex GO sans fiche de collection, et leur Méga si elle est enregistrée ou si vous avez sa Méga-énergie. Avec deux attaques chargées, on retient la meilleure contre ce boss. Méga : seul l’exemplaire indiqué Méga dans sa fiche (bloc « Combat dans Pokémon GO ») est essayé sous cette forme, ou sous chacune s’il a Méga X et Méga Y (on garde la meilleure contre ce boss) ; une fiche plus ancienne sans ce champ garde l’ancienne règle (Méga enregistrée ou Méga-énergie), au niveau Base ; un Obscur ne méga-évolue jamais. Le niveau Méga n’agit sur les dégâts que via l’attaque chargée « + » de certaines Méga (puissance ×1 / ×1,1 / ×1,2 / ×1,3 de Base à Super Max) et, au Super Max, +2 niveaux pendant la Méga-évolution ; le bonus d’équipe (+10 %, +30 % au même type, identique à tous les niveaux) profite aux autres Dresseurs et n’est pas compté.${RK.sh ? '' : ' Vos Obscurs sont pris en compte avec « Obscurs inclus ».'}</p><p class="note">Règles : 6 Pokémon différents (un Méga et sa forme de base comptent pour 2, un Obscur et sa version normale aussi ; pour deux exemplaires de la même espèce, le meilleur ; un même exemplaire ne compte qu’une fois, sous sa meilleure forme), jamais plus d’un Méga (un seul peut être actif à la fois). On prend les meilleurs contre ce boss dans l’ordre, sans moyenne. % = comparé au n° 1 du classement.</p>`; };
     if (RK.rv === 'g') body += `<ol class="rklist">${P.g.map((r, i) => cntRow(r, i, rd.nb)).join('')}</ol><p class="note">Classement contre les ${rd.nb} boss de raid testés, sans moyenne : d’abord le nombre de boss où ce Pokémon est n° 1, puis le nombre de boss où il est utile (au moins 60 % du meilleur), puis son meilleur % contre un boss.</p>`;
     else if (RK.rv === 't') { const T = Object.keys(P.t).sort((a, b) => TYPE_FR[a].localeCompare(TYPE_FR[b], 'fr')); if (!P.t[RK.ty]) RK.ty = T[0]; const [nb, L] = P.t[RK.ty];
       body += `<div class="rkctl"><select id="rkty" aria-label="Type du boss">${T.map(t => `<option value="${t}"${t === RK.ty ? ' selected' : ''}>${esc(TYPE_FR[t])} (${P.t[t][0]} boss)</option>`).join('')}</select></div><ol class="rklist">${L.map((r, i) => cntRow(r, i, nb)).join('')}</ol><p class="note">Boss de type ${esc(TYPE_FR[RK.ty])} (y compris double type) : même règle que le classement global, sur ces ${nb} boss seulement.</p>`; }
     else { const Bi = rd.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr')); let j = rd.B.findIndex(b => b[0] + '|' + b[2] === RK.boss); if (j < 0) { const c = Bi.find(([, x]) => bossStatus(sc, 'raid', y => raidMatch(y, x))?.now); j = (c || Bi[0])[0]; } const b = rd.B[j];
       body += `<div class="rkctl rkboss"><input id="rkq" type="search" placeholder="Chercher un boss…" value="${esc(RK.q)}" autocomplete="off"><select id="rkb" aria-label="Boss">${bossOpts(Bi.filter(([, x]) => !RK.q || x[1].toLowerCase().includes(RK.q.toLowerCase())), 'raid', sc, raidMatch, x => x[0] + '|' + x[2], x => `${x[1]} (${x[2]})`, b[0] + '|' + b[2])}</select></div>${schedNote(sc, 'raid')}
-        <p class="rkbt">${esc(b[1])} · ${esc(b[2])} · ${b[3].map(badge).join('')}</p><div class="pcslot" data-pck="${esc(raidBase(b[0]))}" data-psh="${/obscur/.test(b[2]) ? 1 : 0}" data-pmg="${raidBase(b[0]) !== b[0] ? 1 : 0}"></div><ol class="rklist">${P.b[j].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs attaquants contre ce boss, chacun avec son meilleur moveset. % = dégâts par seconde pondérés par la survie, comparés au n° 1.</p>`; }
+        <p class="rkbt">${esc(b[1])} · ${esc(b[2])} · ${b[3].map(badge).join('')}</p><div class="pcslot" data-pck="${esc(raidBase(b[0]))}" data-psh="${/obscur/.test(b[2]) ? 1 : 0}" data-pmg="${raidBase(b[0]) !== b[0] ? 1 : 0}"></div><div class="rkctl">${rkSeg('bt', [['t', 'Équipes'], ['l', 'Classement']])}</div>${RK.bt === 't' ? raidTeamsH(j) : `<ol class="rklist">${P.b[j].map((r, i) => rkRow(i + 1, F[r[0]][0], F[r[0]][1], msE(rd.E, F[r[0]][0], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs attaquants contre ce boss, chacun avec son meilleur moveset. % = dégâts par seconde pondérés par la survie, comparés au n° 1.</p>`}`; }
     body += ELN + `<p class="note">${esc(rd.src)}, ${new Date(rd.date).toLocaleDateString('fr-FR')}.</p>`;
   } else if (RK.s === 'rocket') {
     if (!rk) body += '<p class="note">Classement Team GO Rocket indisponible hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p>';
@@ -2926,11 +3070,18 @@ async function renderRank() {
     const R = { A: 'Attaquant', T: 'Tank', H: 'Soigneur' }, RD = { A: 'dégâts infligés', T: '0,6 × jauge Max remplie + 0,2 × tenue + 0,2 × dégâts absorbés par Gardomax', H: '0,7 × PV soignés + 0,3 × survie' };
     if (!mx) body += '<p class="note">Classement des Combats Max indisponible hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p>';
     else { const F = mx.F, mvk = i => mx.mv[i], X = mx.R[RK.ro];
-      body += `<div class="rkctl">${rkSeg('mv', [['g', 'Global'], ['b', 'Par boss']])}${rkSeg('ro', Object.entries(R))}</div>`;
+      body += `<div class="rkctl">${rkSeg('mv', [['g', 'Global'], ['b', 'Par boss']])}${RK.mv === 'b' && RK.bt === 't' ? '' : rkSeg('ro', Object.entries(R))}</div>`;
+      const maxTeamsH = j => { const R3 = ['A', 'T', 'H'];
+        const tH = T => `<ol class="rklist">${T.map((r, i) => rkRow(i + 1, F[r[0]], 0, `<b>${R[R3[i]]}</b> · ` + msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur ${{ A: 'attaquant', T: 'tank', H: 'soigneur' }[R3[i]]}</small>`)).join('')}</ol>`;
+        const t1 = maxTeam(R3.map(ro => maxRows(mx.R, j, F, ro, () => true))), t2 = maxTeam(R3.map(ro => maxRows(mx.R, j, F, ro, k => !tmLegMax(k)))), C = maxColl(mx, j), t3 = maxTeam(R3.map(ro => C[ro]));
+        const cH = T => `<ol class="rklist">${T.map((r, i) => rkRow(i + 1, r[0], 0, `<b>${R[R3[i]]}</b> · ` + msE(mx.E, r[0], r[1], r[2]) + `<br>${r[5] ? specTag(r[5]) + (r[5].ml && r[5].ml.some(Boolean) ? ' · attaques Max niv. ' + r[5].ml.map(n => n || 3).join('/') : '') : 'marqué dans le dex GO'}`, `${pcB(r[3])}<small>du meilleur ${{ A: 'attaquant', T: 'tank', H: 'soigneur' }[R3[i]]}</small>`)).join('')}</ol>`;
+        const any = DYNAMAX.size || [...CAUGHT_G].some(x => /-gmax$/.test(x)) || colGoSpecs().some(specMax);
+        const col = !any ? '<p class="note">Indiquez Dynamax ou Gigamax sur vos Pokémon GO dans la collection (ou marquez-les « Dynamax » / Gigamax « Capturé » sur leur fiche) pour voir cette équipe.</p>' : t3 ? cH(t3) + ovN(t3.map(r => r[3])) : '<p class="note">Vos Pokémon Dynamax / Gigamax ne suffisent pas pour former un trio (il en faut au moins un par rôle, un exemplaire ne pouvant tenir qu’un rôle).</p>';
+        return `<h3 class="rkh">Équipe conseillée</h3>${t1 ? tH(t1) : ''}<h3 class="rkh">Équipe conseillée sans légendaires ni Gigamax</h3>${t2 ? tH(t2) : '<p class="note">Pas de trio possible.</p>'}<p class="note">Sans Pokémon légendaires, fabuleux, Ultra-Chimères, Paradoxes ni Gigamax (aussi rares à obtenir qu’un légendaire) : uniquement des Dynamax.</p><h3 class="rkh">Équipe avec ma collection</h3>${col}<p class="note">Vos Pokémon de la collection dans Pokémon GO indiqués Dynamax ou Gigamax, recalculés sur cet appareil avec leurs vraies attaques, leur niveau, leurs IV et les niveaux de leurs attaques Max ; ce qui n’est pas renseigné est supposé comme dans le classement (meilleur moveset, niveau 40, IV 15/15/15, attaques Max niveau 3). S’y ajoutent les Pokémon marqués « Dynamax » (ou Gigamax « Capturé ») dans le dex GO sans fiche de collection, un exemplaire chacun. Le même Pokémon peut tenir deux rôles s’il y a deux exemplaires.</p><p class="note">Règles : un Attaquant, un Tank et un Soigneur ; le même Pokémon peut occuper deux postes (par exemple deux Leuphorie). Parmi tous les trios possibles, on garde celui dont le membre le plus faible dans son rôle est le meilleur (puis le 2e plus faible), sans moyenne. % = comparé au n° 1 du rôle contre ce boss.</p>`; };
       if (RK.mv === 'g') body += `<ol class="rklist">${X.g.map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${r[3]}</b><small>n° 1</small>`).replace('</small></span><span class="rkv">', ` · utile contre ${r[4]} / ${mx.nb} boss · meilleur ${String(r[5]).replace('.', ',')} %</small></span><span class="rkv">`)).join('')}</ol><p class="note">${esc(R[RK.ro])} (${RD[RK.ro]}) : classement contre les ${mx.nb} boss Dynamax et Gigamax testés, sans moyenne : d’abord le nombre de boss où ce Pokémon est n° 1 dans ce rôle, puis le nombre de boss où il est utile (au moins 60 % du meilleur), puis son meilleur % contre un boss.</p>`;
       else { const Bi = mx.B.map((b, j) => [j, b]).sort((x, y) => x[1][1].localeCompare(y[1][1], 'fr') || x[1][2] - y[1][2]); let j = mx.B.findIndex(b => b[0] === RK.mb); if (j < 0) { const c = Bi.find(([, x]) => bossStatus(sc, 'max', y => maxMatch(y, x))?.now); j = (c || Bi[0])[0]; } const b = mx.B[j], tl = t => t >= 6 ? 'Gigamax 6★' : 'Dynamax ' + t + '★';
         body += `<div class="rkctl rkboss"><select id="rkmb" aria-label="Boss">${bossOpts(Bi, 'max', sc, maxMatch, x => x[0], x => `${x[1]} (${tl(x[2])})`, b[0])}</select></div>${schedNote(sc, 'max')}
-          <p class="rkbt">${esc(b[1])} · ${tl(b[2])} · ${b[3].map(badge).join('')}</p><ol class="rklist">${X.b[j].map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs ${{ A: 'attaquants', T: 'tanks', H: 'soigneurs' }[RK.ro]} contre ce boss, chacun avec son meilleur moveset pour ce rôle. % = score du rôle (${RD[RK.ro]}), comparé au n° 1.</p>`; }
+          <p class="rkbt">${esc(b[1])} · ${tl(b[2])} · ${b[3].map(badge).join('')}</p><div class="rkctl">${rkSeg('bt', [['t', 'Équipes'], ['l', 'Classement']])}</div>${RK.bt === 't' ? maxTeamsH(j) : `<ol class="rklist">${X.b[j].map((r, i) => rkRow(i + 1, F[r[0]], 0, msE(mx.E, F[r[0]], mvk(r[1]), mvk(r[2])), `<b>${String(r[3]).replace('.', ',')} %</b><small>du meilleur</small>`)).join('')}</ol><p class="note">Les 20 meilleurs ${{ A: 'attaquants', T: 'tanks', H: 'soigneurs' }[RK.ro]} contre ce boss, chacun avec son meilleur moveset pour ce rôle. % = score du rôle (${RD[RK.ro]}), comparé au n° 1.</p>`}`; }
       body += ELN + `<p class="note">${esc(mx.src)}, ${new Date(mx.date).toLocaleDateString('fr-FR')}.</p>`; }
   }
   rv.innerHTML = head + `<div class="rkwrap">${body}</div>`;
