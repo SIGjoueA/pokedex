@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.4';
+const VERSION = 'v60.5';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Classements : équipes conseillées par boss en raid et en Combat Max, et équipe avec votre collection recalculée avec les attaques, le niveau et les IV saisis dans la fiche, y compris la Méga et son niveau.';
-const DATA_VERSION = 'd39'; // bump when the schema of data/*.json changes
+const NOTES = 'Fiche Pokémon GO, Attaques : liste complète des boss de raid (vues Normal et Obscur) et de Combat Max où le Pokémon est utile, avec un lien vers chaque boss, et ses attaques Max.';
+const DATA_VERSION = 'd40'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
