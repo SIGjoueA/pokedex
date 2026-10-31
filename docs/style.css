@@ -650,7 +650,7 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .gomoves.mv-raid .mvpvp,.gomoves.mv-pvp .mvraid,.gomoves.mv-raid .mvmax,.gomoves.mv-pvp .mvmax,.gomoves.mv-max .mvraid,.gomoves.mv-max .mvpvp{display:none}
 .rdty li{margin:6px 0}
 .rvseg{display:flex;width:100%;margin:2px 0 6px}.rvseg button{flex:1;font-size:14px;color:var(--fg)}
-.bsl{margin:2px 0 0}.bsl summary{cursor:pointer;color:var(--accent,#2a6fdb);font-size:14px}.bslist{margin:4px 0 6px 6px;columns:1}.bslist li{margin:3px 0}.bslk{font-weight:600}.rdwx{margin:6px 0}.rdwx summary{cursor:pointer;font-weight:600}
+.bsl{margin:2px 0 0}.bsl summary{cursor:pointer;font-size:14px;list-style:none}.bsl summary::-webkit-details-marker{display:none}.bsn{color:var(--mute)}.bsmore{margin-left:8px;color:var(--accent);font-weight:600;white-space:nowrap}.bsmore::after{content:' ▾'}.bsl[open] .bsmore{font-size:0}.bsl[open] .bsmore::after{content:'− réduire ▴';font-size:14px}.bsh{margin:6px 0 2px;font-size:13px;color:var(--mute)}.bslist{margin:4px 0 6px 6px;columns:1}.bslist li{margin:3px 0}.bslk{font-weight:600}.rdwx{margin:6px 0}.rdwx summary{cursor:pointer;font-weight:600}
 .mvh{font-size:15px;margin:12px 0 4px}
 .pvrec li{margin:4px 0}
 /* v57: Couafarel trims — equal-width grid, zone under the name */

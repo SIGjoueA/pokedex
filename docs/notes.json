@@ -3,9 +3,9 @@
   "v": "v60.5",
   "d": "2026-10-31",
   "l": [
-   "Fiche Pokémon GO, Attaques, Raids & arènes : « Selon le boss » remplace « Moveset recommandé » et donne la liste complète des boss de raid où le Pokémon est utile, rangés sous le moveset qui convient le mieux à chacun ; touchez un boss pour ouvrir ses équipes dans Classements.",
+   "Fiche Pokémon GO, Attaques, Raids & arènes : « Selon le boss » remplace « Moveset recommandé » et donne la liste complète des boss de raid où le Pokémon est utile, rangés sous le moveset qui convient le mieux à chacun (liste repliée, touchez « + de détails ») ; touchez un boss pour ouvrir ses équipes dans Classements.",
    "Vues « Normal » et « Obscur » quand le Pokémon a une forme obscure : chacune a sa propre liste de boss.",
-   "Combats Max : attaques Max accessibles (selon le type de l’attaque immédiate, Gardomax, Régémax et l’attaque G-Max des Gigamax) et liste complète des boss où le Pokémon est utile, par rôle, avec un lien vers chaque boss."
+   "Combats Max : attaques Max accessibles (Attaque Max du type de l’attaque immédiate, ou attaque G-Max unique pour les Gigamax, plus Gardomax et Régémax) ; sous chaque moveset recommandé, « + de détails » donne les boss concernés, avec un lien vers chacun."
   ]
  },
  {
