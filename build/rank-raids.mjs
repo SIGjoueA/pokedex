@@ -34,6 +34,6 @@ if (RB.length !== B.length || RB.some((b, j) => b.k !== B[j].k)) throw new Error
 const BS = RB.map(b => { const g = b.go || goOf(b.k); return [g.a, g.d, g.fm, g.cm, b.cpm, b.shadow ? 1 : 0]; });
 const TOP = Object.fromEntries(['n', 's'].map(pool => [pool, B.map(b => Math.max(...b.sc.filter((v, i) => pool === 's' || S[i].kind !== 's').map(v => v[0])))]));
 const TY = Object.fromEntries(Object.entries(PTY).map(([k, v]) => [k, v.t])); // attacker types used by the simulation (patch)
-const out = { date: '2026-10-28', src: 'Simulation raid v2 (niveau 40, sans météo ni esquive, Méga au niveau de base)', nb: B.length, mv, F, B: B.map(b => [b.k, b.n, b.tier, b.t]), P, BS, TOP, TY };
+const out = { date: '2026-11-01', src: 'Simulation raid v2 (niveau 40, sans météo ni esquive, Méga au niveau de base)', nb: B.length, mv, F, B: B.map(b => [b.k, b.n, b.tier, b.t]), P, BS, TOP, TY };
 fs.writeFileSync(path.join(ROOT, 'docs/data/rank-raid.json'), JSON.stringify(out));
 console.log('rank-raid.json', JSON.stringify(out).length, 'octets ; formes', F.length, '; top global sans obscurs :', P.n.g.slice(0, 5).map(r => F[r[0]][0] + ' ' + r[3] + '/' + r[4]).join(', '));

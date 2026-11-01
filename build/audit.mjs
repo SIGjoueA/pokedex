@@ -175,7 +175,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v28 17 Gigamax sortis + Duralugon le 2026-11-06 (v44 : Salarsen = une fiche)', core.e.filter(e => e.c === 'gmax' && e.go).length === 17 && E['884-gmax'].gof === '2026-11-06' && F(884, '884-gmax').go.shf === '2026-11-06');
   ok('v28 pas de shiny Gigamax Lézargus / Salarsen', F(818, '818-gmax').go.nosh === 1 && F(849, '849-amped-gmax').go.nosh === 1 && !F(6, '6-gmax').go.nosh);
   ok('v28 Méga-Dracaufeu X / Y, Méga-Mewtwo X / Y, Primo-Kyogre / Groudon dans GO', ['6-mega-x', '6-mega-y', '150-mega-x', '150-mega-y', '382-primal', '383-primal'].every(k => E[k].go === 1));
-  ok('v28 Méga-Lugulabre pas encore dans GO', !E['609-mega'].go);
+  ok('v60.6 Méga-Lugulabre sortie dans GO (31/10/2026), Vent Mauvais +', E['609-mega'].go === 1 && F(609, '609-mega').go.r === 1 && F(609, '609-mega').go.cm.includes('OMINOUS_WIND_PLUS'));
   ok('v28 Gigamax GO = stats de la base', F(6, '6-gmax').go.a === F(6).go.a && F(6, '6-gmax').go.m50 === F(6).go.m50);
   ok('v28 shiny Méga = Méga-Évolution d’un shiny', JSON.stringify(F(6, '6-mega-x').go.sh) === '["mega"]');
   ok('v28 nombre de Méga / Primo GO', core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length === 62);

@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.5';
+const VERSION = 'v60.6';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Fiche Pokémon GO, Attaques : liste complète des boss de raid (vues Normal et Obscur) et de Combat Max où le Pokémon est utile, avec un lien vers chaque boss, et ses attaques Max.';
-const DATA_VERSION = 'd40'; // bump when the schema of data/*.json changes
+const NOTES = 'Méga-Lugulabre : sortie dans GO, nouvelle attaque Vent Mauvais +, Super Méga-Raid (équipe avec une Méga, sans Primo) ; niveaux Méga renommés comme dans le jeu ; classements PvP mis à jour.';
+const DATA_VERSION = 'd41'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

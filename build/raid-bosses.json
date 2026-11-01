@@ -34,6 +34,11 @@
   "Élite": {
    "hp": 20000,
    "cpm": 0.7903
+  },
+  "Super Méga": {
+   "hp": 9000,
+   "cpm": 0.7903,
+   "_doc": "v60.6 : Super Méga-Raid (Méga-Lugulabre, 31/10/2026). 7 boucliers, brisés uniquement par les Pokémon méga-évolués (pas les Primo) : l’équipe conseillée contient une Méga et exclut les Primo. PV non publiés, à confirmer (9000 = Méga par défaut)."
   }
  },
  "bosses": [
@@ -1396,10 +1401,34 @@
   {
    "k": "609-mega",
    "n": "Méga-Lugulabre",
-   "tier": "Méga",
+   "tier": "Super Méga",
    "hp": 9000,
    "cpm": 0.7903,
-   "src": "Paramètres par défaut du niveau (build/raid-bosses.json → tiers) ; planning Leek Duck (lu le 29/10/2026)"
+   "src": "Super Méga-Raid : Leek Duck (lu le 29/10/2026), Pokémon GO Hub « Super Mega Chandelure Raid Guide » (7 boucliers, Méga obligatoire, pas de Primo ; lu le 01/11/2026). PV : défaut du niveau Méga, non publiés. Attaques du boss : celles de la forme (game master), liste de raid non confirmée par une 2e source.",
+   "shields": 7,
+   "hpNote": "PV non publiés, à confirmer",
+   "go": {
+    "t": [
+     "ghost",
+     "fire"
+    ],
+    "a": 335,
+    "d": 227,
+    "s": 155,
+    "fm": [
+     "HEX_FAST",
+     "FIRE_SPIN_FAST",
+     "INCINERATE_FAST",
+     "ASTONISH_FAST"
+    ],
+    "cm": [
+     "ENERGY_BALL",
+     "SHADOW_BALL",
+     "OVERHEAT",
+     "FLAME_CHARGE"
+    ]
+   },
+   "_note": "v60.6 : attaques du boss figées sur celles de la forme sans Vent Mauvais + (liste de raid DoctorPokeGO non confirmée par Pokebattler / Leek Duck / GO Hub)."
   },
   {
    "k": "641",

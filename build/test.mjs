@@ -557,7 +557,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     const lst = await p.$$eval('#results [href^="#/p/"]', as => as.map(a => a.getAttribute('href').slice(4)));
     const i6 = lst.indexOf('6');
     ok(i6 >= 0 && lst.slice(i6, i6 + 4).join() === '6,6-mega-x,6-mega-y,6-gmax', tag + ' v28 GO list (Formes): Dracaufeu, then Méga X, Méga Y, Gigamax ' + lst.slice(i6, i6 + 4).join());
-    ok(['382-primal', '383-primal', '150-mega-x', '398-mega', '849-amped-gmax', '818-gmax'].every(k => lst.includes(k)) && !['884-gmax', '609-mega', '890-eternamax', '892-single-strike-gmax'].some(k => lst.includes(k)), tag + ' v28 GO list: Primals, late Megas, Gigamax in; Duralugon Gigamax (before 6/11), Méga-Lugulabre, Éthernatos Infinimax out');
+    ok(['382-primal', '383-primal', '150-mega-x', '398-mega', '849-amped-gmax', '818-gmax'].every(k => lst.includes(k)) && lst.includes('609-mega') && !['884-gmax', '890-eternamax', '892-single-strike-gmax'].some(k => lst.includes(k)), tag + ' v28 GO list: Primals, late Megas (v60.6: Méga-Lugulabre), Gigamax in; Duralugon Gigamax (before 6/11), Éthernatos Infinimax out');
     const cnt = await p.$eval('#count', e => e.textContent);
     ok(/formes dont \d+ Méga \/ Primo \/ Gigamax \(hors dorure\)/.test(cnt), tag + ' v28 GO counter: Méga / Primo / Gigamax shown as forms, hors dorure ' + cnt.slice(0, 90));
     ok(await p.evaluate(() => !baseStatus(BY_KEY['6-gmax']).sw.includes('go') && !homeAvail(BY_KEY['6-gmax']).includes('go') && !homeAvail(BY_KEY['6-mega-x']).includes('go') && homeAvail(BY_KEY['6']).includes('go') && baseStatus(BY_KEY['6']).sw.includes('go')), tag + ' v28 gold completion: no GO tier / GO HOME mark for GO Megas and Gigamax (base form unchanged)');
