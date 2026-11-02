@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.6';
+const VERSION = 'v60.7';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Méga-Lugulabre : sortie dans GO, nouvelle attaque Vent Mauvais +, Super Méga-Raid (équipe avec une Méga, sans Primo) ; niveaux Méga renommés comme dans le jeu ; classements PvP mis à jour.';
-const DATA_VERSION = 'd42'; // bump when the schema of data/*.json changes
+const NOTES = 'Combats Max : Duralugon Gigamax (6★, Terres Sauvages GO) ajouté aux classements, avec des paramètres de boss à confirmer.';
+const DATA_VERSION = 'd43'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
