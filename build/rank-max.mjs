@@ -16,17 +16,18 @@ const SC = S.bosses.map(b => scores(b.key)), R = {};
 for (const ro of 'ATH') {
   const per = SC.map(sc => { const best = new Map(); for (const [i, v] of sc) { const k = S.sets[i].k, o = best.get(k); if (!o || v[ro] > o[1]) best.set(k, [i, v[ro]]); }
     const L = [...best.entries()].sort((a, b) => b[1][1] - a[1][1]), top = L[0][1][1] || 1; return L.map(([k, [i, v]]) => [k, i, v / top]); });
-  const A = new Map(); per.forEach(L => L.forEach(([k, i, r], pos) => { if (r < USE) return; const a = A.get(k) || { n1: 0, nu: 0, best: 0, sets: {} }; if (pos === 0) a.n1++; a.nu++; a.best = Math.max(a.best, r); a.sets[i] = (a.sets[i] || 0) + (pos === 0 ? 1000 : 0) + r; A.set(k, a); }));
-  const g = [...A.entries()].sort((x, y) => y[1].n1 - x[1].n1 || y[1].nu - x[1].nu || y[1].best - x[1].best).slice(0, 60).map(([k, a]) => { const s = S.sets[+Object.entries(a.sets).sort((x, y) => y[1] - x[1])[0][0]]; return [fi(k), mi(s.f), mi(s.c), a.n1, a.nu, pct(a.best)]; });
+  const gOf = keep => { const A = new Map(); per.forEach((L, j) => keep(j) && L.forEach(([k, i, r], pos) => { if (r < USE) return; const a = A.get(k) || { n1: 0, nu: 0, best: 0, sets: {} }; if (pos === 0) a.n1++; a.nu++; a.best = Math.max(a.best, r); a.sets[i] = (a.sets[i] || 0) + (pos === 0 ? 1000 : 0) + r; A.set(k, a); }));
+  const g = [...A.entries()].sort((x, y) => y[1].n1 - x[1].n1 || y[1].nu - x[1].nu || y[1].best - x[1].best).slice(0, 60).map(([k, a]) => { const s = S.sets[+Object.entries(a.sets).sort((x, y) => y[1] - x[1])[0][0]]; return [fi(k), mi(s.f), mi(s.c), a.n1, a.nu, pct(a.best)]; }); return g; };
+  const g = gOf(() => true), TI = S.bosses.map(b => b.tier); // v60.7 : aussi par niveau (5★/6★ « h », 3★/4★ « l »)
   const row = ([k, i, r]) => [fi(k), mi(S.sets[i].f), mi(S.sets[i].c), pct(r)];
   per.forEach((L, j) => { NM[j][ro] = Math.max(...SC[j].map(([, v]) => v[ro])); });
-  R[ro] = { b: per.map(L => L.slice(0, 20).map(row)), x: per.map(L => L.slice(20, 60).filter(([, , r]) => r >= 0.3).map(row)), g };
+  R[ro] = { b: per.map(L => L.slice(0, 20).map(row)), x: per.map(L => L.slice(20, 60).filter(([, , r]) => r >= 0.3).map(row)), g, gh: gOf(j => TI[j] >= 5), gl: gOf(j => TI[j] <= 4) };
 }
 const PM = JSON.parse(fs.readFileSync(path.join(ROOT, 'build/go-moves-patch.json'))), MB = JSON.parse(fs.readFileSync(path.join(ROOT, 'build/max-bosses.json')));
 const goOf = k => { if (MB.inline[k]) return MB.inline[k]; const g = JSON.parse(fs.readFileSync(`${ROOT}/docs/data/sp/${parseInt(k)}.json`)).f[k].go, p = PM.movepool[k]; if (!p) return g;
   const o = { ...g }; for (const f of ['fm', 'cm', 'fe', 'ce']) if (p[f]) o[f] = [...new Set([...(g[f] || []), ...p[f]])]; return o; };
-const BS = S.bosses.map(sb => { const b = MB.bosses.find(x => x.key === sb.key), g = goOf(b.key); return [g.a, g.d, b.hp, b.cpm, b.atkMult, b.meMult, b.rate, b.limit, b.enrageAt, b.enrage, sb.moves]; });
-const out = { date: '2026-10-28', src: 'Simulation Combats Max v1 (niveau 40, Gardomax et Régémax niveau 3, sans esquive)', nb: S.bosses.length, mv, F, B: S.bosses.map(b => [b.key, b.fr, b.tier, b.t]), R, BS, NM: NM.map(m => Object.fromEntries(Object.entries(m).map(([k, v]) => [k, +v.toPrecision(6)]))) };
+const BS = S.bosses.map(sb => { const b = MB.bosses.find(x => x.key === sb.key), g = goOf(b.key); return [g.a, g.d, b.hp, b.cpm, b.atkMult, b.meMult, b.rate, b.limit, b.enrageAt, b.enrage, sb.moves, b.meDec]; });
+const out = { date: '2026-11-02', src: 'Simulation Combats Max v1 (niveau 40, Gardomax et Régémax niveau 3, sans esquive)', nb: S.bosses.length, nbh: S.bosses.filter(b => b.tier >= 5).length, nbl: S.bosses.filter(b => b.tier <= 4).length, mv, F, B: S.bosses.map(b => [b.key, b.fr, b.tier, b.t]), R, BS, NM: NM.map(m => Object.fromEntries(Object.entries(m).map(([k, v]) => [k, +v.toPrecision(6)]))) };
 fs.writeFileSync(path.join(ROOT, 'docs/data/rank-max.json'), JSON.stringify(out));
 console.log('rank-max.json', JSON.stringify(out).length, 'octets');
 for (const ro of 'ATH') console.log(ro, 'global', R[ro].g.slice(0, 5).map(r => F[r[0]] + ' ' + r[3] + '/' + r[4] + ' ' + r[5]).join(', '));

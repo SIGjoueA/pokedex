@@ -53,7 +53,7 @@
     const df = dmg(M[s.f][2], atk, bDef, st(s.f), eff(M[s.f][1], B.t)), dc = dmg(M[s.c][2], atk, bDef, st(s.c), eff(M[s.c][1], B.t));
     const dmax = dmg(x.mp, atk, bDef, s.t.includes(x.mt) ? STAB : 1, eff(x.mt, B.t));
     const dT = dmg(M[mT][2], bAtk, def, bst(mT), eff(M[mT][1], s.t)) * 2, dS = dmg(M[mS][2], bAtk, def, bst(mS), eff(M[mS][1], s.t));
-    const charge = d => Math.max(1, Math.floor(d / B.hp * 200 * B.meMult * 100) / 100);
+    const charge = d => Math.max(1, Math.floor(d / B.hp * 200 * B.meMult * 10 ** (B.meDec ?? 2)) / 10 ** (B.meDec ?? 2));
     const sh0 = x.shield0 ? GUARD : 0;
     const P = [0, 1, 2, 3].map(i => ({ role: i < 2 ? 'A' : i === 2 ? 'T' : 'H', left: 3, hp: hp0, e: 0, sh: sh0, next: 0, out: false, dmg: 0, meter: 0, absorb: 0, heal: 0, alive: 0 }));
     let bhp = B.hp, meter = 0, t = 0, nb = B.rate, orb = ORB_EVERY;
@@ -83,7 +83,7 @@
     if (!M[s.f] || !M[s.c]) return null; const x = maxParams(s.k, s.f, s.ml);
     const acc = { Th: 0, A: 0, Tm: 0, Ta: 0, Hh: 0, Hs: 0 }; let n = 0;
     const mv = B.moves.length > 1 ? B.moves : [B.moves[0], B.moves[0]];
-    for (const a of mv) for (const b of mv) { if (a === b && mv.length > 1) continue; seed = 11;
+    for (const a of mv) for (const b of mv) { if (a === b && B.moves.length > 1) continue; seed = 11;
       for (let i = 0; i < X_RUNS; i++) { const r = battle(s, x, B, a, b); for (const k in acc) acc[k] += r[k]; n++; } }
     for (const k in acc) acc[k] /= n; return acc;
   }

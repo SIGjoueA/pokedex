@@ -25,7 +25,7 @@ if (raidF) { const d = JSON.parse(fs.readFileSync(raidF)); const keys = rb ? rb.
 if (maxF) { const X = JSON.parse(fs.readFileSync(maxF)); const keys = mb ? mb.split(',') : ['6-gmax', '890-eternamax', '144', '149', '812-gmax', '888', '68-gmax', '94-gmax'];
   let wr = 0, ws = 0, n = 0, rd = 0;
   for (const bk of keys) { const j = X.bosses.findIndex(b => b.key === bk); if (j < 0) { console.log('boss absent', bk); continue; } const b = X.bosses[j], bs = rm.BS[j];
-    const B = { a: bs[0], d: bs[1], t: b.t, hp: bs[2], cpm: bs[3], atkMult: bs[4], meMult: bs[5], rate: bs[6], limit: bs[7], enrageAt: bs[8], enrage: bs[9], moves: bs[10] }, N = rm.NM[j];
+    const B = { a: bs[0], d: bs[1], t: b.t, hp: bs[2], cpm: bs[3], atkMult: bs[4], meMult: bs[5], rate: bs[6], limit: bs[7], enrageAt: bs[8], enrage: bs[9], moves: bs[10], meDec: bs[11] ?? 2 }, N = rm.NM[j];
     const ref = { A: new Map(), T: new Map(), H: new Map() }, mine = { A: new Map(), T: new Map(), H: new Map() }, res = X.res[bk];
     for (const i of Object.keys(res)) { const s = X.sets[+i], g = sp(s.k)?.go || JSON.parse(fs.readFileSync(R + '/build/max-bosses.json')).inline[s.k];
       const r = S.maxEval({ a: g.a, d: g.d, s: g.s, t: g.t, f: s.f, c: s.c, k: s.k }, B); n++;
