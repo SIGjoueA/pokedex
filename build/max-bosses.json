@@ -1,0 +1,1102 @@
+{
+ "_doc": "Paramètres par boss (No-Floats-Left, dernière apparition). Approximations notées dans \"approx\".",
+ "source": "https://docs.google.com/spreadsheets/d/ (No-Floats-Left « Raid / Max Battle Parameters », export du 27/10/2026)",
+ "bosses": [
+  {
+   "key": "144",
+   "fr": "Artikodin",
+   "en": "Articuno",
+   "tier": 5,
+   "cpm": 0.7,
+   "hp": 17500,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2026-10-21",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "145",
+   "fr": "Électhor",
+   "en": "Zapdos",
+   "tier": 5,
+   "cpm": 0.7,
+   "hp": 13000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2026-10-21",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "146",
+   "fr": "Sulfura",
+   "en": "Moltres",
+   "tier": 5,
+   "cpm": 0.7,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2026-10-21",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "243",
+   "fr": "Raikou",
+   "en": "Raikou",
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 25000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2025-08-23",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "244",
+   "fr": "Entei",
+   "en": "Entei",
+   "tier": 5,
+   "cpm": 0.75,
+   "hp": 27000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2025-04-26",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "245",
+   "fr": "Suicune",
+   "en": "Suicune",
+   "tier": 5,
+   "cpm": 0.9,
+   "hp": 22000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2025-05-10",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "249",
+   "fr": "Lugia",
+   "en": "Lugia",
+   "tier": 5,
+   "cpm": 0.75,
+   "hp": 18000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2025-11-29",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "250",
+   "fr": "Ho-Oh",
+   "en": "Ho-Oh",
+   "tier": 5,
+   "cpm": 0.7,
+   "hp": 25000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2026-01-30",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "377",
+   "fr": "Regirock",
+   "en": "Regirock",
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 7,
+   "date": "2026-04-20",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "378",
+   "fr": "Regice",
+   "en": "Regice",
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 9,
+   "date": "2026-03-23",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "feuille : charge ×2 à cette apparition, ramenée à ×4 (règle actuelle)"
+   ]
+  },
+  {
+   "key": "379",
+   "fr": "Registeel",
+   "en": "Registeel",
+   "tier": 5,
+   "cpm": 0.9,
+   "hp": 18000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 7,
+   "date": "2026-05-18",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "380",
+   "fr": "Latias",
+   "en": "Latias",
+   "tier": 5,
+   "cpm": 0.7,
+   "hp": 25000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2025-07-26",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "381",
+   "fr": "Latios",
+   "en": "Latios",
+   "tier": 5,
+   "cpm": 0.75,
+   "hp": 23000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": "2025-07-26",
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "charge de jauge ×4 (règle depuis le 20/04/2026) appliquée à une apparition plus ancienne"
+   ]
+  },
+  {
+   "key": "895",
+   "fr": "Regidrago",
+   "en": "Regidrago",
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": null,
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille : valeurs 5★ typiques (CPM 0,8, 20 000 PV, 10 s)"
+   ]
+  },
+  {
+   "key": "480",
+   "fr": "Créhelf",
+   "en": null,
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": null,
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille : valeurs 5★ typiques (CPM 0,8, 20 000 PV, 10 s)"
+   ]
+  },
+  {
+   "key": "481",
+   "fr": "Créfollet",
+   "en": null,
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": null,
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille : valeurs 5★ typiques (CPM 0,8, 20 000 PV, 10 s)"
+   ]
+  },
+  {
+   "key": "482",
+   "fr": "Créfadet",
+   "en": null,
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": null,
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille : valeurs 5★ typiques (CPM 0,8, 20 000 PV, 10 s)"
+   ]
+  },
+  {
+   "key": "483",
+   "fr": "Dialga",
+   "en": "Dialga",
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": null,
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille : valeurs 5★ typiques (CPM 0,8, 20 000 PV, 10 s)"
+   ]
+  },
+  {
+   "key": "484",
+   "fr": "Palkia",
+   "en": "Palkia",
+   "tier": 5,
+   "cpm": 0.8,
+   "hp": 20000,
+   "limit": 400,
+   "enrageAt": 300,
+   "atkMult": 2,
+   "rate": 10,
+   "date": null,
+   "enrage": 3,
+   "meMult": 4,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille : valeurs 5★ typiques (CPM 0,8, 20 000 PV, 10 s)"
+   ]
+  },
+  {
+   "key": "3-gmax",
+   "fr": "Florizarre Gigamax",
+   "en": "Venusaur",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 90000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-04-25",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "6-gmax",
+   "fr": "Dracaufeu Gigamax",
+   "en": "Charizard",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 70000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-04-25",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "9-gmax",
+   "fr": "Tortank Gigamax",
+   "en": "Blastoise",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 75000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-04-25",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "12-gmax",
+   "fr": "Papilusion Gigamax",
+   "en": "Butterfree",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 100000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-08-03",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "25-gmax",
+   "fr": "Pikachu Gigamax",
+   "en": "Pikachu",
+   "tier": 6,
+   "cpm": 1.7,
+   "hp": 80000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-03-28",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "CPM 1.7 très différent des autres 6★ : repris tel quel"
+   ]
+  },
+  {
+   "key": "52-gmax",
+   "fr": "Miaouss Gigamax",
+   "en": "Meowth",
+   "tier": 6,
+   "cpm": 3,
+   "hp": 80000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-02-15",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "CPM 3 très différent des autres 6★ : repris tel quel"
+   ]
+  },
+  {
+   "key": "68-gmax",
+   "fr": "Mackogneur Gigamax",
+   "en": "Machamp",
+   "tier": 6,
+   "cpm": 0.8,
+   "hp": 100000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-05-25",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "94-gmax",
+   "fr": "Ectoplasma Gigamax",
+   "en": "Gengar",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 70000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-04-25",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "99-gmax",
+   "fr": "Krabboss Gigamax",
+   "en": "Kingler",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 100000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-02-01",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "131-gmax",
+   "fr": "Lokhlass Gigamax",
+   "en": "Lapras",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 90000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-08-23",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "143-gmax",
+   "fr": "Ronflex Gigamax",
+   "en": "Snorlax",
+   "tier": 6,
+   "cpm": 0.65,
+   "hp": 135000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-04-19",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "569-gmax",
+   "fr": "Miasmax Gigamax",
+   "en": "Garbodor",
+   "tier": 6,
+   "cpm": 1.4,
+   "hp": 100000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-11-01",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "812-gmax",
+   "fr": "Gorythmic Gigamax",
+   "en": "Rillaboom",
+   "tier": 6,
+   "cpm": 1,
+   "hp": 120000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2026-08-01",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": []
+  },
+  {
+   "key": "815-gmax",
+   "fr": "Pyrobut Gigamax",
+   "en": "Cinderace",
+   "tier": 6,
+   "cpm": 0.8,
+   "hp": 80000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-06-05",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée",
+    "apparition du 03/10/2026 absente de la feuille : paramètres 2025"
+   ]
+  },
+  {
+   "key": "818-gmax",
+   "fr": "Lézargus Gigamax",
+   "en": "Inteleon",
+   "tier": 6,
+   "cpm": 0.9,
+   "hp": 100000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-06-12",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "849-amped-gmax",
+   "fr": "Salarsen Gigamax",
+   "en": "Toxtricity (Amped Form)",
+   "tier": 6,
+   "cpm": 0.9,
+   "hp": 100000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-08-23",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "861-gmax",
+   "fr": "Angoliath Gigamax",
+   "en": "Grimmsnarl",
+   "tier": 6,
+   "cpm": 1.2,
+   "hp": 70000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-11-07",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "890-eternamax",
+   "fr": "Éthernatos Infinimax",
+   "en": "Eternatus (Eternamax)",
+   "tier": 6,
+   "cpm": 0.75,
+   "hp": 60000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": "2025-08-23",
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "attaque ×0,9 (apparition 2025) ramenée à ×1 (règle 2026)",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée",
+    "stats et attaques du game master (V0890_POKEMON_ETERNATUS_ETERNAMAX), absentes des données de l’app"
+   ]
+  },
+  {
+   "key": "884-gmax",
+   "fr": "Duralugon Gigamax",
+   "en": "Duraludon",
+   "tier": 6,
+   "cpm": 0.85,
+   "hp": 90000,
+   "limit": 600,
+   "enrageAt": 220,
+   "atkMult": 1,
+   "rate": 3,
+   "date": null,
+   "enrage": 6,
+   "meMult": 15,
+   "meDec": 2,
+   "approx": [
+    "absent de la feuille (pas encore sorti) : valeurs 6★ typiques (CPM 0,85, 90 000 PV, 3 s), à confirmer",
+    "charge de jauge ×15 (règle depuis le 15/02/2026) appliquée"
+   ]
+  },
+  {
+   "key": "106",
+   "fr": "Kicklee",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "107",
+   "fr": "Tygnon",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "237",
+   "fr": "Kapoera",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "126",
+   "fr": "Magmar",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "633",
+   "fr": "Solochi",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "615",
+   "fr": "Hexagel",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "125",
+   "fr": "Élektek",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "766",
+   "fr": "Quartermac",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "780",
+   "fr": "Draïeul",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "870",
+   "fr": "Hexadron",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "113",
+   "fr": "Leveinard",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "302",
+   "fr": "Ténéfix",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "374",
+   "fr": "Terhal",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "213",
+   "fr": "Caratroc",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "530",
+   "fr": "Minotaupe",
+   "en": null,
+   "tier": 3,
+   "cpm": 0.5,
+   "hp": 10000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-09-18",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 3★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "884",
+   "fr": "Duralugon",
+   "en": null,
+   "tier": 4,
+   "cpm": 0.6,
+   "hp": 20000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-11-16",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 4★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "849",
+   "fr": "Salarsen Forme Aigüe",
+   "en": null,
+   "tier": 4,
+   "cpm": 0.6,
+   "hp": 20000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-11-16",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 4★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  },
+  {
+   "key": "849-low-key",
+   "fr": "Salarsen Forme Grave",
+   "en": null,
+   "tier": 4,
+   "cpm": 0.6,
+   "hp": 20000,
+   "limit": 480,
+   "enrageAt": 300,
+   "atkMult": 1,
+   "rate": 10,
+   "date": "2024-11-16",
+   "enrage": 9,
+   "meMult": 1,
+   "meDec": 0,
+   "approx": [
+    "paramètres communs à tous les boss 4★ (feuille No-Floats-Left, fin 2024)",
+    "attaques ×9 après 300 s : à confirmer"
+   ]
+  }
+ ],
+ "inline": {
+  "890-eternamax": {
+   "a": 251,
+   "d": 505,
+   "s": 452,
+   "t": [
+    "poison",
+    "dragon"
+   ],
+   "fm": [],
+   "cm": [
+    "SLUDGE_BOMB",
+    "HYPER_BEAM",
+    "FLAMETHROWER"
+   ],
+   "ce": [
+    "DYNAMAX_CANNON"
+   ]
+  }
+ }
+}
