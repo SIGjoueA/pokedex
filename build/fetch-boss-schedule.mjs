@@ -66,6 +66,17 @@ for (const x of MAN) {
   else nm.push({ n, ...(k ? { k } : {}), kind: 'max', s: x.start, e: x.end, l, why: k ? 'pas dans nos classements' : 'nom non reconnu', u: 'build/max-schedule-manual.json' });
 }
 out.sort((a, b) => a.s.localeCompare(b.s));
+// Dédupliquer même boss / même fenêtre (manuel + ScrapedDuck) : garder m:1 et le libellé le plus précis
+{ const seen = new Map(), dedup = [];
+  for (const e of out) {
+    const key = [e.k, e.s, e.e, e.kind, e.sh || 0].join('|');
+    const i = seen.get(key);
+    if (i == null) { seen.set(key, dedup.length); dedup.push(e); continue; }
+    const cur = dedup[i];
+    const prefer = (e.m && !cur.m) || ((e.l || '').length > (cur.l || '').length && /événement/i.test(cur.l || ''));
+    if (prefer) dedup[i] = { ...e, ...(cur.m || e.m ? { m: 1 } : {}) };
+  }
+  out.length = 0; out.push(...dedup); }
 const doc = { date: now.toISOString(), src: 'Leek Duck via ScrapedDuck (events.json)', S: out, nm };
 fs.writeFileSync(D + '/boss-schedule.json', JSON.stringify(doc));
 console.log(`boss-schedule.json : ${out.length} entrées, ${nm.length} non reliées`);
