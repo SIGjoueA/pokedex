@@ -1,10 +1,10 @@
-// v60.5 (v60.8: sim Max avec Dialga et Palkia Dynamax): exhaustive boss lists for the GO sheet (« Raids & arènes » Normal / Obscur, « Combats Max » by role), added to docs/data/raid-moves.json.
+// v60.5 (v60.8: sim Max avec Dialga et Palkia Dynamax ; v60.9: sim raid avec Zacian Épée Suprême et Zamazenta Bouclier Suprême): exhaustive boss lists for the GO sheet (« Raids & arènes » Normal / Obscur, « Combats Max » by role), added to docs/data/raid-moves.json.
 // Raids: same rule as the sheet's « utile » (build/raid-moves-v2-final-analyse.mjs): best moveset ≥ 60 % of the best non-Méga attacker (Méga: of the best attacker),
 // each boss under the attacker's best moveset against it. Max: same rule as the Combats Max ranking (build/rank-max.mjs): ≥ 60 % of the best in the role.
-// Inputs (kept locally, not versioned): screenshots/raid-v2/final/data-final-v60.6.json, screenshots/max-v1/final/sim-p50-l40-v60.8.json.
+// Inputs (kept locally, not versioned): screenshots/raid-v2/final/data-final-v60.9.json, screenshots/max-v1/final/sim-p50-l40-v60.8.json.
 import fs from 'node:fs'; import path from 'node:path';
 const ROOT = path.join(path.dirname(new URL(import.meta.url).pathname), '..'), OUT = path.join(ROOT, 'docs/data/raid-moves.json');
-const V = JSON.parse(fs.readFileSync(path.join(ROOT, 'screenshots/raid-v2/final/data-final-v60.6.json')));
+const V = JSON.parse(fs.readFileSync(path.join(ROOT, 'screenshots/raid-v2/final/data-final-v60.9.json')));
 const M = JSON.parse(fs.readFileSync(path.join(ROOT, 'screenshots/max-v1/final/sim-p50-l40-v60.8.json')));
 const RR = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/data/rank-raid.json'))), RM = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/data/rank-max.json')));
 if (V.bosses.some((b, j) => b.k !== RR.B[j][0])) throw new Error('raid bosses ≠ rank-raid.json'); if (M.bosses.some((b, j) => b.key !== RM.B[j][0])) throw new Error('max bosses ≠ rank-max.json');

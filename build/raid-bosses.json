@@ -1438,6 +1438,22 @@
    "hp": 15000,
    "cpm": 0.82,
    "src": "Paramètres par défaut du niveau (build/raid-bosses.json → tiers) ; planning Leek Duck (lu le 29/10/2026)"
+  },
+  {
+   "k": "888-crowned",
+   "n": "Zacian Épée Suprême",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres par défaut du niveau (build/raid-bosses.json → tiers). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
+  },
+  {
+   "k": "889-crowned",
+   "n": "Zamazenta Bouclier Suprême",
+   "tier": "5★",
+   "hp": 15000,
+   "cpm": 0.7903,
+   "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres par défaut du niveau (build/raid-bosses.json → tiers). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
   }
  ]
 }

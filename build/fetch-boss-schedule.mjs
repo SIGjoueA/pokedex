@@ -13,9 +13,11 @@ const core = JSON.parse(fs.readFileSync(D + '/core.json')).e;
 const rd = JSON.parse(fs.readFileSync(D + '/rank-raid.json')), mx = JSON.parse(fs.readFileSync(D + '/rank-max.json'));
 const EN = new Map(core.filter(e => e.en).map(e => [e.en.toLowerCase(), e.k]));
 const BASEF = new Set(['normal', 'altered', 'incarnate', 'land', 'ordinary', 'aria', 'standard', 'hero', 'average', 'baile', 'midday', 'red striped', 'solo', 'disguised', 'amped', 'full belly', 'single strike']);
+const ALIAS = { 'zacian (crowned sword)': '888-crowned', 'zamazenta (crowned shield)': '889-crowned' }; // v60.9 : noms Leek Duck sans équivalent direct dans core.json
 const toKey = raw => { // nom anglais Leek Duck → clé de l'appli
   let n = raw.trim().replace(/\s+Formes?\)/i, ')'), sh = 0;
   if (/^shadow /i.test(n)) { sh = 1; n = n.slice(7); }
+  if (ALIAS[n.toLowerCase()]) return { k: ALIAS[n.toLowerCase()], sh };
   const m = /^(.*?) \((.*)\)$/.exec(n), base = m ? m[1] : n, form = m ? m[2] : '';
   const c = form ? (BASEF.has(form.toLowerCase()) ? [base] : [`${form} ${base}`, `${base} ${form}`, `${base} (${form})`]) : [n];
   for (const x of c) { const k = EN.get(x.toLowerCase()); if (k) return { k, sh }; }
