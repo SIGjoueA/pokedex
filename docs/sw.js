@@ -2,7 +2,7 @@
 const VERSION = 'v60.8';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
 const NOTES = 'Combats Max : Dialga et Palkia Dynamax (5★, Terres Sauvages GO) ajoutés aux classements, avec des paramètres de boss à confirmer.';
-const DATA_VERSION = 'd47'; // bump when the schema of data/*.json changes
+const DATA_VERSION = 'd48'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
