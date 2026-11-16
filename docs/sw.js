@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.11';
+const VERSION = 'v60.12';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Vous avez la Coupe GO CIAL 2026 en PvP ; les équipes Rocket périmées sont signalées ; plus de doublon « Gigamax Gigamax » dans Classements.';
-const DATA_VERSION = 'd52'; // bump when the schema of data/*.json changes
+const NOTES = 'Vous voyez Météno Noyau Vert et Noyau Jaune comme sortis dans GO, et la source de trois cartes Pocket (Mew, Mewtwo-ex, Pikachu-ex).';
+const DATA_VERSION = 'd53'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -359,4 +359,12 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.11 Rocket : date de fin de rotation + avertissement après cette date', /^\d{4}-\d{2}-\d{2}$/.test(rr.valid) && /rkOld = !!\(rk\.valid && TODAY >= rk\.valid\)/.test(app) && /rkwarn/.test(fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8')));
   ok('v60.11 Classements Combats Max : pas de « Gigamax » en double (nom du boss + niveau)', /tl = \(t, n\) => t >= 6 \? \(\/Gigamax\/\.test\(n\) \? '6★' : 'Gigamax 6★'\)/.test(app) && !/tl\(b\[2\]\)/.test(app) && !/tl\(x\[2\]\)/.test(app));
 }
+// ---- v60.12: Météno GO (Noyau Vert 19/10, Noyau Jaune 14/11), sources Pocket manuelles
+{ const pk = D('pocket.json'), S = Object.fromEntries(pk.s.map(s => [s.id, s])), srcOf = (sid, l) => { const s = S[sid], c = s.cards.find(x => x[0] === l); return c[6].map(i => s.b[i]); };
+  const gk = k => sp(774).f[k].go, ent = k => core.e.find(e => e.k === k);
+  ok('v60.12 Météno GO : Forme Météore, Noyau Vert et Noyau Jaune sortis (go.r = 1, entrée go)', ['774', '774-green', '774-yellow'].every(k => gk(k).r === 1 && !gk(k).rf && ent(k).go === 1 && !ent(k).gof));
+  ok('v60.12 Météno GO : les 5 autres noyaux pas encore sortis (non annoncés)', ['774-red', '774-orange', '774-blue', '774-indigo', '774-violet'].every(k => !gk(k).r && !ent(k).go));
+  ok('v60.12 Pocket : A1 283 Mew hors booster (set.x), P-A 050 Mewtwo-ex = boutique, P-B 103 Pikachu-ex = Missions Pikachu', /Pokédex de Kanto/.test(S.A1.x['283']) && srcOf('A1', '283').length === 0 && /Poké Gold/.test(srcOf('P-A', '050')[0]) && /Pika Pika/.test(srcOf('P-B', '103')[0]));
+  ok('v60.12 Pocket : toutes les cartes de A1, P-A, P-B, P-C ont une source (booster ou set.x)', ['A1', 'P-A', 'P-B', 'P-C'].every(id => S[id].cards.every(c => c[6].length || (S[id].x || {})[c[0]])));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

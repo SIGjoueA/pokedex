@@ -183,7 +183,7 @@
   }
  },
  "released": {
-  "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13). v39 : Larvadar (17/03/2026), Embrochet (18/08/2026), Toxizap (16/11/2024), Théffroi (03/12/2024), Grondogue / Dogrino (08/09/2026), Flotillon (12/05/2026) — pokemon.com / Leek Duck / wiki GO, vérifié le 2026-10-16.",
+  "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13). v39 : Larvadar (17/03/2026), Embrochet (18/08/2026), Toxizap (16/11/2024), Théffroi (03/12/2024), Grondogue / Dogrino (08/09/2026), Flotillon (12/05/2026) — pokemon.com / Leek Duck / wiki GO, vérifié le 2026-10-16. v60.12 : Météno (774, Forme Météore, Pluie d’étoiles filantes Orionides, 19/10/2026), Noyau Vert (774-green, Orionides, 19/10/2026) et Noyau Jaune (774-yellow, Léonides, 14/11/2026) — Leek Duck « Minior Showers: Orionids / Leonids 2026 », pokemongo.com/fr/news (Pluies de Météno), vérifié le 2026-11-16. Les 5 autres couleurs (Rouge, Orange, Bleu, Indigo, Violet) sortiront une par pluie (Géminides 11/12 : 2 couleurs, une par hémisphère, puis mai à août 2027), non annoncées : les ajouter ici au fil des annonces.",
   "keys": {
    "778": "MIMIKYU_DISGUISED",
    "807": "ZERAORA_NORMAL",
@@ -228,7 +228,10 @@
    "854": null,
    "942": null,
    "943": null,
-   "955": null
+   "955": null,
+   "774": null,
+   "774-green": null,
+   "774-yellow": null
   }
  },
  "unreleased": {
@@ -263,11 +266,8 @@
   }
  },
  "upcoming": {
-  "_doc": "v47 : sorties GO annoncées avec une date (clé d’entrée → from = date de sortie AAAA-MM-JJ, shinyFrom = date du shiny). Avant la date : « annoncé pour le … » ; à partir de la date l’app affiche la forme comme sortie. Les stats / attaques viennent du game master (refresh-go.mjs). Après la date, déplacer la clé dans released.keys (ou megaReleased.keys) et l’enlever d’ici. Sources : pokemongo.com/fr/news (Pluies de Météno), Leek Duck « Chandelure Super Mega Raid Day », Pokémon GO Hub « GO Wild Area 2026 » (Colimucus / Muplodocus de Hisui : uniquement aux événements en personne de Sendai et Mexico du 6 au 8/11, pas au week-end mondial), vérifié le 2026-10-18. Météno : seule la Forme Météore (sauvage) ; les couleurs de noyau sortiront une par pluie d’étoiles filantes, non annoncées.",
+  "_doc": "v47 : sorties GO annoncées avec une date (clé d’entrée → from = date de sortie AAAA-MM-JJ, shinyFrom = date du shiny). Avant la date : « annoncé pour le … » ; à partir de la date l’app affiche la forme comme sortie. Les stats / attaques viennent du game master (refresh-go.mjs). Après la date, déplacer la clé dans released.keys (ou megaReleased.keys) et l’enlever d’ici. Sources : pokemongo.com/fr/news (Pluies de Météno), Leek Duck « Chandelure Super Mega Raid Day », Pokémon GO Hub « GO Wild Area 2026 » (Colimucus / Muplodocus de Hisui : uniquement aux événements en personne de Sendai et Mexico du 6 au 8/11, pas au week-end mondial), vérifié le 2026-10-18. Météno : voir released.keys (v60.12).",
   "keys": {
-   "774": {
-    "from": "2026-10-19"
-   },
    "705-hisui": {
     "from": "2026-11-06"
    },

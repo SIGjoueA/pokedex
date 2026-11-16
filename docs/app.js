@@ -2884,7 +2884,8 @@ function pkBooHTML(s, c) {
     out.push(`<p class="pkboos">Même carte que <b>${esc(os.n)}</b> n° ${esc(oc[0])} : le jeu la considère comme une seule carte, les exemplaires sont partagés.</p>`);
     if (ob.length) own.unshift(...ob.map(b => `${b} (${os.id})`)); } }
   for (const [ds, dc] of PK_REV.get(c.id) || []) own.push(`${(ds.b && ds.b[0]) || ds.n} (${ds.id} n° ${dc[0]})`);
-  out.unshift(own.length ? `<p class="pkboos"><b>${promo ? 'Source' : own.length > 1 ? 'Boosters' : 'Booster'} :</b> ${own.map(esc).join(', ')}</p>` : promo ? '<p class="pkboos note">Source : non renseignée (événement, mission ou boutique).</p>' : '');
+  const xs = s.x && s.x[c[0]]; // v60.12: free-text source of a card that is in no booster (A1 283 Mew)
+  out.unshift(own.length ? `<p class="pkboos"><b>${promo ? 'Source' : own.length > 1 ? 'Boosters' : 'Booster'} :</b> ${own.map(esc).join(', ')}</p>` : xs ? `<p class="pkboos"><b>Source :</b> ${esc(xs)}</p>` : promo ? '<p class="pkboos note">Source : non renseignée (événement, mission ou boutique).</p>' : '');
   return out.join('');
 }
 const pkFind = id => { const i = id.lastIndexOf('-'), s = PK.s.find(x => x.id === id.slice(0, i)), c = s && s.cards.find(x => x.id === id); return c ? [s, c] : null; };
