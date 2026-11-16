@@ -4,6 +4,7 @@
 // 1) bosses where the form is n° 1, 2) bosses where it is useful (≥ 60 % of the best), 3) best single-boss %. Two pools: without / with shadow attackers.
 // Output: { date, src, nb, mv: [moveKey], F: [[entryKey, shadow 0/1]], B: [[bossKey, name, tier, types]], P: { n|s: { b: [[[f, mf, mc, pct] …top 20] per boss], g: [[f, mf, mc, n1, nu, best] …top 100], t: { type: [nBoss, [[f, mf, mc, n1, nu, best] …top 30]] } } } }
 // v60.4: P.n|s.x = per boss, the next counters after the top 20 (up to rank 80, ≥ 40 % of the best), same row format, used on the device to build the teams.
+// v60.10: B rows of Super Méga-Raid bosses carry a 5th value, the number of shields (build/raid-bosses.json), shown on the boss page.
 // Usage: node rank-raids.mjs [path/to/data-final.json]
 import fs from 'node:fs'; import path from 'node:path';
 const HERE = path.dirname(new URL(import.meta.url).pathname), ROOT = path.join(HERE, '..');
@@ -34,6 +35,6 @@ if (RB.length !== B.length || RB.some((b, j) => b.k !== B[j].k)) throw new Error
 const BS = RB.map(b => { const g = b.go || goOf(b.k); return [g.a, g.d, g.fm, g.cm, b.cpm, b.shadow ? 1 : 0]; });
 const TOP = Object.fromEntries(['n', 's'].map(pool => [pool, B.map(b => Math.max(...b.sc.filter((v, i) => pool === 's' || S[i].kind !== 's').map(v => v[0])))]));
 const TY = Object.fromEntries(Object.entries(PTY).map(([k, v]) => [k, v.t])); // attacker types used by the simulation (patch)
-const out = { date: '2026-11-01', src: 'Simulation raid v2 (niveau 40, sans météo ni esquive, Méga au niveau de base)', nb: B.length, mv, F, B: B.map(b => [b.k, b.n, b.tier, b.t]), P, BS, TOP, TY };
+const out = { date: '2026-11-01', src: 'Simulation raid v2 (niveau 40, sans météo ni esquive, Méga au niveau de base)', nb: B.length, mv, F, B: B.map((b, j) => [b.k, b.n, b.tier, b.t, ...(RB[j].shields ? [RB[j].shields] : [])]), P, BS, TOP, TY };
 fs.writeFileSync(path.join(ROOT, 'docs/data/rank-raid.json'), JSON.stringify(out));
 console.log('rank-raid.json', JSON.stringify(out).length, 'octets ; formes', F.length, '; top global sans obscurs :', P.n.g.slice(0, 5).map(r => F[r[0]][0] + ' ' + r[3] + '/' + r[4]).join(', '));

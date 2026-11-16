@@ -1454,6 +1454,40 @@
    "hp": 15000,
    "cpm": 0.7903,
    "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres par défaut du niveau (build/raid-bosses.json → tiers). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
+  },
+  {
+   "k": "36-mega",
+   "n": "Méga-Mélodelfe",
+   "tier": "Super Méga",
+   "hp": 9000,
+   "cpm": 0.7903,
+   "src": "Super Méga-Raid : Journée Super Méga-Raids du 28/11/2026, 14h–17h (annonce officielle pokemongo.com, Leek Duck, Pokémon GO Hub, lus le 16/11/2026). 8 boucliers, Méga obligatoire, pas de Primo (PogoHelp, lu le 16/11/2026 : nombre non confirmé par une 2e source, affiché dans le jeu). PV : défaut du niveau Méga, non publiés (PogoHelp avance 25 000, non confirmé ; sans effet sur le calcul). Statistiques 253/205/216 et type Fée/Vol : PvPoke (game master du 16/11/2026) et Pokémon GO Hub, identiques ; le game master PokeMiners ne contient pas encore la forme. Attaques du boss : celles de Clefable sans Pound ni Pouvoir Lunaire+ (liste de raid de PogoHelp, identique à la liste PvPoke de la forme moins Pound et Moonblast+ ; non confirmée par Leek Duck / GO Hub).",
+   "shields": 8,
+   "hpNote": "PV non publiés, à confirmer",
+   "go": {
+    "t": [
+     "fairy",
+     "flying"
+    ],
+    "a": 253,
+    "d": 205,
+    "s": 216,
+    "fm": [
+     "CHARGE_BEAM_FAST",
+     "ZEN_HEADBUTT_FAST",
+     "CHARM_FAST",
+     "FAIRY_WIND_FAST"
+    ],
+    "cm": [
+     "DAZZLING_GLEAM",
+     "PSYCHIC",
+     "MOONBLAST",
+     "METEOR_MASH",
+     "SWIFT",
+     "DRAINING_KISS"
+    ]
+   },
+   "_note": "v60.10 : attaques du boss figées sur celles de la forme de base, sans Pouvoir Lunaire+ ni Pound (liste de raid PogoHelp, non confirmée par Leek Duck / GO Hub)."
   }
  ]
 }

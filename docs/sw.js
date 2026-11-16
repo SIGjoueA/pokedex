@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.9';
+const VERSION = 'v60.10';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Raids : Zacian Épée Suprême et Zamazenta Bouclier Suprême ajoutés aux classements.';
-const DATA_VERSION = 'd50'; // bump when the schema of data/*.json changes
+const NOTES = 'Raids : Méga-Mélodelfe (Super Méga-Raid) ajouté aux classements.';
+const DATA_VERSION = 'd51'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
