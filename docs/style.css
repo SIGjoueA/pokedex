@@ -698,3 +698,4 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .rkov sup{font-size:9px;margin-left:1px;opacity:.7}.rkv .rkov{white-space:nowrap}
 .cfseg.off button:disabled{opacity:.45}
 .cfmer{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;margin:.25rem 0}.cfmer .cfs select{margin-left:.4rem}.cfme.off .cfc{opacity:.45}
+.rkwarn{border-left:3px solid #e0a000;background:rgba(224,160,0,.14);border-radius:6px;padding:8px 10px;margin:8px 0}

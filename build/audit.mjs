@@ -147,7 +147,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v25 B. shiny coché = style Shiny', /\.act\.barons\[aria-pressed=true\]\{color:#b58f00;border-color:#f2c200;background:rgba\(242,194,0,\.12\)\}/.test(css) && css.includes('.act.sh[aria-pressed=true]{color:#b58f00;border-color:#f2c200;background:rgba(242,194,0,.12)}'));
   ok('v25 régions des formes régionales', /alola: \['sm', 'usum'\], galar: \['sw', 'swisle', 'swcrown'\], hisui: \['la'\], paldea: \['sv', 'svmask', 'svdisk'\]/.test(app));
   { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'); for (const [v, l] of [['baron', 'Barons'], ['nobaron', '⚪ Barons manquants']]) ok('v25 catégorie ' + v, html.includes(`<option value="${v}">${l}</option>`)); }
-  { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'); ok('v47 « Baron shiny » retiré (filtres + bouton), marques conservées (export barons_g / home_bs)', !/value="(no)?barons"/.test(html) && !/class="act barons"/.test(app) && /barons_g: \[\.\.\.BARONS_G\]/.test(app) && /home_bs: \[\.\.\.HOME_BS\]/.test(app)); ok('v47 blocs HOME « Dex national HOME » + « Shiny »', /pre = homeDexHTML\(p\); body = statsB \+ evoB \+ homeSrcHTML\(p, f, 'Compatibilité'\) \+ homeShinyHTML\(p, f\)/.test(app)); }
+  { const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'); ok('v47 « Baron shiny » retiré (filtres + bouton), marques conservées (export barons_g / home_bs)', !/value="(no)?barons"/.test(html) && !/class="act barons"/.test(app) && /barons_g: \[\.\.\.BARONS_G\]/.test(app) && /home_bs: \[\.\.\.HOME_BS\]/.test(app)); ok('v47 blocs HOME « Dex national HOME » + « Shiny »', /else if \(mode === 'home'\) \{ P = homeDexHTML\(p\) \+ homeSrcHTML\(p, f, 'Compatibilité'\) \+ homeShinyHTML\(p, f\); N = evoB; \}/.test(app)); }
   ok('v25 icône Baron en cache hors-ligne', sw.includes("'img/alpha/baron.png'"));
 }
 // ---- v27: legend list, in-app messages, unified names
@@ -157,7 +157,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v27 toast() en zone live polie', /function toast\(/.test(app) && /aria-live', 'polite'/.test(app) && /\.toast\.on\{/.test(css));
   ok('v27 légende en liste (ul.lgl)', /BASE_LEGEND = '<ul class="lgl">'/.test(app) && /HOME_LEGEND = '<ul class="lgl">'/.test(app) && /\.lgl li\{/.test(css));
   ok('v27 pas de numéro de génération en chiffres arabes', !/Gén\. ?\d/.test(code) && !/\dᵉ/.test(code));
-  ok('v27 pas de « / » collé dans les noms de jeux (app)', !/'(?:DÉ\/PS|[^'<\/]*[A-Za-zÉé0-9]\/[A-Za-zÉé0-9][^'<\/]*)'/.test(code.match(/const GAME_SHORT = \{[^\n]*\}/)[0]) && !/É\/[VB]/.test(code) && !/ROSA|USUL/.test(code));
+  ok('v27 pas de « / » collé dans les noms de jeux (app)', !/'(?:DÉ\/PS|[^'<\/]*[A-Za-zÉé0-9]\/[A-Za-zÉé0-9][^'<\/]*)'/.test(code.match(/const GAME_SHORT = \{[^\n]*\}/)[0]) && !/É\/[VB]/.test(code) && !/ROSA|USUL/.test(code.replace(/\/\/[^\n]*/g, '')));
   const core = JSON.parse(fs.readFileSync(path.join(HERE, '../docs/data/core.json'), 'utf8'));
   ok('v27 core.json : noms courts avec « / » espacé', core.games.every(g => !/\S\/|\/\S/.test(g.s) && !/\S\/|\/\S/.test(g.n)));
   ok('v27 bouton grille / liste en icônes SVG (plus de ☰ / ▦)', /VIEW_LIST_IC = '<svg/.test(app) && /VIEW_GRID_IC = '<svg/.test(app) && !/'☰'|'▦'/.test(code));
@@ -178,7 +178,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.6 Méga-Lugulabre sortie dans GO (31/10/2026), Vent Mauvais +', E['609-mega'].go === 1 && F(609, '609-mega').go.r === 1 && F(609, '609-mega').go.cm.includes('OMINOUS_WIND_PLUS'));
   ok('v28 Gigamax GO = stats de la base', F(6, '6-gmax').go.a === F(6).go.a && F(6, '6-gmax').go.m50 === F(6).go.m50);
   ok('v28 shiny Méga = Méga-Évolution d’un shiny', JSON.stringify(F(6, '6-mega-x').go.sh) === '["mega"]');
-  ok('v28 nombre de Méga / Primo GO', core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length === 62);
+  ok('v28 nombre de Méga / Primo GO', core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length === 63);
   const app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), bd = fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8');
   ok('v28 build-data lance apply-go-overrides', bd.includes("await import('./apply-go-overrides.mjs')") && !/e\.cat !== 'mega'\) r\.go/.test(bd));
   ok('v28 GO hors dorure (goGold)', /const goGold = p => !!p\.go && !p\.mb && p\.c !== 'gmax' && p\.c !== 'primal';/.test(app) && (app.match(/goGold\(p\)/g) || []).length >= 3); }
@@ -200,8 +200,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v30 app : pas de bannière à la première installation', /if \(!navigator\.serviceWorker\.controller/.test(app));
   ok('v30 app : vérifications au démarrage, au retour (visibilitychange) et toutes les 30 min', /swWatch\(reg\)/.test(app) && /visibilitychange[^\n]*swCheck\(\)/.test(app) && /setInterval\(swCheck, 30 \* 60 \* 1000\)/.test(app) && /\.update\(\)/.test(app));
   ok('v30 sélecteur de jeu de la fiche dans l’en-tête collant', /navHTML\(p, `<div class="gamebar dgbar">/.test(app) && /\.dgbar\{/.test(css) && /\.gnum\{/.test(css));
-  ok('v30 « Présent dans » en vue d’ensemble seulement', /else \{ pre = homeSrcHTML\(p, f\); body = [^\n]*availHTML\(sp, games/.test(app));
-  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) body = regB \+ statsB \+ evoB \+ encHTML[^\n]*heldHTML[^\n]*breedHTML[^\n]*shinyHTML[^\n]*effB \+ abB \+ movesHTML[^\n]*E\.ev;/.test(app) && app.includes("pre = costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("goBox + costumesHTML('Costumes GO')") && app.includes('${desc}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
+  ok('v30 « Présent dans » en vue d’ensemble seulement', /else \{ P = availHTML\(sp, games[^\n]*homeSrcHTML\(p, f\) \+ goBox;/.test(app));
+  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) \{ P = tradeBoxHTML\(p, gm\.id\) \+ regB; N = evoB \+ encHTML[^\n]*C = heldHTML[^\n]*shinyHTML[^\n]*breedHTML[^\n]*M = movesHTML[^\n]*D = E\.ev; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')") && app.includes('${size}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
 }
 // ---- v31: shiny data, popup texts, Rouge Feu / Vert Feuille (Switch)
 { const S = D('shiny.json'), DS = D('desc.json'), mv = D('moves.json'), ref = D('ref.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8');
@@ -223,7 +223,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v31 RF/VF Switch : n° Kanto identiques à RF/VF (GBA)', [1, 25, 150].every(id => JSON.stringify(sp(id).gm.frlgsw) === JSON.stringify(sp(id).gm.frlg)) && fs.existsSync(path.join(HERE, '../docs/data/dex/frlgsw.json')));
   ok('v31 RF/VF Switch : marque d’origine GBA (image) dans les jeux actuels', /id: 'gba'[^}]*games: \['frlgsw'\]/.test(app) && fs.existsSync(path.join(HERE, '../docs/img/origin/gba.png')) && /SWITCH_IDS = new Set\(\['frlgsw'/.test(app));
   ok('v31 Présent dans : icône du jeu (même pastille que les menus Jeux)', (app.match(/data-game="\$\{g\}">\$\{gdot\(g\)\}/g) || []).length === 2 && /\.avl li a \.gdot\{/.test(fs.readFileSync(path.join(HERE, '../docs/style.css'), 'utf8')));
-  ok('v31 SW : version ≥ v31, DATA_VERSION ≥ d11', +sw.match(/VERSION = 'v(\d+)'/)[1] >= 31 && +sw.match(/DATA_VERSION = 'd(\d+)'/)[1] >= 11);
+  ok('v31 SW : version ≥ v31, DATA_VERSION ≥ d11', +sw.match(/VERSION = 'v(\d+)(?:\.\d+)*'/)[1] >= 31 && +sw.match(/DATA_VERSION = 'd(\d+)'/)[1] >= 11);
 }
 // ---- v32: Poképédia (descriptions, étymologies, distributions, lieux Switch), GO extras, Méga / Gigamax filters
 { const core = D('core.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8'), html = fs.readFileSync(path.join(HERE, '../docs/index.html'), 'utf8');
@@ -263,7 +263,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   { const dit = JSON.parse(fs.readFileSync(new URL('../docs/data/sp/132.json', import.meta.url))).f['132'].go?.dit, ids = new Set(core.e.map(e => e.id)), DJ = JSON.parse(fs.readFileSync(new URL('./go-ditto.json', import.meta.url)));
     ok('v32 Métamorph GO : déguisements actuels / passés appliqués depuis go-ditto.json', dit && dit.cur.ids.length === DJ.current.names.length && dit.past.length === DJ.past.length && [dit.cur, ...dit.past].every(x => x.ids.length && x.ids.every(id => ids.has(id))));
     ok('v32 Métamorph GO : sources citées (URL) + date de vérification', dit && dit.src.length >= 2 && dit.src.every(([n, u]) => n && /^https:\/\//.test(u)) && /^\d{4}-\d\d-\d\d$/.test(dit.chk)); }
-  ok('v32 SW : VERSION ≥ v32 + DATA_VERSION ≥ d12 + NOTES', +((sw.match(/const VERSION = 'v(\d+)'/) || [])[1] || 0) >= 32 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 12 && /const NOTES = '[^']{10,160}'/.test(sw));
+  ok('v32 SW : VERSION ≥ v32 + DATA_VERSION ≥ d12 + NOTES', +((sw.match(/const VERSION = 'v(\d+)(?:\.\d+)*'/) || [])[1] || 0) >= 32 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 12 && /const NOTES = '[^']{10,160}'/.test(sw));
   { const css = fs.readFileSync(new URL('../docs/style.css', import.meta.url), 'utf8');
     ok('v33 hero : image en bloc centrée + boutons Officiel / HOME / Animé centrés dessous (CSS)', /\.hero #heroimg\{display:block;margin:0 auto;box-sizing:border-box;[^}]*aspect-ratio:1\/1/.test(css) && /\.hero \.sprsw\{display:flex;width:max-content;[^}]*margin:4px auto 8px/.test(css)); }
 }
@@ -300,7 +300,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v34 RF/VF Switch : pas de ligne GBA (Colosseum), « Centre Pokémon » en français', !loc.a.some(a => /Pokecenter/.test(a)) && !loc.m.some(m => /Pokemon /.test(m)) && !(sp(25).f['25'].en.frlgsw || []).some(r => /Colosseum/.test(loc.m[r[1]])));
   ok('v34 lieux : repli « Faire évoluer … » / « Lieu non renseigné » pour les jeux Poképédia', /Lieu non renseigné pour ce jeu/.test(app) && /Faire évoluer \$\{/.test(app));
   { let bad = 0; for (const id of [43, 275, 276, 409]) { const s = sp(id); bad += Object.entries(s.tv || {}).filter(([v, i]) => !(s.pv || {})[v] && s.fv[v] === undefined && /pieds\/seconde|miles|\d pieds/.test(s.tt[i])).length; } eq('v34 descriptions : plus d’unités impériales', bad, 0); }
-  ok('v34 SW : VERSION ≥ v34, DATA_VERSION ≥ d14 (v35 : v35 / d15)', +((sw.match(/const VERSION = 'v(\d+)'/) || [])[1] || 0) >= 34 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 14);
+  ok('v34 SW : VERSION ≥ v34, DATA_VERSION ≥ d14 (v35 : v35 / d15)', +((sw.match(/const VERSION = 'v(\d+)(?:\.\d+)*'/) || [])[1] || 0) >= 34 && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 14);
   ok('v34 build : apply-v34.mjs lancé à la fin de build-data.mjs', /import\('\.\/apply-v34\.mjs'\)/.test(fs.readFileSync(path.join(HERE, 'build-data.mjs'), 'utf8')));
 }
 
@@ -351,5 +351,12 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
   ok('v41 formes interchangeables : FLINK / FSHORT, raccourci, images des formes', /const FLINK = \{ 493: '\*', 773: '\*', 676: \['xy'\], 649: \['bw', 'b2w2', 'home'\]/.test(app) && /Cocher toutes les formes/.test(app) && /✓ Toutes cochées/.test(app) && /new Set\(E\.map\(artOf\)\)/.test(app));
   ok('v48 Ogerpon lié dans Écarlate / Violet (+ HOME), séparé dans GO, migration idempotente', /1017: \['sv', 'home'\]/.test(app) && /function migrateLinkV48\(\)/.test(app) && /migrateFem\(\); migrateLinkV48\(\);/.test(app) && !/1017: '\*'/.test(app));
+}
+// ---- v60.11: peremption (coupe PvP, equipes Rocket), doublon « Gigamax », cri de Mewtwo Armure
+{ const rp = D('rank-pvp.json'), rr = D('rank-rocket.json'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), keys = new Set(core.e.map(e => e.k));
+  ok('v60.11 coupe PvP : dernier jour (cup.fin), règles et classement valides', /^\d{4}-\d{2}-\d{2}$/.test(rp.cup.fin) && rp.cup.r && rp.L.c.r.length >= 100 && rp.L.c.r.every(r => keys.has(r[0])));
+  ok('v60.11 coupe PvP : masquée après cup.fin (plus de « Coupe en cours » périmée)', /cupOver = !!\(pv\.cup && pv\.cup\.fin && TODAY > pv\.cup\.fin\)/.test(app));
+  ok('v60.11 Rocket : date de fin de rotation + avertissement après cette date', /^\d{4}-\d{2}-\d{2}$/.test(rr.valid) && /rkOld = !!\(rk\.valid && TODAY >= rk\.valid\)/.test(app) && /rkwarn/.test(fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8')));
+  ok('v60.11 Classements Combats Max : pas de « Gigamax » en double (nom du boss + niveau)', /tl = \(t, n\) => t >= 6 \? \(\/Gigamax\/\.test\(n\) \? '6★' : 'Gigamax 6★'\)/.test(app) && !/tl\(b\[2\]\)/.test(app) && !/tl\(x\[2\]\)/.test(app));
 }
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -3,7 +3,7 @@
   "upd": "2026-10-02",
   "valid": "2026-12-01",
   "leaders": [
-    { "id": "giovanni", "n": "Giovanni", "role": "Boss", "rank": 1.15, "catch": "644", "catchNote": "Super Radar Rocket : uniquement via le GO Pass Fête des Récoltes (récompenses jusqu’au 7 oct. 2026)",
+    { "id": "giovanni", "n": "Giovanni", "role": "Boss", "rank": 1.15, "catch": "644", "catchNote": "Super Radar Rocket : uniquement via le GO Pass d’un événement Team GO Rocket ; celui de la Fête des Récoltes a pris fin le 7 oct. 2026 et aucun n’est disponible pour l’instant",
       "slots": [["53"], ["115", "464", "68"], ["644"]] },
     { "id": "cliff", "n": "Cliff", "role": "Leader", "rank": 1.05, "catch": "104", "slots": [["104"], ["143", "623", "110-galar"], ["248", "323", "475"]] },
     { "id": "arlo", "n": "Arlo", "role": "Leader", "rank": 1.05, "catch": "88-alola", "slots": [["88-alola"], ["208", "623", "80"], ["65", "6", "212"]] },

@@ -31,7 +31,11 @@ for (const k of Object.keys(r)) { while (r[k].length && !r[k][r[k].length - 1]) 
 const out = { src: 'PvPoke (pvpoke.com, classements « overall » toutes saisons, Ligue Super / Hyper / Master)', date: new Date().toISOString().slice(0, 10), n, r };
 if (!process.argv.includes('--rank-only')) fs.writeFileSync(path.join(D, 'pvp.json'), JSON.stringify(out));
 // v59: ranking lists (top 200 per league / cup, with PvPoke score and moveset) + Little Cup + the current themed cup
-const LISTS = { g: ['Ligue Super', 1500, 'all'], u: ['Ligue Hyper', 2500, 'all'], m: ['Ligue Master', 10000, 'all'], l: ['Coupe des Jeunes', 500, 'little'], c: ['Coupe Halloween Méga (Ligue Super)', 1500, 'halloweenmega'] };
+// v60.11: themed cup of the moment = ONE slot « c ». Update CUP when a new cup starts: t = title, pv = PvPoke rankings folder (GBL version when it exists),
+// c = dates shown, fin = last day (AAAA-MM-JJ; the app hides the cup after that day), r = official rules (shown under the list).
+const CUP = { t: 'Coupe GO CIAL 2026 (Ligue Super)', pv: 'laic2027gbl', c: '10 – 17 nov. et 18 – 25 nov. 2026', fin: '2026-11-25',
+  r: 'Coupe GO CIAL 2026 (« 2026 GO LAIC Cup » en anglais) : 1 500 PC maximum ; types Feu, Ténèbres, Acier et Fée interdits ; Pokémon légendaires, fabuleux et Ultra-Chimères interdits ; Méga-Évolutions interdites en Ligue Combat GO. Espèces interdites : Leveinard, Ronflex, Fouinar, Qulbutoké, Corayon de Galar, Hyporoi, Charmina, Altaria, Téraclope, Moyade, Tarenbulle, Gouroutan, Courrousinge et Terraiste.' };
+const LISTS = { g: ['Ligue Super', 1500, 'all'], u: ['Ligue Hyper', 2500, 'all'], m: ['Ligue Master', 10000, 'all'], l: ['Coupe des Jeunes', 500, 'little'], c: [CUP.t, 1500, CUP.pv] };
 const GOM = JSON.parse(fs.readFileSync(path.join(D, 'go.json'))).moves; const mv = id => !id || id === 'none' ? null : GOM[id + '_FAST'] ? id + '_FAST' : id;
 const keyMega = {}; for (const p of gm) { if (!(p.tags || []).includes('mega')) continue; const c = (byId[p.dex] || []).filter(e => ['mega', 'primal'].includes(e.c)).filter(e => { const g = goOf(p.dex, e.k); return g && g.a === p.baseStats.atk && g.d === p.baseStats.def && g.s === p.baseStats.hp; }); if (c[0]) keyMega[p.speciesId.replace(/_shadow$/, '')] = c[0].k; }
 const RL = {}; let unk = 0;
@@ -40,6 +44,6 @@ for (const [lg, [t, cp, cup]] of Object.entries(LISTS)) {
   for (const x of list) { if (r.length >= 200) break; const sid = x.speciesId.replace(/_shadow$/, ''), k = keyOf[sid] || keyMega[sid]; if (!k) { unk++; continue; } const [f, c1, c2] = x.moveset || []; r.push([k, /_shadow$/.test(x.speciesId) ? 1 : 0, x.score, mv(f), mv(c1), ...(mv(c2) ? [mv(c2)] : [])]); }
   RL[lg] = { t, cp, n: list.length, r };
 }
-fs.writeFileSync(path.join(D, 'rank-pvp.json'), JSON.stringify({ src: 'PvPoke (pvpoke.com, classements « overall »)', date: new Date().toISOString().slice(0, 10), cup: { c: '27 oct. – 3 nov. 2026' }, L: RL }));
+fs.writeFileSync(path.join(D, 'rank-pvp.json'), JSON.stringify({ src: 'PvPoke (pvpoke.com, classements « overall »)', date: new Date().toISOString().slice(0, 10), cup: { c: CUP.c, fin: CUP.fin, r: CUP.r, d: new Date().toISOString().slice(0, 10) }, L: RL }));
 console.log('rank-pvp.json:', Object.entries(RL).map(([k, v]) => `${k} ${v.r.length}/${v.n}`).join(', '), '— ignorés (forme inconnue) :', unk);
 console.log(`pvp.json: ${Object.keys(r).length} entrées classées (${n.g} / ${n.u} / ${n.m}), ${miss.length} espèces PvPoke non associées : ${miss.slice(0, 25).join(', ')}`);
