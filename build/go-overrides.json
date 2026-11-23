@@ -92,9 +92,8 @@
     "shiny": true
    },
    "884-gmax": {
-    "from": "2026-11-06",
-    "shiny": true,
-    "shinyFrom": "2026-11-06"
+    "from": null,
+    "shiny": true
    }
   }
  },
@@ -183,7 +182,7 @@
   }
  },
  "released": {
-  "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13). v39 : Larvadar (17/03/2026), Embrochet (18/08/2026), Toxizap (16/11/2024), Théffroi (03/12/2024), Grondogue / Dogrino (08/09/2026), Flotillon (12/05/2026) — pokemon.com / Leek Duck / wiki GO, vérifié le 2026-10-16. v60.12 : Météno (774, Forme Météore, Pluie d’étoiles filantes Orionides, 19/10/2026), Noyau Vert (774-green, Orionides, 19/10/2026) et Noyau Jaune (774-yellow, Léonides, 14/11/2026) — Leek Duck « Minior Showers: Orionids / Leonids 2026 », pokemongo.com/fr/news (Pluies de Météno), vérifié le 2026-11-16. Les 5 autres couleurs (Rouge, Orange, Bleu, Indigo, Violet) sortiront une par pluie (Géminides 11/12 : 2 couleurs, une par hémisphère, puis mai à août 2027), non annoncées : les ajouter ici au fil des annonces.",
+  "_doc": "v34 : espèces / formes sorties dans GO que la liste pogoapi released_pokemon (figée) ne connaît pas. Clé de l'app → nom de forme du game master PokeMiners (null = données GO déjà présentes). Les stats / attaques manquantes sont prises dans build/.cache/go-latest.json. Sources : pokemondb.net/go, Bulbapedia (vérifié le 2026-10-13). v39 : Larvadar (17/03/2026), Embrochet (18/08/2026), Toxizap (16/11/2024), Théffroi (03/12/2024), Grondogue / Dogrino (08/09/2026), Flotillon (12/05/2026) — pokemon.com / Leek Duck / wiki GO, vérifié le 2026-10-16. v60.12 : Météno (774, Forme Météore, Pluie d’étoiles filantes Orionides, 19/10/2026), Noyau Vert (774-green, Orionides, 19/10/2026) et Noyau Jaune (774-yellow, Léonides, 14/11/2026) — Leek Duck « Minior Showers: Orionids / Leonids 2026 », pokemongo.com/fr/news (Pluies de Météno), vérifié le 2026-11-16. Les 5 autres couleurs (Rouge, Orange, Bleu, Indigo, Violet) sortiront une par pluie (Géminides 11/12 : 2 couleurs, une par hémisphère, puis mai à août 2027), non annoncées : les ajouter ici au fil des annonces. v60.14 : Colimucus de Hisui (705-hisui) et Muplodocus de Hisui (706-hisui) sortis le 6/11/2026 aux Terres Sauvages GO en personne (Sendai et Mexico, pas au week-end mondial) — Bulbapedia « Sliggoo (GO) », pokemongo.com / Pokémon GO Hub, vérifié le 2026-11-23.",
   "keys": {
    "778": "MIMIKYU_DISGUISED",
    "807": "ZERAORA_NORMAL",
@@ -231,7 +230,9 @@
    "955": null,
    "774": null,
    "774-green": null,
-   "774-yellow": null
+   "774-yellow": null,
+   "705-hisui": null,
+   "706-hisui": null
   }
  },
  "unreleased": {
@@ -266,15 +267,8 @@
   }
  },
  "upcoming": {
-  "_doc": "v47 : sorties GO annoncées avec une date (clé d’entrée → from = date de sortie AAAA-MM-JJ, shinyFrom = date du shiny). Avant la date : « annoncé pour le … » ; à partir de la date l’app affiche la forme comme sortie. Les stats / attaques viennent du game master (refresh-go.mjs). Après la date, déplacer la clé dans released.keys (ou megaReleased.keys) et l’enlever d’ici. Sources : pokemongo.com/fr/news (Pluies de Météno), Leek Duck « Chandelure Super Mega Raid Day », Pokémon GO Hub « GO Wild Area 2026 » (Colimucus / Muplodocus de Hisui : uniquement aux événements en personne de Sendai et Mexico du 6 au 8/11, pas au week-end mondial), vérifié le 2026-10-18. Météno : voir released.keys (v60.12).",
-  "keys": {
-   "705-hisui": {
-    "from": "2026-11-06"
-   },
-   "706-hisui": {
-    "from": "2026-11-06"
-   }
-  }
+  "_doc": "v47 : sorties GO annoncées avec une date (clé d’entrée → from = date de sortie AAAA-MM-JJ, shinyFrom = date du shiny). Avant la date : « annoncé pour le … » ; à partir de la date l’app affiche la forme comme sortie. Les stats / attaques viennent du game master (refresh-go.mjs). Après la date, déplacer la clé dans released.keys (ou megaReleased.keys, ou gmax.forms.from = null) et l’enlever d’ici. v60.14 : 705-hisui et 706-hisui déplacés dans released.keys (sortis le 6/11/2026) ; 884-gmax (Duralugon Gigamax) passé à from = null dans gmax.forms (sorti le 6/11/2026 aux Terres Sauvages, puis Mondial les 14–15/11) — Bulbapedia, pokemon.com « Gigantamax Duraludon Debuts in Pokémon GO Wild Area: Global Event », vérifié le 2026-11-23.",
+  "keys": {}
  },
  "dynamax": {
   "_doc": "v38 : formes utilisables en Combats Max (Dynamax) dans Pokémon GO → bouton « Dynamax » sur la fiche GO. Clé d’entrée → date de sortie (AAAA-MM-JJ) ; une date future = bouton affiché à partir de cette date. Liste maintenue à la main (routine GO hebdo). Source : Bulbapedia « Dynamax (GO) » (vérifié le 2026-10-16), recoupé avec Leek Duck (Max Mondays, relevé du 2026-10-26 : Psystigri le 23/11/2026). Les Gigamax ont leur propre clé (gmax).",

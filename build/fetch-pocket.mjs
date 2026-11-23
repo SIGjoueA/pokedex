@@ -55,6 +55,7 @@ const kslug = {}; for (const m of kidx.matchAll(/href="(\/jeux\/mobile\/pocket\/
 for (const [c, u] of [['P-A', 'promo-a'], ['P-B', 'promo-b'], ['P-C', 'promo-c']]) kslug[c] ||= { u: `/jeux/mobile/pocket/cartodex/extensions/${u}.html`, n: c.replace('P-', 'Promo-') };
 console.log('Pokékalos sets', Object.keys(kslug).join(' '));
 const KNAME = { B2b: 'Méga-Rayonnement', B3: 'Aura Palpitante', B3a: 'Propulsion Paradoxe', B3b: 'Jours Heureux', B4: 'Domination Céleste', B4a: 'L’Ambition de la Team Rocket', B4b: 'Booster de Luxe Méga', A4b: 'Booster de Luxe ex', 'P-B': 'Promo-B', C1: 'Fusion Double', 'P-C': 'Promo-C', SP1: 'Premiers Partenaires' }; // Poképédia / Pokékalos, if the index layout changes
+const OFFICIAL = { C1: 131 }; // cartes de base (hors secrètes) : Bulbapedia Dual Fusion « 217 (131 + 86 secret) », numérotation 001/131
 const enFr = new Map(); for (const st of sets) for (const c of st.cards) if (c[4]) enFr.set(c[1], c[1]);
 let added = 0;
 for (const L of lsets) {
@@ -70,8 +71,9 @@ for (const L of lsets) {
     return [lid, fr || r.en, promo ? 10 : k && k.r != null ? k.r : r.k, cat ? [] : dexOf(fr, r.en), cat, 3]; });
   const d = (/^(\d+) (\w{3}) (\d+)$/.exec(L.date) || []); const date = d.length ? `20${d[3]}-${MON[d[2]]}-${d[1].padStart(2, '0')}` : (have ? have.d : (K && K.d) || '');
   if (have) { const ids = new Set(have.cards.map(c => c[0])); const extra = cards.filter(c => !ids.has(c[0])); have.cards.push(...extra); have.cards.sort((a, b) => a[0].localeCompare(b[0], 'en', { numeric: true })); added += extra.length; console.log(L.id, '+', extra.length, '(Limitless / Pokékalos)'); }
-  else { sets.push({ id: L.id, n: KNAME[L.id] || (K && K.n) || L.en, en: L.en, d: date, o: 0, cards, src: 'll' }); added += cards.length; console.log(L.id, sets.at(-1).n, cards.length, kc.size ? 'FR ok' : 'no FR'); }
+  else { sets.push({ id: L.id, n: KNAME[L.id] || (K && K.n) || L.en, en: L.en, d: date, o: OFFICIAL[L.id] || 0, cards, src: 'll' }); added += cards.length; console.log(L.id, sets.at(-1).n, cards.length, kc.size ? 'FR ok' : 'no FR'); }
 }
+for (const st of sets) if (!st.o && OFFICIAL[st.id]) st.o = OFFICIAL[st.id];
 console.log('merged cards', added);
 // v52: boosters per card. Pokékalos lists every booster of a set with its own page (« Cartes disponibles dans ce Booster »);
 // TCGdex `boosters` is merged in (union, by normalised name). Card field 6 = indices into set.b (booster names, French).
