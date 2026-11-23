@@ -2,7 +2,7 @@
 const VERSION = 'v60.12';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
 const NOTES = 'Vous voyez Météno Noyau Vert et Noyau Jaune comme sortis dans GO, et la source de trois cartes Pocket (Mew, Mewtwo-ex, Pikachu-ex).';
-const DATA_VERSION = 'd54'; // bump when the schema of data/*.json changes
+const DATA_VERSION = 'd55'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
