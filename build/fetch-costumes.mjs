@@ -399,11 +399,60 @@ const ENUM_OF = {
   nightcap: 'NIGHTCAP', pi: 'PI', pinoevolve: 'PI_NOEVOLVE', royalnoevolve: 'ROYAL_NOEVOLVE',
 };
 
+// Poképédia renamed some "Formel avec accessoires" files to "Élégant avec accessoires".
+const FILE_ALIAS = [
+  [/Formel_avec_accessoires/g, 'Élégant_avec_accessoires'],
+  [/Formel avec accessoires/g, 'Élégant avec accessoires'],
+];
+function ppeUrl(file) {
+  let f = file.replace(/_/g, ' ');
+  for (const [re, to] of FILE_ALIAS) f = f.replace(re, to);
+  return 'https://www.pokepedia.fr/Special:FilePath/' + encodeURIComponent(f).replace(/'/g, '%27');
+}
 function imgFor(it, ppe) {
+  // Prefer a Poképédia sprite when we have one: the jsDelivr enum CDN is incomplete (missing 2023–2026 files).
+  if (ppe) return ppeUrl(ppe.file);
   const enu = ENUM_OF[slug(it.suffix)];
   if (enu) return 'https://cdn.jsdelivr.net/gh/pokemon-go-api/assets@main/Pokemon/pm' + it.dex + '.c' + enu + '.icon.png';
-  if (ppe) return 'https://www.pokepedia.fr/Special:FilePath/' + encodeURIComponent(ppe.file.replace(/_/g, ' '));
   return '';
+}
+
+async function resolveAll(species) {
+  const recs = Object.values(species).flat().filter(c => c.img);
+  const ua = { 'User-Agent': 'PokedexCostumeBuild/1.0 (https://sigjouea.github.io/pokedex/)' };
+  const byUrl = new Map();
+  for (const c of recs) (byUrl.get(c.img) || byUrl.set(c.img, []).get(c.img)).push(c);
+  let ok = 0, dropped = 0, retarget = 0;
+  const q = [...byUrl.keys()];
+  async function fetchOk(url) {
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const r = await fetch(url, { headers: ua, redirect: 'follow' });
+        const ct = (r.headers.get('content-type') || '');
+        if (r.ok && ct.startsWith('image/')) return r.url || url;
+      } catch {}
+      await new Promise(res => setTimeout(res, 400 * (attempt + 1)));
+    }
+    return null;
+  }
+  async function worker() {
+    while (q.length) {
+      const url = q.shift();
+      const final = await fetchOk(url);
+      for (const c of byUrl.get(url)) {
+        if (final) {
+          if (final !== url) retarget++;
+          c.img = final;
+          ok++;
+        } else {
+          delete c.img;
+          dropped++;
+        }
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: 8 }, worker));
+  return { ok, dropped, retarget, unique: byUrl.size };
 }
 
 
@@ -460,8 +509,13 @@ for (const recs of Object.values(species)) {
   }
 }
 
-for (const list of Object.values(species)) {
-  list.sort((a, b) => (a.evo || 0) - (b.evo || 0) || a.n.localeCompare(b.n, 'fr') || a.id.localeCompare(b.id));
+// Keep Bulbapedia table order (chronological by event). Do not sort alphabetically:
+// that mixed English and French labels and hid the history of a long list such as Pikachu's.
+
+if (!process.env.SKIP_IMG_RESOLVE) {
+  const r = await resolveAll(species);
+  nImg = Object.values(species).flat().filter(c => c.img).length;
+  console.log(JSON.stringify({ resolved: r, withImage: nImg }));
 }
 
 const total = Object.values(species).reduce((n, l) => n + l.length, 0);

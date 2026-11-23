@@ -1816,13 +1816,19 @@ function costumesHTML(title) {
     const on = COSTUME_C.has(c.id), shOn = COSTUME_S.has(c.id);
     const src = c.img || art;
     const fb = esc(art);
-    const frn = c.frs === 'en' ? ' <small class="mute">nom français non vérifié</small>' : c.frs === 'ppe-unoff' ? ' <small class="mute">appellation non officielle</small>' : '';
-    const ev = c.evo ? ' <small class="mute">évolution uniquement</small>' : '';
-    const shLab = c.sh ? 'Chromatique constaté' : 'Chromatique non constaté';
+    const bits = [];
+    if (c.frs === 'en') bits.push('nom français non vérifié');
+    else if (c.frs === 'ppe-unoff') bits.push('appellation non officielle');
+    if (c.evo) bits.push('évolution uniquement');
+    bits.push(c.sh ? 'Chromatique constaté' : 'Chromatique non constaté');
+    const meta = bits.length ? `<small class="mute">${bits.join(' · ')}</small>` : '';
     const btns = edit
       ? `<div class="costacts"><button type="button" class="act cg costcg" data-cost="${esc(c.id)}" aria-pressed="${on}">${on ? BALL : BALL_OFF}<span class="t">Capturé</span></button>${c.sh ? `<button type="button" class="act sh costsh" data-cost="${esc(c.id)}" aria-pressed="${shOn}">✨ <span class="t">Shiny</span></button>` : ''}</div>`
       : `<p class="costst">${on ? 'Capturé' : 'Pas encore capturé'}${shOn ? ' · ✨ shiny' : ''}</p>`;
-    return `<article class="costcard${on ? ' on' : ''}"><img src="${esc(src)}" alt="" width="72" height="72" loading="lazy"${c.img ? ` onerror="this.onerror=null;this.src='${fb}';this.classList.add('costfallback')"` : ' class="costfallback"'}><div class="ct"><b>${esc(c.n)}</b>${frn}${ev}<small class="mute"> · ${shLab}</small>${btns}</div></article>`;
+    const img = c.img
+      ? `<img src="${esc(src)}" alt="" width="72" height="72" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.removeAttribute('referrerpolicy');this.src='${fb}';this.classList.add('costfallback')">`
+      : `<img src="${esc(art)}" alt="" width="72" height="72" class="costfallback">`;
+    return `<article class="costcard${on ? ' on' : ''}">${img}<div class="ct"><b>${esc(c.n)}</b>${meta}${btns}</div></article>`;
   }).join('');
   const note = edit
     ? 'Les costumes ne comptent pas dans la complétion Pokémon GO : ils forment un compteur à part, optionnel. Marquer un costume n’inscrit pas l’espèce comme capturée.'
