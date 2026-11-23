@@ -60,6 +60,33 @@ const MEGA_GEMS = new Set(store.get('mega_gems', []).map(k => k.includes(':') ? 
 const MEGA_ENERGY = new Set(store.get('mega_energy', []).map(String));
 // v38: Pokémon GO « Dynamax » mark (usable in Max Battles), one per GO sheet (entry keys). No effect on completion (like the Méga-énergie).
 const DYNAMAX = new Set(store.get('go_dynamax', []).map(String));
+// v60.16: Pokémon GO event costumes, optional marks (captured / shiny). No effect on GO completion, and they never tick the species « Capturé ».
+const COSTUME_C = new Set(store.get('go_costumes', []).map(String));
+const COSTUME_S = new Set(store.get('go_costumes_s', []).map(String));
+let COSTUMES = null, COSTUMES_P = null;
+const loadCostumes = () => COSTUMES_P || (COSTUMES_P = getJSON('data/costumes.json').then(d => { COSTUMES = d; updateGoCostMenu(); return d; }).catch(() => { COSTUMES_P = null; return null; }));
+const saveCostumes = () => { store.set('go_costumes', [...COSTUME_C]); store.set('go_costumes_s', [...COSTUME_S]); updateGoCostMenu(); };
+function updateGoCostMenu() {
+  const el = $('#gocost'); if (!el) return;
+  if (!COSTUMES) { el.hidden = true; el.textContent = ''; return; }
+  const n = Object.values(COSTUMES.s).flat().filter(c => COSTUME_C.has(c.id)).length;
+  el.hidden = false;
+  el.textContent = `Costumes : ${n} / ${COSTUMES.n} (sans effet sur la complétion)`;
+}
+function costumeHost(p) {
+  if (!p || goTemp(p) || p.c === 'gmax' || !p.go) return false;
+  if (p.k === String(p.id)) return true;
+  if (p.c === 'reg' || /-(alola|galar|hisui|paldea|small|large|super|average|antique)$/.test(p.k)) return true;
+  return false;
+}
+function costumesOf(p) {
+  if (!COSTUMES || !costumeHost(p)) return [];
+  const list = COSTUMES.s[String(p.id)] || [];
+  const REG = /-(alola|galar|hisui|paldea)$/;
+  if (p.c === 'reg' || REG.test(p.k)) return list.filter(c => c.k === p.k);
+  return list.filter(c => !c.k || !REG.test(c.k));
+}
+
 const GMAX_IC = '<img class="gemimg" src="img/max/gigamax.webp" alt="" width="28" height="28" decoding="async">', DMAX_IC = '<img class="gemimg" src="img/max/dynamax.webp" alt="" width="28" height="28" decoding="async">';
 let ENERGY_ICONS = { generic: 'img/energy/generic.webp', ids: new Set() };
 let MEGA_STONES = { fallback: { item: 'key-stone', fr: 'Gemme Sésame', img: 'img/stones/key-stone.png', label: 'Méga-Gemme' }, stones: {} };
@@ -338,7 +365,7 @@ const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + 
 // The sheet has its own tracking context: its game switcher (state.dgame). 'all' = overview (general infos, read-only); 'home' = Pokémon HOME sheet (origin marks).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_R.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); store.set('go_costumes', [...COSTUME_C]); store.set('go_costumes_s', [...COSTUME_S]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_R.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
   for (const k of [...HOME_B]) if ((!BY_KEY[k] && !FEM_OF[k]) || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
   // v47: Baron shiny marks (BARONS_G / HOME_BS) are frozen: no button, never shown or changed, kept in storage + export (future « mode Collection »)
   store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
@@ -612,6 +639,7 @@ async function boot() {
   $('#formsbtn').setAttribute('aria-pressed', state.forms);
   buildControls();
   render(); colInit(); pkInit();
+  loadCostumes().then(() => { updateGoCostMenu(); if (DET && DET.p && !$('#detail-view').hidden) renderDetail(); });
   window.addEventListener('hashchange', route);
   route();
   registerSW();
@@ -1065,6 +1093,13 @@ function trackHTML(p0) {
   } else if (goMegas(p0).length) {
     const ms = energyMates(p0);
     h += `<br><span class="mute gemline">${ms.map(m => `${m.c === 'primal' ? 'Énergie Primo' : megaXYZ(m) ? `Méga-énergie ${megaXYZ(m).toUpperCase()}` : 'Méga-énergie'} de ${esc((BY_KEY[String(p0.id)] || p0).n)} : ${hasEnergy(m) ? 'obtenue' : 'pas encore obtenue'}`).join(' · ')} (${ms.length > 1 ? 'une marque par forme' : 'marque par espèce'}, sans effet sur la complétion ; cochée automatiquement quand vous marquez la ${ms.some(m => m.c === 'primal') ? 'Primo' : 'Méga'} capturée).</span>`;
+  }
+  if (c === 'go' && !goTemp(p0) && p0.c !== 'gmax') {
+    const cl = costumesOf(p0);
+    if (cl.length) {
+      const nC = cl.filter(x => COSTUME_C.has(x.id)).length, nS = cl.filter(x => COSTUME_S.has(x.id)).length;
+      h += `<br><span class="mute">Costumes : ${nC} / ${cl.length} capturé${nC > 1 ? 's' : ''}${nS ? ` · ${nS} shiny` : ''} <small>(sans effet sur la complétion)</small></span>`;
+    }
   }
   if (alphaOk(p, c)) h += `<br><span class="mute baronl">${BARON_IC} Baron : ${isBaron(p, c) ? 'oui' : 'non'} <small>(sans effet sur la complétion)</small></span>`;
   else if (ALPHA_GAMES.has(c) && !p0.mb && !bo) h += `<br><span class="mute baronl">Ne peut pas être Baron dans ce jeu${(BY_KEY[String(p.id)] || p).lg || (BY_KEY[String(p.id)] || p).my ? ' (légendaire / fabuleux)' : ''}.</span>`;
@@ -1770,8 +1805,30 @@ ${rrec}
     dit: ditHTML(d)
   };
 }
-// v43: GO costumes block, placeholder until the costume data is added
-function costumesHTML(title) { return `<section class="box costbox"><h2>${title}</h2><p class="note">En chantier.</p></section>`; }
+// v60.16: GO event costumes (interactive on the GO sheet, read-only on the overview). Empty when this form has none.
+function costumesHTML(title) {
+  const p = DET && DET.p, list = costumesOf(p);
+  if (!list.length) return '';
+  const edit = title === 'Costumes';
+  const nC = list.filter(c => COSTUME_C.has(c.id)).length;
+  const art = artOf(p);
+  const cards = list.map(c => {
+    const on = COSTUME_C.has(c.id), shOn = COSTUME_S.has(c.id);
+    const src = c.img || art;
+    const fb = esc(art);
+    const frn = c.frs === 'en' ? ' <small class="mute">nom français non vérifié</small>' : c.frs === 'ppe-unoff' ? ' <small class="mute">appellation non officielle</small>' : '';
+    const ev = c.evo ? ' <small class="mute">évolution uniquement</small>' : '';
+    const shLab = c.sh ? 'Chromatique constaté' : 'Chromatique non constaté';
+    const btns = edit
+      ? `<div class="costacts"><button type="button" class="act cg costcg" data-cost="${esc(c.id)}" aria-pressed="${on}">${on ? BALL : BALL_OFF}<span class="t">Capturé</span></button>${c.sh ? `<button type="button" class="act sh costsh" data-cost="${esc(c.id)}" aria-pressed="${shOn}">✨ <span class="t">Shiny</span></button>` : ''}</div>`
+      : `<p class="costst">${on ? 'Capturé' : 'Pas encore capturé'}${shOn ? ' · ✨ shiny' : ''}</p>`;
+    return `<article class="costcard${on ? ' on' : ''}"><img src="${esc(src)}" alt="" width="72" height="72" loading="lazy"${c.img ? ` onerror="this.onerror=null;this.src='${fb}';this.classList.add('costfallback')"` : ' class="costfallback"'}><div class="ct"><b>${esc(c.n)}</b>${frn}${ev}<small class="mute"> · ${shLab}</small>${btns}</div></article>`;
+  }).join('');
+  const note = edit
+    ? 'Les costumes ne comptent pas dans la complétion Pokémon GO : ils forment un compteur à part, optionnel. Marquer un costume n’inscrit pas l’espèce comme capturée.'
+    : 'Pour les marquer, choisissez le jeu « Pokémon GO ». Les costumes ne comptent pas dans la complétion.';
+  return `<section class="box costbox"><h2>${title} <small class="cnt">${nC} / ${list.length}</small></h2><div class="costgrid">${cards}</div><p class="note">${note}</p></section>`;
+}
 
 function renderDetail() {
   const { p, sp, f, shared } = DET;
@@ -1988,6 +2045,11 @@ document.addEventListener('click', e => {
   const dmb = e.target.closest('#actbar .dmx[data-dmax]');
   if (dmb) { const p = DET && DET.p; if (!p || p.k !== dmb.dataset.dmax || sheetCtx() !== 'go') return; // v38: Dynamax ⇒ caught in GO (unticking leaves Capturé)
     if (DYNAMAX.has(p.k)) DYNAMAX.delete(p.k); else { DYNAMAX.add(p.k); if (!CAUGHT_G.has(gkey('go', p))) toggleMark(p, 'caught', 'go'); } saveTrack(); refreshTrack(p); render(); return; }
+  const ccb = e.target.closest('.costcg[data-cost], .costsh[data-cost]');
+  if (ccb) { const id = ccb.dataset.cost, p = DET && DET.p; if (!id || !p || sheetCtx() !== 'go') return;
+    if (ccb.classList.contains('costsh')) { if (COSTUME_S.has(id)) COSTUME_S.delete(id); else { COSTUME_S.add(id); COSTUME_C.add(id); } }
+    else if (COSTUME_C.has(id)) { COSTUME_C.delete(id); COSTUME_S.delete(id); } else COSTUME_C.add(id);
+    saveCostumes(); refreshTrack(p); render(); return; }
   const enb = e.target.closest('#actbar .energy');
   if (enb) { const p = DET && DET.p, m = BY_KEY[enb.dataset.energy]; if (!p || !m || !goTemp(m) || enb.disabled || sheetCtx() !== 'go') return; toggleEnergy(m); refreshTrack(p); render(); return; }
   const bab = e.target.closest('#actbar .baron, #actbar .barons');
@@ -2122,7 +2184,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2158,7 +2220,7 @@ async function notesAfterUpdate() { // once per new version: « vXX installée �
 function menuOpen(on) {
   const m = $('#menu'), bk = $('#menuback'), b = $('#menubtn'); if (!m || m.hidden === !on) return;
   m.hidden = bk.hidden = !on; b.setAttribute('aria-expanded', on);
-  if (on) { menuNotes(false); menuVersion(); $('#menux').focus({ preventScroll: true }); } else if (document.activeElement && m.contains(document.activeElement)) b.focus({ preventScroll: true });
+  if (on) { menuNotes(false); menuVersion(); updateGoCostMenu(); $('#menux').focus({ preventScroll: true }); } else if (document.activeElement && m.contains(document.activeElement)) b.focus({ preventScroll: true });
 }
 // v46: « 🐞 Signaler un bug / proposer une idée » = mailto: with version, current view / sheet and device, rebuilt on menu open and on tap (synchronous, so iOS Safari opens Mail)
 const BUG_TO = 'pokedexsigjouea@gmail.com';
@@ -2220,7 +2282,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], collection: COLL, pocket: PKQ };
+    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], go_costumes: [...COSTUME_C], go_costumes_s: [...COSTUME_S], collection: COLL, pocket: PKQ };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -2246,6 +2308,9 @@ boot();
       if (Array.isArray(d.mega_gems)) d.mega_gems.filter(x => typeof x === 'string').map(x => x.includes(':') ? x : 'za:' + x).filter(x => { const i = x.indexOf(':'), k = x.slice(i + 1); return GAME_BY[x.slice(0, i)] && BY_KEY[k] && BY_KEY[k].mb; }).forEach(x => MEGA_GEMS.add(x));
       if (Array.isArray(d.mega_energy)) d.mega_energy.map(String).filter(k => /^\d+(-[xyz])?$/.test(k)).forEach(k => MEGA_ENERGY.add(k));
       if (Array.isArray(d.go_dynamax)) d.go_dynamax.map(String).filter(kOk).forEach(k => DYNAMAX.add(k)); store.set('go_dynamax', [...DYNAMAX]);
+      if (Array.isArray(d.go_costumes)) d.go_costumes.map(String).filter(x => /^\d+-[a-z0-9]+$/i.test(x)).forEach(k => COSTUME_C.add(k));
+      if (Array.isArray(d.go_costumes_s)) d.go_costumes_s.map(String).filter(x => /^\d+-[a-z0-9]+$/i.test(x)).forEach(k => { COSTUME_S.add(k); COSTUME_C.add(k); });
+      store.set('go_costumes', [...COSTUME_C]); store.set('go_costumes_s', [...COSTUME_S]);
       if (d.pocket && typeof d.pocket === 'object') pkMerge(d.pocket); // v50: Pocket copies, max per language (old format = array of ids)
       if (Array.isArray(d.collection)) colImport(d.collection); // v49: older backups have no collection → nothing changes
       migrateEnergy(); migrateMarks(); rebuildHome(); if (!d.sal_h47) migrateSalHome(true); store.set('mega_energy', [...MEGA_ENERGY]);

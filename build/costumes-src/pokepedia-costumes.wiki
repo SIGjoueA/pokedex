@@ -1,0 +1,1289 @@
+== Pokémon costumés ==
+Certains Pokémon ont des formes spéciales, disponibles de façon temporaire au cours d'évènements. À l'exception de Pokémon clonés, ces Pokémon costumés sont recensés dans la section « Évènements » du Pokédex du jeu.
+
+Ils sont listés dans le tableau ci-dessous, trié par [[Liste des Pokémon dans l'ordre du Pokédex de Pokémon GO|ordre du Pokédex]], puis par ordre de première disponibilité dans le jeu.
+
+La totalité de ces Pokémon costumés sont disponibles sous forme chromatique, et sous leurs deux sexes lorsqu'ils sont sexués, sauf quelques exceptions :
+* [[Pikachu]] ([[:Fichier:Sprite 0025 Casquette de détective (2019) GO.png|Casquette de détective (2019)]]), [[Pikachu]] ([[:Fichier:Sprite 0025 Mimiqui GO.png|Costumé en Mimiqui]]), [[Pikachu]] ([[:Fichier:Sprite 0025 Cloné GO.png|cloné]]), [[Pikachu]] ([[:Fichier:Sprite 0025 Kurta GO.png|portant un kurta]]) et [[Raichu]] ([[:Fichier:Sprite 0026 Casquette de détective ♂ GO.png|Casquette de détective (2019)]]) sont uniquement mâles.
+* [[Pikachu Catcheur]], [[Pikachu Star]], [[Pikachu Rockeur]], [[Pikachu Docteur]] et [[Pikachu]] ([[:Fichier:Sprite 0025 Sari GO.png|portant un sari]]) sont uniquement femelles.
+* [[Florizarre]] ([[:Fichier:Sprite 0003 Cloné ♂ GO.png|cloné]]), [[Dracaufeu]] ([[:Fichier:Sprite 0006 Cloné GO.png|cloné]]), [[Tortank]] ([[:Fichier:Sprite 0009 Cloné GO.png|cloné]]), [[Pikachu]] ([[:Fichier:Sprite 0025 Cloné GO.png|cloné]]), [[Pikachu Docteur]], [[Mewtwo]] ([[:Fichier:Sprite 0150 Armure GO.png|Armure]]), [[Gardevoir]] ([[:Fichier:Sprite 0282 Chapeau Meloetta GO.png|Chapeau Meloetta]]) et [[Libégon]] ([[:Fichier:Sprite 0330 Chapeau Meloetta GO.png|Chapeau Meloetta]]) n'ont pas été disponibles sous forme chromatique, et sont donc [[Shiny Lock]].
+
+{| class="tableaustandard enroulable enroulé" width="800px" style="white-space:nowrap"
+! colspan="4" | Liste des Pokémon costumés
+|-
+! N°
+! Image
+! Dénomination
+! Source
+|-
+| rowspan="3" | 0001
+| [[Fichier:Sprite 0001 Munja GO.png|100px]]
+| [[Bulbizarre]] vêtu d'un costume de [[Munja]]
+| <ref name="Halloween 2019">[https://pokemongolive.com/fr/post/halloween2019/ Halloween 2019]</ref> <ref group="note" name="pluriel">Extrapolé depuis le pluriel.</ref>
+|-
+| [[Fichier:Sprite 0001 Chapeau de fête GO.png|100px]]
+| [[Bulbizarre]] coiffé d'un chapeau de fête<br>''[[Bulbizarre]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023">[https://pokemongolive.com/post/new-years-2023?hl=fr Nouvel An 2023]</ref><br><ref name="Nouvel An 2022">[https://pokemongolive.com/fr/post/new-year-2022/ Nouvel An 2022]</ref>
+|-
+| [[Fichier:Sprite 0001 Visière Pikachu GO.png|100px]]
+| [[Bulbizarre]] ''Visière [[Pikachu]]''
+| <ref group="note" name="non-officiel">Appellation non officielle.</ref>
+|-
+| 0002
+| [[Fichier:Sprite 0002 Chapeau de fête GO.png|100px]]
+| [[Herbizarre]] coiffé d'un chapeau de fête
+| <ref name="Fête du 9e anniversaire de Pokémon GO">[https://pokemongo.com/fr/post/pokemongo-9th-anniversary Fête du 9e anniversaire de Pokémon GO]</ref>
+|-
+| rowspan="2" | 0003
+| [[Fichier:Sprite 0003 Cloné ♂ GO.png|100px]]
+| [[Florizarre]] cloné
+| <ref name="Journée Pokémon 2020">[https://pokemongolive.com/fr/post/pokemonday2020/ Journée Pokémon 2020]</ref> <ref group="note" name="similaire">Extrapolé depuis un costume similaire.</ref>
+|-
+| [[Fichier:Sprite 0003 Chapeau de fête ♂ GO.png|100px]]
+| [[Florizarre]] coiffé d'un chapeau de fête
+| <ref name="Fête du 9e anniversaire de Pokémon GO"/>
+|-
+| rowspan="3" | 0004
+| [[Fichier:Sprite 0004 Osselait GO.png|100px]]
+| [[Salamèche]] au costume d'[[Osselait]]
+| <ref name="Halloween 2019"/> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0004 Chapeau de fête GO.png|100px]]
+| [[Salamèche]] coiffé d'un chapeau de fête<br>''[[Salamèche]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| [[Fichier:Sprite 0004 Visière Pikachu GO.png|100px]]
+| [[Salamèche]] ''Visière [[Pikachu]]''
+| <ref group="note" name="non-officiel"/>
+|-
+| 0005
+| [[Fichier:Sprite 0005 Chapeau de fête GO.png|100px]]
+| [[Reptincel]] coiffé d'un chapeau de fête<br>''[[Reptincel]] Chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/> <ref group="note" name="similaire"/><br><ref name="Anniversaire 2022">[https://pokemongolive.com/fr/post/anniversary-event-battle-weekend-2022/ Anniversaire 2022]</ref>
+|-
+| rowspan="2" | 0006
+| [[Fichier:Sprite 0006 Cloné GO.png|100px]]
+| [[Dracaufeu]] cloné
+| <ref name="Journée Pokémon 2020"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0006 Chapeau de fête GO.png|100px]]
+| [[Dracaufeu]] coiffé d'un chapeau de fête<br>''[[Dracaufeu]] Chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/> <ref group="note" name="similaire"/><br><ref name="Anniversaire 2022"/>
+|-
+| rowspan="4" | 0007
+| [[Fichier:Sprite 0007 Lunettes de soleil GO.png|100px]]
+| [[Carapuce]] portant des lunettes de soleil
+| <ref name="Ed Sheeran">[https://pokemongolive.com/fr/post/ed-sheeran-collab/ Collaboration avec Ed Sheeran]</ref>
+|-
+| [[Fichier:Sprite 0007 Tutafeh GO.png|100px]]
+| [[Carapuce]] à la tenue de [[Tutafeh]]
+| <ref name="Halloween 2019"/> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0007 Chapeau de fête GO.png|100px]]
+| [[Carapuce]] coiffé d'un chapeau de fête<br>''[[Carapuce]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| [[Fichier:Sprite 0007 Visière Pikachu GO.png|100px]]
+| [[Carapuce]] ''Visière [[Pikachu]]''
+| <ref group="note" name="non-officiel"/>
+|-
+| rowspan="2" | 0008
+| [[Fichier:Sprite 0008 Lunettes de soleil GO.png|100px]]
+| [[Carabaffe]] portant des lunettes de soleil
+| <ref name="Ed Sheeran"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0008 Chapeau de fête GO.png|100px]]
+| [[Carabaffe]] coiffé d'un chapeau de fête
+| <ref name="Anniversaire 2023">[https://pokemongolive.com/post/pokemongo-7th-anniversary?hl=fr Anniversaire 2023]</ref>
+|-
+| rowspan="3" | 0009
+| [[Fichier:Sprite 0009 Lunettes de soleil GO.png|100px]]
+| [[Tortank]] portant des lunettes de soleil
+| <ref name="Ed Sheeran"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0009 Cloné GO.png|100px]]
+| [[Tortank]] cloné
+| <ref name="Journée Pokémon 2020"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0009 Chapeau de fête GO.png|100px]]
+| [[Tortank]] coiffé d'un chapeau de fête
+| <ref name="Anniversaire 2023"/>
+|-
+| 0012
+| [[Fichier:Sprite 0012 Costume Fashion ♂ GO.png|100px]]
+| [[Papilusion]] avec un costume Fashion<br>''[[Papilusion]] portant un costume à la mode'' <small>(2021)</small>
+| <ref name="Fashion Week 2022"/><br><ref name="Fashion Week 2021">[https://pokemongolive.com/fr/post/fashion-week-2021/ Fashion Week 2021]</ref> <ref group="note" name="verbiale">Extrapolé depuis une forme verbiale.</ref>
+|-
+| 0020
+| [[Fichier:Sprite 0020 Chapeau de fête ♂ GO.png|100px]]
+| [[Rattatac]] coiffé d'un chapeau de fête<br>''[[Rattatac]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| rowspan="87" | 0025
+| [[Fichier:Sprite 0025 Chapeau festif ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau festif
+| <ref name="Fêtes d'hiver 2021"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau de fête (violet) ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'un chapeau de fête<br>''[[Pikachu]] avec un chapeau de fête'' <small>(2020)</small><br>''[[Pikachu]] festif'' <small>(2017)</small>
+| <ref name="Nouvel an 2023"/> <ref group="note" name="similaire"/><br><ref name="Marathon Éclosion 2020">[https://pokemongolive.com/fr/post/adventuresync-hatchathon-2020/ Marathon Éclosion 2020]</ref> <ref group="note" name="pluriel"/><br><ref>[https://pokemongolive.com/fr/post/pokemonday2017/ Pokémon Day 2017]</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette Originale ♂ GO.png|100px]]
+| [[Pikachu à Casquette]] Originale
+| <ref name="Pikachu à Casquette">[[Pikachu à Casquette]]</ref>
+|-
+| [[Fichier:Sprite 0025 Chapeau de sorcière ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'un chapeau de sorcière<br>''[[Pikachu]] spécial'' <small>(2017)</small>
+| <ref name="Halloween 2024 2e partie">[https://pokemongolive.com/post/halloween-part-2-2024?hl=fr Halloween 2024 2<sup>e</sup> partie]</ref><br><ref name="Halloween 2017">[https://pokemongolive.com/fr/post/halloween2017/ Halloween 2017]</ref>
+|-
+| [[Fichier:Sprite 0025 Style estival ♂ GO.png|100px]]
+| [[Pikachu]] de style estival<br>''[[Pikachu]] spécial « Style estival »'' <small>(2018)</small>
+| <ref name="Fashion Week 2023">[https://pokemongolive.com/post/fashion-week-2023 Fashion Week 2023]</ref><br><ref name="Anniversaire 2018">[https://pokemongolive.com/post/birthday2018/ Anniversaire 2018]</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette à design de HF ♂ GO.png|100px]]
+| [[Pikachu]] à Casquette à design de HF
+| <ref name="HF">Extrapolé depuis [[Pikachu à Casquette]] et le vêtement "Casquette à design de HF" du jeu.</ref>
+|-
+| [[Fichier:Sprite 0025 Couronne de fleurs ♂ GO.png|100px]]
+| [[Pikachu]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022">[https://pokemongolive.com/fr/post/egg-citing-spring-surprise-2022/ Effervescence printanière 2022]</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette de détective (2019) GO.png|100px]]
+| [[Pikachu]] coiffé de sa casquette de [[Détective Pikachu (personnage)|détective]]
+| <ref name="Détective Pikachu">[https://pokemongolive.com/fr/post/pikapika2019 Célébration de Détective Pikachu]</ref>
+|-
+| [[Fichier:Sprite 0025 Chapeau de paille ♂ GO.png|100px]]
+| [[Pikachu]] à chapeau de paille
+| <ref>[https://pokemongolive.com/fr/post/strawhat/ Évènement Pikachu à chapeau de paille]</ref>
+|-
+| [[Fichier:Sprite 0025 Mimiqui GO.png|100px]]
+| [[Pikachu]] vêtu d'un costume de [[Mimiqui]]
+| <ref name="Halloween 2019"/> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Bonnet ♂ GO.png|100px]]
+| [[Pikachu]] portant un bonnet
+| <ref name="Fêtes d'hiver 2019">[https://pokemongolive.com/fr/post/holiday2019/ Fêtes d'hiver 2019]</ref>
+|-
+| [[Fichier:Sprite 0025 Cloné GO.png|100px]]
+| [[Pikachu]] cloné
+| <ref name="Journée Pokémon 2020"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau de fête (rouge) ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'un chapeau de fête<br>''[[Pikachu]] vêtu d'un chapeau pointu''<br>''[[Pikachu]] et son chapeau de fête'' <small>(2022)</small>
+| <ref>[https://pokemongolive.com/post/evenement-ephemere Événement éphémère au Val d'Europe]</ref><br><ref group="note">Dans l'article de l'Événement éphémère au Val d'Europe, il est mentionné « Pikachu coiffé d'un chapeau de fête » à un endroit, et « Pikachu vêtu d'un chapeau pointu » à un autre. La forme « chapeau de fête » est privilégiée pour la cohérence avec les autres Pokémon portant le même costume.</ref><br><ref name="Nouvel An 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0025 Catcheur GO.png|100px]]
+| [[Pikachu Catcheur]]
+| <ref name="ROSA">{{Jeu|ROSA}}</ref>
+|-
+| [[Fichier:Sprite 0025 Chapeau de safari ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'un chapeau de safari
+| <ref name="Safari Zone Singapour">[https://pokemongolive.com/fr/post/pokemon-go-safari-zone-singapore/ Safari Zone : Singapour]</ref>
+|-
+| [[Fichier:Sprite 0025 Coiffé de fleurs ♂ GO.png|100px]]
+| [[Pikachu]] coiffé de fleurs
+| <ref>[https://pokemongolive.com/post/springevent2020/ Évènement printemps 2020]</ref> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Dracaufeu ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau de [[Dracaufeu]]
+| <ref name="Défi Souvenir">[https://pokemongolive.com/post/throwbackchallenge2020/ Défi Souvenir]</ref> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Noctali ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau de [[Noctali]]
+| <ref name="Défi Souvenir"/> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Rayquaza ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau de [[Rayquaza]]
+| <ref name="Défi Souvenir"/> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Lucario ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau de [[Lucario]]
+| <ref name="Défi Souvenir"/> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Volant ballons multicolores ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec des ballons multicolores
+| <ref name="Safari Zone Singapour"/> <ref group="note" name="Volant">La majuscule à "Volant" est conservée pour coller aux autres médias de la licence.</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette Monde ♂ GO.png|100px]]
+| [[Pikachu à Casquette]] Monde
+| <ref name="Pikachu à Casquette"/>
+|-
+| [[Fichier:Sprite 0025 Explorateur ♂ GO.png|100px]]
+| [[Pikachu]] Explorateur
+| <ref>[https://pokemongolive.com/post/movie-2021/ Évènement ''Pokémon, le film : Les secrets de la jungle'' 2021]</ref>
+|-
+| [[Fichier:Sprite 0025 Tenue du carnaval d'hiver ♂ GO.png|100px]]
+| [[Pikachu]] portant une tenue du carnaval d'hiver<br>''[[Pikachu]] portant un ensemble carnaval d'hiver'' <small>(2022)</small><br>''[[Pikachu]] avec un costume de fêtes'' <small>(2020)</small>
+| <ref name="Fêtes d'hiver 2024 1re partie">[https://pokemongolive.com/post/holiday-part1-2024?hl=fr Fêtes d'hiver 2024 – 1<sup>re</sup> partie]</ref><br><ref name="Fêtes d'hiver 2022 1re partie">[https://pokemongolive.com/post/winter-holiday-part-1-2022?hl=fr Fêtes d'hiver 2022 – 1<sup>re</sup> partie]</ref><br><ref>[https://pokemongolive.com/post/holiday2020/ Fêtes d'hiver 2020]</ref> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau Nouvel An ♂ GO.png|100px]]
+| [[Pikachu]] et son chapeau Nouvel An<br>''[[Pikachu]] et son chapeau du Nouvel An''
+| <ref name="Nouvel An 2022"/><br><ref group="note">Dans l'article du Nouvel An 2022, il est mentionné « Pikachu et son chapeau du Nouvel An » à un endroit, et « Pikachu et son chapeau Nouvel An » à un autre. La forme « chapeau Nouvel An » est privilégiée pour la cohérence avec les autres Pokémon portant le même costume.</ref>
+|-
+| [[Fichier:Sprite 0025 Volant ballon en forme de 5 ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec un ballon en forme de 5
+| <ref>[https://pokemongolive.com/fr/post/birthday2021/ Anniversaire 2021]</ref>
+|-
+| [[Fichier:Sprite 0025 Star GO.png|100px]]
+| [[Pikachu Star]]
+| <ref name="ROSA"/>
+|-
+| [[Fichier:Sprite 0025 Rockeur GO.png|100px]]
+| [[Pikachu Rockeur]]
+| <ref name="ROSA"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau Meloetta ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau inspiré de [[Meloetta]]
+| <ref name="Ultra Bonus 2021">[https://pokemongolive.com/fr/post/pokemongofest2021-ultraunlock/ Ultra Bonus 2021]</ref>
+|-
+| [[Fichier:Sprite 0025 Chenapans d'Halloween ♂ GO.png|100px]]
+| [[Pikachu]] portant un costume Chenapans d'Halloween<br>''[[Pikachu]] portant un costume Chenapan d'Halloween'' <small>(2022-2023)</small><br>''Chenapan d'Halloween - [[Pikachu]]'' <small>(2021)</small>
+| <ref name="Halloween 2024 2e partie"/> <ref group="note" name="similaire"/><br><ref name="Halloween 2022 Part 2">[https://pokemongolive.com/post/halloween-2022-event-details-part-2 Halloween 2022 Part 2]</ref><ref name="Halloween 2023 Part 2">[https://pokemongolive.com/post/halloween-part-2-2023?hl=fr Halloween 2023 Part 2]</ref><br><ref name="Halloween 2021">[https://pokemongolive.com/fr/post/halloween-2021/ Halloween 2021]</ref>
+|-
+| [[Fichier:Sprite 0025 Chemise kariyushi d'Okinawa ♂ GO.png|100px]]
+| [[Pikachu]] portant une chemise kariyushi d'Okinawa
+| <ref name="Pokémon Air Adventures 2022">[https://pokemongolive.com/fr/post/flying-pikachu-2022/ Pokémon Air Adventures 2022]</ref>
+|-
+| [[Fichier:Sprite 0025 Volant ballons de couleurs différentes ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec des ballons de couleurs différentes
+| <ref name="Pokémon Air Adventures 2022"/>
+|-
+| [[Fichier:Sprite 0025 Gracidée ♂ GO.png|100px]]
+| [[Pikachu]] couronné de fleurs de [[Gracidée]]
+| <ref>[https://pokemongolive.com/fr/post/pokemongofest2022-update/ Pokémon GO Fest 2022]</ref> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau du JCC Pokémon ♂ GO.png|100px]]
+| [[Pikachu]] portant un chapeau du [[Jeu de Cartes à Collectionner|JCC Pokémon]]
+| <ref>[https://pokemongolive.com/fr/post/Pokemon-TCG-Crossover-Event/ Évènement de collaboration du JCC Pokémon !]</ref>
+|-
+| [[Fichier:Sprite 0025 Gâteau ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'un gâteau<br>[[Pikachu]] Costume gâteau <small>(2022)</small>
+| <ref name="Anniversaire 2023"/><br><ref name="Anniversaire 2022"/>
+|-
+| [[Fichier:Sprite 0025 Championnats du Monde 2022 ♂ GO.png|100px]]
+| [[Pikachu]] Championnats du Monde 2022
+| <ref>[https://pokemongolive.com/fr/post/world-championships-event-2022 Championnats du Monde Pokémon 2022]</ref>
+|-
+| [[Fichier:Sprite 0025 Écharpe Shaymin ♂ GO.png|100px]]
+| [[Pikachu]] portant une écharpe inspirée de Shaymin
+| <ref>[https://pokemongolive.com/fr/post/gofest2022-finale-event/ Pokémon GO Fest 2022 : Final]</ref>
+|-
+| [[Fichier:Sprite 0025 Volant ballons verts ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec des ballons verts
+| <ref name="Safari Zone Taipei">[https://pokemongolive.com/events/safarizone-taipei Pokémon GO Safari Zone: Taipei]</ref> <ref group="note" name="Traduit Gardens Volant">Traduit en se basant sur les costumes similaires de [https://pokemongolive.com/fr/post/pokemon-go-safari-zone-singapore/ Safari Zone au Gardens by the Bay] ; la majuscule à "Volant" est conservée pour coller aux autres médias de la licence.</ref>
+|-
+| [[Fichier:Sprite 0025 T-shirt vert (Baie) ♂ GO.png|100px]]
+| [[Pikachu]] avec un T-shirt vert (Baie)
+| <ref name="Safari Zone Taipei"/> <ref group="note" name="Traduit Gardens">Traduit en se basant sur les costumes similaires de [https://pokemongolive.com/fr/post/pokemon-go-safari-zone-singapore/ Safari Zone au Gardens by the Bay].</ref>
+|-
+| [[Fichier:Sprite 0025 Volant ballons violets ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec des ballons violets
+| <ref name="Safari Zone Singapour"/> <ref group="note" name="Volant"/>
+|-
+| [[Fichier:Sprite 0025 T-shirt violet (Fleur) ♂ GO.png|100px]]
+| [[Pikachu]] avec un T-shirt violet (Fleur)
+| <ref name="Safari Zone Singapour"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau haut-de-forme de fête ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'un chapeau haut-de-forme de fête
+| <ref name="Nouvel an 2023"/>
+|-
+| [[Fichier:Sprite 0025 Chapeau de Brice ♂ GO.png|100px]]
+| [[Pikachu]] coiffé du chapeau de Brice
+| <ref name="Circuit Pokémon GO Hoenn">[https://gotour.pokemongolive.com/fr/event-gameplay Circuit Pokémon GO : Hoenn – Las Vegas] ([https://web.archive.org/web/20230220231439/https://gotour.pokemongolive.com/fr/event-gameplay archive])</ref>
+|-
+| [[Fichier:Sprite 0025 Ruban de Flora ♂ GO.png|100px]]
+| [[Pikachu]] coiffé du ruban de Flora
+| <ref name="Circuit Pokémon GO Hoenn"/>
+|-
+| [[Fichier:Sprite 0025 Fleurs de cerisier ♂ GO.png|100px]]
+| [[Pikachu]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023">[https://pokemongolive.com/post/spring-into-spring-2023?hl=fr Effervescence printanière 2023]</ref>
+|-
+| [[Fichier:Sprite 0025 Volant ballons orange ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec des ballons orange
+| <ref name="Pokémon Air Adventures 2023"/> <ref group="note" name="Traduit Gardens Volant"/>
+|-
+| [[Fichier:Sprite 0025 T-shirt bleu (Agrume) ♂ GO.png|100px]]
+| [[Pikachu]] avec un T-shirt bleu (Agrume)
+| <ref name="Pokémon Air Adventures 2023">[https://pokemongolive.com/events/airadventures-jejuisland Pokémon Air Adventures 2023]</ref> <ref group="note" name="Traduit Gardens"/>
+|-
+| [[Fichier:Sprite 0025 Couronne en améthyste ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en améthyste
+| <ref name="GO Fest 2023 Osaka">[https://gofest.pokemongolive.com/osaka/event-gameplay Festival Pokémon GO 2023 : Osaka] ([https://web.archive.org/web/20231210161235/https://gofest.pokemongolive.com/osaka/event-gameplay?hl=fr archive])</ref>
+|-
+| [[Fichier:Sprite 0025 Championnats du Monde 2023 ♂ GO.png|100px]]
+| [[Pikachu]] Championnats du Monde 2023
+| <ref>[https://pokemongolive.com/post/world-championships-event-2023?hl=fr Championnats du Monde Pokémon 2023]</ref>
+|-
+| [[Fichier:Sprite 0025 Couronne en pyrite ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en pyrite
+| <ref name="GO Fest 2023 Monde">[https://gofest.pokemongolive.com/global?hl=fr Festival Pokémon GO 2023 : Monde entier] ([https://web.archive.org/web/20230606172233/https://gofest.pokemongolive.com/global?hl=fr archive)]</ref>
+|-
+| [[Fichier:Sprite 0025 Couronne en quartz ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en quartz
+| <ref name="GO Fest 2023 Monde"/>
+|-
+| [[Fichier:Sprite 0025 Couronne en malachite ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en malachite
+| <ref name="GO Fest 2023 Monde"/>
+|-
+| [[Fichier:Sprite 0025 Couronne en aigue-marine ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en aigue-marine
+| <ref name="GO Fest 2023 Monde"/>
+|-
+| [[Fichier:Sprite 0025 Casquette de détective (2023) ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une casquette de [[Détective Pikachu (personnage)|détective]]<ref group=note>Cette version du costume possède une icône et des animations différentes de la version de 2019 et est considérée comme un costume différent dans le Pokédex du jeu.</ref>
+| <ref name="Le retour de Détective Pikachu">[https://pokemongolive.com/post/detective-pikachu-returns-event?hl=fr Évènement "Le retour de Détective Pikachu"]</ref>
+|-
+| [[Fichier:Sprite 0025 Déguisement d'Halloween ♂ GO.png|100px]]
+| [[Pikachu]] portant un déguisement d'Halloween
+| <ref name="Halloween 2023 Part 2"/>
+|-
+| [[Fichier:Sprite 0025 Tenue des fêtes ♂ GO.png|100px]]
+| [[Pikachu]] portant une tenue des fêtes<br>''[[Pikachu]] portant des vêtements des fêtes''
+| <ref name="Fêtes d'hiver 2023 1re partie">[https://pokemongolive.com/post/winter-holiday-part-1-2023?hl=fr Fêtes d'hiver 2023 – 1<sup>re</sup> partie]</ref><br><ref group="note">Dans les articles des Fêtes d'hiver 2023, il est mentionné « Pikachu portant une tenue des fêtes » à un endroit, et « Pikachu portant des vêtements des fêtes » à un autre. La forme « tenue des fêtes » est privilégiée pour la cohérence avec les autres Pokémon portant le même costume.</ref>
+|-
+| [[Fichier:Sprite 0025 Bonnet d'Aurore ♂ GO.png|100px]]
+| [[Pikachu]] coiffé du bonnet d'Aurore
+| <ref name="Circuit Pokémon GO Sinnoh">[https://gotour.pokemongolive.com/event-gameplay?hl=fr Circuit Pokémon GO : Sinnoh - Los Angeles] ([https://web.archive.org/web/20240614121545/https://gotour.pokemongolive.com/event-gameplay?hl=fr archive]</ref>
+|-
+| [[Fichier:Sprite 0025 Béret de Louka ♂ GO.png|100px]]
+| [[Pikachu]] coiffé du béret de Louka
+| <ref name="Circuit Pokémon GO Sinnoh"/>
+|-
+| [[Fichier:Sprite 0025 Foulard de Lucia ♂ GO.png|100px]]
+| [[Pikachu]] coiffé du foulard de Lucia
+| <ref name="Circuit Pokémon GO Sinnoh"/>
+|-
+| [[Fichier:Sprite 0025 Casquette d'Aurel ♂ GO.png|100px]]
+| [[Pikachu]] coiffé de la casquette d'Aurel
+| <ref name="Circuit Pokémon GO Sinnoh"/>
+|-
+| [[Fichier:Sprite 0025 Docteur GO.png|100px]]
+| [[Pikachu Docteur]]
+| <ref name="ROSA"/>
+|-
+| [[Fichier:Sprite 0025 Chemise batik ♂ GO.png|100px]]
+| [[Pikachu]] portant une chemise batik
+| <ref name="Pikachu's Indonesia Adventure">[https://pokemongolive.com/events/indonesia-journey-bali Pikachu's Indonesia Adventure]</ref> <ref group="note">Traduit en se basant sur les costumes similaires de [https://pokemongolive.com/fr/post/flying-pikachu-2022/ Pokémon Air Adventures 2022].</ref>
+|-
+| [[Fichier:Sprite 0025 Volant ballons spéciaux ♂ GO.png|100px]]
+| [[Pikachu Volant]] avec des ballons spéciaux
+| <ref name="Pikachu's Indonesia Adventure"/> <ref group="note" name="Traduit Gardens Volant"/>
+|-
+| [[Fichier:Sprite 0025 Casquette de Cap ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Cap
+| <ref>[https://pokemongolive.com/post/pokemon-horizons-anime-celebration?hl=fr Célébration pour La série : Pokémon, les horizons 2024]</ref>
+|-
+| [[Fichier:Sprite 0025 Couronne en forme de soleil ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en forme de soleil
+| <ref name="GO Fest 2024">[https://gofest.pokemongolive.com/global?hl=fr Festival Pokémon GO 2024]</ref>
+|-
+| [[Fichier:Sprite 0025 Couronne en forme de lune ♂ GO.png|100px]]
+| [[Pikachu]] coiffé d'une couronne en forme de lune
+| <ref name="GO Fest 2024"/>
+|-
+| [[Fichier:Sprite 0025 Championnats du Monde 2024 ♂ GO.png|100px]]
+| [[Pikachu]] Championnats du Monde 2024<br>''[[Pikachu]] des Championnats du Monde 2024''
+| <ref>[https://pokemongolive.com/post/world-championship-twitch-timed-research-2024?hl=fr Championnats du Monde Pokémon 2024 (Twitch Drops)]</ref> <ref group="note">Cette version est privilégiée pour la cohérence avec les précédentes tenues des Championnats du Monde.</ref><br><ref>[https://pokemongolive.com/post/world-championships-event-2024?hl=fr Championnats du Monde Pokémon 2024]</ref>
+|-
+| [[Fichier:Sprite 0025 Sari GO.png|100px]]
+| [[Pikachu]] portant un sari
+| <ref name="Festival of Lights 2024">[https://pokemongolive.com/post/festival-of-lights-2024 Festival of Lights 2024]</ref> <ref group="note" name="Traduit anglais">Traduit depuis l'anglais.</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette de Ludwig ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Ludwig
+| <ref name="Circuit Pokémon GO : Unys">[https://gotour.pokemongolive.com/global?hl=fr Circuit Pokémon GO : Unys] ([https://web.archive.org/web/20250303212630/https://gotour.pokemongolive.com/global?hl=fr archive])</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette de Ludvina ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Ludvina
+| <ref name="Circuit Pokémon GO : Unys"/>
+|-
+| [[Fichier:Sprite 0025 Visière de Mélis ♂ GO.png|100px]]
+| [[Pikachu]] portant la visière de Mélis
+| <ref name="Circuit Pokémon GO : Unys"/>
+|-
+| [[Fichier:Sprite 0025 Visière d'Écho ♂ GO.png|100px]]
+| [[Pikachu]] portant la visière d'Écho
+| <ref name="Circuit Pokémon GO : Unys"/>
+|-
+| [[Fichier:Sprite 0025 Kurta GO.png|100px]]
+| [[Pikachu]] portant un kurta
+| <ref name="Fête des couleurs 2025">[https://pokemongolive.com/post/festival-of-colors-2025?hl=fr Fête des couleurs 2025]</ref>
+|-
+| [[Fichier:Sprite 0025 Formel avec accessoires rouges ♂ GO.png|100px]]
+| [[Pikachu]] formel avec accessoires rouges
+| <ref name="Festival Pokémon GO 2025 : Finale Max">[https://pokemongo.com/fr/gofestmaxfinale#tab:max-finale Festival Pokémon GO 2025 : Finale Max] ([https://web.archive.org/web/20250909032645/https://pokemongo.com/fr/gofestmaxfinale#tab:max-finale archive])</ref>
+|-
+| [[Fichier:Sprite 0025 Formel avec accessoires bleus ♂ GO.png|100px]]
+| [[Pikachu]] formel avec accessoires bleus
+| <ref name="Festival Pokémon GO 2025 : Finale Max"/>
+|-
+| [[Fichier:Sprite 0025 Formel avec accessoires jaunes ♂ GO.png|100px]]
+| [[Pikachu]] formel avec accessoires jaunes
+| <ref name="Festival Pokémon GO 2025 : Finale Max"/>
+|-
+| [[Fichier:Sprite 0025 Élégant avec accessoires rouges ♂ GO.png|100px]]
+| [[Pikachu]] élégant avec accessoires rouges
+| <ref name="Festival Pokémon GO 2025 : Finale Max">[https://pokemongo.com/fr/gofestmaxfinale#tab:max-finale Festival Pokémon GO 2025 : Finale Max] ([https://web.archive.org/web/20250909032645/https://pokemongo.com/fr/gofestmaxfinale#tab:max-finale archive])</ref>
+|-
+| [[Fichier:Sprite 0025 Élégant avec accessoires bleus ♂ GO.png|100px]]
+| [[Pikachu]] élégant avec accessoires bleus
+| <ref name="Festival Pokémon GO 2025 : Finale Max"/>
+|-
+| [[Fichier:Sprite 0025 Élégant avec accessoires jaunes ♂ GO.png|100px]]
+| [[Pikachu]] élégant avec accessoires jaunes
+| <ref name="Festival Pokémon GO 2025 : Finale Max"/>
+|-
+| [[Fichier:Sprite 0025 Maillot de football indonésien ♂ GO.png|100px]]
+| [[Pikachu]] portant un maillot de football indonésien
+| <ref>[https://pokemongo.com/en/post/goaltimewithpikachu2025 Goal Time with Pikachu] '''(en)'''</ref> <ref group="note" name="Traduit anglais"/>
+|-
+| [[Fichier:Sprite 0025 Blouson d'université ♂ GO.png|100px]]
+| [[Pikachu]] portant un blouson d'université
+| <ref>[https://pokemongo.com/fr/post/world-championships-event-2025 Championnats du Monde Pokémon 2025]</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette de Kalem ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Kalem
+| <ref name="Circuit Pokémon GO Kalos Tainan">[https://pokemongo.com/fr/gotour/tainan/gameplay Circuit Pokémon GO : Kalos – Tainan] ([https://web.archive.org/web/20260303164920/https://pokemongo.com/fr/gotour/tainan/gameplay archive])</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette de Serena ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Serena
+| <ref name="Circuit Pokémon GO Kalos Tainan"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0025 Casquette de Red ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Red
+| <ref name="En route pour Kalos">[https://pokemongo.com/fr/news/road-to-kalos-event En route pour Kalos]</ref>
+|-
+| [[Fichier:Sprite 0025 Casquette de Leaf ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Leaf
+| <ref name="En route pour Kalos"/>
+|-
+| [[Fichier:Sprite 0025 Casquette de Luth ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Luth
+| <ref name="En route pour Kalos"/>
+|-
+| [[Fichier:Sprite 0025 Casquette de Célesta ♂ GO.png|100px]]
+| [[Pikachu]] portant la casquette de Célesta
+| <ref name="En route pour Kalos"/>
+|-
+| rowspan="14" | 0026
+| [[Fichier:Sprite 0026 Chapeau festif ♂ GO.png|100px]]
+| [[Raichu]] portant un chapeau festif
+| <ref name="Fêtes d'hiver 2021"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Chapeau de fête ♂ GO.png|100px]]
+| [[Raichu]] coiffé d'un chapeau de fête<br>''[[Raichu]] avec un chapeau de fête'' <small>(2020)</small>
+| <ref name="Nouvel an 2023"/> <ref group="note" name="similaire"/><br><ref name="Marathon Éclosion 2020"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Casquette Originale ♂ GO.png|100px]]
+| [[Raichu]] à Casquette Originale
+| <ref name="Pikachu à Casquette"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Chapeau de sorcière ♂ GO.png|100px]]
+| [[Raichu]] coiffé d'un chapeau de sorcière<br>''[[Raichu]] spécial'' <small>(2017)</small>
+| <ref name="Halloween 2024 2e partie"/><br><ref name="Halloween 2017"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Style estival ♂ GO.png|100px]]
+| [[Raichu]] de style estival<br>''[[Raichu]] spécial « Style estival »'' <small>(2018)</small>
+| <ref name="Fashion Week 2023"/> <ref group="note" name="similaire"/><br><ref name="Anniversaire 2018"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Casquette à design de HF ♂ GO.png|100px]]
+| [[Raichu]] à Casquette à design de HF
+| <ref name="HF"/>
+|-
+| [[Fichier:Sprite 0026 Couronne de fleurs ♂ GO.png|100px]]
+| [[Raichu]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Casquette de détective ♂ GO.png|100px]]
+| [[Raichu]] coiffé de sa casquette de [[Détective Pikachu (personnage)|détective]]
+| <ref name="Détective Pikachu"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Bonnet ♂ GO.png|100px]]
+| [[Raichu]] portant un bonnet
+| <ref name="Fêtes d'hiver 2019"/>
+|-
+| [[Fichier:Sprite 0026 Casquette Monde ♂ GO.png|100px]]
+| [[Raichu]] à Casquette Monde
+| <ref name="Pikachu à Casquette"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0026 Chapeau Nouvel An ♂ GO.png|100px]]
+| [[Raichu]] et son chapeau Nouvel An
+| <ref name="Nouvel An 2022"/>
+|-
+| [[Fichier:Sprite 0026 Fleurs de cerisier ♂ GO.png|100px]]
+| [[Raichu]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0026 Casquette de détective ♂ GO.png|100px]]
+| [[Raichu]] coiffé d'une casquette de [[Détective Pikachu (personnage)|détective]]<ref group=note>Cette version du costume, bien qu'identique à la version de 2019, est considérée comme un costume différent dans le Pokédex du jeu.</ref>
+| <ref name="Le retour de Détective Pikachu"/>
+|-
+| [[Fichier:Sprite 0026 Tenue des fêtes ♂ GO.png|100px]]
+| [[Raichu]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2023 1re partie"/>
+|-
+| 0031
+| [[Fichier:Sprite 0031 Couronne GO.png|100px]]
+| [[Nidoqueen]] portant une couronne
+| <ref name="Choc des couronnes">[https://pokemongo.com/post/crown-clash-2025?hl=fr Choc des couronnes]</ref>
+|-
+| 0033
+| [[Fichier:Sprite 0033 Chapeau de fête GO.png|100px]]
+| [[Nidorino]] coiffé d'un chapeau de fête<br>''[[Nidorino]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| 0034
+| [[Fichier:Sprite 0034 Couronne GO.png|100px]]
+| [[Nidoking]] portant une couronne
+| <ref name="Choc des couronnes"/>
+|-
+| 0037
+| [[Fichier:Sprite 0037 Festival effrayant GO.png|100px]]
+| [[Goupix]] portant un costume du Festival effrayant
+| <ref name="Halloween 2022 Part 2"/>
+|-
+| 0038
+| [[Fichier:Sprite 0038 Festival effrayant GO.png|100px]]
+| [[Feunard]] portant un costume du Festival effrayant
+| <ref name="Halloween 2022 Part 2"/>
+|-
+| 0039
+| [[Fichier:Sprite 0039 Ruban GO.png|100px]]
+| [[Rondoudou]] portant un ruban
+| <ref name="Nouvel An 2024">[https://pokemongolive.com/post/new-year-2024?hl=fr Nouvel An 2024]</ref>
+|-
+| 0040
+| [[Fichier:Sprite 0040 Ruban GO.png|100px]]
+| [[Grodoudou]] portant un ruban
+| <ref name="Nouvel An 2024"/>
+|-
+| 0050
+| [[Fichier:Sprite 0050 Costume Fashion GO.png|100px]]
+| [[Taupiqueur]] avec un costume Fashion
+| <ref name="Fashion Week 2022">[https://pokemongolive.com/fr/post/fashion-week-2022/ Fashion Week 2022]</ref>
+|-
+| 0051
+| [[Fichier:Sprite 0051 Costume Fashion GO.png|100px]]
+| [[Triopikeur]] avec un costume Fashion
+| <ref name="Fashion Week 2022"/>
+|-
+| rowspan="2" | 0054
+| [[Fichier:Sprite 0054 Tenue des fêtes GO.png|100px]]
+| [[Psykokwak]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2023 2e partie">[https://pokemongolive.com/post/winter-holiday-part-2-2023?hl=fr Fêtes d'hiver 2023 – 2<sup>e</sup> partie]</ref>
+|-
+| [[Fichier:Sprite 0054 Bouée GO.png|100px]]
+| [[Psykokwak]] portant une bouée
+| <ref>[https://pokemongo.com/fr/post/pokemon-concierge-2025 Célébration pour La réceptionniste Pokémon]</ref>
+|-
+| 0055
+| [[Fichier:Sprite 0055 Tenue des fêtes GO.png|100px]]
+| [[Akwakwak]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2023 2e partie"/>
+|-
+| rowspan="2" | 0077
+| [[Fichier:Sprite 0077 Accessoire de Candela GO.png|100px]]
+| [[Ponyta]] portant un accessoire de Candela
+| <ref name="Un héroïsme vaillant">[https://pokemongolive.com/post/a-valorous-hero?hl=fr Un héroïsme vaillant]</ref>
+|-
+| [[Fichier:Sprite 0077 Galar Chapeau Meloetta GO.png|100px]]
+| [[Ponyta de Galar]] portant un chapeau inspiré de [[Meloetta]]
+| <ref name="Ultra Bonus 2021"/>
+|-
+| 0078
+| [[Fichier:Sprite 0078 Accessoire de Candela GO.png|100px]]
+| [[Galopa]] portant un accessoire de Candela
+| <ref name="Un héroïsme vaillant"/> <ref group="note" name="similaire"/>
+|-
+| rowspan="2" | 0079
+| [[Fichier:Sprite 0079 Lunettes 2020 GO.png|100px]]
+| [[Ramoloss]] et ses lunettes 2020
+| <ref name="Nouvel An 2022"/>
+|-
+| [[Fichier:Sprite 0079 Chapeau GO.png|100px]]
+| [[Ramoloss]] coiffé d'un chapeau
+| <ref name="Le retour de Détective Pikachu"/>
+|-
+| 0080
+| [[Fichier:Sprite 0080 Lunettes 2021 GO.png|100px]]
+| [[Flagadoss]] et ses lunettes 2021
+| <ref name="Nouvel An 2022"/>
+|-
+| 0088
+| [[Fichier:Sprite 0088 Chapeau de fête GO.png|100px]]
+| [[Tadmorv]] coiffé d'un chapeau de fête
+| <ref name="Anniversaire 2024">[https://pokemongolive.com/fr/post/pokemongo-8th-anniversary/ Anniversaire 2024]</ref>
+|-
+| 0089
+| [[Fichier:Sprite 0089 Chapeau de fête GO.png|100px]]
+| [[Grotadmorv]] coiffé d'un chapeau de fête
+| <ref name="Anniversaire 2024"/>
+|-
+| rowspan="4" | 0094
+| [[Fichier:Sprite 0094 Chapeau de fête GO.png|100px]]
+| [[Ectoplasma]] coiffé d'un chapeau de fête<br>''[[Ectoplasma]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| [[Fichier:Sprite 0094 Méga-Branette GO.png|100px]]
+| [[Ectoplasma]] déguisé
+| <ref name="Halloween 2020">[https://pokemongolive.com/fr/post/halloween2020/ Halloween 2020]</ref> <ref group="note" name="pluriel"/>
+|-
+| [[Fichier:Sprite 0094 Festival effrayant GO.png|100px]]
+| [[Ectoplasma]] portant un costume du Festival effrayant
+| <ref name="Halloween 2022 Part 2"/>
+|-
+| [[Fichier:Sprite 0094 Déguisement d'Halloween GO.png|100px]]
+| [[Ectoplasma]] portant un déguisement d'Halloween
+| <ref name="Halloween 2023 Part 2"/>
+|-
+| 0104
+| [[Fichier:Sprite 0104 Couronne de cempasúchil GO.png|100px]]
+| [[Osselait]] coiffé d'une couronne de cempasúchil
+| <ref name="Día de Muertos 2023">[https://pokemongolive.com/fr/post/dia-de-muertos-2023/ Día de Muertos 2023]</ref>
+|-
+| 0105
+| [[Fichier:Sprite 0105 Couronne de cempasúchil GO.png|100px]]
+| [[Ossatueur]] coiffé d'une couronne de cempasúchil
+| <ref name="Día de Muertos 2023"/>
+|-
+| 0113
+| [[Fichier:Sprite 0113 Couronne de fleurs GO.png|100px]]
+| [[Leveinard]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| 0125
+| [[Fichier:Sprite 0125 Accessoire de Spark GO.png|100px]]
+| [[Élektek]] portant un accessoire de Spark<br>''[[Élektek]] portant un accessoire sur le thème de Spark'' <small>(2023)</small>
+| <ref name="Triomphe collectif">[https://pokemongolive.com/fr/post/triumph-together-2024/ Triomphe collectif]</ref><br><ref name="Un héroïsme intuitif">[https://pokemongolive.com/post/an-instinctive-hero?hl=fr Un héroïsme intuitif]</ref> <ref group="note" name="similaire"/>
+|-
+| rowspan="2" | 0131
+| [[Fichier:Sprite 0131 Écharpe GO.png|100px]]
+| [[Lokhlass]] portant une écharpe
+| <ref name="Festival Aquatique 2022">[https://pokemongolive.com/fr/post/water-festival-2022/ Festival Aquatique 2022]</ref>
+|-
+| [[Fichier:Sprite 0131 Accessoire de Blanche GO.png|100px]]
+| [[Lokhlass]] portant un accessoire de Blanche<br>''[[Lokhlass]] portant un accessoire sur le thème de Blanche'' <small>(2023)</small>
+| <ref name="Triomphe collectif"/><br><ref>[https://pokemongolive.com/post/a-mystic-hero?hl=fr Un héroïsme mystique]</ref>
+|-
+| rowspan="2" | 0132
+| [[Fichier:Sprite 0132 Chapeau GO.png|100px]]
+| [[Métamorph]] portant un chapeau
+| <ref name="Pokopia">[https://pokemongo.com/fr/news/pokemon-pokopia-celebration-event-2026 Événement de célébration pour Pokémon Pokopia]</ref>
+|-
+| [[Fichier:Sprite 0132 Casquette GO.png|100px]]
+| [[Métamorph]] portant une casquette
+| <ref name="Pokopia"/>
+|-
+| rowspan="7" | 0133
+| [[Fichier:Sprite 0133 Couronne de fleurs ♂ GO.png|100px]]
+| [[Évoli]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| [[Fichier:Sprite 0133 Chapeau de fête ♂ GO.png|100px]]
+| [[Évoli]] coiffé d'un chapeau de fête<br>''[[Évoli]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/> <ref group="note" name="similaire"/><br><ref name="Nouvel An 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0133 Chapeau de fêtes ♂ GO.png|100px]]
+| [[Évoli]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie">[https://pokemongolive.com/post/winter-holiday-part-2-2022?hl=fr Fêtes d'hiver 2022 – 2<sup>e</sup> partie]</ref>
+|-
+| [[Fichier:Sprite 0133 Fleurs de cerisier ♂ GO.png|100px]]
+| [[Évoli]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0133 Chapeau d'explorateur ♂ GO.png|100px]]
+| [[Évoli]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone">[https://pokemongolive.com/events/citysafari-barcelona?hl=fr Pokémon GO City Safari : Barcelone]</ref>
+|-
+| [[Fichier:Sprite 0133 Couronne en forme de soleil ♂ GO.png|100px]]
+| [[Évoli]] coiffé d'une couronne en forme de soleil
+| <ref name="GO Fest 2024"/>
+|-
+| [[Fichier:Sprite 0133 Couronne en forme de lune ♂ GO.png|100px]]
+| [[Évoli]] coiffé d'une couronne en forme de lune
+| <ref name="GO Fest 2024"/>
+|-
+| rowspan="4" | 0134
+| [[Fichier:Sprite 0134 Couronne de fleurs GO.png|100px]]
+| [[Aquali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0134 Chapeau de fêtes GO.png|100px]]
+| [[Aquali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0134 Fleurs de cerisier GO.png|100px]]
+| [[Aquali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0134 Chapeau d'explorateur GO.png|100px]]
+| [[Aquali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| rowspan="4" | 0135
+| [[Fichier:Sprite 0135 Couronne de fleurs GO.png|100px]]
+| [[Voltali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0135 Chapeau de fêtes GO.png|100px]]
+| [[Voltali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0135 Fleurs de cerisier GO.png|100px]]
+| [[Voltali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0135 Chapeau d'explorateur GO.png|100px]]
+| [[Voltali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| rowspan="4" | 0136
+| [[Fichier:Sprite 0136 Couronne de fleurs GO.png|100px]]
+| [[Pyroli]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0136 Chapeau de fêtes GO.png|100px]]
+| [[Pyroli]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0136 Fleurs de cerisier GO.png|100px]]
+| [[Pyroli]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0136 Chapeau d'explorateur GO.png|100px]]
+| [[Pyroli]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| 0142
+| [[Fichier:Sprite 0142 Sac GO.png|100px]]
+| [[Ptéra]] portant un sac
+| <ref name="GO Fest 2023 Osaka"/>
+|-
+| rowspan="3" | 0143
+| [[Fichier:Sprite 0143 Chapeau de Cowboy GO.png|100px]]
+| [[Ronflex]] coiffé d'un chapeau de Cowboy<br>''[[Ronflex]] avec un chapeau de cow-boy'' <small>(2022)</small>
+| <ref name="GO Fest 2023 Monde"/><br><ref>[https://pokemongolive.com/fr/post/ultrabeasts-join-gofest-irl/ Ultra-Chimères au Pokémon GO Fest]</ref>
+|-
+| [[Fichier:Sprite 0143 Bonnet de nuit GO.png|100px]]
+| [[Ronflex]] portant un bonnet de nuit
+| <ref>[https://pokemongolive.com/post/pokemon-sleep-pokemon-go-plus-plus-event?hl=fr Un petit roupillon]</ref>
+|-
+| [[Fichier:Sprite 0143 Veste cloutée GO.png|100px]]
+| [[Ronflex]] portant une veste cloutée
+| <ref>[https://pokemongolive.com/post/get-ready-for-go-wild-area-2024?hl=fr Terres Sauvages Pokémon GO : Mondial]</ref>
+|-
+| 0149
+| [[Fichier:Sprite 0149 Costume Fashion GO.png|100px]]
+| [[Dracolosse]] avec un costume Fashion
+| <ref name="Fashion Week 2023"/>
+|-
+| 0150
+| [[Fichier:Sprite 0150 Armure GO.png|100px]]
+| [[Mewtwo]] en Armure
+| <ref>[[Mewtwo en Armure (Promo SM 228)]]</ref>
+|-
+| 0163
+| [[Fichier:Sprite 0163 Tenue du Nouvel An GO.png|100px]]
+| [[Hoothoot]] portant une tenue du Nouvel An<br>''[[Hoothoot]] et son chapeau Nouvel An'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| 0164
+| [[Fichier:Sprite 0164 Tenue du Nouvel An GO.png|100px]]
+| [[Noarfang]] portant une tenue du Nouvel An
+| <ref name="Nouvel an 2023"/>
+|-
+| rowspan="9" | 0172
+| [[Fichier:Sprite 0172 Casquette Originale GO.png|100px]]
+| [[Pichu]] à Casquette Originale
+| <ref name="Pikachu à Casquette"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0172 Chapeau de sorcière GO.png|100px]]
+| [[Pichu]] coiffé d'un chapeau de sorcière<br>''[[Pichu]] spécial'' <small>(2017)</small>
+| <ref name="Halloween 2024 2e partie"/><br><ref name="Halloween 2017"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0172 Chapeau festif GO.png|100px]]
+| [[Pichu]] portant un chapeau festif
+| <ref name="Fêtes d'hiver 2021"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0172 Chapeau de fête GO.png|100px]]
+| [[Pichu]] coiffé d'un chapeau de fête<br>''[[Pichu]] avec un chapeau de fête'' <small>(2020)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Marathon Éclosion 2020"/>
+|-
+| [[Fichier:Sprite 0172 Style estival GO.png|100px]]
+| [[Pichu]] de style estival<br>''[[Pichu]] spécial « Style estival »'' <small>(2018)</small>
+| <ref name="Fashion Week 2023"/><br><ref name="Anniversaire 2018"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0172 Bonnet GO.png|100px]]
+| [[Pichu]] portant un bonnet<br>''[[Pichu]] avec un bonnet''
+| <ref name="Fêtes d'hiver 2019"/><br><ref group="note">Dans l'article des Fêtes 2019, il est mentionné « Pichu portant un bonnet » à un endroit, et « Pichu avec un bonnet » à un autre. La forme « portant un bonnet » est privilégiée pour la cohérence avec les autres Pokémon portant le même costume.</ref>
+|-
+| [[Fichier:Sprite 0172 Couronne de fleurs GO.png|100px]]
+| [[Pichu]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| [[Fichier:Sprite 0172 Chapeau Nouvel An GO.png|100px]]
+| [[Pichu]] et son chapeau Nouvel An
+| <ref name="Nouvel An 2022"/>
+|-
+| [[Fichier:Sprite 0172 Fleurs de cerisier GO.png|100px]]
+| [[Pichu]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| 0175
+| [[Fichier:Sprite 0175 Couronne de fleurs GO.png|100px]]
+| [[Togepi]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| 0176
+| [[Fichier:Sprite 0176 Couronne de fleurs GO.png|100px]]
+| [[Togetic]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| 0185
+| [[Fichier:Sprite 0185 Tenue des fêtes ♂ GO.png|100px]]
+| [[Simularbre]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2025 1re partie">[https://pokemongo.com/fr/news/winter-holiday-part1-2025 Fêtes d'hiver 2025 – 1<sup>re</sup> partie]</ref>
+|-
+| 0194
+| [[Fichier:Sprite 0194 Costume Fashion ♂ GO.png|100px]]
+| [[Axoloto]] avec un costume Fashion
+| <ref name="Fashion Week 2023"/>
+|-
+| 0195
+| [[Fichier:Sprite 0195 Costume Fashion ♂ GO.png|100px]]
+| [[Maraiste]] avec un costume Fashion
+| <ref name="Fashion Week 2023"/>
+|-
+| rowspan="5" | 0196
+| [[Fichier:Sprite 0196 Couronne de fleurs GO.png|100px]]
+| [[Mentali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0196 Chapeau de fêtes GO.png|100px]]
+| [[Mentali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0196 Fleurs de cerisier GO.png|100px]]
+| [[Mentali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0196 Chapeau d'explorateur GO.png|100px]]
+| [[Mentali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| [[Fichier:Sprite 0196 Écharpe de jour GO.png|100px]]
+| [[Mentali]] portant une écharpe de jour
+| <ref name="GO Fest 2024"/>
+|-
+| rowspan="5" | 0197
+| [[Fichier:Sprite 0197 Couronne de fleurs GO.png|100px]]
+| [[Noctali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0197 Chapeau de fêtes GO.png|100px]]
+| [[Noctali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0197 Fleurs de cerisier GO.png|100px]]
+| [[Noctali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0197 Chapeau d'explorateur GO.png|100px]]
+| [[Noctali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| [[Fichier:Sprite 0197 Écharpe de nuit GO.png|100px]]
+| [[Noctali]] portant une écharpe de nuit
+| <ref name="GO Fest 2024"/>
+|-
+| 0199
+| [[Fichier:Sprite 0199 Lunettes 2022 GO.png|100px]]
+| [[Roigada]] et ses lunettes 2022
+| <ref name="Nouvel An 2022"/>
+|-
+| 0202
+| [[Fichier:Sprite 0202 Chapeau de fête ♂ GO.png|100px]]
+| [[Qulbutoké]] coiffé d'un chapeau de fête<br>''[[Qulbutoké]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| 0215
+| [[Fichier:Sprite 0215 Costume Fashion ♂ GO.png|100px]]
+| [[Farfuret]] avec un costume Fashion<br>''[[Farfuret]] portant un costume à la mode'' <small>(2021)</small>
+| <ref name="Fashion Week 2023"/><br><ref name="Fashion Week 2021"/> <ref group="note" name="verbiale"/>
+|-
+| 0216
+| [[Fichier:Sprite 0216 Chapeau de sorcière GO.png|100px]]
+| [[Teddiursa]] coiffé d'un chapeau de sorcière
+| <ref name="Halloween 2025 2e partie">[https://pokemongo.com/fr/news/halloween-part-2-2025 Halloween 2025 : 2<sup>e</sup> partie]</ref>
+|-
+| 0217
+| [[Fichier:Sprite 0217 Chapeau de sorcière ♂ GO.png|100px]]
+| [[Ursaring]] coiffé d'un chapeau de sorcière
+| <ref name="Halloween 2025 2e partie"/>
+|-
+| 0225
+| [[Fichier:Sprite 0225 Ruban de fêtes GO.png|100px]]
+| [[Cadoizo]] portant un ruban de fêtes<br>''[[Cadoizo]] festif'' <small>(2021)</small>
+| <ref name="Fêtes d'hiver 2022 2e partie"/><br><ref name="Fêtes d'hiver 2021">[https://pokemongolive.com/fr/post/holiday2021/ Fêtes d'hiver 2021]</ref>
+|-
+| 0234
+| [[Fichier:Sprite 0234 Tenue de fêtes GO.png|100px]]
+| [[Cerfrousse]] portant une tenue de fêtes<br>''[[Cerfrousse]] festif'' <small>(2021)</small><br>''[[Cerfrousse]] avec des cloches'' <small>(2019)</small>
+| <ref name="Fêtes d'hiver 2022 1re partie"/><br><ref name="Fêtes d'hiver 2021"/><br><ref name="Fêtes d'hiver 2019"/>
+|-
+| 0238
+| [[Fichier:Sprite 0238 Costume Fashion GO.png|100px]]
+| [[Lippouti]] avec un costume Fashion<br>''[[Lippouti]] en costume de mode'' <small>(2021)</small><br>''[[Lippouti]] portant un nœud'' <small>(2020)</small>
+| <ref name="Fashion Week 2022"/><br><ref name="Fashion Week 2021"/><br><ref name="Fashion Week 2020">[https://pokemongolive.com/fr/post/longchampfashionweek/ Fashion Week 2020]</ref> <ref group="note" name="verbiale"/>
+|-
+| 0239
+| [[Fichier:Sprite 0239 Accessoire de Spark GO.png|100px]]
+| [[Élekid]] portant un accessoire de Spark<br>''[[Élekid]] portant un accessoire sur le thème de Spark'' <small>(2023)</small>
+| <ref name="Triomphe collectif"/><br><ref name="Un héroïsme intuitif"/>
+|-
+| 0242
+| [[Fichier:Sprite 0242 Couronne de fleurs GO.png|100px]]
+| [[Leuphorie]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| 0263
+| [[Fichier:Sprite 0263 Galar Chapeau Meloetta GO.png|100px]]
+| [[Zigzaton de Galar]] portant un chapeau inspiré de [[Meloetta]]
+| <ref name="Ultra Bonus 2021"/>
+|-
+| 0265
+| [[Fichier:Sprite 0265 Chapeau de fête GO.png|100px]]
+| [[Chenipotte]] coiffé d'un chapeau de fête<br>''[[Chenipotte]] et son chapeau de fête'' <small>(2022)</small>
+| <ref name="Nouvel an 2023"/><br><ref name="Nouvel An 2022"/>
+|-
+| 0281
+| [[Fichier:Sprite 0281 Costume Fashion GO.png|100px]]
+| [[Kirlia]] avec un costume Fashion<br>''[[Kirlia]] avec un haut-de-forme '' <small>(2020)</small>
+| <ref name="Fashion Week 2022"/><br><ref name="Fashion Week 2020"/>
+|-
+| 0282
+| [[Fichier:Sprite 0282 Chapeau Meloetta GO.png|100px]]
+| [[Gardevoir]] portant un chapeau inspiré de [[Meloetta]]
+| <ref name="Ultra Bonus 2021"/>
+|-
+| 0287
+| [[Fichier:Sprite 0287 Visière GO.png|100px]]
+| [[Parecool]] portant une visière
+| <ref name="Sable sommeillant">[https://pokemongolive.com/post/slumbering-sands-2024?hl=fr Sable sommeillant]</ref>
+|-
+| 0288
+| [[Fichier:Sprite 0288 Visière GO.png|100px]]
+| [[Vigoroth]] portant une visière
+| <ref name="Sable sommeillant"/>
+|-
+| 0289
+| [[Fichier:Sprite 0289 Visière GO.png|100px]]
+| [[Monaflèmit]] portant une visière
+| <ref name="Sable sommeillant"/>
+|-
+| 0302
+| [[Fichier:Sprite 0302 Funécire GO.png|100px]]
+| [[Ténéfix]] avec son costume
+| <ref name="Halloween 2020"/> <ref group="note" name="pluriel"/>
+|-
+| 0330
+| [[Fichier:Sprite 0330 Chapeau Meloetta GO.png|100px]]
+| [[Libégon]] portant un chapeau inspiré de [[Meloetta]]
+| <ref name="Ultra Bonus 2021"/>
+|-
+| 0355
+| [[Fichier:Sprite 0355 Couronne de cempasúchil GO.png|100px]]
+| [[Skelénox]] portant une couronne de cempasúchil<br>''[[Skelénox]] portant une couronne de cempasúchitl'' <small>(2022)</small>
+| <ref name="Día de Muertos 2023"/><br><ref name="Día de Muertos 2022">[https://pokemongolive.com/fr/post/dia-de-muertos-2022/ Día de Muertos 2022]</ref>
+|-
+| 0356
+| [[Fichier:Sprite 0356 Couronne de cempasúchil GO.png|100px]]
+| [[Téraclope]] portant une couronne de cempasúchil<br>''[[Téraclope]] portant une couronne de cempasúchitl'' <small>(2022)</small>
+| <ref name="Día de Muertos 2023"/> <ref group="note" name="similaire"/><br><ref name="Día de Muertos 2022"/>
+|-
+| 0359
+| [[Fichier:Sprite 0359 Costume Fashion GO.png|100px]]
+| [[Absol]] avec un costume Fashion
+| <ref name="Fashion Week 2022"/>
+|-
+| 0363
+| [[Fichier:Sprite 0363 Écharpe de fêtes GO.png|100px]]
+| [[Obalie]] portant une écharpe de fêtes<br>''[[Obalie]] portant une tenue de fêtes'' <small>(2022)</small><br>''[[Obalie]] festif'' <small>(2021)</small>
+| <ref name="Fêtes d'hiver 2023 1re partie"/><br><ref name="Fêtes d'hiver 2022 1re partie"/><br><ref name="Fêtes d'hiver 2021"/>
+|-
+| rowspan="2" | 0387
+| [[Fichier:Sprite 0387 Chapeau de Louka GO.png|100px]]
+| [[Tortipouss]] avec le chapeau de [[Louka]]
+| <ref name="Sortie DEPS">[https://pokemongolive.com/fr/post/brilliant-diamond-shining-pearl-event/ Célébration de la sortie de {{Jeu|DEPS|lien=non}}]</ref>
+|-
+| [[Fichier:Sprite 0387 Chapeau d'Aurore GO.png|100px]]
+| [[Tortipouss]] avec le chapeau d'[[Aurore (Sinnoh)|Aurore]]
+| <ref name="Sortie DEPS"/>
+|-
+| rowspan="2" | 0390
+| [[Fichier:Sprite 0390 Chapeau de Louka GO.png|100px]]
+| [[Ouisticram]] avec le chapeau de [[Louka]]
+| <ref name="Sortie DEPS"/>
+|-
+| [[Fichier:Sprite 0390 Chapeau d'Aurore GO.png|100px]]
+| [[Ouisticram]] avec le chapeau d'[[Aurore (Sinnoh)|Aurore]]
+| <ref name="Sortie DEPS"/>
+|-
+| rowspan="3" | 0393
+| [[Fichier:Sprite 0393 Chenapans d'Halloween GO.png|100px]]
+| [[Tiplouf]] portant un costume Chenapans d'Halloween<br>''[[Tiplouf]] portant un costume Chenapan d'Halloween'' <small>(2022-2023)</small><br>''Chenapan d'Halloween - [[Tiplouf]]'' <small>(2021)</small>
+| <ref name="Halloween 2024 2e partie"/><br><ref name="Halloween 2022 Part 2"/><ref name="Halloween 2023 Part 2"/><br><ref name="Halloween 2021"/>
+|-
+| [[Fichier:Sprite 0393 Chapeau de Louka GO.png|100px]]
+| [[Tiplouf]] avec le chapeau de [[Louka]]
+| <ref name="Sortie DEPS"/>
+|-
+| [[Fichier:Sprite 0393 Chapeau d'Aurore GO.png|100px]]
+| [[Tiplouf]] avec le chapeau d'[[Aurore (Sinnoh)|Aurore]]
+| <ref name="Sortie DEPS"/>
+|-
+| 0403
+| [[Fichier:Sprite 0403 Costume Fashion ♂ GO.png|100px]]
+| [[Lixy]] avec un costume Fashion<br>''[[Lixy]] en costume de mode'' <small>(2021)</small><br>''[[Lixy]] avec un haut-de-forme'' <small>(2020)</small>
+| <ref name="Fashion Week 2022"/><br><ref name="Fashion Week 2021"/><br><ref name="Fashion Week 2020"/>
+|-
+| 0426
+| [[Fichier:Sprite 0426 Chenapans d'Halloween GO.png|100px]]
+| [[Grodrive]] portant un costume Chenapans d'Halloween<br>''[[Grodrive]] portant un costume Chenapan d'Halloween'' <small>(2022-2023)</small><br>''Chenapan d'Halloween - [[Grodrive]]'' <small>(2021)</small>
+| <ref name="Halloween 2024 2e partie"/><br><ref name="Halloween 2022 Part 2"/><ref name="Halloween 2023 Part 2"/><br><ref name="Halloween 2021"/>
+|-
+| 0427
+| [[Fichier:Sprite 0427 Couronne de fleurs GO.png|100px]]
+| [[Laporeille]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| 0428
+| [[Fichier:Sprite 0428 Couronne de fleurs GO.png|100px]]
+| [[Lockpin]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| 0440
+| [[Fichier:Sprite 0440 Couronne de fleurs GO.png|100px]]
+| [[Ptiravi]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| 0453
+| [[Fichier:Sprite 0453 Costume Fashion ♂ GO.png|100px]]
+| [[Cradopaud]] avec un costume Fashion<br>''[[Cradopaud]] portant une casquette à l'envers'' <small>(2020)</small>
+| <ref name="Fashion Week 2022"/><br><ref name="Fashion Week 2020"/>
+|-
+| 0454
+| [[Fichier:Sprite 0454 Costume Fashion ♂ GO.png|100px]]
+| [[Coatox]] avec un costume Fashion
+| <ref name="Fashion Week 2022"/>
+|-
+| 0466
+| [[Fichier:Sprite 0466 Accessoire de Spark GO.png|100px]]
+| [[Élekable]] portant un accessoire de Spark<br>''[[Élekable]] portant un accessoire sur le thème de Spark'' <small>(2023)</small>
+| <ref name="Triomphe collectif"/><br><ref name="Un héroïsme intuitif"/> <ref group="note" name="similaire"/>
+|-
+| 0468
+| [[Fichier:Sprite 0468 Couronne de fleurs GO.png|100px]]
+| [[Togekiss]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/>
+|-
+| rowspan="4" | 0470
+| [[Fichier:Sprite 0470 Couronne de fleurs GO.png|100px]]
+| [[Phyllali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0470 Chapeau de fêtes GO.png|100px]]
+| [[Phyllali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0470 Fleurs de cerisier GO.png|100px]]
+| [[Phyllali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0470 Chapeau d'explorateur GO.png|100px]]
+| [[Phyllali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| rowspan="5" | 0471
+| [[Fichier:Sprite 0471 Couronne de fleurs GO.png|100px]]
+| [[Givrali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0471 Tenue de fêtes sous-marines GO.png|100px]]
+| [[Givrali]] portant une tenue de fêtes sous-marines<br>''[[Givrali]] portant une tenue de fêtes'' <small>(2022, 1<sup>re</sup> partie)</small><br>''[[Givrali]] festif'' <small>(2021)</small>
+| <ref name="Fêtes d'hiver 2022 2e partie"/><br><ref name="Fêtes d'hiver 2022 1re partie"/><br><ref name="Fêtes d'hiver 2021"/>
+|-
+| [[Fichier:Sprite 0471 Chapeau de fêtes GO.png|100px]]
+| [[Givrali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0471 Fleurs de cerisier GO.png|100px]]
+| [[Givrali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0471 Chapeau d'explorateur GO.png|100px]]
+| [[Givrali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| 0477
+| [[Fichier:Sprite 0477 Couronne de cempasúchil GO.png|100px]]
+| [[Noctunoir]] portant une couronne de cempasúchil<br>''[[Noctunoir]] portant une couronne de cempasúchitl'' <small>(2022)</small>
+| <ref name="Día de Muertos 2023"/> <ref group="note" name="similaire"/><br><ref name="Día de Muertos 2022"/>
+|-
+| 0522
+| [[Fichier:Sprite 0522 Costume Fashion GO.png|100px]]
+| [[Zébibron]] avec un costume Fashion<br>''[[Zébibron]] portant un costume à la mode'' <small>(2021)</small>
+| <ref name="Fashion Week 2022"/><br><ref name="Fashion Week 2021"/> <ref group="note" name="verbiale"/>
+|-
+| 0546
+| [[Fichier:Sprite 0546 Couronne de fleurs GO.png|100px]]
+| [[Doudouvet]] portant une couronne de fleurs
+| <ref name="Merveilles verdoyantes">[https://pokemongolive.com/post/verdant-wonders-2024?hl=fr Merveilles verdoyantes]</ref>
+|-
+| 0547
+| [[Fichier:Sprite 0547 Couronne de fleurs GO.png|100px]]
+| [[Farfaduvet]] portant une couronne de fleurs
+| <ref name="Merveilles verdoyantes"/>
+|-
+| 0572
+| [[Fichier:Sprite 0572 Costume Fashion GO.png|100px]]
+| [[Chinchidou]] avec un costume Fashion
+| <ref name="Fashion Week 2025">[https://pokemongolive.com/post/fashion-week-2025?hl=fr Fashion Week 2025]</ref>
+|-
+| 0573
+| [[Fichier:Sprite 0573 Costume Fashion GO.png|100px]]
+| [[Pashmilla]] avec un costume Fashion
+| <ref name="Fashion Week 2025"/>
+|-
+| 0613
+| [[Fichier:Sprite 0613 Ruban de fêtes GO.png|100px]]
+| [[Polarhume]] portant un ruban de fêtes<br>''[[Polarhume]] festif'' <small>(2021)</small>
+| <ref name="Fêtes d'hiver 2022 2e partie"/><br><ref name="Fêtes d'hiver 2021"/>
+|-
+| 0613
+| [[Fichier:Sprite 0614 Ruban de fêtes GO.png|100px]]
+| [[Polagriffe]] portant un ruban de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| 0656
+| [[Fichier:Sprite 0656 Déguisement d'Halloween GO.png|100px]]
+| [[Grenousse]] portant un déguisement d'Halloween
+| <ref name="Halloween 2024 2e partie"/>
+|-
+| 0657
+| [[Fichier:Sprite 0657 Déguisement d'Halloween GO.png|100px]]
+| [[Croâporal]] portant un déguisement d'Halloween
+| <ref name="Halloween 2024 2e partie"/>
+|-
+| 0658
+| [[Fichier:Sprite 0658 Déguisement d'Halloween GO.png|100px]]
+| [[Amphinobi]] portant un déguisement d'Halloween
+| <ref name="Halloween 2024 2e partie"/>
+|-
+| rowspan="4" | 0700
+| [[Fichier:Sprite 0700 Couronne de fleurs GO.png|100px]]
+| [[Nymphali]] portant une couronne de fleurs
+| <ref name="Effervescence printanière 2022"/> <ref group="note" name="similaire"/>
+|-
+| [[Fichier:Sprite 0700 Chapeau de fêtes GO.png|100px]]
+| [[Nymphali]] portant un chapeau de fêtes
+| <ref name="Fêtes d'hiver 2022 2e partie"/>
+|-
+| [[Fichier:Sprite 0700 Fleurs de cerisier GO.png|100px]]
+| [[Nymphali]] orné de fleurs de cerisier
+| <ref name="Effervescence printanière 2023"/>
+|-
+| [[Fichier:Sprite 0700 Chapeau d'explorateur GO.png|100px]]
+| [[Nymphali]] coiffé d'un chapeau d'explorateur
+| <ref name="City Safari Barcelone"/>
+|-
+| 0702
+| [[Fichier:Sprite 0702 Tenue des fêtes GO.png|100px]]
+| [[Dedenne]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2024 1re partie"/>
+|-
+| 0710
+| [[Fichier:Sprite 0710 Petite Festival effrayant GO.png|100px]]<br>[[Fichier:Sprite 0710 Moyenne Festival effrayant GO.png|100px]]<br>[[Fichier:Sprite 0710 Grande Festival effrayant GO.png|100px]]<br>[[Fichier:Sprite 0710 Giga Festival effrayant GO.png|100px]]
+| [[Pitrouille]] portant un costume du Festival effrayant
+| <ref name="Halloween 2022 Part 2"/>
+|-
+| 0711
+| [[Fichier:Sprite 0711 Petite Festival effrayant GO.png|100px]]<br>[[Fichier:Sprite 0711 Moyenne Festival effrayant GO.png|100px]]<br>[[Fichier:Sprite 0711 Grande Festival effrayant GO.png|100px]]<br>[[Fichier:Sprite 0711 Giga Festival effrayant GO.png|100px]]
+| [[Banshitrouye]] portant un costume du Festival effrayant
+| <ref name="Halloween 2022 Part 2"/>
+|-
+| 0714
+| [[Fichier:Sprite 0714 Serre-tête GO.png|100px]]
+| [[Sonistrelle]] portant un serre-tête
+| <ref name="Halloween 2025 2e partie"/>
+|-
+| 0715
+| [[Fichier:Sprite 0715 Serre-tête GO.png|100px]]
+| [[Bruyverne]] portant un serre-tête
+| <ref name="Halloween 2025 2e partie"/>
+|-
+| 0722
+| [[Fichier:Sprite 0722 Déguisement d'Halloween GO.png|100px]]
+| [[Brindibou]] portant un déguisement d'Halloween
+| <ref name="Halloween 2024 2e partie"/>
+|-
+| 0723
+| [[Fichier:Sprite 0723 Déguisement d'Halloween GO.png|100px]]
+| [[Efflèche]] portant un déguisement d'Halloween
+| <ref name="Halloween 2024 2e partie"/>
+|-
+| 0724
+| [[Fichier:Sprite 0724 Déguisement d'Halloween GO.png|100px]]
+| [[Archéduc]] portant un déguisement d'Halloween
+| <ref name="Halloween 2024 2e partie"/>
+|-
+| 0737
+| [[Fichier:Sprite 0737 Tenue des fêtes GO.png|100px]]
+| [[Chrysapile]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2025 1re partie"/>
+|-
+| 0738
+| [[Fichier:Sprite 0738 Tenue des fêtes GO.png|100px]]
+| [[Lucanon]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2025 1re partie"/>
+|-
+| 0760
+| [[Fichier:Sprite 0760 Cape des Terres Sauvages GO.png|100px]]
+| [[Chelours]] portant une cape des Terres Sauvages
+| <ref>[https://pokemongo.com/fr/gowildarea/global Terres Sauvages 2025] ([https://web.archive.org/web/20251226121207/https://pokemongo.com/fr/gowildarea/global archive])</ref>
+|-
+| 0831
+| [[Fichier:Sprite 0831 Tenue des fêtes GO.png|100px]]
+| [[Moumouton]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2024 2e partie">[https://pokemongolive.com/post/holiday-part2-2024?hl=fr Fêtes d'hiver 2024 – 2<sup>e</sup> partie]</ref>
+|-
+| 0832
+| [[Fichier:Sprite 0832 Tenue des fêtes GO.png|100px]]
+| [[Moumouflon]] portant une tenue des fêtes
+| <ref name="Fêtes d'hiver 2024 2e partie"/>
+|-
+| 0870
+| [[Fichier:Sprite 0870 En-train GO.png|100px]]
+| [[Hexadron]] a de l'en-train
+| <ref name="Festival Pokémon GO 2025 : Finale Max"/>
+|-
+| 0901
+| [[Fichier:Sprite 0901 Chapeau de sorcière GO.png|100px]]
+| [[Ursaking]] coiffé d'un chapeau de sorcière
+| <ref name="Halloween 2025 2e partie"/>
+|-
+| 0907
+| [[Fichier:Sprite 0907 Chapeau avec l'épingle de Liko GO.png|100px]]
+| [[Matourgeon]] portant un chapeau avec l'épingle de Liko
+| <ref>[https://pokemongo.com/post/pokemon-horizons-anime-celebration-2025?hl=fr Célébration pour La série : Pokémon, les horizons 2025]</ref>
+|-
+| 0999
+| [[Fichier:Sprite 0999 Marche Pièce du 9e anniversaire GO.png|100px]]
+| [[Mordudor]] tenant une pièce du 9e anniversaire
+| <ref name="Fête du 9e anniversaire de Pokémon GO"/>
+|}
+
+'''Note''' : Pour retrouver tous les Pokémon costumés présents dans l'inventaire, il suffit de taper « ''Costume'' » dans le filtre de recherche.

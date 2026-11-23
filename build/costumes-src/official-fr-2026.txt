@@ -1,0 +1,14 @@
+# Official French names from pokemongo.com/fr (retrieved 2026-11-23)
+# Halloween 2026 Part I (https://pokemongo.com/fr/news/halloween-part-1-2026):
+#   Pikachu portant un chapeau et une pèlerine
+#   Nosferapti coiffé d'un haut-de-forme
+#   Théffroi portant un nœud
+#   Tiplouf portant un costume Chenapans d'Halloween
+# Halloween 2026 Part II (https://pokemongo.com/fr/news/halloween-part-2-2026):
+#   Brindibou portant un déguisement d'Halloween
+#   Ectoplasma portant un costume du Festival effrayant
+# World Space Week 2026 (https://pokemongo.com/fr/news/world-space-week-2026):
+#   Pikachu astronaute
+# Pokémon Pokopia Celebration (https://pokemongo.com/fr/news/pokemon-pokopia-celebration-event-2026):
+#   Métamorph portant un chapeau
+#   Métamorph portant une casquette

@@ -381,6 +381,21 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const sm = ['609-mega', '36-mega'].map(k => rb.bosses.find(b => b.k === k));
   ok('v60.15 Super Méga-Raids : 25 000 PV confirmés (Méga-Lugulabre, Méga-Mélodelfe)', rb.tiers['Super Méga'].hp === 25000 && sm.every(b => b && b.hp === 25000 && b.cpm === 0.7903) && sm[0].shields === 7 && sm[1].shields === 8);
   ok('v60.15 note Super Méga : 25 000 PV, plus de « à confirmer »', /Le boss a 25 000 PV \(valeur confirmée pour les Super Méga-Raids\)/.test(app) && !/PV du boss non publiés, à confirmer/.test(app));
-  ok('v60.15 SW : VERSION v60.15, DATA_VERSION d57', /VERSION = 'v60\.15'/.test(sw) && /DATA_VERSION = 'd57'/.test(sw));
+  ok('v60.15 SW : VERSION ≥ v60.15, DATA_VERSION ≥ d57', +((sw.match(/VERSION = 'v(\d+)(?:\.\d+)?'/) || [])[1] || 0) >= 60 && /VERSION = 'v60\.(1[5-9]|[2-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 57);
 }
+// ---- v60.16: Pokémon GO event costumes (optional marks, not in GO completion)
+{ const cost = D('costumes.json'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8'), html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+  const all = Object.values(cost.s || {}).flat();
+  const ids = new Set(all.map(c => c.id));
+  ok('v60.16 costumes.json : schéma et volume', cost && cost.n >= 300 && Object.keys(cost.s).length >= 120 && cost.n === all.length && all.length === ids.size);
+  ok('v60.16 costumes : identifiants stables, pas de Mewtwo Armure', all.every(c => /^\d+-[a-z0-9]+$/i.test(c.id) && c.n && ['off','ppe','ppe-unoff','en'].includes(c.frs)) && !all.some(c => /armored/i.test(c.id) || /Armure/.test(c.n)));
+  ok('v60.16 costumes : source française renseignée, sans nom inventé pour les 2026 encore non traduits', all.every(c => c.frs !== 'en' || /nom français non vérifié/.test(app)) && all.filter(c => c.frs === 'off').length >= 8);
+  ok('v60.16 SW : VERSION v60.16, DATA_VERSION d58', /VERSION = 'v60\.16'/.test(sw) && /DATA_VERSION = 'd58'/.test(sw));
+  ok('v60.16 pack hors-ligne : data/costumes.json', /'data\/costumes\.json'/.test(app));
+  ok('v60.16 export/import : go_costumes et go_costumes_s', /go_costumes: \[\.\.\.COSTUME_C\]/.test(app) && /go_costumes_s: \[\.\.\.COSTUME_S\]/.test(app) && /d\.go_costumes/.test(app));
+  ok('v60.16 costumes hors complétion : marques séparées, jamais de coche auto de l’espèce', /COSTUME_C/.test(app) && !/toggleMark\([^\n]*COSTUME/.test(app) && !/CAUGHT_G\.add\([^\n]*COSTUME/.test(app) && /n’inscrit pas l’espèce/.test(app));
+  ok('v60.16 fiche : bloc Costumes interactif (plus seulement « En chantier »)', /function costumesHTML\(title\)/.test(app) && /costcg/.test(app) && !/function costumesHTML\(title\) \{ return `<section class="box costbox"><h2>\$\{title\}<\/h2><p class="note">En chantier\.<\/p><\/section>`; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')"));
+  ok('v60.16 menu : compteur costumes', /id="gocost"/.test(html) && /updateGoCostMenu/.test(app));
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

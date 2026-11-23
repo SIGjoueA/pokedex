@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.15';
+const VERSION = 'v60.16';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Les Super Méga-Raids ont 25 000 PV, et les extensions Pocket B2b à B4b affichent leur nombre officiel de cartes de base.';
-const DATA_VERSION = 'd57'; // bump when the schema of data/*.json changes
+const NOTES = 'Les costumes de Pokémon GO sont listés sur les fiches, avec un compteur à part (sans effet sur la complétion).';
+const DATA_VERSION = 'd58'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

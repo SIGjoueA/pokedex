@@ -699,3 +699,16 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .cfseg.off button:disabled{opacity:.45}
 .cfmer{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1rem;margin:.25rem 0}.cfmer .cfs select{margin-left:.4rem}.cfme.off .cfc{opacity:.45}
 .rkwarn{border-left:3px solid #e0a000;background:rgba(224,160,0,.14);border-radius:6px;padding:8px 10px;margin:8px 0}
+
+/* v60.16: Pokémon GO event costumes */
+.costbox .costgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:.6em 0}
+@media (min-width:520px){.costbox .costgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.costcard{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:8px 6px;background:var(--bg3);border:2px solid var(--line);border-radius:12px;min-width:0}
+.costcard.on{border-color:var(--accent)}
+.costcard img{width:72px;height:72px;object-fit:contain;image-rendering:pixelated}
+.costcard img.costfallback{image-rendering:auto;opacity:.75}
+.costcard .ct{font-size:13px;line-height:1.3;width:100%}
+.costcard .ct b{display:block;font-size:13px;font-weight:700}
+.costacts{display:flex;flex-direction:column;gap:4px;width:100%;margin-top:6px}
+.costacts .act{width:100%;flex:none}
+.costst{margin:.25em 0 0;font-size:12px;color:var(--mute)}

@@ -1,0 +1,211 @@
+{
+  "costumes": 317,
+  "species": 127,
+  "names": {
+    "ppe": 282,
+    "official": 9,
+    "english_unverified": 26
+  },
+  "withImage": 284,
+  "unmatchedBulb": [
+    {
+      "id": "2-visor",
+      "dex": 2,
+      "form": "Pikachu visor",
+      "suffix": "Visor",
+      "code": "0002Visor"
+    },
+    {
+      "id": "3-visor",
+      "dex": 3,
+      "form": "Pikachu visor",
+      "suffix": "Visor",
+      "code": "0003Visor"
+    },
+    {
+      "id": "5-visor",
+      "dex": 5,
+      "form": "Pikachu visor",
+      "suffix": "Visor",
+      "code": "0005Visor"
+    },
+    {
+      "id": "6-visor",
+      "dex": 6,
+      "form": "Pikachu visor",
+      "suffix": "Visor",
+      "code": "0006Visor"
+    },
+    {
+      "id": "8-visor",
+      "dex": 8,
+      "form": "Pikachu visor",
+      "suffix": "Visor",
+      "code": "0008Visor"
+    },
+    {
+      "id": "9-visor",
+      "dex": 9,
+      "form": "Pikachu visor",
+      "suffix": "Visor",
+      "code": "0009Visor"
+    },
+    {
+      "id": "25-wcs2026",
+      "dex": 25,
+      "form": "World Championships",
+      "suffix": "WCS2026",
+      "code": "0025WCS2026"
+    },
+    {
+      "id": "25-baseballjersey",
+      "dex": 25,
+      "form": "Baseball Shirt",
+      "suffix": "BaseballJersey",
+      "code": "0025BaseballJersey"
+    },
+    {
+      "id": "25-marathonvisor",
+      "dex": 25,
+      "form": "Pikachu wearing a Marathon Visor",
+      "suffix": "MarathonVisor",
+      "code": "0025MarathonVisor"
+    },
+    {
+      "id": "25-fossil",
+      "dex": 25,
+      "form": "Excavator Pikachu",
+      "suffix": "Fossil",
+      "code": "0025Fossil"
+    },
+    {
+      "id": "10-gofest2026",
+      "dex": 10,
+      "form": "Caterpie wearing a Poké Ball Hat",
+      "suffix": "GOFest2026",
+      "code": "0010GOFest2026"
+    },
+    {
+      "id": "25-mystichat",
+      "dex": 25,
+      "form": "Pikachu wearing a Team Mystic hat",
+      "suffix": "MysticHat",
+      "code": "0025MysticHat"
+    },
+    {
+      "id": "25-instincthat",
+      "dex": 25,
+      "form": "Pikachu wearing a Team Instinct hat",
+      "suffix": "InstinctHat",
+      "code": "0025InstinctHat"
+    },
+    {
+      "id": "25-valorhat",
+      "dex": 25,
+      "form": "Pikachu wearing a Team Valor hat",
+      "suffix": "ValorHat",
+      "code": "0025ValorHat"
+    },
+    {
+      "id": "999-anniversary10",
+      "dex": 999,
+      "form": "10th Anniversary Coin",
+      "suffix": "Anniversary10",
+      "code": "0999Anniversary10"
+    },
+    {
+      "id": "25-willow",
+      "dex": 25,
+      "form": "Professor Willow's Assistant",
+      "suffix": "Willow",
+      "code": "0025Willow"
+    },
+    {
+      "id": "25-cosmog",
+      "dex": 25,
+      "form": "Cosmog-themed Spacesuit",
+      "suffix": "Cosmog",
+      "code": "0025Cosmog"
+    },
+    {
+      "id": "25-anniversary2026malaysia01",
+      "dex": 25,
+      "form": "PokéXciting!",
+      "suffix": "Anniversary2026Malaysia01",
+      "code": "0025Anniversary2026Malaysia01"
+    },
+    {
+      "id": "25-anniversary2026taiwan01",
+      "dex": 25,
+      "form": "PokéXciting!",
+      "suffix": "Anniversary2026Taiwan01",
+      "code": "0025Anniversary2026Taiwan01"
+    },
+    {
+      "id": "25-anniversary2026singapore01",
+      "dex": 25,
+      "form": "PokéXciting!",
+      "suffix": "Anniversary2026Singapore01",
+      "code": "0025Anniversary2026Singapore01"
+    },
+    {
+      "id": "25-anniversary2026philippine01",
+      "dex": 25,
+      "form": "PokéXciting!",
+      "suffix": "Anniversary2026Philippine01",
+      "code": "0025Anniversary2026Philippine01"
+    },
+    {
+      "id": "4-friede",
+      "dex": 4,
+      "form": "Charmander wearing Friede's goggles",
+      "suffix": "Friede",
+      "code": "0004Friede"
+    },
+    {
+      "id": "6-friede",
+      "dex": 6,
+      "form": "Charmander wearing Friede's goggles",
+      "suffix": "Friede",
+      "code": "0006Friede"
+    },
+    {
+      "id": "5-friede",
+      "dex": 5,
+      "form": "Charmander wearing Friede's goggles",
+      "suffix": "Friede",
+      "code": "0005Friede"
+    },
+    {
+      "id": "25-k2026a01",
+      "dex": 25,
+      "form": "Hanbok",
+      "suffix": "K2026A01",
+      "code": "0025K2026A01"
+    },
+    {
+      "id": "68-jacket",
+      "dex": 68,
+      "form": "Modern Jacket",
+      "suffix": "Jacket",
+      "code": "0068Jacket"
+    }
+  ],
+  "unmatchedPpe": [
+    {
+      "dex": 25,
+      "file": "Sprite_0025_Casquette_de_détective_(2023)_♂_GO.png",
+      "den": "Pikachu coiffé d'une casquette de détective"
+    },
+    {
+      "dex": 26,
+      "file": "Sprite_0026_Casquette_de_détective_♂_GO.png",
+      "den": "Raichu coiffé d'une casquette de détective"
+    },
+    {
+      "dex": 150,
+      "file": "Sprite_0150_Armure_GO.png",
+      "den": "Mewtwo en Armure"
+    }
+  ]
+}

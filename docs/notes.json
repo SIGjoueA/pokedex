@@ -1,5 +1,16 @@
 [
  {
+  "v": "v60.16",
+  "d": "2026-11-23",
+  "l": [
+   "Les costumes de Pokémon GO apparaissent sur la fiche de l’espèce, dans un bloc « Costumes ».",
+   "Chaque costume a son nom français lorsqu’une source fiable le donne (annonces officielles ou Poképédia). Sinon, le nom anglais est affiché avec la mention « nom français non vérifié ».",
+   "Vous pouvez cocher « Capturé » et, s’il a été constaté en chromatique, « Shiny ». Ces marques sont optionnelles : elles ne comptent pas dans la complétion Pokémon GO, et elles n’inscrivent pas l’espèce comme capturée.",
+   "Un compteur « Costumes » figure aussi dans le menu, sous Pokémon GO.",
+   "Les illustrations viennent des sprites Poképédia ou, quand l’identifiant du costume est connu, des icônes communautaires pokemon-go-api. Elles se chargent à la demande et ne font pas partie du pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.7",
   "d": "2026-11-02",
   "l": [
