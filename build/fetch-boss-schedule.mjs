@@ -3,7 +3,9 @@
 // Pour les Lundis Max, la page Leek Duck de l'événement donne la semaine complète (« from … through … »).
 // Heures = heure locale du joueur (pas de « Z ») ; les rares horaires en UTC (« Z ») sont gardés tels quels.
 // Fenêtre : en cours + début dans les 15 prochains jours. Les noms non reconnus ou absents de nos classements sont listés dans « nm » (jamais supprimés en silence).
-// Usage : node build/fetch-boss-schedule.mjs   (routine du lundi ; peut tourner plus souvent)
+// Si la liste bosses de ScrapedDuck est vide, les noms sont repris du titre (ex. « Cresselia and Darkrai in 5-star Raid Battles »), puis de la liste shinies.
+// Les événements annulés (titre « [Canceled] … » ou « [Cancelled] … ») sont ignorés. Sans dates, ou dates invalides : pas dans le calendrier, listés dans nm.
+// Usage : node build/fetch-boss-schedule.mjs [--out chemin]   (routine du lundi et du jeudi ; --out pour un essai sans écraser le fichier publié)
 import fs from 'node:fs';
 const R = new URL('..', import.meta.url).pathname, D = R + 'docs/data';
 const SRC = 'https://raw.githubusercontent.com/bigfoott/ScrapedDuck/data/events.json';
@@ -28,6 +30,14 @@ const split = s => { // « Cresselia and Darkrai », « Deoxys (Normal, Defense,
   if (m) return m[2].split(/,\s*(?:and\s+)?|\s+and\s+/).filter(Boolean).map(f => `${m[1]} (${f.trim()})`);
   return s.split(/,\s*(?:and\s+)?|\s+and\s+/).map(x => x.trim()).filter(Boolean);
 };
+const canceled = n => /\[\s*cancell?ed\s*\]/i.test(n || '');
+const raidNames = (x, n) => { // liste bosses, sinon titre, sinon shinies
+  const listed = (x.extraData?.raidbattles?.bosses || []).map(b => b.name).filter(Boolean);
+  if (listed.length) return listed;
+  const m = /^(.*?)\s+in\s+(.+)$/i.exec(n);
+  if (m && /\braids?\b/i.test(m[2])) { const t = split(m[1]); if (t.length) return t; }
+  return (x.extraData?.raidbattles?.shinies || []).map(b => b.name).filter(Boolean);
+};
 const RAIDK = new Set(rd.B.map(b => b[0] + '|' + (/obscur/.test(b[2]) ? 1 : 0))), MAXK = new Set(mx.B.map(b => b[0]));
 const now = new Date(), lim = new Date(now.getTime() + 15 * 864e5);
 const loc = s => s && s.replace(/\.000(Z?)$/, '$1').replace(/:00$/, '');
@@ -40,13 +50,19 @@ const add = (name, kind, s, e, l, link, shF) => {
   if (ok) out.push({ k, ...(sh ? { sh } : {}), kind, s, e, l });
   else nm.push({ n: name, ...(k ? { k } : {}), ...(sh ? { sh } : {}), kind, s, e, l, why: k ? 'pas dans nos classements' : 'nom non reconnu', u: link });
 };
+const noDates = (x, why, s, e) => { if (/raid|max/.test(x.eventType)) nm.push({ n: x.name, kind: /max/.test(x.eventType) ? 'max' : 'raid', s, e, why, u: x.link }); };
 for (const x of ev) {
-  if (!x.start || !x.end) { if (/raid|max/.test(x.eventType)) nm.push({ n: x.name, kind: /max/.test(x.eventType) ? 'max' : 'raid', s: null, e: null, why: 'dates non publiées par la source', u: x.link }); continue; }
-  const s0 = new Date(x.start), e0 = new Date(x.end); if (e0 < now || s0 > lim) continue;
+  if (canceled(x.name)) continue;
+  if (!x.start || !x.end) { noDates(x, 'dates non publiées par la source', null, null); continue; }
+  const s0 = new Date(x.start), e0 = new Date(x.end);
+  if (Number.isNaN(+s0) || Number.isNaN(+e0)) { noDates(x, 'dates invalides', x.start, x.end); continue; }
+  if (e0 < now || s0 > lim) continue;
   let s = loc(x.start), e = loc(x.end); const t = x.eventType, n = x.name;
   if (t === 'raid-battles' || /elite/.test(t)) {
     const l = /shadow/i.test(n) ? 'Raids obscurs' : /mega/i.test(n) ? 'Raids Méga' : /elite/i.test(n + t) ? 'Raids Élite' : /5-star/i.test(n) ? 'Raids 5★' : 'Raids';
-    for (const b of x.extraData?.raidbattles?.bosses || []) add(b.name, 'raid', s, e, l, x.link, l === 'Raids obscurs' ? 1 : 0);
+    const names = raidNames(x, n);
+    if (!names.length) nm.push({ n, kind: 'raid', s, e, l, why: 'aucun boss dans la source', u: x.link });
+    else for (const b of names) add(b, 'raid', s, e, l, x.link, l === 'Raids obscurs' ? 1 : 0);
   } else if (t === 'raid-hour') { for (const b of split(n.replace(/ Raid Hour$/, ''))) add(b, 'raid', s, e, 'Heure de raids', x.link); }
   else if (t === 'raid-day') { const m = /^(.*?) (Super )?(Mega )?Raid Day$/.exec(n); const b = m && m[1] ? ((m[2] || m[3]) && !/^Mega /.test(m[1]) ? 'Mega ' + m[1] : m[1]) : n; add(b, 'raid', s, e, m && m[2] ? 'Journée Super Méga-Raids' : 'Journée Raids', x.link); }
   else if (t === 'max-mondays') { const m = /^(Dynamax|Gigantamax) (.*?) during Max Monday$/.exec(n);
@@ -80,7 +96,8 @@ out.sort((a, b) => a.s.localeCompare(b.s));
   }
   out.length = 0; out.push(...dedup); }
 const doc = { date: now.toISOString(), src: 'Leek Duck via ScrapedDuck (events.json)', S: out, nm };
-fs.writeFileSync(D + '/boss-schedule.json', JSON.stringify(doc));
+const destArg = process.argv.indexOf('--out'), dest = destArg >= 0 && process.argv[destArg + 1] ? process.argv[destArg + 1] : D + '/boss-schedule.json';
+fs.writeFileSync(dest, JSON.stringify(doc));
 console.log(`boss-schedule.json : ${out.length} entrées, ${nm.length} non reliées`);
 for (const x of out) console.log(' ', x.kind, x.k + (x.sh ? ' (obscur)' : ''), x.s, '→', x.e, x.l);
 for (const x of nm) console.log('  ! non relié :', x.kind, x.n, x.s, '→', x.e, x.l, '—', x.why);
