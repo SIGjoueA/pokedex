@@ -373,4 +373,14 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.14 Colimucus et Muplodocus de Hisui sortis dans GO (6/11/2026)', hisui('705-hisui') && hisui('706-hisui') && !('705-hisui' in (JSON.parse(fs.readFileSync(path.join(HERE, 'go-overrides.json'), 'utf8')).upcoming.keys || {})));
   ok('v60.14 Pocket C1 Fusion Double : 131 cartes de base + 86 secrètes', C1 && C1.o === 131 && C1.cards.length === 217);
 }
+// ---- v60.15: Super Méga 25 000 PV, comptes officiels Pocket (B2b–B4b, A4b, promo A/B)
+{ const pk = D('pocket.json'), S = Object.fromEntries(pk.s.map(s => [s.id, s])), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const O = { 'P-A': [117, 117], A4b: [353, 379], 'P-B': [103, 103], B2b: [69, 117], B3: [155, 234], B3a: [74, 109], B3b: [69, 106], B4: [155, 233], B4a: [72, 110], B4b: [402, 429], C1: [131, 217] };
+  ok('v60.15 Pocket : comptes officiels de cartes de base (Bulbapedia)', Object.entries(O).every(([id, [o, n]]) => S[id] && S[id].o === o && S[id].cards.length === n));
+  const rb = JSON.parse(fs.readFileSync(path.join(HERE, 'raid-bosses.json'), 'utf8'));
+  const sm = ['609-mega', '36-mega'].map(k => rb.bosses.find(b => b.k === k));
+  ok('v60.15 Super Méga-Raids : 25 000 PV confirmés (Méga-Lugulabre, Méga-Mélodelfe)', rb.tiers['Super Méga'].hp === 25000 && sm.every(b => b && b.hp === 25000 && b.cpm === 0.7903) && sm[0].shields === 7 && sm[1].shields === 8);
+  ok('v60.15 note Super Méga : 25 000 PV, plus de « à confirmer »', /Le boss a 25 000 PV \(valeur confirmée pour les Super Méga-Raids\)/.test(app) && !/PV du boss non publiés, à confirmer/.test(app));
+  ok('v60.15 SW : VERSION v60.15, DATA_VERSION d57', /VERSION = 'v60\.15'/.test(sw) && /DATA_VERSION = 'd57'/.test(sw));
+}
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

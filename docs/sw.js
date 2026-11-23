@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.14';
+const VERSION = 'v60.15';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Vous voyez Colimucus et Muplodocus de Hisui et Duralugon Gigamax comme sortis dans GO, et les 131 cartes de base de Fusion Double.';
-const DATA_VERSION = 'd56'; // bump when the schema of data/*.json changes
+const NOTES = 'Les Super Méga-Raids ont 25 000 PV, et les extensions Pocket B2b à B4b affichent leur nombre officiel de cartes de base.';
+const DATA_VERSION = 'd57'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

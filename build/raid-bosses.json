@@ -36,9 +36,9 @@
    "cpm": 0.7903
   },
   "Super Méga": {
-   "hp": 9000,
+   "hp": 25000,
    "cpm": 0.7903,
-   "_doc": "v60.6 : Super Méga-Raid (Méga-Lugulabre, 31/10/2026). 7 boucliers, brisés uniquement par les Pokémon méga-évolués (pas les Primo) : l’équipe conseillée contient une Méga et exclut les Primo. PV non publiés, à confirmer (9000 = Méga par défaut)."
+   "_doc": "v60.15 : Super Méga-Raid. 25 000 PV et CPM 0,7903 (comme les autres raids depuis 2020) pour toutes les apparitions Super Méga de la feuille No-Floats-Left / Flyfunner « Raid / Max Battle Parameters », ligne « All » et chaque boss nommé (lu le 23/11/2026). Les boucliers, brisés uniquement par les Pokémon méga-évolués (pas les Primo), varient selon le boss (colonne Subdue de la feuille, et guides). L’équipe conseillée contient une Méga et exclut les Primo."
   }
  },
  "bosses": [
@@ -1402,11 +1402,11 @@
    "k": "609-mega",
    "n": "Méga-Lugulabre",
    "tier": "Super Méga",
-   "hp": 9000,
+   "hp": 25000,
    "cpm": 0.7903,
-   "src": "Super Méga-Raid : Leek Duck (lu le 29/10/2026), Pokémon GO Hub « Super Mega Chandelure Raid Guide » (7 boucliers, Méga obligatoire, pas de Primo ; lu le 01/11/2026). PV : défaut du niveau Méga, non publiés. Attaques du boss : celles de la forme (game master), liste de raid non confirmée par une 2e source.",
+   "src": "Super Méga-Raid : Leek Duck (lu le 29/10/2026), Pokémon GO Hub « Super Mega Chandelure Raid Guide » (7 boucliers, Méga obligatoire, pas de Primo ; recoupé par le compte rendu getgodex du 31/10/2026). PV : 25 000, CPM 0,7903 — feuille No-Floats-Left / Flyfunner « Super-Mega Raid » (toutes les apparitions ont 25 000 PV, lu le 23/11/2026) ; Pokémon Gameinfo affiche 86 088 PC en Super Méga contre 51 653 en raid Méga, soit le rapport √(25 000/9 000). Attaques du boss : celles de la forme (game master), liste de raid non confirmée par une 2e source.",
    "shields": 7,
-   "hpNote": "PV non publiés, à confirmer",
+   "hpNote": "25 000 PV confirmés (feuille Flyfunner, toutes les Super Méga ; CP Super Méga 86 088 chez Gameinfo, cohérent avec 25 000 PV)",
    "go": {
     "t": [
      "ghost",
@@ -1445,7 +1445,7 @@
    "tier": "5★",
    "hp": 15000,
    "cpm": 0.7903,
-   "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres par défaut du niveau (build/raid-bosses.json → tiers). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
+   "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres du niveau 5★ confirmés : 15 000 PV, CPM 0,7903 (Pokebattler, 67 864 PC / 15 000 PV ; Dittobase ; Gishan ; Bulbapedia, lus le 23/11/2026). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
   },
   {
    "k": "889-crowned",
@@ -1453,17 +1453,17 @@
    "tier": "5★",
    "hp": 15000,
    "cpm": 0.7903,
-   "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres par défaut du niveau (build/raid-bosses.json → tiers). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
+   "src": "Raids 5★ du 09/11 au 13/11/2026 : Leek Duck (lu le 12/11/2026). Paramètres du niveau 5★ confirmés : 15 000 PV, CPM 0,7903 (Gishan, 56 867 PC / 15 000 PV ; Bulbapedia, lus le 23/11/2026). Attaques du boss : celles de la forme (game master PvPoke, lu le 12/11/2026)."
   },
   {
    "k": "36-mega",
    "n": "Méga-Mélodelfe",
    "tier": "Super Méga",
-   "hp": 9000,
+   "hp": 25000,
    "cpm": 0.7903,
-   "src": "Super Méga-Raid : Journée Super Méga-Raids du 28/11/2026, 14h–17h (annonce officielle pokemongo.com, Leek Duck, Pokémon GO Hub, lus le 16/11/2026). 8 boucliers, Méga obligatoire, pas de Primo (PogoHelp, lu le 16/11/2026 : nombre non confirmé par une 2e source, affiché dans le jeu). PV : défaut du niveau Méga, non publiés (PogoHelp avance 25 000, non confirmé ; sans effet sur le calcul). Statistiques 253/205/216 et type Fée/Vol : PvPoke (game master du 16/11/2026) et Pokémon GO Hub, identiques ; le game master PokeMiners ne contient pas encore la forme. Attaques du boss : celles de Clefable sans Pound ni Pouvoir Lunaire+ (liste de raid de PogoHelp, identique à la liste PvPoke de la forme moins Pound et Moonblast+ ; non confirmée par Leek Duck / GO Hub).",
+   "src": "Super Méga-Raid : Journée Super Méga-Raids du 28/11/2026, 14h–17h (annonce officielle pokemongo.com, Leek Duck, Pokémon GO Hub, lus le 16/11/2026). 8 boucliers, Méga obligatoire, pas de Primo (PogoHelp, lu le 16/11/2026 : nombre non confirmé par une 2e source pour ce boss, affiché dans le jeu ; la ligne « All » de la feuille Flyfunner vaut aussi 8). PV : 25 000, CPM 0,7903 — PogoHelp et Pokebattler (explicitement 25 000 PV, 62 851 PC, lus le 23/11/2026) ; Pokémon Gameinfo affiche les mêmes PC Super Méga ; la feuille Flyfunner donne 25 000 PV à toutes les Super Méga (le boss n’y figure pas encore, sortie le 28/11). Statistiques 253/205/216 et type Fée/Vol : PvPoke (game master du 16/11/2026) et Pokémon GO Hub, identiques ; le game master PokeMiners ne contient pas encore la forme. Attaques du boss : celles de Clefable sans Pound ni Pouvoir Lunaire+ (liste de raid de PogoHelp, identique à la liste PvPoke de la forme moins Pound et Moonblast+ ; non confirmée par Leek Duck / GO Hub).",
    "shields": 8,
-   "hpNote": "PV non publiés, à confirmer",
+   "hpNote": "25 000 PV confirmés (PogoHelp, Pokebattler, feuille Flyfunner pour le niveau Super Méga ; CP Super Méga 62 851 chez Gameinfo et Pokebattler)",
    "go": {
     "t": [
      "fairy",

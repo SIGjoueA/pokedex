@@ -55,7 +55,19 @@ const kslug = {}; for (const m of kidx.matchAll(/href="(\/jeux\/mobile\/pocket\/
 for (const [c, u] of [['P-A', 'promo-a'], ['P-B', 'promo-b'], ['P-C', 'promo-c']]) kslug[c] ||= { u: `/jeux/mobile/pocket/cartodex/extensions/${u}.html`, n: c.replace('P-', 'Promo-') };
 console.log('Pokékalos sets', Object.keys(kslug).join(' '));
 const KNAME = { B2b: 'Méga-Rayonnement', B3: 'Aura Palpitante', B3a: 'Propulsion Paradoxe', B3b: 'Jours Heureux', B4: 'Domination Céleste', B4a: 'L’Ambition de la Team Rocket', B4b: 'Booster de Luxe Méga', A4b: 'Booster de Luxe ex', 'P-B': 'Promo-B', C1: 'Fusion Double', 'P-C': 'Promo-C', SP1: 'Premiers Partenaires' }; // Poképédia / Pokékalos, if the index layout changes
-const OFFICIAL = { C1: 131 }; // cartes de base (hors secrètes) : Bulbapedia Dual Fusion « 217 (131 + 86 secret) », numérotation 001/131
+const OFFICIAL = { // cartes de base (hors secrètes), Bulbapedia « List of Pokémon TCG Pocket expansions » (lu le 23/11/2026)
+  'P-A': 117, // Promo-A : 117 (pas de secrètes)
+  A4b: 353, // Deluxe Pack: ex « 353 regular + 26 secret »
+  'P-B': 103, // Promo-B : 103 (pas de secrètes)
+  B2b: 69, // Mega Shine « 69 regular + 48 secret »
+  B3: 155, // Pulsing Aura « 155 regular + 79 secret »
+  B3a: 74, // Paradox Drive « 74 regular + 35 secret »
+  B3b: 69, // Everyday Wonders « 69 regular + 37 secret »
+  B4: 155, // Ruler of the Skies « 155 regular + 78 secret »
+  B4a: 72, // Team Rocket's Ambition « 72 regular + 38 secret »
+  B4b: 402, // Deluxe Pack: Mega « 402 regular + 27 secret »
+  C1: 131, // Dual Fusion « 217 (131 + 86 secret) », numérotation 001/131
+};
 const enFr = new Map(); for (const st of sets) for (const c of st.cards) if (c[4]) enFr.set(c[1], c[1]);
 let added = 0;
 for (const L of lsets) {
