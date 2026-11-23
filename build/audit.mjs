@@ -173,7 +173,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const [k, o] of Object.entries(OV.gmax.forms)) { const g = E[k] && F(E[k].id, k).go; ok('v28 Gigamax GO ' + k, !!g && (o.from ? !E[k].go && E[k].gof === o.from && g.rf === o.from && g.r === 0 : E[k].go === 1 && g.r === 1) && (o.shiny ? g.sh && g.sh[0] === 'max' && !g.nosh : g.nosh === 1)); }
   ok('v28 Gigamax hors liste sans GO', core.e.filter(e => e.c === 'gmax' && (e.go || e.gof)).length === Object.keys(OV.gmax.forms).length && !E['892-single-strike-gmax'].go && !E['890-eternamax']?.go);
   ok('v60.14 18 Gigamax sortis dont Duralugon (6/11/2026, v44 : Salarsen = une fiche)', core.e.filter(e => e.c === 'gmax' && e.go).length === 18 && E['884-gmax'].go === 1 && !E['884-gmax'].gof && F(884, '884-gmax').go.r === 1 && !F(884, '884-gmax').go.rf && !F(884, '884-gmax').go.shf);
-  ok('v28 pas de shiny Gigamax Lézargus / Salarsen', F(818, '818-gmax').go.nosh === 1 && F(849, '849-amped-gmax').go.nosh === 1 && !F(6, '6-gmax').go.nosh);
+  ok('v28 pas de shiny Gigamax Lézargus ; v60.18 Salarsen Gigamax shiny GO', F(818, '818-gmax').go.nosh === 1 && F(849, '849-amped-gmax').go.sh?.includes('max') && !F(849, '849-amped-gmax').go.nosh && !F(6, '6-gmax').go.nosh);
   ok('v28 Méga-Dracaufeu X / Y, Méga-Mewtwo X / Y, Primo-Kyogre / Groudon dans GO', ['6-mega-x', '6-mega-y', '150-mega-x', '150-mega-y', '382-primal', '383-primal'].every(k => E[k].go === 1));
   ok('v60.6 Méga-Lugulabre sortie dans GO (31/10/2026), Vent Mauvais +', E['609-mega'].go === 1 && F(609, '609-mega').go.r === 1 && F(609, '609-mega').go.cm.includes('OMINOUS_WIND_PLUS'));
   ok('v28 Gigamax GO = stats de la base', F(6, '6-gmax').go.a === F(6).go.a && F(6, '6-gmax').go.m50 === F(6).go.m50);
@@ -415,7 +415,9 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.17 fiche hors GO : bloc Attaque G-Max', /function gmaxMoveHTML/.test(app) && /M = gmaxMoveHTML\(p\)/.test(app));
   ok('v60.17 pack hors-ligne : data/gmax-moves.json', /'data\/gmax-moves\.json'/.test(app));
   ok('v60.17 sim : types G-Max complets dont Duralugon (884-gmax, dragon)', /884-gmax':'dragon'/.test(sim) && /133-gmax':'normal'/.test(sim) && /809-gmax':'steel'/.test(sim) && /892-rapid-strike-gmax':'water'/.test(sim));
-  ok('v60.17 SW : VERSION v60.17, DATA_VERSION d59', /VERSION = 'v60\.17'/.test(sw) && /DATA_VERSION = 'd59'/.test(sw));
+  ok('v60.17 SW : VERSION ≥ v60.17, DATA_VERSION ≥ d59', /VERSION = 'v60\.(1[7-9]|[2-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 59);
+  ok('v60.18 SW : VERSION v60.18, DATA_VERSION d60', /VERSION = 'v60\.18'/.test(sw) && /DATA_VERSION = 'd60'/.test(sw));
+  ok('v60.18 Salarsen Gigamax : shiny GO (Combats Max), Forme Grave renseignée', F(849, '849-amped-gmax').go.sh?.includes('max') && !F(849, '849-amped-gmax').go.nosh && Array.isArray(F(849, '849-low-key').go.sh) && F(849, '849-low-key').go.sh.length > 0);
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
