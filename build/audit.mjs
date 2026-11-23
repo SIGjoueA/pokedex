@@ -201,7 +201,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v30 app : vérifications au démarrage, au retour (visibilitychange) et toutes les 30 min', /swWatch\(reg\)/.test(app) && /visibilitychange[^\n]*swCheck\(\)/.test(app) && /setInterval\(swCheck, 30 \* 60 \* 1000\)/.test(app) && /\.update\(\)/.test(app));
   ok('v30 sélecteur de jeu de la fiche dans l’en-tête collant', /navHTML\(p, `<div class="gamebar dgbar">/.test(app) && /\.dgbar\{/.test(css) && /\.gnum\{/.test(css));
   ok('v30 « Présent dans » en vue d’ensemble seulement', /else \{ P = availHTML\(sp, games[^\n]*homeSrcHTML\(p, f\) \+ goBox;/.test(app));
-  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) \{ P = tradeBoxHTML\(p, gm\.id\) \+ regB; N = evoB \+ encHTML[^\n]*C = heldHTML[^\n]*shinyHTML[^\n]*breedHTML[^\n]*M = movesHTML[^\n]*D = E\.ev; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')") && app.includes('${size}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
+  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) \{ P = tradeBoxHTML\(p, gm\.id\) \+ regB; N = evoB \+ encHTML[^\n]*C = heldHTML[^\n]*shinyHTML[^\n]*breedHTML[^\n]*M = (?:gmaxMoveHTML\(p\) \+ )?movesHTML[^\n]*D = E\.ev; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')") && app.includes('${size}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
 }
 // ---- v31: shiny data, popup texts, Rouge Feu / Vert Feuille (Switch)
 { const S = D('shiny.json'), DS = D('desc.json'), mv = D('moves.json'), ref = D('ref.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8');
@@ -390,12 +390,32 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.16 costumes.json : schéma et volume', cost && cost.n >= 300 && Object.keys(cost.s).length >= 120 && cost.n === all.length && all.length === ids.size);
   ok('v60.16 costumes : identifiants stables, pas de Mewtwo Armure', all.every(c => /^\d+-[a-z0-9]+$/i.test(c.id) && c.n && ['off','ppe','ppe-unoff','en'].includes(c.frs)) && !all.some(c => /armored/i.test(c.id) || /Armure/.test(c.n)));
   ok('v60.16 costumes : source française renseignée, sans nom inventé pour les 2026 encore non traduits', all.every(c => c.frs !== 'en' || /nom français non vérifié/.test(app)) && all.filter(c => c.frs === 'off').length >= 8);
-  ok('v60.16 SW : VERSION v60.16, DATA_VERSION d58', /VERSION = 'v60\.16'/.test(sw) && /DATA_VERSION = 'd58'/.test(sw));
+  ok('v60.16 SW : VERSION ≥ v60.16, DATA_VERSION ≥ d58', /VERSION = 'v60\.(1[6-9]|[2-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 58);
   ok('v60.16 pack hors-ligne : data/costumes.json', /'data\/costumes\.json'/.test(app));
   ok('v60.16 export/import : go_costumes et go_costumes_s', /go_costumes: \[\.\.\.COSTUME_C\]/.test(app) && /go_costumes_s: \[\.\.\.COSTUME_S\]/.test(app) && /d\.go_costumes/.test(app));
   ok('v60.16 costumes hors complétion : marques séparées, jamais de coche auto de l’espèce', /COSTUME_C/.test(app) && !/toggleMark\([^\n]*COSTUME/.test(app) && !/CAUGHT_G\.add\([^\n]*COSTUME/.test(app) && /n’inscrit pas l’espèce/.test(app));
   ok('v60.16 fiche : bloc Costumes interactif (plus seulement « En chantier »)', /function costumesHTML\(title\)/.test(app) && /costcg/.test(app) && !/function costumesHTML\(title\) \{ return `<section class="box costbox"><h2>\$\{title\}<\/h2><p class="note">En chantier\.<\/p><\/section>`; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')"));
   ok('v60.16 menu : compteur costumes', /id="gocost"/.test(html) && /updateGoCostMenu/.test(app));
+}
+
+
+// ---- v60.17: official French G-Max move names (sheets + Combats Max rankings)
+{ const gm = D('gmax-moves.json'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8'), sim = fs.readFileSync(path.join(DOCS, 'sim.js'), 'utf8');
+  const core = D('core.json'), moves = gm && gm.moves || {}, keys = Object.keys(moves);
+  const types = new Set(['normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy']);
+  const gmax = core.e.filter(e => e.c === 'gmax' && e.k !== '890-eternamax');
+  const official = ['Fouet G-Max','Fournaise G-Max','Canonnade G-Max','Illusion G-Max','Foudre G-Max','Pactole G-Max','Frappe G-Max','Hantise G-Max','Bulles G-Max','Résonance G-Max','Câlin G-Max','Récolte G-Max','Pestilence G-Max','Fonte G-Max','Percussion G-Max','Pyroball G-Max','Gâchette G-Max','Rafale G-Max','Ondes G-Max','Récif G-Max','Téphra G-Max','Corrosion G-Max','Nectar G-Max','Enlisement G-Max','Choc G-Max','Combustion G-Max','Sentence G-Max','Torpeur G-Max','Cure G-Max','Percée G-Max','Usure G-Max','Coup Final G-Max','Multicoup G-Max'];
+  ok('v60.17 gmax-moves.json : 34 clés, 33 noms officiels', gm && gm.n === 34 && gm.nu === 33 && keys.length === 34 && new Set(Object.values(moves).map(m => m.n)).size === 33);
+  ok('v60.17 gmax-moves.json : chaque entrée a un nom français officiel, un type et le nom anglais', keys.every(k => /gmax$/.test(k) && moves[k].n && / G-Max$/.test(moves[k].n) && types.has(moves[k].t) && /^G-Max /.test(moves[k].en) && moves[k].p));
+  ok('v60.17 gmax-moves.json : les 33 noms officiels (Poképédia) sont tous présents', official.every(n => Object.values(moves).some(m => m.n === n)) && official.length === 33);
+  ok('v60.17 toutes les formes Gigamax du dex (sauf Infinimax) ont une attaque G-Max', gmax.every(e => moves[e.k] && moves[e.k].n) && moves['849-low-key-gmax']?.n === 'Choc G-Max');
+  ok('v60.17 noms de repli de l’app alignés sur gmax-moves.json', keys.every(k => app.includes("'" + k + "': ['" + moves[k].n.replace(/'/g, "\\'") + "', '" + moves[k].t + "']") || app.includes('"' + k + '"')));
+  ok('v60.17 fiche GO : onglet Combats Max même sans classement (showMax / Duralugon Gigamax)', /showMax = !!\(MX \|\| \(p\.c === 'gmax' && GM\)\)/.test(app) && /function gmaxMoveOf/.test(app) && /function gmaxKeyOf/.test(app));
+  ok('v60.17 Classements Combats Max : nom G-Max sur les lignes Gigamax seulement', /const msMax = /.test(app) && /p\.c === 'gmax' \? gmaxMoveOf\(p\)/.test(app) && /msMax\(mx\.E/.test(app) && app.split('msMax(mx.E').length >= 5);
+  ok('v60.17 fiche hors GO : bloc Attaque G-Max', /function gmaxMoveHTML/.test(app) && /M = gmaxMoveHTML\(p\)/.test(app));
+  ok('v60.17 pack hors-ligne : data/gmax-moves.json', /'data\/gmax-moves\.json'/.test(app));
+  ok('v60.17 sim : types G-Max complets dont Duralugon (884-gmax, dragon)', /884-gmax':'dragon'/.test(sim) && /133-gmax':'normal'/.test(sim) && /809-gmax':'steel'/.test(sim) && /892-rapid-strike-gmax':'water'/.test(sim));
+  ok('v60.17 SW : VERSION v60.17, DATA_VERSION d59', /VERSION = 'v60\.17'/.test(sw) && /DATA_VERSION = 'd59'/.test(sw));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -39,7 +39,8 @@
   }
   // ---------- Combats Max v1 ----------
   const ORB = 10, ORB_EVERY = 15, PHASE_S = 9, SWITCH_S = 1, TICK = 0.5, GUARD_LAYERS = 3, PT = 0.5, X_RUNS = 4;
-  const GMAX_TYPE = { '3-gmax':'grass','6-gmax':'fire','9-gmax':'water','12-gmax':'bug','25-gmax':'electric','52-gmax':'normal','68-gmax':'fighting','94-gmax':'ghost','99-gmax':'water','131-gmax':'ice','143-gmax':'normal','569-gmax':'poison','812-gmax':'grass','815-gmax':'fire','818-gmax':'water','849-amped-gmax':'electric','861-gmax':'dark' };
+  // v60.17: complete official G-Max types (all 34 Gigamax keys, including unreleased and Duralugon 884-gmax)
+  const GMAX_TYPE = { '3-gmax':'grass','6-gmax':'fire','9-gmax':'water','12-gmax':'bug','25-gmax':'electric','52-gmax':'normal','68-gmax':'fighting','94-gmax':'ghost','99-gmax':'water','131-gmax':'ice','133-gmax':'normal','143-gmax':'normal','569-gmax':'poison','809-gmax':'steel','812-gmax':'grass','815-gmax':'fire','818-gmax':'water','823-gmax':'flying','826-gmax':'psychic','834-gmax':'water','839-gmax':'rock','841-gmax':'grass','842-gmax':'grass','844-gmax':'ground','849-amped-gmax':'electric','849-low-key-gmax':'electric','851-gmax':'fire','858-gmax':'fairy','861-gmax':'dark','869-gmax':'fairy','879-gmax':'steel','884-gmax':'dragon','892-single-strike-gmax':'dark','892-rapid-strike-gmax':'water' };
   const maxKind = k => GMAX_TYPE[k] ? 'gmax' : /^88[89]-crowned$/.test(k) ? 'crowned' : k === '890' ? 'eter' : 'dmax';
   // Max move levels 1–3: Max Attack 250/300/350, G-Max (and Éthernatos) 350/400/450, Gardomax 20/40/60, Régémax 8/12/16 % of max HP
   const maxParams = (k, f, ml) => { const kind = maxKind(k), l = ml || [3, 3, 3];

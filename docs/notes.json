@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.17",
+  "d": "2026-11-23",
+  "l": [
+   "Les noms officiels français des 33 attaques G-Max (Pokémon Épée et Bouclier, relevés sur Poképédia) apparaissent sur les fiches : onglet Combats Max de Pokémon GO, et bloc « Attaque G-Max » dans les autres vues, y compris pour les Gigamax pas encore sortis dans GO.",
+   "Sur une fiche Gigamax en Combats Max, l’attaque G-Max s’affiche même si le Pokémon n’est pas encore dans les classements (comme Duralugon Gigamax, avec Usure G-Max).",
+   "Dans Classements › Combats Max, le moveset d’un attaquant Gigamax indique aussi son attaque G-Max (par exemple Pistolet à O + Hydroblast † · Canonnade G-Max).",
+   "Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.16",
   "d": "2026-11-23",
   "l": [

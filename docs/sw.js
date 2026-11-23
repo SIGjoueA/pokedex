@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.16';
+const VERSION = 'v60.17';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Les costumes de Pokémon GO sont listés sur les fiches, avec un compteur à part (sans effet sur la complétion).';
-const DATA_VERSION = 'd58'; // bump when the schema of data/*.json changes
+const NOTES = 'Les noms officiels français des attaques G-Max figurent sur les fiches Combats Max et dans les classements.';
+const DATA_VERSION = 'd59'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
