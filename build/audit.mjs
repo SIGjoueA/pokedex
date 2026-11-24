@@ -731,4 +731,34 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.27 SW : VERSION ≥ v60.27, DATA_VERSION ≥ d69', /VERSION = 'v60\.(2[7-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 69);
 }
 
+// ---- v60.28: champ E (attaques exclusives, « † ») dans rank-raid.json et rank-max.json
+{ const rr = D('rank-raid.json'), rm = D('rank-max.json'), pm = D('pvp-moves.json'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const eliteOf = k => { let s; try { s = sp(k.split('-')[0]); } catch { s = null; } const g = s && s.f && s.f[k] && s.f[k].go; return g ? [...(g.fe || []), ...(g.ce || [])] : []; };
+  const check = (label, j, forms) => {
+    ok(`v60.28 ${label} : champ E présent`, !!(j.E && typeof j.E === 'object' && !Array.isArray(j.E) && Object.keys(j.E).length > 0));
+    eq(`v60.28 ${label} : clés E ⊆ formes du classement`, Object.keys(j.E || {}).filter(k => !forms.has(k)), []);
+    const miss = [], extra = [], unknown = [];
+    for (const k of forms) {
+      const want = eliteOf(k), got = j.E[k] || [];
+      if (want.length && JSON.stringify(got) !== JSON.stringify(want)) miss.push(k);
+      if (!want.length && got.length) extra.push(k);
+      for (const m of got) if (!(pm.m && pm.m[m]) && !go.moves[m]) unknown.push(k + ':' + m);
+    }
+    eq(`v60.28 ${label} : E = fe+ce des fiches GO`, miss, []);
+    eq(`v60.28 ${label} : pas de forme sans élite dans E`, extra, []);
+    eq(`v60.28 ${label} : attaques E connues (pvp-moves / go.moves)`, unknown, []);
+  };
+  check('raids', rr, new Set(rr.F.map(x => x[0])));
+  check('Combats Max', rm, new Set(rm.F));
+  eq('v60.28 raids : ordre F et top global inchangés', [rr.F[0], rr.F[rr.F.length - 1], rr.F.length, rr.P.n.g.slice(0, 5), rr.nb, rr.date], [['150-mega-x', 0], ['525', 1], 674, [[0, 0, 1, 20, 125, 100], [58, 73, 74, 19, 44, 100], [84, 98, 112, 17, 71, 100], [6, 41, 9, 16, 105, 100], [12, 8, 14, 15, 76, 100]], 169, '2026-11-01']);
+  eq('v60.28 Max : ordre F et tops A/T/H inchangés', [rm.F[0], rm.F.length, rm.R.A.g.slice(0, 5), rm.R.T.g.slice(0, 3), rm.R.H.g.slice(0, 3), rm.nb, rm.date], ['888-crowned', 159, [[0, 0, 1, 14, 37, 100], [1, 2, 3, 10, 26, 100], [2, 4, 5, 5, 17, 100], [3, 6, 7, 5, 10, 100], [4, 8, 9, 4, 35, 100]], [[17, 0, 30, 17, 54, 100], [77, 72, 73, 8, 56, 100], [0, 0, 95, 6, 54, 100]], [[77, 72, 73, 38, 56, 100], [127, 72, 73, 8, 53, 100], [35, 21, 86, 5, 44, 100]], 56, '2026-11-24']);
+  ok('v60.28 raids : Méga-Mewtwo X a Riposte et Psystrik en élite', (rr.E['150-mega-x'] || []).includes('COUNTER_FAST') && (rr.E['150-mega-x'] || []).includes('PSYSTRIKE'));
+  ok('v60.28 Max : Rhinastoc a Roc-Boulet en élite, Ethernatos Canon Dynamax', (rm.E['464'] || []).includes('ROCK_WRECKER') && (rm.E['890'] || []).includes('DYNAMAX_CANNON'));
+  const raiders = fs.readFileSync(path.join(HERE, 'rank-raids.mjs'), 'utf8'), rmax = fs.readFileSync(path.join(HERE, 'rank-max.mjs'), 'utf8'), fpvp = fs.readFileSync(path.join(HERE, 'fetch-pvp.mjs'), 'utf8'), elite = fs.readFileSync(path.join(HERE, 'rank-elite.mjs'), 'utf8');
+  ok('v60.28 garde-fou : rank-raids, rank-max et fetch-pvp appellent applyElite', /applyElite\(\['rank-raid\.json'\]\)/.test(raiders) && /applyElite\(\['rank-max\.json'\]\)/.test(rmax) && /applyElite\(\['rank-pvp\.json'\]\)/.test(fpvp) && /export function applyElite/.test(elite));
+  const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v60.28 app : † via rd.E / mx.E dans les classements', /msE\(rd\.E/.test(src) && /msMax\(mx\.E/.test(src) && src.includes('† : attaque exclusive'));
+  ok('v60.28 SW : VERSION ≥ v60.28, DATA_VERSION ≥ d70', /VERSION = 'v60\.(2[8-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 70);
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -1,5 +1,13 @@
 [
  {
+  "v": "v60.28",
+  "d": "2026-11-24",
+  "l": [
+   "Classements Raids et Combats Max : la marque « † » des attaques exclusives (événement / MT élite) réapparaît, comme dans les classements PvP. Elle avait disparu depuis la v60.2, quand les classements ont été régénérés sans le champ qui porte cette information.",
+   "Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.27",
   "d": "2026-11-24",
   "l": [

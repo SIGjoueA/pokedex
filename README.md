@@ -202,6 +202,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Audit** : contrôles `v60.27` dans `build/audit.mjs` (plus de « Cristal de raid N étoiles » dans `pl`, événements conservés, 18 cristaux = module, comptes Paldea / Septentria / Terra-Dôme, Pikachu, Chartor, Bekipan, Chapignon, Tauros de Paldea, Grotadmorv d’Alola, Muciole, Ogerpon (Antre Interdit en lieu habituel, pas dans les raids), pas de 7★ dans `rd`, talent caché seulement si la fiche en a un).
 
 
+## v60.28 : marque † des attaques exclusives dans les classements raids et Max
+- **Cause** : depuis la v60.2 (`8578148`), `build/rank-raids.mjs` et `build/rank-max.mjs` réécrivent `docs/data/rank-raid.json` et `rank-max.json` sans le champ `E` (et sans appeler `build/rank-elite.mjs`). Les mises à jour suivantes des classements (jusqu’à la v60.20) ont fait de même. La routine « Planning des boss » (`build/fetch-boss-schedule.mjs`, lundi et jeudi) lit ces fichiers mais ne les réécrit pas. En v60.25, `E` a été remis sur `rank-pvp.json` seulement.
+- **Correctif** : `build/rank-elite.mjs` pose uniquement le champ `E` (attaques `fe` + `ce` des fiches GO). L’ordre des classements et les scores ne changent pas.
+- **Garde-fou** : `applyElite` est appelé à la fin de `rank-raids.mjs`, `rank-max.mjs` et `fetch-pvp.mjs`, pour que `E` ne disparaisse plus à la prochaine régénération.
+- **Audit** : contrôles `v60.28` dans `build/audit.mjs` (`E` présent et égal à `fe` + `ce`, attaques connues de `pvp-moves.json` / `go.moves`, ordre des classements inchangé, scripts branchés).
+
 ## Limites connues
 Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.27';
+const VERSION = 'v60.28';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Écarlate / Violet : raids Téracristal 1★–6★ à Paldea, Septentria et au Terra-Dôme, type Téra fixe et talent caché. Œufs GO : historique par saison.';
-const DATA_VERSION = 'd69'; // bump when the schema of data/*.json changes
+const NOTES = 'Classements raids et Combats Max : la marque † des attaques exclusives (événement / MT élite) réapparaît.';
+const DATA_VERSION = 'd70'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

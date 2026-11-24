@@ -5,6 +5,7 @@
 // v60.4: R.A|T|H.x = per boss, ranks 21–60 (≥ 30 % of the best), same row format, used on the device to build the teams of 3.
 // Usage: node rank-max.mjs [path/to/sim.json]
 import fs from 'node:fs'; import path from 'node:path';
+import { applyElite } from './rank-elite.mjs';
 const ROOT = path.join(path.dirname(new URL(import.meta.url).pathname), '..');
 const S = JSON.parse(fs.readFileSync(process.argv[2] || path.join(ROOT, 'screenshots/max-v1/final/sim-p50-l40.json'))), USE = 0.6;
 const mvI = {}, mv = [], mi = k => mvI[k] ??= mv.push(k) - 1, fI = {}, F = [], fi = k => fI[k] ??= F.push(k) - 1, pct = x => Math.round(x * 1000) / 10;
@@ -29,5 +30,6 @@ const goOf = k => { if (MB.inline[k]) return MB.inline[k]; const g = JSON.parse(
 const BS = S.bosses.map(sb => { const b = MB.bosses.find(x => x.key === sb.key), g = goOf(b.key); return [g.a, g.d, b.hp, b.cpm, b.atkMult, b.meMult, b.rate, b.limit, b.enrageAt, b.enrage, sb.moves, b.meDec]; });
 const out = { date: new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Paris'}).format(new Date()), src: 'Simulation Combats Max v1 (niveau 40, Gardomax et Régémax niveau 3, sans esquive)', nb: S.bosses.length, nbh: S.bosses.filter(b => b.tier >= 5).length, nbl: S.bosses.filter(b => b.tier <= 4).length, mv, F, B: S.bosses.map(b => [b.key, b.fr, b.tier, b.t]), R, BS, NM: NM.map(m => Object.fromEntries(Object.entries(m).map(([k, v]) => [k, +v.toPrecision(6)]))) };
 fs.writeFileSync(path.join(ROOT, 'docs/data/rank-max.json'), JSON.stringify(out));
+applyElite(['rank-max.json']);
 console.log('rank-max.json', JSON.stringify(out).length, 'octets');
 for (const ro of 'ATH') console.log(ro, 'global', R[ro].g.slice(0, 5).map(r => F[r[0]] + ' ' + r[3] + '/' + r[4] + ' ' + r[5]).join(', '));

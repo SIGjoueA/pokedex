@@ -7,6 +7,7 @@
 // v60.10: B rows of Super Méga-Raid bosses carry a 5th value, the number of shields (build/raid-bosses.json), shown on the boss page.
 // Usage: node rank-raids.mjs [path/to/data-final.json]
 import fs from 'node:fs'; import path from 'node:path';
+import { applyElite } from './rank-elite.mjs';
 const HERE = path.dirname(new URL(import.meta.url).pathname), ROOT = path.join(HERE, '..');
 const IN = process.argv[2] || path.join(ROOT, 'screenshots/raid-v2/final/data-final.json');
 const XN = 80, XMIN = 0.4; // v60.4: ranks 21–80 (≥ 40 %) kept for the teams (no-legendary team, team from the collection)
@@ -37,4 +38,5 @@ const TOP = Object.fromEntries(['n', 's'].map(pool => [pool, B.map(b => Math.max
 const TY = Object.fromEntries(Object.entries(PTY).map(([k, v]) => [k, v.t])); // attacker types used by the simulation (patch)
 const out = { date: '2026-11-01', src: 'Simulation raid v2 (niveau 40, sans météo ni esquive, Méga au niveau de base)', nb: B.length, mv, F, B: B.map((b, j) => [b.k, b.n, b.tier, b.t, ...(RB[j].shields ? [RB[j].shields] : [])]), P, BS, TOP, TY };
 fs.writeFileSync(path.join(ROOT, 'docs/data/rank-raid.json'), JSON.stringify(out));
+applyElite(['rank-raid.json']);
 console.log('rank-raid.json', JSON.stringify(out).length, 'octets ; formes', F.length, '; top global sans obscurs :', P.n.g.slice(0, 5).map(r => F[r[0]][0] + ' ' + r[3] + '/' + r[4]).join(', '));

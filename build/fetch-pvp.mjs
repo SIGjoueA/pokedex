@@ -5,6 +5,7 @@
 // Usage: node fetch-pvp.mjs [--rank-only]   (downloads ~5 MB, re-run to refresh)
 // v59: also writes docs/data/rank-pvp.json (« Classements » tab) = { src, date, L: { g|u|m|l|c: { t, cp, r: [[entryKey, shadow 0/1, score, fast, charged1, charged2?] …top 200] } } }; --rank-only = rank-pvp.json only
 import fs from 'node:fs'; import path from 'node:path'; import { mapPvPoke, PVP_ABSENT } from './pvp-map.mjs';
+import { applyElite } from './rank-elite.mjs';
 const HERE = path.dirname(new URL(import.meta.url).pathname), D = path.join(HERE, '../docs/data');
 const RAW = 'https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/';
 const get = async u => { const r = await fetch(u, { headers: { 'User-Agent': 'PokedexPWA/1.0 (personal PWA)' } }); if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); };
@@ -36,6 +37,7 @@ for (const [lg, [t, cp, cup]] of Object.entries(LISTS)) {
   RL[lg] = { t, cp, n: list.length, r };
 }
 fs.writeFileSync(path.join(D, 'rank-pvp.json'), JSON.stringify({ src: 'PvPoke (pvpoke.com, classements « overall »)', date: new Date().toISOString().slice(0, 10), cup: { c: CUP.c, fin: CUP.fin, r: CUP.r, d: new Date().toISOString().slice(0, 10) }, L: RL }));
+applyElite(['rank-pvp.json']);
 console.log('rank-pvp.json:', Object.entries(RL).map(([k, v]) => `${k} ${v.r.length}/${v.n}`).join(', '), '— ignorés (forme inconnue) :', unk);
 console.log(`pvp.json: ${Object.keys(r).length} entrées classées (${n.g} / ${n.u} / ${n.m}), ${Object.keys(alias).length} formes d’apparence liées à leur espèce`);
 console.log(`liens PvPoke : ${Object.keys(keyOf).length} + ${Object.keys(keyMega).length} Méga/Primo ; sans fiche GO : ${miss.join(', ') || '—'} ; stats différentes : ${bad.join(', ') || '—'}`);
