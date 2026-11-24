@@ -858,4 +858,34 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.31 cache : Raid Téracristal, événements 1 et 92, Serebii Mighty, Bulbapedia', fs.existsSync(path.join(cache, 'Raid_Téracristal.wiki')) && fs.existsSync(path.join(cache, 'Cristal_de_raid_événementiel_1.wiki')) && fs.existsSync(path.join(cache, 'Cristal_de_raid_événementiel_92.wiki')) && fs.existsSync(path.join(cache, 'serebii-event-mightydragapult.html')) && fs.existsSync(path.join(cache, 'Bulbapedia_Tera_Raid_Battle.wiki')));
 }
 
+
+
+// ---- v60.32 : meilleurs attaquants des raids Téracristal 7★ et 6★ (build/rank-sv-raids.mjs → docs/data/rank-sv-raid.json)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  ok('v60.32 SW : VERSION ≥ v60.32, DATA_VERSION ≥ d74', /VERSION = 'v60\.(3[2-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 74);
+  ok('v60.32 NOTES ≤ 160 caractères, commence par les meilleurs attaquants', notes.length > 0 && notes.length <= 160 && /^Meilleurs attaquants/.test(notes) && /7★/.test(notes) && /Dispo en raid/.test(notes), String(notes.length));
+  const rk = D('rank-sv-raid.json');
+  const n7 = (rk.B || []).filter(b => b[3] === 7).length;
+  const n6 = (rk.B || []).filter(b => b[3] === 6).length;
+  ok('v60.32 rank-sv-raid : ≥ 50 raids 7★ et ≥ 100 raids 6★, tables P et L', n7 >= 50 && n6 >= 100 && rk.P && rk.L && (rk.F || []).length > 10 && rk.mv && rk.mvfr, `${n7}/${n6}/${(rk.F || []).length}`);
+  ok('v60.32 chaque fiche 7★ a un top (sans légendaires) de 1 à 12', (rk.B || []).filter(b => b[3] === 7).every(b => {
+    const slot = rk.P[b[0]] && rk.P[b[0]][b[4]];
+    return Array.isArray(slot) && slot.length >= 1 && slot.length <= 12 && slot.every(r => r.length === 4);
+  }));
+  const drag = rk.P['887-dragon'] && rk.P['887-dragon'].dragon;
+  const names = (drag || []).map(r => (rk.F[r[0]] || '') + ' ' + (rk.mvfr[r[1]] || ''));
+  ok('v60.32 Lanssorien : Florges, Primarina et Nymphali en tête (Pouvoir Lunaire, Téra Fée)', !!(drag && drag.length >= 3 && /671/.test(String(rk.F[drag[0][0]])) && names.some(n => /Pouvoir Lunaire/.test(n)) && ['671','730','700'].every(k => (drag || []).some(r => String(rk.F[r[0]]) === k))), names.slice(0, 6).join(' · '));
+  const src = fs.readFileSync(path.join(HERE, 'rank-sv-raids.mjs'), 'utf8');
+  ok('v60.32 script : pas de capacités suicidaires, apostrophes normalisées, --7star conserve les 6★', /Misty Explosion|Explo-Brume/.test(src) && /function normFr/.test(src) && /--7star/.test(src) && /row\[3\] !== 7/.test(src));
+  ok('v60.32 @smogon/calc déclaré, node_modules ignoré', /@smogon\/calc/.test(fs.readFileSync(path.join(HERE, 'package.json'), 'utf8')) && /build\/node_modules\//.test(fs.readFileSync(path.join(HERE, '../.gitignore'), 'utf8')));
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.32 apply-v34 lance fix-v60-32', /fix-v60-32\.mjs/.test(apply));
+  ok('v60.32 update-tera7 relance le classement 7★', /rank-sv-raids/.test(fs.readFileSync(path.join(HERE, 'update-tera7.mjs'), 'utf8')));
+  ok('v60.32 app : bloc Meilleurs attaquants, vue Raids, fiche, pack hors-ligne', /Meilleurs attaquants/.test(app) && /function svRankBoxHTML/.test(app) && /function svRaidsBlockHTML/.test(app) && /data\/rank-sv-raid\.json/.test(app) && /Inclure les légendaires et fabuleux/.test(app));
+  ok('v60.32 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, src, fs.readFileSync(path.join(HERE, 'fix-v60-32.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

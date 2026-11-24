@@ -31,3 +31,4 @@ node('fix-v60-27.mjs');      // v60.27: raids Téracristal d’Écarlate / Viole
 node('fix-v60-29.mjs');      // v60.29: précision des formes — disponibilité par jeu (Méga du DLC Z-A, formes régionales / Gigamax / alternatives) et textes officiels des Méga / Primo (Poképédia)
 node('fix-v60-30.mjs');      // v60.30: index compact des raids Dynamax (ÉB) et Téracristal (ÉV) → docs/data/raids.json (filtre « Dispo en raid » et vue Raids)
 node('fix-v60-31.mjs');      // v60.31: raids Téracristal 7★ événementiels d’Écarlate / Violet → docs/data/tera7.json
+node('fix-v60-32.mjs');      // v60.32: classements des meilleurs attaquants des raids Téracristal 7★ et 6★ → docs/data/rank-sv-raid.json

@@ -1061,6 +1061,7 @@ function renderRaids() {
   let body = `<div class="rkwrap rvwrap"><div class="rvctl"><p class="note rvlbl">Raids ${esc(kind)} — ${esc(RAID_LONG[g])}</p><div class="chips rvgames" role="tablist" aria-label="Jeu">${tabs}</div><div class="chips rvstars" role="group" aria-label="Étoiles">${st}</div></div>`;
   const shown = sections.filter(sec => sec.n);
   if (!shown.length && !showT7) body += '<p class="empty">Aucun raid ne correspond à ce filtre.</p>';
+  if (isEV) body += svRaidsBlockHTML(g);
   if (showT7) body += tera7ViewHTML(g);
   for (const sec of shown) {
     const label = sec.s === 'exp' ? 'Expédition Dynamax' : sec.s + '★';
@@ -1091,8 +1092,35 @@ document.addEventListener('click', e => {
   if (gb) { const id = gb.dataset.rg; RV.g = id; RV.s = ''; const h = '#/raids/' + id; if (location.hash !== h) location.hash = h; else renderRaids(); return; }
   const sb = e.target.closest('#raid-view [data-rvs]');
   if (sb) { RV.s = sb.dataset.rvs; renderRaids(); return; }
+  const teraBtn = e.target.closest('[data-svrk-tera]');
+  if (teraBtn) {
+    const box = teraBtn.closest('.svrkbox');
+    if (box) {
+      box.dataset.svrkTera = teraBtn.dataset.svrkTera;
+      if (box.closest('#raid-view')) RV.svTera = box.dataset.svrkTera;
+      refreshSvRankBox(box);
+    }
+    return;
+  }
   const a = e.target.closest('#raid-view a[data-raid]');
   if (a) { sheetPref = a.dataset.raid; fromRaids = true; fromRank = false; raidScroll = window.scrollY; raidBack = location.hash; }
+});
+document.addEventListener('change', e => {
+  const sel = e.target.closest('[data-svrk-boss]');
+  if (sel) {
+    RV.svBoss = sel.value;
+    RV.svTera = svDefaultTera(sel.value);
+    if (/^#\/raids/.test(location.hash)) renderRaids();
+    return;
+  }
+  const leg = e.target.closest('[data-svrk-leg]');
+  if (leg) {
+    const box = leg.closest('.svrkbox');
+    if (!box) return;
+    box.dataset.svrkLeg = leg.checked ? '1' : '';
+    if (box.closest('#raid-view')) RV.svLeg = leg.checked;
+    refreshSvRankBox(box);
+  }
 });
 
 function route() {
@@ -1768,7 +1796,7 @@ const RAID_SHORT = { sw: 'ÉB', swisle: 'Isolarmure', swcrown: 'Couronneige', sv
 const RAID_LONG = { ...RAID_G, ...TERA_G };
 const STAR_EXP = 1 << 6, STAR_RARE = 1 << 7, STAR_7 = 1 << 8;
 const raidBit = s => s === 'exp' ? (STAR_EXP | STAR_RARE) : (s === '7' ? STAR_7 : (/^[1-6]$/.test(s) ? 1 << (+s - 1) : 0));
-let RAIDS = null, RAIDS_P = null, RAID_F = null, TERA7 = null;
+let RAIDS = null, RAIDS_P = null, RAID_F = null, TERA7 = null, RSV = null;
 let fromRaids = false, raidScroll = 0, raidBack = '#/raids';
 const RV = { g: '', s: '' };
 function buildRaidF(d) {
@@ -1780,8 +1808,9 @@ async function loadRaids() {
   if (RAIDS_P) return RAIDS_P;
   RAIDS_P = Promise.all([
     getJSON('data/raids.json'),
-    getJSON('data/tera7.json').catch(() => null)
-  ]).then(([d, t7]) => { RAIDS = d; TERA7 = t7 || false; buildRaidF(d); applyTera7Bits(t7); return d; }).catch(e => { RAIDS_P = null; RAIDS = false; TERA7 = false; throw e; });
+    getJSON('data/tera7.json').catch(() => null),
+    getJSON('data/rank-sv-raid.json').catch(() => null)
+  ]).then(([d, t7, rsv]) => { RAIDS = d; TERA7 = t7 || false; RSV = rsv || false; buildRaidF(d); applyTera7Bits(t7); return d; }).catch(e => { RAIDS_P = null; RAIDS = false; TERA7 = false; RSV = false; throw e; });
   return RAIDS_P;
 }
 function applyTera7Bits(t7) {
@@ -1836,9 +1865,11 @@ function tera7HTML(k) {
       r.ver === 's' ? 'Écarlate uniquement.' : r.ver === 'v' ? 'Violet uniquement.' : '',
       r.lv ? `Niveau ${r.lv}.` : ''
     ].filter(Boolean).join(' ');
+    const rk = svRankBoxHTML(r.id, r.tera, false, { title: 'Meilleurs attaquants', origin: 'sv' });
     return `<div class="t7raid ${st === 'past' ? 't7past' : 't7now'}">
       <div class="t7head"><b>${esc(r.n)}${r.title ? ' ' + esc(r.title) : ''}</b> ${badge(r.tera)}</div>
       ${dates}${meta ? `<div class="ms">${meta}</div>` : ''}${moves ? `<div class="ms">Capacités : ${moves}.</div>` : ''}${raidM}${bits ? `<div class="ms">${esc(bits)}</div>` : ''}
+      ${rk}
     </div>`;
   }).join('');
   const note = 'Sources : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid événementiels ; <a href="https://www.serebii.net/scarletviolet/teraraidbattleevents.shtml" target="_blank" rel="noopener">Serebii</a> ; Bulbapedia. Titre officiel : « le Surpuissant » (Insigne Surpuissant). Dates civiles inclusives (horaires typiques 00:00–23:59 UTC).';
@@ -1864,6 +1895,118 @@ function tera7ViewHTML(g) {
   html += '</details>';
   return html;
 }
+
+// v60.32 : meilleurs attaquants des raids Téracristal 7★ et 6★
+const SV_TYPES = ['normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'];
+function svRankReady() { return !!(RSV && RSV.P && RSV.F); }
+function svBossRow(id) { return ((RSV && RSV.B) || []).find(b => b[0] === id); }
+function svTeraKeys(id, leg) {
+  const slot = svRankReady() && (leg ? RSV.L : RSV.P)[id];
+  return slot ? SV_TYPES.filter(t => slot[t]) : [];
+}
+function svDefaultTera(id) {
+  const b = svBossRow(id);
+  if (b && b[4] && b[4] !== '*') return b[4];
+  const keys = svTeraKeys(id, false);
+  const p = b && BY_KEY[b[1]];
+  if (p && p.t && keys.includes(p.t[0])) return p.t[0];
+  return keys[0] || 'normal';
+}
+function svRankListHTML(id, tera, leg, origin) {
+  if (!svRankReady()) return '<p class="note">Classement indisponible.</p>';
+  const slot = (leg ? RSV.L : RSV.P)[id] || {};
+  const rows = slot[tera] || [];
+  if (!rows.length) return '<p class="note">Pas encore de classement pour ce type Téra.</p>';
+  return `<ol class="rklist svrklist">${rows.map((r, i) => {
+    const k = RSV.F[r[0]], mv = RSV.mvfr[r[1]], typ = r[2], pct = r[3];
+    const p = BY_KEY[k];
+    const href = p ? `#/p/${p.k}` : `#/p/${k}`;
+    const raid = origin ? ` data-raid="${esc(origin)}"` : '';
+    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)} · Téra ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
+  }).join('')}</ol>`;
+}
+function svTeraChipsHTML(id, tera, leg) {
+  const keys = svTeraKeys(id, leg);
+  if (keys.length <= 1) return '';
+  return `<div class="chips svrktera" role="group" aria-label="Type Téra du boss">${keys.map(t => `<button type="button" class="chip rchip" data-svrk-tera="${t}" aria-pressed="${t === tera}">${badge(t)}</button>`).join('')}</div>`;
+}
+function svLegHTML(leg) {
+  return `<label class="svrkleg"><input type="checkbox" data-svrk-leg${leg ? ' checked' : ''}> Inclure les légendaires et fabuleux</label>`;
+}
+function svMethodNote() {
+  return 'Méthode : attaquant de niveau 100, IV 31, 252 EV PV et 252 EV dans sa meilleure stat offensive, nature qui l’augmente, meilleur talent offensif, objet Restes. Il téracristallise dans le type de sa meilleure capacité apprenable dans Écarlate / Violet. Score : dégâts infligés au carré, divisés par les dégâts encaissés, comme pour les raids de Pokémon GO. Bouclier Téra simplifié. Les stratégies de soutien (Cognobidon, Grondement, soins) ne sont pas classées. Les légendaires et fabuleux sont exclus par défaut.';
+}
+function svRankBoxHTML(id, tera, leg, opts = {}) {
+  if (!svRankReady() || !((leg ? RSV.L : RSV.P)[id])) return '';
+  const keys = svTeraKeys(id, leg);
+  if (!keys.includes(tera)) tera = svDefaultTera(id);
+  const b = svBossRow(id);
+  const title = Object.prototype.hasOwnProperty.call(opts, 'title') ? opts.title : 'Meilleurs attaquants';
+  const pick = opts.select || '';
+  const teraLine = keys.length > 1 ? `<p class="note rvlbl">Type Téra du boss</p>${svTeraChipsHTML(id, tera, leg)}` : (b && b[4] && b[4] !== '*' ? `<p class="note">Téra ${esc(TYPE_FR[b[4]] || b[4])}</p>` : '');
+  return `<div class="svrkbox" data-svrk-id="${esc(id)}" data-svrk-tera="${esc(tera)}" data-svrk-leg="${leg ? '1' : ''}"${opts.origin ? ` data-svrk-origin="${esc(opts.origin)}"` : ''}>
+    ${title ? `<h3>${esc(title)}</h3>` : ''}${pick}${teraLine}${svLegHTML(leg)}
+    <div class="svrkbody">${svRankListHTML(id, tera, leg, opts.origin)}</div>
+    <p class="note">${svMethodNote()}</p>
+  </div>`;
+}
+function refreshSvRankBox(box) {
+  if (!box || !svRankReady()) return;
+  const id = box.dataset.svrkId, leg = box.dataset.svrkLeg === '1';
+  let tera = box.dataset.svrkTera || svDefaultTera(id);
+  const keys = svTeraKeys(id, leg);
+  if (keys.length && !keys.includes(tera)) tera = keys[0];
+  box.dataset.svrkTera = tera;
+  box.querySelectorAll('[data-svrk-tera]').forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.svrkTera === tera));
+  const legIn = box.querySelector('[data-svrk-leg]');
+  if (legIn) legIn.checked = leg;
+  const body = box.querySelector('.svrkbody');
+  if (body) body.innerHTML = svRankListHTML(id, tera, leg, box.dataset.svrkOrigin || '');
+}
+function svBossSelectHTML(cur, game) {
+  if (!svRankReady()) return '';
+  const today = todayISO();
+  const B = RSV.B || [];
+  const g7 = B.filter(b => b[3] === 7), g6 = B.filter(b => b[3] === 6);
+  const stOf = id => { const r = (TERA7 && TERA7.raids || []).find(x => x.id === id); return r ? tera7RaidStatus(r, today) : 'past'; };
+  const ord = { now: 0, soon: 1, past: 2 };
+  g7.sort((a, b) => (ord[stOf(a[0])] ?? 9) - (ord[stOf(b[0])] ?? 9) || a[2].localeCompare(b[2], 'fr'));
+  g6.sort((a, b) => a[2].localeCompare(b[2], 'fr'));
+  const opt = (b, tag) => `<option value="${esc(b[0])}"${b[0] === cur ? ' selected' : ''}>${esc(b[2])}${b[6] ? ' ' + esc(b[6]) : ''}${b[4] && b[4] !== '*' ? ' · ' + esc(TYPE_FR[b[4]] || b[4]) : ''}${tag ? ' (' + tag + ')' : ''}</option>`;
+  let html = `<label class="svrkpick"><span>Boss</span><select data-svrk-boss aria-label="Boss du classement">`;
+  if (g7.length) {
+    html += '<optgroup label="7★">';
+    for (const b of g7) {
+      const st = stOf(b[0]);
+      html += opt(b, st === 'now' ? 'en cours' : st === 'soon' ? 'à venir' : '');
+    }
+    html += '</optgroup>';
+  }
+  if (g6.length) {
+    html += '<optgroup label="6★">';
+    for (const b of g6) html += opt(b, '');
+    html += '</optgroup>';
+  }
+  html += '</select></label>';
+  return html;
+}
+function svDefaultBoss() {
+  if (!svRankReady()) return '';
+  const today = todayISO();
+  const g7 = (RSV.B || []).filter(b => b[3] === 7);
+  const now = g7.find(b => { const r = (TERA7 && TERA7.raids || []).find(x => x.id === b[0]); return r && tera7RaidStatus(r, today) === 'now'; });
+  return (now || g7[0] || (RSV.B || [])[0] || [])[0] || '';
+}
+function svRaidsBlockHTML(g) {
+  if (!svRankReady()) return '';
+  const id = (RV.svBoss && svBossRow(RV.svBoss)) ? RV.svBoss : svDefaultBoss();
+  RV.svBoss = id;
+  const b = svBossRow(id);
+  const tera = (b && b[4] && b[4] !== '*') ? b[4] : (RV.svTera && svTeraKeys(id, !!RV.svLeg).includes(RV.svTera) ? RV.svTera : svDefaultTera(id));
+  RV.svTera = tera;
+  return `<details class="rvsec svrksec" open><summary>Meilleurs attaquants</summary>${svRankBoxHTML(id, tera, !!RV.svLeg, { title: '', select: svBossSelectHTML(id, g), origin: g })}</details>`;
+}
+
 function raidGameOfList() { return RAID_GAME.has(state.game) ? state.game : ''; }
 function raidCat(p) {
   if (!RAID_F) return false;
@@ -1907,7 +2050,9 @@ function teraRaidHTML(k, f, sp, gm) {
     'Niveau du boss : 1★ 12 · 2★ 20 · 3★ 35 · 4★ 45 · 5★ 75 · 6★ 90 (75 après capture).',
     'Sauf indication, le type Téra est aléatoire (couleur du cristal). « Téra par défaut » = un type naturel du Pokémon.',
     'Listes, type Téra et talent caché : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid. Les raids 7★ d’événement figurent dans le bloc « Raids 7★ (événements) ».'].filter(Boolean);
-  return { html: t7.html + `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>`, rows: rows.length + t7.rows };
+  const sixId = k + '-6';
+  const sixRk = svRankReady() && (RSV.P[sixId] || (RSV.L && RSV.L[sixId])) ? `<div class="raidloc svrk6">${svRankBoxHTML(sixId, svDefaultTera(sixId), false, { title: 'Meilleurs attaquants (raid 6★)', origin: gm.id })}</div>` : '';
+  return { html: t7.html + `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>` + sixRk, rows: rows.length + t7.rows };
 }
 function raidRows(k, f, sp, g) {
   const e = BY_KEY[k]; if (f.rd && f.rd[g]) return f.rd[g];
@@ -2662,7 +2807,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', 'data/rank-sv-raid.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }

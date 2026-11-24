@@ -230,6 +230,13 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Sources** : Poképédia (CC BY-NC-SA 3.0 FR) en priorité pour les noms français (pages Raid Téracristal et Cristal de raid événementiel N), puis Serebii (Mighty / Unrivaled) et Bulbapedia (table 7★) pour le talent, la nature et le recoupement des dates.
 - **Audit** : contrôles `v60.31` dans `build/audit.mjs` (VERSION / DATA_VERSION, 53 raids, Lanssorien en cours, formes Hisui, exclusivités de version, puce 7★, pack, NOTES ≤ 160 caractères).
 
+## v60.32 : meilleurs attaquants des raids Téracristal 7★ et 6★
+- **Données** : `build/rank-sv-raids.mjs` calcule `docs/data/rank-sv-raid.json` avec `@smogon/calc` (licence MIT, installé dans `build/`, `node_modules` non versionné). Périmètre de cette version : les 53 raids 7★ événementiels et les raids 6★ d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo). `DATA_VERSION` passe à `d74` ; le fichier est inclus dans le pack hors-ligne. Relancer `node build/rank-sv-raids.mjs --7star` après `update-tera7.mjs` pour classer un nouveau raid 7★ sans effacer les 6★.
+- **Méthode** : attaquant de niveau 100, IV 31, 252 EV PV et 252 EV offensifs, nature qui les augmente, meilleur talent offensif, objet Restes. Il téracristallise dans le type de sa meilleure capacité apprenable. Score : dégâts infligés au carré, divisés par les dégâts encaissés (comme les classements de raids GO). Bouclier Téra simplifié. Les stratégies de soutien (Cognobidon, Grondement, soins) ne sont pas classées. Les légendaires et fabuleux sont exclus par défaut.
+- **Affichage** : bloc « Meilleurs attaquants » dans la vue Raids (sélecteur de boss, type Téra du boss s’il est aléatoire) et sur la fiche (blocs raids 7★ et 6★) : top 12, capacité, Téra, lien vers la fiche, ligne de méthode.
+- **Reste à venir** : raids 5★ d’Écarlate / Violet, raids 5★ d’Épée / Bouclier (Isolarmure, Couronneige) et Aventure Dynamax. Les 1–4★ n’ont pas de classement dédié.
+- **Audit** : contrôles `v60.32` dans `build/audit.mjs`.
+
 ## Limites connues
 Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

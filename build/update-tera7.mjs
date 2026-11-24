@@ -705,4 +705,14 @@ if (isMain) {
   if (!data.raids.every(r => r.windows.length)) console.warn('sans fenêtre :', data.raids.filter(r => !r.windows.length).map(r => r.id));
   if (!data.raids.every(r => r.talent)) console.warn('sans talent :', data.raids.filter(r => !r.talent).map(r => r.id));
   if (!data.raids.every(r => r.nature)) console.warn('sans nature :', data.raids.filter(r => !r.nature).map(r => r.id));
+  // v60.32 : classer les 7★ (conserve les 6★ déjà présents). Ne pas relancer depuis fix-v60-31 (import uniquement).
+  try {
+    const { buildRankSvRaids, writeRankSvRaids } = await import('./rank-sv-raids.mjs');
+    const { data: rk } = buildRankSvRaids({ only7: true });
+    const wr = writeRankSvRaids(rk);
+    const n7 = rk.B.filter(b => b[3] === 7).length;
+    console.log(`rank-sv-raids --7star : ${n7} raids 7★, ${wr.changed ? 'écrit' : 'inchangé'} ${wr.file}`);
+  } catch (e) {
+    console.warn('classements 7★ non mis à jour (' + (e && e.message) + '). Installez @smogon/calc dans build/ puis lancez : node build/rank-sv-raids.mjs --7star');
+  }
 }

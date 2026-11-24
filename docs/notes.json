@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.32",
+  "d": "2026-11-24",
+  "l": [
+   "Meilleurs attaquants contre les raids Téracristal 7★ (événements) et 6★ d’Écarlate / Violet, y compris le Masque Turquoise et le Disque Indigo. Un bloc « Meilleurs attaquants » figure dans la vue Raids et sur la fiche du boss (raids 7★ et 6★) : top 12, capacité, type Téra, lien vers la fiche.",
+   "Le type Téra du boss 6★ se choisit quand il est aléatoire. Les légendaires et fabuleux sont exclus par défaut, avec une option pour les afficher. Une ligne rappelle la méthode (niveau 100, IV 31, EV, talent offensif, Restes, Téra de l’attaque, score dégâts infligés / dégâts encaissés).",
+   "Calcul interne avec la formule officielle de dégâts (@smogon/calc, licence MIT). Les 5★ Écarlate / Violet, les 5★ Épée / Bouclier et l’Aventure Dynamax viendront dans une mise à jour suivante. Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.31",
   "d": "2026-11-24",
   "l": [

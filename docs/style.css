@@ -772,3 +772,13 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 
 #raid-view .rvctl{position:sticky;top:calc(var(--tap) + 8px);z-index:5;background:var(--bg);padding:4px 0 8px}
 #raid-view .rvctl .chips{padding-bottom:2px}
+
+/* v60.32 : meilleurs attaquants des raids Téracristal */
+.svrkbox{margin:10px 0 4px}
+.svrkbox h3{margin:12px 0 6px;font-size:16px}
+.svrkpick{display:flex;flex-direction:column;gap:4px;margin:8px 0}
+.svrkpick span{font-size:13px;opacity:.8}
+.svrkpick select{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);max-width:100%}
+.svrkleg{display:flex;align-items:center;gap:8px;margin:8px 0;font-size:14px}
+.svrklist .rki{flex:none;width:1.4em;text-align:right;font-variant-numeric:tabular-nums;opacity:.7;font-size:13px}
+.svrksec .svrkbox{padding:0 2px 8px}
