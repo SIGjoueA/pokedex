@@ -1824,12 +1824,12 @@ function fillPcBoxes() { document.querySelectorAll('.pcslot[data-pck]').forEach(
 const goCp = (d, L) => { const cpm = { 40: 0.7903, 50: 0.8403, 51: 0.8453 }[L]; return Math.max(10, Math.floor((d.a + 15) * Math.sqrt(d.d + 15) * Math.sqrt(d.s + 15) * cpm * cpm / 10)); };
 function pvpHTML(p, go) {
   const P = go.pvp; if (!P) return '';
-  const r = P.r[p.k] || (p.c === 'sex' ? P.r[String(p.id)] : null);
+  const ak = P.a && P.a[p.k], r = P.r[p.k] || (ak ? P.r[ak] : null) || (p.c === 'sex' ? P.r[String(p.id)] : null); // v60.25: a = forme d’apparence → rang de son espèce PvPoke
   const L = [['g', 'Ligue Super', '≤ 1 500 PC'], ['u', 'Ligue Hyper', '≤ 2 500 PC'], ['m', 'Ligue Master', 'sans limite']];
   const cell = (i, lab, cap, k) => { const v = r && r[i], vs = r && r[i + 3]; return `<div class="pvpc${v && v <= 100 ? ' top' : ''}"><b>${v ? '#' + v : '—'}</b><span>${lab}<small>${cap}</small></span>${vs ? `<small class="pvsh">Obscur : #${vs}</small>` : ''}</div>`; };
   return `<section class="box pvpbox"><h2>Combats GO (PvP) <small class="cnt">classement</small></h2>
     <div class="kv kv3 pvp">${L.map(([k, lab, cap], i) => cell(i, lab, cap, k)).join('')}</div>
-    <p class="note">${r ? `Rang dans le classement général <a href="https://pvpoke.com/rankings/" target="_blank" rel="noopener">PvPoke</a> de chaque ligue (sur ${P.n.g} / ${P.n.u} / ${P.n.m} Pokémon classés ; en vert : top 100). « — » : pas classé dans cette ligue.` : 'Pas classé par PvPoke (pas assez performant, pas encore sorti ou forme absente du classement).'} Mis à jour le ${frDate(P.date)}.</p></section>`;
+    <p class="note">${r ? `Rang dans le classement général <a href="https://pvpoke.com/rankings/" target="_blank" rel="noopener">PvPoke</a> de chaque ligue (sur ${P.n.g} / ${P.n.u} / ${P.n.m} Pokémon classés ; en vert : top 100). « — » : pas classé dans cette ligue.${ak && BY_KEY[ak] ? ` Mêmes statistiques et mêmes attaques que ${esc(BY_KEY[ak].n)} : PvPoke ne classe pas cette forme à part, le rang est commun.` : ''}` : 'Pas classé par PvPoke (pas assez performant, pas encore sorti ou forme absente du classement).'} Mis à jour le ${frDate(P.date)}.</p></section>`;
 }
 // v32: Ditto (Métamorph) — Pokémon it can be disguised as in GO (build/go-ditto.json, cited sources)
 function ditHTML(d) {
@@ -1868,7 +1868,7 @@ function goHTML(p, f, sp, shared, go) {
   const rows = (fn, ks, fast, el) => (ks || []).map(k => fn(k, fast, el)).join('');
   const both = fn => [rows(fn, d.fm, true, false) + rows(fn, d.fe, true, true), rows(fn, d.cm, false, false) + rows(fn, d.ce, false, true)];
   const [fm, cm] = both(moveRowGo), [fp, cp] = both(moveRowPvp);
-  const rs = go.pvm && go.pvm.ms && (go.pvm.ms[p.k] || (p.c === 'sex' ? go.pvm.ms[String(p.id)] : null));
+  const rs = go.pvm && go.pvm.ms && (go.pvm.ms[p.k] || (go.pvp && go.pvp.a && go.pvm.ms[go.pvp.a[p.k]]) || (p.c === 'sex' ? go.pvm.ms[String(p.id)] : null));
   const mvn = k => esc(go.moves[k]?.[0] || k);
   const rec = rs ? `<h3 class="mvh">Moveset recommandé</h3><ul class="plain gol pvrec">${[['g', 'Ligue Super'], ['u', 'Ligue Hyper'], ['m', 'Ligue Master']].filter(([l]) => rs[l]).map(([l, n]) => `<li><b>${n}</b> : ${mvn(rs[l][0])} + ${rs[l].slice(1).map(mvn).join(' / ')}</li>`).join('')}</ul>` : '';
   // v58: raid v2 (moveset le plus souvent n° 1, lignes par type, météo, capacités « + ») et Combats Max v1 — data/raid-moves.json v2

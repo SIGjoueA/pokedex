@@ -1,9 +1,10 @@
 // v32: PvP rankings (GO Battle League) from PvPoke (open source, https://github.com/pvpoke/pvpoke, MIT) → docs/data/pvp.json (lazy-loaded with GO sheets).
 // pvp.json = { src, date, n: {g, u, m} (ranked count per league), r: { entryKey: [gRank, uRank, mRank, gShadow, uShadow, mShadow] } } (0 = not ranked)
-// Mapping PvPoke speciesId → app entry: same National dex number + same GO base stats (atk/def/sta) as our GO data; ties → the base form first.
+// Mapping PvPoke speciesId → app entry: build/pvp-map.mjs (v60.25: name table + GO base stats check; before: stats only, forms folded onto the base).
+// v60.25: pvp.json also has a = { lookOnlyFormKey: keyOfItsPvPokeSpecies } (Zarbi, Prismillon, Météno noyaux…: same stats and moves, shown on their sheet).
 // Usage: node fetch-pvp.mjs [--rank-only]   (downloads ~5 MB, re-run to refresh)
 // v59: also writes docs/data/rank-pvp.json (« Classements » tab) = { src, date, L: { g|u|m|l|c: { t, cp, r: [[entryKey, shadow 0/1, score, fast, charged1, charged2?] …top 200] } } }; --rank-only = rank-pvp.json only
-import fs from 'node:fs'; import path from 'node:path';
+import fs from 'node:fs'; import path from 'node:path'; import { mapPvPoke, PVP_ABSENT } from './pvp-map.mjs';
 const HERE = path.dirname(new URL(import.meta.url).pathname), D = path.join(HERE, '../docs/data');
 const RAW = 'https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/';
 const get = async u => { const r = await fetch(u, { headers: { 'User-Agent': 'PokedexPWA/1.0 (personal PWA)' } }); if (!r.ok) throw new Error(u + ' ' + r.status); return r.json(); };
@@ -11,24 +12,15 @@ const gm = await get(RAW + 'gamemaster/pokemon.json');
 const L = { g: 1500, u: 2500, m: 10000 };
 const rk = {}; for (const [k, cp] of Object.entries(L)) rk[k] = await get(RAW + `rankings/all/overall/rankings-${cp}.json`);
 const core = JSON.parse(fs.readFileSync(path.join(D, 'core.json')));
-const byId = {}; for (const e of core.e) (byId[e.id] ||= []).push(e);
-const spCache = {}; const goOf = (id, k) => { spCache[id] ||= JSON.parse(fs.readFileSync(path.join(D, `sp/${id}.json`))); const f = spCache[id].f[k]; return f && f.go; };
-const keyOf = {}, miss = [];
-for (const p of gm) {
-  if (p.tags && (p.tags.includes('mega') || p.tags.includes('duplicate'))) continue;
-  const id = p.dex, sid = p.speciesId.replace(/_shadow$/, ''); if (keyOf[sid]) continue;
-  const cands = (byId[id] || []).filter(e => !['mega', 'primal', 'gmax'].includes(e.c));
-  const m = cands.filter(e => { const g = goOf(id, e.k); return g && g.a === p.baseStats.atk && g.d === p.baseStats.def && g.s === p.baseStats.hp; });
-  const pick = m.find(e => !e.c) || m.find(e => e.c === 'reg' && sid.includes('_')) || m[0];
-  if (pick) keyOf[sid] = pick.k; else miss.push(p.speciesId);
-}
+const spCache = {}; const goOf = k => { const id = k.split('-')[0]; if (!(id in spCache)) spCache[id] = fs.existsSync(path.join(D, `sp/${id}.json`)) ? JSON.parse(fs.readFileSync(path.join(D, `sp/${id}.json`))) : null; const f = spCache[id] && spCache[id].f[k]; return f && f.go; };
+const { keyOf, keyMega, alias, miss, absent, bad } = mapPvPoke(gm, core, goOf);
 const r = {}, n = {};
 for (const [lg, list] of Object.entries(rk)) {
   const col = { g: 0, u: 1, m: 2 }[lg]; n[lg] = list.length;
   list.forEach((x, i) => { const sh = /_shadow$/.test(x.speciesId), k = keyOf[x.speciesId.replace(/_shadow$/, '')]; if (!k) return; const a = r[k] ||= [0, 0, 0, 0, 0, 0]; const c = col + (sh ? 3 : 0); if (!a[c]) a[c] = i + 1; });
 }
 for (const k of Object.keys(r)) { while (r[k].length && !r[k][r[k].length - 1]) r[k].pop(); }
-const out = { src: 'PvPoke (pvpoke.com, classements « overall » toutes saisons, Ligue Super / Hyper / Master)', date: new Date().toISOString().slice(0, 10), n, r };
+const out = { src: 'PvPoke (pvpoke.com, classements « overall » toutes saisons, Ligue Super / Hyper / Master)', date: new Date().toISOString().slice(0, 10), n, r, a: alias };
 if (!process.argv.includes('--rank-only')) fs.writeFileSync(path.join(D, 'pvp.json'), JSON.stringify(out));
 // v59: ranking lists (top 200 per league / cup, with PvPoke score and moveset) + Little Cup + the current themed cup
 // v60.11: themed cup of the moment = ONE slot « c ». Update CUP when a new cup starts: t = title, pv = PvPoke rankings folder (GBL version when it exists),
@@ -37,7 +29,6 @@ const CUP = { t: 'Coupe GO CIAL 2026 (Ligue Super)', pv: 'laic2027gbl', c: '10 �
   r: 'Coupe GO CIAL 2026 (« 2026 GO LAIC Cup » en anglais) : 1 500 PC maximum ; types Feu, Ténèbres, Acier et Fée interdits ; Pokémon légendaires, fabuleux et Ultra-Chimères interdits ; Méga-Évolutions interdites en Ligue Combat GO. Espèces interdites : Leveinard, Ronflex, Fouinar, Qulbutoké, Corayon de Galar, Hyporoi, Charmina, Altaria, Téraclope, Moyade, Tarenbulle, Gouroutan, Courrousinge et Terraiste.' };
 const LISTS = { g: ['Ligue Super', 1500, 'all'], u: ['Ligue Hyper', 2500, 'all'], m: ['Ligue Master', 10000, 'all'], l: ['Coupe des Jeunes', 500, 'little'], c: [CUP.t, 1500, CUP.pv] };
 const GOM = JSON.parse(fs.readFileSync(path.join(D, 'go.json'))).moves; const mv = id => !id || id === 'none' ? null : GOM[id + '_FAST'] ? id + '_FAST' : id;
-const keyMega = {}; for (const p of gm) { if (!(p.tags || []).includes('mega')) continue; const c = (byId[p.dex] || []).filter(e => ['mega', 'primal'].includes(e.c)).filter(e => { const g = goOf(p.dex, e.k); return g && g.a === p.baseStats.atk && g.d === p.baseStats.def && g.s === p.baseStats.hp; }); if (c[0]) keyMega[p.speciesId.replace(/_shadow$/, '')] = c[0].k; }
 const RL = {}; let unk = 0;
 for (const [lg, [t, cp, cup]] of Object.entries(LISTS)) {
   const list = lg === 'g' || lg === 'u' || lg === 'm' ? rk[lg] : await get(RAW + `rankings/${cup}/overall/rankings-${cp}.json`); const r = [];
@@ -46,4 +37,6 @@ for (const [lg, [t, cp, cup]] of Object.entries(LISTS)) {
 }
 fs.writeFileSync(path.join(D, 'rank-pvp.json'), JSON.stringify({ src: 'PvPoke (pvpoke.com, classements « overall »)', date: new Date().toISOString().slice(0, 10), cup: { c: CUP.c, fin: CUP.fin, r: CUP.r, d: new Date().toISOString().slice(0, 10) }, L: RL }));
 console.log('rank-pvp.json:', Object.entries(RL).map(([k, v]) => `${k} ${v.r.length}/${v.n}`).join(', '), '— ignorés (forme inconnue) :', unk);
-console.log(`pvp.json: ${Object.keys(r).length} entrées classées (${n.g} / ${n.u} / ${n.m}), ${miss.length} espèces PvPoke non associées : ${miss.slice(0, 25).join(', ')}`);
+console.log(`pvp.json: ${Object.keys(r).length} entrées classées (${n.g} / ${n.u} / ${n.m}), ${Object.keys(alias).length} formes d’apparence liées à leur espèce`);
+console.log(`liens PvPoke : ${Object.keys(keyOf).length} + ${Object.keys(keyMega).length} Méga/Primo ; sans fiche GO : ${miss.join(', ') || '—'} ; stats différentes : ${bad.join(', ') || '—'}`);
+console.log('non reliés exprès :', absent.map(s => `${s} : ${PVP_ABSENT[s]}`).join(' ; '));

@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.25",
+  "d": "2026-11-24",
+  "l": [
+   "Combats GO (PvP) : les formes régionales et les formes spéciales ont maintenant leur propre rang PvPoke sur leur fiche et dans les Classements. Avant, elles partageaient les statistiques de leur forme de base et leur rang était affiché sur la fiche de base (par exemple, le rang de Limonde de Galar apparaissait sur Limonde).",
+   "Formes reliées à leur classement : formes d’Alola, de Galar, de Hisui et de Paldea (Limonde, Grotadmorv, Smogogo, Ossatueur, Farfuret, Tauros de Paldea…), Kyurem Noir, Necrozma Ailes de l’Aurore, Keldeo Forme Décidée, les quatre Genesect, Shifours Style Mille Poings, Motisma, Morphéo, Plumeline, Ceriflor Ensoleillé, Mistigrix femelle, Nigirigon… Mewtwo Armuré, Zacian / Zamazenta Couronnés et Zygarde Forme 10 % restent reliés.",
+   "Formes qui ne changent que d’apparence (Zarbi, Prismillon, Couafarel, Flabébé, Vivaldaim, noyaux de Météno…) : leur fiche affiche le rang et le moveset de leur espèce, avec une note, car PvPoke ne les classe pas à part.",
+   "Classements PvP à jour (PvPoke au 24/11/2026)."
+  ]
+ },
+ {
   "v": "v60.24",
   "d": "2026-11-24",
   "l": [

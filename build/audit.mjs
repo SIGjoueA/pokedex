@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { DOCS, HERE } from './lib.mjs';
+import { mapPvPoke, PVP_ABSENT, PVP_FORMS } from './pvp-map.mjs';
 const D = f => JSON.parse(fs.readFileSync(path.join(DOCS, 'data', f), 'utf8'));
 const core = D('core.json'), evo = D('evo.json'), ref = D('ref.json'), moves = D('moves.json'), go = D('go.json'), tm = D('tm.json'), loc = D('loc.json');
 const E = Object.fromEntries(core.e.map(e => [e.k, e])); const G = Object.fromEntries(core.games.map(g => [g.id, g]));
@@ -609,6 +610,36 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.24 app : bloc Raids Dynamax + crédit Poképédia + note des Badges', /function raidHTML/.test(src) && /Raids Dynamax/.test(src) && /Poképédia<\/a> \(CC BY-NC-SA 3\.0 FR\), pages des antres et des zones/.test(src) && src.includes('0 → 1★ ; 1–2 → 1–2★ ; 3 → 1–3★ ; 4–5 → 2–3★ ; 6–7 → 3–4★ ; 8 → 3–5★'));
   const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
   ok('v60.24 SW : VERSION ≥ v60.24, DATA_VERSION ≥ d66', /VERSION = 'v60\.(2[4-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 66);
+}
+// ---- v60.25: formes GO reliées à PvPoke (build/pvp-map.mjs, utilisé par fetch-pvp.mjs et fetch-pvp-moves.mjs)
+{ const SPC = {}, goOf = k => { const id = k.split('-')[0]; if (!(id in SPC)) SPC[id] = fs.existsSync(path.join(DOCS, 'data', `sp/${id}.json`)) ? sp(id) : null; const f = SPC[id] && SPC[id].f[k]; return f && f.go; };
+  const M = mapPvPoke(pvpk, core, goOf), all = { ...M.keyOf, ...M.keyMega }, pv = D('pvp.json'), pm = D('pvp-moves.json'), rp = D('rank-pvp.json'), keys = new Set(core.e.map(e => e.k));
+  const WANT = { mewtwo_armored: '150-armored', zacian_crowned_sword: '888-crowned', zamazenta_crowned_shield: '889-crowned', zacian_hero: '888', zamazenta_hero: '889',
+    zygarde_10: '718-10', zygarde_complete: '718-complete', necrozma_dusk_mane: '800-dusk', necrozma_dawn_wings: '800-dawn', kyurem_black: '646-black', kyurem_white: '646-white',
+    sliggoo_hisuian: '705-hisui', goodra_hisuian: '706-hisui', stunfisk_galarian: '618-galar', stunfisk: '618', marowak_alolan: '105-alola', muk_alolan: '89-alola',
+    weezing_galarian: '110-galar', rotom_wash: '479-wash', rotom_heat: '479-heat', genesect_shock: '649-shock', keldeo_resolute: '647-resolute', urshifu_rapid_strike: '892-rapid-strike',
+    tauros_aqua: '128-paldea-aqua-breed', tauros_blaze: '128-paldea-blaze-breed', castform_sunny: '351-sunny', meowstic_female: '678-female', cherrim_sunny: '421-sunshine',
+    giratina_origin: '487-origin', minior_core: '774-green', charizard_mega_x: '6-mega-x', kyogre_primal: '382-primal' };
+  eq('v60.25 PvPoke → formes de l’appli (liste vérifiée)', Object.fromEntries(Object.keys(WANT).map(s => [s, all[s] || null])), WANT);
+  const inv = {}; for (const [s, k] of Object.entries(all)) (inv[k] ||= []).push(s);
+  eq('v60.25 PvPoke : aucune fiche reliée à deux espèces PvPoke', Object.entries(inv).filter(([, v]) => v.length > 1), []);
+  eq('v60.25 PvPoke : pas de lien refusé (stats GO différentes)', M.bad, []);
+  eq('v60.25 PvPoke : chaque espèce PvPoke reliée ou non reliée exprès (PVP_ABSENT)', M.miss, []);
+  ok('v60.25 PvPoke : table PVP_FORMS / PVP_ABSENT sans id inconnu', [...Object.keys(PVP_FORMS), ...Object.keys(PVP_ABSENT)].every(s => pvpk.some(p => p.speciesId === s)) && Object.values(PVP_FORMS).every(k => keys.has(k)));
+  const linked = new Set([...Object.values(M.keyOf), ...Object.keys(M.alias)]);
+  eq('v60.25 chaque fiche GO (hors Méga / Primo / Gigamax) reliée à PvPoke ou forme d’apparence', core.e.filter(e => !['mega', 'primal', 'gmax'].includes(e.c) && goOf(e.k) && !linked.has(e.k)).map(e => e.k), []);
+  ok('v60.25 formes d’apparence : alias vers une fiche reliée, jamais aussi reliée en propre', Object.keys(M.alias).length >= 80 && Object.entries(M.alias).every(([a, b]) => Object.values(M.keyOf).includes(b) && !inv[a]));
+  ok('v60.25 pvp.json : clés r ⊂ fiches reliées, alias a = build', Object.keys(pv.r).every(k => keys.has(k) && Object.values(M.keyOf).includes(k)) && JSON.stringify(pv.a) === JSON.stringify(M.alias));
+  ok('v60.25 pvp.json : formes régionales classées à part de leur forme de base', ['618-galar', '89-alola', '110-galar', '646-black', '800-dawn', '647-resolute', '649-shock', '128-paldea-aqua-breed'].every(k => pv.r[k]) && JSON.stringify(pv.r['618']) !== JSON.stringify(pv.r['618-galar']));
+  ok('v60.25 pvp-moves.json : moveset des formes reliées (Limonde de Galar, Kyurem Noir, Genesect Choc)', ['618-galar', '646-black', '649-shock'].every(k => pm.ms[k]));
+  const dupL = Object.entries(rp.L).filter(([, l]) => new Set(l.r.map(r => r[0] + '|' + r[1])).size !== l.r.length).map(([k]) => k);
+  eq('v60.25 Classements PvP : pas de doublon fiche + Obscur dans une liste', dupL, []);
+  ok('v60.25 Classements PvP : clés = fiches reliées (ou Méga)', Object.values(rp.L).every(l => l.r.every(r => Object.values(all).includes(r[0]))));
+  const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v60.25 app : rang et moveset PvP des formes d’apparence (pvp.json a)', /const ak = P\.a && P\.a\[p\.k\], r = P\.r\[p\.k\] \|\| \(ak \? P\.r\[ak\] : null\)/.test(src) && /go\.pvm\.ms\[go\.pvp\.a\[p\.k\]\]/.test(src) && /PvPoke ne classe pas cette forme à part/.test(src));
+  ok('v60.25 fetch-pvp / fetch-pvp-moves : liens via pvp-map.mjs', ['fetch-pvp.mjs', 'fetch-pvp-moves.mjs'].every(f => /mapPvPoke\(gm, core, goOf\)/.test(fs.readFileSync(path.join(HERE, f), 'utf8'))));
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.25 SW : VERSION ≥ v60.25, DATA_VERSION ≥ d67', /VERSION = 'v60\.(2[5-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 67);
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

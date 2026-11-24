@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.24';
+const VERSION = 'v60.25';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Épée / Bouclier : raids Dynamax avec les vrais antres (zone, lettre, faisceau), Isolarmure, Couronneige et Expédition Dynamax (Poképédia).';
-const DATA_VERSION = 'd66'; // bump when the schema of data/*.json changes
+const NOTES = 'PvP : les formes régionales et spéciales ont leur propre rang PvPoke (fiches et Classements). Épée / Bouclier : raids Dynamax avec les vrais antres (zone, lettre, faisceau), Isolarmure, Couronneige et Expédition Dynamax (Poképédia).';
+const DATA_VERSION = 'd67'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
