@@ -1678,17 +1678,16 @@ function teraRaidHTML(k, f, sp, gm) {
   const hint = other.length ? `<p class="note raidalso">Aussi en raid : ${other.map(g => esc(TERA_G[g])).join(', ')} (choisissez ce jeu pour le détail).</p>` : '';
   const rows = here.flatMap(g => R[g].map(r => g === gm.id ? r : [`${r[0]} (${TERA_G[g]})`, r[1], r[2]]));
   if (!rows.length) return { html: hint ? `<div class="raidloc">${hint}</div>` : '', rows: 0 };
-  const SPECIAL = /^Antre Interdit/, gOf = z => { const m = z.match(/ \((Écarlate \/ Violet|Masque Turquoise|Disque Indigo)\)$/); return m ? gs.find(g => TERA_G[g] === m[1]) : gm.id; };
+  const gOf = z => { const m = z.match(/ \((Écarlate \/ Violet|Masque Turquoise|Disque Indigo)\)$/); return m ? gs.find(g => TERA_G[g] === m[1]) : gm.id; };
   const by = new Map(); for (const r of rows) { if (!by.has(r[0])) by.set(r[0], []); by.get(r[0]).push(r); }
-  const zs = [...by].sort((a, b) => (gs.indexOf(gOf(a[0])) - gs.indexOf(gOf(b[0]))) || (SPECIAL.test(a[0]) - SPECIAL.test(b[0])) || a[0].localeCompare(b[0], 'fr'));
-  const n = zs.length, has6 = rows.some(r => /6★/.test(r[1])), onlyAntre = rows.every(r => SPECIAL.test(r[0]));
+  const zs = [...by].sort((a, b) => (gs.indexOf(gOf(a[0])) - gs.indexOf(gOf(b[0]))) || a[0].localeCompare(b[0], 'fr'));
+  const n = zs.length, has6 = rows.some(r => /6★/.test(r[1]));
   const list = zs.map(([z, rs]) => `<div class="enc"><b>${esc(z)}</b>${rs.map(r => `<div class="ms">${esc(r[1])}</div>`).join('')}</div>`).join('');
   const six = has6 ? ' Les raids 6★ : un par jour, après le premier Grand Tournoi de l’Académie et 10 raids 4★ réussis.' : '';
-  const credit = 'Listes, type Téra et talent caché : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid. Les raids événementiels, y compris les 7★, seront traités à part.';
-  const notes = onlyAntre ? ['Rencontre unique du Masque Turquoise. ' + credit] : [here.includes('sv') ? 'Étoiles possibles selon l’avancement de votre histoire (Paldea) : début → 1–2★ ; 3 Badges → 1–3★ ; 6 Badges → 1–4★ ; après le générique → 3–5★ ; après le premier Grand Tournoi de l’Académie → 3–5★.' + six : six.trim(),
+  const notes = [here.includes('sv') ? 'Étoiles possibles selon l’avancement de votre histoire (Paldea) : début → 1–2★ ; 3 Badges → 1–3★ ; 6 Badges → 1–4★ ; après le générique → 3–5★ ; après le premier Grand Tournoi de l’Académie → 3–5★.' + six : six.trim(),
     'Niveau du boss : 1★ 12 · 2★ 20 · 3★ 35 · 4★ 45 · 5★ 75 · 6★ 90 (75 après capture).',
     'Sauf indication, le type Téra est aléatoire (couleur du cristal). « Téra par défaut » = un type naturel du Pokémon.',
-    credit].filter(Boolean);
+    'Listes, type Téra et talent caché : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid. Les raids événementiels, y compris les 7★, seront traités à part.'].filter(Boolean);
   return { html: `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>`, rows: rows.length };
 }
 function raidRows(k, f, sp, g) {

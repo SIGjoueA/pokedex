@@ -1,13 +1,13 @@
 // v60.27: raids Téracristal d’Écarlate / Violet (étape 2 du plan raids : Paldea, Masque Turquoise, Disque Indigo). Idempotent : node fix-v60-27.mjs   (V6027_REPORT=fichier.json → rapport détaillé)
 // Avant : « Où le trouver » listait seulement « Cristal de raid N étoiles (Paldea) · Raid Téracristal » (parfois « Exclusif Ec./Vi. »), sans bloc dédié, sans talent caché, et presque jamais le type Téra.
 // Sources (Poképédia, CC BY-NC-SA 3.0 FR ; texte brut en cache versionné build/cache/v60-27/, téléchargé une seule fois) :
-//   - Module:Localisations/Données/Pokémon Écarlate et Violet : entrées « Cristal de raid 1–6 étoiles (Paldea|Septentria|Terra-Dôme) » et « Antre Interdit » ;
+//   - Module:Localisations/Données/Pokémon Écarlate et Violet : entrées « Cristal de raid 1–6 étoiles (Paldea|Septentria|Terra-Dôme) » ;
 //   - pages « Cristal de raid N étoiles (région) » ({{#invoke:Tableau Pokémon|teracristal}}) : même liste, recoupée champ à champ ;
 //   - « Raid Téracristal » : rareté selon l’histoire (étoiles et niveaux du boss), type Téra « Aléatoire » si non précisé (module Tableau Pokémon) ;
-//   - « Antre Interdit » : lieu de Septentria (Masque Turquoise).
+//   - « Antre Interdit » : rencontre scénarisée d’Ogerpon à Septentria (Masque Turquoise), pas un raid Téracristal — laissée dans f.pl.
 // Recoupement Serebii / Bulbapedia pour vérification seulement (non utilisés comme source de données). Les IV garantis et les taux d’apparition par Pokémon ne figurent pas sur Poképédia : ils ne sont pas inventés.
 // Hors lot : cristaux événementiels (y compris 7★). Ils restent dans f.pl tels quels.
-// Résultat : docs/data/sp/<id>.json → f[<clé>].rd[sv|svmask|svdisk] = [[zone, texte, drapeaux]] ; les lignes « Cristal de raid 1–6 étoiles (…) » et « Antre Interdit » sont retirées de f.pl (les clés sw* de rd, écrites en v60.24, sont conservées).
+// Résultat : docs/data/sp/<id>.json → f[<clé>].rd[sv|svmask|svdisk] = [[zone, texte, drapeaux]] ; les lignes « Cristal de raid 1–6 étoiles (…) » sont retirées de f.pl (les clés sw* de rd, écrites en v60.24, sont conservées). L’Antre Interdit reste un lieu habituel de f.pl.
 import fs from 'node:fs'; import { execFileSync } from 'node:child_process';
 import { parseLua, clean } from './pokepedia.mjs';
 const D = new URL('../docs/data/', import.meta.url), C = new URL('./cache/v60-27/', import.meta.url);
@@ -169,13 +169,14 @@ let nLines = 0;
 for (const o of Object.values(BAG)) {
   push(o.k, o.g, [o.z, [starTxt(o.stars), ...o.bits].join(' · '), '']); nLines++;
 }
-// Antre Interdit (Ogerpon, Masque Turquoise) — pas un cristal 1–6★
+// Antre Interdit (Ogerpon, Masque Turquoise) : rencontre scénarisée, pas un raid Téracristal → f.pl, pas f.rd
+const ANTRE_PL = {}; // ANTRE_PL[k][game] = [[place, texte]]
 { const recs = MOD['Antre Interdit'] || {}; let n = 0;
   for (const [mon, rs] of Object.entries(recs)) {
     const [k, fl] = keyOf(mon); if (!k) { unkMon.add(mon); continue; }
     for (const r of [].concat(rs)) {
       const bits = [fl, r.milieu ? clean(String(r.milieu)) : '', r.niveau ? 'Niv. ' + clean(String(r.niveau)).replace(/-/g, '–') : '', /unique/i.test(String(r.taux || '')) ? 'une seule capture' : (r.taux && r.taux !== '-' ? clean(String(r.taux)) : '')].filter(Boolean);
-      push(k, 'svmask', ['Antre Interdit (Septentria)', bits.join(' · '), '']); n++; nLines++;
+      ((ANTRE_PL[k] ||= {}).svmask ||= []).push(['Antre Interdit (Septentria)', bits.join(' · ')]); n++;
     }
   }
   if (n !== 1) doubt.push('Antre Interdit : ' + n + ' ligne(s) (attendu : Ogerpon seulement)');
@@ -198,7 +199,7 @@ rep.noGame = noGame;
 // ---------- 4. écriture des fiches ----------
 const RAIDPL = /^Cristal de raid [1-6] étoiles? \((?:Paldea|Septentria|Terra-Dôme)\)$/;
 const ANTRE = /^Antre Interdit( \(Septentria\))?$/;
-let removed = 0, files = 0; const games = ['sv', 'svmask', 'svdisk'];
+let removed = 0, files = 0, antreFix = 0; const games = ['sv', 'svmask', 'svdisk'];
 const ids = [...new Set(core.e.map(e => e.id))];
 for (const id of ids) {
   const f = new URL(`sp/${id}.json`, D); if (!fs.existsSync(f)) continue; const sp = JSON.parse(fs.readFileSync(f)), before = JSON.stringify(sp);
@@ -206,7 +207,7 @@ for (const id of ids) {
     if (v.rd) { for (const g of games) delete v.rd[g]; if (!Object.keys(v.rd).length) delete v.rd; }
     if (v.pl) {
       for (const g of games) { const L = v.pl[g]; if (!L) continue;
-        const keep = L.filter(([pl]) => { if (RAIDPL.test(pl) || ANTRE.test(pl)) { removed++; return false; } return true; });
+        const keep = L.filter(([pl]) => { if (RAIDPL.test(pl)) { removed++; return false; } return true; });
         if (keep.length) v.pl[g] = keep; else delete v.pl[g];
       }
       if (!Object.keys(v.pl).length) delete v.pl;
@@ -215,6 +216,18 @@ for (const id of ids) {
       const o = { ...(v.rd || {}) };
       for (const g of games) if (RD[k][g]) o[g] = RD[k][g].sort((a, b) => a[0].localeCompare(b[0], 'fr') || a[1].localeCompare(b[1], 'fr', { numeric: true }));
       v.rd = o;
+    }
+    // rencontre scénarisée : (re)placer l’Antre Interdit dans pl, jamais dans rd
+    if (ANTRE_PL[k]) {
+      for (const [g, rows] of Object.entries(ANTRE_PL[k])) {
+        const L = (v.pl ||= {})[g] ||= [];
+        const keep = L.filter(([pl]) => !ANTRE.test(pl));
+        const next = keep.concat(rows);
+        if (JSON.stringify(L) !== JSON.stringify(next)) { v.pl[g] = next; antreFix++; }
+      }
+    } else if (v.pl) {
+      for (const g of games) if (v.pl[g]) { const n = v.pl[g].filter(([pl]) => !ANTRE.test(pl)); if (n.length !== v.pl[g].length) { doubt.push(`Antre Interdit inattendu sur ${k} / ${g}`); v.pl[g] = n; if (!v.pl[g].length) delete v.pl[g]; } }
+      if (!Object.keys(v.pl).length) delete v.pl;
     }
   }
   const after = JSON.stringify(sp); if (after !== before) { fs.writeFileSync(f, after); files++; }
@@ -227,7 +240,7 @@ rep.cov = cov; rep.removedPl = removed; rep.files = files; rep.doubt = doubt; re
 const ex = k => Object.fromEntries(Object.entries(RD[k] || {}).map(([g, L]) => [g, L.map(r => r[0] + ' | ' + r[1])]));
 rep.examples = { '25': ex('25'), '324': ex('324'), '226': ex('226'), '286': ex('286'), '1017': ex('1017'), '89-alola': ex('89-alola'), '128-paldea-blaze-breed': ex('128-paldea-blaze-breed'), '3': ex('3'), '6': ex('6'), '313': ex('313') };
 console.log(`v60.27 tables : ${Object.values(rep.pools).reduce((a, n) => a + n, 0)} entrées sur 18 cristaux (${ZONES.map(z => z + ' ' + STARS.map(s => Object.keys(POOLS[placeOf(z, s)]).length).join('/')).join(', ')}) ; pages = module${pageDiff.length ? ' SAUF ' + pageDiff.length + ' écart(s)' : ''}`);
-console.log(`v60.27 raids : ${Object.entries(cov).map(([g, c]) => `${g} ${c.keys} fiches / ${c.lines} lignes`).join(', ')} ; Antre Interdit ${rep.antreInterdit} ; lignes « Cristal / Antre Interdit » retirées de pl : ${removed} ; fichiers modifiés : ${files}`);
+console.log(`v60.27 raids : ${Object.entries(cov).map(([g, c]) => `${g} ${c.keys} fiches / ${c.lines} lignes`).join(', ')} ; Antre Interdit (lieu, pas raid) ${rep.antreInterdit} ; lignes « Cristal » retirées de pl : ${removed} ; Antre Interdit remis dans pl : ${antreFix} ; fichiers modifiés : ${files}`);
 console.log(`v60.27 noms inconnus : ${rep.unknownNames.join(', ') || '—'} ; sans jeu ÉV sélectionnable : ${noGame.length}${noGame.length ? ' — ' + noGame.join(', ') : ''}`);
 console.log(`v60.27 doutes : ${doubt.length}${doubt.length ? '\n  - ' + doubt.join('\n  - ') : ''}`);
 if (process.env.V6027_REPORT) fs.writeFileSync(process.env.V6027_REPORT, JSON.stringify(rep, null, 1));

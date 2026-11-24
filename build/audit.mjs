@@ -695,15 +695,15 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
     if (/talent caché/.test(r.t)) { const f = F((E[r.k] || {}).id || r.k.split('-')[0], r.k); const a = (f && f.a) || []; if (!a.some(x => x[1])) haBad.push(r.k); }
   }
   eq('v60.27 plus de « Cristal de raid N étoiles » dans « Où le trouver » (pl)', starPl, []);
-  eq('v60.27 Antre Interdit retiré de pl (déplacé vers rd)', antrePl, []);
+  eq('v60.27 Antre Interdit dans les lieux habituels (Ogerpon seulement, pas un raid)', antrePl, ['1017']);
   eq('v60.27 cristaux événementiels conservés dans pl (hors lot)', evPl.sort(), ['1009 Cristal de raid événementiel 13', '1009 Cristal de raid événementiel 46', '1010 Cristal de raid événementiel 13', '1010 Cristal de raid événementiel 46', '248 Cristal de raid événementiel 73', '914 Cristal de raid événementiel 72'].sort());
   eq('v60.27 lignes de raid propres (balises, pas d’abréviation Ec./Vi.)', wiki, []);
   eq('v60.27 pas de 7★ ni d’événement dans rd', star7, []);
   eq('v60.27 talent caché seulement pour les Pokémon qui en ont un', [...new Set(haBad)], []);
   eq('v60.27 chaque zone dans un seul jeu', Object.entries(zoneGame).filter(([, s]) => s.size > 1).map(([z]) => z), []);
   const keys = g => new Set(all.filter(r => r.g === g).map(r => r.k)).size, lines = g => all.filter(r => r.g === g).length;
-  eq('v60.27 fiches / lignes : Paldea, Septentria, Terra-Dôme', [keys('sv'), lines('sv'), keys('svmask'), lines('svmask'), keys('svdisk'), lines('svdisk')], [369, 419, 96, 122, 95, 111]);
-  eq('v60.27 zones rangées par jeu (Paldea / Septentria / Terra-Dôme)', [ [...(zoneGame['Paldea'] || [])], [...(zoneGame['Septentria'] || [])], [...(zoneGame['Terra-Dôme'] || [])], [...(zoneGame['Antre Interdit (Septentria)'] || [])] ], [['sv'], ['svmask'], ['svdisk'], ['svmask']]);
+  eq('v60.27 fiches / lignes : Paldea, Septentria, Terra-Dôme', [keys('sv'), lines('sv'), keys('svmask'), lines('svmask'), keys('svdisk'), lines('svdisk')], [369, 419, 95, 121, 95, 111]);
+  eq('v60.27 zones rangées par jeu (Paldea / Septentria / Terra-Dôme)', [ [...(zoneGame['Paldea'] || [])], [...(zoneGame['Septentria'] || [])], [...(zoneGame['Terra-Dôme'] || [])], [...(zoneGame['Antre Interdit (Septentria)'] || [])] ], [['sv'], ['svmask'], ['svdisk'], []]);
   const R = (k, g) => { const e = E[k], f = e && F(e.id, k); return ((f && f.rd && f.rd[g]) || []).map(r => r[0] + ' | ' + r[1]); };
   ok('v60.27 Pikachu : Paldea 2–3★', R('25', 'sv').includes('Paldea | 2–3★'), R('25', 'sv').join(' ; '));
   ok('v60.27 Chartor : talent caché garanti en 6★', R('324', 'sv').includes('Paldea | 4★') && R('324', 'sv').includes('Paldea | 6★ · talent caché garanti'), R('324', 'sv').join(' ; '));
@@ -714,7 +714,9 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.27 Tauros de Paldea Combative : 4★ et 6★ (talent caché possible)', R('128-paldea-combat-breed', 'sv').includes('Paldea | 4★') && R('128-paldea-combat-breed', 'sv').includes('Paldea | 6★ · talent caché possible'));
   ok('v60.27 Grotadmorv d’Alola : Terra-Dôme 6★ (Disque Indigo), pas la forme de Kanto', R('89-alola', 'svdisk').includes('Terra-Dôme | 6★ · talent caché possible') && !R('89', 'svdisk').length);
   ok('v60.27 Muciole : Septentria 2★ et 4★, Écarlate uniquement', R('313', 'svmask').includes('Septentria | 2★ et 4★ · Écarlate uniquement'));
-  ok('v60.27 Ogerpon : Antre Interdit (Septentria), une seule capture', R('1017', 'svmask').includes('Antre Interdit (Septentria) | Rencontre · Niv. 20, 70 · une seule capture'));
+  { const pl = ((F(1017, '1017').pl || {}).svmask || []).map(r => r[0] + ' | ' + r[1]);
+    ok('v60.27 Ogerpon : Antre Interdit en lieu habituel, pas dans les raids', pl.includes('Antre Interdit (Septentria) | Rencontre · Niv. 20, 70 · une seule capture') && !R('1017', 'svmask').length && !R('1017', 'sv').length && !R('1017', 'svdisk').length, JSON.stringify({ pl, rd: R('1017', 'svmask') }));
+    ok('v60.27 Ogerpon : pas de « Raid Téracristal » sur l’Antre Interdit', pl.every(t => !/Raid Téracristal/.test(t))); }
   ok('v60.27 Lougaroc Crépusculaire : 6★ sans talent caché (la fiche n’en a pas, malgré Poképédia « Possible »)', R('745-dusk', 'sv').includes('Paldea | 6★') && R('745-dusk', 'sv').every(t => !/talent caché/.test(t)));
   ok('v60.27 Florizarre / Dracaufeu : pas de raid Téracristal 1★–6★', !R('3', 'sv').length && !R('3', 'svdisk').length && !R('6', 'sv').length && !R('6', 'svdisk').length);
   { const { parseLua } = await import('./pokepedia.mjs'), C = path.join(HERE, 'cache/v60-27'), fname = t => t.replace(/[ /:]/g, '_') + '.wiki';
