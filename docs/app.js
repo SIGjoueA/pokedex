@@ -34,7 +34,7 @@ let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, 
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
 const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get('shiny_g', []));
-const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all' };
+const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all', rstars: [] };
 let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // v35: full name of a form; default forms of real alternate-form species carry their official form name (core fn: « Nigirigon Forme Courbée »)
@@ -664,6 +664,7 @@ async function boot() {
   window.addEventListener('hashchange', route);
   route();
   registerSW();
+  loadRaids().then(() => { if (state.cat === 'raid') render(); if (/^#\/raids/.test(location.hash)) renderRaids(); }).catch(() => { updateCatOptions(); syncMenus(); if (state.cat === 'raid') render(); if (/^#\/raids/.test(location.hash)) renderRaids(); });
 }
 
 /* ---------------- list ---------------- */
@@ -678,11 +679,17 @@ function buildControls() {
   $('#game').addEventListener('change', async e => { await setGame(e.target.value); });
   initGameMenu(); initCatMenu(); initGenMenu(); initSortMenu();
   $('#gen').addEventListener('change', e => { state.gen = e.target.value; render(); });
-  $('#cat').addEventListener('change', e => { state.cat = e.target.value; render(); });
+  $('#cat').addEventListener('change', e => { state.cat = e.target.value; if (state.cat !== 'raid') state.rstars = []; if (state.cat === 'raid') loadRaids().then(() => render()).catch(() => render()); else render(); });
   $('#sort').addEventListener('change', e => { state.sort = e.target.value; render(); });
   $('#typechips').addEventListener('click', e => {
     const b = e.target.closest('.chip'); if (!b) return;
     toggleType(b.dataset.t);
+  });
+  $('#raidchips').addEventListener('click', e => {
+    const b = e.target.closest('[data-rs]'); if (!b) return;
+    const s = b.dataset.rs, i = state.rstars.indexOf(s);
+    if (i >= 0) state.rstars.splice(i, 1); else state.rstars.push(s);
+    render();
   });
   $('#viewbtn').addEventListener('click', () => { state.view = state.view === 'grid' ? 'list' : 'grid'; store.set('view', state.view); render(); });
   $('#formsbtn').addEventListener('click', () => { state.forms = !state.forms; store.set('forms', state.forms); $('#formsbtn').setAttribute('aria-pressed', state.forms); render(); });
@@ -715,7 +722,7 @@ function toggleType(t) {
   render();
 }
 function resetFilters() {
-  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '' });
+  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', rstars: [] });
   $('#q').value = ''; $('#gen').value = ''; $('#cat').value = ''; $('#sort').value = 'id'; $('#game').value = '';
   render();
 }
@@ -774,7 +781,7 @@ function filtered() {
   const reg = gm ? listReps(gm.id, dex) : null, R = gm && REGION_OF_GAME[gm.id];
   let out = E.filter(p => {
     if (dex && dex.mega) { if (!dex.keys.has(p.k)) return false; } // Méga-Dex: base forms + Megas, whatever the forms toggle
-    else if (!(FORM_CATS[state.cat] && formCat(p)) && !regShow(p, reg)) return false;
+    else if (!(FORM_CATS[state.cat] && formCat(p)) && !(state.cat === 'raid' && raidCat(p)) && !regShow(p, reg)) return false;
     if (dex && dex.mega) {
     } else if (dex) {
       if (!dex.order.has(p.id)) return false;
@@ -787,6 +794,7 @@ function filtered() {
     if (state.gen && p.g !== +state.gen) return false;
     for (const t of state.types) if (!p.t.includes(t)) return false;
     const key = ik(p);
+    if (state.cat === 'raid' && !raidCat(p)) return false;
     if (state.cat === 'trade' && !(tradeOf(p, trackCtx()) && !tradeOf(p, trackCtx()).opt)) return false;
     if (state.cat === 'leg' && !p.lg) return false;
     if (state.cat === 'myth' && !p.my) return false;
@@ -921,6 +929,7 @@ function updateCatOptions() {
   const gm = GAME_BY[state.game], gi = gm ? GIDX[gm.id] : -1, dex = gm ? listDex() : null;
   // v40: Ultra-Chimères too (none before Soleil / Lune)
   { const o = $('#cat option[value=trade]'), has = !!(c && c !== 'home' && tradeIdx(c).t.size); if (o) o.disabled = !has; if (!has && state.cat === 'trade') { state.cat = ''; $('#cat').value = ''; } }
+  { const o = $('#cat option[value=raid]'), off = !!(state.game && !RAID_GAME.has(state.game)) || RAIDS === false; if (o) o.disabled = off; if (off && state.cat === 'raid') { state.cat = ''; state.rstars = []; $('#cat').value = ''; } }
   for (const v of [...Object.keys(FORM_CATS), 'ub']) {
     const o = $(`#cat option[value=${v}]`); if (!o) continue;
     const isV = v === 'ub' ? isUB : p => formCat(p, v);
@@ -935,7 +944,7 @@ function render() {
   const box = $('#results');
   box.className = state.view === 'grid' ? 'grid' : 'grid list';
   { const vb = $('#viewbtn'), g = state.view === 'grid'; if (vb.dataset.v !== state.view) { vb.innerHTML = g ? VIEW_LIST_IC : VIEW_GRID_IC; vb.dataset.v = state.view; vb.title = g ? 'Afficher en liste' : 'Afficher en grille'; vb.setAttribute('aria-label', vb.title); } }
-  box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${GAME_BY[state.game] && !DEX[state.game] ? 'Chargement…' : 'Aucun Pokémon trouvé.'}</p>`;
+  box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${(GAME_BY[state.game] && !DEX[state.game]) || (state.cat === 'raid' && !RAID_F && RAIDS !== false) ? 'Chargement…' : 'Aucun Pokémon trouvé.'}</p>`;
   const gm = GAME_BY[state.game];
   const ctx = trackCtx(); let prog;
   if (ctx) { // progress of the selected game: marks among the entries that belong to it
@@ -961,8 +970,9 @@ function render() {
   $('#count').textContent = `${head}${vdx ? ' · ' + vdx.s : gm ? ' · ' + gm.s : state.game === 'go' ? ' · GO' : ''} · ${prog}`;
   // v45: the legend lives in the ☰ menu (HOME legend in the HOME view, the base legend elsewhere)
   const lg = $('#legend'), lgW = ctx === 'home' ? 'home' : 'base'; if (lg.dataset.w !== lgW) { lg.dataset.w = lgW; lg.innerHTML = lgW === 'home' ? HOME_LEGEND : BASE_LEGEND; }
-  document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
-  const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game;
+  document.querySelectorAll('#typechips .chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
+  updateRaidChips();
+  const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game || state.rstars.length;
   $('#reset').hidden = !active;
   requestAnimationFrame(updJump);
 }
@@ -1007,9 +1017,86 @@ async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).
 
 /* ---------------- detail ---------------- */
 let detailTok = 0, DET = null, showShinyArt = false, showFemArt = false; // v44c: showFemArt = female image of a single-entry species (hero « ♀ » button)
+
+function renderRaids() {
+  const el = $('#raid-view'); if (!el) return;
+  const hm = location.hash.match(/^#\/raids(?:\/([a-z]+))?/);
+  let g = (hm && RAID_GAME.has(hm[1]) && hm[1]) || RV.g || raidGameOfList() || 'sw';
+  RV.g = g;
+  const head = `<div class="dtop"><div class="dnav"><a href="#/" aria-label="Retour à la liste">←</a><h1 class="rkh">Raids</h1><span class="sp"></span></div></div>`;
+  if (RAIDS === false) { el.innerHTML = head + '<div class="rkwrap"><p class="note">Données de raids indisponibles hors-ligne. Téléchargez le pack de formes et de fiches, ou ouvrez cet écran une fois avec une connexion Internet.</p></div>'; document.title = 'Raids – Pokédex'; return; }
+  if (!RAIDS) { el.innerHTML = head + '<div class="rkwrap"><p class="note">Chargement des raids…</p></div>'; document.title = 'Raids – Pokédex'; loadRaids().then(() => { if (/^#\/raids/.test(location.hash)) renderRaids(); }).catch(() => renderRaids()); return; }
+  const stars = raidStarsFor(g);
+  if (RV.s && !stars.includes(RV.s)) RV.s = '';
+  const kind = (g === 'sv' || g === 'svmask' || g === 'svdisk') ? 'Téracristal' : 'Dynamax';
+  const gi = RAIDS.g.indexOf(g), bitF = RV.s ? raidBit(RV.s) : 0;
+  const tabs = RAIDS.g.map(id => `<button type="button" class="chip rchip" data-rg="${id}" aria-pressed="${id === g}" aria-label="${esc(RAID_LONG[id])}">${esc(RAID_SHORT[id])}</button>`).join('');
+  const st = ['', ...stars].map(s => `<button type="button" class="chip rchip" data-rvs="${s}" aria-pressed="${RV.s === s}">${s === '' ? 'Toutes' : s === 'exp' ? 'Expédition' : s + '★'}</button>`).join('');
+  const starOrder = RV.s ? [RV.s] : stars;
+  const sections = [];
+  for (const s of starOrder) {
+    const bit = raidBit(s), locMap = new Map();
+    for (const row of RAIDS.r) {
+      if (row[1] !== gi || !(row[5] & bit)) continue;
+      const [k, , zi, den, beam, , fl, xi] = row, z = RAIDS.z[zi];
+      const title = den ? `${z} · ${den.includes(',') ? 'Antres' : 'Antre'} ${den} (faisceau ${beam === 'r' ? 'rouge' : 'mauve'})` : z;
+      if (!locMap.has(title)) locMap.set(title, { title, evt: /événementiel/i.test(z), items: new Map() });
+      const loc = locMap.get(title); if (/e/.test(fl)) loc.evt = true;
+      const extra = RAIDS.x[xi] || '', prev = loc.items.get(k);
+      if (!prev) loc.items.set(k, { fl, extra });
+      else loc.items.set(k, { fl: prev.fl.includes('g') || /g/.test(fl) ? (prev.fl.includes('e') || /e/.test(fl) ? 'ge' : 'g') : (/e/.test(fl) || prev.fl.includes('e') ? 'e' : prev.fl), extra: raidMergeExtra(prev.extra, extra) });
+    }
+    const locs = [...locMap.values()].sort((a, b) => (a.evt - b.evt) || a.title.localeCompare(b.title, 'fr'));
+    const uniq = new Set(); for (const l of locs) for (const k of l.items.keys()) uniq.add(k);
+    sections.push({ s, locs, n: uniq.size, nLoc: locs.reduce((n, l) => n + l.items.size, 0) });
+  }
+  const rowHTML = (k, info) => {
+    const p = BY_KEY[k], tags = [];
+    if (/g/.test(info.fl)) tags.push('Gigamax');
+    if (info.extra) tags.push(info.extra);
+    return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-raid="${esc(g)}">${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b>${p ? `<span class="rkty">${p.t.map(badge).join('')}</span>` : ''}${tags.length ? `<small>${esc(tags.join(' · '))}</small>` : ''}</span></a></li>`;
+  };
+  let body = `<div class="rkwrap rvwrap"><div class="rvctl"><p class="note rvlbl">Raids ${esc(kind)} — ${esc(RAID_LONG[g])}</p><div class="chips rvgames" role="tablist" aria-label="Jeu">${tabs}</div><div class="chips rvstars" role="group" aria-label="Étoiles">${st}</div></div>`;
+  const shown = sections.filter(sec => sec.n);
+  if (!shown.length) body += '<p class="empty">Aucun raid ne correspond à ce filtre.</p>';
+  for (const sec of shown) {
+    const label = sec.s === 'exp' ? 'Expédition Dynamax' : sec.s + '★';
+    const open = RV.s || shown.length <= 2 ? ' open' : (sec.s === '5' || sec.s === '6' ? ' open' : '');
+    body += `<details class="rvsec"${open}><summary>${esc(label)} <span class="mute">${sec.n} Pokémon</span></summary>`;
+    for (const loc of sec.locs) {
+      const locOpen = loc.items.size <= 6 && (RV.s || shown.length <= 1) ? ' open' : '';
+      const items = [...loc.items.entries()].sort((a, b) => ((BY_KEY[a[0]] || {}).id || 0) - ((BY_KEY[b[0]] || {}).id || 0) || a[0].localeCompare(b[0], 'en', { numeric: true }));
+      body += `<details class="rvloc${loc.evt ? ' evt' : ''}"${locOpen}><summary>${esc(loc.title)} <span class="mute">${loc.items.size}</span></summary><ul class="rklist">${items.map(([k, info]) => rowHTML(k, info)).join('')}</ul></details>`;
+    }
+    body += '</details>';
+  }
+  const notes = [];
+  if (g === 'sw') notes.push('Étoiles possibles selon vos Badges (Terres Sauvages) : 0 → 1★ ; 1–2 → 1–2★ ; 3 → 1–3★ ; 4–5 → 2–3★ ; 6–7 → 3–4★ ; 8 → 3–5★. Faisceau rouge = raid commun, mauve = raid rare.');
+  if (g === 'sv') notes.push('Étoiles possibles selon l’avancement de votre histoire (Paldea) : début → 1–2★ ; 3 Badges → 1–3★ ; 6 Badges → 1–4★ ; après le générique → 3–5★ ; après le premier Grand Tournoi de l’Académie → 3–5★. Les raids 6★ : un par jour, après ce tournoi et 10 raids 4★ réussis.');
+  if (g === 'sv' || g === 'svmask' || g === 'svdisk') notes.push('Sauf indication, le type Téra est aléatoire. « Téra par défaut » = un type naturel du Pokémon.');
+  if (g === 'swcrown') notes.push('L’Expédition Dynamax se lance depuis le Grand Antre Dynamax des Terres Enneigées de la Couronne.');
+  notes.push('Les taux, les IV garantis et le détail de chaque antre figurent sur la fiche du Pokémon. Raids événementiels (en grisé) : depuis le 1er novembre 2022, ils pouvaient remplacer n’importe quel antre. Les raids 7★ d’événement seront traités à part.');
+  notes.push((g === 'sv' || g === 'svmask' || g === 'svdisk')
+    ? 'Listes : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid.'
+    : 'Antres, lettres et taux : <a href="https://www.pokepedia.fr/Antre_de_Pok%C3%A9mon" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des antres et des zones.');
+  body += `<p class="note">${notes.join(' ')}</p></div>`;
+  el.innerHTML = head + body;
+  document.title = 'Raids ' + RAID_LONG[g] + ' – Pokédex';
+}
+document.addEventListener('click', e => {
+  const gb = e.target.closest('#raid-view [data-rg]');
+  if (gb) { const id = gb.dataset.rg; RV.g = id; RV.s = ''; const h = '#/raids/' + id; if (location.hash !== h) location.hash = h; else renderRaids(); return; }
+  const sb = e.target.closest('#raid-view [data-rvs]');
+  if (sb) { RV.s = sb.dataset.rvs; renderRaids(); return; }
+  const a = e.target.closest('#raid-view a[data-raid]');
+  if (a) { sheetPref = a.dataset.raid; fromRaids = true; fromRank = false; raidScroll = window.scrollY; raidBack = location.hash; }
+});
+
 function route() {
   const m = location.hash.match(/^#\/p\/(\d+(?:-[a-z0-9-]+)?)/);
-  const lv = $('#list-view'), dv = $('#detail-view'), rv = $('#rank-view');
+  const lv = $('#list-view'), dv = $('#detail-view'), rv = $('#rank-view'), rav = $('#raid-view');
+  if (/^#\/raids/.test(location.hash)) { if (!lv.hidden) listScroll = window.scrollY; detailTok++; lv.hidden = true; dv.hidden = true; if (rv) rv.hidden = true; if (rav) rav.hidden = false; const back = fromRaids, y = raidScroll; fromRaids = false; window.scrollTo(0, 0); renderRaids(); if (back) window.scrollTo(0, y); return; }
+  if (rav) rav.hidden = true;
   if (/^#\/classements/.test(location.hash)) { if (!lv.hidden) listScroll = window.scrollY; detailTok++; lv.hidden = true; dv.hidden = true; rv.hidden = false; document.title = 'Classements – Pokédex'; const back = fromRank, y = rankScroll; fromRank = false; window.scrollTo(0, 0); renderRank().then(() => { if (back) window.scrollTo(0, y); }); return; }
   if (rv) rv.hidden = true;
   const rp = m && (BY_KEY[m[1]] || FEM_OF[m[1]]); // v44c: an old female link (#/p/3-female) opens the species sheet, female image
@@ -1020,7 +1107,7 @@ function route() {
     openDetail(rp);
     window.scrollTo(0, 0);
   } else {
-    detailTok++; sheetPref = null; fromRank = false;
+    detailTok++; sheetPref = null; fromRank = false; fromRaids = false;
     dv.hidden = true; lv.hidden = false;
     document.title = 'Pokédex';
     window.scrollTo(0, listScroll);
@@ -1249,7 +1336,7 @@ function navHTML(p, extra = '') {
     const seen = new Set(), list = filtered().filter(x => !seen.has(x.id) && seen.add(x.id)); const i = list.findIndex(x => x.id === p.id); // one entry per species (regional form in its region’s dex)
     if (i > 0) prev = `#/p/${list[i - 1].k}`; if (i >= 0 && i < list.length - 1) next = `#/p/${list[i + 1].k}`;
   } else { prev = p.id > 1 ? `#/p/${p.id - 1}` : ''; next = p.id < 1025 ? `#/p/${p.id + 1}` : ''; }
-  return `<div class="dtop"><div class="dnav">${fromRank ? '<a href="#/classements" aria-label="Retour aux classements">←</a>' : '<a href="#/" aria-label="Retour à la liste">←</a>'}<a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="cadd2" type="button" data-add="${p.k}" aria-label="Ajouter à ma collection" title="Ajouter à ma collection">＋</button><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
+  return `<div class="dtop"><div class="dnav">${fromRank ? '<a href="#/classements" aria-label="Retour aux classements">←</a>' : fromRaids ? `<a href="${esc(raidBack || '#/raids')}" aria-label="Retour aux raids">←</a>` : '<a href="#/" aria-label="Retour à la liste">←</a>'}<a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="cadd2" type="button" data-add="${p.k}" aria-label="Ajouter à ma collection" title="Ajouter à ma collection">＋</button><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
 function effGroups(types, mode, chart, mm = null) {
@@ -1672,6 +1759,51 @@ function stoneLocHTML(k, gm) {
 const RAID_G = { sw: 'Épée / Bouclier', swisle: 'Isolarmure', swcrown: 'Couronneige' };
 // v60.27: raids Téracristal d’Écarlate / Violet (f.rd[sv|svmask|svdisk], build/fix-v60-27.mjs ; Poképédia)
 const TERA_G = { sv: 'Écarlate / Violet', svmask: 'Masque Turquoise', svdisk: 'Disque Indigo' };
+// v60.30: index compact (data/raids.json) pour le filtre « Dispo en raid » et la vue #/raids
+const RAID_GAME = new Set(['sw', 'swisle', 'swcrown', 'sv', 'svmask', 'svdisk']);
+const RAID_SHORT = { sw: 'ÉB', swisle: 'Isolarmure', swcrown: 'Couronneige', sv: 'ÉV', svmask: 'Turquoise', svdisk: 'Indigo' };
+const RAID_LONG = { ...RAID_G, ...TERA_G };
+const STAR_EXP = 1 << 6, STAR_RARE = 1 << 7;
+const raidBit = s => s === 'exp' ? (STAR_EXP | STAR_RARE) : (/^[1-6]$/.test(s) ? 1 << (+s - 1) : 0);
+let RAIDS = null, RAIDS_P = null, RAID_F = null;
+let fromRaids = false, raidScroll = 0, raidBack = '#/raids';
+const RV = { g: '', s: '' };
+function buildRaidF(d) {
+  const f = {};
+  for (const row of d.r) { const g = d.g[row[1]]; (f[row[0]] ||= {}); f[row[0]][g] = (f[row[0]][g] || 0) | row[5]; }
+  RAID_F = f;
+}
+async function loadRaids() {
+  if (RAIDS_P) return RAIDS_P;
+  RAIDS_P = getJSON('data/raids.json').then(d => { RAIDS = d; buildRaidF(d); return d; }).catch(e => { RAIDS_P = null; RAIDS = false; throw e; });
+  return RAIDS_P;
+}
+function raidGameOfList() { return RAID_GAME.has(state.game) ? state.game : ''; }
+function raidCat(p) {
+  if (!RAID_F) return false;
+  const rec = RAID_F[p.k]; if (!rec) return false;
+  const g = raidGameOfList(), mask = g ? (rec[g] || 0) : Object.values(rec).reduce((a, b) => a | b, 0);
+  if (!mask) return false;
+  return !state.rstars.length || state.rstars.some(s => mask & raidBit(s));
+}
+function raidStarsFor(g) {
+  const out = ['1', '2', '3', '4', '5'];
+  if (!g || g === 'sv' || g === 'svmask' || g === 'svdisk') out.push('6');
+  if (!g || g === 'swcrown') out.push('exp');
+  return out;
+}
+function updateRaidChips() {
+  const el = $('#raidchips'); if (!el) return;
+  const on = state.cat === 'raid' && !(state.game && !RAID_GAME.has(state.game)) && RAIDS !== false;
+  el.hidden = !on; if (!on) return;
+  const stars = raidStarsFor(raidGameOfList());
+  el.innerHTML = stars.map(s => `<button type="button" class="chip rchip" data-rs="${s}" aria-pressed="${state.rstars.includes(s)}">${s === 'exp' ? 'Expédition' : s + '★'}</button>`).join('');
+}
+function raidMergeExtra(a, b) {
+  if (!a) return b; if (!b || a === b) return a;
+  const parts = []; for (const s of (a + ' · ' + b).split(' · ')) if (s && !parts.includes(s)) parts.push(s);
+  return parts.join(' · ');
+}
 function teraRaidHTML(k, f, sp, gm) {
   const e = BY_KEY[k] || {}, sel = new Set([...(f.av || []), ...horsGames(e, sp)]), gs = Object.keys(TERA_G), R = Object.fromEntries(gs.map(g => [g, raidRows(k, f, sp, g) || []]));
   const here = gs.filter(g => R[g].length && (g === gm.id || !sel.has(g))), other = gs.filter(g => R[g].length && g !== gm.id && sel.has(g));
@@ -2439,7 +2571,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }

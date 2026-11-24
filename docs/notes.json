@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.30",
+  "d": "2026-11-24",
+  "l": [
+   "Nouveau filtre « Dispo en raid » dans la liste Catégorie. Quand un jeu Épée / Bouclier, Isolarmure, Couronneige, Écarlate / Violet, Masque Turquoise ou Disque Indigo est sélectionné, il ne retient que les Pokémon rencontrables en raid dans ce jeu. Sans jeu, il couvre les six. Des puces d’étoiles (et « Expédition » à Couronneige) permettent d’affiner.",
+   "Nouvelle vue « Raids Dynamax et Téracristal » (menu, puis #/raids) : les boss sont classés par jeu, puis par étoiles et par lieu ou antre. Chaque nom ouvre la fiche, déjà positionnée sur le bon jeu. L’Expédition Dynamax a sa propre section à Couronneige. Les raids événementiels restent indiqués, en grisé.",
+   "Les taux, les IV garantis et le détail de chaque antre restent sur la fiche. L’Antre Interdit d’Ogerpon n’est pas un raid. Les raids 7★ d’événement seront traités à part.",
+   "Les données tiennent dans le pack hors-ligne (nouveau fichier raids.json) : pensez à le retélécharger."
+  ]
+ },
+ {
   "v": "v60.29",
   "d": "2026-11-24",
   "l": [

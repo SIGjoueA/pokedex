@@ -36,6 +36,7 @@
         <option value="gmax">Gigamax</option>
         <option value="baby">Bébés</option>
         <option value="trade">⇄ Échange requis</option>
+        <option value="raid">Dispo en raid</option>
         <option value="fav">★ Favoris</option>
         <option value="caught">🔴 Capturés</option>
         <option value="missing">⚪ Pas encore capturés</option>
@@ -67,6 +68,7 @@
       </select>
     </div>
     <div id="typechips" class="chips" role="group" aria-label="Filtrer par type"></div>
+    <div id="raidchips" class="chips raidchips" role="group" aria-label="Filtrer par étoiles" hidden></div>
     <div class="status"><span id="count"></span><button id="reset" class="link" hidden>Réinitialiser</button></div>
   </header>
   <main id="results" class="grid" aria-live="polite"></main>
@@ -78,11 +80,15 @@
 </div>
 <div id="detail-view" hidden></div>
 <div id="rank-view" hidden></div>
+<div id="raid-view" hidden></div>
 <div id="menuback" class="menuback" hidden></div>
 <div id="menu" class="menu" role="dialog" aria-modal="true" aria-labelledby="menutitle" hidden>
   <div class="menuhead"><button id="menuprev" type="button" class="menuprev" aria-label="Retour au menu" hidden>‹</button><h2 id="menutitle">Menu</h2><button id="menux" type="button" class="menux" aria-label="Fermer le menu">✕</button></div>
   <div id="mmain">
   <section class="msec"><h3>Hors-ligne</h3><div id="offline"></div></section>
+  <section class="msec"><h3>Raids</h3>
+    <p class="mrow"><a class="mnext" href="#/raids"><span>★ Raids Dynamax et Téracristal</span><span class="chev" aria-hidden="true">›</span></a></p>
+    <p class="note">Boss d’Épée / Bouclier et d’Écarlate / Violet, classés par jeu, par étoiles et par lieu. Disponible hors-ligne une fois le pack de fiches téléchargé.</p></section>
   <section class="msec"><h3>Pokémon GO</h3>
     <p class="mrow"><a id="rankbtn" class="mnext" href="#/classements"><span>🏆 Classements : PvP, raids, Combats Max</span><span class="chev" aria-hidden="true">›</span></a></p>
     <p id="gocost" class="note" hidden></p>

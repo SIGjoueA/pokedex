@@ -1,0 +1,32 @@
+{
+  "note": "Aucun téléchargement : index construit localement depuis docs/data/sp/*/f.rd (v60.24 Dynamax ÉB, v60.27 Téracristal ÉV). Poképédia, CC BY-NC-SA 3.0 FR.",
+  "date": "2026-11-24",
+  "rows": 6895,
+  "games": {
+    "sw": {
+      "rows": 2309,
+      "keys": 404
+    },
+    "swisle": {
+      "rows": 1911,
+      "keys": 277
+    },
+    "swcrown": {
+      "rows": 2024,
+      "keys": 411
+    },
+    "sv": {
+      "rows": 419,
+      "keys": 369
+    },
+    "svmask": {
+      "rows": 121,
+      "keys": 95
+    },
+    "svdisk": {
+      "rows": 111,
+      "keys": 95
+    }
+  },
+  "unmappedGmax": []
+}

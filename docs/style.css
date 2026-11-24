@@ -745,3 +745,21 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .egh summary,.eghsub summary{cursor:pointer;color:var(--accent);font-weight:600}
 .eghlist{margin:6px 0 0;padding:0}
 .eghlist > li{margin:0 0 4px}
+
+/* v60.30: filtre « Dispo en raid » (puces d’étoiles) et vue #/raids */
+.raidchips .chip,.rvwrap .chip{background:var(--bg2);color:var(--fg);text-shadow:none;opacity:.85;border-color:var(--line);font-weight:600}
+.raidchips .chip[aria-pressed=true],.rvwrap .chip[aria-pressed=true]{opacity:1;border-color:#c9a227;background:#c9a22733;box-shadow:0 0 0 2px var(--bg) inset}
+#raid-view .rvwrap{padding-bottom:28px}
+#raid-view .rvlbl{margin:0 0 8px}
+#raid-view .rvgames,#raid-view .rvstars{flex-wrap:wrap;overflow:visible;padding-top:2px}
+#raid-view .rvsec{margin:10px 0;border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:0 10px}
+#raid-view .rvsec>summary{font-weight:700;font-size:16px;padding:10px 4px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+#raid-view .rvsec>summary::-webkit-details-marker,#raid-view .rvloc>summary::-webkit-details-marker{display:none}
+#raid-view .rvloc{border-top:1px solid var(--line)}
+#raid-view .rvloc>summary{padding:8px 4px;cursor:pointer;font-weight:600;font-size:14px;display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+#raid-view .rvloc.evt>summary,#raid-view .rvloc.evt .rkrow{color:var(--mute)}
+#raid-view .rklist{padding-bottom:6px}
+#raid-view .rkh{font-size:18px;margin:0 0 0 4px}
+
+#raid-view .rvctl{position:sticky;top:calc(var(--tap) + 8px);z-index:5;background:var(--bg);padding:4px 0 8px}
+#raid-view .rvctl .chips{padding-bottom:2px}

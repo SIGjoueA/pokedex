@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DOCS, HERE } from './lib.mjs';
 import { mapPvPoke, PVP_ABSENT, PVP_FORMS } from './pvp-map.mjs';
+import { buildRaids, RAID_GAMES } from './fix-v60-30.mjs';
 const D = f => JSON.parse(fs.readFileSync(path.join(DOCS, 'data', f), 'utf8'));
 const core = D('core.json'), evo = D('evo.json'), ref = D('ref.json'), moves = D('moves.json'), go = D('go.json'), tm = D('tm.json'), loc = D('loc.json');
 const E = Object.fromEntries(core.e.map(e => [e.k, e])); const G = Object.fromEntries(core.games.map(g => [g.id, g]));
@@ -795,5 +796,35 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.29 cache : pages Méga-Florizarre et Méga-Pokémon', fs.existsSync(path.join(cache, 'Méga-Florizarre.wiki')) && fs.existsSync(path.join(cache, 'Méga-Pokémon.wiki')));
 }
 
+
+
+// ---- v60.30: filtre « Dispo en raid » et vue Raids (build/fix-v60-30.mjs → docs/data/raids.json)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  ok('v60.30 SW : VERSION ≥ v60.30, DATA_VERSION ≥ d72', /VERSION = 'v60\.(3[0-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 72);
+  ok('v60.30 NOTES ≤ 160 caractères, commence par le filtre / la vue Raids', notes.length > 0 && notes.length <= 160 && /Dispo en raid/.test(notes) && /vue Raids/.test(notes), String(notes.length));
+  const raids = D('raids.json'), built = buildRaids(), { _meta, ...data } = built;
+  eq('v60.30 raids.json idempotent (égal au résultat de fix-v60-30)', raids, data);
+  ok('v60.30 raids.json : 6 jeux ÉB / ÉV, ≥ 6800 lignes, ≥ 800 fiches', raids.g.join() === RAID_GAMES.join() && raids.r.length >= 6800 && new Set(raids.r.map(r => r[0])).size >= 800, `${raids.r.length}/${new Set(raids.r.map(r => r[0])).size}`);
+  const cov = {};
+  for (const row of raids.r) { const g = raids.g[row[1]]; (cov[g] ||= { rows: 0, keys: new Set() }); cov[g].rows++; cov[g].keys.add(row[0]); }
+  ok('v60.30 comptes par jeu (ÉB ≥ 370 / Isolarmure ≥ 250 / Couronneige ≥ 200 / Paldea ≥ 300 / Septentria ≥ 80 / Terra-Dôme ≥ 80)',
+    (cov.sw?.keys.size || 0) >= 370 && (cov.swisle?.keys.size || 0) >= 250 && (cov.swcrown?.keys.size || 0) >= 200 && (cov.sv?.keys.size || 0) >= 300 && (cov.svmask?.keys.size || 0) >= 80 && (cov.svdisk?.keys.size || 0) >= 80,
+    RAID_GAMES.map(g => `${g} ${cov[g]?.keys.size || 0}/${cov[g]?.rows || 0}`).join(', '));
+  const keysOf = (k, g) => raids.r.filter(r => r[0] === k && raids.g[r[1]] === g);
+  ok('v60.30 Pikachu : raids Paldea et Isolarmure', keysOf('25', 'sv').length > 0 && keysOf('25', 'swisle').length > 0);
+  ok('v60.30 Tygnon : antres de Couronneige et des Terres Sauvages', keysOf('107', 'swcrown').some(r => raids.z[r[2]] === 'Repos du Géant') && keysOf('107', 'sw').some(r => raids.z[r[2]] === 'Plaine Verdoyante'));
+  ok('v60.30 Mewtwo : Expédition Dynamax à Couronneige seulement', keysOf('150', 'swcrown').some(r => /Expédition Dynamax/.test(raids.z[r[2]]) && (r[5] & (1 << 7))) && !keysOf('150', 'sw').length && !keysOf('150', 'sv').length);
+  ok('v60.30 Mackogneur Gigamax : fiche 68-gmax, drapeau g, Plaine Rocheuse', keysOf('68-gmax', 'sw').some(r => raids.z[r[2]] === 'Plaine Rocheuse' && /g/.test(r[6])) && !keysOf('68', 'sw').some(r => /g/.test(r[6])));
+  eq('v60.30 Ogerpon (1017) absent de l’index des raids (Antre Interdit = lieu)', keysOf('1017', 'svmask').length + keysOf('1017', 'sv').length + raids.r.filter(r => r[0] === '1017').length, 0);
+  ok('v60.30 pas de 7★ ni d’Antre Interdit dans l’index', raids.r.every(r => (r[5] & ~((1 << 8) - 1)) === 0) && raids.z.every(z => !/Antre Interdit/.test(z)));
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.30 apply-v34 lance fix-v60-30', /fix-v60-30\.mjs/.test(apply));
+  ok('v60.30 app : filtre Dispo en raid, vue #/raids, pack hors-ligne', /option value="raid"|cat === 'raid'/.test(html + app) && /Dispo en raid/.test(html) && /function renderRaids/.test(app) && /#\/raids/.test(app) && /data\/raids\.json/.test(app) && /function raidCat/.test(app));
+  ok('v60.30 menu : entrée Raids Dynamax et Téracristal, hors section GO', /Raids Dynamax et Téracristal/.test(html) && /id="raid-view"/.test(html) && /id="raidchips"/.test(html));
+}
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
