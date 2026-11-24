@@ -1656,11 +1656,13 @@ function ppLocHTML(rows, gm) {
   return gl + `<details${by.size <= 8 ? ' open' : ''}><summary>${by.size} lieu${by.size > 1 ? 'x' : ''}</summary>${list}</details>` +
     '<p class="note">Lieux, niveaux et taux : <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), données des pages de lieux. Cadeaux (« Donné ») et échanges in-game inclus.</p>';
 }
+// v60.22: methods written by build/fix-v60-22.mjs (not Poképédia) → neutral note, no Poképédia credit
+const GEN_HOW = /^(Méga-Évolution|Primo-Résurgence|Changement de forme) /;
 function encHTML(f, sp, gm, shared) {
   const pp = ppLocs(f, sp, gm);
   if (pp && pp.length) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2>${ppLocHTML(pp, gm)}</section>`;
   { const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k], B = (e && e.c !== 'reg' ? (sp.f[String(sp.id)] || {}).pln : null) || {}, F = f.pln || {}, al = { svmask: 'sv', svdisk: 'sv', swisle: 'sw', swcrown: 'sw', zadlc: 'za' }[gm.id], na = F[gm.id] || F[al] || B[gm.id] || B[al]; // v60.22: per game (a form with its own text for one game still inherits the others)
-    if (na) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(na)}</p><p class="note">Pas de lieu de capture dans ce jeu ; méthode d’obtention selon <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p></section>`; }
+    if (na) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(na)}</p>${GEN_HOW.test(na) ? '<p class="note">Pas de lieu de capture dans ce jeu.</p>' : '<p class="note">Pas de lieu de capture dans ce jeu ; méthode d’obtention selon <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p>'}</section>`; }
   const src = f.en ? f : (f.enOf && sp.f[f.enOf]) || f;
   const rows = (src.en && src.en[gm.id]) || [];
   let body;

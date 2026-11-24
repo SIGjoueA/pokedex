@@ -516,6 +516,10 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
       core.games.forEach((g, i) => { if (!((e.gb >> i) & 1) && !(e.k === String(e.id) && (s.hx || []).includes(g.id))) return; if (g.ver.some(([v]) => src(v) === 'tr')) tr.push(g.id + ':' + e.k); }); }
     eq('v60.22 traduction automatique affichée : Chenipotte RF/VF seulement', tr, ['frlg:265']); }
   { const L = loc.a.filter(a => /\b(City|Town|Forest|Island|Tower|Mt\.|Mount|Path|Road|Cave|Lake)\b/.test(a) && !/^Cave (Taupiqueur|Connecterre)$/.test(a)); eq('v60.22 noms de lieux PokéAPI sans anglais', L, []); }
+  { const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), m = src.match(/const GEN_HOW = (\/.*\/);/), RE = m && eval(m[1]); let bad = 0, n = 0;
+    ok('v60.22 app : note neutre (sans crédit Poképédia) pour les méthodes générées', !!RE && /GEN_HOW\.test\(na\) \? '<p class="note">Pas de lieu de capture dans ce jeu\.<\/p>'/.test(src));
+    for (const e of core.e) { const f = S(e.id).f[e.k] || {}; for (const t of Object.values(f.pln || {})) { const gen = RE && RE.test(t); if (gen) n++; if (gen !== !!(e.mb || e.bo)) bad++; } }
+    eq('v60.22 méthodes générées = exactement celles des Méga / Primo / changements de forme', bad, 0); ok('v60.22 méthodes générées présentes', n >= 100, n); }
   const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
   ok('v60.22 SW : VERSION ≥ v60.22, DATA_VERSION ≥ d64', /VERSION = 'v60\.(2[2-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 64);
 }
