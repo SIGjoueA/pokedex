@@ -1,5 +1,17 @@
 [
  {
+  "v": "v60.21",
+  "d": "2026-11-24",
+  "l": [
+   "Faiblesses selon le talent, version finale : quand un Pokémon a plusieurs talents, des boutons au-dessus du tableau affichent ses faiblesses avec chacun d’eux (« Types seuls » n’en tient pas compte). Un talent unique est appliqué directement.",
+   "24 talents sont pris en compte, avec leur génération d’apparition : immunités (Lévitation, Absorbe-Eau, Lavabo, Peau Sèche, Absorbe-Volt, Motorisé, Paratonnerre, Torche, Bien Cuit, Herbivore, Absorbe-Terre), réductions (Isograisse, Ignifugé, Aquabulle, Sel Purificateur, Filtre, Solide Roc, Prisme-Armure), Boule de Poils (Feu ×2), Garde Mystik, Mer Primaire, Terre Finale, Souffle Delta et Téra-Carapace.",
+   "Les multiplicateurs inhabituels s’affichent tels quels (×3 et ×1,5 avec Solide Roc ou Filtre, ×1,25 avec Peau Sèche), et chaque talent indique ce qu’il change, par exemple « Sol ×2 → ×0 ».",
+   "Sans jeu choisi, la fiche signale un talent d’une ancienne génération qui changeait les faiblesses (Ectoplasma : Lévitation jusqu’à la génération VI).",
+   "Correction : les talents n’existent pas dans Let’s Go, Pikachu / Évoli ni dans Légendes Z-A ; ils n’y sont plus affichés. Pichu Troizépi n’a pas de talent caché.",
+   "Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.20",
   "d": "2026-11-24",
   "l": [

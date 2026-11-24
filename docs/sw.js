@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.20';
+const VERSION = 'v60.21';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Combats Max : Duralugon Gigamax est ajouté comme attaquant (1 n°1, utile contre 25 boss).';
-const DATA_VERSION = 'd62'; // bump when the schema of data/*.json changes
+const NOTES = 'Faiblesses selon le talent : un tableau par talent (Lévitation, Absorbe-Volt, Garde Mystik…), effets vérifiés.';
+const DATA_VERSION = 'd63'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -1252,9 +1252,7 @@ function navHTML(p, extra = '') {
   return `<div class="dtop"><div class="dnav">${fromRank ? '<a href="#/classements" aria-label="Retour aux classements">←</a>' : '<a href="#/" aria-label="Retour à la liste">←</a>'}<a class="${prev ? '' : 'disabled'}" href="${prev || '#'}" aria-label="Précédent">‹</a><a class="${next ? '' : 'disabled'}" href="${next || '#'}" aria-label="Suivant">›</a><span class="sp"></span><button class="cadd2" type="button" data-add="${p.k}" aria-label="Ajouter à ma collection" title="Ajouter à ma collection">＋</button><button class="fav" type="button" aria-pressed="${FAVS.has(key)}" aria-label="Favori">${FAVS.has(key) ? '★' : '☆'}</button></div>${extra}${actbarHTML(p)}</div>`;
 }
 const chartFor = gen => DATA.charts[gen <= 1 ? 1 : gen <= 5 ? 2 : 6];
-function effGroups(types, mode, chart, adj = {}) {
-  const mults = {};
-  for (const [atk, row] of Object.entries(chart)) mults[atk] = types.reduce((m, d) => m * (row[d] ?? 1), 1) * (adj[atk] ?? 1);
+function effGroups(types, mode, chart, mm = null) {
   const g = {};
   if (mode === 'go') {
     for (const [atk, row] of Object.entries(chart)) {
@@ -1264,39 +1262,112 @@ function effGroups(types, mode, chart, adj = {}) {
     return [[2, 'Très faible', '×2,56', 'w'], [1, 'Faible', '×1,6', 'w'], [-1, 'Résiste', '×0,625', 'r'], [-2, 'Résiste fortement', '×0,39', 'r'], [-3, 'Résiste énormément', '×0,24', 'r']]
       .map(([k, l, m, c]) => ({ label: l, mult: m, cls: c, types: g[k] || [] })).filter(x => x.types.length);
   }
+  // v60.21: any multiplier (talents : ×3 / ×1,5 avec Filtre, ×1,25 / ×2,5 avec Peau Sèche, ×2 avec Boule de Poils…), strongest weakness first
+  const mults = mm || typeMults(types, chart);
   for (const [t, v] of Object.entries(mults)) if (v !== 1) (g[v] ||= []).push(t);
-  return [[4, 'Très faible', '×4', 'w'], [2, 'Faible', '×2', 'w'], [0.5, 'Résiste', '×½', 'r'], [0.25, 'Résiste fortement', '×¼', 'r'], [0, 'Immunisé', '×0', 'r']]
-    .map(([k, l, m, c]) => ({ label: l, mult: m, cls: c, types: g[k] || [] })).filter(x => x.types.length);
+  return Object.keys(g).map(Number).sort((a, b) => b - a)
+    .map(v => ({ label: v >= 3 ? 'Très faible' : v >= 2 ? 'Faible' : v > 1 ? 'Légèrement faible' : v >= 0.5 ? 'Résiste' : v > 0 ? 'Résiste fortement' : 'Immunisé', mult: multTxt(v), cls: v > 1 ? 'w' : 'r', types: g[v] }));
 }
-function effHTML(types, mode, chart, ab = null) {
-  const mark = ab ? ab.mark : new Set(), adj = ab ? ab.adj : {};
-  const body = effGroups(types, mode, chart, adj).map(x => `<div class="eff ${x.cls}"><div class="hd">${x.label} <small>${x.mult}</small></div><div class="badges">` +
+const multTxt = v => '×' + ({ 0.5: '½', 0.25: '¼', 0.125: '⅛' }[v] || dec(v));
+function effHTML(types, mode, chart, mm = null, mark = null) {
+  mark ||= new Set();
+  const body = effGroups(types, mode, chart, mm).map(x => `<div class="eff ${x.cls}"><div class="hd">${x.label} <small>${x.mult}</small></div><div class="badges">` +
     x.types.map(t => `<a class="badge${mark.has(t) ? ' abx' : ''}" href="#" data-type="${t}" style="background:${TYPE_COLORS[t]}">${esc(TYPE_FR[t])}${mark.has(t) ? '<sup aria-hidden="true">*</sup>' : ''}</a>`).join('') + '</div></div>').join('');
   return body || '<p class="note">Aucune faiblesse ni résistance.</p>';
 }
-// v31: abilities that change type matchups (classic games). Immunities / halvings are applied to the table when EVERY ability of the form has them
-// (« son seul talent »), otherwise the affected types get a * and a note. Gen: first generation where the effect exists.
+// v31 → v60.21: talents qui changent les faiblesses dans les jeux principaux (Poképédia / Bulbapedia, effets recoupés avec le simulateur Showdown).
+// g = première génération où l’effet existe · t = multiplicateur par type attaquant · se = attaques super efficaces × se · wg = Garde Mystik ·
+// ds = Souffle Delta (faiblesses du type Vol annulées) · ts = Téra-Carapace (PV au maximum) · c = condition affichée. Bloc pur, relu par build/audit.mjs.
+// ABEFF-START
+const NO_ABIL = { lgpe: 'Pokémon : Let’s Go, Pikachu et Let’s Go, Évoli', la: 'Légendes Pokémon : Arceus', za: 'Légendes Pokémon : Z-A', zadlc: 'Légendes Pokémon : Z-A' };
 const ABIL_EFF = {
-  26: { t: { ground: 0 } }, 11: { t: { water: 0 } }, 114: { t: { water: 0 }, g: 5 }, 87: { t: { water: 0, fire: 1.25 } }, 10: { t: { electric: 0 } }, 31: { t: { electric: 0 }, g: 5 }, 78: { t: { electric: 0 } },
-  18: { t: { fire: 0 } }, 273: { t: { fire: 0 } }, 157: { t: { grass: 0 }, g: 5 }, 297: { t: { ground: 0 } }, 47: { t: { fire: 0.5, ice: 0.5 } }, 85: { t: { fire: 0.5 } }, 199: { t: { fire: 0.5 } }, 272: { t: { ghost: 0.5 } }, 218: { t: { fire: 2 } },
-  25: { x: 'ne subit que les attaques super efficaces (et les dégâts indirects)' }, 111: { x: 'attaques super efficaces : dégâts ×0,75' }, 116: { x: 'attaques super efficaces : dégâts ×0,75' }, 232: { x: 'attaques super efficaces : dégâts ×0,75' }
+  26: { g: 3, t: { ground: 0 }, c: 'sauf sous Gravité ou après Anti-Air, Racines ou Balle Fer' }, // Lévitation
+  297: { g: 9, t: { ground: 0 }, c: 'l’attaque le soigne' }, // Absorbe-Terre
+  11: { g: 3, t: { water: 0 }, c: 'l’attaque le soigne' }, // Absorbe-Eau
+  114: { g: 5, t: { water: 0 }, c: 'en génération IV, il attirait seulement les attaques Eau en combat double' }, // Lavabo
+  87: { g: 4, t: { water: 0, fire: 1.25 }, c: 'l’Eau le soigne ; il perd aussi des PV au soleil' }, // Peau Sèche
+  10: { g: 3, t: { electric: 0 }, c: 'l’attaque le soigne' }, // Absorbe-Volt
+  78: { g: 4, t: { electric: 0 }, c: 'sa Vitesse augmente' }, // Motorisé
+  31: { g: 5, t: { electric: 0 }, c: 'avant la génération V, il attirait seulement les attaques Électrik' }, // Paratonnerre
+  18: { g: 3, t: { fire: 0 }, c: 'ses attaques Feu sont ensuite renforcées' }, // Torche
+  273: { g: 9, t: { fire: 0 }, c: 'sa Défense augmente beaucoup' }, // Bien Cuit
+  157: { g: 5, t: { grass: 0 }, c: 'son Attaque augmente' }, // Herbivore
+  47: { g: 3, t: { fire: 0.5, ice: 0.5 } }, // Isograisse
+  85: { g: 4, t: { fire: 0.5 } }, // Ignifugé
+  199: { g: 7, t: { fire: 0.5 } }, // Aquabulle
+  272: { g: 9, t: { ghost: 0.5 } }, // Sel Purificateur
+  218: { g: 7, t: { fire: 2 }, c: 'les attaques directes (au contact) sont en plus divisées par 2' }, // Boule de Poils
+  111: { g: 4, se: 0.75 }, 116: { g: 4, se: 0.75 }, 232: { g: 7, se: 0.75 }, // Filtre, Solide Roc, Prisme-Armure
+  25: { g: 3, wg: 1, c: 'les dégâts indirects (poison, brûlure, météo, Picots…) le touchent quand même' }, // Garde Mystik
+  189: { g: 6, t: { fire: 0 }, c: 'pluie battante tant qu’il est au combat : les attaques Feu échouent' }, // Mer Primaire
+  190: { g: 6, t: { water: 0 }, c: 'soleil intense tant qu’il est au combat : les attaques Eau échouent' }, // Terre Finale
+  191: { g: 6, ds: 1, c: 'vents mystérieux tant qu’il est au combat : le type Vol n’a plus de faiblesse' }, // Souffle Delta
+  305: { g: 9, ts: 1, c: 'seulement quand ses PV sont au maximum' } // Téra-Carapace
 };
-const multFR = m => m === 0 ? 'immunisé contre' : m === 0.5 ? 'dégâts ÷ 2 de' : m === 2 ? 'dégâts × 2 de' : `dégâts ×${dec(String(m))} de`;
-function abilityEff(f, gm, ref, types, chart) {
-  if (!gm) return null;
-  const list = abilityList(f, gm, ref).filter(([id]) => ABIL_EFF[id] && (ABIL_EFF[id].g || 3) <= gm.g); if (!list.length) return null;
-  const all = abilityList(f, gm, ref), only = id => all.length > 0 && all.every(a => a[0] === id), adj = {}, mark = new Set(), notes = [];
-  const STD = new Set([0, 0.25, 0.5, 1, 2, 4]);
-  for (const [id, hid] of list) {
-    const e = ABIL_EFF[id], nm = (ref.ab[id] || [])[0] || '?';
-    if (e.x) { notes.push(`<b>Talent ${esc(nm)}</b>${hid ? ' (caché)' : ''} : ${e.x}${only(id) ? ' — son seul talent.' : ' — si le Pokémon a ce talent.'}`); continue; }
-    const parts = Object.entries(e.t).map(([t, m]) => `${multFR(m)} <b>${esc(TYPE_FR[t])}</b>`);
-    const base = t => types.reduce((m, d) => m * (chart[t]?.[d] ?? 1), 1), apply = only(id) && Object.entries(e.t).every(([t, m]) => STD.has(base(t) * m));
-    for (const t of Object.keys(e.t)) { mark.add(t); if (apply) adj[t] = (adj[t] ?? 1) * e.t[t]; }
-    notes.push(`<b>* Talent ${esc(nm)}</b>${hid ? ' (caché)' : ''} : ${parts.join(', ')}${apply ? ' — son seul talent : déjà pris en compte ci-dessus.' : ' — si le Pokémon a ce talent (le tableau montre les types seuls).'}`);
+// ignorés par un attaquant doté de Brise Moule, Turbo Brasier ou Téra-Voltage (pas Prisme-Armure, ni la météo de Mer Primaire / Terre Finale / Souffle Delta)
+const AB_BREAK = new Set([26, 297, 11, 114, 87, 10, 78, 31, 18, 273, 157, 47, 85, 199, 272, 218, 111, 116, 25, 305]);
+const r4 = v => Math.round(v * 1e4) / 1e4;
+function typeMults(types, chart) { const m = {}; for (const [atk, row] of Object.entries(chart)) m[atk] = r4(types.reduce((x, d) => x * (row[d] ?? 1), 1)); return m; }
+function abMults(types, chart, id) { // multipliers of every attacking type for a Pokémon of these types with this ability
+  const e = ABIL_EFF[id], base = typeMults(types, chart), out = {};
+  for (const [atk, b] of Object.entries(base)) {
+    let m = b;
+    if (e.ds && types.includes('flying') && chart[atk]?.flying === 2) m /= 2;
+    if (e.t && atk in e.t) m *= e.t[atk];
+    if (e.se && b > 1) m *= e.se;
+    if (e.wg && b <= 1) m = 0;
+    if (e.ts && m >= 1) m = 0.5;
+    out[atk] = r4(m);
   }
-  return { adj, mark, html: `<div class="abnote">${notes.map(n => `<p>${n}</p>`).join('')}</div>` };
+  return out;
 }
+// ABEFF-END
+const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
+// v60.21: one table per talent. A single talent (or the same twice) is applied directly; otherwise « Types seuls » (types changed by a talent marked *) + a button per talent.
+function abilityEff(f, gm, ref, types, chart) {
+  const gen = gm ? gm.g : 9, all = abilityList(f, gm, ref), on = id => ABIL_EFF[id] && ABIL_EFF[id].g <= gen;
+  const nm = id => esc((ref.ab[id] || [])[0] || '?'), ids = [...new Set(all.map(a => a[0]))];
+  const hid = id => all.some(a => a[0] === id && a[1]) && !all.some(a => a[0] === id && !a[1]);
+  const base = typeMults(types, chart);
+  const diff = id => { if (!on(id)) return []; const m = abMults(types, chart, id); return Object.keys(m).filter(t => m[t] !== base[t]).map(t => [t, base[t], m[t]]); };
+  const rel = ids.filter(id => diff(id).length);
+  const what = id => { const e = ABIL_EFF[id], d = diff(id);
+    const ch = e.wg ? `seules les attaques super efficaces le touchent, les ${d.length} autres types passent à ×0`
+      : e.ts ? `toute attaque qui n’est pas déjà « pas très efficace » passe à ×½ (${d.length} types)`
+      : d.map(([t, a, b]) => `<b>${esc(TYPE_FR[t])}</b> ${multTxt(a)} → ${multTxt(b)}${b === 0 ? ' (immunisé)' : ''}`).join(', ');
+    return ch + (e.c ? ` ; ${e.c}` : '') + '.'; };
+  // overview (no game): talents of an older generation that changed the table (Ectoplasma : Lévitation jusqu’à la génération VI)
+  const past = [];
+  if (!gm) for (const [g2, l] of f.pa || []) for (const [id] of l) if (!ids.includes(id) && ABIL_EFF[id] && ABIL_EFF[id].g <= g2 && !past.some(x => x[0] === id)) past.push([id, g2]);
+  const pastP = past.map(([id, g2]) => `<p class="abpast">Jusqu’à la génération ${ROMAN[g2]}, ce Pokémon avait le talent <b>${nm(id)}</b> : choisissez un jeu de cette époque pour en tenir compte.</p>`).join('');
+  if (!rel.length) return pastP ? { one: null, mark: new Set(), mm: null, html: `<div class="abnote">${pastP}</div>` } : null;
+  const brk = gen >= 4 && rel.some(id => AB_BREAK.has(id)) ? `<p class="abbrk">Un adversaire doté de Brise Moule, Turbo Brasier ou Téra-Voltage ignore ${rel.length > 1 ? 'ces talents' : 'ce talent'}${rel.some(id => !AB_BREAK.has(id)) ? ' (sauf Prisme-Armure, Mer Primaire, Terre Finale et Souffle Delta)' : ''}.</p>` : '';
+  const scope = gm ? '' : '<p class="abpast">Talents actuels ; choisissez un jeu pour ceux de son époque.</p>';
+  if (ids.length === 1) { // its only talent: already in the table
+    const id = ids[0];
+    return { one: id, mark: new Set(diff(id).map(x => x[0])), mm: abMults(types, chart, id),
+      html: `<div class="abnote"><p><b>* ${nm(id)}</b> (son seul talent, déjà pris en compte ci-dessus) : ${what(id)}</p>${brk}${pastP}${scope}</div>` };
+  }
+  const mark = new Set(rel.flatMap(id => diff(id).map(x => x[0])));
+  const other = ids.filter(id => !rel.includes(id) && !on(id)), moot = ids.filter(id => !rel.includes(id) && on(id)); // moot: Paratonnerre on a Ground type…
+  const btn = (v, label, pressed) => `<button type="button" data-abv="${v}" aria-pressed="${pressed}">${label}</button>`;
+  const seg = `<div class="abseg" role="group" aria-label="Tableau selon le talent">${btn(0, 'Types seuls', true)}${ids.map(id => btn(id, nm(id) + (hid(id) ? ' <small>caché</small>' : ''), false)).join('')}</div>`;
+  const panes = ids.map(id => ({ id, mm: rel.includes(id) ? abMults(types, chart, id) : null, mark: new Set(diff(id).map(x => x[0])) }));
+  const notes = rel.map(id => `<p><b>${nm(id)}</b>${hid(id) ? ' (talent caché)' : ''} : ${what(id)}</p>`).join('') +
+    moot.map(id => `<p><b>${nm(id)}</b>${hid(id) ? ' (talent caché)' : ''} : sans effet sur ce Pokémon, ${ABIL_EFF[id].t && Object.values(ABIL_EFF[id].t).every(m => m === 0) ? 'ses types l’immunisent déjà' : 'ses types donnent déjà le même résultat'}.</p>`).join('') +
+    (other.length ? `<p>${other.map(nm).join(', ')} : ${other.length > 1 ? 'ces talents ne changent' : 'ce talent ne change'} pas le tableau.</p>` : '');
+  return { one: null, mark, mm: null, seg, panes,
+    html: `<div class="abnote"><p class="abhd">Touchez le talent de votre Pokémon, au-dessus du tableau, pour voir ses faiblesses avec ce talent. « Types seuls » n’en tient pas compte : les types marqués * changent selon le talent.</p>${notes}${brk}${pastP}${scope}</div>` };
+}
+function effBlockHTML(types, chart, abE) { // the table(s) of « Faiblesses & résistances » for the main games
+  if (!abE) return `<div id="eff">${effHTML(types, 'main', chart)}</div>`;
+  if (!abE.panes) return `<div id="eff">${effHTML(types, 'main', chart, abE.mm, abE.mark)}</div>${abE.html}`;
+  return `${abE.seg}<div id="eff"><div data-abp="0">${effHTML(types, 'main', chart, null, abE.mark)}</div>${abE.panes.map(p => `<div data-abp="${p.id}" hidden>${effHTML(types, 'main', chart, p.mm, p.mark)}</div>`).join('')}</div>${abE.html}`;
+}
+// v60.21: talent buttons of the weakness table (not remembered: each Pokémon has its own talents)
+document.addEventListener('click', e => { const b = e.target.closest('.abseg [data-abv]'); if (!b) return; const box = b.closest('section'), v = b.dataset.abv;
+  box.querySelectorAll('.abseg [data-abv]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+  box.querySelectorAll('[data-abp]').forEach(x => { x.hidden = x.dataset.abp !== v; }); });
 function statColor(v) { return v < 50 ? '#e5534b' : v < 80 ? '#e0a02f' : v < 110 ? '#9bc53d' : v < 150 ? '#3fbf7f' : '#35b7d6'; }
 const pickGen = (list, gen, cur) => { const e = (list || []).find(x => x[0] >= gen); return e ? e[1] : cur; };
 function statsHTML(arr, gen1, max = 255) {
@@ -1374,16 +1445,16 @@ function etyHTML(sp) {
 }
 function abilityList(f, gm, ref) { // [[abilityId, hidden]] of the form in this game ([] when abilities do not exist)
   const gen = gm ? gm.g : 9;
-  if (gm && (gen < 3 || gm.id === 'la')) return [];
+  if (gm && (gen < 3 || NO_ABIL[gm.id])) return []; // v60.21: no talents in Let’s Go and Légendes Arceus / Z-A either
   let list = pickGen(f.pa, gen, f.a);
   if (gen < 5) list = list.filter(a => !a[1]);
   return list.filter(a => ((ref.ab[a[0]] || [])[2] || 1) <= gen); // an ability cannot exist before the generation that introduced it
 }
 function abilitiesHTML(f, gm, ref) {
   const gen = gm ? gm.g : 9;
-  if (gm && (gen < 3 || gm.id === 'la')) return `<p class="note">${gm.id === 'la' ? 'Les talents n’existent pas dans Légendes Pokémon : Arceus.' : 'Les talents n’existent pas avant la génération III.'}</p>`;
+  if (gm && (gen < 3 || NO_ABIL[gm.id])) return `<p class="note">${NO_ABIL[gm.id] ? `Les talents n’existent pas dans ${NO_ABIL[gm.id]}.` : 'Les talents n’existent pas avant la génération III.'}</p>`;
   const list = abilityList(f, gm, ref);
-  if (!list.length) return '<p class="note">Aucun talent.</p>';
+  if (!list.length) return `<p class="note">${gm ? 'Aucun talent.' : 'Aucun talent : cette forme n’apparaît que dans des jeux sans talents (Légendes Pokémon : Z-A).'}</p>`;
   // v31: description in a popup (tap the name) — keeps the sheet short
   return { n: list.length, body: list.map(([id, hid]) => { const a = ref.ab[id]; return a ? `<div class="ab"><button type="button" class="dsc" data-dsc="a:${id}" aria-haspopup="dialog"><b>${esc(a[0])}</b><span class="ii" aria-hidden="true">ⓘ</span></button>${hid ? ' <span class="tag2">Talent caché</span>' : ''}</div>` : ''; }).join('') + '<p class="note">Touchez un talent pour sa description.</p>' };
 }
@@ -1920,7 +1991,7 @@ function renderDetail() {
     const statsB = `<section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>`;
     const effB = `<section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
-      <div id="eff">${effHTML(types, mode2, chart, abE)}</div>${abE ? abE.html : ''}
+      ${effBlockHTML(types, chart, abE)}
       <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>`;
     const abB = (() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })();
     const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}

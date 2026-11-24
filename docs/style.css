@@ -398,6 +398,13 @@ details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] sum
 .badge sup{font-weight:800;margin-left:1px}
 .abnote{margin:12px 0 4px;padding:8px 12px;border-radius:12px;background:rgba(123,92,214,.10);border:1px solid rgba(123,92,214,.35);font-size:14px;line-height:1.4}
 .abnote p{margin:4px 0}
+/* v60.21: one table per talent */
+.abseg{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.abseg button{flex:1 1 auto;min-height:36px;padding:4px 10px;border-radius:18px;border:2px solid var(--line);background:var(--bg2);color:var(--fg);font-size:14px;font-weight:600;cursor:pointer}
+.abseg button small{font-weight:400;color:var(--mute)}
+.abseg button[aria-pressed="true"]{border-color:rgba(123,92,214,.9);background:rgba(123,92,214,.16)}
+.abnote .abhd{font-weight:600}
+.abnote .abbrk,.abnote .abpast{color:var(--mute);font-size:13px}
 /* v31: base-form note */
 .basenote{border-left:4px solid var(--accent)}
 .basenote p{margin:0;font-size:14.5px;line-height:1.45}

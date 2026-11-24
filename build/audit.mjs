@@ -444,5 +444,46 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.20 Duralugon Gigamax : listes de boss sur la fiche (utile en attaquant)', !!(rd.bm && rd.bm['884-gmax'] && rd.bm['884-gmax'].A && rd.bm['884-gmax'].A.length));
 }
 
+// ---- v60.21: talents qui changent les faiblesses (bloc ABEFF de docs/app.js, évalué tel quel)
+{ const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), blk = src.slice(src.indexOf('// ABEFF-START'), src.indexOf('// ABEFF-END'));
+  const { NO_ABIL, ABIL_EFF, typeMults, abMults } = new Function(blk + '\nreturn { NO_ABIL, ABIL_EFF, typeMults, abMults };')();
+  const ch = g => core.charts[g <= 1 ? 1 : g <= 5 ? 2 : 6];
+  const abIds = (f, g) => { let l = pickGen(f.pa, g, f.a); if (g < 5) l = l.filter(a => !a[1]); return l.filter(a => (ref.ab[a[0]][2] || 1) <= g).map(a => a[0]); };
+  const M = (id, k, g, ab) => { const f = F(id, k), t = pickGen(f.pt, g, f.t); return abMults(t, ch(g), ab); };
+  const B = (id, k, g) => { const f = F(id, k); return typeMults(pickGen(f.pt, g, f.t), ch(g)); };
+  const NAMES = { 26: 'Lévitation', 297: 'Absorbe-Terre', 11: 'Absorbe-Eau', 114: 'Lavabo', 87: 'Peau Sèche', 10: 'Absorbe-Volt', 78: 'Motorisé', 31: 'Paratonnerre', 18: 'Torche', 273: 'Bien Cuit', 157: 'Herbivore', 47: 'Isograisse', 85: 'Ignifugé', 199: 'Aquabulle', 272: 'Sel Purificateur', 218: 'Boule de Poils', 111: 'Filtre', 116: 'Solide Roc', 232: 'Prisme-Armure', 25: 'Garde Mystik', 189: 'Mer Primaire', 190: 'Terre Finale', 191: 'Souffle Delta', 305: 'Téra-Carapace' };
+  eq('v60.21 talents gérés = liste attendue', Object.keys(ABIL_EFF).map(Number).sort((a, b) => a - b), Object.keys(NAMES).map(Number).sort((a, b) => a - b));
+  for (const [id, n] of Object.entries(NAMES)) { ok(`v60.21 nom officiel ${n}`, ref.ab[id] && ref.ab[id][0] === n, ref.ab[id] && ref.ab[id][0]); ok(`v60.21 ${n} : effet pas avant le talent`, ABIL_EFF[id].g >= (ref.ab[id][2] || 3)); }
+  eq('v60.21 jeux sans talents', Object.keys(NO_ABIL).sort(), ['la', 'lgpe', 'za', 'zadlc']);
+  // Lévitation selon la génération : Ectoplasma l’a jusqu’en VI, Corps Maudit ensuite
+  ok('v60.21 Ectoplasma gen3/6 Lévitation, gen7 non', abIds(F(94), 3).includes(26) && abIds(F(94), 6).includes(26) && !abIds(F(94), 7).includes(26));
+  eq('v60.21 Ectoplasma gen6 Lévitation : Sol ×2 → ×0', [B(94, '94', 6).ground, M(94, '94', 6, 26).ground], [2, 0]);
+  ok('v60.21 Méga-Ectoplasma sans Lévitation', !abIds(F(94, '94-mega'), 6).includes(26));
+  // Garde Mystik : seules les attaques super efficaces touchent Munja
+  { const m = M(292, '292', 9, 25); eq('v60.21 Munja Garde Mystik', Object.keys(m).filter(t => m[t] > 0).sort(), ['dark', 'fire', 'flying', 'ghost', 'rock']); eq('v60.21 Munja seul talent', abIds(F(292), 9), [25]); }
+  { const m = M(292, '292', 3, 25); eq('v60.21 Munja Garde Mystik gen3 (Acier résiste Ténèbres/Spectre, non concerné)', Object.keys(m).filter(t => m[t] > 0).sort(), ['dark', 'fire', 'flying', 'ghost', 'rock']); }
+  eq('v60.21 Lanturn Absorbe-Volt : Électrik ×1 → ×0', [B(171, '171', 9).electric, M(171, '171', 9, 10).electric], [1, 0]);
+  eq('v60.21 Lanturn Absorbe-Eau caché : Eau ×½ → ×0', [B(171, '171', 9).water, M(171, '171', 9, 11).water], [0.5, 0]);
+  ok('v60.21 Lanturn : Absorbe-Eau caché absent avant la gen V', !abIds(F(171), 4).includes(11) && abIds(F(171), 5).includes(11));
+  eq('v60.21 Ponyta Torche : Feu ×½ → ×0', [B(77, '77', 9).fire, M(77, '77', 9, 18).fire], [0.5, 0]);
+  ok('v60.21 Ponyta de Galar sans Torche', !abIds(F(77, '77-galar'), 9).includes(18));
+  eq('v60.21 Galvagon Absorbe-Volt : Électrik ×¼ → ×0', [B(880, '880', 9).electric, M(880, '880', 9, 10).electric], [0.25, 0]);
+  eq('v60.21 Cradopaud Peau Sèche : Eau ×0, Feu ×1,25', [M(453, '453', 9, 87).water, M(453, '453', 9, 87).fire], [0, 1.25]);
+  ok('v60.21 Rhinastoc Paratonnerre + Solide Roc', abIds(F(464), 9).includes(31) && abIds(F(464), 9).includes(116));
+  eq('v60.21 Rhinastoc Solide Roc : Eau ×4 → ×3, Plante ×4 → ×3', [M(464, '464', 9, 116).water, M(464, '464', 9, 116).grass], [3, 3]);
+  ok('v60.21 Paratonnerre sans effet avant la gen V', ABIL_EFF[31].g === 5 && ABIL_EFF[114].g === 5);
+  { const m = M(384, '384-mega', 6, 191); eq('v60.21 Méga-Rayquaza Souffle Delta : Glace ×4 → ×2, Roche ×2 → ×1, Dragon/Fée inchangés', [m.ice, m.rock, m.dragon, m.fairy, m.electric], [2, 1, 2, 2, 0.5]); }
+  eq('v60.21 Primo-Kyogre Mer Primaire : Feu ×0', M(382, '382-primal', 6, 189).fire, 0);
+  eq('v60.21 Primo-Groudon Terre Finale : Eau ×0', M(383, '383-primal', 6, 190).water, 0);
+  { const m = M(1024, '1024-terastal', 9, 305); eq('v60.21 Terapagos Téracristal Téra-Carapace : Combat ×2 → ×½, Spectre ×0 reste', [m.fighting, m.ghost, m.fire], [0.5, 0, 0.5]); }
+  eq('v60.21 Groret Isograisse : Feu et Glace ×½', [M(325, '325', 9, 47).fire, M(325, '325', 9, 47).ice], [0.5, 0.5]);
+  eq('v60.21 Pichu Troizépi : Statik seul (pas de Paratonnerre caché)', F(172, '172-spiky-eared').a, [[9, 0]]);
+  ok('v60.21 Méga-Heatran (Z-A seulement) sans talent', F(485, '485-mega').a.length === 0);
+  // every form with a talent of the list: the effect actually changes something for at least one of its types (no dead entry)
+  { let dead = 0, n = 0; for (const e of core.e) { const f = sp(e.id).f[e.k]; if (!f || !f.a) continue; for (const [id] of f.a) if (ABIL_EFF[id]) { n++; const a = abMults(f.t, ch(9), id), b = typeMults(f.t, ch(9)); if (!Object.keys(a).some(t => a[t] !== b[t])) dead++; } } ok(`v60.21 talents de la liste sur ${n} formes (dont ${dead} sans effet visible, ex. Lévitation sur un type Vol)`, n > 250 && dead < 15); }
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.21 SW : VERSION ≥ v60.21, DATA_VERSION ≥ d63', /VERSION = 'v60\.(2[1-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 63);
+}
+
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
