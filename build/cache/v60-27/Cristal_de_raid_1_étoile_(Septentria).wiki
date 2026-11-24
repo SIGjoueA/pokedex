@@ -1,0 +1,259 @@
+{{Renvoi homonymie|Cristal de raid 1 étoile}}
+{{Ruban Cristal de raid|1|premier=oui|suffixe=Septentria}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 1★''' qui peuvent apparaître dans les cristaux brillants à [[Septentria]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Abo / talent-caché(Impossible) difficulté(1) capacités(Dard-Venin, Queue-Poison, Morsure, Regard Médusant)
+Sabelette / talent-caché(Impossible) difficulté(1) capacités(Boul'Armure, Taillade, Tour Rapide, Coud'Boue)
+Ptitard / talent-caché(Impossible) difficulté(1) capacités(Pistolet à O, Vibraqua, Brume, Balayage)
+Racaillou / talent-caché(Impossible) difficulté(1) capacités(Jet-Pierres, Boul'Armure, Roulade, Piétisol)
+Fouinette / talent-caché(Impossible) difficulté(1) capacités(Griffe, Vive-Attaque, Puissance, Charme)
+Hoothoot / talent-caché(Impossible) difficulté(1) capacités(Picpic, Charge, Rugissement, Ombre Nocturne)
+Mimigal / talent-caché(Impossible) difficulté(1) capacités(Ombre Nocturne, Dard-Venin, Sécrétion, Harcèlement)
+Mélo / talent-caché(Impossible) difficulté(1) capacités(Voix Enjôleuse, Berceuse, Encore, Doux Baiser)
+Axoloto / talent-caché(Impossible) difficulté(1) capacités(Mimi-Queue, Pistolet à O, Danse Pluie, Tir de Boue)
+Medhyèna / talent-caché(Impossible) difficulté(1) capacités(Morsure, Charge, Jet de Sable, Crochet Venin)
+Korillon / talent-caché(Impossible) difficulté(1) capacités(Choc Mental, Rugissement, Étonnement)
+Larveyette / talent-caché(Impossible) difficulté(1) capacités(Charge, Sécrétion, Piqûre, Tranch'Herbe)
+Couaneton / talent-caché(Impossible) difficulté(1) capacités(Pistolet à O, Anti-Brume, Cru-Ailes)
+Larvibule / talent-caché(Impossible) difficulté(1) capacités(Force Poigne, Coud'Boue, Sécrétion, Piqûre)
+Bombydou / talent-caché(Impossible) difficulté(1) capacités(Vole-Vie, Vent Féérique, Para-Spore, Doux Parfum)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Abo_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Croc d'Abo / 1
+Plume Force / 1
+Croc d'Abo / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Force / 1 / 9%
+Baie Oran / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Croc d'Abo / 1 / 7%
+
+Sabelette_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Griffe de Sabelette / 1
+Plume Armure / 1
+Griffe de Sabelette / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Armure / 1 / 9%
+Baie Ceriz / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Poussière Étoile / 1 / 30%
+Griffe de Sabelette / 1 / 7%
+
+Ptitard_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Mucus de Ptitard / 1
+Plume Esprit / 1
+Mucus de Ptitard / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Esprit / 1 / 9%
+Baie Fraive / 1 / 8%
+Baie Willia / 2 / 8%
+Baie Maron / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Mucus de Ptitard / 1 / 7%
+
+Racaillou_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Fragment de Racaillou / 1
+Plume Armure / 1
+Fragment de Racaillou / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Armure / 1 / 9%
+Baie Ceriz / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Poussière Étoile / 1 / 30%
+Fragment de Racaillou / 1 / 7%
+
+Fouinette_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Poils de Fouinette / 1
+Plume Sprint / 1
+Poils de Fouinette / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Sprint / 1 / 9%
+Baie Kika / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Poils de Fouinette / 1 / 7%
+
+Hoothoot_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Plume de Hoothoot / 1
+Plume Mental / 1
+Plume de Hoothoot / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Mental / 1 / 9%
+Baie Willia / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Kika / 1 / 8%
+Poussière Étoile / 1 / 30%
+Plume de Hoothoot / 1 / 7%
+
+Mimigal_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Fil de Mimigal / 1
+Plume Force / 1
+Fil de Mimigal / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Force / 1 / 9%
+Baie Oran / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Fil de Mimigal / 1 / 7%
+
+Mélo_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Poils de Mélo / 1
+Plume Santé / 1
+Poils de Mélo / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Santé / 1 / 9%
+Baie Pêcha / 1 / 8%
+Baie Fraive / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Poils de Mélo / 1 / 7%
+
+Axoloto_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Mucus d'Axoloto / 1
+Plume Santé / 1
+Mucus d'Axoloto / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Santé / 1 / 9%
+Baie Pêcha / 1 / 8%
+Baie Fraive / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Mucus d'Axoloto / 1 / 7%
+
+Medhyèna_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Croc de Medhyèna / 1
+Plume Force / 1
+Croc de Medhyèna / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Force / 1 / 9%
+Baie Oran / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Croc de Medhyèna / 1 / 7%
+
+Korillon_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Fragment de Korillon / 1
+Plume Esprit / 1
+Fragment de Korillon / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Esprit / 1 / 9%
+Baie Fraive / 1 / 8%
+Baie Willia / 2 / 8%
+Baie Maron / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Fragment de Korillon / 1 / 7%
+
+Larveyette_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Feuille de Larveyette / 1
+Plume Santé / 1
+Feuille de Larveyette / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Santé / 1 / 9%
+Baie Pêcha / 1 / 8%
+Baie Fraive / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Feuille de Larveyette / 1 / 7%
+
+Couaneton_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Plume de Couaneton / 1
+Plume Esprit / 1
+Plume de Couaneton / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Esprit / 1 / 9%
+Baie Fraive / 1 / 8%
+Baie Willia / 2 / 8%
+Baie Maron / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Plume de Couaneton / 1 / 7%
+
+Larvibule_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Fil de Larvibule / 1
+Plume Force / 1
+Fil de Larvibule / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Force / 1 / 9%
+Baie Oran / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Fil de Larvibule / 1 / 7%
+
+Bombydou_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Poudre de Bombydou / 1
+Plume Sprint / 1
+Poudre de Bombydou / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 9%
+Plume Sprint / 1 / 9%
+Baie Kika / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Poudre de Bombydou / 1 / 7%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 1-Stern-Tera-Raids in der Blaubeer-Akademie]]

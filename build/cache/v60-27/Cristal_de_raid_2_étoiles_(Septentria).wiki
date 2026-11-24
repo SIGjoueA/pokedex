@@ -1,0 +1,259 @@
+{{Renvoi homonymie|Cristal de raid 2 étoiles}}
+{{Ruban Cristal de raid|2|suffixe=Septentria}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 2★''' qui peuvent apparaître dans les cristaux brillants à [[Septentria]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Goupix / talent-caché(Impossible) difficulté(2) capacités(Calcination, Feu Follet, Extrasenseur, Dépit)
+Chétiflor / talent-caché(Impossible) difficulté(2) capacités(Fouet Lianes, Ligotage, Croissance, Poudre Toxik)
+Yanma / talent-caché(Impossible) difficulté(2) capacités(Tranch'Air, Vive-Attaque, Ruse, Piqûre)
+Limagma / talent-caché(Impossible) difficulté(2) capacités(Purédpois, Flammèche, Jet-Pierres, Malédiction)
+Marcacrin / talent-caché(Impossible) difficulté(2) capacités(Poudreuse, Gigotage, Éclats Glace, Brume)
+Nénupiot / talent-caché(Impossible) difficulté(2) capacités(Vole-Vie, Pistolet à O, Brume, Méga-Sangsue)
+Grainipiot / talent-caché(Impossible) difficulté(2) capacités(Charge, Étonnement, Vole-Vie, Représailles)
+Muciole / talent-caché(Impossible) difficulté(2) capacités(Vive-Attaque, Charge, Survinsecte, Frappe Atlas) notes(Exclusif Ec.)
+Lumivole / talent-caché(Impossible) difficulté(2) capacités(Charme, Charge, Survinsecte, Vive-Attaque) notes(Exclusif Vi.)
+Écrapince / talent-caché(Impossible) difficulté(2) capacités(Pistolet à O, Provoc, Bulles d'O, Coup Double)
+Barpau / talent-caché(Impossible) difficulté(2) capacités(Charge, Gigotage, Brume, Buée Noire)
+Skelénox / talent-caché(Impossible) difficulté(2) capacités(Représailles, Ombre Nocturne, Étonnement, Ombre Portée)
+Goinfrex / talent-caché(Impossible) difficulté(2) capacités(Charge, Léchouille, Morsure, Désherbaffe)
+Charpenti / talent-caché(Impossible) difficulté(2) capacités(Balayage, Jet-Pierres, Puissance, Groz'Yeux)
+Funécire / talent-caché(Impossible) difficulté(2) capacités(Châtiment, Feu Follet, Flammèche, Purédpois)
+Verpom / talent-caché(Impossible) difficulté(2) capacités(Repli, Étonnement)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Goupix_2
+Bonbon Exp. S / 3
+Poils de Goupix / 2
+Plume Esprit / 1
+Poils de Goupix / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Esprit / 1 / 10%
+Baie Fraive / 1 / 4%
+Baie Willia / 2 / 4%
+Baie Maron / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Poils de Goupix / 1 / 10%
+
+Chétiflor_2
+Bonbon Exp. S / 3
+Liane de Chétiflor / 2
+Plume Force / 1
+Liane de Chétiflor / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Force / 1 / 10%
+Baie Oran / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Liane de Chétiflor / 1 / 10%
+
+Yanma_2
+Bonbon Exp. S / 3
+Dard de Yanma / 2
+Plume Sprint / 1
+Dard de Yanma / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Sprint / 1 / 10%
+Baie Kika / 1 / 4%
+Baie Maron / 2 / 4%
+Baie Willia / 1 / 4%
+Petit Champi / 1 / 31%
+Dard de Yanma / 1 / 10%
+
+Limagma_2
+Bonbon Exp. S / 3
+Lave de Limagma / 2
+Plume Armure / 1
+Lave de Limagma / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Armure / 1 / 10%
+Baie Ceriz / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Poussière Étoile / 1 / 31%
+Lave de Limagma / 1 / 10%
+
+Marcacrin_2
+Bonbon Exp. S / 3
+Poils de Marcacrin / 2
+Plume Force / 1
+Poils de Marcacrin / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Force / 1 / 10%
+Baie Oran / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Poils de Marcacrin / 1 / 10%
+
+Nénupiot_2
+Bonbon Exp. S / 3
+Feuille de Nénupiot / 2
+Plume Mental / 1
+Feuille de Nénupiot / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Mental / 1 / 10%
+Baie Willia / 1 / 4%
+Baie Maron / 2 / 4%
+Baie Kika / 1 / 4%
+Poussière Étoile / 1 / 31%
+Feuille de Nénupiot / 1 / 10%
+
+Grainipiot_2
+Bonbon Exp. S / 3
+Tige de Grainipiot / 2
+Plume Armure / 1
+Tige de Grainipiot / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Armure / 1 / 10%
+Baie Ceriz / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Poussière Étoile / 1 / 31%
+Tige de Grainipiot / 1 / 10%
+
+Muciole_2
+Bonbon Exp. S / 3
+Fluide de Muciole / 2
+Plume Esprit / 1
+Fluide de Muciole / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Esprit / 1 / 10%
+Baie Fraive / 1 / 4%
+Baie Willia / 2 / 4%
+Baie Maron / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Fluide de Muciole / 1 / 10%
+
+Lumivole_2
+Bonbon Exp. S / 3
+Fluide de Lumivole / 2
+Plume Esprit / 1
+Fluide de Lumivole / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Esprit / 1 / 10%
+Baie Fraive / 1 / 4%
+Baie Willia / 2 / 4%
+Baie Maron / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Fluide de Lumivole / 1 / 10%
+
+Écrapince_2
+Bonbon Exp. S / 3
+Carapace d'Écrapince / 2
+Plume Force / 1
+Carapace d'Écrapince / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Force / 1 / 10%
+Baie Oran / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Carapace d'Écrapince / 1 / 10%
+
+Barpau_2
+Bonbon Exp. S / 3
+Écaille de Barpau / 2
+Plume Sprint / 1
+Écaille de Barpau / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Sprint / 1 / 10%
+Baie Kika / 1 / 4%
+Baie Maron / 2 / 4%
+Baie Willia / 1 / 4%
+Petit Champi / 1 / 31%
+Écaille de Barpau / 1 / 10%
+
+Skelénox_2
+Bonbon Exp. S / 3
+Fragment de Skelénox / 2
+Plume Armure / 1
+Fragment de Skelénox / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Armure / 1 / 10%
+Baie Ceriz / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Poussière Étoile / 1 / 31%
+Fragment de Skelénox / 1 / 10%
+
+Goinfrex_2
+Bonbon Exp. S / 3
+Croc de Goinfrex / 2
+Plume Santé / 1
+Croc de Goinfrex / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Santé / 1 / 10%
+Baie Pêcha / 1 / 4%
+Baie Fraive / 2 / 4%
+Baie Willia / 1 / 4%
+Petit Champi / 1 / 31%
+Croc de Goinfrex / 1 / 10%
+
+Charpenti_2
+Bonbon Exp. S / 3
+Sueur de Charpenti / 2
+Plume Force / 1
+Sueur de Charpenti / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Force / 1 / 10%
+Baie Oran / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Sueur de Charpenti / 1 / 10%
+
+Funécire_2
+Bonbon Exp. S / 3
+Suie de Funécire / 2
+Plume Esprit / 1
+Suie de Funécire / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Esprit / 1 / 10%
+Baie Fraive / 1 / 4%
+Baie Willia / 2 / 4%
+Baie Maron / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 31%
+Suie de Funécire / 1 / 10%
+
+Verpom_2
+Bonbon Exp. S / 3
+Jus de Verpom / 2
+Plume Armure / 1
+Jus de Verpom / 1 / invités
+Bonbon Exp. S / 1 / 24%
+Bonbon Exp. M / 1 / 12%
+Plume Armure / 1 / 10%
+Baie Ceriz / 1 / 4%
+Baie Pêcha / 2 / 4%
+Baie Fraive / 1 / 4%
+Poussière Étoile / 1 / 31%
+Jus de Verpom / 1 / 10%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 2-Sterne-Tera-Raids in Kitakami]]

@@ -1,0 +1,817 @@
+{{Renvoi homonymie|Cristal de raid 2 étoiles}}
+{{Ruban Cristal de raid|2|suffixe=Paldea}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 2★''' qui peuvent apparaître dans les cristaux brillants à [[Paldea]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Pikachu / talent-caché(Impossible) difficulté(2) capacités(Étincelle, Frotte-Frimousse, Cage Éclair, Météores)
+Rondoudou / talent-caché(Impossible) difficulté(2) capacités(Plaquage, Voix Enjôleuse, Gyroballe, Berceuse)
+Taupiqueur / talent-caché(Impossible) difficulté(2) capacités(Piétisol, Tranche, Aiguisage, Étonnement)
+Miaouss / talent-caché(Impossible) difficulté(2) capacités(Morsure, Jackpot, Assurance, Combo-Griffe)
+Psykokwak / talent-caché(Impossible) difficulté(2) capacités(Vibraqua, Psykoud'Boul, Entrave, Hypnose)
+Férosinge / talent-caché(Impossible) difficulté(2) capacités(Casse-Brique, Combo-Griffe, Groz'Yeux, Puissance)
+Caninos / talent-caché(Impossible) difficulté(2) capacités(Roue de Feu, Morsure, Grondement, Vengeance)
+Ramoloss / talent-caché(Impossible) difficulté(2) capacités(Vibraqua, Choc Mental, Bâillement, Rugissement)
+Magnéti / talent-caché(Impossible) difficulté(2) capacités(Cage Éclair, Étincelle, Grincement, Toile Élek)
+Tadmorv / talent-caché(Impossible) difficulté(2) capacités(Détritus, Tir de Boue, Entrave, Ombre Portée)
+Kokiyas / talent-caché(Impossible) difficulté(2) capacités(Coqui-Lame, Éclats Glace, Groz'Yeux, Charge)
+Fantominus / talent-caché(Impossible) difficulté(2) capacités(Représailles, Châtiment, Onde Folie, Vent Glace)
+Voltorbe / talent-caché(Impossible) difficulté(2) capacités(Ondes Étranges, Éclair, Météores, Roulade)
+Magicarpe / talent-caché(Impossible) difficulté(2) capacités(Charge, Gigotage, Trempette)
+Wattouat / talent-caché(Impossible) difficulté(2) capacités(Cage Éclair, Éclair, Charge, Rayon Gemme)
+Cornèbre / talent-caché(Impossible) difficulté(2) capacités(Cru-Ailes, Étonnement, Assurance, Buée Noire)
+Feuforêve / talent-caché(Impossible) difficulté(2) capacités(Cage Éclair, Étonnement, Choc Mental, Ombre Portée) notes(Exclusif Vi.)
+Pomdepik / talent-caché(Impossible) difficulté(2) capacités(Piqûre, Bélier, Roulade, Survinsecte)
+Teddiursa / talent-caché(Impossible) difficulté(2) capacités(Implore, Représailles, Regard Touchant, Griffe Acier)
+Malosse / talent-caché(Impossible) difficulté(2) capacités(Morsure, Flammèche, Baston, Façade)
+Phanpy / talent-caché(Impossible) difficulté(2) capacités(Boul'Armure, Roulade, Piétisol, Souplesse)
+Parecool / talent-caché(Impossible) difficulté(2) capacités(Coup d'Boule, Encore, Bâillement, Câlinerie)
+Méditikka / talent-caché(Impossible) difficulté(2) capacités(Bluff, Choc Mental, Balayette, Boost)
+Gloupti / talent-caché(Impossible) difficulté(2) capacités(Détritus, Bombe Acide, Coud'Boue, Plaquage) notes(Exclusif Vi.)
+Spoink / talent-caché(Impossible) difficulté(2) capacités(Rafale Psy, Onde Folie, Désherbaffe, Choc Mental)
+Cacnea / talent-caché(Impossible) difficulté(2) capacités(Vole-Vie, Balle Graine, Jet de Sable, Représailles)
+Polichombr / talent-caché(Impossible) difficulté(2) capacités(Ombre Portée, Grincement, Feu Follet, Rafale Psy)
+Stalgamin / talent-caché(Impossible) difficulté(2) capacités(Éclats Glace, Vent Glace, Groz'Yeux, Roulade)
+Lovdisc / talent-caché(Impossible) difficulté(2) capacités(Charme, Vibraqua, Vampibaiser, Gigotage)
+Lixy / talent-caché(Impossible) difficulté(2) capacités(Morsure, Crocs Éclair, Double Pied, Regard Touchant)
+Mustébouée / talent-caché(Impossible) difficulté(2) capacités(Aqua-Jet, Pistolet à O, Rugissement, Taillade)
+Sancoki forme(Occident) / talent-caché(Impossible) difficulté(2) capacités(Tir de Boue, Vibraqua, Pouvoir Antique, Bain de Smog) notes(Exclusif Ec.)
+Sancoki forme(Orient) / talent-caché(Impossible) difficulté(2) capacités(Tir de Boue, Vibraqua, Pouvoir Antique, Bain de Smog) notes(Exclusif Vi.)
+Baudrive / talent-caché(Impossible) difficulté(2) capacités(Tornade, Représailles, Étonnement, Buée Noire) notes(Exclusif Ec.)
+Moufouette / talent-caché(Impossible) difficulté(2) capacités(Brouillard, Combo-Griffe, Morsure, Choc Venin) notes(Exclusif Ec.)
+Cradopaud / talent-caché(Impossible) difficulté(2) capacités(Étonnement, Provoc, Balayage, Choc Venin)
+Écayon / talent-caché(Impossible) difficulté(2) capacités(Pistolet à O, Tornade, Onde Boréale, Onde Folie)
+Mascaïman / talent-caché(Impossible) difficulté(2) capacités(Piétisol, Morsure, Jet de Sable, Groz'Yeux)
+Scrutella / talent-caché(Impossible) difficulté(2) capacités(Chatouille, Rafale Psy, Tourmente, Écras'Face)
+Trompignon / talent-caché(Impossible) difficulté(2) capacités(Bain de Smog, Étonnement, Méga-Sangsue, Para-Spore)
+Scalpion / talent-caché(Impossible) difficulté(2) capacités(Taillade, Griffe Acier, Grimace, Assurance)
+Passerouge / talent-caché(Impossible) difficulté(2) capacités(Nitrocharge, Vive-Attaque, Gigotage, Picpic)
+Venalgue / talent-caché(Impossible) difficulté(2) capacités(Acide, Ouragan, Buée Noire, Pistolet à O) notes(Exclusif Ec.)
+Flingouste / talent-caché(Impossible) difficulté(2) capacités(Aqua-Jet, Anti-Air, Larcin, Gigotage) notes(Exclusif Vi.)
+Tiboudet / talent-caché(Impossible) difficulté(2) capacités(Double Pied, Piétisol, Écrasement, Coud'Boue)
+Tritox / talent-caché(Impossible) difficulté(2) capacités(Flammèche, Calcination, Coud'Boue, Queue-Poison)
+Bacabouh / talent-caché(Impossible) difficulté(2) capacités(Piétisol, Étonnement, Tourbi-Sable, Jet de Sable)
+Charbi / talent-caché(Impossible) difficulté(2) capacités(Brouillard, Coud'Boue, Calcination, Anti-Air)
+Embrochet / talent-caché(Impossible) difficulté(2) capacités(Aqua-Jet, Picpic, Morsure, Hâte)
+Théffroi forme(Contrefaçon) / talent-caché(Impossible) difficulté(2) capacités(Étonnement, Méga-Sangsue, Repli, Rafale Psy)
+Grimalin / talent-caché(Impossible) difficulté(2) capacités(Morsure, Flatterie, Balayage, Provoc)
+Charibari / talent-caché(Impossible) difficulté(2) capacités(Éclate-Roc, Piétisol, Écrasement, Rugissement)
+Compagnol / talent-caché(Impossible) difficulté(2) capacités(Écho, Coup Double, Regard Touchant, Câlinerie)
+Virovent / talent-caché(Impossible) difficulté(2) capacités(Roulade, Balle Graine, Harcèlement, Ombre Portée)
+Pimito / talent-caché(Impossible) difficulté(2) capacités(Morsure, Tranch'Herbe, Balle Graine, Coup d'Boule)
+Forgerette / talent-caché(Impossible) difficulté(2) capacités(Croco Larme, Griffe Acier, Étonnement, Éclate-Roc)
+Vrombi / talent-caché(Impossible) difficulté(2) capacités(Gyroballe, Détritus, Assurance, Gaz Toxik)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Pikachu_2
+Bonbon Exp. S / 3
+Poils de Pichu / 2
+Plume Sprint / 1
+Poils de Pichu / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Pichu / 1 / 111,11%
+
+Rondoudou_2
+Bonbon Exp. S / 3
+Poils de Toudoudou / 2
+Plume Santé / 1
+Poils de Toudoudou / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Toudoudou / 1 / 111,11%
+
+Taupiqueur_2
+Bonbon Exp. S / 3
+Terre de Taupiqueur / 2
+Plume Sprint / 1
+Terre de Taupiqueur / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Terre de Taupiqueur / 1 / 111,11%
+
+Miaouss_2
+Bonbon Exp. S / 3
+Poils de Miaouss / 2
+Plume Sprint / 1
+Poils de Miaouss / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Miaouss / 1 / 111,11%
+
+Psykokwak_2
+Bonbon Exp. S / 3
+Duvet de Psykokwak / 2
+Plume Esprit / 1
+Duvet de Psykokwak / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Duvet de Psykokwak / 1 / 111,11%
+
+Férosinge_2
+Bonbon Exp. S / 3
+Poils de Férosinge / 2
+Plume Force / 1
+Poils de Férosinge / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Poils de Férosinge / 1 / 111,11%
+
+Caninos_2
+Bonbon Exp. S / 3
+Poils de Caninos / 2
+Plume Force / 1
+Poils de Caninos / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Poils de Caninos / 1 / 111,11%
+
+Ramoloss_2
+Bonbon Exp. S / 3
+Griffe de Ramoloss / 2
+Plume Santé / 1
+Griffe de Ramoloss / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Griffe de Ramoloss / 1 / 111,11%
+
+Magnéti_2
+Bonbon Exp. S / 3
+Vis de Magnéti / 2
+Plume Esprit / 1
+Vis de Magnéti / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Vis de Magnéti / 1 / 111,11%
+
+Tadmorv_2
+Bonbon Exp. S / 3
+Poison de Tadmorv / 2
+Plume Mental / 1
+Poison de Tadmorv / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Poison de Tadmorv / 1 / 111,11%
+
+Kokiyas_2
+Bonbon Exp. S / 3
+Perle de Kokiyas / 2
+Plume Armure / 1
+Perle de Kokiyas / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Perle de Kokiyas / 1 / 111,11%
+
+Fantominus_2
+Bonbon Exp. S / 3
+Gaz de Fantominus / 2
+Plume Esprit / 1
+Gaz de Fantominus / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Gaz de Fantominus / 1 / 111,11%
+
+Voltorbe_2
+Bonbon Exp. S / 3
+Électricité de Voltorbe / 2
+Plume Sprint / 1
+Électricité de Voltorbe / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Électricité de Voltorbe / 1 / 111,11%
+
+Magicarpe_2
+Bonbon Exp. S / 3
+Écaille de Magicarpe / 2
+Plume Sprint / 1
+Écaille de Magicarpe / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Écaille de Magicarpe / 1 / 111,11%
+
+Wattouat_2
+Bonbon Exp. S / 3
+Laine de Wattouat / 2
+Plume Esprit / 1
+Laine de Wattouat / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Laine de Wattouat / 1 / 111,11%
+
+Cornèbre_2
+Bonbon Exp. S / 3
+Trésor de Cornèbre / 2
+Plume Sprint / 1
+Trésor de Cornèbre / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Trésor de Cornèbre / 1 / 111,11%
+
+Feuforêve_2
+Bonbon Exp. S / 3
+Larme de Feuforêve / 2
+Plume Mental / 1
+Larme de Feuforêve / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Larme de Feuforêve / 1 / 111,11%
+
+Pomdepik_2
+Bonbon Exp. S / 3
+Écorce de Pomdepik / 2
+Plume Armure / 1
+Écorce de Pomdepik / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Écorce de Pomdepik / 1 / 111,11%
+
+Teddiursa_2
+Bonbon Exp. S / 3
+Griffe de Teddiursa / 2
+Plume Force / 1
+Griffe de Teddiursa / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Griffe de Teddiursa / 1 / 111,11%
+
+Malosse_2
+Bonbon Exp. S / 3
+Croc de Malosse / 2
+Plume Esprit / 1
+Croc de Malosse / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Croc de Malosse / 1 / 111,11%
+
+Phanpy_2
+Bonbon Exp. S / 3
+Ongle de Phanpy / 2
+Plume Santé / 1
+Ongle de Phanpy / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Ongle de Phanpy / 1 / 111,11%
+
+Parecool_2
+Bonbon Exp. S / 3
+Poils de Parecool / 2
+Plume Santé / 1
+Poils de Parecool / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Parecool / 1 / 111,11%
+
+Méditikka_2
+Bonbon Exp. S / 3
+Sueur de Méditikka / 2
+Plume Sprint / 1
+Sueur de Méditikka / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Sueur de Méditikka / 1 / 111,11%
+
+Gloupti_2
+Bonbon Exp. S / 3
+Mucus de Gloupti / 2
+Plume Santé / 1
+Mucus de Gloupti / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Mucus de Gloupti / 1 / 111,11%
+
+Spoink_2
+Bonbon Exp. S / 3
+Perle de Spoink / 2
+Plume Sprint / 1
+Perle de Spoink / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Perle de Spoink / 1 / 111,11%
+
+Cacnea_2
+Bonbon Exp. S / 3
+Épine de Cacnea / 2
+Plume Force / 1
+Épine de Cacnea / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Épine de Cacnea / 1 / 111,11%
+
+Polichombr_2
+Bonbon Exp. S / 3
+Tissu de Polichombr / 2
+Plume Force / 1
+Tissu de Polichombr / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Tissu de Polichombr / 1 / 111,11%
+
+Stalgamin_2
+Bonbon Exp. S / 3
+Poils de Stalgamin / 2
+Plume Santé / 1
+Poils de Stalgamin / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Stalgamin / 1 / 111,11%
+
+Lovdisc_2
+Bonbon Exp. S / 3
+Écaille de Lovdisc / 2
+Plume Sprint / 1
+Écaille de Lovdisc / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Écaille de Lovdisc / 1 / 111,11%
+
+Lixy_2
+Bonbon Exp. S / 3
+Croc de Lixy / 2
+Plume Force / 1
+Croc de Lixy / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Croc de Lixy / 1 / 111,11%
+
+Mustébouée_2
+Bonbon Exp. S / 3
+Poils de Mustébouée / 2
+Plume Sprint / 1
+Poils de Mustébouée / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Mustébouée / 1 / 111,11%
+
+Sancoki_2
+Bonbon Exp. S / 3
+Mucus de Sancoki / 2
+Plume Mental / 1
+Mucus de Sancoki / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Mucus de Sancoki / 1 / 111,11%
+
+Sancoki_2_2
+Bonbon Exp. S / 3
+Mucus de Sancoki / 2
+Plume Mental / 1
+Mucus de Sancoki / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Mucus de Sancoki / 1 / 111,11%
+
+Baudrive_2
+Bonbon Exp. S / 3
+Gaz de Baudrive / 2
+Plume Santé / 1
+Gaz de Baudrive / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Santé / 1 / 111,11%
+Baie Pêcha / 1 / 44,44%
+Baie Fraive / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Gaz de Baudrive / 1 / 111,11%
+
+Moufouette_2
+Bonbon Exp. S / 3
+Poils de Moufouette / 2
+Plume Sprint / 1
+Poils de Moufouette / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Moufouette / 1 / 111,11%
+
+Cradopaud_2
+Bonbon Exp. S / 3
+Poison de Cradopaud / 2
+Plume Force / 1
+Poison de Cradopaud / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Poison de Cradopaud / 1 / 111,11%
+
+Écayon_2
+Bonbon Exp. S / 3
+Écaille d'Écayon / 2
+Plume Mental / 1
+Écaille d'Écayon / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Écaille d'Écayon / 1 / 111,11%
+
+Mascaïman_2
+Bonbon Exp. S / 3
+Griffe de Mascaïman / 2
+Plume Force / 1
+Griffe de Mascaïman / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Griffe de Mascaïman / 1 / 111,11%
+
+Scrutella_2
+Bonbon Exp. S / 3
+Cils de Scrutella / 2
+Plume Mental / 1
+Cils de Scrutella / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Cils de Scrutella / 1 / 111,11%
+
+Trompignon_2
+Bonbon Exp. S / 3
+Spores de Trompignon / 2
+Plume Armure / 1
+Spores de Trompignon / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Spores de Trompignon / 1 / 111,11%
+
+Scalpion_2
+Bonbon Exp. S / 3
+Lame de Scalpion / 2
+Plume Force / 1
+Lame de Scalpion / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Lame de Scalpion / 1 / 111,11%
+
+Passerouge_2
+Bonbon Exp. S / 3
+Plume de Passerouge / 2
+Plume Sprint / 1
+Plume de Passerouge / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Plume de Passerouge / 1 / 111,11%
+
+Venalgue_2
+Bonbon Exp. S / 3
+Algue de Venalgue / 2
+Plume Mental / 1
+Algue de Venalgue / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Algue de Venalgue / 1 / 111,11%
+
+Flingouste_2
+Bonbon Exp. S / 3
+Pince de Flingouste / 2
+Plume Esprit / 1
+Pince de Flingouste / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Pince de Flingouste / 1 / 111,11%
+
+Tiboudet_2
+Bonbon Exp. S / 3
+Boue de Tiboudet / 2
+Plume Armure / 1
+Boue de Tiboudet / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Boue de Tiboudet / 1 / 111,11%
+
+Tritox_2
+Bonbon Exp. S / 3
+Gaz de Tritox / 2
+Plume Esprit / 1
+Gaz de Tritox / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Gaz de Tritox / 1 / 111,11%
+
+Bacabouh_2
+Bonbon Exp. S / 3
+Sable de Bacabouh / 2
+Plume Armure / 1
+Sable de Bacabouh / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Sable de Bacabouh / 1 / 111,11%
+
+Charbi_2
+Bonbon Exp. S / 3
+Charbon de Charbi / 2
+Plume Armure / 1
+Charbon de Charbi / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Charbon de Charbi / 1 / 111,11%
+
+Embrochet_2
+Bonbon Exp. S / 3
+Écaille d'Embrochet / 2
+Plume Sprint / 1
+Écaille d'Embrochet / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Écaille d'Embrochet / 1 / 111,11%
+
+Théffroi_2
+Bonbon Exp. S / 3
+Fragment de Théffroi / 2
+Plume Esprit / 1
+Fragment de Théffroi / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Esprit / 1 / 111,11%
+Baie Fraive / 1 / 44,44%
+Baie Willia / 2 / 44,44%
+Baie Maron / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Fragment de Théffroi / 1 / 111,11%
+
+Grimalin_2
+Bonbon Exp. S / 3
+Poils de Grimalin / 2
+Plume Force / 1
+Poils de Grimalin / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Poils de Grimalin / 1 / 111,11%
+
+Charibari_2
+Bonbon Exp. S / 3
+Rouille de Charibari / 2
+Plume Armure / 1
+Rouille de Charibari / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Armure / 1 / 111,11%
+Baie Ceriz / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Rouille de Charibari / 1 / 111,11%
+
+Compagnol_2
+Bonbon Exp. S / 3
+Poils de Compagnol / 2
+Plume Sprint / 1
+Poils de Compagnol / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Sprint / 1 / 111,11%
+Baie Kika / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Willia / 1 / 44,44%
+Petit Champi / 1 / 333,33%
+Poils de Compagnol / 1 / 111,11%
+
+Virovent_2
+Bonbon Exp. S / 3
+Branche de Virovent / 2
+Plume Force / 1
+Branche de Virovent / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Branche de Virovent / 1 / 111,11%
+
+Pimito_2
+Bonbon Exp. S / 3
+Graine de Pimito / 2
+Plume Force / 1
+Graine de Pimito / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Graine de Pimito / 1 / 111,11%
+
+Forgerette_2
+Bonbon Exp. S / 3
+Poils de Forgerette / 2
+Plume Mental / 1
+Poils de Forgerette / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Mental / 1 / 111,11%
+Baie Willia / 1 / 44,44%
+Baie Maron / 2 / 44,44%
+Baie Kika / 1 / 44,44%
+Poussière Étoile / 1 / 333,33%
+Poils de Forgerette / 1 / 111,11%
+
+Vrombi_2
+Bonbon Exp. S / 3
+Gaz de Vrombi / 2
+Plume Force / 1
+Gaz de Vrombi / 1 / invités
+Bonbon Exp. M / 1 / 133,33%
+Plume Force / 1 / 111,11%
+Baie Oran / 1 / 44,44%
+Baie Pêcha / 2 / 44,44%
+Baie Fraive / 1 / 44,44%
+Perle (objet){{!}}Perle / 1 / 333,33%
+Gaz de Vrombi / 1 / 111,11%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 2-Sterne-Tera-Raids in Paldea]]

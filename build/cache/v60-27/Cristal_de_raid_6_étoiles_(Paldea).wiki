@@ -1,0 +1,1909 @@
+{{Renvoi homonymie|Cristal de raid 6 étoiles}}
+{{Ruban Cristal de raid|6|suffixe=Paldea|dernier=oui}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 6★''' qui peuvent apparaître dans les cristaux noirs à [[Paldea]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Ectoplasma / talent-caché(Impossible) difficulté(6) capacités(Ball'Ombre, Bombe Beurk, Éclat Magique, Feu Follet; Hypnose)
+Tauros forme(Paldea Combative) / talent-caché(Possible) difficulté(6) capacités(Close Combat, Mania, Psykoud'Boul, Taurogne; Gonflette, Grincement)
+Tauros forme(Paldea Flamboyante) / talent-caché(Possible) difficulté(6) capacités(Boutefeu, Close Combat, Lance-Flammes, Coup d'Boule; Zénith, Gonflette) notes(Exclusif Ec.)
+Tauros forme(Paldea Aquatique) / talent-caché(Possible) difficulté(6) capacités(Aquatacle, Close Combat, Surf, Coup d'Boule; Danse Pluie, Gonflette) notes(Exclusif Vi.)
+Léviator / talent-caché(Possible) difficulté(6) capacités(Hydro-Queue, Mâchouille, Vent Violent, Crocs Givre; Provoc, Danse Draco)
+Métamorph / talent-caché(Possible) difficulté(6) capacités(Morphing)
+Aquali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Surf, Mégaphone, Bâillement; Danse Pluie, Plénitude)
+Voltali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Tonnerre, Ball'Ombre, Cage Éclair; Champ Électrifié, Plénitude)
+Pyroli / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Boutefeu, Ébullilave, Feu Follet; Zénith, Malédiction)
+Dracolosse / talent-caché(Possible) difficulté(6) capacités(Draco-Charge, Vitesse Extrême, Danse Draco, Hydro-Queue; Mur Lumière)
+Mentali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Psyko, Choc Psy, Chatouille; Champ Psychique, Plénitude)
+Noctali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Vibrobscur, Tricherie, Chatouille; Plénitude, Malédiction)
+Roigada / talent-caché(Possible) difficulté(6) capacités(Surf, Choc Psy, Distorsion, Lance-Flammes; Mur Lumière, Danse Pluie, Plénitude)
+Cizayox / talent-caché(Possible) difficulté(6) capacités(Plaie Croix, Pisto-Poing, Close Combat, Tête de Fer; Mur de Fer, Puissance)
+Scarhino / talent-caché(Possible) difficulté(6) capacités(Mégacorne, Close Combat, Mania, Groz'Yeux; Gonflette)
+Leuphorie / talent-caché(Possible) difficulté(6) capacités(Éclat Magique, Mégaphone, Berceuse, Mur Lumière; Boul'Armure)
+Tyranocif / talent-caché(Possible) difficulté(6) capacités(Lame de Roc, Mâchouille, Grincement, Boule Roc; Mur de Fer) notes(Exclusif Ec.)
+Bekipan / talent-caché(Toujours) difficulté(6) capacités(Vent Violent, Hydrocanon, Brume, Ultrason; Danse Pluie, Hâte)
+Gardevoir / talent-caché(Impossible) difficulté(6) capacités(Pouvoir Lunaire, Psyko, Plénitude, Cage Éclair; Champ Brumeux, Champ Psychique)
+Chapignon / talent-caché(Possible) difficulté(6) capacités(Balle Graine, Balayette, Spore, Aéropique; Champ Herbu)
+Chartor / talent-caché(Toujours) difficulté(6) capacités(Ébullilave, Bâillement, Bain de Smog, Plaquage; Zénith, Mur de Fer)
+Drattak / talent-caché(Possible) difficulté(6) capacités(Colère, Double Volée, Lance-Flammes, Téra Explosion; Danse Draco) notes(Exclusif Vi.)
+Étouraptor / talent-caché(Possible) difficulté(6) capacités(Close Combat, Rapace, Damoclès, Danse Plumes)
+Carchacrok / talent-caché(Possible) difficulté(6) capacités(Colère, Séisme, Lance-Flammes, Éboulement; Danse Lames)
+Hippodocus / talent-caché(Possible) difficulté(6) capacités(Séisme, Crocs Givre, Bâillement, Éboulement)
+Magnézone / talent-caché(Possible) difficulté(6) capacités(Fatal-Foudre, Luminocanon, Triplattaque, Cage Éclair; Danse Pluie, Mur de Fer, Champ Électrifié)
+Phyllali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Lame Feuille, Double Pied, Charme; Zénith, Danse Lames)
+Givrali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Laser Glace, Blizzard, Charme; Chute de Neige, Plénitude)
+Gallame / talent-caché(Impossible) difficulté(6) capacités(Coupe Psycho, Close Combat, Feu Follet, Aéropique; Hypnose, Entrave, Champ Psychique)
+Gaulet / talent-caché(Possible) difficulté(6) capacités(Éco-Sphère, Tricherie, Spore, Bombe Beurk; Champ Herbu)
+Tranchodon / talent-caché(Possible) difficulté(6) capacités(Colère, Mâchouille, Giga Impact, Escarmouche; Danse Draco)
+Trioxhydre / talent-caché(Impossible) difficulté(6) capacités(Vibrobscur, Draco-Choc, Mâchouille, Provoc; Rengorgement, Machination) notes(Exclusif Ec.)
+Pyrax / talent-caché(Possible) difficulté(6) capacités(Bourdon, Lance-Flammes, Vent Violent, Vent Arrière; Amnésie, Zénith, Mur Lumière, Papillodanse)
+Flambusard / talent-caché(Possible) difficulté(6) capacités(Rapace, Boutefeu, Lance-Flammes, Téra Explosion; Zénith, Danse Lames)
+Kravarech / talent-caché(Possible) difficulté(6) capacités(Draco-Choc, Bombe Beurk, Vibraqua, Toxik; Bombe Acide, Draco-Météore) notes(Exclusif Ec.)
+Gamblast / talent-caché(Impossible) difficulté(6) capacités(Vibraqua, Draco-Choc, Aurasphère, Pince-Masse; Danse Pluie) notes(Exclusif Vi.)
+Nymphali / talent-caché(Possible) difficulté(6) capacités(Téra Explosion, Mégaphone, Pouvoir Lunaire, Bâillement; Champ Brumeux, Plénitude)
+Muplodocus / talent-caché(Possible) difficulté(6) capacités(Draco-Choc, Surf, Bombe Beurk, Mégafouet; Danse Pluie)
+Séracrawl / talent-caché(Possible) difficulté(6) capacités(Chute Glace, Tacle Lourd, Chute de Neige, Cryo-Pirouette; Mur de Fer)
+Lougaroc forme(Crépusculaire) / talent-caché(Possible) difficulté(6) capacités(Vif Roc, Éboulement, Mâchouille, Provoc; Tempête de Sable)
+Prédastérie / talent-caché(Possible) difficulté(6) capacités(Vibraqua, Aqua-Brèche, Direct Toxik, Dard-Nuée; Douche Froide, Toxik)
+Mimiqui / talent-caché(Impossible) difficulté(6) capacités(Câlinerie, Griffe Ombre, Ombre Portée, Martobois; Champ Brumeux, Danse Lames)
+Corvaillus / talent-caché(Possible) difficulté(6) capacités(Tête de Fer, Bec Vrille, Big Splash, Aiguisage; Vent Arrière)
+Wattapik / talent-caché(Possible) difficulté(6) capacités(Électrikipik, Fatal-Foudre, Surf, Direct Toxik; Cage Éclair, Champ Électrifié)
+Beldeneige / talent-caché(Possible) difficulté(6) capacités(Blizzard, Bourdon, Vent Violent, Chute de Neige)
+Lanssorien / talent-caché(Possible) difficulté(6) capacités(Ball'Ombre, Draco-Choc, Tonnerre, Lance-Flammes; Protection, Mur Lumière) notes(Exclusif Vi.)
+Pohmarmotte / talent-caché(Possible) difficulté(6) capacités(Éclair Fou, Close Combat, Double Décharge, Frotte-Frimousse; Champ Électrifié)
+Famignol forme(Quatre) / talent-caché(Possible) difficulté(6) capacités(Câlinerie, Bélier, Balayage, Charme; Grand Nettoyage)
+Briochien / talent-caché(Impossible) difficulté(6) capacités(Câlinerie, Damoclès, Morsure, Regard Touchant)
+Gigansel / talent-caché(Impossible) difficulté(6) capacités(Lame de Roc, Tacle Lourd, Salaison, Marto-Poing; Tempête de Sable, Éboulement)
+Carmadura / talent-caché(Possible) difficulté(6) capacités(Canon Blindé, Psyko, Ombre Nocturne, Feu Follet; Plénitude, Zénith) notes(Exclusif Ec.)
+Malvalame / talent-caché(Possible) difficulté(6) capacités(Lame en Peine, Griffe Ombre, Coupe Psycho, Feu Follet; Zénith) notes(Exclusif Vi.)
+Fulgulairo / talent-caché(Possible) difficulté(6) capacités(Vent Violent, Fatal-Foudre, Brouhaha, Grimace; Chargeur, Danse Pluie)
+Dogrino / talent-caché(Possible) difficulté(6) capacités(Mâchouille, Contre, Colère, Bélier; Provoc)
+Tag-Tag / talent-caché(Possible) difficulté(6) capacités(Sabotage, Détricanon, Bélier, Flatterie; Toxik)
+Terracruel / talent-caché(Impossible) difficulté(6) capacités(Éco-Sphère, Telluriforce, Spore, Châtiment; Champ Herbu)
+Craparoi / talent-caché(Possible) difficulté(6) capacités(Lame de Roc, Éclate-Roc, Plaie Croix, Tempête de Sable; Sabotage, Mur de Fer)
+Forgelina / talent-caché(Possible) difficulté(6) capacités(Marteau Mastoc, Câlinerie, Sabotage, Cage Éclair; Champ Brumeux, Doux Baiser)
+Lestombaile / talent-caché(Possible) difficulté(6) capacités(Éboulement, Acrobatie, Sabotage, Danse Plumes)
+Vrombotor / talent-caché(Possible) difficulté(6) capacités(Détricanon, Surchauffe, Tête de Fer, Provoc; Grimace, Change-Vitesse)
+Motorizard / talent-caché(Possible) difficulté(6) capacités(Damoclès, Draco-Griffe, Draco-Choc, Sabotage; Change-Vitesse)
+Ferdeter / talent-caché(Possible) difficulté(6) capacités(Tête de Fer, Séisme, Anti-Air, Tempête de Sable; Enroulement)
+Floréclat / talent-caché(Possible) difficulté(6) capacités(Rayon Gemme, Cradovague, Ultralaser, Poliroche; Tempête de Sable)
+Balbalèze / talent-caché(Possible) difficulté(6) capacités(Cryo-Pirouette, Plaquage, Chute de Neige, Trépignement; Bâillement)
+Oyacata / talent-caché(Possible) difficulté(6) capacités(Aquatacle, Plat du Jour, Tacle Lourd, Bâillement; Danse Pluie, Malédiction)
+Courrousinge / talent-caché(Possible) difficulté(6) capacités(Close Combat, Griffe Ombre, Assurance, Puissance; Gonflette, Poing de Colère)
+Terraiste / talent-caché(Impossible) difficulté(6) capacités(Séisme, Direct Toxik, Mégacorne, Bâillement)
+Farigiraf / talent-caché(Possible) difficulté(6) capacités(Double Laser, Mégaphone, Balayage, Brouhaha; Hâte)
+Scalpereur / talent-caché(Possible) difficulté(6) capacités(Tête de Fer, Tranche-Nuit, Génusection, Cage Éclair; Danse Lames)
+Glaivodo / talent-caché(Impossible) difficulté(6) capacités(Stalactite, Draco-Charge, Chute de Neige, Big Splash)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Ectoplasma_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Gaz de Fantominus / 5
+Plume Esprit / 3
+Gaz de Fantominus / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Gaz de Fantominus / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Tauros_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Tauros / 5
+Plume Force / 3
+Poils de Tauros / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Tauros / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Tauros_6_2
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Tauros / 5
+Plume Force / 3
+Poils de Tauros / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Tauros / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Tauros_6_3
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Tauros / 5
+Plume Force / 3
+Poils de Tauros / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Tauros / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Léviator_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Magicarpe / 5
+Plume Force / 3
+Écaille de Magicarpe / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Magicarpe / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Métamorph_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Substance de Métamorph / 5
+Plume Sprint / 3
+Substance de Métamorph / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Substance de Métamorph / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Aquali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Santé / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Santé / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Épice Secrète Sucrée / 1 / 13,64%
+Épice Secrète Salée / 1 / 13,64%
+Épice Secrète Amère / 1 / 13,64%
+Épice Secrète Acide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Voltali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Sprint / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Pyroli_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Force / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Dracolosse_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Minidraco / 5
+Plume Force / 3
+Écaille de Minidraco / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Minidraco / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Mentali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Esprit / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Noctali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Mental / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Roigada_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Griffe de Ramoloss / 5
+Plume Mental / 3
+Griffe de Ramoloss / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Griffe de Ramoloss / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Cizayox_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Griffe d'Insécateur / 5
+Plume Force / 3
+Griffe d'Insécateur / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Griffe d'Insécateur / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Scarhino_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Griffe de Scarhino / 5
+Plume Force / 3
+Griffe de Scarhino / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Griffe de Scarhino / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Leuphorie_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Babiole de Ptiravi / 5
+Plume Santé / 3
+Babiole de Ptiravi / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Santé / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Épice Secrète Sucrée / 1 / 13,64%
+Épice Secrète Salée / 1 / 13,64%
+Épice Secrète Amère / 1 / 13,64%
+Épice Secrète Acide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Babiole de Ptiravi / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Tyranocif_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Griffe d'Embrylex / 5
+Plume Force / 3
+Griffe d'Embrylex / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Griffe d'Embrylex / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Bekipan_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Plume de Goélise / 5
+Plume Armure / 3
+Plume de Goélise / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Plume de Goélise / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Gardevoir_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Babiole de Tarsal / 5
+Plume Esprit / 3
+Babiole de Tarsal / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Babiole de Tarsal / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Chapignon_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Spores de Balignon / 5
+Plume Force / 3
+Spores de Balignon / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Spores de Balignon / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Chartor_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Charbon de Chartor / 5
+Plume Armure / 3
+Charbon de Chartor / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Charbon de Chartor / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Drattak_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Draby / 5
+Plume Force / 3
+Écaille de Draby / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Draby / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Étouraptor_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Plume d'Étourmi / 5
+Plume Force / 3
+Plume d'Étourmi / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Plume d'Étourmi / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Carchacrok_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Griknot / 5
+Plume Force / 3
+Écaille de Griknot / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Griknot / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Hippodocus_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Sable d'Hippopotas / 5
+Plume Armure / 3
+Sable d'Hippopotas / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Sable d'Hippopotas / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Magnézone_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Vis de Magnéti / 5
+Plume Esprit / 3
+Vis de Magnéti / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Vis de Magnéti / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Phyllali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Force / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Givrali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Esprit / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Gallame_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Babiole de Tarsal / 5
+Plume Force / 3
+Babiole de Tarsal / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Babiole de Tarsal / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Gaulet_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Spores de Trompignon / 5
+Plume Santé / 3
+Spores de Trompignon / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Santé / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Épice Secrète Sucrée / 1 / 13,64%
+Épice Secrète Salée / 1 / 13,64%
+Épice Secrète Amère / 1 / 13,64%
+Épice Secrète Acide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Spores de Trompignon / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Tranchodon_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Coupenotte / 5
+Plume Force / 3
+Écaille de Coupenotte / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Coupenotte / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Trioxhydre_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Solochi / 5
+Plume Esprit / 3
+Écaille de Solochi / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Solochi / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Pyrax_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Pyronille / 5
+Plume Esprit / 3
+Poils de Pyronille / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Pyronille / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Flambusard_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Plume de Passerouge / 5
+Plume Sprint / 3
+Plume de Passerouge / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Plume de Passerouge / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Kravarech_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Algue de Venalgue / 5
+Plume Esprit / 3
+Algue de Venalgue / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Algue de Venalgue / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Gamblast_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Pince de Flingouste / 5
+Plume Esprit / 3
+Pince de Flingouste / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Pince de Flingouste / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Nymphali_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Esprit / 3
+Poils d'Évoli / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils d'Évoli / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Muplodocus_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Mucus de Mucuscule / 5
+Plume Mental / 3
+Mucus de Mucuscule / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Mucus de Mucuscule / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Séracrawl_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Glace de Grelaçon / 5
+Plume Armure / 3
+Glace de Grelaçon / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Glace de Grelaçon / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Lougaroc_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Roche de Rocabot / 5
+Plume Force / 3
+Roche de Rocabot / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Roche de Rocabot / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Prédastérie_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Épine de Vorastérie / 5
+Plume Armure / 3
+Épine de Vorastérie / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Épine de Vorastérie / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Mimiqui_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Tissu de Mimiqui / 5
+Plume Mental / 3
+Tissu de Mimiqui / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Tissu de Mimiqui / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Corvaillus_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Plume de Minisange / 5
+Plume Armure / 3
+Plume de Minisange / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Plume de Minisange / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Wattapik_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Épine de Wattapik / 5
+Plume Force / 3
+Épine de Wattapik / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Épine de Wattapik / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Beldeneige_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Fil de Frissonille / 5
+Plume Mental / 3
+Fil de Frissonille / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Fil de Frissonille / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Lanssorien_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poudre de Fantyrm / 5
+Plume Sprint / 3
+Poudre de Fantyrm / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poudre de Fantyrm / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Pohmarmotte_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Pohm / 5
+Plume Force / 3
+Poils de Pohm / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Pohm / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Famignol_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Compagnol / 5
+Plume Sprint / 3
+Poils de Compagnol / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Compagnol / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Briochien_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Pâtachiot / 5
+Plume Armure / 3
+Poils de Pâtachiot / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Pâtachiot / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Gigansel_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Sel de Selutin / 5
+Plume Armure / 3
+Sel de Selutin / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Sel de Selutin / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Carmadura_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Suie de Charbambin / 5
+Plume Esprit / 3
+Suie de Charbambin / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Suie de Charbambin / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Malvalame_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Suie de Charbambin / 5
+Plume Force / 3
+Suie de Charbambin / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Suie de Charbambin / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Fulgulairo_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Plume de Zapétrel / 5
+Plume Sprint / 3
+Plume de Zapétrel / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Plume de Zapétrel / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Dogrino_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Croc de Grondogue / 5
+Plume Force / 3
+Croc de Grondogue / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Croc de Grondogue / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Tag-Tag_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Encre de Gribouraigne / 5
+Plume Sprint / 3
+Encre de Gribouraigne / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Encre de Gribouraigne / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Terracruel_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Membrane de Terracool / 5
+Plume Mental / 3
+Membrane de Terracool / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Membrane de Terracool / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Craparoi_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Pince de Craparoi / 5
+Plume Armure / 3
+Pince de Craparoi / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Pince de Craparoi / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Forgelina_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Forgerette / 5
+Plume Mental / 3
+Poils de Forgerette / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Forgerette / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Lestombaile_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Plume de Lestombaile / 5
+Plume Force / 3
+Plume de Lestombaile / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Plume de Lestombaile / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Vrombotor_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Gaz de Vrombi / 5
+Plume Force / 3
+Gaz de Vrombi / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Gaz de Vrombi / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Motorizard_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Motorizard / 5
+Plume Sprint / 3
+Écaille de Motorizard / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Sprint / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Sucrée / 1 / 13,64%
+Aromate Jovial / 1 / 13,64%
+Aromate Naïf / 1 / 13,64%
+Aromate Pressé / 1 / 13,64%
+Aromate Timide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Motorizard / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Ferdeter_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Rouille de Ferdeter / 5
+Plume Armure / 3
+Rouille de Ferdeter / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Armure / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Salée / 1 / 13,64%
+Aromate Assuré / 1 / 13,64%
+Aromate Malin / 1 / 13,64%
+Aromate Lâche / 1 / 13,64%
+Aromate Relax / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Rouille de Ferdeter / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Floréclat_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Cristal de Germéclat / 5
+Plume Esprit / 3
+Cristal de Germéclat / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Esprit / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Amère / 1 / 13,64%
+Aromate Modeste / 1 / 13,64%
+Aromate Doux / 1 / 13,64%
+Aromate Foufou / 1 / 13,64%
+Aromate Discret / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Cristal de Germéclat / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Balbalèze_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Graisse de Piétacé / 5
+Plume Santé / 3
+Graisse de Piétacé / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Santé / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Épice Secrète Sucrée / 1 / 13,64%
+Épice Secrète Salée / 1 / 13,64%
+Épice Secrète Amère / 1 / 13,64%
+Épice Secrète Acide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Graisse de Piétacé / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Oyacata_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Barbillon d'Oyacata / 5
+Plume Santé / 3
+Barbillon d'Oyacata / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Santé / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Épice Secrète Sucrée / 1 / 13,64%
+Épice Secrète Salée / 1 / 13,64%
+Épice Secrète Amère / 1 / 13,64%
+Épice Secrète Acide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Barbillon d'Oyacata / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Courrousinge_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Férosinge / 5
+Plume Force / 3
+Poils de Férosinge / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Férosinge / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Terraiste_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Mucus d'Axoloto / 5
+Plume Mental / 3
+Mucus d'Axoloto / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Mental / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Grande Perle / 1 / 45,45%
+Perle Triple / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Acide / 1 / 13,64%
+Aromate Calme / 1 / 13,64%
+Aromate Gentil / 1 / 13,64%
+Aromate Prudent / 1 / 13,64%
+Aromate Malpoli / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Mucus d'Axoloto / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Farigiraf_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Poils de Girafarig / 5
+Plume Santé / 3
+Poils de Girafarig / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Santé / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Gros Champi / 1 / 45,45%
+Champi Suave / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Épice Secrète Sucrée / 1 / 13,64%
+Épice Secrète Salée / 1 / 13,64%
+Épice Secrète Amère / 1 / 13,64%
+Épice Secrète Acide / 1 / 13,64%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Poils de Girafarig / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Scalpereur_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Lame de Scalpion / 5
+Plume Force / 3
+Lame de Scalpion / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Lame de Scalpion / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+
+Glaivodo_6
+Bonbon Exp. L / 4
+Bonbon Exp. XL / 1
+Écaille de Frigodo / 5
+Plume Force / 3
+Écaille de Frigodo / 3 / invités
+Téra-Éclat / 3
+Téra-Éclat / 3 / hôte
+Bonbon Exp. L / 2 / 36,36%
+Super Bonbon / 1 / 22,73%
+Plume Force / 2 / 45,45%
+Bonbon Exp. XL / 1 / 22,73%
+Morceau d'Étoile / 1 / 45,45%
+Morceau Comète / 1 / 9,09%
+Pépite / 1 / 22,73%
+Épice Secrète Corsée / 1 / 13,64%
+Aromate Rigide / 1 / 13,64%
+Aromate Solo / 1 / 13,64%
+Aromate Mauvais / 1 / 13,64%
+Aromate Brave / 1 / 11,36%
+PP Plus / 1 / 22,73%
+Capsule d'Argent / 1 / 18,18%
+Écaille de Frigodo / 2 / 45,45%
+Pilule Talent / 1 / 9,09%
+Patch Talent / 1 / 4,55%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 6-Sterne-Tera-Raids in Paldea]]

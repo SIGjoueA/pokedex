@@ -569,7 +569,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const id of [...new Set(core.e.map(e => e.id))]) { const s = sp(id);
     for (const [k, f] of Object.entries(s.f)) {
       for (const g of GS) for (const [pl, d] of (f.pl && f.pl[g]) || []) { if (/^Antre (événementiel )?\d+$/.test(pl)) plRaid++; if (pl === 'Grand Antre Dynamax' && g !== 'swcrown') plGA++; void d; }
-      for (const [g, rows] of Object.entries(f.rd || {})) { if (!GS.includes(g)) wiki++;
+      for (const [g, rows] of Object.entries(f.rd || {})) { if (!GS.includes(g)) continue; // v60.27: rd a aussi sv / svmask / svdisk (raids Téracristal)
         for (const [z, t, fl] of rows) { all.push({ id, k, g, z, t, fl });
           if (/Antres? \d|Antre événementiel \d|\b\d{2,3}\b(?! %| IV)(?![^·]*★)/.test(t.replace(/Niv\. \d+/, ''))) tableNum++;
           if (/\{\{|\}\}|\[\[|\]\]|<|>|undefined|NaN|null/.test(z + t)) wiki++;
@@ -676,6 +676,57 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.26 Toujours en avant : nom officiel, saison précédente (02/06–08/09/2026)', named.some(s => s.id === 'forever-forward' && s.fr === 'Toujours en avant' && s.from === '2026-06-02' && s.to === '2026-09-08'));
   ok('v60.26 date de vérif Leek Duck renseignée (pool ≥ date de mise à jour)', !!(eh.checked && eh.updated && eh.checked >= eh.updated));
   ok('v60.26 app : labelFr + note saison en cours (site officiel, tableau Leek Duck, Forever Forward)', /labelFr/.test(src) && /saison en cours/.test(src) && /mise à jour du tableau/.test(src) && /Forever Forward/.test(src) && /site officiel/.test(src));
+}
+// ---- v60.27: raids Téracristal d’Écarlate / Violet (build/fix-v60-27.mjs → sp f.rd[sv|svmask|svdisk] = [[zone, texte, drapeaux]])
+{ const games = ['sv', 'svmask', 'svdisk'], all = [];
+  const evPl = [], starPl = [], antrePl = [], wiki = [], haBad = [], zoneGame = {}, star7 = [];
+  for (const e of core.e) { const f = F(e.id, e.k); if (!f) continue;
+    for (const g of games) { const L = (f.rd && f.rd[g]) || []; for (const r of L) all.push({ k: e.k, g, z: r[0], t: r[1], fl: r[2] || '' }); }
+    for (const [g, L] of Object.entries(f.pl || {})) if (games.includes(g)) for (const r of L) {
+      if (/^Cristal de raid [1-6] étoiles? \((?:Paldea|Septentria|Terra-Dôme)\)$/.test(r[0])) starPl.push(e.k + ' ' + g);
+      if (/^Cristal de raid événementiel /.test(r[0])) evPl.push(e.k + ' ' + r[0]);
+      if (/^Antre Interdit/.test(r[0])) antrePl.push(e.k);
+    }
+  }
+  for (const r of all) {
+    if (/[{}|\[\]]|Exclusif Ec|Exclusif Vi/.test(r.z + r.t)) wiki.push(r.k + ' ' + r.z);
+    if (/7★/.test(r.t) || /événementiel/.test(r.z)) star7.push(r.k + ' ' + r.z);
+    (zoneGame[r.z] ||= new Set()).add(r.g);
+    if (/talent caché/.test(r.t)) { const f = F((E[r.k] || {}).id || r.k.split('-')[0], r.k); const a = (f && f.a) || []; if (!a.some(x => x[1])) haBad.push(r.k); }
+  }
+  eq('v60.27 plus de « Cristal de raid N étoiles » dans « Où le trouver » (pl)', starPl, []);
+  eq('v60.27 Antre Interdit retiré de pl (déplacé vers rd)', antrePl, []);
+  eq('v60.27 cristaux événementiels conservés dans pl (hors lot)', evPl.sort(), ['1009 Cristal de raid événementiel 13', '1009 Cristal de raid événementiel 46', '1010 Cristal de raid événementiel 13', '1010 Cristal de raid événementiel 46', '248 Cristal de raid événementiel 73', '914 Cristal de raid événementiel 72'].sort());
+  eq('v60.27 lignes de raid propres (balises, pas d’abréviation Ec./Vi.)', wiki, []);
+  eq('v60.27 pas de 7★ ni d’événement dans rd', star7, []);
+  eq('v60.27 talent caché seulement pour les Pokémon qui en ont un', [...new Set(haBad)], []);
+  eq('v60.27 chaque zone dans un seul jeu', Object.entries(zoneGame).filter(([, s]) => s.size > 1).map(([z]) => z), []);
+  const keys = g => new Set(all.filter(r => r.g === g).map(r => r.k)).size, lines = g => all.filter(r => r.g === g).length;
+  eq('v60.27 fiches / lignes : Paldea, Septentria, Terra-Dôme', [keys('sv'), lines('sv'), keys('svmask'), lines('svmask'), keys('svdisk'), lines('svdisk')], [369, 419, 96, 122, 95, 111]);
+  eq('v60.27 zones rangées par jeu (Paldea / Septentria / Terra-Dôme)', [ [...(zoneGame['Paldea'] || [])], [...(zoneGame['Septentria'] || [])], [...(zoneGame['Terra-Dôme'] || [])], [...(zoneGame['Antre Interdit (Septentria)'] || [])] ], [['sv'], ['svmask'], ['svdisk'], ['svmask']]);
+  const R = (k, g) => { const e = E[k], f = e && F(e.id, k); return ((f && f.rd && f.rd[g]) || []).map(r => r[0] + ' | ' + r[1]); };
+  ok('v60.27 Pikachu : Paldea 2–3★', R('25', 'sv').includes('Paldea | 2–3★'), R('25', 'sv').join(' ; '));
+  ok('v60.27 Chartor : talent caché garanti en 6★', R('324', 'sv').includes('Paldea | 4★') && R('324', 'sv').includes('Paldea | 6★ · talent caché garanti'), R('324', 'sv').join(' ; '));
+  ok('v60.27 Bekipan : talent caché garanti en 6★', R('279', 'sv').includes('Paldea | 3★') && R('279', 'sv').includes('Paldea | 6★ · talent caché garanti'));
+  ok('v60.27 Chapignon : Téra par défaut en 5★, talent caché possible en 6★', R('286', 'sv').includes('Paldea | 5★ · Téra par défaut') && R('286', 'sv').includes('Paldea | 6★ · talent caché possible'));
+  ok('v60.27 Tauros de Paldea Flamboyante : Écarlate uniquement, fiche de la forme', R('128-paldea-blaze-breed', 'sv').includes('Paldea | 5★ · Écarlate uniquement') && R('128-paldea-blaze-breed', 'sv').includes('Paldea | 6★ · talent caché possible · Écarlate uniquement') && !R('128', 'sv').length);
+  ok('v60.27 Tauros de Paldea Aquatique : Violet uniquement', R('128-paldea-aqua-breed', 'sv').includes('Paldea | 5★ · Violet uniquement') && R('128-paldea-aqua-breed', 'sv').includes('Paldea | 6★ · talent caché possible · Violet uniquement'));
+  ok('v60.27 Tauros de Paldea Combative : 4★ et 6★ (talent caché possible)', R('128-paldea-combat-breed', 'sv').includes('Paldea | 4★') && R('128-paldea-combat-breed', 'sv').includes('Paldea | 6★ · talent caché possible'));
+  ok('v60.27 Grotadmorv d’Alola : Terra-Dôme 6★ (Disque Indigo), pas la forme de Kanto', R('89-alola', 'svdisk').includes('Terra-Dôme | 6★ · talent caché possible') && !R('89', 'svdisk').length);
+  ok('v60.27 Muciole : Septentria 2★ et 4★, Écarlate uniquement', R('313', 'svmask').includes('Septentria | 2★ et 4★ · Écarlate uniquement'));
+  ok('v60.27 Ogerpon : Antre Interdit (Septentria), une seule capture', R('1017', 'svmask').includes('Antre Interdit (Septentria) | Rencontre · Niv. 20, 70 · une seule capture'));
+  ok('v60.27 Lougaroc Crépusculaire : 6★ sans talent caché (la fiche n’en a pas, malgré Poképédia « Possible »)', R('745-dusk', 'sv').includes('Paldea | 6★') && R('745-dusk', 'sv').every(t => !/talent caché/.test(t)));
+  ok('v60.27 Florizarre / Dracaufeu : pas de raid Téracristal 1★–6★', !R('3', 'sv').length && !R('3', 'svdisk').length && !R('6', 'sv').length && !R('6', 'svdisk').length);
+  { const { parseLua } = await import('./pokepedia.mjs'), C = path.join(HERE, 'cache/v60-27'), fname = t => t.replace(/[ /:]/g, '_') + '.wiki';
+    const MOD = parseLua(fs.readFileSync(path.join(C, fname('Module:Localisations/Données/Pokémon Écarlate et Violet')), 'utf8'));
+    const placeOf = (z, s) => `Cristal de raid ${s} étoile${s > 1 ? 's' : ''} (${z})`, miss = [];
+    for (const z of ['Paldea', 'Septentria', 'Terra-Dôme']) for (const s of [1, 2, 3, 4, 5, 6]) { const w = fs.readFileSync(path.join(C, fname(placeOf(z, s))), 'utf8'); if (!(placeOf(z, s) in MOD) || !w.includes('#invoke:Tableau Pokémon|teracristal')) miss.push(placeOf(z, s)); }
+    eq('v60.27 cache : 18 pages de cristaux + module', miss, []);
+    eq('v60.27 entrées du module (18 cristaux)', [1, 2, 3, 4, 5, 6].map(s => ['Paldea', 'Septentria', 'Terra-Dôme'].map(z => Object.keys(MOD[placeOf(z, s)] || {}).length)), [[58, 15, 11], [57, 16, 11], [77, 26, 22], [93, 23, 21], [99, 25, 21], [70, 28, 27]]); }
+  const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v60.27 app : bloc Raids Téracristal + crédit Poképédia + note de l’histoire', /function teraRaidHTML/.test(src) && /Raids Téracristal/.test(src) && /Poképédia<\/a> \(CC BY-NC-SA 3\.0 FR\), pages des cristaux de raid/.test(src) && src.includes('début → 1–2★ ; 3 Badges → 1–3★ ; 6 Badges → 1–4★ ; après le générique → 3–5★') && src.includes('6★ 90 (75 après capture)'));
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.27 SW : VERSION ≥ v60.27, DATA_VERSION ≥ d69', /VERSION = 'v60\.(2[7-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 69);
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

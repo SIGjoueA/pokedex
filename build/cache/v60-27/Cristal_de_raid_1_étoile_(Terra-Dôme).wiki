@@ -1,0 +1,195 @@
+{{Renvoi homonymie|Cristal de raid 1 étoile}}
+{{Ruban Cristal de raid|1|suffixe=Terra-Dôme|premier=oui}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 1★''' qui peuvent apparaître dans les cristaux brillants du [[Terra-Dôme]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Mystherbe / talent-caché(Impossible) difficulté(1) capacités(Acide, Tranch'Herbe, Doux Parfum, Croissance)
+Noeunoeuf / talent-caché(Impossible) difficulté(1) capacités(Choc Mental, Protection, Balle Graine, Hypnose)
+Hypotrempe / talent-caché(Impossible) difficulté(1) capacités(Pistolet à O, Ouragan, Onde Boréale, Trempette)
+Loupio / talent-caché(Impossible) difficulté(1) capacités(Boule Élek, Pistolet à O, Cage Éclair, Ultrason)
+Snubbull / talent-caché(Impossible) difficulté(1) capacités(Morsure, Léchouille, Coup d'Boule, Charge)
+Debugant / talent-caché(Impossible) difficulté(1) capacités(Charge, Mach Punch, Bluff, Ruse)
+Zébibron / talent-caché(Impossible) difficulté(1) capacités(Vive-Attaque, Chargeur, Onde de Choc, Nitrocharge)
+Baggiguane / talent-caché(Impossible) difficulté(1) capacités(Groz'Yeux, Balayage, Représailles, Coup d'Boule)
+Statitik / talent-caché(Impossible) difficulté(1) capacités(Toile Élek, Piqûre, Sécrétion, Taillade)
+Psystigri / talent-caché(Impossible) difficulté(1) capacités(Voix Enjôleuse, Choc Mental, Griffe, Bluff)
+Picassaut / talent-caché(Impossible) difficulté(1) capacités(Picpic, Rugissement, Écho, Éclate-Roc)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Mystherbe_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Feuille de Mystherbe / 1
+Plume Esprit / 1
+Feuille de Mystherbe / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Esprit / 1 / 8,5%
+Baie Fraive / 1 / 8%
+Baie Willia / 2 / 8%
+Baie Maron / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Feuille de Mystherbe / 1 / 7%
+
+Noeunoeuf_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Coquille de Noeunoeuf / 1
+Plume Esprit / 1
+Coquille de Noeunoeuf / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Esprit / 1 / 8,5%
+Baie Fraive / 1 / 8%
+Baie Willia / 2 / 8%
+Baie Maron / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Coquille de Noeunoeuf / 1 / 7%
+
+Hypotrempe_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Encre d'Hypotrempe / 1
+Plume Santé / 1
+Encre d'Hypotrempe / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Santé / 1 / 8,5%
+Baie Pêcha / 1 / 8%
+Baie Fraive / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Encre d'Hypotrempe / 1 / 7%
+
+Loupio_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Électricité de Loupio / 1
+Plume Mental / 1
+Électricité de Loupio / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Mental / 1 / 8,5%
+Baie Willia / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Kika / 1 / 8%
+Poussière Étoile / 1 / 30%
+Électricité de Loupio / 1 / 7%
+
+Snubbull_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Poils de Snubbull / 1
+Plume Santé / 1
+Poils de Snubbull / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Santé / 1 / 8,5%
+Baie Pêcha / 1 / 8%
+Baie Fraive / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Poils de Snubbull / 1 / 7%
+
+Debugant_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Sueur de Debugant / 1
+Plume Force / 1
+Sueur de Debugant / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Force / 1 / 8,5%
+Baie Oran / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Sueur de Debugant / 1 / 7%
+
+Zébibron_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Crinière de Zébibron / 1
+Plume Sprint / 1
+Crinière de Zébibron / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Sprint / 1 / 8,5%
+Baie Kika / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Crinière de Zébibron / 1 / 7%
+
+Baggiguane_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Sueur de Baggiguane / 1
+Plume Armure / 1
+Sueur de Baggiguane / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Armure / 1 / 8,5%
+Baie Ceriz / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Poussière Étoile / 1 / 30%
+Sueur de Baggiguane / 1 / 7%
+
+Statitik_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Fil de Statitik / 1
+Plume Sprint / 1
+Fil de Statitik / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Sprint / 1 / 8,5%
+Baie Kika / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Willia / 1 / 8%
+Petit Champi / 1 / 30%
+Fil de Statitik / 1 / 7%
+
+Psystigri_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Poils de Psystigri / 1
+Plume Esprit / 1
+Poils de Psystigri / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Esprit / 1 / 8,5%
+Baie Fraive / 1 / 8%
+Baie Willia / 2 / 8%
+Baie Maron / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Poils de Psystigri / 1 / 7%
+
+Picassaut_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Plume de Picassaut / 1
+Plume Force / 1
+Plume de Picassaut / 1 / invités
+Bonbon Exp. XS / 1 / 22%
+Bonbon Exp. S / 1 / 8,5%
+Plume Force / 1 / 8,5%
+Baie Oran / 1 / 8%
+Baie Pêcha / 2 / 8%
+Baie Fraive / 1 / 8%
+Perle (objet){{!}}Perle / 1 / 30%
+Plume de Picassaut / 1 / 7%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 1-Stern-Tera-Raids in der Blaubeer-Akademie]]

@@ -1,0 +1,437 @@
+{{Renvoi homonymie|Cristal de raid 3 étoiles}}
+{{Ruban Cristal de raid|3|suffixe=Terra-Dôme}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 3★''' qui peuvent apparaître dans les cristaux brillants du [[Terra-Dôme]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Sabelette forme(Alola) / talent-caché(Impossible) difficulté(3) capacités(Tour Rapide, Griffe Acier, Éclats Glace, Aiguisage) notes(Exclusif Vi.)
+Goupix forme(Alola) / talent-caché(Impossible) difficulté(3) capacités(Lyophilisation, Vent Glace, Éclats Glace, Entrave) notes(Exclusif Ec.)
+Ortide / talent-caché(Impossible) difficulté(3) capacités(Feuille Magik, Acide, Para-Spore, Poudre Toxik)
+Taupiqueur forme(Alola) / talent-caché(Impossible) difficulté(3) capacités(Coup d'Boule, Coud'Boue, Piétisol, Tête de Fer)
+Racaillou forme(Alola) / talent-caché(Impossible) difficulté(3) capacités(Élecanon, Étincelle, Jet-Pierres, Poing Éclair)
+Ramoloss forme(Galar) / talent-caché(Impossible) difficulté(3) capacités(Psykoud'Boul, Vibraqua, Bâillement, Coup d'Boule)
+Tadmorv forme(Alola) / talent-caché(Impossible) difficulté(3) capacités(Bombe Acide, Morsure, Toxik, Plaquage)
+Rhinocorne / talent-caché(Impossible) difficulté(3) capacités(Koud'Korne, Piétisol, Tomberoche, Poliroche)
+Hypocéan / talent-caché(Impossible) difficulté(3) capacités(Draco-Souffle, Vibraqua, Puissance, Brouillard)
+Porygon / talent-caché(Impossible) difficulté(3) capacités(Éclair, Rafale Psy, Bélier, Hâte)
+Loupio / talent-caché(Impossible) difficulté(3) capacités(Coup d'Jus, Vibraqua, Chargeur, Pistolet à O)
+Posipi / talent-caché(Impossible) difficulté(3) capacités(Coup d'Jus, Cage Éclair, Encore, Météores)
+Négapi / talent-caché(Impossible) difficulté(3) capacités(Coup d'Jus, Cage Éclair, Encore, Météores)
+Terhal / talent-caché(Impossible) difficulté(3)
+Kranidos / talent-caché(Impossible) difficulté(3) capacités(Bélier, Assurance, Souplesse, Éclate-Roc) notes(Exclusif Ec.)
+Dinoclier / talent-caché(Impossible) difficulté(3) capacités(Pouvoir Antique, Strido-Son, Bélier, Grincement) notes(Exclusif Vi.)
+Rototaupe / talent-caché(Impossible) difficulté(3) capacités(Tour Rapide, Griffe Acier, Combo-Griffe, Tunnelier)
+Méios / talent-caché(Impossible) difficulté(3) capacités(Rafale Psy, Choc Psy, Mur Lumière, Choc Mental)
+Gringolem / talent-caché(Impossible) difficulté(3) capacités(Poing Ombre, Poing Éclair, Poing Feu, Tempête de Sable)
+Sepiatop / talent-caché(Impossible) difficulté(3) capacités(Picpic, Représailles, Rafale Psy, Picore)
+Piclairon / talent-caché(Impossible) difficulté(3) capacités(Picore, Éclate-Roc, Furie, Grincement)
+Guérilande / talent-caché(Impossible) difficulté(3) capacités(Feuille Magik, Nœud Herbe, Câlinerie, Soucigraine)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Sabelette_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Griffe de Sabelette / 3
+Plume Armure / 2
+Griffe de Sabelette / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Armure / 1 / 9,9%
+Baie Papaya / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Griffe de Sabelette / 1 / 9,9%
+
+Goupix_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Poils de Goupix / 3
+Plume Esprit / 2
+Poils de Goupix / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Esprit / 1 / 9,9%
+Baie Gowav / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Morceau d'Étoile / 1 / 11,88%
+Poussière Étoile / 1 / 24,75%
+Poils de Goupix / 1 / 9,9%
+
+Ortide_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Feuille de Mystherbe / 3
+Plume Esprit / 2
+Feuille de Mystherbe / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Esprit / 1 / 9,9%
+Baie Gowav / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Morceau d'Étoile / 1 / 11,88%
+Poussière Étoile / 1 / 24,75%
+Feuille de Mystherbe / 1 / 9,9%
+
+Taupiqueur_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Terre de Taupiqueur / 3
+Plume Sprint / 2
+Terre de Taupiqueur / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Sprint / 1 / 9,9%
+Baie Mago / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Petit Champi / 1 / 24,75%
+Gros Champi / 1 / 11,88%
+Terre de Taupiqueur / 1 / 9,9%
+
+Racaillou_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Fragment de Racaillou / 3
+Plume Armure / 2
+Fragment de Racaillou / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Armure / 1 / 9,9%
+Baie Papaya / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Fragment de Racaillou / 1 / 9,9%
+
+Ramoloss_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Griffe de Ramoloss / 3
+Plume Santé / 2
+Griffe de Ramoloss / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Santé / 1 / 9,9%
+Baie Sitrus / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Gros Champi / 1 / 11,88%
+Petit Champi / 1 / 24,75%
+Griffe de Ramoloss / 1 / 9,9%
+
+Tadmorv_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Poison de Tadmorv / 3
+Plume Armure / 2
+Poison de Tadmorv / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Armure / 1 / 9,9%
+Baie Papaya / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Poison de Tadmorv / 1 / 9,9%
+
+Rhinocorne_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Croc de Rhinocorne / 3
+Plume Force / 2
+Croc de Rhinocorne / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 10%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. M / 2 / 5%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Morceau d'Étoile / 1 / 12%
+Poussière Étoile / 1 / 25%
+Croc de Rhinocorne / 1 / 10%
+
+Hypocéan_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Encre d'Hypotrempe / 3
+Plume Esprit / 2
+Encre d'Hypotrempe / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Esprit / 1 / 9,9%
+Baie Gowav / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Morceau d'Étoile / 1 / 11,88%
+Poussière Étoile / 1 / 24,75%
+Encre d'Hypotrempe / 1 / 9,9%
+
+Porygon_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Fragment de Porygon / 3
+Plume Esprit / 2
+Fragment de Porygon / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Esprit / 1 / 9,9%
+Baie Gowav / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Morceau d'Étoile / 1 / 11,88%
+Poussière Étoile / 1 / 24,75%
+Fragment de Porygon / 1 / 9,9%
+
+Loupio_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Électricité de Loupio / 3
+Plume Mental / 2
+Électricité de Loupio / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Mental / 1 / 9,9%
+Baie Wiki / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Électricité de Loupio / 1 / 9,9%
+
+Posipi_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Poils de Posipi / 3
+Plume Sprint / 2
+Poils de Posipi / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Sprint / 1 / 9,9%
+Baie Mago / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Petit Champi / 1 / 24,75%
+Gros Champi / 1 / 11,88%
+Poils de Posipi / 1 / 9,9%
+
+Négapi_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Poils de Négapi / 3
+Plume Sprint / 2
+Poils de Négapi / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Sprint / 1 / 9,9%
+Baie Mago / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Petit Champi / 1 / 24,75%
+Gros Champi / 1 / 11,88%
+Poils de Négapi / 1 / 9,9%
+
+Terhal_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Griffe de Terhal / 3
+Plume Armure / 2
+Griffe de Terhal / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Armure / 1 / 9,9%
+Baie Papaya / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Griffe de Terhal / 1 / 9,9%
+
+Kranidos_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Piquant de Kranidos / 3
+Plume Force / 2
+Piquant de Kranidos / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 10%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. M / 2 / 5%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Morceau d'Étoile / 1 / 12%
+Poussière Étoile / 1 / 25%
+Piquant de Kranidos / 1 / 10%
+
+Dinoclier_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Ongle de Dinoclier / 3
+Plume Armure / 2
+Ongle de Dinoclier / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Armure / 1 / 9,9%
+Baie Papaya / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Ongle de Dinoclier / 1 / 9,9%
+
+Rototaupe_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Griffe de Rototaupe / 3
+Plume Force / 2
+Griffe de Rototaupe / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 10%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. M / 2 / 5%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Morceau d'Étoile / 1 / 12%
+Poussière Étoile / 1 / 25%
+Griffe de Rototaupe / 1 / 10%
+
+Méios_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Fluide de Nucléos / 3
+Plume Esprit / 2
+Fluide de Nucléos / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Esprit / 1 / 9,9%
+Baie Gowav / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Morceau d'Étoile / 1 / 11,88%
+Poussière Étoile / 1 / 24,75%
+Fluide de Nucléos / 1 / 9,9%
+
+Gringolem_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Fragment de Gringolem / 3
+Plume Force / 2
+Fragment de Gringolem / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 10%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. M / 2 / 5%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Morceau d'Étoile / 1 / 12%
+Poussière Étoile / 1 / 25%
+Fragment de Gringolem / 1 / 10%
+
+Sepiatop_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Encre de Sepiatop / 3
+Plume Santé / 2
+Encre de Sepiatop / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Santé / 1 / 9,9%
+Baie Sitrus / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Gros Champi / 1 / 11,88%
+Petit Champi / 1 / 24,75%
+Encre de Sepiatop / 1 / 9,9%
+
+Piclairon_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Plume de Picassaut / 3
+Plume Force / 2
+Plume de Picassaut / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 10%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. M / 2 / 5%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Morceau d'Étoile / 1 / 12%
+Poussière Étoile / 1 / 25%
+Plume de Picassaut / 1 / 10%
+
+Guérilande_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Fleur de Guérilande / 3
+Plume Mental / 2
+Fleur de Guérilande / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 1 / 9,9%
+Bonbon Exp. M / 1 / 13,86%
+Bonbon Exp. M / 2 / 4,95%
+Plume Mental / 1 / 9,9%
+Baie Wiki / 1 / 6,93%
+Baie Prine / 1 / 7,92%
+Perle (objet){{!}}Perle / 1 / 24,75%
+Grande Perle / 1 / 11,88%
+Fleur de Guérilande / 1 / 9,9%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 3-Sterne-Tera-Raids in der Blaubeer-Akademie]]

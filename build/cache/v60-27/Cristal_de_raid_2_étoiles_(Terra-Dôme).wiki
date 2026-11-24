@@ -1,0 +1,182 @@
+{{Renvoi homonymie|Cristal de raid 2 étoiles}}
+{{Ruban Cristal de raid|2|suffixe=Terra-Dôme}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 2★''' qui peuvent apparaître dans les cristaux brillants du [[Terra-Dôme]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Tentacool / talent-caché(Impossible) difficulté(2) capacités(Dard-Venin, Pistolet à O, Acide, Vibraqua)
+Doduo / talent-caché(Impossible) difficulté(2) capacités(Picpic, Picore, Assurance, Rugissement)
+Otaria / talent-caché(Impossible) difficulté(2) capacités(Coup d'Boule, Vent Glace, Charme, Léchouille)
+Élekid / talent-caché(Impossible) difficulté(2) capacités(Éclair, Groz'Yeux, Vive-Attaque, Onde de Choc)
+Magby / talent-caché(Impossible) difficulté(2) capacités(Flammèche, Purédpois, Roue de Feu, Groz'Yeux)
+Kraknoix / talent-caché(Impossible) difficulté(2) capacités(Morsure, Coud'Boue, Jet de Sable, Étonnement)
+Doudouvet / talent-caché(Impossible) difficulté(2) capacités(Vent Féérique, Para-Spore, Tranch'Herbe, Croissance)
+Chinchidou / talent-caché(Impossible) difficulté(2) capacités(Écras'Face, Regard Touchant, Mimi-Queue, Balle Graine)
+Nucléos / talent-caché(Impossible) difficulté(2) capacités(Choc Mental, Onde Folie, Étonnement, Météores)
+Araqua / talent-caché(Impossible) difficulté(2) capacités(Pistolet à O, Piqûre, Morsure, Bulles d'O)
+Crèmy / talent-caché(Impossible) difficulté(2) capacités(Charge, Doux Parfum, Force Ajoutée, Vampibaiser)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Tentacool_2
+Bonbon Exp. S / 3
+Aiguillon de Tentacool / 2
+Plume Mental / 1
+Aiguillon de Tentacool / 1 / invités
+Bonbon Exp. S / 1 / 34,33%
+Bonbon Exp. M / 1 / 17,91%
+Plume Mental / 1 / 14,93%
+Baie Willia / 1 / 5,97%
+Baie Maron / 2 / 5,97%
+Baie Kika / 1 / 5,97%
+Aiguillon de Tentacool / 1 / 14,93%
+
+Doduo_2
+Bonbon Exp. S / 3
+Duvet de Doduo / 2
+Plume Force / 1
+Duvet de Doduo / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Force / 1 / 10,31%
+Baie Oran / 1 / 4,12%
+Baie Pêcha / 2 / 4,12%
+Baie Fraive / 1 / 4,12%
+Perle (objet){{!}}Perle / 1 / 30,93%
+Duvet de Doduo / 1 / 10,31%
+
+Otaria_2
+Bonbon Exp. S / 3
+Poils d'Otaria / 2
+Plume Mental / 1
+Poils d'Otaria / 1 / invités
+Bonbon Exp. S / 1 / 34,33%
+Bonbon Exp. M / 1 / 17,91%
+Plume Mental / 1 / 14,93%
+Baie Willia / 1 / 5,97%
+Baie Maron / 2 / 5,97%
+Baie Kika / 1 / 5,97%
+Poils d'Otaria / 1 / 14,93%
+
+Élekid_2
+Bonbon Exp. S / 3
+Poils d'Élekid / 2
+Plume Esprit / 1
+Poils d'Élekid / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Esprit / 1 / 10,31%
+Baie Fraive / 1 / 4,12%
+Baie Willia / 2 / 4,12%
+Baie Maron / 1 / 4,12%
+Perle (objet){{!}}Perle / 1 / 30,93%
+Poils d'Élekid / 1 / 10,31%
+
+Magby_2
+Bonbon Exp. S / 3
+Poils de Magby / 2
+Plume Force / 1
+Poils de Magby / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Force / 1 / 10,31%
+Baie Oran / 1 / 4,12%
+Baie Pêcha / 2 / 4,12%
+Baie Fraive / 1 / 4,12%
+Perle (objet){{!}}Perle / 1 / 30,93%
+Poils de Magby / 1 / 10,31%
+
+Kraknoix_2
+Bonbon Exp. S / 3
+Carapace de Kraknoix / 2
+Plume Force / 1
+Carapace de Kraknoix / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Force / 1 / 10,31%
+Baie Oran / 1 / 4,12%
+Baie Pêcha / 2 / 4,12%
+Baie Fraive / 1 / 4,12%
+Perle (objet){{!}}Perle / 1 / 30,93%
+Carapace de Kraknoix / 1 / 10,31%
+
+Doudouvet_2
+Bonbon Exp. S / 3
+Coton de Doudouvet / 2
+Plume Sprint / 1
+Coton de Doudouvet / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Sprint / 1 / 10,31%
+Baie Kika / 1 / 4,12%
+Baie Maron / 2 / 4,12%
+Baie Willia / 1 / 4,12%
+Petit Champi / 1 / 30,93%
+Coton de Doudouvet / 1 / 10,31%
+
+Chinchidou_2
+Bonbon Exp. S / 3
+Poils de Chinchidou / 2
+Plume Sprint / 1
+Poils de Chinchidou / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Sprint / 1 / 10,31%
+Baie Kika / 1 / 4,12%
+Baie Maron / 2 / 4,12%
+Baie Willia / 1 / 4,12%
+Petit Champi / 1 / 30,93%
+Poils de Chinchidou / 1 / 10,31%
+
+Nucléos_2
+Bonbon Exp. S / 3
+Fluide de Nucléos / 2
+Plume Esprit / 1
+Fluide de Nucléos / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Esprit / 1 / 10,31%
+Baie Fraive / 1 / 4,12%
+Baie Willia / 2 / 4,12%
+Baie Maron / 1 / 4,12%
+Perle (objet){{!}}Perle / 1 / 30,93%
+Fluide de Nucléos / 1 / 10,31%
+
+Araqua_2
+Bonbon Exp. S / 3
+Fil d'Araqua / 2
+Plume Armure / 1
+Fil d'Araqua / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Armure / 1 / 10,31%
+Baie Ceriz / 1 / 4,12%
+Baie Pêcha / 2 / 4,12%
+Baie Fraive / 1 / 4,12%
+Poussière Étoile / 1 / 30,93%
+Fil d'Araqua / 1 / 10,31%
+
+Crèmy_2
+Bonbon Exp. S / 3
+Crème de Crèmy / 2
+Plume Armure / 1
+Crème de Crèmy / 1 / invités
+Bonbon Exp. S / 1 / 23,71%
+Bonbon Exp. M / 1 / 12,37%
+Plume Armure / 1 / 10,31%
+Baie Ceriz / 1 / 4,12%
+Baie Pêcha / 2 / 4,12%
+Baie Fraive / 1 / 4,12%
+Poussière Étoile / 1 / 30,93%
+Crème de Crèmy / 1 / 10,31%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 2-Sterne-Tera-Raids in der Blaubeer-Akademie]]

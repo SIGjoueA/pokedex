@@ -1,0 +1,439 @@
+{{Renvoi homonymie|Cristal de raid 4 étoiles}}
+{{Ruban Cristal de raid|4|suffixe=Terra-Dôme}}
+
+Cette page recense les '''[[Raid Téracristal|raids Téracristal]] de difficulté 4★''' qui peuvent apparaître dans les cristaux brillants du [[Terra-Dôme]], dans {{Jeu|EV}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Rafflesia / talent-caché(Impossible) difficulté(4) capacités(Danse Fleurs, Poudre Toxik, Bombe Beurk, Pouvoir Lunaire; Zénith, Croissance)
+Tentacruel / talent-caché(Impossible) difficulté(4) capacités(Direct Toxik, Surf, Acide, Toxik; Danse Pluie)
+Dodrio / talent-caché(Impossible) difficulté(4) capacités(Bec Vrille, Triplattaque, Larcin, Grimace; Hâte)
+Lamantine / talent-caché(Impossible) difficulté(4) capacités(Saumure, Laser Glace, Câlinerie, Aqua-Jet; Danse Pluie, Surf)
+Rhinoféros / talent-caché(Impossible) difficulté(4) capacités(Tunnelier, Éboulement, Anti-Air, Sable Ardent; Poliroche)
+Élektek / talent-caché(Impossible) difficulté(4) capacités(Poing Éclair, Plaquage, Casse-Brique, Boule Élek; Champ Électrifié, Danse Pluie)
+Magmar / talent-caché(Impossible) difficulté(4) capacités(Canicule, Poing Feu, Balayage, Onde Folie; Zénith, Ébullilave)
+Lanturn / talent-caché(Impossible) difficulté(4) capacités(Coup d'Jus, Douche Froide, Ondes Étranges, Cage Éclair)
+Joliflor / talent-caché(Impossible) difficulté(4) capacités(Danse Fleurs, Para-Spore, Bombe Beurk, Pouvoir Lunaire; Zénith, Croissance)
+Granbull / talent-caché(Impossible) difficulté(4) capacités(Câlinerie, Morsure, Rugissement, Crocs Éclair; Charme)
+Vibraninf / talent-caché(Impossible) difficulté(4) capacités(Sable Ardent, Draco-Choc, Tranch'Air, Tempête de Sable; Bang Sonique)
+Métang / talent-caché(Impossible) difficulté(4) capacités(Psykoud'Boul, Tête de Fer, Pisto-Poing, Hâte; Mur de Fer)
+Charkos / talent-caché(Impossible) difficulté(4) capacités(Psykoud'Boul, Coup d'Boule, Éboulement, Grincement; Fracass'Tête) notes(Exclusif Ec.)
+Bastiodon / talent-caché(Impossible) difficulté(4) capacités(Tête de Fer, Pouvoir Antique, Tempête de Sable, Tomberoche) notes(Exclusif Vi.)
+Zéblitz / talent-caché(Impossible) difficulté(4) capacités(Éclair Fou, Surchauffe, Tonnerre, Écrasement; Champ Électrifié)
+Farfaduvet / talent-caché(Impossible) difficulté(4) capacités(Éco-Sphère, Pouvoir Lunaire, Para-Spore, Zénith; Cotogarde)
+Baggaïd / talent-caché(Impossible) difficulté(4) capacités(Mâchouille, Pied Voltige, Vantardise, Draco-Griffe; Tourmente, Provoc)
+Mygavolt / talent-caché(Impossible) difficulté(4) capacités(Coup d'Jus, Bourdon, Toile Élek, Toile Gluante)
+Mistigrix sexe(m) / talent-caché(Impossible) difficulté(4) capacités(Choc Psy, Psyko, Météores, Charme; Champ Psychique) notes(Exclusif Ec.)
+Mistigrix sexe(f) / talent-caché(Impossible) difficulté(4) capacités(Choc Psy, Psyko, Météores, Charme; Champ Psychique) notes(Exclusif Vi.)
+Tarenbulle / talent-caché(Impossible) difficulté(4) capacités(Aqua-Brèche, Furie-Bond, Mâchouille, Grimace; Ravage Rampant, Danse Pluie)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Rafflesia_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Feuille de Mystherbe / 4
+Plume Esprit / 2
+Feuille de Mystherbe / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Esprit / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Feuille de Mystherbe / 2 / 9%
+
+Tentacruel_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Aiguillon de Tentacool / 4
+Plume Mental / 2
+Aiguillon de Tentacool / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Mental / 1 / 10%
+Baie Gowav / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Résin / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Aiguillon de Tentacool / 2 / 9%
+
+Dodrio_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Duvet de Doduo / 4
+Plume Force / 2
+Duvet de Doduo / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Duvet de Doduo / 2 / 9%
+
+Lamantine_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils d'Otaria / 4
+Plume Mental / 2
+Poils d'Otaria / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Mental / 1 / 10%
+Baie Gowav / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Résin / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Poils d'Otaria / 2 / 9%
+
+Rhinoféros_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Croc de Rhinocorne / 4
+Plume Force / 2
+Croc de Rhinocorne / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Croc de Rhinocorne / 2 / 9%
+
+Élektek_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils d'Élekid / 4
+Plume Esprit / 2
+Poils d'Élekid / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Esprit / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Poils d'Élekid / 2 / 9%
+
+Magmar_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils de Magby / 4
+Plume Esprit / 2
+Poils de Magby / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Esprit / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Poils de Magby / 2 / 9%
+
+Lanturn_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Électricité de Loupio / 4
+Plume Santé / 2
+Électricité de Loupio / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Grena / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Électricité de Loupio / 2 / 9%
+
+Joliflor_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Feuille de Mystherbe / 4
+Plume Esprit / 2
+Feuille de Mystherbe / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Esprit / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Feuille de Mystherbe / 2 / 9%
+
+Granbull_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils de Snubbull / 4
+Plume Santé / 2
+Poils de Snubbull / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Grena / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Poils de Snubbull / 2 / 9%
+
+Vibraninf_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Carapace de Kraknoix / 4
+Plume Sprint / 2
+Carapace de Kraknoix / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Sprint / 1 / 10%
+Baie Mago / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Carapace de Kraknoix / 2 / 9%
+
+Métang_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Griffe de Terhal / 4
+Plume Armure / 2
+Griffe de Terhal / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Armure / 1 / 10%
+Baie Papaya / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Qualot / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Griffe de Terhal / 2 / 9%
+
+Charkos_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Piquant de Kranidos / 4
+Plume Force / 2
+Piquant de Kranidos / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Force / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Piquant de Kranidos / 2 / 9%
+
+Bastiodon_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Ongle de Dinoclier / 4
+Plume Armure / 2
+Ongle de Dinoclier / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Armure / 1 / 10%
+Baie Papaya / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Qualot / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Ongle de Dinoclier / 2 / 9%
+
+Zéblitz_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Crinière de Zébibron / 4
+Plume Sprint / 2
+Crinière de Zébibron / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Sprint / 1 / 10%
+Baie Mago / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Crinière de Zébibron / 2 / 9%
+
+Farfaduvet_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Coton de Doudouvet / 4
+Plume Sprint / 2
+Coton de Doudouvet / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Sprint / 1 / 10%
+Baie Mago / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Coton de Doudouvet / 2 / 9%
+
+Baggaïd_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Sueur de Baggiguane / 4
+Plume Armure / 2
+Sueur de Baggiguane / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Armure / 1 / 10%
+Baie Papaya / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Qualot / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Sueur de Baggiguane / 2 / 9%
+
+Mygavolt_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Fil de Statitik / 4
+Plume Sprint / 2
+Fil de Statitik / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Sprint / 1 / 10%
+Baie Mago / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Fil de Statitik / 2 / 9%
+
+Mistigrix_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils de Psystigri / 4
+Plume Esprit / 2
+Poils de Psystigri / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Esprit / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Poils de Psystigri / 2 / 9%
+
+Mistigrix_4_2
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils de Psystigri / 4
+Plume Esprit / 2
+Poils de Psystigri / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Esprit / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Poils de Psystigri / 2 / 9%
+
+Tarenbulle_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Fil d'Araqua / 4
+Plume Mental / 2
+Fil d'Araqua / 2 / invités
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. L / 2 / 4%
+Plume Mental / 1 / 10%
+Baie Gowav / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Résin / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Fil d'Araqua / 2 / 9%
+}}
+
+{{Cristaux de raid}}
+
+[[de:Tera-Raid/Liste der 4-Sterne-Tera-Raids in der Blaubeer-Akademie]]

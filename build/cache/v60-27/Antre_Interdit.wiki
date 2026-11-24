@@ -1,0 +1,414 @@
+{{ébauche|lieu}}
+{{Infobox Lieu
+| nom=Antre Interdit
+| image=Antre Interdit EV.png
+| nomja=恐れ穴
+| nomromaji=
+| nomtm=Osore Ana
+| nomen=Dreaded Den
+| format-loc=png
+| légende=
+| région=Septentria
+| ouest=[[Gueule du Monstre]]
+| enclavé-dans=[[Mont Strueux]]
+| localisation=Localisation Antre Interdit EV.png{{!}}300px
+| desc-carte=
+}}
+L''''Antre Interdit''' est un lieu de la région de [[Septentria]]. Il est uniquement accessible dans l'extension {{jeu|EVmt}}.
+
+== Description ==
+L'Antre Interdit est une petite grotte situé au sud-est du [[Mont Strueux]]. Il était le refuge d'[[Ogerpon]] et de son compagnon humain, comme en témoigne la présence de cendres à l'intérieur de la grotte.
+
+== Objets ==
+{| class="tableaustandard" style="text-align:left"
+! Objets rares
+! Obtention
+! Localisation
+|-
+| {{Objet|Masque de la Pierre|jeu=EV}}
+| Après avoir capturé Ogerpon.
+| —
+|-
+| {{Objet|Masque du Fourneau|jeu=EV}}
+| Après avoir capturé Ogerpon.
+| —
+|-
+| {{Objet|Masque du Puits|jeu=EV}}
+| Après avoir capturé Ogerpon.
+| —
+|-
+! CT
+! Obtention
+! Localisation
+|-
+| {{Objet|CT010|ct=oui|jeu=EV}}
+| Dans une infractuosité rocheuse
+| —
+|-
+|}
+
+== Dresseurs ==
+=== 1<sup>er</sup> affrontement contre Kassis ===
+{{Tableau Dresseur
+<!-- Paramètres préliminaires -->
+| jeu=EV
+
+<!-- Paramètres du Dresseur -->
+| d-nom=Kassis<br>le [[Dresseur]]
+| d-sprite=Kassis
+| d-taille=200px
+| d-rec=704
+| condition=Avant d'avoir terminé l'histoire principale
+
+<!-- Premier Pokémon -->
+| p1-nom=Yanma
+| p1-sexe=m
+| p1-niveau=16
+| p1-type1=Insecte
+| p1-type2=Vol
+| p1-talent=Œil Composé
+| p1-capacité1=Tranch'Air
+| p1-capacité2=Survinsecte
+| p1-capacité3=Vive-Attaque
+| p1-capacité4=Météores
+
+<!-- Deuxième Pokémon -->
+| p2-nom=Ptitard
+| p2-sexe=m
+| p2-niveau=15
+| p2-type1=Eau
+| p2-talent=Absorbe-Eau
+| p2-capacité1=Buée Noire
+| p2-capacité2=Pistolet à O
+| p2-capacité3=Tir de Boue
+| p2-capacité4=Écras'Face
+
+<!-- Troisième Pokémon -->
+| p3-nom=Fouinar
+| p3-sexe=m
+| p3-niveau=16
+| p3-type1=Normal
+| p3-talent=Fuite (talent){{!}}Fuite
+| p3-capacité1=Boul'Armure
+| p3-capacité2=Combo-Griffe
+| p3-capacité3=Vive-Attaque
+| p3-capacité4=Tunnel
+}}
+{{Tableau Dresseur
+<!-- Paramètres préliminaires -->
+| jeu=EV
+
+<!-- Paramètres du Dresseur -->
+| d-nom=Kassis<br>le [[Dresseur]]
+| d-sprite=Kassis
+| d-taille=200px
+| d-rec=2 904
+| condition=Après avoir terminé l'histoire principale
+
+<!-- Premier Pokémon -->
+| p1-nom=Fouinar
+| p1-sexe=m
+| p1-niveau=62
+| p1-type1=Normal
+| p1-talent=Regard Vif
+| p1-capacité1=Amnésie
+| p1-capacité2=Damoclès
+| p1-capacité3=Vive-Attaque
+| p1-capacité4=Tunnel
+
+<!-- Deuxième Pokémon -->
+| p2-nom=Yanma
+| p2-sexe=m
+| p2-niveau=62
+| p2-type1=Insecte
+| p2-type2=Vol
+| p2-talent=Œil Composé
+| p2-capacité1=Tranch'Air
+| p2-capacité2=Bourdon
+| p2-capacité3=Giga-Sangsue
+| p2-capacité4=Vive-Attaque
+
+<!-- Troisième Pokémon -->
+| p3-nom=Têtarte
+| p3-sexe=m
+| p3-niveau=66
+| p3-type1=Eau
+| p3-talent=Absorbe-Eau
+| p3-capacité1=Buée Noire
+| p3-capacité2=Cognobidon
+| p3-capacité3=Aqua-Brèche
+| p3-capacité4=Bélier
+}}
+
+=== 2<sup>e</sup> affrontement contre Kassis ===
+{{Tableau Dresseur
+<!-- Paramètres préliminaires -->
+| jeu=EV
+
+<!-- Paramètres du Dresseur -->
+| d-nom=Kassis<br>le [[Dresseur]]
+| d-sprite=Kassis (Combat pour Ogerpon)
+| d-taille=200px
+| d-rec=1 672
+| condition=Avant d'avoir terminé l'histoire principale
+
+<!-- Premier Pokémon -->
+| p1-nom=Tengalice
+| p1-sexe=m
+| p1-sexediff=oui
+| p1-niveau=33
+| p1-type1=Plante
+| p1-type2=Ténèbres
+| p1-talent=Chlorophylle
+| p1-capacité1=Bluff
+| p1-capacité2=Aéropique
+| p1-capacité3=Représailles
+| p1-capacité4=Balle Graine
+
+<!-- Deuxième Pokémon -->
+| p2-nom=Yanmega
+| p2-sexe=m
+| p2-niveau=37
+| p2-type1=Insecte
+| p2-type2=Vol
+| p2-talent=Lentiteintée
+| p2-capacité1=Bourdon
+| p2-capacité2=Tranch'Air
+| p2-capacité3=Pouvoir Antique
+| p2-capacité4=Vive-Attaque
+
+<!-- Troisième Pokémon -->
+| p3-nom=Scorvol
+| p3-sexe=m
+| p3-niveau=37
+| p3-type1=Sol
+| p3-type2=Vol
+| p3-talent=Hyper Cutter
+| p3-capacité1=Aéropique
+| p3-capacité2=Armure
+| p3-capacité3=Piétisol
+| p3-capacité4=Queue-Poison
+
+<!-- Quatrième Pokémon -->
+| p4-nom=Tartard
+| p4-sexe=m
+| p4-niveau=38
+| p4-type1=Eau
+| p4-type2=Combat
+| p4-talent=Absorbe-Eau
+| p4-capacité1=Aqua-Brèche
+| p4-capacité2=Casse-Brique
+| p4-capacité4=Cognobidon
+| p4-capacité3=Poing Glace
+
+<!-- Cinquième Pokémon -->
+| p5-nom=Tarinorme
+| p5-sexe=m
+| p5-niveau=33
+| p5-type1=Roche
+| p5-type2=Acier
+| p5-talent=Fermeté
+| p5-capacité1=Étincelle
+| p5-capacité2=Boule Roc
+| p5-capacité3=Tomberoche
+| p5-capacité4=Rayon Gemme
+
+<!-- Sixième Pokémon -->
+| p6-nom=Pomdramour
+| p6-sexe=m
+| p6-niveau=36
+| p6-type1=Plante
+| p6-type2=Dragon
+| p6-talent=Nectar Mielleux
+| p6-capacité1=Bombe au Sirop
+| p6-capacité2=Coup Double
+| p6-capacité3=Draco-Souffle
+| p6-capacité4=Boul'Armure
+}}
+{{Tableau Dresseur
+<!-- Paramètres préliminaires -->
+| jeu=EV
+
+<!-- Paramètres du Dresseur -->
+| d-nom=Kassis<br>le [[Dresseur]]
+| d-sprite=Kassis (Combat pour Ogerpon)
+| d-taille=200px
+| d-rec=5 776
+| condition=Après avoir terminé l'histoire principale
+
+<!-- Premier Pokémon -->
+| p1-nom=Tengalice
+| p1-sexe=m
+| p1-sexediff=oui
+| p1-niveau=71
+| p1-type1=Plante
+| p1-type2=Ténèbres
+| p1-talent=Aéroporté
+| p1-objet=Ceinture Force
+| p1-capacité1=Bluff
+| p1-capacité2=Lame Feuille
+| p1-capacité3=Vent Arrière
+| p1-capacité4=Vibrobscur
+
+<!-- Deuxième Pokémon -->
+| p2-nom=Yanmega
+| p2-sexe=m
+| p2-niveau=72
+| p2-type1=Insecte
+| p2-type2=Vol
+| p2-talent=Lentiteintée
+| p2-objet=Baie Éka
+| p2-capacité1=Bourdon
+| p2-capacité2=Lame d'Air
+| p2-capacité3=Pouvoir Antique
+| p2-capacité4=Psyko
+
+<!-- Troisième Pokémon -->
+| p3-nom=Scorvol
+| p3-sexe=m
+| p3-niveau=76
+| p3-type1=Sol
+| p3-type2=Vol
+| p3-talent=Hyper Cutter
+| p3-objet=Baie Nanone
+| p3-capacité1=Double Volée
+| p3-capacité2=Plaie Croix
+| p3-capacité3=Séisme
+| p3-capacité4=Tomberoche
+
+<!-- Quatrième Pokémon -->
+| p4-nom=Tartard
+| p4-sexe=m
+| p4-niveau=72
+| p4-type1=Eau
+| p4-type2=Combat
+| p4-talent=Absorbe-Eau
+| p4-objet=Baie Sitrus
+| p4-capacité1=Aqua-Brèche
+| p4-capacité2=Close Combat
+| p4-capacité4=Cognobidon
+| p4-capacité3=Poing Glace
+
+<!-- Cinquième Pokémon -->
+| p5-nom=Tarinorme
+| p5-sexe=m
+| p5-niveau=71
+| p5-type1=Roche
+| p5-type2=Acier
+| p5-talent=Fermeté
+| p5-objet=Baie Pitaye
+| p5-capacité1=Big Splash
+| p5-capacité2=Élecanon
+| p5-capacité3=Luminocanon
+| p5-capacité4=Rayon Gemme
+
+<!-- Sixième Pokémon -->
+| p6-nom=Pomdramour
+| p6-sexe=m
+| p6-niveau=72
+| p6-type1=Plante
+| p6-type2=Dragon
+| p6-talent=Nectar Mielleux
+| p6-objet=Restes
+| p6-capacité1=Bombe au Sirop
+| p6-capacité2=Coup Double
+| p6-capacité3=Draco-Choc
+| p6-capacité4=Éco-Sphère
+}}
+
+== Pokémon ==
+Après la résurection des [[Adoramis]], ces derniers sont partis vers l'antre interdit pour se venger d'Ogerpon. En arrivant, le joueur intervient pour mettre fin au combat. Après concertation, [[Fortusimia]] décide de se battre. Il est impossible de le capturer à ce moment de l'aventure.
+
+=== Avant d'avoir terminé ''[[Retour aux sources (Écarlate et Violet)|Retour aux sources]]'' ===
+{{Rencontre Pokémon
+| jeu=EV
+| pokemon=Fortusimia
+| chromatique=non
+| sexe=m
+| niveau=30
+| type1=Poison
+| type2=Psy
+| talent=Chaîne Toxique
+| capacité1=Flatterie
+| capacité2=Bain de Smog
+| capacité3=Rafale Psy
+}}
+
+=== Après avoir terminé ''[[Retour aux sources (Écarlate et Violet)|Retour aux sources]]'' ===
+{{Rencontre Pokémon
+| jeu=EV
+| pokemon=Fortusimia
+| chromatique=non
+| sexe=m
+| niveau=70
+| type1=Poison
+| type2=Psy
+| talent=Chaîne Toxique
+| capacité1=Psyko
+| capacité2=Machination
+| capacité3=Cradovague
+| capacité4=Prescience
+}}
+
+Après un second combat contre [[Kassis]] en ce lieu, le joueur a la possibilité d'affronter Ogerpon. Durant ce combat, il doit d'abord mettre K.O. Ogerpon 4 fois de suite, changeant de Masque et Téracristallisant à chaque fois, commençant d'abord par le [[Masque du Fourneau]], puis celui du [[Masque du Puits|Puits]], celui de la [[Masque de la Pierre|Pierre]] et terminant avec le [[Masque Turquoise]]. Ogerpon restaure ses PV et PP de ses capacités à chaque phase, et réinitialise ses changements de statistiques et de statut en même temps. Une fois les 4 formes d'Ogerpon vaincues, le joueur peut capturer le Pokémon légendaire.
+
+<div class="liste-pokémon">
+{{#invoke:Tableau Pokémon|sauvage|jeu=EV|
+Rencontre
+Ogerpon / niveau(20, 70) taux(Unique)
+}}
+</div>
+
+Le niveau d'Ogerpon ainsi que les capacités apprises changent selon l'avancée du joueur dans l'aventure principale.
+
+=== Avant d'avoir terminé ''[[Retour aux sources (Écarlate et Violet)|Retour aux sources]]'' ===
+{{Rencontre Pokémon
+| jeu=EV
+| pokemon=Ogerpon
+| forme=Turquoise
+| chromatique=non
+| nature=Solo
+| sexe=f
+| niveau=20
+| type1=Plante
+| type-téra=Plante
+| talent=Acharné
+| capacité1=Massue Liane
+| capacité2=Plaquage
+| capacité3=Croissance
+| capacité4=Fouet Lianes
+}}
+
+=== Après avoir terminé ''[[Retour aux sources (Écarlate et Violet)|Retour aux sources]]'' ===
+{{Rencontre Pokémon
+| jeu=EV
+| pokemon=Ogerpon
+| forme=Turquoise
+| chromatique=non
+| nature=Solo
+| sexe=f
+| niveau=70
+| type1=Plante
+| type-téra=Plante
+| talent=Acharné
+| capacité1=Massue Liane
+| capacité2=Balayage
+| capacité3=Plaquage
+| capacité4=Champ Herbu
+}}
+
+== Voir aussi ==
+{{Septentria}}
+{{Lieux mythiques|région=Septentria}}
+
+[[Catégorie:Lieu]]
+[[Catégorie:Lieu de Septentria]]
+[[Catégorie:Lieu (jeu vidéo)]]
+[[Catégorie:Lieu de Pokémon Écarlate et Violet]]
+
+[[de:Schreckenshöhle]]
+[[en:Dreaded Den]]
+[[es:Gruta del Pavor]]
+[[it:Antro del Terrore]]
+[[ja:恐れ穴]]
+[[zh:恐洞]]
