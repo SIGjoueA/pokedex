@@ -1,0 +1,173 @@
+{{Ruban Cristal de raid|8|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 8.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 8''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 27 au 29 janvier, du 10 au 12 février 2023 et du 8 au 14 mai 2026.
+
+On y trouvait notamment des [[Amphinobi]] de type Téracristal [[Poison (type)|Poison]], alors qu'il était indisponible en temps normal.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Amphinobi / type-téracristal(Poison) talent-caché(Toujours) difficulté(7) capacités(Détricanon, Hydrocanon, Laser Glace, Tranche-Nuit; Pics Toxik, Reflet) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+Lucario / talent-caché(Possible) difficulté(4) capacités(Griffe Acier, Rengorgement, Onde Vide, Charge Os) / talent-caché(Possible) difficulté(5) capacités(Poing Météore, Danse Lames, Onde Vide, Séisme; Rengorgement, Mur de Fer) / type-téracristal(Acier) talent-caché(Toujours) difficulté(5) capacités(Poing Météore, Danse Lames, Onde Vide, Séisme; Rengorgement, Mur de Fer)
+Archéodong / talent-caché(Possible) difficulté(4) capacités(Onde Folie, Gyroballe, Mur de Fer, Rafale Psy) / talent-caché(Possible) difficulté(5) capacités(Force Ajoutée, Gyroballe, Mur de Fer, Tacle Lourd; Protection, Mur Lumière) / type-téracristal(Psy) talent-caché(Toujours) difficulté(5) capacités(Force Ajoutée, Mur de Fer, Gyroballe, Tacle Lourd; Protection, Mur Lumière)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Amphinobi_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Carbone / 5
+Téra-Éclat Poison / 10
+Téra-Éclat Poison / 5 / hôte
+CT Poison, CT091, Pics Toxik / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. XL / 5 / 23%
+Super Bonbon / 2 / 10%
+Carbone / 5 / 10%
+Bonbon Exp. XL / 2 / 5%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Malpoli / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Poison / 5 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+
+Lucario_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils de Riolu / 4
+Plume Santé / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Gowav / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Poils de Riolu / 2 / 9%
+
+Lucario_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Poils de Riolu / 5
+Plume Armure / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Alga / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Poils de Riolu / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Lucario_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Poils de Riolu / 5
+Plume Armure / 3
+Téra-Éclat Acier / 2
+Téra-Éclat Acier / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Alga / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Acier / 1 / 4%
+Poils de Riolu / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Archéodong_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Fragment d'Archéomire / 4
+Plume Santé / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Gowav / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Fragment d'Archéomire / 2 / 9%
+
+Archéodong_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Fragment d'Archéomire / 5
+Plume Armure / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Alga / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Fragment d'Archéomire / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Archéodong_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Fragment d'Archéomire / 5
+Plume Armure / 3
+Téra-Éclat Psy / 2
+Téra-Éclat Psy / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Alga / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Psy / 1 / 4%
+Fragment d'Archéomire / 2 / 5%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/27.01.2023]]

@@ -1,0 +1,103 @@
+{{Ruban Cristal de raid|21|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 21.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 21''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait le 19 mai et du 16 au 18 juin 2023.
+
+On y trouvait des [[Fort-Ivoire]] ou des [[Roue-de-Fer]] selon la version.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Fort-Ivoire / type-téracristal(Acier) talent-caché(Impossible) difficulté(5) capacités(Close Combat, Séisme, Éboulement, Cryo-Pirouette; Zénith, Trépignement) notes(Exclusif Ec.) / talent-caché(Impossible) difficulté(5) capacités(Close Combat, Séisme, Éboulement, Cryo-Pirouette; Zénith, Trépignement) notes(Exclusif Ec.)
+Roue-de-Fer / type-téracristal(Sol) talent-caché(Impossible) difficulté(5) capacités(Tête de Fer, Séisme, Mégacorne, Éclair Fou; Champ Électrifié, Piétisol) notes(Exclusif Vi.) / talent-caché(Impossible) difficulté(5) capacités(Tête de Fer, Séisme, Mégacorne, Éclair Fou; Champ Électrifié, Piétisol) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Fort-Ivoire_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat Acier / 2
+Téra-Éclat Acier / 2 / hôte
+Bonbon Exp. L / 1 / 24,21%
+Bonbon Exp. L / 2 / 11,58%
+Super Bonbon / 1 / 4,21%
+Plume Force / 2 / 10,53%
+Baie Lonme / 3 / 8,42%
+Grande Perle / 1 / 12,63%
+Perle Triple / 1 / 2,11%
+Pépite / 1 / 5,26%
+Aromate Jovial / 1 / 2,11%
+PP Plus / 1 / 3,16%
+Capsule d'Argent / 1 / 2,11%
+Téra-Éclat Acier / 2 / 11,58%
+Pilule Talent / 1 / 2,11%
+
+Fort-Ivoire_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 24,21%
+Bonbon Exp. L / 2 / 11,58%
+Super Bonbon / 1 / 4,21%
+Plume Force / 2 / 10,53%
+Baie Lonme / 3 / 8,42%
+Grande Perle / 1 / 12,63%
+Perle Triple / 1 / 2,11%
+Pépite / 1 / 5,26%
+Aromate Jovial / 1 / 2,11%
+PP Plus / 1 / 3,16%
+Capsule d'Argent / 1 / 2,11%
+Téra-Éclat / 2 / 11,58%
+Pilule Talent / 1 / 2,11%
+
+Roue-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat Sol / 2
+Téra-Éclat Sol / 2 / hôte
+Bonbon Exp. L / 1 / 24,21%
+Bonbon Exp. L / 2 / 11,58%
+Super Bonbon / 1 / 4,21%
+Plume Force / 2 / 10,53%
+Baie Lonme / 3 / 8,42%
+Grande Perle / 1 / 12,63%
+Perle Triple / 1 / 2,11%
+Pépite / 1 / 5,26%
+Aromate Jovial / 1 / 2,11%
+PP Plus / 1 / 3,16%
+Capsule d'Argent / 1 / 2,11%
+Téra-Éclat Sol / 2 / 11,58%
+Pilule Talent / 1 / 2,11%
+
+Roue-de-Fer_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 24,21%
+Bonbon Exp. L / 2 / 11,58%
+Super Bonbon / 1 / 4,21%
+Plume Force / 2 / 10,53%
+Baie Lonme / 3 / 8,42%
+Grande Perle / 1 / 12,63%
+Perle Triple / 1 / 2,11%
+Pépite / 1 / 5,26%
+Aromate Jovial / 1 / 2,11%
+PP Plus / 1 / 3,16%
+Capsule d'Argent / 1 / 2,11%
+Téra-Éclat / 2 / 11,58%
+Pilule Talent / 1 / 2,11%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/19.05.2023]]

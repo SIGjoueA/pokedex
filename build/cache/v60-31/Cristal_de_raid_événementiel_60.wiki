@@ -1,0 +1,39 @@
+{{Ruban Cristal de raid|60|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 60.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 60''' est un événement de {{Jeu|EV}} qui faiwait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 28 au 31 octobre 2024, à l'occasion d'Halloween.
+
+On y trouvait des [[Ectoplasma]] de type Téracristal [[Spectre (type)|Spectre]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Ectoplasma / type-téracristal(Spectre) talent-caché(Impossible) difficulté(5) niveau(75) capacités(Ball'Ombre, Bombe Beurk, Éclat Magique, Vibrobscur; Étonnement, Léchouille)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Ectoplasma_5
+Bonbon Exp. M / 2
+Bonbon Exp. L / 2
+Super Bonbon / 3
+Téra-Éclat Spectre / 3
+Bonbon Exp. S / 4 / 9%
+Bonbon Exp. M / 2 / 10%
+Bonbon Exp. L / 2 / 10%
+Bonbon Exp. XL / 2 / 10%
+Super Bonbon / 3 / 10%
+Bonbon Exp. S / 4 / 8%
+Bonbon Exp. M / 2 / 10%
+Bonbon Exp. L / 2 / 10%
+Bonbon Exp. XL / 2 / 10%
+Super Bonbon / 3 / 10%
+Épice Secrète Amère / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/28.10.2024]]

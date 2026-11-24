@@ -1,0 +1,63 @@
+{{Ruban Cristal de raid|65|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 65.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 65''' est un événement de {{Jeu|EV}} qui fait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroule du 13 au 19 décembre 2024.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Courrousinge / talent-caché(Possible) difficulté(5) niveau(75) capacités(Poing de Colère, Trépignement, Close Combat, Exécu-Son; Grincement, Vantardise)
+Scalpereur / talent-caché(Possible) difficulté(5) niveau(75) capacités(Génusection, Tête de Fer, Tranche-Nuit, Tranche; Mur de Fer, Danse Lames)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Courrousinge_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 20 / du type
+Téra-Éclat / 10 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11 %
+Pilule Talent / 1 / 2%
+Épice Secrète Salée / 1 / 3%
+
+Scalpereur_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 20 / du type
+Téra-Éclat / 10 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Tamato / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11 %
+Pilule Talent / 1 / 2%
+Épice Secrète Salée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/13.12.2024]]

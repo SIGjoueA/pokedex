@@ -1,0 +1,173 @@
+{{Ruban Cristal de raid|5|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 5.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 5''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 30 décembre 2022 au 1<sup>er</sup> janvier 2023, du 13 au 15 janvier 2023 et du 12 au 18 juin 2026.
+
+On y trouvait notamment des [[Pyrobut]] de type Téracristal [[Combat (type)|Combat]], alors qu'il est indisponible en temps normal.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Ectoplasma / talent-caché(Impossible) difficulté(4) capacités(Vibrobscur, Bain de Smog, Bombe Beurk, Griffe Ombre; Léchouille) / talent-caché(Impossible) difficulté(5) capacités(Ball'Ombre, Bain de Smog, Bombe Beurk, Ombre Nocturne; Léchouille, Onde Folie) / type-téracristal(Psy) talent-caché(Impossible) difficulté(5) capacités(Ball'Ombre, Bain de Smog, Bombe Beurk, Ombre Nocturne; Léchouille, Onde Folie)
+Léviator / talent-caché(Possible) difficulté(4) capacités(Hydro-Queue, Danse Draco, Cascade, Morsure) / talent-caché(Possible) difficulté(5) capacités(Hydrocanon, Danse Draco, Hydro-Queue, Vent Violent; Danse Pluie) / type-téracristal(Vol) talent-caché(Impossible) difficulté(5) capacités(Hydrocanon, Danse Draco, Hydro-Queue, Vent Violent; Danse Pluie)
+Pyrobut / type-téracristal(Combat) talent-caché(Toujours) difficulté(7) capacités(Pied Voltige, Ballon Brûlant, Acrobatie, Tête de Fer; Gonflette) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Ectoplasma_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Gaz de Fantominus / 4
+Plume Armure / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Armure / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Gaz de Fantominus / 2 / 9%
+
+Ectoplasma_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Gaz de Fantominus / 5
+Plume Armure / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Champi Suave / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Gaz de Fantominus / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Ectoplasma_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Gaz de Fantominus / 5
+Plume Armure / 3
+Téra-Éclat Psy / 2
+Téra-Éclat Psy / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Champi Suave / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Psy / 1 / 4%
+Gaz de Fantominus / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Léviator_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Écaille de Magicarpe / 4
+Plume Armure / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Armure / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Écaille de Magicarpe / 2 / 9%
+
+Léviator_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Écaille de Magicarpe / 5
+Plume Armure / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Champi Suave / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Écaille de Magicarpe / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Léviator_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Écaille de Magicarpe / 5
+Plume Armure / 3
+Téra-Éclat Vol / 2
+Téra-Éclat Vol / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Champi Suave / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Vol / 1 / 4%
+Écaille de Magicarpe / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Pyrobut_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Combat / 10
+Téra-Éclat Combat / 5 / hôte
+CT Combat, CT064, Gonflette / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Protéine / 5 / 10%
+Bonbon Exp. XL / 2 / 5%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Combat / 5 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/30.12.2022]]

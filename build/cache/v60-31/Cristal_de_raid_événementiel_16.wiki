@@ -1,0 +1,45 @@
+{{Ruban Cristal de raid|16|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 16.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 16''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 31 mars au 2 avril, du 7 au 9 avril 2023 et du 17 au 23 avril 2026.
+
+On y trouvait des [[Clamiral]] de type Téracristal [[Insecte (type)|Insecte]], alors qu'il était indisponible en temps normal.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Clamiral / type-téracristal(Insecte) talent-caché(Toujours) difficulté(7) capacités(Tranch'Aqua, Mégacorne, Tranche-Nuit, Tunnelier; Puissance, Danse Lames, Piétisol) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Clamiral_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Insecte / 20
+Téra-Éclat Insecte / 10 / hôte
+CT Normal, CT088, Danse Lames / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Protéine / 5 / 10%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Solo / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Insecte / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/31.03.2023]]

@@ -1,0 +1,134 @@
+{{Ruban Cristal de raid|17|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 17.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 17''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 7 au 9 avril 2023.
+
+On y trouvait des [[Métamorph]], ainsi que divers objets de combats en récompense.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Métamorph / talent-caché(Toujours) difficulté(5) capacités(Morphing) / talent-caché(Toujours) difficulté(5) capacités(Morphing) / talent-caché(Toujours) difficulté(5) capacités(Morphing) / talent-caché(Toujours) difficulté(5) capacités(Morphing)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Métamorph_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Substance de Métamorph / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 2 / 13,33%
+Bonbon Exp. L / 3 / 8,33%
+Super Bonbon / 1 / 2,67%
+PV Plus / 1 / 5%
+Protéine / 1 / 5%
+Fer / 1 / 5%
+Calcium / 1 / 5%
+Zinc / 1 / 5%
+Carbone / 1 / 5%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 2,67%
+Pierre Stase / 1 / 0,67%
+Nœud Destin / 1 / 0,67%
+Téra-Éclat / 4 / 5%
+Pilule Talent / 1 / 1,67%
+Baie Grena / 1 / 5%
+Baie Alga / 1 / 5%
+Baie Qualot / 1 / 5%
+Baie Lonme / 1 / 5%
+Baie Résin / 1 / 5%
+Baie Tamato / 1 / 5%
+
+Métamorph_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Substance de Métamorph / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 2 / 13,33%
+Bonbon Exp. L / 3 / 8,33%
+Super Bonbon / 1 / 2,67%
+PV Plus / 1 / 5%
+Protéine / 1 / 5%
+Fer / 1 / 5%
+Calcium / 1 / 5%
+Zinc / 1 / 5%
+Carbone / 1 / 5%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 2,67%
+Pierre Stase / 1 / 0,67%
+Nœud Destin / 1 / 0,67%
+Téra-Éclat / 4 / 5%
+Pilule Talent / 1 / 1,67%
+Baie Grena / 1 / 5%
+Baie Alga / 1 / 5%
+Baie Qualot / 1 / 5%
+Baie Lonme / 1 / 5%
+Baie Résin / 1 / 5%
+Baie Tamato / 1 / 5%
+
+Métamorph_5_3
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Substance de Métamorph / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 2 / 13,33%
+Bonbon Exp. L / 3 / 8,33%
+Super Bonbon / 1 / 2,67%
+PV Plus / 1 / 5%
+Protéine / 1 / 5%
+Fer / 1 / 5%
+Calcium / 1 / 5%
+Zinc / 1 / 5%
+Carbone / 1 / 5%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 2,67%
+Pierre Stase / 1 / 0,67%
+Nœud Destin / 1 / 0,67%
+Téra-Éclat / 4 / 5%
+Pilule Talent / 1 / 1,67%
+Baie Grena / 1 / 5%
+Baie Alga / 1 / 5%
+Baie Qualot / 1 / 5%
+Baie Lonme / 1 / 5%
+Baie Résin / 1 / 5%
+Baie Tamato / 1 / 5%
+
+Métamorph_5_4
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Substance de Métamorph / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 2 / 13,33%
+Bonbon Exp. L / 3 / 8,33%
+Super Bonbon / 1 / 2,67%
+PV Plus / 1 / 5%
+Protéine / 1 / 5%
+Fer / 1 / 5%
+Calcium / 1 / 5%
+Zinc / 1 / 5%
+Carbone / 1 / 5%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 2,67%
+Pierre Stase / 1 / 0,67%
+Nœud Destin / 1 / 0,67%
+Téra-Éclat / 4 / 5%
+Pilule Talent / 1 / 1,67%
+Baie Grena / 1 / 5%
+Baie Alga / 1 / 5%
+Baie Qualot / 1 / 5%
+Baie Lonme / 1 / 5%
+Baie Résin / 1 / 5%
+Baie Tamato / 1 / 5%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/07.04.2023]]

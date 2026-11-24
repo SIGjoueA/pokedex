@@ -1,0 +1,45 @@
+{{Ruban Cristal de raid|19|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 19.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 19''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 28 au 30 avril, du 5 au 7 mai 2023 et du 19 au 25 juin 2026.
+
+On y trouvait des [[Lézargus]] de type Téracristal [[Glace (type)|Glace]], alors qu'il était indisponible en temps normal.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Lézargus / type-téracristal(Glace) talent-caché(Toujours) difficulté(7) capacités(Blizzard, Tir de Précision, Vibrobscur, Larme à l'Œil; Brume, Chute de Neige) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Lézargus_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Zinc / 5
+Téra-Éclat Glace / 20
+Téra-Éclat Glace / 10 / hôte
+CT Glace, CT143, Blizzard / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Zinc / 5 / 10%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Discret / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Glace / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/28.04.2023]]

@@ -1,0 +1,761 @@
+{{Renvoi homonymie|Raid}}
+[[Fichier:Raid Téracristal EV.png|right|thumb|325px|Un raid Téracristal dans {{jeu|EV}}.]]
+Le '''raid Téracristal''' est un mode de [[combat Pokémon]] introduit lors de la [[neuvième génération]] avec {{jeu|EV}}. Il permet d'affronter un Pokémon [[Téracristallisation|Téracristal]] sauvage aux côtés de trois autres joueurs, via une communication sans fil locale ou Internet.
+
+Le raid Téracristal succède au [[raid Dynamax]] de la [[huitième génération]].
+
+== Principe ==
+=== Localisation ===
+[[Fichier:Cristal d'un raid Téracristal type Plante EV.png|thumb|right|300px|Un cristal permettant de déclencher un raid Téracristal de type Plante.]]
+Les raids Téracristal peuvent se déclencher uniquement via les cristaux qui parsèment l'environnement des régions de [[Paldea]] et [[Septentria]] et de l'[[Institut Myrtille]]. Les cristaux actifs peuvent être trouvés grâce aux faisceaux de lumière qu'ils émettent dans le paysage. La couleur du cristal indique notamment le type Téracristal du Pokémon à affronter lors du raid. La seule exception étant les cristaux noirs dégageant de l'énergie, qui symbolisent un raid très rare ou un raid événementiel.
+
+En général, les Pokémon présents dans les raids ont des caractéristiques plus rares que celles des autres Pokémon sauvages. Par exemple, ils peuvent avoir un type Téracristal particulier, qui serait difficilement obtenable hors raid Téracristal. Contrairement aux raids Dynamax de {{jeu|EB}}, la localisation et l'environnement des cristaux ne déterminent pas le type du Pokémon Téracristal. Ils sont répartis de manière aléatoire à travers les régions, avec des caractéristiques également aléatoires. Il est aussi possible de connaître le type Téracristal du Pokémon d'un raid à partir de la carte. Ils sont réinitialisés à chaque changement de jour.
+
+Pour lancer un raid Téracristal, il faut interagir avec un cristal. Cela permet :
+* d'ouvrir l'écran du lancement du raid, qui indique l'ombre du Pokémon Téracristal sauvage, son type Téracristal, sa difficulté (son nombre d'étoiles), mais aussi les membres de l'équipe et leurs Pokémon ;
+* de lancer automatiquement la recherche de partenaires pour le raid.
+
+Pour rejoindre un raid qui n'a pas encore une équipe complète, il faut utiliser le menu « Raids Téracristal » du Poké Portail. Ce système affiche les requêtes de raid Téracristal lorsqu'il est ouvert. Sélectionner une requête de raid Téracristal grâce à ce menu permet de rejoindre l'écran de lancement du raid, via un mot de passe ou non. Il est également possible d'utiliser l'option « Aléatoire », qui permet de rejoindre un raid au hasard.
+
+S'il est impossible de réunir une équipe de quatre joueurs différents pour un raid, des Dresseurs de soutien viennent automatiquement compléter l'équipe pour affronter le Pokémon téracristallisé sauvage.
+
+À noter que certains raids sont exclusifs à une certaine version. C'est notamment le cas des raids abritant un Pokémon exclusif à telle ou telle version.
+
+=== Rareté des raids ===
+La rareté d'un raid Téracristal est indiqué par son nombre d'étoiles. Plus un raid possède un grand nombre d'étoiles, plus le Pokémon Téracristal est puissant avec un nombre de PV importants, et plus les récompenses sont rares et importantes. L'augmentation du niveau de rareté d'un raid dépend de l'avancement du joueur dans l'histoire principale du jeu. Lorsque certains paliers sont atteints, des raids plus rares apparaissent à travers Paldea.
+
+À noter que, lorsque le joueur interagit pour la première fois avec un cristal de raid, il reçoit automatiquement des [[Point de Ligue|Points de Ligue]]. Le nombre de PL obtenus dépend aussi de la rareté du raid.
+
+{| class="tableaustandard centre"
+|-
+! rowspan="2" | Rareté
+! colspan="2" | Caractéristiques du boss
+! rowspan="2" | Points de Ligue obtenus<br>au premier toucher
+! colspan="5" | Pourcentage d'apparition selon l'avancement de l'histoire
+|-
+! Niveau
+! Multiplicateur de PV
+! Début du jeu
+! Après 3 Badges d'Arène
+! Après 6 Badges d'Arène
+! Après le générique de fin
+! Après le premier<br>Grand Tournoi de l'Académie
+|-
+| {{étoiles|1|pleines}}
+| 12
+| ×5
+| 500
+| 80 %
+| 30 %
+| 20 %
+| —
+| —
+|-
+| {{étoiles|2|pleines}}
+| 20
+| ×5
+| 700
+| 20 %
+| 40 %
+| 20 %
+| —
+| —
+|-
+| {{étoiles|3|pleines}}
+| 35
+| ×8
+| 1000
+| —
+| 30 %
+| 30 %
+| 40 %
+| 30 %
+|-
+| {{étoiles|4|pleines}}
+| 45
+| ×12
+| 1200
+| —
+| —
+| 30 %
+| 35 %
+| 40 %
+|-
+| {{étoiles|5|pleines}}
+| 75
+| ×20
+| 1600
+| —
+| —
+| —
+| 25 %
+| 30 %
+|-
+| {{étoiles|5|pleines}}{{étoiles|1|pleines}}
+| 90 (75 après capture)
+| ×25
+| 1800
+| —
+| —
+| —
+| —
+| 1 par jour
+|-
+| {{étoiles|5|pleines}}{{étoiles|2|pleines}}
+| 100
+| ×25
+| 2000
+| —
+| —
+| —
+| —
+| [[#Évènements|Évènement]]
+|}
+
+Pour débloquer les raids de rareté 6 étoiles, il faut nécessairement terminer le premier [[Grand Tournoi de l'Académie]]. Suite à cela, [[Jacq]] contacte le joueur via son [[Motismart]] et l'informe que des raids à cristaux noirs ont été aperçus, mais que les informations à leur sujet manquent. Le joueur doit alors effectuer plusieurs raids Téracristal à 4 étoiles, en ligne ou non, et en réussir 10. Après un certain nombre de raids terminés, Jacq contacte à nouveau le joueur pour lui indiquer la position d'un raid à cristal noir, soit de rareté 6 étoiles. À partir de cet instant, il est possible pour le joueur d'héberger lui-même des raids à 6 étoiles, à raison d'un raid par jour. Il débloque également l'accès aux raids événementiels à 7 étoiles.
+
+=== Combat ===
+Chaque membre de l'équipe ne peut utiliser qu'un seul Pokémon par raid Téracristal. Avant le combat, sur l'écran de lancement du raid, il est possible de choisir son Pokémon directement dans son équipe, ou dans une de ses [[Système de Stockage Pokémon|Boîtes PC]].
+
+Le fonctionnement des raids Téracristal est similaire à celui des [[Raid Dynamax|raids Dynamax]] ; il faut vaincre un Pokémon sauvage — sous l'effet de la Téracristallisation pendant la totalité du raid — en un temps imparti. À chaque fois qu'un Pokémon d'un joueur humain tombe K.O. au cours du raid, le temps restant pour vaincre le boss est réduit immédiatement. Toutefois, le Pokémon K.O. est remis sur pied et renvoyé au combat après un certain temps : 5 secondes pour le premier K.O., 10 secondes pour le deuxième, puis 15 secondes.
+
+La véritable particularité de ces raids est que chacun des quatre Dresseurs peut attaquer continuellement le Pokémon du raid, sans transition. Il n'y a pas de système de tour ; il n'est donc pas nécessaire d'attendre que les autres joueurs aient terminé leur action pour combattre. La coopération et le travail d'équipe entre les différents joueurs est nécessaire pour parvenir à vaincre le Pokémon ennemi.
+
+Selon le type Téracristal du Pokémon Téracristal sauvage, sa puissance peut être décuplée ; ou ses faiblesses et résistances peuvent changer de l'ordinaire. En plus de cela, la rareté du raid effectué influence le niveau et le nombre de points de vie du boss ; ces derniers étant multipliés selon un certain chiffre. Il peut également utiliser une variété d'effets à son avantage. Ainsi, il est capable :
+* d'utiliser une capacité à la suite d'une autre, faisant partie de son [[moveset]] de base ou non : il peut utiliser entre 0 et 4 capacités différentes supplémentaires en fonction du Pokémon et/ou de la difficulté ;
+* d'annuler les effets négatifs qu'il subit ;
+* de supprimer les changements de stats et les effets des talents du côté allié ;
+* de dérober une charge de l'Orbe Téracristal de tous les alliés ;
+* d'activer un Bouclier Téracristal, qui le protège davantage des capacités des alliés. Le moyen le plus rapide de faire tomber ce bouclier est d'utiliser des capacités sous l'effet de la Téracristallisation.
+
+En effet, pendant un raid, les quatre Pokémon des quatre participants peuvent avoir recours à la Téracristallisation. Le phénomène suit alors son fonctionnement traditionnel ; il n'est utilisable qu'une seule fois, et à condition que l'[[Orbe Téracristal]] du joueur soit chargé (après avoir touché 3 fois le Pokémon affronté, via une capacité physique ou spéciale). Le processus se termine à la fin du raid, ou si le Pokémon téracristallisé est mis K.O. À noter qu'un Pokémon de type Téracristal [[Stellaire]] n'a pas de limite d'utilisation de [[STAB]] lors d'un raid Téracristal.
+
+Si le Dresseur ne souhaite pas utiliser une capacité de son Pokémon, il peut utiliser jusqu'à trois encouragements par raid. Ce système permet ainsi à tous les joueurs de soutenir leurs coéquipiers, même si leurs Pokémon n'ont pas de capacité de statut. Ainsi, ces encouragements sont :
+* « À l'attaque ! », qui augmente l'[[Attaque (statistique)|Attaque]] et l'[[Attaque Spéciale]] de tous les alliés ;
+* « Posture défensive ! », qui augmente la [[Défense (statistique)|Défense]] et la [[Défense Spéciale (statistique)|Défense Spéciale]] de tous les alliés ;
+* « Soin d'urgence ! », qui redonne des [[PV]] et soigne les altérations de statut de tous les alliés.
+
+Si l'équipe parvient à vaincre le Pokémon Téracristal, tous les joueurs de l'équipe ont alors la possibilité de capturer à coup sûr le Pokémon ennemi, avec la [[Ball]] de leur choix. Des récompenses sont également distribuées à tous les membres de l'équipe, à l'issue d'un raid réussi.
+
+Si le Pokémon adverse n'est pas vaincu durant le temps imparti, le Pokémon Téracristal sauvage expulse les alliés de la caverne et le raid se termine automatiquement, sans possibilité de capture.
+
+=== Pénalité ===
+
+Si le joueur abandonne 3 raids Téracristal en ligne (en quittant le jeu), il ne peut plus accéder aux fonctionnalités en ligne de {{jeu|EV}} pendant 30 minutes.
+
+== Évènements ==
+Régulièrement, et similairement au [[Bulletin des Terres Sauvages]], des événements ajoutent des cristaux de raid sur la carte, le plus souvent avec des Pokémon non trouvables ailleurs. Ils ont lieu en général le week-end, et certains raids, de difficulté 7★, permettent d'obtenir des Pokémon possédant un [[Insigne]] Surpuissant.
+
+Le tableau ci-dessous récapitule tous les raids Téracristal événementiels :
+
+{| class="tableaustandard centre enroulable enroulé entetefixe" style="min-width:80%; max-width:100%"
+! colspan="5" | Raids Téracristal événementiels
+|-
+! width="60px" | Numéro
+! width="200px" | Image
+! width="170px" | Dates
+! width="110px" | Pokémon
+! width="500px" | Remarques
+|-
+| [[Cristal de raid événementiel 92|92]]
+| [[Fichier:Cristal de raid événementiel 92.png|200px|link=Cristal de raid événementiel 92]]
+| 28/08–03/09/2026
+| {{miniature|0983|jeu=EV}}
+| Le [[Scalpereur]] est de [[type Téracristal]] [[Ténèbres (type)|Ténèbres]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 91|91]]
+| [[Fichier:Cristal de raid événementiel 91.png|200px|link=Cristal de raid événementiel 91]]
+| 21–27/08/2026
+| {{miniature|0981|jeu=EV}}
+| Le [[Farigiraf]] est de [[type Téracristal]] [[Fée (type)|Fée]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 90|90]]
+| [[Fichier:Cristal de raid événementiel 90.png|200px|link=Cristal de raid événementiel 90]]
+| 14–20/08/2026
+| {{miniature|0979|jeu=EV}}
+| Le [[Courrousinge]] est de [[type Téracristal]] [[Spectre (type)|Spectre]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 89|89]]
+| [[Fichier:Cristal de raid événementiel 89.png|200px|link=Cristal de raid événementiel 89]]
+| 07–13/08/2026
+| {{miniature|0970|jeu=EV}}
+| Le [[Floréclat]] est de [[type Téracristal]] [[Plante (type)|Plante]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 88|88]]
+| [[Fichier:Cristal de raid événementiel 88.png|200px|link=Cristal de raid événementiel 88]]
+| 17/07–06/08/2026
+| {{miniature|0129|jeu=EV}}
+| Le [[Magicarpe]] est de [[type Téracristal]] [[Dragon (type)|Dragon]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 87|87]]
+| [[Fichier:Cristal de raid événementiel 87.png|200px|link=Cristal de raid événementiel 87]]
+| 05–07/12/2025<br>12–14/12/2025<br>20–26/11/2026
+| {{miniature|0887|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Lanssorien]] est de [[type Téracristal]] [[Dragon (type)|Dragon]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 86|86]]
+| [[Fichier:Cristal de raid événementiel 86.png|200px|link=Cristal de raid événementiel 86]]
+| 21–23/11/2025<br>28–30/11/2025<br>06–12/11/2026
+| {{miniature|0706|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Muplodocus]] est de [[type Téracristal]] [[Eau (type)|Eau]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 85|85]]
+| [[Fichier:Cristal de raid événementiel 85.png|200px|link=Cristal de raid événementiel 85]]
+| 07–09/11/2025<br>14–16/11/2025
+| {{miniature|0635|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Trioxhydre]] est de [[type Téracristal]] [[Poison (type)|Poison]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 84|84]]
+| [[Fichier:Cristal de raid événementiel 84.png|200px|link=Cristal de raid événementiel 84]]
+| 03–12/10/2025
+| {{miniature|1005|jeu=EV}}{{miniature|1006|jeu=EV}}<br>{{Masquer|{{miniature|0984|jeu=EV}}{{miniature|0985|jeu=EV}}{{miniature|0986|jeu=EV}}{{miniature|0987|jeu=EV}}{{miniature|0988|jeu=EV}}{{miniature|0989|jeu=EV}}{{miniature|0990|jeu=EV}}{{miniature|0991|jeu=EV}}{{miniature|0992|jeu=EV}}{{miniature|0993|jeu=EV}}{{miniature|0994|jeu=EV}}{{miniature|0995|jeu=EV}}|cacher=[-]|afficher=[+]}}
+| Les [[Pokémon Paradoxe]] sont exclusifs à leur jeu d'origine. [[Rugit-Lune]] et [[Garde-de-Fer]] possèdent l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 83|83]]
+| [[Fichier:Cristal de raid événementiel 83.png|200px|link=Cristal de raid événementiel 83]]
+| 01–14/09/2025
+| {{miniature|1004|jeu=EV}}
+| Le [[Yuyu]] est [[chromatique]], de [[type Téracristal]] [[Feu (type)|Feu]] et n'est pas capturable. Puisqu'un million de Yuyu ont été vaincus, une distribution a eu lieu à partir du 19 septembre 2025.
+|-
+| [[Cristal de raid événementiel 82|82]]
+| [[Fichier:Cristal de raid événementiel 82.png|200px|link=Cristal de raid événementiel 82]]
+| 18–31/08/2025
+| {{miniature|1003|jeu=EV}}
+| Le [[Dinglu]] est [[chromatique]], de [[type Téracristal]] [[Sol (type)|Sol]] et n'est pas capturable. Puisqu'un million de Dinglu ont été vaincus, une distribution a eu lieu à partir du 5 septembre 2025.
+|-
+| [[Cristal de raid événementiel 81|81]]
+| [[Fichier:Cristal de raid événementiel 81.png|200px|link=Cristal de raid événementiel 81]]
+| 04–17/08/2025
+| {{miniature|1002|jeu=EV}}
+| Le [[Baojian]] est [[chromatique]], de [[type Téracristal]] [[Glace (type)|Glace]] et n'est pas capturable. Puisqu'un million de Baojian ont été vaincus, une distribution a eu lieu à partir du 22 août 2025.
+|-
+| [[Cristal de raid événementiel 80|80]]
+| [[Fichier:Cristal de raid événementiel 80.png|200px|link=Cristal de raid événementiel 80]]
+| 23/07–03/08/2025
+| {{miniature|1001|jeu=EV}}
+| Le [[Chongjian]] est [[chromatique]], de [[type Téracristal]] [[Plante (type)|Plante]] et n'est pas capturable. Puisqu'un million de Chongjian ont été vaincus, une distribution a eu lieu à partir du 8 août 2025.
+|-
+| [[Cristal de raid événementiel 79|79]]
+| [[Fichier:Cristal de raid événementiel 79.png|200px|link=Cristal de raid événementiel 79]]
+| 11–13/07/2025<br>18–20/07/2025<br>13–19/11/2026
+| {{miniature|0784|jeu=EV}}
+| L'[[Ékaïser]] est de [[type Téracristal]] [[Combat (type)|Combat]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 78|78]]
+| [[Fichier:Cristal de raid événementiel 78.png|200px|link=Cristal de raid événementiel 78]]
+| 20–22/06/2025<br>27–29/06/2025
+| {{miniature|0998|jeu=EV}}
+| Le [[Glaivodo]] est de [[type Téracristal]] [[Glace (type)|Glace]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 77|77]]
+| [[Fichier:Cristal de raid événementiel 77.png|200px|link=Cristal de raid événementiel 77]]
+| 05–15/06/2025
+| {{miniature|0233|jeu=EV}}
+| Le [[Porygon2]] est de [[type Téracristal]] [[Normal (type)|Normal]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 76|76]]
+| [[Fichier:Cristal de raid événementiel 76.png|200px|link=Cristal de raid événementiel 76]]
+| 23–25/05/2025<br>30/05–01/06/2025<br>23–29/10/2026
+| {{miniature|0445|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Carchacrok]] est de [[type Téracristal]] [[Sol (type)|Sol]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 75|75]]
+| [[Fichier:Cristal de raid événementiel 75.png|200px|link=Cristal de raid événementiel 75]]
+| 09–11/05/2025<br>16–18/05/2025<br>16–22/10/2026
+| {{miniature|0376|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Métalosse]] est de [[type Téracristal]] [[Acier (type)|Acier]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 74|74]]
+| [[Fichier:Cristal de raid événementiel 74.png|200px|link=Cristal de raid événementiel 74]]
+| 18–20/04/2025<br>25–27/04/2025<br>09–16/10/2026
+| {{miniature|0373|jeu=EV}}
+| Le [[Drattak]] est de [[type Téracristal]] [[Vol (type)|Vol]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 73|73]]
+| [[Fichier:Cristal de raid événementiel 73.png|200px|link=Cristal de raid événementiel 73]]
+| 28–30/03/2025<br>04–06/04/2025<br>02–08/10/2026
+| {{miniature|0248|jeu=EV}}
+| Le [[Tyranocif]] est de [[type Téracristal]] [[Spectre (type)|Spectre]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 72|72]]
+| [[Fichier:Cristal de raid événementiel 72.png|200px|link=Cristal de raid événementiel 72]]
+| 14–20/03/2025
+| {{miniature|0914|jeu=EV}}
+| Le [[Palmaval]] est de [[type Téracristal]] [[Eau (type)|Eau]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 71|71]]
+| [[Fichier:Cristal de raid événementiel 71.png|200px|link=Cristal de raid événementiel 71]]
+| 07–13/03/2025<br>11–17/09/2026
+| {{miniature|0911|jeu=EV}}
+| Le [[Flâmigator]] est de [[type Téracristal]] [[Feu (type)|Feu]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 70|70]]
+| [[Fichier:Cristal de raid événementiel 70.png|200px|link=Cristal de raid événementiel 70]]
+| 28/02–06/03/2025<br>04–10/09/2026
+| {{miniature|0908|jeu=EV}}
+| Le [[Miascarade]] est de [[type Téracristal]] [[Plante (type)|Plante]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 69|69]]
+| [[Fichier:Cristal de raid événementiel 69.png|200px|link=Cristal de raid événementiel 69]]
+| 14–16/02/2025
+| {{miniature|0868|jeu=EV}}
+| En récompense, des [[Objet en Sucre|Objets en Sucre]].
+|-
+| [[Cristal de raid événementiel 68|68]]
+| [[Fichier:Cristal de raid événementiel 68.png|200px|link=Cristal de raid événementiel 68]]
+| 24–26/01/2025
+| {{miniature|0985|jeu=EV}}{{miniature|0991|jeu=EV}}
+| [[Hurle-Queue]] est exclusif à {{Jeu|Ec}}, et [[Hotte-de-Fer]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 67|67]]
+| [[Fichier:Cristal de raid événementiel 67.png|200px|link=Cristal de raid événementiel 67]]
+| 17–19/01/2025
+| {{miniature|0103|Alola|jeu=EV}}
+| Les [[Noadkoko d'Alola]] sont de type Téracristal [[Dragon (type)|Dragon]].
+|-
+| [[Cristal de raid événementiel 66|66]]
+| [[Fichier:Cristal de raid événementiel 66.png|200px|link=Cristal de raid événementiel 66]]
+| 20/12/2024–06/01/2025
+| {{miniature|0384|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Rayquaza]] est de type Téracristal [[Dragon (type)|Dragon]], n'est capturable qu'une seule fois, et est toujours [[chromatique]]. Cet évènement est en concordance avec {{Série|LH}}.
+|-
+| [[Cristal de raid événementiel 65|65]]
+| [[Fichier:Cristal de raid événementiel 65.png|200px|link=Cristal de raid événementiel 65]]
+| 06–12/12/2024
+| {{miniature|0979|jeu=EV}}{{miniature|0983|jeu=EV}}
+| Cet évènement est la troisième et dernière partie d'un évènement amenant à l'apparition d'un Rayquaza chromatique.
+|-
+| [[Cristal de raid événementiel 64|64]]
+| [[Fichier:Cristal de raid événementiel 64.png|200px|link=Cristal de raid événementiel 64]]
+| 06–12/12/2024
+| {{miniature|0184|jeu=EV}}{{miniature|0980|jeu=EV}}
+| Cet évènement est la deuxième partie d'un évènement amenant à l'apparition d'un Rayquaza chromatique.
+|-
+| [[Cristal de raid événementiel 63|63]]
+| [[Fichier:Cristal de raid événementiel 63.png|200px|link=Cristal de raid événementiel 63]]
+| 29/11–05/12/2024
+| {{miniature|0823|jeu=EV}}{{miniature|0939|jeu=EV}}
+| Cet évènement est la première partie d'un évènement amenant à l'apparition d'un Rayquaza chromatique.
+|-
+| [[Cristal de raid événementiel 62|62]]
+| [[Fichier:Cristal de raid événementiel 62.png|200px|link=Cristal de raid événementiel 62]]
+| 15–17/11/2024<br>22–24/11/2024<br>13–19/03/2026
+| {{miniature|0389|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Torterra]] est de [[type Téracristal]] [[Sol (type)|Sol]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 61|61]]
+| [[Fichier:Cristal de raid événementiel 61.png|200px|link=Cristal de raid événementiel 61]]
+| 01–03/11/2024<br>08–10/11/2024<br>13–19/02/2026
+| {{miniature|0160|jeu=EV}}{{miniature|0242|jeu=EV}}
+| L'[[Aligatueur]] est de [[type Téracristal]] [[Ténèbres (type)|Ténèbres]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 60|60]]
+| [[Fichier:Cristal de raid événementiel 60.png|200px|link=Cristal de raid événementiel 60]]
+| 29–31/11/2024
+| {{miniature|0094|jeu=EV}}
+| L'[[Ectoplasma]] est de [[type Téracristal]] [[Spectre (type)|Spectre]]. Ce raid Téracristal événementiel se déroule à l'occasion d'Halloween.
+|-
+| [[Cristal de raid événementiel 59|59]]
+| [[Fichier:Cristal de raid événementiel 59.png|200px|link=Cristal de raid événementiel 59]]
+| 18–20/10/2024
+| {{miniature|0936|jeu=EV}}{{miniature|0937|jeu=EV}}<br>{{miniature|0874|jeu=EV}}{{miniature|0875|jeu=EV}}
+| Dans ce raid Téracristal événementiel, on trouvait des Pokémon exclusifs, disponibles dans les deux versions.
+|-
+| [[Cristal de raid événementiel 58|58]]
+| [[Fichier:Cristal de raid événementiel 58.png|200px|link=Cristal de raid événementiel 58]]
+| 04–06/10/2024<br>11–13/10/2024<br>20–26/03/2026
+| {{miniature|0392|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Simiabraz]] est de [[type Téracristal]] [[Roche (type)|Roche]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 57|57]]
+| [[Fichier:Cristal de raid événementiel 57.png|200px|link=Cristal de raid événementiel 57]]
+| 20–22/09/2024<br>27–29/09/2024<br>03–09/04/2026
+| {{miniature|0497|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Majaspic]] est de [[type Téracristal]] [[Plante (type)|Plante]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 56|56]]
+| [[Fichier:Cristal de raid événementiel 56.png|200px|link=Cristal de raid événementiel 56]]
+| 06–08/09/2024<br>13–15/09/2024<br>22–28/05/2026
+| {{miniature|0727|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Félinferno]] est de [[type Téracristal]] [[Ténèbres (type)|Ténèbres]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 55|55]]
+| [[Fichier:Cristal de raid événementiel 55.png|200px|link=Cristal de raid événementiel 55]]
+| 23/08–01/09/2024<br>25/09–01/10/2026
+| {{miniature|0149|jeu=EV}}
+| Le [[Dracolosse]] est de [[type Téracristal]] [[Normal (type)|Normal]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 54|54]]
+| [[Fichier:Cristal de raid événementiel 54.png|200px|link=Cristal de raid événementiel 54]]
+| 09–22/08/2024<br>30/04–08/05/2025
+| {{miniature|0999|Coffre|jeu=EV}}
+| Les [[Mordudor]] des raids 5★ peuvent être [[chromatique]]s, alors que le Pokémon est normalement [[Shiny Lock]].
+|-
+| [[Cristal de raid événementiel 53|53]]
+| [[Fichier:Cristal de raid événementiel 53.png|200px|link=Cristal de raid événementiel 53]]
+| 26/07–08/08/2024
+| {{miniature|0977|jeu=EV}}
+| L'[[Oyacata]] est de [[type Téracristal]] [[Eau (type)|Eau]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 52|52]]
+| [[Fichier:Cristal de raid événementiel 52.png|200px|link=Cristal de raid événementiel 52]]
+| 12–25/07/2024
+| {{miniature|0025|jeu=EV}}
+| Le [[Pikachu]] est de [[type Téracristal]] [[Eau (type)|Eau]], n'est capturable qu'une seule fois (s'il ne l'a pas été [[#Cristal de raid événementiel 12|auparavant]]), possède l'[[Insigne]] Surpuissant et connaît la capacité [[Surf]].
+|-
+| [[Cristal de raid événementiel 51|51]]
+| [[Fichier:Cristal de raid événementiel 51.png|200px|link=Cristal de raid événementiel 51]]
+| 28–30/06/2024<br>05–07/07/2024<br>20–26/02/2026
+| {{miniature|0254|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Jungko]] est de [[type Téracristal]] [[Dragon (type)|Dragon]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 50|50]]
+| [[Fichier:Cristal de raid événementiel 50.png|200px|link=Cristal de raid événementiel 50]]
+| 14–16/06/2024<br>21–23/06/2024<br>10–16/04/2026
+| {{miniature|0500|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Roitiflam]] est de [[type Téracristal]] [[Électrik (type)|Électrik]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 49|49]]
+| [[Fichier:Cristal de raid événementiel 49.png|200px|link=Cristal de raid événementiel 49]]
+| 31/05–02/06/2024<br>07–09/06/2024<br>07–13/03/2026
+| {{miniature|0260|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Laggron]] est de [[type Téracristal]] [[Poison (type)|Poison]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 48|48]]
+| [[Fichier:Cristal de raid événementiel 48.png|200px|link=Cristal de raid événementiel 48]]
+| 24–26/05/2024
+| {{miniature|0989|jeu=EV}}{{miniature|0995|jeu=EV}}
+| [[Pelage-Sablé]] est exclusif à {{Jeu|Ec}}, et [[Épine-de-Fer]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 47|47]]
+| [[Fichier:Cristal de raid événementiel 47.png|200px|link=Cristal de raid événementiel 47]]
+| 10–12/05/2024<br>17–19/05/2024<br>29/05–04/06/2026
+| {{miniature|0730|jeu=EV}}{{miniature|0242|jeu=EV}}
+| L'[[Oratoria]] est de [[type Téracristal]] [[Fée (type)|Fée]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 46|46]]
+| [[Fichier:Cristal de raid événementiel 46.png|200px|link=Cristal de raid événementiel 46]]
+| 26/04/2024–06/05/2024<br>21–27/02/2025
+| {{miniature|1009|jeu=EV}}{{miniature|1010|jeu=EV}}
+| [[Serpente-Eau]] est exclusif à {{Jeu|Ec}}, et [[Vert-de-Fer]] est exclusif à {{Jeu|Vi}}. Les Pokémon ne sont pas disponibles autrement, et ne sont capturables qu'une seule fois s'ils ne l'ont pas été [[#Cristal de raid événementiel 13|auparavant]].
+|-
+| [[Cristal de raid événementiel 45|45]]
+| [[Fichier:Cristal de raid événementiel 45.png|200px|link=Cristal de raid événementiel 45]]
+| 05–07/04/2024<br>12–14/04/2024<br>30/01–05/02/2026
+| {{miniature|0154|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Méganium]] est de [[type Téracristal]] [[Psy (type)|Psy]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 44|44]]
+| [[Fichier:Cristal de raid événementiel 44.png|200px|link=Cristal de raid événementiel 44]]
+| 22–24/03/2024
+| {{miniature|0986|jeu=EV}}{{miniature|0992|jeu=EV}}
+| [[Fongus-Furie]] est exclusif à {{Jeu|Ec}}, et [[Paume-de-Fer]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 43|43]]
+| [[Fichier:Cristal de raid événementiel 43.png|200px|link=Cristal de raid événementiel 43]]
+| 13–17/03/2024<br>16–23/01/2026
+| {{miniature|0006|jeu=EV}}
+| Le [[Dracaufeu]] est de [[type Téracristal]] [[Dragon (type)|Dragon]], n'est capturable qu'une seule fois (s'il ne l'a pas été [[#Cristal de raid événementiel 2|auparavant]]), et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 42|42]]
+| [[Fichier:Cristal de raid événementiel 42.png|200px|link=Cristal de raid événementiel 42]]
+| 06–12/03/2024<br>23–29/01/2026
+| {{miniature|0009|jeu=EV}}
+| Le [[Tortank]] est de [[type Téracristal]] [[Acier (type)|Acier]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 41|41]]
+| [[Fichier:Cristal de raid événementiel 41.png|200px|link=Cristal de raid événementiel 41]]
+| 28/02–05/03/2024<br>07–15/01/2026
+| {{miniature|0003|jeu=EV}}
+| Le [[Florizarre]] est de [[type Téracristal]] [[Sol (type)|Sol]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. À partir de cet événement, les récompenses comprennent des [[Épice Secrète|Épices Secrètes]].
+|-
+| [[Cristal de raid événementiel 40|40]]
+| [[Fichier:Cristal de raid événementiel 40.png|200px|link=Cristal de raid événementiel 40]]
+| 02–04/12/2024
+| {{miniature|0936|jeu=EV}}{{miniature|0937|jeu=EV}}<br>{{miniature|0874|jeu=EV}}{{miniature|0875|jeu=EV}}
+| Dans ce raid Téracristal événementiel, on trouvait des Pokémon exclusifs, disponibles dans les deux versions.
+|-
+| [[Cristal de raid événementiel 39|39]]
+| [[Fichier:Cristal de raid événementiel 39.png|200px|link=Cristal de raid événementiel 39]]
+| 12–15/02/2024
+| {{miniature|0370|jeu=EV}}
+| Ce raid Téracristal événementiel se déroule à l'occasion de la Saint-Valentin.
+|-
+| [[Cristal de raid événementiel 38|38]]
+| [[Fichier:Cristal de raid événementiel 38.png|200px|link=Cristal de raid événementiel 38]]
+| 02–04/02/2024<br>09–11/02/2024<br>27/03–02/04/2026
+| {{miniature|0395|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Pingoléon]] est de [[type Téracristal]] [[Glace (type)|Glace]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 37|37]]
+| [[Fichier:Cristal de raid événementiel 37.png|200px|link=Cristal de raid événementiel 37]]
+| 26–28/01/2024
+| {{miniature|0987|jeu=EV}}{{miniature|0993|jeu=EV}}
+| [[Flotte-Mèche]] est exclusif à {{Jeu|Ec}}, et [[Têtes-de-Fer]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 36|36]]
+| [[Fichier:Cristal de raid événementiel 36.png|200px|link=Cristal de raid événementiel 36]]
+| 12–14/01/2024<br>19–21/01/2024<br>27/02–06/03/2026
+| {{miniature|0257|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Braségali]] est de [[type Téracristal]] [[Vol (type)|Vol]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Les [[Leuphorie]] n'apparaissent que pendant la deuxième période.
+|-
+| [[Cristal de raid événementiel 35|35]]
+| [[Fichier:Cristal de raid événementiel 35.png|200px|link=Cristal de raid événementiel 35]]
+| 22–24/12/2023
+| {{miniature|0991|jeu=EV}}{{miniature|0242|jeu=EV}}
+| Le [[Hotte-de-Fer]] est de [[type Téracristal]] [[Glace (type)|Glace]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 34|34]]
+| [[Fichier:Cristal de raid événementiel 34.png|200px|link=Cristal de raid événementiel 34]]
+| 08–21/12/2023
+| {{miniature|0483|jeu=EV}}{{miniature|0484|jeu=EV}}
+| [[Dialga]] est exclusif à {{Jeu|Ec}}, et [[Palkia]] est exclusif à {{Jeu|Vi}}. Ils sont de [[type Téracristal]] [[Dragon (type)|Dragon]], et ne sont captuables qu'une seule fois.
+|-
+| [[Cristal de raid événementiel 33|33]]
+| [[Fichier:Cristal de raid événementiel 33.png|200px|link=Cristal de raid événementiel 33]]
+| 24–26/11/2023<br>01–03/12/2023<br>10–16/07/2026
+| {{miniature|0503|Hisui|jeu=EV}}
+| Le [[Clamiral de Hisui]] est de [[type Téracristal]] [[Eau (type)|Eau]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 32|32]]
+| [[Fichier:Cristal de raid événementiel 32.png|200px|link=Cristal de raid événementiel 32]]
+| 17–20/11/2023
+| {{miniature|0133|jeu=EV}}
+| L'[[Évoli]] est de [[type Téracristal]] [[Normal (type)|Normal]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. En récompense, des [[Pierre d'évolution|pierres d'évolution]].
+|-
+| [[Cristal de raid événementiel 31|31]]
+| [[Fichier:Cristal de raid événementiel 31.png|200px|link=Cristal de raid événementiel 31]]
+| 03–05/11/2023<br>10–12/11/2023<br>03–09/07/2026
+| {{miniature|0157|Hisui|jeu=EV}}
+| Le [[Typhlosion de Hisui]] est de [[type Téracristal]] [[Feu (type)|Feu]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 30|30]]
+| [[Fichier:Cristal de raid événementiel 30.png|200px|link=Cristal de raid événementiel 30]]
+| 27–31/10/2023
+| {{miniature|0429|jeu=EV}}
+| Ce raid Téracristal événementiel se déroule à l'occasion d'Halloween.
+|-
+| [[Cristal de raid événementiel 29|29]]
+| [[Fichier:Cristal de raid événementiel 29.png|200px|link=Cristal de raid événementiel 29]]
+| 06–08/10/2023<br>13–15/10/2023<br>26/06–02/07/2026
+| {{miniature|0724|Hisui|jeu=EV}}
+| L'[[Archéduc de Hisui]] est de [[type Téracristal]] [[Plante (type)|Plante]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 28|28]]
+| [[Fichier:Cristal de raid événementiel 28.png|200px|link=Cristal de raid événementiel 28]]
+| 22–24/09/2023
+| {{miniature|0988|jeu=EV}}{{miniature|0994|jeu=EV}}
+| [[Rampe-Ailes]] est exclusif à {{Jeu|Ec}}, et [[Mite-de-Fer]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 27|27]]
+| [[Fichier:Cristal de raid événementiel 27.png|200px|link=Cristal de raid événementiel 27]]
+| 01–17/09/2023
+| {{miniature|0150|jeu=EV}}
+| Le [[Mewtwo]] est de [[type Téracristal]] [[Psy (type)|Psy]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant. Un [[Mew]] utilisé dans ce raid Téracristal recevra des boosts de stats, et aussi un [[Insigne]] Surpuissant en cas de victoire ; ceci pour concorder avec une distribution événementielle proche.
+|-
+| [[Cristal de raid événementiel 26|26]]
+| [[Fichier:Cristal de raid événementiel 26.png|200px|link=Cristal de raid événementiel 26]]
+| 18–31/08/2023<br>01–17/09/2023
+| {{miniature|0858|jeu=EV}}{{miniature|0861|jeu=EV}}<br>{{miniature|0242|jeu=EV}}
+| Ce raid événementiel avait pour but de proposer des Pokémon et des objets efficaces dans un raid à venir contre Mewtwo.
+|-
+| [[Cristal de raid événementiel 25|25]]
+| [[Fichier:Cristal de raid événementiel 25.png|200px|link=Cristal de raid événementiel 25]]
+| 09–17/08/2023<br>01–17/09/2023
+| {{miniature|0212|jeu=EV}}{{miniature|0635|jeu=EV}}<br>{{miniature|0242|jeu=EV}}
+| Ce raid événementiel avait pour but de proposer des Pokémon et des objets efficaces dans un raid à venir contre Mewtwo.
+|-
+| [[Cristal de raid événementiel 24|24]]
+| [[Fichier:Cristal de raid événementiel 24.png|200px|link=Cristal de raid événementiel 24]]
+| 28–30/07/2023<br>04–06/08/2023<br>05–11/06/2026
+| {{miniature|0812|jeu=EV}}
+| Le [[Gorythmic]] est de [[type Téracristal]] [[Normal (type)|Normal]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 23|23]]
+| [[Fichier:Cristal de raid événementiel 23.png|200px|link=Cristal de raid événementiel 23]]
+| 07–09/07/2023<br>14—16/07/2023<br>01–07/05/2026
+| {{miniature|0655|jeu=EV}}
+| Le [[Goupelin]] est de [[type Téracristal]] [[Fée (type)|Fée]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 22|22]]
+| [[Fichier:Cristal de raid événementiel 22.png|200px|link=Cristal de raid événementiel 22]]
+| 21/06–02/07/2023
+| {{miniature|0999|Coffre|jeu=EV}}
+| Les [[Mordudor]] des raids 5★ peuvent être [[chromatique]]s, alors que le Pokémon est normalement [[Shiny Lock]].
+|-
+| [[Cristal de raid événementiel 21|21]]
+| [[Fichier:Cristal de raid événementiel 21.png|200px|link=Cristal de raid événementiel 21]]
+| 19/05/2023<br>16–18/06/2023
+| {{miniature|0984|jeu=EV}}{{miniature|0990|jeu=EV}}
+| [[Fort-Ivoire]] est exclusif à {{Jeu|Ec}}, et [[Roue-de-Fer]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 20|20]]
+| [[Fichier:Cristal de raid événementiel 20.png|200px|link=Cristal de raid événementiel 20]]
+| 12–14/05/2023<br>19/05/2023<br>16—18/06/2023<br>24–30/04/2026
+| {{miniature|0652|jeu=EV}}
+| Le [[Blindépique]] est de [[type Téracristal]] [[Roche (type)|Roche]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 19|19]]
+| [[Fichier:Cristal de raid événementiel 19.png|200px|link=Cristal de raid événementiel 19]]
+| 28–30/04/2023<br>05–07/05/2023<br>19–25/06/2026
+| {{miniature|0818|jeu=EV}}
+| Le [[Lézargus]] est de [[type Téracristal]] [[Glace (type)|Glace]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 18|18]]
+| [[Fichier:Cristal de raid événementiel 18.png|200px|link=Cristal de raid événementiel 18]]
+| 14–16/04/2023<br>21–23/04/2023<br>06–12/02/2026
+| {{miniature|0157|jeu=EV}}
+| Le [[Typhlosion]] est de [[type Téracristal]] [[Spectre (type)|Spectre]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 17|17]]
+| [[Fichier:Cristal de raid événementiel 17.png|200px|link=Cristal de raid événementiel 17]]
+| 07–09/04/2023
+| {{miniature|0132|jeu=EV}}
+| En récompense, divers objets de combat.
+|-
+| [[Cristal de raid événementiel 16|16]]
+| [[Fichier:Cristal de raid événementiel 16.png|200px|link=Cristal de raid événementiel 16]]
+| 31/03–02/04/2023<br>07–09/04/2023<br>17–23/04/2026
+| {{miniature|0503|jeu=EV}}
+| Le [[Clamiral]] est de [[type Téracristal]] [[Insecte (type)|Insecte]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 15|15]]
+| [[Fichier:Cristal de raid événementiel 15.png|200px|link=Cristal de raid événementiel 15]]
+| 24–26/03/2023<br>21–23/04/2023<br>20–22/10/2023
+| {{miniature|0242|jeu=EV}}
+| En récompense, des [[Téra-Éclat]]s de différents types.
+|-
+| [[Cristal de raid événementiel 14|14]]
+| [[Fichier:Cristal de raid événementiel 14.png|200px|link=Cristal de raid événementiel 14]]
+| 17–19/03/2023<br>24–26/03/2023<br>15–21/05/2026
+| {{miniature|0724|jeu=EV}}
+| L'[[Archéduc]] est de [[type Téracristal]] [[Vol (type)|Vol]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|- id="Cristal de raid événementiel 13"
+| [[Cristal de raid événementiel 13|13]]
+| [[Fichier:Cristal de raid événementiel 13.png|200px|link=Cristal de raid événementiel 13]]
+| 27/02–12/03/2023<br>01–14/05/2023<br>25/12/2023–07/01/2024
+| {{miniature|1009|jeu=EV}}{{miniature|1010|jeu=EV}}
+| [[Serpente-Eau]] est exclusif à {{Jeu|Ec}}, et [[Vert-de-Fer]] est exclusif à {{Jeu|Vi}}. Les Pokémon ne sont pas disponibles autrement, et ne sont capturables qu'une seule fois.
+|- id="Cristal de raid événementiel 12"
+| [[Cristal de raid événementiel 12|12]]
+| [[Fichier:Cristal de raid événementiel 12.png|200px|link=Cristal de raid événementiel 12]]
+| 24–27/02/2023
+| {{miniature|0025|jeu=EV}}
+| Le [[Pikachu]] est de [[type Téracristal]] [[Eau (type)|Eau]], n'est capturable qu'une seule fois, possède l'[[Insigne]] Surpuissant et connaît la capacité [[Surf]].
+|-
+| [[Cristal de raid événementiel 11|11]]
+| [[Fichier:Cristal de raid événementiel 11.png|200px|link=Cristal de raid événementiel 11]]
+| 17–19/02/2023
+| {{miniature|0445|jeu=EV}}{{miniature|0700|jeu=EV}}
+| —
+|-
+| [[Cristal de raid événementiel 10|10]]
+| [[Fichier:Cristal de raid événementiel 10.png|200px|link=Cristal de raid événementiel 10]]
+| 13–15/02/2023
+| {{miniature|0924|jeu=EV}}
+| Ce raid Téracristal événementiel se déroule à l'occasion de la Saint-Valentin. En récompense, des ingrédients pour [[Sandwich (mécanique)|Sandwich]].
+|-
+| [[Cristal de raid événementiel 9|9]]
+| [[Fichier:Cristal de raid événementiel 9.png|200px|link=Cristal de raid événementiel 9]]
+| 03–05/02/2023
+| {{miniature|0936|jeu=EV}}{{miniature|0937|jeu=EV}}
+| [[Carmadura]] est exclusif à {{Jeu|Ec}}, et [[Malvalame]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 8|8]]
+| [[Fichier:Cristal de raid événementiel 8.png|200px|link=Cristal de raid événementiel 8]]
+| 27–29/01/2023<br>10–12/02/2023<br>08–14/05/2026
+| {{miniature|0658|jeu=EV}}<br>{{miniature|0448|jeu=EV}}{{miniature|0437|jeu=EV}}
+| L'[[Amphinobi]] est de [[type Téracristal]] [[Poison (type)|Poison]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 7|7]]
+| [[Fichier:Cristal de raid événementiel 7.png|200px|link=Cristal de raid événementiel 7]]
+| 20–23/01/2023
+| {{miniature|0426|jeu=EV}}{{miniature|0429|jeu=EV}}
+| [[Grodrive]] est exclusif à {{Jeu|Ec}}, et [[Magirêve]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 6|6]]
+| [[Fichier:Cristal de raid événementiel 6.png|200px|link=Cristal de raid événementiel 6]]
+| 06–08/01/2023
+| {{miniature|0635|jeu=EV}}{{miniature|0887|jeu=EV}}
+| [[Trioxhydre]] est exclusif à {{Jeu|Ec}}, et [[Lanssorien]] est exclusif à {{Jeu|Vi}}.
+|-
+| [[Cristal de raid événementiel 5|5]]
+| [[Fichier:Cristal de raid événementiel 5.png|200px|link=Cristal de raid événementiel 5]]
+| 30/12/2022–01/01/2023<br>13–15/01/2023<br>12–18/06/2026
+| {{miniature|0815|jeu=EV}}<br>{{miniature|0094|jeu=EV}}{{miniature|0130|jeu=EV}}
+| Le [[Pyrobut]] est de [[type Téracristal]] [[Combat (type)|Combat]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 4|4]]
+| [[Fichier:Cristal de raid événementiel 4.png|200px|link=Cristal de raid événementiel 4]]
+| 23–25/12/2022
+| {{miniature|0225|jeu=EV}}
+| En récompense, des [[Téra-Éclat]]s de différents types.
+|-
+| [[Cristal de raid événementiel 3|3]]
+| [[Fichier:Cristal de raid événementiel 3.png|200px|link=Cristal de raid événementiel 3]]
+| 09–11/12/2022
+| {{miniature|0248|jeu=EV}}{{miniature|0373|jeu=EV}}
+| [[Tyranocif]] est exclusif à {{Jeu|Ec}}, et [[Drattak]] est exclusif à {{Jeu|Vi}}.
+|- id="Cristal de raid événementiel 2"
+| [[Cristal de raid événementiel 2|2]]
+| [[Fichier:Cristal de raid événementiel 2.png|200px|link=Cristal de raid événementiel 2]]
+| 02–04/12/2022<br>16–18/12/2022
+| {{miniature|0006|jeu=EV}}<br>{{miniature|0671|Rouge|jeu=EV}}{{miniature|0778|jeu=EV}}
+| Le [[Dracaufeu]] est de [[type Téracristal]] [[Dragon (type)|Dragon]], n'est capturable qu'une seule fois, et possède l'[[Insigne]] Surpuissant.
+|-
+| [[Cristal de raid événementiel 1|1]]
+| [[Fichier:Cristal de raid événementiel 1.png|200px|link=Cristal de raid événementiel 1]]
+| 25–27/11/2022
+| {{miniature|0133|jeu=EV}}
+| En récompense, des [[Pierre d'évolution|pierres d'évolution]] et des [[plume]]s.
+|}
+
+== Imagerie ==
+<center><gallery widths="150px">
+Capture d'un Gardevoir Téracristal EV.png|La capture d'un Gardevoir Téracristal.
+Écran de lancement d'un raid Téracristal EV.png|L'écran de lancement d'un raid Téracristal.
+</gallery></center>
+
+=== Cristaux par type ===
+
+<center><gallery widths="150px" perrow="6">
+Cristal d'un raid Téracristal type Normal EV.png|Normal
+Cristal d'un raid Téracristal type Feu EV.png|Feu
+Cristal d'un raid Téracristal type Eau EV.png|Eau
+Cristal d'un raid Téracristal type Électrik EV.png|Électrik
+Cristal d'un raid Téracristal type Plante EV.png|Plante
+Cristal d'un raid Téracristal type Glace EV.png|Glace
+Cristal d'un raid Téracristal type Combat EV.png|Combat
+Cristal d'un raid Téracristal type Poison EV.png|Poison
+Cristal d'un raid Téracristal type Sol EV.png|Sol
+Cristal d'un raid Téracristal type Vol EV.png|Vol
+Cristal d'un raid Téracristal type Psy EV.png|Psy
+Cristal d'un raid Téracristal type Insecte EV.png|Insecte
+Cristal d'un raid Téracristal type Roche EV.png|Roche
+Cristal d'un raid Téracristal type Spectre EV.png|Spectre
+Cristal d'un raid Téracristal type Dragon EV.png|Dragon
+Cristal d'un raid Téracristal type Ténèbres EV.png|Ténèbres
+Cristal d'un raid Téracristal type Acier EV.png|Acier
+Cristal d'un raid Téracristal type Fée EV.png|Fée
+</gallery></center>
+=== Cristaux spéciaux ===
+<center><gallery widths="150px">
+Cristal d'un raid Téracristal 6 étoiles.png|Cristal de raid 6 étoiles.
+Cristal d'un raid Téracristal événementiel.png|Cristal de raid événementiel.
+Cristal d'un raid Téracristal 7 étoiles.png|Cristal de raid 7 étoiles.
+</gallery></center>
+
+== Voir aussi ==
+
+* [[Combat de raid (JCC)]]
+* [[Raid Dynamax]]
+
+{{Cristaux de raid}}
+{{Combat}}
+
+[[de:Tera-Raid]]
+[[en:Tera Raid Battle]]
+[[es:Teraincursión]]
+[[it:Raid Teracristal]]
+[[ja:テラレイドバトル]]
+[[zh:太晶团体战]]

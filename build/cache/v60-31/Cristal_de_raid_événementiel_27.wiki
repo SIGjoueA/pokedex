@@ -1,0 +1,47 @@
+{{Ruban Cristal de raid|27|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 27.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 27''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 1<sup>er</sup> au 17 septembre 2023.
+
+On y trouvait des [[Mewtwo]] de type Téracristal [[Psy (type)|Psy]]. Un [[Mew]] utilisé dans ce raid Téracristal recevra des boosts de stats, et aussi un [[Insigne]] Surpuissant en cas de victoire ; ceci pour concorder avec une distribution événementielle proche.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Mewtwo / type-téracristal(Psy) talent-caché(Toujours) difficulté(7) capacités(Frappe Psy, Aurasphère, Laser Glace, Plénitude; Repos) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Mewtwo_7
+Bonbon Exp. L / 10
+Bonbon Exp. XL / 4
+Roche Royale / 1 / unique
+Poudre Claire / 1 / unique
+Capsule d'Or / 3 / unique
+Patch Talent / 3 / unique
+Téra-Éclat Psy / 100 / unique
+Bonbon Exp. L / 3 / 20%
+Bonbon Exp. XL / 3 / 15%
+Super Bonbon / 2 / 8%
+Maxi Pépite / 1 / 8%
+Morceau Comète / 1 / 11%
+Pilule Talent / 1 / 5%
+Patch Talent / 1 / 2%
+PP Plus / 3 / 5%
+Capsule d'Argent / 2 / 5%
+Aromate Modeste / 1 / 11%
+Téra-Éclat Psy / 5 / 10%
+}}
+
+== Galerie ==
+<center><gallery>
+Évènement Obtenez Mew & Mewtwo ! EV.png|Logo de l'événement.
+</gallery></center>
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/01.09.2023]]

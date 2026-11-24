@@ -1,0 +1,46 @@
+{{Ruban Cristal de raid|12|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 12.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 12''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 24 au 27 février 2023, à l'occasion de la Journée Pokémon.
+
+On y trouvait des [[Pikachu]] de type [[Téracristal]] [[Eau (type)|Eau]] connaissant la capacité [[Surf]].
+
+__TOC__
+
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Pikachu / type-téracristal(Eau) talent-caché(Toujours) difficulté(7) capacités(Fatal-Foudre, Surf, Câlinerie, Queue de Fer; Danse Pluie) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique. [[Balle Lumière]] tenue.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Pikachu_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Calcium / 5
+Téra-Éclat Eau / 20
+Téra-Éclat Eau / 10 / hôte
+CT Eau, CT123, Surf / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Calcium / 5 / 10%
+Bonbon Exp. XL / 2 / 5%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Discret / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Eau / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/24.02.2023]]

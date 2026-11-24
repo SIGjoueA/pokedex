@@ -1,0 +1,45 @@
+{{Ruban Cristal de raid|18|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 18.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 18''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 14 au 16, du 21 au 23 avril 2023 et du 6 au 12 février 2026.
+
+On y trouvait des [[Typhlosion]] de type Téracristal [[Spectre (type)|Spectre]], alors qu'il était indisponible en temps normal.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Typhlosion / type-téracristal(Spectre) talent-caché(Toujours) difficulté(7) capacités(Éruption, Ball'Ombre, Câlinerie, Séisme; Zénith) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Typhlosion_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Calcium / 5
+Téra-Éclat Spectre / 20
+Téra-Éclat Spectre / 10 / hôte
+CT Spectre, CT114, Ball'Ombre / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Calcium / 5 / 10%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Doux / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Spectre / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/14.04.2023]]

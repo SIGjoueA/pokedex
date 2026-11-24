@@ -1,0 +1,378 @@
+L''''insigne''' est un mécanisme de jeu introduit dans {{jeu|EB}}. Il s'agit d'une marque spéciale qu'un Pokémon peut porter lorsqu'il est [[capture|capturé]], et qui lui confère un titre.
+== Obtention ==
+La plupart des insignes ne peuvent pas être gagnés, cependant tout Pokémon sauvage a 5% de chance d'avoir un insigne lorsqu'il est attrapé. Le [[Charme Insigne]] augmente les chances de rencontre d'un Pokémon doté d'un insigne.
+
+Dans {{Jeu|EV}}, le joueur peut augmenter ses chances de rencontrer un Pokémon doté d'un insigne avec un [[Sandwich (mécanique)|Sandwich]] possédant l'Aura Insigne. Certains insignes peuvent également être obtenus avec un Pokémon déjà attrapé. Dans {{jeu|EVdi}}, avec la fonction [[Verrouillage (mécanique)|Verrouillage]] améliorée, le joueur peut voir si un Pokémon est doté d'un insigne.
+
+Les insignes sont affichés dans la partie [[Ruban (série principale)|Ruban]] du résumé dans {{Jeu|EB}} et dans la section Souvenirs du résumé dans {{Jeu|EV|lien=non}}.
+
+== Liste des insignes ==
+=== Dans {{Jeu|EB}} ===
+==== Insignes conditionnels ====
+Parmi les 5% de chance qu'a un Pokémon de posséder un insigne, ceci sont ceux qu'il est le plus susceptible d'avoir.
+
+{| class="tableaustandard" style="text-align:center"
+! colspan=2 | Insigne
+! Description
+! Titre associé
+! Méthode<br/>d'obtention
+|-
+| [[Fichier:Insigne Appétit EB.png|x50px]]
+| Insigne Appétit
+| L'insigne d'un Pokémon affamé.
+| l'Affamé
+| Le Pokémon doit être attrapé entre 12h et 18h59.
+|-
+| [[Fichier:Insigne Crépuscule EB.png|x50px]]
+| Insigne Crépuscule
+| L'insigne d'un Pokémon fourbu.
+| le Fourbu
+| Le Pokémon doit être attrapé entre 19h et 19h59.
+|-
+| [[Fichier:Insigne Minuit EB.png|x50px]]
+| Insigne Minuit
+| L'insigne d'un Pokémon endormi.
+| l'Endormi
+| Le Pokémon doit être attrapé entre 20h et 23h59.
+|-
+| [[Fichier:Insigne Aube EB.png|x50px]]
+| Insigne Aube
+| L'insigne d'un Pokémon matinal.
+| le Matinal
+| Le Pokémon doit être attrapé entre 6h et 11h59.
+|-
+| [[Fichier:Insigne Nuages EB.png|x50px]]
+| Insigne Nuage
+| L'insigne d'un Pokémon rêveur.
+| le Rêveur
+| Le Pokémon doit être attrapé par temps nuageux.
+|-
+| [[Fichier:Insigne Pluie EB.png|x50px]]
+| Insigne Pluie
+| L'insigne d'un Pokémon trempé.
+| le Trempé
+| Le Pokémon doit être attrapé par temps pluvieux.
+|-
+| [[Fichier:Insigne Tonnerre EB.png|x50px]]
+| Insigne Tonnerre
+| L'insigne d'un Pokémon survolté.
+| le Survolté
+| Le Pokémon doit être attrapé par temps orageux.
+|-
+| [[Fichier:Insigne Neige EB.png|x50px]]
+| Insigne Neige
+| L'insigne d'un Pokémon enneigé.
+| l'Enneigé
+| Le Pokémon doit être attrapé par temps neigeux.
+|-
+| [[Fichier:Insigne Blizzard EB.png|x50px]]
+| Insigne Blizzard
+| L'insigne d'un Pokémon grelottant.
+| le Grelottant
+| Le Pokémon doit être attrapé dans le blizzard.
+|-
+| [[Fichier:Insigne Sécheresse EB.png|x50px]]
+| Insigne Sécheresse
+| L'insigne d'un Pokémon assoiffé.
+| l'Assoiffé
+| Le Pokémon doit être attrapé par temps ensoleillé.
+|-
+| [[Fichier:Insigne Tempête de Sable EB.png|x50px]]
+| Insigne Tempête de Sable
+| L'insigne d'un Pokémon ensablé.
+| l'Ensablé
+| Le Pokémon doit être attrapé dans une tempête de sable.
+|-
+| [[Fichier:Insigne Brume EB.png|x50px]]
+| Insigne Brume
+| L'insigne d'un Pokémon égaré.
+| l'Égaré
+| Le Pokémon doit être attrapé par temps brumeux.
+|-
+| [[Fichier:Insigne Pêche EB.png|x50px]]
+| Insigne Pêche
+| L'insigne d'un Pokémon frétillant.
+| le Frétillant
+| Le Pokémon doit être pêché.
+|-
+| [[Fichier:Insigne Curry EB.png|x50px]]
+| Insigne Curry
+| L'insigne d'un Pokémon gastronome.
+| le Gastronome
+| Le Pokémon doit avoir rendu visite au joueur après qu'il a cuisiné un [[curry]].
+|}
+
+==== Autres insignes ====
+Ces insignes sont, à l'exception de l'insigne Sociabilité, plus rares que les conditionnels. Tout Pokémon sauvage peut posséder un de ces insignes.
+
+{| class="tableaustandard" style="text-align:center"
+! colspan=2 | Insigne
+! Description
+! Titre associé
+! Rareté
+|-
+| [[Fichier:Insigne Sociabilité EB.png|x50px]]
+| Insigne Sociabilité
+| L'insigne d'un Pokémon sociable.
+| le Sociable
+| Peu commun
+|-
+| [[Fichier:Insigne Espièglerie EB.png|x50px]]
+| Insigne Espièglerie
+| L'insigne d'un Pokémon espiègle.
+| l'Espiègle
+| Rare
+|-
+| [[Fichier:Insigne Insouciance EB.png|x50px]]
+| Insigne Insouciance
+| L'insigne d'un Pokémon insouciant.
+| l'Insouciant
+| Rare
+|-
+| [[Fichier:Insigne Nervosité EB.png|x50px]]
+| Insigne Nervosité
+| L'insigne d'un Pokémon tendu.
+| le Tendu
+| Rare
+|-
+| [[Fichier:Insigne Enthousiasme EB.png|x50px]]
+| Insigne Enthousiasme
+| L'insigne d'un Pokémon enthousiaste.
+| l'Enthousiaste
+| Rare
+|-
+| [[Fichier:Insigne Charisme EB.png|x50px]]
+| Insigne Charisme
+| L'insigne d'un Pokémon charismatique.
+| le Charismatique
+| Rare
+|-
+| [[Fichier:Insigne Sang-Froid EB.png|x50px]]
+| Insigne Sang-Froid
+| L'insigne d'un Pokémon imperturbable.
+| l'Imperturbable
+| Rare
+|-
+| [[Fichier:Insigne Sang-Chaud EB.png|x50px]]
+| Insigne Sang-Chaud
+| L'insigne d'un Pokémon agressif.
+| l'Agressif
+| Rare
+|-
+| [[Fichier:Insigne Inattention EB.png|x50px]]
+| Insigne Inattention
+| L'insigne d'un Pokémon distrait.
+| le Distrait
+| Rare
+|-
+| [[Fichier:Insigne Bonheur EB.png|x50px]]
+| Insigne Bonheur
+| L'insigne d'un Pokémon guilleret.
+| le Guilleret
+| Rare
+|-
+| [[Fichier:Insigne Colère EB.png|x50px]]
+| Insigne Colère
+| L'insigne d'un Pokémon contrarié.
+| le Contrarié
+| Rare
+|-
+| [[Fichier:Insigne Rire EB.png|x50px]]
+| Insigne Rire
+| L'insigne d'un Pokémon rieur.
+| le Rieur
+| Rare
+|-
+| [[Fichier:Insigne Pleurs EB.png|x50px]]
+| Insigne Pleurs
+| L'insigne d'un Pokémon pleurnicheur.
+| le Pleurnicheur
+| Rare
+|-
+| [[Fichier:Insigne Bonne Humeur EB.png|x50px]]
+| Insigne Bonne Humeur
+| L'insigne d'un Pokémon bien luné.
+| le Bien Luné
+| Rare
+|-
+| [[Fichier:Insigne Saute d'Humeur EB.png|x50px]]
+| Insigne Saute d'Humeur
+| L'insigne d'un Pokémon mal luné.
+| le Mal Luné
+| Rare
+|-
+| [[Fichier:Insigne Réflexion EB.png|x50px]]
+| Insigne Réflexion
+| L'insigne d'un Pokémon réfléchi.
+| le Réfléchi
+| Rare
+|-
+| [[Fichier:Insigne Impulsivité EB.png|x50px]]
+| Insigne Impulsivité
+| L'insigne d'un Pokémon impulsif.
+| l'Impulsif
+| Rare
+|-
+| [[Fichier:Insigne Ruse EB.png|x50px]]
+| Insigne Ruse
+| L'insigne d'un Pokémon opportuniste.
+| l'Opportuniste
+| Rare
+|-
+| [[Fichier:Insigne Menace EB.png|x50px]]
+| Insigne Menace
+| L'insigne d'un Pokémon menaçant.
+| le Menaçant
+| Rare
+|-
+| [[Fichier:Insigne Gentillesse EB.png|x50px]]
+| Insigne Gentillesse
+| L'insigne d'un Pokémon bienveillant.
+| le Bienveillant
+| Rare
+|-
+| [[Fichier:Insigne Panique EB.png|x50px]]
+| Insigne Panique
+| L'insigne d'un Pokémon paniqué.
+| le Paniqué
+| Rare
+|-
+| [[Fichier:Insigne Entrain EB.png|x50px]]
+| Insigne Entrain
+| L'insigne d'un Pokémon motivé.
+| le Motivé
+| Rare
+|-
+| [[Fichier:Insigne Nonchalance EB.png|x50px]]
+| Insigne Nonchalance
+| L'insigne d'un Pokémon nonchalant.
+| le Nonchalant
+| Rare
+|-
+| [[Fichier:Insigne Fierté EB.png|x50px]]
+| Insigne Fierté
+| L'insigne d'un Pokémon fier.
+| le Fier
+| Rare
+|-
+| [[Fichier:Insigne Abattement EB.png|x50px]]
+| Insigne Abattement
+| L'insigne d'un Pokémon abattu.
+| l'Abattu
+| Rare
+|-
+| [[Fichier:Insigne Discrétion EB.png|x50px]]
+| Insigne Discrétion
+| L'insigne d'un Pokémon taciturne.
+| le Taciturne
+| Rare
+|-
+| [[Fichier:Insigne Frime EB.png|x50px]]
+| Insigne Frime
+| L'insigne d'un Pokémon frimeur.
+| le Frimeur
+| Rare
+|-
+| [[Fichier:Insigne Énergie EB.png|x50px]]
+| Insigne Énergie
+| L'insigne d'un Pokémon énergique.
+| l'Énergique
+| Rare
+|-
+| [[Fichier:Insigne Blessure EB.png|x50px]]
+| Insigne Blessure
+| L'insigne d'un Pokémon blessé.
+| le Blessé
+| Rare
+|-
+| [[Fichier:Insigne Rareté EB.png|x50px]]
+| Insigne Rareté
+| L'insigne d'un Pokémon rarissime.
+| le Rarissime
+| Très rare
+|}
+
+=== Dans {{Jeu|EV}} ===
+En plus de la majorité des insignes de {{jeu|EB|lien=non}}, de nouveaux insignes, tous conditionnels, ont été ajoutés.
+
+{| class="tableaustandard" style="text-align:center"
+! colspan=2 | Insigne
+! Description
+! Titre associé
+! Méthode<br/>d'obtention
+! Rareté
+|-
+| [[Fichier:Insigne Surpuissant EV.png|x50px]]
+| Insigne Surpuissant
+| L'insigne d'un Pokémon attrapé lors d'un [[raid Téracristal]] de difficulté sept étoiles.
+| le Surpuissant
+| Le Pokémon doit être attrapé lors d'un raid Téracristal de difficulté sept étoiles.
+| Garanti
+|-
+| [[Fichier:Insigne Amitié EV.png|x50px]]
+| Insigne Amitié
+| L'insigne d'un Pokémon avec lequel vous avez noué une amitié.
+| le Partenaire Fiable
+| Peut être trouvé sur un Pokémon de l'équipe avec un fort niveau de [[Bonheur]] (200 ou plus).
+| Rare
+|-
+| [[Fichier:Insigne Gourmet EV.png|x50px]]
+| Insigne Gourmet
+| L'insigne d'un Pokémon gourmet.
+| le Gourmet
+| Peut être trouvé sur un Pokémon de l'équipe après avoir préparé un [[Sandwich (mécanique)|sandwich]] ou mangé un plat.
+| Rare
+|-
+| [[Fichier:Insigne Ramassage EV.png|x50px]]
+| Insigne Ramassage
+| L'insigne d'un Pokémon qui ramasse des objets.
+| le Chasseur de Trésors
+| Peut être trouvé sur un Pokémon de l'équipe qui a ramassé des objets aux sols avec le mode "[[En avant !]]".<br>(Depuis la version 2.0.1)
+| Rare
+|-
+| [[Fichier:Insigne Maxi EV.png|x50px]]
+| Insigne Maxi
+| L'insigne d'un Pokémon considéré comme le plus grand possible.
+| le Géant
+| Donné par une Montagnarde à [[Mesaledo]]. (après lui avoir montré un Pokémon de très grande taille)
+| Garanti
+|-
+| [[Fichier:Insigne Mini EV.png|x50px]]
+| Insigne Mini
+| L'insigne d'un Pokémon considéré comme le plus petit possible.
+| le Minuscule
+| Donné par une Montagnarde à [[Mesaledo]]. (après lui avoir montré un Pokémon de très petite taille)
+| Garanti
+|-
+| [[Fichier:Insigne Dominant EV.png|x50px]]
+| Insigne Dominant
+| L'insigne d'un ancien Pokémon Dominant.
+| l'Ancien Dominant
+| Trouvable sur un ancien [[Pokémon Dominant (Paldea)|Pokémon Dominant]].
+| Garanti
+|-
+| [[Fichier:Insigne Destin EV.png|x50px]]
+| Insigne Destin
+| L'insigne d'un Pokémon envoyé par le destin.
+| le Destiné
+| Trouvable sur un Pokémon attrapé le jour de l'anniversaire du joueur.
+| Peu commun
+|-
+| [[Fichier:Insigne Baron EV.png|x50px]]
+| Insigne Baron
+| L'insigne d'un ancien Pokémon Baron.
+| l'Ancien Baron
+| Transférer un [[Pokémon Baron]] de {{jeu|LPA}} via ''[[Pokémon HOME]]''.
+| Garanti
+|}
+
+{{Caractéristiques des Pokémon}}
+
+[[Catégorie:Mécanisme de jeu]][[Catégorie:Pokémon Épée et Bouclier]][[Catégorie:Pokémon Écarlate et Violet]]
+
+[[de:Zeichen]]
+[[en:Mark]]
+[[es:Emblema]]
+[[it:Emblemi]]
+[[ja:あかし]]
+[[zh:证章]]

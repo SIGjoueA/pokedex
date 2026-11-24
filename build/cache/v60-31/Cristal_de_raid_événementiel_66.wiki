@@ -1,0 +1,159 @@
+{{Ruban Cristal de raid|66|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 66.png|thumb|right|300px]]
+Événement surnommé « Rayquaza chromatique apparaît »<ref>[https://pokemon.gamespress.com/fr/Un-Rayquaza-chromatique-apparaitra-prochainement-dans-les-raids--27623 Site de presse officiel]</ref>, le '''[[raid Téracristal événementiel]] 66''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 20 décembre 2024 au 5 janvier 2025.
+
+On y trouvait des [[Rayquaza]] [[chromatique]]s de type Téracristal [[Dragon (type)|Dragon]] ; ceci pour concorder avec {{Série|LH}}.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Rayquaza / type-téracristal(Dragon) talent-caché(Impossible) difficulté(5) niveau(75) capacités(Draco-Choc, Vent Violent, Séisme, Vitesse Extrême; Draco-Ascension, Draco-Météore, Danse Draco) notes(Toujours chromatique. Capturable une seule fois.)
+Leuphorie / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) niveau(75) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Rayquaza_5
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Dragon / 20
+Téra-Éclat Dragon / 10 / hôte
+CT Dragon, CT115, Draco-Choc / 1 / unique
+Patch Talent / 1 / unique
+Téra-Éclat Dragon / 50 / unique
+Bonbon Exp. L / 3 / 12%
+Bonbon Exp. L / 5 / 18%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Protéine / 5 / 5%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Mauvais / 1 / 2%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 3%
+Téra-Éclat Dragon / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+
+Leuphorie_5
+Téra-Éclat Feu / 5
+Téra-Éclat Eau / 5
+Téra-Éclat Plante / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_2
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Roche / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_3
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Insecte / 5
+Téra-Éclat Psy / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_4
+Téra-Éclat Sol / 5
+Téra-Éclat Vol / 5
+Téra-Éclat Électrik / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_5
+Téra-Éclat Spectre / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Normal / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_6
+Téra-Éclat Acier / 5
+Téra-Éclat Fée / 5
+Téra-Éclat Dragon / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_7
+Téra-Éclat Feu / 5
+Téra-Éclat Eau / 5
+Téra-Éclat Plante / 5
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Roche / 5
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Insecte / 5
+Téra-Éclat Psy / 5
+Téra-Éclat / 15
+Téra-Éclat / 1 / 100%
+
+Leuphorie_5_8
+Téra-Éclat Sol / 5
+Téra-Éclat Vol / 5
+Téra-Éclat Électrik / 5
+Téra-Éclat Spectre / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Normal / 5
+Téra-Éclat Acier / 5
+Téra-Éclat Fée / 5
+Téra-Éclat Dragon / 5
+Téra-Éclat / 15
+Téra-Éclat / 1 / 100%
+}}
+
+== Imagerie ==
+
+<gallery class="center">
+Événement Rayquaza chromatique apparaît EV.png|Logo de l'événement.
+Rayquaza (chromatique)-Distribution 2024.png|Artwork de [[Rayquaza]] [[chromatique]] pour l'événement.
+</gallery>
+
+== Liens externes ==
+
+* [https://www.youtube.com/watch?v=HsI2xHmbxzw Vidéo promotionnelle de l'événement] sur la chaîne YouTube officielle de Pokémon
+
+== Références ==
+
+<references/>
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/20.12.2024]]

@@ -1,0 +1,48 @@
+{{Ruban Cristal de raid|81|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 81.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 81''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 4 au 17 août 2025.
+
+On y trouvait des [[Baojian]] [[chromatique]]s, alors que le Pokémon est normalement [[Shiny Lock]]. Il n'était toutefois pas capturable, mais puisqu'un million de Chongjian ont été vaincus, le Pokémon a été distribué à partir du 22 août 2025.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Baojian / type-téracristal(Glace) talent-caché(Impossible) difficulté(5) niveau(75) capacités(Chute Glace, Mâchouille, Éclats Glace, Lame Sainte; Cataclysme, Buée Noire) notes(Toujours chromatique. Jamais capturable.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Baojian_5
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Glace / 40
+Téra-Éclat Glace / 20 / hôte
+Bonbon Exp. L / 3 / 13%
+Bonbon Exp. L / 5 / 16%
+Super Bonbon / 2 / 8%
+Bonbon Exp. XL / 2 / 5%
+Protéine / 5 / 8%
+Morceau d'Étoile / 2 / 8%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Glace / 20 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/04.08.2025]]

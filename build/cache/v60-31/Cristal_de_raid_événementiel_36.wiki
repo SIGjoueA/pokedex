@@ -1,0 +1,138 @@
+{{Ruban Cristal de raid|36|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 36.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 36''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 12 au 14, du 19 au 21 janvier 2024 et du 27 février au 6 mars 2026.
+
+On y trouvait notamment des [[Braségali]] de type Téracristal [[Vol (type)|Vol]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Braségali / type-téracristal(Vol) talent-caché(Toujours) difficulté(7) capacités(Pied Brûleur, Rapace, Séisme, Balayage; Surchauffe, Éboulement, Danse Lames, Gonflette) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+Leuphorie / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) notes(N'apparaît qu'en deuxième période.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Braségali_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Vol / 20
+Téra-Éclat Vol / 10 / hôte
+CT Vol, CT164, Rapace / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Protéine / 5 / 10%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Vol / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+
+Leuphorie_5
+Téra-Éclat Feu / 5
+Téra-Éclat Eau / 5
+Téra-Éclat Plante / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_2
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Roche / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_3
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Insecte / 5
+Téra-Éclat Psy / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_4
+Téra-Éclat Sol / 5
+Téra-Éclat Vol / 5
+Téra-Éclat Électrik / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_5
+Téra-Éclat Spectre / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Normal / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_6
+Téra-Éclat Acier / 5
+Téra-Éclat Fée / 5
+Téra-Éclat Dragon / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_7
+Téra-Éclat Feu / 5
+Téra-Éclat Eau / 5
+Téra-Éclat Plante / 5
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Roche / 5
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Insecte / 5
+Téra-Éclat Psy / 5
+Téra-Éclat / 15
+Téra-Éclat / 1 / 100%
+
+Leuphorie_5_8
+Téra-Éclat Sol / 5
+Téra-Éclat Vol / 5
+Téra-Éclat Électrik / 5
+Téra-Éclat Spectre / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Normal / 5
+Téra-Éclat Acier / 5
+Téra-Éclat Fée / 5
+Téra-Éclat Dragon / 5
+Téra-Éclat / 15
+Téra-Éclat / 1 / 100%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/12.01.2024]]

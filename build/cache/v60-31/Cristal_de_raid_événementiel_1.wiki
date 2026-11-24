@@ -1,0 +1,156 @@
+{{Ruban Cristal de raid|1|événementiel=oui|premier=oui}}
+
+[[Fichier:Cristal de raid événementiel 1.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 1''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 25 au 27 novembre 2022.
+
+On y trouvait des [[Évoli]] avec différents types Téracristal, ainsi que des [[Pierre d'évolution|pierres d'évolution]] et des [[Plume]]s en récompense.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Évoli / talent-caché(Impossible) difficulté(1) capacités(Charge, Mimi-Queue, Jet de Sable, Vive-Attaque) / talent-caché(Impossible) difficulté(2) capacités(Météores, Regard Touchant, Vive-Attaque, Charge) / talent-caché(Possible) difficulté(3) capacités(Morsure, Météores, Regard Touchant, Vive-Attaque) / talent-caché(Possible) difficulté(4) capacités(Charme, Plénitude, Morsure, Météores; Vive-Attaque) / talent-caché(Possible) difficulté(5) capacités(Mégaphone, Téra Explosion, Morsure, Météores; Bâillement, Plénitude)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Évoli_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 2
+Poils d'Évoli / 1
+Jolie Plume / 1
+Bonbon Exp. XS / 1 / 20%
+Bonbon Exp. S / 1 / 8,5%
+Poils d'Évoli / 1 / 7%
+Plume Santé / 1 / 5%
+Plume Force / 1 / 5%
+Plume Armure / 1 / 5%
+Plume Esprit / 1 / 5%
+Plume Mental / 1 / 5%
+Plume Sprint / 1 / 5%
+Jolie Plume / 1 / 20%
+Bonbon Exp. XS / 1 / 12%
+Pierre Eau / 1 / 0,5%
+Pierre Feu / 1 / 0,5%
+Pierre Foudre / 1 / 0,5%
+Pierre Plante / 1 / 0,5%
+Pierre Glace / 1 / 0,5%
+
+Évoli_2
+Bonbon Exp. S / 4
+Poils d'Évoli / 2
+Jolie Plume / 1
+Bonbon Exp. M / 1 / 13,5%
+Bonbon Exp. M / 2 / 8%
+Baie Sitrus / 1 / 5%
+Baie Prine / 1 / 5%
+Gros Champi / 1 / 30%
+Poils d'Évoli / 1 / 16,5%
+Plume Santé / 1 / 3%
+Plume Force / 1 / 3%
+Plume Armure / 1 / 3%
+Plume Esprit / 1 / 3%
+Plume Mental / 1 / 3%
+Plume Sprint / 1 / 3%
+Pierre Eau / 1 / 0,8%
+Pierre Feu / 1 / 0,8%
+Pierre Foudre / 1 / 0,8%
+Pierre Plante / 1 / 0,8%
+Pierre Glace / 1 / 0,8%
+
+Évoli_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 2
+Poils d'Évoli / 3
+Jolie Plume / 1
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. M / 1 / 9,5%
+Bonbon Exp. M / 1 / 13%
+Bonbon Exp. L / 2 / 5%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 1 / 10%
+Gros Champi / 1 / 15%
+Maxi Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Poils d'Évoli / 2 / 5,5%
+Pierre Eau / 1 / 1%
+Pierre Feu / 1 / 1%
+Pierre Foudre / 1 / 1%
+Pierre Plante / 1 / 1%
+Pierre Glace / 1 / 1%
+Plume Force / 1 / 3%
+Plume Armure / 1 / 3%
+Plume Esprit / 1 / 3%
+Plume Mental / 1 / 3%
+Plume Sprint / 1 / 3%
+
+Évoli_4
+Bonbon Exp. M / 3
+Bonbon Exp. L / 1
+Poils d'Évoli / 4
+Jolie Plume / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 16,2%
+Bonbon Exp. L / 2 / 15,3%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Prudent / 1 / 2,5%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Grelot Zen / 2 / 2%
+Pilule Talent / 1 / 1,5%
+Pierre Eau / 1 / 1,5%
+Pierre Feu / 1 / 1,5%
+Pierre Foudre / 1 / 1,5%
+Pierre Plante / 1 / 1,5%
+Pierre Glace / 1 / 1,5%
+Plume Force / 1 / 3%
+Plume Armure / 1 / 3%
+Plume Esprit / 1 / 3%
+Plume Mental / 1 / 3%
+Plume Sprint / 1 / 3%
+
+Évoli_5
+Bonbon Exp. L / 2
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Jolie Plume / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 16,2%
+Bonbon Exp. L / 2 / 15,3%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Prudent / 1 / 2,5%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Grelot Zen / 2 / 2%
+Pilule Talent / 1 / 1,5%
+Pierre Eau / 1 / 1,5%
+Pierre Feu / 1 / 1,5%
+Pierre Foudre / 1 / 1,5%
+Pierre Plante / 1 / 1,5%
+Pierre Glace / 1 / 1,5%
+Plume Force / 1 / 3%
+Plume Armure / 1 / 3%
+Plume Esprit / 1 / 3%
+Plume Mental / 1 / 3%
+Plume Sprint / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/25.11.2022]]

@@ -1,0 +1,44 @@
+{{Ruban Cristal de raid|20|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 20.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 20''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 12 au 14 mai, le 19 mai, du 16 au 18 juin 2023 et du 24 au 30 avril 2026.
+
+On y trouvait des [[Blindépique]] de type Téracristal [[Roche (type)|Roche]], alors qu'il était indisponible en temps normal.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Blindépique / type-téracristal(Roche) talent-caché(Toujours) difficulté(7) capacités(Séisme, Marto-Poing, Lame de Roc, Martobois; Mur de Fer, Gonflette, Malédiction) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Blindépique_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Fer / 5
+Téra-Éclat Roche / 20
+Téra-Éclat Roche / 10 / hôte
+CT Roche, CT150, Lame de Roc / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Fer / 5 / 10%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Malin / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/12.05.2023]]

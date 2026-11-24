@@ -30,3 +30,4 @@ node('fix-v60-26.mjs');      // v60.26: historique des pools d’œufs GO par sa
 node('fix-v60-27.mjs');      // v60.27: raids Téracristal d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo) : étoiles, version, type Téra s’il est fixe, talent caché (l’Antre Interdit d’Ogerpon reste un lieu, pas un raid)
 node('fix-v60-29.mjs');      // v60.29: précision des formes — disponibilité par jeu (Méga du DLC Z-A, formes régionales / Gigamax / alternatives) et textes officiels des Méga / Primo (Poképédia)
 node('fix-v60-30.mjs');      // v60.30: index compact des raids Dynamax (ÉB) et Téracristal (ÉV) → docs/data/raids.json (filtre « Dispo en raid » et vue Raids)
+node('fix-v60-31.mjs');      // v60.31: raids Téracristal 7★ événementiels d’Écarlate / Violet → docs/data/tera7.json

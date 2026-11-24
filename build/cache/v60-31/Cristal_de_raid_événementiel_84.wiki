@@ -1,0 +1,342 @@
+{{Ruban Cristal de raid|84|événementiel=oui}}
+[[Fichier:Cristal de raid événementiel 84.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 84''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 3 au 12 octobre 2025.
+
+On y trouvait des [[Pokémon Paradoxe]] différents selon la version jouée.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Rugit-Lune / type-téracristal(Dragon) talent-caché(Impossible) difficulté(7) niveau(100) capacités(Draco-Griffe, Mâchouille, Tête de Fer, Séisme; Zénith, Danse Draco) notes(Exclusif Ec. Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+Garde-de-Fer / type-téracristal(Fée) talent-caché(Impossible) difficulté(7) niveau(100) capacités(Choc Émotionnel, Aurasphère, Psykoud'Boul, Ball'Ombre; Champ Électrifié, Danse Lames) notes(Exclusif Vi. Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+Fort-Ivoire / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Séisme, Casse-Brique, Cryo-Pirouette, Tomberoche; Zénith, Éboulement) notes(Exclusif Ec. Jamais chromatique.)
+Hurle-Queue / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Éclat Magique, Psyko, Mégaphone, Lance-Flammes; Zénith, Bang Sonique) notes(Exclusif Ec. Jamais chromatique.)
+Fongus-Furie / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Canon Graine, Mâchouille, Bain de Smog, Spore; Zénith, Champ Herbu) notes(Exclusif Ec. Jamais chromatique.)
+Flotte-Mèche / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Ball'Ombre, Éclat Magique, Vent Glace, Feu Ensorcelé; Zénith, Champ Brumeux) notes(Exclusif Ec. Jamais chromatique.)
+Rampe-Ailes / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Vampirisme, Casse-Brique, Boutefeu, Éclair Fou; Zénith, Séisme) notes(Exclusif Ec. Jamais chromatique.)
+Pelage-Sablé / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Tonnerre, Telluriforce, Luminocanon, Rayon Gemme; Zénith, Gravité) notes(Exclusif Ec. Jamais chromatique.)
+Roue-de-Fer / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Cavalerie Lourde, Tête de Fer, Cryo-Pirouette, Éclair Fou; Champ Électrifié, Séisme) notes(Exclusif Vi. Jamais chromatique.)
+Hotte-de-Fer / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Lyophilisation, Douche Froide, Vent Glace, Encore; Champ Électrifié, Chute de Neige) notes(Exclusif Vi. Jamais chromatique.)
+Paume-de-Fer / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Vampi-Poing, Éclair Fou, Tacle Lourd, Poing Glace; Champ Électrifié, Éboulement) notes(Exclusif Vi. Jamais chromatique.)
+Têtes-de-Fer / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Vibrobscur, Lame d'Air, Telluriforce, Luminocanon; Champ Électrifié, Vent Arrière) notes(Exclusif Vi. Jamais chromatique.)
+Mite-de-Fer / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Danse du Feu, Cradovague, Survinsecte, Éco-Sphère; Champ Électrifié, Canicule) notes(Exclusif Vi. Jamais chromatique.)
+Épine-de-Fer / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Tomberoche, Éclair Fou, Séisme, Poing Glace; Champ Électrifié, Éboulement) notes(Exclusif Vi. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Rugit-Lune_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Dragon / 40
+Téra-Éclat Dragon / 20 / hôte
+CT Feu, CT049, Zénith / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 13%
+Bonbon Exp. L / 5 / 16%
+Super Bonbon / 2 / 8%
+Bonbon Exp. XL / 2 / 5%
+Protéine / 5 / 8%
+Morceau d'Étoile / 2 / 8%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Dragon / 20 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+
+Garde-de-Fer_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Carbone / 5
+Téra-Éclat Fée / 40
+Téra-Éclat Fée / 20 / hôte
+CT Électrik, CT136, Champ Électrifié / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 13%
+Bonbon Exp. L / 5 / 16%
+Super Bonbon / 2 / 8%
+Bonbon Exp. XL / 2 / 5%
+Carbone / 5 / 8%
+Morceau d'Étoile / 2 / 8%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Naïf / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Fée / 20 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+
+Fort-Ivoire_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Armure / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Armure / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Malin / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Hurle-Queue_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Mental / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Mental / 2 / 10%
+Baie Alga / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Calme / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Fongus-Furie_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Santé / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Santé / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Relax / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Flotte-Mèche_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Sprint / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Sprint / 2 / 10%
+Baie Grena / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Rampe-Ailes_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Qualot / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Pelage-Sablé_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Roue-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Armure / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Armure / 2 / 10%
+Baie Résin / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Jovial / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Hotte-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Sprint / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Sprint / 2 / 10%
+Baie Grena / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Paume-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Santé / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Santé / 2 / 10%
+Baie Tamato / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Brave / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Têtes-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Résin / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Mite-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Mental / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Mental / 2 / 10%
+Baie Qualot / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Calme / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Épine-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Prudent / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 4 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/03.10.2025]]

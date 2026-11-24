@@ -1,0 +1,50 @@
+{{Ruban Cristal de raid|52|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 52.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 52''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 12 au 25 juillet 2024.
+
+On y trouvait des [[Pikachu]] de type Téracristal [[Eau (type)|Eau]] connaissant la capacité [[Surf]], capturables une seule fois si la capture n'a pas eu lieu [[Cristal de raid événementiel 12|auparavant]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Pikachu / type-téracristal(Eau) talent-caché(Toujours) difficulté(7) capacités(Fatal-Foudre, Surf, Câlinerie, Queue de Fer; Danse Pluie) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique. [[Balle Lumière]] tenue.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Pikachu_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Calcium / 5
+Téra-Éclat Eau / 20
+Téra-Éclat Eau / 10 / hôte
+CT Eau, CT123, Surf / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 11%
+Bonbon Exp. L / 5 / 20%
+Super Bonbon / 2 / 10%
+Calcium / 5 / 7%
+Bonbon Exp. XL / 2 / 5%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 3%
+Aromate Discret / 1 / 2%
+PP Plus / 1 / 4%
+Capsule d'Argent / 1 / 3%
+Téra-Éclat Eau / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/12.07.2024]]

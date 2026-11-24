@@ -1,0 +1,153 @@
+{{Ruban Cristal de raid|3|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 3.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 3''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 9 au 11 décembre 2022.
+
+On y trouvait des [[Tyranocif]] ou des [[Drattak]] selon la version, dont certains d'un type Téracristal en particulier.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Tyranocif / talent-caché(Possible) difficulté(4) capacités(Séisme, Lame de Roc, Morsure, Draco-Griffe; Groz'Yeux) notes(Exclusif Ec.) / type-téracristal(Spectre) talent-caché(Possible) difficulté(5) capacités(Séisme, Lame de Roc, Mâchouille, Poing Glace; Groz'Yeux, Giga Impact) notes(Exclusif Ec.) / talent-caché(Possible) difficulté(5) capacités(Séisme, Lame de Roc, Mâchouille, Poing Glace; Groz'Yeux, Giga Impact) notes(Exclusif Ec.)
+Drattak / talent-caché(Possible) difficulté(4) capacités(Psykoud'Boul, Draco-Griffe, Mâchouille, Double Volée; Draco-Souffle) notes(Exclusif Vi.) / type-téracristal(Acier) talent-caché(Possible) difficulté(5) capacités(Draco-Griffe, Vent Violent, Séisme, Double Volée; Draco-Souffle, Danse Draco) notes(Exclusif Vi.) / talent-caché(Possible) difficulté(5) capacités(Draco-Griffe, Vent Violent, Séisme, Double Volée; Draco-Souffle, Danse Draco) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Tyranocif_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Griffe d'Embrylex / 4
+Plume Force / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Force / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Tamato / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Griffe d'Embrylex / 2 / 9%
+
+Tyranocif_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Griffe d'Embrylex / 5
+Plume Force / 3
+Téra-Éclat Spectre / 2
+Téra-Éclat Spectre / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Force / 2 / 10%
+Baie Tamato / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Jovial / 1 / 3%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 3%
+Téra-Éclat Spectre / 1 / 5%
+Griffe d'Embrylex / 2 / 5%
+Pilule Talent / 1 / 3%
+
+Tyranocif_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Griffe d'Embrylex / 5
+Plume Force / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Force / 2 / 10%
+Baie Tamato / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Jovial / 1 / 3%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 3%
+Téra-Éclat / 1 / 5%
+Griffe d'Embrylex / 2 / 5%
+Pilule Talent / 1 / 3%
+
+Drattak_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Écaille de Draby / 4
+Plume Esprit / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Esprit / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Écaille de Draby / 2 / 9%
+
+Drattak_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Écaille de Draby / 5
+Plume Esprit / 3
+Téra-Éclat Acier / 2
+Téra-Éclat Acier / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 3%
+Aromate Timide / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 3%
+Téra-Éclat Acier / 1 / 5%
+Écaille de Draby / 2 / 5%
+Pilule Talent / 1 / 3%
+
+Drattak_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Écaille de Draby / 5
+Plume Esprit / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 3%
+Aromate Timide / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 3%
+Téra-Éclat / 1 / 5%
+Écaille de Draby / 2 / 5%
+Pilule Talent / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/09.12.2022]]

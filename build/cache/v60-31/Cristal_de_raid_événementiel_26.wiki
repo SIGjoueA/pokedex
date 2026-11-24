@@ -1,0 +1,170 @@
+{{Ruban Cristal de raid|26|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 26.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 26''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 18 au 31 août et du 1<sup>er</sup> au 17 septembre 2023.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Sorcilence / talent-caché(Possible) difficulté(5) capacités(Feu Ensorcelé, Psyko, Voix Enjôleuse, Vibrobscur; Champ Psychique, Plénitude)
+Angoliath / talent-caché(Possible) difficulté(5) capacités(Choc Émotionnel, Mur Lumière, Fourbette, Câlinerie; Protection, Gonflette)
+Leuphorie / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas) / talent-caché(Possible) difficulté(5) capacités(Vibra Soin, Dernier Recours, E-Coque, Frappe Atlas)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Sorcilence_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+PV Plus / 2
+Fer / 2
+Zinc / 2
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 3%
+PV Plus / 1 / 5%
+Fer / 1 / 5%
+Zinc / 1 / 5%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 3%
+Aromate Gentil / 1 / 3%
+Aromate Pressé / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 4%
+PP Plus / 1 / 4%
+Pilule Talent / 1 / 2%
+CT Psy, CT074, Protection / 1 / 5%
+CT Psy, CT075, Mur Lumière / 1 / 5%
+CT Insecte, CT015, Survinsecte / 1 / 5%
+CT Ténèbres, CT030, Aboiement / 1 / 5%
+
+Angoliath_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+PV Plus / 2
+Fer / 2
+Zinc / 2
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 3%
+PV Plus / 1 / 5%
+Fer / 1 / 5%
+Zinc / 1 / 5%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 3%
+Aromate Gentil / 1 / 3%
+Aromate Pressé / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 4%
+PP Plus / 1 / 4%
+Pilule Talent / 1 / 2%
+CT Psy, CT074, Protection / 1 / 5%
+CT Psy, CT075, Mur Lumière / 1 / 5%
+CT Insecte, CT015, Survinsecte / 1 / 5%
+CT Ténèbres, CT030, Aboiement / 1 / 5%
+
+Leuphorie_5
+Téra-Éclat Feu / 5
+Téra-Éclat Eau / 5
+Téra-Éclat Plante / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_2
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Roche / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_3
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Insecte / 5
+Téra-Éclat Psy / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_4
+Téra-Éclat Sol / 5
+Téra-Éclat Vol / 5
+Téra-Éclat Électrik / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_5
+Téra-Éclat Spectre / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Normal / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_6
+Téra-Éclat Acier / 5
+Téra-Éclat Fée / 5
+Téra-Éclat Dragon / 5
+Téra-Éclat / 5
+Téra-Éclat / 2 / 20%
+Téra-Éclat / 3 / 15%
+Bonbon Exp. XL / 3 / 20%
+Super Bonbon / 2 / 10%
+Bonbon Exp. L / 5 / 35%
+
+Leuphorie_5_7
+Téra-Éclat Feu / 5
+Téra-Éclat Eau / 5
+Téra-Éclat Plante / 5
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Roche / 5
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Insecte / 5
+Téra-Éclat Psy / 5
+Téra-Éclat / 15
+Téra-Éclat / 1 / 100%
+
+Leuphorie_5_8
+Téra-Éclat Sol / 5
+Téra-Éclat Vol / 5
+Téra-Éclat Électrik / 5
+Téra-Éclat Spectre / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Normal / 5
+Téra-Éclat Acier / 5
+Téra-Éclat Fée / 5
+Téra-Éclat Dragon / 5
+Téra-Éclat / 15
+Téra-Éclat / 1 / 100%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/18.08.2023]]

@@ -1,0 +1,107 @@
+{{Ruban Cristal de raid|48|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 48.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 48''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 24 au 26 mai 2024.
+
+On y trouvait des [[Pelage-Sablé]] et des [[Épine-de-Fer]] selon la version.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Pelage-Sablé / talent-caché(Impossible) difficulté(5) capacités(Coup d'Jus, Telluriforce, Luminocanon, Ondes Étranges; Zénith, Gravité) notes(Exclusif Ec.) / type-téracristal(Glace) talent-caché(Impossible) difficulté(5) capacités(Coup d'Jus, Telluriforce, Luminocanon, Ondes Étranges; Zénith, Gravité) notes(Exclusif Ec.)
+Épine-de-Fer / talent-caché(Impossible) difficulté(5) capacités(Lame de Roc, Volt Assaut, Séisme, Dard-Nuée; Champ Électrifié, Malédiction) notes(Exclusif Vi.) / type-téracristal(Insecte) talent-caché(Impossible) difficulté(5) capacités(Lame de Roc, Volt Assaut, Séisme, Dard-Nuée; Champ Électrifié, Malédiction) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Pelage-Sablé_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Pelage-Sablé_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat Glace / 2
+Téra-Éclat Glace / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Glace / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Épine-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+
+Épine-de-Fer_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat Insecte / 2
+Téra-Éclat Insecte / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Insecte / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/24.05.2024]]

@@ -1,0 +1,105 @@
+{{Ruban Cristal de raid|9|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 9.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 9''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 3 au 5 février 2023.
+
+On y trouvait des [[Carmadura]] ou des [[Malvalame]], selon la version.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Carmadura / talent-caché(Possible) difficulté(4) capacités(Ébullilave, Choc Psy, Éco-Sphère, Provoc; Zénith) notes(Exclusif Ec.) / talent-caché(Possible) difficulté(5) capacités(Canon Blindé, Vaste Pouvoir, Éco-Sphère, Provoc; Zénith, Plénitude) notes(Exclusif Ec.)
+Malvalame / talent-caché(Possible) difficulté(4) capacités(Nitrocharge, Ombre Portée, Tranche-Nuit, Feu Follet; Zénith) notes(Exclusif Vi.) / talent-caché(Possible) difficulté(5) capacités(Lame en Peine, Griffe Ombre, Tranche-Nuit, Feu Follet; Zénith, Danse Lames) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Carmadura_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Suie de Charbambin / 4
+Plume Mental / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Mental / 1 / 10%
+Baie Wiki / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Suie de Charbambin / 2 / 9%
+
+Carmadura_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Suie de Charbambin / 5
+Plume Mental / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Mental / 2 / 10%
+Baie Alga / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Suie de Charbambin / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Malvalame_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Suie de Charbambin / 4
+Plume Armure / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Armure / 1 / 10%
+Baie Figuy / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Suie de Charbambin / 2 / 9%
+
+Malvalame_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Suie de Charbambin / 5
+Plume Armure / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Armure / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Suie de Charbambin / 2 / 5%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/03.02.2023]]

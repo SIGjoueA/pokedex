@@ -1,0 +1,98 @@
+{{Ruban Cristal de raid|54|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 54.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 54''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 9 au 22 août 2024 et du 30 avril au 8 mai 2025.
+
+On y trouvait des [[Mordudor]], et ceux des raids 5★ pouvaient être [[chromatique]]s, alors que le Pokémon est normalement [[Shiny Lock]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Mordudor forme(Coffre) / talent-caché(Impossible) difficulté(1) niveau(12) capacités(Charge, Étonnement) notes(Jamais chromatique.) / talent-caché(Impossible) difficulté(2) niveau(20) capacités(Charge, Étonnement, Châtiment) notes(Jamais chromatique.) / talent-caché(Impossible) difficulté(3) niveau(35) capacités(Charge, Étonnement, Châtiment, Rayon Gemme) notes(Jamais chromatique.) / talent-caché(Impossible) difficulté(4) niveau(45) capacités(Bélier, Étonnement, Châtiment, Rayon Gemme; Machination) notes(Jamais chromatique.) / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Bélier, Ball'Ombre, Châtiment, Rayon Gemme; Machination)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Mordudor_1
+Bonbon Exp. XS / 1
+Bonbon Exp. S / 1
+Plume Sprint / 1
+Bonbon Exp. XS / 1 / 30%
+Bonbon Exp. S / 1 / 8%
+Plume Sprint / 1 / 8%
+Baie Maron / 1 / 8%
+Baie Maron / 2 / 8%
+Baie Kika / 1 / 8%
+Jolie Plume / 1 / 30%
+
+Mordudor_2
+Bonbon Exp. S / 3
+Plume Sprint / 1
+Bonbon Exp. S / 1 / 28%
+Bonbon Exp. M / 1 / 20%
+Plume Sprint / 1 / 10%
+Baie Maron / 1 / 4%
+Baie Maron / 2 / 4%
+Baie Kika / 1 / 4%
+Perle (objet){{!}}Perle / 1 / 30%
+
+Mordudor_3
+Bonbon Exp. S / 1
+Bonbon Exp. M / 2
+Plume Sprint / 2
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. S / 1 / 10%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. M / 2 / 5%
+Plume Sprint / 1 / 10%
+Baie Sitrus / 1 / 11%
+Baie Prine / 1 / 13%
+Grande Perle / 1 / 12%
+Gros Champi / 1 / 25%
+
+Mordudor_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Plume Sprint / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 16,48%
+Bonbon Exp. M / 1 / 15,38%
+Bonbon Exp. L / 2 / 5,49%
+Plume Sprint / 1 / 10,99%
+Baie Sitrus / 1 / 7,69%
+Baie Prine / 1 / 7,69%
+Baie Alga / 3 / 10,99%
+Grande Perle / 1 / 16,48%
+Pépite / 1 / 5,49%
+Téra-Éclat / 2 / 3,3%
+
+Mordudor_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Sprint / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Sprint / 3 / 10%
+Baie Alga / 3 / 8%
+Pépite / 1 / 20%
+Morceau Comète / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 4%
+Pilule Talent / 1 / 2%
+Épice Secrète Amère / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/09.08.2024]]

@@ -4,6 +4,7 @@ import path from 'node:path';
 import { DOCS, HERE } from './lib.mjs';
 import { mapPvPoke, PVP_ABSENT, PVP_FORMS } from './pvp-map.mjs';
 import { buildRaids, RAID_GAMES } from './fix-v60-30.mjs';
+import { buildTera7 } from './update-tera7.mjs';
 const D = f => JSON.parse(fs.readFileSync(path.join(DOCS, 'data', f), 'utf8'));
 const core = D('core.json'), evo = D('evo.json'), ref = D('ref.json'), moves = D('moves.json'), go = D('go.json'), tm = D('tm.json'), loc = D('loc.json');
 const E = Object.fromEntries(core.e.map(e => [e.k, e])); const G = Object.fromEntries(core.games.map(g => [g.id, g]));
@@ -825,6 +826,36 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.30 apply-v34 lance fix-v60-30', /fix-v60-30\.mjs/.test(apply));
   ok('v60.30 app : filtre Dispo en raid, vue #/raids, pack hors-ligne', /option value="raid"|cat === 'raid'/.test(html + app) && /Dispo en raid/.test(html) && /function renderRaids/.test(app) && /#\/raids/.test(app) && /data\/raids\.json/.test(app) && /function raidCat/.test(app));
   ok('v60.30 menu : entrée Raids Dynamax et Téracristal, hors section GO', /Raids Dynamax et Téracristal/.test(html) && /id="raid-view"/.test(html) && /id="raidchips"/.test(html));
+}
+
+
+// ---- v60.31: raids Téracristal 7★ événementiels d’Écarlate / Violet (build/update-tera7.mjs → docs/data/tera7.json)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  ok('v60.31 SW : VERSION ≥ v60.31, DATA_VERSION ≥ d73', /VERSION = 'v60\.(3[1-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 73);
+  ok('v60.31 NOTES ≤ 160 caractères, commence par les raids 7★', notes.length > 0 && notes.length <= 160 && /7★/.test(notes) && /Dispo en raid/.test(notes), String(notes.length));
+  const tera7 = D('tera7.json'), built = buildTera7({ offline: true });
+  eq('v60.31 tera7.json idempotent (égal au résultat de update-tera7, hors divergences)', tera7.raids, built.raids);
+  ok('v60.31 tera7 : ≥ 50 raids, autant d’espèces, ≥ 100 fenêtres', tera7.raids.length >= 50 && new Set(tera7.raids.map(r => r.k)).size === tera7.raids.length && tera7.raids.reduce((n, r) => n + r.windows.length, 0) >= 100, `${tera7.raids.length}/${new Set(tera7.raids.map(r => r.k)).size}/${tera7.raids.reduce((n, r) => n + r.windows.length, 0)}`);
+  const byId = Object.fromEntries(tera7.raids.map(r => [r.id, r]));
+  const dragapult = byId['887-dragon'], charizard = byId['6-dragon'], pikachu = byId['25-water'];
+  ok('v60.31 Lanssorien en cours le 24/11/2026 (20–26 nov., Téra Dragon)', dragapult && dragapult.tera === 'dragon' && dragapult.windows.some(w => w.s === '2026-11-20' && w.e === '2026-11-26'), JSON.stringify((dragapult || {}).windows));
+  ok('v60.31 Glaivodo à venir (27 nov.–3 déc. 2026, source Serebii)', (byId['998-ice'] || {}).windows?.some(w => w.s === '2026-11-27' && w.e === '2026-12-03'));
+  ok('v60.31 Dracaufeu : événements 2 et 43 fusionnés, talent Force Soleil, nature Modeste', charizard && charizard.evts.join() === '2,43' && charizard.talent === 'Force Soleil' && charizard.nature === 'Modeste' && charizard.title === 'le Surpuissant');
+  ok('v60.31 Pikachu : Surf en capacité mise en avant, Balle Lumière', pikachu && pikachu.feat === 'Surf' && pikachu.held === 'Balle Lumière' && pikachu.moves.includes('Surf'));
+  ok('v60.31 formes Hisui (Typhlosion, Clamiral, Archéduc)', !!(byId['157-hisui-fire'] && byId['503-hisui-water'] && byId['724-hisui-grass']));
+  // Typhlosion Hisui is Fire tera? Event 31 was type-téracristal(Feu) but wait first run Feu, 2026 rerun also Fire. There's also maybe only ghost? Event 31 is Feu. Key 157-hisui-fire. I listed fire AND ghost - ghost might be wrong (that's for a different typhlosion event?). Regular Typhlosion event might be ghost. Check: event 31 Typhlosion forme(Hisui) Feu; there is also 157-ghost in divergences earlier - that was regular Typhlosion (not hisui) ghost tera! So keys: 157-ghost (Johto Typhlosion) and 157-hisui-fire. Fix audit accordingly.
+  ok('v60.31 Rugit-Lune Écarlate / Garde-de-Fer Violet', byId['1005-dragon']?.ver === 's' && byId['1006-fairy']?.ver === 'v');
+  ok('v60.31 pas de Yuyu ni de Rayquaza en 7★ (événements 5★ exclus)', !tera7.raids.some(r => r.k === '1004' || r.k === '384' || /Yuyu|Rayquaza/i.test(r.n)));
+  ok('v60.31 chaque raid a des fenêtres, un talent, une nature et le titre le Surpuissant', tera7.raids.every(r => r.windows.length && r.talent && r.nature && r.title === 'le Surpuissant'));
+  ok('v60.31 update-tera7 ne supprime pas l’historique (union des fenêtres)', /never erase history|sans jamais effacer|if \(exists\(OUT\)\)/.test(fs.readFileSync(path.join(HERE, 'update-tera7.mjs'), 'utf8')));
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.31 apply-v34 lance fix-v60-31', /fix-v60-31\.mjs/.test(apply));
+  ok('v60.31 app : bloc Raids 7★, section vue, puce 7★, pack hors-ligne', /Raids 7★ \(événements\)/.test(app) && /function tera7HTML/.test(app) && /function tera7ViewHTML/.test(app) && /out\.push\('6', '7'\)/.test(app) && /data\/tera7\.json/.test(app));
+  const cache = path.join(HERE, 'cache/v60-31');
+  ok('v60.31 cache : Raid Téracristal, événements 1 et 92, Serebii Mighty, Bulbapedia', fs.existsSync(path.join(cache, 'Raid_Téracristal.wiki')) && fs.existsSync(path.join(cache, 'Cristal_de_raid_événementiel_1.wiki')) && fs.existsSync(path.join(cache, 'Cristal_de_raid_événementiel_92.wiki')) && fs.existsSync(path.join(cache, 'serebii-event-mightydragapult.html')) && fs.existsSync(path.join(cache, 'Bulbapedia_Tera_Raid_Battle.wiki')));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

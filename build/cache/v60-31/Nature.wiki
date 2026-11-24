@@ -1,0 +1,153 @@
+La '''nature''' est un [[IV#DV et IV|DV]] apparu à partir de la [[troisième génération]].
+
+== Informations générales ==
+
+=== ''Fonctionnement'' de la nature ===
+
+Les '''natures''' peuvent avoir deux effets :
+* un bonus et un malus : elles augmenteront une [[statistique]] de 10% et en diminueront une autre de 10% ;
+* neutre : elles n'auront aucun effet sur les [[statistique]]s.
+
+Chaque Pokémon se voit définir aléatoirement une nature lors de sa ''création''. À noter qu'il existe un total de 25 natures différentes.
+
+Depuis la [[huitième génération]], les [[Aromate]]s permettent d'influencer les changements de [[statistique]]s causés par les natures, sans pour autant changer les natures elles-mêmes.
+
+=== ''Transmettre'' la nature ===
+
+Il existe un moyen, depuis {{Jeu|E}}, d'influer sur la nature d'un Pokémon, mais uniquement pour ceux issus de [[reproduction]].
+
+Lors de celle-ci, il faut donner une [[Pierre Stase]] au Pokémon femelle. La descendance aura alors une chance sur deux de recevoir la nature de la mère.
+
+Depuis {{Jeu|HGSS}}, cette technique fonctionne également avec un parent mâle.
+
+Avec l'apparition de {{Jeu|N2B2}}, dès qu'un des parents tient la [[Pierre Stase]], la descendance a toujours la nature du parent tenant la pierre.
+
+=== ''Influer'' sur la nature des Pokémon sauvages ===
+
+Depuis {{jeu|E}}, si un Pokémon avec [[Synchro]] est placé en tête d'équipe, il y a une chance sur deux de rencontrer un Pokémon sauvage avec la même nature. Depuis la [[septième génération]], cela fonctionne également avec les Pokémon donnés par un [[PNJ]], à l'exception du livreur de [[Pokémon évènementiel]]. En [[huitième génération]], le Pokémon sauvage rencontré disposera systématiquement de la même nature que le Pokémon doté de [[Synchro]] excepté pour les Pokémon rencontrés lors de [[raid Dynamax]].
+
+À partir de la [[neuvième génération]], [[Synchro]] n'a plus d'effet sur la nature des Pokémon sauvages.
+
+Dans {{Jeu|LGPÉ}}, au [[Centre Pokémon]] de [[Céladopole]], un personnage permet de déterminer une nature précise à tous les Pokémon sauvages rencontrés par le [[Personnage jouable|Joueur]], l'effet dure jusqu'à minuit et le service coûte 10 000 {{P}}. La nature est choisie en fonction des réponses du [[Personnage jouable|Joueur]] :
+
+{| class="tableaustandard centre"
+! rowspan="2" colspan="2" |
+! colspan="5" | Seconde question : Quelle fleur déracines-tu ?
+|-
+| style="background-color:#FF968D" | '''Rouge'''<br /><small>(-10 % Attaque)</small>
+| style="background-color:#FAE232" | '''Jaune'''<br /><small>(-10 % Défense)</small>
+| style="background-color:#8EE4FF" | '''Bleue'''<br /><small>(-10 % Att. Spé.)</small>
+| style="background-color:#99cc99" | '''Verte'''<br /><small>(-10 % Déf. Spé.)</small>
+| style="background-color:#FFC3ED" | '''Rose'''<br /><small>(-10 % Vitesse)</small>
+|-
+! rowspan="5" style="writing-mode: sideways-lr; text-orientation: mixed; width: 1.5em; white-space: nowrap" | Première question : Quelle fleur arroses-tu ?
+| style="background-color:#FF968D" | '''Rouge'''<br /><small>(+10 % Attaque)</small>
+| ''Hardi''
+| Solo
+| Rigide
+| Mauvais
+| Brave
+|-
+| style="background-color:#FAE232" | '''Jaune'''<br /><small>(+10 % Défense)</small>
+| Assuré
+| ''Docile''
+| Malin
+| Lâche
+| Relax
+|-
+| style="background-color:#8EE4FF" | '''Bleue'''<br /><small>(+10 % Att. Spé.)</small>
+| Modeste
+| Doux
+| ''Pudique''
+| Foufou
+| Discret
+|-
+| style="background-color:#99cc99" | '''Verte'''<br /><small>(+10 % Déf. Spé.)</small>
+| Calme
+| Gentil
+| Prudent
+| ''Bizarre''
+| Malpoli
+|-
+| style="background-color:#FFC3ED" | '''Rose'''<br /><small>(+10 % Vitesse)</small>
+| Timide
+| Pressé
+| Jovial
+| Naïf
+| ''Sérieux''
+|}
+
+== Tableau des différentes natures ==
+
+{| class="tableaustandard sortable center"
+|-
+! Nature !! Anglais !! Japonais !! Allemand !! [[Attaque (statistique)|Attaque]] !! [[Défense]] !! [[Attaque Spéciale]] !! [[Statistique#Défense Spéciale|Défense Spéciale]] !! [[Vitesse]] !! Goût Préféré !! Goût Détesté
+
+|-
+| Assuré || Bold || ずぶとい (Zubutoi)|| Kühn || <span style="color:red;font-weight:bold">-10 %</span> || <span style="color:green;font-weight:bold">+10 %</span> || — || — || — || Acide || Épicé
+|-
+| Bizarre || Quirky || きまぐれ (Kimagure) || Kauzig || — || — || — || — || — || — || —
+|-
+| Brave || Brave || ゆうかん (Yūkan)|| Mutig || <span style="color:green;font-weight:bold">+10 %</span> || — || — || — || <span style="color:red;font-weight:bold">-10 %</span> || Épicé || Sucré
+|-
+| Calme || Calm || おだやか (Odayaka)|| Still || <span style="color:red;font-weight:bold">-10 %</span> || — || — || <span style="color:green;font-weight:bold">+10 %</span> || — || Amer || Épicé
+|-
+| Discret || Quiet || れいせい (Reisei)|| Ruhig || — || — || <span style="color:green;font-weight:bold">+10 %</span> || — || <span style="color:red;font-weight:bold">-10 %</span> || Sec || Sucré
+|-
+| Docile || Docile || すなお (Sunao)|| Sanft || — || — || — || — || — || — || —
+|-
+| Doux || Mild || おっとり (Ottori)|| Mild || — || <span style="color:red;font-weight:bold">-10 %</span> || <span style="color:green;font-weight:bold">+10 %</span> || — || — || Sec || Acide
+|-
+| Foufou || Rash || うっかりや (Ukkariya)|| Hitzig || — || — || <span style="color:green;font-weight:bold">+10 %</span> || <span style="color:red;font-weight:bold">-10 %</span> || — || Sec || Amer
+|-
+| Gentil || Gentle || おとなしい (Otonashī)|| Zart || — || <span style="color:red;font-weight:bold">-10 %</span> || — || <span style="color:green;font-weight:bold">+10 %</span> || — || Amer || Acide
+|-
+| Hardi || Hardy || がんばりや (Ganbariya)|| Robust || — || — || — || — || — || — || —
+|-
+| Jovial || Jolly || ようき (Yōki)|| Froh || — || — || <span style="color:red;font-weight:bold">-10 %</span> || — || <span style="color:green;font-weight:bold">+10 %</span> || Sucré || Sec
+|-
+| Lâche || Lax || のうてんき (Nōtenki)|| Lasch || — || <span style="color:green;font-weight:bold">+10 %</span> || — || <span style="color:red;font-weight:bold">-10 %</span> || — || Acide || Amer
+|-
+| Malin || Impish || わんぱく (Wanpaku)|| Pfiffig || — || <span style="color:green;font-weight:bold">+10 %</span> || <span style="color:red;font-weight:bold">-10 %</span> || — || — || Acide || Sec
+|-
+| Malpoli || Sassy || なまいき (Namaiki)|| Forsch || — || — || — || <span style="color:green;font-weight:bold">+10 %</span> || <span style="color:red;font-weight:bold">-10 %</span> || Amer || Sucré
+|-
+| Mauvais || Naughty || やんちゃ (Yancha)|| Frech || <span style="color:green;font-weight:bold">+10 %</span> || — || — || <span style="color:red;font-weight:bold">-10 %</span> || — || Épicé || Amer
+|-
+| Modeste || Modest || ひかえめ (Hikaeme)|| Mäßig || <span style="color:red;font-weight:bold">-10 %</span> || — || <span style="color:green;font-weight:bold">+10 %</span> || — || — || Sec || Épicé
+|-
+| Naïf || Naive || むじゃき (Mujaki)|| Naiv || — || — || — || <span style="color:red;font-weight:bold">-10 %</span> || <span style="color:green;font-weight:bold">+10 %</span> || Sucré || Amer
+|-
+| Pressé || Hasty || せっかち (Sekkachi)|| Hastig || — || <span style="color:red;font-weight:bold">-10 %</span> || — || — || <span style="color:green;font-weight:bold">+10 %</span> || Sucré || Acide
+|-
+| Prudent || Careful || しんちょう (Shinchō)|| Sacht || — || — || <span style="color:red;font-weight:bold">-10 %</span> || <span style="color:green;font-weight:bold">+10 %</span> || — || Amer || Sec
+|-
+| Pudique || Bashful || てれや (Tereya)|| Zaghaft || — || — || — || — || — || — || —
+|-
+| Relax || Relaxed || のんき (Nonki)|| Locker || — || <span style="color:green;font-weight:bold">+10 %</span> || — || — || <span style="color:red;font-weight:bold">-10 %</span> || Acide || Sucré
+|-
+| Rigide || Adamant || いじっぱり (Ijippari)|| Hart || <span style="color:green;font-weight:bold">+10 %</span> || — || <span style="color:red;font-weight:bold">-10 %</span> || — || — || Épicé || Sec
+|-
+| Sérieux || Serious || まじめ (Majime)|| Ernst || — || — || — || — || — || — || —
+|-
+| Solo || Lonely || さみしがり (Samishigari)|| Solo || <span style="color:green;font-weight:bold">+10 %</span> || <span style="color:red;font-weight:bold">-10 %</span> || — || — || — || Épicé || Acide
+|-
+| Timide || Timid || おくびょう (Okubyō)|| Scheu || <span style="color:red;font-weight:bold">-10 %</span> || — || — || — || <span style="color:green;font-weight:bold">+10 %</span> || Sucré || Épicé
+|}
+
+== Voir aussi ==
+
+* [[Calcul des statistiques]]
+* [[IV]]
+* [[Statistiques]]
+
+{{Caractéristiques des Pokémon}}
+
+[[Catégorie:Caractéristique de Pokémon]]
+
+[[de:Wesen]]
+[[en:Nature]]
+[[es:Naturaleza]]
+[[it:Natura]]
+[[ja:せいかく]]
+[[zh:性格]]

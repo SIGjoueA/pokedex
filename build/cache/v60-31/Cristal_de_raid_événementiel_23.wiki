@@ -1,0 +1,45 @@
+{{Ruban Cristal de raid|23|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 23.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 23''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 7 au 9, du 14 au 16 juillet 2023 et du 1<sup>er</sup> au 7 mai 2026.
+
+On y trouvait des [[Goupelin]] de type Téracristal [[Fée (type)|Fée]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Goupelin / type-téracristal(Fée) talent-caché(Toujours) difficulté(7) capacités(Déflagration, Psyko, Éclat Magique, Feu Follet; Zone Magique, Machination) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Goupelin_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Calcium / 5
+Téra-Éclat Fée / 20
+Téra-Éclat Fée / 10 / hôte
+CT Feu, CT141, Déflagration / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Bonbon Exp. XL / 2 / 5%
+Calcium / 5 / 10%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Timide / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Fée / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/07.07.2023]]

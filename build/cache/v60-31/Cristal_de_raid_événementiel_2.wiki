@@ -1,0 +1,129 @@
+{{Ruban Cristal de raid|2|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 2.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 2''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 2 au 4 et du 16 au 18 décembre 2022.
+
+On y trouvait notamment des [[Dracaufeu]] de type Téracristal Dragon, capturables une seule fois sur les deux périodes de raid.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Dracaufeu / type-téracristal(Dragon) talent-caché(Toujours) difficulté(7) capacités(Draco-Choc, Déflagration, Vent Violent, Exploforce; Surchauffe, Téra Explosion, Zénith, Feu d'Enfer) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+Florges forme(Rouge) nom(Fleur Rouge) / talent-caché(Possible) difficulté(4) capacités(Pouvoir Lunaire, Mur Lumière, Danse Fleurs, Voix Enjôleuse; Champ Herbu) / talent-caché(Possible) difficulté(5) capacités(Pouvoir Lunaire, Mur Lumière, Voix Enjôleuse, Danse Fleurs; Champ Herbu, Nœud Herbe)
+Mimiqui / talent-caché(Impossible) difficulté(4) capacités(Câlinerie, Griffe Ombre, Ombre Portée, Martobois; Champ Brumeux) / talent-caché(Impossible) difficulté(5) capacités(Câlinerie, Griffe Ombre, Ombre Portée, Martobois; Téra Explosion, Champ Brumeux)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Dracaufeu_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Calcium / 5
+Téra-Éclat Dragon / 10
+Téra-Éclat Dragon / 5 / hôte
+CT Feu, CT157, Surchauffe / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 15%
+Bonbon Exp. L / 5 / 23%
+Super Bonbon / 2 / 10%
+Calcium / 5 / 10%
+Bonbon Exp. XL / 2 / 5%
+Morceau d'Étoile / 2 / 10%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Dragon / 5 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+
+Florges_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Pollen de Flabébé / 4
+Plume Mental / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Mental / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Pollen de Flabébé / 2 / 9%
+
+Florges_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Pollen de Flabébé / 5
+Plume Mental / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Mental / 2 / 10%
+Baie Lonme / 3 / 8%
+Gros Champi / 1 / 12%
+Champi Suave / 1 / 2%
+Pépite / 1 / 5%
+Aromate Prudent / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Pollen de Flabébé / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Mimiqui_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Tissu de Mimiqui / 4
+Plume Mental / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Mental / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Gros Champi / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Tissu de Mimiqui / 2 / 9%
+
+Mimiqui_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Tissu de Mimiqui / 5
+Plume Mental / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Mental / 2 / 10%
+Baie Lonme / 3 / 8%
+Gros Champi / 1 / 12%
+Champi Suave / 1 / 2%
+Pépite / 1 / 5%
+Aromate Prudent / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Tissu de Mimiqui / 2 / 5%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/02.12.2022]]

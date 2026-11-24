@@ -1,0 +1,38 @@
+{{Ruban Cristal de raid|30|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 30.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 30''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 27 au 31 octobre 2023, à l'occasion d'Halloween.
+
+On y trouvait des [[Magirêve]] de type Téracristal [[Spectre (type)|Spectre]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Magirêve / type-téracristal(Spectre) talent-caché(Impossible) difficulté(5) capacités(Ball'Ombre, Feu Ensorcelé, Psyko, Vent Glace; Étonnement, Grimace)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Magirêve_5
+Bonbon Exp. M / 2
+Bonbon Exp. L / 2
+Super Bonbon / 3
+Téra-Éclat Spectre / 3
+Bonbon Exp. S / 4 / 10%
+Bonbon Exp. M / 2 / 10%
+Bonbon Exp. L / 2 / 10%
+Bonbon Exp. XL / 2 / 10%
+Super Bonbon / 3 / 10%
+Bonbon Exp. S / 4 / 10%
+Bonbon Exp. M / 2 / 10%
+Bonbon Exp. L / 2 / 10%
+Bonbon Exp. XL / 2 / 10%
+Super Bonbon / 3 / 10%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/27.10.2023]]

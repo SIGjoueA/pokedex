@@ -222,6 +222,14 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Données** : `build/fix-v60-30.mjs` (lancé par `apply-v34.mjs`, idempotent) construit `docs/data/raids.json` (index compact, ~200 Ko) à partir de `f.rd` (v60.24 / v60.27), sans nouvel appel réseau. Le fichier est inclus dans le pack hors-ligne. `DATA_VERSION` passe à `d72`.
 - **Audit** : contrôles `v60.30` dans `build/audit.mjs` (VERSION / DATA_VERSION, cohérence de l’index avec `f.rd`, Ogerpon absent, Pikachu / Tygnon / Mewtwo / Mackogneur Gigamax, filtre et vue dans l’appli, pack, NOTES ≤ 160 caractères).
 
+
+## v60.31 : raids 7★ événementiels d’Écarlate / Violet
+- **Données** : `build/update-tera7.mjs` (et `build/fix-v60-31.mjs`, lancé par `apply-v34.mjs`, idempotent, mode cache uniquement) construit `docs/data/tera7.json` : tous les raids Téracristal 7★ depuis décembre 2022, rediffusions fusionnées par espèce, forme et type Téra. Le script ajoute les nouvelles fenêtres et les nouveaux boss, sans jamais effacer l’historique. Pages sources mises en cache dans `build/cache/v60-31/`. `DATA_VERSION` passe à `d73` ; le fichier est inclus dans le pack hors-ligne.
+- **Fiche** : bloc « Raids 7★ (événements) » sur les fiches concernées, en jeu Écarlate / Violet (y compris Masque Turquoise et Disque Indigo). Boss et forme, type Téra, dates de chaque diffusion, titre officiel « le Surpuissant » (Insigne Surpuissant), talent, nature, capacités de capture et capacités utilisées en raid, capacité mise en avant le cas échéant.
+- **Vue et filtre** : section 7★ dans la vue Raids pour ÉV ; puce 7★ du filtre « Dispo en raid ». Les raids terminés sont en grisé ; les raids en cours ou à venir sont mis en avant.
+- **Sources** : Poképédia (CC BY-NC-SA 3.0 FR) en priorité pour les noms français (pages Raid Téracristal et Cristal de raid événementiel N), puis Serebii (Mighty / Unrivaled) et Bulbapedia (table 7★) pour le talent, la nature et le recoupement des dates.
+- **Audit** : contrôles `v60.31` dans `build/audit.mjs` (VERSION / DATA_VERSION, 53 raids, Lanssorien en cours, formes Hisui, exclusivités de version, puce 7★, pack, NOTES ≤ 160 caractères).
+
 ## Limites connues
 Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

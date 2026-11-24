@@ -1,0 +1,169 @@
+{{Ruban Cristal de raid|40|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 40.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 40''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 16 au 18 février 2024.
+
+On y trouvait des Pokémon exclusifs.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Carmadura / talent-caché(Possible) difficulté(5) capacités(Canon Blindé, Vaste Pouvoir, Luminocanon, Aurasphère; Zénith, Champ Psychique) / talent-caché(Possible) difficulté(3) capacités(Nitrocharge, Ombre Nocturne, Ébullilave, Luminocanon; Zénith)
+Malvalame / talent-caché(Possible) difficulté(5) capacités(Lame en Peine, Griffe Ombre, Coupe Psycho, Tranche-Nuit; Zénith, Gonflette) / talent-caché(Possible) difficulté(3) capacités(Nitrocharge, Ombre Nocturne, Ébullilave, Tranche-Nuit; Zénith)
+Dolman / difficulté(5) capacités(Éboulement, Big Splash, Cavalerie Lourde, Tacle Lourd; Tempête de Sable, Mur de Fer) / difficulté(3) capacités(Tomberoche, Écrasement, Balayage, Piétisol; Tempête de Sable)
+Bekaglaçon / difficulté(5) capacités(Aqua-Brèche, Cryo-Pirouette, Tête de Fer, Psykoud'Boul; Amnésie, Chute de Neige) / difficulté(3) capacités(Coup d'Boule, Vent Glace, Ball'Météo, Aqua-Brèche; Chute de Neige) notes(Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Carmadura_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 25%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+
+Carmadura_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 4
+Suie de Charbambin / 5
+Plume Sprint / 2
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. S / 2 / 15%
+Bonbon Exp. M / 1 / 18%
+Bonbon Exp. M / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 8%
+Grande Perle / 1 / 12%
+Gros Champi / 1 / 25%
+
+Malvalame_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 25%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+
+Malvalame_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 4
+Suie de Charbambin / 5
+Plume Sprint / 2
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. S / 2 / 15%
+Bonbon Exp. M / 1 / 18%
+Bonbon Exp. M / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 8%
+Grande Perle / 1 / 12%
+Gros Champi / 1 / 25%
+
+Dolman_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 25%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+
+Dolman_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 4
+Roche de Dolman / 5
+Plume Sprint / 2
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. S / 2 / 15%
+Bonbon Exp. M / 1 / 18%
+Bonbon Exp. M / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 8%
+Grande Perle / 1 / 12%
+Gros Champi / 1 / 25%
+
+Bekaglaçon_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 25%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+
+Bekaglaçon_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 4
+Duvet de Bekaglaçon / 5
+Plume Sprint / 2
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. S / 2 / 15%
+Bonbon Exp. M / 1 / 18%
+Bonbon Exp. M / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 8%
+Grande Perle / 1 / 12%
+Gros Champi / 1 / 25%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/16.02.2024]]

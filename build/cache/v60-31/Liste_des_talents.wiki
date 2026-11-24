@@ -1,0 +1,1642 @@
+Cette page liste l'intégralité des talents présents dans la [[série principale]] de jeux vidéo Pokémon. Ces talents sont au nombre de 297 (sans compter [[Cacophonie]]), et sont ici triés par jeu d'apparition puis par ordre alphabétique.
+
+Seuls les effets en combat dans leur dernier jeu principal d'apparition en date sont listés, les effets dans les générations précédentes sont détaillés sur les pages des talents ; pour les effets hors combat, voir [[Talent#Talents avec un effet hors combat|cette page]]. Certains talents ont changé de nom au fil des jeux, comme documenté sur [[Liste des éléments des jeux principaux ayant changé de nom|cette page]].
+
+La colonne Index indique les numéros d'index, qui sont l'adresse interne des talents dans les jeux.
+
+{{#invoke:Sommaire|table|
+Liste des talents{{!}}Liste des talents
+>Liste des talents{{!}}Apparus dans ''Pokémon Rubis et Saphir'' (76)
+>DP{{!}}Apparus dans ''Pokémon Diamant et Perle'' (47)
+>NB{{!}}Apparus dans ''Pokémon Noir et Blanc'' (41)
+>XY{{!}}Apparus dans ''Pokémon X et Y'' (24)
+>ROSA{{!}}Apparus dans ''Pokémon Rubis Oméga et Saphir Alpha'' (3)
+>SL{{!}}Apparus dans ''Pokémon Soleil et Lune'' (41)
+>USUL{{!}}Apparus dans ''Pokémon Ultra-Soleil et Ultra-Lune'' (1)
+>EB{{!}}Apparus dans ''Pokémon Épée et Bouclier'' (25)
+>ISA{{!}}Apparus dans ''L'île solitaire de l'Armure'' (2)
+>TEC{{!}}Apparus dans ''Les terres enneigées de la Couronne'' (6)
+>EV{{!}}Apparus dans ''Pokémon Écarlate et Violet'' (31)
+>MT{{!}}Apparus dans ''Le Masque Turquoise'' (5)
+>DI{{!}}Apparus dans ''Le Disque Indigo'' (4)
+>Champions{{!}}Apparus dans ''Pokémon Champions'' (4)
+Notes et références{{!}}Notes et références
+}}
+
+== Liste des talents ==
+
+{| class="tableaustandard sortable center entetefixe"
+|-
+! width="5%" | Apparu
+! Index
+! width="12%" | Talent
+! Effet en combat
+|-
+| {{Abréviation|RS}}
+| 054
+| [[Absentéisme]]
+| Lorsque le Pokémon utilise une [[capacité]], il passe le tour suivant à paresser.
+|-
+| {{Abréviation|RS}}
+| 011
+| [[Absorbe-Eau]]
+| Les [[capacité]]s de type [[Eau]] sont inefficaces sur le Pokémon et lui rendent 1/4 de ses [[PV]] max.
+|-
+| {{Abréviation|RS}}
+| 010
+| [[Absorbe-Volt]]
+| Les [[capacité]]s de type [[Électrik]] sont inefficaces sur le Pokémon et lui rendent 1/4 de ses [[PV]] max.
+|-
+| {{Abréviation|RS}}
+| 055
+| [[Agitation]]
+| Quand le Pokémon utilise une [[capacité physique]], son [[Attaque (statistique)|Attaque]] est multipliée par 1,5, tandis que sa [[Précision]] est multipliée par 0,8.
+|-
+| {{Abréviation|RS}}
+| 076
+| [[Air Lock]]
+| Annule tous les effets de la [[Météo (mécanisme)|météo]].
+|-
+| {{Abréviation|RS}}
+| 043
+| [[Anti-Bruit]]
+| Le Pokémon est immunisé contre les [[Capacité sonore|capacités de son]].
+|-
+| {{Abréviation|RS}}
+| 040
+| [[Armumagma]]
+| Le Pokémon est immunisé contre le [[gel]].
+|-
+| {{Abréviation|RS}}
+| 004
+| [[Armurbaston]]
+| Le Pokémon est immunisé contre les [[Coup critique|coups critiques]].
+|-
+| {{Abréviation|RS}}
+| 039
+| [[Attention]]
+| Le Pokémon ne peut pas être [[peur|apeuré]] par les attaques des adversaires, et il est immunisé contre l’[[Intimidation (talent)|intimidation]].
+|-
+| {{Abréviation|RS}}
+| 012
+| [[Benêt]]
+| Le Pokémon est immunisé contre l’état « [[Attraction (statut)|Attraction]] », la [[provoc]]ation ou l’[[Intimidation (talent)|intimidation]].
+|-
+| {{Abréviation|RS}}
+| 066
+| [[Brasier]]
+| Quand les [[PV]] du Pokémon sont inférieurs ou égaux à 1/3 de ses PV max, la puissance de ses capacités de type [[Feu]] est multipliée par 1,5.
+|-
+| {{Abréviation|RS}}
+| data-sort-value="076" | <ref group=note name=Cacophonie>[[Cacophonie]] est un talent présent dans la [[troisième génération]], uniquement obtenable sur un [[Pokémon bug]]. Son numéro d'index était 076 avant d'être supprimé dans la [[quatrième génération]], où ce numéro a été réatribué à [[Air Lock]] qui était auparavent le 077.</ref>
+| [[Cacophonie]]
+| Évite les [[capacité sonore|attaques sonores]].
+|-
+| {{Abréviation|RS}}
+| 036
+| [[Calque]]
+| Quand le Pokémon arrive sur le terrain, il adopte le même [[talent]] que l’adversaire.
+|-
+| {{Abréviation|RS}}
+| 034
+| [[Chlorophylle]]
+| Quand le [[Soleil (climat)|soleil]] brille, la [[Vitesse]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|RS}}
+| 013
+| [[Ciel Gris]]
+| Le Pokémon annule tous les effets liés à la [[Météo (mécanisme)|météo]].
+|-
+| {{Abréviation|RS}}
+| 037
+| [[Coloforce]]
+| La puissance des [[capacité physique|capacités physiques]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|RS}}
+| 075
+| [[Coque Armure]]
+| Le Pokémon est immunisé contre les [[Coup critique|coups critiques]].
+|-
+| {{Abréviation|RS}}
+| 049
+| [[Corps Ardent]]
+| Quand le Pokémon subit une [[capacité à contact]], il a 30 % de chances de [[brûler]] l’adversaire.
+|-
+| {{Abréviation|RS}}
+| 029
+| [[Corps Sain]]
+| Les [[stat]]s du Pokémon ne peuvent pas baisser à cause des [[capacité]]s ou du [[talent]] des adversaires.
+|-
+| {{Abréviation|RS}}
+| 002
+| [[Crachin]]
+| Quand le Pokémon arrive sur le terrain, il invoque la [[pluie]] pendant 5 tours.
+|-
+| {{Abréviation|RS}}
+| 062
+| [[Cran]]
+| Quand le Pokémon souffre d’une altération de [[statut]], son [[Attaque (statistique)|Attaque]] est multipliée par 1,5.
+De plus, lorsque le Pokémon est [[Brûlure|brûlé]], les dégâts qu’il inflige avec ses [[capacité physique|capacités physiques]] ne sont pas réduits de moitié.
+|-
+| {{Abréviation|RS}}
+| 044
+| [[Cuvette]]
+| Quand il [[Pluie|pleut]], le Pokémon récupère 1/16 de ses [[PV]] max à la fin de chaque tour.
+|-
+| {{Abréviation|RS}}
+| 016
+| [[Homochromie]]
+| Lorsque le Pokémon est touché par une [[capacité]], il prend le [[type]] de celle-ci.
+|-
+| {{Abréviation|RS}}
+| 063
+| [[Écaille Spéciale]]
+| Quand le Pokémon souffre d’une altération de [[statut]], sa [[Défense]] est multipliée par 1,5.
+|-
+| {{Abréviation|RS}}
+| 007
+| [[Échauffement]]
+| Le Pokémon est immunisé contre la [[paralysie]].
+|-
+| {{Abréviation|RS}}
+| 073
+| [[Écran Fumée]]
+| Les [[stat]]s du Pokémon ne peuvent pas baisser à cause des [[capacité]]s ou du [[talent]] des adversaires.
+|-
+| {{Abréviation|RS}}
+| 019
+| [[Écran Poudre]]
+| Le Pokémon est immunisé contre les effets additionnels des [[Capacité|attaques]].
+|-
+| {{Abréviation|RS}}
+| 065
+| [[Engrais (talent)|Engrais]]
+| Quand les [[PV]] du Pokémon sont inférieurs ou égaux à 1/3 de ses PV max, la puissance de ses capacités de type [[Plante]] est multipliée par 1,5.
+|-
+| {{Abréviation|RS}}
+| 072
+| [[Esprit Vital]]
+| Le Pokémon est immunisé contre le [[sommeil]] et la somnolence.
+|-
+| {{Abréviation|RS}}
+| 068
+| [[Essaim (talent)|Essaim]]
+| Quand les [[PV]] du Pokémon sont inférieurs ou égaux à 1/3 de ses PV max, la puissance de ses capacités de type [[Insecte]] est multipliée par 1,5.
+|-
+| {{Abréviation|RS}}
+| 005
+| [[Fermeté]]
+| Si les [[PV]] du Pokémon sont au maximum et qu’il subit des dégâts d’une [[capacité]] qui devrait le mettre K.O. en un coup, il résiste avec 1 PV.
+Les capacités qui mettent toujours [[OHKO|K.O. en un coup]] sont inefficaces sur le Pokémon.
+|-
+| {{Abréviation|RS}}
+| 074
+| [[Force Pure]]
+| La puissance des [[capacité physique|capacités physiques]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|RS}}
+| 050
+| [[Fuite (talent)|Fuite]]
+| Le Pokémon peut être [[Switch (stratégie)|remplacé]] par un autre Pokémon de son équipe, même si des effets l’en empêchent.
+|-
+| {{Abréviation|RS}}
+| 025
+| [[Garde Mystik]]
+| Une puissance mystérieuse protège le Pokémon contre toutes les [[capacité]]s, sauf celles « [[super efficace]]s ».
+|-
+| {{Abréviation|RS}}
+| 033
+| [[Glissade]]
+| Quand il [[Pluie|pleut]], la [[Vitesse]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|RS}}
+| 060
+| [[Glu]]
+| Le Pokémon ne peut pas perdre l’[[objet tenu|objet qu’il tient]]. Les adversaires ne peuvent pas le dérober.
+|-
+| {{Abréviation|RS}}
+| 052
+| [[Hyper Cutter]]
+| L’[[Attaque (statistique)|Attaque]] du Pokémon ne peut pas baisser à cause des [[capacité]]s ou du [[talent]] des adversaires.
+|-
+| {{Abréviation|RS}}
+| 041
+| [[Ignifu-Voile]]
+| Le voile qui recouvre le Pokémon le protège des [[brûlure]]s.
+|-
+| {{Abréviation|RS}}
+| 015
+| [[Insomnia]]
+| Le Pokémon est immunisé contre le [[sommeil]] et la somnolence.
+|-
+| {{Abréviation|RS}}
+| 022
+| [[Intimidation (talent)|Intimidation]]
+| Quand le Pokémon arrive sur le terrain, il baisse l’[[Attaque (statistique)|Attaque]] des adversaires de 1 cran.
+|-
+| {{Abréviation|RS}}
+| 047
+| [[Isograisse]]
+| Les dégâts des [[capacité]]s de types [[Feu]] et [[Glace]] subis par le Pokémon sont réduits de moitié.
+|-
+| {{Abréviation|RS}}
+| 056
+| [[Joli Sourire]]
+| Quand le Pokémon subit une [[capacité à contact]] d’un adversaire du [[sexe]] opposé, il a 30 % de chances de lui infliger l’état « [[Attraction (statut)|Attraction]] ».
+|-
+| {{Abréviation|RS}}
+| 026
+| [[Lévitation]]
+| Le Pokémon flotte au-dessus du sol, ce qui l’immunise contre les capacités de type [[Sol]], ainsi que les effets de [[Picots]], [[Pics Toxik]] et [[Toile Gluante]].
+|-
+| {{Abréviation|RS}}
+| 035
+| [[Luminescence]]
+| Le Pokémon ignore les changements d’[[Esquive]] des adversaires, et sa [[Précision]] ne peut pas baisser.
+|-
+| {{Abréviation|RS}}
+| 042
+| [[Magnépiège]]
+| Attire les Pokémon [[Acier]] grâce à un champ magnétique, ce qui les empêche de [[Fuite (combat)|quitter le terrain]].
+|-
+| {{Abréviation|RS}}
+| 023
+| [[Marque Ombre]]
+| Le Pokémon empêche les adversaires de [[Fuite (combat)|quitter le terrain]].
+|-
+| {{Abréviation|RS}}
+| 048
+| [[Matinal]]
+| Le Pokémon se réveille deux fois plus vite de l’[[Sommeil|endormissement]].
+|-
+| {{Abréviation|RS}}
+| 030
+| [[Médic Nature]]
+| Quand le Pokémon [[switch|revient dans son équipe]], il soigne ses altérations de [[statut]].
+|-
+| {{Abréviation|RS}}
+| 059
+| [[Météo (talent)|Météo]]
+| Le Pokémon prend le type [[Eau]], [[Feu]] ou [[Glace]] en fonction de la [[Météo (mécanisme)|météo]].
+|-
+| {{Abréviation|RS}}
+| 058
+| [[Moins]]
+| L’[[Attaque Spéciale]] du Pokémon est multipliée par 1,5 si un allié présent sur le terrain a le [[talent]] [[Plus]] ou le talent Moins.
+|-
+| {{Abréviation|RS}}
+| 006
+| [[Moiteur]]
+| Le Pokémon empêche l’utilisation des [[capacité]]s explosives et l’activation des [[talent]]s explosifs.
+|-
+| {{Abréviation|RS}}
+| 061
+| [[Mue]]
+| Le Pokémon a 30 % de chances de soigner ses altérations de [[statut]] à la fin de chaque tour.
+|-
+| {{Abréviation|RS}}
+| 014
+| [[Œil Composé]]
+| La [[Précision]] des capacités du Pokémon est multipliée par 1,3.
+|-
+| {{Abréviation|RS}}
+| 031
+| [[Paratonnerre]]
+| Le Pokémon attire les [[capacité]]s de type [[Électrik]]. Elles sont inefficaces sur lui et augmentent son [[Attaque Spéciale]] de 1 cran.
+|-
+| {{Abréviation|RS}}
+| 024
+| [[Peau Dure]]
+| Quand le Pokémon subit une [[capacité à contact]], il inflige à l’adversaire des dégâts équivalents à 1/8 des [[PV]] max de celui-ci.
+|-
+| {{Abréviation|RS}}
+| 071
+| [[Piège Sable]]
+| Empêche l'adversaire de [[Fuite (combat)|quitter le terrain]].
+|-
+| {{Abréviation|RS}}
+| 057
+| [[Plus]]
+| L’[[Attaque Spéciale]] du Pokémon est multipliée par 1,5 si un allié présent sur le terrain a le [[talent]] Plus ou le talent [[Moins]].
+|-
+| {{Abréviation|RS}}
+| 038
+| [[Point Poison]]
+| Quand le Pokémon subit une [[capacité à contact]], il a 30 % de chances d’[[Empoisonnement|empoisonner]] l’adversaire.
+|-
+| {{Abréviation|RS}}
+| 027
+| [[Pose Spore]]
+| Quand le Pokémon subit une [[capacité à contact]], il a 30 % de chances d’[[Empoisonnement|empoisonner]], [[Paralysie|paralyser]] ou [[sommeil|endormir]] l’adversaire.
+|-
+| {{Abréviation|RS}}
+| 046
+| [[Pression]]
+| Les adversaires doivent dépenser 1 [[PP]] supplémentaire pour viser ce Pokémon avec leurs [[capacité]]s.
+|-
+| {{Abréviation|RS}}
+| 001
+| [[Puanteur]]
+| Quand le Pokémon inflige des dégâts à l’aide d’une [[capacité]], il a 10 % de chances d’[[peur|apeurer]] la cible.
+|-
+| {{Abréviation|RS}}
+| 053
+| [[Ramassage]]
+| Quand le Pokémon ne tient pas d’[[objet tenu|objet]], à la fin du tour, il ramasse celui qu’un autre Pokémon a consommé.
+|-
+| {{Abréviation|RS}}
+| 051
+| [[Regard Vif]]
+| Le Pokémon ignore les changements d’[[Esquive]] des adversaires, et sa [[Précision]] ne peut pas baisser.
+|-
+| {{Abréviation|RS}}
+| 045
+| [[Sable Volant]]
+| Quand le Pokémon arrive sur le terrain, il invoque une [[tempête de sable]] pendant 5 tours.
+|-
+| {{Abréviation|RS}}
+| 070
+| [[Sécheresse]]
+| Quand le Pokémon arrive sur le terrain, il invoque le [[Soleil (climat)|soleil]] pendant 5 tours.
+|-
+| {{Abréviation|RS}}
+| 032
+| [[Sérénité]]
+| Augmente les chances d'infliger des effets additionnels.
+|-
+| {{Abréviation|RS}}
+| 009
+| [[Statik]]
+| Quand le Pokémon subit une [[capacité à contact]], il a 30 % de chances de [[paralysie|paralyser]] l’adversaire.
+|-
+| {{Abréviation|RS}}
+| 064
+| [[Suintement]]
+| Quand le Pokémon subit une capacité absorbant des [[PV]], il empêche l’adversaire de se soigner et lui inflige des dégâts équivalents à la quantité de PV qui aurait dû être absorbée.
+|-
+| {{Abréviation|RS}}
+| 028
+| [[Synchro]]
+| Si le Pokémon est [[Empoisonnement|empoisonné]], [[Empoisonnement grave|gravement empoisonné]], [[Paralysie|paralysé]] ou [[Brûlure|brûlé]] par une [[capacité]] ou un [[talent]] d’un autre Pokémon, ce dernier subit la même altération de [[statut]].
+|-
+| {{Abréviation|RS}}
+| 020
+| [[Tempo Perso]]
+| Le Pokémon est immunisé contre la [[confusion]] et l’[[Intimidation (talent)|intimidation]].
+|-
+| {{Abréviation|RS}}
+| 069
+| [[Tête de Roc]]
+| Le Pokémon peut utiliser des capacités qui devraient normalement aussi lui [[contrecoup|infliger des dégâts]] sans perdre de [[PV]].
+|-
+| {{Abréviation|RS}}
+| 018
+| [[Torche]]
+| Les capacités de type [[Feu]] sont inefficaces sur ce Pokémon et le font entrer dans l’état « Torche ».
+|-
+| {{Abréviation|RS}}
+| 067
+| [[Torrent]]
+| Quand les [[PV]] du Pokémon sont inférieurs ou égaux à 1/3 de ses PV max, la puissance de ses [[capacité]]s de type [[Eau]] est multipliée par 1,5.
+|-
+| {{Abréviation|RS}}
+| 003
+| [[Turbo]]
+| La [[Vitesse]] du Pokémon augmente de 1 cran à la fin de chaque tour.
+|-
+| {{Abréviation|RS}}
+| 017
+| [[Vaccin]]
+| Le Pokémon est immunisé contre le [[Empoisonnement|poison]] et le [[Empoisonnement grave|poison grave]].
+|-
+| {{Abréviation|RS}}
+| 021
+| [[Ventouse]]
+| Le Pokémon est immunisé contre les [[capacité]]s ou les [[objet]]s des adversaires qui forcent à [[Switch (stratégie)|changer de Pokémon]].
+|-
+| id="DP" | {{Abréviation|RS}}
+| 008
+| [[Voile Sable]]
+| Lors des [[Tempête de sable|tempêtes de sable]], l’[[Esquive]] du Pokémon est multipliée par 1,25.
+|-
+| {{Abréviation|DP}}
+| 091
+| [[Adaptabilité]]
+| La puissance des capacités du [[STAB|même type]] que le Pokémon est multipliée par 2 au lieu de 1,5.
+|-
+| {{Abréviation|DP}}
+| 117
+| [[Alerte Neige]]
+| Quand le Pokémon arrive sur le terrain, il invoque la [[neige]] pendant 5 tours.
+|-
+| {{Abréviation|DP}}
+| 099
+| [[Annule Garde]]
+| La [[Précision]] des capacités du Pokémon et des capacités qui ciblent le Pokémon passe à 100 %.
+|-
+| {{Abréviation|DP}}
+| 107
+| [[Anticipation]]
+| Quand il arrive sur le terrain, le Pokémon devine si les adversaires connaissent des capacités super efficaces sur lui, ou des capacités qui mettent toujours [[OHKO|K.O. en un coup]].
+|-
+| {{Abréviation|DP}}
+| 106
+| [[Boom Final]]
+| Quand le Pokémon est mis K.O. par une [[capacité à contact]], il inflige à l’adversaire des dégâts équivalents à 1/4 des PV max de celui-ci.
+|-
+| {{Abréviation|DP}}
+| 104
+| [[Brise Moule]]
+| Le Pokémon peut utiliser ses capacités en ignorant le talent des adversaires. Certains talents ne peuvent pas être ignorés.
+|-
+| {{Abréviation|DP}}
+| 105
+| [[Chanceux]]
+| Le taux de [[coup critique|critiques]] du Pokémon augmente de 1 cran.
+|-
+| {{Abréviation|DP}}
+| 118
+| [[Cherche Miel]]
+| Le Pokémon peut parfois trouver du [[Miel]] après un combat.
+|-
+| {{Abréviation|DP}}
+| 083
+| [[Colérique]]
+| Quand le Pokémon subit un [[coup critique]], son [[Attaque (statistique)|Attaque]] augmente et atteint le 6ᵉ cran.
+|-
+| {{Abréviation|DP}}
+| 115
+| [[Corps Gel]]
+| Quand il [[neige]], le Pokémon récupère 1/16 de ses PV max à la fin de chaque tour.
+|-
+| {{Abréviation|DP}}
+| 112
+| [[Début Calme]]
+| Divise la [[Vitesse]] et l'[[Attaque (statistique)|Attaque]] du Pokémon par deux pendant les cinq premiers tours du combat.
+|-
+| {{Abréviation|DP}}
+| 084
+| [[Délestage]]
+| La [[Vitesse]] du Pokémon est multipliée par 2 si l’[[Objet tenu|objet qu’il tient]] disparaît.
+|-
+| {{Abréviation|DP}}
+| 122
+| [[Don Floral]]
+| Augmente l'[[Attaque (statistique)|Attaque]] et la [[Défense Spéciale (statistique)|Défense Spéciale]] du Pokémon et de ses alliés lorsque le [[Soleil (climat)|soleil]] brille.
+|-
+| {{Abréviation|DP}}
+| 102
+| [[Feuille Garde]]
+| Quand le [[Soleil (climat)|soleil]] brille, le Pokémon est immunisé contre les altérations de [[statut]].
+|-
+| {{Abréviation|DP}}
+| 111
+| [[Filtre]]
+| Le Pokémon ne subit que 3/4 des dégâts des capacités super efficaces.
+|-
+| {{Abréviation|DP}}
+| 094
+| [[Force Soleil]]
+| Quand le [[Soleil (climat)|soleil]] brille, l’[[Attaque Spéciale]] du Pokémon est multipliée par 1,5, mais il perd 1/8 de ses PV max à la fin de chaque tour.
+|-
+| {{Abréviation|DP}}
+| 119
+| [[Fouille]]
+| Quand le Pokémon arrive sur le terrain, il peut identifier l’[[objet tenu|objet que tient]] l’adversaire.
+|-
+| {{Abréviation|DP}}
+| 100
+| [[Frein]]
+| Quand des capacités ont le même niveau de [[priorité]], le Pokémon agit en dernier.
+|-
+| {{Abréviation|DP}}
+| 098
+| [[Garde Magik]]
+| Seules les attaques peuvent infliger des dégâts au Pokémon.
+|-
+| {{Abréviation|DP}}
+| 082
+| [[Gloutonnerie]]
+| Le Pokémon n’attend pas qu’il lui reste 1/4 de ses PV ou moins pour manger la [[Baie (type d'objet)|Baie]] qu’il tient, il la mange quand ses PV sont réduits de moitié ou moins.
+|-
+| {{Abréviation|DP}}
+| 093
+| [[Hydratation]]
+| Quand il [[Pluie|pleut]], le Pokémon soigne ses altérations de [[statut]] à la fin de chaque tour.
+|-
+| {{Abréviation|DP}}
+| 085
+| [[Ignifugé]]
+| Les dégâts des capacités de type [[Feu]] et de [[brûlure]] subis par le Pokémon sont réduits de moitié.
+|-
+| {{Abréviation|DP}}
+| 080
+| [[Impassible]]
+| Quand le Pokémon est a[[peur]]é, sa [[Vitesse]] augmente de 1 cran.
+|-
+| {{Abréviation|DP}}
+| 109
+| [[Inconscient]]
+| Quand le Pokémon attaque ou est attaqué, il ignore les changements de [[stat]]s des adversaires, sauf les changements de [[Vitesse]].
+|-
+| {{Abréviation|DP}}
+| 114
+| [[Lavabo]]
+| Le Pokémon détourne sur lui les capacités de type [[Eau]] et les neutralise, tout en montant son [[Attaque Spéciale]].
+|-
+| {{Abréviation|DP}}
+| 110
+| [[Lentiteintée]]
+| Permet à une capacité qui n'est pas très efficace d'infliger des dégâts comme si elle était efficace normalement.
+|-
+| {{Abréviation|DP}}
+| 103
+| [[Maladresse]]
+| L’[[objet tenu|objet que tient]] le Pokémon n’a pas d’effet.
+|-
+| {{Abréviation|DP}}
+| 123
+| [[Mauvais Rêve]]
+| Inflige des dégâts aux ennemis [[Sommeil|endormis]].
+|-
+| {{Abréviation|DP}}
+| 078
+| [[Motorisé]]
+| Les capacités de type [[Électrik]] sont inefficaces sur le Pokémon et augmentent sa [[Vitesse]] de 1 cran.
+|-
+| {{Abréviation|DP}}
+| 092
+| [[Multi-Coups]]
+| Les capacités du Pokémon pouvant frapper plusieurs fois frappent toujours le maximum de fois possible.
+|-
+| {{Abréviation|DP}}
+| 121
+| [[Multi-Type]]
+| Modifie le [[type]] du Pokémon en fonction de la [[plaque]] qu'il tient.
+|-
+| {{Abréviation|DP}}
+| 096
+| [[Normalise]]
+| Toutes les capacités du Pokémon deviennent de type [[Normal]], quel que soit leur [[type]] original. Leur puissance augmente légèrement.
+|-
+| {{Abréviation|DP}}
+| 087
+| [[Peau Sèche]]
+| Les capacités de type [[Eau]] sont inefficaces sur le Pokémon et lui rendent 1/4 de ses PV max, mais les dégâts qu’il subit provenant de capacités de type [[Feu]] sont multipliés par 1,25.
+Quand il [[Pluie|pleut]], le Pokémon récupère 1/8 de ses PV max à la fin de chaque tour, mais quand le [[Soleil (climat)|soleil]] brille, il perd 1/8 de ses PV max à la fin de chaque tour.
+|-
+| {{Abréviation|DP}}
+| 077
+| [[Pied Confus]]
+| Quand le Pokémon est [[confus]], son [[Esquive]] est multipliée par 2.
+|-
+| {{Abréviation|DP}}
+| 095
+| [[Pied Véloce]]
+| Quand le Pokémon souffre d’une altération de [[statut]], sa [[Vitesse]] est multipliée par 1,5. De plus, sa Vitesse ne baisse pas lorsqu’il est [[paralysie|paralysé]].
+|-
+| {{Abréviation|DP}}
+| 089
+| [[Poing de Fer]]
+| La puissance des [[:Catégorie:Capacité coup de poing|capacités de coups de poing]] du Pokémon est multipliée par 1,2.
+|-
+| {{Abréviation|DP}}
+| 108
+| [[Prédiction]]
+| Quand il arrive sur le terrain, le Pokémon détecte la capacité la plus puissante des adversaires.
+|-
+| {{Abréviation|DP}}
+| 113
+| [[Querelleur]]
+| Le Pokémon peut toucher les Pokémon de type [[Spectre (type)|Spectre]] avec des capacités de type [[Normal]] ou [[Combat (type)|Combat]]. Il est aussi immunisé contre l’[[Intimidation (talent)|intimidation]].
+|-
+| {{Abréviation|DP}}
+| 081
+| [[Rideau Neige]]
+| Quand il [[neige]], l’[[Esquive]] du Pokémon est multipliée par 1,25.
+|-
+| {{Abréviation|DP}}
+| 079
+| [[Rivalité]]
+| La puissance des capacités du Pokémon est multipliée par 1,25 si l’adversaire est du même [[sexe]], et par 0,75 s’il est du sexe opposé.
+Si l’un ou l’autre Pokémon est de sexe inconnu, les capacités conservent leur puissance d’origine.
+|-
+| {{Abréviation|DP}}
+| 086
+| [[Simple]]
+| Les changements de [[Statistique|stats]] du Pokémon sont multipliés par 2.
+|-
+| {{Abréviation|DP}}
+| 097
+| [[Sniper]]
+| Le multiplicateur de puissance appliqué lorsque ce Pokémon inflige un [[coup critique]] est de 2,25 au lieu de 1,5.
+|-
+| {{Abréviation|DP}}
+| 090
+| [[Soin Poison]]
+| Quand le Pokémon est [[Empoisonnement|empoisonné]] ou [[Empoisonnement grave|gravement empoisonné]], il récupère 1/8 de ses PV max à la fin de chaque tour au lieu d’en perdre.
+|-
+| {{Abréviation|DP}}
+| 116
+| [[Solide Roc]]
+| Le Pokémon ne subit que 3/4 des dégâts des capacités super efficaces.
+|-
+| {{Abréviation|DP}}
+| 101
+| [[Technicien (talent)|Technicien]]
+| Quand la puissance des capacités du Pokémon est inférieure ou égale à 60, elle est multipliée par 1,5.
+|-
+| {{Abréviation|DP}}
+| 088
+| [[Télécharge]]
+| Le Pokémon compare la [[Défense]] et la [[Défense Spéciale (statistique)|Défense Spéciale]] de l'adversaire et augmente son [[Attaque (statistique)|Attaque]] ou son [[Attaque Spéciale]] en conséquence.
+|-
+| id="NB" | {{Abréviation|DP}}
+| 120
+| [[Téméraire]]
+| La puissance des [[:Catégorie:Capacité infligeant un contrecoup|capacités infligeant aussi des dégâts]] au Pokémon est multipliée par 1,2.
+|-
+| {{Abréviation|NB}}
+| 128
+| [[Acharné]]
+| Quand un adversaire baisse au moins une des [[Statistique|stats]] du Pokémon, l’[[Attaque (statistique)|Attaque]] de ce dernier augmente de 2 crans.
+|-
+| {{Abréviation|NB}}
+| 148
+| [[Analyste]]
+| Quand le Pokémon agit en dernier, la puissance de ses capacités est multipliée par 1,3.
+|-
+| {{Abréviation|NB}}
+| 133
+| [[Armurouillée]]
+| Quand le Pokémon subit des dégâts d’une [[capacité physique]], sa [[Défense]] baisse de 1 cran, mais sa [[Vitesse]] augmente de 2 crans.
+|-
+| {{Abréviation|NB}}
+| 146
+| [[Baigne Sable]]
+| Pendant les [[tempête de sable|tempêtes de sable]], la [[Vitesse]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|NB}}
+| 145
+| [[Cœur de Coq]]
+| La [[Défense]] du Pokémon ne peut pas baisser à cause des capacités ou du talent des adversaires.
+|-
+| {{Abréviation|NB}}
+| 154
+| [[Cœur Noble]]
+| Quand le Pokémon subit des dégâts d’une capacité de type [[Ténèbres (type)|Ténèbres]], son [[Attaque (statistique)|Attaque]] augmente de 1 cran.
+|-
+| {{Abréviation|NB}}
+| 131
+| [[Cœur Soin]]
+| Le Pokémon a 50 % de chances de soigner les altérations de [[statut]] d’un allié à la fin de chaque tour.
+|-
+| {{Abréviation|NB}}
+| 126
+| [[Contestation]]
+| Les changements de [[stat]]s du Pokémon sont inversés : les augmentations de stats se transforment en baisses, et les baisses de stats se transforment en augmentations.
+|-
+| {{Abréviation|NB}}
+| 130
+| [[Corps Maudit]]
+| Quand le Pokémon subit des dégâts d’une capacité, il a 30 % de chances d’infliger l’état « [[entrave|Capacité bloquée]] » à l’adversaire pendant 4 tours.
+|-
+| {{Abréviation|NB}}
+| 129
+| [[Défaitiste]]
+| Le Pokémon devient défaitiste quand ses PV tombent à la moitié, et son [[Attaque (statistique)|Attaque]] et son [[Attaque Spéciale]] sont divisées par deux.
+|-
+| {{Abréviation|NB}}
+| 142
+| [[Envelocape]]
+| Le Pokémon est immunisé contre les dégâts des [[tempête de sable|tempêtes de sable]], et contre les capacités et les talents qui libèrent de la [[:Catégorie:Capacité poudreuse|poudre]].
+|-
+| {{Abréviation|NB}}
+| 160
+| [[Épine de Fer (talent)|Épine de Fer]]
+| Inflige des dégâts à l'attaquant lorsque le Pokémon subit une [[attaque directe]].
+|-
+| {{Abréviation|NB}}
+| 158
+| [[Farceur]]
+| Le niveau de [[priorité]] des [[capacité de statut|capacités de statut]] du Pokémon augmente de 1 cran.
+|-
+| {{Abréviation|NB}}
+| 159
+| [[Force Sable]]
+| La puissance des capacités de types [[Roche]], [[Sol]] et [[Acier]] du Pokémon est multipliée par 1,3 pendant les [[tempête de sable|tempêtes de sable]].
+|-
+| {{Abréviation|NB}}
+| 132
+| [[Garde-Ami]]
+| Les alliés du Pokémon ne subissent que 3/4 des dégâts qui leur sont infligés.
+|-
+| {{Abréviation|NB}}
+| 134
+| [[Heavy Metal]]
+| Le [[poids]] du Pokémon est multiplié par 2.
+|-
+| {{Abréviation|NB}}
+| 157
+| [[Herbivore]]
+| Les capacités de type [[Plante]] sont inefficaces sur le Pokémon et augmentent son [[Attaque (statistique)|Attaque]] de 1 cran.
+|-
+| {{Abréviation|NB}}
+| 149
+| [[Illusion]]
+| Le Pokémon apparaît sous les traits du dernier membre de l’équipe. L’effet se dissipe s’il subit les dégâts d’une capacité.
+|-
+| {{Abréviation|NB}}
+| 150
+| [[Imposteur]]
+| Le Pokémon prend l’apparence du Pokémon en face de lui. Toutes les caractéristiques de ce dernier, à l’exception de ses PV, sont également dupliquées.
+|-
+| {{Abréviation|NB}}
+| 153
+| [[Impudence]]
+| Quand le Pokémon met un adversaire K.O. avec une attaque, son [[Attaque (statistique)|Attaque]] augmente de 1 cran.
+|-
+| {{Abréviation|NB}}
+| 151
+| [[Infiltration]]
+| Le Pokémon peut utiliser ses capacités en ignorant les effets des capacités suivantes des adversaires : [[Mur Lumière]], [[Protection]], [[Voile Aurore]], [[Rune Protect]] et [[Clonage (capacité)|Clonage]].
+|-
+| {{Abréviation|NB}}
+| 135
+| [[Light Metal]]
+| Le [[poids]] du Pokémon est divisé par 2.
+|-
+| {{Abréviation|NB}}
+| 141
+| [[Lunatique]]
+| À la fin de chaque tour, une [[stat]] du Pokémon augmente de 2 crans et une autre stat baisse de 1 cran.
+|-
+| {{Abréviation|NB}}
+| 156
+| [[Miroir Magik]]
+| Le Pokémon est immunisé contre les [[capacité de statut|capacités de statut]] et les renvoie vers l’adversaire.
+|-
+| {{Abréviation|NB}}
+| 161
+| [[Mode Transe]]
+| Le Pokémon change de forme quand il lui reste moins de la moitié de ses PV.
+|-
+| {{Abréviation|NB}}
+| 152
+| [[Momie]]
+| Quand le Pokémon subit une [[capacité à contact]], le talent de l’adversaire est remplacé par Momie.
+|-
+| {{Abréviation|NB}}
+| 136
+| [[Multiécaille]]
+| Quand les PV du Pokémon sont au maximum, les dégâts qu’il subit sont réduits de moitié.
+|-
+| {{Abréviation|NB}}
+| 147
+| [[Peau Miracle]]
+| Le Pokémon résiste mieux aux [[capacité de statut|capacités de statut]].
+|-
+| {{Abréviation|NB}}
+| 155
+| [[Phobique]]
+| Si le Pokémon est [[Intimidation (talent)|intimidé]] ou subit des dégâts d’une capacité de type [[Ténèbres (type)|Ténèbres]], [[Spectre (type)|Spectre]] ou [[Insecte]], sa [[Vitesse]] augmente de 1 cran.
+|-
+| {{Abréviation|NB}}
+| 124
+| [[Pickpocket]]
+| Quand le Pokémon ne tient pas d’[[Objet tenu|objet]] et qu’il subit une [[capacité à contact]], il vole celui de l’adversaire.
+|-
+| {{Abréviation|NB}}
+| 138
+| [[Rage Brûlure]]
+| Augmente la puissance des [[Catégorie de capacité|capacités spéciales]] quand le Pokémon est [[Brûlure|brûlé]].
+|-
+| {{Abréviation|NB}}
+| 137
+| [[Rage Poison]]
+| Augmente la puissance des capacités physiques quand le Pokémon est [[Empoisonnement|empoisonné]].
+|-
+| {{Abréviation|NB}}
+| 139
+| [[Récolte]]
+| Si le Pokémon utilise une [[Baie (type d'objet)|Baie]], il a 50 % de chances d’en récolter une identique à la fin de chaque tour. Quand le [[Soleil (climat)|soleil]] brille, il récolte une Baie à coup sûr.
+|-
+| {{Abréviation|NB}}
+| 144
+| [[Régé-Force]]
+| Quand le Pokémon [[Switch (stratégie)|revient]] dans son équipe, il récupère 1/3 de ses PV max.
+|-
+| {{Abréviation|NB}}
+| 125
+| [[Sans Limite]]
+| Les attaques du Pokémon perdent leurs effets additionnels, mais la puissance de ses capacités est multipliée par 1,3.
+|-
+| {{Abréviation|NB}}
+| 140
+| [[Télépathe]]
+| Le Pokémon évite les attaques de ses alliés.
+|-
+| {{Abréviation|NB}}
+| 127
+| [[Tension]]
+| Le Pokémon empêche les adversaires de manger des [[Baie (type d'objet)|Baie]]s.
+|-
+| {{Abréviation|NB}}
+| 164
+| [[Téra-Voltage]]
+| Le Pokémon ignore les talents adverses qui auraient un effet sur ses capacités.
+|-
+| {{Abréviation|NB}}
+| 143
+| [[Toxitouche]]
+| Quand le Pokémon inflige une [[capacité à contact]] à l’adversaire, il a 30 % de chances de l’[[Empoisonnement|empoisonner]].
+|-
+| {{Abréviation|NB}}
+| 163
+| [[Turbo Brasier]]
+| Le Pokémon ignore les talents adverses qui auraient un effet sur ses capacités.
+|-
+| id="XY" | {{Abréviation|NB}}
+| 162
+| [[Victorieux]]
+| Augmente la [[Précision]] du Pokémon et de ses alliés.
+|-
+| {{Abréviation|XY}}
+| 177
+| [[Ailes Bourrasque]]
+| Quand les PV du Pokémon sont au maximum, le niveau de [[priorité]] de ses capacités de type [[Vol (type)|Vol]] augmente de 1 cran.
+|-
+| {{Abréviation|XY}}
+| 185
+| [[Amour Filial]]
+| La mère et son petit peuvent attaquer 2 fois d’affilée. La puissance des attaques du petit est égale à 1/4 de celle des attaques de la mère.
+|-
+| {{Abréviation|XY}}
+| 165
+| [[Aroma-Voile]]
+| Le Pokémon et ses alliés sont immunisés contre la [[provoc]]ation, l’impossibilité de répétition des capacités, le blocage de capacités, le blocage de soins, ainsi que les états « [[Attraction (capacité)|Attraction]] » et « [[Encore]] ».
+|-
+| {{Abréviation|XY}}
+| 187
+| [[Aura Féérique]]
+| La puissance des capacités de type [[Fée]] de tous les Pokémon est multipliée par 1,33.
+|-
+| {{Abréviation|XY}}
+| 188
+| [[Aura Inversée]]
+| Inverse l'effet des talents « Aura » afin que ceux-ci baissent la puissance des capacités affectées au lieu de l'augmenter.
+|-
+| {{Abréviation|XY}}
+| 186
+| [[Aura Ténébreuse]]
+| Augmente la puissance des attaques de type [[Ténèbres (type)|Ténèbres]] de tous les Pokémon.
+|-
+| {{Abréviation|XY}}
+| 167
+| [[Bajoues]]
+| Quand le Pokémon mange une [[Baie (type d'objet)|Baie]], il bénéficie de ses effets et en plus, il récupère 1/3 de ses PV max.
+|-
+| {{Abréviation|XY}}
+| 172
+| [[Battant]]
+| Quand un adversaire baisse au moins une des [[stat]]s du Pokémon, l’[[Attaque Spéciale]] de ce dernier augmente de 2 crans.
+|-
+| {{Abréviation|XY}}
+| 176
+| [[Déclic Tactique]]
+| Le Pokémon prend sa [[Forme#Exagide|Forme Assaut]] lorsqu’il utilise une attaque, et sa Forme Parade lorsqu’il utilise la capacité [[Bouclier Royal]].
+|-
+| {{Abréviation|XY}}
+| 166
+| [[Flora-Voile]]
+| Le Pokémon empêche ses alliés de type [[Plante]] de subir des baisses de [[stat]]s et des altérations de [[statut]].
+|-
+| {{Abréviation|XY}}
+| 175
+| [[Gluco-Voile]]
+| Le Pokémon et ses alliés sont immunisés contre le [[sommeil]] et la somnolence.
+|-
+| {{Abréviation|XY}}
+| 181
+| [[Griffe Dure]]
+| La puissance des [[capacité à contact|capacités à contact]] du Pokémon est multipliée par 1,3.
+|-
+| {{Abréviation|XY}}
+| 170
+| [[Magicien]]
+| Quand le Pokémon ne tient pas d’[[Objet tenu|objet]], il vole celui de l’adversaire auquel il inflige des dégâts à l’aide d’une capacité.
+|-
+| {{Abréviation|XY}}
+| 178
+| [[Méga Blaster]]
+| La puissance des capacités du Pokémon qui [[:Catégorie:Capacité à aura|projettent une aura]] est multipliée par 1,5.
+|-
+| {{Abréviation|XY}}
+| 171
+| [[Pare-Balles]]
+| Le Pokémon est immunisé contre les [[:Catégorie:Capacité à projectiles|capacités lançant des projectiles]].
+|-
+| {{Abréviation|XY}}
+| 184
+| [[Peau Céleste]]
+| Les capacités de type [[Normal]] du Pokémon prennent le type [[Vol (type)|Vol]] et leur puissance est multipliée par 1,2.
+|-
+| {{Abréviation|XY}}
+| 182
+| [[Peau Féérique]]
+| Les capacités de type [[Normal]] du Pokémon prennent le type [[Fée]] et leur puissance est multipliée par 1,2.
+|-
+| {{Abréviation|XY}}
+| 174
+| [[Peau Gelée]]
+| Les capacités de type [[Normal]] du Pokémon prennent le type [[Glace]] et leur puissance est multipliée par 1,2.
+|-
+| {{Abréviation|XY}}
+| 183
+| [[Poisseux]]
+| Quand le Pokémon subit une [[capacité à contact]], la [[Vitesse]] de l’adversaire baisse de 1 cran.
+|-
+| {{Abréviation|XY}}
+| 173
+| [[Prognathe]]
+| La puissance des [[:Catégorie:Capacité à base de morsure|capacités de morsure]] du Pokémon est multipliée par 1,5.
+|-
+| {{Abréviation|XY}}
+| 168
+| [[Protéen]]
+| Le Pokémon prend le [[type]] de la capacité qu’il utilise. Ce talent ne s’active qu’une fois par arrivée du Pokémon sur le terrain.
+|-
+| {{Abréviation|XY}}
+| 180
+| [[Symbiose]]
+| Quand un allié consomme son [[Objet tenu|objet]], le Pokémon lui donne celui qu’il tient.
+|-
+| {{Abréviation|XY}}
+| 169
+| [[Toison Épaisse]]
+| Les dégâts des [[capacité physique|capacités physiques]] subis par le Pokémon sont réduits de moitié.
+|-
+| id="ROSA" | {{Abréviation|XY}}
+| 179
+| [[Toison Herbue]]
+| Quand un [[Champ Herbu|champ herbu]] est actif, la [[Défense]] du Pokémon est multipliée par 1,5.
+|-
+| {{Abréviation|ROSA}}
+| 189
+| [[Mer Primaire]]
+| Altère les conditions [[Météo (mécanisme)|météo]] pour neutraliser les attaques de type [[Feu]].
+|-
+| {{Abréviation|ROSA}}
+| 191
+| [[Souffle Delta]]
+| Altère les conditions [[Météo (mécanisme)|météo]] pour annuler les faiblesses du type [[Vol (type)|Vol]].
+|-
+| id="SL" | {{Abréviation|ROSA}}
+| 190
+| [[Terre Finale]]
+| Altère les conditions [[Météo (mécanisme)|météo]] pour neutraliser les attaques de type [[Eau]].
+|-
+| {{Abréviation|SL}}
+| 220
+| [[Animacœur]]
+| Augmente l'[[Attaque Spéciale]] du Pokémon lorsqu'un autre Pokémon est mis K.O.
+|-
+| {{Abréviation|SL}}
+| 199
+| [[Aquabulle (talent)|Aquabulle]]
+| Le Pokémon est immunisé contre la [[brûlure]]. Les dégâts des capacités de type [[Feu]] qu’il subit sont réduits de moitié. La puissance de ses capacités de type [[Eau]] est multipliée par 2.
+|-
+| {{Abréviation|SL}}
+| 208
+| [[Banc (talent)|Banc]]
+| Le Pokémon se rassemble avec ses congénères quand ses PV sont élevés. Quand il ne lui reste plus beaucoup de PV, le banc se disperse.
+|-
+| {{Abréviation|SL}}
+| 217
+| [[Batterie]]
+| Augmente la puissance des [[Catégorie de capacité|capacités spéciales]] des alliés.
+|-
+| {{Abréviation|SL}}
+| 224
+| [[Boost Chimère]]
+| Augmente la [[stat]] la plus élevée du Pokémon quand il met K.O. un autre Pokémon.
+|-
+| {{Abréviation|SL}}
+| 197
+| [[Bouclier-Carcan]]
+| Lorsque le Pokémon perd la moitié de ses PV, son enveloppe se brise et il adopte une posture offensive.
+|-
+| {{Abréviation|SL}}
+| 218
+| [[Boule de Poils]]
+| Les dégâts des [[capacité à contact|capacités à contact]] subis par le Pokémon sont réduits de moitié, mais les dégâts des capacités de type [[Feu]] subis par le Pokémon sont multipliés par 2.
+|-
+| {{Abréviation|SL}}
+| 202
+| [[Chasse-Neige]]
+| Quand il [[neige]], la [[Vitesse]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|SL}}
+| 219
+| [[Corps Coloré]]
+| L'adversaire est abasourdi par le Pokémon, ce qui l'empêche de viser ce dernier et ses alliés avec une capacité [[priorité|prioritaire]]
+|-
+| {{Abréviation|SL}}
+| 212
+| [[Corrosion]]
+| Le Pokémon est capable d’[[Empoisonnement|empoisonner]] ou de [[Empoisonnement grave|gravement empoisonner]] les Pokémon de type [[Acier (type)|Acier]] ou [[Poison (type)|Poison]].
+|-
+| {{Abréviation|SL}}
+| 228
+| [[Créa-Brume]]
+| Le Pokémon crée un [[Champ Brumeux]] au moment où il entre au combat.
+|-
+| {{Abréviation|SL}}
+| 226
+| [[Créa-Élec]]
+| Quand le Pokémon arrive sur le terrain, il crée un [[Champ Électrifié|champ électrifié]] sur tout le terrain pendant 5 tours.
+|-
+| {{Abréviation|SL}}
+| 229
+| [[Créa-Herbe]]
+| Quand le Pokémon arrive sur le terrain, il crée un [[Champ Herbu|champ herbu]] sur tout le terrain pendant 5 tours.
+|-
+| {{Abréviation|SL}}
+| 227
+| [[Créa-Psy]]
+| Quand le Pokémon arrive sur le terrain, il crée un [[Champ Psychique|champ psychique]] sur tout le terrain pendant 5 tours.
+|-
+| {{Abréviation|SL}}
+| 196
+| [[Cruauté]]
+| Quand le Pokémon attaque un adversaire [[Empoisonnement|empoisonné]] ou [[Empoisonnement grave|gravement empoisonné]], il inflige systématiquement un [[coup critique]].
+|-
+| {{Abréviation|SL}}
+| 216
+| [[Danseuse (talent)|Danseuse]]
+| Si n'importe quel Pokémon utilise une [[:catégorie:capacité danse|capacité dansante]], le Pokémon utilise immédiatement cette danse lui aussi.
+|-
+| {{Abréviation|SL}}
+| 192
+| [[Endurance]]
+| Quand le Pokémon subit des dégâts d’une capacité, sa [[Défense]] augmente de 1 cran.
+|-
+| {{Abréviation|SL}}
+| 193
+| [[Escampette]]
+| Le Pokémon perd confiance quand ses PV tombent à la moitié et s'[[Fuite (combat)|enfuit]] dans sa Poké Ball.
+|-
+| {{Abréviation|SL}}
+| 200
+| [[Expert Acier]]
+| Augmente la puissance des attaques de type [[Acier (type)|Acier]].
+|-
+| {{Abréviation|SL}}
+| 215
+| [[Expuls'Organes]]
+| Quand le Pokémon subit des dégâts d’une capacité qui le met K.O., il renvoie la même quantité de dégâts à l’adversaire qui les lui a infligés.
+|-
+| {{Abréviation|SL}}
+| 209
+| [[Fantômasque]]
+| Si le Pokémon devait subir des dégâts d’une capacité sous sa [[Forme#Mimiqui|Forme Déguisée]], il perd 1/8 de ses PV max à la place, puis prend sa Forme Démasquée.
+|-
+| {{Abréviation|SL}}
+| 198
+| [[Filature]]
+| Quand le Pokémon attaque une cible qui vient d’arriver sur le terrain après un [[Switch (stratégie)|échange]], la puissance de la capacité utilisée est multipliée par 2.
+|-
+| {{Abréviation|SL}}
+| 201
+| [[Folle Furie]]
+| L’[[Attaque Spéciale]] du Pokémon augmente de 1 cran quand ses PV tombent à la moitié ou moins à cause d’une attaque de l’adversaire.
+|-
+| {{Abréviation|SL}}
+| 204
+| [[Hydrata-Son]]
+| Les [[Capacité sonore|capacités de son]] utilisées par le Pokémon prennent le type [[Eau]].
+|-
+| {{Abréviation|SL}}
+| 213
+| [[Hypersommeil]]
+| Le Pokémon rêve en permanence et ne se réveille jamais. Il est capable d'attaquer normalement tout en dormant.
+|-
+| {{Abréviation|SL}}
+| 203
+| [[Longue Portée]]
+| Les capacités que le Pokémon utilise ne sont pas considérées comme des [[capacité à contac|capacités à contact]].
+|-
+| {{Abréviation|SL}}
+| 221
+| [[Mèche Rebelle]]
+| Baisse la [[Vitesse]] de l'attaquant lorsque le Pokémon subit une [[attaque directe]].
+|-
+| {{Abréviation|SL}}
+| 230
+| [[Métallo-Garde]]
+| Empêche les [[stat]]s du Pokémon de baisser à cause du talent ou d'une capacité de l'adversaire.
+|-
+| {{Abréviation|SL}}
+| 223
+| [[Osmose]]
+| Le Pokémon acquiert le talent d'un allié mis K.O.
+|-
+| {{Abréviation|SL}}
+| 206
+| [[Peau Électrique]]
+| Les capacités de type [[Normal]] deviennent de type [[Électrik]]. Leur puissance augmente légèrement.
+|-
+| {{Abréviation|SL}}
+| 214
+| [[Prestance Royale]]
+| Les adversaires ne peuvent pas utiliser de capacités [[priorité|prioritaires]] sur le Pokémon et ses alliés.
+|-
+| {{Abréviation|SL}}
+| 205
+| [[Prioguérison]]
+| Rend les capacités de soin [[priorité|prioritaires]].
+|-
+| {{Abréviation|SL}}
+| 232
+| [[Prisme-Armure]]
+| Diminue la puissance des attaques [[super efficace]]s subies.
+|-
+| {{Abréviation|SL}}
+| 211
+| [[Rassemblement]]
+| Lorsque le Pokémon perd la moitié de ses PV, ses Cellules se rassemblent pour l'encourager, ce qui lui permet de prendre sa [[Forme#Zygarde|Forme Parfaite]].
+|-
+| {{Abréviation|SL}}
+| 222
+| [[Receveur]]
+| Le Pokémon obtient le talent d’un allié mis K.O.
+|-
+| {{Abréviation|SL}}
+| 194
+| [[Repli Tactique]]
+| Quand les [[PV]] du Pokémon tombent à la moitié ou moins, il [[Fuite (combat)|revient]] dans son équipe.
+|-
+| {{Abréviation|SL}}
+| 195
+| [[Sable Humide]]
+| Augmente beaucoup la [[Défense]] du Pokémon quand il subit une capacité de type [[Eau]].
+|-
+| {{Abréviation|SL}}
+| 231
+| [[Spectro-Bouclier]]
+| Le Pokémon reçoit moins de dégâts quand ses PV sont au maximum.
+|-
+| {{Abréviation|SL}}
+| 207
+| [[Surf Caudal]]
+| Quand un [[Champ Électrifié|champ électrifié]] est actif, la [[Vitesse]] du Pokémon est multipliée par 2.
+|-
+| {{Abréviation|SL}}
+| 210
+| [[Synergie]]
+| En battant un ennemi, ce Pokémon renforce ses liens avec son Dresseur, ce qui augmente son [[Attaque (statistique)|Attaque]], son [[Attaque Spéciale]] et sa [[Vitesse]].
+|-
+| id="USUL" | {{Abréviation|SL}}
+| 225
+| [[Système Alpha]]
+| Change le [[type]] du Pokémon en fonction de la [[ROM]] équipée.
+|-
+| id="EB" | {{Abréviation|USUL}}
+| 233
+| [[Cérébro-Force]]
+| Augmente encore plus la puissance des attaques [[super efficace]]s.
+|-
+| {{Abréviation|EB}}
+| 254
+| [[Âme Vagabonde]]
+| Quand le Pokémon subit une [[capacité à contact]], il échange son talent contre celui de l’adversaire.
+|-
+| {{Abréviation|EB}}
+| 240
+| [[Armure Miroir]]
+| Au lieu d’être affecté par les baisses de [[stat]]s, le Pokémon les renvoie au Pokémon qui a tenté de les lui infliger.
+|-
+| {{Abréviation|EB}}
+| 252
+| [[Boost Acier]]
+| La puissance des capacités de type [[Acier (type)|Acier]] du Pokémon et de ses alliés est multipliée par 1,5.
+|-
+| {{Abréviation|EB}}
+| 251
+| [[Brise-Barrière]]
+| Quand le Pokémon arrive sur le terrain, il annule les effets de [[Mur Lumière]], [[Protection]] et [[Voile Aurore]].
+|-
+| {{Abréviation|EB}}
+| 249
+| [[Cercle d'Énergie]]
+| Augmente la puissance des capacités des Pokémon qui se trouvent à proximité.
+|-
+| {{Abréviation|EB}}
+| 253
+| [[Corps Condamné]]
+| Lorsque le Pokémon est directement touché par une capacité, l'assaillant et lui tomberont K.O. dans trois tours, à moins qu'ils ne soient remplacés entre temps.
+|-
+| {{Abréviation|EB}}
+| 258
+| [[Déclic Fringale]]
+| À la fin de chaque tour, le Pokémon alterne entre son [[Forme#Morpeko|Mode Rassasié]] et son Mode Affamé.
+|-
+| {{Abréviation|EB}}
+| 241
+| [[Dégobage]]
+| Quand le Pokémon utilise [[Surf]] ou [[Plongée]], il revient avec une proie. Lorsqu'il subit des dégâts par la suite, il attaque en recrachant sa proie.
+|-
+| {{Abréviation|EB}}
+| 246
+| [[Écailles Glacées]]
+| Le Pokémon est protégé par des écailles de glace. Les dégâts qu'il subit par des [[catégorie de capacité#capacités spéciales|capacités spéciales]] sont divisés par deux.
+|-
+| {{Abréviation|EB}}
+| 238
+| [[Effilochage]]
+| Quand le Pokémon est touché par une attaque, il dissémine des aigrettes qui diminuent la [[Vitesse]] de tout le monde, sauf la sienne.
+|-
+| {{Abréviation|EB}}
+| 235
+| [[Égide Inflexible]]
+| Augmente la [[Défense]] du Pokémon la première fois qu'il entre au combat.
+|-
+| {{Abréviation|EB}}
+| 255
+| [[Entêtement]]
+| Augmente l'[[Attaque (statistique)|Attaque]], mais empêche d'utiliser toute autre capacité que celle utilisée en premier par le Pokémon.
+|-
+| {{Abréviation|EB}}
+| 245
+| [[Expul'Sable]]
+| Quand le Pokémon subit des dégâts d’une capacité, il invoque une [[tempête de sable]] pendant 5 tours.
+|-
+| {{Abréviation|EB}}
+| 256
+| [[Gaz Inhibiteur]]
+| Si un Pokémon avec Gaz Inhibiteur est sur le terrain, les effets des talents de tous les autres Pokémon ne s'activent pas ou sont neutralisés.
+|-
+| {{Abréviation|EB}}
+| 234
+| [[Lame Indomptable]]
+| Augmente l'[[Attaque (statistique)|Attaque]] du Pokémon la première fois qu'il entre au combat.
+|-
+| {{Abréviation|EB}}
+| 236
+| [[Libéro]]
+| Le Pokémon prend le [[type]] de la capacité qu’il utilise. Ce talent ne s’active qu’une fois par arrivée du Pokémon sur le terrain.
+|-
+| {{Abréviation|EB}}
+| 250
+| [[Mimétisme]]
+| Le Pokémon prend le [[type]] du [[champ]] actif.
+|-
+| {{Abréviation|EB}}
+| 247
+| [[Mûrissement]]
+| Les effets des [[Baie]]s mangées par le Pokémon sont multipliés par 2.
+|-
+| {{Abréviation|EB}}
+| 242
+| [[Nerfs d'Acier]]
+| Le Pokémon ignore les effets des capacités ou des talents qui attirent les capacités.
+|-
+| {{Abréviation|EB}}
+| 239
+| [[Propulseur]]
+| Permet d'ignorer l'effet des capacités ou des talents qui attirent les capacités.
+|-
+| {{Abréviation|EB}}
+| 244
+| [[Punk Rock]]
+| La puissance des [[capacité sonore|capacités de son]] du Pokémon est multipliée par 1,3. Les dégâts des capacités de son subis par le Pokémon sont réduits de moitié.
+|-
+| {{Abréviation|EB}}
+| 237
+| [[Ramasse Ball]]
+| Si le Pokémon ne tient aucun objet, il ramassera la [[Ball|Poké Ball]] lors du premier lancer raté du combat.
+|-
+| {{Abréviation|EB}}
+| 248
+| [[Tête de Gel]]
+| Le glaçon sur sa tête encaisse les [[capacité physique|attaques physiques]] à la place du Pokémon, mais sa destruction modifie son apparence. Le glaçon se reforme quand il [[neige]].
+|-
+| {{Abréviation|EB}}
+| 243
+| [[Turbine]]
+| Lorsque le Pokémon est touché par des capacités de type [[Eau]] ou [[Feu]], sa [[Vitesse]] augmente énormément.
+|-
+| id="ISA" | {{Abréviation|EB}}
+| 257
+| [[Voile Pastel]]
+| Protège le Pokémon et ses alliés contre toutes les altérations de [[statut]] liées à l'[[empoisonnement]].
+|-
+| {{Abréviation|ISA}}
+| 260
+| [[Poing Invisible]]
+| Quand le Pokémon utilise une [[capacité à contact]], il ignore les effets de protection des adversaires et inflige 1/4 des dégâts que la capacité aurait normalement infligés. Les autres effets des adversaires se déclenchent toujours.
+|-
+| id="TEC" | {{Abréviation|ISA}}
+| 259
+| [[Tir Vif]]
+| Le Pokémon a 30 % de chances d’agir en premier, même si les autres capacités lancées ont le même niveau de priorité que la sienne.
+|-
+| {{Abréviation|TEC}}
+| 264
+| [[Blanche Ruade]]
+| Quand le Pokémon met un ennemi K.O., il émet un hennissement glaçant, ce qui augmente son [[Attaque (statistique)|Attaque]].
+|-
+| {{Abréviation|TEC}}
+| 261
+| [[Breuvage Suspect]]
+| Quand le Pokémon arrive sur le terrain, il annule les changements de [[stat]]s de ses alliés.
+|-
+| {{Abréviation|TEC}}
+| 263
+| [[Dent de Dragon]]
+| Augmente la puissance des capacités de type [[Dragon (type)|Dragon]].
+|-
+| {{Abréviation|TEC}}
+| 266
+| [[Osmose Équine]] ''([[Sylveroy, le Cavalier du Froid]])''
+| Les talents [[Tension]] de [[Sylveroy]] et [[Blanche Ruade]] de [[Blizzeval]] sont cumulés.
+|-
+| {{Abréviation|TEC}}
+| 267
+| [[Osmose Équine]] ''([[Sylveroy, le Cavalier d'Effroi]])''
+| Les talents [[Tension]] de [[Sylveroy]] et [[Sombre Ruade]] de [[Spectreval]] sont cumulés.
+|-
+| {{Abréviation|TEC}}
+| 265
+| [[Sombre Ruade]]
+| Quand le Pokémon met un ennemi K.O., il émet un hennissement terrifiant qui augmente son [[Attaque Spéciale|Attaque Spécial]].
+|-
+| id="EV" | {{Abréviation|TEC}}
+| 262
+| [[Transistor]]
+| Augmente la puissance des capacités de type [[Électrik]].
+|-
+| {{Abréviation|EV}}
+| 297
+| [[Absorbe-Terre]]
+| Les capacités de type [[Sol]] sont inefficaces sur le Pokémon et lui rendent 1/4 de ses PV max.
+|-
+| {{Abréviation|EV}}
+| 274
+| [[Aéroporté]]
+| L'[[Attaque (statistique)|Attaque]] du Pokémon augmente si un [[Vent Arrière|vent arrière]] souffle ou s'il est touché par une capacité faisant appel au vent. Dans ce dernier cas, il ne subit aucun dégât.
+|-
+| {{Abréviation|EV}}
+| 296
+| [[Armure Caudale]]
+| Les adversaires ne peuvent pas utiliser de [[capacité prioritaire|capacités prioritaires]] sur le Pokémon et ses alliés.
+|-
+| {{Abréviation|EV}}
+| 273
+| [[Bien Cuit]]
+| Si le Pokémon est touché par une capacité de type [[Feu]], il ne subit aucun dégât et sa [[Défense]] augmente beaucoup.
+|-
+| {{Abréviation|EV}}
+| 286
+| [[Bois du Fléau]]
+| Le pouvoir du bois qui appelle le fléau affaiblit l'[[Attaque (statistique)|Attaque]] de tous les autres Pokémon.
+|-
+| {{Abréviation|EV}}
+| 282
+| [[Charge Quantique]]
+| Quand un [[Champ Électrifié|champ électrifié]] est actif ou que le Pokémon tient une capsule d'[[Énergie Booster]], sa [[stat]] la plus élevée augmente.
+|-
+| {{Abréviation|EV}}
+| 275
+| [[Chien de Garde]]
+| Le Pokémon est immunisé contre les effets de l’[[Intimidation (talent)|intimidation]]. À la place, son [[Attaque (statistique)|Attaque]] augmente de 1 cran. De plus, le Pokémon est immunisé contre les capacités ou les [[Objet tenu|objet]]s des adversaires qui forcent à [[Switch (stratégie)|changer]] de Pokémon.
+|-
+| {{Abréviation|EV}}
+| 294
+| [[Collab]]
+| Quand le Pokémon entre sur le terrain, il copie les changements de [[stat]]s de son allié.
+|-
+| {{Abréviation|EV}}
+| 279
+| [[Commandant (talent)|Commandant]]
+| Si un [[Oyacata]] allié est sur le terrain quand ce Pokémon rejoint le combat, ce dernier entre dans sa bouche et devient son commandant.
+|-
+| {{Abréviation|EV}}
+| 283
+| [[Corps en Or]]
+| Le Pokémon est immunisé contre les [[capacité de statut|capacités de statut]] des autres Pokémon.
+|-
+| {{Abréviation|EV}}
+| 271
+| [[Courroupace]]
+| Le Pokémon enrage s'il a moins de la moitié de ses PV après avoir subi une attaque. Sa [[Défense|Déf.]] et sa [[Défense Spéciale (statistique)|Déf. Spé.]] baissent, et son [[Attaque (statistique)|Atq.]], son [[Attaque Spéciale|Atq. Spé.]] et sa [[Vitesse|Vit.]] augmentent.
+|-
+| {{Abréviation|EV}}
+| 295
+| [[Dépôt Toxique]]
+| Quand le Pokémon subit les dégâts d’une [[capacité physique]], il répand des [[Pics Toxik|pics toxiques]] sur le côté adverse.
+|-
+| {{Abréviation|EV}}
+| 285
+| [[Épée du Fléau]]
+| Le pouvoir de l'épée qui appelle le fléau affaiblit la [[Défense]] de tous les autres Pokémon.
+|-
+| {{Abréviation|EV}}
+| 298
+| [[Force Fongique]]
+| Le Pokémon agit toujours plus lentement quand il utilise une [[capacité de statut]], mais il ignore les talents adverses.
+|-
+| {{Abréviation|EV}}
+| 293
+| [[Général Suprême]]
+| Quand le Pokémon arrive sur le terrain, la puissance de ses capacités augmente de 10 % pour chaque Pokémon de son équipe mis K.O. pendant le combat. Elle peut augmenter de 50 % au maximum.
+|-
+| {{Abréviation|EV}}
+| 280
+| [[Grecharge]]
+| Quand le Pokémon subit des dégâts d’une capacité, il obtient un boost [[Électrik]].
+|-
+| {{Abréviation|EV}}
+| 292
+| [[Incisif]]
+| La puissance des capacités du Pokémon qui infligent des [[:Catégorie:Capacité tranchante|entailles]] est multipliée par 1,5.
+|-
+| {{Abréviation|EV}}
+| 289
+| [[Moteur à Hadrons]]
+| Le Pokémon crée un [[Champ Électrifié|champ électrifié]] quand il rejoint le combat. Une machine du futur fait monter son [[Attaque Spéciale]] si un champ électrifié est actif.
+|-
+| {{Abréviation|EV}}
+| 268
+| [[Odeur Tenace]]
+| Lorsque le Pokémon subit une [[attaque directe]], le talent de l'attaquant est remplacé par Odeur Tenace.
+|-
+| {{Abréviation|EV}}
+| 290
+| [[Opportuniste]]
+| Quand les [[stat]]s de l’adversaire augmentent, les stats du Pokémon augmentent de la même manière.
+|-
+| {{Abréviation|EV}}
+| 281
+| [[Paléosynthèse]]
+| Quand le [[Soleil (climat)|soleil]] brille ou que le Pokémon tient une capsule d'[[Énergie Booster]], sa [[stat]] la plus élevée augmente.
+|-
+| {{Abréviation|EV}}
+| 287
+| [[Perles du Fléau]]
+| Le pouvoir des perles qui appellent le fléau affaiblit la [[Défense Spéciale]] de tous les autres Pokémon.
+|-
+| {{Abréviation|EV}}
+| 276
+| [[Porte-Roche]]
+| Augmente la puissance des capacités de type [[Roche]].
+|-
+| {{Abréviation|EV}}
+| 288
+| [[Pouls Orichalque]]
+| Le Pokémon invoque le [[Soleil (climat)|soleil]] quand il rejoint le combat. Quand les rayons du soleil sont intenses, une pulsation primitive augmente son [[Attaque (statistique)|Attaque]].
+|-
+| {{Abréviation|EV}}
+| 291
+| [[Ruminant]]
+| Quand le Pokémon mange une [[Baie]], à la fin du tour suivant, il mange la même Baie une fois de plus.
+|-
+| {{Abréviation|EV}}
+| 272
+| [[Sel Purificateur]]
+| Le Pokémon est immunisé contre les altérations de [[statut]]. Les dégâts des capacités de type [[Spectre (type)|Spectre]] qu’il subit sont réduits de moitié.
+|-
+| {{Abréviation|EV}}
+| 269
+| [[Semencier]]
+| Quand le Pokémon subit des dégâts d’une capacité, il crée un [[Champ Herbu|champ herbu]] sur tout le terrain pendant 5 tours.
+|-
+| {{Abréviation|EV}}
+| 278
+| [[Supermutation]]
+| Quand le Pokémon revient dans son équipe, il prend sa [[Forme#Superdofin|Forme Super]].
+|-
+| {{Abréviation|EV}}
+| 270
+| [[Thermodynamique]]
+| Le Pokémon est immunisé contre la [[brûlure]]. Quand il subit des dégâts d’une capacité de type [[Feu]], son [[Attaque (statistique)|Attaque]] augmente de 1 cran.
+|-
+| {{Abréviation|EV}}
+| 277
+| [[Turbine Éolienne]]
+| Si le Pokémon est touché par une capacité faisant appel au vent, il se charge en électricité.
+|-
+| id="MT" | {{Abréviation|EV}}
+| 284
+| [[Urne du Fléau]]
+| Le pouvoir de l'urne qui appelle le fléau affaiblit l'[[Attaque Spéciale]] de tous les autres Pokémon.
+|-
+| {{Abréviation|MT}}
+| 299
+| [[Aux Petits Soins]]
+| Quand le Pokémon arrive sur le terrain, il restaure 1/4 des PV max de son allié.
+|-
+| {{Abréviation|MT}}
+| 305
+| [[Chaîne Toxique]]
+| Grâce aux pouvoirs de sa chaîne imprégnée de toxines, le Pokémon peut [[empoisonnement grave|empoisonner gravement]] sa cible en la [[Capacité à contact|touchant avec une capacité]].
+|-
+| {{Abréviation|MT}}
+| 301
+| [[Force Mémorielle]] ''([[Ogerpon]] Masque Turquoise)''
+| Le Pokémon fait briller le [[Masque Turquoise]] en puisant dans ses souvenirs, ce qui augmente sa [[Vitesse]].
+|-
+| {{Abréviation|MT}}
+| 302
+| [[Force Mémorielle]] ''([[Ogerpon]] Masque du Puits)''
+| Le Pokémon fait briller le [[Masque du Puits]] en puisant dans ses souvenirs, ce qui augmente sa [[Défense Spéciale (statistique)|Défense Spéciale]].
+|-
+| {{Abréviation|MT}}
+| 303
+| [[Force Mémorielle]] ''([[Ogerpon]] Masque du Fourneau)''
+| Le Pokémon fait briller le [[Masque du Fourneau]] en puisant dans ses souvenirs, ce qui augmente son [[Attaque (statistique)|Attaque]].
+|-
+| {{Abréviation|MT}}
+| 304
+| [[Force Mémorielle]] ''([[Ogerpon]] Masque de la Pierre)''
+| Le Pokémon fait briller le [[Masque de la Pierre]] en puisant dans ses souvenirs, ce qui augmente sa [[Défense]].
+|-
+| {{Abréviation|MT}}
+| 306
+| [[Nectar Mielleux]]
+| Quand le Pokémon arrive sur le terrain, il baisse l’[[Esquive]] des adversaires de 1 cran. Ce talent ne s’active qu’une seule fois par combat.
+|-
+| id="DI" | {{Abréviation|MT}}
+| 300
+| [[Œil Révélateur]]
+| Le Pokémon ignore les changements d'[[Esquive]] des cibles et peut toucher les Pokémon [[Spectre (type)|Spectre]] avec des capacités [[Normal]] ou [[Combat (type)|Combat]]. Sa [[Précision]] ne peut pas baisser.
+|-
+| {{Abréviation|DI}}
+| 307
+| [[Téramorphose]]
+| Quand le Pokémon rejoint le combat, il absorbe l'énergie alentour et prend sa [[forme#Terapagos|forme Téracristal]].
+|-
+| {{Abréviation|DI}}
+| 308
+| [[Téra-Carapace]]
+| Grâce à sa carapace qui renferme l'énergie de tous les [[type]]s, les capacités subies par ce Pokémon quand ses PV sont au maximum ne sont pas très efficaces.
+|-
+| {{Abréviation|DI}}
+| 309
+| [[Téraformation 0]]
+| Lorsque Terapagos prend sa [[Forme#Terapagos|Forme Stellaire]], il utilise son pouvoir enfoui pour annuler les effets de la [[Météo (mécanisme)|météo]] et des [[champ]]s actifs.
+|-
+| id="Champions" | {{Abréviation|DI}}
+| 310
+| [[Emprise Toxique]]
+| Lorsque [[Pêchaminus]] [[Empoisonnement|empoisonne]] un Pokémon grâce à l'une de ses capacités, ce dernier devient également [[confus]].
+|-
+| {{Abréviation|Champions}}
+| 311
+| [[Transperceuse]]
+| Quand le Pokémon utilise une [[capacité à contact]], il ignore les effets de protection des adversaires et inflige 1/4 des dégâts que la capacité aurait normalement infligés. Les autres effets des adversaires se déclenchent toujours.
+|-
+| {{Abréviation|Champions}}
+| 312
+| [[Peau Draconique]]
+| Les capacités de type [[Normal]] du Pokémon prennent le type [[Dragon (type)|Dragon]] et leur puissance est multipliée par 1,2.
+|-
+| {{Abréviation|Champions}}
+| 313
+| [[Lévitaboost]]
+| Le Pokémon flotte au-dessus du sol, ce qui l’immunise contre les capacités de type [[Sol]], ainsi que les effets de [[Picots]], [[Pics Toxik]] et [[Toile Gluante]]. Augmente la [[stat]] la plus élevée du Pokémon quand il met K.O. un autre Pokémon.
+|-
+| {{Abréviation|Champions}}
+| 315
+| [[Méga-Soleil]]
+| Le Pokémon peut utiliser ses capacités comme si le [[Soleil (climat)|soleil]] brillait, même si ce n'est pas le cas.
+|-
+| {{Abréviation|Champions}}
+| 316
+| [[Crinière de Feu]]
+| Augmente la puissance des capacités de type [[Feu]].
+|-
+| {{Abréviation|Champions}}
+| 318
+| [[Habanéruption]]
+| Quand le Pokémon subit des dégâts d’une capacité, il [[Brûlure|brûle]] l'adversaire.
+|-
+| {{Abréviation|Champions}}
+| 319
+| [[Aura Protectrice]]
+| Les dégâts des [[capacité à contact|capacités à contact]] subis par le Pokémon sont réduits de moitié.
+|-
+}
+
+== Notes et références ==
+<references group=note />
+
+[[Catégorie:Talent|*]]
+[[Catégorie:Liste]]
+
+[[de:Fähigkeit#Liste der Fähigkeiten]]
+[[en:Ability#List of Abilities]]
+[[es:Lista de habilidades]]
+[[it:Abilità#Elenco delle Abilità]]
+[[ja:とくせい一覧]]
+[[zh:特性列表]]

@@ -1,0 +1,63 @@
+{{Ruban Cristal de raid|13|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 13.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 13''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de [[Paldea]]. Il se déroulait du 27 février au 12 mars 2023, du 1<sup>er</sup> au 14 mai 2023, et du 25 décembre 2023 au 7 janvier 2024.
+
+On y trouvait des [[Serpente-Eau]] de type Téracristal [[Eau (type)|Eau]] ou des [[Vert-de-Fer]] de type Téracristal [[Psy (type)|Psy]] selon la version jouée, impossibles à capturer autrement.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|
+Serpente-Eau / type-téracristal(Eau) talent-caché(Impossible) difficulté(5) capacités(Hydrovapeur, Draco-Choc, Râle Mâle, Lance-Flammes; Zénith) notes(Exclusif Ec. Capturable une seule fois. Jamais chromatique.)
+Vert-de-Fer / type-téracristal(Psy) talent-caché(Impossible) difficulté(5) capacités(Lame Psychique, Lame Feuille, Mégacorne, Danse Lames; Champ Électrifié) notes(Exclusif Vi. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Serpente-Eau_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Santé / 3
+Téra-Éclat Eau / 2
+Téra-Éclat Eau / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Santé / 2 / 10%
+Baie Tamato / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Naïf / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Eau / 2 / 11%
+Pilule Talent / 1 / 2%
+
+Vert-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Santé / 3
+Téra-Éclat Psy / 2
+Téra-Éclat Psy / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Santé / 2 / 10%
+Baie Tamato / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Naïf / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Psy / 2 / 11%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/27.02.2023]]

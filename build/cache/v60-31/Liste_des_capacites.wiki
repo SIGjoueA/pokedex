@@ -1,0 +1,1924 @@
+Cette page liste l'intégralité des capacités présentes dans la [[série principale]] de jeux vidéo Pokémon. Ces capacités sont au nombre de {{Compteur Capacités}} (dont {{Compteur Capacités|Capacité Z}} [[Capacité Z|capacités Z]], {{Compteur Capacités|Dynamax}} [[Capacité Dynamax|capacités Dynamax]] et {{Compteur Capacités|Gigamax}} [[Capacité Gigamax|capacités Gigamax]]), et elles sont ici triées par jeu d'apparition puis par ordre alphabétique.
+
+Ce tableau présente le nom, le type et la catégorie de la capacité, qui sont à jour en fonction du jeu principal le plus récent. Différents aspects de certaines capacités ont changé au fil des jeux tel que documenté sur la [[liste des capacités modifiées]] ; pour plus de détails sur les données précises des capacités, voir leurs pages dédiées ou les listes de capacités par génération accessibles dans la section [[#Voir aussi|Voir aussi]].
+
+La colonne Index indique les numéros d'index, qui sont l'adresse interne des capacités dans les jeux.
+
+Les [[Capacité Gigamax|capacités Gigamax]] ne possèdent pas de numéro d'index.
+
+{{#invoke:Sommaire|table|
+Liste des capacités{{!}}Liste des capacités ({{Compteur Capacités}})
+>Liste des capacités{{!}}Apparues dans ''Pokémon Rouge et Bleu'' (165)
+>OA{{!}}Apparues dans ''Pokémon Or et Argent'' (86)
+>RS{{!}}Apparues dans ''Pokémon Rubis et Saphir'' (103)
+>DP{{!}}Apparues dans ''Pokémon Diamant et Perle'' (113)
+>NB{{!}}Apparues dans ''Pokémon Noir et Blanc'' (90)
+>N2B2{{!}}Apparues dans ''Pokémon Noir 2 et Blanc 2'' (2)
+>XY{{!}}Apparues dans ''Pokémon X et Y'' (55)
+>ROSA{{!}}Apparues dans ''Pokémon Rubis Oméga et Saphir Alpha'' (4)
+>SL{{!}}Apparues dans ''Pokémon Soleil et Lune'' (82)
+>USUL{{!}}Apparues dans ''Pokémon Ultra-Soleil et Ultra-Lune'' (9)
+>LGPE{{!}}Apparues dans ''Pokémon : Let's Go Pikachu et Let's Go Évoli'' (14)
+>EB{{!}}Apparues dans ''Pokémon Épée et Bouclier'' (80)
+>ISA{{!}}Apparues dans ''L'île solitaire de l'Armure'' (29)
+>TEC{{!}}Apparues dans ''Les terres enneigées de la Couronne'' (8)
+>LPA{{!}}Apparues dans ''Légendes Pokémon : Arceus'' (24)
+>EV{{!}}Apparues dans ''Pokémon Écarlate et Violet'' (50)
+>EVMT{{!}}Apparues dans ''Le Masque Turquoise'' (4)
+>EVDI{{!}}Apparues dans ''Le Disque Indigo'' (15)
+>LPZA{{!}}Apparues dans ''Légendes Pokémon : Z-A'' (2)
+Voir aussi{{!}}Voir aussi
+}}
+
+== Liste des capacités ==
+
+{| class="tableaustandard centre sortable entetefixe" width="40%"
+|-
+! width="5%" | Apparue
+! Index
+! Capacité
+! Type
+! Catégorie
+|-
+| {{Abréviation|RB}} || 090 || [[Abîme]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 151 || [[Acidarmure]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 051 || [[Acide]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 159 || [[Affûtage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 133 || [[Amnésie]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 106 || [[Armure]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 067 || [[Balayage]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 065 || [[Bec Vrille]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 036 || [[Bélier]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 047 || [[Berceuse]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 059 || [[Blizzard]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 121 || [[Bombe Œuf]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 112 || [[Bouclier (capacité)|Bouclier]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 111 || [[Boul'Armure]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 108 || [[Brouillard (capacité)|Brouillard]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 054 || [[Brume]] || {{type|glace}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 114 || [[Buée Noire]] || {{type|glace}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 061 || [[Bulles d'O]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 086 || [[Cage Éclair]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 127 || [[Cascade]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 033 || [[Charge]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 093 || [[Choc Mental]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 128 || [[Claquoir]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 164 || [[Clonage (capacité)|Clonage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 154 || [[Combo-Griffe]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 132 || [[Constriction]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 160 || [[Conversion]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 102 || [[Copie]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 130 || [[Coud'Krâne]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 029 || [[Coup d'Boule]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 015 || [[Coupe]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 013 || [[Coupe-Vent]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 158 || [[Croc de Mort]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 162 || [[Croc Fatal]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 074 || [[Croissance]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 017 || [[Cru-Ailes]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 018 || [[Cyclone]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 038 || [[Damoclès]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 083 || [[Danse Flammes]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 080 || [[Danse Fleurs]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 014 || [[Danse Lames]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 042 || [[Dard-Nuée]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 040 || [[Dard-Venin]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 126 || [[Déflagration]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 120 || [[Destruction]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 124 || [[Détritus]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 138 || [[Dévorêve]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 041 || [[Double Dard]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 024 || [[Double Pied]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 082 || [[Draco-Rage]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 135 || [[E-Coque]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 157 || [[Éboulement]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 084 || [[Éclair]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 001 || [[Écras'Face]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 023 || [[Écrasement]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 145 || [[Écume]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 032 || [[Empal'Korne]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 050 || [[Entrave]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 020 || [[Étreinte]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 153 || [[Explosion]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 087 || [[Fatal-Foudre]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 052 || [[Flammèche]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 148 || [[Flash]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 070 || [[Force]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 011 || [[Force Poigne]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 022 || [[Fouet Lianes]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 069 || [[Frappe Atlas]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 099 || [[Frénésie]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 031 || [[Furie]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 139 || [[Gaz Toxik]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 010 || [[Griffe]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 103 || [[Grincement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 142 || [[Grobisou]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 043 || [[Groz'Yeux]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 012 || [[Guillotine]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 097 || [[Hâte]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 046 || [[Hurlement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 056 || [[Hydrocanon]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 095 || [[Hypnose]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 006 || [[Jackpot]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 028 || [[Jet de Sable]] || {{type|sol}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 088 || [[Jet-Pierres]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 030 || [[Koud'Korne]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 053 || [[Lance-Flammes]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 076 || [[Lance-Soleil]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 058 || [[Laser Glace]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 122 || [[Léchouille]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 035 || [[Ligotage]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 107 || [[Lilliput]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 165 || [[Lutte]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 037 || [[Mania]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 125 || [[Massd'Os]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 027 || [[Mawashi Geri]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 072 || [[Méga-Sangsue]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 129 || [[Météores]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 118 || [[Métronome (capacité)|Métronome]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 039 || [[Mimi-Queue]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 119 || [[Mimique]] || {{type|vol}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 144 || [[Morphing]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 044 || [[Morsure]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 113 || [[Mur Lumière]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 101 || [[Ombre Nocturne]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 062 || [[Onde Boréale]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 109 || [[Onde Folie]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 155 || [[Osmerang]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 078 || [[Para-Spore]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 117 || [[Patience]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 131 || [[Picanon]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 064 || [[Picpic]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 026 || [[Pied Sauté]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 136 || [[Pied Voltige]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 140 || [[Pilonnage]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 152 || [[Pince-Masse]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 143 || [[Piqué]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 055 || [[Pistolet à O]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 034 || [[Plaquage]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 004 || [[Poing Comète]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 009 || [[Poing Éclair]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 007 || [[Poing Feu]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 008 || [[Poing Glace]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 002 || [[Poing Karaté]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 079 || [[Poudre Dodo]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 077 || [[Poudre Toxik]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 115 || [[Protection]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 094 || [[Psyko]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 116 || [[Puissance (capacité)|Puissance]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 123 || [[Purédpois]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 060 || [[Rafale Psy]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 104 || [[Reflet]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 137 || [[Regard Médusant]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 110 || [[Repli]] || {{type|eau}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 156 || [[Repos]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 068 || [[Riposte (capacité)|Riposte]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 045 || [[Rugissement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 066 || [[Sacrifice (capacité)|Sacrifice]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 081 || [[Sécrétion]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 089 || [[Séisme]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 105 || [[Soin]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 049 || [[Sonic Boom]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 021 || [[Souplesse]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 147 || [[Spore]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 057 || [[Surf]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 134 || [[Télékinésie]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 100 || [[Téléport]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 085 || [[Tonnerre]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 003 || [[Torgnoles]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 016 || [[Tornade]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 092 || [[Toxik]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 075 || [[Tranch'Herbe]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 163 || [[Tranche]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 150 || [[Trempette]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 161 || [[Triplattaque]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 091 || [[Tunnel]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 005 || [[Ultimapoing]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 025 || [[Ultimawashi]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 063 || [[Ultralaser]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 048 || [[Ultrason]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 146 || [[Uppercut]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 149 || [[Vague Psy]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RB}} || 073 || [[Vampigraine]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RB}} || 141 || [[Vampirisme]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 098 || [[Vive-Attaque]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 019 || [[Vol (capacité)|Vol]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RB}} || 071 || [[Vole-Vie]] || {{type|plante}} || {{type|spécial}}
+|-
+| id="OA" | {{Abréviation|RB}} || 096 || [[Yoga]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 182 || [[Abri]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 177 || [[Aéroblast]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 211 || [[Ailes d'Acier]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 222 || [[Ampleur]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 213 || [[Attraction (capacité)|Attraction]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 234 || [[Aurore (capacité)|Aurore]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 220 || [[Balance (capacité)|Balance]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 247 || [[Ball'Ombre]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 251 || [[Baston]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 214 || [[Blabla Dodo]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 188 || [[Bombe Beurk]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 244 || [[Boost]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 217 || [[Cadeau]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 171 || [[Cauchemar]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 198 || [[Charge Os]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 204 || [[Charme (capacité)|Charme]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 193 || [[Clairvoyance]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 187 || [[Cognobidon]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 200 || [[Colère]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 179 || [[Contre]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 176 || [[Conversion 2]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 233 || [[Corps Perdu]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 189 || [[Coud'Boue]] || {{type|sol}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 238 || [[Coup Croix]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 240 || [[Danse Pluie]] || {{type|eau}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 180 || [[Dépit]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 197 || [[Détection]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 186 || [[Doux Baiser]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 230 || [[Doux Parfum]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 225 || [[Draco-Souffle]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 223 || [[Dynamo-Poing]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 249 || [[Éclate-Roc]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 192 || [[Élecanon]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 227 || [[Encore]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 209 || [[Étincelle]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 206 || [[Faux-Chage]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 185 || [[Feinte]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 221 || [[Feu Sacré]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 218 || [[Frustration]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 202 || [[Giga-Sangsue]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 175 || [[Gigotage]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 215 || [[Glas de Soin]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 166 || [[Gribouille]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 232 || [[Griffe Acier]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 184 || [[Grimace]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 208 || [[Lait à Boire]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 168 || [[Larcin]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 194 || [[Lien du Destin]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 170 || [[Lire-Esprit]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 183 || [[Mach Punch]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 242 || [[Mâchouille]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 174 || [[Malédiction]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 224 || [[Mégacorne]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 190 || [[Octazooka]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 239 || [[Ouragan]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 191 || [[Picots]] || {{type|sol}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 181 || [[Poudreuse]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 228 || [[Poursuite]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 246 || [[Pouvoir Antique]] || {{type|roche}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 248 || [[Prescience]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 237 || [[Puissance Cachée]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 231 || [[Queue de Fer]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 236 || [[Rayon Lune]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 212 || [[Regard Noir]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 226 || [[Relais]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 195 || [[Requiem]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 216 || [[Retour]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 173 || [[Ronflement]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 172 || [[Roue de Feu]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 205 || [[Roulade]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 219 || [[Rune Protect]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 250 || [[Siphon]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 178 || [[Spore Coton]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 235 || [[Synthèse]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 210 || [[Taillade]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 201 || [[Tempête de Sable]] || {{type|roche}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 203 || [[Ténacité]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 169 || [[Toile]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 229 || [[Tour Rapide]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 167 || [[Triple Pied]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 207 || [[Vantardise]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 196 || [[Vent Glace]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|OA}} || 199 || [[Verrouillage (capacité)|Verrouillage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|OA}} || 245 || [[Vitesse Extrême]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|OA}} || 243 || [[Voile Miroir]] || {{type|psy}} || {{type|spécial}}
+|-
+| id="RS" | {{Abréviation|OA}} || 241 || [[Zénith]] || {{type|feu}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 332 || [[Aéropique]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 312 || [[Aromathérapie]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 274 || [[Assistance]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 256 || [[Avale]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 281 || [[Bâillement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 296 || [[Ball'Brume]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 301 || [[Ball'Glace]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 311 || [[Ball'Météo]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 331 || [[Balle Graine]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 335 || [[Barrage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 252 || [[Bluff]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 350 || [[Boule Roc]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 253 || [[Brouhaha]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 293 || [[Camouflage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 257 || [[Canicule (capacité)|Canicule]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 280 || [[Casse-Brique]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 268 || [[Chargeur]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 321 || [[Chatouille]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 292 || [[Cogne]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 270 || [[Coup d'Main]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 305 || [[Crochet Venin]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 313 || [[Croco Larme]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 349 || [[Danse Draco]] || {{type|dragon}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 298 || [[Danse Folle]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 297 || [[Danse Plumes]] || {{type|vol}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 337 || [[Draco-Griffe]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 285 || [[Échange (capacité)|Échange]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 306 || [[Éclate Griffe]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 283 || [[Effort]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 344 || [[Électacle]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 284 || [[Éruption]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 310 || [[Étonnement]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 326 || [[Extrasenseur]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 263 || [[Façade]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 261 || [[Feu Follet]] || {{type|feu}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 345 || [[Feuille Magik]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 316 || [[Flair]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 260 || [[Flatterie]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 290 || [[Force Cachée]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 322 || [[Force Cosmique]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 267 || [[Force Nature]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 323 || [[Giclédo]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 329 || [[Glaciation]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 339 || [[Gonflette]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 258 || [[Grêle (capacité)|Grêle]] || {{type|glace}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 336 || [[Grondement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 308 || [[Hydroblast]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 272 || [[Imitation]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 343 || [[Implore]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 348 || [[Lame Feuille]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 300 || [[Lance-Boue]] || {{type|sol}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 295 || [[Lumi-Éclat]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 294 || [[Lumi-Queue]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 304 || [[Mégaphone]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 264 || [[Mitra-Poing]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 334 || [[Mur de Fer]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 330 || [[Ocroupi]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 351 || [[Onde de Choc (capacité)|Onde de Choc]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 266 || [[Par Ici]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 303 || [[Paresse]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 299 || [[Pied Brûleur]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 347 || [[Plénitude]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 291 || [[Plongée]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 302 || [[Poing Dard]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 309 || [[Poing Météore]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 325 || [[Poing Ombre]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 286 || [[Possessif]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 269 || [[Provoc]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 354 || [[Psycho-Boost]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 342 || [[Queue-Poison]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 275 || [[Racines]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 307 || [[Rafale Feu]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 288 || [[Rancune]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 324 || [[Rayon Signal]] || {{type|insecte}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 340 || [[Rebond]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 278 || [[Recyclage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 277 || [[Reflet Magik]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 287 || [[Régénération]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 255 || [[Relâche]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 282 || [[Sabotage]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 289 || [[Saisie]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 320 || [[Siffl'Herbe]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 262 || [[Souvenir]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 333 || [[Stalactite]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 265 || [[Stimulant]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 254 || [[Stockage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 327 || [[Stratopercut]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 319 || [[Strido-Son]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 315 || [[Surchauffe]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 276 || [[Surpuissance]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 341 || [[Tir de Boue]] || {{type|sol}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 317 || [[Tomberoche]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 271 || [[Tour de Magie]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 328 || [[Tourbi-Sable]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 259 || [[Tourmente]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 346 || [[Tourniquet]] || {{type|eau}} || {{type|statut}}
+|-
+| {{Abréviation|RS}} || 314 || [[Tranch'Air]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 338 || [[Végé-Attaque]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 279 || [[Vendetta]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|RS}} || 318 || [[Vent Argenté]] || {{type|insecte}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 352 || [[Vibraqua]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|RS}} || 273 || [[Vœu]] || {{type|normal}} || {{type|statut}}
+|-
+| id="DP" | {{Abréviation|RS}} || 353 || [[Vœu Destructeur]] || {{type|acier}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 367 || [[Acupression]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 381 || [[Air Veinard]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 392 || [[Anneau Hydro]] || {{type|eau}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 432 || [[Anti-Brume]] || {{type|vol}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 377 || [[Anti-Soin]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 454 || [[Appel Attaque]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 455 || [[Appel Défense]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 456 || [[Appel Soins]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 453 || [[Aqua-Jet]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 372 || [[Assurance]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 379 || [[Astuce Force]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 376 || [[Atout]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 355 || [[Atterrissage]] || {{type|vol}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 396 || [[Aurasphère]] || {{type|combat}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 419 || [[Avalanche]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 448 || [[Babil]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 443 || [[Bombe Aimant]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 426 || [[Boue-Bombe]] || {{type|sol}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 405 || [[Bourdon]] || {{type|insecte}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 394 || [[Boutefeu]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 402 || [[Canon Graine]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 370 || [[Close Combat]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 389 || [[Coup Bas]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 435 || [[Coup d'Jus]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 458 || [[Coup Double]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 427 || [[Coupe Psycho]] || {{type|psy}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 422 || [[Crocs Éclair]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 424 || [[Crocs Feu]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 423 || [[Crocs Givre]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 461 || [[Danse Lune]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 374 || [[Dégommage]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 369 || [[Demi-Tour]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 387 || [[Dernier Recours]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 441 || [[Détricanon]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 398 || [[Direct Toxik]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 433 || [[Distorsion (capacité)|Distorsion]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 363 || [[Don Naturel]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 407 || [[Draco-Charge]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 406 || [[Draco-Choc]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 434 || [[Draco-Météore]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 436 || [[Ébullilave]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 375 || [[Échange Psy]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 420 || [[Éclats Glace]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 412 || [[Éco-Sphère]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 373 || [[Embargo]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 431 || [[Escalade]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 378 || [[Essorage]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 411 || [[Exploforce]] || {{type|combat}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 395 || [[Forte-Paume]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 457 || [[Fracass'Tête]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 368 || [[Fulmifer]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 465 || [[Fulmigraine]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 416 || [[Giga Impact]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 356 || [[Gravité]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 421 || [[Griffe Ombre]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 360 || [[Gyroballe]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 459 || [[Hurle-Temps]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 401 || [[Hydro-Queue]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 449 || [[Jugement]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 403 || [[Lame d'Air]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 444 || [[Lame de Roc]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 430 || [[Luminocanon]] || {{type|acier}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 417 || [[Machination]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 359 || [[Marto-Poing]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 452 || [[Martobois]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 438 || [[Mégafouet]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 429 || [[Miroi-Tir]] || {{type|acier}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 382 || [[Moi d'Abord]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 447 || [[Nœud Herbe]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 357 || [[Œil Miracle]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 425 || [[Ombre Portée]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 410 || [[Onde Vide]] || {{type|combat}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 415 || [[Passe-Passe]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 391 || [[Permucœur]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 384 || [[Permuforce]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 385 || [[Permugarde]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 383 || [[Photocopie]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 365 || [[Picore]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 390 || [[Pics Toxik]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 446 || [[Piège de Roc]] || {{type|roche}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 450 || [[Piqûre]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 418 || [[Pisto-Poing]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 404 || [[Plaie Croix]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 440 || [[Poison Croix]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 397 || [[Poliroche]] || {{type|roche}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 462 || [[Presse]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 428 || [[Psykoud'Boul]] || {{type|psy}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 386 || [[Punition]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 413 || [[Rapace]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 451 || [[Rayon Chargé]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 408 || [[Rayon Gemme]] || {{type|roche}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 371 || [[Représailles]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 358 || [[Réveil Forcé]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 467 || [[Revenant]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 439 || [[Roc-Boulet]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 364 || [[Ruse]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 362 || [[Saumure]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 445 || [[Séduction]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 388 || [[Soucigraine]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 460 || [[Spatio-Rift]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 380 || [[Suc Digestif]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 414 || [[Telluriforce]] || {{type|sol}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 437 || [[Tempête Verte]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 442 || [[Tête de Fer]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 400 || [[Tranche-Nuit]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 464 || [[Trou Noir]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 409 || [[Vampi-Poing]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|DP}} || 366 || [[Vent Arrière]] || {{type|vol}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 466 || [[Vent Mauvais]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 399 || [[Vibrobscur]] || {{type|ténèbres}} || {{type|spécial}}
+|-
+| {{Abréviation|DP}} || 361 || [[Vœu Soin]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|DP}} || 393 || [[Vol Magnétik]] || {{type|électrik}} || {{type|statut}}
+|-
+| id="NB" | {{Abréviation|DP}} || 463 || [[Vortex Magma]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 511 || [[À la Queue]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 555 || [[Aboiement]] || {{type|ténèbres}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 512 || [[Acrobatie]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 468 || [[Aiguisage]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 518 || [[Aire d'Eau]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 520 || [[Aire d'Herbe]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 519 || [[Aire de Feu]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 475 || [[Allègement]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 479 || [[Anti-Air]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 495 || [[Après Vous]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 498 || [[Attrition]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 499 || [[Bain de Smog]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 490 || [[Balayette]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 491 || [[Bombe Acide]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 486 || [[Boule Élek]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 537 || [[Bulldoboule]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 510 || [[Calcination]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 521 || [[Change-Éclair]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 508 || [[Change-Vitesse]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 547 || [[Chant Antique]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 496 || [[Chant Canon]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 550 || [[Charge Foudre]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 506 || [[Châtiment]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 473 || [[Choc Psy]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 474 || [[Choc Venin]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 556 || [[Chute Glace]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 507 || [[Chute Libre]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 513 || [[Copie-Type]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 534 || [[Coqui-Lame]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 538 || [[Cotogarde]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 557 || [[Coup Victoire]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 482 || [[Cradovague]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 531 || [[Crève-Cœur]] || {{type|psy}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 552 || [[Danse du Feu]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 487 || [[Détrempage]] || {{type|eau}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 530 || [[Double Baffe]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 525 || [[Draco-Queue]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 503 || [[Ébullition]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 497 || [[Écho (capacité)|Écho]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 559 || [[Éclair Croix]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 528 || [[Éclair Fou]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 532 || [[Encornebois]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 489 || [[Enroulement]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 549 || [[Ère Glaciaire]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 539 || [[Explonuit]] || {{type|ténèbres}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 504 || [[Exuviation]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 517 || [[Feu d'Enfer]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 551 || [[Flamme Bleue]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 558 || [[Flamme Croix]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 500 || [[Force Ajoutée]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 540 || [[Frappe Psy]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 469 || [[Garde Large]] || {{type|roche}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 545 || [[Incendie (capacité)|Incendie]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 502 || [[Interversion]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 548 || [[Lame Ointe]] || {{type|combat}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 533 || [[Lame Sainte]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 544 || [[Lancécrou]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 477 || [[Lévikinésie]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 488 || [[Nitrocharge]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 483 || [[Papillodanse]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 471 || [[Partage Force]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 470 || [[Partage Garde]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 516 || [[Passe-Cadeau]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 543 || [[Peignée]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 536 || [[Phytomixeur]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 523 || [[Piétisol]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 541 || [[Plumo-Queue]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 476 || [[Poudre Fureur]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 501 || [[Prévention]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 509 || [[Projection]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 493 || [[Rayon Simple]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 481 || [[Rebondifeu]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 526 || [[Rengorgement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 524 || [[Souffle Glacé]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 522 || [[Survinsecte]] || {{type|insecte}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 485 || [[Synchropeine]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 535 || [[Tacle Feu]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 484 || [[Tacle Lourd]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 546 || [[Techno Buster]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 494 || [[Ten-Danse]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 527 || [[Toile Élek]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 515 || [[Tout ou Rien]] || {{type|combat}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 492 || [[Tricherie]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 529 || [[Tunnelier]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 514 || [[Vengeance]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 542 || [[Vent Violent]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|NB}} || 505 || [[Vibra Soin]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|NB}} || 480 || [[Yama Arashi]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|NB}} || 472 || [[Zone Étrange]] || {{type|psy}} || {{type|statut}}
+|-
+| id="N2B2" | {{Abréviation|NB}} || 478 || [[Zone Magique]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|N2B2}} || 553 || [[Éclair Gelé]] || {{type|glace}} || {{type|physique}}
+|-
+| id="XY" | {{Abréviation|N2B2}} || 554 || [[Feu Glacé]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 586 || [[Bang Sonique]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 588 || [[Bouclier Royal]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 597 || [[Brume Capiteuse]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 583 || [[Câlinerie]] || {{type|fée}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 589 || [[Camaraderie]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 606 || [[Célébration]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 581 || [[Champ Brumeux]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 604 || [[Champ Électrifié]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 580 || [[Champ Herbu]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 590 || [[Confidence]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 565 || [[Dard Mortel]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 569 || [[Déluge Plasmique]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 575 || [[Dernier Mot]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 605 || [[Éclat Magique]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 582 || [[Électrisation]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 562 || [[Éructation]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 603 || [[Étrennes]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 563 || [[Fertilisation]] || {{type|sol}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 595 || [[Feu Ensorcelé]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 560 || [[Flying Press]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 616 || [[Force Chtonienne]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 609 || [[Frotte-Frimousse]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 579 || [[Garde Florale]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 601 || [[Géo-Contrôle]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 567 || [[Halloween]] || {{type|spectre}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 566 || [[Hantise]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 611 || [[Harcèlement]] || {{type|insecte}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 592 || [[Jet de Vapeur]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 573 || [[Lyophilisation]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 602 || [[Magné-Contrôle]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 607 || [[Mains Jointes]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 571 || [[Maléfice Sylvain]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 613 || [[Mort'Ailes]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 600 || [[Nuée de Poudre]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 598 || [[Ondes Étranges]] || {{type|électrik}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 591 || [[Orage Adamantin]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 570 || [[Parabocharge]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 596 || [[Pico-Défense]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 599 || [[Piège de Venin]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 612 || [[Poing Boost]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 585 || [[Pouvoir Lunaire]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 568 || [[Râle Mâle]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 608 || [[Regard Touchant]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 576 || [[Renversement]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 610 || [[Retenue]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 594 || [[Sheauriken]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 561 || [[Tatamigaeshi]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 572 || [[Tempête Florale]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|XY}} || 564 || [[Toile Gluante]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 593 || [[TrouDimensionnel]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 577 || [[Vampibaiser]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 584 || [[Vent Féérique]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|XY}} || 587 || [[Verrou Enchanté]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|XY}} || 578 || [[Vigilance]] || {{type|fée}} || {{type|statut}}
+|-
+| id="ROSA" | {{Abréviation|XY}} || 574 || [[Voix Enjôleuse]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|ROSA}} || 620 || [[Draco-Ascension]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|ROSA}} || 621 || [[Furie Dimension]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|ROSA}} || 619 || [[Lame Pangéenne]] || {{type|sol}} || {{type|physique}}
+|-
+| id="SL" | {{Abréviation|ROSA}} || 618 || [[Onde Originelle]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 673 || [[Affilage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 659 || [[Amass'Sable]] || {{type|sol}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 677 || [[Ancrage]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 632-633 || [[Apocalypse Gigalithique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|roche}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 636-637 || [[Appel des Ombres Éternelles]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|spectre}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 710 || [[Aqua-Brèche]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 664 || [[Aria de l'Écume]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 681 || [[Arrogance]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 690 || [[Bec-Canon]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 661 || [[Blockhaus]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 688 || [[Botte Sucrette]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 676 || [[Boule Pollen]] || {{type|insecte}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 705 || [[Canon Floral]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 704 || [[Carapiège]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 667 || [[Cavalerie Lourde]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 693 || [[Centrifugifle]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 678 || [[Champ Psychique]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 652-653 || [[Chaos Draconique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|dragon}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 713 || [[Choc Météore]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 712 || [[Clepto-Mânes]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 634-635 || [[Cocon Fatal]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|insecte}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 698 || [[Colère du Gardien d'Alola]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 624-625 || [[Combo Hyper-Furie]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|combat}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 718 || [[Coup Varia-Type]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 686 || [[Danse Éveil]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 696 || [[Dark Body Press]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 663 || [[Dark Lariat]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 628-629 || [[Déluge Causti-Toxique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|poison}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 692 || [[Draco-Marteau]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 716 || [[Électrikipik]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 700 || [[Électro-Surf Survolté]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 674 || [[Engrenage]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 630-631 || [[Éruption Géo-Sismique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|sol}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 660 || [[Escarmouche]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 684 || [[Estocorne]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 675 || [[Exécu-Son]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 699 || [[Fauche-Âme des Sept Étoiles]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 670 || [[Feuillage]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 672 || [[Fil Toxique]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 682 || [[Flamme Ultime]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 680 || [[Fouet de Feu]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 646-647 || [[Fulguro-Lance Gigavolt]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|électrik}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 695 || [[Fureur des Plumes Spectrales]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 679 || [[Furie-Bond]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 701 || [[Gare au Ronflex]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 719 || [[Giga-Tonnerre]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 656-657 || [[Impact Choupinova]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|fée}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 717 || [[Ire de la Nature]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 669 || [[Lame Solaire]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 715 || [[Larme à l'Œil]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 650-651 || [[Laser Cryogénique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|glace}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 711 || [[Laser Prisme]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 665 || [[Marteau de Glace]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 614 || [[Myria-Flèches]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 615 || [[Myria-Vagues]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 702 || [[Neuf pour Un]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 708 || [[Os Ombre]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 683 || [[Permuvitesse]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 644-645 || [[Pétalexplosion Éblouissante]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|plante}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 658 || [[Pikachute Foudroyante]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 626-627 || [[Piqué Supersonique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|vol}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 671 || [[Projecteur]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 706 || [[Psycho-Croc]] || {{type|psy}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 648-649 || [[Psycho-Pulvérisation EX]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|psy}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 685 || [[Purification (capacité)|Purification]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 640-641 || [[Pyro-Explosion Cataclysmique]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|feu}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 714 || [[Rayon Spectral]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 687 || [[Sanction Suprême]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 666 || [[Soin Floral]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 689 || [[Sommation]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 642-643 || [[Super Tourbillon Abyssal]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 703 || [[Supernova Originelle]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 697 || [[Symphonie des Ondines]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 662 || [[Tisse Ombre]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 707 || [[Trépignement]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 654-655 || [[Trou Noir des Ombres]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|ténèbres}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 622-623 || [[Turbo-Charge Bulldozer]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|normal}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 691 || [[Vibrécaille]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|SL}} || 709 || [[Vif Roc]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|SL}} || 694 || [[Voile Aurore]] || {{type|glace}} || {{type|statut}}
+|-
+| {{Abréviation|SL}} || 668 || [[Vole-Force]] || {{type|plante}} || {{type|statut}}
+|-
+| id="USUL" | {{Abréviation|SL}} || 638-639 || [[Vrille Maximum]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|acier}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|USUL}} || 723 || [[Apocalypsis Luminis]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|USUL}} || 720 || [[Caboche-Kaboum]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|USUL}} || 728 || [[Dracacophonie Flamboyante]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|USUL}} || 724 || [[Hélio-Choc Dévastateur]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|USUL}} || 727 || [[Hurlement des Roches-Lames]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|USUL}} || 726 || [[Patati-Patattrape]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|fée}} || {{type|physique}}
+|-
+| {{Abréviation|USUL}} || 722 || [[Photo-Geyser]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|USUL}} || 721 || [[Plasma Punch]] || {{type|électrik}} || {{type|physique}}
+|-
+| id="LGPE" | {{Abréviation|USUL}} || 725 || [[Rayons Séléno-Explosifs]] [[Fichier:Miniature Capacité Z SL.png|25px|Capacité Z]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 742 || [[Écrous d'Poing]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|LGPE}} || 741 || [[Évo-Chardasso]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|LGPE}} || 739 || [[Évo-Congélo]] || {{type|glace}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 734 || [[Évo-Dynamo]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 738 || [[Évo-Écolo]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|LGPE}} || 740 || [[Évo-Fabulo]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 735 || [[Évo-Flambo]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|LGPE}} || 736 || [[Évo-Psycho]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 737 || [[Évo-Ténébro]] || {{type|ténèbres}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 733 || [[Évo-Thalasso]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 732 || [[Pika-Fracas]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|LGPE}} || 731 || [[Pika-Piqué]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|LGPE}} || 730 || [[Pika-Splash]] || {{type|eau}} || {{type|spécial}}
+|-
+| id="EB" | {{Abréviation|LGPE}} || 729 || [[Pika-Sprint]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 784 || [[Abattage]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 787 || [[Acide Malique]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 782 || [[Aegis Maxima]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 766 || [[Aéromax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|vol}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 780 || [[Ballon Brûlant]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 776 || [[Big Splash]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 792 || [[Blocage (capacité)|Blocage]] || {{type|ténèbres}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 755 || [[Branchicrok]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Bulles G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Câlin G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|normal}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 744 || [[Canon Dynamax]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 756 || [[Change-Côté]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 789 || [[Choc Émotionnel]] || {{type|fée}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Choc G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|électrik}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Combustion G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|feu}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Corrosion G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|plante}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 746 || [[Croque Fort]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 763 || [[Cryomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|glace}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Cure G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|fée}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 775 || [[Dracacophonie]] || {{type|dragon}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 751 || [[Draco-Flèches]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 768 || [[Dracomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|dragon}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 767 || [[Enchantomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|fée}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Enlisement G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|sol}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 791 || [[Fontaine de Vie]] || {{type|eau}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Fonte G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|acier}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 788 || [[Force G]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Foudre G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|électrik}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 793 || [[Fourbette]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Fournaise G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|feu}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Frappe G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|combat}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 759 || [[Fulguromax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|électrik}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 747 || [[Garde-à-Joues]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 743 || [[Gardomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 781 || [[Gladius Maximus]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 749 || [[Goudronnage]] || {{type|roche}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Hantise G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|spectre}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 765 || [[Hydromax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Illusion G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|insecte}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 758 || [[Insectomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|insecte}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 794 || [[Joute Astrale]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 795 || [[Laser Infinimax]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 770 || [[Lithomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|roche}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 796 || [[Métalaser]] || {{type|acier}} || {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 774 || [[Métallomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|acier}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 777 || [[Nappage]] || {{type|fée}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Nectar G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|plante}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 760 || [[Normalomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|normal}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 753 || [[Octoprise]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Ondes G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|psy}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 786 || [[Overdrive (capacité)|Overdrive]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Pactole G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|normal}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Percée G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|acier}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Pestilence G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|poison}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 773 || [[Phytomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|plante}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 750 || [[Poudre Magique]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 754 || [[Prise de Bec]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 769 || [[Psychomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|psy}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 761 || [[Pugilomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|combat}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 757 || [[Pyromax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|feu}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Rafale G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|vol}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Récif G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Récolte G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|normal}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Résonance G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|glace}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 782 || [[Roue Libre]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Sentence G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|fée}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 772 || [[Sinistromax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|ténèbres}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 771 || [[Sismomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|sol}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 762 || [[Spectromax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|spectre}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 778 || [[Tambour Battant]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 785 || [[Tapotige]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Téphra G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|roche}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 752 || [[Thérémonie]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || 745 || [[Tir de Précision]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Torpeur G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|ténèbres}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 764 || [[Toxinomax]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Dynamax]] || {{type|poison}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|EB}} || 779 || [[Troquenard]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|EB}} || 748 || [[Ultime Bastion]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|EB}} || data-sort-value="9999" | — || [[Usure G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|dragon}} || {{type|physique}} {{type|spécial}}
+|-
+| id="ISA" | {{Abréviation|EB}} || 790 || [[Vapeur Féérique]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Canonnade G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 808 || [[Cent Rancunes]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 805 || [[Champlification]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 811 || [[Coaching]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Coup Final G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|ténèbres}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 814 || [[Double Volée]] || {{type|vol}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 812 || [[Eau Revoir]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 809 || [[Esprit Frappeur]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 802 || [[Explo-Brume]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 807 || [[Feu Envieux]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Fouet G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|plante}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Gâchette G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 810 || [[Gaz Corrosif]] || {{type|poison}} || {{type|statut}}
+|-
+| {{Abréviation|ISA}} || 803 || [[Gliss'Herbe]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 801 || [[Kokiyarme]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 800 || [[Laser Météore]] || {{type|roche}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 798 || [[Métalliroue]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 804 || [[Monte-Tension]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Multicoup G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|eau}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Percussion G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|plante}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 817 || [[Poing Obscur]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || data-sort-value="9999" | — || [[Pyroball G-Max]] [[Fichier:Miniature Gigamax EB.png|25px|Capacité Gigamax]] || {{type|feu}} || {{type|physique}} {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 799 || [[Rafale Écailles]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 806 || [[Ravage Rampant]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 815 || [[Sable Ardent]] || {{type|sol}} || {{type|spécial}}
+|-
+| {{Abréviation|ISA}} || 816 || [[Selve Salvatrice]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|ISA}} || 818 || [[Torrent de Coups]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|ISA}} || 813 || [[Triple Axel]] || {{type|glace}} || {{type|physique}}
+|-
+| id="TEC" | {{Abréviation|ISA}} || 797 || [[Vaste Pouvoir]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|TEC}} || 823 || [[Coup Fulgurant]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|TEC}} || 820 || [[Draco-Énergie]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|TEC}} || 825 || [[Éclat Spectral]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|TEC}} || 822 || [[Fureur Ardente]] || {{type|ténèbres}} || {{type|spécial}}
+|-
+| {{Abréviation|TEC}} || 824 || [[Lance de Glace]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|TEC}} || 821 || [[Regard Glaçant]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|TEC}} || 826 || [[Sort Sinistre]] || {{type|psy}} || {{type|spécial}}
+|-
+| id="LPA" | {{Abréviation|TEC}} || 819 || [[Voltageôle]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 840 || [[Ailes Psycho]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 834 || [[Aquatacle]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 838 || [[Assaut Frontal]] || {{type|sol}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 836 || [[Bise Glaciaire]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 841 || [[Cœur de Rancœur]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 844 || [[Cortège Funèbre]] || {{type|spectre}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 837 || [[Danse Victoire]] || {{type|combat}} || {{type|statut}}
+|-
+| {{Abréviation|LPA}} || 829 || [[Échange Force]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|LPA}} || 850 || [[Extravaillance]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|LPA}} || 832 || [[Force Mystique]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 833 || [[Grand Courroux]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 827 || [[Griffes Funestes]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 830 || [[Hache de Pierre]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 835 || [[Herblast]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 839 || [[Multitoxik]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 842 || [[Mur Fumigène]] || {{type|acier}} || {{type|statut}}
+|-
+| {{Abréviation|LPA}} || 849 || [[Prière Lunaire]] || {{type|psy}} || {{type|statut}}
+|-
+| {{Abréviation|LPA}} || 828 || [[Sprint Bouclier]] || {{type|psy}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 843 || [[Triple Flèche]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|LPA}} || 847 || [[Typhon Fulgurant]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 846 || [[Typhon Hivernal]] || {{type|vol}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 831 || [[Typhon Passionné]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|LPA}} || 848 || [[Typhon Pyrosable]] || {{type|sol}} || {{type|spécial}}
+|-
+| id="EV" | {{Abréviation|LPA}} || 845 || [[Vagues à Lames]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 884 || [[Bond]] || {{type|insecte}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 890 || [[Canon Blindé]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 877 || [[Cataclysme]] || {{type|ténèbres}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 871 || [[Chant Flamboyant]] || {{type|feu}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 862 || [[Charge Glaive]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 883 || [[Chute de Neige]] || {{type|glace}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 896 || [[Crash Brûlant]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 900 || [[Crash Magique]] || {{type|fée}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 899 || [[Crash Musclé]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 897 || [[Crash Obscur]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 898 || [[Crash Toxique]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 861 || [[Cryo-Pirouette]] || {{type|glace}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 872 || [[Danse Aquatique]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 867 || [[Décalquage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 868 || [[Décharnement]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 859 || [[Dérapage]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 885 || [[Désherbaffe]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 892 || [[Double Décharge]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 888 || [[Double Laser]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 886 || [[Douche Froide]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 869 || [[Génusection]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 882 || [[Grand Nettoyage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 858 || [[Habanerage]] || {{type|plante}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 854 || [[Hommage Posthume]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 876 || [[Hydrovapeur]] || {{type|eau}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 887 || [[Hyperceuse]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 891 || [[Lame en Peine]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 875 || [[Lame Psychique]] || {{type|psy}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 855 || [[Lumino-Impact]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 870 || [[Magie Florale]] || {{type|plante}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 893 || [[Marteau Mastoc]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 881 || [[Neigeux de Mots]] || {{type|glace}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 878 || [[Nitro Crash]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 852 || [[Piège de Fil]] || {{type|insecte}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 856 || [[Plat du Jour]] || {{type|dragon}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 889 || [[Poing de Colère]] || {{type|spectre}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 857 || [[Poing Sonique]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 860 || [[Prolifération]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 880 || [[Queulonage]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 874 || [[Ruée d'Or]] || {{type|acier}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 864 || [[Salaison]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 863 || [[Second Souffle]] || {{type|normal}} || {{type|statut}}
+|-
+| {{Abréviation|EV}} || 853 || [[Talon-Marteau]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 873 || [[Taurogne]] || {{type|normal}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 851 || [[Téra Explosion]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|EV}} || 866 || [[Toupie Éclat]] || {{type|poison}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 895 || [[Tranch'Aqua]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 865 || [[Triple Plongeon]] || {{type|eau}} || {{type|physique}}
+|-
+| {{Abréviation|EV}} || 879 || [[Turbo Volt]] || {{type|électrik}} || {{type|spécial}}
+|-
+| id="EVMT" | {{Abréviation|EV}} || 894 || [[Vindicte]] || {{type|ténèbres}} || {{type|physique}}
+|-
+| {{Abréviation|EVMT}} || 903 || [[Bombe au Sirop]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|EVMT}} || 901 || [[Lune Rouge]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|EVMT}} || 904 || [[Massue Liane]] || {{type|plante}} || {{type|physique}}
+|-
+| id="EVDI" | {{Abréviation|EVMT}} || 902 || [[Mortier Matcha]] || {{type|plante}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 919 || [[Chaîne Malsaine]] || {{type|poison}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 913 || [[Cri Draconique]] || {{type|dragon}} || {{type|statut}}
+|-
+| {{Abréviation|EVDI}} || 917 || [[Dissonance Psy]] || {{type|psy}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 905 || [[Fulgurayon]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 915 || [[Indignition]] || {{type|feu}} || {{type|physique}}
+|-
+| {{Abréviation|EVDI}} || 910 || [[Lame Puissante]] || {{type|roche}} || {{type|physique}}
+|-
+| {{Abréviation|EVDI}} || 911 || [[Lame Tachyonique]] || {{type|acier}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 907 || [[Laser Hasard]] || {{type|dragon}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 906 || [[Pluie Térastrale]] || {{type|normal}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 912 || [[Pression Extrême]] || {{type|acier}} || {{type|physique}}
+|-
+| {{Abréviation|EVDI}} || 918 || [[Prio-Parade]] || {{type|combat}} || {{type|physique}}
+|-
+| {{Abréviation|EVDI}} || 908 || [[Rempart Brûlant]] || {{type|feu}} || {{type|statut}}
+|-
+| {{Abréviation|EVDI}} || 909 || [[Vif Éclair]] || {{type|électrik}} || {{type|spécial}}
+|-
+| {{Abréviation|EVDI}} || 914 || [[Voix Envoûtante]] || {{type|fée}} || {{type|spécial}}
+|-
+| id="LPZA" | {{Abréviation|EVDI}} || 916 || [[Volt Assaut]] || {{type|électrik}} || {{type|physique}}
+|-
+| {{Abréviation|LPZA}} || 617 || [[Lumière du Néant]] || {{type|fée}} || {{type|spécial}}
+|-
+| {{Abréviation|LPZA}} || 920 || [[Lux Nihilum]] || {{type|dragon}} || {{type|spécial}}
+|}
+
+== Voir aussi ==
+{{Listes des capacités}}
+
+[[Catégorie:Liste de capacités|*]]
+
+[[de:Attacken-Liste]]
+[[en:List of moves]]
+[[es:Lista de movimientos]]
+[[it:Elenco mosse]]
+[[ja:わざ一覧 (第七世代)]]
+[[zh:招式列表]]

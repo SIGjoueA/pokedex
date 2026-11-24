@@ -1,0 +1,50 @@
+{{Ruban Cristal de raid|41|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 41.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 41''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 28 février au 5 mars 2024 et du 9 au 15 janvier 2026.
+
+On y trouvait des [[Florizarre]] de type Téracristal [[Sol (type)|Sol]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Florizarre / type-téracristal(Sol) talent-caché(Toujours) difficulté(7) capacités(Telluriforce, Bombe Beurk, Giga-Sangsue, Amnésie; Zénith, Croissance, Tempête Florale) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Florizarre_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Zinc / 5
+Téra-Éclat Sol / 20
+Téra-Éclat Sol / 10 / hôte
+CT Sol, CT133, Telluriforce / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 13%
+Bonbon Exp. L / 5 / 16%
+Super Bonbon / 2 / 8%
+Bonbon Exp. XL / 2 / 5%
+Zinc / 5 / 8%
+Morceau d'Étoile / 2 / 8%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Sol / 10 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/28.02.2024]]

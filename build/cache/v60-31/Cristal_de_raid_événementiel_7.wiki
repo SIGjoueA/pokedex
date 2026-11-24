@@ -1,0 +1,150 @@
+{{Ruban Cristal de raid|7|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 7.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 7''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 20 au 23 janvier 2023.
+
+On y trouvait des [[Grodrive]] ou des [[Magirêve]] selon la version, dont certains d'un type Téracristal en particulier.
+
+__TOC__
+
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Grodrive / talent-caché(Possible) difficulté(4) capacités(Vole-Force, Ball'Ombre, Stockage, Représailles) notes(Exclusif Ec.) / talent-caché(Possible) difficulté(5) capacités(Tranch'Air, Ball'Ombre, Stockage, Vole-Force; Vent Arrière) notes(Exclusif Ec.) / type-téracristal(Ténèbres) talent-caché(Possible) difficulté(5) capacités(Tranch'Air, Ball'Ombre, Stockage, Vole-Force; Vent Arrière) notes(Exclusif Ec.)
+Magirêve / talent-caché(Impossible) difficulté(4) capacités(Feu Ensorcelé, Croco Larme, Châtiment, Onde Folie; Machination) notes(Exclusif Vi.) / talent-caché(Impossible) difficulté(5) capacités(Feu Ensorcelé, Croco Larme, Ball'Ombre, Rayon Gemme; Machination) notes(Exclusif Vi.) / type-téracristal(Spectre) talent-caché(Impossible) difficulté(5) capacités(Feu Ensorcelé, Croco Larme, Ball'Ombre, Rayon Gemme; Machination) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Grodrive_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Gaz de Baudrive / 4
+Plume Santé / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Résin / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Gaz de Baudrive / 2 / 9%
+
+Grodrive_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Gaz de Baudrive / 5
+Plume Santé / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Santé / 2 / 10%
+Baie Résin / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Gaz de Baudrive / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Grodrive_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Gaz de Baudrive / 5
+Plume Santé / 3
+Téra-Éclat Ténèbres / 2
+Téra-Éclat Ténèbres / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Santé / 2 / 10%
+Baie Résin / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Ténèbres / 1 / 4%
+Gaz de Baudrive / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Magirêve_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Larme de Feuforêve / 4
+Plume Sprint / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Sprint / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Larme de Feuforêve / 2 / 9%
+
+Magirêve_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Larme de Feuforêve / 5
+Plume Sprint / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Sprint / 2 / 10%
+Baie Alga / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Larme de Feuforêve / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Magirêve_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Larme de Feuforêve / 5
+Plume Sprint / 3
+Téra-Éclat Spectre / 2
+Téra-Éclat Spectre / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Sprint / 2 / 10%
+Baie Alga / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Spectre / 1 / 4%
+Larme de Feuforêve / 2 / 5%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/20.01.2023]]

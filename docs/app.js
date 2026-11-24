@@ -1032,7 +1032,9 @@ function renderRaids() {
   const gi = RAIDS.g.indexOf(g), bitF = RV.s ? raidBit(RV.s) : 0;
   const tabs = RAIDS.g.map(id => `<button type="button" class="chip rchip" data-rg="${id}" aria-pressed="${id === g}" aria-label="${esc(RAID_LONG[id])}">${esc(RAID_SHORT[id])}</button>`).join('');
   const st = ['', ...stars].map(s => `<button type="button" class="chip rchip" data-rvs="${s}" aria-pressed="${RV.s === s}">${s === '' ? 'Toutes' : s === 'exp' ? 'Expédition' : s + '★'}</button>`).join('');
-  const starOrder = RV.s ? [RV.s] : stars;
+  const isEV = g === 'sv' || g === 'svmask' || g === 'svdisk';
+  const showT7 = isEV && TERA7 && TERA7.raids && (!RV.s || RV.s === '7');
+  const starOrder = RV.s === '7' ? [] : (RV.s ? [RV.s] : stars.filter(s => s !== '7'));
   const sections = [];
   for (const s of starOrder) {
     const bit = raidBit(s), locMap = new Map();
@@ -1058,7 +1060,8 @@ function renderRaids() {
   };
   let body = `<div class="rkwrap rvwrap"><div class="rvctl"><p class="note rvlbl">Raids ${esc(kind)} — ${esc(RAID_LONG[g])}</p><div class="chips rvgames" role="tablist" aria-label="Jeu">${tabs}</div><div class="chips rvstars" role="group" aria-label="Étoiles">${st}</div></div>`;
   const shown = sections.filter(sec => sec.n);
-  if (!shown.length) body += '<p class="empty">Aucun raid ne correspond à ce filtre.</p>';
+  if (!shown.length && !showT7) body += '<p class="empty">Aucun raid ne correspond à ce filtre.</p>';
+  if (showT7) body += tera7ViewHTML(g);
   for (const sec of shown) {
     const label = sec.s === 'exp' ? 'Expédition Dynamax' : sec.s + '★';
     const open = RV.s || shown.length <= 2 ? ' open' : (sec.s === '5' || sec.s === '6' ? ' open' : '');
@@ -1075,7 +1078,7 @@ function renderRaids() {
   if (g === 'sv') notes.push('Étoiles possibles selon l’avancement de votre histoire (Paldea) : début → 1–2★ ; 3 Badges → 1–3★ ; 6 Badges → 1–4★ ; après le générique → 3–5★ ; après le premier Grand Tournoi de l’Académie → 3–5★. Les raids 6★ : un par jour, après ce tournoi et 10 raids 4★ réussis.');
   if (g === 'sv' || g === 'svmask' || g === 'svdisk') notes.push('Sauf indication, le type Téra est aléatoire. « Téra par défaut » = un type naturel du Pokémon.');
   if (g === 'swcrown') notes.push('L’Expédition Dynamax se lance depuis le Grand Antre Dynamax des Terres Enneigées de la Couronne.');
-  notes.push('Les taux, les IV garantis et le détail de chaque antre figurent sur la fiche du Pokémon. Raids événementiels (en grisé) : depuis le 1er novembre 2022, ils pouvaient remplacer n’importe quel antre. Les raids 7★ d’événement seront traités à part.');
+  notes.push('Les taux, les IV garantis et le détail de chaque antre figurent sur la fiche du Pokémon. Raids événementiels (en grisé) : depuis le 1er novembre 2022, ils pouvaient remplacer n’importe quel antre. Les raids 7★ d’Écarlate / Violet ont leur propre section : terminés en grisé, en cours ou à venir mis en avant.');
   notes.push((g === 'sv' || g === 'svmask' || g === 'svdisk')
     ? 'Listes : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid.'
     : 'Antres, lettres et taux : <a href="https://www.pokepedia.fr/Antre_de_Pok%C3%A9mon" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des antres et des zones.');
@@ -1763,9 +1766,9 @@ const TERA_G = { sv: 'Écarlate / Violet', svmask: 'Masque Turquoise', svdisk: '
 const RAID_GAME = new Set(['sw', 'swisle', 'swcrown', 'sv', 'svmask', 'svdisk']);
 const RAID_SHORT = { sw: 'ÉB', swisle: 'Isolarmure', swcrown: 'Couronneige', sv: 'ÉV', svmask: 'Turquoise', svdisk: 'Indigo' };
 const RAID_LONG = { ...RAID_G, ...TERA_G };
-const STAR_EXP = 1 << 6, STAR_RARE = 1 << 7;
-const raidBit = s => s === 'exp' ? (STAR_EXP | STAR_RARE) : (/^[1-6]$/.test(s) ? 1 << (+s - 1) : 0);
-let RAIDS = null, RAIDS_P = null, RAID_F = null;
+const STAR_EXP = 1 << 6, STAR_RARE = 1 << 7, STAR_7 = 1 << 8;
+const raidBit = s => s === 'exp' ? (STAR_EXP | STAR_RARE) : (s === '7' ? STAR_7 : (/^[1-6]$/.test(s) ? 1 << (+s - 1) : 0));
+let RAIDS = null, RAIDS_P = null, RAID_F = null, TERA7 = null;
 let fromRaids = false, raidScroll = 0, raidBack = '#/raids';
 const RV = { g: '', s: '' };
 function buildRaidF(d) {
@@ -1775,8 +1778,91 @@ function buildRaidF(d) {
 }
 async function loadRaids() {
   if (RAIDS_P) return RAIDS_P;
-  RAIDS_P = getJSON('data/raids.json').then(d => { RAIDS = d; buildRaidF(d); return d; }).catch(e => { RAIDS_P = null; RAIDS = false; throw e; });
+  RAIDS_P = Promise.all([
+    getJSON('data/raids.json'),
+    getJSON('data/tera7.json').catch(() => null)
+  ]).then(([d, t7]) => { RAIDS = d; TERA7 = t7 || false; buildRaidF(d); applyTera7Bits(t7); return d; }).catch(e => { RAIDS_P = null; RAIDS = false; TERA7 = false; throw e; });
   return RAIDS_P;
+}
+function applyTera7Bits(t7) {
+  if (!t7 || !t7.raids || !RAID_F) return;
+  for (const r of t7.raids) {
+    const rec = (RAID_F[r.k] ||= {});
+    for (const g of ['sv', 'svmask', 'svdisk']) rec[g] = (rec[g] || 0) | STAR_7;
+  }
+}
+function todayISO() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+function tera7Of(k) { return (TERA7 && TERA7.raids || []).filter(r => r.k === k); }
+function tera7WinStatus(w, today) { return (w.s <= today && today <= w.e) ? 'now' : (w.s > today ? 'soon' : 'past'); }
+function tera7RaidStatus(r, today) {
+  const st = (r.windows || []).map(w => tera7WinStatus(w, today));
+  return st.includes('now') ? 'now' : (st.includes('soon') ? 'soon' : 'past');
+}
+function fmtT7Range(s, e) {
+  const months = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+  const [ys, ms, ds] = s.split('-').map(Number), [ye, me, de] = e.split('-').map(Number);
+  if (ys === ye && ms === me) return `${ds}–${de} ${months[ms - 1]} ${ys}`;
+  if (ys === ye) return `${ds} ${months[ms - 1]} – ${de} ${months[me - 1]} ${ys}`;
+  return `${ds} ${months[ms - 1]} ${ys} – ${de} ${months[me - 1]} ${ye}`;
+}
+function tera7HTML(k) {
+  const L = tera7Of(k); if (!L.length) return { html: '', rows: 0 };
+  const today = todayISO();
+  const blocks = L.map(r => {
+    const st = tera7RaidStatus(r, today);
+    const live = (r.windows || []).filter(w => tera7WinStatus(w, today) !== 'past');
+    const old = (r.windows || []).filter(w => tera7WinStatus(w, today) === 'past');
+    let dates = '';
+    if (live.length) {
+      const lab = live.some(w => tera7WinStatus(w, today) === 'now') ? 'En cours' : 'À venir';
+      dates += `<div class="ms"><b>${lab} :</b> ${live.map(w => esc(fmtT7Range(w.s, w.e))).join(' · ')}</div>`;
+      if (old.length) dates += `<div class="ms">Aussi : ${old.map(w => esc(fmtT7Range(w.s, w.e))).join(' · ')}</div>`;
+    } else if (old.length) dates += `<div class="ms">Terminé : ${old.map(w => esc(fmtT7Range(w.s, w.e))).join(' · ')}</div>`;
+    let tal = r.talent ? esc(r.talent) : '';
+    if (tal && r.ha === 'Toujours') tal += ' (talent caché)';
+    else if (tal && r.ha === 'Possible') tal += ' (talent caché possible)';
+    const meta = [tal ? `Talent : ${tal}` : '', r.nature ? `Nature : ${esc(r.nature)}` : ''].filter(Boolean).join(' · ');
+    const moves = (r.moves || []).map(m => r.feat && m === r.feat ? `<b>${esc(m)}</b>` : esc(m)).join(', ');
+    const raidM = (r.raidMoves || []).length ? `<div class="ms">En raid : ${r.raidMoves.map(esc).join(', ')}</div>` : '';
+    const bits = [
+      r.mark ? r.mark + '.' : '',
+      r.once ? 'Capturable une seule fois.' : '',
+      r.shiny === 'never' ? 'Jamais chromatique.' : '',
+      r.held ? `Objet tenu : ${r.held}.` : '',
+      r.feat ? `Capacité mise en avant : ${r.feat}.` : '',
+      r.ver === 's' ? 'Écarlate uniquement.' : r.ver === 'v' ? 'Violet uniquement.' : '',
+      r.lv ? `Niveau ${r.lv}.` : ''
+    ].filter(Boolean).join(' ');
+    return `<div class="t7raid ${st === 'past' ? 't7past' : 't7now'}">
+      <div class="t7head"><b>${esc(r.n)}${r.title ? ' ' + esc(r.title) : ''}</b> ${badge(r.tera)}</div>
+      ${dates}${meta ? `<div class="ms">${meta}</div>` : ''}${moves ? `<div class="ms">Capacités : ${moves}.</div>` : ''}${raidM}${bits ? `<div class="ms">${esc(bits)}</div>` : ''}
+    </div>`;
+  }).join('');
+  const note = 'Sources : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid événementiels ; <a href="https://www.serebii.net/scarletviolet/teraraidbattleevents.shtml" target="_blank" rel="noopener">Serebii</a> ; Bulbapedia. Titre officiel : « le Surpuissant » (Insigne Surpuissant). Dates civiles inclusives (horaires typiques 00:00–23:59 UTC).';
+  return { html: `<div class="raidloc t7block"><h3>Raids 7★ (événements)</h3>${blocks}<p class="note">${note}</p></div>`, rows: L.length };
+}
+function tera7ViewHTML(g) {
+  if (!TERA7 || !TERA7.raids) return '';
+  const today = todayISO(), live = [], past = [];
+  for (const r of TERA7.raids) (tera7RaidStatus(r, today) === 'past' ? past : live).push(r);
+  const byId = (a, b) => ((BY_KEY[a.k] || {}).id || 0) - ((BY_KEY[b.k] || {}).id || 0) || a.k.localeCompare(b.k, 'en', { numeric: true });
+  live.sort(byId); past.sort(byId);
+  const row = r => {
+    const p = BY_KEY[r.k], st = tera7RaidStatus(r, today);
+    const lab = st === 'now' ? 'En cours' : st === 'soon' ? 'À venir' : 'Terminé';
+    const dates = (r.windows || []).map(w => fmtT7Range(w.s, w.e)).join(' · ');
+    const ver = r.ver === 's' ? 'Écarlate uniquement' : r.ver === 'v' ? 'Violet uniquement' : '';
+    const tags = [lab, r.title, ver].filter(Boolean).join(' · ');
+    return `<li><a class="rkrow" href="#/p/${p ? p.k : r.k}" data-raid="${esc(g)}">${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : r.n)}</b><span class="rkty">${badge(r.tera)}</span><small>${esc(tags)}${dates ? ' · ' + esc(dates) : ''}</small></span></a></li>`;
+  };
+  let html = `<details class="rvsec t7sec" open><summary>7★ <span class="mute">${TERA7.raids.length} Pokémon</span></summary>`;
+  if (live.length) html += `<details class="rvloc t7now" open><summary>En cours et à venir <span class="mute">${live.length}</span></summary><ul class="rklist">${live.map(row).join('')}</ul></details>`;
+  if (past.length) html += `<details class="rvloc t7past evt"${live.length ? '' : ' open'}><summary>Passés <span class="mute">${past.length}</span></summary><ul class="rklist">${past.map(row).join('')}</ul></details>`;
+  html += '</details>';
+  return html;
 }
 function raidGameOfList() { return RAID_GAME.has(state.game) ? state.game : ''; }
 function raidCat(p) {
@@ -1788,7 +1874,7 @@ function raidCat(p) {
 }
 function raidStarsFor(g) {
   const out = ['1', '2', '3', '4', '5'];
-  if (!g || g === 'sv' || g === 'svmask' || g === 'svdisk') out.push('6');
+  if (!g || g === 'sv' || g === 'svmask' || g === 'svdisk') out.push('6', '7');
   if (!g || g === 'swcrown') out.push('exp');
   return out;
 }
@@ -1805,11 +1891,12 @@ function raidMergeExtra(a, b) {
   return parts.join(' · ');
 }
 function teraRaidHTML(k, f, sp, gm) {
+  const t7 = tera7HTML(k);
   const e = BY_KEY[k] || {}, sel = new Set([...(f.av || []), ...horsGames(e, sp)]), gs = Object.keys(TERA_G), R = Object.fromEntries(gs.map(g => [g, raidRows(k, f, sp, g) || []]));
   const here = gs.filter(g => R[g].length && (g === gm.id || !sel.has(g))), other = gs.filter(g => R[g].length && g !== gm.id && sel.has(g));
   const hint = other.length ? `<p class="note raidalso">Aussi en raid : ${other.map(g => esc(TERA_G[g])).join(', ')} (choisissez ce jeu pour le détail).</p>` : '';
   const rows = here.flatMap(g => R[g].map(r => g === gm.id ? r : [`${r[0]} (${TERA_G[g]})`, r[1], r[2]]));
-  if (!rows.length) return { html: hint ? `<div class="raidloc">${hint}</div>` : '', rows: 0 };
+  if (!rows.length) return { html: (t7.html || '') + (hint ? `<div class="raidloc">${hint}</div>` : ''), rows: t7.rows };
   const gOf = z => { const m = z.match(/ \((Écarlate \/ Violet|Masque Turquoise|Disque Indigo)\)$/); return m ? gs.find(g => TERA_G[g] === m[1]) : gm.id; };
   const by = new Map(); for (const r of rows) { if (!by.has(r[0])) by.set(r[0], []); by.get(r[0]).push(r); }
   const zs = [...by].sort((a, b) => (gs.indexOf(gOf(a[0])) - gs.indexOf(gOf(b[0]))) || a[0].localeCompare(b[0], 'fr'));
@@ -1819,8 +1906,8 @@ function teraRaidHTML(k, f, sp, gm) {
   const notes = [here.includes('sv') ? 'Étoiles possibles selon l’avancement de votre histoire (Paldea) : début → 1–2★ ; 3 Badges → 1–3★ ; 6 Badges → 1–4★ ; après le générique → 3–5★ ; après le premier Grand Tournoi de l’Académie → 3–5★.' + six : six.trim(),
     'Niveau du boss : 1★ 12 · 2★ 20 · 3★ 35 · 4★ 45 · 5★ 75 · 6★ 90 (75 après capture).',
     'Sauf indication, le type Téra est aléatoire (couleur du cristal). « Téra par défaut » = un type naturel du Pokémon.',
-    'Listes, type Téra et talent caché : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid. Les raids événementiels, y compris les 7★, seront traités à part.'].filter(Boolean);
-  return { html: `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>`, rows: rows.length };
+    'Listes, type Téra et talent caché : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid. Les raids 7★ d’événement figurent dans le bloc « Raids 7★ (événements) ».'].filter(Boolean);
+  return { html: t7.html + `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>`, rows: rows.length + t7.rows };
 }
 function raidRows(k, f, sp, g) {
   const e = BY_KEY[k]; if (f.rd && f.rd[g]) return f.rd[g];
@@ -2201,6 +2288,10 @@ function shadowHTML(title) {
 
 function renderDetail() {
   const { p, sp, f, shared } = DET;
+  if (GAME_BY[state.dgame] && TERA_G[state.dgame] && TERA7 == null && RAIDS !== false) {
+    loadRaids().then(() => { if (DET && DET.p && DET.p.k === p.k) renderDetailKeepScroll(); }).catch(() => {});
+  }
+
   const mode = state.dgame; // 'all' | 'home' | 'go' | game id
   const gm = GAME_BY[mode]; const isGo = mode === 'go';
   const gen = gm ? gm.g : 9;
@@ -2571,7 +2662,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }

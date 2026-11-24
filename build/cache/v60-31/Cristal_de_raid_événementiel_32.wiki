@@ -1,0 +1,50 @@
+{{Ruban Cristal de raid|32|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 32.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 32''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 17 au 20 novembre 2023.
+
+On y trouvait des [[Évoli]] de type Téracristal [[Normal (type)|Normal]], ainsi que des [[Pierre d'évolution|pierres d'évolution]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Évoli / type-téracristal(Normal) talent-caché(Toujours) difficulté(7) capacités(Damoclès, Mégaphone, Morsure, Charme; Regard Touchant) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Évoli_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 6
+PV Plus / 5
+Téra-Éclat Normal / 20
+Téra-Éclat Normal / 10 / hôte
+Patch Talent / 1 / unique
+Pierre Eau / 1 / unique
+Pierre Foudre / 1 / unique
+Pierre Feu / 1 / unique
+Pierre Plante / 1 / unique
+Pierre Glace / 1 / unique
+Bonbon Exp. L / 5 / 15%
+Bonbon Exp. XL / 5 / 15%
+Super Bonbon / 2 / 10%
+PV Plus / 5 / 10%
+Baie Grena / 5 / 5%
+Baie Alga / 5 / 5%
+Baie Qualot / 5 / 5%
+Baie Lonme / 5 / 5%
+Baie Résin / 5 / 5%
+Baie Tamato / 5 / 5%
+Morceau Comète / 2 / 5%
+Capsule d'Argent / 1 / 5%
+Téra-Éclat Normal / 10 / 7%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/17.11.2023]]

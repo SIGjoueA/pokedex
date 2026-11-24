@@ -1,0 +1,50 @@
+{{Ruban Cristal de raid|70|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 70.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 70''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 28 février au 6 mars 2025 et du 4 au 10 septembre 2026.
+
+On y trouvait des [[Miascarade]] de type Téracristal [[Plante (type)|Plante]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Miascarade / type-téracristal(Plante) talent-caché(Toujours) difficulté(7) niveau(100) capacités(Magie Florale, Tranche-Nuit, Acrobatie, Câlinerie; Aiguisage, Tempête Florale, Champ Herbu) notes(Insigne Surpuissant. Capturable une seule fois. Jamais chromatique.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Miascarade_7
+Bonbon Exp. L / 6
+Bonbon Exp. XL / 4
+Protéine / 5
+Téra-Éclat Plante / 40
+Téra-Éclat Plante / 20 / hôte
+CT Fée, CT127, Câlinerie / 1 / unique
+Patch Talent / 1 / unique
+Bonbon Exp. L / 3 / 13%
+Bonbon Exp. L / 5 / 16%
+Super Bonbon / 2 / 8%
+Bonbon Exp. XL / 2 / 5%
+Protéine / 5 / 8%
+Morceau d'Étoile / 2 / 8%
+Morceau Comète / 1 / 2%
+Pépite / 2 / 5%
+Aromate Rigide / 1 / 3%
+PP Plus / 1 / 5%
+Capsule d'Argent / 1 / 4%
+Téra-Éclat Plante / 20 / 5%
+Pilule Talent / 1 / 2%
+Patch Talent / 1 / 1%
+Épice Secrète Sucrée / 1 / 3%
+Épice Secrète Salée / 1 / 3%
+Épice Secrète Acide / 1 / 3%
+Épice Secrète Amère / 1 / 3%
+Épice Secrète Corsée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/28.02.2025]]

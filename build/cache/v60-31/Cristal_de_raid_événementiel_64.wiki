@@ -1,0 +1,63 @@
+{{Ruban Cristal de raid|64|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 64.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 64''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 6 au 12 décembre 2024.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Azumarill / talent-caché(Possible) difficulté(5) niveau(75) capacités(Hydrocanon, Hydro-Queue, Câlinerie, Damoclès; Charme, Danse Pluie)
+Terraiste / talent-caché(Possible) difficulté(5) niveau(75) capacités(Séisme, Direct Toxik, Bâillement, Amnésie; Toxik)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Azumarill_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Santé / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Santé / 2 / 10%
+Baie Résin / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+
+Terraiste_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Mental / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Mental / 2 / 10%
+Baie Qualot / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Prudent / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/06.12.2024]]

@@ -1,0 +1,281 @@
+{{Ruban Cristal de raid|4|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 4.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 4''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 23 au 25 décembre 2022.
+
+On y trouvait des [[Cadoizo]], et des [[Téra-Éclat]]s de différents types en récompense.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Cadoizo / talent-caché(Impossible) difficulté(1) capacités(Cadeau, Poing Glace, Météores, Vive-Attaque) / talent-caché(Impossible) difficulté(2) capacités(Cadeau, Poing Glace, Météores, Vive-Attaque) / talent-caché(Possible) difficulté(3) capacités(Cadeau, Poing Glace, Météores, Bec Vrille) / talent-caché(Possible) difficulté(4) capacités(Cadeau, Poing Glace, Météores, Vent Glace) / talent-caché(Possible) difficulté(5) capacités(Cadeau, Blizzard, Météores, Lame d'Air; Vent Glace) / talent-caché(Possible) difficulté(5) capacités(Cadeau, Blizzard, Météores, Lame d'Air; Vent Glace) / talent-caché(Possible) difficulté(5) capacités(Cadeau, Blizzard, Météores, Lame d'Air; Vent Glace) / talent-caché(Possible) difficulté(5) capacités(Cadeau, Blizzard, Météores, Lame d'Air; Vent Glace) / talent-caché(Possible) difficulté(5) capacités(Cadeau, Blizzard, Météores, Lame d'Air; Vent Glace) / talent-caché(Possible) difficulté(5) capacités(Cadeau, Blizzard, Météores, Lame d'Air; Vent Glace)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Cadoizo_1
+Bonbon Exp. XS / 2
+Bonbon Exp. S / 2
+Provisions de Cadoizo / 2
+Bonbon Exp. XS / 2 / 19%
+Bonbon Exp. S / 2 / 8%
+Baie Mepo / 1 / 8%
+Baie Oran / 2 / 8%
+Baie Willia / 1 / 8%
+Poussière Étoile / 1 / 30%
+Provisions de Cadoizo / 1 / 7%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_2
+Bonbon Exp. S / 5
+Provisions de Cadoizo / 3
+Bonbon Exp. S / 2 / 23%
+Bonbon Exp. M / 2 / 13%
+Baie Mepo / 1 / 4%
+Baie Oran / 2 / 4%
+Baie Willia / 1 / 4%
+Poussière Étoile / 1 / 30%
+Provisions de Cadoizo / 2 / 10%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 4
+Provisions de Cadoizo / 5
+Téra-Éclat / 1
+Téra-Éclat / 1 / hôte
+Bonbon Exp. S / 2 / 7%
+Bonbon Exp. M / 2 / 14%
+Bonbon Exp. M / 4 / 5%
+Baie Mago / 1 / 7%
+Baie Prine / 1 / 8%
+Pépite / 1 / 12%
+Morceau d'Étoile / 1 / 25%
+Provisions de Cadoizo / 2 / 10%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_4
+Bonbon Exp. M / 4
+Bonbon Exp. L / 2
+Provisions de Cadoizo / 6
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 2 / 15%
+Bonbon Exp. M / 2 / 12%
+Bonbon Exp. L / 3 / 5%
+Baie Mago / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Morceau d'Étoile / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Provisions de Cadoizo / 3 / 9%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_5
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Provisions de Cadoizo / 8
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Téra-Éclat Feu / 5
+Téra-Éclat Plante / 5
+Téra-Éclat Eau / 5
+Bonbon Exp. L / 2 / 23%
+Bonbon Exp. L / 3 / 12%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 3%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Provisions de Cadoizo / 4 / 5%
+Pilule Talent / 1 / 2%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_5_2
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Provisions de Cadoizo / 8
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Téra-Éclat Vol / 5
+Téra-Éclat Combat / 5
+Téra-Éclat Insecte / 5
+Bonbon Exp. L / 2 / 23%
+Bonbon Exp. L / 3 / 12%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 3%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Provisions de Cadoizo / 4 / 5%
+Pilule Talent / 1 / 2%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_5_3
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Provisions de Cadoizo / 8
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Téra-Éclat Électrik / 5
+Téra-Éclat Sol / 5
+Téra-Éclat Psy / 5
+Bonbon Exp. L / 2 / 23%
+Bonbon Exp. L / 3 / 12%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 3%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Provisions de Cadoizo / 4 / 5%
+Pilule Talent / 1 / 2%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_5_4
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Provisions de Cadoizo / 8
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Téra-Éclat Roche / 5
+Téra-Éclat Spectre / 5
+Téra-Éclat Acier / 5
+Bonbon Exp. L / 2 / 23%
+Bonbon Exp. L / 3 / 12%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 3%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Provisions de Cadoizo / 4 / 5%
+Pilule Talent / 1 / 2%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_5_5
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Provisions de Cadoizo / 8
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Téra-Éclat Normal / 5
+Téra-Éclat Ténèbres / 5
+Téra-Éclat Fée / 5
+Bonbon Exp. L / 2 / 23%
+Bonbon Exp. L / 3 / 12%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 3%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Provisions de Cadoizo / 4 / 5%
+Pilule Talent / 1 / 2%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+
+Cadoizo_5_6
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Provisions de Cadoizo / 8
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Téra-Éclat Glace / 5
+Téra-Éclat Poison / 5
+Téra-Éclat Dragon / 5
+Bonbon Exp. L / 2 / 23%
+Bonbon Exp. L / 3 / 12%
+Super Bonbon / 1 / 4%
+Baie Lonme / 3 / 8%
+Morceau d'Étoile / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 3%
+Aromate Modeste / 1 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Provisions de Cadoizo / 4 / 5%
+Pilule Talent / 1 / 2%
+Plume Santé / 1 / 2%
+Plume Force / 1 / 2%
+Plume Armure / 1 / 2%
+Plume Esprit / 1 / 2%
+Plume Mental / 1 / 2%
+Plume Sprint / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/23.12.2022]]

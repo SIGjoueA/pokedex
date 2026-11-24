@@ -1,0 +1,3069 @@
+{
+ "src": "Poképédia (CC BY-NC-SA 3.0 FR) — pages Raid Téracristal et Cristal de raid événementiel N ; Serebii (Tera Raid Battle Events / Mighty / Unrivaled) ; Bulbapedia (Tera Raid Battle, table 7★). Noms de talents et de capacités anglophones traduits via les noms officiels (données PokeAPI).",
+ "updated": "2026-11-24",
+ "tz": "Dates civiles inclusives. Les horaires officiels sont typiquement 00:00–23:59 UTC.",
+ "titleOfficial": "le Surpuissant",
+ "markOfficial": "Insigne Surpuissant",
+ "raids": [
+  {
+   "id": "3-ground",
+   "k": "3",
+   "n": "Florizarre",
+   "tera": "ground",
+   "evts": [
+    41
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Chlorophylle",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Telluriforce",
+    "Bombe Beurk",
+    "Giga-Sangsue",
+    "Amnésie"
+   ],
+   "raidMoves": [
+    "Zénith",
+    "Croissance",
+    "Tempête Florale"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-02-28",
+     "e": "2024-03-05",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-01-09",
+     "e": "2026-01-15",
+     "src": [
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "6-dragon",
+   "k": "6",
+   "n": "Dracaufeu",
+   "tera": "dragon",
+   "evts": [
+    2,
+    43
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Force Soleil",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Draco-Choc",
+    "Déflagration",
+    "Vent Violent",
+    "Exploforce"
+   ],
+   "raidMoves": [
+    "Surchauffe",
+    "Téra Explosion",
+    "Zénith",
+    "Feu d'Enfer"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2022-12-02",
+     "e": "2022-12-04",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2022-12-16",
+     "e": "2022-12-18",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-03-13",
+     "e": "2024-03-17",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-01-16",
+     "e": "2026-01-23",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "9-steel",
+   "k": "9",
+   "n": "Tortank",
+   "tera": "steel",
+   "evts": [
+    42
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Cuvette",
+   "ha": "Toujours",
+   "nature": "Naïf",
+   "natureSrc": "se",
+   "moves": [
+    "Hydrocanon",
+    "Luminocanon",
+    "Aurasphère",
+    "Mur de Fer"
+   ],
+   "raidMoves": [
+    "Repli",
+    "Exuviation",
+    "Danse Pluie"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-03-06",
+     "e": "2024-03-12",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-01-23",
+     "e": "2026-01-29",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "25-water",
+   "k": "25",
+   "n": "Pikachu",
+   "tera": "water",
+   "evts": [
+    12,
+    52
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Paratonnerre",
+   "ha": "Toujours",
+   "nature": "Discret",
+   "natureSrc": "se",
+   "moves": [
+    "Fatal-Foudre",
+    "Surf",
+    "Câlinerie",
+    "Queue de Fer"
+   ],
+   "raidMoves": [
+    "Danse Pluie"
+   ],
+   "feat": "Surf",
+   "held": "Balle Lumière",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-02-24",
+     "e": "2023-02-27",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-07-12",
+     "e": "2024-07-25",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique. [[Balle Lumière]] tenue."
+  },
+  {
+   "id": "129-dragon",
+   "k": "129",
+   "n": "Magicarpe",
+   "tera": "dragon",
+   "evts": [
+    88
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Phobique",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Trempette",
+    "Charge",
+    "Gigotage"
+   ],
+   "raidMoves": [],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2026-07-17",
+     "e": "2026-08-06",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "133-normal",
+   "k": "133",
+   "n": "Évoli",
+   "tera": "normal",
+   "evts": [
+    32
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Anticipation",
+   "ha": "Toujours",
+   "nature": "Hardi",
+   "natureSrc": "se",
+   "moves": [
+    "Damoclès",
+    "Mégaphone",
+    "Morsure",
+    "Charme"
+   ],
+   "raidMoves": [
+    "Regard Touchant"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-11-17",
+     "e": "2023-11-20",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "149-normal",
+   "k": "149",
+   "n": "Dracolosse",
+   "tera": "normal",
+   "evts": [
+    55
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Attention",
+   "ha": "Impossible",
+   "nature": "Brave",
+   "natureSrc": "se",
+   "moves": [
+    "Vitesse Extrême",
+    "Rafale Écailles",
+    "Danse Draco",
+    "Séisme"
+   ],
+   "raidMoves": [
+    "Danse Pluie",
+    "Vent Violent",
+    "Fatal-Foudre",
+    "Draco-Météore"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-08-23",
+     "e": "2024-09-01",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-09-25",
+     "e": "2026-10-01",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "150-psychic",
+   "k": "150",
+   "n": "Mewtwo",
+   "tera": "psychic",
+   "evts": [
+    27
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Tension",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Frappe Psy",
+    "Aurasphère",
+    "Laser Glace",
+    "Plénitude"
+   ],
+   "raidMoves": [
+    "Repos"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-09-01",
+     "e": "2023-09-17",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "154-psychic",
+   "k": "154",
+   "n": "Méganium",
+   "tera": "psychic",
+   "evts": [
+    45
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Feuille Garde",
+   "ha": "Toujours",
+   "nature": "Malin",
+   "natureSrc": "se",
+   "moves": [
+    "Canon Graine",
+    "Psykoud'Boul",
+    "Big Splash",
+    "Malédiction"
+   ],
+   "raidMoves": [
+    "Protection",
+    "Mur Lumière",
+    "Piétisol"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-04-05",
+     "e": "2024-04-07",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-04-12",
+     "e": "2024-04-14",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-01-30",
+     "e": "2026-02-05",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "157-ghost",
+   "k": "157",
+   "n": "Typhlosion",
+   "tera": "ghost",
+   "evts": [
+    18
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Torche",
+   "ha": "Toujours",
+   "nature": "Doux",
+   "natureSrc": "se",
+   "moves": [
+    "Éruption",
+    "Ball'Ombre",
+    "Câlinerie",
+    "Séisme"
+   ],
+   "raidMoves": [
+    "Zénith"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-04-14",
+     "e": "2023-04-16",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-04-21",
+     "e": "2023-04-23",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-02-06",
+     "e": "2026-02-12",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "157-hisui-fire",
+   "k": "157-hisui",
+   "n": "Typhlosion de Hisui",
+   "tera": "fire",
+   "evts": [
+    31
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Fouille",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Cortège Funèbre",
+    "Lance-Flammes",
+    "Feu Follet",
+    "Exploforce"
+   ],
+   "raidMoves": [
+    "Zénith"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-11-03",
+     "e": "2023-11-05",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-11-10",
+     "e": "2023-11-12",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-07-03",
+     "e": "2026-07-09",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "160-dark",
+   "k": "160",
+   "n": "Aligatueur",
+   "tera": "dark",
+   "evts": [
+    61
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Sans Limite",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Mâchouille",
+    "Aqua-Brèche",
+    "Psycho-Croc",
+    "Poing Glace"
+   ],
+   "raidMoves": [
+    "Danse Lames",
+    "Séisme",
+    "Danse Draco"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-11-01",
+     "e": "2024-11-03",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-11-08",
+     "e": "2024-11-10",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-02-13",
+     "e": "2026-02-19",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "233-normal",
+   "k": "233",
+   "n": "Porygon2",
+   "tera": "normal",
+   "evts": [
+    77
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Analyste",
+   "ha": "Toujours",
+   "nature": "Discret",
+   "natureSrc": "se",
+   "moves": [
+    "Triplattaque",
+    "Psyko",
+    "Tonnerre",
+    "Laser Glace"
+   ],
+   "raidMoves": [
+    "Distorsion",
+    "Coup d'Jus"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-06-05",
+     "e": "2025-06-15",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "248-ghost",
+   "k": "248",
+   "n": "Tyranocif",
+   "tera": "ghost",
+   "evts": [
+    73
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Sable Volant",
+   "ha": "Impossible",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Lame de Roc",
+    "Mâchouille",
+    "Séisme",
+    "Griffe Ombre"
+   ],
+   "raidMoves": [
+    "Puissance",
+    "Danse Draco"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-03-28",
+     "e": "2025-03-30",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-04-04",
+     "e": "2025-04-06",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-10-02",
+     "e": "2026-10-08",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "254-dragon",
+   "k": "254",
+   "n": "Jungko",
+   "tera": "dragon",
+   "evts": [
+    51
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Délestage",
+   "ha": "Toujours",
+   "nature": "Pressé",
+   "natureSrc": "se",
+   "moves": [
+    "Lame Feuille",
+    "Abattage",
+    "Danse Draco",
+    "Poing Éclair"
+   ],
+   "raidMoves": [
+    "Tempête Verte",
+    "Séisme"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-06-28",
+     "e": "2024-06-30",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-07-05",
+     "e": "2024-07-07",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-02-20",
+     "e": "2026-02-26",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "257-flying",
+   "k": "257",
+   "n": "Braségali",
+   "tera": "flying",
+   "evts": [
+    36
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Turbo",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Pied Brûleur",
+    "Rapace",
+    "Séisme",
+    "Balayage"
+   ],
+   "raidMoves": [
+    "Surchauffe",
+    "Éboulement",
+    "Danse Lames",
+    "Gonflette"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-01-12",
+     "e": "2024-01-14",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-01-19",
+     "e": "2024-01-21",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-02-27",
+     "e": "2026-03-06",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "260-poison",
+   "k": "260",
+   "n": "Laggron",
+   "tera": "poison",
+   "evts": [
+    49
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Moiteur",
+   "ha": "Toujours",
+   "nature": "Relax",
+   "natureSrc": "se",
+   "moves": [
+    "Séisme",
+    "Hydrocanon",
+    "Cradovague",
+    "Aqua-Brèche"
+   ],
+   "raidMoves": [
+    "Ocroupi",
+    "Bâillement"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-05-31",
+     "e": "2024-06-02",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-06-07",
+     "e": "2024-06-09",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-03-07",
+     "e": "2026-03-13",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "373-flying",
+   "k": "373",
+   "n": "Drattak",
+   "tera": "flying",
+   "evts": [
+    74
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Impudence",
+   "ha": "Toujours",
+   "nature": "Discret",
+   "natureSrc": "se",
+   "moves": [
+    "Téra Explosion",
+    "Draco-Choc",
+    "Séisme",
+    "Lance-Flammes"
+   ],
+   "raidMoves": [
+    "Canicule",
+    "Abattage",
+    "Danse Draco"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-04-18",
+     "e": "2025-04-20",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-04-25",
+     "e": "2025-04-27",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-10-09",
+     "e": "2026-10-16",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "376-steel",
+   "k": "376",
+   "n": "Métalosse",
+   "tera": "steel",
+   "evts": [
+    75
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Corps Sain",
+   "ha": "Impossible",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Poing Météore",
+    "Psykoud'Boul",
+    "Séisme",
+    "Poing Éclair"
+   ],
+   "raidMoves": [
+    "Aiguisage",
+    "Mur de Fer",
+    "Mur Lumière"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-05-09",
+     "e": "2025-05-11",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-05-16",
+     "e": "2025-05-18",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-10-16",
+     "e": "2026-10-22",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "389-ground",
+   "k": "389",
+   "n": "Torterra",
+   "tera": "ground",
+   "evts": [
+    62
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Coque Armure",
+   "ha": "Toujours",
+   "nature": "Brave",
+   "natureSrc": "se",
+   "moves": [
+    "Séisme",
+    "Martobois",
+    "Anti-Air",
+    "Telluriforce"
+   ],
+   "raidMoves": [
+    "Exuviation"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-11-15",
+     "e": "2024-11-17",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-11-22",
+     "e": "2024-11-24",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-03-13",
+     "e": "2026-03-19",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "392-rock",
+   "k": "392",
+   "n": "Simiabraz",
+   "tera": "rock",
+   "evts": [
+    58
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Poing de Fer",
+   "ha": "Toujours",
+   "nature": "Mauvais",
+   "natureSrc": "se",
+   "moves": [
+    "Boutefeu",
+    "Aurasphère",
+    "Téra Explosion",
+    "Nœud Herbe"
+   ],
+   "raidMoves": [
+    "Machination",
+    "Danse Lames",
+    "Puissance"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-10-04",
+     "e": "2024-10-06",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-10-11",
+     "e": "2024-10-13",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-03-20",
+     "e": "2026-03-26",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "395-ice",
+   "k": "395",
+   "n": "Pingoléon",
+   "tera": "ice",
+   "evts": [
+    38
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Battant",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Surf",
+    "Luminocanon",
+    "Laser Glace",
+    "Nœud Herbe"
+   ],
+   "raidMoves": [
+    "Chute de Neige",
+    "Blizzard",
+    "Mur de Fer"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-02-02",
+     "e": "2024-02-04",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-02-09",
+     "e": "2024-02-11",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-03-27",
+     "e": "2026-04-02",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "445-ground",
+   "k": "445",
+   "n": "Carchacrok",
+   "tera": "ground",
+   "evts": [
+    76
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Peau Dure",
+   "ha": "Toujours",
+   "nature": "Jovial",
+   "natureSrc": "se",
+   "moves": [
+    "Séisme",
+    "Direct Toxik",
+    "Aqua-Brèche",
+    "Crocs Feu"
+   ],
+   "raidMoves": [
+    "Abattage",
+    "Danse Lames"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-05-23",
+     "e": "2025-05-25",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-05-30",
+     "e": "2025-06-01",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-10-23",
+     "e": "2026-10-29",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "497-grass",
+   "k": "497",
+   "n": "Majaspic",
+   "tera": "grass",
+   "evts": [
+    57
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Contestation",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Tempête Verte",
+    "Suc Digestif",
+    "Draco-Choc",
+    "Queue de Fer"
+   ],
+   "raidMoves": [
+    "Doux Parfum",
+    "Abattage",
+    "Regard Médusant"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-09-20",
+     "e": "2024-09-22",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-09-27",
+     "e": "2024-09-29",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-04-03",
+     "e": "2026-04-09",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "500-electric",
+   "k": "500",
+   "n": "Roitiflam",
+   "tera": "electric",
+   "evts": [
+    50
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Téméraire",
+   "ha": "Toujours",
+   "nature": "Brave",
+   "natureSrc": "se",
+   "moves": [
+    "Boutefeu",
+    "Vampi-Poing",
+    "Éclair Fou",
+    "Fracass'Tête"
+   ],
+   "raidMoves": [
+    "Gonflette",
+    "Tacle Feu"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-06-14",
+     "e": "2024-06-16",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-06-21",
+     "e": "2024-06-23",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-04-10",
+     "e": "2026-04-16",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "503-bug",
+   "k": "503",
+   "n": "Clamiral",
+   "tera": "bug",
+   "evts": [
+    16
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Coque Armure",
+   "ha": "Toujours",
+   "nature": "Solo",
+   "natureSrc": "se",
+   "moves": [
+    "Tranch'Aqua",
+    "Mégacorne",
+    "Tranche-Nuit",
+    "Tunnelier"
+   ],
+   "raidMoves": [
+    "Puissance",
+    "Danse Lames",
+    "Piétisol"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-03-31",
+     "e": "2023-04-02",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-04-07",
+     "e": "2023-04-09",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-04-17",
+     "e": "2026-04-23",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "503-hisui-water",
+   "k": "503-hisui",
+   "n": "Clamiral de Hisui",
+   "tera": "water",
+   "evts": [
+    33
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Incisif",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Vagues à Lames",
+    "Coqui-Lame",
+    "Plaie Croix",
+    "Lame Sainte"
+   ],
+   "raidMoves": [
+    "Danse Lames",
+    "Puissance",
+    "Piétisol"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-11-24",
+     "e": "2023-11-26",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-12-01",
+     "e": "2023-12-03",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-07-10",
+     "e": "2026-07-16",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "635-poison",
+   "k": "635",
+   "n": "Trioxhydre",
+   "tera": "poison",
+   "evts": [
+    85
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Lévitation",
+   "ha": "Impossible",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Téra Explosion",
+    "Vibrobscur",
+    "Draco-Choc",
+    "Telluriforce"
+   ],
+   "raidMoves": [
+    "Aboiement",
+    "Machination",
+    "Danse Draco"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-11-07",
+     "e": "2025-11-09",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-11-14",
+     "e": "2025-11-16",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-10-30",
+     "e": "2026-11-05",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "652-rock",
+   "k": "652",
+   "n": "Blindépique",
+   "tera": "rock",
+   "evts": [
+    20
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Pare-Balles",
+   "ha": "Toujours",
+   "nature": "Malin",
+   "natureSrc": "se",
+   "moves": [
+    "Séisme",
+    "Marto-Poing",
+    "Lame de Roc",
+    "Martobois"
+   ],
+   "raidMoves": [
+    "Mur de Fer",
+    "Gonflette",
+    "Malédiction"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-05-12",
+     "e": "2023-05-14",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-06-16",
+     "e": "2023-06-18",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-04-24",
+     "e": "2026-04-30",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "655-fairy",
+   "k": "655",
+   "n": "Goupelin",
+   "tera": "fairy",
+   "evts": [
+    23
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Magicien",
+   "ha": "Toujours",
+   "nature": "Timide",
+   "natureSrc": "se",
+   "moves": [
+    "Déflagration",
+    "Psyko",
+    "Éclat Magique",
+    "Feu Follet"
+   ],
+   "raidMoves": [
+    "Zone Magique",
+    "Machination"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-07-07",
+     "e": "2023-07-09",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-07-14",
+     "e": "2023-07-16",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-05-01",
+     "e": "2026-05-07",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "658-poison",
+   "k": "658",
+   "n": "Amphinobi",
+   "tera": "poison",
+   "evts": [
+    8
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Protéen",
+   "ha": "Toujours",
+   "nature": "Malpoli",
+   "natureSrc": "se",
+   "moves": [
+    "Détricanon",
+    "Hydrocanon",
+    "Laser Glace",
+    "Tranche-Nuit"
+   ],
+   "raidMoves": [
+    "Pics Toxik",
+    "Reflet"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-01-27",
+     "e": "2023-01-29",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-02-10",
+     "e": "2023-02-12",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-05-08",
+     "e": "2026-05-14",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "706-water",
+   "k": "706",
+   "n": "Muplodocus",
+   "tera": "water",
+   "evts": [
+    86
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Herbivore",
+   "ha": "Impossible",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Ébullition",
+    "Draco-Choc",
+    "Bombe Beurk",
+    "Séisme"
+   ],
+   "raidMoves": [
+    "Cradovague",
+    "Surf"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-11-21",
+     "e": "2025-11-23",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-11-28",
+     "e": "2025-11-30",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-11-06",
+     "e": "2026-11-12",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "724-flying",
+   "k": "724",
+   "n": "Archéduc",
+   "tera": "flying",
+   "evts": [
+    14
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Longue Portée",
+   "ha": "Toujours",
+   "nature": "Brave",
+   "natureSrc": "se",
+   "moves": [
+    "Tisse Ombre",
+    "Rapace",
+    "Balayage",
+    "Lame Feuille"
+   ],
+   "raidMoves": [
+    "Danse Plumes",
+    "Danse Lames",
+    "Tranch'Air"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-03-17",
+     "e": "2023-03-19",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-03-24",
+     "e": "2023-03-26",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-05-15",
+     "e": "2026-05-21",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "724-hisui-grass",
+   "k": "724-hisui",
+   "n": "Archéduc de Hisui",
+   "tera": "grass",
+   "evts": [
+    29
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Querelleur",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Triple Flèche",
+    "Rapace",
+    "Griffe Ombre",
+    "Lame Feuille"
+   ],
+   "raidMoves": [
+    "Gonflette",
+    "Danse Lames",
+    "Champ Herbu",
+    "Tempête Verte"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-10-06",
+     "e": "2023-10-08",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-10-13",
+     "e": "2023-10-15",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-06-26",
+     "e": "2026-07-02",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "727-dark",
+   "k": "727",
+   "n": "Félinferno",
+   "tera": "dark",
+   "evts": [
+    56
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Intimidation",
+   "ha": "Toujours",
+   "nature": "Brave",
+   "natureSrc": "se",
+   "moves": [
+    "Boutefeu",
+    "Dark Lariat",
+    "Gonflette",
+    "Tête de Fer"
+   ],
+   "raidMoves": [
+    "Aboiement",
+    "Provoc",
+    "Séisme"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-09-06",
+     "e": "2024-09-08",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-09-13",
+     "e": "2024-09-15",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-05-22",
+     "e": "2026-05-28",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "730-fairy",
+   "k": "730",
+   "n": "Oratoria",
+   "tera": "fairy",
+   "evts": [
+    47
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Hydrata-Son",
+   "ha": "Toujours",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Pouvoir Lunaire",
+    "Aria de l'Écume",
+    "Berceuse",
+    "Psyko"
+   ],
+   "raidMoves": [
+    "Encore",
+    "Surf"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-05-10",
+     "e": "2024-05-12",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2024-05-17",
+     "e": "2024-05-19",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-05-29",
+     "e": "2026-06-04",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "784-fighting",
+   "k": "784",
+   "n": "Ékaïser",
+   "tera": "fighting",
+   "evts": [
+    79
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Anti-Bruit",
+   "ha": "Impossible",
+   "nature": "Mauvais",
+   "natureSrc": "se",
+   "moves": [
+    "Close Combat",
+    "Draco-Griffe",
+    "Tête de Fer",
+    "Bang Sonique"
+   ],
+   "raidMoves": [
+    "Dracacophonie",
+    "Vibrécaille"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-07-11",
+     "e": "2025-07-13",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-07-18",
+     "e": "2025-07-20",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-11-13",
+     "e": "2026-11-19",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "812-normal",
+   "k": "812",
+   "n": "Gorythmic",
+   "tera": "normal",
+   "evts": [
+    24
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Créa-Herbe",
+   "ha": "Toujours",
+   "nature": "Jovial",
+   "natureSrc": "se",
+   "moves": [
+    "Tambour Battant",
+    "Acrobatie",
+    "Plaquage",
+    "Balayage"
+   ],
+   "raidMoves": [
+    "Croissance",
+    "Bang Sonique",
+    "Gonflette"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-07-28",
+     "e": "2023-07-30",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-08-04",
+     "e": "2023-08-06",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-06-05",
+     "e": "2026-06-11",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "815-fighting",
+   "k": "815",
+   "n": "Pyrobut",
+   "tera": "fighting",
+   "evts": [
+    5
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Libéro",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Pied Voltige",
+    "Ballon Brûlant",
+    "Acrobatie",
+    "Tête de Fer"
+   ],
+   "raidMoves": [
+    "Gonflette"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2022-12-30",
+     "e": "2023-01-01",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-01-13",
+     "e": "2023-01-15",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-06-12",
+     "e": "2026-06-18",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "818-ice",
+   "k": "818",
+   "n": "Lézargus",
+   "tera": "ice",
+   "evts": [
+    19
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Sniper",
+   "ha": "Toujours",
+   "nature": "Discret",
+   "natureSrc": "se",
+   "moves": [
+    "Blizzard",
+    "Tir de Précision",
+    "Vibrobscur",
+    "Larme à l'Œil"
+   ],
+   "raidMoves": [
+    "Brume",
+    "Chute de Neige"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-04-28",
+     "e": "2023-04-30",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    },
+    {
+     "s": "2023-05-05",
+     "e": "2023-05-07",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-06-19",
+     "e": "2026-06-25",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "887-dragon",
+   "k": "887",
+   "n": "Lanssorien",
+   "tera": "dragon",
+   "evts": [
+    87
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Corps Maudit",
+   "ha": "Toujours",
+   "nature": "Naïf",
+   "natureSrc": "se",
+   "moves": [
+    "Draco-Flèches",
+    "Ball'Ombre",
+    "Acrobatie",
+    "Lance-Flammes"
+   ],
+   "raidMoves": [
+    "Danse Draco",
+    "Abattage"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-12-05",
+     "e": "2025-12-07",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-12-12",
+     "e": "2025-12-14",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-11-20",
+     "e": "2026-11-26",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "908-grass",
+   "k": "908",
+   "n": "Miascarade",
+   "tera": "grass",
+   "evts": [
+    70
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Protéen",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Magie Florale",
+    "Tranche-Nuit",
+    "Acrobatie",
+    "Câlinerie"
+   ],
+   "raidMoves": [
+    "Aiguisage",
+    "Tempête Florale",
+    "Champ Herbu"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-02-28",
+     "e": "2025-03-06",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-09-04",
+     "e": "2026-09-10",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "911-fire",
+   "k": "911",
+   "n": "Flâmigator",
+   "tera": "fire",
+   "evts": [
+    71
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Inconscient",
+   "ha": "Toujours",
+   "nature": "Foufou",
+   "natureSrc": "se",
+   "moves": [
+    "Chant Flamboyant",
+    "Ball'Ombre",
+    "Trépignement",
+    "Mégaphone"
+   ],
+   "raidMoves": [
+    "Voix Enjôleuse",
+    "Nitrocharge"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-03-07",
+     "e": "2025-03-13",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-09-11",
+     "e": "2026-09-17",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "914-water",
+   "k": "914",
+   "n": "Palmaval",
+   "tera": "water",
+   "evts": [
+    72
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Impudence",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Danse Aquatique",
+    "Casse-Brique",
+    "Rapace",
+    "Cryo-Pirouette"
+   ],
+   "raidMoves": [
+    "Gonflette",
+    "Danse Pluie"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-03-14",
+     "e": "2025-03-20",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-09-18",
+     "e": "2026-09-24",
+     "src": [
+      "pp",
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "970-grass",
+   "k": "970",
+   "n": "Floréclat",
+   "tera": "grass",
+   "evts": [
+    89
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Dépôt Toxique",
+   "ha": "Impossible",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Toupie Éclat",
+    "Bombe Beurk",
+    "Rayon Gemme",
+    "Éco-Sphère"
+   ],
+   "raidMoves": [
+    "Poliroche",
+    "Éclat Magique",
+    "Cradovague"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2026-08-07",
+     "e": "2026-08-13",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "977-water",
+   "k": "977",
+   "n": "Oyacata",
+   "tera": "water",
+   "evts": [
+    53
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Inconscient",
+   "ha": "Impossible",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Aquatacle",
+    "Plat du Jour",
+    "Séisme",
+    "Avalanche"
+   ],
+   "raidMoves": [
+    "Bâillement",
+    "Malédiction"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2024-07-26",
+     "e": "2024-08-08",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "979-ghost",
+   "k": "979",
+   "n": "Courrousinge",
+   "tera": "ghost",
+   "evts": [
+    90
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Acharné",
+   "ha": "Toujours",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Poing de Colère",
+    "Close Combat",
+    "Poing Glace",
+    "Poing Éclair"
+   ],
+   "raidMoves": [
+    "Séisme",
+    "Éboulement",
+    "Piétisol"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2026-08-14",
+     "e": "2026-08-20",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "981-fairy",
+   "k": "981",
+   "n": "Farigiraf",
+   "tera": "fairy",
+   "evts": [
+    91
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Armure Caudale",
+   "ha": "Impossible",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Double Laser",
+    "Éclat Magique",
+    "Ball'Ombre",
+    "Tonnerre"
+   ],
+   "raidMoves": [
+    "Machination",
+    "Distorsion"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2026-08-21",
+     "e": "2026-08-27",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "983-dark",
+   "k": "983",
+   "n": "Scalpereur",
+   "tera": "dark",
+   "evts": [
+    92
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Général Suprême",
+   "ha": "Impossible",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Génusection",
+    "Tête de Fer",
+    "Casse-Brique",
+    "Lame de Roc"
+   ],
+   "raidMoves": [
+    "Aboiement",
+    "Danse Lames"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2026-08-28",
+     "e": "2026-09-03",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "991-ice",
+   "k": "991",
+   "n": "Hotte-de-Fer",
+   "tera": "ice",
+   "evts": [
+    35
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Charge Quantique",
+   "ha": "Impossible",
+   "nature": "Modeste",
+   "natureSrc": "se",
+   "moves": [
+    "Lyophilisation",
+    "Hydrocanon",
+    "Blizzard",
+    "Douche Froide"
+   ],
+   "raidMoves": [
+    "Chute de Neige",
+    "Voile Aurore",
+    "Champ Électrifié"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2023-12-22",
+     "e": "2023-12-24",
+     "src": [
+      "pp",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "998-ice",
+   "k": "998",
+   "n": "Glaivodo",
+   "tera": "ice",
+   "evts": [
+    78
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Thermodynamique",
+   "ha": "Impossible",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Charge Glaive",
+    "Chute Glace",
+    "Mâchouille",
+    "Séisme"
+   ],
+   "raidMoves": [
+    "Danse Lames"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-06-20",
+     "e": "2025-06-22",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2025-06-27",
+     "e": "2025-06-29",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    },
+    {
+     "s": "2026-11-27",
+     "e": "2026-12-03",
+     "src": [
+      "se"
+     ]
+    }
+   ],
+   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "1005-dragon",
+   "k": "1005",
+   "n": "Rugit-Lune",
+   "tera": "dragon",
+   "evts": [
+    84
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Paléosynthèse",
+   "ha": "Impossible",
+   "nature": "Rigide",
+   "natureSrc": "se",
+   "moves": [
+    "Draco-Griffe",
+    "Mâchouille",
+    "Tête de Fer",
+    "Séisme"
+   ],
+   "raidMoves": [
+    "Zénith",
+    "Danse Draco"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "s",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-10-03",
+     "e": "2025-10-12",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Exclusif Ec. Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  },
+  {
+   "id": "1006-fairy",
+   "k": "1006",
+   "n": "Garde-de-Fer",
+   "tera": "fairy",
+   "evts": [
+    84
+   ],
+   "title": "le Surpuissant",
+   "mark": "Insigne Surpuissant",
+   "talent": "Charge Quantique",
+   "ha": "Impossible",
+   "nature": "Naïf",
+   "natureSrc": "se",
+   "moves": [
+    "Choc Émotionnel",
+    "Aurasphère",
+    "Psykoud'Boul",
+    "Ball'Ombre"
+   ],
+   "raidMoves": [
+    "Champ Électrifié",
+    "Danse Lames"
+   ],
+   "feat": null,
+   "held": "",
+   "once": true,
+   "shiny": "never",
+   "ver": "v",
+   "lv": 100,
+   "windows": [
+    {
+     "s": "2025-10-03",
+     "e": "2025-10-12",
+     "src": [
+      "pp",
+      "se",
+      "bp"
+     ]
+    }
+   ],
+   "notes": "Exclusif Vi. Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+  }
+ ],
+ "divergences": [
+  {
+   "id": "3-ground",
+   "chosen": {
+    "s": "2026-01-09",
+    "e": "2026-01-15",
+    "src": [
+     "se",
+     "bp"
+    ]
+   },
+   "others": [
+    {
+     "s": "2026-01-07",
+     "e": "2026-01-15",
+     "src": [
+      "pp"
+     ]
+    }
+   ],
+   "note": "Bornes différentes selon les sources ; date retenue = celle du plus grand nombre de sources, à défaut Poképédia."
+  },
+  {
+   "id": "6-dragon",
+   "chosen": {
+    "s": "2026-01-16",
+    "e": "2026-01-23",
+    "src": [
+     "pp",
+     "se"
+    ]
+   },
+   "others": [
+    {
+     "s": "2026-01-16",
+     "e": "2026-01-22",
+     "src": [
+      "bp"
+     ]
+    }
+   ],
+   "note": "Bornes différentes selon les sources ; date retenue = celle du plus grand nombre de sources, à défaut Poképédia."
+  },
+  {
+   "id": "233-normal",
+   "chosen": {
+    "s": "2025-06-05",
+    "e": "2025-06-15",
+    "src": [
+     "pp",
+     "se"
+    ]
+   },
+   "others": [
+    {
+     "s": "2025-06-05",
+     "e": "2025-06-16",
+     "src": [
+      "bp"
+     ]
+    }
+   ],
+   "note": "Bornes différentes selon les sources ; date retenue = celle du plus grand nombre de sources, à défaut Poképédia."
+  },
+  {
+   "id": "257-flying",
+   "chosen": {
+    "s": "2026-02-27",
+    "e": "2026-03-06",
+    "src": [
+     "pp",
+     "se"
+    ]
+   },
+   "others": [
+    {
+     "s": "2026-02-27",
+     "e": "2026-03-05",
+     "src": [
+      "bp"
+     ]
+    }
+   ],
+   "note": "Bornes différentes selon les sources ; date retenue = celle du plus grand nombre de sources, à défaut Poképédia."
+  },
+  {
+   "id": "260-poison",
+   "chosen": {
+    "s": "2026-03-07",
+    "e": "2026-03-13",
+    "src": [
+     "pp",
+     "se"
+    ]
+   },
+   "others": [
+    {
+     "s": "2026-03-06",
+     "e": "2026-03-12",
+     "src": [
+      "bp"
+     ]
+    }
+   ],
+   "note": "Bornes différentes selon les sources ; date retenue = celle du plus grand nombre de sources, à défaut Poképédia."
+  },
+  {
+   "id": "998-ice",
+   "chosen": {
+    "s": "2026-11-27",
+    "e": "2026-12-03",
+    "src": [
+     "se"
+    ]
+   },
+   "others": [],
+   "note": "Fenêtre vue seulement chez se (non recoupée)."
+  }
+ ]
+}

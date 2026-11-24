@@ -1,0 +1,54 @@
+{{Ruban Cristal de raid|39|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 39.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 39''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 12 au 15 février 2024, à l'occasion de la Saint-Valentin.
+
+On y trouvait des [[Lovdisc]] de type Téracristal [[Fée (type)|Fée]].
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Lovdisc / type-téracristal(Fée) talent-caché(Possible) difficulté(3) capacités(Bélier, Doux Baiser, Gigotage, Vampibaiser) / type-téracristal(Fée) talent-caché(Possible) difficulté(5) capacités(Rune Protect, Hydrocanon, Détrempage, Anneau Hydro; Charme, Danse Pluie)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Lovdisc_3
+Bonbon Exp. XS / 2
+Bonbon Exp. S / 2
+Bonbon Exp. M / 2
+Téra-Éclat Fée / 2
+Bonbon Exp. XS / 1 / 20%
+Bonbon Exp. S / 1 / 20%
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 2 / 10%
+Bonbon Exp. L / 1 / 5%
+Grande Perle / 1 / 10%
+Perle (objet){{!}}Perle / 1 / 20%
+
+Lovdisc_5
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 3
+Bonbon Exp. M / 2
+Téra-Éclat Fée / 5
+Super Bonbon / 3
+Perle Triple / 1 / 5%
+Bonbon Exp. M / 2 / 10%
+Bonbon Exp. L / 2 / 13%
+Bonbon Exp. L / 3 / 13%
+Bonbon Exp. XL / 2 / 13%
+Bonbon Exp. XL / 3 / 13%
+Super Bonbon / 3 / 13%
+Super Bonbon / 5 / 10%
+Téra-Éclat Fée / 3 / 3%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/12.02.2024]]

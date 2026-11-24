@@ -1,0 +1,158 @@
+{{Ruban Cristal de raid|10|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 10.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 10''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 13 au 15 février 2023.
+
+On y trouvait des [[Compagnol]], et des ingrédients pour [[Sandwich (mécanique)|Sandwich]] en récompense.
+
+__TOC__
+
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Compagnol / talent-caché(Impossible) difficulté(1) capacités(Écras'Face, Regard Touchant, Écho, Croc Fatal) / talent-caché(Impossible) difficulté(2) capacités(Balle Graine, Regard Touchant, Écho, Croc Fatal) / talent-caché(Possible) difficulté(3) capacités(Balle Graine, Charme, Mégaphone, Croc Fatal; Câlinerie) / talent-caché(Possible) difficulté(4) capacités(Balle Graine, Charme, Prolifération, Encore; Hâte) / talent-caché(Possible) difficulté(5) capacités(Balle Graine, Encore, Prolifération, Câlinerie; Hâte, Mégaphone) / type-téracristal(Fée) talent-caché(Possible) difficulté(5) capacités(Balle Graine, Encore, Prolifération, Câlinerie; Hâte, Mégaphone)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Compagnol_1
+Bonbon Exp. XS / 2
+Bonbon Exp. S / 2
+Poils de Compagnol / 2
+Plume Sprint / 2
+Pomme (Paldea){{!}}Pomme / 2
+Kiwi / 2
+Banane (Paldea){{!}}Banane / 2
+Fraise / 2
+Ananas / 2
+Bonbon Exp. XS / 1 / 8,08%
+Bonbon Exp. S / 1 / 8,08%
+Poussière Étoile / 1 / 20,2%
+Beurre / 2 / 9,09%
+Crème Fouettée / 2 / 9,09%
+Confiture de Baies / 2 / 9,09%
+Marmelade / 2 / 9,09%
+Beurre de Cacahuètes / 2 / 9,09%
+Yaourt / 2 / 9,09%
+Fromage Frais / 2 / 9,09%
+
+Compagnol_2
+Bonbon Exp. S / 5
+Poils de Compagnol / 4
+Plume Sprint / 2
+Pomme (Paldea){{!}}Pomme / 2
+Kiwi / 2
+Banane (Paldea){{!}}Banane / 2
+Fraise / 2
+Ananas / 2
+Bonbon Exp. S / 2 / 13%
+Bonbon Exp. M / 1 / 13%
+Poussière Étoile / 1 / 20%
+Beurre / 2 / 9%
+Crème Fouettée / 2 / 9%
+Confiture de Baies / 2 / 0%
+Marmelade / 2 / 9%
+Beurre de Cacahuètes / 2 / 9%
+Yaourt / 2 / 9%
+Fromage Frais / 2 / 9%
+
+Compagnol_3
+Bonbon Exp. S / 2
+Bonbon Exp. M / 4
+Poils de Compagnol / 5
+Plume Sprint / 2
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Pomme (Paldea){{!}}Pomme / 2
+Kiwi / 2
+Banane (Paldea){{!}}Banane / 2
+Fraise / 2
+Ananas / 2
+Bonbon Exp. S / 2 / 15%
+Bonbon Exp. M / 3 / 15%
+Os Rare / 1 / 14%
+Beurre / 2 / 8%
+Crème Fouettée / 2 / 8%
+Confiture de Baies / 2 / 8%
+Marmelade / 2 / 8%
+Beurre de Cacahuètes / 2 / 8%
+Yaourt / 2 / 8%
+Fromage Frais / 2 / 8%
+
+Compagnol_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils de Compagnol / 4
+Plume Sprint / 3
+Téra-Éclat / 2
+Téra-Éclat / 4 / hôte
+Pomme (Paldea){{!}}Pomme / 5
+Kiwi / 3
+Banane (Paldea){{!}}Banane / 3
+Fraise / 3
+Ananas / 3
+Bonbon Exp. M / 3 / 12%
+Bonbon Exp. L / 2 / 12%
+Grande Perle / 1 / 13%
+Beurre / 3 / 9%
+Crème Fouettée / 3 / 9%
+Confiture de Baies / 3 / 9%
+Marmelade / 3 / 9%
+Beurre de Cacahuètes / 3 / 9%
+Yaourt / 3 / 9%
+Fromage Frais / 3 / 9%
+
+Compagnol_5
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Poils de Compagnol / 8
+Plume Sprint / 5
+Téra-Éclat / 4
+Téra-Éclat / 4 / hôte
+Pomme (Paldea){{!}}Pomme / 5
+Kiwi / 5
+Banane (Paldea){{!}}Banane / 5
+Fraise / 5
+Ananas / 5
+Super Bonbon / 2 / 15%
+Capsule d'Argent / 1 / 4%
+PP Plus / 1 / 4%
+Champi Suave / 1 / 14%
+Beurre / 5 / 9%
+Crème Fouettée / 5 / 9%
+Confiture de Baies / 5 / 9%
+Marmelade / 5 / 9%
+Beurre de Cacahuètes / 5 / 9%
+Yaourt / 5 / 9%
+Fromage Frais / 5 / 9%
+
+Compagnol_5_2
+Bonbon Exp. L / 3
+Bonbon Exp. XL / 2
+Poils de Compagnol / 8
+Plume Sprint / 5
+Téra-Éclat Fée / 4
+Téra-Éclat Fée / 4 / hôte
+Pomme (Paldea){{!}}Pomme / 5
+Kiwi / 5
+Banane (Paldea){{!}}Banane / 5
+Fraise / 5
+Ananas / 5
+Super Bonbon / 2 / 15%
+Capsule d'Argent / 1 / 4%
+PP Plus / 1 / 4%
+Champi Suave / 1 / 14%
+Beurre / 5 / 9%
+Crème Fouettée / 5 / 9%
+Confiture de Baies / 5 / 9%
+Marmelade / 5 / 9%
+Beurre de Cacahuètes / 5 / 9%
+Yaourt / 5 / 9%
+Fromage Frais / 5 / 9%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/13.02.2023]]

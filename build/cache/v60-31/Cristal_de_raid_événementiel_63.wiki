@@ -1,0 +1,63 @@
+{{Ruban Cristal de raid|63|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 63.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 63''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 29 novembre au 5 décembre 2024.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Corvaillus / talent-caché(Possible) difficulté(5) niveau(75) capacités(Grimace, Bec Vrille, Ailes d'Acier, Rapace; Aiguisage)
+Ampibidou / talent-caché(Possible) difficulté(5) niveau(75) capacités(Coup d'Jus, Ball'Météo, Champ Électrifié, Coup Bas; Étincelle)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Corvaillus_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Armure / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Armure / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Malin / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Corsée / 1 / 3%
+
+Ampibidou_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Corsée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/29.11.2024]]

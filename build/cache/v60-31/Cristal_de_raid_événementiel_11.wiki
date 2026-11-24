@@ -1,0 +1,150 @@
+{{Ruban Cristal de raid|11|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 11.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 11''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 17 au 19 février 2023.
+
+On y trouvait des [[Carchacrok]] et des [[Nymphali]].
+
+__TOC__
+
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Carchacrok / talent-caché(Possible) difficulté(4) capacités(Piétisol, Draco-Griffe, Éboulement, Morsure; Tempête de Sable) / talent-caché(Possible) difficulté(5) capacités(Séisme, Draco-Griffe, Éboulement, Tête de Fer; Tempête de Sable, Danse Lames) / type-téracristal(Sol) talent-caché(Possible) difficulté(5) capacités(Séisme, Draco-Griffe, Éboulement, Tête de Fer; Tempête de Sable, Danse Lames)
+Nymphali / talent-caché(Possible) difficulté(4) capacités(Mégaphone, Bélier, Voix Enjôleuse, Charme; Plénitude) / talent-caché(Possible) difficulté(5) capacités(Mégaphone, Téra Explosion, Pouvoir Lunaire, Bâillement; Plénitude) / type-téracristal(Fée) talent-caché(Possible) difficulté(5) capacités(Mégaphone, Téra Explosion, Pouvoir Lunaire, Bâillement; Plénitude)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Carchacrok_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Écaille de Griknot / 4
+Plume Force / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Santé / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Lonme / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 2 / 3%
+Écaille de Griknot / 2 / 9%
+
+Carchacrok_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Écaille de Griknot / 5
+Plume Force / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Écaille de Griknot / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Carchacrok_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Écaille de Griknot / 5
+Plume Force / 3
+Téra-Éclat Sol / 2
+Téra-Éclat Sol / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Sol / 2 / 11%
+Écaille de Griknot / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Nymphali_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poils d'Évoli / 4
+Plume Esprit / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Esprit / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Alga / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 2 / 3%
+Poils d'Évoli / 2 / 9%
+
+Nymphali_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Esprit / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Poils d'Évoli / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Nymphali_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Poils d'Évoli / 5
+Plume Esprit / 3
+Téra-Éclat Fée / 2
+Téra-Éclat Fée / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 11%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Modeste / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Fée / 2 / 11%
+Poils d'Évoli / 2 / 5%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/17.02.2023]]

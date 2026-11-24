@@ -1,0 +1,109 @@
+{{Ruban Cristal de raid|59|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 59.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 59''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 18 au 20 octobre 2024.
+
+On y trouvait les mêmes Pokémon exclusifs que dans [[Cristal de raid événementiel 40|un précédent raid événementiel]], mais avec des récompenses modifiées.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Carmadura / talent-caché(Possible) difficulté(5) niveau(75) capacités(Canon Blindé, Vaste Pouvoir, Luminocanon, Aurasphère; Zénith, Champ Psychique)
+Malvalame / talent-caché(Possible) difficulté(5) niveau(75) capacités(Lame en Peine, Griffe Ombre, Coupe Psycho, Tranche-Nuit; Zénith, Gonflette)
+Dolman / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Éboulement, Big Splash, Cavalerie Lourde, Tacle Lourd; Tempête de Sable, Mur de Fer)
+Bekaglaçon / talent-caché(Impossible) difficulté(5) niveau(75) capacités(Aqua-Brèche, Cryo-Pirouette, Tête de Fer, Psykoud'Boul; Amnésie, Chute de Neige)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Carmadura_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Esprit / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Esprit / 2 / 10%
+Baie Alga / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Corsée / 1 / 3%
+
+Malvalame_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+
+Dolman_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Salée / 1 / 3%
+
+Bekaglaçon_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 22%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 8%
+Grande Perle / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Acide / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/04.10.2024]]

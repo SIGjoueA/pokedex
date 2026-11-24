@@ -1,0 +1,149 @@
+{{Ruban Cristal de raid|6|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 6.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 6''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 6 au 8 janvier 2023.
+
+On y trouvait des [[Trioxhydre]] ou des [[Lanssorien]] selon la version, dont certains d'un type Téracristal en particulier.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Trioxhydre / talent-caché(Impossible) difficulté(4) capacités(Draco-Choc, Vibrobscur, Rengorgement, Souplesse) notes(Exclusif Ec.) / talent-caché(Impossible) difficulté(5) capacités(Draco-Météore, Vibrobscur, Machination, Souplesse; Grimace, Rengorgement) notes(Exclusif Ec.) / type-téracristal(Acier) talent-caché(Impossible) difficulté(5) capacités(Draco-Météore, Vibrobscur, Machination, Souplesse; Grimace, Rengorgement) notes(Exclusif Ec.)
+Lanssorien / talent-caché(Impossible) difficulté(4) capacités(Draco-Flèches, Danse Draco, Châtiment, Feu Follet) notes(Exclusif Vi.) / talent-caché(Possible) difficulté(5) capacités(Draco-Flèches, Draco-Météore, Châtiment, Lance-Flammes; Feu Follet, Danse Draco) notes(Exclusif Vi.) / type-téracristal(Dragon) talent-caché(Possible) difficulté(5) capacités(Draco-Flèches, Draco-Météore, Châtiment, Lance-Flammes; Feu Follet, Danse Draco) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Trioxhydre_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Écaille de Solochi / 4
+Plume Esprit / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Esprit / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Qualot / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Écaille de Solochi / 2 / 9%
+
+Trioxhydre_5
+Bonbon Exp. XL / 1
+Bonbon Exp. XL / 1
+Écaille de Solochi / 5
+Plume Esprit / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Écaille de Solochi / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Trioxhydre_5_2
+Bonbon Exp. XL / 1
+Bonbon Exp. XL / 1
+Écaille de Solochi / 5
+Plume Esprit / 3
+Téra-Éclat Acier / 2
+Téra-Éclat Acier / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Acier / 1 / 4%
+Écaille de Solochi / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Lanssorien_4
+Bonbon Exp. M / 2
+Bonbon Exp. L / 1
+Poudre de Fantyrm / 4
+Plume Esprit / 2
+Téra-Éclat / 1
+Téra-Éclat / 2 / hôte
+Bonbon Exp. M / 1 / 15%
+Bonbon Exp. M / 1 / 14%
+Bonbon Exp. L / 2 / 5%
+Plume Esprit / 1 / 10%
+Baie Sitrus / 1 / 7%
+Baie Prine / 1 / 7%
+Baie Qualot / 3 / 10%
+Grande Perle / 1 / 15%
+Pépite / 1 / 5%
+Téra-Éclat / 1 / 3%
+Poudre de Fantyrm / 2 / 9%
+
+Lanssorien_5
+Bonbon Exp. XL / 1
+Bonbon Exp. XL / 1
+Poudre de Fantyrm / 5
+Plume Esprit / 3
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 1 / 4%
+Poudre de Fantyrm / 2 / 5%
+Pilule Talent / 1 / 2%
+
+Lanssorien_5_2
+Bonbon Exp. XL / 1
+Bonbon Exp. XL / 1
+Poudre de Fantyrm / 5
+Plume Esprit / 3
+Téra-Éclat Dragon / 2
+Téra-Éclat Dragon / 2 / hôte
+Bonbon Exp. L / 1 / 23%
+Bonbon Exp. L / 2 / 18%
+Super Bonbon / 1 / 4%
+Plume Esprit / 2 / 10%
+Baie Tamato / 3 / 8%
+Gros Champi / 1 / 12%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Timide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Dragon / 1 / 4%
+Poudre de Fantyrm / 2 / 5%
+Pilule Talent / 1 / 2%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/06.01.2023]]

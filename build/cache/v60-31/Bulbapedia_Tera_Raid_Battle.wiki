@@ -1,0 +1,2388 @@
+[[File:Scarlet Violet Tera Raid Battle screenshot.png|thumb|250px|A Tera Raid Battle against a {{t|Water}} {{Tera|Tera Type}} {{p|Gardevoir}}]]
+A '''Tera Raid Battle''' (Japanese: '''テラレイドバトル''' ''Tera Raid Battle'') is a type of [[Pokémon battle]] featured in {{g|Scarlet and Violet}} in which four [[Pokémon Trainer]]s battle a {{pkmn2|wild}} {{Tera}} {{OBP|Pokémon|species}}, which remains Terastallized until enough damage has been dealt to the Pokémon.
+
+==History==
+Tera Raid Crystals are created from energy unleashed from the [[Great Crater of Paldea]] over the years. During the post-game events of {{g|Scarlet and Violet}}, stronger 5★ and black 6★ raid crystals begin to appear. [[Jacq]] asks the player to not participate in the 6★ raids for the player's safety, due to the overwhelming energy contained within. If the player ignores his request and manages to defeat one, it's revealed from the readings that they're being caused by residual energy leaking from [[Area Zero]] into the rest of [[Paldea]]. In certain events, 7★ Raids show up with very rare Pokémon normally not found in Paldea. The rare Pokémon discovered in 7★ Raids have often included [[Legendary Pokémon]] and the fully evolved forms of [[first partner Pokémon]], including the three [[Hisuian form]]s of {{p|Typhlosion}}, {{p|Samurott}}, and {{p|Decidueye}}.
+
+==In the games==
+[[File:Scarlet Violet Tera Raid Crystal screenshot.jpg|thumb|250px|A Grass Tera crystal, containing a Grass Tera-type Pokémon]]
+A number of shining crystals will be scattered across Paldea, which are visible at a distance in the overworld by a beam of light shooting up from them if they have not already been visited. The color of the crystal will also indicate the Tera Type of the Pokémon within, with the exception of black 6★ and 7★ difficulty crystals. These black raid crystals are displayed with the correct type icon on the minimap, but are displayed with a black background and subtle purple glow. Crystals associated with a [[Poké Portal News]] event will also be surrounded by circular ring-shaped auras when up close, and their type icons on the map will have a thicker, glowing border.
+
+Visiting each crystal for the first time awards a certain amount of LP, even if the player chooses not to participate in the raid: 
+{| class="roundy" style="text-align:center; background: #{{paldea color}}; border: 3px solid #{{paldea color dark}};"
+|- 
+! style="background: #{{paldea color light}}; {{roundytl|5px}}"| Rank
+! style="background: #{{paldea color light}}; {{roundytr|5px}}" | LP reward
+|- style="background: #FFFFFF;"
+! ★
+| 500 LP
+|- style="background: #FFFFFF;"
+! ★★
+| 700 LP
+|- style="background: #FFFFFF;"
+! ★★★
+| 1000 LP
+|- style="background: #FFFFFF;"
+! ★★★★
+| 1200 LP
+|- style="background: #FFFFFF;"
+! ★★★★★
+| 1500 LP
+|- style="background: #FFFFFF;"
+! {{tt|★★★★★★|Only one crystal at this level will be available per refresh}}
+| 1800 LP
+|- 
+! style="background: #FFFFFF; {{roundybl|5px}}" | {{tt|★★★★★★★|Crystals at this level are only available from Poké Portal News}}
+| style="background: #FFFFFF; {{roundybr|5px}}" | 2000 LP
+|}
+No LP is given for visiting the same crystal subsequent times, or for joining a raid hosted by another player. If the host manages to defeat the Tera Raid, their crystal will disappear. Unlike Max Raid Battles, completing all possible raids in the region will not make a new set of crystals respawn; instead, they will only respawn at midnight or when the player receives new Poké Portal News data.
+
+Each Trainer uses a single Pokémon (from either their party or [[Pokémon Box Link|Box]]) against the Tera Pokémon. When starting a Tera Raid Battle, players can see a silhouette of the Tera Pokémon, its Tera Type, and a star rating of its difficulty. The objective, "''Defeat the Tera Pokémon within the time limit!''", is displayed in the lower right corner. Additionally, if the raid has been opened to other players, there is a 3-minute timer for those players to join and select a Pokémon, or the currently selected Pokémon will be locked in at the end of the timer and the raid automatically starts. Each player at the waiting screen in these raids can see the other three Trainers participating and the Pokémon they have currently chosen, with a checkmark if their choice has been locked in.
+
+The Pokémon each player selected to battle with will be fully healed at the start of the battle, and if a Pokémon from the party was selected, it will be fully healed again at the end of the battle. If a Pokémon from the boxes was selected, then after the battle is over, its HP, PP, and status condition will revert to what they were before it was selected for battle.
+
+===Battle===
+
+====Timer====
+The battle system differs from typical turn-based battles in that the battle is timed, with an orange timer bar visible below the boss's HP bar that ticks down from 5 to 7½ minutes and beyond depending on the raid (the event Mewtwo raid having the longest length to date at 15 minutes), and all participants are able to act at any point, regardless of whether the opponent Pokémon or allies are also performing an action at the same time. It is even possible for a Pokémon to execute multiple moves before an ally chooses to act at all.
+
+When the timer reaches 10% time remaining, the message "''You can feel a tremendous energy gathering! There isn't much time left!''" will appear. If the timer expires before players defeat the Tera Pokémon, the energy burst will be unleashed, expelling all players from the raid, with the messages "''(Pokémon) released its gathered energy!''", followed by "''You and the others were blown out of the cavern!''"
+
+====Turn system====
+The raid boss essentially participates in four concurrent one-on-one battles against each of the team members, and for each turn any player takes, the boss will get one turn against that player, with their relative order within that turn decided by priority or speed as usual. During these turns, the boss may use any move from its base moveset, which is the moveset it will have if it is caught and thus contains up to four moves. Moves used by other players' Pokémon will appear as small speech bubbles next to their sprites in the top-left corner. A player will not see any messages for moves the raid boss uses against other players' Pokémon (except for additional moves described below), but if some of those moves affect its own stat stages (such as {{m|Calm Mind}} or {{m|Ancient Power}}), those stages will be in effect for all players, and can be seen by checking its status with the Y button. Likewise, moves that create weather or terrain conditions will create them for all four lanes, even if some players don't see the move being used; a particle effect will be visible in the center of the screen to indicate their presence. Field effects that last for a certain number of turns will have their turn count decrease only after all players have made a move. {{m|Light Screen}} and {{m|Reflect}} will use their reduced doubles damage multiplier.
+
+If the raid has been opened to other players (even if no others joined), then each time a player's menu comes up, that player must select an action within 60 seconds, or else the earliest selectable move in their moveset will automatically be used at that time.
+
+====Targeting====
+
+Players are allowed to target a teammate with their moves, but {{cat|moves that target all adjacent Pokémon}} (such as {{m|Earthquake}}) will only hit the raid boss. If the raid boss uses such a move, it will only hit the Pokémon whose lane it was used in, and will not receive a multiple-target damage penalty (except if it uses it during an extra action as described below). 
+
+====Knockouts====
+If a non-boss Pokémon faints, it will be revived after five seconds initially, plus an additional five-second wait for each time it has previously fainted in the battle, up to a maximum of 30 seconds. Additionally, this also reduces the timer by a number of seconds equal to the fainted Pokémon's level. Pokémon used by NPCs do not reduce the timer when they faint.
+
+====Terastallization====
+Each time a player's Pokémon successfully uses a direct-damaging move, this player's [[Tera Orb]] will gain one charge. If a player's [[Tera Orb]] has three charges, this player can Terastallize their Pokémon on any turn. Each player may only Terastallize once per raid, even if their Terastallized Pokémon faints.
+
+Only direct-damaging moves, targeting either the raid boss or an ally, will count towards the Tera Orb's charge. [[Status move]]s, [[#Cheers|cheering]], and moves that miss do not count. If a damaging move is used while the boss's shield is up and deals so little damage that the shield reduction causes the damage to be less than ½, it will round down to 0 damage and that attack will not charge the Tera Orb either.
+
+Unlike [[Max Raid Battle]]s, where only a single player can [[Dynamax]] their Pokémon and the option to do so rotates between players until it's used, all four participants in a Tera Raid Battle are permitted to Terastallize their Pokémon separately.
+
+The allied NPCs never Terastallize their Pokémon. However, if a player has disconnected and is currently being controlled by the AI, then it will Terastallize at the earliest possible opportunity if possible.
+
+====Extra actions====
+The boss may have extra actions which take place at predefined thresholds of health or time. These actions interrupt players' access to the menu. If the thresholds for two or more extra actions are met at the same moment (for instance, because of heavy damage), the boss will perform all of them in sequence, and it will not be possible to access the menu again until each of them have finished their animations. An extra action can happen between a player's command and the corresponding turn.
+
+There are six types of extra action: additional move, shield, removal of negative effects, removal of positive effects, [[Tera Orb]] charge stealing, and the double-action phase where the boss can use a second move in a turn. Additional moves appear in 3★-and-above raids, while all the other actions appear in 4★-and-above raids. The double-action phase has only appeared in certain 7★ raids so far.
+
+If an action's trigger is at 100% of time or HP remaining, it will thus trigger at the very start of the battle, before the players can take a turn. This often happens in 7★ raids and some of the 5★ event raids but also occurred in many of the 5★ and 6★ raids in [[Kitakami]] and the [[Terarium]].<ref>https://twitter.com/Sibuna_Switch/status/1628992932039602177</ref>
+
+=====Additional move=====
+The boss uses a move outside of standard turn order. This move can be outside of their base moveset; if it is the case, it will not know it if it is caught.
+* For moves that target a single Pokémon, a random target will be chosen, and all players will be able to see the move messages and the attack animation aimed in the direction of the targeted Pokémon, even when it isn't their own.
+* For moves that usually target multiple Pokémon, it will do so, and the multiple-target damage penalty will apply. This is the only way a move can ever hit multiple Pokémon during a Tera Raid Battle.
+This additional move can be interrupted by paralysis, but not freeze. If the boss is frozen when it hits the threshold, then the attempt to use the move will be delayed until after it has thawed out.
+
+=====Shield=====
+The boss produces a shield which severely reduces the damage of attacks from non-Terastallized Pokémon, blocks the effects of [[status move]]s, and cures any non-volatile [[status condition]] it has upon activation. This action has two separate triggers, one based on a time threshold and one based on an HP threshold, but it can never be done more than once in a battle, even if the shield breaks before the alternative condition gets fulfilled.
+
+The shield applies a multiplier to incoming damage. There are three multipliers depending on the situation of the attacking Pokémon:
+* the attacking Pokémon is not Terastallized: ×0.2;
+* the attacking Pokémon is Terastallized and the move's type '''does not match''' the user's Tera Type (including a non-{{type|Stellar}} move from a user with the Stellar Tera type): ×0.35;
+* the attacking Pokémon is Terastallized and the move's type '''does match''' the user's Tera Type: ×0.75.
+
+The previous multipliers' values are used for all 6★ and 5★ raids in Paldea,<ref>https://twitter.com/Sibuna_Switch/status/1610483831769018368</ref> which includes all non-event raids, but may be different for 7★ raids, going as far as being greater than 1 (thus increasing damage) or being very small (×0.01 for instance). 4★ raids in Paldea and Kitakami use ×0.4 multipliers and ×0.8 multipliers for the respective Terastallized scenarios. 5★ raids in Kitakami use ×0.3, ×0.6, and ×0.9 multipliers, while 6★ raids use ×0.3, ×0.55, and ×0.85 multipliers. 4★ raids in Blueberry Academy use ×0.4, ×0.5, and ×0.9 multipliers, while 5★ raids use the same multipliers as Paldea, and 6★ raids use ×0.4, ×0.6, and ×0.8 multipliers.
+
+After the multiplier is applied, damage is rounded to the nearest whole number, with values of 0.5 and above rounding up.
+
+After the boss's shield is broken, the boss will not move during each player's next turn. However, it may still use scripted moves if any are scheduled to take place at the time.
+
+=====Removal of negative effects=====
+The boss removes any non-volatile [[status condition]] it has and its negative [[stat modifier]]s. Its positive stat modifiers will remain as they are. All other effects such as {{m|Leech Seed}} or ability changes remain untouched.
+
+=====Removal of positive effects=====
+The boss removes the positive [[stat modifier]]s of its opponents, and only for the following turn, nullifies their [[Ability|Abilities]] as well. Negative stat modifiers will remain as they are. Pokémon that are knocked out or are holding an [[Ability Shield]] during the removal are not affected by the Ability nullification.
+
+=====Tera Orb charge stealing=====
+The boss removes one charge from each player's [[Tera Orb]]. Pokémon that have already Terastallized, that have not built up any charge, or that are knocked out are unaffected.
+
+=====Double-action phase=====
+After a predefined HP or time threshold, the boss has a set-percentage chance to use a randomly selected attack at the end of the turn, allowing it to use two moves in a single turn. The choice of the second attack seems to be fully random, so it can select attacks that the target is visibly immune to, unlike the typical AI.
+
+====Additional commands====
+The players cannot use items from their bags, but have additional commands exclusive to raids.
+
+=====Running away=====
+In a single-player raid, the host can choose to run away, ending the battle as a forfeit. If the raid has been opened to other players (even if no others joined), running is not possible, and will give the message ''"It's no good! You can't find an opening to run away from such a strong opponent!"''.
+
+=====Cheers=====
+{{incomplete|section|needs=Mechanics behind Go all out! and Hang tough! cheers are still not entirely understood, see [https://twitter.com/Sibuna_Switch/status/1772885083696791811 this twitter thread] <br>Missing chart for different probabilities Heal up! to restore different amounts of HP, see [https://twitter.com/Sibuna_Switch/status/1770995804129366511 this twitter thread].}}
+Players can opt to cheer instead of executing a move, up to three times per Tera Raid per player. Cheering has increased [[priority]] over moves. The player cheers using their fist when activating any of the cheers. The three cheer options are:
+* '''Go all out!''': multiplies the user's and their allies' Attack and Sp. Atk by ×1.5. The aura is red.
+* '''Hang tough!''': multiplies the user's and their allies' Defense and Sp. Def by ×1.5<ref>https://twitter.com/Sibuna_Switch/status/1772885083696791811</ref> The aura is blue.
+* '''Heal up!''': removes non-volatile [[status condition]]s and {{status|confusion}} from the user and their allies, and restores 20% to 100% of their total HP randomly<ref>https://twitter.com/Sibuna_Switch/status/1770995804129366511</ref> The aura is green.
+** The amount of HP restored is the same for all participants affected by the same cheer, rather than differing amounts per participant.<ref>https://twitter.com/Sibuna_Switch/status/1771005827702296934</ref>
+
+[[Stat]]-boosting effects from cheers are independent from other [[stat modifier]]s, which means that their effects stack multiplicatively. Stat-boosting cheers last for three turns for each Pokémon, even if the Tera Raid Pokémon nullifies stat changes. If an ally faints and returns to battle within those turns, [[List of glitches in Generation IX#Permanent cheer preservation on fainting|the stat boost from the cheer will be made permanent for the rest of the battle]], and this permanent boost can stack with a regular cheer afterwards, which can also be made permanent and repeated if fainted again.<ref>[https://web.archive.org/web/20221229032818/https://twitter.com/Sibuna_Switch/status/1607557138271936513 Anubis on Twitter: "The more I look into Tera Raid cheer mechanics, the more confused I am..."]</ref>
+
+If there is at least one NPC Trainer in a Tera Raid Battle, the first one (based on the display order in the top-left corner) will always cheer "Hang tough!" on the first turn. NPCs will not perform any other cheers during the raid.
+
+=====Callouts=====
+The player can press the Minus button to choose between four Callouts: "Help!", "Everyone, attack together!", "Thanks!", and "I've got this!". They have no practical effect outside of communicating with other players. The Callouts are displayed to other players in a bubble just like how the player's Pokémon moves are displayed to them. After using any three Callouts within a turn, they will be unusable until the next turn.
+
+====Additional info====
+* The raid boss has infinite [[PP]] on all of its moves.
+* Pokémon found in 3★-or-above Tera Raid Battles may have their [[Hidden Ability]].
+** {{p|Ditto}} Tera Raid Battles are an exception, and always have their Hidden Ability.
+
+====Battle Limitations====
+{{incomplete|section|needs=What are the effects of moves such as Endeavor, Pain Split, Eruption, etc. when used in a Tera Raid Battle?}}
+There are a variety of moves, abilities, and items that either operate with limited effects or are completely negated. Some limits apply to all combatants while others only apply to only players or the raid boss.
+
+=====All combatants=====
+======Item relocating======
+Moves and Abilities that involve the transfer of items fail to have effect. Any other effects or damage operate as normal. Examples include:
+
+* Moves: {{m|Trick}}, {{m|Switcheroo}}, {{m|Thief}}, {{m|Covet}}
+* Abilities: {{a|Magician}}, {{a|Pickpocket}}, {{a|Sticky Hold}}
+
+Items that transfer themselves (such as [[Sticky Barb]]) operate as normal.
+
+======Instant-KOs======
+* Moves that knock out the user, such as {{m|Self-Destruct}}, {{m|Explosion}}, {{m|Misty Explosion}}, or {{m|Final Gambit}}, will fail and not knock out the user.
+* Moves that can cause an instant KO on any target will fail: {{m|Perish Song}}, {{m|Destiny Bond}}.
+** If a [[one-hit knockout move]] lands on the raid boss, it takes no damage from it. However, they work normally against any players' Pokémon.
+
+======Damage based on target's HP======
+Moves, abilities, status conditions, and items that cause damage or healing based on the target's HP are calculated relative to the raid boss' base max HP rather than its boosted max HP (usually resulting in comparatively tiny values), but otherwise operate as normal. Examples include:
+
+* Moves: {{m|Ruination}}, {{m|Super Fang}}, {{m|Endeavor}}, {{m|Recover}}, {{m|Heal Pulse}}, {{m|Roost}}
+** Relatedly, moves the raid boss uses that get weaker/stronger based on its remaining HP are functionally locked to their "full HP" power for the entire raid, for better or worse, as its current HP will almost always be at or above its max HP. Examples include {{m|Eruption}}, {{m|Water Spout}}, {{m|Flail}}.
+* Abilities: {{a|Aftermath}}, {{a|Bad Dreams}}, {{a|Gulp Missile}}, {{a|Rough Skin}}, {{a|Iron Barbs}}
+* Items: [[Rocky Helmet]], [[Sticky Barb]], [[Sitrus Berry]]
+* Status: {{status|Poison}}, {{status|burn}}, {{m|Curse}}, [[seeding]]
+** If a raid boss would be inflicted with "Badly Poisoned", such as by the move Toxic, it instead is inflicted with standard Poison.
+
+======Moves and Abilities that interact differently with Tera forms======
+Some moves and abilities operate normally but may be misunderstood how they interact with Terastallized Pokémon. For example, a Terastallized Pokémon cannot have its type changed by any means, even if a prompt claims it did. Because a raid boss is always Terastallized, and while an allied Pokémon is Terastallized, some moves' or their additional effects fail to operate as normal against/by that target.
+
+* Moves that cause type changes fail to change a Terastallized Pokémon's type(s) but otherwise operate normally: {{m|Soak}}, {{m|Reflect Type}}, {{m|Roost}}, {{m|Burn Up}}, {{m|Double Shock}}
+* Moves with effects impacted by a Terastallized Pokémon:
+** {{m|Tar Shot}} (fails to add Fire weakness when used against a currently-Terastallized target)
+** {{m|Judgment}} (Judgment's type is determined by the user's held [[Plate]]/lack of Plate, not the user's type. If an Arceus holds any plate other than a [[Blank Plate]] and its Tera Type does not match that of the held plate and it is not the {{t|Stellar}} type, Judgment will not receive {{STAB}} while it is Terastallized.)
+* Abilities relating to type changes are prevented/overridden by an active Tera Type: {{a|Protean}}, {{a|Libero}}, {{a|Forecast}}.
+
+======Moves======
+* The following moves will fail: {{m|Guard Split}}, {{m|Power Split}}, {{m|Pain Split}}.
+* Moves that force either the target or user to retreat from the battle or switch out will fail to do so, but otherwise operate normally. Examples include: {{m|Roar}}, {{m|Dragon Tail}}, {{m|U-turn}}, {{m|Volt Switch}}.
+* Moves that alter the field, such as {{m|Trick Room}}, {{m|Magic Room}}, [[weather]], [[terrain]], and [[List of moves that cause entry hazards|entry hazards]] affect all combatants/the full targeted side.
+* {{m|Sketch}} operates like {{m|Mimic}}, reverting back to Sketch after the raid.
+* Damaging moves that target multiple Pokémon only affect the opponent in the targeted lane. Examples include: {{m|Earthquake}}, {{m|Surf}}, {{m|Hurricane}}, {{m|Growl}}.
+** However, this limit does not apply to those moves when called as a raid boss' extra actions and will hit the full party as normal at that time.
+
+======Abilities======
+* Negated Abilities: (none identified)
+
+Some abilities are not directly negated, but may be hindered or be unable to operate due to relying on something that is limited or not applicable in Tera Raid Battles.
+
+* Hindered effect:
+** {{a|Damp}} only affects the ability Aftermath, as self-destructive moves are blocked.
+* Unusable effect:
+** Any ability that requires/causes switching out or ending a battle, including: {{a|Zero to Hero}}, {{a|Natural Cure}}, {{a|Wimp Out}}, {{a|Emergency Exit}}, {{a|Run Away}}, {{a|Pickup}}
+
+======Items======
+* The following items have effects that fail in Tera Raids: [[Red Card]] and [[Eject Button]] (due to switching being restricted)
+
+=====Player-specific=====
+======Moves======
+* Moves with beneficial full-team effects apply to all players. Examples include: {{m|Life Dew}}, {{m|Reflect}}, {{m|Light Screen}}, {{m|Aurora Veil}}, and {{m|Safeguard}}.
+* The following moves when used against the raid boss will fail without effect: {{m|Disable}}, {{m|Encore}}, {{m|Imprison}}, {{m|Torment}}.
+* {{m|Fake Out}} and other [[flinch]]-inflicting moves fail to cause a raid boss to flinch, but otherwise operate normally.
+* {{m|Knock Off}} used against an ally fails to remove the target's held item. Otherwise operates normally.<sup>(verification needed, there are claims of operating differently in certain raids)</sup>
+* {{m|Last Respects}} fails to increase in base damage based on number of party KOs, including itself.
+
+======Abilities======
+* Abilities that redirect moves from an ally fail to redirect but any additional effects, whether beneficial or not, operate as normal. Examples include: {{a|Storm Drain}}, {{a|Lightning Rod}}.
+* Abilities that cause a raid boss to flinch fail to do so, such as {{a|Stench}}.
+
+======Items======
+* [[King's Rock]] fails to cause a raid boss to flinch.
+
+=====Raid Boss-specific=====
+======Moves======
+* (none identified)
+
+======Abilities======
+* If the Raid Boss has {{a|Imposter}}, it will always transform into the raid host's Pokémon.
+* A Raid Boss's {{a|Inner Focus}} and {{a|Steadfast}} cannot activate due to flinching (as it cannot flinch).
+
+===Capture===
+Defeating the Tera Pokémon within the time limit will cause the Pokémon to cease being Terastallized, at which point the player is given the chance to select a [[Poké Ball]] from their bag to catch the Pokémon. This capture cannot fail, regardless of the type of ball used, or whether the player is the host or participant of the battle.
+
+===Difficulty===
+{{incomplete|section|needs=The list of events with a non-typical HP multiplier is incomplete.}}
+Tera Raid Pokémon have their [[HP]] increased for the duration of the battle, as well as having one or more of their [[IV]]s guaranteed to be set to 31, except for 3★ Pachirisu, which is not set to have any guaranteed IVs. Additionally, 6★-raid Pokémon are temporarily set to level 90 for the duration of the battle, but are reduced to level 75 when captured.
+{| class="roundy" style="margin:auto; text-align:center; background:#{{paldea color}}; border: 3px solid #{{paldea color dark}}; caption-side:bottom;" cellpadding="3px"
+|- 
+! style="background-color:#{{paldea color light}}; {{roundytl|5px}}" | Star Rating
+! style="background-color:#{{paldea color light}}" | {{color2|000|HP}} modifier
+! style="background-color:#{{paldea color light}}" | {{color2|000|Level}}<br>during battle
+! style="background-color:#{{paldea color light}}" | {{color2|000|Level}}<br>when {{color2|000|Caught Pokémon|caught}}
+! style="background-color:#{{paldea color light}}; {{roundytr|5px}}" | Guaranteed<br> {{color2|000|Stats judge|best}} {{color2|000|IV|IVs}}
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★
+| 5×
+| 12
+| 12
+| 1
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★
+| 5×
+| 20
+| 20
+| 1
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★★
+| 8×
+| 35
+| 35
+| 2
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★★★
+| 12×
+| 45
+| 45
+| 3
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}};" | ★★★★★
+| 20×<sup>*</sup>
+| 75
+| 75
+| 4
+|- style="background:#fff"
+! style="background-color:#{{violet color light}}" | ★★★★★★
+| 25×
+| 90
+| 75
+| 5
+|- style="background:#fff"
+! style="background-color:#{{violet color light}}; {{roundybl|5px}}" | ★★★★★★★
+| Varies<sup>**</sup>
+| 100
+| 100
+| style="{{roundybr|5px}}" | 6
+|+ style="font-size:80%; text-align:left; " | 
+: <sup><nowiki>*</nowiki></sup> Some event 5★ Raids have a different multiplier, such as the Dialga and Palkia event which had a 35× HP modifier.
+: <sup><nowiki>**</nowiki></sup> While this modifier is typically 30×, several events have deviated from this, for instance:
+:: The 7★ event Samurott, Chesnaught, Rillaboom, Hisuian Samurott, Empoleon, and Blastoise had a 35× modifier.
+:: The 7★ event Pikachu, Eevee, and Mewtwo had a 50× modifier.
+:: The first 7★ event Charizard had a modifier of only 25×.
+|}
+
+===Encounters===
+The Pokémon available to fight in a Tera Raid Battle changes with the star value of the raid, as well as which version of the game the player is playing. The raid boss's Tera Type is chosen independently of the Pokémon itself, and has no influence over which Pokémon the raid boss will be.
+
+{| class="roundy" style="margin:auto; text-align:center; background:#{{paldea color}}; border: 3px solid #{{paldea color dark}}" cellpadding="3px"
+|- 
+! style="background-color:#{{paldea color light}}; {{roundytl|5px}}" | Star rating
+! style="background-color:#{{paldea color light}}" | From<br>beginning
+! style="background-color:#{{paldea color light}}" | After three<br>{{color2|000|Badge|Gym Badges}}
+! style="background-color:#{{paldea color light}}" | After six<br>{{color2|000|Badge|Gym Badges}}
+! style="background-color:#{{paldea color light}}" | After<br>{{color2|000|Game credits|ending credits}}
+! style="background-color:#{{paldea color light}}; {{roundytr|5px}}" | Complete {{color2|000|Academy Ace Tournament}}<br>and 10 4★ or 5★ Raids
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★
+| 80%
+| 30%
+| 20%
+| 0%
+| 0%
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★
+| 20%
+| 40%
+| 20%
+| 0%
+| 0%
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★★
+| 0%
+| 30%
+| 30%
+| 40%
+| 30%
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★★★
+| 0%
+| 0%
+| 30%
+| 35%
+| 40%
+|- style="background:#fff"
+! style="background-color:#{{paldea color light}}" | ★★★★★
+| 0%
+| 0%
+| 0%
+| 25%
+| 30%
+|- style="background:#fff"
+! style="background-color:#{{violet color light}}" | ★★★★★★
+| 0%
+| 0%
+| 0%
+| 0%
+| Only one per real-life day
+|- style="background:#fff"
+! style="background-color:#{{violet color light}}; {{roundybl|5px}}" | ★★★★★★★<br><small>'''([[Poké Portal News]] exclusive)'''</small>
+| 0%
+| 0%
+| 0%
+| 0%
+| style="{{roundybr|5px}}" | Only one per real-life day
+|}
+
+====Paldea====
+
+=====1★ Raids=====
+{{main|List of 1★ Tera Raid Battles (Paldea)}}
+
+=====2★ Raids=====
+{{main|List of 2★ Tera Raid Battles (Paldea)}}
+
+=====3★ Raids=====
+{{main|List of 3★ Tera Raid Battles (Paldea)}}
+
+=====4★ Raids=====
+{{main|List of 4★ Tera Raid Battles (Paldea)}}
+
+=====5★ Raids=====
+{{main|List of 5★ Tera Raid Battles (Paldea)}}
+
+=====6★ Raids=====
+{{main|List of 6★ Tera Raid Battles (Paldea)}}
+
+=====7★ Raids=====
+
+{| class="roundtable sortable" style="margin:auto; text-align:center; background:#{{paldea color}}; border: 3px solid #{{paldea color dark}};" cellpadding="3px"
+|-
+! style="background-color:#{{paldea color light}}; {{roundytl|5px}}" | Star Raid Battle name
+! style="background-color:#{{paldea color light}}" | Pokémon
+! style="background-color:#{{paldea color light}}" | Pokémon form
+! style="background-color:#{{paldea color light}}" | Date start
+! style="background-color:#{{paldea color light}}" | Date finish
+! style="background-color:#{{paldea color light}}" | Pokémon Tera Type
+! style="background-color:#{{paldea color light}}" | Star Tera Raid
+! style="background-color:#{{paldea color light}}; {{roundytr|5px}}" | Mark Icon
+
+|-
+| Mighty Kingambit
+| {{p|Kingambit}}
+| —
+| data-sort-value="2026-08-28" | August 28, 2026
+| data-sort-value="2026-09-03" | September 3, 2026
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+|-
+| Mighty Farigiraf
+| {{p|Farigiraf}}
+| —
+| data-sort-value="2026-08-21" | August 21, 2026
+| data-sort-value="2026-08-27" | August 27, 2026
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+|-
+| Mighty Annihilape
+| {{p|Annihilape}}
+| —
+| data-sort-value="2026-08-14" | August 14, 2026
+| data-sort-value="2026-08-20" | August 20, 2026
+{{Typetable|Ghost}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Glimmora
+| {{p|Glimmora}}
+| —
+| data-sort-value="2026-08-07" | August 7, 2026
+| data-sort-value="2026-08-13" | August 13, 2026
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Magikarp
+| {{p|Magikarp}}
+| —
+| data-sort-value="2026-07-17" | July 17, 2026
+| data-sort-value="2026-08-06" | August 6, 2026
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Samurott
+| {{p|Samurott}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2026-07-10" | July 10, 2026
+| data-sort-value="2026-07-16" | July 16, 2026
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Typhlosion
+| {{p|Typhlosion}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2026-07-03" | July 3, 2026
+| data-sort-value="2026-07-09" | July 9, 2026
+{{Typetable|Fire}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Decidueye
+| {{p|Decidueye}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2026-06-26" | June 26, 2026
+| data-sort-value="2026-07-02" | July 2, 2026
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Inteleon
+| {{p|Inteleon}}
+| —
+| data-sort-value="2026-06-19" | June 19, 2026
+| data-sort-value="2026-06-25" | June 25, 2026
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Cinderace
+| {{p|Cinderace}}
+| —
+| data-sort-value="2026-06-12" | June 12, 2026
+| data-sort-value="2026-06-18" | June 18, 2026
+{{Typetable|Fighting}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Rillaboom
+| {{p|Rillaboom}}
+| —
+| data-sort-value="2026-06-05" | June 5, 2026
+| data-sort-value="2026-06-11" | June 11, 2026
+{{Typetable|Normal}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Primarina
+| {{p|Primarina}}
+| —
+| data-sort-value="2026-05-29" | May 29, 2026
+| data-sort-value="2026-06-04" | June 4, 2026
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Incineroar
+| {{p|Incineroar}}
+| —
+| data-sort-value="2026-05-22" | May 22, 2026
+| data-sort-value="2026-05-28" | May 28, 2026
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Decidueye
+| {{p|Decidueye}}
+| —
+| data-sort-value="2026-05-15" | May 15, 2026
+| data-sort-value="2026-05-21" | May 21, 2026
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Greninja
+| {{p|Greninja}}
+| —
+| data-sort-value="2026-05-08" | May 8, 2026
+| data-sort-value="2026-05-14" | May 14, 2026
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Delphox
+| {{p|Delphox}}
+| —
+| data-sort-value="2026-05-01" | May 1, 2026
+| data-sort-value="2026-05-07" | May 7, 2026
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Chesnaught
+| {{p|Chesnaught}}
+| —
+| data-sort-value="2026-04-24" | April 24, 2026
+| data-sort-value="2026-04-30" | April 30, 2026
+{{Typetable|Rock}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Samurott
+| {{p|Samurott}}
+| —
+| data-sort-value="2026-04-17" | April 17, 2026
+| data-sort-value="2026-04-23" | April 23, 2026
+{{Typetable|Bug}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Emboar
+| {{p|Emboar}}
+| —
+| data-sort-value="2026-04-10" | April 10, 2026
+| data-sort-value="2026-04-16" | April 16, 2026
+{{Typetable|Electric}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Serperior
+| {{p|Serperior}}
+| —
+| data-sort-value="2026-04-03" | April 3, 2026
+| data-sort-value="2026-04-09" | April 9, 2026
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Empoleon
+| {{p|Empoleon}}
+| —
+| data-sort-value="2026-03-27" | March 27, 2026
+| data-sort-value="2026-04-02" | April 2, 2026
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Infernape
+| {{p|Infernape}}
+| —
+| data-sort-value="2026-03-20" | March 20, 2026
+| data-sort-value="2026-03-26" | March 26, 2026
+{{Typetable|Rock}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Torterra
+| {{p|Torterra}}
+| —
+| data-sort-value="2026-03-13" | March 13, 2026
+| data-sort-value="2026-03-19" | March 19, 2026
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Swampert
+| {{p|Swampert}}
+| —
+| data-sort-value="2026-03-06" | March 6, 2026
+| data-sort-value="2026-03-12" | March 12, 2026
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Blaziken
+| {{p|Blaziken}}
+| —
+| data-sort-value="2026-02-27" | February 27, 2026
+| data-sort-value="2026-03-05" | March 5, 2026
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Sceptile
+| {{p|Sceptile}}
+| —
+| data-sort-value="2026-02-20" | February 20, 2026
+| data-sort-value="2026-02-26" | February 26, 2026
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Feraligatr
+| {{p|Feraligatr}}
+| —
+| data-sort-value="2026-02-13" | February 13, 2026
+| data-sort-value="2026-02-19" | February 19, 2026
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Typhlosion
+| {{p|Typhlosion}}
+| —
+| data-sort-value="2026-02-06" | February 6, 2026
+| data-sort-value="2026-02-12" | February 12, 2026
+{{Typetable|Ghost}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Meganium
+| {{p|Meganium}}
+| —
+| data-sort-value="2026-01-30" | January 30, 2026
+| data-sort-value="2026-02-05" | February 5, 2026
+{{Typetable|Psychic}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Blastoise
+| {{p|Blastoise}}
+| —
+| data-sort-value="2026-01-23" | January 23, 2026
+| data-sort-value="2026-01-29" | January 29, 2026
+{{Typetable|Steel}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Charizard
+| {{p|Charizard}}
+| —
+| data-sort-value="2026-01-16" | January 16, 2026
+| data-sort-value="2026-01-22" | January 22, 2026
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Venusaur
+| {{p|Venusaur}}
+| —
+| data-sort-value="2026-01-09" | January 9, 2026
+| data-sort-value="2026-01-15" | January 15, 2026
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Dragapult
+| {{p|Dragapult}}
+| —
+| data-sort-value="2025-12-05" | December 5, 2025
+| data-sort-value="2025-12-07" | December 7, 2025
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Dragapult
+| {{p|Dragapult}}
+| —
+| data-sort-value="2025-12-12" | December 12, 2025
+| data-sort-value="2025-12-14" | December 14, 2025
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Goodra
+| {{p|Goodra}}
+| —
+| data-sort-value="2025-11-21" | November 21, 2025
+| data-sort-value="2025-11-23" | November 23, 2025
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Goodra
+| {{p|Goodra}}
+| —
+| data-sort-value="2025-11-28" | November 28, 2025
+| data-sort-value="2025-11-30" | November 30, 2025
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hydreigon
+| {{p|Hydreigon}}
+| —
+| data-sort-value="2025-11-07" | November 7, 2025
+| data-sort-value="2025-11-09" | November 9, 2025
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hydreigon
+| {{p|Hydreigon}}
+| —
+| data-sort-value="2025-11-14" | November 14, 2025
+| data-sort-value="2025-11-16" | November 16, 2025
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Roaring Moon
+| {{p|Roaring Moon}}
+| —
+| data-sort-value="2025-10-03" | October 3, 2025
+| data-sort-value="2025-10-12" | October 12, 2025
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Iron Valiant
+| {{p|Iron Valiant}}
+| —
+| data-sort-value="2025-10-03" | October 3, 2025
+| data-sort-value="2025-10-12" | October 12, 2025
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Kommo-o
+| {{p|Kommo-o}}
+| —
+| data-sort-value="2025-07-11" | July 11, 2025
+| data-sort-value="2025-07-13" | July 13, 2025
+{{Typetable|Fighting}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Kommo-o
+| {{p|Kommo-o}}
+| —
+| data-sort-value="2025-07-18" | July 18, 2025
+| data-sort-value="2025-07-20" | July 20, 2025
+{{Typetable|Fighting}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Baxcalibur
+| {{p|Baxcalibur}}
+| —
+| data-sort-value="2025-06-20" | June 20, 2025
+| data-sort-value="2025-06-22" | June 22, 2025
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Baxcalibur
+| {{p|Baxcalibur}}
+| —
+| data-sort-value="2025-06-27" | June 27, 2025
+| data-sort-value="2025-06-29" | June 29, 2025
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Porygon2
+| {{p|Porygon2}}
+| —
+| data-sort-value="2025-06-05" | June 5, 2025
+| data-sort-value="2025-06-16" | June 16, 2025
+{{Typetable|Normal}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Garchomp
+| {{p|Garchomp}}
+| —
+| data-sort-value="2025-05-23" | May 23, 2025
+| data-sort-value="2025-05-25" | May 25, 2025
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Garchomp
+| {{p|Garchomp}}
+| —
+| data-sort-value="2025-05-30" | May 30, 2025
+| data-sort-value="2025-06-01" | June 1, 2025
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Metagross
+| {{p|Metagross}}
+| —
+| data-sort-value="2025-05-09" | May 9, 2025
+| data-sort-value="2025-05-11" | May 11, 2025
+{{Typetable|Steel}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Metagross
+| {{p|Metagross}}
+| —
+| data-sort-value="2025-05-16" | May 16, 2025
+| data-sort-value="2025-05-18" | May 18, 2025
+{{Typetable|Steel}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Salamence
+| {{p|Salamence}}
+| —
+| data-sort-value="2025-04-18" | April 18, 2025
+| data-sort-value="2025-04-20" | April 20, 2025
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Salamence
+| {{p|Salamence}}
+| —
+| data-sort-value="2025-04-25" | April 25, 2025
+| data-sort-value="2025-04-27" | April 27, 2025
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Tyranitar
+| {{p|Tyranitar}}
+| —
+| data-sort-value="2025-03-28" | March 28, 2025
+| data-sort-value="2025-03-30" | March 30, 2025
+{{Typetable|Ghost}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Tyranitar
+| {{p|Tyranitar}}
+| —
+| data-sort-value="2025-04-04" | April 4, 2025
+| data-sort-value="2025-04-06" | April 6, 2025
+{{Typetable|Ghost}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Quaquaval
+| {{p|Quaquaval}}
+| —
+| data-sort-value="2025-03-14" | March 14, 2025
+| data-sort-value="2025-03-20" | March 20, 2025
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Skeledirge
+| {{p|Skeledirge}}
+| —
+| data-sort-value="2025-03-07" | March 7, 2025
+| data-sort-value="2025-03-13" | March 13, 2025
+{{Typetable|Fire}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Meowscarada
+| {{p|Meowscarada}}
+| —
+| data-sort-value="2025-02-28" | February 28, 2025
+| data-sort-value="2025-03-06" | March 6, 2025
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Torterra
+| {{p|Torterra}}
+| —
+| data-sort-value="2024-11-15" | November 15, 2024
+| data-sort-value="2024-11-17" | November 17, 2024
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Torterra
+| {{p|Torterra}}
+| —
+| data-sort-value="2024-11-22" | November 22, 2024
+| data-sort-value="2024-11-24" | November 24, 2024
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Feraligatr
+| {{p|Feraligatr}}
+| —
+| data-sort-value="2024-11-01" | November 1, 2024
+| data-sort-value="2024-11-03" | November 3, 2024
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Feraligatr
+| {{p|Feraligatr}}
+| —
+| data-sort-value="2024-11-08" | November 8, 2024
+| data-sort-value="2024-11-10" | November 10, 2024
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Infernape
+| {{p|Infernape}}
+| —
+| data-sort-value="2024-10-04" | October 4, 2024
+| data-sort-value="2024-10-06" | October 6, 2024
+{{Typetable|Rock}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Infernape
+| {{p|Infernape}}
+| —
+| data-sort-value="2024-10-11" | October 11, 2024
+| data-sort-value="2024-10-13" | October 13, 2024
+{{Typetable|Rock}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Serperior
+| {{p|Serperior}}
+| —
+| data-sort-value="2024-09-20" | September 20, 2024
+| data-sort-value="2024-09-22" | September 22, 2024
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Serperior
+| {{p|Serperior}}
+| —
+| data-sort-value="2024-09-27" | September 27, 2024
+| data-sort-value="2024-09-29" | September 29, 2024
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Incineroar
+| {{p|Incineroar}}
+| —
+| data-sort-value="2024-09-06" | September 6, 2024
+| data-sort-value="2024-09-08" | September 8, 2024
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Incineroar
+| {{p|Incineroar}}
+| —
+| data-sort-value="2024-09-13" | September 13, 2024
+| data-sort-value="2024-09-15" | September 15, 2024
+{{Typetable|Dark}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Dragonite
+| {{p|Dragonite}}
+| —
+| data-sort-value="2024-08-23" | August 23, 2024
+| data-sort-value="2024-09-01" | September 1, 2024
+{{Typetable|Normal}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Dondozo
+| {{p|Dondozo}}
+| —
+| data-sort-value="2024-07-26" | July 26, 2024
+| data-sort-value="2024-08-08" | August 8, 2024
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Pikachu Returns
+| {{p|Pikachu}}
+| —
+| data-sort-value="2024-07-12" | July 12, 2024
+| data-sort-value="2024-07-25" | July 25, 2024
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Sceptile
+| {{p|Sceptile}}
+| —
+| data-sort-value="2024-06-28" | June 28, 2024
+| data-sort-value="2024-06-30" | June 30, 2024
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Sceptile
+| {{p|Sceptile}}
+| —
+| data-sort-value="2024-07-05" | July 5, 2024
+| data-sort-value="2024-07-07" | July 7, 2024
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Emboar
+| {{p|Emboar}}
+| —
+| data-sort-value="2024-06-14" | June 14, 2024
+| data-sort-value="2024-06-16" | June 16, 2024
+{{Typetable|Electric}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Emboar
+| {{p|Emboar}}
+| —
+| data-sort-value="2024-06-21" | June 21, 2024
+| data-sort-value="2024-06-23" | June 23, 2024
+{{Typetable|Electric}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Swampert
+| {{p|Swampert}}
+| —
+| data-sort-value="2024-05-31" | May 31, 2024
+| data-sort-value="2024-06-02" | June 2, 2024
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Swampert
+| {{p|Swampert}}
+| —
+| data-sort-value="2024-06-07" | June 7, 2024
+| data-sort-value="2024-06-09" | June 9, 2024
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Primarina
+| {{p|Primarina}}
+| —
+| data-sort-value="2024-05-10" | May 10, 2024
+| data-sort-value="2024-05-12" | May 12, 2024
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Primarina
+| {{p|Primarina}}
+| —
+| data-sort-value="2024-05-17" | May 17, 2024
+| data-sort-value="2024-05-19" | May 19, 2024
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Meganium
+| {{p|Meganium}}
+| —
+| data-sort-value="2024-04-05" | April 5, 2024
+| data-sort-value="2024-04-07" | April 7, 2024
+{{Typetable|Psychic}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Meganium
+| {{p|Meganium}}
+| —
+| data-sort-value="2024-04-12" | April 12, 2024
+| data-sort-value="2024-04-14" | April 14, 2024
+{{Typetable|Psychic}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Charizard Returns
+| {{p|Charizard}}
+| —
+| data-sort-value="2024-03-13" | March 13, 2024
+| data-sort-value="2024-03-17" | March 17, 2024
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Blastoise
+| {{p|Blastoise}}
+| —
+| data-sort-value="2024-03-06" | March 6, 2024
+| data-sort-value="2024-03-12" | March 12, 2024
+{{Typetable|Steel}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Venusaur
+| {{p|Venusaur}}
+| —
+| data-sort-value="2024-02-28" | February 28, 2024
+| data-sort-value="2024-03-05" | March 5, 2024
+{{Typetable|Ground}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Empoleon
+| {{p|Empoleon}}
+| —
+| data-sort-value="2024-02-02" | February 2, 2024
+| data-sort-value="2024-02-04" | February 4, 2024
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Empoleon
+| {{p|Empoleon}}
+| —
+| data-sort-value="2024-02-09" | February 9, 2024
+| data-sort-value="2024-02-11" | February 11, 2024
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Blaziken
+| {{p|Blaziken}}
+| —
+| data-sort-value="2024-01-12" | January 12, 2024
+| data-sort-value="2024-01-14" | January 14, 2024
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Blaziken
+| {{p|Blaziken}}
+| —
+| data-sort-value="2024-01-19" | January 19, 2024
+| data-sort-value="2024-01-21" | January 21, 2024
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Iron Bundle
+| {{p|Iron Bundle}}
+| —
+| data-sort-value="2023-12-22" | December 22, 2023
+| data-sort-value="2023-12-24" | December 24, 2023
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Samurott
+| {{p|Samurott}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2023-11-24" | November 24, 2023
+| data-sort-value="2023-11-26" | November 26, 2023
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Samurott
+| {{p|Samurott}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2023-12-01" | December 1, 2023
+| data-sort-value="2023-12-03" | December 3, 2023
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Eevee
+| {{p|Eevee}}
+| —
+| data-sort-value="2023-11-17" | November 17, 2023
+| data-sort-value="2023-11-20" | November 20, 2023
+{{Typetable|Normal}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Typhlosion
+| {{p|Typhlosion}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2023-11-03" | November 3, 2023
+| data-sort-value="2023-11-05" | November 5, 2023
+{{Typetable|Fire}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Typhlosion
+| {{p|Typhlosion}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2023-11-10" | November 10, 2023
+| data-sort-value="2023-11-12" | November 12, 2023
+{{Typetable|Fire}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Decidueye
+| {{p|Decidueye}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2023-10-06" | October 6, 2023
+| data-sort-value="2023-10-08" | October 8, 2023
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Hisuian Decidueye
+| {{p|Decidueye}}
+| [[Hisuian form|Hisuian]]
+| data-sort-value="2023-10-13" | October 13, 2023
+| data-sort-value="2023-10-15" | October 15, 2023
+{{Typetable|Grass}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Mewtwo Showdown
+| {{p|Mewtwo}}
+| —
+| data-sort-value="2023-09-01" | September 1, 2023
+| data-sort-value="2023-09-17" | September 17, 2023
+{{Typetable|Psychic}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Rillaboom
+| {{p|Rillaboom}}
+| —
+| data-sort-value="2023-07-28" | July 28, 2023
+| data-sort-value="2023-07-30" | July 30, 2023
+{{Typetable|Normal}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Rillaboom
+| {{p|Rillaboom}}
+| —
+| data-sort-value="2023-08-04" | August 4, 2023
+| data-sort-value="2023-08-06" | August 6, 2023
+{{Typetable|Normal}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Delphox
+| {{p|Delphox}}
+| —
+| data-sort-value="2023-07-07" | July 7, 2023
+| data-sort-value="2023-07-09" | July 9, 2023
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Delphox
+| {{p|Delphox}}
+| —
+| data-sort-value="2023-07-14" | July 14, 2023
+| data-sort-value="2023-07-16" | July 16, 2023
+{{Typetable|Fairy}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Chesnaught
+| {{p|Chesnaught}}
+| —
+| data-sort-value="2023-05-12" | May 12, 2023
+| data-sort-value="2023-05-14" | May 14, 2023
+{{Typetable|Rock}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Chesnaught
+| {{p|Chesnaught}}
+| —
+| data-sort-value="2023-06-16" | June 16, 2023
+| data-sort-value="2023-06-18" | June 18, 2023
+{{Typetable|Rock}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Inteleon
+| {{p|Inteleon}}
+| —
+| data-sort-value="2023-04-28" | April 28, 2023
+| data-sort-value="2023-04-30" | April 30, 2023
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Inteleon
+| {{p|Inteleon}}
+| —
+| data-sort-value="2023-05-05" | May 5, 2023
+| data-sort-value="2023-05-07" | May 7, 2023
+{{Typetable|Ice}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Typhlosion
+| {{p|Typhlosion}}
+| —
+| data-sort-value="2023-04-14" | April 14, 2023
+| data-sort-value="2023-04-16" | April 16, 2023
+{{Typetable|Ghost}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Typhlosion
+| {{p|Typhlosion}}
+| —
+| data-sort-value="2023-04-21" | April 21, 2023
+| data-sort-value="2023-04-23" | April 23, 2023
+{{Typetable|Ghost}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Samurott
+| {{p|Samurott}}
+| —
+| data-sort-value="2023-03-31" | March 31, 2023
+| data-sort-value="2023-04-02" | April 2, 2023
+{{Typetable|Bug}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Samurott
+| {{p|Samurott}}
+| —
+| data-sort-value="2023-04-07" | April 7, 2023
+| data-sort-value="2023-04-09" | April 9, 2023
+{{Typetable|Bug}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Decidueye
+| {{p|Decidueye}}
+| —
+| data-sort-value="2023-03-17" | March 17, 2023
+| data-sort-value="2023-03-19" | March 19, 2023
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Decidueye
+| {{p|Decidueye}}
+| —
+| data-sort-value="2023-03-24" | March 24, 2023
+| data-sort-value="2023-03-26" | March 26, 2023
+{{Typetable|Flying}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Mighty Pikachu
+| {{p|Pikachu}}
+| —
+| data-sort-value="2023-02-24" | February 24, 2023
+| data-sort-value="2023-02-27" | February 27, 2023
+{{Typetable|Water}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Unrivaled Greninja
+| {{p|Greninja}}
+| —
+| data-sort-value="2023-01-27" | January 27, 2023
+| data-sort-value="2023-01-29" | January 29, 2023
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Unrivaled Greninja
+| {{p|Greninja}}
+| —
+| data-sort-value="2023-02-10" | February 10, 2023
+| data-sort-value="2023-02-12" | February 12, 2023
+{{Typetable|Poison}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Unrivaled Cinderace
+| {{p|Cinderace}}
+| —
+| data-sort-value="2022-12-30" | December 30, 2022
+| data-sort-value="2023-01-01" | January 1, 2023
+{{Typetable|Fighting}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Unrivaled Cinderace
+| {{p|Cinderace}}
+| —
+| data-sort-value="2023-01-13" | January 13, 2023
+| data-sort-value="2023-01-15" | January 15, 2023
+{{Typetable|Fighting}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Unrivaled Charizard
+| {{p|Charizard}}
+| —
+| data-sort-value="2022-12-02" | December 2, 2022
+| data-sort-value="2022-12-04" | December 4, 2022
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|-
+| Unrivaled Charizard
+| {{p|Charizard}}
+| —
+| data-sort-value="2022-12-16" | December 16, 2022
+| data-sort-value="2022-12-18" | December 18, 2022
+{{Typetable|Dragon}}
+| ★★★★★★★
+| data-sort-value="Mightiest Mark" | [[File:Mightiest Mark.png|32px|link=Mark|alt=Mightiest Mark]]
+
+|- class="sortbottom"
+! style="background-color:#{{paldea color light}}; {{roundybl|5px}}" colspan="8" | 7★ Tera Raid Battle events in Paldea
+|}
+
+====Kitakami====
+=====1★ Raids=====
+{{main|List of 1★ Tera Raid Battles (Kitakami)}}
+
+=====2★ Raids=====
+{{main|List of 2★ Tera Raid Battles (Kitakami)}}
+
+=====3★ Raids=====
+{{main|List of 3★ Tera Raid Battles (Kitakami)}}
+
+=====4★ Raids=====
+{{main|List of 4★ Tera Raid Battles (Kitakami)}}
+
+=====5★ Raids=====
+{{main|List of 5★ Tera Raid Battles (Kitakami)}}
+
+=====6★ Raids=====
+{{main|List of 6★ Tera Raid Battles (Kitakami)}}
+
+====Blueberry Academy====
+
+=====1★ Raids=====
+{{main|List of 1★ Tera Raid Battles (Blueberry Academy)}}
+
+=====2★ Raids=====
+{{main|List of 2★ Tera Raid Battles (Blueberry Academy)}}
+
+=====3★ Raids=====
+{{main|List of 3★ Tera Raid Battles (Blueberry Academy)}}
+
+=====4★ Raids=====
+{{main|List of 4★ Tera Raid Battles (Blueberry Academy)}}
+
+=====5★ Raids=====
+{{main|List of 5★ Tera Raid Battles (Blueberry Academy)}}
+
+=====6★ Raids=====
+{{main|List of 6★ Tera Raid Battles (Blueberry Academy)}}
+
+===NPC Trainers===
+If there are less than four players in a Tera Raid Battle, NPC Trainers will fill in. The Pokémon used by these Trainers get stronger as the player unlocks more difficult Tera Raids.
+
+All Pokémon listed below have the following properties:
+* [[Nature]]: Hardy
+* {{EV}}s: 252 {{stat|HP}}, 128 {{stat|Defense}}, 128 {{stat|Sp. Defense}}
+* {{IV}}s: 10 for {{stat|Attack}} and {{stat|Sp. Attack}}, 31 for all other stats
+
+The NPC Trainers always use one Hang tough! cheer on the first turn, and no other cheers afterwards. They also do not Terastallize their Pokémon, nor reduce the timer when they faint.
+
+If the player enters a raid with one empty spot, or challenges a raid alone, the following message will appear.
+
+''Oh! Help has arrived-now you've got a full''<br>
+''party to raid with!''
+
+When a raid is started with the "Challenge alone" option and a raid opened to other players has '''not''' been played in the current session since starting the game (even when hosted via "Challenge as a group" and played alone), the selection of NPC trainers is chosen from a RNG seed from 0-100, meaning there are 101 possible NPC parties that can be used with this method.<ref>https://docs.google.com/spreadsheets/d/1c27PbFXKr9NACNr-s3fFvENg4nryc-eVddlv4RnI2FQ/pubhtml</ref> 
+
+Raids that are started with "Challenge as a group" (even when played alone) use a 64-bit RNG seed and allow for every combination of NPCs to be generated. After a group raid is played in the current session, any raids started with "Challenge alone" will always use the same NPC selection as the last group raid played instead of following the above behavior, allowing one to lock in a favorable group of NPCs to make use of, though further group raids will still reroll for a new team. This effect will be retained until the game is restarted.
+
+The NPC Pokémon will have a level equal to 80% of the level of the host's Pokémon, rounded down (but not to less than 1). If the host's Pokémon is at level 1, the NPC Pokémon will be at level 80.
+
+====1★====
+NPC Trainers use the following Pokémon after 1★ Tera Raids are unlocked. Their level of 16 assumes that the host is bringing a level 20 Pokémon.
+
+{{Pokémon/Grid}}
+{{Pokémon
+| caption = '''Austin'''
+| gen = 9
+| ndex = 0058
+| pokemon = Growlithe
+| gender = female
+| level = 16
+| type1 = Fire
+| ability = Intimidate
+| move1 = Ember | move1type = Fire | move1cat = Special
+| move2 = Leer | move2type = Normal | move2cat = Status
+| move3 = Bite | move3type = Dark | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Ava'''
+| gen = 9
+| ndex = 0418
+| pokemon = Buizel
+| gender = male
+| level = 16
+| type1 = Water
+| ability = Swift Swim
+| move1 = Aqua Jet | move1type = Water | move1cat = Physical
+| move2 = Bite | move2type = Dark | move2cat = Physical
+| move3 = Water Gun | move3type = Water | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Logan'''
+| gen = 9
+| ndex = 0672
+| pokemon = Skiddo
+| gender = male
+| level = 16
+| type1 = Grass
+| ability = Sap Sipper
+| move1 = Tackle | move1type = Normal | move1cat = Physical
+| move2 = Vine Whip | move2type = Grass | move2cat = Physical
+| move3 = Growth | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Hailey'''
+| gen = 9
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 16
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Thunder Shock | move1type = Electric | move1cat = Special
+| move2 = Thunder Wave | move2type = Electric | move2cat = Status
+| move3 = Swift | move3type = Normal | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Evan'''
+| gen = 9
+| ndex = 0819
+| pokemon = Skwovet
+| gender = male
+| level = 16
+| type1 = Normal
+| ability = Cheek Pouch
+| move1 = Tackle | move1type = Normal | move1cat = Physical
+| move2 = Defense Curl | move2type = Normal | move2cat = Status
+| move3 = Rollout | move3type = Rock | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Charlotte'''
+| gen = 9
+| ndex = 0397
+| pokemon = Staravia
+| gender = male
+| level = 16
+| type1 = Normal
+| type2 = Flying
+| ability = Intimidate
+| move1 = Wing Attack | move1type = Flying | move1cat = Physical
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Growl | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Kylie'''
+| gen = 9
+| ndex = 0739
+| pokemon = Crabrawler
+| gender = male
+| level = 16
+| type1 = Fighting
+| ability = Hyper Cutter
+| move1 = Rock Smash | move1type = Fighting | move1cat = Physical
+| move2 = Bubble Beam | move2type = Water | move2cat = Special
+| move3 = Work Up | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Hunter'''
+| gen = 9
+| ndex = 0425
+| pokemon = Drifloon
+| gender = male
+| level = 16
+| type1 = Ghost
+| type2 = Flying
+| ability = Aftermath
+| move1 = Gust | move1type = Flying | move1cat = Special
+| move2 = Hex | move2type = Ghost | move2cat = Special
+| move3 = Payback | move3type = Dark | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Gianna'''
+| gen = 9
+| ndex = 0434
+| pokemon = Stunky
+| gender = male
+| level = 16
+| type1 = Poison
+| type2 = Dark
+| ability = Stench
+| move1 = Bite | move1type = Dark | move1cat = Physical
+| move2 = Acid Spray | move2type = Poison | move2cat = Special
+| move3 = Screech | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Eli'''
+| gen = 9
+| ndex = 0281
+| pokemon = Kirlia
+| gender = male
+| level = 16
+| type1 = Psychic
+| type2 = Fairy
+| ability = Synchronize
+| move1 = Confusion | move1type = Psychic | move1cat = Special
+| move2 = Calm Mind | move2type = Psychic | move2cat = Status
+| move3 = Disarming Voice | move3type = Fairy | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Henry'''
+| gen = 9
+| ndex = 0624
+| pokemon = Pawniard
+| gender = male
+| level = 16
+| type1 = Dark
+| type2 = Steel
+| ability = Defiant
+| move1 = Metal Claw | move1type = Steel | move1cat = Physical
+| move2 = Scratch | move2type = Normal | move2cat = Physical
+| move3 = Scary Face | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Chase'''
+| gen = 9
+| ndex = 0702
+| pokemon = Dedenne
+| gender = male
+| level = 16
+| type1 = Electric
+| type2 = Fairy
+| ability = Cheek Pouch
+| move1 = Draining Kiss | move1type = Fairy | move1cat = Special
+| move2 = Parabolic Charge | move2type = Electric | move2cat = Special
+| move3 = Charm | move3type = Fairy | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Claire'''
+| gen = 9
+| ndex = 0402
+| pokemon = Kricketune
+| gender = male
+| level = 16
+| type1 = Bug
+| ability = Swarm
+| move1 = Bug Bite | move1type = Bug | move1cat = Physical
+| move2 = Sing | move2type = Normal | move2cat = Status
+| move3 = Aerial Ace | move3type = Flying | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Brooklyn'''
+| gen = 9
+| ndex = 0744
+| pokemon = Rockruff
+| gender = male
+| level = 16
+| type1 = Rock
+| ability = Keen Eye
+| move1 = Rock Throw | move1type = Rock | move1cat = Physical
+| move2 = Bite | move2type = Dark | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Zoe'''
+| gen = 9
+| ndex = 0551
+| pokemon = Sandile
+| gender = male
+| level = 16
+| type1 = Ground
+| type2 = Dark
+| ability = Intimidate
+| move1 = Sand Tomb | move1type = Ground | move1cat = Physical
+| move2 = Scary Face | move2type = Normal | move2cat = Status
+| move3 = Bite | move3type = Dark | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Samantha'''
+| gen = 9
+| ndex = 0361
+| pokemon = Snorunt
+| gender = male
+| level = 16
+| type1 = Ice
+| ability = Inner Focus
+| move1 = Powder Snow | move1type = Ice | move1cat = Special
+| move2 = Ice Shard | move2type = Ice | move2cat = Physical
+| move3 = Bite | move3type = Dark | move3cat = Physical
+}}
+{{Pokémon/Grid/end}}
+
+====3★====
+NPC Trainers use the following Pokémon after 3★ Tera Raids are unlocked. Their level of 40 assumes that the host is bringing a level 50 Pokémon.
+
+{{Pokémon/Grid}}
+{{Pokémon
+| caption = '''Austin'''
+| gen = 9
+| ndex = 0323
+| pokemon = Camerupt
+| gender = male
+| level = 40
+| type1 = Fire
+| type2 = Ground
+| ability = Magma Armor
+| move1 = Flame Wheel | move1type = Fire | move1cat = Physical
+| move2 = Bulldoze | move2type = Ground | move2cat = Physical
+| move3 = Yawn | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Ava'''
+| gen = 9
+| ndex = 0419
+| pokemon = Floatzel
+| gender = male
+| level = 40
+| type1 = Water
+| ability = Swift Swim
+| move1 = Water Pulse | move1type = Water | move1cat = Special
+| move2 = Aqua Jet | move2type = Water | move2cat = Physical
+| move3 = Growl | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Logan'''
+| gen = 9
+| ndex = 0673
+| pokemon = Gogoat
+| gender = male
+| level = 40
+| type1 = Grass
+| ability = Sap Sipper
+| move1 = Horn Leech | move1type = Grass | move1cat = Physical
+| move2 = Facade | move2type = Normal | move2cat = Physical
+| move3 = Growth | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Hailey'''
+| gen = 9
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 40
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Metal Sound | move1type = Steel | move1cat = Status
+| move2 = Shock Wave | move2type = Electric | move2cat = Special
+| move3 = Tri Attack | move3type = Normal | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Evan'''
+| gen = 9
+| ndex = 0820
+| pokemon = Greedent
+| gender = male
+| level = 40
+| type1 = Normal
+| ability = Cheek Pouch
+| move1 = Facade | move1type = Normal | move1cat = Physical
+| move2 = Bite | move2type = Dark | move2cat = Physical
+| move3 = Tail Whip | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Charlotte'''
+| gen = 9
+| ndex = 0334
+| pokemon = Altaria
+| gender = male
+| level = 40
+| type1 = Dragon
+| type2 = Flying
+| ability = Natural Cure
+| move1 = Aerial Ace | move1type = Flying | move1cat = Physical
+| move2 = Dragon Breath | move2type = Dragon | move2cat = Special
+| move3 = Feather Dance | move3type = Flying | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Kylie'''
+| gen = 9
+| ndex = 0057
+| pokemon = Primeape
+| gender = male
+| level = 40
+| type1 = Fighting
+| ability = Vital Spirit
+| move1 = Low Kick | move1type = Fighting | move1cat = Physical
+| move2 = Rage Fist | move2type = Ghost | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Hunter'''
+| gen = 9
+| ndex = 0426
+| pokemon = Drifblim
+| gender = male
+| level = 40
+| type1 = Ghost
+| type2 = Flying
+| ability = Aftermath
+| move1 = Hex | move1type = Ghost | move1cat = Special
+| move2 = Air Slash | move2type = Flying | move2cat = Special
+| move3 = Will-O-Wisp | move3type = Fire | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Gianna'''
+| gen = 9
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 40
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Thief | move1type = Dark | move1cat = Physical
+| move2 = Ice Shard | move2type = Ice | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Eli'''
+| gen = 9
+| ndex = 0097
+| pokemon = Hypno
+| gender = male
+| level = 40
+| type1 = Psychic
+| ability = Insomnia
+| move1 = Zen Headbutt | move1type = Psychic | move1cat = Physical
+| move2 = Fire Punch | move2type = Fire | move2cat = Physical
+| move3 = Thunder Punch | move3type = Electric | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Henry'''
+| gen = 9
+| ndex = 0437
+| pokemon = Bronzong
+| gender = none
+| level = 40
+| type1 = Steel
+| type2 = Psychic
+| ability = Levitate
+| move1 = Gyro Ball | move1type = Steel | move1cat = Physical
+| move2 = Psybeam | move2type = Psychic | move2cat = Special
+| move3 = Metal Sound | move3type = Steel | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Chase'''
+| gen = 9
+| ndex = 0700
+| pokemon = Sylveon
+| gender = male
+| level = 40
+| type1 = Fairy
+| ability = Cute Charm
+| move1 = Fairy Wind | move1type = Fairy | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Charm | move3type = Fairy | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Claire'''
+| gen = 9
+| ndex = 0123
+| pokemon = Scyther
+| gender = male
+| level = 40
+| type1 = Bug
+| type2 = Flying
+| ability = Swarm
+| move1 = Fury Cutter | move1type = Bug | move1cat = Physical
+| move2 = Aerial Ace | move2type = Flying | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Brooklyn'''
+| gen = 9
+| ndex = 0745
+| pokemon = Lycanroc
+| gender = male
+| level = 40
+| type1 = Rock
+| ability = Keen Eye
+| move1 = Rock Tomb | move1type = Rock | move1cat = Physical
+| move2 = Accelerock | move2type = Rock | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Zoe'''
+| gen = 9
+| ndex = 0844
+| pokemon = Sandaconda
+| gender = male
+| level = 40
+| type1 = Ground
+| ability = Sand Spit
+| move1 = Bulldoze | move1type = Ground | move1cat = Physical
+| move2 = Sand Attack | move2type = Ground | move2cat = Status
+| move3 = Poison Tail | move3type = Poison | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Samantha'''
+| gen = 9
+| ndex = 0362
+| pokemon = Glalie
+| gender = male
+| level = 40
+| type1 = Ice
+| ability = Inner Focus
+| move1 = Ice Fang | move1type = Ice | move1cat = Physical
+| move2 = Bite | move2type = Dark | move2cat = Physical
+| move3 = Scary Face | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Dylan'''
+| gen = 9
+| ndex = 0148
+| pokemon = Dragonair
+| gender = male
+| level = 40
+| type1 = Dragon
+| ability = Shed Skin
+| move1 = Dragon Breath | move1type = Dragon | move1cat = Special
+| move2 = Safeguard | move2type = Normal | move2cat = Status
+| move3 = Slam | move3type = Normal | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Luke'''
+| gen = 9
+| ndex = 0454
+| pokemon = Toxicroak
+| gender = male
+| level = 40
+| type1 = Poison
+| type2 = Fighting
+| ability = Anticipation
+| move1 = Venoshock | move1type = Poison | move1cat = Special
+| move2 = Low Kick | move2type = Fighting | move2cat = Physical
+| move3 = Poison Sting | move3type = Poison | move3cat = Physical
+}}
+{{Pokémon/Grid/end}}
+
+====5★====
+NPC Trainers use the following Pokémon after 5★ Tera Raids are unlocked. Their level of 80 assumes the host is bringing a level 100 Pokémon.
+
+{{Pokémon/Grid}}
+{{Pokémon
+| caption = '''Austin'''
+| gen = 9
+| ndex = 0059
+| pokemon = Arcanine
+| gender = female
+| level = 80
+| type1 = Fire
+| ability = Intimidate
+| move1 = Flamethrower | move1type = Fire | move1cat = Special
+| move2 = Bite | move2type = Dark | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Ava'''
+| gen = 9
+| ndex = 0748
+| pokemon = Toxapex
+| gender = male
+| level = 80
+| type1 = Poison
+| type2 = Water
+| ability = Merciless
+| move1 = Surf | move1type = Water | move1cat = Special
+| move2 = Poison Jab | move2type = Poison | move2cat = Physical
+| move3 = Chilling Water | move3type = Water | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Logan'''
+| gen = 9
+| ndex = 0930
+| pokemon = Arboliva
+| gender = male
+| level = 80
+| type1 = Grass
+| type2 = Normal
+| ability = Seed Sower
+| move1 = Energy Ball | move1type = Grass | move1cat = Special
+| move2 = Safeguard | move2type = Normal | move2cat = Status
+| move3 = Earth Power | move3type = Ground | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Hailey'''
+| gen = 9
+| ndex = 0939
+| pokemon = Bellibolt
+| gender = male
+| level = 80
+| type1 = Electric
+| ability = Electromorphosis
+| move1 = Discharge | move1type = Electric | move1cat = Special
+| move2 = Mud Shot | move2type = Ground | move2cat = Special
+| move3 = Light Screen | move3type = Psychic | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Evan'''
+| gen = 9
+| ndex = 0982
+| pokemon = Dudunsparce
+| gender = male
+| level = 80
+| type1 = Normal
+| ability = Serene Grace
+| move1 = Hyper Drill | move1type = Normal | move1cat = Physical
+| move2 = Glare | move2type = Normal | move2cat = Status
+| move3 = Drill Run | move3type = Ground | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Charlotte'''
+| gen = 9
+| ndex = 0398
+| pokemon = Staraptor
+| gender = male
+| level = 80
+| type1 = Normal
+| type2 = Flying
+| ability = Intimidate
+| move1 = Brave Bird | move1type = Flying | move1cat = Physical
+| move2 = Facade | move2type = Normal | move2cat = Physical
+| move3 = Feather Dance | move3type = Flying | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Kylie'''
+| gen = 9
+| ndex = 0128
+| pokemon = Tauros
+| form = -Paldea Combat
+| gender = male
+| level = 80
+| type1 = Fighting
+| ability = Intimidate
+| move1 = Raging Bull | move1type = Fighting | move1cat = Physical
+| move2 = Work Up | move2type = Normal | move2cat = Status
+| move3 = Assurance | move3type = Dark | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Hunter'''
+| gen = 9
+| ndex = 0426
+| pokemon = Drifblim
+| gender = male
+| level = 80
+| type1 = Ghost
+| type2 = Flying
+| ability = Aftermath
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Air Slash | move2type = Flying | move2cat = Special
+| move3 = Will-O-Wisp | move3type = Fire | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Gianna'''
+| gen = 9
+| ndex = 0197
+| pokemon = Umbreon
+| gender = male
+| level = 80
+| type1 = Dark
+| ability = Synchronize
+| move1 = Dark Pulse | move1type = Dark | move1cat = Special
+| move2 = Thunder Wave | move2type = Electric | move2cat = Status
+| move3 = Psychic | move3type = Psychic | move3cat = Special
+}}
+{{Pokémon
+| caption = '''Eli'''
+| gen = 9
+| ndex = 0282
+| pokemon = Gardevoir
+| gender = male
+| level = 80
+| type1 = Psychic
+| type2 = Fairy
+| ability = Synchronize
+| move1 = Psyshock | move1type = Psychic | move1cat = Special
+| move2 = Dazzling Gleam | move2type = Fairy | move2cat = Special
+| move3 = Life Dew | move3type = Water | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Henry'''
+| gen = 9
+| ndex = 0823
+| pokemon = Corviknight
+| gender = male
+| level = 80
+| type1 = Flying
+| type2 = Steel
+| ability = Pressure
+| move1 = Iron Head | move1type = Steel | move1cat = Physical
+| move2 = Drill Peck | move2type = Flying | move2cat = Physical
+| move3 = Scary Face | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Chase'''
+| gen = 9
+| ndex = 0700
+| pokemon = Sylveon
+| gender = male
+| level = 80
+| type1 = Fairy
+| ability = Pixilate
+| move1 = Moonblast | move1type = Fairy | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Charm | move3type = Fairy | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Claire'''
+| gen = 9
+| ndex = 0214
+| pokemon = Heracross
+| gender = male
+| level = 80
+| type1 = Bug
+| type2 = Fighting
+| ability = Swarm
+| move1 = Megahorn | move1type = Bug | move1cat = Physical
+| move2 = Brick Break | move2type = Fighting | move2cat = Physical
+| move3 = Bulk Up | move3type = Fighting | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Brooklyn'''
+| gen = 9
+| ndex = 0934
+| pokemon = Garganacl
+| gender = male
+| level = 80
+| type1 = Rock
+| ability = Purifying Salt
+| move1 = Rock Slide | move1type = Rock | move1cat = Physical
+| move2 = Rock Tomb | move2type = Rock | move2cat = Physical
+| move3 = Heavy Slam | move3type = Steel | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Zoe'''
+| gen = 9
+| ndex = 0750
+| pokemon = Mudsdale
+| gender = male
+| level = 80
+| type1 = Ground
+| ability = Own Tempo
+| move1 = High Horsepower | move1type = Ground | move1cat = Physical
+| move2 = Rock Smash | move2type = Fighting | move2cat = Physical
+| move3 = Low Kick | move3type = Fighting | move3cat = Physical
+}}
+{{Pokémon
+| caption = '''Samantha'''
+| gen = 9
+| ndex = 0461
+| pokemon = Weavile
+| gender = male
+| level = 80
+| type1 = Dark
+| type2 = Ice
+| ability = Pressure
+| move1 = Night Slash | move1type = Dark | move1cat = Physical
+| move2 = Ice Punch | move2type = Ice | move2cat = Physical
+| move3 = Leer | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Dylan'''
+| gen = 9
+| ndex = 0612
+| pokemon = Haxorus
+| gender = male
+| level = 80
+| type1 = Dragon
+| ability = Rivalry
+| move1 = Dragon Claw | move1type = Dragon | move1cat = Physical
+| move2 = Facade | move2type = Normal | move2cat = Physical
+| move3 = Scary Face | move3type = Normal | move3cat = Status
+}}
+{{Pokémon
+| caption = '''Luke'''
+| gen = 9
+| ndex = 0980
+| pokemon = Clodsire
+| gender = male
+| level = 80
+| type1 = Poison
+| type2 = Ground
+| ability = Poison Point
+| move1 = Poison Jab | move1type = Poison | move1cat = Physical
+| move2 = Stomping Tantrum | move2type = Ground | move2cat = Physical
+| move3 = Toxic | move3type = Poison | move3cat = Status
+}}
+{{Pokémon/Grid/end}}
+
+===Penalty===
+If the player drops out of three Online Tera Raid Battles (by closing the game), they will be unable to access the game's online service for 30 minutes. This can also occur if the game [[Game freeze|crashed]].
+
+==In animation==
+===Pokémon: Discover Paldea===
+In ''{{DL|Pokémon: Discover Paldea|Tera Raid Team-Up}}'', a group of four {{tc|student}}s took on an {{rf|Alolan}} {{p|Exeggutor}} with the {{t|Dragon}} {{Tera|Tera Type}} in a Tera Raid Battle and defeated it.
+
+==Trivia==
+* All NPC Trainers' [[gender]]ed Pokémon are male, except Austin's {{p|Growlithe}} and {{p|Arcanine}}.
+* Each one of the 18 NPC Trainers is associated with one of the 18 [[type]]s.
+* Dylan's Japanese, Italian, and Korean names are the same as of {{DL|Type Expert Tournament/Dragon|Drakon}}, another {{type|Dragon}} expert and contender to the [[Type Expert Tournament]] in {{B2W2}}.
+* Although this battle format has not yet officially appeared in {{aniseries|HZ}}, in ''[[HZ129|Destiny of the Black Rayquaza]]'', [[Roy]] and [[Ult]] battled against a {{Tera}}stallized [[Black Rayquaza]] in a format similar to a Raid Battle, with Roy using {{TP|Roy|Kilowattrel}}, {{TP|Roy|Lucario}}, and {{TP|Roy|Skeledirge}}, and Ult using {{p|Sableye}} and {{p|Dragonite}}.
+
+==In other languages==
+{{langtable|color={{scarlet color}}|bordercolor={{violet color dark}}|textcolor=fff
+|de=Tera-Raid
+|es=Teraincursión
+|fr=Raid Téracristal
+|it=Raid Teracristal
+|ko=테라 레이드배틀 ''Tera Raid Battle''
+|zh_yue=太晶團體戰 ''{{tt|Taaijīng Tyùhntái Jin|Tera Group Battle}}''
+|zh_cmn=太晶團體戰 / 太晶团体战 ''{{tt|Tàijīng Tuántǐ Zhàn|Tera Group Battle}}''
+}}
+
+''NPC Trainers''
+{{langlist/h||paldea}}
+{{langlist|||Austin|トモヒデ|Tomohide|Patrice|Jakob|Annibale|Zacariás|우영|Uyeong|智英|Zhìyīng / Jiyīng}}
+{{langlist|||Ava|ユウミ|Yūmi|Noëlle|Martina|Mila|Maialen|도미|Domi|佑美|Yòuměi / Yauhméih}}
+{{langlist|||Logan|ケンイチ|Ken'ichi|Ahmed|Antonio|David|Virgilio|헌일|Heonil|健一|Jiànyī / Gihnyāt}}
+{{langlist|||Hailey|アイカ|Aika|Pascaline|Emma|Moira|Mai|에이카|Eika|艾佳|Àijiā / Ngaaihgāai}}
+{{langlist|||Evan|シンペイ|Shinpei|Roger|Frank|Matteo|Jesús|신평|Sinpyeong|申平|Shēnpíng / Sānpìhng}}
+{{langlist|||Charlotte|カヤ|Kaya|Valéria|Clarissa|Loretta|Celia|카야|Kaya|歌雅|Gēyǎ / Gō'ngáh}}
+{{langlist|||Hunter|アキラ|Akira|Tony|Tom|Valentino|Zigor|강철|Gangcheol|齊樂 / 齐乐|Qílè / Chàihlohk}}
+{{langlist|||Gianna|チカ|Chika|Célestine|Josepha|Simona|Linda|지혜|Jihye|琦娜|Qínà / Kèihnàh}}
+{{langlist|||Eli|マサアキ|Masaaki|Hilaire|Peter|Gianfranco|Josué|정명|Jeongmyeong|勝昭 / 胜昭|Shèngzhāo / Singchiū}}
+{{langlist|||Henry|アキト|Akito|Yoachim|Maxim|Otto|Eugenio|조인|Jo-in|秋人|Qiūrén / Chāuyàhn}}
+{{langlist|||Chase|ユウタロウ|Yūtarō|César|André|Nicolò|Lázaro|윤태|Yuntae|悠太郎|Yōutàiláng / Yàuhtaailòhng}}
+{{langlist|||Claire|リカコ|Rikako|Delphine|Rieke|Danila|Asun|민주|Minju|里佳子|Lǐjiāzi / Léuihgāaijí}}
+{{langlist|||Brooklyn|アケミ|Akemi|Fabiola|Karolina|Veronica|Magda|진주|Jinju|明美|Míngměi / Mìhngméih}}
+{{langlist|||Zoe|ヨシコ|Yoshiko|Jessica|Kati|Hannah|Catuxa|희선|Huiseon|佳子|Jiāzi / Gāaijí}}
+{{langlist|||Samantha|ヒナコ|Hinako|Gabrielle|Annika|Denise|Ona|자희|Jahui|日奈子|Rìnàizi / Yahtnoihjí}}
+{{langlist|||Dylan|リュウイチ|Ryūichi|Aimé|Linus|Indro|Guimar|용일|Yong-il|隆一|Lóngyī / Lùhngyāt}}
+{{langlist|||Luke|ツナキ|Tsunaki|Jean-Marc|Philipp|Fosco|Jun|상기|Sanggi|茲諾 / 兹诺|Zīnuò / Jīnohk}}
+|}
+
+==References==
+{{reflist}}
+
+==Related articles==
+* [[Terastal phenomenon]]
+* [[Poké Portal News]]
+* [[Max Raid Battle]]
+* [[Raid Battle (GO)]]
+* [[Raid Battle (TCG)]]
+
+{{Tera Raid Battles}}
+{{battle}}
+{{Project Games notice|game mechanic}}
+
+[[Category:Pokémon Scarlet and Violet]]
+[[Category:Terminology]]
+[[Category:Game mechanics]]
+[[Category:Battle variations]]
+[[Category:Methods of obtaining Pokémon]]
+
+[[de:Tera-Raid]]
+[[es:Teraincursión]]
+[[fr:Raid Téracristal]]
+[[it:Raid Teracristal]]
+[[ja:テラレイドバトル]]
+[[zh:太晶团体战]]

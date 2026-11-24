@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.30';
+const VERSION = 'v60.31';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Filtre « Dispo en raid » et vue Raids (Dynamax ÉB, Téracristal ÉV), par étoiles et par lieu. Disponibilité des formes précisée.';
-const DATA_VERSION = 'd72'; // bump when the schema of data/*.json changes
+const NOTES = 'Raids 7★ événementiels d’Écarlate / Violet (fiche, vue Raids, filtre Dispo en raid). Filtre et vue Raids Dynamax ÉB / Téracristal ÉV.';
+const DATA_VERSION = 'd73'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

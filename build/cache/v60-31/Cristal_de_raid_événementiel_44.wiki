@@ -1,0 +1,107 @@
+{{Ruban Cristal de raid|44|événementiel=oui}}
+
+[[Fichier:Cristal de raid événementiel 44.png|thumb|right|300px]]
+Le '''[[raid Téracristal événementiel]] 44''' est un événement de {{Jeu|EV}} qui faisait apparaître des cristaux de raids événementiels sur la carte de Paldea. Il se déroulait du 22 au 24 mars 2024.
+
+On y trouvait des [[Fongus-Furie]] et des [[Paume-de-Fer]] selon la version.
+
+__TOC__
+== Pokémon ==
+
+{{#invoke:Tableau Pokémon|teracristal|localisations=non|
+Fongus-Furie / talent-caché(Impossible) difficulté(5) capacités(Spore, Canon Graine, Représailles, Trépignement; Zénith, Provoc) notes(Exclusif Ec.) / type-téracristal(Poison) talent-caché(Impossible) difficulté(5) capacités(Spore, Canon Graine, Représailles, Trépignement; Zénith, Provoc) notes(Exclusif Ec.)
+Paume-de-Fer / talent-caché(Impossible) difficulté(5) capacités(Éclair Fou, Vampi-Poing, Séisme, Tacle Lourd; Champ Électrifié, Éboulement) notes(Exclusif Vi.) / type-téracristal(Plante) talent-caché(Impossible) difficulté(5) capacités(Éclair Fou, Vampi-Poing, Séisme, Tacle Lourd; Champ Électrifié, Éboulement) notes(Exclusif Vi.)
+}}
+
+== Récompenses ==
+
+{{#invoke:Tableau Objet|teracristal|
+
+Fongus-Furie_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+
+Fongus-Furie_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat Poison / 2
+Téra-Éclat Poison / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Poison / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+
+Paume-de-Fer_5
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat / 2
+Téra-Éclat / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+
+Paume-de-Fer_5_2
+Bonbon Exp. L / 1
+Bonbon Exp. XL / 1
+Plume Force / 5
+Téra-Éclat Plante / 2
+Téra-Éclat Plante / 2 / hôte
+Bonbon Exp. L / 1 / 24%
+Bonbon Exp. L / 2 / 13%
+Super Bonbon / 1 / 5%
+Plume Force / 2 / 10%
+Baie Lonme / 3 / 7%
+Grande Perle / 1 / 11%
+Perle Triple / 1 / 2%
+Pépite / 1 / 5%
+Aromate Rigide / 1 / 2%
+PP Plus / 1 / 3%
+Capsule d'Argent / 1 / 2%
+Téra-Éclat Plante / 2 / 11%
+Pilule Talent / 1 / 2%
+Épice Secrète Sucrée / 1 / 3%
+}}
+
+{{Cristaux de raid|événementiel=oui}}
+
+[[de:Tera-Raid-Events/22.03.2024]]
