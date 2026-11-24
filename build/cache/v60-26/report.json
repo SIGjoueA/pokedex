@@ -1,0 +1,462 @@
+{
+  "current": {
+    "id": "twilight-trails",
+    "season": "Twilight Trails",
+    "updated": "2026-09-14",
+    "n": 75
+  },
+  "seasons": [
+    {
+      "id": "celebration",
+      "fr": null,
+      "n": 90,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "legends",
+      "fr": "Saison des légendes",
+      "n": 83,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "discovery",
+      "fr": "Saison des découvertes",
+      "n": 54,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "mischief",
+      "fr": "Saison Chenapan",
+      "n": 60,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "heritage",
+      "fr": "Saison du patrimoine",
+      "n": 60,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "alola",
+      "fr": "Saison d’Alola",
+      "n": 0,
+      "src": null
+    },
+    {
+      "id": "season-of-go",
+      "fr": "Saison GO",
+      "n": 56,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "light",
+      "fr": "Saison de la Lumière",
+      "n": 57,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "mythical-wishes",
+      "fr": "Saison des Vœux fabuleux",
+      "n": 56,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "rising-heroes",
+      "fr": "Héroïsme croissant",
+      "n": 47,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "hidden-gems",
+      "fr": "Gemmes cachées",
+      "n": 43,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "adventures-abound",
+      "fr": "Des aventures à foison",
+      "n": 36,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "timeless-travels",
+      "fr": "Voyages hors du temps",
+      "n": 43,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "world-of-wonders",
+      "fr": "Monde merveilleux",
+      "n": 45,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "shared-skies",
+      "fr": "Sous un même ciel",
+      "n": 46,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "max-out",
+      "fr": "Au max",
+      "n": 44,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "dual-destiny",
+      "fr": "Double destinée",
+      "n": 42,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "might-and-mastery",
+      "fr": "Puissance et maîtrise",
+      "n": 40,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "delightful-days",
+      "fr": "Jours heureux",
+      "n": 36,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "tales-of-transformation",
+      "fr": "Transformations fabuleuses",
+      "n": 36,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "precious-paths",
+      "fr": "Parcours précieux",
+      "n": 46,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "memories-in-motion",
+      "fr": "Souvenirs vivants",
+      "n": 33,
+      "src": "serebii-previous"
+    },
+    {
+      "id": "forever-forward",
+      "fr": "Toujours en avant",
+      "n": 57,
+      "src": "serebii-current+leekduck-event"
+    },
+    {
+      "id": "twilight-trails",
+      "fr": "Sentiers crépusculaires",
+      "n": 75,
+      "src": "leekduck"
+    }
+  ],
+  "pre": [
+    {
+      "id": "pre-2020-10-20",
+      "label": "20/10/20-2/12/20",
+      "from": "2020-10-20",
+      "to": "2020-12-02",
+      "n": 72
+    },
+    {
+      "id": "pre-2020-10-12",
+      "label": "12/10/20-19/10/20",
+      "from": "2020-10-12",
+      "to": "2020-10-19",
+      "n": 89
+    },
+    {
+      "id": "pre-2020-06-08",
+      "label": "8/6/20-12/10/20",
+      "from": "2020-06-08",
+      "to": "2020-10-12",
+      "n": 88
+    },
+    {
+      "id": "pre-2020-06-03",
+      "label": "3/6/20-8/6/20",
+      "from": "2020-06-03",
+      "to": "2020-06-08",
+      "n": 83
+    },
+    {
+      "id": "pre-2020-02-18",
+      "label": "18/02/2020-3/6/20",
+      "from": "2020-02-18",
+      "to": "2020-06-03",
+      "n": 81
+    },
+    {
+      "id": "pre-2019-12-16",
+      "label": "16/12/2019-18/02/2020",
+      "from": "2019-12-16",
+      "to": "2020-02-18",
+      "n": 90
+    },
+    {
+      "id": "pre-2019-09-23",
+      "label": "23/09/2019-16/12/2019",
+      "from": "2019-09-23",
+      "to": "2019-12-16",
+      "n": 140
+    },
+    {
+      "id": "pre-2019-09-16",
+      "label": "16/09/2019-23/09/2019",
+      "from": "2019-09-16",
+      "to": "2019-09-23",
+      "n": 119
+    },
+    {
+      "id": "pre-2019-09-09",
+      "label": "09/09/2019-23/09/2019",
+      "from": "2019-09-09",
+      "to": "2019-09-23",
+      "n": 108
+    },
+    {
+      "id": "pre-2019-09-02",
+      "label": "02/09/2019-09/09/2019",
+      "from": "2019-09-02",
+      "to": "2019-09-09",
+      "n": 105
+    },
+    {
+      "id": "pre-2019-04-26",
+      "label": "26/04/2019-02/09/2019",
+      "from": "2019-04-26",
+      "to": "2019-09-02",
+      "n": 90
+    },
+    {
+      "id": "pre-2019-04-09",
+      "label": "09/04/2019-26/04/2019",
+      "from": "2019-04-09",
+      "to": "2019-04-26",
+      "n": 124
+    },
+    {
+      "id": "pre-2019-02-13",
+      "label": "13/02/2019-09/04/2019",
+      "from": "2019-02-13",
+      "to": "2019-04-09",
+      "n": 122
+    },
+    {
+      "id": "pre-2019-01-31",
+      "label": "31/01/2019-13/02/2019",
+      "from": "2019-01-31",
+      "to": "2019-02-13",
+      "n": 134
+    },
+    {
+      "id": "pre-2019-01-15",
+      "label": "15/01/2019-29/01/2019",
+      "from": "2019-01-15",
+      "to": "2019-01-29",
+      "n": 140
+    },
+    {
+      "id": "pre-2018-12-20",
+      "label": "20/12/2018-15/01/2019",
+      "from": "2018-12-20",
+      "to": "2019-01-15",
+      "n": 136
+    },
+    {
+      "id": "pre-2018-11-27",
+      "label": "27/11/2018 - 20/12/2018",
+      "from": "2018-11-27",
+      "to": "2018-12-20",
+      "n": 128
+    },
+    {
+      "id": "pre-hatchathon-2018",
+      "label": "Hatchathon 2018",
+      "from": null,
+      "to": null,
+      "n": 121
+    },
+    {
+      "id": "pre-october-2018",
+      "label": "October 2018",
+      "from": null,
+      "to": null,
+      "n": 128
+    },
+    {
+      "id": "pre-july-2018",
+      "label": "July 2018",
+      "from": null,
+      "to": null,
+      "n": 123
+    },
+    {
+      "id": "pre-2018-02-01",
+      "label": "February 2018 - July 2018",
+      "from": "2018-02-01",
+      "to": "2018-07-01",
+      "n": 118
+    },
+    {
+      "id": "pre-2018-01-01",
+      "label": "January 2018 - February 2018",
+      "from": "2018-01-01",
+      "to": "2018-02-01",
+      "n": 32
+    },
+    {
+      "id": "pre-2017-12-21",
+      "label": "December 21st 2017 - January 2018",
+      "from": "2017-12-21",
+      "to": "2018-01-01",
+      "n": 104
+    },
+    {
+      "id": "pre-2017-12-08",
+      "label": "December 8th 2017 - December 21st 2017",
+      "from": "2017-12-08",
+      "to": "2017-12-21",
+      "n": 92
+    },
+    {
+      "id": "pre-october-2017",
+      "label": "October 2017",
+      "from": null,
+      "to": null,
+      "n": 80
+    },
+    {
+      "id": "pre-september-2017",
+      "label": "September 2017",
+      "from": null,
+      "to": null,
+      "n": 77
+    },
+    {
+      "id": "pre-2017-07-25",
+      "label": "1.37 25/07/17",
+      "from": "2017-07-25",
+      "to": "2017-07-25",
+      "n": 78
+    },
+    {
+      "id": "pre-2017-07-06",
+      "label": "1.37 06/07/17",
+      "from": "2017-07-06",
+      "to": "2017-07-06",
+      "n": 84
+    },
+    {
+      "id": "pre-2017-05-05",
+      "label": "1.33 05/05/17",
+      "from": "2017-05-05",
+      "to": "2017-05-05",
+      "n": 73
+    },
+    {
+      "id": "pre-2017-04-20",
+      "label": "1.31 20/04/17",
+      "from": "2017-04-20",
+      "to": "2017-04-20",
+      "n": 80
+    },
+    {
+      "id": "pre-2017-04-13",
+      "label": "1.31 13/04/17",
+      "from": "2017-04-13",
+      "to": "2017-04-13",
+      "n": 61
+    },
+    {
+      "id": "pre-2017-02-16",
+      "label": "1.27.2 16/02/17",
+      "from": "2017-02-16",
+      "to": "2017-02-16",
+      "n": 68
+    },
+    {
+      "id": "pre-2017-02-08",
+      "label": "1.25.0 08/02/17",
+      "from": "2017-02-08",
+      "to": "2017-02-08",
+      "n": 57
+    },
+    {
+      "id": "pre-2016-12-12",
+      "label": "1.19.1 12/12/16",
+      "from": "2016-12-12",
+      "to": "2016-12-12",
+      "n": 69
+    },
+    {
+      "id": "pre-2016-11-03",
+      "label": "1.13.3 03/11/16",
+      "from": "2016-11-03",
+      "to": "2016-11-03",
+      "n": 66
+    },
+    {
+      "id": "pre-1-0",
+      "label": "1.0",
+      "from": null,
+      "to": null,
+      "n": 73
+    }
+  ],
+  "mix": [
+    {
+      "id": "period-2022-03-01-alola-go",
+      "n": 55
+    }
+  ],
+  "species": 357,
+  "empty": [
+    "alola"
+  ],
+  "unmapped": [],
+  "skipped": [
+    "costume:222 222-glasses.png Corsola  (Galarian Form (Sunglasses))",
+    "costume:263 263-gofest2021.png Zigzagoon  (Galarian Form - GO Fest 2021)"
+  ],
+  "doubtful": [],
+  "notes": [
+    "onglet mixte « 1/3/22-30/6/22 » : 55 espèces, conservé comme période datée (chevauche Alola et GO)",
+    "Toujours en avant : pool Serebii unionné avec la page d’événement Leek Duck (39 espèces listées ; la page précise que la liste n’est pas exhaustive)",
+    "Bulbapedia mentionne 171 couple(s) (saison, espèce, distance) absents de Serebii ; non ajoutés (tables Bulbapedia = extraits, pas des pools complets). Ex. : delightful-days:636:5, delightful-days:775:5, delightful-days:935:10:as, delightful-days:996:10:as, delightful-days:52-alola:7:ga, delightful-days:88-alola:7:ga, delightful-days:100-hisui:7:ga, delightful-days:222-galar:7:ga"
+  ],
+  "bbOnlyCount": 171,
+  "bbOnlySample": [
+    "delightful-days:636:5",
+    "delightful-days:775:5",
+    "delightful-days:935:10:as",
+    "delightful-days:996:10:as",
+    "delightful-days:52-alola:7:ga",
+    "delightful-days:88-alola:7:ga",
+    "delightful-days:100-hisui:7:ga",
+    "delightful-days:222-galar:7:ga",
+    "delightful-days:37-alola:7:gr",
+    "delightful-days:215-hisui:7:gr",
+    "delightful-days:550-white-striped:7:gr",
+    "might-and-mastery:54:2",
+    "might-and-mastery:636:10",
+    "might-and-mastery:782:10:as",
+    "might-and-mastery:885:10",
+    "might-and-mastery:935:10:as",
+    "might-and-mastery:996:10:as",
+    "might-and-mastery:52-alola:7:ga",
+    "might-and-mastery:88-alola:7:ga",
+    "might-and-mastery:100-hisui:7:ga",
+    "might-and-mastery:222-galar:7:ga",
+    "might-and-mastery:37-alola:7:gr",
+    "might-and-mastery:215-hisui:7:gr",
+    "might-and-mastery:550-white-striped:7:gr",
+    "dual-destiny:550:7:gr",
+    "dual-destiny:636:5",
+    "dual-destiny:636:10",
+    "dual-destiny:674:7:gr",
+    "dual-destiny:682:5",
+    "dual-destiny:704:10"
+  ]
+}

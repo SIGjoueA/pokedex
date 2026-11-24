@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pok&eacute;mon GO - Special Events</title>
+<script data-cfasync="false">
+  window.ramp = window.ramp || {};
+  window.ramp.que = window.ramp.que || [];
+</script>
+
+<meta http-equiv="imagetoolbar" CONTENT="no">
+	<link rel="stylesheet" type="text/css" href="/style/layout.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta">
+
+<!-- GDPR Compliancy -->
+<style>
+body {
+	--cmpBgColor: #507C36;
+	--cmpTextColor: #000000;
+	--cmpLinkColor: #ffffff;
+	--cmpPurposesColor: #000000;
+	--cmpBrandColor: #000000;
+	--cmpLogo: url('https://www.serebii.net/extralogo.png');
+}
+</style>
+<!-- GDPR Compliancy -->
+
+<link rel="search" href="/serebii-opensearch.xml" type="application/opensearchdescription+xml" title="Serebii Open Search" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128947957-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-128947957-1');
+</script>
+<!-- Place the below code anywhere you like in the <head> (higher is better) -->
+
+
+
+
+<meta name="keywords" content="Serebii, Pokemon, Pok&eacute;mon, GO, Events" />
+<link rel="stylesheet" href="/style/tablenew.css" type="text/css" media="screen" />
+
+<link rel="canonical" href="https://www.serebii.net/pokemongo/seasons.shtml" />
+<meta property="og:image" content="https://www.serebii.net/pokemongo/titles.jpg">
+<meta property="og:title" content="Seasons  - Pok&eacute;mon GO">
+<meta property="og:description" content="Seasons in Pok&eacute;mon GO. This page details all seasons in Pok&eacute;mon GO with different pages for each season with full details">
+<meta name="description" content="Seasons in Pok&eacute;mon GO. This page details all seasons in Pok&eacute;mon GO with different pages for each season with full details">
+<meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+<script type="text/javascript">
+	var viewport_meta = document.getElementById('viewport-meta');
+	var viewport_timer;
+
+	// these body*Class are reused in the lbar mobile menu
+	function bodyAddClass(className){
+		if(document.body) document.body.classList.add(className);
+	}
+	function bodyRemoveClass(className){
+		if(document.body) document.body.className = document.body.className.replace(className,"");
+	}
+
+	function viewport_set() {
+		// Define our viewport meta values
+		var viewports = {
+			default: viewport_meta.getAttribute('content'),
+			mobileL: 'width=device-width,initial-scale=0.75',
+			mobileM: 'width=device-width,initial-scale=0.5',
+			mobileS: 'width=device-width,initial-scale=0.4'
+		};
+
+		// Change the viewport value based on screen.width
+		if(screen.width < 370){
+			viewport_meta.setAttribute('content', viewports.mobileS);
+			bodyAddClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		} else if(screen.width < 505){
+			viewport_meta.setAttribute('content', viewports.mobileM);
+			bodyRemoveClass("nav_mobileS");
+			bodyAddClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		} else if (screen.width < 760){
+			viewport_meta.setAttribute('content', viewports.mobileL);
+			bodyRemoveClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyAddClass("nav_mobileL");
+		} else{
+			viewport_meta.setAttribute('content', viewports.default);
+			bodyRemoveClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		}
+	}
+
+	// Set the correct viewport value on page load
+	viewport_set();
+
+	/* attach listener to (delay) set the correct viewport after device orientation change or resize. also onload so the nav_mobile* class gets added to body AFTER <body> has loaded */
+	if(window.addEventListener){
+		window.addEventListener('load', viewport_set);
+		window.addEventListener('resize', function(){
+			clearTimeout(viewport_timer);
+			viewport_timer = setTimeout(viewport_set, 100);
+		})
+	} else{
+		window.attachEvent('onload', viewport_set)
+		window.attachEvent('onresize', function(){
+			clearTimeout(viewport_timer);
+			viewport_timer = setTimeout(viewport_set, 100);
+		})
+	}
+
+</script>
+
+
+<header id="header">
+	<div class="banner">
+		<a href="/"><img src="/Banner.jpg" alt="Serebii.net Header" style="height:139px"></a>
+	</div>
+
+	<nav class="quicklinks">
+		<ul>
+			<li><b>Quick Links</b></li>
+			<li><a href="/index2.shtml">Home</a></li>
+			<li><a href="https://forums.serebii.net/" target="blank">Forums</a></li>
+			<li><a href="mailto:webmaster@serebii.net">Contact</a></li>
+			<li><a href="/discord.shtml">Discord</a></li>
+			<li><a href="/pokemon">Pokédex Hub</a></li>
+			<li><a href="/pokedex-sv">Scarlet & Violet Pokédex</a></li>
+			<li><a href="/pokedex-champions">Champions Pokédex</a></li>
+			<li><a href="/pokearth">Pokéarth</a></li>
+
+			<li class="search">
+				<form id="searchbox_018410473690156091934:6gahkiyodbi" action="/search.shtml" style="margin:0px;">
+					<input type="hidden" name="cx" value="018410473690156091934:6gahkiyodbi" />
+					<input type="hidden" name="cof" value="FORID:11" />
+					<input name="q" type="text" size="20" />
+					<input type="submit" name="sa" value="Search" />
+				</form>
+				<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=searchbox_018410473690156091934%3A6gahkiyodbi"></script>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+
+
+<div id="wrapper">
+
+<ul id="tbar_sticky">
+	<li>
+		<a href="#lbar" class="navheader" id="tbar_lbar_open"><img src="/hidden/2019-04/burger.svg"></a>
+	</li>
+	<li>
+		<form id="searchbox_018410473690156091934:6gahkiyodbi" action="/search.shtml" style="margin:0px;">
+			<input type="hidden" name="cx" value="018410473690156091934:6gahkiyodbi" />
+			<input type="hidden" name="cof" value="FORID:11" />
+			<input name="q" type="search" placeholder="Search Serebii.net..." />
+		</form>
+	</li>
+	<li>
+		<a href="#rbar" class="navheader" id="tbar_rbar_open" style="padding-right:20px"><img src="/hidden/2019-04/burger.svg"></a>
+	</li>
+</ul>
+<div id="tbar_backdrop"></div>
+
+<nav id="lbar">
+	<ul id="lbar_ul">
+		<li>
+			<a href="/" class="navheader">Databases</a>
+			<ul>
+				<li><a href="/index2.shtml">News</a>
+				<li><a href="/archive.shtml">Archived news</a></li>
+				<li><a href="/pokemon/"><b>Pokédex</b></a></li>
+				<li><a href="/pokedex/">-Red/Blue Pokédex</a></li>
+				<li><a href="/pokedex-gs/">-Gold/Silver Pokédex</a></li>
+				<li><a href="/pokedex-rs/">-Ruby/Sapphire Pokédex</a></li>
+				<li><a href="/pokedex-dp/">-Diamond/Pearl Pokédex</a></li>
+				<li><a href="/pokedex-bw/">-Black/White Pokédex</a></li>
+				<li><a href="/pokedex-xy/">-X & Y Pokédex</a></li>
+				<li><a href="/pokedex-sm/">-Sun & Moon Pokédex</a></li>
+				<li><a href="/pokedex-sm/">-Let's Go Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-Sword & Shield Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-BDSP Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-Legends: Arceus Pokédex</a></li>
+				<li><a href="/pokemongo/pokemon/">-GO Pokédex</a></li>
+				<li><a href="/pokedex-sv/">-Scarlet & Violet Pokédex</a></li>
+				<li><a href="/pokedex-sv/">-Legends: Z-A Pokédex</a></li>
+				<li><a href="/pokedex-champions/">-Champions Pokédex</a></li>
+
+				<li><strong>Attackdex</strong></li>
+				<li><a href="/attackdex-rby/">-Gen 1 Attackdex</a></li>
+				<li><a href="/attackdex-gs/">-Gen 2 Attackdex</a></li>
+				<li><a href="/attackdex/">-Gen 3 Attackdex</a></li>
+				<li><a href="/attackdex-dp/">-Gen 4 Attackdex</a></li>
+				<li><a href="/attackdex-bw/">-Gen 5 Attackdex</a></li>
+				<li><a href="/attackdex-xy/">-Gen 6 Attackdex</a></li>
+				<li><a href="/attackdex-sm/">-Gen 7 Attackdex</a></li>
+				<li><a href="/attackdex-swsh/">-Gen 8 Attackdex</a></li>
+				<li><a href="/attackdex-sv/">-Gen 9 Attackdex</a></li>
+				<li><a href="/attackdex-champions/">-Champions Attackdex</a></li>
+				<li><a href="/itemdex/">ItemDex</a></li>
+				<li><a href="/pokearth/">Pokéarth</a></li>
+				<li><a href="/abilitydex/">Abilitydex</a></li>
+				<li><a href="/spindex/">Spin-Off Pokédex</a></li>
+				<li><a href="/spindex-dp/">Spin-Off Pokédex DP</a></li>
+				<li><a href="/spindex-bw/">Spin-Off Pokédex BW</a></li>
+				<li><a href="/card/dex/">Cardex</a></li>
+				<li><a href="/movies/dex/">Cinematic Pokédex</a></li>
+				<li><a href="/games/mechanics.shtml">Game Mechanics</a></li>
+				<li><a href="/games/iv-calcsv.shtml">-Scarlet/Violet IV Calc.</a></li>
+				<li><a href="/potw-champions">Pokémon of the Week</a></li>
+				<li><a href="/potw-champions/">-Champions</a></li>
+				<li><a href="/potw-sv/">-9th Gen</a></li>
+				<li><a href="/potw-swsh/">-8th Gen</a></li>
+				<li><a href="/potw-sm/">-7th Gen</a></li>
+				<li><a href="/pokemon/timeline.shtml">Pokémon Timeline</a></li>
+				<li><a href="/pokemoncenter/">Pokémon Centers</a></li>
+				<li><a href="/playpokemon">Pokémon Championship Series</a></li>
+				<li><a href="/pokemonxp/">PokémonXP</a></li>
+
+				<li><a href="/music/projectvoltage">Hatsune Miku Project Voltage</a></li>
+				<li><a href="/museums/">Pokémon in Museums & Exhibitions</a></li>
+				<li><a href="/pokemon/vangoghmuseum/">-Pokémon x Van Gogh</a></li>
+				<li><a href="/pokemonday/">Pokémon Day</a></li>
+				<li><a href="/presentations">Pokémon Presentations</a></li>
+				<li><a href="/lego/">LEGO Pokémon</a></li>
+				<li><a href="/pokemonshirts/">Pokémon Shirts</a></li>
+				<li><a href="/themeparks/">Theme Parks</a></li>
+				<li><a href="https://forums.serebii.net" target="blank">Forums</a></li>
+				<li><a href="/discord.shtml">Discord Chat</a></li>		
+				<li><a href="/games/currentevents.shtml">Current & Upcoming Events</a></li>
+				<li><a href="/events">Event Database</a></li>
+				<li><a href="/scarletviolet/pokemon.shtml">9th Generation Pokémon</a></li>
+				<li><a href="/scarletviolet/dlc-pokemon.shtml">-New Pokémon in DLC</a></li>
+				<li><a href="/scarletviolet/paldeanforms.shtml">-Paldean Form Pokémon</a></li>
+
+			</ul>
+		</li>
+
+
+		<li>
+			<a href="/anime/" class="navheader">Anime & TV</a>
+			<ul>
+				<li><a href="/anime/epiguide/">Episode Listings & Pictures</a></li>
+				<li><a href="/anime/dex/">AniméDex</a></li>
+				<li><a href="/anime/characters/">Character Bios</a></li>
+				<li><a href="/anime/epiguide/indigo/">The Indigo League</a></li>
+				<li><a href="/anime/epiguide/orange/">The Orange League</a></li>
+				<li><a href="/anime/epiguide/johto/">The Johto Saga</a></li>
+				<li><a href="/anime/epiguide/houen/">The Saga in Hoenn!</a></li>
+				<li><a href="/anime/epiguide/kanto/">Kanto Battle Frontier Saga!</a></li>
+				<li><a href="/anime/epiguide/shinou/">The Sinnoh Saga!</a></li>
+				<li><a href="/anime/epiguide/bestwishes/">Best Wishes - Unova Saga</a></li>
+				<li><a href="/anime/epiguide/xy/">XY - Kalos Saga</a></li>
+				<li><a href="/anime/epiguide/sunmoon/">Sun & Moon - Alola Saga</a></li>
+				<li><a href="/anime/epiguide/pokemon/">Pokémon Journeys - Galar Saga</a></li>
+				<li><a href="/anime/epiguide/pokemonmaster/">Pokémon Aim To Be A Pokémon Master</a></li>
+				<li><a href="/anime/epiguide/pokemon2023/">Pokémon Horizons - Paldea Saga</a></li>
+				<li><a href="/anime/epiguide/chronicles/">Pokémon Chronicles</a></li>	
+				<li><a href="/anime/epiguide/specials/">The Special Episodes</a></li>
+				<li><a href="/anime/banned.shtml">The Banned Episodes</a></li>
+				<li><a href="/anime/shiny/">Shiny Pokémon</a></li>
+<li><b>Other Web Series</b></li>
+				<li><a href="/anime/epiguide/generations/">Pokémon Generations</a></li>
+				<li><a href="/anime/epiguide/twilightwings/">Pokémon Twilight Wings</a></li>
+				<li><a href="/anime/epiguide/evolutions/">Pokémon Evolutions</a></li>
+				<li><a href="/anime/hisuiansnow/">Pokémon: Hisuian Snow</a></li>
+				<li><a href="/anime/paldeanwinds/">Pokémon: Paldean Winds</a></li>
+				<li><a href="/anime/poketoon/">PokéToon</a></li>
+				<li><a href="/anime/other/pathtothepeak/">Path to the Peak</a></li>
+				<li><a href="/anime/other/pokeminutes/">PokéMinutes</a></li>
+				<li><a href="/anime/other/pokevideodex/">PokéVideoDex</a></li>
+				<li><a href="/anime/other/goodmorningwithpokemon/">Good Morning with Pokémon</a></li>
+				<li><a href="/anime/other/">Other Animations</a></li>
+				<li><b>Other Series</b></li>
+				<li><a href="/pokemonconcierge/">Pokémon Concierge</a></li>
+				<li><a href="/pokemontales/">Pokémon Tales: The Misadventures of Sirfetch'd & Pichu</a></li>
+
+				<li><b>Live Action</b></li>
+				<li><a href="/poketsume/">PokéTsume</a></li>
+
+
+			</ul>
+		</li>
+
+		<li>
+			<a href="/games/" class="navheader">Video Games</a>
+			<ul>
+				<li><a href="/pokemon/generation10.shtml"><b>Gen X</b></li>
+				<li><a href="/windswaves/">Winds & Waves</a></li>
+
+				<li><a href="/pokemon/generation9.shtml"><b>Gen IX</b></a></li>
+				<li><a href="/scarletviolet/">Scarlet & Violet</a></li>
+				<li><a href="/legendsz-a/">Legends: Z-A</a></li>
+				<li><a href="/pokemonchampions/">Pokémon Champions</a></li>
+				<li><a href="/pokemonpokopia/">Pokémon Pokopia</a></li>
+				<li><a href="/pokemonfriends/">Pokémon Friends</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/cafemix/">Pokémon Café ReMix</a></li>
+				<li><a href="/pokemonmasters/">Pokémon Masters EX</a></li>
+				<li><a href="/pokemonunite/">Pokémon UNITE</a></li>
+				<li><a href="/pokemonsleep/">Pokémon Sleep</a></li>
+				<li><a href="/detectivepikachureturns/">Detective Pikachu Returns</a></li>
+				<li><a href="/tcgpocket/">Pokémon TCG Pocket</a></li>
+
+				<li><a href="/pokemon/generation8.shtml"><b>Gen VIII</b></a></li>
+				<li><a href="/swordshield/">Sword & Shield</a></li>
+				<li><a href="/brilliantdiamondshiningpearl/">Brilliant Diamond & Shining Pearl</a></li>
+				<li><a href="/legendsarceus/">Pokémon Legends: Arceus</a></li>
+				<li><a href="/pokemonhome/">Pokémon HOME</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/pokemonmasters/">Pokémon Masters EX</a></li>
+				<li><a href="/dungeonrescueteamdx/">Pokémon Mystery Dungeon Rescue Team DX</a></li>
+				<li><a href="/pokemonsmile/">Pokémon Smile</a></li>
+				<li><a href="/cafemix/">Pokémon Café ReMix</a></li>
+				<li><a href="/newpokemonsnap/">New Pokémon Snap</a></li>
+				<li><a href="/pokemonunite/">Pokémon UNITE</a></li>
+				<li><a href="/tcglive/">Pokémon TCG Live</a></li>
+
+				<li><a href="/pokemon/generation7.shtml"><b>Gen VII</b></a></li>
+				<li><a href="/sunmoon/">Sun & Moon</a></li>
+				<li><a href="/ultrasunultramoon/">Ultra Sun & Ultra Moon</a></li>
+				<li><a href="/letsgopikachueevee/">Let's Go, Pikachu! & Let's Go, Eevee!</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/magikarpjump/">Pokémon: Magikarp Jump</a></li>
+				<li><a href="/rumblerush/">Pokémon Rumble Rush</a></li>
+				<li><a href="/pokkendx/">Pokkén Tournament DX</a></li>
+				<li><a href="/detective/">Detective Pikachu</a></li>
+				<li><a href="/quest/">Pokémon Quest</a></li>
+				<li><a href="/smashbrosultimate/">Super Smash Bros. Ultimate</a></li>
+				<li><a href="/pokemon/generation6.shtml"><b>Gen VI</b></a></li>
+				<li><a href="/xy/">X & Y</a></li>
+				<li><a href="/omegarubyalphasapphire/">Omega Ruby & Alpha Sapphire</a></li>
+				<li><a href="/bank/">Pokémon Bank</a></li>
+				<li><a href="/battletrozei/">Pokémon Battle TrozeiPokémon Link: Battle</a></li>
+				<li><a href="/artacademy/">Pokémon Art Academy</a></li>
+				<li><a href="/bandofthieves/">The Band of Thieves & 1000 Pokémon</a></li>
+				<li><a href="/shuffle/">Pokémon Shuffle</a></li>
+				<li><a href="/rumbleworld/">Pokémon Rumble World</a></li>
+				<li><a href="/supermysterydungeon/">Pokémon Super Mystery Dungeon</a></li>
+				<li><a href="/picross/">Pokémon Picross</a></li>
+				<li><a href="/detective/">Detective Pikachu</a></li>
+				<li><a href="/pokken/">Pokkén Tournament</a></li>
+				<li><a href="/duel/">Pokémon Duel</a></li>
+				<li><a href="/smashbros3dswiiu/">Smash Bros for 3DS/Wii U</a></li>
+				<li><a href="/games/badge/">Nintendo Badge Arcade</a></li>
+				<li><a href="/pokemon/generation5.shtml"><b>Gen V</b></a></li>
+				<li><a href="/blackwhite/">Black & White</a></li>
+				<li><a href="/black2white2/">Black 2 & White 2</a></li>
+				<li><a href="/dreamradar/">Pokémon Dream Radar</a></li>
+				<li><a href="/trettalab/">Pokémon Tretta Lab</a></li>
+				<li><a href="/rumbleu/">Pokémon Rumble U</a></li>
+				<li><a href="/dungeoninfinity/">Mystery Dungeon: Gates to Infinity</a></li>
+				<li><a href="/conquest/">Pokémon Conquest</a></li>
+				<li><a href="/pokepark2/">PokéPark 2: Wonders Beyond</a></li>
+				<li><a href="/rumble2/">Pokémon Rumble Blast</a></li>
+				<li><a href="/pokedex3d/">Pokédex 3D</a></li>
+				<li><a href="/pokedex3dpro/">Pokédex 3D Pro</a></li>
+				<li><a href="/typingds/">Learn With Pokémon: Typing Adventure</a></li>
+				<li><a href="/card/howtoplayds/">TCG How to Play DS</a></li>
+				<li><a href="/pokedexios/">Pokédex for iOS</a></li>
+				<li><a href="/pokemon/generation4.shtml"><b>Gen IV</b></a></li>
+				<li><a href="/diamondpearl/">Diamond & Pearl</a></li>
+				<li><a href="/platinum/">Platinum</a></li>
+				<li><a href="/heartgoldsoulsilver/">Heart Gold & Soul Silver</a></li>
+				<li><a href="/ranger3/">Pokémon Ranger: Guardian Signs</a></li>
+				<li><a href="/melee/">Pokémon Rumble</a></li>
+				<li><a href="/dungeon3/">Mystery Dungeon: Blazing, Stormy & Light Adventure Squad</a></li>
+				<li><a href="/pokepark/">PokéPark Wii - Pikachu's  Adventure</a></li>
+				<li><a href="/battle/">Pokémon Battle Revolution</a></li>
+				<li><a href="/dungeonsky/">Mystery Dungeon - Explorers of Sky</a></li>
+				<li><a href="/ranger2/">Pokémon Ranger: Shadows of Almia</a></li>
+				<li><a href="/dungeon2/">Mystery Dungeon - Explorers of Time & Darkness</a></li>
+				<li><a href="/ranch/">My Pokémon Ranch</a></li>
+				<li><a href="/ssbb/">Smash Bros Brawl</a></li>
+				<li><a href="/pokemon/generation3.shtml"><b>Gen III</b></a></li>
+				<li><a href="/rubysapphire/">Ruby & Sapphire</a></li>
+				<li><a href="/fireredleafgreen/">Fire Red & Leaf Green</a></li>
+				<li><a href="/emerald/">Emerald</a></li>
+				<li><a href="/colosseum/">Pokémon Colosseum</a></li>
+				<li><a href="/xd/">Pokémon XD: Gale of Darkness</a></li>
+				<li><a href="/dash/">Pokémon Dash</a></li>
+				<li><a href="/pokemon_channel/">Pokémon Channel</a></li>
+				<li><a href="/pokemon_box/">Pokémon Box: RS</a></li>
+				<li><a href="/pinball_rs/">Pokémon Pinball RS</a></li>
+				<li><a href="/ranger/">Pokémon Ranger</a></li>
+				<li><a href="/mysteriousdungeon/">Mystery Dungeon Red & Blue</a></li>
+				<li><a href="/torouze/">PokémonTrozei</a></li>
+				<li><a href="/pikachu/">Pikachu DS Tech Demo</a></li>
+				<li><a href="/pokeparkfish/">PokéPark Fishing Rally</a></li>
+				<li><a href="/e-reader/">The E-Reader</a></li>
+				<li><a href="/pokemate/">PokéMate</a></li>
+				<li><a href="/pokemon/generation2.shtml"><b>Gen II</b></a></li>
+				<li><a href="/gs/">Gold/Silver</a></li>
+				<li><a href="/crystal/">Crystal</a></li>
+				<li><a href="/stadium2/">Pokémon Stadium 2</a></li>
+				<li><a href="/puzzlechallenge/">Pokémon Puzzle Challenge</a></li>
+				<li><a href="/mini/">Pokémon Mini</a></li>
+				<li><a href="/smash_bros_2/">Super Smash Bros. Melee</a></li>
+				<li><a href="/pokemon/generation1.shtml"><b>Gen I</b></a></li>
+				<li><a href="/rb/">Red, Blue & Green</a></li>
+				<li><a href="/yellow/">Yellow</a></li>
+				<li><a href="/puzzleleague/">Pokémon Puzzle League</a></li>
+				<li><a href="/snap/">Pokémon Snap</a></li>
+				<li><a href="/pinball/">Pokémon Pinball</a></li>
+				<li><a href="/stadiumjp/">Pokémon Stadium (Japanese)</a></li>
+				<li><a href="/stadium/">Pokémon Stadium</a></li>
+				<li><a href="/tradingcardgamegb/">Pokémon Trading Card Game GB</a></li>
+				<li><a href="/smash_bros/">Super Smash Bros.</a></li>
+
+				<li><strong>Miscellaneous</strong></li>
+				<li><a href="/games/mechanics.shtml">Game Mechanics</a></li>
+				<li><a href="/playpokemon">Pokémon Championship Series</a></li>
+				<li><a href="/games/others.shtml">In Other Games</a></li>
+				<li><a href="/games/virtualconsole.shtml">Virtual Console</a></li>
+				<li><a href="/games/consoles.shtml">Special Edition Consoles</a></li>
+				<li><a href="/games/themes.shtml">Pokémon 3DS Themes</a></li>
+				<li><a href="/apps">Smartphone & Tablet Apps</a></li>
+				<li><a href="/virtualpet">Virtual Pets</a></li>
+				<li><a href="/amiibo">amiibo</a></li>
+				<li><a href="/nintendoswitchonline/">Nintendo Switch Online & Icons</a></li>
+				<li><strong>Board Game</strong></li>
+				<li><a href="/pokemongoita">Pokémon Goita</a></li>
+				<li><strong>Arcade</strong></li>
+				<li><a href="/frienda">Pokémon FRIENDA</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/manga/" class="navheader">Manga</a>
+			<ul>
+				<li><a href="/manga/">General Information</a>
+				<li><a href="/manga/dex">MangaDex</a></li>
+				<li><a href="/manga/characters">Character BIOs</a></li>
+				<li><a href="/manga/characters-new">Detailed BIOs</a></li>
+				<li><a href="/manga/chapter.shtml">Chapter Guides</a></li>
+				<li><a href="/manga/volume.shtml">Volume Guides</a></li>
+				<li><a href="/manga/rby/">RBG Series</a></li>
+				<li><a href="/manga/yellow/">Yellow Series</a></li>
+				<li><a href="/manga/gsc/">GSC Series</a></li>
+				<li><a href="/manga/rs/">RS Series</a></li>
+				<li><a href="/manga/frlg/">FRLG Series</a></li>
+				<li><a href="/manga/bf/">Emerald Series</a></li>
+				<li><a href="/manga/dp/">DP Series</a></li>
+				<li><a href="/manga/pt/">Platinum Series</a></li>
+				<li><a href="/manga/hgss/">HGSS Series</a></li>
+				<li><a href="/manga/bw/">BW Series</a></li>
+				<li><a href="/manga/b2w2/">B2W2 Series</a></li>
+				<li><a href="/manga/xy/">XY Series</a></li>
+				<li><a href="/manga/oras/">ORAS Series</a></li>
+				<li><a href="/manga/sunmoon/">SM Series</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/movies/" class="navheader">Movies</a>
+			<ul>
+				<li><strong>Anime</strong></li>
+				<li><a href="/movies/mewtwo/origin/">The Origin of Mewtwo</a></li>
+				<li><a href="/movies/mewtwo/">Mewtwo Strikes Back</a></li>
+				<li><a href="/movies/lugia/">The Power of One</a></li>
+				<li><a href="/movies/entei/">Spell Of The Unown</a></li>
+				<li><a href="/anime/epiguide/specials/002.shtml">Mewtwo Returns</a></li>
+				<li><a href="/movies/serebii/">Celebi: Voice of the Forest</a></li>
+				<li><a href="/movies/latias_latios/">Pokémon Heroes</a></li>
+				<li><a href="/movies/jirachi/">Jirachi - Wish Maker</a></li>
+				<li><a href="/movies/deoxys/">Destiny Deoxys!</a></li>
+				<li><a href="/movies/mew/">Lucario and the Mystery of Mew!</a></li>
+				<li><a href="/movies/kyogre/">Pokémon Ranger & The Temple of the Sea!</a></li>
+				<li><a href="/movies/dp/">The Rise of Darkrai!</a></li>
+				<li><a href="/movies/giratina/">Giratina & The Sky Warrior!</a></li>
+				<li><a href="/movies/arceus/">Arceus and the Jewel of Life</a></li>
+				<li><a href="/movies/celebi/">Zoroark - Master of Illusions</a></li>
+				<li><a href="/movies/victini/">Black: Victini & ReshiramWhite: Victini & Zekrom</a></li>
+				<li><a href="/movies/kyurem/">Kyurem VS The Sword of Justice</a></li>
+				<li><a href="/movies/meloetta/">-Meloetta's Midnight Serenade</a></li>
+				<li><a href="/movies/genesect/">Genesect and the Legend Awakened</a></li>
+				<li><a href="/movies/xy/">Diancie & The Cocoon of Destruction</a></li>
+				<li><a href="/movies/hoopa/">Hoopa & The Clash of Ages</a></li>
+				<li><a href="/movies/volcanion/">Volcanion and the Mechanical Marvel</a></li>
+				<li><a href="/movies/pokemon20/">Pokémon I Choose You!</a></li>
+				<li><a href="/movies/thepowerofus/">Pokémon The Power of Us</a></li>
+				<li><a href="/movies/mewtwoevolution/">Mewtwo Strikes Back Evolution</a></li>
+				<li><a href="/movies/secretsofthejungle/">Secrets of the Jungle</a></li>
+				<li><a href="/movies/pokemonwildcard/">Wild Card</a></li>
+				<li><strong>Live Action</strong></li>
+				<li><a href="/movies/detectivepikachu/">Pokémon Detective Pikachu</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/movies/" class="navheader">Pikachu Shorts</a>
+			<ul>
+				<li><a href="/movies/pikachu1/">Pikachu's Summer Vacation</a></li>
+				<li><a href="/movies/pikachu2/">Pikachu's Rescue Adventure</a></li>
+				<li><a href="/movies/pikachu3/">Pikachu And Pichu</a></li>
+				<li><a href="/movies/pikachu4/">Pikachu's PikaBoo</a></li>
+				<li><a href="/movies/pikachu5/">Camp Pikachu!</a></li>
+				<li><a href="/movies/pikachu6/">Gotta Dance!!</a></li>
+				<li><a href="/movies/pikachu7/">Pikachu's Summer Festival!</a></li>
+				<li><a href="/movies/pikachu8/">Pikachu's Ghost Festival!</a></li>
+				<li><a href="/movies/pikachu9/">Pikachu's Island Adventure!</a></li>
+				<li><a href="/movies/pikachu10/">Pikachu's Exploration Club</a></li>
+				<li><a href="/movies/pikachu11/">Pikachu's Great Ice Adventure</a></li>
+				<li><a href="/movies/pikachu12/">Pikachu's Sparkling Search</a></li>
+				<li><a href="/movies/pikachu13/">Pikachu's Really Mysterious Adventure</a></li>
+				<li><a href="/movies/eevee/">Eevee & Friends</a></li>
+				<li><a href="/movies/klefki/">Pikachu, What's This Key?</a></li>
+				<li><a href="/movies/pikachumusic/">Pikachu & The Pokémon Music Squad</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/card/" class="navheader">Trading Cards</a>
+			<ul>
+				<li><a href="/tcglive/">Pokémon TCG Live</a></li>
+				<li><a href="/card/dex/">Cardex</a></li>
+				<li><a href="/card/dex/extra">-Extra Pokémon Types</a></li>
+				<li><a href="/card/dex/trainers">Trainer Cards</a></li>
+				<li><a href="/card/dex/energy">Energy Cards</a></li>
+				<li><a href="/card/dex/extra/altart.shtml">Alternate Art Cards</a></li>
+				<li><a href="/card/raidbattles">Raid Battles</a></li>
+				<li><a href="/card/classic/">Pokémon TCG Classic</a></li>
+				<li><a href="/card/english.shtml"><b>English Sets</b></a></li>
+				<li><a href="/card/flowingfists/">-Flowing Fists</a></li>
+				<li><a href="/card/deltareign/">-Delta Reign</a></li>
+				<li><a href="/card/30thcelebration/">-30th Celebration</a></li>
+				<li><a href="/card/pitchblack/">-Pitch Black</a></li>
+				<li><a href="/card/chaosrising/">-Chaos Rising</a></li>
+				<li><a href="/card/perfectorder/">-Perfect Order</a></li>
+				<li><a href="/card/ascendedheroes/">-Ascended Heroes</a></li>
+				<li><a href="/card/phantasmalflames/">-Phantasmal Flames</a></li>
+				<li><a href="/card/megaevolution/">-Mega Evolution</a></li>
+				<li><a href="/card/blackbolt/">-Black Bolt</a></li>
+				<li><a href="/card/whiteflare/">-White Flare</a></li>
+				<li><a href="/card/destinedrivals/">-Destined Rivals</a></li>
+				<li><a href="/card/journeytogether/">-Journey Together</a></li>
+				<li><a href="/card/prismaticevolutions/">-Prismatic Evolutions</a></li>
+				<li><a href="/card/surgingsparks/">-Surging Sparks</a></li>
+				<li><a href="/card/stellarcrown/">-Stellar Crown</a></li>
+				<li><a href="/card/shroudedfable/">-Shrouded Fable</a></li>
+				<li><a href="/card/twilightmasquerade/">-Twilight Masquerade</a></li>
+				<li><a href="/card/temporalforces/">-Temporal Forces</a></li>
+				<li><a href="/card/paldeanfates/">-Paldean Fates</a></li>
+				<li><a href="/card/paradoxrift/">-Paradox Rift</a></li>
+				<li><a href="/card/151/">-151</a></li>
+				<li><a href="/card/obsidianflames/">-Obsidian Flames</a></li>
+				<li><a href="/card/paldeaevolved/">-Paldea Evolved</a></li>
+				<li><a href="/card/scarletviolet/">-Scarlet Violet</a></li>
+				<li><a href="/card/swsh.shtml">-SWSH Series</a></li>
+				<li><a href="/card/sm.shtml">-SM Series</a></li>
+				<li><a href="/card/xy.shtml">-XY Series</a></li>
+				<li><a href="/card/bw.shtml">-BW Series</a></li>
+				<li><a href="/card/dpt.shtml">-DPtHS Series</a></li>
+				<li><a href="/card/ex.shtml">-EX Series</a></li>
+				<li><a href="/card/neo.shtml">-Neo/eSeries</a></li>
+				<li><a href="/card/first.shtml">-First Gen Series</a></li>
+				<li><a href="/card/engpromo.shtml"><b>English Promos</b></a></li>
+				<li><a href="/card/megapromos">-Mega Promos</a></li>
+				<li><a href="/card/svpromos">-SV Promos</a></li>
+				<li><a href="/card/swshpromos">-SWSH Promos</a></li>
+				<li><a href="/card/smpromos">-SM Promos</a></li>
+				<li><a href="/card/xypromos">-XY Promos</a></li>
+				<li><a href="/card/popseries.shtml">-POP Series</a></li>
+				<li><a href="/card/japanese.shtml"><b>Japanese Sets</b></a></li>
+				<li><a href="/card/auraseeker/">-Aura Seeker</a></li>
+				<li><a href="/card/stormemeralda/">-Storm Emeralda</a></li>
+				<li><a href="/card/abysseye/">-Abyss Eye</a></li>
+				<li><a href="/card/ninjaspinner/">-Ninja Spinner</a></li>
+				<li><a href="/card/nihilzero/">-Nihil Zero</a></li>
+				<li><a href="/card/megadreamex/">-Mega Dream ex</a></li>
+				<li><a href="/card/infernox/">-Inferno X</a></li>
+				<li><a href="/card/megabrave/">-Mega Brave</a></li>
+				<li><a href="/card/megasymphonia/">-Mega Symphonia</a></li>
+				<li><a href="/card/blackbolt-jp/">-Black Bolt</a></li>
+				<li><a href="/card/whiteflare-jp/">-White Flare</a></li>
+				<li><a href="/card/gloryofteamrocket/">-Glory of Team Rocket</a></li>
+				<li><a href="/card/hotairarena/">-Hot Air Arena</a></li>
+				<li><a href="/card/battlepartners/">-Battle Partners</a></li>
+				<li><a href="/card/terastalfestivalex/">-Terastal Festival ex</a></li>
+				<li><a href="/card/superelectricbreaker/">-Super Electric Breaker</a></li>
+				<li><a href="/card/paradisedragona/">-Paradise Dragona</a></li>
+				<li><a href="/card/stellarmiracle/">-Stellar Miracle</a></li>
+				<li><a href="/card/nightwanderer/">-Night Wanderer</a></li>
+				<li><a href="/card/maskofchange/">-Mask of Change</a></li>
+				<li><a href="/card/crimsonhaze/">-Crimson Haze</a></li>
+				<li><a href="/card/wildforce/">-Wild Force</a></li>
+				<li><a href="/card/cyberjudge/">-Cyber Judge</a></li>
+				<li><a href="/card/vstaruniverse/">-VSTAR Universe</a></li>
+				<li><a href="/card/vs">-Pokémon VS</a></li>
+				<li><a href="/card/jppromo.shtml"><b>Japanese Promos</b></a></li>
+				<li><a href="/card/svpromo">-SV Promos</a></li>
+				<li><a href="/card/spromo">-S Promos</a></li>
+				<li><a href="/card/smpromo">-SM Promos</a></li>
+
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+
+<script type="text/javascript">
+
+function loadMobileLbar(){
+	var tbar_lbar_open=document.getElementById('tbar_lbar_open'),
+		tbar_backdrop=document.getElementById('tbar_backdrop'),
+		lbar=document.getElementById('lbar'),
+		lbarLIs=document.querySelectorAll("#lbar_ul>li .navheader"),
+		lbarLIULs=document.querySelectorAll("#lbar_ul>li>ul");
+
+	/* lbar display/hide */
+	tbar_lbar_open.onclick=function() {
+		if (lbar.className.indexOf("show") > -1){//hide
+			lbar.className = lbar.className.replace("show","");
+			bodyRemoveClass("nav_modal");
+		} else{//show
+			lbar.classList.add("show");
+			bodyAddClass("nav_modal");
+		}
+
+		return false;
+	}
+
+
+	/* background clicked when bar shown */
+	tbar_backdrop.onclick=function() {// if the backdrop is clicked, hide menus
+		lbar.className = lbar.className.replace("show","");
+		rbar.className = rbar.className.replace("show","");
+		bodyRemoveClass("nav_modal");
+		return false;
+	}
+
+	/* handle expand/collapse sub-menus in lbar by attaching click events */
+	for(i=0; i<lbarLIs.length; i++){
+		lbarLIs[i].onclick=function(i) {
+			var elem=this.parentNode.getElementsByTagName("UL")[0];
+			var elemDisp=(elem.className.indexOf("show") === -1)
+
+			// hide all ul, then open one if clicked
+			for(i2=0; i2<lbarLIULs.length; i2++){
+				lbarLIULs[i2].className = lbarLIULs[i2].className.replace("show","");
+			}
+
+			if(elemDisp){
+				elem.classList.add("show");
+			}
+
+			return false;
+		}
+	}
+}
+function loadMobileRbar(){
+	var tbar_rbar_open=document.getElementById('tbar_rbar_open'),
+		rbar=document.getElementById('rbar');
+
+	/* rbar display/hide */
+	tbar_rbar_open.onclick=function() {
+		if (rbar.className.indexOf("show") > -1){//hide
+			rbar.className = rbar.className.replace("show","");
+			bodyRemoveClass("nav_modal");
+		} else{//show
+			rbar.classList.add("show");
+			bodyAddClass("nav_modal");
+		}
+
+		return false;
+	}
+}
+
+loadMobileLbar();
+
+/* attach listener to for rbar events AFTER page loads (because #rbar hasn't loaded at this point in page ) */
+if(window.addEventListener){
+	window.addEventListener('load', loadMobileRbar)
+} else{
+	window.attachEvent('onload', loadMobileRbar)
+}
+</script>
+
+
+
+<div id="content">
+		<div class="center" style="margin-top:16px;height:100px"><div id="nn_lb1"></div><div id="nn_mobile_lb1"></div></div>
+<main>
+
+<p><h1>Seasons</h1></p>
+<p>a new feature in Pok&eacute;mon GO starting December 2020 was the inclusion of seasons. These seasons are a combination of the meteorological temperate seasons as well as being themed towards other elements going around in Pok&eacute;mon GO and the Pok&eacute;mon franchise in general</p>
+
+<p><h2>List of Seasons</h2></p>
+<table class="dextab" align="center">
+<tr><td class="fooevo" width="150">Picture</td><td class="fooevo">Name</td><td class="fooevo">Duration</td></tr><tr><td class="cen" width="150"><a href="seasons/daydreamdestinations.shtml"><img src="/pokemongo/daydreamdestinations2.jpg" loading="lazy" width="150" alt="Daydream Destinations" /></a></td><td class="fooinfo"><a href="seasons/daydreamdestinations.shtml"><u>Daydream Destinations</u></a></td><td class="fooinfo">December 1st - March 2nd 2027</td></tr><tr><td class="cen" width="150"><a href="seasons/twilighttrails.shtml"><img src="/pokemongo/twilighttrails2.jpg" loading="lazy" width="150" alt="Twilight Trails" /></a></td><td class="fooinfo"><a href="seasons/twilighttrails.shtml"><u>Twilight Trails</u></a></td><td class="fooinfo">September 8th - December 2nd 2026</td></tr><tr><td class="cen" width="150"><a href="seasons/foreverforward.shtml"><img src="/pokemongo/foreverforward2.jpg" loading="lazy" width="150" alt="Forever Forward" /></a></td><td class="fooinfo"><a href="seasons/foreverforward.shtml"><u>Forever Forward</u></a></td><td class="fooinfo">June 2nd- September 8th 2026</td></tr><tr><td class="cen" width="150"><a href="seasons/memoriesinmotion.shtml"><img src="/pokemongo/memoriesinmotion2.jpg" loading="lazy" width="150" alt="Memories in Motion" /></a></td><td class="fooinfo"><a href="seasons/memoriesinmotion.shtml"><u>Memories in Motion</u></a></td><td class="fooinfo">March 3rd - June 2nd 2026</td></tr><tr><td class="cen" width="150"><a href="seasons/preciouspaths.shtml"><img src="/pokemongo/preciouspaths2.jpg" loading="lazy" width="150" alt="Precious Paths" /></a></td><td class="fooinfo"><a href="seasons/preciouspaths.shtml"><u>Precious Paths</u></a></td><td class="fooinfo">December 2nd - March 3rd 2026</td></tr><tr><td class="cen" width="150"><a href="seasons/talesoftransformation.shtml"><img src="/pokemongo/talesoftransformation2.jpg" loading="lazy" width="150" alt="Tales of Transformation" /></a></td><td class="fooinfo"><a href="seasons/talesoftransformation.shtml"><u>Tales of Transformation</u></a></td><td class="fooinfo">September 2nd - December 2nd 2025</td></tr><tr><td class="cen" width="150"><a href="seasons/delightfuldays.shtml"><img src="/pokemongo/delightfuldays2.jpg" loading="lazy" width="150" alt="Delightful Days" /></a></td><td class="fooinfo"><a href="seasons/delightfuldays.shtml"><u>Delightful Days</u></a></td><td class="fooinfo">June 3rd - September 2nd 2025</td></tr><tr><td class="cen" width="150"><a href="seasons/mightandmastery.shtml"><img src="/pokemongo/mightandmastery.jpg" loading="lazy" width="150" alt="Might and Mastery" /></a></td><td class="fooinfo"><a href="seasons/mightandmastery.shtml"><u>Might and Mastery</u></a></td><td class="fooinfo">March 4th 2025 - June 3rd 2025</td></tr><tr><td class="cen" width="150"><a href="seasons/dualdestiny.shtml"><img src="/pokemongo/dualdestiny2.jpg" loading="lazy" width="150" alt="Dual Destiny" /></a></td><td class="fooinfo"><a href="seasons/dualdestiny.shtml"><u>Dual Destiny</u></a></td><td class="fooinfo">December 3rd 2024 - March 4th 2025</td></tr><tr><td class="cen" width="150"><a href="seasons/maxout.shtml"><img src="/pokemongo/maxout2.jpg" loading="lazy" width="150" alt="Max Out" /></a></td><td class="fooinfo"><a href="seasons/maxout.shtml"><u>Max Out</u></a></td><td class="fooinfo">September 3rd 2024 - December 3rd 2024</td></tr><tr><td class="cen" width="150"><a href="seasons/sharedskies.shtml"><img src="/pokemongo/sharedskies.jpg" loading="lazy" width="150" alt="Shared Skies" /></a></td><td class="fooinfo"><a href="seasons/sharedskies.shtml"><u>Shared Skies</u></a></td><td class="fooinfo">June 1st 2024 - September 3rd 2024</td></tr><tr><td class="cen" width="150"><a href="seasons/worldofwonders.shtml"><img src="/pokemongo/worldofwonders.jpg" loading="lazy" width="150" alt="World of Wonders" /></a></td><td class="fooinfo"><a href="seasons/worldofwonders.shtml"><u>World of Wonders</u></a></td><td class="fooinfo">March 1st 2024 - June 1st 2024</td></tr><tr><td class="cen" width="150"><a href="seasons/timelesstravels.shtml"><img src="/pokemongo/timelesstravels.jpg" loading="lazy" width="150" alt="Timeless Travels" /></a></td><td class="fooinfo"><a href="seasons/timelesstravels.shtml"><u>Timeless Travels</u></a></td><td class="fooinfo">December 1st 2023 - March 1st 2024</td></tr><tr><td class="cen" width="150"><a href="seasons/adventuresabound.shtml"><img src="/pokemongo/adventuresabound.jpg" loading="lazy" width="150" alt="Adventures Abound" /></a></td><td class="fooinfo"><a href="seasons/adventuresabound.shtml"><u>Adventures Abound</u></a></td><td class="fooinfo">September 1st 2023 - December 1st 2023</td></tr><tr><td class="cen" width="150"><a href="seasons/hiddengems.shtml"><img src="/pokemongo/hiddengems.jpg" loading="lazy" width="150" alt="Hidden Gems" /></a></td><td class="fooinfo"><a href="seasons/hiddengems.shtml"><u>Hidden Gems</u></a></td><td class="fooinfo">June 1st 2023 - September 1st 2023</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofrisingheroes.shtml"><img src="/pokemongo/seasonofrisingheroes.jpg" loading="lazy" width="150" alt="Season of Rising Heroes" /></a></td><td class="fooinfo"><a href="seasons/seasonofrisingheroes.shtml"><u>Season of Rising Heroes</u></a></td><td class="fooinfo">March 1st 2023 - June 1st 2023</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofmythicalwishes.shtml"><img src="/pokemongo/seasonofmythicalwishes.jpg" loading="lazy" width="150" alt="Season of Mythical Wishes" /></a></td><td class="fooinfo"><a href="seasons/seasonofmythicalwishes.shtml"><u>Season of Mythical Wishes</u></a></td><td class="fooinfo">December 1st 2022 - March 1st 2023</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonoflight.shtml"><img src="/pokemongo/seasonoflight.jpg" loading="lazy" width="150" alt="Season of Light" /></a></td><td class="fooinfo"><a href="seasons/seasonoflight.shtml"><u>Season of Light</u></a></td><td class="fooinfo">September 1st 2022 - December 1st 2022</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofgo.shtml"><img src="/pokemongo/seasonofgo.jpg" loading="lazy" width="150" alt="Season of GO" /></a></td><td class="fooinfo"><a href="seasons/seasonofgo.shtml"><u>Season of GO</u></a></td><td class="fooinfo">June 1st 2022 - September 1st 2022</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofalola.shtml"><img src="/pokemongo/seasonofalola.jpg" loading="lazy" width="150" alt="Season of Alola" /></a></td><td class="fooinfo"><a href="seasons/seasonofalola.shtml"><u>Season of Alola</u></a></td><td class="fooinfo">March 1st 2022 - June 1st 2022</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofheritage.shtml"><img src="/pokemongo/seasonofheritage2.jpg" loading="lazy" width="150" alt="Season of Heritage" /></a></td><td class="fooinfo"><a href="seasons/seasonofheritage.shtml"><u>Season of Heritage</u></a></td><td class="fooinfo">December 1st 2021 - March 1st 2022</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofmischief.shtml"><img src="/pokemongo/seasonofmischief.jpg" loading="lazy" width="150" alt="Season of Mischief" /></a></td><td class="fooinfo"><a href="seasons/seasonofmischief.shtml"><u>Season of Mischief</u></a></td><td class="fooinfo">September 1st 2021 - December 1st 2021</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofdiscovery.shtml"><img src="/pokemongo/seasonofdiscovery.jpg" loading="lazy" width="150" alt="Season of Discovery" /></a></td><td class="fooinfo"><a href="seasons/seasonofdiscovery.shtml"><u>Season of Discovery</u></a></td><td class="fooinfo">June 1st 2021 - September 1st 2021</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonoflegends.shtml"><img src="/pokemongo/seasonoflegends.jpg" loading="lazy" width="150" alt="Season of Legends" /></a></td><td class="fooinfo"><a href="seasons/seasonoflegends.shtml"><u>Season of Legends</u></a></td><td class="fooinfo">March 1st 2021 - June 1st 2021</td></tr><tr><td class="cen" width="150"><a href="seasons/seasonofcelebration.shtml"><img src="/pokemongo/seasons.jpg" loading="lazy" width="150" alt="Season of Celebration" /></a></td><td class="fooinfo"><a href="seasons/seasonofcelebration.shtml"><u>Season of Celebration</u></a></td><td class="fooinfo">December 1st 2020 - February 28th 2021</td></tr></table>
+
+
+</main></div><!-- END id="content" -->
+
+
+<aside id="rbar">
+	<div class="navheader">Game Names</div>
+<div><a href="#">Pokémon GO</a><br /></div>
+	<div class="navheader">Console</div>
+<div><a href="#">iOS<br />Android</a><br /></div>
+	<div class="navheader">Game Sections</div>
+<div><ul><li><a href="/pokemongo/">Information</a></li>
+<li><a href="/pokemongo/#specs">System Specs</a></li>
+<li>
+<a href="/pokemongo/pics.shtml">Pre-Release Screenshots</a></li>
+<li><b>Pokémon</b><br /><a href="/pokemongo/pokemon.shtml">Pokémon Listings</a></li>
+<li><a href="/pokemongo/pokemon/index.shtml">- In-Depth</a></li>
+<li><a href="/pokemongo/capture.shtml">Capturing Pokémon</a></li>
+<li><a href="/pokemongo/eggs.shtml">Hatching Eggs</a></li>
+<li><a href="/pokemongo/forms.shtml">Pokémon Forms & Differences</a></li>
+<li><a href="/pokemongo/luckypokemon.shtml">Lucky Pokémon & Lucky Friends</a></li>
+<li><a href="/pokemongo/shiny.shtml">Shiny Pokémon</a></li>
+<li><a href="/pokemongo/formchange.shtml">Form Change</a></li>
+<li><a href="/pokemongo/megaevolution.shtml">Mega Evolution</a></li>
+<li><a href="/pokemongo/shadowpokemon.shtml">Shadow Pokémon</a></li>
+<li><a href="/pokemongo/exclusives.shtml">Region Exclusive Pokémon</a></li>
+<li><a href="/pokemongo/moves.shtml">Pokémon Moves</a></li>
+<li><a href="/pokemongo/eventonlymoves.shtml">Event Only Moves</a></li>
+<li><a href="/pokemongo/mysterybox.shtml">Mystery Box & Meltan</a></li>
+<li><a href="/pokemongo/coinbag.shtml">Coin Bag & Gimmighoul</a></li>
+<li><a href="/pokemongo/adventureeffect.shtml">Adventure Effect</a></li>
+<li><b>Mechanics</b></li>
+<li><a href="/pokemongo/research.shtml">Research</a></li>
+<li><a href="/pokemongo/fieldresearch.shtml">-Field Research</a></li>
+<li><a href="/pokemongo/eventresearch.shtml">-Event Only Research</a></li>
+<li><a href="/pokemongo/specialresearch.shtml">-Special Research</a></li>
+<li><a href="/pokemongo/todaysviewresearch.shtml">-Timed Research</a></li>
+<li><a href="/pokemongo/masterworkresearch.shtml">-Masterwork Research</a></li>
+<li><a href="/pokemongo/pass.shtml">Special Passes</a></li>
+<li><a href="/pokemongo/gyms.shtml">Team Valour, Mystic & Instinct</a></li>
+<li><a href="/pokemongo/gyms.shtml">Pokémon Gyms</a></li>
+<li><a href="/pokemongo/raidbattles.shtml">Raid Battles</a></li>
+<li><a href="/pokemongo/trainerbattles.shtml">Trainer Battles</a></li>
+<li><a href="/pokemongo/gobattleleague.shtml">GO Battle League</a></li>
+<li><a href="/pokemongo/maxbattles.shtml">Max Battles & Dynamax</a></li>
+<li><a href="/pokemongo/pokestops.shtml">PokéStops</a></li>
+<li><a href="/pokemongo/teamgorocket.shtml">Team GO Rocket</a></li>
+<li><a href="/pokemongo/trainer.shtml">Trainer Experience & Levels</a></li>
+<li><a href="/pokemongo/size.shtml">Pokémon Size</a></li>
+<li><a href="/pokemongo/evolution.shtml">Pokémon Evolution</a></li>
+<li><a href="/pokemongo/megaevolution.shtml">Mega Evolution</a></li>
+<li><a href="/pokemongo/hypertraining.shtml">Hyper Training</a></li>
+<li><a href="/pokemongo/combatpoints.shtml">Combat Points (CP)</a></li>
+<li><a href="/pokemongo/appraisal.shtml">IV Appraisal</a></li>
+<li><a href="/pokemongo/pokemonsearch.shtml">Pokémon Search Terms</a></li>
+<li><a href="/pokemongo/buddy.shtml">Buddy Pokémon</a></li>
+<li><a href="/pokemongo/friends.shtml">Friends & Gifting</a></li>
+<li><a href="/pokemongo/trades.shtml">Trade System</a></li>
+<li><a href="/pokemongo/partyplay.shtml">Party Play</a></li>
+<li><a href="/pokemongo/adventuresync.shtml">Adventure Sync</a></li>
+<li><a href="/pokemongo/referral.shtml">Referral System</a></li>
+<li><a href="/pokemongo/weather.shtml">Weather</a></li>
+<li><a href="/pokemongo/pokemonhometransfer.shtml">Pokémon HOME Transfer</a></li>
+<li><b>Miscellaneous</b></li>
+<li><a href="/pokemongo/items.shtml">Item Listings</a></li>
+<li><a href="/pokemongo/tms.shtml">TMs</a></li>
+<li><a href="/pokemongo/medals.shtml">Medals</a></li>
+<li><a href="/pokemongo/style.shtml">Style & Clothing</a></li>
+<li><a href="/pokemongo/stickers.shtml">Stickers</a></li>
+<li><a href="/pokemongo/backgrounds.shtml">Special Backgrounds</a></li>
+<li><a href="/pokemongo/shop.shtml">Shop & Microtransactions</a></li>
+<li><b>Updates & Events</b></li>
+<li><a href="/pokemongo/patch.shtml">Patches & Updates</a></li>
+<li><a href="/pokemongo/seasons.shtml">Seasons</a></li>
+<li><a href="/pokemongo/events.shtml">Special In-Game Events</a></li>
+<li><a href="/pokemongo/ticketevents.shtml">Ticketed Events</a></li>
+<li><a href="/pokemongo/reallifeevents.shtml">Real Life Events</a></li>
+<li><a href="/pokemongo/pokemongofest.shtml">Pokémon GO Fest</a></li>
+<li><a href="/pokemongo/communityday.shtml">Community Days</a></li>
+<li><a href="/pokemongo/raidday.shtml">Raid Days</a></li>
+<li><a href="/pokemongo/maxbattleday.shtml">Max Battle Days</a></li>
+<li><a href="/pokemongo/limitedresearchday.shtml">Limited Research Days</a></li>
+<li><a href="/pokemongo/gobattleday.shtml">GO Battle Days</a></li>
+<li><a href="/pokemongo/incenseday.shtml">Incense Days</a></li>
+<li><a href="/pokemongo/friendshipday.shtml">Friendship Days</a></li>
+<li><a href="/pokemongo/hatchday.shtml">Hatch Days</a></li>
+<li><a href="/pokemongo/catchmastery.shtml">Catch Mastery Events</a></li>
+<li><a href="/pokemongo/teamgorockettakeovers.shtml">Team GO Rocket Takeovers</a></li>
+<li><a href="/pokemongo/stamprally.shtml">Stamp Rally</a></li>
+<li><a href="/pokemongo/events/spotlighthour.shtml">Spotlight Hours</a></li>
+<li><a href="/pokemongo/unownevents.shtml">Unown Events</a></li>
+<li><b>Peripherals</b></li>
+<li><a href="/pokemongo/goplus.shtml">Pokémon GO Plus</a></li>
+<li><a href="/pokemon/accessories/pokemongoplusplus.shtml">Pokémon GO Plus +</a></li>
+<li><a href="/pokemongo/applewatch.shtml">Pokémon GO for Apple Watch</a></li>
+</ul></div>
+
+
+	<div class="navheader">Details</div>
+<div><b>Developer:</b><div align="right"><a href="/pokemon/companies/nintendo.shtml">Nintendo</a><br /><a href="/pokemon/companies/gamefreak.shtml">GAME FREAK</a><br /><a href="/pokemon/companies/thepokemoncompany.shtml">The Pokémon Company</a><br /><a href="/pokemon/companies/niantic.shtml">Niantic</a> (until 2025)<br /><a href="/pokemon/companies/scopely.shtml">Scopely</a> (from 2025)</div>
+<b>Genre:</b><div align="right">Augmented Reality</div>
+<b>Players:</b><div align="right">1</div>
+<b>Download Size:</b><div align="right">161MB (iOS)</div>
+<b>Menu Icon</b><br /><div align="center"><img src="/Toolbar/icon/gologo.png"" alt="Icon" title="Icon" width="96" /></div>
+
+</div>
+
+	<div class="navheader">Release Date</div>
+<div><b>iOS & Android</b><br /><b>Australia</b>: July 6th 2016<br />
+<b>US</b>:  July 6th 2016<br />
+<b>Germany</b>:  July 13th 2016<br />
+<b>UK</b>:  July 14th 2016<br />
+<b>Spain/Portugal/Italy</b>:  July 15th 2016<br />
+<b>Europe (Mainland)</b>: July 16th 2016<br />
+<b>Japan</b>:  July 22nd 2016<br />
+<b>Apple Watch</b><br />
+<b>Global</b>: Late 2016</div>
+
+
+	</aside>
+
+</div><!-- END id="wrapper" -->
+<footer id="footer">
+	<div class="copyright">
+		<a href="#top" alt="Top of Page" title="Top of Page" class="totop"></a>
+
+		All Content is &copy; Copyright of Serebii.net 1999-2026. |
+		<a href="/privacy.shtml">Privacy Policy</a> |
+		<a class="nn-cmp-show" href="#">Manage Cookie Settings</a><br/>
+		Pokémon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026<br /><br />
+<a href="https://www.patreon.com/serebiinet" target="blank" rel="nofollow"></u>Support us on Patreon</u></a>
+	</div>
+
+	<div style="height:102px">
+		<div id="nn_lb2"></div><div id="nn_mobile_lb2"></div>
+<div id="celtra-reveal-wrapper" style="position:fixed; height: auto; width: 100%">
+<div id="nn_1by1"></div>
+</div>
+	</div>
+<script data-cfasync="false" async src="//cdn.intergient.com/1025662/76683/ramp.js"></script>
+</footer>
+
+
+
+</body>
+</html>

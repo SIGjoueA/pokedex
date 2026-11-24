@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.25';
+const VERSION = 'v60.26';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'PvP : formes régionales et spéciales avec leur propre rang PvPoke. Épée / Bouclier : raids Dynamax avec les vrais antres, Isolarmure et Couronneige compris.';
-const DATA_VERSION = 'd67'; // bump when the schema of data/*.json changes
+const NOTES = 'Œufs GO : historique des pools par saison sur les fiches (déjà sorti en œuf, avec saison et distance).';
+const DATA_VERSION = 'd68'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -1002,7 +1002,7 @@ function cryBtns(p) {
   const [l, o] = c, same = l && o && l === o;
   return `<div class="cries">${l ? `<button class="cry" type="button" data-cry="${l}" aria-label="Écouter le cri" title="Écouter le cri (version actuelle)"><span aria-hidden="true">🔊</span> Cri</button>` : ''}${o && !same ? `<button class="cry" type="button" data-cry="${o}" aria-label="Écouter le cri d’origine" title="Cri d’origine (jeux Gén. I–V, avant la refonte des cris)"><span aria-hidden="true">🔊</span> Ancien</button>` : ''}</div>`;
 }
-async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null), getJSON('data/pvp-moves.json').catch(() => null), getJSON('data/raid-moves.json').catch(() => null)]).then(([g, pv, pm, rm]) => { g.pvp = pv; g.pvm = pm; g.rdm = rm; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP rankings (data/pvp.json, optional)
+async function loadGo() { if (!GODATA) GODATA = Promise.all([getJSON('data/go.json'), getJSON('data/pvp.json').catch(() => null), getJSON('data/pvp-moves.json').catch(() => null), getJSON('data/raid-moves.json').catch(() => null), getJSON('data/go-eggs.json').catch(() => null)]).then(([g, pv, pm, rm, eh]) => { g.pvp = pv; g.pvm = pm; g.rdm = rm; g.eh = eh; return g; }).catch(e => { GODATA = null; throw e; }); return GODATA; } // v32: + PvP ; v60.26: + historique des œufs GO
 async function loadSp(id) { if (!SP[id]) SP[id] = getJSON(`data/sp/${id}.json`).catch(e => { delete SP[id]; throw e; }); return SP[id]; }
 
 /* ---------------- detail ---------------- */
@@ -1803,6 +1803,36 @@ function evoHTML(p, f, mode, gm) {
 
 /* Pokémon GO */
 const frDate = s => s.split('-').reverse().join('/');
+// v60.26: past GO egg pools (go-eggs.json). Current pool stays on go.eg; this lists other seasons / periods.
+const eggDistLbl = (km, tag) => km + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[tag] || '');
+const eggHistHTML = (p, go) => {
+  const EH = go && go.eh, rows = EH && EH.byKey && EH.byKey[p.k];
+  if (!rows || !rows.length) return '';
+  const past = rows.filter(x => x.s !== EH.current);
+  if (!past.length) return '';
+  const meta = Object.fromEntries((EH.seasons || []).map(s => [s.id, s]));
+  const byS = {}; for (const x of past) (byS[x.s] ||= []).push(x);
+  const years = s => { const a = s.from && s.from.slice(0, 4), b = s.to && s.to.slice(0, 4); return a && b && a !== b ? a + '–' + b : a || b || ''; };
+  const distOf = L => L.map(x => eggDistLbl(x.km, x.tag)).filter((v, i, a) => a.indexOf(v) === i).join(', ');
+  const named = [], pre = [], mix = [];
+  for (const id of Object.keys(byS).sort((a, b) => (meta[b]?.from || '').localeCompare(meta[a]?.from || '') || a.localeCompare(b))) {
+    const s = meta[id] || { id, en: id }, rec = { s, d: distOf(byS[id]) };
+    if (s.kind === 'pre') pre.push(rec); else if (s.kind === 'mix') mix.push(rec); else named.push(rec);
+  }
+  const li = (s, d, extra) => `<li><b>${esc(s.fr || s.en || s.label || s.id)}</b>${extra ? ` <span class="mute">${extra}</span>` : ''} : ${esc(d)}</li>`;
+  let lis = named.map(({ s, d }) => li(s, d, years(s) ? '(' + years(s) + ')' : '')).join('');
+  lis += mix.map(({ s, d }) => li(s, d, s.from && s.to ? '(' + frDate(s.from) + ' – ' + frDate(s.to) + ')' : '')).join('');
+  if (pre.length) {
+    const allD = [...new Set(pre.flatMap(({ d }) => d.split(', ')))].join(', ');
+    const preLab = s => { const lab = s.label || s.en || ''; if (s.month) return lab; const rng = s.from ? (s.to && s.to !== s.from ? frDate(s.from) + ' – ' + frDate(s.to) : frDate(s.from)) : ''; if (s.from && /^\d{1,2}\/\d{1,2}\/\d{2,4}/.test(lab)) return rng; return rng ? `${lab} (${rng})` : lab; };
+    const det = pre.map(({ s, d }) => `<li>${esc(preLab(s))} : ${esc(d)}</li>`).join('');
+    lis += `<li><b>Avant les saisons</b> <span class="mute">(2016–2020)</span> : ${esc(allD)}<details class="eghsub"><summary>Détail des périodes (${pre.length})</summary><ul class="plain">${det}</ul></details></li>`;
+  }
+  const n = named.length + mix.length + (pre.length ? 1 : 0);
+  const list = `<ul class="plain eghlist">${lis}</ul>`;
+  return n <= 2 && pre.length <= 2 ? `<li>Déjà sorti en œuf :${list}</li>` : `<li>Déjà sorti en œuf : <details class="egh"><summary><b>${n} période${n > 1 ? 's' : ''}</b></summary>${list}</details></li>`;
+};
+
 // v60: « PC à la capture » — PC d'un boss de raid attrapé (niv. 20, ou 25 avec météo boostée), IV 10–15 chacun
 let RAIDB = new Set(), RAIDSH = new Set(); // v60: data/raid-bosses.json (build/raid-bosses-export.py)
 let RBP = null; const loadRB = () => RBP || (RBP = getJSON('data/raid-bosses.json').then(j => { RAIDB = new Set(j.b); RAIDSH = new Set(j.sh); }).catch(() => { RBP = null; }));
@@ -1926,9 +1956,10 @@ function goHTML(p, f, sp, shared, go) {
         ${d.rgf ? d.rgf.map(([n, z]) => `<li class="rgl">🌍 ${esc(n)} : <b>${esc(z)}</b></li>`).join('') : ''}
         ${d.fch ? `<li class="rgl">✂️ ${esc(d.fch)}</li>` : ''}
         ${!d.fch || d.rg ? goTradeLi(p) : ''}${d.fch && d.rgf?.some(([, z]) => !/partout/.test(z)) ? `<li class="trl"><span class="trk">⇄</span> Échange requis (coupes régionales) : <b>échange hors de la région (hors événements)</b></li>` : ''}
-        ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => e[0] + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[e[1]] || '')).join(', ')}</b></li>` : ''}
+        ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => eggDistLbl(e[0], e[1])).join(', ')}</b></li>` : ''}
+        ${eggHistHTML(p, go)}
       </ul>
-      <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : seul le pool de la saison actuelle est connu${go.egg ? ` (${esc(go.egg.season)}, au ${go.egg.upd.split('-').reverse().join('/')}, source Leek Duck)` : ''} ; un Pokémon sans distance indiquée n’est pas dans ce pool (ou la donnée manque).</p></section>`,
+      <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : le pool actuel vient de Leek Duck${go.egg ? ` (${esc((go.eh && (go.eh.seasons || []).find(s => s.id === go.eh.current) || {}).fr || go.egg.season)}, au ${frDate(go.egg.upd)}, ${go.egg.n} Pokémon)` : ''} ; l’historique par saison vient de Serebii, complété par Leek Duck pour la saison en cours. Un Pokémon sans mention d’œuf n’est pas dans le pool actuel ; il peut aussi manquer à l’historique (événements, sources incomplètes). Noms des saisons : <a href="https://www.pokepedia.fr/Liste_des_%C3%A9v%C3%A9nements_de_Pok%C3%A9mon_GO_(2026)" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p></section>`,
     shiny: `
     <section class="box shinybox goshiny"><h2>✨ Shiny <small class="cnt">GO</small></h2><ul class="plain gol"><li>Shiny : <b>${sh}</b></li></ul></section>`,
     moves: `
@@ -2373,7 +2404,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }

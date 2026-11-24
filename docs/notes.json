@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.26",
+  "d": "2026-11-24",
+  "l": [
+   "Œufs GO : les fiches indiquent maintenant si un Pokémon est déjà sorti en œuf, avec la saison et la distance quand elles sont connues. Le pool de la saison en cours reste affiché à part (Sentiers crépusculaires, source Leek Duck).",
+   "L’historique reprend les pools des saisons depuis 2020 et les périodes antérieures (2016–2020) d’après les archives Serebii, complétés par Leek Duck pour la saison actuelle. Les éclosions uniquement lors d’événements peuvent manquer. Noms français des saisons : Poképédia (CC BY-NC-SA 3.0 FR).",
+   "La première saison (Season of Celebration, 2020–2021) n’a pas de nom français dans les sources consultées. La Saison d’Alola n’a pas de pool isolé : l’archive Serebii de mars à juin 2022 chevauche le début de la Saison GO et est affichée comme une période datée."
+  ]
+ },
+ {
   "v": "v60.25",
   "d": "2026-11-24",
   "l": [

@@ -7,6 +7,7 @@
 //  - gmax.forms: go data copied from the base form (same stats in GO), r = 1 (released) or r = 0 + rf = release date
 //    (the app shows it from that date: core gof); sh = ['max'] if shiny, shf = shiny release date; nosh = 1 if no shiny.
 import fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
 const D = new URL('../docs/data/', import.meta.url);
 const rd = f => JSON.parse(fs.readFileSync(new URL(f, D)));
 const wr = (f, o) => fs.writeFileSync(new URL(f, D), JSON.stringify(o));
@@ -120,3 +121,6 @@ wr('core.json', core);
 const nM = core.e.filter(e => (e.c === 'mega' || e.c === 'primal') && e.go).length, nG = core.e.filter(e => e.c === 'gmax' && e.go).length, nF = core.e.filter(e => e.gof).length;
 console.log(`GO overrides: ${nM} Méga/Primo sorties, ${nG} Gigamax sortis, ${nF} à venir (${core.e.filter(e => e.gof).map(e => e.k + ' ' + e.gof).join(', ')})`);
 log.forEach(l => console.log('  ' + l));
+// v60.26: weekly GO routine already runs this file — also union the current Leek Duck egg pool into the history.
+try { execFileSync('node', [new URL('./update-go-eggs.mjs', import.meta.url).pathname], { stdio: 'inherit' }); }
+catch (e) { console.log('apply-go-overrides : update-go-eggs ignoré (' + (e.message || e) + ')'); }

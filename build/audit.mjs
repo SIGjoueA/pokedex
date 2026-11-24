@@ -642,4 +642,32 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.25 SW : VERSION ≥ v60.25, DATA_VERSION ≥ d67', /VERSION = 'v60\.(2[5-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 67);
 }
 
+
+// ---- v60.26: historical GO egg pools (docs/data/go-eggs.json)
+{ const eh = D('go-eggs.json'), goj = D('go.json'), src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const seasons = eh.seasons || [], named = seasons.filter(s => !s.kind), pre = seasons.filter(s => s.kind === 'pre'), mix = seasons.filter(s => s.kind === 'mix');
+  const keys = new Set(core.e.map(e => e.k));
+  ok('v60.26 go-eggs.json : saison courante = Sentiers crépusculaires / Twilight Trails', eh.current === 'twilight-trails' && goj.egg && goj.egg.season === 'Twilight Trails' && (named.find(s => s.id === 'twilight-trails') || {}).fr === 'Sentiers crépusculaires');
+  ok('v60.26 go-eggs.json : 24 saisons nommées depuis 2020, 23 avec nom FR Poképédia', named.length === 24 && named.filter(s => s.fr).length === 23);
+  ok('v60.26 Season of Celebration sans nom FR inventé', named.some(s => s.id === 'celebration' && s.en === 'Season of Celebration' && !s.fr));
+  ok('v60.26 Saison d’Alola : pas de pool isolé, période mixte mars–juin 2022 présente', named.some(s => s.id === 'alola' && !Object.keys(s.pool || {}).length) && mix.some(s => s.id === 'period-2022-03-01-alola-go' && Object.keys(s.pool || {}).length >= 40));
+  ok('v60.26 au moins 30 périodes d’avant les saisons et 300 espèces', pre.length >= 30 && Object.keys(eh.byKey || {}).length >= 300);
+  const badK = Object.keys(eh.byKey || {}).filter(k => !keys.has(k));
+  eq('v60.26 clés d’historique ⊂ fiches de l’appli', badK, []);
+  const curPool = (named.find(s => s.id === eh.current) || {}).pool || {};
+  const spEg = [];
+  for (const e of core.e) {
+    const f = (fs.existsSync(path.join(DOCS, 'data', `sp/${e.id}.json`)) ? sp(e.id) : { f: {} }).f[e.k];
+    if (f && f.go && f.go.eg) spEg.push(e.k);
+  }
+  ok('v60.26 pool actuel des fiches (go.eg) = saison courante de go-eggs.json', spEg.length === goj.egg.n && spEg.every(k => curPool[k]) && Object.keys(curPool).length >= spEg.length);
+  ok('v60.26 exemples : Bulbizarre et Riolu déjà sortis, Mewtwo sans historique', !!(eh.byKey['1'] && eh.byKey['1'].length > 1) && !!(eh.byKey['447'] && eh.byKey['447'].some(x => x.s === 'celebration')) && !eh.byKey['150']);
+  ok('v60.26 sources citées (Leek Duck, Serebii, Poképédia)', (eh.src || []).length >= 4 && eh.src.some(s => /leekduck\.com\/eggs/.test(s[1])) && eh.src.some(s => /serebii\.net\/pokemongo\/previouseggs/.test(s[1])) && eh.src.some(s => /pokepedia\.fr/.test(s[1])));
+  ok('v60.26 app : Déjà sorti en œuf + chargement de go-eggs.json + pack hors-ligne', /function eggHistHTML|const eggHistHTML/.test(src) && /Déjà sorti en œuf/.test(src) && /getJSON\('data\/go-eggs\.json'\)/.test(src) && /data\/go-eggs\.json/.test(src) && /CC BY-NC-SA 3\.0 FR/.test(src));
+  ok('v60.26 update-go-eggs : union sans effacer les saisons passées', /mergeCurrentSeason/.test(fs.readFileSync(path.join(HERE, 'eggs.mjs'), 'utf8')) && /Past seasons are never removed|sans supprimer|without removing past/i.test(fs.readFileSync(path.join(HERE, 'update-go-eggs.mjs'), 'utf8') + fs.readFileSync(path.join(HERE, 'eggs.mjs'), 'utf8')));
+  ok('v60.26 apply-go-overrides lance update-go-eggs (routine hebdo)', /update-go-eggs\.mjs/.test(fs.readFileSync(path.join(HERE, 'apply-go-overrides.mjs'), 'utf8')));
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.26 SW : VERSION ≥ v60.26, DATA_VERSION ≥ d68', /VERSION = 'v60\.(2[6-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 68);
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

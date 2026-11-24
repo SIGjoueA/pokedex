@@ -739,3 +739,9 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .shadbox .shadst{margin:.4em 0 0;font-size:13px;color:var(--mute)}
 .shadbox > .mute{display:block;margin:.2em 0 .4em}
 #goshad{white-space:pre-line}
+
+/* v60.26: historical GO egg pools on the Disponibilité block */
+.egh,.eghsub{margin-top:4px}
+.egh summary,.eghsub summary{cursor:pointer;color:var(--accent);font-weight:600}
+.eghlist{margin:6px 0 0;padding:0}
+.eghlist > li{margin:0 0 4px}

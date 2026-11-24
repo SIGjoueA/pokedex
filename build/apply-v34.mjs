@@ -26,3 +26,4 @@ node('fix-v60-21.mjs');      // v60.21: Pichu Troizépi sans talent caché (faib
 node('fix-v60-22.mjs');      // v60.22: lieux / méthodes d’obtention Poképédia des anciens jeux (Gén. I–VII, Hors dex, RF/VF Switch), textes N2B2 officiels, pna des jeux sans Pokédex National
 node('fix-v60-23.mjs');      // v60.23: où obtenir la Méga-Gemme / Gemme Bleue / Gemme Rouge de chaque Méga / Primo (pages d’objets Poképédia), Heatranite, Draco Ascension
 node('fix-v60-24.mjs');      // v60.24: raids Dynamax d’Épée / Bouclier : antres réels (zone, lettre, faisceau) au lieu des numéros de table, jeu (ÉB / Isolarmure / Couronneige), taux par version, IV, talent caché, Expédition Dynamax
+node('fix-v60-26.mjs');      // v60.26: historique des pools d’œufs GO par saison (Serebii + Leek Duck), go-eggs.json
