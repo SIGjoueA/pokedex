@@ -1,0 +1,64 @@
+{{Ruban Antre|52}}
+
+L''''antre 52''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Sol (type)|Sol]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Prairie Entre-Ponts Antre I EB.png|300px]]
+| [[Fichier:Fosse des Sables Antre C EB.png|300px]]
+|-
+| [[Prairie Entre-Ponts/Antres|Prairie Entre-Ponts]]
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+|-
+| colspan="2" | [[Fichier:Plaine Verdoyante Antre F EB.png|300px]]
+|-
+| colspan="2" | [[Plaine Verdoyante/Antres|Plaine Verdoyante]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 52|
+Axoloto / iv(1) 1(35)
+Barloche / iv(1) 1(35)
+Tutafeh forme(Galar) / iv(1) 1(20) 2(30)
+Gringolem / iv(1) 1(10) 2(30)
+Batracné / iv(2) 2(20) 3(20)
+Maraiste / iv(2) 2(20) 3(40)
+Limonde forme(Galar) / iv(3) 3(20) 4(20)
+Golemastoc / iv(4) 3(20) 4(20) 5(30)
+Tritosor forme(Orient) / talent-caché(Possible) iv(4) 4(20) 5(35)
+Crapustule / talent-caché(Possible) iv(4) 4(40) 5(30)
+Tutétékri / iv(4) 5(1)
+Rhinastoc / talent-caché(Possible) iv(4) 5(4)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Prine / taux(80%)
+Baie Qualot / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT63, Rayon Gemme / image(DT Roche) 1(100%) 2(100%) 4(100%) 5(100%)
+DT67, Telluriforce / image(DT Sol) 2(100%) 3(100%) 5(100%)
+DT23, Picots / image(DT Sol) 3(100%) 4(100%) 5(100%)
+DT75, Lame de Roc / image(DT Roche) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Sol]]

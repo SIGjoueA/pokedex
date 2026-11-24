@@ -1,0 +1,74 @@
+{{Ruban Antre|88}}
+
+L''''antre 88''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Ténèbres (type)|Ténèbres]].
+
+On y trouve notamment des [[Angoliath Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Fosse des Sables Antre H EB.png|300px]]
+|-
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 88|
+Goupilou / iv(1) 1(35)
+Zigzaton forme(Galar) / iv(1) 1(35)
+Baggiguane / iv(1) 1(20, Ep) 2(30, Ep)
+Vostourno / iv(1) 1(20, Bo) 2(30, Bo)
+Grimalin / iv(1) 1(10) 2(30)
+Léopardus / iv(2) 2(20) 3(20)
+Linéon forme(Galar) / iv(2) 2(20) 3(40)
+Fourbelin / iv(3) 3(20) 4(20)
+Roublenard / iv(4) 3(20) 4(20) 5(10)
+Pandarbare / talent-caché(Possible) iv(4) 4(20) 5(35)
+Baggaïd / talent-caché(Possible) iv(4) 4(40, Ep) 5(35, Ep)
+Vaututrice / talent-caché(Possible) iv(4) 4(40, Bo) 5(35, Bo)
+Trioxhydre / iv(4) 5(15, Ep)
+Tyranocif / talent-caché(Possible) iv(4) 5(15, Bo)
+Angoliath forme(Gigamax) / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Wiki / taux(80%)
+Baie Tamato / taux(80%)
+DT95, Exécu-Son / image(DT Ténèbres) 1(100%) 2(100%) 4(100%) 5(100%)
+DT93, Dark Lariat / image(DT Ténèbres) 2(100%) 3(100%) 5(100%)
+DT68, Machination / image(DT Ténèbres) 3(100%) 4(100%) 5(100%)
+DT37, Provoc / image(DT Ténèbres) 4(100%) 5(100%)
+Bouclier
+Baie Mago / taux(80%)
+Baie Grena / taux(80%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT32, Mâchouille / image(DT Ténèbres) taux(100%)
+DT58, Vibrobscur / image(DT Ténèbres) 3(100%) 4(100%) 5(100%)
+DT81, Tricherie / image(DT Ténèbres) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Ténèbres]]
+[[Catégorie:Antre à Pokémon Gigamax]]

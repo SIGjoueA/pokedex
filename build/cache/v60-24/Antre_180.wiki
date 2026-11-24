@@ -1,0 +1,91 @@
+{{Ruban Antre|180}}
+
+L''''antre 180''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Roche (type)|Roche]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre C EB.png|300px]]
+| [[Fichier:Pente Enneigée Antre I EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+|-
+| [[Fichier:Plateau Beau-Gant Antre A EB.png|300px]]
+| [[Fichier:Repos du Géant Antre G EB.png|300px]]
+|-
+| [[Plateau Beau-Gant/Antres|Plateau Beau-Gant]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre O EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 180|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Dolman / iv(1) 1(60, Ep) 2(30, Ep) / iv(2) 2(20, Ep) 3(25, Ep) / iv(3) 3(25, Ep) 4(25, Ep)
+Charbi / iv(1) 1(60, Bo) 2(30, Bo)
+Galekid / iv(1) 1(40) 2(25) / iv(2) 2(25) 3(30)
+Wagomine / iv(2) 2(20, Bo) 3(25, Bo) / iv(3) 3(25, Bo) 4(25, Bo)
+Galegon / iv(3) 3(15) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(20)
+Mysdibule / talent-caché(Possible) iv(4) 4(15, Ep) 5(25, Ep)
+Ténéfix / talent-caché(Possible) iv(4) 4(15, Bo) 5(25, Bo)
+Strassie / talent-caché(Possible) iv(4) 4(15) 5(20)
+Galeking / talent-caché(Possible) iv(4) 5(15)
+Monthracite / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Prine / taux(80%)
+Baie Qualot / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT63, Rayon Gemme / image(DT Roche) 1(100%) 2(100%) 4(100%) 5(100%)
+DT67, Telluriforce / image(DT Sol) 2(100%) 3(100%) 5(100%)
+DT23, Picots / image(DT Sol) 3(100%) 4(100%) 5(100%)
+DT75, Lame de Roc / image(DT Roche) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Roche]]

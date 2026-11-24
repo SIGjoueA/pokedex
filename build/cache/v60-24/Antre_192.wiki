@@ -1,0 +1,79 @@
+{{Ruban Antre|192}}
+
+L''''antre 192''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Spectre (type)|Spectre]].
+
+On y trouve majoritairement des [[Théffroi]], dont certains sont dans leur Forme Authentique. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir des [[Théière Fêlée|Théières Fêlées]] et [[Théière Ébréchée|Ébréchées]], ainsi que diverses spécialités sucrées.
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Cimetière Ancien Antre A EB.png|300px]]
+| [[Fichier:Lac Poké Ball Antre L EB.png|300px]]
+|-
+| [[Cimetière Ancien/Antres|Cimetière Ancien]]
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre C EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 192|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Théffroi forme(Contrefaçon) / iv(1) 1(100) 2(55) / iv(2) 2(45) 3(55) / iv(3) 3(37) 4(51) / talent-caché(Possible) iv(4) 4(35) 5(90)
+Théffroi forme(Authentique) / talent-caché(Possible) iv(4) 3(3) 4(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Théière Fêlée / 1(50%) 2(50%) 3(50%) 4(60%) 5(70%)
+Théière Ébréchée / 3(1%) 4(1%) 5(1%)
+Chococœur / taux(100%)
+Glace Volute / 1(30%) 2(50%) 3(60%) 4(70%) 5(80%)
+Galette Illumis / 1(30%) 2(50%) 3(60%) 4(70%) 5(80%)
+Sablé Yantreizh / 1(30%) 2(50%) 3(60%) 4(70%) 5(80%)
+Malasada Maxi / 1(30%) 2(50%) 3(60%) 4(70%) 5(80%)
+Herbe Rappel / 1(70%) 2(70%) 3(70%) 4(85%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Spectre]]

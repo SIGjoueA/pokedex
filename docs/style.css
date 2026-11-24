@@ -443,6 +443,12 @@ details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] sum
 .stoneloc ul{margin:0;padding-left:18px}
 .stoneloc li{font-size:14px;line-height:1.4;padding:2px 0}
 .stoneloc li.evt{color:var(--mute);font-size:13px}
+/* v60.24: raids Dynamax d’Épée / Bouclier */
+.raidloc{margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
+.encbox>.raidloc:first-of-type:nth-child(2){margin-top:0;padding-top:0;border-top:0}
+.raidloc h3{font-size:15px;margin:0 0 2px}
+.raidloc .ms{font-size:13.5px;line-height:1.4}
+.raidloc .ms.evt{color:var(--mute)}
 .cpmax span{font-size:12px}
 .pvp .pvpc{background:var(--bg3);border-radius:10px;padding:8px 4px}
 .pvp .pvpc b{font-size:19px}.pvp .pvpc.top b{color:var(--res)}

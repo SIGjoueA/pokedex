@@ -1,0 +1,95 @@
+{{Ruban Antre|183}}
+
+L''''antre 183''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Spectre (type)|Spectre]].
+
+Dans {{Jeu|Bo}}, on y trouve notamment des [[Ectoplasma Gigamax]].
+
+À noter que les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Psy (type)|Psy]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Cimetière Ancien Antre B EB.png|300px]]
+| [[Fichier:Empreinte du Géant Antre B EB.png|300px]]
+|-
+| [[Cimetière Ancien/Antres|Cimetière Ancien]]
+| [[Empreinte du Géant/Antres|Empreinte du Géant]]
+|-
+| [[Fichier:Lac Poké Ball Antre F EB.png|300px]]
+| [[Fichier:Mer Banquise Antre G EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Mer Banquise/Antres|Mer Banquise]]
+|-
+| colspan="2" | [[Fichier:Plateau Beau-Gant Antre D EB.png|300px]]
+|-
+| colspan="2" | [[Plateau Beau-Gant/Antres|Plateau Beau-Gant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 183|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Fantyrm / talent-caché(Toujours) iv(2) 1(100) 2(55) / talent-caché(Toujours) iv(3) 2(25) 3(30)
+Spectrum / iv(3) 2(20, Ep) 3(25, Ep)
+Corayon forme(Galar) / talent-caché(Toujours) iv(3) 2(20, Bo) 3(25, Bo)
+Mysdibule / talent-caché(Toujours) iv(4) 3(25, Ep) 4(25, Ep) / talent-caché(Toujours) iv(5) 4(15, Ep) 5(20, Ep)
+Ténéfix / talent-caché(Toujours) iv(4) 3(25, Bo) 4(25, Bo) / talent-caché(Toujours) iv(5) 4(15, Bo) 5(20, Bo)
+Desséliande / talent-caché(Toujours) iv(4) 3(15) 4(25) / talent-caché(Toujours) iv(5) 4(15, Ep) 5(20, Ep)
+Corayôme / talent-caché(Toujours) iv(5) 4(15, Bo) 5(20, Bo)
+Lanssorien / talent-caché(Toujours) iv(5) 4(15) 5(40)
+Ectoplasma / iv(5) 5(15, Ep)
+Ectoplasma forme(Gigamax) / iv(5) 5(15, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Figuy / taux(80%)
+Baie Alga / taux(80%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT33, Ball'Ombre / image(DT Spectre) 1(100%) 2(100%) 4(100%) 5(100%)
+DT83, Interversion / image(DT Psy) 2(100%) 3(100%) 5(100%)
+DT38, Tourmagik / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT82, Force Ajoutée / image(DT Psy) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Spectre]]

@@ -1,0 +1,74 @@
+{{Ruban Antre|79}}
+
+L''''antre 79''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Plante (type)|Plante]].
+
+On y trouve notamment des [[Pomdrapi Gigamax]] ou des [[Dratatin Gigamax]] selon la version jouée.
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Bois de Clairjour Antre A EB.png|300px]]
+|-
+| [[Bois de Clairjour/Antres|Bois de Clairjour]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 79|
+Rozbouton / iv(1) 1(35)
+Grainipiot / iv(1) 1(35, Ep)
+Nénupiot / iv(1) 1(35, Bo)
+Tournicoton / iv(1) 1(20) 2(30)
+Grindur / iv(1) 1(10) 2(30)
+Pifeuil / iv(2) 2(20, Ep) 3(20, Ep)
+Lombre / iv(2) 2(20, Bo) 3(20, Bo)
+Verpom / iv(2) 2(20) 3(40)
+Rosélia / iv(4) 3(20) 4(20) 5(10)
+Tengalice / iv(4) 3(20, Ep) 4(20, Ep) 5(20, Ep)
+Ludicolo / iv(4) 3(20, Bo) 4(20, Bo) 5(20, Bo)
+Blancoton / talent-caché(Possible) iv(4) 4(20) 5(25)
+Noacier / talent-caché(Possible) iv(4) 4(40) 5(25)
+Roserade / talent-caché(Possible) iv(4) 5(15)
+Pomdrapi forme(Gigamax) / talent-caché(Possible) iv(4) 5(5, Ep)
+Dratatin forme(Gigamax) / talent-caché(Possible) iv(4) 5(5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Gowav / taux(80%)
+Baie Tamato / taux(80%)
+DT59, Canon Graine / image(DT Plante) taux(100%)
+DT50, Lame Feuille / image(DT Plante) 3(100%) 4(100%) 5(100%)
+DT72, Mégafouet / image(DT Plante) 4(100%) 5(100%)
+Bouclier
+Baie Papaya / taux(80%)
+Baie Grena / taux(80%)
+DT65, Éco-Sphère / image(DT Plante) taux(100%)
+DT77, Nœud Herbe / image(DT Plante) 3(100%) 4(100%) 5(100%)
+DT71, Tempête Verte / image(DT Plante) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Plante]]
+[[Catégorie:Antre à Pokémon Gigamax]]

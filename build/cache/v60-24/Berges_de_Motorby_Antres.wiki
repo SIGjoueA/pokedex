@@ -1,0 +1,105 @@
+[[Fichier:Berges de Motorby Antres EB.png|right|400px|Localisation des antres des Berges de Motorby]]
+
+Les '''Berges de Motorby''' possèdent quatre antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+__TOC__
+== Antre A ==
+
+[[Fichier:Berges de Motorby Antre A EB.png|thumb|right|300px|L'antre A des Berges de Motorby.]]
+
+L'antre A est situé tout au nord-ouest de la zone, contre les remparts de [[Motorby]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 30|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 30|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 60|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 60|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Berges de Motorby Antre B EB.png|thumb|right|300px|L'antre B des Berges de Motorby.]]
+
+L'antre B est situé tout au nord-est de la zone, contre la montagne et à côté d'un arbre.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 14|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 14|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 50|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 50|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Berges de Motorby Antre C EB.png|thumb|right|300px|L'antre C des Berges de Motorby.]]
+
+L'antre C est situé au sud-ouest des berges, au milieu de nombreuses hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 24|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 24|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 56|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 56|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Berges de Motorby Antre D EB.png|thumb|right|300px|L'antre D des Berges de Motorby.]]
+
+L'antre D est situé tout au sud de la zone, juste à l'est du pont vers le [[Lac Milobellus Nord]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 40|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 40|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 65|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 65|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Motostoke Riverbank/Dens]]
+[[it:Fiume di Steamington/Tane di Pokémon]]
+[[ja:エンジンリバーサイド/ポケモンの巣]]

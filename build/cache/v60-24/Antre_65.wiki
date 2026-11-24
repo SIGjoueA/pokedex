@@ -1,0 +1,77 @@
+{{Ruban Antre|65}}
+
+L''''antre 65''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Normal (type)|Normal]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Prairie Entre-Ponts Antre B EB.png|300px]]
+| [[Fichier:Lac Coupenotte Ouest Antre B EB.png|300px]]
+|-
+| [[Prairie Entre-Ponts/Antres|Prairie Entre-Ponts]]
+| [[Lac Coupenotte Ouest/Antres|Lac Coupenotte Ouest]]
+|-
+| [[Fichier:Berges de Motorby Antre D EB.png|300px]]
+| [[Fichier:Plaine Verdoyante Antre D EB.png|300px]]
+|-
+| [[Berges de Motorby/Antres|Berges de Motorby]]
+| [[Plaine Verdoyante/Antres|Plaine Verdoyante]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 65|
+Sapereau / iv(1) 1(35)
+Poichigeon / iv(1) 1(35)
+Rongourmand / iv(1) 1(20) 2(40)
+Évoli / iv(1) 1(10) 2(10) / talent-caché(Possible) iv(4) 5(15)
+Colombeau / iv(2) 2(25) 3(20)
+Moumouton / iv(2) 2(25) 3(40)
+Déflaisan / iv(4) 3(20) 4(20) 5(10)
+Moumouflon / iv(4) 3(20) 4(20) 5(20)
+Gueriaigle / talent-caché(Possible) iv(4) 4(20, Ep) 5(25, Ep)
+Gouroutan / talent-caché(Possible) iv(4) 4(20, Bo) 5(25, Bo)
+Wimessir sexe(m) / talent-caché(Possible) iv(4) 4(40, Ep) 5(25, Ep)
+Wimessir sexe(f) / talent-caché(Possible) iv(4) 4(40, Bo) 5(25, Bo)
+Ronflex / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Spécifiques à certains Pokémon
+Sapereau, Rongourmand, Colombeau, Déflaisan, Gueriaigle, Évoli, 5★ // Poichigeon, Évoli, 1-2★, Moumouton, Moumouflon, Wimessir sexe(f), Ronflex
+Baie Figuy / taux(80%)
+Baie Résin / taux(80%)
+DT42, Mégaphone / image(DT Normal) 1(100%) 2(100%) 4(100%) 5(100%)
+DT35, Brouhaha / image(DT Normal) 2(100%) 3(100%) 5(100%)
+DT30, Encore / image(DT Normal) 3(100%) 4(100%) 5(100%)
+DT14, Métronome (capacité){{!}}Métronome / image(DT Normal) 4(100%) 5(100%)
+Poichigeon, Évoli, 1-2★, Moumouton, Moumouflon, Wimessir sexe(m), Ronflex // Sapereau, Rongourmand, Colombeau, Déflaisan, Gouroutan, Évoli, 5★
+Baie Wiki / taux(80%)
+Baie Lonme / taux(80%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT27, Blabla Dodo / image(DT Normal) taux(100%)
+DT13, Puissance (capacité){{!}}Puissance / image(DT Normal) 3(100%) 4(100%) 5(100%)
+DT00, Danse Lames / image(DT Normal) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Normal]]

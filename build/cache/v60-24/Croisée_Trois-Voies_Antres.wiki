@@ -1,0 +1,56 @@
+[[Fichier:Croisée Trois-Voies Antres EB.png|right|300px|Localisation des antres de la Croisée Trois-Voies]]
+
+La '''Croisée Trois-Voies''' possède deux antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+__TOC__
+
+== Antre A ==
+
+[[Fichier:Croisée Trois-Voies Antre A EB.png|thumb|right|300px|L'antre A de la Croisée Trois-Voies.]]
+
+L'antre A est au nord, près de la frontière avec la [[Mer Banquise]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 184|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 184|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 185|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 185|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Croisée Trois-Voies Antre B EB.png|thumb|right|300px|L'antre B de la Croisée Trois-Voies.]]
+
+L'antre B est au sud, près de la frontière avec les [[Cavernes Gronde-Mer]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 164|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 164|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 165|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 165|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Three-Point Pass/Dens]]

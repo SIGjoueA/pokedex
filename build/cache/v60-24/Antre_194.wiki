@@ -1,0 +1,79 @@
+{{Ruban Antre|194}}
+
+L''''antre 194''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge.
+
+On y trouve majoritairement des [[Évoli]] et [[Évolition|ses évolutions]]. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir beaucoup de [[Super Bonbon]]s, ainsi que diverses [[Pierre évolutive|Pierres évolutives]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre P EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 194|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Évoli / iv(1) 1(50) 2(50) / iv(2) 1(40) 2(30) 3(45) 4(21) 5(3) / iv(3) 1(10) 2(20) 3(18) 4(10) 5(4)
+Pyroli / iv(4) 3(4) 4(8) 5(11)
+Voltali / iv(4) 3(4) 4(8) 5(11)
+Aquali / iv(4) 3(4) 4(8) 5(11)
+Mentali / talent-caché(Possible) iv(4) 3(4) 4(8) 5(11)
+Noctali / talent-caché(Possible) iv(4) 3(4) 4(8) 5(11)
+Phyllali / talent-caché(Possible) iv(4) 3(4) 4(8) 5(11)
+Givrali / talent-caché(Possible) iv(4) 3(4) 4(8) 5(11)
+Nymphali / talent-caché(Possible) iv(4) 3(4) 4(8) 5(11)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(100%)
+Super Bonbon / 1(25%) 2(35%) 3(55%) 4(100%) 5(100%)
+Super Bonbon / 1(25%) 2(35%) 3(35%) 4(55%) 5(100%)
+Super Bonbon / 1(10%) 2(10%) 3(15%) 4(35%) 5(55%)
+Pierre Eau / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Foudre / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Feu / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Plante / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Glace / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]

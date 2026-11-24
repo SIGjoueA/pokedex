@@ -1,0 +1,96 @@
+{{Ruban Antre|173}}
+
+L''''antre 173''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Combat (type)|Combat]].
+
+Dans {{Jeu|Ep}}, on y trouve notamment des [[Mackogneur Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre Q EB.png|300px]]
+| [[Fichier:Mer Banquise Antre M EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Mer Banquise/Antres|Mer Banquise]]
+|-
+| [[Fichier:Pente Enneigée Antre H EB.png|300px]]
+| [[Fichier:Plaine Granfroy Antre C EB.png|300px]]
+|-
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+| [[Plaine Granfroy/Antres|Plaine Granfroy]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre A EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 173|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Hexadron / talent-caché(Toujours) iv(2) 1(60) 2(30) / talent-caché(Toujours) iv(4) 3(25) 4(25)
+Debugant / talent-caché(Toujours) iv(2) 1(40) 2(25)
+Ouvrifier / talent-caché(Toujours) iv(3) 2(25, Ep, 45, Bo) 3(30, Ep, 55, Bo)
+Canarticho forme(Galar) / talent-caché(Toujours) iv(3) 2(20, Ep) 3(25, Ep)
+Golemastoc / talent-caché(Toujours) iv(4) 3(15) 4(25)
+Palarticho / talent-caché(Toujours) iv(5) 4(15, Ep) 5(20, Ep)
+Bétochef / talent-caché(Toujours) iv(5) 4(15, Ep, 30, Bo) 5(20, Ep, 40, Bo)
+Kicklee / talent-caché(Toujours) iv(5) 4(15, Ep) 5(20, Ep)
+Tygnon / talent-caché(Toujours) iv(5) 4(15, Bo) 5(20, Bo)
+Kapoera / talent-caché(Toujours) iv(5) 5(20)
+Mackogneur forme(Gigamax) / talent-caché(Toujours) iv(5) 5(15, Ep)
+Mackogneur / talent-caché(Toujours) iv(5) 5(15, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Wiki / taux(80%)
+Baie Grena / taux(80%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT99, Big Splash / image(DT Combat) 1(100%) 2(100%) 4(100%) 5(100%)
+DT07, Balayage / image(DT Combat) 2(100%) 3(100%) 5(100%)
+DT48, Gonflette / image(DT Combat) 3(100%) 4(100%) 5(100%)
+DT64, Exploforce / image(DT Combat) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Combat]]
+[[Catégorie:Antre à Pokémon Gigamax]]

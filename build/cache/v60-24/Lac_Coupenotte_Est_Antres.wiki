@@ -1,0 +1,131 @@
+[[Fichier:Lac Coupenotte Est Antres EB.png|right|250px|Localisation des antres du Lac Coupenotte Est]]
+
+Le '''Lac Coupenotte Est''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Miasmax Gigamax]] dans l'antre A.
+__TOC__
+== Antre A ==
+
+[[Fichier:Lac Coupenotte Est Antre A EB.png|thumb|right|300px|L'antre A du Lac Coupenotte Est.]]
+
+L'antre A est situé contre les remparts de [[Motorby]], à l'est des escaliers qui mènent vers la ville.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 29|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 29|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 86|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 86|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Lac Coupenotte Est Antre B EB.png|thumb|right|300px|L'antre B du Lac Coupenotte Est.]]
+
+L'antre B est situé au sud-est des escaliers vers [[Motorby]], sur la rive du lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 39|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 39|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 65|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 65|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Lac Coupenotte Est Antre C EB.png|thumb|right|300px|L'antre C du Lac Coupenotte Est.]]
+
+L'antre C est situé directement au sud des escaliers vers [[Motorby]], au nord-est de l'[[Œil du Lac]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 31|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 31|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 61|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 61|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Lac Coupenotte Est Antre D EB.png|thumb|right|300px|L'antre D du Lac Coupenotte Est.]]
+
+L'antre D est situé au sud-est de la zone, à la frontière de la [[Plaine Verdoyante]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 31|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 31|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 61|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 61|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Lac Coupenotte Est Antre E EB.png|thumb|right|300px|L'antre E du Lac Coupenotte Est.]]
+
+L'antre E est situé dans le lac, au sud de celui-ci.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 7|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 7|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 44|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 44|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:East Lake Axewell/Dens]]
+[[it:Lago Axew (est)/Tane di Pokémon]]
+[[ja:キバこ・ひがし/ポケモンの巣]]

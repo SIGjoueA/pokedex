@@ -1,0 +1,107 @@
+[[Fichier:Lac Ouragan Antres EB.png|right|300px|Localisation des antres du Lac Ouragan]]
+
+Le '''Lac Ouragan''' possède quatre antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Dracaufeu Gigamax]] dans l'antre C.
+__TOC__
+== Antre A ==
+
+[[Fichier:Lac Ouragan Antre A EB.png|thumb|right|300px|L'antre A du Lac Ouragan.]]
+
+L'antre A est situé sur la petite berge tout au nord-est de la zone, accessible par le nord du lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 25|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 25|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 56|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 56|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Lac Ouragan Antre B EB.png|thumb|right|300px|L'antre B du Lac Ouragan.]]
+
+L'antre B est situé au bout de la grande partie terrestre du Lac Ouragan.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 34|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 34|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 74|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 74|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Lac Ouragan Antre C EB.png|thumb|right|300px|L'antre C du Lac Ouragan.]]
+
+L'antre C est situé sur la grande partie terrestre du Lac Ouragan, au centre du cercle de piliers de pierre.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 18|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 18|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 77|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 77|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Lac Ouragan Antre D EB.png|thumb|right|300px|L'antre D du Lac Ouragan.]]
+
+L'antre D est situé dans le lac, adossé à la montagne formée par la grande partie terrestre de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 8|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 8|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 44|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 44|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Lake of Outrage/Dens]]
+[[it:Lago Dragofuria/Tane di Pokémon]]
+[[ja:げきりんのみずうみ/ポケモンの巣]]

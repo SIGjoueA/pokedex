@@ -1,0 +1,73 @@
+{{Ruban Antre|87}}
+
+L''''antre 87''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Fée (type)|Fée]].
+
+On y trouve notamment des [[Sorcilence Gigamax]].
+
+À noter que les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Psy (type)|Psy]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Prairie Entre-Ponts Antre H EB.png|300px]]
+|-
+| [[Prairie Entre-Ponts/Antres|Prairie Entre-Ponts]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 87|
+Togepi / iv(1) 1(35)
+Sucroquin / iv(1) 1(35, Ep)
+Fluvetin / iv(1) 1(35, Bo)
+Grimalin / iv(1) 1(20) 2(30)
+Tarsal / iv(1) 1(10) 2(30)
+Togetic / iv(2) 2(20) 3(20)
+Fourbelin / iv(2) 2(20) 3(40)
+Cupcanaille / iv(3) 3(20, Ep) 4(20, Ep)
+Cocotine / iv(3) 3(20, Bo) 4(20, Bo)
+Crèmy / iv(4) 3(20) 4(20) 5(10)
+Gardevoir / talent-caché(Possible) iv(4) 4(20) 5(35)
+Angoliath / talent-caché(Possible) iv(4) 4(40) 5(35)
+Togekiss / talent-caché(Possible) iv(4) 5(15)
+Sorcilence forme(Gigamax) / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Papaya / taux(80%)
+Baie Qualot / taux(80%)
+DT90, Câlinerie / image(DT Fée) taux(100%)
+DT17, Amnésie / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT34, Prescience / image(DT Psy) 4(100%) 5(100%)
+Bouclier
+Baie Gowav / taux(80%)
+Baie Alga / taux(80%)
+DT92, Éclat Magique / image(DT Fée) taux(100%)
+DT12, Hâte / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT82, Force Ajoutée / image(DT Psy) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Fée]]
+[[Catégorie:Antre à Pokémon Gigamax]]

@@ -1,0 +1,33 @@
+[[Fichier:Butte du Dynarbre Antres EB.png|right|200px|Localisation des antres de la Butte du Dynarbre]]
+
+La '''Butte du Dynarbre''' possède un seul antre de Pokémon. Il est associé à deux couleurs de faisceau, rouge ou mauve.
+
+Le centre de l'arbre peut aussi accueillir un [[Rongrigou]] Dynamax, s'il est secoué cinq fois. Cependant, ce combat n'est faisable qu'une seule fois.
+__TOC__
+== Antre A ==
+
+[[Fichier:Butte du Dynarbre Antre A EB.png|thumb|right|300px|L'antre A de la Butte du Dynarbre.]]
+
+L'antre A est situé au sud de la butte, au bord de celle-ci.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 176|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 176|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 177|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 177|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Dyna Tree Hill/Dens]]

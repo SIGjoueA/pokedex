@@ -1,0 +1,73 @@
+{{Ruban Antre|64}}
+
+L''''antre 64''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Dragon (type)|Dragon]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Œil du Lac Antre A EB.png|300px]]
+| [[Fichier:Plaine Verdoyante Antre I EB.png|300px]]
+|-
+| [[Œil du Lac/Antres|Œil du Lac]]
+| [[Plaine Verdoyante/Antres|Plaine Verdoyante]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 64|
+Kraknoix / iv(1) 1(35, Ep, 20, Bo) 2(30, Bo)
+Coupenotte / iv(1) 1(20, Ep, 35, Bo) 2(30, Ep)
+Verpom / iv(1) 1(35)
+Bébécaille / iv(1) 1(10, Ep) 2(30, Ep)
+Mucuscule / iv(1) 1(10, Bo) 2(30, Bo)
+Fantyrm / iv(2) 2(20) 3(20)
+Incisache / iv(2) 2(20, Ep) 3(40, Ep)
+Vibraninf / iv(2) 2(20, Bo) 3(40, Bo)
+Écaïd / iv(4) 3(20, Ep) 4(20, Ep) 5(10, Ep)
+Colimucus / iv(4) 3(20, Bo) 4(20, Bo) 5(10, Bo)
+Boumata / iv(4) 3(20, Ep) 4(20, Ep) 5(20, Ep)
+Draïeul / iv(4) 3(20, Bo) 4(20, Bo) 5(20, Bo)
+Ékaïser / talent-caché(Possible) iv(4) 4(20, Ep) 5(25, Ep)
+Muplodocus / talent-caché(Possible) iv(4) 4(20, Bo) 5(25, Bo)
+Dispareptil / talent-caché(Possible) iv(4) 4(40) 5(25)
+Tranchodon / talent-caché(Possible) iv(4) 5(15, Ep)
+Libégon / iv(4) 5(15, Bo)
+Lanssorien / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT51, Danse Draco / image(DT Dragon) 3(100%) 4(100%) 5(100%)
+DT24, Colère / image(DT Dragon) 4(100%) 5(100%)
+Exclusifs à une version
+Épée
+Baie Wiki / taux(80%)
+Baie Lonme / taux(80%)
+DT47, Dracogriffe / image(DT Dragon) taux(100%)
+Bouclier
+Baie Mago / taux(80%)
+Baie Résin / taux(80%)
+DT62, Dracochoc / image(DT Dragon) taux(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Dragon]]

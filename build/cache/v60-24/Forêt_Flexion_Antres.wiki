@@ -1,0 +1,155 @@
+[[Fichier:Forêt Flexion Antres EB.png|right|400px|Localisation des antres de la Forêt Flexion]]
+
+La '''Forêt Flexion''' possède six antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Florizarre Gigamax]] dans l'antre F.
+__TOC__
+== Antre A ==
+
+[[Fichier:Forêt Flexion Antre A EB.png|thumb|right|300px|L'antre A de la Forêt Flexion.]]
+
+L'antre A est situé au nord de la lande, près de l'accès à la [[Plaine des Efforts]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 119|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 119|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 120|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 120|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Forêt Flexion Antre B EB.png|thumb|right|300px|L'antre B de la Forêt Flexion.]]
+
+L'antre B est situé sous le pont est de la forêt. On y accède via une mise à l'eau plus à l'ouest, vers l'antre E.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 125|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 125|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 126|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 126|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Forêt Flexion Antre C EB.png|thumb|right|300px|L'antre C de la Forêt Flexion.]]
+
+L'antre C se trouve à côté du pont est de la forêt.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 105|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 105|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 106|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 106|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Forêt Flexion Antre D EB.png|thumb|right|300px|L'antre D de la Forêt Flexion.]]
+
+L'antre D se situe au centre de la forêt, sur la petite rivière. On y accède via la mise à l'eau près de l'antre E.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 135|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 135|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 136|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 136|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Forêt Flexion Antre E EB.png|thumb|right|300px|L'antre E de la Forêt Flexion.]]
+
+L'antre E se situe à l'ouest de la zone, près de l'accès à la [[Plage de l'Épreuve]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 109|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 109|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 110|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 110|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Forêt Flexion Antre F EB.png|thumb|right|300px|L'antre F de la Forêt Flexion.]]
+
+L'antre F se situe sur la berge d'un petit plan d'eau, au sud-est de la forêt.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 154|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 154|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 145|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 145|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Forest of Focus/Dens]]
+[[it:Bosco Concentrazione/Tane di Pokémon]]
+[[ja:しゅうちゅうのもり/ポケモンの巣]]

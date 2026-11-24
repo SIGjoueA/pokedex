@@ -1,0 +1,84 @@
+{{Ruban Antre|126}}
+
+L''''antre 126''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Fée (type)|Fée]].
+
+À noter que les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Psy (type)|Psy]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Plaine Salutation Antre F EB.png|300px]]
+| [[Fichier:Lande Boldair Antre E EB.png|300px]]
+|-
+| [[Plaine Salutation/Antres|Plaine Salutation]]
+| [[Lande Boldair/Antres|Lande Boldair]]
+|-
+| [[Fichier:Forêt Flexion Antre B EB.png|300px]]
+| [[Fichier:Mer Isol'Îlots Antre D EB.png|300px]]
+|-
+| [[Forêt Flexion/Antres|Forêt Flexion]]
+| [[Mer Isol'Îlots/Antres|Mer Isol'Îlots]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 126|
+Leuphorie / talent-caché(Toujours) iv(4) 3(5) 4(5) 5(5)
+Mélo / talent-caché(Toujours) iv(1) 1(60) 2(30)
+Spododo / talent-caché(Toujours) iv(1) 1(40) 2(25)
+Marill / talent-caché(Toujours) iv(2) 2(25) 3(30)
+Mélofée / talent-caché(Toujours) iv(2) 2(20) 3(25)
+Kirlia / talent-caché(Toujours) iv(3) 3(25) 4(25)
+Trousselin / talent-caché(Toujours) iv(3) 3(15) 4(25)
+Guérilande / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Mélodelfe / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Gardevoir / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Lampignon / talent-caché(Toujours) iv(4) 5(20)
+Azumarill / talent-caché(Toujours) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leuphorie</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Papaya / taux(80%)
+Baie Qualot / taux(80%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT90, Câlinerie / image(DT Fée) taux(100%)
+DT17, Amnésie / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT34, Prescience / image(DT Psy) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Armurium / 1(2) 2(2) 3(2) 4(3) 5(3)
+<big>Exclusifs à Leuphorie</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Armurium / 3(3) 4(4) 5(5)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Fée]]

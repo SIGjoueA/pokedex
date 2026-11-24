@@ -1,0 +1,64 @@
+{{Ruban Antre|11}}
+
+L''''antre 11''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Acier (type)|Acier]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Fosse des Sables Antre D EB.png|300px]]
+| [[Fichier:Siège du Géant Antre A EB.png|300px]]
+|-
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+| [[Siège du Géant/Antres|Siège du Géant]]
+|-
+| colspan="2" | [[Fichier:Siège du Géant Antre B EB.png|300px]]
+|-
+| colspan="2" | [[Siège du Géant/Antres|Siège du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 11|
+Tic / iv(1) 1(35)
+Miaouss forme(Galar) / iv(1) 1(35)
+Archéomire / iv(1) 1(20) 2(30)
+Grindur / iv(1) 1(10) 2(30)
+Scalpion / iv(2) 2(20)
+Charibari / iv(2) 2(20) 3(40)
+Clic / iv(4) 3(20) 4(25) 5(10)
+Berserkatt / iv(4) 3(20) 4(25) 5(10)
+Archéodong / iv(4) 3(20) 4(25) 5(30)
+Scalproie / talent-caché(Possible) iv(4) 4(25) 5(30)
+Cliticlic / talent-caché(Possible) iv(4) 5(10)
+Pachyradjah / talent-caché(Possible) iv(4) 5(10)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Mago / taux(80%)
+Baie Qualot / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT70, Luminocanon / image(DT Acier) taux(100%)
+DT52, Gyroballe / image(DT Acier) 3(100%) 4(100%) 5(100%)
+DT31, Queue de Fer / image(DT Acier) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Acier]]

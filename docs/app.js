@@ -1668,8 +1668,39 @@ function stoneLocHTML(k, gm) {
   return `<div class="stoneloc"><h3>${img}${ray ? 'Capacité requise' : 'Objet requis'} : ${esc(n)}</h3><ul>${L.map(([v, t]) => `<li${EVT_ROW.test(t) ? ' class="evt"' : ''}>${v ? `<b>${esc(v)} :</b> ` : ''}${esc(t)}</li>`).join('')}</ul>` +
     `<p class="note">${ray ? 'Capacité' : 'Où obtenir l’objet'} : <a href="https://www.pokepedia.fr/${encodeURIComponent(ray ? 'Draco-Ascension' : n)}" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR)${ray ? '' : ', page de l’objet'}${L.some(([, t]) => EVT_ROW.test(t)) ? ' ; en grisé, distributions et événements limités dans le temps' : ''}.</p></div>`;
 }
+// v60.24: raids Dynamax d’Épée / Bouclier (f.rd[game] = [[zone, texte, drapeaux g = Gigamax / e = événement]], build/fix-v60-24.mjs ; Poképédia)
+const RAID_G = { sw: 'Épée / Bouclier', swisle: 'Isolarmure', swcrown: 'Couronneige' };
+function raidRows(k, f, sp, g) {
+  const e = BY_KEY[k]; if (f.rd && f.rd[g]) return f.rd[g];
+  if (e && (e.c === 'reg' || e.mb)) return null;
+  const b = sp.f[String(sp.id)], L = b && b !== f && b.rd ? b.rd[g] : null; if (!L) return null;
+  return e && e.c === 'gmax' ? L.filter(r => r[2] && r[2].includes('g')) : L; // a Gigamax sheet: its Gigamax raids only
+}
+function raidHTML(k, f, sp, gm) {
+  if (!RAID_G[gm.id]) return { html: '', rows: 0 };
+  // games of the same save the sheet cannot switch to (DLC outside its Pokédex: Tygnon, Mewtwo in Couronneige…) → shown here, zone suffixed with the game
+  const e = BY_KEY[k] || {}, sel = new Set([...(f.av || []), ...horsGames(e, sp)]), gs = Object.keys(RAID_G), R = Object.fromEntries(gs.map(g => [g, raidRows(k, f, sp, g) || []]));
+  const here = gs.filter(g => R[g].length && (g === gm.id || !sel.has(g))), other = gs.filter(g => R[g].length && g !== gm.id && sel.has(g));
+  const hint = other.length ? `<p class="note raidalso">Aussi en raid : ${other.map(g => esc(RAID_G[g])).join(', ')} (choisissez ce jeu pour le détail).</p>` : '';
+  const rows = here.flatMap(g => R[g].map(r => g === gm.id ? r : [`${r[0]} (${RAID_G[g]})`, r[1], r[2]]));
+  if (!rows.length) return { html: hint ? `<div class="raidloc">${hint}</div>` : '', rows: 0 };
+  const SPECIAL = /^(Expédition|Raid événementiel)/, gOf = z => { const m = z.match(/ \((Épée \/ Bouclier|Isolarmure|Couronneige)\)$/); return m ? gs.find(g => RAID_G[g] === m[1]) : gm.id; };
+  const by = new Map(); for (const r of rows) { if (!by.has(r[0])) by.set(r[0], []); by.get(r[0]).push(r); }
+  const zs = [...by].sort((a, b) => (gs.indexOf(gOf(a[0])) - gs.indexOf(gOf(b[0]))) || (SPECIAL.test(a[0]) - SPECIAL.test(b[0])) || a[0].localeCompare(b[0], 'fr'));
+  let dens = 0; for (const [z, rs] of zs) { if (SPECIAL.test(z)) continue; const s = new Set(); for (const [, t] of rs) { const m = t.match(/^Antres? ([A-Z0-9, ]+?) \(/); if (m) m[1].split(', ').forEach(x => s.add(x)); } dens += s.size; }
+  const evt = rows.some(r => r[2] && r[2].includes('e')), n = zs.length;
+  const list = zs.map(([z, rs]) => `<div class="enc"><b>${esc(z)}</b>${rs.map(r => `<div class="ms${r[2] && r[2].includes('e') ? ' evt' : ''}">${esc(r[1])}</div>`).join('')}</div>`).join('');
+  const notes = [here.includes('sw') && dens ? 'Étoiles possibles selon vos Badges (Terres Sauvages) : 0 → 1★ ; 1–2 → 1–2★ ; 3 → 1–3★ ; 4–5 → 2–3★ ; 6–7 → 3–4★ ; 8 → 3–5★.' : '',
+    dens ? 'Taux = chance d’apparition parmi les raids de ce nombre d’étoiles dans cet antre ; faisceau rouge = raid commun, mauve = raid rare. « IV parfaits » = nombre d’IV au maximum garantis.' : '',
+    evt ? 'Raid événementiel (en grisé) : depuis le 1er novembre 2022, il a 25 % de chances de remplacer n’importe quel antre (dernier Bulletin des Terres Sauvages).' : '',
+    'Antres, lettres et taux : <a href="https://www.pokepedia.fr/Antre_de_Pok%C3%A9mon" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des antres et des zones.'].filter(Boolean);
+  return { html: `<div class="raidloc"><h3>Raids Dynamax</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}${dens ? ` · ${dens} antre${dens > 1 ? 's' : ''}` : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>`, rows: rows.length };
+}
 function encHTML(f, sp, gm, shared) {
-  const h = encHTML0(f, sp, gm, shared), k = Object.keys(sp.f).find(x => sp.f[x] === f), s = k ? stoneLocHTML(k, gm) : '';
+  const k = Object.keys(sp.f).find(x => sp.f[x] === f), r = k ? raidHTML(k, f, sp, gm) : { html: '', rows: 0 };
+  // v60.24: a sheet with raids but no other location → the raids alone (instead of « Pas de lieu de capture dans ce jeu »)
+  const pp = ppLocs(f, sp, gm), h = r.rows && !(pp && pp.length) ? `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2></section>` : encHTML0(f, sp, gm, shared);
+  const s = (k ? stoneLocHTML(k, gm) : '') + r.html;
   return s ? h.replace(/<\/section>$/, s + '</section>') : h;
 }
 function encHTML0(f, sp, gm, shared) {

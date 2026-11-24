@@ -1,0 +1,278 @@
+{{Ruban Antre|71|événementiel=oui|dernier=oui}}
+
+L''''antre événementiel 71''' est un [[antre de Pokémon]] événementiel, dans {{jeu|EB}}. À partir du 1<sup>er</sup> novembre 2022 et jusqu'à la fin du service, il a 25&nbsp;% de chances de remplacer n'importe quel antre.
+
+On y trouve de nombreux Pokémon [[Gigamax]] différents.
+__TOC__
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre événementiel 71|
+Larvadar / talent-caché(Possible) iv(1) 1(50)
+Grillepattes / talent-caché(Possible) iv(1) 1(50)
+Moumouton / talent-caché(Possible) iv(2) 2(50)
+Khélocrok / talent-caché(Possible) iv(2) 2(50)
+Astronelle / talent-caché(Possible) iv(3) 3(50)
+Moumouflon / talent-caché(Possible) iv(3) 3(50)
+Métamorph / talent-caché(Possible) iv(4) 4(50)
+Corvaillus / talent-caché(Possible) iv(4) 4(50)
+Papilusion forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Mackogneur forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Ectoplasma forme(Gigamax) / iv(5) 5(4)
+Krabboss forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Lokhlass forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Ronflex forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Miasmax forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Corvaillus forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Astronelle forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Torgamord forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Monthracite forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Pomdrapi forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Dratatin forme(Gigamax) / talent-caché(Possible) iv(5) 5(4)
+Dunaconda forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Salarsen forme(Gigamax) / talent-caché(Possible) iv(5) 5(4) notes(Forme Aigüe) / talent-caché(Possible) iv(5) 5(4) notes(Forme Grave)
+Scolocendre forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Sorcilence forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Angoliath forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Charmilly forme(Gigamax) / iv(5) 5(5) notes(Lait Vanille)
+Pachyradjah forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+Duralugon forme(Gigamax) / talent-caché(Possible) iv(5) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+
+Exclusifs à Larvadar, Astronelle et Astronelle Gigamax
+Baie Papaya / 1(80%)
+Baie Grena / 1(80%)
+Baie Mago / 3(80%)
+Baie Qualot / 3(80%)
+Baie Gowav / 5(80%)
+Baie Lonme / 5(80%)
+Petit Champi / 1(20%)
+Gros Champi / 1(20%) 3(30%) 5(50%)
+Champi Suave / 1(20%) 3(30%) 5(50%)
+DT18, Vampirisme / talent-caché(Possible) image(DT Insecte) 1(100%)
+DT97, Psycho-Croc / image(DT Psy) 3(100%)
+DT44, Force Cosmik / image(DT Psy) 3(100%)
+DT69, Psykoud'Boul / image(DT Psy) 5(100%)
+DT17, Amnésie / image(DT Psy) 5(100%)
+DT49, Plénitude / image(DT Psy) 5(100%)
+DT34, Prescience / image(DT Psy) 5(100%)
+
+Exclusifs à Grillepattes et Scolocendre Gigamax
+Baie Prine / 1(80%) 5(80%)
+Baie Lonme / 1(80%) 5(80%)
+Os Rare / 1(20%) 5(50%)
+Pépite / 1(20%) 5(50%)
+Maxi Pépite / 1(20%) 5(50%)
+DT02, Lance-Flammes / talent-caché(Possible) image(DT Feu) 1(100%) 5(100%)
+DT36, Canicule (capacité){{!}}Canicule / talent-caché(Possible) image(DT Feu) 5(100%)
+DT43, Surchauffe / talent-caché(Possible) image(DT Feu) 5(100%)
+
+Exclusifs à Moumouton, Moumouflon et Métamorph
+Baie Wiki / 2(80%) 3(80%) 4(80%)
+Baie Lonme / 2(80%) 3(80%) 4(80%)
+Maxi Pépite / 2(25%) 3(30%) 4(35%)
+DT27, Blabla Dodo / talent-caché(Possible) image(DT Normal) 2(100%) 3(100%) 4(100%)
+DT13, Puissance (capacité){{!}}Puissance / talent-caché(Possible) image(DT Normal) 3(100%) 4(100%)
+DT00, Danse Lames / talent-caché(Possible) image(DT Normal) 4(100%)
+
+Exclusifs à Khélocrok et Krabboss Gigamax
+Perle (objet){{!}}Perle / 2(25%) 5(50%)
+Grande Perle / 2(25%) 5(50%)
+DT16, Cascade / talent-caché(Possible) image(DT Eau) 2(100%) 5(100%)
+DT84, Ébullition / talent-caché(Possible) image(DT Eau) 2(100%)
+DT45, Ocroupi / talent-caché(Possible) image(DT Eau) 5(100%)
+DT04, Surf / talent-caché(Possible) image(DT Eau) 5(100%)
+DT03, Hydrocanon / talent-caché(Possible) image(DT Eau) 5(100%)
+
+Exclusifs à Corvaillus et Corvaillus Gigamax
+Baie Sitrus / 3(80%) 5(80%)
+Baie Qualot / 3(80%) 5(80%)
+Petit Champi / 3(30%) 5(50%)
+Gros Champi / 3(30%) 5(50%)
+Champi Suave / 3(30%) 5(50%)
+DT19, Triplattaque / image(DT Normal) 3(100%) 5(100%)
+DT66, Rapace / image(DT Vol) 3(100%) 5(100%)
+DT89, Vent Violent / image(DT Vol) 5(100%)
+
+Exclusifs à Papilusion Gigamax
+Baie Prine / 5(80%)
+Baie Alga / 5(80%)
+Petit Champi / 5(50%)
+Gros Champi / 5(50%)
+Champi Suave / 5(50%)
+DT60, Plaie-Croix / image(DT Insecte) 5(100%)
+DT96, Boule Pollen / image(DT Insecte) 5(100%)
+DT28, Mégacorne / image(DT Insecte) 5(100%)
+
+Exclusifs à Mackogneur Gigamax
+Baie Sitrus / 5(80%)
+Baie Alga / 5(80%)
+Os Rare / 5(50%)
+Pépite / 5(50%)
+DT56, Aurasphère / image(DT Combat) 5(100%)
+DT21, Contre / image(DT Combat) 5(100%)
+DT39, Surpuissance / image(DT Combat) 5(100%)
+DT53, Close Combat / image(DT Combat) 5(100%)
+
+Exclusifs à Ectoplasma Gigamax
+Baie Mago / 5(80%)
+Baie Alga / 5(80%)
+Poussière Étoile / 5(50%)
+Morceau d'Étoile / 5(50%)
+Morceau Comète / 5(50%)
+DT54, Pics Toxik / image(DT Poison) 5(100%)
+DT78, Cradovague / image(DT Poison) 5(100%)
+DT73, Détricanon / image(DT Poison) 5(100%))
+
+Exclusifs à Lokhlass Gigamax
+Baie Figuy / 5(80%)
+Baie Lonme / 5(80%)
+Poussière Étoile / 5(50%)
+Morceau d'Étoile / 5(50%)
+Morceau Comète / 5(50%)
+DT05, Laser Glace / image(DT Glace) 5(100%)
+DT85, Rengorgement / image(DT Normal) 5(100%)
+DT06, Blizzard / image(DT Glace) 5(100%)
+
+Exclusifs à Ronflex Gigamax
+Baie Figuy / 5(80%)
+Baie Résin / 5(80%)
+DT42, Mégaphone / image(DT Normal) 5(100%)
+DT35, Brouhaha / image(DT Normal) 5(100%)
+DT30, Encore / image(DT Normal) 5(100%)
+DT14, Métronome (capacité){{!}}Métronome / image(DT Normal) 5(100%)
+
+Exclusifs à Miasmax Gigamax
+Baie Wiki / 5(80%)
+Baie Grena / 5(80%)
+Poussière Étoile / 5(50%)
+Morceau d'Étoile / 5(50%)
+Morceau Comète / 5(50%)
+DT57, Direct Toxik / image(DT Poison) 5(100%)
+DT22, Bombe Beurk / image(DT Poison) 5(100%)
+DT91, Piège de Venin / image(DT Poison) 5(100%)
+
+Exclusifs à Torgamord Gigamax
+Baie Gowav / 5(80%)
+Baie Résin / 5(80%)
+DT87, Tunnelier / image(DT Sol) 5(100%)
+DT94, Cavalerie Lourde / image(DT Sol) 5(100%)
+DT76, Piège de Roc / image(DT Roche) 5(100%)
+DT10, Séisme / image(DT Sol) 4(100%) 5(100%)
+
+Exclusifs à Monthracite Gigamax
+Baie Prine / 5(80%)
+Baie Lonme / 5(80%)
+Os Rare / 5(50%)
+Pépite / 5(50%)
+Maxi Pépite / 5(50%)
+DT02, Lance-Flammes / image(DT Feu) 5(100%)
+DT36, Canicule (capacité){{!}}Canicule / image(DT Feu) 5(100%)
+DT43, Surchauffe / image(DT Feu) 5(100%)
+
+Exclusifs à Pomdrapi Gigamax et Dratatin Gigamax
+Baie Mago / 5(80%)
+Baie Résin / 5(80%)
+Maxi Pépite / 5(50%)
+DT62, Dracochoc / image(DT Dragon) 5(100%)
+DT51, Danse Draco / image(DT Dragon) 5(100%)
+DT24, Colère / image(DT Dragon) 5(100%)
+
+Exclusifs à Dunaconda Gigamax
+Baie Prine / 5(80%)
+Baie Qualot / 5(80%)
+Poussière Étoile / 5(50%)
+Morceau d'Étoile / 5(50%)
+DT63, Rayon Gemme / image(DT Roche) 5(100%)
+DT67, Telluriforce / image(DT Sol) 5(100%)
+DT23, Picots / image(DT Sol) 3(100%) 5(100%)
+DT75, Lame de Roc / image(DT Roche) 5(100%)
+
+Exclusifs à Salarsen Gigamax Forme Aigüe
+Baie Figuy / 5(80%)
+Baie Qualot / 5(80%)
+Os Rare / 5(50%)
+Pépite / 5(50%)
+Maxi Pépite / 5(50%)
+DT86, Éclair Fou / image(DT Électrik) 5(100%)
+DT80, Boule Élek / image(DT Électrik) 5(100%)
+DT09, Fatal-Foudre / image(DT Électrik) 5(100%)
+
+Exclusifs à Salarsen Gigamax Forme Grave
+Baie Sitrus / 5(80%)
+Baie Alga / 5(80%)
+Os Rare / 5(50%)
+Pépite / 5(50%)
+Maxi Pépite / 5(50%)
+DT86, Éclair Fou / image(DT Électrik) 5(100%)
+DT08, Tonnerre / image(DT Électrik) 5(100%)
+DT09, Fatal-Foudre / image(DT Électrik) 5(100%)
+
+Exclusifs à Sorcilence Gigamax
+Baie Gowav / 5(80%)
+Baie Lonme / 5(80%)
+DT69, Psykoud'Boul / image(DT Psy) 5(100%)
+DT17, Amnésie / image(DT Psy) 5(100%)
+DT49, Plénitude / image(DT Psy) 5(100%)
+DT34, Prescience / image(DT Psy) 5(100%)
+
+Exclusifs à Angoliath Gigamax
+Baie Gowav / 5(80%)
+Baie Alga / 5(80%)
+Petit Champi / 5(50%)
+Gros Champi / 5(50%)
+Champi Suave / 5(50%)
+DT92, Éclat Magique / image(DT Fée) 5(100%)
+DT12, Hâte / image(DT Psy) 5(100%)
+DT82, Force Ajoutée / image(DT Psy) 5(100%)
+
+Exclusifs à Charmilly Gigamax
+Baie Papaya / 5(80%)
+Baie Qualot / 5(80%)
+Petit Champi / 5(50%)
+Gros Champi / 5(50%)
+Champi Suave / 5(50%)
+DT90, Câlinerie / image(DT Fée) 5(100%)
+DT17, Amnésie / image(DT Psy) 5(100%)
+DT34, Prescience / image(DT Psy) 5(100%)
+
+Exclusifs à Pachyradjah Gigamax
+Baie Mago / 5(80%)
+Baie Qualot / 5(80%)
+Poussière Étoile / 5(50%)
+Morceau d'Étoile / 5(50%)
+Morceau Comète / 5(50%)
+DT70, Luminocanon / image(DT Acier) 5(100%)
+DT52, Gyroballe / image(DT Acier) 5(100%)
+DT31, Queue de Fer / image(DT Acier) 5(100%)
+
+Exlusifs à Duralugon Gigamax
+Baie Gowav / 5(80%)
+Baie Grena / 5(80%)
+Poussière Étoile / 5(50%)
+Morceau d'Étoile / 5(50%)
+Morceau Comète / 5(50%)
+DT79, Tacle Lourd / image(DT Acier) 5(100%)
+DT74, Tête de Fer / image(DT Acier) 5(100%)
+DT46, Mur de Fer / image(DT Acier) 5(100%)
+
+Récompenses bonus
+Bonbon Exp. L / 3(1) 4(3) 5(6)
+Bonbon Exp. XL / 5(6)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Armurium / 1(1) 2(1) 3(1) 4(1) 5(1)
+Dynamaxium / 1(1) 2(1) 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres|catégories=non}}
+
+[[Catégorie:Antre événementiel]]
+
+[[de:Dyna-Raid/Pokémon Schwert und Schild (Update 02.11.2022)]]

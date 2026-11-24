@@ -1,0 +1,69 @@
+{{Ruban Antre|59}}
+
+L''''antre 59''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Plante (type)|Plante]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Prairie Entre-Ponts Antre G EB.png|300px]]
+| [[Fichier:Bois de Clairjour Antre C EB.png|300px]]
+|-
+| [[Prairie Entre-Ponts/Antres|Prairie Entre-Ponts]]
+| [[Bois de Clairjour/Antres|Bois de Clairjour]]
+|-
+| [[Fichier:Bois de Clairjour Antre E EB.png|300px]]
+| [[Fichier:Plaine Rocheuse Antre E EB.png|300px]]
+|-
+| [[Bois de Clairjour/Antres|Bois de Clairjour]]
+| [[Plaine Rocheuse/Antres|Plaine Rocheuse]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 59|
+Ceribou / iv(1) 1(35)
+Grainipiot / iv(1) 1(35, Ep)
+Nénupiot / iv(1) 1(35, Bo)
+Tournicoton / iv(1) 1(20) 2(30)
+Doudouvet / iv(1) 1(10) 2(30)
+Pifeuil / iv(2) 2(20, Ep) 3(20, Ep)
+Lombre / iv(2) 2(20, Bo) 3(20, Bo)
+Spododo / iv(2) 2(20) 3(40)
+Ceriflor / iv(4) 3(20) 4(20) 5(10)
+Lampignon / iv(4) 3(20) 4(20) 5(20)
+Blancoton / talent-caché(Possible) iv(4) 4(20) 5(25)
+Farfaduvet / talent-caché(Possible) iv(4) 4(40) 5(25)
+Tengalice / talent-caché(Possible) iv(4) 5(15, Ep)
+Ludicolo / talent-caché(Possible) iv(4) 5(15, Bo)
+Sinistrail / iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Papaya / taux(80%)
+Baie Grena / taux(80%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT65, Éco-Sphère / image(DT Plante) taux(100%)
+DT77, Nœud Herbe / image(DT Plante) 3(100%) 4(100%) 5(100%)
+DT71, Tempête Verte / image(DT Plante) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Plante]]

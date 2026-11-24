@@ -1,0 +1,68 @@
+{{Ruban Antre|51}}
+
+L''''antre 51''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Roche (type)|Roche]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Siège du Géant Antre D EB.png|300px]]
+| [[Fichier:Plaine Verdoyante Antre H EB.png|300px]]
+|-
+| [[Siège du Géant/Antres|Siège du Géant]]
+| [[Plaine Verdoyante/Antres|Plaine Verdoyante]]
+|-
+| colspan="2" | [[Fichier:Plaine Rocheuse Antre L EB.png|300px]]
+|-
+| colspan="2" | [[Plaine Rocheuse/Antres|Plaine Rocheuse]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 51|
+Crabicoque / iv(1) 1(35)
+Manzaï / iv(1) 1(35)
+Charbi / iv(1) 1(20) 2(30)
+Opermine / iv(1) 1(10, Ep) 2(30, Ep)
+Nodulithe / iv(1) 1(10, Bo) 2(30, Bo)
+Wagomine / iv(2) 2(20) 3(20)
+Simularbre / iv(2) 2(20, Ep) 3(40, Ep)
+Embrylex / iv(2) 2(20, Bo) 3(40, Bo)
+Golgopathe / iv(3) 3(20, Ep) 4(20, Ep)
+Ymphect / iv(3) 3(20, Bo) 4(20, Bo)
+Onix / iv(4) 3(20) 4(20) 5(20)
+Crabaraque / talent-caché(Possible) iv(4) 4(20) 5(30)
+Monthracite / talent-caché(Possible) iv(4) 4(40) 5(30)
+Steelix / talent-caché(Possible) iv(4) 5(15)
+Dolman / iv(4) 5(5, Ep)
+Tyranocif / talent-caché(Possible) iv(4) 5(5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Gowav / taux(80%)
+Baie Résin / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT87, Tunnelier / image(DT Sol) 1(100%) 2(100%) 4(100%) 5(100%)
+DT94, Cavalerie Lourde / image(DT Sol) 2(100%) 3(100%) 5(100%)
+DT76, Piège de Roc / image(DT Roche) 3(100%) 4(100%) 5(100%)
+DT10, Séisme / image(DT Sol) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Roche]]

@@ -1,0 +1,71 @@
+{{Ruban Antre|55}}
+
+L''''antre 55''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Glace (type)|Glace]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Fosse des Sables Antre E EB.png|300px]]
+| [[Fichier:Coiffe du Géant Antre C EB.png|300px]]
+|-
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+| [[Coiffe du Géant/Antres|Coiffe du Géant]]
+|-
+| colspan="2" | [[Fichier:Plaine Rocheuse Antre F EB.png|300px]]
+|-
+| colspan="2" | [[Plaine Rocheuse/Antres|Plaine Rocheuse]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 55|
+Sorbébé / iv(1) 1(35)
+Darumarond forme(Galar) / iv(1) 1(35, Ep)
+Polarhume / iv(1) 1(35, Bo)
+M. Mime forme(Galar) / iv(1) 1(20) 2(30)
+Grelaçon / iv(1) 1(10) 2(40)
+Stalgamin / iv(2) 2(25) 3(30)
+Cadoizo / iv(2) 2(5) 3(5)
+Séracrawl / iv(3) 3(35) 4(20)
+Oniglali / iv(4) 3(30) 4(20) 5(10)
+Sorbouboul / talent-caché(Possible) iv(4) 4(20) 5(25)
+M. Glaquette / talent-caché(Possible) iv(4) 4(40) 5(25)
+Lokhlass / talent-caché(Possible) iv(4) 5(35)
+Darumacho forme(Galar) / talent-caché(Possible) iv(4) 5(5, Ep)
+Bekaglaçon / iv(4) 5(5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Figuy / taux(80%)
+Baie Lonme / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT05, Laser Glace / image(DT Glace) taux(100%)
+DT85, Rengorgement / image(DT Normal) 3(100%) 4(100%) 5(100%)
+DT06, Blizzard / image(DT Glace) 4(100%) 5(100%)
+Récompenses bonus, sauf Cadoizo
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Récompenses bonus exclusives à Cadoizo
+Bonbon Exp. S / 2(10)
+Bonbon Exp. M / 2(5) 3(10)
+Bonbon Exp. L / 3(1)
+Bonbon Dynamax / 2(2) 3(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Glace]]

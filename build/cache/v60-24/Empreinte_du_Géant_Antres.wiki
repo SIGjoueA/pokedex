@@ -1,0 +1,128 @@
+[[Fichier:Empreinte du Géant Antres EB.png|right|400px|Localisation des antres de l'Empreinte du Géant]]
+
+L''''Empreinte du Géant''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+__TOC__
+== Antre A ==
+
+[[Fichier:Empreinte du Géant Antre A EB.png|thumb|right|300px|L'antre A de l'Empreinte du Géant.]]
+
+L'antre A est tout au nord de la zone, à tournant à droite depuis les [[Cavernes Gronde-Mer]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 166|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 166|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 167|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 167|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Empreinte du Géant Antre B EB.png|thumb|right|300px|L'antre B de l'Empreinte du Géant.]]
+
+L'antre B est situé au centre de la partie avec le cours d'eau, à l'intérieur d'une maison abandonnée sur la rive est.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 182|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 182|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 183|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 183|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Empreinte du Géant Antre C EB.png|thumb|right|300px|L'antre C de l'Empreinte du Géant.]]
+
+L'antre C est situé sur la rive ouest de la zone, accolé à la montagne et à une maison abandonnée.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 162|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 162|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 163|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 163|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Empreinte du Géant Antre D EB.png|thumb|right|300px|L'antre D de l'Empreinte du Géant.]]
+
+L'antre D est à l'est de la zone, près des lopins de terre.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 186|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 186|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 187|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 187|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Empreinte du Géant Antre E EB.png|thumb|right|300px|L'antre E de l'Empreinte du Géant.]]
+
+L'antre E est situé tout au sud-ouest, près de la frontière avec le [[Repos du Géant]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 158|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 158|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 159|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 159|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Giant's Foot/Dens]]

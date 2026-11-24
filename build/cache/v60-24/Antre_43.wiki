@@ -1,0 +1,69 @@
+{{Ruban Antre|43}}
+
+L''''antre 43''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Spectre (type)|Spectre]].
+
+À noter que les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Psy (type)|Psy]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Miroir du Géant Antre E EB.png|300px]]
+| [[Fichier:Lac Milobellus Sud Antre A EB.png|300px]]
+|-
+| [[Miroir du Géant/Antres|Miroir du Géant]]
+| [[Lac Milobellus Sud/Antres|Lac Milobellus Sud]]
+|-
+| colspan="2" | [[Fichier:Plaine Rocheuse Antre A EB.png|300px]]
+|-
+| colspan="2" | [[Plaine Rocheuse/Antres|Plaine Rocheuse]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 43|
+Fantominus / iv(1) 1(35)
+Tutafeh forme(Galar) / iv(1) 1(35)
+Théffroi forme(Contrefaçon) / iv(1) 1(20) 2(30)
+Skelénox / iv(1) 1(10) 2(30)
+Spectrum / iv(2) 2(20) 3(30)
+Pitrouille forme(Normale) / iv(2) 2(20, Ep) 3(40, Ep) 4(20, Ep)
+Corayon forme(Galar) / iv(3) 2(20, Bo) 3(40, Bo) 4(20, Bo)
+Téraclope / iv(3) 3(30) 4(20)
+Tutétékri / iv(4) 4(20, Bo) 5(1, Ep, 45, Bo)
+Ténéfix / iv(4) 5(1, Bo)
+Polthégeist forme(Contrefaçon) / talent-caché(Possible) iv(4) 4(20, Ep) 5(45, Ep)
+Banshitrouye forme(Normale) / talent-caché(Possible) iv(4) 4(40, Ep) 5(35, Ep)
+Corayôme / talent-caché(Possible) iv(4) 4(40, Bo) 5(35, Bo)
+Noctunoir / talent-caché(Possible) iv(4) 5(15)
+Ectoplasma / iv(4) 5(4)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Figuy / taux(80%)
+Baie Alga / taux(80%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT33, Ball'Ombre / image(DT Spectre) 1(100%) 2(100%) 4(100%) 5(100%)
+DT83, Interversion / image(DT Psy) 2(100%) 3(100%) 5(100%)
+DT38, Tourmagik / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT82, Force Ajoutée / image(DT Psy) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Spectre]]

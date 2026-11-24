@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.24",
+  "d": "2026-11-24",
+  "l": [
+   "Épée / Bouclier : « Où le trouver » a un bloc « Raids Dynamax » avec les vrais antres au lieu de « Antre 173 » (qui était un numéro de table) : zone, lettre de l’antre (cartes de Poképédia) et faisceau rouge ou mauve, puis les étoiles et le taux par version (« 5★ Épée 10 % / Bouclier 20 % »), Gigamax, le nombre d’IV parfaits garantis et le talent caché.",
+   "Talent caché corrigé : « garanti » dans les antres mauves d’Isolarmure et de Couronneige, « possible » ailleurs (il était affiché à l’envers ou pas du tout).",
+   "Isolarmure et Couronneige ont enfin leurs antres, et l’Expédition Dynamax (Grand Antre Dynamax, légendaires niv. 70) est rangée dans Couronneige. Quand une fiche ne peut pas passer sur l’extension, ses raids y sont affichés avec le nom de l’extension.",
+   "Raid événementiel (dernier Bulletin des Terres Sauvages, depuis le 1er novembre 2022) en grisé, et rappel des étoiles possibles selon vos Badges. Source : Poképédia, recoupé avec PokéAPI."
+  ]
+ },
+ {
   "v": "v60.23",
   "d": "2026-11-24",
   "l": [

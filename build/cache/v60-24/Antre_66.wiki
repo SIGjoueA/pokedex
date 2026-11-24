@@ -1,0 +1,49 @@
+{{Ruban Antre|66}}
+
+L''''antre 66''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Normal (type)|Normal]].
+
+On n'y trouve que des [[Métamorph]]. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir beaucoup d'objets de valeur.
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Plaine Rocheuse Antre J EB.png|300px]]
+|-
+| [[Plaine Rocheuse/Antres|Plaine Rocheuse]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 66|
+Métamorph / iv(1) 1(50) / iv(2) 1(50) 2(50) / iv(3) 2(50) 3(100) 4(50) / talent-caché(Possible) iv(4) 4(50) 5(100)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Sitrus / taux(80%)
+Baie Qualot / taux(80%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Perle Triple / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Normal]]

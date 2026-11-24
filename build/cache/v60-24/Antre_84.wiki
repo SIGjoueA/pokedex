@@ -1,0 +1,69 @@
+{{Ruban Antre|84}}
+
+L''''antre 84''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Acier (type)|Acier]].
+
+On y trouve notamment des [[Duralugon Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Siège du Géant Antre A EB.png|300px]]
+|-
+| [[Siège du Géant/Antres|Siège du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 84|
+Riolu / iv(1) 1(35)
+Archéomire / iv(1) 1(35)
+Scalpion / iv(1) 1(20) 2(30)
+Tic / iv(1) 1(10) 2(30)
+Onix / iv(2) 2(20) 3(20)
+Fermite / iv(2, Ep, 3, Bo) 2(20, Ep) 3(40, Ep, 20, Bo) 4(20, Bo)
+Clic / iv(3, Ep, 2, Bo) 2(20, Bo) 3(20, Ep, 40, Bo) 4(20, Ep)
+Archéodong / iv(4) 3(20) 4(20) 5(10)
+Scalproie / talent-caché(Possible) iv(4) 4(20) 5(35)
+Steelix / talent-caché(Possible) iv(4) 4(40) 5(35)
+Cliticlic / talent-caché(Possible) iv(4) 5(15)
+Duralugon forme(Gigamax) / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Gowav / taux(80%)
+Baie Grena / taux(80%)
+DT79, Tacle Lourd / image(DT Acier) taux(100%)
+DT74, Tête de Fer / image(DT Acier) 3(100%) 4(100%) 5(100%)
+DT46, Mur de Fer / image(DT Acier) 4(100%) 5(100%)
+Bouclier
+Baie Mago / taux(80%)
+Baie Qualot / taux(80%)
+DT70, Luminocanon / image(DT Acier) taux(100%)
+DT52, Gyroballe / image(DT Acier) 3(100%) 4(100%) 5(100%)
+DT31, Queue de Fer / image(DT Acier) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Acier]]
+[[Catégorie:Antre à Pokémon Gigamax]]

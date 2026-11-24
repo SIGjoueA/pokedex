@@ -1,0 +1,103 @@
+{{Ruban Antre|167}}
+
+L''''antre 167''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où les types de Pokémon prédominants sont les types [[Plante (type)|Plante]] et [[Insecte (type)|Insecte]].
+
+On y trouve notamment des [[Papilusion Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Empreinte du Géant Antre A EB.png|300px]]
+| [[Fichier:Lac Poké Ball Antre M EB.png|300px]]
+|-
+| [[Empreinte du Géant/Antres|Empreinte du Géant]]
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|-
+| [[Fichier:Plateau Beau-Gant Antre F EB.png|300px]]
+| [[Fichier:Repos du Géant Antre D EB.png|300px]]
+|-
+| [[Plateau Beau-Gant/Antres|Plateau Beau-Gant]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Temple Couronne Antre A EB.png|300px]]
+|-
+| colspan="2" | [[Temple Couronne/Antres|Temple Couronne]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 167|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Anorith / talent-caché(Toujours) iv(2) 1(60, Ep, 40, Bo) 2(30, Ep, 25, Bo) / talent-caché(Toujours) iv(3) 2(25, Ep, 20, Bo) 3(30, Ep, 25, Bo)
+Lilia / talent-caché(Toujours) iv(2) 1(40, Ep, 60, Bo) 2(25, Ep, 30, Bo) / talent-caché(Toujours) iv(3) 2(20, Ep, 25, Bo) 3(25, Ep, 30, Bo)
+Tarenbulle / talent-caché(Toujours) iv(4) 3(25) 4(25)
+Papilusion / talent-caché(Toujours) iv(4) 3(15) 4(25)
+Armaldo / talent-caché(Toujours) iv(5) 4(15) 5(40, Ep, 20, Bo)
+Vacilys / talent-caché(Toujours) iv(5) 4(15) 5(20, Ep, 40, Bo)
+Blancoton / talent-caché(Toujours) iv(5) 4(15) 5(20)
+Papilusion forme(Gigamax) / talent-caché(Toujours) iv(5) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+
+Exclusifs à Papilusion, Papilusion Gigamax, Anorith, Armaldo et Tarenbulle
+Baie Papaya / taux(80%)
+Baie Grena / taux(80%)
+DT18, Vampirisme / image(DT Insecte) taux(100%)
+DT61, Bourdon / image(DT Insecte) 3(100%) 4(100%) 5(100%)
+DT28, Mégacorne / image(DT Insecte) 4(100%) 5(100%)
+
+Exclusifs à Lilia, Vacilys et Blancoton
+Baie Papaya / taux(80%)
+Baie Grena / taux(80%)
+DT65, Éco-Sphère / image(DT Plante) taux(100%)
+DT77, Nœud Herbe / image(DT Plante) 3(100%) 4(100%) 5(100%)
+DT71, Tempête Verte / image(DT Plante) 4(100%) 5(100%)
+
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Plante]]
+[[Catégorie:Antre de type Insecte]]
+[[Catégorie:Antre à Pokémon Gigamax]]

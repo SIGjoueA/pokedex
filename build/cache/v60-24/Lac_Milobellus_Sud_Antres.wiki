@@ -1,0 +1,131 @@
+[[Fichier:Lac Milobellus Sud Antres EB.png|right|300px|Localisation des antres du Lac Milobellus Sud]]
+
+Le '''Lac Milobellus Sud''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Krabboss Gigamax]] dans l'antre C.
+__TOC__
+== Antre A ==
+
+[[Fichier:Lac Milobellus Sud Antre A EB.png|thumb|right|300px|L'antre A du Lac Milobellus Sud.]]
+
+L'antre A est situé au nord-ouest de la zone, à côté d'un arbre et de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 1|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 1|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 43|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 43|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Lac Milobellus Sud Antre B EB.png|thumb|right|300px|L'antre B du Lac Milobellus Sud.]]
+
+L'antre B est situé au nord-est de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 5|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 5|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 46|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 46|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Lac Milobellus Sud Antre C EB.png|thumb|right|300px|L'antre C du Lac Milobellus Sud.]]
+
+L'antre C est situé dans le golfe à l'ouest du Lac Milobellus Sud.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 8|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 8|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 91|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 91|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Lac Milobellus Sud Antre D EB.png|thumb|right|300px|L'antre D du Lac Milobellus Sud.]]
+
+L'antre D est situé au sud-ouest du lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 41|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 41|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 76|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 76|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Lac Milobellus Sud Antre E EB.png|thumb|right|300px|L'antre E du Lac Milobellus Sud.]]
+
+L'antre E est situé au sud-est du lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 41|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 41|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 76|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 76|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:South Lake Miloch/Dens]]
+[[it:Lago Milotic (sud)/Tane di Pokémon]]
+[[ja:ミロカロこ・みなみ/ポケモンの巣]]

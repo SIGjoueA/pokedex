@@ -1,0 +1,60 @@
+{{Ruban Antre|56}}
+
+L''''antre 56''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Électrik (type)|Électrik]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Ouragan Antre A EB.png|300px]]
+| [[Fichier:Berges de Motorby Antre C EB.png|300px]]
+|-
+| [[Lac Ouragan/Antres|Lac Ouragan]]
+| [[Berges de Motorby/Antres|Berges de Motorby]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 56|
+Voltoutou / iv(1) 1(35)
+Toxizap / iv(1) 1(35)
+Pikachu / iv(1) 1(20) 2(30)
+Statitik / iv(1) 1(10) 2(30)
+Loupio / iv(2) 2(20) 3(20)
+Lanturn / iv(2) 2(20) 3(40)
+Fulgudog / iv(4) 3(20) 4(20) 5(10)
+Salarsen forme(Aigüe) / iv(4) 3(20) 4(20) 5(20)
+Wattapik / talent-caché(Possible) iv(4) 4(20) 5(25)
+Mygavolt / talent-caché(Possible) iv(4) 4(40) 5(25)
+Togedemaru / talent-caché(Possible) iv(4) 5(15)
+Morpeko / iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Sitrus / taux(80%)
+Baie Alga / taux(80%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT86, Éclair Fou / image(DT Électrik) taux(100%)
+DT08, Tonnerre / image(DT Électrik) 3(100%) 4(100%) 5(100%)
+DT09, Fatal-Foudre / image(DT Électrik) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Électrik]]

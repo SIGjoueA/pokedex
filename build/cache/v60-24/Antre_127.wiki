@@ -1,0 +1,79 @@
+{{Ruban Antre|127}}
+
+L''''antre 127''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Spectre (type)|Spectre]].
+
+À noter que les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Psy (type)|Psy]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Plage de l'Épreuve Antre E EB.png|300px]]
+| [[Fichier:Caverne Pugnacité Antre C EB.png|300px]]
+|-
+| [[Plage de l'Épreuve/Antres|Plage de l'Épreuve]]
+| [[Caverne Pugnacité/Antres|Caverne Pugnacité]]
+|-
+| colspan="2" | [[Fichier:Mer Align'Îlots Antre I EB.png|300px]]
+|-
+| colspan="2" | [[Mer Align'Îlots/Antres|Mer Align'Îlots]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 127|
+Leveinard / iv(4) 3(5) 4(5) 5(5)
+Bacabouh / iv(1) 1(60) 2(30)
+Viskuse / iv(1) 1(40) 2(25)
+Osselait / iv(2) 2(25) 3(30)
+Baudrive / iv(2) 2(20) 3(25)
+Moyade / iv(3) 3(25) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(20)
+Grodrive / iv(3) 3(15) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(20)
+Trépassable / talent-caché(Possible) iv(4) 4(15) 5(40)
+Ossatueur / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leveinard</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Figuy / taux(80%)
+Baie Alga / taux(80%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT33, Ball'Ombre / image(DT Spectre) 1(100%) 2(100%) 4(100%) 5(100%)
+DT83, Interversion / image(DT Psy) 2(100%) 3(100%) 5(100%)
+DT38, Tourmagik / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT82, Force Ajoutée / image(DT Psy) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Armurium / 1(1) 2(1) 3(1) 4(2) 5(2)
+<big>Exclusifs à Leveinard</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Armurium / 3(2) 4(3) 5(4)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Spectre]]

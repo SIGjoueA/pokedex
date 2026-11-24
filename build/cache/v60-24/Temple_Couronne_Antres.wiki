@@ -1,0 +1,32 @@
+[[Fichier:Temple Couronne Antres EB.png|right|250px|Localisation des antres du Temple Couronne]]
+
+Le '''Temple Couronne''' possède un seul antre de Pokémon. Il est associé à deux couleurs de faisceau, rouge ou mauve.
+
+__TOC__
+== Antre A ==
+
+[[Fichier:Temple Couronne Antre A EB.png|thumb|right|300px|L'antre A du Temple Couronne.]]
+
+L'antre A est situé au sud du temple, directement à gauche en arrivant depuis le [[Sentier Blanche-Cime]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 166|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 166|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 167|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 167|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Crown Shrine/Dens]]

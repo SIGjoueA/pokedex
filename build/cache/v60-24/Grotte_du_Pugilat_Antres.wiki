@@ -1,0 +1,33 @@
+[[Fichier:Grotte du Pugilat Antres EB.png|right|250px|Localisation des antres de la Grotte du Pugilat]]
+
+La '''Grotte du Pugilat''' possède un seul antre de Pokémon. Il est associé à deux couleurs de faisceau, rouge ou mauve. On y trouve principalement des Pokémon de type [[Acier (type)|Acier]].
+__TOC__
+== Antre A ==
+
+[[Fichier:Grotte du Pugilat Antre A EB.png|thumb|right|300px|L'antre A de la Grotte du Pugilat.]]
+
+L'antre A est dans un recoin du chemin qui va du centre de la grotte à la [[Route de l'Épreuve]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 129|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 129|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 130|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 130|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Brawlers' Cave/Dens]]
+[[it:Antro Scontro/Tane di Pokémon]]
+[[ja:ファイトケイブ/ポケモンの巣]]

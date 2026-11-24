@@ -1,0 +1,74 @@
+{{Ruban Antre|155}}
+
+L''''antre 155''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Eau (type)|Eau]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Mer Eau-Hisse Antre G EB.png|300px]]
+| [[Fichier:Mer Align'Îlots Antre C EB.png|300px]]
+|-
+| [[Mer Eau-Hisse/Antres|Mer Eau-Hisse]]
+| [[Mer Align'Îlots/Antres|Mer Align'Îlots]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 155|
+Leveinard / iv(4) 3(5) 4(5) 5(5)
+Magicarpe / iv(1) 1(60) 2(30)
+Tentacool / iv(1) 1(40) 2(25)
+Stari / iv(2) 2(25) 3(30)
+Kokiyas / iv(2) 2(20) 3(25)
+Tentacruel / iv(3) 3(25) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(25)
+Léviator / iv(3) 3(15) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(25)
+Staross / talent-caché(Possible) iv(4) 4(15) 5(20)
+Crustabri / talent-caché(Possible) iv(4) 5(15)
+Tortank / talent-caché(Possible) iv(4) 5(10)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leveinard</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Perle (objet){{!}}Perle / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Grande Perle / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT16, Cascade / image(DT Eau) 1(100%) 2(100%) 5(100%)
+DT84, Ébullition / image(DT Eau) 2(100%) 3(100%) 4(100%)
+DT98, Aqua-Brèche / image(DT Eau) 3(100%) 4(100%)
+DT45, Ocroupi / image(DT Eau) 3(100%) 5(100%)
+DT04, Surf / image(DT Eau) 4(100%) 5(100%)
+DT03, Hydrocanon / image(DT Eau) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Armurium / 1(1) 2(1) 3(1) 4(2) 5(2)
+<big>Exclusifs à Leveinard</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Armurium / 3(2) 4(3) 5(4)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Eau]]

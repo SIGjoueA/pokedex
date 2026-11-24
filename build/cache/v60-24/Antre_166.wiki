@@ -1,0 +1,100 @@
+{{Ruban Antre|166}}
+
+L''''antre 166''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où les types de Pokémon prédominants sont les types [[Plante (type)|Plante]] et [[Insecte (type)|Insecte]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Empreinte du Géant Antre A EB.png|300px]]
+| [[Fichier:Lac Poké Ball Antre M EB.png|300px]]
+|-
+| [[Empreinte du Géant/Antres|Empreinte du Géant]]
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|-
+| [[Fichier:Plateau Beau-Gant Antre F EB.png|300px]]
+| [[Fichier:Repos du Géant Antre D EB.png|300px]]
+|-
+| [[Plateau Beau-Gant/Antres|Plateau Beau-Gant]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Temple Couronne Antre A EB.png|300px]]
+|-
+| colspan="2" | [[Temple Couronne/Antres|Temple Couronne]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 166|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Tournicoton / iv(1) 1(60) 2(30)
+Anorith / iv(1) 1(40, Ep) 2(25, Ep) / iv(2) 2(25, Ep, 20, Bo) 3(30, Ep, 25, Bo) / iv(3) 3(25, Ep) 4(25, Ep)
+Lilia / iv(1) 1(40, Bo) 2(25, Bo) / iv(2) 2(20, Ep, 25, Bo) 3(25, Ep, 30, Bo) / iv(3) 3(25, Bo) 4(25, Bo)
+Blancoton / iv(3) 3(15) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(20)
+Armaldo / talent-caché(Possible) iv(4) 4(15, Ep) 5(25, Ep, 15, Bo)
+Vacilys / talent-caché(Possible) iv(4) 4(15, Bo) 5(15, Ep, 25, Bo)
+Tarenbulle / talent-caché(Possible) iv(4) 4(15) 5(20)
+Noacier / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+
+Exclusifs à Lilia, Vacilys, Noacier, Tournicoton et Blancoton
+Baie Gowav / taux(80%)
+Baie Tamato / taux(80%)
+DT59, Canon Graine / image(DT Plante) taux(100%)
+DT50, Lame Feuille / image(DT Plante) 3(100%) 4(100%) 5(100%)
+DT72, Mégafouet / image(DT Plante) 4(100%) 5(100%)
+
+Exclusifs à Anorith, Armaldo et Tarenbulle
+Baie Prine / taux(80%)
+Baie Alga / taux(80%)
+DT60, Plaie-Croix / image(DT Insecte) taux(100%)
+DT96, Boule Pollen / image(DT Insecte) 3(100%) 4(100%) 5(100%)
+DT28, Mégacorne / image(DT Insecte) 4(100%) 5(100%)
+
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Plante]]
+[[Catégorie:Antre de type Insecte]]

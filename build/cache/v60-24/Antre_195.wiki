@@ -1,0 +1,79 @@
+{{Ruban Antre|195}}
+
+L''''antre 195''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve.
+
+On y trouve majoritairement des [[Évoli]] et [[Évolition|ses évolutions]]. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir beaucoup de [[Super Bonbon]]s, ainsi que diverses [[Pierre évolutive|Pierres évolutives]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre P EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 195|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Évoli / talent-caché(Toujours) iv(2) 1(50) 2(50) / talent-caché(Toujours) iv(3) 1(40) 2(30) 3(45) 4(21) 5(3) / talent-caché(Toujours) iv(4) 1(10) 2(20) 3(18) 4(10) 5(4)
+Pyroli / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Voltali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Aquali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Mentali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Noctali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Phyllali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Givrali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+Nymphali / talent-caché(Toujours) iv(5) 3(4) 4(8) 5(11)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(100%)
+Super Bonbon / 1(25%) 2(35%) 3(55%) 4(100%) 5(100%)
+Super Bonbon / 1(25%) 2(35%) 3(35%) 4(55%) 5(100%)
+Super Bonbon / 1(10%) 2(10%) 3(15%) 4(35%) 5(55%)
+Pierre Eau / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Foudre / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Feu / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Plante / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Pierre Glace / 1(20%) 2(25%) 3(40%) 4(50%) 5(70%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]

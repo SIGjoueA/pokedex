@@ -1,0 +1,179 @@
+[[Fichier:Plaine des Efforts Antres EB.png|right|400px|Localisation des antres de la Plaine des Efforts]]
+
+La '''Plaine des Efforts''' possède sept antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence d'[[Astronelle Gigamax]] dans l'antre C, et de [[Florizarre Gigamax]] dans l'antre D.
+__TOC__
+== Antre A ==
+
+[[Fichier:Plaine des Efforts Antre A EB.png|thumb|right|300px|L'antre A de la Plaine des Efforts.]]
+
+L'antre A est situé tout au nord de la zone, à côté de [[Trou Dad]] et de l'accès à la [[Voie des Étirements]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 111|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 111|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 112|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 112|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Plaine des Efforts Antre B EB.png|thumb|right|300px|L'antre B de la Plaine des Efforts.]]
+
+L'antre B est situé au nord-ouest de la plaine, à côté de beaucoup de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 115|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 115|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 116|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 116|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Plaine des Efforts Antre C EB.png|thumb|right|300px|L'antre C de la Plaine des Efforts.]]
+
+L'antre C se situe au centre de la plaine, à côté du très grand rocher.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 109|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 109|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 149|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 149|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Plaine des Efforts Antre D EB.png|thumb|right|300px|L'antre D de la Plaine des Efforts.]]
+
+L'antre D se situe au bout du petit chemin à gauche de l'accès vers la [[Route de l'Épreuve]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 154|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 154|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 145|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 145|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Plaine des Efforts Antre E EB.png|thumb|right|300px|L'antre E de la Plaine des Efforts.]]
+
+L'antre E se situe non loin de l'accès à la [[Forêt Flexion]], sur la partie basse de la plaine.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 101|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 101|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 102|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 102|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Plaine des Efforts Antre F EB.png|thumb|right|300px|L'antre F de la Plaine des Efforts.]]
+
+L'antre F se situe à mi-chemin entre les accès à la [[Forêt Flexion]] et à la [[Grotte du Pugilat]], sur une partie qui surplombe la plaine.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 119|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 119|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 120|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 120|Récompenses}}
+
+== Antre G ==
+
+[[Fichier:Plaine des Efforts Antre G EB.png|thumb|right|300px|L'antre G de la Plaine des Efforts.]]
+
+L'antre G se situe sur une petite île au centre du lac du sud-ouest de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 117|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 117|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 118|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 118|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Training Lowlands/Dens]]
+[[it:Piana Addestramento/Tane di Pokémon]]
+[[ja:たんれんへいげん/ポケモンの巣]]

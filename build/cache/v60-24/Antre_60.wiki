@@ -1,0 +1,77 @@
+{{Ruban Antre|60}}
+
+L''''antre 60''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Poison (type)|Poison]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Coiffe du Géant Antre E EB.png|300px]]
+| [[Fichier:Berges de Motorby Antre A EB.png|300px]]
+|-
+| [[Coiffe du Géant/Antres|Coiffe du Géant]]
+| [[Berges de Motorby/Antres|Berges de Motorby]]
+|-
+| [[Fichier:Lac Milobellus Nord Antre A EB.png|300px]]
+| [[Fichier:Lac Milobellus Nord Antre B EB.png|300px]]
+|-
+| [[Lac Milobellus Nord/Antres|Lac Milobellus Nord]]
+| [[Lac Milobellus Nord/Antres|Lac Milobellus Nord]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 60|
+Moufouette / iv(1) 1(35)
+Miamiasme / iv(1) 1(35)
+Rapion / iv(1) 1(20) 2(30)
+Smogo / iv(1) 1(10) 2(30)
+Vorastérie / iv(2) 2(20, Ep) 3(20, Ep)
+Tritox / iv(2) 2(20, Bo) 3(20, Bo)
+Toxizap / iv(2) 2(20) 3(40)
+Miasmax / iv(4) 3(20) 4(20) 5(10)
+Drascore / iv(4) 3(20) 4(20) 5(20)
+Salarsen forme(Aigüe) / talent-caché(Possible) iv(4) 4(20) 5(25)
+Moufflair / talent-caché(Possible) iv(4) 4(40) 5(25)
+Smogogo forme(Galar) / talent-caché(Possible) iv(4) 5(15)
+Prédastérie / talent-caché(Possible) iv(4) 5(5, Ep)
+Malamandre / talent-caché(Possible) iv(4) 5(5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Mago / taux(80%)
+Baie Alga / taux(80%)
+DT54, Pics Toxik / image(DT Poison) taux(100%)
+DT78, Cradovague / image(DT Poison) 3(100%) 4(100%) 5(100%)
+DT73, Détricanon / image(DT Poison) 4(100%) 5(100%)
+Bouclier
+Baie Wiki / taux(80%)
+Baie Grena / taux(80%)
+DT57, Direct Toxik / image(DT Poison) taux(100%)
+DT22, Bombe Beurk / image(DT Poison) 3(100%) 4(100%) 5(100%)
+DT91, Piège de Venin / image(DT Poison) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Poison]]

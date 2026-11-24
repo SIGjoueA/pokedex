@@ -1,0 +1,95 @@
+{{Ruban Antre|175}}
+
+L''''antre 175''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Poison (type)|Poison]].
+
+On y trouve notamment des [[Miasmax Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre B EB.png|300px]]
+| [[Fichier:Lac Poké Ball Antre K EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|-
+| [[Fichier:Mer Banquise Antre K EB.png|300px]]
+| [[Fichier:Repos du Géant Antre H EB.png|300px]]
+|-
+| [[Mer Banquise/Antres|Mer Banquise]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre N EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 175|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Nosferapti / talent-caché(Toujours) iv(2) 1(60) 2(30)
+Miamiasme / talent-caché(Toujours) iv(2) 1(40) 2(25)
+Nidorina / talent-caché(Toujours) iv(3) 2(25, Ep) 3(30, Ep)
+Nidorino / talent-caché(Toujours) iv(3) 2(25, Bo) 3(30, Bo)
+Ramoloss forme(Galar) / talent-caché(Toujours) iv(3) 2(20) 3(25)
+Nosferalto / talent-caché(Toujours) iv(4) 3(25) 4(25)
+Miasmax / talent-caché(Toujours) iv(4) 3(15) 4(25)
+Nidoqueen / talent-caché(Toujours) iv(5) 4(30, Ep, 15, Bo) 5(40, Ep, 20, Bo)
+Nidoking / talent-caché(Toujours) iv(5) 4(15, Ep, 30, Bo) 5(20, Ep, 40, Bo)
+Nostenfer / talent-caché(Toujours) iv(5) 5(20)
+Miasmax forme(Gigamax) / talent-caché(Toujours) iv(5) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Mago / taux(80%)
+Baie Alga / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT54, Pics Toxik / image(DT Poison) taux(100%)
+DT78, Cradovague / image(DT Poison) 3(100%) 4(100%) 5(100%)
+DT73, Détricanon / image(DT Poison) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Poison]]
+[[Catégorie:Antre à Pokémon Gigamax]]

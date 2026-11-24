@@ -1,0 +1,59 @@
+[[Fichier:Tour en ruines Antres EB.png|right|250px|Localisation des antres de la Tour en ruines.]]
+
+La '''Tour en ruines''' possède deux antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve. L'intérieur de la tour est aussi considéré comme un antre, mais n'est accessible que lors d'évènements.
+
+On y trouve principalement des Pokémon de type [[Spectre (type)|Spectre]] et [[Psy (type)|Psy]].
+__TOC__
+== Antre A ==
+
+[[Fichier:Tour en ruines Antre A EB.png|thumb|right|300px|L'antre A de la Tour en ruines.]]
+
+L'antre A est localisé au nord de la tour.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 6|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 6|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 47|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 47|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Tour en ruines Antre B EB.png|thumb|right|300px|L'antre B de la Tour en ruines.]]
+
+L'antre B est au sud de la zone, près du [[Lac Coupenotte Ouest]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 2|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 2|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 50|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 50|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Watchtower Ruins/Dens]]
+[[it:Torre Diroccata/Tane di Pokémon]]
+[[ja:みはりとうあとち/ポケモンの巣]]

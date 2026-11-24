@@ -1,0 +1,221 @@
+{{ébauche}}
+
+{{Infobox Lieu
+| nom=Grand Antre Dynamax
+| image=Grand Antre Dynamax EB.png
+| nomja=マックスダイ巣穴
+| nomromaji=Makkusudai Suana
+| nomtm=Max-Dai Suana
+| nomen=Max Lair
+| format-loc=png
+| légende=
+| région=Couronneige
+| sud=[[Plateau Beau-Gant]]
+| localisation=Localisation Grand Antre Dynamax EB.png{{!}}300px
+| desc-carte=
+}}
+
+Le '''Grand Antre Dynamax''' est un lieu de la région de [[Galar]], situé dans la région de [[Couronneige]]. Il est uniquement accessible dans l'extension {{jeu|EBtec}}.
+
+== Description ==
+
+Le Grand Antre Dynamax est une immense caverne mystérieuse où le phénomène [[Dynamax]] est décuplé. C'est ici qu'ont lieu les [[Expédition Dynamax|expéditions Dynamax]].
+
+== Dans le scénario ==
+Le [[joueur]] accède au Grand Antre Dynamax peu après son arrivée à Couronneige. Il suit [[Dhilan]] et sa fille [[Pivonia]] qui s'est enfuie et se cache dans les profondeurs de la grotte. Malgré les recommendations des scientifiques, Dhilan rentre sans protection dans l'Antre. Le joueur est alors invité à participer à sa première [[expédition Dynamax]] afin de retrouver le père de famille. Une fois l'expédition finie, le joueur retrouve Dhilan qui a trébuché sur un rocher et s'est cogné la tête.
+
+Comprenant que sa fille ne souhaite pas explorer Couronneige avec lui, Dhilan est déçu mais accepte de faire équipe avec le joueur pour son excursion spéciale.
+
+== Expédition Dynamax ==
+{{Article principal|Expédition Dynamax}}
+Le Grand Antre Dynamax permet au joueur de participer aux expéditions Dynamax. Il peut faire équipe avec trois autres joueurs ou Dresseurs de soutien pour tenter de venir à bout d'une série de Pokémon Dynamax et atteindre les tréfonds de l'antre. À la fin de son parcours, le joueur affronte un [[Pokémon légendaire]] ou une [[Ultra-Chimère]], issu des [[génération]]s précédentes.
+
+== Objets ==
+{| class="tableaustandard"
+! colspan="3" | Objets donnés
+|-
+| {{Objet|Ultra Ball|jeu=EB}}
+| Donnée par une scientifique si le joueur capture puis montre un [[Necrozma]] à [[Dhilan]].
+|
+|-
+| {{Objet|Patch Talent|jeu=EB}}
+| Donné par une scientifique si le joueur capture puis montre un [[Necrozma]] à [[Dhilan]].
+|
+|-
+| [[Fichier:Carte de Ligue Dhilan EB.png|x32px]] [[Carte de Ligue]] de Dhilan
+| Offerte par [[Dhilan]] après la première expédition Dynamax.
+| [[Fichier:Grand Antre Dynamax Carte de Ligue Dhilan EB.png|220px]]
+|-
+|}
+
+== Marchande de Dynamaxium ==
+
+{| class="tableaustandard"
+! class="transition" colspan="4" | Objets en vente
+|-
+| {{Objet|Bonbon Exp. L|jeu=EB}}
+| style="text-align:right" | × 1 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Bonbon Exp. XL|jeu=EB}}
+| style="text-align:right" | × 3 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Bonbon Dynamax|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Morceau Vœu|jeu=EB}}
+| style="text-align:right" | × 3 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Armurium|jeu=EB}}
+| style="text-align:right" | × 3 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|PV Plus|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Protéine|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Fer|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Calcium|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Zinc|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Carbone|jeu=EB}}
+| style="text-align:right" | × 2 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Honor Ball|jeu=EB}}
+| style="text-align:right" | × 1 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Ultra Ball|jeu=EB}}
+| style="text-align:right" | × 150 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Capsule d'Argent|jeu=EB}}
+| style="text-align:right" | × 25 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|-
+| {{Objet|Pilule Talent|jeu=EB}}
+| style="text-align:right" | × 50 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+| {{Objet|Patch Talent|jeu=EB}}
+| style="text-align:right" | × 200 {{Objet|Dynamaxium|jeu=EB|nom=non}}
+|}
+
+== Dresseurs ==
+Après avoir résolu toutes les quêtes de Couronneige, le joueur a la possibilité d'affronter Dhilan dans l'Antre.
+
+{{Tableau Dresseur
+<!-- Paramètres préliminaires -->
+| jeu=EB
+| couleur=Acier
+
+<!-- Paramètres du Dresseur -->
+| d-nom=Dhilan<br>le [[Dresseur]]
+| d-sprite=Dhilan
+| d-taille=200px
+
+<!-- Premier Pokémon -->
+| p1-nom=Berserkatt
+| p1-sexe=m
+| p1-niveau=74
+| p1-type1=Acier
+| p1-capacité1=Demi-Tour
+| p1-capacité2=Tête de Fer
+| p1-capacité3=Canon Graine
+| p1-capacité4=Exécu-Son
+
+<!-- Deuxième Pokémon -->
+| p2-nom=Archéodong
+| p2-niveau=70
+| p2-type1=Acier
+| p2-type2=Psy
+| p2-talent=Ignifugé
+| p2-capacité1=Extrasenseur
+| p2-capacité2=Luminocanon
+| p2-capacité3=Plénitude
+| p2-capacité4=Ball'Ombre
+
+<!-- Troisième Pokémon -->
+| p3-nom=Cizayox
+| p3-sexe=m
+| p3-sexediff=oui
+| p3-niveau=73
+| p3-type1=Insecte
+| p3-type2=Acier
+| p3-capacité1=Plaie Croix
+| p3-capacité2=Pisto-Poing
+| p3-capacité3=Cru-Ailes
+| p3-capacité4=Coup Double
+
+<!-- Quatrième Pokémon -->
+| p4-nom=Pachyradjah
+| p4-sexe=f
+| p4-niveau=74
+| p4-type1=Acier
+| p4-talent=Sans Limite
+| p4-capacité1=Tacle Lourd
+| p4-capacité2=Câlinerie
+| p4-capacité3=Cavalerie Lourde
+| p4-capacité4=Surpuissance
+
+<!-- Cinquième Pokémon -->
+| p5-nom=Galeking
+| p5-sexe=m
+| p5-niveau=74
+| p5-type1=Acier
+| p5-type2=Roche
+| p5-talent=Fermeté
+| p5-capacité1=Mâchouille
+| p5-capacité2=Tête de Fer
+| p5-capacité3=Lame de Roc
+| p5-capacité4=Big Splash
+}}
+
+== Pokémon ==
+=== {{jeu|EB}} ===
+{{Article principal|Expédition Dynamax}}
+
+Après une expédition Dynamax, il est possible de garder un des Pokémon rencontrés.
+
+Aussi, un [[Vémini]] est donné par la scientifique après avoir complété 5 expéditions [[Ultra-Chimère]].
+
+<div class="liste-pokémon">
+{{#invoke:Tableau Pokémon|sauvage|jeu=EB|
+Donné, après avoir complété<br>5 expéditions Ultra-Chimère
+Vémini / niveau(20) taux(Unique)
+}}
+
+{{Rencontre Pokémon
+| rencontre=donné
+| jeu=EB
+| pokemon=Vémini
+| type1=Poison
+| niveau=20
+| talent=Boost Chimère
+| ball=Ultra Ball
+| capacité1=Coup d'Main
+| capacité2=Acide
+| capacité3=Furie
+| capacité4=Dard Mortel
+}}
+</div>
+
+== Imagerie ==
+<center><gallery>
+Fichier:Grand Antre Dynamax Entrée EB.png|L'entrée de l'Antre.
+Fichier:Grand Antre Dynamax Intérieur EB.png|L'intérieur de l'Antre.
+Fichier:Grand Antre Dynamax Dhilan EB.png|Dhilan, mal-en-point.
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+=== Apparitions sur d'autres cartes ===
+Le Grand Antre Dynamax apparaît sur les cartes suivantes :
+
+{{Liste des cartes d'un sujet secondaire}}
+
+{{Galar}}
+
+[[Catégorie:Ville de Galar]]
+[[Catégorie:Lieu]]
+[[Catégorie:Lieu de Couronneige]]
+[[Catégorie:Lieu de Pokémon Épée et Bouclier]]
+
+[[de:Dyna-Riesennest]]
+[[en:Max Lair]]
+[[es:Supernido Dinamax]]
+[[it:Dynatana max]]
+[[ja:マックスダイすあな]]
+[[zh:極巨巢穴]]

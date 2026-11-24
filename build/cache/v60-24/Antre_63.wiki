@@ -1,0 +1,77 @@
+{{Ruban Antre|63}}
+
+L''''antre 63''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Ténèbres (type)|Ténèbres]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Prairie Entre-Ponts Antre D EB.png|300px]]
+| [[Fichier:Plaine Rocheuse Antre D EB.png|300px]]
+|-
+| [[Prairie Entre-Ponts/Antres|Prairie Entre-Ponts]]
+| [[Plaine Rocheuse/Antres|Plaine Rocheuse]]
+|-
+| colspan="2" | [[Fichier:Lac Coupenotte Ouest Antre A EB.png|300px]]
+|-
+| colspan="2" | [[Lac Coupenotte Ouest/Antres|Lac Coupenotte Ouest]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 63|
+Goupilou / iv(1) 1(35)
+Zigzaton forme(Galar) / iv(1) 1(35)
+Baggiguane / iv(1) 1(20, Ep) 2(30, Ep)
+Vostourno / iv(1) 1(20, Bo) 2(30, Bo)
+Farfuret / iv(1) 1(10) 2(30)
+Léopardus / iv(2) 2(20) 3(20)
+Linéon forme(Galar) / iv(2) 2(20) 3(40)
+Roublenard / iv(4) 3(20) 4(20) 5(10)
+Pandarbare / iv(4) 3(20) 4(20) 5(20)
+Dimoret / talent-caché(Possible) iv(4) 4(20) 5(25)
+Baggaïd / talent-caché(Possible) iv(4) 4(40, Ep) 5(25, Ep)
+Vaututrice / talent-caché(Possible) iv(4) 4(40, Bo) 5(25, Bo)
+Ixon / talent-caché(Possible) iv(4) 5(15)
+Trioxhydre / iv(4) 5(5, Ep)
+Tyranocif / talent-caché(Possible) iv(4) 5(5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Wiki / taux(80%)
+Baie Tamato / taux(80%)
+DT95, Exécu-Son / image(DT Ténèbres) 1(100%) 2(100%) 4(100%) 5(100%)
+DT93, Dark Lariat / image(DT Ténèbres) 2(100%) 3(100%) 5(100%)
+DT68, Machination / image(DT Ténèbres) 3(100%) 4(100%) 5(100%)
+DT37, Provoc / image(DT Ténèbres) 4(100%) 5(100%)
+Bouclier
+Baie Mago / taux(80%)
+Baie Grena / taux(80%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT32, Mâchouille / image(DT Ténèbres) taux(100%)
+DT58, Vibrobscur / image(DT Ténèbres) 3(100%) 4(100%) 5(100%)
+DT81, Tricherie / image(DT Ténèbres) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Ténèbres]]

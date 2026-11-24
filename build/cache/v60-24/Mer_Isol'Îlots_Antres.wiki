@@ -1,0 +1,131 @@
+[[Fichier:Mer Isol'Îlots Antres EB.png|right|250px|Localisation des antres de la Mer Isol'Îlots]]
+
+La '''Mer Isol'Îlots''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Krabboss Gigamax]] dans l'antre A.
+__TOC__
+== Antre A ==
+
+[[Fichier:Mer Isol'Îlots Antre A EB.png|thumb|right|300px|L'antre A de la Mer Isol'Îlots.]]
+
+L'antre A est situé sur un petit îlot au nord de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 137|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 137|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 147|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 147|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Mer Isol'Îlots Antre B EB.png|thumb|right|300px|L'antre B de la Mer Isol'Îlots.]]
+
+L'antre B est situé à mi-chemin entre les deux îles de la mer.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 139|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 139|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 140|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 140|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Mer Isol'Îlots Antre C EB.png|thumb|right|300px|L'antre C de la Mer Isol'Îlots.]]
+
+L'antre C se situe sur la plus grande île, au centre de la mer.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 111|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 111|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 112|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 112|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Mer Isol'Îlots Antre D EB.png|thumb|right|300px|L'antre D de la Mer Isol'Îlots.]]
+
+L'antre D se situe entre le grand îlot et la [[Tour de l'Eau]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 125|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 125|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 126|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 126|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Mer Isol'Îlots Antre E EB.png|thumb|right|300px|L'antre E de la Mer Isol'Îlots.]]
+
+L'antre E se trouve au sud de la zone, à la frontière avec la [[Mer Isol'Îlots]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 99|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 99|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 100|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 100|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Insular Sea/Dens]]
+[[it:Mar Sperdipelago/Tane di Pokémon]]
+[[ja:はなれじまかいいき/ポケモンの巣]]

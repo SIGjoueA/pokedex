@@ -1,0 +1,89 @@
+{{Ruban Antre|83}}
+
+L''''antre 83''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Roche (type)|Roche]] dans {{Jeu|Ep}}, et [[Glace (type)|Glace]] dans {{Jeu|Bo}}.
+
+On y trouve notamment des [[Monthracite Gigamax]] ou des [[Lokhlass Gigamax]] selon la version jouée.
+
+À noter que dans {{Jeu|Ep}}, les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Sol (type)|Sol]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Siège du Géant Antre E EB.png|300px]]
+|-
+| [[Siège du Géant/Antres|Siège du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 83|
+Crabicoque / iv(1) 1(35, Ep)
+Sorbébé / iv(1) 1(35, Bo)
+Manzaï / iv(1) 1(35, Ep)
+Polarhume / iv(1) 1(35, Bo)
+Charbi / iv(1) 1(20, Ep) 2(30, Ep)
+M. Mime forme(Galar) / iv(1) 1(20, Bo) 2(30, Bo)
+Opermine / iv(1) 1(10, Ep) 2(30, Ep)
+Grelaçon / iv(1) 1(10, Bo) 2(40, Bo)
+Wagomine / iv(2) 2(20, Ep) 3(20, Ep)
+Stalgamin / iv(2) 2(25, Bo) 3(30, Bo)
+Simularbre / iv(2) 2(20, Ep) 3(40, Ep)
+Cadoizo / iv(2) 2(5, Bo) 3(5, Bo)
+Golgopathe / iv(3) 3(20, Ep) 4(20, Ep)
+Séracrawl / iv(3) 3(35, Bo) 4(20, Bo)
+Onix / iv(4) 3(20, Ep) 4(20, Ep) 5(10, Ep)
+Oniglali / iv(4) 3(30, Bo) 4(20, Bo) 5(10, Bo)
+Crabaraque / talent-caché(Possible) iv(4) 4(20, Ep) 5(35, Ep)
+Sorbouboul / talent-caché(Possible) iv(4) 4(20, Bo) 5(35, Bo)
+Steelix / talent-caché(Possible) iv(4) 4(40, Ep) 5(35, Ep)
+M. Glaquette / talent-caché(Possible) iv(4) 4(40, Bo) 5(35, Bo)
+Dolman / iv(4) 5(15, Ep)
+Bekaglaçon / iv(4) 5(15, Bo)
+Monthracite forme(Gigamax) / talent-caché(Possible) iv(4) 5(5, Ep)
+Lokhlass forme(Gigamax) / talent-caché(Possible) iv(4) 5(5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Exclusifs à une version
+Épée
+Baie Gowav / taux(80%)
+Baie Résin / taux(80%)
+DT87, Tunnelier / image(DT Sol) 1(100%) 2(100%) 4(100%) 5(100%)
+DT94, Cavalerie Lourde / image(DT Sol) 2(100%) 3(100%) 5(100%)
+DT76, Piège de Roc / image(DT Roche) 3(100%) 4(100%) 5(100%)
+DT10, Séisme / image(DT Sol) 4(100%) 5(100%)
+Bouclier
+Baie Figuy / taux(80%)
+Baie Lonme / taux(80%)
+DT05, Laser Glace / image(DT Glace) taux(100%)
+DT85, Rengorgement / image(DT Normal) 3(100%) 4(100%) 5(100%)
+DT06, Blizzard / image(DT Glace) 4(100%) 5(100%)
+Récompenses bonus, sauf Cadoizo
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Récompenses bonus exclusives à Cadoizo
+Bonbon Exp. S / 2(10)
+Bonbon Exp. M / 2(5) 3(10)
+Bonbon Exp. L / 3(1)
+Bonbon Dynamax / 2(2) 3(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Roche]]
+[[Catégorie:Antre de type Glace]]
+[[Catégorie:Antre à Pokémon Gigamax]]

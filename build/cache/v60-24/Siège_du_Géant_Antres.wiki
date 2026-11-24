@@ -1,0 +1,131 @@
+[[Fichier:Siège du Géant Antres EB.png|right|250px|Localisation des antres du Siège du Géant]]
+
+Le '''Siège du Géant''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve. On y trouve principalement des Pokémon de type [[Acier (type)|Acier]] et [[Roche (type)|Roche]].
+
+On peut noter la présence de [[Duralugon Gigamax]] dans l'antre A, et de [[Monthracite Gigamax]] et [[Lokhlass Gigamax]] dans l'antre E.
+__TOC__
+== Antre A ==
+
+[[Fichier:Siège du Géant Antre A EB.png|thumb|right|300px|L'antre A du Siège du Géant.]]
+
+L'antre A est situé dans un recoin au nord-est de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 11|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 11|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 84|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 84|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Siège du Géant Antre B EB.png|thumb|right|300px|L'antre B du Siège du Géant.]]
+
+L'antre B est situé directement au sud de l'antre A, à côté de beaucoup de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 11|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 11|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 49|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 49|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Siège du Géant Antre C EB.png|thumb|right|300px|L'antre C du Siège du Géant.]]
+
+L'antre C est situé un peu au nord du pont et du gros rocher, à l'est de l'antre B.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 12|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 12|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 45|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 45|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Siège du Géant Antre D EB.png|thumb|right|300px|L'antre D du Siège du Géant.]]
+
+L'antre D est collé au gros rocher du Siège du Géant, au sud-est de celui-ci.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 15|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 15|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 51|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 51|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Siège du Géant Antre E EB.png|thumb|right|300px|L'antre E du Siège du Géant.]]
+
+L'antre E est situé au sud-ouest de la zone, sur la rive du [[Lac Milobellus Sud]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 15|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 15|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 83|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 83|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Giant's Seat/Dens]]
+[[it:Sedia del Gigante/Tane di Pokémon]]
+[[ja:きょじんのこしかけ/ポケモンの巣]]

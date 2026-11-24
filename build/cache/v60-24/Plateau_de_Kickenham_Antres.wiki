@@ -1,0 +1,177 @@
+[[Fichier:Plateau de Kickenham Antres EB.png|right|500px|Localisation des antres du Plateau de Kickenham]]
+
+La '''Plateau de Kickenham''' possède sept antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+__TOC__
+== Antre A ==
+
+[[Fichier:Plateau de Kickenham Antre A EB.png|thumb|right|300px|L'antre A du Plateau de Kickenham.]]
+
+L'antre A est situé au nord-est du plateau, dans un recoin contre les remparts de [[Kickenham]] et derrière une zone de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 12|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 12|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 45|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 45|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Plateau de Kickenham Antre B EB.png|thumb|right|300px|L'antre B du Plateau de Kickenham.]]
+
+L'antre B est situé au nord-ouest du plateau, dans un recoin contre les remparts de [[Kickenham]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 30|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 30|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 57|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 57|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Plateau de Kickenham Antre C EB.png|thumb|right|300px|L'antre C du Plateau de Kickenham.]]
+
+L'antre C est situé tout à l'ouest du plateau, vers la frontière avec la [[Coiffe du Géant]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 23|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 23|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 73|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 73|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Plateau de Kickenham Antre D EB.png|thumb|right|300px|L'antre D du Plateau de Kickenham.]]
+
+L'antre D se situe à l'ouest du plateau, près de zones de hautes herbes, directement au sud de l'antre B et à l'est de l'antre C.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 33|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 33|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 62|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 62|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Plateau de Kickenham Antre E EB.png|thumb|right|300px|L'antre E du Plateau de Kickenham.]]
+
+L'antre E est situé au sud-est des escaliers vers [[Kickenham]], avec une grande zone de hautes herbes à son sud.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 32|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 32|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 61|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 61|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Plateau de Kickenham Antre F EB.png|thumb|right|300px|L'antre F du Plateau de Kickenham.]]
+
+L'antre F se situe tout à l'est de la zone, non loin de la frontière avec le [[Miroir du Géant]]. Des hautes herbes se trouvent directement au nord.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 14|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 14|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 68|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 68|Récompenses}}
+
+== Antre G ==
+
+[[Fichier:Plateau de Kickenham Antre G EB.png|thumb|right|300px|L'antre G du Plateau de Kickenham.]]
+
+L'antre G se situe au plein sud du plateau, directement sous les escaliers vers [[Kickenham]], au bord de la falaise vers la [[Fosse des Sables]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 19|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 19|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 53|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 53|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Hammerlocke Hills/Dens]]
+[[it:Colle Knuckleburgh/Tane di Pokémon]]
+[[ja:ナックルきゅうりょう/ポケモンの巣]]

@@ -1,0 +1,103 @@
+{{Ruban Antre|161}}
+
+L''''antre 161''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Feu (type)|Feu]].
+
+On y trouve notamment des [[Scolocendre Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre E EB.png|300px]]
+| [[Fichier:Lac Poké Ball Antre O EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|-
+| [[Fichier:Pente Enneigée Antre A EB.png|300px]]
+| [[Fichier:Repos du Géant Antre J EB.png|300px]]
+|-
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre M EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 161|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Magby / talent-caché(Toujours) iv(2) 1(100) 2(55)
+Magmar / talent-caché(Toujours) iv(3) 2(25) 3(30) / talent-caché(Toujours) iv(4) 3(25) 4(25)
+Aflamanoir / talent-caché(Toujours) iv(3) 2(20) 3(25)
+Scolocendre / talent-caché(Toujours) iv(4) 3(15) 4(25)
+Lugulabre / talent-caché(Toujours) iv(5) 4(15) 5(20)
+Feunard / talent-caché(Toujours) iv(5) 4(15, Ep) 5(20, Ep)
+Arcanin / talent-caché(Toujours) iv(5) 4(15, Bo) 5(20, Bo)
+Maganon / talent-caché(Toujours) iv(5) 4(15) 5(40)
+Scolocendre forme(Gigamax) / talent-caché(Toujours) iv(5) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+
+Exclusifs à Magby, Magmar et Maganon
+Baie Figuy / taux(80%)
+Baie Tamato / taux(80%)
+DT88, Tacle Feu / image(DT Feu) taux(100%)
+DT41, Pied Brûleur / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT55, Boutefeu / image(DT Feu) 4(100%) 5(100%)
+
+Exclusifs à Feunard, Arcanin, Lugulabre, Aflamanoir, Scolocendre et Scolocendre Gigamax
+Baie Prine / 2(80%) 3(80%) 4(80%) 5(80%)
+Baie Lonme / 2(80%) 3(80%) 4(80%) 5(80%)
+DT02, Lance-Flammes / image(DT Feu) 2(100%) 3(100%) 4(100%) 5(100%)
+DT36, Canicule (capacité){{!}}Canicule / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT43, Surchauffe / image(DT Feu) 4(100%) 5(100%)
+
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Feu]]
+[[Catégorie:Antre à Pokémon Gigamax]]

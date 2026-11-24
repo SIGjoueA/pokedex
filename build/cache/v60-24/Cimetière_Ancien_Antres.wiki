@@ -1,0 +1,56 @@
+[[Fichier:Cimetière Ancien Antres EB.png|right|250px|Localisation des antres du Cimetière Ancien]]
+
+Le '''Cimetière Ancien''' possède deux antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+__TOC__
+== Antre A ==
+
+[[Fichier:Cimetière Ancien Antre A EB.png|thumb|right|300px|L'antre A du Cimetière Ancien.]]
+
+L'antre A est situé à l'intérieur de la maison abandonnée.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 192|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 192|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 193|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 193|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Cimetière Ancien Antre B EB.png|thumb|right|300px|L'antre B du Cimetière Ancien.]]
+
+L'antre B est à l'ouest du cimetière, parmi les pierres tombales.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 182|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 182|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 183|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 183|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Old Cemetery/Dens]]

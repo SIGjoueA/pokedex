@@ -1,0 +1,153 @@
+[[Fichier:Lac Milobellus Nord Antres EB.png|right|400px|Localisation des antres du Lac Milobellus Nord]]
+
+Le '''Lac Milobellus Nord''' possède six antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve. On y trouve principalement des Pokémon de type [[Poison (type)|Poison]], [[Eau (type)|Eau]] et [[Combat (type)|Combat]].
+__TOC__
+== Antre A ==
+
+[[Fichier:Lac Milobellus Nord Antre A EB.png|thumb|right|300px|L'antre A du Lac Milobellus Nord.]]
+
+L'antre A est situé dans un recoin au nord-est de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 29|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 29|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 60|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 60|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Lac Milobellus Nord Antre B EB.png|thumb|right|300px|L'antre B du Lac Milobellus Nord.]]
+
+L'antre B est situé vers le centre de la zone, au sud du pont menant aux [[Berges de Motorby]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 29|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 29|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 60|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 60|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Lac Milobellus Nord Antre C EB.png|thumb|right|300px|L'antre C du Lac Milobellus Nord.]]
+
+L'antre C se trouve tout à l'est, sur les eaux du lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 41|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 41|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 76|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 76|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Lac Milobellus Nord Antre D EB.png|thumb|right|300px|L'antre D du Lac Milobellus Nord.]]
+
+L'antre D se situe au sud de la zone, sur la rive du lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 10|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 10|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 48|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 48|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Lac Milobellus Nord Antre E EB.png|thumb|right|300px|L'antre E du Lac Milobellus Nord.]]
+
+L'antre E est situé au bout de la partie surélevée colline au sud de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 10|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 10|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 48|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 48|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Lac Milobellus Nord Antre F EB.png|thumb|right|300px|L'antre F du Lac Milobellus Nord.]]
+
+L'antre F est situé dans le lac, au sud de la partie à l'est de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 41|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 41|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 76|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 76|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:North Lake Miloch/Dens]]
+[[it:Lago Milotic (nord)/Tane di Pokémon]]
+[[ja:ミロカロこ・きた/ポケモンの巣]]

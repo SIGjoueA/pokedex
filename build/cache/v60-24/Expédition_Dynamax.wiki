@@ -1,0 +1,2048 @@
+Les '''expéditions Dynamax''' sont une mécanique introduite dans l'extension {{Jeu|EBtec}} pour {{Jeu|EB}}.
+
+== Description ==
+[[Fichier:Expédition Dynamax EB.png|thumb|right|300px|Une expédition Dynamax dans {{Jeu|EB}}.]]
+En parlant à la scientifique au [[Grand Antre Dynamax]], il est possible de former un groupe de quatre personnes afin de partir en expédition. Le groupe peut être formé de personnes communiquant toutes en local, ou bien en ligne. Si moins de quatre personnes sont présentes dans le groupe, des [[PNJ]] viennent le compléter. Une fois le groupe complété, chaque membre du groupe choisit parmi 3 Pokémon, à tour de rôle. Chaque Pokémon ainsi choisi est remplacé par un nouveau pour le joueur suivant. Une fois que les quatre membres du groupe ont choisi leur Pokémon, l'expédition commence.
+
+Une expédition est formée de plusieurs combats à la suite, qui s'apparentent à des [[Raid Dynamax|raids Dynamax]] : les Pokémon rencontrés sont sous forme [[Dynamax]], voire [[Gigamax]] pour certains. Au total, le groupe mène 3 combats contre des Pokémon « classiques », puis un combat contre un Pokémon « hors du commun », au fond de l'antre. Avant chaque combat, le groupe peut choisir entre une sélection de Pokémon à combattre, cachés derrière un nuage rose, et dont un des types est indiqué. Les Pokémon du groupe ne sont pas soignés automatiquement entre chaque combat, mais chaque Pokémon battu sur le chemin vers le fond de l'antre peut remplacer le Pokémon d'un des membres du groupe qui l'a capturé. Enfin, le groupe est éjecté de l'antre si un combat dure plus de dix tours, ou si le groupe cumule quatre K.O. au cours de l'expédition.
+
+Sur le chemin vers le fond de l'antre, le groupe peut faire diverses rencontres bonus :
+* une [[Scientifique]], qui propose au groupe de remplacer un Pokémon par un nouveau Pokémon, comme à la fin d'un combat victorieux (à la différence que le Pokémon de remplacement n'est pas connu à l'avance) ;
+* une [[Randonneuse]], qui propose à chaque membre du groupe une sélection d'objets à faire tenir aux Pokémon (les objets restent si le Pokémon est remplacé dans le futur) ;
+* un tas de [[Baie (type d'objet)|Baies]], qui permet aux Pokémon de régénérer 50&nbsp;% de leurs [[PV]].
+
+À la fin de chaque expédition Dynamax, les joueurs sont récompensés d'un nombre d'éclats de [[Dynamaxium]] correspondant à leur progression :
+* 1 éclat de Dynamaxium par combat remporté, et deux supplémentaires pour un combat remporté contre un Pokémon hors du commun ;
+* 2 éclats de Dynamaxium si aucun Pokémon du groupe n'a été mis [[K.O.]] ;
+* si l'expédition a été faite en réseau, que ce soit en local ou en ligne (1 éclat de Dynamaxium pour une expédition avec un seul autre joueur, 2 éclats de Dynamaxium pour une expédition avec plus de deux autres joueurs) ;
+* 3 éclats de Dynamaxium si le Pokémon hors du commun a été gardé.
+
+Tous les Pokémon rencontrés peuvent être capturés à coup sûr, mais les Pokémon hors du commun ne peuvent être choisis qu'une seule fois. Même si les Pokémon n'apparaissent pas comme tels durant le combat, ils peuvent être [[chromatique]]s quand ils apparaissent sur l'écran de fin de l'expédition. Ce caractère est propre à chaque membre du groupe, ce qui veut dire qu'un même Pokémon peut être chromatique pour un membre, mais pas pour un autre. Par ailleurs, chaque Pokémon capturé lors d'une expédition Dynamax a 1 chance sur 300 d'être chromatique. Avec le [[Charme Chroma]], ce taux passe à 1 chance sur 100.
+
+Après la fin d'une expédition Dynamax où le joueur n'a pas vaincu le Pokémon hors du commun ou qu'il ne l'a pas choisi, la Scientifique proposera au joueur d'enregistrer son emplacement. Ainsi, il pourra être sélectionné dans une future expédition, plutôt que de partir combattre contre un Pokémon hors du commun au hasard. Trois emplacements peuvent être enregistrés à la fois. Aussi, [[Pivonia]] propose parfois d'enregistrer certains Pokémon hors du commun, moyennant la somme de 5 éclats de Dynamaxium.
+
+=== Expédition Dynamax en mode sans fin ===
+Après avoir commencé la mission spéciale de [[Dhilan]] « Un Ciel Menaçant, un Ultra-Trou béant : info ou intox ? », le joueur peut faire des expéditions Dynamax en mode sans fin, en parlant au personnage à gauche de la Scientifique du Grand Antre Dynamax.
+
+Ces expéditions fonctionnent sur le même principe que le mode de base, à la différence près que les Pokémon ne peuvent pas être gardés à la fin de l'expédition, et qu'une fois le fond de l'antre atteint, le groupe continue sur une nouvelle série de quatre combats. L'expédition s'arrête quand un combat dure plus de dix tours, ou si le groupe cumule quatre « vies », représentés par les K.O. au cours de l'expédition. À chaque fois que le groupe atteint le fond de l'antre, le groupe récupère une vie.
+
+== Pokémon d'emprunt et rencontrables ==
+Tous les Pokémon dans la liste ci-dessous peuvent être empruntés ou rencontrés. Ils sont tous au niveau 65. À noter que les Pokémon capturés lors de l'expédition ont une chance sur 300 d'être [[chromatique]]s (une chance sur 100 avec le [[Charme Chroma]]).
+
+{| class="tableaustandard navigation"
+|+ [[Type]]s<br><button type="button" name="Pokémon" value="afficher" title="[Masquer tout]">[Afficher tout]</button>
+|-
+| {{type|normal}}<br><button type="button" name="Normal" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|combat}}<br><button type="button" name="Combat" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|vol}}<br><button type="button" name="Vol" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|poison}}<br><button type="button" name="Poison" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|sol}}<br><button type="button" name="Sol" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|roche}}<br><button type="button" name="Roche" value="afficher" title="[Masquer]">[Afficher]</button>
+|-
+| {{type|insecte}}<br><button type="button" name="Insecte" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|spectre}}<br><button type="button" name="Spectre" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|psy}}<br><button type="button" name="Psy" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|plante}}<br><button type="button" name="Plante" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|feu}}<br><button type="button" name="Feu" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|eau}}<br><button type="button" name="Eau" value="afficher" title="[Masquer]">[Afficher]</button>
+|-
+| {{type|électrik}}<br><button type="button" name="Électrik" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|glace}}<br><button type="button" name="Glace" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|dragon}}<br><button type="button" name="Dragon" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|acier}}<br><button type="button" name="Acier" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|ténèbres}}<br><button type="button" name="Ténèbres" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|fée}}<br><button type="button" name="Fée" value="afficher" title="[Masquer]">[Afficher]</button>
+|}
+
+{| class="tableaustandard entetefixe" style="white-space:nowrap;"
+|-
+! Pokémon
+! [[Type]](s)
+! [[Talent]]
+! colspan="2" | Capacités
+|- class="Pokémon Poison Plante"
+| 002 {{Miniature|0002}} [[Herbizarre]]
+| {{type|plante|poison}}
+| [[Chlorophylle]]
+| [[Aire d'Herbe]]<br>[[Synthèse]]
+| [[Lance-Soleil]]<br>[[Bombe Beurk]]
+|- class="Pokémon Feu"
+| 005 {{Miniature|0005}} [[Reptincel]]
+| {{type|feu}}
+| [[Force Soleil]]
+| [[Aire de Feu]]<br>[[Draco-Choc]]
+| [[Ténacité]]<br>[[Feu d'Enfer]]
+|- class="Pokémon Eau"
+| 008 {{Miniature|0008}} [[Carabaffe]]
+| {{type|eau}}
+| [[Cuvette]]
+| [[Aire d'Eau]]<br>[[Laser Glace]]
+| [[Aurasphère]]<br>[[Hydrocanon]]
+|- class="Pokémon Insecte Vol"
+| 012 {{Miniature|0012|Gigamax}} [[Papilusion Gigamax|Papilusion]]<br>''Gigamax''
+| {{type|insecte|vol}}
+| [[Lentiteintée]]
+| [[Boule Pollen]]<br>[[Choc Venin]]
+| [[Poudre Fureur]]<br>[[Giga-Sangsue]]
+|- class="Pokémon Électrik"
+| 026 {{Miniature|0026}} [[Raichu]]
+| {{type|électrik}}
+| [[Paratonnerre]]
+| [[Monte-Tension]]<br>[[Permuvitesse]]
+| [[Mur Lumière]]<br>[[Exploforce]]
+|- class="Pokémon Électrik Psy"
+| 026 {{Miniature|0026|Alola}} [[Raichu d'Alola|Raichu]]<br>''Forme d'Alola''
+| {{type|électrik|psy}}
+| [[Surf Caudal]]
+| [[Tonnerre]]<br>[[Champ Électrifié]]
+| [[Psyko]]<br>[[Chant Canon]]
+|- class="Pokémon Sol"
+| 028 {{Miniature|0028}} [[Sablaireau]]
+| {{type|sol}}
+| [[Voile Sable]]
+| [[Éclate Griffe]]<br>[[Trépignement]]
+| [[Lame de Roc]]<br>[[Vampirisme]]
+|- class="Pokémon Glace Acier"
+| 028 {{Miniature|0028|Alola}} [[Sablaireau d'Alola|Sablaireau]]<br>''Forme d'Alola''
+| {{type|glace|acier}}
+| [[Rideau Neige]]
+| [[Avalanche]]<br>[[Éboulement]]
+| [[Casse-Brique]]<br>[[Danse Lames]]
+|- class="Pokémon Poison Sol"
+| 031 {{Miniature|0031}} [[Nidoqueen]]
+| {{type|poison|sol}}
+| [[Point Poison]]
+| [[Sable Ardent]]<br>[[Choc Venin]]
+| [[Charme (capacité)|Charme]]<br>[[Ball'Ombre]]
+|- class="Pokémon Poison Sol"
+| 034 {{Miniature|0034}} [[Nidoking]]
+| {{type|poison|sol}}
+| [[Rivalité]]
+| [[Cavalerie Lourde]]<br>[[Poing Feu]]
+| [[Poing Glace]]<br>[[Poing Éclair]]
+|- class="Pokémon Fée"
+| 035 {{Miniature|0035}} [[Mélofée]]
+| {{type|fée}}
+| [[Garde-Ami]]
+| [[Fontaine de Vie]]<br>[[Feu Ensorcelé]]
+| [[Feuille Magik]]<br>[[Protection]]
+|- class="Pokémon Fée"
+| 036 {{Miniature|0036}} [[Mélodelfe]]
+| {{type|fée}}
+| [[Garde Magik]]
+| [[Laser Météore]]<br>[[Câlinerie]]
+| [[Par Ici]]<br>[[Force Cosmique]]
+|- class="Pokémon Normal Fée"
+| 039 {{Miniature|0039}} [[Rondoudou]]
+| {{type|normal|fée}}
+| [[Garde-Ami]]
+| [[Clonage (capacité)|Clonage]]<br>[[Mur Lumière]]
+| [[Croco Larme]]<br>[[Vampibaiser]]
+|- class="Pokémon Normal Fée"
+| 040 {{Miniature|0040}} [[Grodoudou]]
+| {{type|normal|fée}}
+| [[Battant]]
+| [[Éclat Magique]]<br>[[Chant Canon]]
+| [[Vaste Pouvoir]]<br>[[Doux Baiser]]
+|- class="Pokémon Plante Poison"
+| 044 {{Miniature|0044}} [[Ortide]]
+| {{type|plante|poison}}
+| [[Chlorophylle]]
+| [[Choc Venin]]<br>[[Toxik]]
+| [[Pouvoir Lunaire]]<br>[[Para-Spore]]
+|- class="Pokémon Plante Poison"
+| 045 {{Miniature|0045}} [[Rafflesia]]
+| {{type|plante|poison}}
+| [[Chlorophylle]]
+| [[Giga-Sangsue]]<br>[[Champ Herbu]]
+| [[Toxik]]<br>[[Boule Pollen]]
+|- class="Pokémon Sol"
+| 051 {{Miniature|0051}} [[Triopikeur]]
+| {{type|sol}}
+| [[Force Sable]]
+| [[Cavalerie Lourde]]<br>[[Clonage (capacité)|Clonage]]
+| [[Coud'Boue]]<br>[[Éboulement]]
+|- class="Pokémon Sol Acier"
+| 051 {{Miniature|0051|Alola}} [[Triopikeur d'Alola|Triopikeur]]<br>''Forme d'Alola''
+| {{type|sol|acier}}
+| [[Voile Sable]]
+| [[Tête de Fer]]<br>[[Cavalerie Lourde]]
+| [[Coup Bas]]<br>[[Grincement]]
+|- class="Pokémon Normal"
+| 053 {{Miniature|0053}} [[Persian]]
+| {{type|normal}}
+| [[Technicien (talent)|Technicien]]
+| [[Façade]]<br>[[Câlinerie]]
+| [[Ruse]]<br>[[Chant Canon]]
+|- class="Pokémon Ténèbres"
+| 053 {{Miniature|0053|Alola}} [[Persian d'Alola|Persian]]<br>''Forme d'Alola''
+| {{type|ténèbres}}
+| [[Toison Épaisse]]
+| [[Assurance]]<br>[[Aboiement]]
+| [[Ruse]]<br>[[À la Queue]]
+|- class="Pokémon Eau"
+| 055 {{Miniature|0055}} [[Akwakwak]]
+| {{type|eau}}
+| [[Glissade]]
+| [[Aqua-Jet]]<br>[[Grincement]]
+| [[Ultimawashi]]<br>[[Saumure]]
+|- class="Pokémon Eau Combat"
+| 062 {{Miniature|0062}} [[Tartard]]
+| {{type|eau|combat}}
+| [[Absorbe-Eau]]
+| [[Vampi-Poing]]<br>[[Plaquage]]
+| [[Coaching]]<br>[[Aqua-Brèche]]
+|- class="Pokémon Psy"
+| 064 {{Miniature|0064}} [[Kadabra]]
+| {{type|psy}}
+| [[Garde Magik]]
+| [[Choc Psy]]<br>[[Chant Canon]]
+| [[Ténacité]]<br>[[Éclat Magique]]
+|- class="Pokémon Combat"
+| 067 {{Miniature|0067}} [[Machopeur]]
+| {{type|combat}}
+| [[Annule Garde]]
+| [[Dynamo-Poing]]<br>[[Tomberoche]]
+| [[Représailles]]<br>[[Coaching]]
+|- class="Pokémon Eau Poison"
+| 073 {{Miniature|0073}} [[Tentacruel]]
+| {{type|eau|poison}}
+| [[Corps Sain]]
+| [[Vibraqua]]<br>[[Hydrocanon]]
+| [[Direct Toxik]]<br>[[Danse Lames]]
+|- class="Pokémon Eau Psy"
+| 080 {{Miniature|0080}} [[Flagadoss]]
+| {{type|eau|psy}}
+| [[Tempo Perso]]
+| [[Vaste Pouvoir]]<br>[[Boost]]
+| [[Lance-Flammes]]<br>[[Choc Psy]]
+|- class="Pokémon Électrik Acier"
+| 082 {{Miniature|0082}} [[Magnéton]]
+| {{type|électrik|acier}}
+| [[Analyste]]
+| [[Boule Élek]]<br>[[Luminocanon]]
+| [[Vol Magnétik]]<br>[[Mur Lumière]]
+|- class="Pokémon Spectre Poison"
+| 093 {{Miniature|0093}} [[Spectrum]]
+| {{type|spectre|poison}}
+| [[Lévitation]]
+| [[Châtiment]]<br>[[Hypnose]]
+| [[Dévorêve]]<br>[[Éco-Sphère]]
+|- class="Pokémon Eau"
+| 099 {{Miniature|0099|Gigamax}} [[Krabboss Gigamax|Krabboss]]<br>''Gigamax''
+| {{type|eau}}
+| [[Hyper Cutter]]
+| [[Pince-Masse]]<br>[[Garde Large]]
+| [[Tunnel]]<br>[[Surpuissance]]
+|- class="Pokémon Plante Psy"
+| 103 {{Miniature|0103}} [[Noadkoko]]
+| {{type|plante|psy}}
+| [[Récolte]]
+| [[Coupe Psycho]]<br>[[Lance-Soleil]]
+| [[Trépignement]]<br>[[Champlification]]
+|- class="Pokémon Sol"
+| 105 {{Miniature|0105}} [[Ossatueur]]
+| {{type|sol}}
+| [[Armurbaston]]
+| [[Osmerang]]<br>[[Exécu-Son]]
+| [[Tête de Fer]]<br>[[Grincement]]
+|- class="Pokémon Feu Spectre"
+| 105 {{Miniature|0105|Alola}} [[Ossatueur d'Alola|Ossatueur]]<br>''Forme d'Alola''
+| {{type|feu|spectre}}
+| [[Tête de Roc]]
+| [[Boutefeu]]<br>[[Os Ombre]]
+| [[Feu Follet]]<br>[[Tête de Fer]]
+|- class="Pokémon Combat"
+| 106 {{Miniature|0106}} [[Kicklee]]
+| {{type|combat}}
+| [[Échauffement]]
+| [[Close Combat]]<br>[[Garde Large]]
+| [[Pied Brûleur]]<br>[[Balayette]]
+|- class="Pokémon Combat"
+| 107 {{Miniature|0107}} [[Tygnon]]
+| {{type|combat}}
+| [[Poing de Fer]]
+| [[Poing Boost]]<br>[[Poing Feu]]
+| [[Poing Éclair]]<br>[[Poing Glace]]
+|- class="Pokémon Normal"
+| 108 {{Miniature|0108}} [[Excelangue]]
+| {{type|normal}}
+| [[Benêt]]
+| [[Chant Canon]]<br>[[Blizzard]]
+| [[Fatal-Foudre]]<br>[[Ocroupi]]
+|- class="Pokémon Poison"
+| 110 {{Miniature|0110}} [[Smogogo]]
+| {{type|poison}}
+| [[Gaz Inhibiteur]]
+| [[Bain de Smog]]<br>[[Canicule (capacité)|Canicule]]
+| [[Bombe Beurk]]<br>[[Vibrobscur]]
+|- class="Pokémon Poison Fée"
+| 110 {{Miniature|0110|Galar}} [[Smogogo de Galar|Smogogo]]<br>''Forme de Galar''
+| {{type|poison|fée}}
+| [[Créa-Brume]]
+| [[Vapeur Féérique]]<br>[[Bain de Smog]]
+| [[Lance-Flammes]]<br>[[Provoc]]
+|- class="Pokémon Sol Roche"
+| 112 {{Miniature|0112}} [[Rhinoféros]]
+| {{type|sol|roche}}
+| [[Tête de Roc]]
+| [[Tunnelier]]<br>[[Anti-Air]]
+| [[Estocorne]]<br>[[Grimace]]
+|- class="Pokémon Normal"
+| 113 {{Miniature|0113}} [[Leveinard]]
+| {{type|normal}}
+| [[Cœur Soin]]
+| [[Chant Canon]]<br>[[Vibra Soin]]
+| [[Coup d'Main]]<br>[[Mur Lumière]]
+|- class="Pokémon Plante"
+| 114 {{Miniature|0114}} [[Saquedeneu]]
+| {{type|plante}}
+| [[Feuille Garde]]
+| [[Mégafouet]]<br>[[Para-Spore]]
+| [[Gliss'Herbe]]<br>[[Plaquage]]
+|- class="Pokémon Normal"
+| 115 {{Miniature|0115}} [[Kangourex]]
+| {{type|normal}}
+| [[Matinal]]
+| [[Plaquage]]<br>[[Coup Bas]]
+| [[Tunnel]]<br>[[Colère]]
+|- class="Pokémon Eau"
+| 117 {{Miniature|0117}} [[Hypocéan]]
+| {{type|eau}}
+| [[Sniper]]
+| [[Ébullition]]<br>[[Draco-Choc]]
+| [[Clonage (capacité)|Clonage]]<br>[[Chant Canon]]
+|- class="Pokémon Eau"
+| 119 {{Miniature|0119}} [[Poissoroy]]
+| {{type|eau}}
+| [[Ignifu-Voile]]
+| [[Cascade]]<br>[[Rebond]]
+| [[Direct Toxik]]<br>[[Tunnelier]]
+|- class="Pokémon Eau Psy"
+| 121 {{Miniature|0121}} [[Staross]]
+| {{type|eau|psy}}
+| [[Analyste]]
+| [[Rayon Gemme]]<br>[[Éclat Magique]]
+| [[Coupe Psycho]]<br>[[Vent Glace]]
+|- class="Pokémon Psy Fée"
+| 122 {{Miniature|0122}} [[M. Mime]]
+| {{type|psy|fée}}
+| [[Filtre]]
+| [[Mur Lumière]]<br>[[Protection]]
+| [[Coup d'Main]]<br>[[Psyko]]
+|- class="Pokémon Glace Psy"
+| 122 {{Miniature|0122|Galar}} [[M. Mime de Galar|M. Mime]]<br>''Forme de Galar''
+| {{type|glace|psy}}
+| [[Corps Gel]]
+| [[Mur Lumière]]<br>[[Protection]]
+| [[Vent Glace]]<br>[[Psyko]]
+|- class="Pokémon Insecte Vol"
+| 123 {{Miniature|0123}} [[Insécateur]]
+| {{type|insecte|vol}}
+| [[Technicien (talent)|Technicien]]
+| [[Taillade]]<br>[[Vive Attaque]]
+| [[Assurance]]<br>[[Cru-Ailes]]
+|- class="Pokémon Glace Psy"
+| 124 {{Miniature|0124}} [[Lippoutou]]
+| {{type|glace|psy}}
+| [[Peau Sèche]]
+| [[Vampibaiser]]<br>[[Grobisou]]
+| [[Laser Glace]]<br>[[Chant Canon]]
+|- class="Pokémon Électrik"
+| 125 {{Miniature|0125}} [[Élektek]]
+| {{type|électrik}}
+| [[Esprit Vital]]
+| [[Monte-Tension]]<br>[[Toile Élek]]
+| [[Coup d'Main]]<br>[[Chant Canon]]
+|- class="Pokémon Feu"
+| 126 {{Miniature|0126}} [[Magmar]]
+| {{type|feu}}
+| [[Esprit Vital]]
+| [[Déflagration]]<br>[[Feu Envieux]]
+| [[Bain de Smog]]<br>[[Chant Canon]]
+|- class="Pokémon Normal"
+| 128 {{Miniature|0128}} [[Tauros]]
+| {{type|normal}}
+| [[Colérique]]
+| [[Façade]]<br>[[Cavalerie Lourde]]
+| [[Close Combat]]<br>[[Assurance]]
+|- class="Pokémon Normal"
+| 132 {{Miniature|0132}} [[Métamorph]]
+| {{type|normal}}
+| [[Imposteur]]
+| [[Morphing]]<br>—
+| —<br>—
+|- class="Pokémon Eau"
+| 134 {{Miniature|0134}} [[Aquali]]
+| {{type|eau}}
+| [[Absorbe-Eau]]
+| [[Vibraqua]]<br>[[Charme (capacité)|Charme]]
+| [[Ball'Météo]]<br>[[Buée Noire]]
+|- class="Pokémon Électrik"
+| 135 {{Miniature|0135}} [[Voltali]]
+| {{type|électrik}}
+| [[Absorbe-Volt]]
+| [[Tonnerre]]<br>[[Météores]]
+| [[Ball'Ombre]]<br>[[Coup d'Main]]
+|- class="Pokémon Feu"
+| 136 {{Miniature|0136}} [[Pyroli]]
+| {{type|feu}}
+| [[Torche]]
+| [[Feu Envieux]]<br>[[Ball'Ombre]]
+| [[Regard Touchant]]<br>[[Dernier Recours]]
+|- class="Pokémon Normal"
+| 137 {{Miniature|0137}} [[Porygon]]
+| {{type|normal}}
+| [[Télécharge]]
+| [[Tricherie]]<br>[[Laser Glace]]
+| [[Tonnerre]]<br>[[Ultralaser]]
+|- class="Pokémon Dragon"
+| 148 {{Miniature|0148}} [[Draco]]
+| {{type|dragon}}
+| [[Mue]]
+| [[Blizzard]]<br>[[Abattage]]
+| [[Rafale Écailles]]<br>[[Fatal-Foudre]]
+|- class="Pokémon Normal Vol"
+| 164 {{Miniature|0164}} [[Noarfang]]
+| {{type|normal|vol}}
+| [[Lentiteintée]]
+| [[Écho (capacité)|Écho]]<br>[[Protection]]
+| [[Piqué]]<br>[[Hypnose]]
+|- class="Pokémon Eau Électrik"
+| 171 {{Miniature|0171}} [[Lanturn]]
+| {{type|eau|électrik}}
+| [[Absorbe-Volt]]
+| [[Vibraqua]]<br>[[Hydrocanon]]
+| [[Tonnerre]]<br>[[Onde Folie]]
+|- class="Pokémon Fée Vol"
+| 176 {{Miniature|0176}} [[Togetic]]
+| {{type|fée|vol}}
+| [[Sérénité]]
+| [[Fontaine de Vie]]<br>[[Par Ici]]
+| [[Câlinerie]]<br>[[Feu Ensorcelé]]
+|- class="Pokémon Psy Vol"
+| 178 {{Miniature|0178}} [[Xatu]]
+| {{type|psy|vol}}
+| [[Miroir Magik]]
+| [[Psyko]]<br>[[Rayon Simple]]
+| [[Lame d'Air]]<br>[[Onde Folie]]
+|- class="Pokémon Plante"
+| 182 {{Miniature|0182}} [[Joliflor]]
+| {{type|plante}}
+| [[Cœur Soin]]
+| [[Champ Herbu]]<br>[[Giga-Sangsue]]
+| [[Coup d'Main]]<br>[[Éclat Magique]]
+|- class="Pokémon Eau Fée"
+| 184 {{Miniature|0184}} [[Azumarill]]
+| {{type|eau|fée}}
+| [[Herbivore]]
+| [[Aqua-Jet]]<br>[[Câlinerie]]
+| [[Hydro-Queue]]<br>[[Rebond]]
+|- class="Pokémon Roche"
+| 185 {{Miniature|0185}} [[Simularbre]]
+| {{type|roche}}
+| [[Fermeté]]
+| [[Trépignement]]<br>[[Lame de Roc]]
+| [[Mur de Fer]]<br>[[Big Splash]]
+|- class="Pokémon Eau"
+| 186 {{Miniature|0186}} [[Tarpaud]]
+| {{type|eau}}
+| [[Crachin]]
+| [[Aqua-Brèche]]<br>[[Chant Canon]]
+| [[Telluriforce]]<br>[[Coup d'Main]]
+|- class="Pokémon Eau Sol"
+| 195 {{Miniature|0195}} [[Maraiste]]
+| {{type|eau|sol}}
+| [[Inconscient]]
+| [[Exploforce]]<br>[[Ébullition]]
+| [[Toxik]]<br>[[Amnésie]]
+|- class="Pokémon Eau Psy"
+| 199 {{Miniature|0199}} [[Roigada]]
+| {{type|eau|psy}}
+| [[Tempo Perso]]
+| [[Prescience]]<br>[[Machination]]
+| [[Coqui-Lame]]<br>[[Poing Glace]]
+|- class="Pokémon Normal"
+| 206 {{Miniature|0206}} [[Insolourdo]]
+| {{type|normal}}
+| [[Sérénité]]
+| [[Ravage Rampant]]<br>[[Double Volée]]
+| [[Ball'Ombre]]<br>[[Laser Glace]]
+|- class="Pokémon Eau Poison"
+| 211 {{Miniature|0211}} [[Qwilfish]]
+| {{type|eau|poison}}
+| [[Intimidation (talent)|Intimidation]]
+| [[Danse Lames]]<br>[[Direct Toxik]]
+| [[Aqua-Brèche]]<br>[[Métalliroue]]
+|- class="Pokémon Ténèbres Glace"
+| 215 {{Miniature|0215}} [[Farfuret]]
+| {{type|ténèbres|glace}}
+| [[Regard Vif]]
+| [[Triple Axel]]<br>[[Cent Rancunes]]
+| [[Exécu-Son]]<br>[[Aboiement]]
+|- class="Pokémon Glace Sol"
+| 221 {{Miniature|0221}} [[Cochignon]]
+| {{type|glace|sol}}
+| [[Isograisse]]
+| [[Blizzard]]<br>[[Tomberoche]]
+| [[Éclats Glace]]<br>[[Surpuissance]]
+|- class="Pokémon Eau"
+| 224 {{Miniature|0224}} [[Octillery]]
+| {{type|eau}}
+| [[Sniper]]
+| [[Ravage Rampant]]<br>[[Luminocanon]]
+| [[Ébullition]]<br>[[Bombe Acide]]
+|- class="Pokémon Eau Vol"
+| 226 {{Miniature|0226}} [[Démanta]]
+| {{type|eau|vol}}
+| [[Absorbe-Eau]]
+| [[Lame d'Air]]<br>[[Plongée]]
+| [[Garde Large]]<br>[[Vibraqua]]
+|- class="Pokémon Acier Vol"
+| 227 {{Miniature|0227}} [[Airmure]]
+| {{type|acier|vol}}
+| [[Armurouillée]]
+| [[Assurance]]<br>[[Ailes d'Acier]]
+| [[Plaie Croix]]<br>[[Vol (capacité)|Vol]]
+|- class="Pokémon Combat"
+| 237 {{Miniature|0237}} [[Kapoera]]
+| {{type|combat}}
+| [[Intimidation (talent)|Intimidation]]
+| [[Tunnelier]]<br>[[Triple Axel]]
+| [[Casse-Brique]]<br>[[Coaching]]
+|- class="Pokémon Normal"
+| 241 {{Miniature|0241}} [[Écrémeuh]]
+| {{type|normal}}
+| [[Querelleur]]
+| [[Ultimawashi]]<br>[[Lait à Boire]]
+| [[Cage Éclair]]<br>[[Câlinerie]]
+|- class="Pokémon Plante"
+| 253 {{Miniature|0253}} [[Massko]]
+| {{type|plante}}
+| [[Engrais (talent)|Engrais]]
+| [[Aire d'Herbe]]<br>[[Aire d'Herbe]]
+| [[Casse-Brique]]<br>[[Ténacité]]
+|- class="Pokémon Plante"
+| 254 {{Miniature|0254}} [[Jungko]]
+| {{type|plante}}
+| [[Délestage]]
+| [[Aire d'Herbe]]<br>[[Abattage]]
+| [[Tempête Verte]]<br>[[Plaie Croix]]
+|- class="Pokémon Feu Combat"
+| 256 {{Miniature|0256}} [[Galifeu]]
+| {{type|feu|combat}}
+| [[Brasier]]
+| [[Aire de Feu]]<br>[[Exploforce]]
+| [[Danse Plumes]]<br>[[Balayette]]
+|- class="Pokémon Feu Combat"
+| 257 {{Miniature|0257}} [[Braségali]]
+| {{type|feu|combat}}
+| [[Turbo]]
+| [[Aire de Feu]]<br>[[Pied Brûleur]]
+| [[Close Combat]]<br>[[Coaching]]
+|- class="Pokémon Eau Sol"
+| 259 {{Miniature|0259}} [[Flobio]]
+| {{type|eau|sol}}
+| [[Torrent]]
+| [[Aire d'Eau]]<br>[[Cascade]]
+| [[Tunnel]]<br>[[Poing Glace]]
+|- class="Pokémon Eau Sol"
+| 260 {{Miniature|0260}} [[Laggron]]
+| {{type|eau|sol}}
+| [[Moiteur]]
+| [[Aire d'Eau]]<br>[[Blizzard]]
+| [[Telluriforce]]<br>[[Amnésie]]
+|- class="Pokémon Normal"
+| 264 {{Miniature|0264}} [[Linéon]]
+| {{type|normal}}
+| [[Ramassage]]
+| [[Tranche]]<br>[[Dard-Nuée]]
+| [[Regard Touchant]]<br>[[Griffe Ombre]]
+|- class="Pokémon Ténèbres Normal"
+| 264 {{Miniature|0264|Galar}} [[Linéon de Galar|Linéon]]<br>''Forme de Galar''
+| {{type|ténèbres|normal}}
+| [[Ramassage]]
+| [[Exécu-Son]]<br>[[Aboiement]]
+| [[Provoc]]<br>[[Clonage (capacité)|Clonage]]
+|- class="Pokémon Eau Vol"
+| 279 {{Miniature|0279}} [[Bekipan]]
+| {{type|eau|vol}}
+| [[Crachin]]
+| [[Double Volée]]<br>[[Ball'Météo]]
+| [[Garde Large]]<br>[[Vive Attaque]]
+|- class="Pokémon Insecte Vol"
+| 291 {{Miniature|0291}} [[Ninjask]]
+| {{type|insecte|vol}}
+| [[Turbo]]
+| [[Taillade]]<br>[[Clonage (capacité)|Clonage]]
+| [[Coud'Boue]]<br>[[Ravage Rampant]]
+|- class="Pokémon Normal"
+| 295 {{Miniature|0295}} [[Brouhabam]]
+| {{type|normal}}
+| [[Querelleur]]
+| [[Champlification]]<br>[[Ultralaser]]
+| [[Exploforce]]<br>[[Blizzard]]
+|- class="Pokémon Acier Roche"
+| 305 {{Miniature|0305}} [[Galegon]]
+| {{type|acier|roche}}
+| [[Fermeté]]
+| [[Métalliroue]]<br>[[Queue de Fer]]
+| [[Éboulement]]<br>[[Strido-Son]]
+|- class="Pokémon Électrik"
+| 310 {{Miniature|0310}} [[Élecsprint]]
+| {{type|électrik}}
+| [[Paratonnerre]]
+| [[Monte-Tension]]<br>[[Météores]]
+| [[Surchauffe]]<br>[[Psycho-Croc]]
+|- class="Pokémon Plante Poison"
+| 315 {{Miniature|0315}} [[Rosélia]]
+| {{type|plante|poison}}
+| [[Point Poison]]
+| [[Tempête Verte]]<br>[[Extrasenseur]]
+| [[Ball'Météo]]<br>[[Fontaine de Vie]]
+|- class="Pokémon Eau Ténèbres"
+| 319 {{Miniature|0319}} [[Sharpedo]]
+| {{type|eau|ténèbres}}
+| [[Turbo]]
+| [[Aqua-Jet]]<br>[[Assurance]]
+| [[Vantardise]]<br>[[Rafale Écailles]]
+|- class="Pokémon Eau"
+| 320 {{Miniature|0320}} [[Wailmer]]
+| {{type|eau}}
+| [[Ignifu-Voile]]
+| [[Saumure]]<br>[[Métalliroue]]
+| [[Rebond]]<br>[[Ténacité]]
+|- class="Pokémon Feu"
+| 324 {{Miniature|0324}} [[Chartor]]
+| {{type|feu}}
+| [[Sécheresse]]
+| [[Feu Envieux]]<br>[[Feu d'Enfer]]
+| [[Tour Rapide]]<br>[[Brouillard (capacité)|Brouillard]]
+|- class="Pokémon Sol Dragon"
+| 330 {{Miniature|0330}} [[Libégon]]
+| {{type|sol|dragon}}
+| [[Lévitation]]
+| [[Ailes d'Acier]]<br>[[Draco-Griffe]]
+| [[Bourdon]]<br>[[Coud'Boue]]
+|- class="Pokémon Dragon Vol"
+| 334 {{Miniature|0334}} [[Altaria]]
+| {{type|dragon|vol}}
+| [[Ciel Gris]]
+| [[Éclat Magique]]<br>[[Canicule (capacité)|Canicule]]
+| [[Cotogarde]]<br>[[Draco-Choc]]
+|- class="Pokémon Eau Sol"
+| 340 {{Miniature|0340}} [[Barbicha]]
+| {{type|eau|sol}}
+| [[Hydratation]]
+| [[Rebond]]<br>[[Éructation]]
+| [[Ocroupi]]<br>[[Psykoud'Boul]]
+|- class="Pokémon Eau Ténèbres"
+| 342 {{Miniature|0342}} [[Colhomard]]
+| {{type|eau|ténèbres}}
+| [[Adaptabilité]]
+| [[Cent Rancunes]]<br>[[Façade]]
+| [[Ocroupi]]<br>[[Danse Lames]]
+|- class="Pokémon Sol Psy"
+| 344 {{Miniature|0344}} [[Kaorine]]
+| {{type|sol|psy}}
+| [[Lévitation]]
+| [[Distorsion (capacité)|Distorsion]]<br>[[Psyko]]
+| [[Pouvoir Antique]]<br>[[Ultralaser]]
+|- class="Pokémon Roche Plante"
+| 346 {{Miniature|0346}} [[Vacilys]]
+| {{type|roche|plante}}
+| [[Ventouse]]
+| [[Éco-Sphère]]<br>[[Pouvoir Antique]]
+| [[Suc Digestif]]<br>[[Bombe Beurk]]
+|- class="Pokémon Roche Insecte"
+| 348 {{Miniature|0348}} [[Armaldo]]
+| {{type|roche|insecte}}
+| [[Armurbaston]]
+| [[Plaie Croix]]<br>[[Anti-Air]]
+| [[Trépignement]]<br>[[Tempête de Sable]]
+|- class="Pokémon Spectre"
+| 356 {{Miniature|0356}} [[Téraclope]]
+| {{type|spectre}}
+| [[Pression]]
+| [[Ombre Portée]]<br>[[Châtiment]]
+| [[Gravité]]<br>[[Ravage Rampant]]
+|- class="Pokémon Ténèbres"
+| 359 {{Miniature|0359}} [[Absol]]
+| {{type|ténèbres}}
+| [[Pression]]
+| [[Blizzard]]<br>[[Tranche-Nuit]]
+| [[Tranche]]<br>[[Déflagration]]
+|- class="Pokémon Glace"
+| 362 {{Miniature|0362}} [[Oniglali]]
+| {{type|glace}}
+| [[Corps Gel]]
+| [[Métalliroue]]<br>[[Mâchouille]]
+| [[Crocs Givre]]<br>[[Croco Larme]]
+|- class="Pokémon Glace Eau"
+| 364 {{Miniature|0364}} [[Phogleur]]
+| {{type|glace|eau}}
+| [[Isograisse]]
+| [[Laser Glace]]<br>[[Saumure]]
+| [[Plongée]]<br>[[Vantardise]]
+|- class="Pokémon Eau Roche"
+| 369 {{Miniature|0369}} [[Relicanth]]
+| {{type|eau|roche}}
+| [[Tête de Roc]]
+| [[Aqua-Brèche]]<br>[[Fracass'Tête]]
+| [[Gigotage]]<br>[[Rafale Écailles]]
+|- class="Pokémon Acier Psy"
+| 375 {{Miniature|0375}} [[Métang]]
+| {{type|acier|psy}}
+| [[Corps Sain]]
+| [[Poing Météore]]<br>[[Poing Éclair]]
+| [[Coupe Psycho]]<br>[[Protection]]
+|- class="Pokémon Électrik"
+| 405 {{Miniature|0405}} [[Luxray]]
+| {{type|électrik}}
+| [[Cran]]
+| [[Façade]]<br>[[Mur Lumière]]
+| [[Monte-Tension]]<br>[[Champ Électrifié]]
+|- class="Pokémon Insecte Vol"
+| 416 {{Miniature|0416}} [[Apireine]]
+| {{type|insecte|vol}}
+| [[Pression]]
+| [[Appel Attaque]]<br>[[Vantardise]]
+| [[Double Volée]]<br>[[Vendetta]]
+|- class="Pokémon Plante"
+| 421 {{Miniature|0421}} [[Ceriflor]]
+| {{type|plante}}
+| [[Don Floral]]
+| [[Lance-Soleil]]<br>[[Soucigraine]]
+| [[Zénith]]<br>[[Ball'Météo]]
+|- class="Pokémon Eau Sol"
+| 423 {{Miniature|0423|Orient}} [[Tritosor]]<br>''Mer Orient''
+| {{type|eau|sol}}
+| [[Force Sable]]
+| [[Plaquage]]<br>[[Ravage Rampant]]
+| [[Tomberoche]]<br>[[Cascade]]
+|- class="Pokémon Spectre Vol"
+| 426 {{Miniature|0426}} [[Grodrive]]
+| {{type|spectre|vol}}
+| [[Boom Final]]
+| [[Feu Follet]]<br>[[Psyko]]
+| [[Vent Arrière]]<br>[[Tonnerre]]
+|- class="Pokémon Normal"
+| 428 {{Miniature|0428}} [[Lockpin]]
+| {{type|normal}}
+| [[Joli Sourire]]
+| [[Vampi-Poing]]<br>[[Ultimawashi]]
+| [[Charme (capacité)|Charme]]<br>[[Rebond]]
+|- class="Pokémon Poison Ténèbres"
+| 435 {{Miniature|0435}} [[Moufflair]]
+| {{type|poison|ténèbres}}
+| [[Boom Final]]
+| [[Cent Rancunes]]<br>[[Feu Envieux]]
+| [[Bombe Acide]]<br>[[Coup Bas]]
+|- class="Pokémon Acier Psy"
+| 437 {{Miniature|0437}} [[Archéodong]]
+| {{type|acier|psy}}
+| [[Lévitation]]
+| [[Psykoud'Boul]]<br>[[Strido-Son]]
+| [[Métalliroue]]<br>[[Échange (capacité)|Échange]]
+|- class="Pokémon Normal"
+| 446 {{Miniature|0446}} [[Goinfrex]]
+| {{type|normal}}
+| [[Isograisse]]
+| [[Poing Éclair]]<br>[[Poing Feu]]
+| [[Plaquage]]<br>[[Détricanon]]
+|- class="Pokémon Poison Ténèbres"
+| 452 {{Miniature|0452}} [[Drascore]]
+| {{type|poison|ténèbres}}
+| [[Armurbaston]]
+| [[Cent Rancunes]]<br>[[Plaie Croix]]
+| [[Acupression]]<br>[[Queue de Fer]]
+|- class="Pokémon Plante Glace"
+| 460 {{Miniature|0460}} [[Blizzaroi]]
+| {{type|plante|glace}}
+| [[Anti-Bruit]]
+| [[Avalanche]]<br>[[Voile Aurore]]
+| [[Chant Canon]]<br>[[Gliss'Herbe]]
+|- class="Pokémon Glace Spectre"
+| 478 {{Miniature|0478}} [[Momartik]]
+| {{type|glace|spectre}}
+| [[Rideau Neige]]
+| [[Triple Axel]]<br>[[Souffle Glacé]]
+| [[Voile Aurore]]<br>[[Ball'Ombre]]
+|- class="Pokémon Électrik Spectre"
+| 479 {{Miniature|0479}} [[Motisma]]
+| {{type|électrik|spectre}}
+| [[Lévitation]]
+| [[Boule Élek]]<br>[[Feu Follet]]
+| [[Machination]]<br>[[Châtiment]]
+|- class="Pokémon Normal"
+| 508 {{Miniature|0508}} [[Mastouffe]]
+| {{type|normal}}
+| [[Querelleur]]
+| [[Giga Impact]]<br>[[Façade]]
+| [[Chant Canon]]<br>[[Regard Touchant]]
+|- class="Pokémon Ténèbres"
+| 510 {{Miniature|0510}} [[Léopardus]]
+| {{type|ténèbres}}
+| [[Échauffement]]
+| [[Assurance]]<br>[[Câlinerie]]
+| [[Tourmente]]<br>[[Grincement]]
+|- class="Pokémon Psy"
+| 518 {{Miniature|0518}} [[Mushana]]
+| {{type|psy}}
+| [[Prédiction]]
+| [[Vaste Pouvoir]]<br>[[Choc Psy]]
+| [[Bâillement]]<br>[[Éco-Sphère]]
+|- class="Pokémon Normal Vol"
+| 521 {{Miniature|0521}} [[Déflaisan]]
+| {{type|normal|vol}}
+| [[Cœur de Coq]]
+| [[Double Volée]]<br>[[Provoc]]
+| [[Danse Plumes]]<br>[[Vent Arrière]]
+|- class="Pokémon Roche"
+| 525 {{Miniature|0525}} [[Géolithe]]
+| {{type|roche}}
+| [[Fermeté]]
+| [[Lame de Roc]]<br>[[Mur de Fer]]
+| [[Big Splash]]<br>[[Trépignement]]
+|- class="Pokémon Psy Vol"
+| 528 {{Miniature|0528}} [[Rhinolove]]
+| {{type|psy|vol}}
+| [[Simple]]
+| [[Rayon Simple]]<br>[[Permuvitesse]]
+| [[Psyko]]<br>[[Lame d'Air]]
+|- class="Pokémon Normal"
+| 531 {{Miniature|0531}} [[Nanméouïe]]
+| {{type|normal}}
+| [[Cœur Soin]]
+| [[Fontaine de Vie]]<br>[[Vampibaiser]]
+| [[Mégaphone]]<br>[[Lance-Flammes]]
+|- class="Pokémon Combat"
+| 533 {{Miniature|0533}} [[Ouvrifier]]
+| {{type|combat}}
+| [[Cran]]
+| [[Mitra-Poing]]<br>[[Coaching]]
+| [[Casse-Brique]]<br>[[Cavalerie Lourde]]
+|- class="Pokémon Eau Sol"
+| 536 {{Miniature|0536}} [[Batracné]]
+| {{type|eau|sol}}
+| [[Glissade]]
+| [[Écho (capacité)|Écho]]<br>[[Ébullition]]
+| [[Telluriforce]]<br>[[Rebond]]
+|- class="Pokémon Eau Sol"
+| 537 {{Miniature|0537}} [[Crapustule]]
+| {{type|eau|sol}}
+| [[Glissade]]
+| [[Écho (capacité)|Écho]]<br>[[Ultrason]]
+| [[Bombe Beurk]]<br>[[Grincement]]
+|- class="Pokémon Insecte Poison"
+| 545 {{Miniature|0545}} [[Brutapode]]
+| {{type|insecte|poison}}
+| [[Essaim (talent)|Essaim]]
+| [[Métalliroue]]<br>[[Toxik]]
+| [[Exécu-Son]]<br>[[Mégacorne]]
+|- class="Pokémon Plante Fée"
+| 547 {{Miniature|0547}} [[Farfaduvet]]
+| {{type|plante|fée}}
+| [[Farceur]]
+| [[Vent Violent]]<br>[[Provoc]]
+| [[Éco-Sphère]]<br>[[Câlinerie]]
+|- class="Pokémon Plante"
+| 549 {{Miniature|0549}} [[Fragilady]]
+| {{type|plante}}
+| [[Tempo Perso]]
+| [[Danse Fleurs]]<br>[[Papillodanse]]
+| [[Mur Lumière]]<br>[[Boule Pollen]]
+|- class="Pokémon Eau"
+| 550 {{Miniature|0550|Rouge}} [[Bargantua]]<br>''Motif Rouge''
+| {{type|eau}}
+| [[Adaptabilité]]
+| [[Aqua-Brèche]]<br>[[Plongée]]
+| [[Psycho-Croc]]<br>[[Crocs Givre]]
+|- class="Pokémon Eau"
+| 550 {{Miniature|0550|Bleu}} [[Bargantua]]<br>''Motif Bleu''
+| {{type|eau}}
+| [[Adaptabilité]]
+| [[Ébullition]]<br>[[Plongée]]
+| [[Mâchouille]]<br>[[Clonage (capacité)|Clonage]]
+|- class="Pokémon Sol Ténèbres"
+| 553 {{Miniature|0553}} [[Crocorible]]
+| {{type|sol|ténèbres}}
+| [[Colérique]]
+| [[Telluriforce]]<br>[[Vantardise]]
+| [[Dark Lariat]]<br>[[Tempête de Sable]]
+|- class="Pokémon Plante"
+| 556 {{Miniature|0556}} [[Maracachi]]
+| {{type|plante}}
+| [[Lavabo]]
+| [[Tempête Verte]]<br>[[Éco-Sphère]]
+| [[Coup Bas]]<br>[[Acupression]]
+|- class="Pokémon Insecte Roche"
+| 558 {{Miniature|0558}} [[Crabaraque]]
+| {{type|insecte|roche}}
+| [[Coque Armure]]
+| [[Exuviation]]<br>[[Plaie Croix]]
+| [[Tomberoche]]<br>[[Big Splash]]
+|- class="Pokémon Psy Vol"
+| 561 {{Miniature|0561}} [[Cryptéro]]
+| {{type|psy|vol}}
+| [[Peau Miracle]]
+| [[Psyko]]<br>[[Danse Pluie]]
+| [[Lame d'Air]]<br>[[Luminocanon]]
+|- class="Pokémon Spectre"
+| 563 {{Miniature|0563}} [[Tutankafer]]
+| {{type|spectre}}
+| [[Momie]]
+| [[Ball'Ombre]]<br>[[Buée Noire]]
+| [[Psyko]]<br>[[Zone Étrange]]
+|- class="Pokémon Poison"
+| 569 {{Miniature|0569|Gigamax}} [[Miasmax Gigamax|Miasmax]]<br>''Gigamax''
+| {{type|poison}}
+| [[Boom Final]]
+| [[Détricanon]]<br>[[Bombe Beurk]]
+| [[Vampi-Poing]]<br>[[Piège de Venin]]
+|- class="Pokémon Normal"
+| 573 {{Miniature|0573}} [[Pashmilla]]
+| {{type|normal}}
+| [[Technicien (talent)|Technicien]]
+| [[Écho (capacité)|Écho]]<br>[[Plumo-Queue]]
+| [[Mur Lumière]]<br>[[Triple Axel]]
+|- class="Pokémon Glace"
+| 583 {{Miniature|0583}} [[Sorboul]]
+| {{type|glace}}
+| [[Corps Gel]]
+| [[Brume]]<br>[[Laser Glace]]
+| [[Blizzard]]<br>[[Mégaphone]]
+|- class="Pokémon Électrik Vol"
+| 587 {{Miniature|0587}} [[Emolga]]
+| {{type|électrik|vol}}
+| [[Statik]]
+| [[Acrobatie]]<br>[[Monte-Tension]]
+| [[Ténacité]]<br>[[Toile Élek]]
+|- class="Pokémon Insecte Acier"
+| 589 {{Miniature|0589}} [[Lançargot]]
+| {{type|insecte|acier}}
+| [[Coque Armure]]
+| [[Tunnelier]]<br>[[Coqui-Lame]]
+| [[Taillade]]<br>[[Provoc]]
+|- class="Pokémon Plante Poison"
+| 591 {{Miniature|0591}} [[Gaulet]]
+| {{type|plante|poison}}
+| [[Pose Spore]]
+| [[Bain de Smog]]<br>[[Poudre Fureur]]
+| [[Giga-Sangsue]]<br>[[Choc Venin]]
+|- class="Pokémon Eau Spectre"
+| 593 {{Miniature|0593}} [[Moyade]]
+| {{type|eau|spectre}}
+| [[Absorb Eau]]
+| [[Éclat Magique]]<br>[[Plongée]]
+| [[Distorsion (capacité)|Distorsion]]<br>[[Vent Glace]]
+|- class="Pokémon Insecte Électrik"
+| 596 {{Miniature|0596}} [[Mygavolt]]
+| {{type|insecte|électrik}}
+| [[Œil Composé]]
+| [[Fatal-Foudre]]<br>[[Bourdon]]
+| [[Boule Élek]]<br>[[Toile Élek]]
+|- class="Pokémon Acier"
+| 600 {{Miniature|0600}} [[Clic]]
+| {{type|acier}}
+| [[Minus]]
+| [[Rayon Chargé]]<br>[[Monte-Tension]]
+| [[Luminocanon]]<br>[[Rayon Gemme]]
+|- class="Pokémon Acier"
+| 601 {{Miniature|0601}} [[Cliticlic]]
+| {{type|acier}}
+| [[Plus]]
+| [[Lancécrou]]<br>[[Chgt Vitesse]]
+| [[Giga Impact]]<br>[[Strido-Son]]
+|- class="Pokémon Psy"
+| 606 {{Miniature|0606}} [[Neitram]]
+| {{type|psy}}
+| [[Synchro]]
+| [[Vaste Pouvoir]]<br>[[Laser Météore]]
+| [[Vibrobscur]]<br>[[Chant Canon]]
+|- class="Pokémon Spectre Feu"
+| 608 {{Miniature|0608}} [[Mélancolux]]
+| {{type|spectre|feu}}
+| [[Torche]]
+| [[Feu Envieux]]<br>[[Ravage Rampant]]
+| [[Feu d'Enfer]]<br>[[Distorsion (capacité)|Distorsion]]
+|- class="Pokémon Dragon"
+| 611 {{Miniature|0611}} [[Incisache]]
+| {{type|dragon}}
+| [[Rivalité]]
+| [[Giga Impact]]<br>[[Colère]]
+| [[Abattage]]<br>[[Plaie Croix]]
+|- class="Pokémon Glace"
+| 614 {{Miniature|0614}} [[Polagriffe]]
+| {{type|glace}}
+| [[Chasse-Neige]]
+| [[Big Splash]]<br>[[Blizzard]]
+| [[Souffle Glacé]]<br>[[Saumure]]
+|- class="Pokémon Glace"
+| 615 {{Miniature|0615}} [[Hexagel]]
+| {{type|glace}}
+| [[Lévitation]]
+| [[Blizzard]]<br>[[Laser Glace]]
+| [[Protection]]<br>[[Lance-Soleil]]
+|- class="Pokémon Insecte"
+| 617 {{Miniature|0617}} [[Limaspeed]]
+| {{type|insecte}}
+| [[Hydratation]]
+| [[Survinsecte]]<br>[[Bombe Acide]]
+| [[Danse Pluie]]<br>[[Bourdon]]
+|- class="Pokémon Sol Électrik"
+| 618 {{Miniature|0618}} [[Limonde]]
+| {{type|sol|électrik}}
+| [[Statik]]
+| [[Champ Électrifié]]<br>[[Tonnerre]]
+| [[Telluriforce]]<br>[[Ocroupi]]
+|- class="Pokémon Sol Acier"
+| 618 {{Miniature|0618|Galar}} [[Limonde de Galar|Limonde]]<br>''Forme de Galar''
+| {{type|sol|acier}}
+| [[Mimétisme]]
+| [[Strido-Son]]<br>[[Champlification]]
+| [[Tricherie]]<br>[[Telluriforce]]
+|- class="Pokémon Combat"
+| 620 {{Miniature|0620}} [[Shaofouine]]
+| {{type|combat}}
+| [[Attention]]
+| [[Aurasphère]]<br>[[Garde Large]]
+| [[Tomberoche]]<br>[[Ultimawashi]]
+|- class="Pokémon Dragon"
+| 621 {{Miniature|0621}} [[Drakkarmin]]
+| {{type|dragon}}
+| [[Sans Limite]]
+| [[Cent Rancunes]]<br>[[Double Volée]]
+| [[Tête de Fer]]<br>[[Tunnel]]
+|- class="Pokémon Sol Spectre"
+| 623 {{Miniature|0623}} [[Golemastoc]]
+| {{type|sol|spectre}}
+| [[Poing de Fer]]
+| [[Mitra-Poing]]<br>[[Poing Ombre]]
+| [[Sable Ardent]]<br>[[Rune Protect]]
+|- class="Pokémon Ténèbres Acier"
+| 625 {{Miniature|0625}} [[Scalproie]]
+| {{type|ténèbres|acier}}
+| [[Attention]]
+| [[Tranche-Nuit]]<br>[[Direct Toxik]]
+| [[Coupe Psycho]]<br>[[Strido-Son]]
+|- class="Pokémon Normal"
+| 626 {{Miniature|0626}} [[Frison]]
+| {{type|normal}}
+| [[Herbivore]]
+| [[Plaquage]]<br>[[Cent Rancunes]]
+| [[Estocorne]]<br>[[Surpuissance]]
+|- class="Pokémon Feu"
+| 631 {{Miniature|0631}} [[Aflamanoir]]
+| {{type|feu}}
+| [[Torche]]
+| [[Fouet de Feu]]<br>[[Surchauffe]]
+| [[Zénith]]<br>[[Lance-Soleil]]
+|- class="Pokémon Insecte Acier"
+| 632 {{Miniature|0632}} [[Fermite]]
+| {{type|insecte|acier}}
+| [[Essaim (talent)|Essaim]]
+| [[Crocs Éclair]]<br>[[Plaie Croix]]
+| [[Strido-Son]]<br>[[Griffe Acier]]
+|- class="Pokémon Normal Sol"
+| 660 {{Miniature|0660}} [[Excavarenne]]
+| {{type|normal|sol}}
+| [[Coloforce]]
+| [[Lame de Roc]]<br>[[Trépignement]]
+| [[Tunnel]]<br>[[Vive Attaque]]
+|- class="Pokémon Feu Vol"
+| 663 {{Miniature|0663}} [[Flambusard]]
+| {{type|feu|vol}}
+| [[Ailes Bourrasque]]
+| [[Vent Arrière]]<br>[[Vent Violent]]
+| [[Ailes d'Acier]]<br>[[Lance-Flammes]]
+|- class="Pokémon Combat Ténèbres"
+| 675 {{Miniature|0675}} [[Pandarbare]]
+| {{type|combat|ténèbres}}
+| [[Poing de Fer]]
+| [[Pisto-Poing]]<br>[[Marto-Poing]]
+| [[Dark Lariat]]<br>[[Coaching]]
+|- class="Pokémon Acier Spectre"
+| 680 {{Miniature|0680}} [[Dimoclès]]
+| {{type|acier|spectre}}
+| [[Annule Garde]]
+| [[Tête de Fer]]<br>[[Danse Lames]]
+| [[Lame Sainte]]<br>[[Aéropique]]
+|- class="Pokémon Ténèbres Psy"
+| 687 {{Miniature|0687}} [[Sepiatroce]]
+| {{type|ténèbres|psy}}
+| [[Contestation]]
+| [[Renversement]]<br>[[Vaste Pouvoir]]
+| [[Tranche-Nuit]]<br>[[Tonnerre]]
+|- class="Pokémon Roche Eau"
+| 689 {{Miniature|0689}} [[Golgopathe]]
+| {{type|roche|eau}}
+| [[Griffe Dure]]
+| [[Coqui-Lame]]<br>[[Blizzard]]
+| [[Coud'Krâne]]<br>[[Direct Toxik]]
+|- class="Pokémon Électrik Normal"
+| 695 {{Miniature|0695}} [[Iguolta]]
+| {{type|électrik|normal}}
+| [[Peau Sèche]]
+| [[Boule Élek]]<br>[[Hâte]]
+| [[Chant Canon]]<br>[[Coud'Boue]]
+|- class="Pokémon Roche Dragon"
+| 697 {{Miniature|0697}} [[Rexillius]]
+| {{type|roche|dragon}}
+| [[Prognathe]]
+| [[Rafale Écailles]]<br>[[Boule Roc]]
+| [[Surpuissance]]<br>[[Plaquage]]
+|- class="Pokémon Roche Glace"
+| 699 {{Miniature|0699}} [[Dragmara]]
+| {{type|roche|glace}}
+| [[Peau Gelée]]
+| [[Plaquage]]<br>[[Fatal-Foudre]]
+| [[Pouvoir Antique]]<br>[[Cage Éclair]]
+|- class="Pokémon Combat Vol"
+| 701 {{Miniature|0701}} [[Brutalibré]]
+| {{type|combat|vol}}
+| [[Échauffement]]
+| [[Provoc]]<br>[[Direct Toxik]]
+| [[Exécu-Son]]<br>[[Balayette]]
+|- class="Pokémon Électrik Fée"
+| 702 {{Miniature|0702}} [[Dedenne]]
+| {{type|électrik|fée}}
+| [[Plus]]
+| [[Ten-Danse]]<br>[[Fatal-Foudre]]
+| [[Éclat Magique]]<br>[[Clonage (capacité)|Clonage]]
+|- class="Pokémon Acier Fée"
+| 707 {{Miniature|0707}} [[Trousselin]]
+| {{type|acier|fée}}
+| [[Farceur]]
+| [[Mur Lumière]]<br>[[Vigilance]]
+| [[Luminocanon]]<br>[[Câlinerie]]
+|- class="Pokémon Spectre Plante"
+| 709 {{Miniature|0709}} [[Desséliande]]
+| {{type|spectre|plante}}
+| [[Récolte]]
+| [[Encornebois]]<br>[[Protection]]
+| [[Vampi-Poing]]<br>[[Distorsion (capacité)|Distorsion]]
+|- class="Pokémon Spectre Plante"
+| 711 {{Miniature|0711}} [[Banshitrouye]]
+| {{type|spectre|plante}}
+| [[Ramassage]]
+| [[Feu Ensorcelé]]<br>[[Ombre Portée]]
+| [[Soucigraine]]<br>[[Grimace]]
+|- class="Pokémon Insecte Électrik"
+| 737 {{Miniature|0737}} [[Chrysapile]]
+| {{type|insecte|électrik}}
+| [[Batterie]]
+| [[Sécrétion]]<br>[[Ondes Étranges]]
+| [[Étincelle]]<br>[[Tunnel]]
+|- class="Pokémon Insecte Électrik"
+| 738 {{Miniature|0738}} [[Lucanon]]
+| {{type|insecte|électrik}}
+| [[Lévitation]]
+| [[Étincelle]]<br>[[Coud'Boue]]
+| [[Direct Toxik]]<br>[[Bourdon]]
+|- class="Pokémon Insecte Fée"
+| 743 {{Miniature|0743}} [[Rubombelle]]
+| {{type|insecte|fée}}
+| [[Gluco-Voile]]
+| [[Boule Pollen]]<br>[[Vampibaiser]]
+| [[Aromathérapie]]<br>[[Croco Larme]]
+|- class="Pokémon Roche"
+| 745 {{Miniature|0745|Diurne}} [[Lougaroc]]<br>''Forme Diurne''
+| {{type|roche}}
+| [[Baigne Sable]]
+| [[Vif Roc]]<br>[[Lame de Roc]]
+| [[Chant Canon]]<br>[[Grondement]]
+|- class="Pokémon Roche"
+| 745 {{Miniature|0745|Nocturne}} [[Lougaroc]]<br>''Forme Nocturne''
+| {{type|roche}}
+| [[Annule Garde]]
+| [[Lame de Roc]]<br>[[Casse-Brique]]
+| [[Provoc]]<br>[[Mâchouille]]
+|- class="Pokémon Sol"
+| 750 {{Miniature|0750}} [[Bourrinos]]
+| {{type|sol}}
+| [[Tempo Perso]]
+| [[Cent Rancunes]]<br>[[Surpuissance]]
+| [[Tourbi-Sable]]<br>[[Éclate-Roc]]
+|- class="Pokémon Eau Insecte"
+| 752 {{Miniature|0752}} [[Tarenbulle]]
+| {{type|eau|insecte}}
+| [[Absorb Eau]]
+| [[Aqua-Brèche]]<br>[[Ten-Danse]]
+| [[Furie-Bond]]<br>[[Direct Toxik]]
+|- class="Pokémon Plante"
+| 754 {{Miniature|0754}} [[Floramantis]]
+| {{type|plante}}
+| [[Contestation]]
+| [[Tempête Verte]]<br>[[Ball'Météo]]
+| [[Plaie Croix]]<br>[[Chant Canon]]
+|- class="Pokémon Plante Fée"
+| 756 {{Miniature|0756}} [[Lampignon]]
+| {{type|plante|fée}}
+| [[Cuvette]]
+| [[Vole-Force]]<br>[[Pouvoir Lunaire]]
+| [[Danse Pluie]]<br>[[Ball'Météo]]
+|- class="Pokémon Poison Feu"
+| 758 {{Miniature|0758}} [[Malamandre]]
+| {{type|poison|feu}}
+| [[Corrosion]]
+| [[Toxik]]<br>[[Lance-Flammes]]
+| [[Poison Croix]]<br>[[Piège de Venin]]
+|- class="Pokémon Normal Combat"
+| 760 {{Miniature|0760}} [[Chelours]]
+| {{type|normal|combat}}
+| [[Maladresse]]
+| [[Damoclès]]<br>[[Regard Touchant]]
+| [[Représailles]]<br>[[Giga Impact]]
+|- class="Pokémon Plante"
+| 763 {{Miniature|0763}} [[Sucreine]]
+| {{type|plante}}
+| [[Prestance Royale]]
+| [[Aromathérapie]]<br>[[Botte Sucrette]]
+| [[Acrobatie]]<br>[[Vantardise]]
+|- class="Pokémon Fée"
+| 764 {{Miniature|0764}} [[Guérilande]]
+| {{type|fée}}
+| [[Prioguérison]]
+| [[Soin Floral]]<br>[[Vampibaiser]]
+| [[Après Vous]]<br>[[Éco-Sphère]]
+|- class="Pokémon Normal Psy"
+| 765 {{Miniature|0765}} [[Gouroutan]]
+| {{type|normal|psy}}
+| [[Symbiose]]
+| [[Sommation]]<br>[[Mur Lumière]]
+| [[Psyko]]<br>[[Choc Psy]]
+|- class="Pokémon Combat"
+| 766 {{Miniature|0766}} [[Quartermac]]
+| {{type|combat}}
+| [[Receveur]]
+| [[Casse-Brique]]<br>[[Tomberoche]]
+| [[Clonage (capacité)|Clonage]]<br>[[Acrobatie]]
+|- class="Pokémon Spectre Sol"
+| 770 {{Miniature|0770}} [[Trépassable]]
+| {{type|spectre|sol}}
+| [[Voile Sable]]
+| [[Champlification]]<br>[[Sable Ardent]]
+| [[Amass'Sable]]<br>[[Ball'Ombre]]
+|- class="Pokémon Eau"
+| 771 {{Miniature|0771}} [[Concombaffe]]
+| {{type|eau}}
+| [[Expuls'Organes]]
+| [[Toxik]]<br>[[Provoc]]
+| [[Piège de Venin]]<br>[[Riposte (capacité)|Riposte]]
+|- class="Pokémon Électrik Acier"
+| 777 {{Miniature|0777}} [[Togedemaru]]
+| {{type|électrik|acier}}
+| [[Fermeté]]
+| [[Frotte-Frimousse]]<br>[[Direct Toxik]]
+| [[Toile Élek]]<br>[[Tête de Fer]]
+|- class="Pokémon Spectre Fée"
+| 778 {{Miniature|0778}} [[Mimiqui]]
+| {{type|spectre|fée}}
+| [[Fantômasque]]
+| [[Griffe Ombre]]<br>[[Tranche]]
+| [[Regard Touchant]]<br>[[Malédiction]]
+|- class="Pokémon Normal"
+| 820 {{Miniature|0820}} [[Rongrigou]]
+| {{type|normal}}
+| [[Bajoues]]
+| [[Gyroballe]]<br>[[Psycho-Croc]]
+| [[Danse Lames]]<br>[[Plaquage]]
+|- class="Pokémon Insecte Psy"
+| 826 {{Miniature|0826|Gigamax}} [[Astronelle Gigamax|Astronelle]]<br>''Gigamax''
+| {{type|insecte|psy}}
+| [[Essaim (talent)|Essaim]]
+| [[Après Vous]]<br>[[Psyko]]
+| [[Rafale Psy]]<br>[[Survinsecte]]
+|- class="Pokémon Ténèbres"
+| 828 {{Miniature|0828}} [[Roublenard]]
+| {{type|ténèbres}}
+| [[Délestage]]
+| [[Tricherie]]<br>[[Aboiement]]
+| [[Provoc]]<br>[[Feu Envieux]]
+|- class="Pokémon Plante"
+| 830 {{Miniature|0830}} [[Blancoton]]
+| {{type|plante}}
+| [[Pose Spore]]
+| [[Mur Lumière]]<br>[[Ball'Météo]]
+| [[Cotogarde]]<br>[[Tempête Verte]]
+|- class="Pokémon Normal"
+| 832 {{Miniature|0832}} [[Moumouflon]]
+| {{type|normal}}
+| [[Boule de Poils]]
+| [[Gliss'Herbe]]<br>[[Ultimawashi]]
+| [[Big Splash]]<br>[[Clonage (capacité)|Clonage]]
+|- class="Pokémon Eau Roche"
+| 834 {{Miniature|0834}} [[Torgamord]]
+| {{type|eau|roche}}
+| [[Prognathe]]
+| [[Coqui-Lame]]<br>[[Ravage Rampant]]
+| [[Estocorne]]<br>[[Éboulement]]
+|- class="Pokémon Électrik"
+| 836 {{Miniature|0836}} [[Fulgudog]]
+| {{type|électrik}}
+| [[Prognathe]]
+| [[Monte-Tension]]<br>[[Mâchouille]]
+| [[Charme (capacité)|Charme]]<br>[[Coup d'Main]]
+|- class="Pokémon Roche Feu"
+| 838 {{Miniature|0838}} [[Wagomine]]
+| {{type|roche|feu}}
+| [[Torche]]
+| [[Surchauffe]]<br>[[Danse Flammes]]
+| [[Protection]]<br>[[Éboulement]]
+|- class="Pokémon Roche Feu"
+| 839 {{Miniature|0839|Gigamax}} [[Monthracite]]<br>''Gigamax''
+| {{type|roche|feu}}
+| [[Turbine]]
+| [[Brouillard (capacité)|Brouillard]]<br>[[Laser Météore]]
+| [[Lance-Flammes]]<br>[[Ébullition]]
+|- class="Pokémon Sol"
+| 844 {{Miniature|0844|Gigamax}} [[Dunaconda]]<br>''Gigamax''
+| {{type|sol}}
+| [[Expul'Sable]]
+| [[Sable Ardent]]<br>[[Rafale Écailles]]
+| [[Ravage Rampant]]<br>[[Regard Médusant]]
+|- class="Pokémon Vol Eau"
+| 845 {{Miniature|0845}} [[Nigosier]]
+| {{type|vol|eau}}
+| [[Dégobage]]
+| [[Plongée]]<br>[[Ténacité]]
+| [[Amnésie]]<br>[[Exécu-Son]]
+|- class="Pokémon Eau"
+| 847 {{Miniature|0847}} [[Hastacuda]]
+| {{type|eau}}
+| [[Glissade]]
+| [[Aqua-Jet]]<br>[[Rafale Écailles]]
+| [[Assurance]]<br>[[Ténacité]]
+|- class="Pokémon Électrik Poison"
+| 849 {{Miniature|0849|Gigamax}} [[Salarsen]]<br>''Gigamax''
+| {{type|électrik|poison}}
+| [[Plus]]
+| [[Monte-Tension]]<br>[[Cage Éclair]]
+| [[Mégaphone]]<br>[[Larme à l'Œil]]
+|- class="Pokémon Feu Insecte"
+| 851 {{Miniature|0851|Gigamax}} [[Scolocendre]]<br>''Gigamax''
+| {{type|feu|insecte}}
+| [[Écran Fumée]]
+| [[Lance-Flammes]]<br>[[Sable Ardent]]
+| [[Choc Venin]]<br>[[Souplesse]]
+|- class="Pokémon Combat"
+| 853 {{Miniature|0853}} [[Krakos]]
+| {{type|combat}}
+| [[Échauffement]]
+| [[Renversement]]<br>[[Vampi-Poing]]
+| [[Ocroupi]]<br>[[Exploforce]]
+|- class="Pokémon Spectre"
+| 855 {{Miniature|0855}} [[Polthégeist]]
+| {{type|spectre}}
+| [[Armurouillée]]
+| [[Aromathérapie]]<br>[[Coup Bas]]
+| [[Choc Psy]]<br>[[Giga-Sangsue]]
+|- class="Pokémon Psy Fée"
+| 858 {{Miniature|0858|Gigamax}} [[Sorcilence]]<br>''Gigamax''
+| {{type|psy|fée}}
+| [[Anticipation]]
+| [[Vaste Pouvoir]]<br>[[Câlinerie]]
+| [[Fontaine de Vie]]<br>[[Rune Protect]]
+|- class="Pokémon Ténèbres Fée"
+| 861 {{Miniature|0861|Gigamax}} [[Angoliath]]<br>''Gigamax''
+| {{type|ténèbres|fée}}
+| [[Farceur]]
+| [[Poing Boost]]<br>[[Vibrobscur]]
+| [[Permuforce]]<br>[[Confidence]]
+|- class="Pokémon Ténèbres Normal"
+| 862 {{Miniature|0862}} [[Ixon]]
+| {{type|ténèbres|normal}}
+| [[Téméraire]]
+| [[Cent Rancunes]]<br>[[Tonnerre]]
+| [[Façade]]<br>[[Grincement]]
+|- class="Pokémon Acier"
+| 863 {{Miniature|0863}} [[Berserkatt]]
+| {{type|acier}}
+| [[Boost Acier]]
+| [[Griffe Acier]]<br>[[Amnésie]]
+| [[Cent Rancunes]]<br>[[Fatal-Foudre]]
+|- class="Pokémon Fée"
+| 869 {{Miniature|0869|Gigamax}} [[Charmilly Gigamax|Charmilly]]<br>''Gigamax''
+| {{type|fée}}
+| [[Aroma-Voile]]
+| [[Nappage]]<br>[[Éclat Magique]]
+| [[Feu Ensorcelé]]<br>[[Feuille Magik]]
+|- class="Pokémon Combat"
+| 870 {{Miniature|0870}} [[Hexadron]]
+| {{type|combat}}
+| [[Armurbaston]]
+| [[Escarmouche]]<br>[[Danse Lames]]
+| [[Estocorne]]<br>[[Casse-Brique]]
+|- class="Pokémon Électrik"
+| 871 {{Miniature|0871}} [[Wattapik]]
+| {{type|électrik}}
+| [[Créa-Élec]]
+| [[Hydrocanon]]<br>[[Fatal-Foudre]]
+| [[Acupression]]<br>[[Piège de Venin]]
+|- class="Pokémon Glace Insecte"
+| 873 {{Miniature|0873}} [[Beldeneige]]
+| {{type|glace|insecte}}
+| [[Écailles Glacées]]
+| [[Ball'Météo]]<br>[[Vent Arrière]]
+| [[Survinsecte]]<br>[[Vent Violent]]
+|- class="Pokémon Psy Normal"
+| 876 {{Miniature|0876}} [[Wimessir]]
+| {{type|psy|normal}}
+| [[Synchro]]
+| [[Feu Ensorcelé]]<br>[[Vaste Pouvoir]]
+| [[Plénitude]]<br>[[Ball'Ombre]]
+|- class="Pokémon Électrik Ténèbres"
+| 877 {{Miniature|0877}} [[Morpeko]]
+| {{type|électrik|ténèbres}}
+| [[Déclic Fringale]]
+| [[Roue Libre]]<br>[[Vibrobscur]]
+| [[Tonnerre]]<br>[[Crocs Givre]]
+|- class="Pokémon Acier"
+| 879 {{Miniature|0879}} [[Pachyradjah]]
+| {{type|acier}}
+| [[Sans Limite]]
+| [[Mur de Fer]]<br>[[Big Splash]]
+| [[Luminocanon]]<br>[[Métalliroue]]
+|- class="Pokémon Acier Dragon"
+| 884 {{Miniature|0884|Gigamax}} [[Duralugon Gigamax|Duralugon]]<br>''Gigamax''
+| {{type|acier|Dragon}}
+| [[Light Metal]]
+| [[Abattage]]<br>[[Cage Éclair]]
+| [[Tête de Fer]]<br>[[Tonnerre]]
+|- class="Pokémon Dragon Spectre"
+| 886 {{Miniature|0886}} [[Dispareptil]]
+| {{type|dragon|spectre}}
+| [[Corps Sain]]
+| [[Draco-Charge]]<br>[[Assurance]]
+| [[Feu Follet]]<br>[[Ball'Ombre]]
+|}
+
+== Pokémon hors du commun ==
+Les Pokémon hors du commun peuvent être soit [[Pokémon légendaire|légendaires]], soit, après avoir obtenu la [[Note Légende (?)]], des [[Ultra-Chimère]]s. Ils ne peuvent pas être empruntés et apparaissent toujours pour le dernier raid. Une fois un Pokémon d'une certaine espèce attrapé, les suivants fuiront toujours, afin de limiter à un par fichier de sauvegarde le nombre de ces Pokémon. Ils sont tous au niveau 70, et tout comme les Pokémon d'emprunt, les Pokémon capturés ont une chance sur 300 d'être [[chromatique]]s (une chance sur 100 avec le [[Charme Chroma]]).
+
+{| class="tableaustandard navigation"
+|+ [[Type]]s<br><button type="button" name="Légendaire" value="afficher" title="[Masquer tout]">[Afficher tout]</button>
+|-
+| {{type|normal}}<br>''Aucun''
+| {{type|combat}}<br><button type="button" name="LEG-Combat" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|vol}}<br><button type="button" name="LEG-Vol" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|poison}}<br><button type="button" name="LEG-Poison" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|sol}}<br><button type="button" name="LEG-Sol" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|roche}}<br><button type="button" name="LEG-Roche" value="afficher" title="[Masquer]">[Afficher]</button>
+|-
+| {{type|insecte}}<br><button type="button" name="LEG-Insecte" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|spectre}}<br><button type="button" name="LEG-Spectre" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|psy}}<br><button type="button" name="LEG-Psy" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|plante}}<br><button type="button" name="LEG-Plante" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|feu}}<br><button type="button" name="LEG-Feu" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|eau}}<br><button type="button" name="LEG-Eau" value="afficher" title="[Masquer]">[Afficher]</button>
+|-
+| {{type|électrik}}<br><button type="button" name="LEG-Électrik" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|glace}}<br><button type="button" name="LEG-Glace" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|dragon}}<br><button type="button" name="LEG-Dragon" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|acier}}<br><button type="button" name="LEG-Acier" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|ténèbres}}<br><button type="button" name="LEG-Ténèbres" value="afficher" title="[Masquer]">[Afficher]</button>
+| {{type|fée}}<br><button type="button" name="LEG-Fée" value="afficher" title="[Masquer]">[Afficher]</button>
+|}
+
+=== [[Pokémon légendaire]]s ===
+{| class="tableaustandard entetefixe" style="white-space:nowrap;"
+|-
+! Pokémon
+! [[Type]](s)
+! [[Talent]]
+! colspan="2" | Capacités
+|-
+| colspan="5" class="épée-bouclier" style="text-align:center" | '''Dans {{Jeu|EB}}'''
+|- class="Légendaire LEG-Glace LEG-Vol"
+| 144 {{Miniature|0144}} [[Artikodin]]
+| {{type|glace|vol}}
+| [[Pression]]
+| [[Laser Glace]]<br>[[Lyophilisation]]
+| [[Vent Violent]]<br>[[Brume]]
+|- class="Légendaire LEG-Électrik LEG-Vol"
+| 145 {{Miniature|0145}} [[Électhor]]
+| {{type|électrik|vol}}
+| [[Pression]]
+| [[Fatal-Foudre]]<br>[[Bec Vrille]]
+| [[Rapace]]<br>[[Hâte]]
+|- class="Légendaire LEG-Feu LEG-Vol"
+| 146 {{Miniature|0146}} [[Sulfura]]
+| {{type|feu|vol}}
+| [[Pression]]
+| [[Canicule (capacité)|Canicule]]<br>[[Cru-Ailes]]
+| [[Groz'Yeux]]<br>[[Danse Flammes]]
+|- class="Légendaire LEG-Psy"
+| 150 {{Miniature|0150}} [[Mewtwo]]
+| {{type|psy}}
+| [[Pression]]
+| [[Psyko]]<br>[[Entrave]]
+| [[Soin]]<br>[[Blizzard]]
+|- class="Légendaire LEG-Électrik"
+| 243 {{Miniature|0243}} [[Raikou]]
+| {{type|électrik}}
+| [[Pression]]
+| [[Tonnerre]]<br>[[Grondement]]
+| [[Vitesse Extrême]]<br>[[Ball'Météo]]
+|- class="Légendaire LEG-Feu"
+| 244 {{Miniature|0244}} [[Entei]]
+| {{type|feu}}
+| [[Pression]]
+| [[Lance-Flammes]]<br>[[Grimace]]
+| [[Vitesse Extrême]]<br>[[Mâchouille]]
+|- class="Légendaire LEG-Eau"
+| 245 {{Miniature|0245}} [[Suicune]]
+| {{type|eau}}
+| [[Pression]]
+| [[Aqua-Brèche]]<br>[[Extrasenseur]]
+| [[Vitesse Extrême]]<br>[[Plénitude]]
+|- class="Légendaire LEG-Dragon LEG-Vol"
+| 384 {{Miniature|0384}} [[Rayquaza]]
+| {{type|dragon|vol}}
+| [[Air Lock]]
+| [[Draco-Ascension]]<br>[[Centrifugifle]]
+| [[Vitesse Extrême]]<br>[[Ouragan]]
+|- class="Légendaire LEG-Psy"
+| 480 {{Miniature|0480}} [[Créhelf]]
+| {{type|psy}}
+| [[Lévitation]]
+| [[Psyko]]<br>[[Prescience]]
+| [[Zone Magique]]<br>[[Ball'Ombre]]
+|- class="Légendaire LEG-Psy"
+| 481 {{Miniature|0481}} [[Créfollet]]
+| {{type|psy}}
+| [[Lévitation]]
+| [[Psyko]]<br>[[Charme (capacité)|Charme]]
+| [[Vampibaiser]]<br>[[Triplattaque]]
+|- class="Légendaire LEG-Psy"
+| 482 {{Miniature|0482}} [[Créfadet]]
+| {{type|psy}}
+| [[Lévitation]]
+| [[Psyko]]<br>[[Éclat Magique]]
+| [[Machination]]<br>[[Façade]]
+|- class="Légendaire LEG-Feu LEG-Acier"
+| 485 {{Miniature|0485}} [[Heatran]]
+| {{type|feu|acier}}
+| [[Torche]]
+| [[Strido-Son]]<br>[[Ébullilave]]
+| [[Mâchouille]]<br>[[Tête de Fer]]
+|- class="Légendaire LEG-Spectre LEG-Dragon"
+| 487 {{Miniature|0487|Alternative}} [[Giratina]]<br>''Forme Alternative''
+| {{type|spectre|dragon}}
+| [[Pression]]
+| [[Draco-Griffe]]<br>[[Grimace]]
+| [[Ball'Ombre]]<br>[[Pouvoir Antique]]
+|- class="Légendaire LEG-Psy"
+| 488 {{Miniature|0488}} [[Cresselia]]
+| {{type|psy}}
+| [[Lévitation]]
+| [[Vent Glace]]<br>[[Pouvoir Lunaire]]
+| [[Coupe Psycho]]<br>[[Choc Psy]]
+|- class="Légendaire LEG-Sol LEG-Vol"
+| 645 {{Miniature|0645|Avatar}} [[Démétéros]]<br>''Forme Avatar''
+| {{type|sol|vol}}
+| [[Force Sable]]
+| [[Tourbi-Sable]]<br>[[Tomberoche]]
+| [[Piétisol]]<br>[[Exploforce]]
+|- class="Légendaire LEG-Dragon LEG-Glace"
+| 646 {{Miniature|0646}} [[Kyurem]]
+| {{type|dragon|glace}}
+| [[Pression]]
+| [[Laser Glace]]<br>[[Mégaphone]]
+| [[Ball'Ombre]]<br>[[Grimace]]
+|- class="Légendaire LEG-Dragon LEG-Sol"
+| 718 {{Miniature|0718|50 %}} [[Zygarde]]<br>''Forme 50 %''
+| {{type|dragon|sol}}
+| [[Rassemblement]]
+| [[Myria-Flèches]]<br>[[Force Chtonienne]]
+| [[Draco-Choc]]<br>[[Étreinte]]
+|- class="Légendaire LEG-Électrik LEG-Fée"
+| 785 {{Miniature|0785}} [[Tokorico]]
+| {{type|électrik|fée}}
+| [[Créa-Élec]]
+| [[Tonnerre]]<br>[[Vive-Attaque]]
+| [[Rapace]]<br>[[Provoc]]
+|- class="Légendaire LEG-Psy LEG-Fée"
+| 786 {{Miniature|0786}} [[Tokopiyon]]
+| {{type|psy|fée}}
+| [[Créa-Psy]]
+| [[Psyko]]<br>[[Câlinerie]]
+| [[Zone Magique]]<br>[[Charme (capacité)|Charme]]
+|- class="Légendaire LEG-Plante LEG-Fée"
+| 787 {{Miniature|0787}} [[Tokotoro]]
+| {{type|plante|fée}}
+| [[Créa-Herbe]]
+| [[Surpuissance]]<br>[[Mégacorne]]
+| [[Martobois]]<br>[[Grimace]]
+|- class="Légendaire LEG-Eau LEG-Fée"
+| 788 {{Miniature|0788}} [[Tokopisco]]
+| {{type|eau|fée}}
+| [[Créa-Brume]]
+| [[Siphon]]<br>[[Vibraqua]]
+| [[Saumure]]<br>[[Pouvoir Lunaire]]
+|- class="Légendaire LEG-Psy"
+| 800 {{Miniature|0800}} [[Necrozma]]
+| {{type|psy}}
+| [[Prisme-Armure]]
+| [[Coupe Psycho]]<br>[[Rayon Chargé]]
+| [[Rayon Gemme]]<br>[[Allègement]]
+|-
+| colspan="5" class="épée" style="text-align:center" | '''Uniquement dans {{Jeu|Ep}}'''
+|- class="Légendaire LEG-Feu LEG-Vol"
+| 250 {{Miniature|0250}} [[Ho-Oh]]
+| {{type|feu|vol}}
+| [[Pression]]
+| [[Boutefeu]]<br>[[Extrasenseur]]
+| [[Zénith]]<br>[[Pouvoir Antique]]
+|- class="Légendaire LEG-Dragon LEG-Psy"
+| 381 {{Miniature|0381}} [[Latios]]
+| {{type|dragon|psy}}
+| [[Lévitation]]
+| [[Danse Draco]]<br>[[Draco-Choc]]
+| [[Psykoud'Boul]]<br>[[Aurasphère]]
+|- class="Légendaire LEG-Sol"
+| 383 {{Miniature|0383}} [[Groudon]]
+| {{type|sol}}
+| [[Sécheresse]]
+| [[Séisme]]<br>[[Grimace]]
+| [[Ébullilave]]<br>[[Marto-Poing]]
+|- class="Légendaire LEG-Acier LEG-Dragon"
+| 483 {{Miniature|0483}} [[Dialga]]
+| {{type|acier|dragon}}
+| [[Pression]]
+| [[Tranche]]<br>[[Pouvoir Antique]]
+| [[Luminocanon]]<br>[[Draco-Griffe]]
+|- class="Légendaire LEG-Vol"
+| 641 {{Miniature|0641|Avatar}} [[Boréas]]<br>''Forme Avatar''
+| {{type|vol}}
+| [[Farceur]]
+| [[Vent Violent]]<br>[[Hâte]]
+| [[Vent Glace]]<br>[[Canicule (capacité)|Canicule]]
+|- class="Légendaire LEG-Dragon LEG-Feu"
+| 643 {{Miniature|0643}} [[Reshiram]]
+| {{type|dragon|feu}}
+| [[Turbo Brasier]]
+| [[Râle Mâle]]<br>[[Extrasenseur]]
+| [[Flamme Croix]]<br>[[Draco-Choc]]
+|- class="Légendaire LEG-Fée"
+| 716 {{Miniature|0716}} [[Xerneas]]
+| {{type|fée}}
+| [[Aura Féérique]]
+| [[Racines]]<br>[[Éclat Magique]]
+| [[Pouvoir Lunaire]]<br>[[Encornebois]]
+|- class="Légendaire LEG-Psy LEG-Acier"
+| 791 {{Miniature|0791}} [[Solgaleo]]
+| {{type|psy|acier}}
+| [[Métallo-Garde]]
+| [[Psykoud'Boul]]<br>[[Danse Flammes]]
+| [[Queue de Fer]]<br>[[Râle Mâle]]
+|-
+| colspan="5" class="bouclier" style="text-align:center" | '''Uniquement dans {{Jeu|Bo}}'''
+|- class="Légendaire LEG-Psy LEG-Vol"
+| 249 {{Miniature|0249}} [[Lugia]]
+| {{type|psy|vol}}
+| [[Pression]]
+| [[Draco-Choc]]<br>[[Extrasenseur]]
+| [[Siphon]]<br>[[Pouvoir Antique]]
+|- class="Légendaire LEG-Dragon LEG-Psy"
+| 380 {{Miniature|0380}} [[Latias]]
+| {{type|dragon|psy}}
+| [[Lévitation]]
+| [[Copie-Type]]<br>[[Draco-Souffle]]
+| [[Psykoud'Boul]]<br>[[Surf]]
+|- class="Légendaire LEG-Eau"
+| 382 {{Miniature|0382}} [[Kyogre]]
+| {{type|eau}}
+| [[Crachin]]
+| [[Surf]]<br>[[Plaquage]]
+| [[Anneau Hydro]]<br>[[Fatal-Foudre]]
+|- class="Légendaire LEG-Eau LEG-Dragon"
+| 484 {{Miniature|0484}} [[Palkia]]
+| {{type|eau|dragon}}
+| [[Pression]]
+| [[Tranche]]<br>[[Surf]]
+| [[Pouvoir Antique]]<br>[[Draco-Griffe]]
+|- class="Légendaire LEG-Électrik LEG-Vol"
+| 642 {{Miniature|0642|Avatar}} [[Fulguris]]<br>''Forme Avatar''
+| {{type|électrik|vol}}
+| [[Farceur]]
+| [[Fatal-Foudre]]<br>[[Danse Pluie]]
+| [[Ball'Météo]]<br>[[Cradovague]]
+|- class="Légendaire LEG-Dragon LEG-Électrik"
+| 644 {{Miniature|0644}} [[Zekrom]]
+| {{type|dragon|électrik}}
+| [[Téra-Voltage]]
+| [[Râle Mâle]]<br>[[Tranche]]
+| [[Éclair Croix]]<br>[[Draco-Griffe]]
+|- class="Légendaire LEG-Ténèbres LEG-Vol"
+| 717 {{Miniature|0717}} [[Yveltal]]
+| {{type|ténèbres|vol}}
+| [[Aura Ténébreuse]]
+| [[Provoc]]<br>[[Mort'Ailes]]
+| [[Draco-Charge]]<br>[[Coup Bas]]
+|- class="Légendaire LEG-Psy LEG-Spectre"
+| 792 {{Miniature|0792}} [[Lunala]]
+| {{type|psy|spectre}}
+| [[Spectro-Bouclier]]
+| [[Ball'Ombre]]<br>[[Pouvoir Lunaire]]
+| [[Reflet Magik]]<br>[[Météores]]
+|}
+
+=== [[Ultra-Chimère]]s ===
+{| class="tableaustandard entetefixe" style="white-space:nowrap;"
+|-
+! Pokémon
+! [[Type]](s)
+! [[Talent]]
+! colspan="2" | Capacités
+|-
+| colspan="5" class="épée-bouclier" style="text-align:center" | '''Dans {{Jeu|EB}}'''
+|- class="Légendaire LEG-Roche LEG-Poison"
+| 793 {{Miniature|0793}} [[Zéroïd]]
+| {{type|roche|poison}}
+| [[Boost Chimère]]
+| [[Zone Étrange]]<br>[[Cradovague]]
+| [[Centrifugifle]]<br>[[Bombe Acide]]
+|- class="Légendaire LEG-Insecte LEG-Combat"
+| 794 {{Miniature|0794}} [[Mouscoto]]
+| {{type|insecte|combat}}
+| [[Boost Chimère]]
+| [[Poing Boost]]<br>[[Provoc]]
+| [[Vampirisme]]<br>[[Dynamo-Poing]]
+|- class="Légendaire LEG-Insecte LEG-Combat"
+| 795 {{Miniature|0795}} [[Cancrelove]]
+| {{type|insecte|combat}}
+| [[Boost Chimère]]
+| [[Pied Voltige]]<br>[[Météores]]
+| [[Exécu-Son]]<br>[[Furie-Bond]]
+|- class="Légendaire LEG-Électrik"
+| 796 {{Miniature|0796}} [[Câblifère]]
+| {{type|électrik}}
+| [[Boost Chimère]]
+| [[Mégafouet]]<br>[[Coup d'Jus]]
+| [[Ondes Étranges]]<br>[[Centrifugifle]]
+|- class="Légendaire LEG-Acier LEG-Vol"
+| 797 {{Miniature|0797}} [[Bamboiselle]]
+| {{type|acier|vol}}
+| [[Boost Chimère]]
+| [[Vampigraine]]<br>[[Anti-Air]]
+| [[Gyroballe]]<br>[[Séisme]]
+|- class="Légendaire LEG-Plante LEG-Acier"
+| 798 {{Miniature|0798}} [[Katagami]]
+| {{type|plante|acier}}
+| [[Boost Chimère]]
+| [[Onde Vide]]<br>[[Tranch'Air]]
+| [[Lame Feuille]]<br>[[Danse Lames]]
+|- class="Légendaire LEG-Ténèbres LEG-Dragon"
+| 799 {{Miniature|0799}} [[Engloutyran]]
+| {{type|ténèbres|dragon}}
+| [[Boost Chimère]]
+| [[Draco-Charge]]<br>[[Trépignement]]
+| [[Centrifugifle]]<br>[[Ultimapoing]]
+|- class="Légendaire LEG-Roche LEG-Acier"
+| 805 {{Miniature|0805}} [[Ama-Ama]]
+| {{type|roche|acier}}
+| [[Boost Chimère]]
+| [[Éboulement]]<br>[[Damoclès]]
+| [[Centrifugifle]]<br>[[Allègement]]
+|- class="Légendaire LEG-Feu LEG-Spectre"
+| 806 {{Miniature|0806}} [[Pierroteknik]]
+| {{type|feu|spectre}}
+| [[Boost Chimère]]
+| [[Griffe Ombre]]<br>[[Provoc]]
+| [[Déflagration]]<br>[[Psykoud'Boul]]
+|}
+
+<!-- Données pour le module Localisation
+{{#invoke:Tableau Pokémon|sauvage|jeu=EB|lieu=Grand Antre Dynamax|
+Pokémon rencontrables
+Herbizarre / niveau(65) taux(Fixe)
+Reptincel / niveau(65) taux(Fixe)
+Carabaffe / niveau(65) taux(Fixe)
+Papilusion forme(Gigamax) / niveau(65) taux(Fixe)
+Raichu / niveau(65) taux(Fixe)
+Raichu forme(Alola) / niveau(65) taux(Fixe)
+Sablaireau / niveau(65) taux(Fixe)
+Sablaireau forme(Alola) / niveau(65) taux(Fixe)
+Nidoqueen / niveau(65) taux(Fixe)
+Nidoking / niveau(65) taux(Fixe)
+Mélofée / niveau(65) taux(Fixe)
+Mélodelfe / niveau(65) taux(Fixe)
+Rondoudou / niveau(65) taux(Fixe)
+Grodoudou / niveau(65) taux(Fixe)
+Ortide / niveau(65) taux(Fixe)
+Rafflesia / niveau(65) taux(Fixe)
+Triopikeur / niveau(65) taux(Fixe)
+Triopikeur forme(Alola) / niveau(65) taux(Fixe)
+Persian / niveau(65) taux(Fixe)
+Persian forme(Alola) / niveau(65) taux(Fixe)
+Akwakwak / niveau(65) taux(Fixe)
+Tartard / niveau(65) taux(Fixe)
+Kadabra / niveau(65) taux(Fixe)
+Machopeur / niveau(65) taux(Fixe)
+Tentacruel / niveau(65) taux(Fixe)
+Flagadoss / niveau(65) taux(Fixe)
+Magnéton / niveau(65) taux(Fixe)
+Spectrum / niveau(65) taux(Fixe)
+Krabboss forme(Gigamax) / niveau(65) taux(Fixe)
+Noadkoko / niveau(65) taux(Fixe)
+Ossatueur / niveau(65) taux(Fixe)
+Ossatueur forme(Alola) / niveau(65) taux(Fixe)
+Kicklee / niveau(65) taux(Fixe)
+Tygnon / niveau(65) taux(Fixe)
+Excelangue / niveau(65) taux(Fixe)
+Smogogo / niveau(65) taux(Fixe)
+Smogogo forme(Galar) / niveau(65) taux(Fixe)
+Rhinoféros / niveau(65) taux(Fixe)
+Leveinard / niveau(65) taux(Fixe)
+Saquedeneu / niveau(65) taux(Fixe)
+Kangourex / niveau(65) taux(Fixe)
+Hypocéan / niveau(65) taux(Fixe)
+Poissoroy / niveau(65) taux(Fixe)
+Staross / niveau(65) taux(Fixe)
+M. Mime / niveau(65) taux(Fixe)
+M. Mime forme(Galar) / niveau(65) taux(Fixe)
+Insécateur / niveau(65) taux(Fixe)
+Lippoutou / niveau(65) taux(Fixe)
+Élektek / niveau(65) taux(Fixe)
+Magmar / niveau(65) taux(Fixe)
+Tauros / niveau(65) taux(Fixe)
+Métamorph / niveau(65) taux(Fixe)
+Aquali / niveau(65) taux(Fixe)
+Voltali / niveau(65) taux(Fixe)
+Pyroli / niveau(65) taux(Fixe)
+Porygon / niveau(65) taux(Fixe)
+Draco / niveau(65) taux(Fixe)
+Noarfang / niveau(65) taux(Fixe)
+Lanturn / niveau(65) taux(Fixe)
+Togetic / niveau(65) taux(Fixe)
+Xatu / niveau(65) taux(Fixe)
+Joliflor / niveau(65) taux(Fixe)
+Azumarill / niveau(65) taux(Fixe)
+Simularbre / niveau(65) taux(Fixe)
+Tarpaud / niveau(65) taux(Fixe)
+Maraiste / niveau(65) taux(Fixe)
+Roigada / niveau(65) taux(Fixe)
+Insolourdo / niveau(65) taux(Fixe)
+Qwilfish / niveau(65) taux(Fixe)
+Farfuret / niveau(65) taux(Fixe)
+Cochignon / niveau(65) taux(Fixe)
+Octillery / niveau(65) taux(Fixe)
+Démanta / niveau(65) taux(Fixe)
+Airmure / niveau(65) taux(Fixe)
+Kapoera / niveau(65) taux(Fixe)
+Écrémeuh / niveau(65) taux(Fixe)
+Massko / niveau(65) taux(Fixe)
+Jungko / niveau(65) taux(Fixe)
+Galifeu / niveau(65) taux(Fixe)
+Braségali / niveau(65) taux(Fixe)
+Flobio / niveau(65) taux(Fixe)
+Laggron / niveau(65) taux(Fixe)
+Linéon / niveau(65) taux(Fixe)
+Linéon forme(Galar) / niveau(65) taux(Fixe)
+Bekipan / niveau(65) taux(Fixe)
+Ninjask / niveau(65) taux(Fixe)
+Brouhabam / niveau(65) taux(Fixe)
+Galegon / niveau(65) taux(Fixe)
+Élecsprint / niveau(65) taux(Fixe)
+Rosélia / niveau(65) taux(Fixe)
+Sharpedo / niveau(65) taux(Fixe)
+Wailmer / niveau(65) taux(Fixe)
+Chartor / niveau(65) taux(Fixe)
+Libégon / niveau(65) taux(Fixe)
+Altaria / niveau(65) taux(Fixe)
+Barbicha / niveau(65) taux(Fixe)
+Colhomard / niveau(65) taux(Fixe)
+Kaorine / niveau(65) taux(Fixe)
+Vacilys / niveau(65) taux(Fixe)
+Armaldo / niveau(65) taux(Fixe)
+Téraclope / niveau(65) taux(Fixe)
+Absol / niveau(65) taux(Fixe)
+Oniglali / niveau(65) taux(Fixe)
+Phogleur / niveau(65) taux(Fixe)
+Relicanth / niveau(65) taux(Fixe)
+Métang / niveau(65) taux(Fixe)
+Luxray / niveau(65) taux(Fixe)
+Apireine / niveau(65) taux(Fixe)
+Ceriflor / niveau(65) taux(Fixe)
+Tritosor forme(Orient) / niveau(65) taux(Fixe)
+Grodrive / niveau(65) taux(Fixe)
+Lockpin / niveau(65) taux(Fixe)
+Moufflair / niveau(65) taux(Fixe)
+Archéodong / niveau(65) taux(Fixe)
+Goinfrex / niveau(65) taux(Fixe)
+Drascore / niveau(65) taux(Fixe)
+Blizzaroi / niveau(65) taux(Fixe)
+Momartik / niveau(65) taux(Fixe)
+Motisma / niveau(65) taux(Fixe)
+Mastouffe / niveau(65) taux(Fixe)
+Léopardus / niveau(65) taux(Fixe)
+Mushana / niveau(65) taux(Fixe)
+Déflaisan / niveau(65) taux(Fixe)
+Géolithe / niveau(65) taux(Fixe)
+Rhinolove / niveau(65) taux(Fixe)
+Nanméouïe / niveau(65) taux(Fixe)
+Ouvrifier / niveau(65) taux(Fixe)
+Batracné / niveau(65) taux(Fixe)
+Crapustule / niveau(65) taux(Fixe)
+Brutapode / niveau(65) taux(Fixe)
+Farfaduvet / niveau(65) taux(Fixe)
+Fragilady / niveau(65) taux(Fixe)
+Bargantua forme(Rouge) / niveau(65) taux(Fixe)
+Bargantua forme(Bleu) / niveau(65) taux(Fixe)
+Crocorible / niveau(65) taux(Fixe)
+Maracachi / niveau(65) taux(Fixe)
+Crabaraque / niveau(65) taux(Fixe)
+Cryptéro / niveau(65) taux(Fixe)
+Tutankafer / niveau(65) taux(Fixe)
+Miasmax forme(Gigamax) / niveau(65) taux(Fixe)
+Pashmilla / niveau(65) taux(Fixe)
+Sorboul / niveau(65) taux(Fixe)
+Emolga / niveau(65) taux(Fixe)
+Lançargot / niveau(65) taux(Fixe)
+Gaulet / niveau(65) taux(Fixe)
+Moyade / niveau(65) taux(Fixe)
+Mygavolt / niveau(65) taux(Fixe)
+Clic / niveau(65) taux(Fixe)
+Cliticlic / niveau(65) taux(Fixe)
+Neitram / niveau(65) taux(Fixe)
+Mélancolux / niveau(65) taux(Fixe)
+Incisache / niveau(65) taux(Fixe)
+Polagriffe / niveau(65) taux(Fixe)
+Hexagel / niveau(65) taux(Fixe)
+Limaspeed / niveau(65) taux(Fixe)
+Limonde / niveau(65) taux(Fixe)
+Limonde forme(Galar) / niveau(65) taux(Fixe)
+Shaofouine / niveau(65) taux(Fixe)
+Drakkarmin / niveau(65) taux(Fixe)
+Golemastoc / niveau(65) taux(Fixe)
+Scalproie / niveau(65) taux(Fixe)
+Frison / niveau(65) taux(Fixe)
+Aflamanoir / niveau(65) taux(Fixe)
+Fermite / niveau(65) taux(Fixe)
+Excavarenne / niveau(65) taux(Fixe)
+Flambusard / niveau(65) taux(Fixe)
+Pandarbare / niveau(65) taux(Fixe)
+Dimoclès / niveau(65) taux(Fixe)
+Sepiatroce / niveau(65) taux(Fixe)
+Golgopathe / niveau(65) taux(Fixe)
+Iguolta / niveau(65) taux(Fixe)
+Rexillius / niveau(65) taux(Fixe)
+Dragmara / niveau(65) taux(Fixe)
+Brutalibré / niveau(65) taux(Fixe)
+Dedenne / niveau(65) taux(Fixe)
+Trousselin / niveau(65) taux(Fixe)
+Desséliande / niveau(65) taux(Fixe)
+Banshitrouye nom(Taille Normale) / niveau(65) taux(Fixe)
+Chrysapile / niveau(65) taux(Fixe)
+Lucanon / niveau(65) taux(Fixe)
+Rubombelle / niveau(65) taux(Fixe)
+Lougaroc forme(Diurne) / niveau(65) taux(Fixe)
+Lougaroc forme(Nocturne) / niveau(65) taux(Fixe)
+Bourrinos / niveau(65) taux(Fixe)
+Tarenbulle / niveau(65) taux(Fixe)
+Floramantis / niveau(65) taux(Fixe)
+Lampignon / niveau(65) taux(Fixe)
+Malamandre / niveau(65) taux(Fixe)
+Chelours / niveau(65) taux(Fixe)
+Sucreine / niveau(65) taux(Fixe)
+Guérilande / niveau(65) taux(Fixe)
+Gouroutan / niveau(65) taux(Fixe)
+Quartermac / niveau(65) taux(Fixe)
+Trépassable / niveau(65) taux(Fixe)
+Concombaffe / niveau(65) taux(Fixe)
+Togedemaru / niveau(65) taux(Fixe)
+Mimiqui / niveau(65) taux(Fixe)
+Rongrigou / niveau(65) taux(Fixe)
+Astronelle forme(Gigamax) / niveau(65) taux(Fixe)
+Roublenard / niveau(65) taux(Fixe)
+Blancoton / niveau(65) taux(Fixe)
+Moumouflon / niveau(65) taux(Fixe)
+Torgamord / niveau(65) taux(Fixe)
+Fulgudog / niveau(65) taux(Fixe)
+Wagomine / niveau(65) taux(Fixe)
+Monthracite forme(Gigamax) / niveau(65) taux(Fixe)
+Dunaconda forme(Gigamax) / niveau(65) taux(Fixe)
+Nigosier / niveau(65) taux(Fixe)
+Hastacuda / niveau(65) taux(Fixe)
+Salarsen forme(Gigamax) / niveau(65) taux(Fixe)
+Scolocendre forme(Gigamax) / niveau(65) taux(Fixe)
+Krakos / niveau(65) taux(Fixe)
+Polthégeist / niveau(65) taux(Fixe)
+Sorcilence forme(Gigamax) / niveau(65) taux(Fixe)
+Angoliath forme(Gigamax) / niveau(65) taux(Fixe)
+Ixon / niveau(65) taux(Fixe)
+Berserkatt / niveau(65) taux(Fixe)
+Charmilly forme(Gigamax) / niveau(65) taux(Fixe)
+Hexadron / niveau(65) taux(Fixe)
+Wattapik / niveau(65) taux(Fixe)
+Beldeneige / niveau(65) taux(Fixe)
+Wimessir / niveau(65) taux(Fixe)
+Morpeko / niveau(65) taux(Fixe)
+Pachyradjah / niveau(65) taux(Fixe)
+Duralugon forme(Gigamax) / niveau(65) taux(Fixe)
+Dispareptil / niveau(65) taux(Fixe)
+
+Pokémon hors du commun
+Artikodin / niveau(70) taux(Unique)
+Électhor / niveau(70) taux(Unique)
+Sulfura / niveau(70) taux(Unique)
+Mewtwo / niveau(70) taux(Unique)
+Raikou / niveau(70) taux(Unique)
+Entei / niveau(70) taux(Unique)
+Suicune / niveau(70) taux(Unique)
+Rayquaza / niveau(70) taux(Unique)
+Créhelf / niveau(70) taux(Unique)
+Créfollet / niveau(70) taux(Unique)
+Créfadet / niveau(70) taux(Unique)
+Heatran / niveau(70) taux(Unique)
+Giratina forme(Alternative) / niveau(70) taux(Unique)
+Cresselia / niveau(70) taux(Unique)
+Démétéros forme(Avatar) / niveau(70) taux(Unique)
+Kyurem / niveau(70) taux(Unique)
+Zygarde / niveau(70) taux(Unique)
+Tokorico / niveau(70) taux(Unique)
+Tokopiyon / niveau(70) taux(Unique)
+Tokotoro / niveau(70) taux(Unique)
+Tokopisco / niveau(70) taux(Unique)
+Necrozma / niveau(70) taux(Unique)
+Ho-Oh / niveau(70) taux(Unique, Ep)
+Latios / niveau(70) taux(Unique, Ep)
+Groudon / niveau(70) taux(Unique, Ep)
+Dialga / niveau(70) taux(Unique, Ep)
+Boréas forme(Avatar) / niveau(70) taux(Unique, Ep)
+Reshiram / niveau(70) taux(Unique, Ep)
+Xerneas / niveau(70) taux(Unique, Ep)
+Solgaleo / niveau(70) taux(Unique, Ep)
+Lugia / niveau(70) taux(Unique, Bo)
+Latias / niveau(70) taux(Unique, Bo)
+Kyogre / niveau(70) taux(Unique, Bo)
+Palkia / niveau(70) taux(Unique, Bo)
+Fulguris forme(Avatar) / niveau(70) taux(Unique, Bo)
+Zekrom / niveau(70) taux(Unique, Bo)
+Yveltal / niveau(70) taux(Unique, Bo)
+Lunala / niveau(70) taux(Unique, Bo)
+
+Pokémon hors du commun,<br>(une fois la [[Note Légende (?)]] reçue)
+Zéroïd / niveau(70) taux(Unique)
+Mouscoto / niveau(70) taux(Unique)
+Cancrelove / niveau(70) taux(Unique)
+Câblifère / niveau(70) taux(Unique)
+Bamboiselle / niveau(70) taux(Unique)
+Katagami / niveau(70) taux(Unique)
+Engloutyran / niveau(70) taux(Unique)
+Ama-Ama / niveau(70) taux(Unique)
+Pierroteknik / niveau(70) taux(Unique)
+}}
+-->
+
+[[Catégorie:Mécanisme de jeu]]
+[[Catégorie:Page avec un module Tableau Pokémon]]
+
+[[de:Dynamax-Abenteuer]]
+[[en:Dynamax Adventure]]
+[[es:Aventura Dinamax]]
+[[it:Avventura Dynamax]]
+[[ja:ダイマックスアドベンチャー]]
+[[zh:极巨大冒险]]

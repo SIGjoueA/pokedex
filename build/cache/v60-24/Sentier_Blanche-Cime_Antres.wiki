@@ -1,0 +1,80 @@
+[[Fichier:Sentier Blanche-Cime Antres EB.png|right|400px|Localisation des antres du Sentier Blanche-Cime]]
+
+Le '''Sentier Blanche-Cime''' possède trois antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+__TOC__
+== Antre A ==
+
+[[Fichier:Sentier Blanche-Cime Antre A EB.png|thumb|right|300px|L'antre A du Sentier Blanche-Cime.]]
+
+L'antre A est au nord, à droite lorsqu'on vient depuis les [[Galeries Monte-Pic]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 188|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 188|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 189|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 189|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Sentier Blanche-Cime Antre B EB.png|thumb|right|300px|L'antre B du Sentier Blanche-Cime.]]
+
+L'antre B est au nord-est de la zone, près de la frontière avec le [[Temple Couronne]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 178|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 178|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 179|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 179|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Sentier Blanche-Cime Antre C EB.png|thumb|right|300px|L'antre C du Sentier Blanche-Cime.]]
+
+L'antre C est le seul des trois antres de la zone qui soit dans la partie sud.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 184|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 184|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 185|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 185|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Path to the Peak/Dens]]

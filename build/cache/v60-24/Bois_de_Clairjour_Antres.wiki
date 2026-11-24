@@ -1,0 +1,131 @@
+[[Fichier:Bois de Clairjour Antres EB.png|right|300px|Localisation des antres du Bois de Clairjour]]
+
+Le '''Bois de Clairjour''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve. On y trouve principalement des Pokémon de type [[Plante (type)|Plante]].
+
+On peut noter la présence de [[Pomdrapi Gigamax]] et [[Dratatin Gigamax]] dans l'antre A, et d'[[Astronelle Gigamax]] dans l'antre D.
+__TOC__
+== Antre A ==
+
+[[Fichier:Bois de Clairjour Antre A EB.png|thumb|right|300px|L'antre A du Bois de Clairjour.]]
+
+L'antre A est au nord-ouest de la zone, juste au-dessus de l'antre B.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 28|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 28|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 79|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 79|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Bois de Clairjour Antre B EB.png|thumb|right|300px|L'antre B du Bois de Clairjour.]]
+
+L'antre B est au nord-ouest de la zone, juste au-dessous de l'antre A.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 26|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 26|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 58|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 58|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Bois de Clairjour Antre C EB.png|thumb|right|300px|L'antre C du Bois de Clairjour.]]
+
+L'antre A est situé au nord de la zone, près du [[Lac Coupenotte Ouest]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 26|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 26|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 59|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 59|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Bois de Clairjour Antre D EB.png|thumb|right|300px|L'antre D du Bois de Clairjour.]]
+
+L'antre D est situé au sud des antres A et B, près d'une zone de terre claire.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 4|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 4|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 92|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 92|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Bois de Clairjour Antre E EB.png|thumb|right|300px|L'antre E du Bois de Clairjour.]]
+
+L'antre E est le plus au sud de la zone. Il est entouré de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 26|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 26|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 59|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 59|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Dappled Grove/Dens]]
+[[it:Boschetto Ombraluce/Tane di Pokémon]]
+[[ja:こもれびばやし/ポケモンの巣]]

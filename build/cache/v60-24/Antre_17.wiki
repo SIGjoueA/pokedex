@@ -1,0 +1,61 @@
+{{Ruban Antre|17}}
+
+L''''antre 17''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Sol (type)|Sol]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Fosse des Sables Antre C EB.png|300px]]
+| [[Fichier:Fosse des Sables Antre G EB.png|300px]]
+|-
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 17|
+Dunaja / iv(1) 1(35)
+Tutafeh forme(Galar) / iv(1) 1(35)
+Hippopotas / iv(1) 1(20) 2(30)
+Marcacrin / iv(1) 1(10, Ep) 2(30, Ep, 20, Bo)
+Kraknoix / iv(1) 1(10, Bo) 2(20, Ep, 30, Bo)
+Cochignon / iv(2) 2(20) 3(40)
+Vibraninf / iv(3) 3(30, Ep) 4(20, Ep)
+Limonde forme(Galar) / iv(3) 3(30, Bo) 4(20, Bo) / iv(4) 3(30, Ep) 4(30, Ep) 5(29, Ep)
+Vibraninf / iv(4) 3(30, Bo) 4(30, Bo) 5(29, Bo)
+Tutétékri / iv(4) 5(1)
+Hippodocus / talent-caché(Possible) iv(4) 4(50, Ep) 5(25, Ep, 35, Bo)
+Libégon / iv(4) 4(50, Bo) 5(35, Ep, 25, Bo)
+Dunaconda / talent-caché(Possible) iv(4) 5(10)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Prine / taux(80%)
+Baie Qualot / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT63, Rayon Gemme / image(DT Roche) 1(100%) 2(100%) 4(100%) 5(100%)
+DT67, Telluriforce / image(DT Sol) 2(100%) 3(100%) 5(100%)
+DT23, Picots / image(DT Sol) 3(100%) 4(100%) 5(100%)
+DT75, Lame de Roc / image(DT Roche) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Sol]]

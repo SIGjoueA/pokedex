@@ -1,0 +1,62 @@
+{{Ruban Antre|38}}
+
+L''''antre 38''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Dragon (type)|Dragon]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Œil du Lac Antre A EB.png|300px]]
+|-
+| [[Œil du Lac/Antres|Œil du Lac]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 38|
+Sonistrelle / iv(1) 1(35)
+Verpom / iv(1) 1(35)
+Bébécaille / iv(1) 1(20, Ep) 2(30, Ep)
+Mucuscule / iv(1) 1(20, Bo) 2(30, Bo)
+Fantyrm / iv(1) 1(10) 2(10)
+Sonistrelle / iv(2) 2(30)
+Verpom / iv(2) 2(30) 3(40)
+Dispareptil / iv(3) 3(10) 4(10)
+Bruyverne / iv(4) 3(25) 4(35) 5(35)
+Écaïd / iv(4) 3(25, Ep) 4(35, Ep) 5(35, Ep)
+Colimucus / iv(4) 3(25, Bo) 4(35, Bo) 5(35, Bo)
+Ékaïser / talent-caché(Possible) iv(4) 4(20, Ep) 5(20, Ep)
+Muplodocus / talent-caché(Possible) iv(4) 4(20, Bo) 5(20, Bo)
+Pomdrapi / talent-caché(Possible) iv(4) 5(5, Ep)
+Dratatin / talent-caché(Possible) iv(4) 5(5, Bo)
+Lanssorien / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Mago / taux(80%)
+Baie Résin / taux(80%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT62, Dracochoc / image(DT Dragon) taux(100%)
+DT51, Danse Draco / image(DT Dragon) 3(100%) 4(100%) 5(100%)
+DT24, Colère / image(DT Dragon) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Dragon]]

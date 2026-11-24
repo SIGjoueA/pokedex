@@ -1,0 +1,129 @@
+[[Fichier:Miroir du Géant Antres EB.png|right|300px|Localisation des antres du Miroir du Géant]]
+
+Le '''Miroir du Géant''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+__TOC__
+== Antre A ==
+
+[[Fichier:Miroir du Géant Antre A EB.png|thumb|right|300px|L'antre A du Miroir du Géant.]]
+
+L'antre A est situé tout au nord-est de la zone, avec des hautes herbes et l'antre B juste au sud.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 27|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 27|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 70|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 70|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Miroir du Géant Antre B EB.png|thumb|right|300px|L'antre B du Miroir du Géant.]]
+
+L'antre B est situé au nord-est de la zone, avec des hautes herbes et l'antre A à son nord.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 36|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 36|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 69|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 69|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Miroir du Géant Antre C EB.png|thumb|right|300px|L'antre C du Miroir du Géant.]]
+
+L'antre C est situé au centre du Miroir du Géant, près d'un grand rocher.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 25|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 25|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 72|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 72|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Miroir du Géant Antre D EB.png|thumb|right|300px|L'antre D du Miroir du Géant.]]
+
+L'antre D se situe dans le petit lac vers le sud de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 42|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 42|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 67|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 67|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Miroir du Géant Antre E EB.png|thumb|right|300px|L'antre E du Miroir du Géant.]]
+
+L'antre E se trouve tout au sud-ouest de la zone, à côté de hautes herbes brunes, à la frontière avec la [[Plaine Rocheuse]] et de la [[Fosse des Sables]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 28|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 28|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 43|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 43|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Giant's Mirror/Dens]]
+[[it:Specchio del Gigante/Tane di Pokémon]]
+[[ja:きょじんのかがみいけ/ポケモンの巣]]

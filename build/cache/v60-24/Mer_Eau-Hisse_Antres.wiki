@@ -1,0 +1,179 @@
+[[Fichier:Mer Eau-Hisse Antres EB.png|right|400px|Localisation des antres de la Mer Eau-Hisse]]
+
+La '''Mer Eau-Hisse''' possède dix antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Métamorph]] dans l'antre A, et de [[Tortank Gigamax]] dans l'antre G.
+__TOC__
+== Antre A ==
+
+[[Fichier:Mer Eau-Hisse Antre A EB.png|thumb|right|300px|L'antre A de la Mer Eau-Hisse.]]
+
+L'antre A est situé sur l'île aux trois arbres, tout au nord de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 152|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 152|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 153|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 153|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Mer Eau-Hisse Antre B EB.png|thumb|right|300px|L'antre B de la Mer Eau-Hisse.]]
+
+L'antre B est dans la partie nord de la zone, à mi-chemin entre les cinq îlots et l'île aux trois arbres.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 121|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 121|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 122|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 122|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Mer Eau-Hisse Antre C EB.png|thumb|right|300px|L'antre C de la Mer Eau-Hisse.]]
+
+L'antre C est sur le petit îlot au milieu des cinq îlots, près de l'accès à la [[Plaine Salutation]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 139|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 139|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 140|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 140|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Mer Eau-Hisse Antre D EB.png|thumb|right|300px|L'antre D de la Mer Eau-Hisse.]]
+
+L'antre D se situe au sud de l'antre C, au centre de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 109|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 109|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 110|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 110|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Mer Eau-Hisse Antre E EB.png|thumb|right|300px|L'antre E de la Mer Eau-Hisse.]]
+
+L'antre E se situe à l'ouest des cinq îlots, près d'un grand rocher.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 131|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 131|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 132|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 132|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Mer Eau-Hisse Antre F EB.png|thumb|right|300px|L'antre F de la Mer Eau-Hisse.]]
+
+L'antre F se situe au sud-ouest des cinq îlots, directement au sud de la gare de la [[Plaine Salutation]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 107|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 107|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 108|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 108|Récompenses}}
+
+== Antre G ==
+
+[[Fichier:Mer Eau-Hisse Antre G EB.png|thumb|right|300px|L'antre G de la Mer Eau-Hisse.]]
+
+L'antre G se situe sur une petite île au sud-ouest de la zone, près de la [[Mer Align'Îlots]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 155|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 155|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 146|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 146|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Workout Sea/Dens]]
+[[it:Mar Ginnico/Tane di Pokémon]]
+[[ja:ワークアウトのうみ/ポケモンの巣]]

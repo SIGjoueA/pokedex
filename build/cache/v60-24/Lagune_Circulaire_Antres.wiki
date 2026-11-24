@@ -1,0 +1,107 @@
+[[Fichier:Lagune Circulaire Antres EB.png|right|300px|Localisation des antres de la Lagune Circulaire]]
+
+La '''Lagune Circulaire''' possède quatre antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Pomdrapi Gigamax]] et de [[Dratatin Gigamax]] dans l'antre A.
+__TOC__
+== Antre A ==
+
+[[Fichier:Lagune Circulaire Antre A EB.png|thumb|right|300px|L'antre A de la Lagune Circulaire.]]
+
+L'antre A est situé au nord de l'îlot au centre de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 131|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 131|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 151|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 151|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Lagune Circulaire Antre B EB.png|thumb|right|300px|L'antre B de la Lagune Circulaire.]]
+
+L'antre B est situé à l'est de la lagune, entre les deux sorties vers la [[Mer Align'Îlots]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 107|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 107|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 108|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 108|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Lagune Circulaire Antre C EB.png|thumb|right|300px|L'antre C de la Lagune Circulaire.]]
+
+L'antre C se situe sur la plage de l'îlot au centre de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 113|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 113|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 114|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 114|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Lagune Circulaire Antre D EB.png|thumb|right|300px|L'antre D de la Lagune Circulaire.]]
+
+L'antre D se situe au sud de la lagune, près d'une entrée vers la [[Mer Align'Îlots]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 137|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 137|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 138|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 138|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Loop Lagoon/Dens]]
+[[it:Baia Circolare/Tane di Pokémon]]
+[[ja:えんかんのいりえ/ポケモンの巣]]

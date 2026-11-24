@@ -1,0 +1,93 @@
+{{Ruban Antre|191}}
+
+L''''antre 191''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Fée (type)|Fée]].
+
+On y trouve notamment des [[Sorcilence Gigamax]].
+
+À noter que les [[DT]] récompensant cet antre sont majoritairement d'un type différent de celui des Pokémon de l'antre, à savoir le type [[Psy (type)|Psy]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre I EB.png|300px]]
+| [[Fichier:Mer Banquise Antre E EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Mer Banquise/Antres|Mer Banquise]]
+|-
+| [[Fichier:Pente Enneigée Antre F EB.png|300px]]
+| [[Fichier:Plaine Granfroy Antre A EB.png|300px]]
+|-
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+| [[Plaine Granfroy/Antres|Plaine Granfroy]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre R EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 191|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Strassie / talent-caché(Toujours) iv(2) 1(60) 2(30) / talent-caché(Toujours) iv(3) 2(20) 3(25) / talent-caché(Toujours) iv(4) 3(25) 4(25)
+Doudouvet / talent-caché(Toujours) iv(2) 1(40) 2(25)
+Mélofée / talent-caché(Toujours) iv(3) 2(25) 3(30)
+Farfaduvet / talent-caché(Toujours) iv(4) 3(15) 4(25)
+Smogogo forme(Galar) / talent-caché(Toujours) iv(5) 4(15) 5(40)
+Sorcilence / talent-caché(Toujours) iv(5) 4(15) 5(20)
+Mélodelfe / talent-caché(Toujours) iv(5) 4(15) 5(20)
+Sorcilence forme(Gigamax) / talent-caché(Toujours) iv(5) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Gowav / taux(80%)
+Baie Alga / taux(80%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT92, Éclat Magique / image(DT Fée) taux(100%)
+DT12, Hâte / image(DT Psy) 3(100%) 4(100%) 5(100%)
+DT82, Force Ajoutée / image(DT Psy) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Fée]]

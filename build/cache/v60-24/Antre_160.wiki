@@ -1,0 +1,89 @@
+{{Ruban Antre|160}}
+
+L''''antre 160''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Feu (type)|Feu]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lac Poké Ball Antre E EB.png|300px]]
+| [[Fichier:Lac Poké Ball Antre O EB.png|300px]]
+|-
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+| [[Lac Poké Ball/Antres|Lac Poké Ball]]
+|-
+| [[Fichier:Pente Enneigée Antre A EB.png|300px]]
+| [[Fichier:Repos du Géant Antre J EB.png|300px]]
+|-
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre M EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 160|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Magby / iv(1) 1(60) 2(30) / iv(2) 2(25) 3(30)
+Grillepattes / iv(1) 1(40) 2(25)
+Aflamanoir / iv(2) 2(20) 3(25) / iv(3) 3(15) 4(25)
+Mélancolux / iv(3) 3(25) 4(25)
+Magmar / talent-caché(Possible) iv(4) 4(15) 5(40)
+Scolocendre / talent-caché(Possible) iv(4) 4(15) 5(20)
+Lugulabre / talent-caché(Possible) iv(4) 4(15) 5(20)
+Maganon / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Sitrus / taux(80%)
+Baie Résin / taux(80%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT02, Lance-Flammes / image(DT Feu) taux(100%)
+DT88, Tacle Feu / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT15, Déflagration / image(DT Feu) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Feu]]

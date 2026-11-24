@@ -1,0 +1,85 @@
+{{Ruban Antre|188}}
+
+L''''antre 188''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Acier (type)|Acier]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Mer Banquise Antre F EB.png|300px]]
+| [[Fichier:Pente Enneigée Antre D EB.png|300px]]
+|-
+| [[Mer Banquise/Antres|Mer Banquise]]
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+|-
+| [[Fichier:Repos du Géant Antre K EB.png|300px]]
+| [[Fichier:Sentier Blanche-Cime Antre A EB.png|300px]]
+|-
+| [[Repos du Géant/Antres|Repos du Géant]]
+| [[Sentier Blanche-Cime/Antres|Sentier Blanche-Cime]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 188|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Galekid / iv(1) 1(60) 2(30) / iv(2) 2(25) 3(30)
+Fermite / iv(1) 1(40) 2(25) / talent-caché(Possible) iv(4) 4(15) 5(20)
+Terhal / iv(2) 2(20) 3(25)
+Galegon / iv(3) 3(25) 4(25)
+Métang / iv(3) 3(15) 4(25)
+Corvaillus / talent-caché(Possible) iv(4) 4(15) 5(25)
+Pachyradjah / talent-caché(Possible) iv(4) 4(15) 5(20)
+Galeking / talent-caché(Possible) iv(4) 5(30)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Gowav / taux(80%)
+Baie Grena / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT79, Tacle Lourd / image(DT Acier) taux(100%)
+DT74, Tête de Fer / image(DT Acier) 3(100%) 4(100%) 5(100%)
+DT46, Mur de Fer / image(DT Acier) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Acier]]

@@ -1,0 +1,82 @@
+{{Ruban Antre|106}}
+
+L''''antre 106''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Électrik (type)|Électrik]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Plaine Salutation Antre G EB.png|300px]]
+| [[Fichier:Forêt Flexion Antre C EB.png|300px]]
+|-
+| [[Plaine Salutation/Antres|Plaine Salutation]]
+| [[Forêt Flexion/Antres|Forêt Flexion]]
+|-
+| [[Fichier:Plage de l'Épreuve Antre F EB.png|300px]]
+| [[Fichier:Mer Calméole Antre C EB.png|300px]]
+|-
+| [[Plage de l'Épreuve/Antres|Plage de l'Épreuve]]
+| [[Mer Calméole/Antres|Mer Calméole]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 106|
+Leuphorie / talent-caché(Toujours) iv(4) 3(5) 4(5) 5(5)
+Lixy / talent-caché(Toujours) iv(1) 1(60) 2(30)
+Pichu / talent-caché(Toujours) iv(1) 1(40) 2(25)
+Pikachu / talent-caché(Toujours) iv(2) 2(25) 3(30)
+Wattapik / talent-caché(Toujours) iv(2) 2(20) 3(25)
+Luxio / talent-caché(Toujours) iv(3) 3(25) 4(25)
+Raichu / talent-caché(Toujours) iv(3) 3(15) 4(25)
+Fulgudog / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Dedenne / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Élecsprint / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Luxray / talent-caché(Toujours) iv(4) 5(20)
+Magnézone / talent-caché(Toujours) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leuphorie</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Sitrus / taux(80%)
+Baie Alga / taux(80%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT86, Éclair Fou / image(DT Électrik) taux(100%)
+DT08, Tonnerre / image(DT Électrik) 3(100%) 4(100%) 5(100%)
+DT09, Fatal-Foudre / image(DT Électrik) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Armurium / 1(2) 2(2) 3(2) 4(3) 5(3)
+<big>Exclusifs à Leuphorie</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Armurium / 3(3) 4(4) 5(5)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Électrik]]

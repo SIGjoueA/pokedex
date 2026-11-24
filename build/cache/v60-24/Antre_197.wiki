@@ -1,0 +1,80 @@
+{{Ruban Antre|197|dernier=oui}}
+
+L''''antre 197''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Roche (type)|Roche]].
+
+On y trouve majoritairement des [[Pokémon fossile]]s, dont ceux originaires de [[Galar]], obtenables avec leur [[talent caché]]. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir beaucoup d'[[Os Rare]]s, ainsi que des [[Masse Os]] et les [[Fossile (objet)|Fossiles]] de la région de Galar.
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Pente Enneigée Antre B EB.png|300px]]
+|-
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 197|
+Cadoizo / talent-caché(Toujours) iv(5) 3(5) 4(5) 5(5)
+Amonita / talent-caché(Toujours) iv(2) 1(100, Ep) 2(100, Ep)
+Kabuto / talent-caché(Toujours) iv(2) 1(100, Bo) 2(100, Bo)
+Amonistar / talent-caché(Toujours) iv(2) 3(15, Ep)
+Kabutops / talent-caché(Toujours) iv(2) 3(15, Bo)
+Ptéra / talent-caché(Toujours) iv(3) 3(40) / talent-caché(Toujours) iv(5) 4(21) 5(15)
+Galvagla / talent-caché(Toujours) iv(3) 3(20, Ep) / talent-caché(Toujours) iv(5) 4(30, Ep, 7, Bo) 5(30, Ep, 10, Bo)
+Hydragla / talent-caché(Toujours) iv(3) 3(20, Bo) / talent-caché(Toujours) iv(5) 4(7, Ep, 30, Bo) 5(10, Ep, 30, Bo)
+Galvagon / talent-caché(Toujours) iv(4) 3(20, Ep) 4(30, Ep, 7, Bo) / talent-caché(Toujours) iv(5) 5(30, Ep, 10, Bo)
+Hydragon / talent-caché(Toujours) iv(4) 3(20, Bo) 4(7, Ep, 30, Bo) / talent-caché(Toujours) iv(5) 5(10, Ep, 30, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Cadoizo</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Os Rare / 1(80%) 2(80%) 3(80%) 4(80%) 5(100%)
+Os Rare / 1(40%) 2(40%) 3(60%) 4(80%) 5(100%)
+Os Rare / 1(20%) 2(40%) 3(40%) 4(60%) 5(80%)
+Os Rare / 1(20%) 2(20%) 3(20%) 4(40%) 5(60%)
+Masse Os / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Oiseau / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Poisson / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Dragon / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Aileron / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Cadoizo</big>
+Capsule d'Argent / 3(5%) 4(15%) 5(30%)
+Capsule d'Or / 3(1%) 4(3%) 5(5%)
+Pépite / 3(80%) 4(90%) 5(100%)
+Maxi Pépite / 3(30%) 4(50%) 5(70%)
+Limonade / 3(100%) 4(100%) 5(100%)
+PP Plus / 3(50%) 4(65%) 5(80%)
+PP Max / 3(5%) 4(10%) 5(15%)
+Luxe Ball / 3(60%) 4(80%) 5(100%)
+Rêve Ball / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 3(100%) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Dynamaxium / 3(2) 4(2) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Roche]]

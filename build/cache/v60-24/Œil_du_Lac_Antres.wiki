@@ -1,0 +1,33 @@
+[[Fichier:Œil du Lac Antres EB.png|right|200px|Localisation des antres de l'Œil du Lac]]
+
+L''''Œil du Lac''' possède un seul antre de Pokémon. Il est associé à deux couleurs de faisceau, rouge ou mauve. On y trouve principalement des Pokémon de type [[Dragon (type)|Dragon]].
+__TOC__
+== Antre A ==
+
+[[Fichier:Œil du Lac Antre A EB.png|thumb|right|300px|L'antre A de l'Œil du Lac.]]
+
+L'antre A est localisé au centre de l'Œil du Lac.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 38|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 38|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 64|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 64|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Axew's Eye/Dens]]
+[[it:Occhio del Lago Axew/Tane di Pokémon]]
+[[ja:キバこのひとみ/ポケモンの巣]]

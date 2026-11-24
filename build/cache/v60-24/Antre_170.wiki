@@ -1,0 +1,92 @@
+{{Ruban Antre|170}}
+
+L''''antre 170''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Glace (type)|Glace]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Mer Banquise Antre H EB.png|300px]]
+| [[Fichier:Mer Banquise Antre I EB.png|300px]]
+|-
+| [[Mer Banquise/Antres|Mer Banquise]]
+| [[Mer Banquise/Antres|Mer Banquise]]
+|-
+| [[Fichier:Mer Banquise Antre N EB.png|300px]]
+| [[Fichier:Repos du Géant Antre E EB.png|300px]]
+|-
+| [[Mer Banquise/Antres|Mer Banquise]]
+| [[Repos du Géant/Antres|Repos du Géant]]
+|-
+| colspan="2" | [[Fichier:Repos du Géant Antre U EB.png|300px]]
+|-
+| colspan="2" | [[Repos du Géant/Antres|Repos du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 170|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Polarhume / iv(1) 1(60, Ep) 2(30, Ep)
+Bekaglaçon / iv(1) 1(60, Bo) 2(30, Bo) / iv(2) 2(20, Bo) 3(25, Bo)
+Obalie / iv(1) 1(40) 2(25) / iv(2) 2(25) 3(30)
+Grelaçon / iv(2) 2(20, Ep) 3(25, Ep)
+Phogleur / iv(3) 3(25) 4(25)
+Hexagel / iv(3) 3(15) 4(25)
+Sorbouboul / talent-caché(Possible) iv(4) 4(15) 5(25)
+Polagriffe / talent-caché(Possible) iv(4) 4(15) 5(20)
+Kaimorse / talent-caché(Possible) iv(4) 4(15) 5(20)
+Séracrawl / talent-caché(Possible) iv(4) 5(15)
+Lokhlass / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Figuy / taux(80%)
+Baie Lonme / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT05, Laser Glace / image(DT Glace) taux(100%)
+DT85, Rengorgement / image(DT Normal) 3(100%) 4(100%) 5(100%)
+DT06, Blizzard / image(DT Glace) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Glace]]

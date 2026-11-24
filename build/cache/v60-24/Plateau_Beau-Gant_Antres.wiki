@@ -1,0 +1,154 @@
+[[Fichier:Plateau Beau-Gant Antres EB.png|right|400px|Localisation des antres du Plateau Beau-Gant]]
+
+Le '''Plateau Beau-Gant''' possède six antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+__TOC__
+== Antre A ==
+
+[[Fichier:Plateau Beau-Gant Antre A EB.png|thumb|right|300px|L'antre A du Plateau Beau-Gant.]]
+
+L'antre A est situé au nord de la zone, près d'une zone de hautes herbes adossée à la montagne et entourant des arbres.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 180|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 180|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 181|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 181|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Plateau Beau-Gant Antre B EB.png|thumb|right|300px|L'antre B du Plateau Beau-Gant.]]
+
+L'antre B est situé à gauche en arrivant depuis la gare, près d'une zone de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 168|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 168|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 169|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 169|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Plateau Beau-Gant Antre C EB.png|thumb|right|300px|L'antre C du Plateau Beau-Gant.]]
+
+L'antre C est situé vers le centre de la zone, près d'une grande zone de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 168|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 168|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 169|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 169|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Plateau Beau-Gant Antre D EB.png|thumb|right|300px|L'antre D du Plateau Beau-Gant.]]
+
+L'antre D est à l'est de la zone, caché entre des grands rochers.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 182|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 182|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 183|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 183|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Plateau Beau-Gant Antre E EB.png|thumb|right|300px|L'antre E du Plateau Beau-Gant.]]
+
+L'antre E est situé vers la frontière avec le [[Hameau Gelé]], près d'un grand rocher.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 158|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 158|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 159|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 159|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Plateau Beau-Gant Antre F EB.png|thumb|right|300px|L'antre F du Plateau Beau-Gant.]]
+
+L'antre F se trouve derrière une zone de hautes herbes, accessible en tournant à droite depuis l'entrée de la gare.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 166|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 166|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 167|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 167|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Slippery Slope/Dens]]
+[[it:Nevi Primoscivolo/Tane di Pokémon]]
+[[ja:すべりだしせつげん/ポケモンの巣]]

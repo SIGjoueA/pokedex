@@ -1,0 +1,63 @@
+{{Ruban Antre|4}}
+
+L''''antre 4''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Insecte (type)|Insecte]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Prairie Entre-Ponts Antre C EB.png|300px]]
+| [[Fichier:Bois de Clairjour Antre D EB.png|300px]]
+|-
+| [[Prairie Entre-Ponts/Antres|Prairie Entre-Ponts]]
+| [[Bois de Clairjour/Antres|Bois de Clairjour]]
+|-
+| colspan="2" | [[Fichier:Plaine Verdoyante Antre E EB.png|300px]]
+|-
+| colspan="2" | [[Plaine Verdoyante/Antres|Plaine Verdoyante]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 4|
+Chenipan / iv(1) 1(35)
+Larvibule / iv(1) 1(35)
+Ningale / iv(1) 1(20) 2(30)
+Statitik / iv(1) 1(10) 2(30)
+Fermite / iv(2) 2(20) 3(30, Ep, 10, Bo) / talent-caché(Possible) iv(4) 5(20)
+Chrysacier / iv(2) 2(20) 3(10, Ep, 30, Bo)
+Chrysapile / iv(3) 3(20) 4(10)
+Ninjask / iv(4) 3(20) 4(20) 5(10)
+Papilusion / iv(4) 3(20) 4(20) 5(25)
+Mygavolt / talent-caché(Possible) iv(4) 4(50) 5(25)
+Lucanon / iv(4) 5(20)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Papaya / taux(80%)
+Baie Grena / taux(80%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT18, Vampirisme / image(DT Insecte) taux(100%)
+DT61, Bourdon / image(DT Insecte) 3(100%) 4(100%) 5(100%)
+DT28, Mégacorne / image(DT Insecte) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Insecte]]

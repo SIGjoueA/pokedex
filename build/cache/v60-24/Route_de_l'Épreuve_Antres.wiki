@@ -1,0 +1,107 @@
+[[Fichier:Route de l'Épreuve Antres EB.png|right|400px|Localisation des antres de la Route de l'Épreuve]]
+
+La '''Route de l'Épreuve''' possède quatre antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Lougaroc]] sous forme Crépusculaire dans l'antre B.
+__TOC__
+== Antre A ==
+
+[[Fichier:Route de l'Épreuve Antre A EB.png|thumb|right|300px|L'antre A de la Route de l'Épreuve.]]
+
+L'antre A est situé derrière la [[Tour des Ténèbres]], au nord de la route.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 121|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 121|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 122|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 122|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Route de l'Épreuve Antre B EB.png|thumb|right|300px|L'antre B de la Route de l'Épreuve.]]
+
+L'antre B est situé à l'est de la route, au bout d'un chemin étroit.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 156|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 156|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 157|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 157|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Route de l'Épreuve Antre C EB.png|thumb|right|300px|L'antre C de la Route de l'Épreuve.]]
+
+L'antre C se trouve au nord de la route, dans un recoin à l'est des escaliers menant à la [[Tour des Ténèbres]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 107|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 107|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 108|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 108|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Route de l'Épreuve Antre D EB.png|thumb|right|300px|L'antre D de la Route de l'Épreuve.]]
+
+L'antre D se situe au sud de la zone, près de l'accès à la [[Grotte du Pugilat]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 123|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 123|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 124|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 124|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Challenge Road/Dens]]
+[[it:Cammino Sfida/Tane di Pokémon]]
+[[ja:チャレンジロード/ポケモンの巣]]

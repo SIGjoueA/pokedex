@@ -1,0 +1,62 @@
+{{Ruban Antre|21}}
+
+L''''antre 21''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Glace (type)|Glace]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Fosse des Sables Antre E EB.png|300px]]
+|-
+| [[Fosse des Sables/Antres|Fosse des Sables]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 21|
+Sorbébé / iv(1) 1(35)
+Marcacrin / iv(1) 1(35)
+Blizzi / iv(1) 1(20) 2(35)
+Grelaçon / iv(1) 1(10) 2(35)
+Cadoizo / iv(1) 2(5)
+Sorboul / iv(2) 2(25) 3(40)
+Cochignon / iv(3) 3(20) 4(10, Ep, 35, Bo)
+Séracrawl / iv(4) 3(20) 4(20, Ep, 25, Bo) 5(10, Ep, 30, Bo)
+Blizzaroi / iv(4) 3(20) 4(20, Ep, 25, Bo) 5(25, Ep, 30, Bo)
+Crustabri / talent-caché(Possible) iv(4) 4(50, Ep, 15, Bo) 5(25, Ep, 20, Bo)
+Sorbouboul / talent-caché(Possible) iv(4) 5(30, Ep, 15, Bo)
+Lokhlass / talent-caché(Possible) iv(4) 5(10, Ep, 5, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Figuy / taux(80%)
+Baie Lonme / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau Comète / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT05, Laser Glace / image(DT Glace) taux(100%)
+DT85, Rengorgement / image(DT Normal) 3(100%) 4(100%) 5(100%)
+DT06, Blizzard / image(DT Glace) 4(100%) 5(100%)
+Récompenses bonus, sauf Cadoizo
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Récompenses bonus exclusives à Cadoizo
+Bonbon Exp. S / 2(7)
+Bonbon Exp. M / 2(2)
+Bonbon Dynamax / 2(2)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Glace]]

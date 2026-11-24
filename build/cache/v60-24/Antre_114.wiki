@@ -1,0 +1,89 @@
+{{Ruban Antre|114}}
+
+L''''antre 114''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Feu (type)|Feu]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Plaine Salutation Antre A EB.png|300px]]
+| [[Fichier:Plage de l'Épreuve Antre A EB.png|300px]]
+|-
+| [[Plaine Salutation/Antres|Plaine Salutation]]
+| [[Plage de l'Épreuve/Antres|Plage de l'Épreuve]]
+|-
+| [[Fichier:Lagune Circulaire Antre C EB.png|300px]]
+| [[Fichier:Sables de Kudsac Antre B EB.png|300px]]
+|-
+| [[Lagune Circulaire/Antres|Lagune Circulaire]]
+| [[Sables de Kudsac/Antres|Sables de Kudsac]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 114|
+Leuphorie / talent-caché(Toujours) iv(4) 3(5) 4(5) 5(5)
+Pyronille / talent-caché(Toujours) iv(1) 1(60) 2(30) / talent-caché(Toujours) iv(2) 2(25) 3(30)
+Funécire / talent-caché(Toujours) iv(1) 1(40) 2(25)
+Tritox / talent-caché(Toujours) iv(2) 2(20) 3(25)
+Chartor / talent-caché(Toujours) iv(3) 3(25) 4(25)
+Malamandre / talent-caché(Toujours) iv(3) 3(15) 4(25)
+Flambusard / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Lugulabre / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Pyrax / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Feunard / talent-caché(Toujours) iv(4) 5(20, Ep)
+Arcanin / talent-caché(Toujours) iv(4) 5(20, Bo)
+Dracaufeu / talent-caché(Toujours) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leuphorie</big>
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT02, Lance-Flammes / image(DT Feu) taux(100%)
+Sauf Funécire, Pyronille 2IV, Chartor, Lugulabre et Pyrax
+Baie Sitrus / taux(80%)
+Baie Résin / taux(80%)
+DT88, Tacle Feu / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT15, Déflagration / image(DT Feu) 4(100%) 5(100%)
+Exclusifs à Funécire, Pyronille 2IV, Chartor, Lugulabre et Pyrax
+Baie Prine / taux(80%)
+Baie Lonme / taux(80%)
+DT36, Canicule (capacité){{!}}Canicule / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT43, Surchauffe / image(DT Feu) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Armurium / 1(2) 2(2) 3(2) 4(3) 5(3)
+<big>Exclusifs à Leuphorie</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Armurium / 3(3) 4(4) 5(5)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Feu]]

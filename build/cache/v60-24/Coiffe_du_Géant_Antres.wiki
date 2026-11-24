@@ -1,0 +1,131 @@
+[[Fichier:Coiffe du Géant Antres EB.png|right|300px|Localisation des antres de la Coiffe du Géant]]
+
+La '''Coiffe du Géant''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Corvaillus Gigamax]] dans l'antre A, et de [[Torgamord Gigamax]] dans l'antre B.
+__TOC__
+== Antre A ==
+
+[[Fichier:Coiffe du Géant Antre A EB.png|thumb|right|300px|L'antre A de la Coiffe du Géant.]]
+
+L'antre A est situé tout au nord-est de la zone, à la frontière avec le [[Plateau de Kickenham]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 32|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 32|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 89|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 89|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Coiffe du Géant Antre B EB.png|thumb|right|300px|L'antre B de la Coiffe du Géant.]]
+
+L'antre B est situé à l'est du gros rocher circulaire, vers la rive du [[Lac Ouragan]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 24|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 24|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 78|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 78|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Coiffe du Géant Antre C EB.png|thumb|right|300px|L'antre C de la Coiffe du Géant.]]
+
+L'antre C est situé vers le centre de la zone, adossé au gros rocher ovale.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 23|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 23|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 55|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 55|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Coiffe du Géant Antre D EB.png|thumb|right|300px|L'antre D de la Coiffe du Géant.]]
+
+L'antre D est situé au sud de la zone, avec des hautes herbes juste à l'est.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 18|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 18|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 71|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 71|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Coiffe du Géant Antre E EB.png|thumb|right|300px|L'antre E de la Coiffe du Géant.]]
+
+L'antre E est situé tout au sud de la zone, à la frontière avec la [[Plaine Rocheuse]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 30|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 30|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 60|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 60|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Giant's Cap/Dens]]
+[[it:Berretto del Gigante/Tane di Pokémon]]
+[[ja:きょじんのぼうし/ポケモンの巣]]

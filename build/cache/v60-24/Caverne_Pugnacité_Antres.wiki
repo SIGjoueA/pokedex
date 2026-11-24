@@ -1,0 +1,155 @@
+[[Fichier:Caverne Pugnacité Antres EB.png|right|400px|Localisation des antres de la Caverne Pugnacité]]
+
+La '''Caverne Pugnacité''' possède six antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Torgamord Gigamax]] dans l'antre A.
+__TOC__
+== Antre A ==
+
+[[Fichier:Caverne Pugnacité Antre A EB.png|thumb|right|300px|L'antre A de la Caverne Pugnacité.]]
+
+L'antre A est situé dans un renfoncement au nord de la zone, avec les antres B et C. Il est le plus éloigné de l'entrée des trois.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 135|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 135|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 148|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 148|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Caverne Pugnacité Antre B EB.png|thumb|right|300px|L'antre B de la Caverne Pugnacité.]]
+
+L'antre B est situé dans un renfoncement au nord de la zone, avec les antres A et C. En y entrant, il se trouve à gauche.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 129|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 129|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 130|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 130|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Caverne Pugnacité Antre C EB.png|thumb|right|300px|L'antre C de la Caverne Pugnacité.]]
+
+L'antre C est situé dans un renfoncement au nord de la zone, avec les antres A et B. En y entrant, il se trouve à droite.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 127|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 127|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 128|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 128|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Caverne Pugnacité Antre D EB.png|thumb|right|300px|L'antre D de la Caverne Pugnacité.]]
+
+L'antre D se situe à l'ouest de la zone, près de la [[Plage de l'Épreuve]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 103|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 103|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 104|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 104|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Caverne Pugnacité Antre E EB.png|thumb|right|300px|L'antre E de la Caverne Pugnacité.]]
+
+L'antre E se situe à l'est de la zone, près de l'accès à la [[Plaine Salutation]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 133|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 133|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 134|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 134|Récompenses}}
+
+== Antre F ==
+
+[[Fichier:Caverne Pugnacité Antre F EB.png|thumb|right|300px|L'antre F de la Caverne Pugnacité.]]
+
+L'antre F se situe au sud de la zone, vers l'accès à la [[Lagune Circulaire]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 101|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 101|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 102|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 102|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Courageous Cavern/Dens]]
+[[it:Grotta Grinta/Tane di Pokémon]]
+[[ja:とうしんのどうくつ/ポケモンの巣]]

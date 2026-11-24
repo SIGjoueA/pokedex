@@ -1,0 +1,79 @@
+{{Ruban Antre|104}}
+
+L''''antre 104''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Sol (type)|Sol]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Plage de l'Épreuve Antre D EB.png|300px]]
+| [[Fichier:Caverne Pugnacité Antre D EB.png|300px]]
+|-
+| [[Plage de l'Épreuve/Antres|Plage de l'Épreuve]]
+| [[Caverne Pugnacité/Antres|Caverne Pugnacité]]
+|-
+| colspan="2" | [[Fichier:Mer Align'Îlots Antre H EB.png|300px]]
+|-
+| colspan="2" | [[Mer Align'Îlots/Antres|Mer Align'Îlots]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 104|
+Leuphorie / talent-caché(Toujours) iv(4) 3(5) 4(5) 5(5)
+Sabelette / talent-caché(Toujours) iv(1) 1(60) 2(30)
+Osselait / talent-caché(Toujours) iv(1) 1(40) 2(25)
+Kraknoix / talent-caché(Toujours) iv(2) 2(45) 3(55)
+Escroco / talent-caché(Toujours) iv(3) 3(25) 4(25)
+Sablaireau / talent-caché(Toujours) iv(3) 3(15) 4(25)
+Ossatueur / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Crocorible / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Kangourex / talent-caché(Toujours) iv(4) 4(15) 5(20)
+Libégon / iv(4) 5(20)
+Golemastoc / talent-caché(Toujours) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leuphorie</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Gowav / taux(80%)
+Baie Résin / taux(80%)
+Poussière Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Morceau d'Étoile / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT87, Tunnelier / image(DT Sol) 1(100%) 2(100%) 4(100%) 5(100%)
+DT94, Cavalerie Lourde / image(DT Sol) 2(100%) 3(100%) 5(100%)
+DT76, Piège de Roc / image(DT Roche) 3(100%) 4(100%) 5(100%)
+DT10, Séisme / image(DT Sol) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Armurium / 1(2) 2(2) 3(2) 4(3) 5(3)
+<big>Exclusifs à Leuphorie</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Armurium / 3(3) 4(4) 5(5)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Sol]]

@@ -1,0 +1,82 @@
+{{Ruban Antre|144}}
+
+L''''antre 144''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Insecte (type)|Insecte]] et [[Vol (type)|Vol]].
+
+On y trouve majoritairement des [[Apitrini]] et des [[Apireine]]. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir du [[Miel]] et du [[Maxi Miel]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Îlot Calméole Antre A EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre B EB.png|300px]]
+|-
+| [[Îlot Calméole]]
+| [[Îlot Calméole]]
+|-
+| [[Fichier:Îlot Calméole Antre C EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre D EB.png|300px]]
+|-
+| [[Îlot Calméole]]
+| [[Îlot Calméole]]
+|-
+| [[Fichier:Îlot Calméole Antre E EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre F EB.png|300px]]
+|-
+| [[Îlot Calméole]]
+| [[Îlot Calméole]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 144|
+Leuphorie / talent-caché(Toujours) iv(4) 3(5) 4(6) 5(7)
+Apitrini / talent-caché(Toujours) iv(1) 1(100) 2(55) / talent-caché(Toujours) iv(2) 2(45) 3(55)
+Apireine / talent-caché(Toujours) iv(3) 3(40) 4(49) / talent-caché(Toujours) iv(4) 4(45) 5(93)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leuphorie</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / 1(60%) 2(70%) 3(80%) 4(90%) 5(100%)
+Super Bonbon / 1(20%) 2(30%) 3(40%) 4(50%) 5(60%)
+Miel / taux(100%)
+Miel / 1(80%) 2(80%) 3(80%) 4(90%) 5(100%)
+Miel / 1(50%) 2(50%) 3(60%) 4(80%) 5(100%)
+Miel / 1(30%) 2(30%) 3(40%) 4(70%) 5(100%)
+Miel / 1(30%) 2(30%) 3(40%) 4(60%) 5(90%)
+Miel / 1(10%) 2(10%) 3(20%) 4(50%) 5(80%)
+Maxi Miel / 3(50%) 4(60%) 5(70%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Armurium / 1(2) 2(2) 3(2) 4(3) 5(3)
+<big>Exclusifs à Leuphorie</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Armurium / 3(3) 4(4) 5(5)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Insecte]]
+[[Catégorie:Antre de type Vol]]

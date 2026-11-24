@@ -1,0 +1,83 @@
+[[Fichier:Sables de Kudsac Antres EB.png|right|400px|Localisation des antres des Sables de Kudsac]]
+
+Les '''Sables de Kudsac''' possèdent six antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+
+On peut noter la présence de [[Dunaconda Gigamax]] dans l'antre A.
+__TOC__
+== Antre A ==
+
+[[Fichier:Sables de Kudsac Antre A EB.png|thumb|right|300px|L'antre A des Sables de Kudsac.]]
+
+L'antre A est situé au nord-est de la zone. Il est le plus éloigné de l'entrée.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 103|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 103|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 150|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 150|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Sables de Kudsac Antre B EB.png|thumb|right|300px|L'antre B des Sables de Kudsac.]]
+
+L'antre B est situé au nord-ouest de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 113|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 113|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 114|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 114|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Sables de Kudsac Antre C EB.png|thumb|right|300px|L'antre C des Sables de Kudsac.]]
+
+L'antre C est situé au sud-ouest de la zone, proche de la [[Voie des Étirements]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 115|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 115|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 116|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 116|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Potbottom Desert/Dens]]
+[[it:Deserto Paiolo/Tane di Pokémon]]
+[[ja:なべぞこさばく/ポケモンの巣]]

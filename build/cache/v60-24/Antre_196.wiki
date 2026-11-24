@@ -1,0 +1,84 @@
+{{Ruban Antre|196}}
+
+L''''antre 196''' est un [[antre de Pokémon]] de [[Couronneige]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Roche (type)|Roche]].
+
+On y trouve majoritairement des [[Pokémon fossile]]s. De plus, aucun [[DT]] n'est obtenu en récompense, mais il est possible d'obtenir beaucoup d'[[Os Rare]]s, ainsi que des [[Masse Os]] et les [[Fossile (objet)|Fossiles]] de la région de [[Galar]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Pente Enneigée Antre B EB.png|300px]]
+|-
+| [[Pente Enneigée/Antres|Pente Enneigée]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 196|
+Nanméouïe / talent-caché(Possible) iv(4) 3(5) 4(5) 5(5)
+Amonita / iv(1) 1(60, Ep) 2(30, Ep)
+Kabuto / iv(1) 1(60, Bo) 2(30, Bo)
+Anorith / iv(1) 1(40, Ep) 2(25, Ep)
+Lilia / iv(1) 1(40, Bo) 2(25, Bo)
+Ptyranidur / iv(2) 2(25, Ep, 20, Bo) 3(30, Ep, 25, Bo)
+Amagara / iv(2) 2(20, Ep, 25, Bo) 3(25, Ep, 30, Bo)
+Armaldo / iv(3) 3(25, Ep, 15, Bo) 4(25) / talent-caché(Possible) iv(4) 4(15, Ep) 5(20, Ep)
+Vacilys / iv(3) 3(15, Ep, 25, Bo) 4(25) / talent-caché(Possible) iv(4) 4(15, Bo) 5(20, Bo)
+Amonistar / talent-caché(Possible) iv(4) 4(15, Ep) 5(25, Ep)
+Kabutops / talent-caché(Possible) iv(4) 4(15, Bo) 5(25, Bo)
+Rexillius / talent-caché(Possible) iv(4) 4(15, Ep) 5(20, Ep, 15, Bo)
+Dragmara / talent-caché(Possible) iv(4) 4(15, Bo) 5(15, Ep, 20, Bo)
+Ptéra / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Os Rare / 1(80%) 2(80%) 3(80%) 4(80%) 5(100%)
+Os Rare / 1(40%) 2(40%) 3(60%) 4(80%) 5(100%)
+Os Rare / 1(20%) 2(40%) 3(40%) 4(60%) 5(80%)
+Os Rare / 1(20%) 2(20%) 3(20%) 4(40%) 5(60%)
+Masse Os / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Oiseau / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Poisson / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Dragon / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Fossile Aileron / 1(10%) 2(10%) 3(20%) 4(30%) 5(40%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Dynamaxium / taux(1)
+
+<big>Exclusifs à Nanméouïe</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Capsule d'Or / 4(1%) 5(1%)
+Super Bonbon / 3(80%) 4(80%) 5(85%)
+Super Bonbon / 3(55%) 4(55%) 5(75%)
+Super Bonbon / 3(35%) 4(45%) 5(65%)
+Super Bonbon / 3(25%) 4(35%) 5(55%)
+Super Bonbon / 3(20%) 4(25%) 5(45%)
+Super Bonbon / 4(15%) 5(35%)
+Super Bonbon / 4(5%) 5(25%)
+Super Bonbon / 5(15%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Dynamaxium / 3(1) 4(1) 5(1)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Roche]]

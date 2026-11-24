@@ -1,0 +1,53 @@
+[[Fichier:Îlot Calméole Antres EB.png|right|200px|Localisation des antres de l'Îlot Calméole]]
+
+L''''Îlot Calméole''' possède six antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve. L'arbre au centre de l'îlot est aussi considéré comme un antre, mais n'est accessible que lors d'évènements.
+
+On y trouve notamment des [[Apitrini]] et des [[Apireine]], ainsi que du [[Miel]] et du [[Maxi Miel]].
+__TOC__
+== Antres A à F ==
+
+Ces six antres sont situés sur les branches de l'île. On peut y trouver les mêmes Pokémon et les mêmes récompenses quel que soit l'antre.
+
+{| class="tableaustandard centre"
+! colspan="3" | Antres A à F de l'Îlot Calméole
+|-
+| [[Fichier:Îlot Calméole Antre A EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre B EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre C EB.png|300px]]
+|-
+| L'antre A de l'Îlot Calméole, au nord-ouest.
+| L'antre B de l'Îlot Calméole, au nord-est.
+| L'antre C de l'Îlot Calméole, à l'ouest.
+|-
+| [[Fichier:Îlot Calméole Antre D EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre E EB.png|300px]]
+| [[Fichier:Îlot Calméole Antre F EB.png|300px]]
+|-
+| L'antre D de l'Îlot Calméole, à l'est.
+| L'antre E de l'Îlot Calméole, au sud-ouest.
+| L'antre F de l'Îlot Calméole, au sud-est.
+|}
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 143|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 143|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 144|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 144|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Honeycalm Island/Dens]]
+[[it:Isola Quietarnia/Tane di Pokémon]]
+[[ja:ハニカームじま/ポケモンの巣]]

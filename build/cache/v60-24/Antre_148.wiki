@@ -1,0 +1,77 @@
+{{Ruban Antre|148}}
+
+L''''antre 148''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Eau (type)|Eau]].
+
+On y trouve notamment des [[Torgamord Gigamax]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Caverne Pugnacité Antre A EB.png|300px]]
+|-
+| [[Caverne Pugnacité/Antres|Caverne Pugnacité]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 148|
+Leuphorie / talent-caché(Toujours) iv(4) 3(5) 4(5) 5(5)
+Khélocrok / talent-caché(Toujours) iv(1) 1(60) 2(30)
+Psykokwak / talent-caché(Toujours) iv(1) 1(40) 2(25)
+Barloche / talent-caché(Toujours) iv(2) 2(25) 3(30)
+Bargantua forme(Rouge) / talent-caché(Toujours) iv(2) 2(20, Ep) 3(25, Ep) / talent-caché(Toujours) iv(4) 4(15, Ep) 5(20, Ep)
+Bargantua forme(Bleu) / talent-caché(Toujours) iv(2) 2(20, Bo) 3(25, Bo) / talent-caché(Toujours) iv(4) 4(15, Bo) 5(20, Bo)
+Akwakwak / talent-caché(Toujours) iv(3) 3(25) 4(25)
+Nigosier / iv(3) 3(15) 4(25)
+Akwakwak / talent-caché(Toujours) iv(4) 4(15) 5(25)
+Hastacuda / talent-caché(Toujours) iv(4) 4(15) 5(25)
+Barbicha / talent-caché(Toujours) iv(4) 5(15)
+Torgamord forme(Gigamax) / talent-caché(Toujours) iv(4) 5(10)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leuphorie</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Perle (objet){{!}}Perle / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Grande Perle / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT16, Cascade / image(DT Eau) 1(100%) 2(100%) 5(100%)
+DT84, Ébullition / image(DT Eau) 2(100%) 3(100%) 4(100%)
+DT98, Aqua-Brèche / image(DT Eau) 3(100%) 4(100%)
+DT45, Ocroupi / image(DT Eau) 3(100%) 5(100%)
+DT04, Surf / image(DT Eau) 4(100%) 5(100%)
+DT03, Hydrocanon / image(DT Eau) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+Armurium / 1(2) 2(2) 3(2) 4(3) 5(3)
+<big>Exclusifs à Leuphorie</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(5) 4(5) 5(5)
+Bonbon Exp. S / 3(5) 4(5) 5(5)
+Bonbon Exp. M / 3(10) 4(5) 5(5)
+Bonbon Exp. L / 3(3) 4(5) 5(5)
+Bonbon Exp. XL / 4(2) 5(5)
+Bonbon Dynamax / 3(4) 4(4) 5(5)
+Armurium / 3(3) 4(4) 5(5)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Eau]]
+[[Catégorie:Antre à Pokémon Gigamax]]

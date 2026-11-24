@@ -1,0 +1,83 @@
+{{Ruban Antre|131}}
+
+L''''antre 131''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Dragon (type)|Dragon]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Lagune Circulaire Antre A EB.png|300px]]
+| [[Fichier:Mer Eau-Hisse Antre E EB.png|300px]]
+|-
+| [[Lagune Circulaire/Antres|Lagune Circulaire]]
+| [[Mer Eau-Hisse/Antres|Mer Eau-Hisse]]
+|-
+| colspan="2" | [[Fichier:Mer Calméole Antre E EB.png|300px]]
+|-
+| colspan="2" | [[Mer Calméole/Antres|Mer Calméole]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 131|
+Leveinard / iv(4) 3(5) 4(5) 5(5)
+Bébécaille / iv(1) 1(60, Ep) 2(30, Ep)
+Mucuscule / iv(1) 1(60, Bo) 2(30, Bo)
+Hypotrempe / iv(1) 1(40) 2(25)
+Verpom / iv(2) 2(25) 3(30)
+Hypocéan / iv(2) 2(20) 3(25)
+Drakkarmin / iv(3) 3(25) 4(25) / talent-caché(Possible) iv(4) 4(15) 5(25)
+Écaïd / iv(3) 3(15, Ep) 4(25, Ep)
+Colimucus / iv(3) 3(15, Bo) 4(25, Bo)
+Léviator / talent-caché(Possible) iv(4) 4(15) 5(20)
+Pomdrapi / talent-caché(Possible) iv(4) 4(15, Ep) 5(20, Ep)
+Dratatin / talent-caché(Possible) iv(4) 4(15, Bo) 5(20, Bo)
+Hyporoi / talent-caché(Possible) iv(4) 5(15)
+Ékaïser / talent-caché(Possible) iv(4) 5(15, Ep)
+Muplodocus / talent-caché(Possible) iv(4) 5(15, Bo)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leveinard</big>
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Wiki / taux(80%)
+Baie Lonme / taux(80%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT47, Dracogriffe / image(DT Dragon) taux(100%)
+DT51, Danse Draco / image(DT Dragon) 3(100%) 4(100%) 5(100%)
+DT24, Colère / image(DT Dragon) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Armurium / 1(1) 2(1) 3(1) 4(2) 5(2)
+<big>Exclusifs à Leveinard</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Armurium / 3(2) 4(3) 5(4)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Dragon]]

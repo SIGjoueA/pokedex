@@ -1,0 +1,58 @@
+{{Ruban Antre|70}}
+
+L''''antre 70''' est un [[antre de Pokémon]] des [[Terres Sauvages]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière mauve, où le type de Pokémon prédominant est le type [[Plante (type)|Plante]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! Localisations
+|-
+| [[Fichier:Miroir du Géant Antre A EB.png|300px]]
+|-
+| [[Miroir du Géant/Antres|Miroir du Géant]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 70|
+Ceribou / iv(1) 1(35)
+Croquine / iv(1) 1(35)
+Tournicoton / iv(1) 1(20) 2(30)
+Doudouvet / iv(1) 1(10) 2(30)
+Candine / iv(2) 2(20) 3(20)
+Grindur / iv(2) 2(20) 3(40)
+Ceriflor / iv(4) 3(20) 4(20) 5(10)
+Noacier / iv(4) 3(20) 4(20) 5(20)
+Blancoton / talent-caché(Possible) iv(4) 4(20) 5(25)
+Sucreine / talent-caché(Possible) iv(4) 4(40) 5(25)
+Farfaduvet / talent-caché(Possible) iv(4) 5(15)
+Phyllali / talent-caché(Possible) iv(4) 5(5)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Baie Gowav / taux(80%)
+Baie Tamato / taux(80%)
+Petit Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Gros Champi / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Champi Suave / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+DT59, Canon Graine / image(DT Plante) taux(100%)
+DT50, Lame Feuille / image(DT Plante) 3(100%) 4(100%) 5(100%)
+DT72, Mégafouet / image(DT Plante) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(7)
+Bonbon Exp. S / 1(2) 2(7)
+Bonbon Exp. M / 2(2) 3(7) 4(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 1(2) 2(2) 3(2) 4(2) 5(3)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière mauve]]
+[[Catégorie:Antre de type Plante]]

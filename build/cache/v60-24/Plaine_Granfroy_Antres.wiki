@@ -1,0 +1,127 @@
+[[Fichier:Plaine Granfroy Antres EB.png|right|400px|Localisation des antres de la Plaine Granfroy]]
+
+La '''Plaine Granfroy''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+__TOC__
+== Antre A ==
+
+[[Fichier:Plaine Granfroy Antre A EB.png|thumb|right|300px|L'antre A de la Plaine Granfroy.]]
+
+L'antre A est situé au nord-est de la zone, entouré de hautes herbes.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 190|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 190|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 191|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 191|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Plaine Granfroy Antre B EB.png|thumb|right|300px|L'antre B de la Plaine Granfroy.]]
+
+L'antre B est situé au centre de la partie est, non loin des hautes herbes entourant l'antre A.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 176|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 176|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 177|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 177|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Plaine Granfroy Antre C EB.png|thumb|right|300px|L'antre C de la Plaine Granfroy.]]
+
+L'antre C se à l'est du grand rocher de la partie est, dans la zone la plus passante.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 172|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 172|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 173|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 173|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Plaine Granfroy Antre D EB.png|thumb|right|300px|L'antre D de la Plaine Granfroy.]]
+
+L'antre D se à l'ouest du grand rocher de la partie est, dans la zone la plus étroite.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 186|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 186|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 187|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 187|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Plaine Granfroy Antre E EB.png|thumb|right|300px|L'antre E de la Plaine Granfroy.]]
+
+L'antre E se situe au sud de la partie ouest de la plaine, à la frontière avec le [[Repos du Géant]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 164|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 164|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 165|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 165|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Frostpoint Field/Dens]]

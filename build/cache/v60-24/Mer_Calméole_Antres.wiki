@@ -1,0 +1,128 @@
+[[Fichier:Mer Calméole Antres EB.png|right|400px|Localisation des antres de la Mer Calméole]]
+
+La '''Mer Calméole''' possède cinq antres de Pokémon. Chacun est associé à deux couleurs de faisceau, rouge ou mauve.
+__TOC__
+== Antre A ==
+
+[[Fichier:Mer Calméole Antre A EB.png|thumb|right|300px|L'antre A de la Mer Calméole.]]
+
+L'antre A est situé tout au nord de la zone, au centre du cercle formé par les trois grands rochers.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 139|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 139|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 140|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 140|Récompenses}}
+
+== Antre B ==
+
+[[Fichier:Mer Calméole Antre B EB.png|thumb|right|300px|L'antre B de la Mer Calméole.]]
+
+L'antre B se situe au sud des trois grands rochers du nord de la zone.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 121|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 121|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 122|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 122|Récompenses}}
+
+== Antre C ==
+
+[[Fichier:Mer Calméole Antre C EB.png|thumb|right|300px|L'antre C de la Mer Calméole.]]
+
+L'antre C est situé au nord de l'[[Îlot Calméole]], assez éloigné des trois grands rochers.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 105|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 105|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 106|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 106|Récompenses}}
+
+== Antre D ==
+
+[[Fichier:Mer Calméole Antre D EB.png|thumb|right|300px|L'antre D de la Mer Calméole.]]
+
+L'antre D se situe à l'ouest de l'[[Îlot Calméole]], entre celui-ci et un tout petit îlot.
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 123|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 123|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 124|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 124|Récompenses}}
+
+== Antre E ==
+
+[[Fichier:Mer Calméole Antre E EB.png|thumb|right|300px|L'antre E de la Mer Calméole.]]
+
+L'antre E se situe au sud de la zone, sur une berge près de la frontière avec la [[Plage de l'Épreuve]].
+
+=== Faisceau de lumière rouge ===
+:;Pokémon
+
+{{#lst:Antre 131|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 131|Récompenses}}
+
+=== Faisceau de lumière mauve ===
+:;Pokémon
+
+{{#lst:Antre 132|Pokémon}}
+
+:;Récompenses
+
+{{#lst:Antre 132|Récompenses}}
+
+{{Antres de Galar}}
+
+[[en:Honeycalm Island/Dens]]
+[[ja:ハニカームのうみ/ポケモンの巣]]

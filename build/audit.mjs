@@ -562,4 +562,53 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.23 SW : VERSION ≥ v60.23, DATA_VERSION ≥ d65', /VERSION = 'v60\.(2[3-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 65);
 }
 
+// ---- v60.24: raids Dynamax d’Épée / Bouclier (build/fix-v60-24.mjs → sp f.rd[sw|swisle|swcrown] = [[zone, texte, drapeaux]])
+{ const GS = ['sw', 'swisle', 'swcrown'], all = [], zoneGame = {}; let tableNum = 0, plRaid = 0, plGA = 0, wiki = 0, haBad = [], dens = new Set();
+  const hasHA = (s, k) => ((s.f[k] && s.f[k].a) || (s.f[String(s.id)] || {}).a || []).some(a => a[1]);
+  for (const id of [...new Set(core.e.map(e => e.id))]) { const s = sp(id);
+    for (const [k, f] of Object.entries(s.f)) {
+      for (const g of GS) for (const [pl, d] of (f.pl && f.pl[g]) || []) { if (/^Antre (événementiel )?\d+$/.test(pl)) plRaid++; if (pl === 'Grand Antre Dynamax' && g !== 'swcrown') plGA++; void d; }
+      for (const [g, rows] of Object.entries(f.rd || {})) { if (!GS.includes(g)) wiki++;
+        for (const [z, t, fl] of rows) { all.push({ id, k, g, z, t, fl });
+          if (/Antres? \d|Antre événementiel \d|\b\d{2,3}\b(?! %| IV)(?![^·]*★)/.test(t.replace(/Niv\. \d+/, ''))) tableNum++;
+          if (/\{\{|\}\}|\[\[|\]\]|<|>|undefined|NaN|null/.test(z + t)) wiki++;
+          if (/talent caché/.test(t) && !hasHA(s, k)) haBad.push(k);
+          if (!/^(Expédition|Raid événementiel)/.test(z)) { (zoneGame[z] ||= new Set()).add(g); const m = t.match(/^Antres? ([A-Z, ]+?) \(faisceau (rouge|mauve)\)/); if (m) m[1].split(', ').forEach(L => dens.add(z + ' ' + L)); else wiki++; } } } } }
+  eq('v60.24 plus de « Antre N » (numéro de table) dans « Où le trouver »', plRaid, 0); eq('v60.24 pas de numéro de table dans les lignes de raid', tableNum, 0);
+  eq('v60.24 « Grand Antre Dynamax » rangé dans Couronneige', plGA, 0); eq('v60.24 lignes de raid propres (balises, jeu, format)', wiki, 0);
+  eq('v60.24 talent caché seulement pour les Pokémon qui en ont un', [...new Set(haBad)], []);
+  eq('v60.24 chaque zone dans un seul jeu', Object.entries(zoneGame).filter(([, s]) => s.size > 1).map(([z]) => z), []);
+  eq('v60.24 275 antres physiques (44 zones)', [dens.size, Object.keys(zoneGame).length], [275, 44]);
+  const keys = g => new Set(all.filter(r => r.g === g && !/^Expédition|^Raid/.test(r.z)).map(r => r.k)).size;
+  ok('v60.24 fiches avec antres : ÉB ≥ 370, Isolarmure ≥ 250, Couronneige ≥ 200', keys('sw') >= 370 && keys('swisle') >= 250 && keys('swcrown') >= 200, [keys('sw'), keys('swisle'), keys('swcrown')].join('/'));
+  const ZI = ['Plaine Salutation', 'Lande Boldair', 'Mer Align\'Îlots', 'Mer Isol\'Îlots', 'Îlot Calméole', 'Caverne Pugnacité'], ZC = ['Repos du Géant', 'Lac Poké Ball', 'Mer Banquise', 'Pente Enneigée', 'Plaine Granfroy', 'Plateau Beau-Gant'], ZS = ['Plaine Verdoyante', 'Plaine Rocheuse', 'Fosse des Sables', 'Lac Milobellus Sud', 'Prairie Entre-Ponts', 'Miroir du Géant'];
+  eq('v60.24 zones rangées par jeu (Isolarmure / Couronneige / Terres Sauvages)', [ZI.filter(z => !(zoneGame[z] && zoneGame[z].has('swisle'))), ZC.filter(z => !(zoneGame[z] && zoneGame[z].has('swcrown'))), ZS.filter(z => !(zoneGame[z] && zoneGame[z].has('sw')))], [[], [], []]);
+  const R = (k, g) => { const e = E[k], s = sp(e ? e.id : +k), f = s.f[k]; return ((f.rd || {})[g] || []).map(r => r[0] + ' | ' + r[1]); };
+  ok('v60.24 Tygnon : antres de Couronneige (Repos du Géant, mauve, talent caché garanti)', R('107', 'swcrown').some(t => /^Repos du Géant \| Antre A \(faisceau mauve\) · 4★ 15 % · 5★ 20 % · 5 IV parfaits · talent caché garanti · Bouclier uniquement$/.test(t)), R('107', 'swcrown').join(' ; '));
+  ok('v60.24 Tygnon : antre A de la Plaine Verdoyante (rouge), IV selon la version', R('107', 'sw').includes('Plaine Verdoyante | Antre A (faisceau rouge) · 3★ 20 % · 4★ 25 % · 5★ Épée 30 % · IV parfaits : 4 (Épée) / 3 (Bouclier)'), R('107', 'sw').join(' ; '));
+  ok('v60.24 Mackogneur Gigamax : Plaine Rocheuse antre C (mauve), 5★ 5 %, Épée uniquement', R('68', 'sw').includes('Plaine Rocheuse | Antre C (faisceau mauve) · Gigamax · 5★ 5 % · 4 IV parfaits · talent caché possible · Épée uniquement'));
+  ok('v60.24 Mackogneur : « talent caché possible » (Possible) dans les Terres Sauvages', R('68', 'sw').some(t => /^Plaine Verdoyante \| Antre A \(faisceau rouge\) · 5★ 10 % · 4 IV parfaits · talent caché possible$/.test(t)));
+  ok('v60.24 Leuphorie : antres mauves d’Isolarmure = talent caché garanti', R('242', 'swisle').some(t => /^Plaine Salutation \| Antres? (?:[A-Z], )*I(?:, [A-Z])* \(faisceau mauve\) · 3–5★ 5 % · 4 IV parfaits · talent caché garanti$/.test(t)), R('242', 'swisle').slice(0, 3).join(' ; '));
+  ok('v60.24 Mewtwo : Expédition Dynamax dans Couronneige seulement', R('150', 'swcrown').includes('Expédition Dynamax – Grand Antre Dynamax | Pokémon hors du commun (fin d’expédition) · Niv. 70 · une seule capture') && !R('150', 'sw').length);
+  ok('v60.24 Expédition / raid événementiel : bon jeu', all.every(r => !/^Expédition/.test(r.z) || r.g === 'swcrown') && all.every(r => !/^Raid événementiel/.test(r.z) || (r.g === 'sw' && /e/.test(r.fl || ''))));
+  ok('v60.24 Gigamax marqués (drapeau g)', all.every(r => /(^|· )Gigamax ·/.test(r.t) === /g/.test(r.fl || '')));
+  ok('v60.24 Salarsen Gigamax Aigüe / Grave (notes)', R('849', 'sw').some(t => /Gigamax.*forme Aigüe/.test(t)) && R('849', 'swcrown').some(t => /Gigamax.*forme Aigüe dans Épée, forme Grave dans Bouclier/.test(t)));
+  ok('v60.24 Vémini (cadeau du Grand Antre Dynamax) reste dans Couronneige', ((F(803).pl || {}).swcrown || []).some(r => /^Grand Antre Dynamax/.test(r[0]) && /^Donné/.test(r[1])));
+  ok('v60.24 Papilusion Gigamax (Plaine Verdoyante B, C) : 1–5★ 10 % (taux sans étoile, sommes à 90 %)', R('12', 'sw').includes('Plaine Verdoyante | Antres B, C (faisceau mauve) · Gigamax · 1–5★ 10 % · 4 IV parfaits · talent caché possible'));
+  ok('v60.24 Iguolta antre 25 : « 35, 30, Bo » = Épée 35 % / Bouclier 30 %', R('695', 'sw').some(t => /5★ Épée 35 % \/ Bouclier 30 %/.test(t)));
+  // taux : somme par antre, étoile et version = 100 % (écarts connus de la source Poképédia)
+  { const { parseLua } = await import('./pokepedia.mjs'), M = parseLua(fs.readFileSync(path.join(HERE, 'cache/v60-24/Module_Localisations_Données_Pokémon_Épée_et_Bouclier.wiki'), 'utf8')), bad = [];
+    for (const [p, mons] of Object.entries(M)) { const t = (p.match(/^Antre (\d+)$/) || [])[1]; if (!t) continue; const S = {};
+      for (const recs of Object.values(mons)) for (const r of [].concat(recs)) { for (const st of ['1', '2', '3', '4', '5']) if (r[st]) { const v = String(r[st]).split(/\s*,\s*/), o = {}; let un;
+        for (let i = 0; i < v.length; i++) if (v[i + 1] === 'Ep' || v[i + 1] === 'Bo') { o[v[i + 1]] = +v[i]; i++; } else un = +v[i];
+        const x = (S[st] ||= { Ep: 0, Bo: 0 }); for (const w of ['Ep', 'Bo']) x[w] += o[w] ?? un ?? 0; }
+        if (r.taux && !['1', '2', '3', '4', '5'].some(st => r[st])) for (const st of ['1', '2', '3', '4', '5']) { const x = (S[st] ||= { Ep: 0, Bo: 0 }); x.Ep += +r.taux; x.Bo += +r.taux; } }
+      for (const [st, x] of Object.entries(S)) for (const v of ['Ep', 'Bo']) if (Math.abs(x[v] - 100) > 0.5) bad.push(`${t}/${st}/${v}/${x[v]}`); }
+    eq('v60.24 sommes des taux = 100 % (hors écarts connus de Poképédia)', bad.filter(b => !['119/3', '143/3', '151/1', '151/2', '151/3', '157/3', '190/5', '192/4'].includes(b.split('/').slice(0, 2).join('/'))), []); }
+  const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v60.24 app : bloc Raids Dynamax + crédit Poképédia + note des Badges', /function raidHTML/.test(src) && /Raids Dynamax/.test(src) && /Poképédia<\/a> \(CC BY-NC-SA 3\.0 FR\), pages des antres et des zones/.test(src) && src.includes('0 → 1★ ; 1–2 → 1–2★ ; 3 → 1–3★ ; 4–5 → 2–3★ ; 6–7 → 3–4★ ; 8 → 3–5★'));
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.24 SW : VERSION ≥ v60.24, DATA_VERSION ≥ d66', /VERSION = 'v60\.(2[4-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 66);
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

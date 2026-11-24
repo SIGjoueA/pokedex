@@ -1,0 +1,1460 @@
+[[Fichier:Plaine Verdoyante Antre A EB.png|thumb|right|300px|Un antre de Pokémon dans {{Jeu|EB}}.]]
+
+Un '''antre de Pokémon''' (anglais : '''Pokémon Den''' ; japonais : '''ポケモンの巣''' ''Pokémon no Su'') est un endroit où résident des Pokémon sous forme [[Dynamax]]. Ils apparaissent à [[Galar]], plus précisément dans les [[Terres Sauvages]], ainsi qu'à [[Isolarmure]] et [[Couronneige]].
+
+__TOC__
+== Description ==
+
+Les antres de Pokémon sont des structures de roche circulaires et peuvent être trouvés sur terre ou à la surface de l'eau. Lorsqu'un [[raid Dynamax]] y est présent, un faisceau de couleur visible depuis très loin en sort. La couleur du faisceau indique la rareté du raid et les Pokémon qui peuvent y être présents. Chaque jour, huit antres de Pokémon sont naturellement dotés d'un faisceau, dont un mauve.
+
+Un antre de Pokémon peut avoir quatre états différents :
+
+<center><gallery>
+Fichier:Plaine Rocheuse Antre J EB.png|Un antre éteint.
+Fichier:Plaine Rocheuse Antre E EB.png|Un antre brillant.
+Fichier:Fosse des Sables Antre I EB.png|Un antre avec un faisceau de lumière rouge.
+Fichier:Plaine Rocheuse Antre F EB.png|Un antre avec un faisceau de lumière mauve.
+</gallery></center>
+
+Si l'antre brille et le joueur interagit avec, il recevra des [[Watt (monnaie)|Watts]] en fonction de la couleur du faisceau ; si [[Éthernatos]] a été vaincu, les valeurs augmentent.
+
+{| class="tableaustandard centre"
+!
+! Sans faisceau
+! Avec faisceau
+|-
+! Avant le combat contre Éthernatos
+| 50 W
+| 300 W
+|-
+! Après le combat contre Éthernatos
+| 200 W
+| 2000 W
+|}
+
+Les antres peuvent se régénérer de deux façons : chaque jour, ou lorsque tous les raids de la zone ont été effectués. Après la régénération, les Watts peuvent être à nouveau collectés et huit nouveaux antres se voient dotés d'un faisceau. Le joueur peut également forcer l'activation d'un antre en y lançant un [[Morceau Vœu]].
+
+== Rareté des raids ==
+
+Selon le nombre de [[Badge]]s du joueur, différentes zones des [[Terres Sauvages]] sont accessibles et différentes raretés de raid sont proposées. À un nombre de Badges donné, la rareté est choisie équiprobablement entre celles possibles, puis un Pokémon est choisi parmi cette rareté.
+
+{| class="tableaustandard centre"
+! rowspan="2" | Nombre de Badges
+! rowspan="2" | Zones des [[Terres Sauvages]] débloquées
+! colspan="5" | Rareté du raid
+|-
+! width="80px" | ★
+! width="80px" | ★★
+! width="80px" | ★★★
+! width="80px" | ★★★★
+! width="80px" | ★★★★★
+|-
+| 0
+| Sud-est, sauf [[Lac Milobellus Nord]], [[Lac Milobellus Sud|Sud]] et [[Siège du Géant]]
+| ✔ || || || ||
+|-
+| 1
+| Sud complet
+| ✔ || ✔ || || ||
+|-
+| 2
+|
+| ✔ || ✔ || || ||
+|-
+| 3
+| Nord complet
+| ✔ || ✔ || ✔ || ||
+|-
+| 4
+|
+| || ✔ || ✔ || ||
+|-
+| 5
+|
+| || ✔ || ✔ || ||
+|-
+| 6
+| Zones aquatiques une fois la [[Moticyclette]] améliorée
+| || || ✔ || ✔ ||
+|-
+| 7
+|
+| || || ✔ || ✔ ||
+|-
+| 8
+|
+| || || ✔ || ✔ || ✔
+|}
+
+== Liste des antres ==
+Chaque structure de roche est associée à deux numéros d'antre : un pour chaque couleur de faisceau qu'il peut avoir. Ainsi, l'[[antre 1]] a des rencontres uniques, mais peut être trouvé à plusieurs endroits, à savoir la [[Plaine Verdoyante/Antres|Plaine Verdoyante]], le [[Lac Milobellus Sud/Antres|Lac Milobellus Sud]] et la [[Plaine Rocheuse/Antres|Plaine Rocheuse]].
+
+Pour plus d'informations sur chaque antre, comme la liste complète des Pokémon, l'exclusivité à certaines versions, les taux, les raretés et les récompenses, se référer à la page dédiée.
+
+À noter que quand l'espèce dispose d'un [[talent caché]], les Pokémon Gigamax ont toujours la possibilité d'être disponibles avec celui-ci. De plus, s'ils en disposent, les Pokémon des antres mauves d'[[Isolarmure]] et de [[Couronneige]] possèdent toujours leur talent caché.
+
+{| class="tableaustandard centre sortable enroulable enroulé"
+! colspan="6" | Liste des antres
+|-
+! Numéro
+! Zone
+! Couleur du<br>faisceau
+! Type<br>prédominant
+! Pokémon avec<br>leur talent caché
+! Pokémon Gigamax<br>disponibles
+|-
+| [[Antre 1|1]]
+| Terres Sauvages
+| Rouge
+| {{type|combat}}
+| {{Miniature|0068}}{{Miniature|0237}}{{Miniature|0534}}
+| —
+|-
+| [[Antre 2|2]]
+| Terres Sauvages
+| Rouge
+| {{type|psy}}
+| {{Miniature|0282}}{{Miniature|0576}}{{Miniature|0579}}
+| —
+|-
+| [[Antre 3|3]]
+| Terres Sauvages
+| Rouge
+| {{type|roche}}
+| {{Miniature|0213}}{{Miniature|0526}}{{Miniature|0558}}
+| —
+|-
+| [[Antre 4|4]]
+| Terres Sauvages
+| Rouge
+| {{type|insecte}}
+| {{Miniature|0596}}{{Miniature|0632}}
+| —
+|-
+| [[Antre 5|5]]
+| Terres Sauvages
+| Rouge
+| {{type|insecte}}
+| {{Miniature|0416}}{{Miniature|0743}}{{Miniature|0826}}
+| —
+|-
+| [[Antre 6|6]]
+| Terres Sauvages
+| Rouge
+| {{type|spectre}}
+| {{Miniature|0593}}{{Miniature|0709}}{{Miniature|0711}}
+| —
+|-
+| [[Antre 7|7]]
+| Terres Sauvages
+| Rouge
+| {{type|eau}}
+| {{Miniature|0130}}{{Miniature|0321}}
+| —
+|-
+| [[Antre 8|8]]
+| Terres Sauvages
+| Rouge
+| {{type|eau}}
+| {{Miniature|0321}}{{Miniature|0423|Orient}}{{Miniature|0752}}
+| —
+|-
+| [[Antre 9|9]]
+| Terres Sauvages
+| Rouge
+| {{type|eau}}
+| {{Miniature|0091}}{{Miniature|0342}}{{Miniature|0537}}
+| —
+|-
+| [[Antre 10|10]]
+| Terres Sauvages
+| Rouge
+| {{type|combat}}
+| {{Miniature|0760}}{{Miniature|0853}}{{Miniature|0865}}{{Miniature|0870}}
+| —
+|-
+| [[Antre 11|11]]
+| Terres Sauvages
+| Rouge
+| {{type|acier}}
+| {{Miniature|0601}}{{Miniature|0625}}{{Miniature|0879}}
+| —
+|-
+| [[Antre 12|12]]
+| Terres Sauvages
+| Rouge
+| {{type|acier}}
+| {{Miniature|0208}}{{Miniature|0303}}{{Miniature|0625}}{{Miniature|0777}}
+| —
+|-
+| [[Antre 13|13]]
+| Terres Sauvages
+| Rouge
+| {{type|psy}}
+| {{Miniature|0078|Galar}}{{Miniature|0561}}{{Miniature|0765}}{{Miniature|0826}}{{Miniature|0858}}
+| —
+|-
+| [[Antre 14|14]]
+| Terres Sauvages
+| Rouge
+| {{type|psy}}
+| {{Miniature|0202}}{{Miniature|0866}}
+| —
+|-
+| [[Antre 15|15]]
+| Terres Sauvages
+| Rouge
+| {{type|roche}}
+| {{Miniature|0095}}{{Miniature|0464}}{{Miniature|0526}}
+| —
+|-
+| [[Antre 16|16]]
+| Terres Sauvages
+| Rouge
+| {{type|sol}}
+| {{Miniature|0051}}{{Miniature|0530}}{{Miniature|0750}}
+| —
+|-
+| [[Antre 17|17]]
+| Terres Sauvages
+| Rouge
+| {{type|sol}}
+| {{Miniature|0450}}{{Miniature|0844}}
+| —
+|-
+| [[Antre 18|18]]
+| Terres Sauvages
+| Rouge
+| {{type|feu}}
+| {{Miniature|0059}}{{Miniature|0555|Galar}}{{Miniature|0631}}{{Miniature|0851}}
+| —
+|-
+| [[Antre 19|19]]
+| Terres Sauvages
+| Rouge
+| {{type|feu}}
+| {{Miniature|0059}}{{Miniature|0324}}{{Miniature|0758}}{{Miniature|0776}}
+| —
+|-
+| [[Antre 20|20]]
+| Terres Sauvages
+| Rouge
+| {{type|feu}}
+| {{Miniature|0059}}{{Miniature|0555|Galar}}{{Miniature|0839}}{{Miniature|0851}}
+| —
+|-
+| [[Antre 21|21]]
+| Terres Sauvages
+| Rouge
+| {{type|glace}}
+| {{Miniature|0091}}{{Miniature|0131}}{{Miniature|0584}}
+| —
+|-
+| [[Antre 22|22]]
+| Terres Sauvages
+| Rouge
+| {{type|glace}}
+| {{Miniature|0461}}{{Miniature|0473}}{{Miniature|0873}}
+| —
+|-
+| [[Antre 23|23]]
+| Terres Sauvages
+| Rouge
+| {{type|glace}}
+| {{Miniature|0478}}{{Miniature|0555|Galar}}{{Miniature|0873}}
+| —
+|-
+| [[Antre 24|24]]
+| Terres Sauvages
+| Rouge
+| {{type|électrik}}
+| {{Miniature|0026}}{{Miniature|0596}}
+| —
+|-
+| [[Antre 25|25]]
+| Terres Sauvages
+| Rouge
+| {{type|électrik}}
+| {{Miniature|0777}}{{Miniature|0871}}
+| —
+|-
+| [[Antre 26|26]]
+| Terres Sauvages
+| Rouge
+| {{type|plante}}
+| {{Miniature|0045}}{{Miniature|0182}}{{Miniature|0763}}
+| —
+|-
+| [[Antre 27|27]]
+| Terres Sauvages
+| Rouge
+| {{type|plante}}
+| {{Miniature|0547}}{{Miniature|0830}}{{Miniature|0841}}{{Miniature|0842}}
+| —
+|-
+| [[Antre 28|28]]
+| Terres Sauvages
+| Rouge
+| {{type|plante}}
+| {{Miniature|0710}}{{Miniature|0711}}
+| —
+|-
+| [[Antre 29|29]]
+| Terres Sauvages
+| Rouge
+| {{type|poison}}
+| {{Miniature|0435}}{{Miniature|0569}}{{Miniature|0748}}
+| —
+|-
+| [[Antre 30|30]]
+| Terres Sauvages
+| Rouge
+| {{type|poison}}
+| {{Miniature|0110|Galar}}{{Miniature|0315}}{{Miniature|0849|Aigüe}}
+| —
+|-
+| [[Antre 31|31]]
+| Terres Sauvages
+| Rouge
+| {{type|vol}}
+| {{Miniature|0178}}{{Miniature|0561}}{{Miniature|0528}}{{Miniature|0630}}
+| —
+|-
+| [[Antre 32|32]]
+| Terres Sauvages
+| Rouge
+| {{type|vol}}
+| {{Miniature|0701}}{{Miniature|0823}}
+| —
+|-
+| [[Antre 33|33]]
+| Terres Sauvages
+| Rouge
+| {{type|fée}}
+| {{Miniature|0468}}{{Miniature|0683}}{{Miniature|0685}}{{Miniature|0756}}
+| —
+|-
+| [[Antre 34|34]]
+| Terres Sauvages
+| Rouge
+| {{type|fée}}
+| {{Miniature|0078|Galar}}{{Miniature|0303}}{{Miniature|0861}}{{Miniature|0869|Lait Vanille}}
+| —
+|-
+| [[Antre 35|35]]
+| Terres Sauvages
+| Rouge
+| {{type|ténèbres}}
+| {{Miniature|0275}}{{Miniature|0302}}{{Miniature|0342}}{{Miniature|0625}}
+| —
+|-
+| [[Antre 36|36]]
+| Terres Sauvages
+| Rouge
+| {{type|ténèbres}}
+| {{Miniature|0248}}{{Miniature|0630}}{{Miniature|0862}}
+| —
+|-
+| [[Antre 37|37]]
+| Terres Sauvages
+| Rouge
+| {{type|dragon}}
+| {{Miniature|0612}}{{Miniature|0706}}{{Miniature|0780}}{{Miniature|0784}}
+| —
+|-
+| [[Antre 38|38]]
+| Terres Sauvages
+| Rouge
+| {{type|dragon}}
+| {{Miniature|0706}}{{Miniature|0784}}{{Miniature|0841}}{{Miniature|0842}}{{Miniature|0887}}
+| —
+|-
+| [[Antre 39|39]]
+| Terres Sauvages
+| Rouge
+| {{type|normal}}
+| {{Miniature|0573}}{{Miniature|0695}}{{Miniature|0760}}
+| —
+|-
+| [[Antre 40|40]]
+| Terres Sauvages
+| Rouge
+| {{type|normal}}
+| {{Miniature|0143}}{{Miniature|0628}}{{Miniature|0660}}{{Miniature|0765}}
+| —
+|-
+| [[Antre 41|41]]
+| Terres Sauvages
+| Rouge
+| {{type|eau}}
+| {{Miniature|0537}}{{Miniature|0748}}{{Miniature|0847}}
+| —
+|-
+| [[Antre 42|42]]
+| Terres Sauvages
+| Rouge
+| {{type|eau}}
+| {{Miniature|0423|Orient}}{{Miniature|0593}}{{Miniature|0834}}
+| —
+|-
+| [[Antre 43|43]]
+| Terres Sauvages
+| Mauve
+| {{type|spectre}}
+| {{Miniature|0477}}{{Miniature|0711}}{{Miniature|0855}}{{Miniature|0864}}
+| —
+|-
+| [[Antre 44|44]]
+| Terres Sauvages
+| Mauve
+| {{type|eau}}
+| {{Miniature|0130}}{{Miniature|0131}}{{Miniature|0350}}{{Miniature|0771}}
+| —
+|-
+| [[Antre 45|45]]
+| Terres Sauvages
+| Mauve
+| {{type|acier}}
+| {{Miniature|0208}}{{Miniature|0448}}{{Miniature|0601}}{{Miniature|0625}}
+| —
+|-
+| [[Antre 46|46]]
+| Terres Sauvages
+| Mauve
+| {{type|insecte}}
+| {{Miniature|0589}}{{Miniature|0617}}{{Miniature|0752}}
+| —
+|-
+| [[Antre 47|47]]
+| Terres Sauvages
+| Mauve
+| {{type|spectre}}
+| {{Miniature|0711}}{{Miniature|0855}}{{Miniature|0864}}
+| —
+|-
+| [[Antre 48|48]]
+| Terres Sauvages
+| Mauve
+| {{type|combat}}
+| {{Miniature|0068}}{{Miniature|0448}}{{Miniature|0475}}{{Miniature|0701}}{{Miniature|0766}}
+| —
+|-
+| [[Antre 49|49]]
+| Terres Sauvages
+| Mauve
+| {{type|acier}}
+| {{Miniature|0625}}{{Miniature|0863}}{{Miniature|0879}}{{Miniature|0884}}
+| —
+|-
+| [[Antre 50|50]]
+| Terres Sauvages
+| Mauve
+| {{type|psy}}
+| {{Miniature|0282}}{{Miniature|0687}}{{Miniature|0858}}{{Miniature|0866}}
+| —
+|-
+| [[Antre 51|51]]
+| Terres Sauvages
+| Mauve
+| {{type|roche}}
+| {{Miniature|0208}}{{Miniature|0248}}{{Miniature|0558}}{{Miniature|0839}}
+| —
+|-
+| [[Antre 52|52]]
+| Terres Sauvages
+| Mauve
+| {{type|sol}}
+| {{Miniature|0423|Orient}}{{Miniature|0464}}{{Miniature|0537}}
+| —
+|-
+| [[Antre 53|53]]
+| Terres Sauvages
+| Mauve
+| {{type|feu}}
+| {{Miniature|0006}}{{Miniature|0038}}{{Miniature|0059}}{{Miniature|0758}}{{Miniature|0851}}
+| —
+|-
+| [[Antre 54|54]]
+| Terres Sauvages
+| Mauve
+| {{type|feu}}
+| {{Miniature|0038}}{{Miniature|0059}}{{Miniature|0609}}{{Miniature|0758}}{{Miniature|0839}}
+| —
+|-
+| [[Antre 55|55]]
+| Terres Sauvages
+| Mauve
+| {{type|glace}}
+| {{Miniature|0131}}{{Miniature|0555|Galar}}{{Miniature|0584}}{{Miniature|0866}}
+| —
+|-
+| [[Antre 56|56]]
+| Terres Sauvages
+| Mauve
+| {{type|électrik}}
+| {{Miniature|0596}}{{Miniature|0777}}{{Miniature|0871}}{{Miniature|0877}}
+| —
+|-
+| [[Antre 57|57]]
+| Terres Sauvages
+| Mauve
+| {{type|électrik}}
+| {{Miniature|0479|Chaleur}}{{Miniature|0479|Froid}}{{Miniature|0479|Hélice}}{{Miniature|0479|Lavage}}{{Miniature|0479|Tonte}}
+| —
+|-
+| [[Antre 58|58]]
+| Terres Sauvages
+| Mauve
+| {{type|plante}}
+| {{Miniature|0407}}{{Miniature|0598}}{{Miniature|0830}}{{Miniature|0841}}{{Miniature|0842}}
+| —
+|-
+| [[Antre 59|59]]
+| Terres Sauvages
+| Mauve
+| {{type|plante}}
+| {{Miniature|0272}}{{Miniature|0275}}{{Miniature|0547}}{{Miniature|0830}}
+| —
+|-
+| [[Antre 60|60]]
+| Terres Sauvages
+| Mauve
+| {{type|poison}}
+| {{Miniature|0110|Galar}}{{Miniature|0435}}{{Miniature|0748}}{{Miniature|0758}}{{Miniature|0849|Aigüe}}
+| —
+|-
+| [[Antre 61|61]]
+| Terres Sauvages
+| Mauve
+| {{type|vol}}
+| {{Miniature|0178}}{{Miniature|0225}}{{Miniature|0701}}{{Miniature|0823}}
+| —
+|-
+| [[Antre 62|62]]
+| Terres Sauvages
+| Mauve
+| {{type|fée}}
+| {{Miniature|0282}}{{Miniature|0468}}{{Miniature|0861}}
+| —
+|-
+| [[Antre 63|63]]
+| Terres Sauvages
+| Mauve
+| {{type|ténèbres}}
+| {{Miniature|0248}}{{Miniature|0461}}{{Miniature|0560}}{{Miniature|0630}}{{Miniature|0862}}
+| —
+|-
+| [[Antre 64|64]]
+| Terres Sauvages
+| Mauve
+| {{type|dragon}}
+| {{Miniature|0612}}{{Miniature|0706}}{{Miniature|0784}}{{Miniature|0886}}{{Miniature|0887}}
+| —
+|-
+| [[Antre 65|65]]
+| Terres Sauvages
+| Mauve
+| {{type|normal}}
+| {{Miniature|0133}}{{Miniature|0143}}{{Miniature|0628}}{{Miniature|0765}}{{Miniature|0876}}
+| —
+|-
+| [[Antre 66|66]]
+| Terres Sauvages
+| Mauve
+| {{type|normal}}
+| {{Miniature|0132}}
+| —
+|-
+| [[Antre 67|67]]
+| Terres Sauvages
+| Mauve
+| {{type|eau}}
+| {{Miniature|0131}}{{Miniature|0134}}{{Miniature|0226}}{{Miniature|0771}}
+| —
+|-
+| [[Antre 68|68]]
+| Terres Sauvages
+| Mauve
+| {{type|psy}}
+| {{Miniature|0196}}{{Miniature|0687}}{{Miniature|0858}}{{Miniature|0866}}
+| —
+|-
+| [[Antre 69|69]]
+| Terres Sauvages
+| Mauve
+| {{type|ténèbres}}
+| {{Miniature|0197}}{{Miniature|0625}}{{Miniature|0687}}{{Miniature|0862}}
+| —
+|-
+| [[Antre 70|70]]
+| Terres Sauvages
+| Mauve
+| {{type|plante}}
+| {{Miniature|0470}}{{Miniature|0547}}{{Miniature|0763}}{{Miniature|0830}}
+| —
+|-
+| [[Antre 71|71]]
+| Terres Sauvages
+| Mauve
+| {{type|feu}}
+| {{Miniature|0038}}{{Miniature|0059}}{{Miniature|0136}}{{Miniature|0609}}
+| —
+|-
+| [[Antre 72|72]]
+| Terres Sauvages
+| Mauve
+| {{type|électrik}}
+| {{Miniature|0025}}{{Miniature|0135}}{{Miniature|0695}}
+| —
+|-
+| [[Antre 73|73]]
+| Terres Sauvages
+| Mauve
+| {{type|glace}}
+| {{Miniature|0471}}{{Miniature|0478}}{{Miniature|0584}}{{Miniature|0866}}
+| —
+|-
+| [[Antre 74|74]]
+| Terres Sauvages
+| Mauve
+| {{type|fée}}
+| {{Miniature|0282}}{{Miniature|0468}}{{Miniature|0700}}{{Miniature|0861}}
+| —
+|-
+| [[Antre 75|75]]
+| Terres Sauvages
+| Mauve
+| {{type|eau}}
+| {{Miniature|0130}}{{Miniature|0195}}{{Miniature|0211}}{{Miniature|0752}}
+| —
+|-
+| [[Antre 76|76]]
+| Terres Sauvages
+| Mauve
+| {{type|eau}}
+| {{Miniature|0211}}{{Miniature|0224}}{{Miniature|0226}}{{Miniature|0321}}
+| —
+|-
+| [[Antre 77|77]]
+| Terres Sauvages
+| Mauve
+| {{type|feu}}
+| {{Miniature|0038}}{{Miniature|0059}}{{Miniature|0758}}{{Miniature|0851}}
+| {{Miniature|0006|Gigamax}}
+|-
+| [[Antre 78|78]]
+| Terres Sauvages
+| Mauve
+| {{type|eau}}
+| {{Miniature|0130}}{{Miniature|0423|Orient}}
+| {{Miniature|0834|Gigamax}}
+|-
+| [[Antre 79|79]]
+| Terres Sauvages
+| Mauve
+| {{type|plante}}
+| {{Miniature|0407}}{{Miniature|0598}}{{Miniature|0830}}
+| {{Miniature|0841|Gigamax}}{{Miniature|0842|Gigamax}}
+|-
+| [[Antre 80|80]]
+| Terres Sauvages
+| Mauve
+| {{type|feu}}
+| {{Miniature|0038}}{{Miniature|0059}}{{Miniature|0609}}{{Miniature|0839}}
+| {{Miniature|0851|Gigamax}}
+|-
+| [[Antre 81|81]]
+| Terres Sauvages
+| Mauve
+| {{type|combat}}<br>{{type|spectre}}
+| {{Miniature|0448}}{{Miniature|0475}}{{Miniature|0855}}{{Miniature|0864}}{{Miniature|0865}}
+| {{Miniature|0068|Gigamax}}{{Miniature|0094|Gigamax}}
+|-
+| [[Antre 82|82]]
+| Terres Sauvages
+| Mauve
+| {{type|fée}}
+| {{Miniature|0282}}{{Miniature|0468}}{{Miniature|0861}}
+| {{Miniature|0869|Gigamax}}
+|-
+| [[Antre 83|83]]
+| Terres Sauvages
+| Mauve
+| {{type|roche}}<br>{{type|glace}}
+| {{Miniature|0208}}{{Miniature|0558}}{{Miniature|0584}}{{Miniature|0866}}
+| {{Miniature|0131|Gigamax}}{{Miniature|0839|Gigamax}}
+|-
+| [[Antre 84|84]]
+| Terres Sauvages
+| Mauve
+| {{type|acier}}
+| {{Miniature|0208}}{{Miniature|0601}}{{Miniature|0625}}
+| {{Miniature|0884|Gigamax}}
+|-
+| [[Antre 85|85]]
+| Terres Sauvages
+| Mauve
+| {{type|acier}}
+| {{Miniature|0625}}{{Miniature|0884}}
+| {{Miniature|0879|Gigamax}}
+|-
+| [[Antre 86|86]]
+| Terres Sauvages
+| Mauve
+| {{type|poison}}
+| {{Miniature|0110|Galar}}{{Miniature|0435}}{{Miniature|0748}}{{Miniature|0758}}
+| {{Miniature|0569|Gigamax}}
+|-
+| [[Antre 87|87]]
+| Terres Sauvages
+| Mauve
+| {{type|fée}}
+| {{Miniature|0282}}{{Miniature|0468}}{{Miniature|0861}}
+| {{Miniature|0858|Gigamax}}
+|-
+| [[Antre 88|88]]
+| Terres Sauvages
+| Mauve
+| {{type|ténèbres}}
+| {{Miniature|0248}}{{Miniature|0560}}{{Miniature|0630}}{{Miniature|0675}}
+| {{Miniature|0861|Gigamax}}
+|-
+| [[Antre 89|89]]
+| Terres Sauvages
+| Mauve
+| {{type|vol}}
+| {{Miniature|0178}}{{Miniature|0561}}{{Miniature|0701}}
+| {{Miniature|0823|Gigamax}}
+|-
+| [[Antre 90|90]]
+| Terres Sauvages
+| Mauve
+| {{type|insecte}}
+| {{Miniature|0589}}{{Miniature|0617}}{{Miniature|0752}}
+| {{Miniature|0012|Gigamax}}
+|-
+| [[Antre 91|91]]
+| Terres Sauvages
+| Mauve
+| {{type|eau}}
+| {{Miniature|0130}}{{Miniature|0131}}{{Miniature|0771}}
+| {{Miniature|0099|Gigamax}}
+|-
+| [[Antre 92|92]]
+| Terres Sauvages
+| Mauve
+| {{type|insecte}}
+| {{Miniature|0589}}{{Miniature|0617}}{{Miniature|0768}}
+| {{Miniature|0826|Gigamax}}
+|-
+| [[Antre 93|93]]
+| Terres Sauvages
+| Mauve
+| {{type|sol}}
+| {{Miniature|0423|Orient}}{{Miniature|0464}}{{Miniature|0537}}
+| {{Miniature|0844|Gigamax}}
+|-
+| [[Antre 99|99]]
+| Isolarmure
+| Rouge
+| {{type|normal}}
+| {{Miniature|0040}}{{Miniature|0206}}{{Miniature|0428}}{{Miniature|0508}}
+| —
+|-
+| [[Antre 100|100]]
+| Isolarmure
+| Mauve
+| {{type|normal}}
+| {{Miniature|0040}}{{Miniature|0206}}{{Miniature|0242}}{{Miniature|0428}}{{Miniature|0508}}{{Miniature|0760}}{{Miniature|0832}}
+| —
+|-
+| [[Antre 101|101]]
+| Isolarmure
+| Rouge
+| {{type|normal}}
+| {{Miniature|0128}}{{Miniature|0241}}{{Miniature|0295}}{{Miniature|0463}}{{Miniature|0626}}
+| —
+|-
+| [[Antre 102|102]]
+| Isolarmure
+| Mauve
+| {{type|normal}}
+| {{Miniature|0128}}{{Miniature|0241}}{{Miniature|0242}}{{Miniature|0295}}{{Miniature|0463}}{{Miniature|0573}}{{Miniature|0626}}
+| —
+|-
+| [[Antre 103|103]]
+| Isolarmure
+| Rouge
+| {{type|sol}}
+| {{Miniature|0028}}{{Miniature|0105}}{{Miniature|0115}}{{Miniature|0553}}{{Miniature|0844}}
+| —
+|-
+| [[Antre 104|104]]
+| Isolarmure
+| Mauve
+| {{type|sol}}
+| {{Miniature|0028}}{{Miniature|0105}}{{Miniature|0115}}{{Miniature|0242}}{{Miniature|0330}}{{Miniature|0553}}{{Miniature|0623}}
+| —
+|-
+| [[Antre 105|105]]
+| Isolarmure
+| Rouge
+| {{type|électrik}}
+| {{Miniature|0082}}{{Miniature|0405}}{{Miniature|0462}}{{Miniature|0702}}{{Miniature|0871}}
+| —
+|-
+| [[Antre 106|106]]
+| Isolarmure
+| Mauve
+| {{type|électrik}}
+| {{Miniature|0026}}{{Miniature|0242}}{{Miniature|0310}}{{Miniature|0405}}{{Miniature|0462}}{{Miniature|0702}}{{Miniature|0836}}{{Miniature|0871}}
+| —
+|-
+| [[Antre 107|107]]
+| Isolarmure
+| Rouge
+| {{type|vol}}
+| {{Miniature|0528}}{{Miniature|0587}}{{Miniature|0628}}{{Miniature|0630}}{{Miniature|0663}}
+| —
+|-
+| [[Antre 108|108]]
+| Isolarmure
+| Mauve
+| {{type|vol}}
+| {{Miniature|0164}}{{Miniature|0242}}{{Miniature|0521}}{{Miniature|0528}}{{Miniature|0587}}{{Miniature|0628}}{{Miniature|0630}}{{Miniature|0663}}
+| —
+|-
+| [[Antre 109|109]]
+| Isolarmure
+| Rouge
+| {{type|insecte}}
+| {{Miniature|0123}}{{Miniature|0127}}{{Miniature|0212}}{{Miniature|0214}}{{Miniature|0826}}
+| —
+|-
+| [[Antre 110|110]]
+| Isolarmure
+| Mauve
+| {{type|insecte}}
+| {{Miniature|0127}}{{Miniature|0212}}{{Miniature|0213}}{{Miniature|0214}}{{Miniature|0242}}{{Miniature|0545}}{{Miniature|0558}}{{Miniature|0589}}{{Miniature|0617}}
+| —
+|-
+| [[Antre 111|111]]
+| Isolarmure
+| Rouge
+| {{type|plante}}
+| {{Miniature|0114}}{{Miniature|0465}}{{Miniature|0549}}{{Miniature|0591}}{{Miniature|0754}}
+| —
+|-
+| [[Antre 112|112]]
+| Isolarmure
+| Mauve
+| {{type|plante}}
+| {{Miniature|0242}}{{Miniature|0460}}{{Miniature|0465}}{{Miniature|0549}}{{Miniature|0556}}{{Miniature|0591}}{{Miniature|0754}}
+| —
+|-
+| [[Antre 113|113]]
+| Isolarmure
+| Rouge
+| {{type|feu}}
+| {{Miniature|0324}}{{Miniature|0637}}{{Miniature|0664}}{{Miniature|0758}}
+| —
+|-
+| [[Antre 114|114]]
+| Isolarmure
+| Mauve
+| {{type|feu}}
+| {{Miniature|0006}}{{Miniature|0038}}{{Miniature|0059}}{{Miniature|0242}}{{Miniature|0324}}{{Miniature|0609}}{{Miniature|0637}}{{Miniature|0663}}{{Miniature|0758}}
+| —
+|-
+| [[Antre 115|115]]
+| Isolarmure
+| Rouge
+| {{type|roche}}
+| {{Miniature|0112}}{{Miniature|0464}}{{Miniature|0526}}{{Miniature|0558}}{{Miniature|0745|Diurne}}{{Miniature|0745|Nocturne}}
+| —
+|-
+| [[Antre 116|116]]
+| Isolarmure
+| Mauve
+| {{type|roche}}
+| {{Miniature|0185}}{{Miniature|0213}}{{Miniature|0242}}{{Miniature|0464}}{{Miniature|0526}}{{Miniature|0558}}{{Miniature|0745|Diurne}}{{Miniature|0745|Nocturne}}
+| —
+|-
+| [[Antre 117|117]]
+| Isolarmure
+| Rouge
+| {{type|psy}}
+| {{Miniature|0065}}{{Miniature|0103}}{{Miniature|0121}}{{Miniature|0282}}
+| —
+|-
+| [[Antre 118|118]]
+| Isolarmure
+| Mauve
+| {{type|psy}}
+| {{Miniature|0065}}{{Miniature|0079|Galar}}{{Miniature|0242}}{{Miniature|0518}}{{Miniature|0606}}{{Miniature|0678|♂}}{{Miniature|0678|♀}}{{Miniature|0765}}{{Miniature|0876|♂}}{{Miniature|0876|♀}}
+| —
+|-
+| [[Antre 119|119]]
+| Isolarmure
+| Rouge
+| {{type|poison}}
+| {{Miniature|0073}}{{Miniature|0452}}{{Miniature|0545}}
+| —
+|-
+| [[Antre 120|120]]
+| Isolarmure
+| Mauve
+| {{type|poison}}
+| {{Miniature|0110|Galar}}{{Miniature|0211}}{{Miniature|0242}}{{Miniature|0452}}{{Miniature|0545}}{{Miniature|0591}}{{Miniature|0748}}
+| —
+|-
+| [[Antre 121|121]]
+| Isolarmure
+| Rouge
+| {{type|ténèbres}}
+| {{Miniature|0319}}{{Miniature|0452}}{{Miniature|0625}}{{Miniature|0687}}
+| —
+|-
+| [[Antre 122|122]]
+| Isolarmure
+| Mauve
+| {{type|ténèbres}}
+| {{Miniature|0242}}{{Miniature|0319}}{{Miniature|0510}}{{Miniature|0553}}{{Miniature|0687}}{{Miniature|0828}}
+| —
+|-
+| [[Antre 123|123]]
+| Isolarmure
+| Rouge
+| {{type|combat}}
+| {{Miniature|0454}}{{Miniature|0560}}{{Miniature|0620}}{{Miniature|0853}}
+| —
+|-
+| [[Antre 124|124]]
+| Isolarmure
+| Mauve
+| {{type|combat}}
+| {{Miniature|0242}}{{Miniature|0454}}{{Miniature|0538}}{{Miniature|0539}}{{Miniature|0560}}{{Miniature|0620}}{{Miniature|0766}}{{Miniature|0853}}{{Miniature|0865}}{{Miniature|0870}}
+| —
+|-
+| [[Antre 125|125]]
+| Isolarmure
+| Rouge
+| {{type|fée}}
+| {{Miniature|0040}}{{Miniature|0184}}{{Miniature|0282}}{{Miniature|0707}}{{Miniature|0764}}
+| —
+|-
+| [[Antre 126|126]]
+| Isolarmure
+| Mauve
+| {{type|fée}}
+| {{Miniature|0036}}{{Miniature|0184}}{{Miniature|0242}}{{Miniature|0282}}{{Miniature|0707}}{{Miniature|0756}}{{Miniature|0764}}
+| —
+|-
+| [[Antre 127|127]]
+| Isolarmure
+| Rouge
+| {{type|spectre}}
+| {{Miniature|0105}}{{Miniature|0426}}{{Miniature|0593}}{{Miniature|0770}}
+| —
+|-
+| [[Antre 128|128]]
+| Isolarmure
+| Mauve
+| {{type|spectre}}
+| {{Miniature|0242}}{{Miniature|0426}}{{Miniature|0593}}{{Miniature|0711}}{{Miniature|0770}}{{Miniature|0864}}
+| —
+|-
+| [[Antre 129|129]]
+| Isolarmure
+| Rouge
+| {{type|acier}}
+| {{Miniature|0082}}{{Miniature|0227}}{{Miniature|0462}}{{Miniature|0625}}{{Miniature|0707}}
+| —
+|-
+| [[Antre 130|130]]
+| Isolarmure
+| Mauve
+| {{type|acier}}
+| {{Miniature|0082}}{{Miniature|0227}}{{Miniature|0242}}{{Miniature|0437}}{{Miniature|0448}}{{Miniature|0601}}{{Miniature|0625}}{{Miniature|0863}}
+| —
+|-
+| [[Antre 131|131]]
+| Isolarmure
+| Rouge
+| {{type|dragon}}
+| {{Miniature|0130}}{{Miniature|0230}}{{Miniature|0621}}{{Miniature|0706}}{{Miniature|0784}}{{Miniature|0841}}{{Miniature|0842}}
+| —
+|-
+| [[Antre 132|132]]
+| Isolarmure
+| Mauve
+| {{type|dragon}}
+| {{Miniature|0230}}{{Miniature|0242}}{{Miniature|0621}}{{Miniature|0706}}{{Miniature|0715}}{{Miniature|0780}}{{Miniature|0784}}
+| —
+|-
+| [[Antre 133|133]]
+| Isolarmure
+| Rouge
+| {{type|eau}}
+| {{Miniature|0062}}{{Miniature|0119}}{{Miniature|0186}}{{Miniature|0195}}{{Miniature|0382}}
+| —
+|-
+| [[Antre 134|134]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0062}}{{Miniature|0119}}{{Miniature|0186}}{{Miniature|0195}}{{Miniature|0242}}{{Miniature|0342}}{{Miniature|0752}}
+| —
+|-
+| [[Antre 135|135]]
+| Isolarmure
+| Rouge
+| {{type|eau}}
+| {{Miniature|0055}}{{Miniature|0340}}{{Miniature|0834}}{{Miniature|0847}}
+| —
+|-
+| [[Antre 136|136]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0055}}{{Miniature|0130}}{{Miniature|0242}}{{Miniature|0340}}{{Miniature|0537}}{{Miniature|0550|Rouge}}{{Miniature|0550|Bleu}}{{Miniature|0847}}
+| —
+|-
+| [[Antre 137|137]]
+| Isolarmure
+| Rouge
+| {{type|eau}}
+| {{Miniature|0073}}{{Miniature|0091}}{{Miniature|0099}}{{Miniature|0224}}{{Miniature|0226}}
+| —
+|-
+| [[Antre 138|138]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0073}}{{Miniature|0091}}{{Miniature|0224}}{{Miniature|0226}}{{Miniature|0242}}{{Miniature|0689}}{{Miniature|0748}}{{Miniature|0771}}
+| —
+|-
+| [[Antre 139|139]]
+| Isolarmure
+| Rouge
+| {{type|eau}}
+| {{Miniature|0121}}{{Miniature|0171}}{{Miniature|0319}}{{Miniature|0321}}{{Miniature|0691}}
+| —
+|-
+| [[Antre 140|140]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0117}}{{Miniature|0121}}{{Miniature|0171}}{{Miniature|0242}}{{Miniature|0279}}{{Miniature|0319}}{{Miniature|0320}}{{Miniature|0691}}
+| —
+|-
+| [[Antre 143|143]]
+| Isolarmure
+| Rouge
+| {{type|insecte}}<br>{{type|vol}}
+| {{Miniature|0416}}
+| —
+|-
+| [[Antre 144|144]]
+| Isolarmure
+| Mauve
+| {{type|insecte}}<br>{{type|vol}}
+| {{Miniature|0242}}{{Miniature|0416}}
+| —
+|-
+| [[Antre 145|145]]
+| Isolarmure
+| Mauve
+| {{type|plante}}
+| {{Miniature|0103}}{{Miniature|0242}}{{Miniature|0407}}{{Miniature|0465}}
+| {{Miniature|0003|Gigamax}}
+|-
+| [[Antre 146|146]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0073}}{{Miniature|0121}}{{Miniature|0130}}{{Miniature|0242}}{{Miniature|0689}}
+| {{Miniature|0009|Gigamax}}
+|-
+| [[Antre 147|147]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0073}}{{Miniature|0091}}{{Miniature|0224}}{{Miniature|0242}}{{Miniature|0614}}{{Miniature|0713}}
+| {{Miniature|0099|Gigamax}}
+|-
+| [[Antre 148|148]]
+| Isolarmure
+| Mauve
+| {{type|eau}}
+| {{Miniature|0055}}{{Miniature|0242}}{{Miniature|0340}}{{Miniature|0550|Rouge}}{{Miniature|0550|Bleu}}{{Miniature|0847}}
+| {{Miniature|0834|Gigamax}}
+|-
+| [[Antre 149|149]]
+| Isolarmure
+| Mauve
+| {{type|insecte}}
+| {{Miniature|0127}}{{Miniature|0214}}{{Miniature|0242}}{{Miniature|0291}}{{Miniature|0596}}{{Miniature|0743}}
+| {{Miniature|0826|Gigamax}}
+|-
+| [[Antre 150|150]]
+| Isolarmure
+| Mauve
+| {{type|sol}}
+| {{Miniature|0028}}{{Miniature|0242}}{{Miniature|0530}}{{Miniature|0553}}
+| {{Miniature|0844|Gigamax}}
+|-
+| [[Antre 151|151]]
+| Isolarmure
+| Mauve
+| {{type|plante}}
+| {{Miniature|0242}}{{Miniature|0763}}{{Miniature|0820}}
+| {{Miniature|0841|Gigamax}}{{Miniature|0842|Gigamax}}
+|-
+| [[Antre 152|152]]
+| Isolarmure
+| Rouge
+| {{type|normal}}
+| {{Miniature|0132}}
+| —
+|-
+| [[Antre 153|153]]
+| Isolarmure
+| Mauve
+| {{type|normal}}
+| {{Miniature|0132}}{{Miniature|0242}}
+| —
+|-
+| [[Antre 154|154]]
+| Isolarmure
+| Rouge
+| {{type|plante}}
+| {{Miniature|0003}}{{Miniature|0103}}{{Miniature|0465}}{{Miniature|0591}}{{Miniature|0754}}
+| —
+|-
+| [[Antre 155|155]]
+| Isolarmure
+| Rouge
+| {{type|eau}}
+| {{Miniature|0009}}{{Miniature|0073}}{{Miniature|0091}}{{Miniature|0121}}{{Miniature|0130}}
+| —
+|-
+| [[Antre 156|156]]
+| Isolarmure
+| Rouge
+| {{type|roche}}
+| {{Miniature|0745|Diurne}}{{Miniature|0745|Nocturne}}{{Miniature|0745|Crépusculaire}}
+| —
+|-
+| [[Antre 157|157]]
+| Isolarmure
+| Mauve
+| {{type|roche}}
+| {{Miniature|0242}}{{Miniature|0745|Diurne}}{{Miniature|0745|Nocturne}}{{Miniature|0745|Crépusculaire}}
+| —
+|-
+| [[Antre 158|158]]
+| Couronneige
+| Rouge
+| {{type|normal}}
+| {{Miniature|0531}}{{Miniature|0832}}{{Miniature|0334}}{{Miniature|0143}}
+| —
+|-
+| [[Antre 159|159]]
+| Couronneige
+| Mauve
+| {{type|normal}}
+| {{Miniature|0225}}{{Miniature|0333}}{{Miniature|0819}}{{Miniature|0832}}{{Miniature|0334}}{{Miniature|0143}}
+| {{Miniature|0143|Gigamax}}
+|-
+| [[Antre 160|160]]
+| Couronneige
+| Rouge
+| {{type|feu}}
+| {{Miniature|0531}}{{Miniature|0126}}{{Miniature|0851}}{{Miniature|0609}}{{Miniature|0467}}
+| —
+|-
+| [[Antre 161|161]]
+| Couronneige
+| Mauve
+| {{type|feu}}
+| {{Miniature|0225}}{{Miniature|0240}}{{Miniature|0126}}{{Miniature|0631}}{{Miniature|0851}}{{Miniature|0609}}{{Miniature|0038}}{{Miniature|0059}}{{Miniature|0467}}
+| {{Miniature|0851|Gigamax}}
+|-
+| [[Antre 162|162]]
+| Couronneige
+| Rouge
+| {{type|eau}}
+| {{Miniature|0531}}{{Miniature|0550|Rouge}}{{Miniature|0550|Bleu}}{{Miniature|0139}}{{Miniature|0141}}{{Miniature|0130}}{{Miniature|0350}}{{Miniature|0369}}
+| —
+|-
+| [[Antre 163|163]]
+| Couronneige
+| Mauve
+| {{type|eau}}
+| {{Miniature|0225}}{{Miniature|0349}}{{Miniature|0138}}{{Miniature|0140}}{{Miniature|0369}}{{Miniature|0550|Rouge}}{{Miniature|0550|Bleu}}{{Miniature|0099}}{{Miniature|0139}}{{Miniature|0141}}{{Miniature|0350}}{{Miniature|0130}}
+| {{Miniature|0099|Gigamax}}
+|-
+| [[Antre 164|164]]
+| Couronneige
+| Rouge
+| {{type|électrik}}
+| {{Miniature|0531}}{{Miniature|0871}}{{Miniature|0125}}{{Miniature|0596}}{{Miniature|0836}}{{Miniature|0466}}
+| —
+|-
+| [[Antre 165|165]]
+| Couronneige
+| Mauve
+| {{type|électrik}}
+| {{Miniature|0225}}{{Miniature|0239}}{{Miniature|0702}}{{Miniature|0596}}{{Miniature|0125}}{{Miniature|0836}}{{Miniature|0849|Aigüe}}{{Miniature|0849|Grave}}{{Miniature|0871}}{{Miniature|0466}}
+| {{Miniature|0849|Gigamax}}
+|-
+| [[Antre 166|166]]
+| Couronneige
+| Rouge
+| {{type|plante}}<br>{{type|insecte}}
+| {{Miniature|0531}}{{Miniature|0830}}{{Miniature|0348}}{{Miniature|0346}}{{Miniature|0752}}{{Miniature|0598}}
+| —
+|-
+| [[Antre 167|167]]
+| Couronneige
+| Mauve
+| {{type|plante}}<br>{{type|insecte}}
+| {{Miniature|0225}}{{Miniature|0347}}{{Miniature|0345}}{{Miniature|0752}}{{Miniature|0012}}{{Miniature|0348}}{{Miniature|0346}}{{Miniature|0830}}
+| {{Miniature|0012|Gigamax}}
+|-
+| [[Antre 168|168]]
+| Couronneige
+| Rouge
+| {{type|glace}}
+| {{Miniature|0531}}{{Miniature|0124}}{{Miniature|0873}}{{Miniature|0555|Galar}}{{Miniature|0699}}{{Miniature|0362}}
+| —
+|-
+| [[Antre 169|169]]
+| Couronneige
+| Mauve
+| {{type|glace}}
+| {{Miniature|0225}}{{Miniature|0361}}{{Miniature|0554|Galar}}{{Miniature|0238}}{{Miniature|0698}}{{Miniature|0362}}{{Miniature|0460}}{{Miniature|0124}}{{Miniature|0873}}{{Miniature|0555|Galar}}{{Miniature|0699}}{{Miniature|0473}}
+| —
+|-
+| [[Antre 170|170]]
+| Couronneige
+| Rouge
+| {{type|glace}}
+| {{Miniature|0531}}{{Miniature|0584}}{{Miniature|0614}}{{Miniature|0365}}{{Miniature|0713}}{{Miniature|0131}}
+| —
+|-
+| [[Antre 171|171]]
+| Couronneige
+| Mauve
+| {{type|glace}}
+| {{Miniature|0225}}{{Miniature|0131}}{{Miniature|0363}}{{Miniature|0364}}{{Miniature|0713}}{{Miniature|0615}}{{Miniature|0365}}{{Miniature|0584}}
+| {{Miniature|0131|Gigamax}}
+|-
+| [[Antre 172|172]]
+| Couronneige
+| Rouge
+| {{type|combat}}
+| {{Miniature|0531}}{{Miniature|0623}}{{Miniature|0534}}{{Miniature|0839}}
+| —
+|-
+| [[Antre 173|173]]
+| Couronneige
+| Mauve
+| {{type|combat}}
+| {{Miniature|0225}}{{Miniature|0870}}{{Miniature|0236}}{{Miniature|0533}}{{Miniature|0083|Galar}}{{Miniature|0623}}{{Miniature|0865}}{{Miniature|0534}}{{Miniature|0106}}{{Miniature|0107}}{{Miniature|0237}}{{Miniature|0068}}
+| {{Miniature|0068|Gigamax}}
+|-
+| [[Antre 174|174]]
+| Couronneige
+| Rouge
+| {{type|poison}}
+| {{Miniature|0531}}{{Miniature|0031}}{{Miniature|0034}}{{Miniature|0042}}
+| —
+|-
+| [[Antre 175|175]]
+| Couronneige
+| Mauve
+| {{type|poison}}
+| {{Miniature|0225}}{{Miniature|0041}}{{Miniature|0568}}{{Miniature|0030}}{{Miniature|0033}}{{Miniature|0079|Galar}}{{Miniature|0042}}{{Miniature|0569}}{{Miniature|0031}}{{Miniature|0034}}{{Miniature|0169}}
+| {{Miniature|0569|Gigamax}}
+|-
+| [[Antre 176|176]]
+| Couronneige
+| Rouge
+| {{type|vol}}
+| {{Miniature|0531}}{{Miniature|0042}}{{Miniature|0334}}{{Miniature|0715}}{{Miniature|0823}}{{Miniature|0169}}
+| —
+|-
+| [[Antre 177|177]]
+| Couronneige
+| Mauve
+| {{type|vol}}
+| {{Miniature|0225}}{{Miniature|0041}}{{Miniature|0527}}{{Miniature|0822}}{{Miniature|0042}}{{Miniature|0528}}{{Miniature|0823}}{{Miniature|0142}}{{Miniature|0334}}{{Miniature|0169}}{{Miniature|0715}}
+| {{Miniature|0823|Gigamax}}
+|-
+| [[Antre 178|178]]
+| Couronneige
+| Rouge
+| {{type|psy}}
+| {{Miniature|0531}}{{Miniature|0876|♂}}{{Miniature|0876|♀}}{{Miniature|0576}}{{Miniature|0579}}{{Miniature|0078|Galar}}{{Miniature|0866}}{{Miniature|0437}}
+| —
+|-
+| [[Antre 179|179]]
+| Couronneige
+| Mauve
+| {{type|psy}}
+| {{Miniature|0225}}{{Miniature|0876|♂}}{{Miniature|0876|♀}}{{Miniature|0574}}{{Miniature|0577}}{{Miniature|0122|Galar}}{{Miniature|0079|Galar}}{{Miniature|0375}}{{Miniature|0866}}{{Miniature|0576}}{{Miniature|0579}}{{Miniature|0376}}
+| —
+|-
+| [[Antre 180|180]]
+| Couronneige
+| Rouge
+| {{type|roche}}
+| {{Miniature|0531}}{{Miniature|0305}}{{Miniature|0303}}{{Miniature|0302}}{{Miniature|0703}}{{Miniature|0306}}{{Miniature|0839}}
+| —
+|-
+| [[Antre 181|181]]
+| Couronneige
+| Mauve
+| {{type|roche}}
+| {{Miniature|0225}}{{Miniature|0303}}{{Miniature|0302}}{{Miniature|0304}}{{Miniature|0305}}{{Miniature|0213}}{{Miniature|0839}}{{Miniature|0306}}
+| {{Miniature|0839|Gigamax}}
+|-
+| [[Antre 182|182]]
+| Couronneige
+| Rouge
+| {{type|spectre}}
+| {{Miniature|0531}}{{Miniature|0303}}{{Miniature|0302}}{{Miniature|0362}}{{Miniature|0478}}{{Miniature|0709}}
+| —
+|-
+| [[Antre 183|183]]
+| Couronneige
+| Mauve
+| {{type|spectre}}
+| {{Miniature|0225}}{{Miniature|0885}}{{Miniature|0222|Galar}}{{Miniature|0303}}{{Miniature|0302}}{{Miniature|0709}}{{Miniature|0864}}{{Miniature|0887}}
+| {{Miniature|0094|Gigamax}}
+|-
+| [[Antre 184|184]]
+| Couronneige
+| Rouge
+| {{type|dragon}}
+| {{Miniature|0531}}{{Miniature|0621}}{{Miniature|0372}}{{Miniature|0444}}{{Miniature|0697}}{{Miniature|0373}}{{Miniature|0445}}
+| —
+|-
+| [[Antre 185|185]]
+| Couronneige
+| Mauve
+| {{type|dragon}}
+| {{Miniature|0225}}{{Miniature|0884}}{{Miniature|0371}}{{Miniature|0443}}{{Miniature|0696}}{{Miniature|0776}}{{Miniature|0780}}{{Miniature|0372}}{{Miniature|0444}}{{Miniature|0149}}{{Miniature|0697}}{{Miniature|0373}}{{Miniature|0445}}
+| {{Miniature|0884|Gigamax}}
+|-
+| [[Antre 186|186]]
+| Couronneige
+| Rouge
+| {{type|ténèbres}}
+| {{Miniature|0531}}{{Miniature|0861}}{{Miniature|0359}}{{Miniature|0862}}{{Miniature|0461}}
+| —
+|-
+| [[Antre 187|187]]
+| Couronneige
+| Mauve
+| {{type|ténèbres}}
+| {{Miniature|0225}}{{Miniature|0859}}{{Miniature|0359}}{{Miniature|0215}}{{Miniature|0828}}{{Miniature|0510}}{{Miniature|0861}}{{Miniature|0461}}
+| {{Miniature|0861|Gigamax}}
+|-
+| [[Antre 188|188]]
+| Couronneige
+| Rouge
+| {{type|acier}}
+| {{Miniature|0531}}{{Miniature|0632}}{{Miniature|0823}}{{Miniature|0879}}{{Miniature|0306}}
+| —
+|-
+| [[Antre 189|189]]
+| Couronneige
+| Mauve
+| {{type|acier}}
+| {{Miniature|0225}}{{Miniature|0304}}{{Miniature|0052|Galar}}{{Miniature|0632}}{{Miniature|0305}}{{Miniature|0863}}{{Miniature|0879}}{{Miniature|0306}}{{Miniature|0376}}
+| {{Miniature|0879|Gigamax}}
+|-
+| [[Antre 190|190]]
+| Couronneige
+| Rouge
+| {{type|fée}}
+| {{Miniature|0531}}{{Miniature|0703}}{{Miniature|0036}}{{Miniature|0547}}{{Miniature|0858}}
+| —
+|-
+| [[Antre 191|191]]
+| Couronneige
+| Mauve
+| {{type|fée}}
+| {{Miniature|0225}}{{Miniature|0703}}{{Miniature|0546}}{{Miniature|0035}}{{Miniature|0547}}{{Miniature|0110|Galar}}{{Miniature|0858}}{{Miniature|0036}}
+| {{Miniature|0858|Gigamax}}
+|-
+| [[Antre 192|192]]
+| Couronneige
+| Rouge
+| {{type|spectre}}
+| {{Miniature|0531}}{{Miniature|0854|Contrefaçon}}{{Miniature|0854|Authentique}}
+| —
+|-
+| [[Antre 193|193]]
+| Couronneige
+| Mauve
+| {{type|spectre}}
+| {{Miniature|0225}}{{Miniature|0854|Contrefaçon}}{{Miniature|0854|Authentique}}{{Miniature|0855|Contrefaçon}}{{Miniature|0855|Authentique}}
+| {{Miniature|0869|Gigamax}}
+|-
+| [[Antre 194|194]]
+| Couronneige
+| Rouge
+| —
+| {{Miniature|0531}}{{Miniature|0196}}{{Miniature|0197}}{{Miniature|0470}}{{Miniature|0471}}{{Miniature|0700}}
+| —
+|-
+| [[Antre 195|195]]
+| Couronneige
+| Mauve
+| —
+| {{Miniature|0225}}{{Miniature|0133}}{{Miniature|0136}}{{Miniature|0135}}{{Miniature|0134}}{{Miniature|0196}}{{Miniature|0197}}{{Miniature|0470}}{{Miniature|0471}}{{Miniature|0700}}
+| —
+|-
+| [[Antre 196|196]]
+| Couronneige
+| Rouge
+| {{type|roche}}
+| {{Miniature|0531}}{{Miniature|0348}}{{Miniature|0346}}{{Miniature|0139}}{{Miniature|0141}}{{Miniature|0697}}{{Miniature|0699}}{{Miniature|0142}}
+| —
+|-
+| [[Antre 197|197]]
+| Couronneige
+| Mauve
+| {{type|roche}}
+| {{Miniature|0225}}{{Miniature|0138}}{{Miniature|0140}}{{Miniature|0139}}{{Miniature|0141}}{{Miniature|0142}}{{Miniature|0881}}{{Miniature|0883}}{{Miniature|0880}}{{Miniature|0882}}
+| —
+|}
+
+== Évènements ==
+{{Article principal|Bulletin des Terres Sauvages}}
+
+Parfois, les Pokémon qui apparaissent dans les raids Dynamax changent, en fonction de mises à jour appelées Bulletin des Terres Sauvages.
+
+Elles peuvent débloquer des Pokémon non disponibles, commémorer un évènement comme Halloween ou la journée des enfants, ou encore mettre en lumière certains types de Pokémon.
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+=== Apparitions sur d'autres cartes ===
+Un antre de Pokémon apparaît sur les cartes suivantes :
+
+{{Liste des cartes d'un sujet secondaire}}
+
+== Voir aussi ==
+* [[Raid Dynamax]]
+
+{{Antres}}
+
+[[Catégorie:Antre de Pokémon|*]]
+
+[[en:Pokémon Den]]
+[[it:Tana di Pokémon]]
+[[ja:ポケモンの巣]]
+[[zh:宝可梦巢穴]]

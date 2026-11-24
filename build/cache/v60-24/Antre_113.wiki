@@ -1,0 +1,87 @@
+{{Ruban Antre|113}}
+
+L''''antre 113''' est un [[antre de Pokémon]] d'[[Isolarmure]], dans {{jeu|EB}}. Il s'agit d'un antre à lumière rouge, où le type de Pokémon prédominant est le type [[Feu (type)|Feu]].
+__TOC__
+
+== Localisations ==
+
+{| class="tableaustandard centre"
+! colspan="2" | Localisations
+|-
+| [[Fichier:Plaine Salutation Antre A EB.png|300px]]
+| [[Fichier:Plage de l'Épreuve Antre A EB.png|300px]]
+|-
+| [[Plaine Salutation/Antres|Plaine Salutation]]
+| [[Plage de l'Épreuve/Antres|Plage de l'Épreuve]]
+|-
+| [[Fichier:Lagune Circulaire Antre C EB.png|300px]]
+| [[Fichier:Sables de Kudsac Antre B EB.png|300px]]
+|-
+| [[Lagune Circulaire/Antres|Lagune Circulaire]]
+| [[Sables de Kudsac/Antres|Sables de Kudsac]]
+|}
+
+== Pokémon ==
+
+<section begin=Pokémon/>{{#invoke:Tableau Pokémon|antre|page=Antre 113|
+Leveinard / iv(4) 3(5) 4(5) 5(5)
+Passerouge / iv(1) 1(60) 2(30)
+Tritox / iv(1) 1(40) 2(25) / iv(2) 2(20) 3(25)
+Pyronille / iv(2) 2(25) 3(30) / iv(3) 3(15) 4(25)
+Braisillon / iv(3) 3(25) 4(25)
+Chartor / talent-caché(Possible) iv(4) 4(15) 5(40)
+Flambusard / talent-caché(Possible) iv(4) 4(15) 5(20)
+Malamandre / talent-caché(Possible) iv(4) 4(15) 5(20)
+Pyrax / talent-caché(Possible) iv(4) 5(15)
+}}<section end=Pokémon/>
+
+== Récompenses ==
+
+<section begin=Récompenses/>{{#invoke:Tableau Objet|antre|
+<big>Sauf Leveinard</big>
+Tous
+Capsule d'Argent / 3(1%) 4(2%) 5(3%)
+Super Bonbon / taux(25%)
+Os Rare / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Maxi Pépite / 1(20%) 2(25%) 3(30%) 4(35%) 5(50%)
+Sauf Tritox 1IV, Pyronille 3IV et Pyrax
+Baie Figuy / taux(80%)
+Baie Tamato / taux(80%)
+DT88, Tacle Feu / image(DT Feu) taux(100%)
+DT41, Pied Brûleur / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT55, Boutefeu / image(DT Feu) 4(100%) 5(100%)
+Exclusifs à Tritox 1IV, Pyronille 3IV et Pyrax
+Baie Prine / taux(80%)
+Baie Lonme / taux(80%)
+DT02, Lance-Flammes / image(DT Feu) taux(100%)
+DT36, Canicule (capacité){{!}}Canicule / image(DT Feu) 3(100%) 4(100%) 5(100%)
+DT43, Surchauffe / image(DT Feu) 4(100%) 5(100%)
+Récompenses bonus
+Bonbon Exp. XS / 1(5)
+Bonbon Exp. S / 1(1) 2(5)
+Bonbon Exp. M / 2(1) 3(5) 4(2)
+Bonbon Exp. L / 3(1) 4(3) 5(2)
+Bonbon Exp. XL / 5(1)
+Bonbon Dynamax / 1(1) 2(1) 3(1) 4(1) 5(2)
+Armurium / 1(1) 2(1) 3(1) 4(2) 5(2)
+<big>Exclusifs à Leveinard</big>
+Capsule d'Argent / 3(3%) 4(5%) 5(10%)
+Super Bonbon / 3(80%) 4(90%) 5(100%)
+Super Bonbon / 3(50%) 4(70%) 5(90%)
+Super Bonbon / 3(50%) 4(60%) 5(70%)
+Œuf Chance / 3(3%) 4(4%) 5(5%)
+Récompenses bonus
+Bonbon Exp. XS / 3(3) 4(3) 5(3)
+Bonbon Exp. S / 3(3) 4(3) 5(3)
+Bonbon Exp. M / 3(7) 4(3) 5(3)
+Bonbon Exp. L / 3(2) 4(5) 5(3)
+Bonbon Exp. XL / 5(3)
+Bonbon Dynamax / 3(2) 4(2) 5(3)
+Armurium / 3(2) 4(3) 5(4)
+}}<section end=Récompenses/>
+
+{{Antres}}
+
+[[Catégorie:Antre à lumière rouge]]
+[[Catégorie:Antre de type Feu]]
