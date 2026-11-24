@@ -1,0 +1,119 @@
+{{Ruban Pokémon
+| nomPrécédent=Métang
+| numéro=0376
+| nom=Méga-Métalosse
+| nomSuivant=Regirock
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Métalosse
+| nom-japonais=メガ メタグロス
+| nom-romaji=Mega Metagurosu
+| nom-déposé=Mega Metagross
+| nom-anglais=Mega Metagross
+| ndex=0376
+| dex=Hoenn-ROSA/201//Alola/216//Alola-USUL/280//Illumis/227
+| dex-secondaires=Shuffle/641//Picross/N15-08//Picross (Alternatif)/A15-10
+| légende=Artwork de Méga-Métalosse pour {{Jeu|ROSA}}.
+| type1=Acier
+| type2=Psy
+| catégorie=Pattefer
+| taille=2.5
+| poids=942.9
+| talents=Griffe Dure
+| fmratio=-1
+| génération=6
+| couleur=Bleu
+| corps=11
+| cri=Cri 0376 Méga
+}}
+'''Méga-Métalosse''' (anglais : '''Mega Metagross''' ; japonais : '''メガ メタグロス''' ''Mega Metagross'') est un [[Méga-Pokémon]] de [[type]] [[Acier (type)|Acier]] et [[Psy (type)|Psy]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Métalosse]].
+
+Méga-Métalosse a été révélé par une fuite du ''[[CoroCoro Comics]]'' le 10 juillet 2014.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Par rapport à [[Métalosse]], Méga-Métalosse a désormais quatre bras équipés d'énormes griffes, en plus de ses quatre bras initiaux qui partent derrière lui. Sa croix frontale est désormais dorée et non argentée. Il possède aussi un pique sur le menton, ainsi que quatre triangles de métal sur ses flancs, deux de chaque côté. De plus, il semble léviter. Ses griffes sont lisses d'un côté contrairement à Métalosse.
+==== Différences mâle/femelle ====
+
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Métalosse mâle ou femelle.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, son corps est argenté, ses griffes et son pic sont dorés, et sa croix frontale est bleue.
+Cette palette de couleur est la même que pour le Méga-Métalosse standard, mais appliquée à des zones différentes.
+
+=== [[Évolution]] ===
+
+Méga-Métalosse est la [[Méga-Évolution]] de [[Métalosse]], à l'aide d'une [[Métalossite]].
+
+Métalosse est l'évolution de [[Métang]] à partir du [[niveau]] 45, lui-même l'évolution de [[Terhal]] à partir du niveau 20.
+{{#lst:Terhal|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Griffe Dure]] : augmente la puissance des attaques directes du Pokémon.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:Il s'agit de la fusion d'un Métalosse, d'un Métang et de deux Terhal.
+;{{Jeu|Lu}}
+:La Méga-Évolution a atteint son cerveau et changé sa personnalité. Il est devenu cruel et sans pitié au combat.
+;{{Jeu|US}}
+:Ses cerveaux exceptionnels se sont encore améliorés, et son intelligence le pousse à faire preuve d'une cruauté insoutenable en combat.
+;{{Jeu|UL}}
+:Quand il voit qu'il ne peut pas gagner, il attrape son adversaire avec ses griffes et lance le compte à rebours avant explosion.
+;{{Jeu|LPZA}}
+:Il s'agit de la fusion d'un Métalosse, d'un Métang et de deux Terhal.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Acier|type2=Psy}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 40.
+
+{{Statistiques
+| type=acier
+| PV=80
+| attaque=145
+| defense=150
+| atq-spc=105
+| def-spc=110
+| vitesse=110
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Métalosse voir [[Métalosse/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/metalosse.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/metagross/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Métalosse voir [[Métalosse#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/metagross Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Métalosse/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Métalosse}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Métalosse de Pierre Rochard.png|right|thumb|Le Méga-Métalosse chromatique de Pierre Rochard.]]
+Un Méga-Métalosse [[chromatique]] apparaît dans le [[Pokémon : Méga-Évolution 2]], appartenant à {{ps|Pierre Rochard}}. Un autre non chromatique apparaît dans sa bande-annonce.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Métang
+| numéro=0376
+| nom=Méga-Métalosse
+| nomSuivant=Regirock
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Metalosse]]

@@ -1,0 +1,100 @@
+{{Ruban Pokémon
+| nomPrécédent=Croâporal
+| numéro=0658
+| nom=Méga-Amphinobi
+| nomSuivant=Sapereau
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Amphinobi
+| nom-japonais=メガゲッコウガ
+| nom-romaji=Mega Gekkōga
+| nom-déposé=Mega Gekkouga
+| nom-anglais=Mega Greninja
+| ndex=0658
+| dex=Illumis/211
+| légende=Artwork de Méga-Amphinobi pour {{Jeu|LPZA}}.
+| type1=Eau
+| type2=Ténèbres
+| catégorie=Ninja
+| taille=1.5
+| poids=40.0
+| talents=Protéen
+| fmratio=
+| génération=9
+| couleur=Noir
+| corps=12
+| cri=Cri 0658 Méga
+}}
+'''Méga-Amphinobi''' (anglais : '''Mega Greninja''' ; japonais : '''メガゲッコウガ''' ''Mega Gekkouga'') est un [[Méga-Pokémon]] de [[type]] [[Eau (type)|Eau]] et [[Ténèbres (type)|Ténèbres]]. C'est la [[Méga-Évolution]] d'[[Amphinobi]].
+
+Méga-Amphinobi a été révélé officiellement lors de la bande-annonce du ''Nintendo Direct'' du 12 septembre 2025<ref>[https://youtu.be/bsPF7K5taBM Légendes Pokémon : Z-A – Tant de Méga-Évolutions ! (Nintendo Switch 2/Nintendo Switch) sur YouTube.]</ref>, avec [[Méga-Blindépique]], [[Méga-Goupelin]], [[Méga-Raichu X]] et [[Méga-Raichu Y]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+L'énergie de la [[Méga-Évolution]] a permi à Méga-Amphinobi d'obtenir un Sheauriken géant tournoyant sur lequel il s'accroche, tête en bas. Son corps est maintenant principalement noir, mais les extrémités de ses membres sont restées bleu foncé. Il gagne de petits sheaurikens bleu clair sur l'extérieur de ses cuisses. Deux longues crêtes bleu clair se trouvent sur chaque côté de sa tête, remplaçant celle initialement présente.
+
+==== Différences mâle/femelle ===
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Amphinobi conserve les mêmes couleurs qu'Amphinobi chromatique. Les zones habituellement bleu foncé sont gris foncé, son torse et sa mâchoire inférieure sont gris, tandis que sa langue est rouge.
+
+=== [[Évolution]] ===
+
+Méga-Amphinobi est la [[Méga-Évolution]] d'[[Amphinobi]] avec une [[Amphinolite]]. Ce dernier est l'évolution de [[Croâporal]] à partir du [[niveau]] 36, qui lui-même est l'évolution de [[Grenousse]] à partir du niveau 16.
+{{#lst:Grenousse|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Protéen]] : le Pokémon prend le type de la capacité qu'il utilise.
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Il fait tournoyer un shuriken géant à toute vitesse pour le faire flotter, puis s'y accroche la tête en bas afin de prendre ses ennemis par surprise.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Eau|type2=Ténèbres}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 10, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 10, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=Eau
+| PV=72
+| attaque=125
+| defense=77
+| atq-spc=133
+| def-spc=81
+| vitesse=142
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Amphinobi/Imagerie|Génération 9}}
+{{Navigation Amphinobi}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Croâporal
+| numéro=0658
+| nom=Méga-Amphinobi
+| nomSuivant=Sapereau
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Amphinobi]]

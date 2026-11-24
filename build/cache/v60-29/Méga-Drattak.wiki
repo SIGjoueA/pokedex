@@ -1,0 +1,118 @@
+{{Ruban Pokémon
+| nomPrécédent=Drackhaus
+| numéro=0373
+| nom=Méga-Drattak
+| nomSuivant=Terhal
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Drattak
+| nom-japonais=メガ ボーマンダ
+| nom-romaji=Mega Bōmanda
+| nom-déposé=Mega Bohmander
+| nom-anglais=Mega Salamence
+| ndex=0373
+| dex=Hoenn-ROSA/198//Alola/119//Alola-USUL/149//Illumis/222
+| dex-secondaires=Shuffle/195//Picross/N23-09//Picross (Alternatif)/A23-03
+| légende=Artwork de Méga-Drattak pour {{Jeu|ROSA}}.
+| type1=Dragon
+| type2=Vol
+| catégorie=Dragon
+| taille=1.8
+| poids=112.6
+| talents=Peau Céleste
+| fmratio=.5
+| génération=6
+| couleur=Bleu
+| corps=8
+| cri=Cri 0373 Méga
+}}
+'''Méga-Drattak''' (anglais : '''Mega Salamence''' ; japonais : '''メガ ボーマンダ''' ''Mega Bohmander'') est un [[Méga-Pokémon]] de type [[Dragon (type)|Dragon]] et [[Vol (type)|Vol]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Drattak]].
+
+Méga-Drattak a été révélé en même temps que [[Méga-Lockpin]] et [[Méga-Altaria]] dans le magazine ''[[CoroCoro Comics]]'' du mois de septembre 2014.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+En méga-évoluant, les ailes de [[Drattak]] prennent la forme d'un grand croissant de lune pointant vers l'avant. Les deux excroissances pointues au-dessus de sa tête sont plus grandes. Méga-Drattak possède une armure grise sur son ventre, dans laquelle il peut ranger ses pattes avant.
+
+Dans {{Jeu|EV}}, il est établi que Méga-Drattak possède des liens avec [[Rugit-Lune]], un [[Pokémon Paradoxe]] du passé.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsque Méga-Drattak est chromatique, son corps est vert, ses ailes sont orange et son armure est violette.
+
+=== [[Évolution]] ===
+[[Draby]] évolue à partir du [[niveau]] 30 en [[Drackhaus]], qui lui-même évolue à partir du niveau 50 en [[Drattak]]. Depuis {{Jeu|ROSA}}, [[Drattak]] peut [[Méga-Évolution|méga-évoluer]] en Méga-Drattak.
+{{#lst:Draby|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Peau Céleste]] : les capacités de type Normal deviennent de type Vol. Leur puissance augmente légèrement.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+: Son aile tranchante comme une lame découpe tous ceux qui se dressent sur son chemin, sans toutefois ralentir son vol.
+;{{Jeu|Lu}}
+:Il est devenu tellement violent qu'il agresserait même le Dresseur qui l'a élevé. Il est surnommé « le croissant écarlate ».
+;{{Jeu|US}}
+:Frustré de voir ses précieuses ailes déformées et soudées suite à la [[Méga-Évolution]], il laisse libre cours à sa violence.
+;{{Jeu|UL}}
+:Il se met en position de vol en rangeant ses pattes avant dans sa carapace, et fonce en rase-mottes au-dessus des terrains accidentés.
+;{{Jeu|LPZA}}
+:Il se met en position de vol en calant ses pattes avant dans sa carapace et fonce en rase-mottes, même au-dessus des terrains les plus accidentés.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Dragon|type2=Vol
+| remarque-sol=Si les attaques [[Gravité]], [[Anti-Air]] ou [[Atterrissage]] sont utilisées ou que Méga-Drattak tient une [[Balle Fer]], l'efficacité des attaques [[Sol]] à son encontre est normale
+}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, sa [[Défense]] de 50, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=dragon
+| PV=95
+| attaque=145
+| defense=130
+| atq-spc=120
+| def-spc=90
+| vitesse=120
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Drattak voir [[Drattak/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/salamence/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Drattak voir [[Drattak#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/salamence Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Drattak/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Drattak}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Drattak d'Alva.png|thumb|left|Le Méga-Drattak d'[[Alva]].]]
+[[Fichier:PE06 - Méga-Drattak.png|thumb|right|Le Méga-Drattak d'[[Amaryllis]].]]
+Méga-Drattak apparaît dans un épisode de [[Pokédex Méga-Évolution]] et un autre apparaîtra dans le film 19.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Drackhaus
+| numéro=0373
+| nom=Méga-Drattak
+| nomSuivant=Terhal
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Drattak]]

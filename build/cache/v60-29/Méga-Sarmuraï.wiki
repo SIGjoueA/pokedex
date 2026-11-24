@@ -1,0 +1,95 @@
+{{Ruban Pokémon
+| nomPrécédent=Sovkipou
+| numéro=0768
+| nom=Méga-Sarmuraï
+| nomSuivant=Bacabouh
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Sarmuraï
+| nom-japonais=メガグソクムシャ
+| nom-romaji=Mega Gusokumusha
+| nom-déposé=
+| nom-anglais=Mega Golisopod
+| ndex=0768
+| dex=Extra Illumis/063
+| légende=Artwork de Méga-Sarmuraï pour {{Jeu|LPZA}}.
+| type1=Insecte
+| type2=Acier
+| catégorie=Blindé
+| taille=2.3
+| poids=148.0
+| talents=Griffe Dure
+| fmratio=
+| génération=9
+| couleur=Gris
+| corps=10
+| cri=Cri 0768 Méga
+}}
+'''Méga-Sarmuraï''' (anglais : '''Mega Golisopod''' ; japonais : '''メガグソクムシャ''' ''Mega Gusokumusha'') est un [[Méga-Pokémon]] de [[type]] [[Insecte (type)|Insecte]] et [[Acier (type)|Acier]]. C'est la [[Méga-Évolution]] de [[Sarmuraï]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Sarmuraï voit son type [[Eau]] remplacé par le type [[Acier (type)|Acier]]. Son corps, bien plus sombre, possède deux nouvelles pattes arrière sur lesquelles il se tient en plus des deux pattes avant, devenant quadrupède. Ses deux antennes sont ondulées, tandis que de sa moustache ressort un poil tombant. Les deux paires de pattes les plus antérieures qu'il possédait se sont rangées dans sa carapace alors qu'une paire de pattes, semblables à ses deux mains, ont poussé sur le haut de son dos. De la fourrure violette, identique à la queue de [[Sovkipou]], se trouve à l'arrière de ses avant-bras. Ses yeux sont devenus jaunes.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+
+=== [[Évolution]] ===
+
+Méga-Sarmuraï est la [[Méga-Évolution]] de [[Sarmuraï]] avec une [[Sarmuraïte]]. Sarmuraï est l'évolution de [[Sovkipou]] à partir du [[niveau]] 30.
+{{#lst:Sovkipou|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Griffe Dure]] : augmente la puissance des attaques directes du Pokémon.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il attaque son adversaire en frappant sans relâche avec quatre bras, et quand la fin est proche, il l'achève avec les autres bras qu'il dissimulait.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Insecte|type2=Acier}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 25, sa [[Défense]] de 35, son [[Attaque Spéciale]] de 10, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30.
+
+{{Statistiques
+| type=Insecte
+| PV=75
+| attaque=150
+| defense=175
+| atq-spc=70
+| def-spc=120
+| vitesse=40
+
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Sarmuraï/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Sarmuraï}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Sur la version console de {{jeu|HOME}}, l'[[apparence du corps]] de Méga-Sarmuraï est différente de celle de [[Sarmuraï]]. Sur la version mobile, elles sont identiques ({{Apparence du corps|12}}).
+
+{{Ruban Pokémon
+| nomPrécédent=Sovkipou
+| numéro=0768
+| nom=Méga-Sarmuraï
+| nomSuivant=Bacabouh
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Sarmuraï]]

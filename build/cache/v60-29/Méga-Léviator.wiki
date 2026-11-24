@@ -1,0 +1,189 @@
+{{Ruban Pokémon
+| nomPrécédent=Magicarpe
+| numéro=0130
+| nom=Méga-Léviator
+| nomSuivant=Lokhlass
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Léviator
+| nom-japonais=メガ ギャラドス
+| nom-déposé=Mega Gyarados
+| nom-romaji=Mega Gyaradosu
+| nom-anglais=Mega Gyarados
+| ndex=0130
+| dex=Kanto-LGPE/130//Hoenn-ROSA/054//Kalos (Centre)/050//Alola/092//Alola-USUL/112//Illumis/033
+| dex-secondaires=Shuffle/478//Picross/N27-10//Picross (Alternatif)/A27-07
+| légende=Artwork de Méga-Léviator pour {{Jeu|LPZA}}.
+| type1=Eau
+| type2=Ténèbres
+| catégorie=Terrifiant
+| taille=6.5
+| poids=305.0
+| talents=Brise Moule
+| fmratio=.5
+| couleur=Bleu
+| corps=2
+| cri=Cri 0130 Méga
+| génération=6
+}}
+'''Méga-Léviator''' (anglais : '''Mega Gyarados''' ; japonais : '''メガ ギャラドス''' ''Mega Gyarados'') est un [[Méga-Pokémon]] de [[type]] [[Eau (type)|Eau]] et [[Ténèbres (type)|Ténèbres]]. C'est la [[Méga-Évolution]] de [[Léviator]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Léviator a la physionomie d'un grand serpent de mer bleu. Méga-Léviator est plus gros que sa forme originelle. Il possède des barbillons plus longs qui sont blancs ainsi que des nageoires jaunes des deux côtés de sa tête, une grande crête noire avec la corne du milieu beaucoup plus grande que les deux autres et ses écailles sur le côté sont rouges et quelques parties de son corps sont noires. La taille de ses nageoires est désormais beaucoup plus importante.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Léviator est chromatique, son corps ainsi que ses barbillons sont rouges, et ses nageoires sont blanches au lieu de jaune pâle.
+
+=== [[Évolution]] ===
+
+Méga-Léviator est la [[Méga-Évolution]] de [[Léviator]] avec une [[Léviatorite]], qui lui-même est l'évolution de [[Magicarpe]] au [[niveau]] 20.
+{{#lst:Magicarpe|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Brise Moule]] : le Pokémon ignore les talents adverses qui auraient un effet sur ses capacités.
+
+=== Description du Pokédex ===
+;{{Jeu|So}}
+:La [[Méga-Évolution]] a endommagé son cerveau. Il ne lui reste donc plus que l'instinct sauvage de tout réduire en cendres.
+;{{Jeu|Lu}}
+:Les ouïes sur ses côtés projettent de l'eau horizontalement pour lui faire atteindre une vitesse supérieure à Mach 1.
+;{{Jeu|US}}
+:La [[Méga-Évolution]] est très rude pour son organisme. Ce stress le rend encore plus violent et destructeur que d'habitude.
+;{{Jeu|UL}}
+:Il jaillit de l'eau à une vitesse supersonique. Si un grand navire se trouve sur sa trajectoire, celui-ci se retrouve coupé en deux.
+;{{Jeu|LGPE}}
+:Il se livre entièrement à ses instincts les plus destructeurs. Il suivra toutefois les ordres d'un Dresseur s'il a entièrement confiance en lui.
+;{{Jeu|LPZA}}
+:Il projette de l'eau depuis les orifices situés sur ses flancs et se propulse à la surface à une vitesse supérieure à Mach 1.
+
+== QR Codes ==
+=== [[Septième génération]] ===
+
+{| class="tableaustandard centre eau"
+|-
+! colspan="2" | QR Codes
+|-
+| colspan="2" | Scanner ces QR Codes pour visualiser {{PAGENAME}} dans le Pokédex.
+|-
+| {{PAGENAME}}
+| {{PAGENAME}} Chromatique
+|-
+| [[Fichier:QR code 0130 Méga SL.png]]
+| [[Fichier:QR code 0130 Méga chromatique SL.png]]
+|}
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Eau|type2=Ténèbres}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 30, son [[Attaque Spéciale]] de 10, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 30.
+
+{{Statistiques
+| nom=Méga Léviator
+| type=eau
+| PV=95
+| attaque=155
+| defense=109
+| atq-spc=70
+| def-spc=130
+| vitesse=81
+}}
+Méga-Léviator était le Pokémon à la plus haute statistique d'Attaque du type Eau, avant l'arrivée de [[Superdofin]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Léviator voir [[Léviator/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/leviator.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/gyarados/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Léviator voir [[Léviator#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/leviator.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/gyarados/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Léviator/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Léviator}}
+
+== Dans ''[[Pokémon UNITE]]'' ==
+Méga-Léviator apparaît comme personnage jouable, où il est de type Polyvalent. Lorsque le Pokémon utilise sa Capacité Unité, Léviator Méga-évolue pendant une courte durée.
+
+{{Tableau Méga-Pokémon UNITE
+<!-- Informations -->
+| pokémon=Méga-Léviator
+| rôle1=Rapproché
+| rôle2=Polyvalent
+| dégâts=Attaque
+| difficulté=Intermédiaire
+
+<!-- Statistiques -->
+| puissance=4,5
+| endurance=3,5
+| mobilité=2,5
+| scoring=2
+| utilité=1,5
+
+<!-- Capacités & Talent -->
+| talent=Glissade
+| talent1-condition=Magicarpe
+| talent2=Intimidation
+| talent2-condition=Léviator
+| talentMéga=Brise Moule
+| capacitéunité=Draco-Troubles
+| capacitéunité-niveau=8
+| capacité-2-niveau=3
+| capacité-a=Gigotage
+| capacité-a-niveau=5
+| capacité-a1=Draco-Souffle
+| capacité-b=Trempette
+| capacité-b-niveau=7
+| capacité-b1=Cascade
+
+<!-- Lignée évolutive -->
+| évolution=1
+| stade-base=Magicarpe
+| stade-base-numéro=0129
+| stade1=Léviator
+| stade1-numéro=0130
+| stade1-niveau=7
+| stade-Méga=Méga-Léviator
+| stade-Méga-numéro=0130 Méga
+| stade-Méga-condition=Léviatorite
+
+<!-- Obtention -->
+| pièces={{?}}
+| gemmes={{?}}
+}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Léviator d'Ondine.png|200px|thumb|left|Le Méga-Léviator d'Ondine.]]
+[[Fichier:Méga-Léviator de Lysandre.png|200px|thumb|right|Le Méga-Léviator de Lysandre.]]
+Méga-Léviator fait une apparition dans le dessin animé spécial [[Pokémon : Méga-Évolution]].
+Le Méga-Léviator de Lysandre apparaît durant l'épisode 43 de la saison 19.
+[[Ondine/Pokémon, la série|Ondine]] possède [[Léviator d'Ondine|un Méga-Léviator]] qui a méga-évolué lors du [[SL043]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Magicarpe
+| numéro=0130
+| nom=Méga-Léviator
+| nomSuivant=Lokhlass
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Leviator]]

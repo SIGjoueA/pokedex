@@ -1,0 +1,115 @@
+{{Ruban Pokémon
+| nomPrécédent=Saquedeneu
+| numéro=0115
+| nom=Méga-Kangourex
+| nomSuivant=Hypotrempe
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Kangourex
+| nom-japonais=メガ ガルーラ
+| nom-romaji=Mega Garūra
+| nom-déposé=Mega Garura
+| nom-anglais=Mega Kangaskhan
+| ndex=0115
+| dex=Kanto-LGPE/115//Kalos (Côtes)/062//Alola/165//Alola-USUL/199//Illumis/223
+| dex-secondaires=Shuffle/057//Picross/N29-07//Picross (Alternatif)/A29-03
+| légende=Artwork de Méga-Kangourex pour {{Jeu|XY}}.
+| type1=Normal
+| catégorie=Maternel
+| taille=2.2
+| poids=100.0
+| talents=Amour Filial
+| fmratio=1
+| couleur=Brun
+| corps=6
+| cri=Cri 0115 Méga
+| génération=6
+}}
+'''Méga-Kangourex''' (anglais : '''Mega Kangaskhan''' ; japonais : '''メガ ガルーラ''' ''Mega Garura'') est un [[Méga-Pokémon]] de [[type]] [[Normal (type)|Normal]]. C'est la [[Méga-Évolution]] de [[Kangourex]].
+
+Méga-Kangourex a été révélé pendant les [[Championnats du Monde 2013|Pokémon World Championships 2013]] s'étant déroulés à Vancouver.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+La mère Kangourex ne change pas d'apparence après sa [[Méga-Évolution]]. En revanche, son petit sort de sa poche ventrale pour combattre à ses côtés. Il est un peu plus grand qu'avant, des excroissances rocheuses apparaissent sur son ventre et sur ses genoux et une pointe sort du bout de sa queue. Ses yeux deviennent rouges et des marques roses se distinguent juste à côté, signe qu'il est encore bébé.
+
+==== Différences mâle/femelle ====
+
+Cette espèce est composée uniquement d'individus femelles.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, le corps de Méga Kangourex est gris. Son crâne est, lui, d'un ton vert plus foncé et plus marquant. Le teint du petit est principalement rose clair, mais son crâne a, comme sa mère, une couleur vert foncé.
+
+=== [[Évolution]] ===
+
+Méga-Kangourex est la [[Méga-Évolution]] de [[Kangourex]] avec une [[Kangourexite]].
+{{#lst:Kangourex|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Amour Filial]] : permet à la mère et à son petit d'attaquer tous les deux en même temps.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:C'est grâce à la fierté d'une mère qui voit son enfant grandir que Méga-Kangourex est si fort.
+;{{Jeu|Lu}}
+:La Méga-Évolution a fait grandir le bébé. Il est hargneux et refuse de perdre, au point que sa mère s'inquiète pour son avenir.
+;{{Jeu|US}}
+:Avec l'afflux d'énergie de la [[Méga-Évolution]], le rejeton grandit temporairement, ce qui ne rassure pas sa mère.
+;{{Jeu|UL}}
+:Quand la mère voit son petit grandir grâce à la Méga-Évolution, elle pense avec tristesse au jour où il quittera définitivement le nid.
+;{{Jeu|LGPE}}
+:L'énergie de la Méga-Évolution a fait grandir le petit d'un seul coup. Il se coordonne avec sa mère pour agir de concert.
+;{{Jeu|LPZA}}
+:L'énergie de la Méga-Évolution a fait grandir le petit d'un seul coup. Il se coordonne avec sa mère pour agir de concert.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Normal}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 20, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20 et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=normal
+| PV=105
+| attaque=125
+| defense=100
+| atq-spc=60
+| def-spc=100
+| vitesse=100
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Kangourex voir [[Kangourex/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/kangaskhan/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Kangourex voir [[Kangourex#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/kangaskhan/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Kangourex/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Kangourex}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Kangourex d'Althéo.png|200px|thumb|left|Le Méga-Kangourex d'Althéo.]]
+Méga-Kangourex apparait dans le [[PME01]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Saquedeneu
+| numéro=0115
+| nom=Méga-Kangourex
+| nomSuivant=Hypotrempe
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Kangourex]]

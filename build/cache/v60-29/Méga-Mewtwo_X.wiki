@@ -1,0 +1,154 @@
+{{Renvoi homonymie|Méga-Mewtwo}}
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Dracolosse
+| numéro=0150
+| nom=Méga-Mewtwo X
+| nomSuivant=Mew
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Mewtwo X
+| nom-japonais=メガ ミュウツー X
+| nom-déposé=Mega Mewtwo X
+| nom-romaji=Mega Myūtsū X
+| nom-anglais=Mega Mewtwo X
+| ndex=0150
+| dex=Kanto-LGPE/150//Kalos (Monts)/151//Illumis/232
+| dex-secondaires=Shuffle/158//Picross/N30-07//Picross (Alternatif)/A30-08
+| légende=Artwork de Méga-Mewtwo X pour {{Jeu|XY}}.
+| type1=Psy
+| type2=Combat
+| catégorie=Génétique
+| taille=2.3
+| poids=127.0
+| talents=Impassible
+| fmratio=-1
+| couleur=Violet
+| corps=6
+| cri=Cri 0150 Méga X
+| génération=6
+}}
+'''Méga-Mewtwo X''' (anglais : '''Mega Mewtwo X''' ; japonais : '''メガ ミュウツー X''' ''Mega Mewtwo X'') est un [[Méga-Pokémon]] de [[type]] [[Psy (type)|Psy]] et [[Combat (type)|Combat]]. C'est une des [[Méga-Évolution]]s de [[Mewtwo]].
+
+Méga-Mewtwo X a été dévoilé le 11 septembre 2013, suite à une fuite du ''[[CoroCoro Comics]]'' du mois d'octobre.
+== À propos du Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Mewtwo X est plus grand que Mewtwo. Son corps semble désormais dessiner une sorte de tenue de combat, il a notamment des sortes de protections en anneau autour des épaules, tandis que sa queue violette est plus courte. Ses deux cornes ou oreilles sont plus pointues.
+
+==== Différences mâle/femelle ====
+
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Mewtwo X mâle ou femelle.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Mewtwo X est chromatique, sa queue et les parties qui couvrent ses épaules sont vertes. Ses yeux restent bleus.
+
+=== [[Évolution]] ===
+
+[[Mewtwo]] peut [[Méga-Évolution|méga-évoluer]] en Méga-Mewtwo X s'il tient une [[Mewtwoïte X]]. Il peut également méga-évoluer en [[Méga-Mewtwo Y]] s'il tient une [[Mewtwoïte Y]].
+{{#lst:Mewtwo|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Impassible]] : augmente la Vitesse du Pokémon quand il a peur.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}}
+:Ses pouvoirs psychiques ont augmenté sa masse musculaire. Il peut exercer une pression d'une tonne et courir 100 m en deux secondes.
+;{{Jeu|LPZA}}
+:Ses pouvoirs psychiques ont augmenté sa masse musculaire. Il peut exercer une pression d'une tonne et courir 100 m en deux secondes.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Psy|type2=Combat}}
+
+== [[Statistique]]s ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 80, sa [[Défense]] de 10, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10.
+{{Statistiques
+| nom=Méga-Mewtwo X
+| type=psy
+| PV=106
+| attaque=190
+| defense=100
+| atq-spc=154
+| def-spc=100
+| vitesse=130
+}}
+Méga-Mewtwo X est le Pokémon à la plus haute statistique d'Attaque tous types confondus.
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Mewtwo et Méga-Mewtwo Y voir [[Mewtwo/Génération 6#Stratégie|leurs pages]] [[Méga-Mewtwo Y#Stratégie|dédiées]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/mewtwo/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Mewtwo et Méga-Mewtwo Y voir [[Mewtwo#Stratégie|leurs pages]] [[Méga-Mewtwo Y#Stratégie|dédiées]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/mewtwo Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Mewtwo X/Imagerie|Génération 9}}
+{{Navigation Mewtwo}}
+
+== Dans ''[[Pokémon UNITE]]'' ==
+Méga-Mewtwo X est la Méga-Évolution de Mewtwo (Permis Unité X), qui est present comme personnage jouable de type attaquant. Quand Mewtwo (Permis Unité X) tient la Mewtwoïte X, une jauge de synergie apparait et lorsqu'elle est remplie, le Pokémon Méga-Évolue a partir du niveau 5.
+
+{{Tableau Pokémon UNITE
+<!-- Informations -->
+| pokémon=Méga-Mewtwo X
+| rôle1=Rapproché
+| rôle2=Polyvalent
+| dégâts=Attaque
+| difficulté=Facile
+
+<!-- Statistiques -->
+| puissance=4
+| endurance=4
+| mobilité=3
+| scoring=2
+| utilité=2
+
+<!-- Capacités & Talent -->
+| talent=Pression
+| capacitéunité=Brûlure Psy Infinie
+| capacitéunité-niveau=9
+| capacité-2-niveau=3
+| capacité-a=Choc Mental
+| capacité-a-niveau=5
+| capacité-a1=Prescience
+| capacité-a2=Frappe Psy
+| capacité-b=Bouclier
+| capacité-b-niveau=7
+| capacité-b1=Soin
+| capacité-b2=Téléport
+
+<!-- Lignée évolutive -->
+| évolution=Méga-Évolution
+| stade-base=Mewtwo
+| stade-base-numéro=0150
+| stade-Méga=Méga-Mewtwo X
+| stade-Méga-numéro=0150 Méga X
+| stade-Méga-condition=Mewtwoïte X
+
+<!-- Obtention -->
+| pièces=15 000
+| gemmes=575
+}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+
+Méga-Mewtwo X apparaît dans [[Pokémon : Méga-Évolution - Acte I]].
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Dracolosse
+| numéro=0150
+| nom=Méga-Mewtwo X
+| nomSuivant=Mew
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Mewtwo]]

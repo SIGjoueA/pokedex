@@ -1,0 +1,120 @@
+{{Renvoi homonymie|Méga-Dracaufeu}}
+{{Ruban Pokémon
+| nomPrécédent=Reptincel
+| numéro=0006
+| nom=Méga-Dracaufeu Y
+| nomSuivant=Carapuce
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Dracaufeu Y
+| nom-japonais=メガ リザードン Y
+| nom-déposé=Mega Lizardon Y
+| nom-romaji=Mega Rizādon Y
+| nom-anglais=Mega Charizard Y
+| ndex=0006
+| dex=Kanto-LGPE/006//Kalos (Centre)/085//Illumis/153
+| dex-secondaires=Shuffle/006//Picross/N28-11//Picross (Alternatif)/A28-10
+| légende=Artwork de Méga-Dracaufeu Y pour {{Jeu|XY}}.
+| type1=Feu
+| type2=Vol
+| catégorie=Flamme
+| taille=1.7
+| poids=100.5
+| talents=Sécheresse
+| fmratio=.125
+| couleur=Rouge
+| corps=6
+| génération=6
+| cri=Cri 0006 Méga Y
+}}
+'''Méga-Dracaufeu Y''' (anglais : '''Mega-Charizard Y''' ; japonais : '''メガ リザードン Y''' ''Mega Lizardon Y'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Vol (type)|Vol]]. C'est une des [[Méga-Évolution]]s de [[Dracaufeu]].
+
+Méga-Dracaufeu Y a été révélé dans le magazine ''[[CoroCoro Comics]]'' d'octobre 2013 (sorti en septembre), en même temps que [[Méga-Florizarre]], [[Méga-Tortank]], [[Méga-Mewtwo X]] et [[Méga-Carchacrok]]. Il était alors appelé ''Méga-Dracaufeu''. Ce n'est que le 2 octobre 2013, lors de la diffusion de ''[[Pokémon : Les origines]]'', avec l'apparition de [[Méga-Dracaufeu X]], que son vrai nom s'est révélé être Méga-Dracaufeu Y.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Dracaufeu Y a des allures plus bestiales que [[Dracaufeu]]. Trois cornes sont présentes sur sa tête, celle du milieu étant plus grande que les deux autres, et des pointes surgissent à l'extrémité de sa queue. Il a une plus grande flamme et ses ailes à l'apparence déchirée sont de grande envergure. Il a de petites ailes au niveau de ses bras et un aileron sur sa queue. Il devient [[:wp:digitigrade|digitigrade]] (il se déplace sur ses doigts).
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Dracaufeu Y conserve les couleurs classiques du Dracaufeu chromatique : la couleur de son corps est noire-grise, son ventre est blanc et la membrane de ses ailes ainsi que ses yeux varient entre le bordeaux et le fuchsia.
+
+=== [[Évolution]] ===
+
+Méga-Dracaufeu Y est la [[Méga-Évolution]] de [[Dracaufeu]] avec une [[Dracaufite Y]]. Dracaufeu est l'évolution de [[Reptincel]] à partir du [[niveau]] 36, lui-même l'évolution de [[Salamèche]] à partir du niveau 16.
+{{#lst:Salamèche|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Sécheresse]] : le soleil se met à briller quand le Pokémon entre au combat.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}}
+:Il tire sa puissance du lien qui l'unit à son Dresseur. Sa capacité à voler plus rapidement qu'un avion à réaction fait toute sa fierté.
+;{{Jeu|LPZA}}
+:Il tire sa puissance du lien qui l'unit à son Dresseur. Sa capacité à voler plus rapidement qu'un avion à réaction fait toute sa fierté.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Feu|type2=Vol
+| remarque-sol=Si les attaques [[Gravité]] ou [[Anti-Air]] sont utilisées ou que Méga-Dracaufeu Y tient une [[Balle Fer]], l'efficacité des attaques [[Sol]] à son encontre est double, du fait de son type [[Feu]].
+}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, son [[Attaque Spéciale]] de 50, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 30.
+
+{{Statistiques
+| type=feu
+| PV=78
+| attaque=104
+| defense=78
+| atq-spc=159
+| def-spc=115
+| vitesse=100
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Dracaufeu et Méga-Dracaufeu X voir [[Dracaufeu/Génération 6#Stratégie|leurs pages]] [[Méga-Dracaufeu X#Stratégie|dédiées]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/dracaufeu.html#6gy Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/charizard/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Dracaufeu et Méga-Dracaufeu X voir [[Dracaufeu#Stratégie|leurs pages]] [[Méga-Dracaufeu X#Stratégie|dédiées]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/dracaufeu.html#7gy Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/charizard Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Dracaufeu Y/Imagerie|Génération 9}}
+{{Navigation Dracaufeu}}
+
+== Apparitions dans les jeux secondaires ==
+
+{{Article principal|{{PAGENAME}}/Jeux secondaires}}
+
+Méga-Dracaufeu Y apparaît notamment dans les jeux suivants :
+
+{{#invoke:Sommaire|triAlphabetique|page={{PAGENAME}}/Jeux secondaires}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Dracaufeu Y de Trovato.png|200px|thumb|left|Le Méga-Dracaufeu Y de Trovato.]]
+Méga-Dracaufeu Y appraraît dans le [[XY125]] lors de la Ligue de Kalos, utilisé par [[Trovato/Pokémon, la série|Trovato]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Reptincel
+| numéro=0006
+| nom=Méga-Dracaufeu Y
+| nomSuivant=Carapuce
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Dracaufeu Y]]

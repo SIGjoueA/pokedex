@@ -208,6 +208,14 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Garde-fou** : `applyElite` est appelé à la fin de `rank-raids.mjs`, `rank-max.mjs` et `fetch-pvp.mjs`, pour que `E` ne disparaisse plus à la prochaine régénération.
 - **Audit** : contrôles `v60.28` dans `build/audit.mjs` (`E` présent et égal à `fe` + `ce`, attaques connues de `pvp-moves.json` / `go.moves`, ordre des classements inchangé, scripts branchés).
 
+## v60.29 : précision des formes
+- **Disponibilité** : `build/fix-v60-29.mjs` (lancé par `apply-v34.mjs`, idempotent) recoupe `f.av` avec les lieux déjà présents (`f.pl` Poképédia, `f.en` PokéAPI, `f.rd`, méthodes `f.pln` hors transfert). 68 jeux ajoutés sur des formes (régionales, Gigamax, Motisma, etc. : Légendes Z-A / Extra Illumis, Isolarmure, Couronneige…). Les 23 Méga d’apparition `LPZAmd` (page « Méga-Pokémon ») sont retirées du jeu de base Z-A, conservées dans Méga-Dimension. `core.e.gb` est aligné sur `f.av`.
+- **Textes des Méga / Primo** : descriptions officielles du Pokédex français lues sur les pages « Méga-… » et « Primo-… » (cache versionné `build/cache/v60-29/`, CC BY-NC-SA 3.0 FR) et écrites dans `f.pv` (Let’s Go, Soleil / Lune, Ultra-Soleil / Ultra-Lune, Légendes Z-A / Méga-Dimension). Aucun texte propre n’existe en X / Y ni ROSA : ces jeux gardent le texte de la forme de base. Aucune traduction automatique.
+- **Lieux** : « Plaine Salutation » (cadeaux d’Alola) et mentions Isolarmure / Couronneige mal rangées sous Épée / Bouclier sont rétiquetées. Les lignes « forme Paldea … » de Tauros passent sur les fiches de race ; « forme Paldea » sans race à l’Est est attribué à la Race Combative (signalé). Électhor de Galar (nomade aux Terres Sauvages, quête du DLC) est rangé sous Couronneige.
+- **Hors lot** : Melmetal Gigamax (av encore vide : événement particulier, non tranché) ; pas de textes GO.
+- **Audit** : contrôles `v60.29` dans `build/audit.mjs` (VERSION / DATA_VERSION, Méga DLC hors Z-A de base, textes Z-A distincts de la forme de base, Raichu d’Alola à Illumis, Tauros de Paldea, NOTES ≤ 160 caractères).
+
+
 ## Limites connues
 Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 

@@ -1,0 +1,160 @@
+{{Ruban Pokémon
+| nomPrécédent=Kadabra
+| numéro=0065
+| nom=Méga-Alakazam
+| nomSuivant=Machoc
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Alakazam
+| nom-japonais=メガ フーディン
+| nom-romaji=Mega Fūdin
+| nom-déposé=Mega Foodin
+| nom-anglais=Mega Alakazam
+| ndex=0065
+| dex=Kanto-LGPE/065//Hoenn-ROSA/042//Kalos (Centre)/104//Alola/044//Alola-USUL/051//Illumis/064
+| dex-secondaires=Shuffle/486//Picross/N12-07//Picross (Alternatif)/A12-08
+| légende=Artwork de Méga-Alakazam pour {{Jeu|XY}}.
+| type1=Psy
+| catégorie=Psy
+| taille=1.2
+| poids=48.0
+| talents=Calque
+| fmratio=.25
+| génération=6
+| couleur=Brun
+| corps=12
+| cri=Cri 0065 Méga
+}}
+'''Méga-Alakazam''' (anglais : '''Mega Alakazam''' ; japonais : '''メガ フーディン''' ''Mega Foodin'') est un [[Méga-Pokémon]] de [[type]] [[Psy (type)|Psy]]. C'est la [[Méga-Évolution]] d'[[Alakazam]].
+
+Méga-Alakazam a été révélé dans le magazine CoroCoro Comics de décembre 2013, en même temps que [[Méga-Branette]], [[Méga-Charmina]], [[Méga-Démolosse]], [[Méga-Cizayox]], [[Méga-Élecsprint]], [[Méga-Scarabrute]] et [[Méga-Ptéra]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Quand Alakazam devient Méga-Alakazam, sa moustache se blanchit et devient plus longue et plus ébouriffée. Une longue barbe blanche lui pousse également. Les parties de son corps ressemblant à une armure deviennent plus épaisses et la partie supérieure de son corps se raccourcit sur son maigre ventre. Les pointes sur sa tête deviennent plus courtes tandis qu'une troisième y pousse. On dit que cette corne émet un pouvoir psychique. Ses jambes deviennent plus longues et plus minces, tandis que ses pieds deviennent si maigres qu'ils prennent l'apparence de serres. Trois nouvelles cuillères lui apparaissent, créant un total de cinq cuillères qu'il fait léviter au-dessus de sa tête. Au prix de sa force musculaire qui était déjà faible, le pouvoir de Méga-Alakazam est devenu entièrement psychique. Il peut voir et prédire la vie entière d'une personne en un clin d'œil.
+
+Il est inspiré d'un magicien ou d'un sorcier, mais également d'un sâdhu avec des pouvoirs psychiques.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Alakazam est chromatique, les parties de son corps sont violettes tandis que le reste est jaune foncé (à la façon de l'artwork officiel).
+
+=== [[Évolution]] ===
+
+Méga-Alakazam est la [[Méga-Évolution]] d'[[Alakazam]] s'il tient une [[Alakazamite]].
+
+Alakazam est l'évolution, en cas d'échange entre Dresseurs ou de contact avec un [[Fil de Liaison]], de [[Kadabra]], qui lui-même est l'évolution d'[[Abra]] à partir du [[niveau]] 16.
+{{#lst:Abra|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Calque]] : lorsque le Pokémon entre au combat, il calque le talent d'un ennemi pour remplacer le sien.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:La [[Méga-Évolution]] a utilisé tout ce qui lui restait de force pour accentuer ses pouvoirs psychiques. Il a même perdu du muscle.
+;{{Jeu|Lu}}
+:Ses pouvoirs psychiques sont enfin libérés. Il n'a qu'à jeter un coup d'œil sur quelqu'un pour tout savoir de lui, de sa naissance à sa mort.
+;{{Jeu|US}}
+:Il se sert de l'organe rouge sur son front pour émettre ses pouvoirs psychiques et sonder son adversaire pour tout savoir de lui.
+;{{Jeu|UL}}
+:La Méga-Évolution a fait fondre ses muscles pour libérer sa véritable puissance. Il est omniscient grâce à ses pouvoirs psychiques.
+;{{Jeu|LGPE}}
+:Si une attaque n'atteint pas ce Pokémon, c'est sûrement parce que ses pouvoirs de divination l'ont aidé à la prédire et à l'éviter.
+;{{Jeu|LPZA}}
+:La Méga-Évolution a fait fondre ses muscles pour libérer sa véritable puissance. Il est omniscient grâce à ses pouvoirs psychiques.
+
+== QR Codes ==
+
+=== [[Septième génération]] ===
+{| class="tableaustandard centre psy"
+|-
+! colspan="2" | QR Codes
+|-
+| colspan="2" | Scanner ces QR Codes pour visualiser Méga-Alakazam dans le Pokédex.
+|-
+| Méga-Alakazam
+| Méga-Alakazam chromatique
+|-
+| [[Fichier:QR code 0065 Méga SL.png]]
+| [[Fichier:QR code 0065 Méga chromatique SL.png]]
+|}
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Psy}}
+
+== [[Statistique]]s ==
+
+=== [[Sixième génération]] ===
+Sa [[Défense]] est augmentée de 20, son [[Attaque Spéciale]] de 40, et sa [[Vitesse]] de 30.
+
+{{Statistiques
+| nom=Méga-Alakazam
+| type=psy
+| PV=55
+| attaque=50
+| defense=65
+| atq-spc=175
+| def-spc=95
+| vitesse=150
+}}
+En [[sixième génération]], Méga-Alakazam est le seul Méga-Pokémon à avoir 90 points de statistiques supplémentaires, au lieu des 100 habituels. Cela est dû au fait qu'Alakazam fait partie des Pokémon ayant reçu un boost de statistique en sixième génération. En effet, sa statistique de base en [[Statistique#Défense Spéciale|Défense Spéciale]] a été améliorée de 10 points dans cette dernière. En [[septième génération]], sa forme Méga-Évoluée a reçu un boost de 10 points en Défense Spéciale afin d'obtenir une augmentation totale de 100 points lors de la Méga-Évolution.
+
+=== À partir de la [[septième génération]] ===
+Sa [[Défense]] est augmentée de 20, son [[Attaque Spéciale]] de 40, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10 et sa [[Vitesse]] de 30.
+
+{{Statistiques
+| nom=Méga-Alakazam
+| type=psy
+| PV=55
+| attaque=50
+| defense=65
+| atq-spc=175
+| def-spc=105
+| vitesse=150
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Alakazam voir [[Alakazam/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/alakazam.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/alakazam/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Alakazam voir [[Alakazam#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/alakazam.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/alakazam/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Alakazam/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Alakazam}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Alakazam de Dohga.png|200px|thumb|left|Le Méga-Alakazam de Dohga.]]
+[[Fichier:Méga-Alakazam de Cornélius.png|200px|thumb|right|Le Méga-Alakazam de Cornélius.]]
+Méga-Alakazam apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+Un Méga-Alakazam apparaîtra dans {{film|19}}.
+
+Dans le [[LV084]], [[Cornélius]] fait [[Méga-Évolution|méga-évoluer]] son [[Alakazam]], pour affronter [[Sacha Ketchum|Sacha]] et son [[Lucario de Sacha|Lucario]], comme test pour obtenir une [[Lucarite]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Kadabra
+| numéro=0065
+| nom=Méga-Alakazam
+| nomSuivant=Machoc
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Alakazam]]

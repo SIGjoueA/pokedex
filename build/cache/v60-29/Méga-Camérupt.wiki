@@ -1,0 +1,109 @@
+{{Ruban Pokémon
+| nomPrécédent=Chamallot
+| numéro=0323
+| nom=Méga-Camérupt
+| nomSuivant=Chartor
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Camérupt
+| nom-japonais=メガ バクーダ
+| nom-déposé=Mega Bakuuda
+| nom-romaji=Mega Bakūda
+| nom-anglais=Mega Camerupt
+| ndex=0323
+| dex=Hoenn-ROSA/107//Illumis/117
+| dex-secondaires=Shuffle/375//Picross/N19-09//Picross (Alternatif)/A19-09
+| légende=Artwork de Méga-Camérupt pour {{Jeu|ROSA}}.
+| type1=Feu
+| type2=Sol
+| catégorie=Éruption
+| taille=2.5
+| poids=320.5
+| talents=Sans Limite
+| fmratio=.5
+| génération=6
+| couleur=Rouge
+| corps=8
+| cri=Cri 0323 Méga
+}}
+'''Méga-Camérupt''' (anglais : '''Mega Camerupt''' ; japonais : '''メガ バクーダ''' ''Mega Bakuuda'') est un [[Méga-Pokémon]] de type [[Feu (type)|Feu]] et [[Sol (type)|Sol]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Camérupt]].
+
+Méga-Camérupt a été révélé le 10 septembre 2014, dans une fuite du numéro d'octobre 2014 en même temps que [[Méga-Gallame]] et [[Méga-Sharpedo]] du ''[[CoroCoro Comics]]''.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Quand Camérupt méga-évolue en Méga-Camérupt, les bosses sur son dos se transforment en un seul énorme volcan actif. Sa fourrure s'étend et grandit à un tel point que ne sont plus visibles que ses sabots, et ses oreilles et les touffes qu'il a sur la tête grandissent et deviennent plus dures et plus longues, ce qui leur permet de tenir debout. Il gagne un M gris sur le front et perd les anneaux ronds de chaque côté de son corps. Du magma est constamment en train de bouillir dans son corps. Il a une personnalité explosive et a tendance à facilement s'emporter. Le volcan sur son dos est constamment en éruption, ce qui a pour effet d'intimider ses ennemis.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les Pokémon mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Camérupt a la fourrure noire et le volcan sur son dos est plus foncé.
+
+=== [[Évolution]] ===
+Camérupt est l'évolution de [[Chamallot]] à partir du [[niveau]] 33.
+
+Depuis {{Jeu|ROSA}}, Camérupt peut [[Méga-Évolution|méga-évoluer]] en Méga-Camérupt s'il tient une [[Caméruptite]].
+{{#lst:Chamallot|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Sans Limite]] : les capacités ayant un effet additionnel perdent celui-ci, mais leur puissance augmente de 30 %.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Quand sa colère atteint un point critique, l'immense volcan sur son dos entre en violente éruption et projette de la lave.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Feu|type2=Sol}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 30, son [[Attaque Spéciale]] de 40, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 30. Sa [[Vitesse]] est diminuée de 20.
+
+{{Statistiques
+| type=feu
+| PV=70
+| attaque=120
+| defense=100
+| atq-spc=145
+| def-spc=105
+| vitesse=20
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Camérupt voir [[Camérupt/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/camerupt/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Camérupt voir [[Camérupt#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/camerupt Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Camérupt/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Camérupt}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Camérupt d'Alva.png|200px|thumb|right|Le Méga-Camérupt d'Alva.]]
+Méga-Camérupt n'a encore fait aucune apparition dans [[Pokémon, la série]], mais il apparaît dans {{film|19}} et dans un court-métrage publicitaire pour {{jeu|ROSA}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Chamallot
+| numéro=0323
+| nom=Méga-Camérupt
+| nomSuivant=Chartor
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Camérupt]]

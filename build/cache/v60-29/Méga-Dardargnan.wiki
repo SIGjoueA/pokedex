@@ -1,0 +1,113 @@
+{{Ruban Pokémon
+| nomPrécédent=Coconfort
+| numéro=0015
+| nom=Méga-Dardargnan
+| nomSuivant=Roucool
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Dardargnan
+| nom-japonais=メガ スピアー
+| nom-romaji=Mega Supiā
+| nom-déposé=Mega Spear
+| nom-anglais=Mega Beedrill
+| ndex=0015
+| dex=Kanto-LGPE/015//Illumis/020
+| dex-secondaires=Shuffle/425//Picross/N26-05//Picross (Alternatif)/A26-09
+| légende=Artwork de Méga-Dardargnan pour {{Jeu|ROSA}}.
+| type1=Insecte
+| type2=Poison
+| catégorie=Guêpoison
+| taille=1.4
+| poids=40.5
+| talents=Adaptabilité
+| fmratio=0.5
+| couleur=Jaune
+| corps=13
+| génération=6
+| cri=Cri 0015 Méga
+}}
+'''Méga-Dardargnan''' (anglais : '''Mega Beedrill''' ; japonais : '''メガ スピアー''' ''Mega Spear'') est un [[Méga-Pokémon]] de [[type]] [[Insecte (type)|Insecte]] et [[Poison (type)|Poison]] apparu avec les versions {{jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Dardargnan]].
+
+Méga-Dardargnan a été révélé le 10 octobre 2014, dans une fuite du numéro de novembre 2014 du ''[[CoroCoro Comics]]'' en même temps que [[Méga-Roucarnage]], [[Méga-Latias]] et [[Méga-Latios]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+De manière générale, les lignes de Méga-Dardargnan deviennent plus agressives. En effet, ses bras en forme d'aiguilles s'affinent et ses yeux deviennent plus grands et lui octroient un regard plus perçant. Ses antennes deviennent plus fines pour gagner en aérodynamisme et ses pattes s'épaississent, prenant les rayures de son abdomen et formant à leur tour des aiguilles. Son abdomen se modèle de telle sorte à accueillir les pattes inférieures lorsqu'il passe en position d'attaque, pour ne former qu'un seul et puissant dard et ses paires d'ailes supérieures se séparent pour en former deux nouvelles.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Dardargnan a un corps vert et des yeux bleus. Son dard central est vert clair.
+
+=== [[Évolution]] ===
+
+Méga-Dardargnan est la [[Méga-Évolution]] de [[Dardargnan]] avec la [[Méga-Gemme]] de Dardargnan. Dardargnan est l'évolution de [[Coconfort]] à partir du [[niveau]] 10, qui est lui-même l'évolution d'[[Aspicot]] à partir du niveau 7.
+{{#lst:Aspicot|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Adaptabilité]] : quand le Pokémon utilise une capacité du même type que lui, le bonus de puissance qu'elle reçoit est multiplié par 2, au lieu de 1,5 normalement.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}}
+:Désormais pourvu de dards sur les pattes arrière, il pique ses ennemis avec ses quatre membres, puis les achève avec son aiguillon empoisonné.
+;{{Jeu|LPZA}}
+:Désormais pourvu de dards sur les pattes arrière, il pique ses ennemis avec ses quatre membres, puis les achève avec son aiguillon empoisonné.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Insecte|type2=Poison}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 60, et sa [[Vitesse]] de 70. Son [[Attaque Spéciale]] est diminuée de 30.
+
+{{Statistiques
+| type=insecte
+| PV=65
+| attaque=150
+| defense=40
+| atq-spc=15
+| def-spc=80
+| vitesse=145
+}}
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Dardargnan voir [[Dardargnan/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/beedrill/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Dardargnan voir [[Dardargnan#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/beedrill/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Dardargnan/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Dardargnan}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Dardargnan d'Alva.png|200px|thumb|left|Le Méga-Dardargnan d'Alva.]]
+Méga-Dardargnan apparaît pour la première fois dans le film {{film|19}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+
+* Le design de Méga-Dardargnan a été conçu par plusieurs designers, dont [[Hitoshi Ariga]]<ref>[https://x.com/ariga_megamix/status/548085137955508224 Tweet de Hitoshi Ariga sur Méga-Dardargnan] '''(ja)'''</ref>.
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Coconfort
+| numéro=0015
+| nom=Méga-Dardargnan
+| nomSuivant=Roucool
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Dardargnan]]

@@ -1,0 +1,93 @@
+{{Ruban Pokémon
+| nomPrécédent=Cryodo
+| numéro=0998
+| nom=Méga-Glaivodo
+| nomSuivant=Mordudor
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Glaivodo
+| nom-japonais=メガセグレイブ
+| nom-romaji=Mega Segureibu
+| nom-déposé=Mega Seglaive
+| nom-anglais=Mega Baxcalibur
+| ndex=0998
+| dex=Extra Illumis/034
+| légende=Artwork de Méga-Glaivodo pour {{Jeu|LPZA}}.
+| type1=Dragon
+| type2=Glace
+| catégorie=Dragon Glace
+| taille=2.1
+| poids=315
+| talents=Thermodynamique
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=6
+| cri=Cri 0998 Méga
+}}
+'''Méga-Glaivodo''' (anglais : '''Mega Baxcalibur''' ; japonais : '''メガセグレイブ''' ''Mega Seglaive'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]] et [[Glace (type)|Glace]]. C'est la [[Méga-Évolution]] de [[Glaivodo]].
+
+Méga-Glaivodo a été révélé officiellement lors de la bande-annonce du 6 novembre 2025, avec [[Méga-Éoko]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], la plaque dorsale de Méga-Glaivodo s'est nettement allongée. Il possède sur son ventre une excroissance, semblable au bout d'un manche de « glaive ». Cela donne l'impression qu'il est transpercé, de part et d'autre, par une épée. Les plaques grises de son corps se sont étendues et sont devenues des plaques de glace, qui recouvrent son torse et la partie inférieure de sa queue. Sur sa tête, les plaques forment désormais une sorte de casque de glace.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+=== [[Évolution]] ===
+
+Méga-Glaivodo est la [[Méga-Évolution]] de [[Glaivodo]] avec une [[Glaivodite]]. Ce dernier est l'évolution de [[Cryodo]] à partir du niveau 54, qui lui-même est l'évolution de [[Frigodo]] à partir du niveau 35.
+{{#lst:Frigodo|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Thermodynamique]] : lorsque le Pokémon est touché par une capacité de type Feu, son Attaque augmente et il est immunisé aux brûlures.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:La Méga-Évolution a considérablement augmenté la taille de sa lame dorsale. Il peut tirer des lasers depuis la « poignée » sur son plexus solaire.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Dragon|type2=Glace}}
+
+== [[Statistique]]s ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 25, son [[Attaque Spéciale]] de 30, et sa [[Défense Spéciale]] de 15.
+
+{{Statistiques
+| type=dragon
+| PV=115
+| attaque=175
+| defense=117
+| atq-spc=105
+| def-spc=101
+| vitesse=87
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Glaivodo/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Glaivodo}}
+
+== Apparitions dans les dessins animés ==
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Cryodo
+| numéro=0998
+| nom=Méga-Glaivodo
+| nomSuivant=Mordudor
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Glaivodo]]

@@ -1,0 +1,106 @@
+{{Ruban Pokémon
+| nomPrécédent=Draco
+| numéro=0149
+| nom=Méga-Dracolosse
+| nomSuivant=Méga-Mewtwo X
+| forme-suivant=Méga X
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Dracolosse
+| nom-japonais=メガカイリュー
+| nom-romaji=Mega Kairyū
+| nom-déposé=Mega Kairyu
+| nom-anglais=Mega Dragonite
+| ndex=0149
+| dex=Illumis/147
+| légende=Artwork de Méga-Dracolosse pour {{Jeu|LPZA}}.
+| type1=Dragon
+| type2=Vol
+| catégorie=Dragon
+| taille=2.2
+| poids=290.0
+| talents=Multiécaille
+| fmratio=
+| génération=9
+| couleur=Brun
+| corps=6
+| cri=Cri 0149 Méga
+}}
+'''Méga-Dracolosse''' (anglais : '''Mega Dragonite''' ; japonais : '''メガカイリュー''' ''Mega Kairyu'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]] et [[Vol (type)|Vol]]. C'est la [[Méga-Évolution]] de [[Dracolosse]].
+
+Méga-Dracolosse a été révélé officiellement lors de la bande-annonce du ''[[Pokémon Presents]]'' du 22 juillet 2025.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Dracolosse possède une longue queue sur laquelle se trouve un orbe. Sa tête est ornée d'une grande paire d'ailes, tandis qu'une toute petite se trouve dans son dos. Ses yeux sont de la même couleur que les petites ailes dans son dos, vert bleu. Des plumes ont poussé sur ses épaules et sur le flanc extérieur de ses genoux. Il a une corne sur le front, semblable à celle de [[Draco]].
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, son corps est bleu, et ses ailes violettes. Sa pupille a une teinte violette, le haut de celle-ci possède la même couleur que ses ailes, tandis que le bas est rose.
+
+=== [[Évolution]] ===
+
+Méga-Dracolosse est la [[Méga-Évolution]] de [[Dracolosse]] avec une [[Dracolossite]]. Ce dernier est l'évolution de [[Draco]] à partir du [[niveau]] 55, qui lui-même est l'évolution de [[Minidraco]] à partir du niveau 30.
+{{#lst:Minidraco|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Multiécaille]] : le Pokémon reçoit moins de dégâts quand ses PV sont au maximum.
+
+=== Descriptions du [[Pokédex]] ===
+;{{jeu|LPZA}}
+:L'énergie de la Méga-Évolution l'a rendu excessivement altruiste. C'est par compassion qu'il porte le coup de grâce à ses adversaires.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Dragon|type2=Vol}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est diminuée de 10, sa [[Défense]] est augmentée de 20, son [[Attaque Spéciale]] de 45, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 25, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=Dragon
+| PV=91
+| attaque=124
+| defense=115
+| atq-spc=145
+| def-spc=125
+| vitesse=100
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Dracolosse/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Dracolosse}}
+
+== Apparitions dans les dessins animés ==
+=== {{série|LH}} ===
+{{PAGENAME}} apparaît pour la première fois dans l'épisode [[LH107]]. Il s'agit du [[Dracolosse d'Ult]] qui méga-évolue pendant le combat contre [[Indi]] et [[Rubina]].
+
+<gallery class="center">
+Fichier:LH107 - Méga-Dracolosse.png|Le [[Dracolosse d'Ult]].
+</gallery>
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Draco
+| numéro=0149
+| nom=Méga-Dracolosse
+| nomSuivant=Méga-Mewtwo X
+| forme-suivant=Méga X
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Dracolosse]]

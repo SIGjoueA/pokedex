@@ -1,0 +1,124 @@
+{{Ruban Pokémon
+| nomPrécédent=Méga-Ténéfix
+| forme-précédent=Méga
+| numéro=0303
+| nom=Méga-Mysdibule
+| nomSuivant=Galekid
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Mysdibule
+| nom-japonais=メガ クチート
+| nom-romaji=Mega Kuchīto
+| nom-déposé=Mega Kucheat
+| nom-anglais=Mega Mawile
+| ndex=0303
+| dex=Hoenn-ROSA/071//Kalos (Côtes)/063//Alola-USUL/125//Illumis/133
+| dex-secondaires=Shuffle/111//Picross/N17-06//Picross (Alternatif)/A17-08
+| légende=Artwork de Méga-Mysdibule pour {{Jeu|XY}}.
+| type1=Acier
+| type2=Fée
+| catégorie=Trompeur
+| taille=1.0
+| poids=23.5
+| talents=Coloforce
+| fmratio=.5
+| génération=6
+| couleur=Noir
+| corps=12
+| cri=Cri 0303 Méga
+}}
+'''Méga-Mysdibule''' (anglais : '''Mega Mawile''' ; japonais : '''メガ クチート''' ''Mega Kucheat'') est un [[Méga-Pokémon]] de [[type]] [[Acier (type)|Acier]] et [[Fée (type)|Fée]]. C'est la [[Méga-Évolution]] de [[Mysdibule]].
+
+Méga-Mysdibule a été révélé dans le magazine [[CoroCoro Comics]] de septembre 2013, en même temps que [[Méga-Mewtwo Y]], [[Méga-Pharamp]], [[Méga-Braségali]], [[Méga-Absol]] et [[Méga-Lucario]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En Méga-évoluant, Mysdibule a gagné en taille. Sa robe et l'extrémité de ses manches sont roses. Ses deux mèches sont plus longues et lui arrivent au genou. Sa corne s'est scindée en deux. Ces deux nouvelles cornes font toujours office de longue mâchoire mais ont une forme ondulée. Chaque corne possède deux épis en son sommet.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsque Méga-Mysdibule est chromatique, ses yeux sont rouges et les gueules à l'arrière de sa tête sont violettes au lieu d'être noires.
+
+=== [[Évolution]] ===
+Méga-Mysdibule est la [[Méga-Évolution]] de [[Mysdibule]] s'il tient une [[Mysdibulite]].
+{{#lst:Mysdibule|Tableau d'évolution}}
+=== [[Talent]]s ===
+* [[Coloforce]] : double l'Attaque du Pokémon.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|US}}
+:Ce Pokémon extrêmement agressif agrippe ses proies avec ses deux mâchoires et les déchiquette de toutes ses forces.
+;{{Jeu|UL}}
+:Ses deux gueules bougent violemment, comme mues par leur propre volonté. Elles peuvent pulvériser un rocher d'un seul claquement.
+;{{Jeu|LPZA}}
+:Ses deux gueules s'agitent violemment, comme mues par leur propre volonté. Elles peuvent pulvériser un rocher d'un seul claquement.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Acier|type2=Fée}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 40, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 40.
+{{Statistiques
+| nom=Méga-Mysdibule
+| type=acier
+| PV=50
+| attaque=105
+| defense=125
+| atq-spc=55
+| def-spc=95
+| vitesse=50
+}}
+Si l'on considère que le talent de Méga-Mysdibule double sa statistique d'Attaque, elle devient alors la plus haute de tous les Pokémon.
+
+=== Dans {{Jeu|Légendes Pokémon : Z-A}} ===
+
+* À cause de l'absence de talent dans {{Jeu|Légendes Pokémon : Z-A}}, Méga-Mysdibule gagne 42 points d'[[Attaque (statistique)|Attaque]] supplémentaires.
+
+{{Statistiques
+| nom=Méga-Mysdibule
+| type=acier
+| PV=50
+| attaque=147
+| defense=125
+| atq-spc=55
+| def-spc=95
+| vitesse=50
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Mysdibule voir [[Mysdibule/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/mawile/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Mysdibule voir [[Mysdibule#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/mysdibule.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/mawile Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Mysdibule/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Mysdibule}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Mysdibule d'Amalia.png|200px|thumb|left|Le Méga-Mysdibule d'Amalia.]]
+Un Méga-Mysdibule apparait dans le [[XY034]]. Il affronte le [[Méga-Lucario de Cornélia]] et remporte le combat. Puis, ils affrontent tous les deux la [[Trio de la Team Rocket|Team Rocket]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Méga-Ténéfix
+| forme-précédent=Méga
+| numéro=0303
+| nom=Méga-Mysdibule
+| nomSuivant=Galekid
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Mysdibule]]

@@ -1,0 +1,114 @@
+{{Ruban Pokémon
+| nomPrécédent=Caratroc
+| numéro=0214
+| nom=Méga-Scarhino
+| nomSuivant=Farfuret
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Scarhino
+| nom-japonais=メガ ヘラクロス
+| nom-romaji=Mega Herakurosu
+| nom-déposé=Mega Heracros
+| nom-anglais=Mega Heracross
+| ndex=0214
+| dex=Hoenn-ROSA/175//Kalos (Côtes)/131//Alola-USUL/367//Illumis/179
+| dex-secondaires=Shuffle/047//Picross/N18-03//Picross (Alternatif)/A18-10
+| légende=Artwork de Méga-Scarhino pour {{Jeu|XY}}.
+| type1=Insecte
+| type2=Combat
+| catégorie=Unicorne
+| taille=1.7
+| poids=62.5
+| talents=Multi-Coups
+| fmratio=0.5
+| génération=6
+| couleur=Bleu
+| corps=12
+| cri=Cri 0214 Méga
+}}
+'''Méga-Scarhino''' (anglais : '''Mega Heracross''' ; japonais : '''メガ ヘラクロス''' ''Mega Heracros'') est un [[Méga-Pokémon]] de [[type]] [[Insecte (type)|Insecte]] et [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] de [[Scarhino]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Scarhino est plus trapu que Scarhino. Il a maintenant de fins marquages orange sur la tête, les mains et les épaules. De plus, il a un marquage orange en demi-lune au-dessus des yeux. Il a un long nez pointu courbé en avant et son expression est plus menaçante. Son dos ne possède plus d'ailes et est complètement jaune. La corne sur sa tête est devenue une énorme corne avec deux petites pointes sur le devant. Ses antennes se sont également allongées et ont maintenant des extrémités ovoïdes. Ses avant-bras sont devenus plus gros et ont perdus leurs épines.
+
+Méga-Scarhino est inspiré du [[wp:Dynaste Hercule|dynaste Hercule]].
+
+La température de son corps est très élevée et ouvrir la carapace de ses bras et de son torse permet à cette chaleur de s'échapper. Méga-Scarhino a une force herculéenne qui lui permet de soulever entre ses cornes des objets plus de 500 fois plus lourds que lui. Cependant, quand il reprend sa forme originale, ceci lui provoque des douleurs musculaires.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Scarhino est rose.
+
+=== [[Évolution]] ===
+
+Méga-Scarhino est la [[Méga-Évolution]] de [[Scarhino]] avec une [[Scarhinoïte]].
+{{#lst:Scarhino|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Multi-Coups]] : les capacités pouvant frapper plusieurs fois frappent toujours le nombre maximum de coups.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|US}}
+:Il peut soulever des objets pesant jusqu'à 500 fois son poids en les pinçant entre ses cornes.
+;{{Jeu|UL}}
+:Le flot d'énergie décuple ses muscles, mais lui donne de terribles courbatures après avoir retrouvé sa forme d'origine.
+;{{Jeu|LPZA}}
+:Il peut soulever des objets pesant jusqu'à 500 fois son poids en les saisissant entre ses cornes.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Insecte|type2=Combat}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 60, sa [[Défense]] de 40, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10. Sa [[Vitesse]] est diminuée de 10.
+{{Statistiques
+| type=insecte
+| PV=80
+| attaque=185
+| defense=115
+| atq-spc=40
+| def-spc=105
+| vitesse=75
+}}
+Méga-Scarhino est le Pokémon à la plus haute statistique d'Attaque du type Insecte. Il n'est dépassé que par [[Méga-Mewtwo X]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Scarhino voir [[Scarhino/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/scarhino.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/heracross/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Scarhino voir [[Scarhino#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/scarhino.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/heracross/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Scarhino/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Scarhino}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Scarhino d'Alva.png|200px|thumb|left|Le Méga-Scarhino d'Alva.]]
+Méga-Scarhino apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]]. Il apparaît dans {{film|19}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Caratroc
+| numéro=0214
+| nom=Méga-Scarhino
+| nomSuivant=Farfuret
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Scarhino]]

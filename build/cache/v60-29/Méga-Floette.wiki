@@ -1,0 +1,98 @@
+{{Ruban Pokémon
+| nomPrécédent=Flabébé
+| numéro=0670
+| nom=Méga-Floette
+| nomSuivant=Florges
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Floette
+| nom-japonais=メガフラエッテ
+| nom-romaji=Mega Furaette
+| nom-déposé=Mega Floette
+| nom-anglais=Mega Floette
+| ndex=0670
+| dex=Illumis/039
+| légende=Artwork de Méga-Floette pour {{Jeu|LPZA}}.
+| type1=Fée
+| catégorie=Uniflore
+| taille=0.2
+| poids=100.8
+| talents=Aura Féérique
+| fmratio=1
+| génération=9
+| couleur=Blanc
+| corps=4
+| cri=Cri 0670 Méga
+}}
+'''Méga-Floette''' (anglais : '''Mega Floette''' ; japonais : '''メガフラエッテ''' ''Mega Floette'') est un [[Méga-Pokémon]] de [[type]] [[Fée (type)|Fée]]. C'est la [[Méga-Évolution]] de [[Floette]] Fleur Éternelle.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+La tige de la fleur de Méga-Floette a fusionné avec son corps en se torsadant. Sa fleur est désormais beaucoup plus grande et se divise en trois pétales noir violet. Les bords de ces pétales sont arrondis et fins, se terminant en pointes acérées. Au centre des pétales, une partie sombre est reliée à chaque pointe. Le pistil de cette fleur est constitué de trois épines noir et bleu.
+
+==== Différences mâle/femelle ====
+Cette espèce est composée uniquement d'individus femelles.
+
+==== [[Chromatique]] ====
+
+Ce Pokémon est dit [[Shiny Lock]] et ne peut être obtenu sous sa forme [[chromatique]].
+
+=== [[Évolution]] ===
+
+Méga-Floette est la [[Méga-Évolution]] de [[Floette]] Éternelle avec une [[Floettite]]. Les autres formes de Floette sont l'évolution de [[Flabébé]] à partir du [[niveau]] 19, et peuvent évoluer en [[Florges]] au contact d'une [[Pierre Éclat]].
+{{#lst:Flabébé|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Aura Féérique]] : augmente la puissance des attaques de type Fée de tous les Pokémon présents sur le terrain de 30 %.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:La fleur Éternelle a absorbé toute l'énergie de la Méga-Évolution. Elle attaque les adversaires de son propre chef.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Fée}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Fée
+| PV=74
+| attaque=85
+| defense=87
+| atq-spc=155
+| def-spc=148
+| vitesse=102
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Floette/Imagerie|Génération 9}}
+{{Navigation Floette}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Méga-Floette est le seul [[Méga-Pokémon]] qui n'est pas la [[Méga-Évolution]] du stade final de sa lignée évolutive.
+
+{{Ruban Pokémon
+| nomPrécédent=Flabébé
+| numéro=0670
+| nom=Méga-Floette
+| nomSuivant=Florges
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Floette]]

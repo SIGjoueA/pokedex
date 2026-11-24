@@ -1,0 +1,115 @@
+{{Ruban Pokémon
+| nomPrécédent=Dynavolt
+| numéro=0310
+| nom=Méga-Élecsprint
+| nomSuivant=Posipi
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Élecsprint
+| nom-japonais=メガ ライボルト
+| nom-romaji=Mega Raiboruto
+| nom-déposé=Mega Livolt
+| nom-anglais=Mega Manectric
+| ndex=0310
+| dex=Hoenn-ROSA/081//Kalos (Côtes)/074//Alola-USUL/294//Illumis/086
+| dex-secondaires=Shuffle/252//Picross/N09-08//Picross (Alternatif)/A09-08
+| légende=Artwork de Méga-Élecsprint pour {{Jeu|XY}}.
+| type1=Électrik
+| catégorie=Décharge
+| taille=1.8
+| poids=44
+| talents=Intimidation (talent){{!}}Intimidation
+| fmratio=0.5
+| génération=6
+| couleur=Jaune
+| corps=8
+| cri=Cri 0310 Méga
+}}
+'''Méga-Élecsprint''' (anglais : '''Mega Manectric''' ; japonais : '''メガ ライボルト''' ''Mega Livolt'') est un [[Méga-Pokémon]] de [[type]] [[Électrik]]. C'est la [[Méga-Évolution]] d'[[Élecsprint]].
+
+Méga-Élecsprint a été révélé dans le magazine ''[[CoroCoro Comics]]'' de décembre 2013, en même temps que [[Méga-Alakazam]], [[Méga-Branette]], [[Méga-Charmina]], [[Méga-Cizayox]], [[Méga-Démolosse]], [[Méga-Ptéra]] et [[Méga-Scarabrute]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En Méga-Évoluant, la fourrure jaune qui encercle initialement la tête d'Élecsprint prend du volume et se propage le long de son dos jusqu'à sa queue, en formant un immense éclair. Cette fourrure forme aussi deux longues cornes là où se trouvaient ses ouïes. La fourrure ébouriffée sur ses flans repasse au bleu. Ses griffes deviennent rouges.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Élecsprint a une peau plus sombre.
+
+=== [[Évolution]] ===
+
+Méga-Élecsprint est la [[Méga-Évolution]] d'[[Élecsprint]] avec une [[Élecsprintite]].
+
+Élecsprint est l'évolution de [[Dynavolt]] à partir du [[niveau]] 26.
+{{#lst:Dynavolt|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Intimidation (talent)|Intimidation]] : le Pokémon rugit lorsqu'il arrive au combat, ce qui intimide l'ennemi et baisse son Attaque.
+
+=== Descriptions du Pokédex ===
+
+;{{Jeu|US}}
+:Grâce à la Méga-Évolution, son corps a accumulé une quantité astronomique d'électricité, mais il en gâche une partie car il ne peut tout utiliser.
+;{{Jeu|UL}}
+:L'électricité accumulée dans son corps lui permet de se déplacer à la vitesse de l'éclair, mais elle le rend aussi colérique.
+;{{Jeu|LPZA}}
+:Grâce à la Méga-Évolution, son corps a accumulé une quantité astronomique d'électricité, mais il est incapable de la contrôler pleinement.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Électrik}}
+
+== [[Statistique]]s ==
+
+Sa [[Défense]] est augmentée de 20, son [[Attaque Spéciale]] de 30, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 30.
+
+{{Statistiques
+| nom=Méga-Élecsprint
+| type=Électrik
+| PV=70
+| attaque=75
+| defense=80
+| atq-spc=135
+| def-spc=80
+| vitesse=135
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Élecsprint voir [[Élecsprint/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/elecsprint.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/manectric/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Élecsprint voir [[Élecsprint#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/manectric Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Élecsprint/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Élecsprint}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Élecsprint d'Ether.png|200px|thumb|left|Le Méga-Élecsprint d'Ether.]]
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{DEFAULTSORT:Méga-Elecsprint}}
+
+{{Ruban Pokémon
+| nomPrécédent=Dynavolt
+| numéro=0310
+| nom=Méga-Élecsprint
+| nomSuivant=Posipi
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Elecsprint]]

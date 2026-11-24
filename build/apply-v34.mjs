@@ -28,3 +28,4 @@ node('fix-v60-23.mjs');      // v60.23: où obtenir la Méga-Gemme / Gemme Bleue
 node('fix-v60-24.mjs');      // v60.24: raids Dynamax d’Épée / Bouclier : antres réels (zone, lettre, faisceau) au lieu des numéros de table, jeu (ÉB / Isolarmure / Couronneige), taux par version, IV, talent caché, Expédition Dynamax
 node('fix-v60-26.mjs');      // v60.26: historique des pools d’œufs GO par saison (Serebii + Leek Duck), go-eggs.json
 node('fix-v60-27.mjs');      // v60.27: raids Téracristal d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo) : étoiles, version, type Téra s’il est fixe, talent caché (l’Antre Interdit d’Ogerpon reste un lieu, pas un raid)
+node('fix-v60-29.mjs');      // v60.29: précision des formes — disponibilité par jeu (Méga du DLC Z-A, formes régionales / Gigamax / alternatives) et textes officiels des Méga / Primo (Poképédia)

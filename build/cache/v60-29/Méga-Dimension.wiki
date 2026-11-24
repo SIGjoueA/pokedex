@@ -1,0 +1,120 @@
+{{Infobox Jeu Vidéo
+| nom=Méga-Dimension
+| nomen=Mega Dimension
+| nomja=M次元ラッシュ
+| nomromaji=M Jigen Rasshu
+| nomtm=M Jigen Rush
+| image=Logo Méga-Dimension.png
+| légende=Logotype français de {{Jeu|LPZAmd|lien=non}}.
+| class=mégadimension
+| genre=RPG
+| plate-forme=Nintendo Switch
+| plate-forme2=Nintendo Switch 2
+| génération=9
+| joueurs=1
+| éditeur=The Pokémon Company
+| éditeur2=Nintendo
+| développeur=GAME FREAK
+| page-développeur=GAME FREAK (studio de développement)
+| sortieJapon=10 décembre 2025
+| sortieAmérique=10 décembre 2025
+| sortieAustralie=10 décembre 2025
+| sortieEurope=10 décembre 2025
+| sortieCorée=10 décembre 2025
+}}
+'''''Légendes Pokémon : Z-A – Méga-Dimension''''', ou tout simplement '''''Méga-Dimension''''', est le contenu additionnel payant de {{jeu|LPZA}}. Il a été annoncé lors du ''Nintendo Direct'' du 12 septembre 2025, avant d'être mis en vente le même jour.
+
+== Histoire du contenu additionnel ==
+=== Annonce officielle ===
+{{Jeu|LPZAmd|lien=non}} a été annoncé pour la première fois lors du ''Nintendo Direct'' du 12 septembre 2025.
+
+La première vague du contenu additionnel, qui inclut le Lot de Tenues Holo X&Y, a été annoncée pour une sortie simultanée avec {{Jeu|LPZA}} le 16 octobre 2025. La deuxième vague, initialement prévue pour une sortie avant le 28 février 2026<ref>[https://archive.ph/hkx2p « Légendes Pokémon : Z-A – Méga-Dimension »] sur le site officiel My Nintendo Store (archive).</ref> puis programmée pour le 10 décembre 2025<ref>[https://archive.ph/CSwOh « Bande-annonce de Méga-Dimension »] sur le site officiel de {{Jeu|LPZA}} (archive).</ref>, comprend un scénario additionnel, de nouveaux personnages et [[Méga-Pokémon]], ainsi que le retour de certains Pokémon.
+
+L'achat de {{Jeu|LPZAmd|lien=non}} avant le 28 février 2026 donne droit à un code de téléchargement qui permet de recevoir trois exemplaires de [[Speed Ball]]s, [[Appât Ball]]s, [[Niveau Ball]]s et [[Masse Ball]]s par [[Cadeau Mystère]]. Ce code est valide jusqu'au 10 mars 2026<ref>[https://legends.pokemon.com/fr-fr/news/mega-dimension-bonuses « Les bonus de Méga-Dimension »] sur le site officiel de {{Jeu|LPZA}}.</ref>.
+
+=== Logos ===
+<gallery class="center">
+Logo Méga-Dimension.png|Logotype français.
+Logo Méga-Dimension (japonais).png|Logotype japonais.
+Logo Méga-Dimension (anglais).png|Logotype anglais.
+</gallery>
+
+== Fonctionnement ==
+Les vêtements de la première vague du contenu additionnel de {{Jeu|LPZAmd|lien=non}} sont obtenus automatiquement et disponibles via l'option « Changer d'apparence » dans le menu principal.
+
+À l'instar des scénarios additionnels du [[Pass d'extension pour Pokémon Épée et Bouclier|Pass d'extension pour {{Jeu|EB|lien=non}}]] et du contenu ''[[Le trésor enfoui de la Zone Zéro]]'', celui de la deuxième vague de {{Jeu|LPZAmd|lien=non}} est accessible directement depuis la sauvegarde de {{Jeu|LPZA}}, à condition d'en avoir terminé le scénario principal. Il n'est donc pas nécessaire de commencer une nouvelle partie pour pouvoir y accéder, ce qui permet au joueur d'obtenir des éléments supplémentaires absents du jeu de base.
+
+== Contenu ==
+=== Nouveau scénario ===
+{{Jeu|LPZAmd|lien=non}} est axé autour d'un scénario complètement inédit, avec une intrigue mettant en avant le [[Pokémon fabuleux]] [[Hoopa]]. Suite à l'apparition de distorsions spatiales à travers [[Illumis]], les Dresseurs de la [[Team MZ]] décident d'enquêter. Ils arrivent alors dans un nouveau lieu : [[Extra Illumis]].
+
+<gallery class="center">
+Hoopa (Enchaîné)-LPZA.png|[[Hoopa]]
+</gallery>
+
+=== Nouveaux personnages ===
+Le scénario additionnel marque également l'apparition de personnages non présents dans le jeu de base. Certains sont totalement inédits, d'autres sont déjà apparus dans {{Jeu|XY}}. À ce jour, deux personnages ont été dévoilés :
+* [[Anya]], une jeune fille qui semble avoir un lien particulier avec [[Hoopa]] ;
+* [[Cornélia]], héritière de la [[Méga-Évolution]] et [[Championne d'Arène]] de [[Yantreizh]], qui s'allie à la [[Team MZ]].
+
+<gallery class="center">
+Anya-LPZA.png|[[Anya]]
+Cornélia-LPZA.png|[[Cornélia]]
+</gallery>
+
+=== Nouveaux Méga-Pokémon ===
+De nouveaux Méga-Pokémon exclusifs font leur apparition avec le scénario additionnel. Au total, 19 nouvelles [[Méga-Évolution]] sont introduites, notamment :
+
+<gallery class="center" caption="Nouveaux Méga-Pokémon">
+Méga-Raichu X-LPZA.png|[[Méga-Raichu X]]
+Méga-Raichu Y-LPZA.png|[[Méga-Raichu Y]]
+Méga-Éoko-LPZA.png|[[Méga-Éoko]]
+Méga-Glaivodo-LPZA.png|[[Méga-Glaivodo]]
+Méga-Zeraora-LPZA.png|[[Méga-Zeraora]]
+Méga-Lucario Z-LPZA.png|[[Méga-Lucario Z]]
+</gallery>
+<!-- Merci de ne pas ajouter de nouveaux Méga-Pokémon, assez d'exemples sont déjà présents -->
+
+== Galerie ==
+<gallery class="center">
+Fichier:Key Art Méga-Dimension (1).png|Premier Key Art de {{Jeu|LPZAmd|lien=non}}.
+Fichier:Key Art Méga-Dimension (2).png|Deuxième Key Art de {{Jeu|LPZAmd|lien=non}}.
+Fichier:Lot de Tenues Holo X&Y LPZA.png|Le Lot de Tenues Holo X&Y.
+</gallery>
+
+== Anecdote ==
+* Le deuxième Key Art a été modifié sur le site de presse Pokémon peu de temps après sa publication<ref>[[:Fichier:Key Art Méga-Dimension (2)-v1.png|Ancienne version du deuxième Key Art de {{Jeu|LPZAmd|lien=non}}]].</ref>. Ces modifications comprennent la correction de la couleur d'une écaille sur le bras droit de [[Méga-Aligatueur]], anciennement rouge et désormais bleue, ainsi qu'une légère augmentation de la hauteur d'image vers le haut.
+
+== Noms dans d'autres langues ==
+{{Autres langues
+| ja=M次元ラッシュ
+| ja-romaji=M Jigen Rasshu
+| en=Mega Dimension
+| de=Mega-Dimension
+| es=Megadimensión
+| es-la=Megadimensión
+| it=Megadimensione
+| ko=메가 차원 러시
+| ko-hangeul=Mega Chawon Reosi
+| zh-simplifié=超次元爆涌
+| zh-traditionnel=超次元爆湧
+| zh-pinyin=Chāo Cìyuán Bàoyǒng
+}}
+
+== Sites externes ==
+* [https://legends.pokemon.com/fr-fr/dlc Site officiel français de {{Jeu|LPZAmd|lien=non}}]
+* [https://www.pokemon.co.jp/ex/legends_z-a_dlc/ja/ Site officiel japonais de {{Jeu|LPZAmd|lien=non}}]
+
+== Références ==
+<references/>
+
+{{Jeux principaux}}
+
+{{Bandeau Jeux vidéo}}
+
+[[de:Pokémon-Legenden: Z-A – Mega-Dimension]]
+[[en:Mega Dimension]]
+[[es:Megadimensión]]
+[[it:Leggende Pokémon: Z-A - DLC Megadimensione]]
+[[ja:Pokémon LEGENDS Z-A M次元ラッシュ]]
+[[zh:寶可夢傳說 Z-A 超次元爆湧]]

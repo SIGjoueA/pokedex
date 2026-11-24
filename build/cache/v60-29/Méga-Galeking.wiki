@@ -1,0 +1,112 @@
+{{Ruban Pokémon
+| nomPrécédent=Galegon
+| numéro=0306
+| nom=Méga-Galeking
+| nomSuivant=Méditikka
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Galeking
+| nom-japonais=メガ ボスゴドラ
+| nom-romaji=Mega Bosugodora
+| nom-déposé=Mega Bossgodora
+| nom-anglais=Mega Aggron
+| ndex=0306
+| dex=Hoenn-ROSA/074//Kalos (Monts)/101//Illumis/201
+| dex-secondaires=Shuffle/393//Picross/N16-08//Picross (Alternatif)/A16-04
+| légende=Artwork de Méga-Galeking pour {{Jeu|XY}}.
+| type1=Acier
+| catégorie=Armurfer
+| taille=2.2
+| poids=395
+| talents=Filtre
+| fmratio=0.5
+| génération=6
+| couleur=Gris
+| corps=6
+| cri=Cri 0306 Méga
+}}
+'''Méga-Galeking''' (anglais : '''Mega Aggron''' ; japonais : '''メガ ボスゴドラ''' ''Mega Bossgodora'') est un [[Méga-Pokémon]] de [[type]] [[Acier (type)|Acier]]. C'est la [[Méga-Évolution]] de [[Galeking]].
+
+Méga-Galeking a été révélé dans le magazine ''[[CoroCoro Comics]]'' de novembre 2013, en même temps que [[Méga-Ectoplasma]] et [[Méga-Tyranocif]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En Méga-évoluant, l'armure blanche de Galeking se développe jusqu'à couvrir la quasi intégralité de son corps. Seuls les pieds, épaules, cou et une partie de la queue restent gris. Son menton forme un large pic descendant. Son museau subit le même traitement, mais est aussi équipé d'une lame vers le haut. Deux longs pics ressortent de ses bras. Il a une grande excroissance sur ses épaules, dressée vers le haut.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Galeking est chromatique, son corps est bleu-vert, son armure plus foncée et ses yeux rouges.
+
+=== [[Évolution]] ===
+
+Méga-Galeking est la [[Méga-Évolution]] de [[Galeking]] avec une [[Galekingite]].
+
+Galeking est l'évolution de [[Galegon]] à partir du niveau 42, qui est lui-même l'évolution de [[Galekid]] à partir du [[niveau]] 32.
+{{#lst:Galekid|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Filtre]] : réduit les dégâts subis lorsque le Pokémon est touché par une capacité super efficace.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:L'énergie de la Méga-Évolution a transformé le fer dans l'organisme de ce Pokémon en une armure d'acier qui couvre tout son corps.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Acier}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 50, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20.
+{{Statistiques
+| nom=Méga-Galeking
+| type=acier
+| PV=70
+| attaque=140
+| defense=230
+| atq-spc=60
+| def-spc=80
+| vitesse=50
+}}
+Méga-Galeking partage avec [[Méga-Steelix]] la plus haute statistique de Défense du type Acier. Ils ne sont dépassés que par [[Éthernatos Infinimax]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Galeking voir [[Galeking/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/aggron/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Galeking voir [[Galeking#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/aggron/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Galeking/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Galeking}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Pokémon Méga-Évolution 4 - Méga-Galeking d'un Dresseur.png|thumb|left|Le Méga-Galeking d'un Dresseur.]]
+[[Fichier:Méga-Galeking de Gozu.png|thumb|right|Le Méga-Galeking de Gozu.]]
+Méga-Galeking apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+Il apparaît dans le [[SL089]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Galegon
+| numéro=0306
+| nom=Méga-Galeking
+| nomSuivant=Méditikka
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Galeking]]

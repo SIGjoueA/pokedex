@@ -1,0 +1,115 @@
+{{Ruban Pokémon
+| nomPrécédent=Galifeu
+| numéro=0257
+| nom=Méga-Braségali
+| nomSuivant=Gobou
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Braségali
+| nom-japonais=メガ バシャーモ
+| nom-romaji=Mega Bashāmo
+| nom-déposé=Mega Bursyamo
+| nom-anglais=Mega Blaziken
+| ndex=0257
+| dex=Hoenn-ROSA/006//Extra Illumis/044
+| dex-secondaires=Shuffle/094//Picross/N28-07//Picross (Alternatif)/A28-07
+| légende=Artwork de Méga-Braségali pour {{Jeu|XY}}.
+| type1=Feu
+| type2=Combat
+| catégorie=Ardent
+| taille=1.9
+| poids=52
+| talents=Turbo
+| fmratio=.125
+| génération=6
+| couleur=Rouge
+| corps=6
+| cri=Cri 0257 Méga
+}}
+'''Méga-Braségali''' (anglais : '''Mega Blaziken''' ; japonais : '''メガ バシャーモ''' ''Mega Bursyamo'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] de [[Braségali]].
+
+Méga-Braségali a été révélé dans le magazine ''[[CoroCoro Comics]]'' de septembre 2013, en même temps que [[Méga-Absol]], [[Méga-Lucario]], [[Méga-Mewtwo Y]], [[Méga-Mysdibule]] et [[Méga-Pharamp]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Depuis la [[sixième génération]], [[Braségali]] peut [[Méga-Évolution|méga-évoluer]] en Méga-Braségali s'il tient une [[Braségalite]]. En méga-évoluant, ses marquages habituellement jaunes sont noirs sur le haut des jambes et sur le torse. Les petites crêtes sur sa tête sont une unique corne partant vers l'arrière. Les gerbes de flammes sortant de ses poignets sont plus longues. Ses plumes beiges sont également plus longues pour former un X autour de sa tête.
+
+En méga-évoluant, la puissance de ses coups de patte augmente, ce qui lui donne une profonde fierté. Quand il se lance dans une suite de coups de patte, il arrive que ses jambes s'enflamment, suite à leur friction dans l'atmosphère. Sa puissance et sa vitesse augmentent avec la température de son corps.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Braségali est chromatique, les parties habituellement rouges de son corps sont orange, sa fourrure habituellement blanche est jaune et ses yeux habituellement bleus sont rouges.
+
+=== [[Évolution]] ===
+
+Méga-Braségali est la [[Méga-Évolution]] de [[Braségali]] avec une [[Braségalite]].
+
+Braségali est l'évolution de [[Galifeu]] à partir du [[niveau]] 36, lui-même l'évolution de [[Poussifeu]] à partir du niveau 16.
+{{#lst:Poussifeu|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Turbo]] : la Vitesse du Pokémon augmente à chaque tour.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Grâce au sang bouillant qui coule dans ses veines, ses techniques sont deux fois plus précises. Il soumet ses ennemis en un clin d'œil.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Feu|type2=Combat}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 10, son [[Attaque Spéciale]] de 20, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=feu
+| PV=80
+| attaque=160
+| defense=80
+| atq-spc=130
+| def-spc=80
+| vitesse=100
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Braségali voir [[Braségali/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/blaziken/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Braségali voir [[Braségali#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/blaziken/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Braségali/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Braségali}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Braségali anime.jpg|200px|thumb| Le Méga-Braségali de [[Jérémy (Kalos)|Jérémy]].]]
+Méga-Braségali apparaît pour la première fois dans l'épisode [[XY001]], ce qui fait de lui le premier Méga-Pokémon à être apparu dans le dessin animé. On découvre également dans l'épisode [[XY010]] qu'il appartient à [[Jérémy (Kalos)|Jérémy]], le père de [[Lem/Pokémon, la série|Lem]] et [[Clem/Pokémon, la série|Clem]].
+
+Méga-Braségali apparaît dans [[PME02|Pokémon : Méga-Évolution partie II]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Galifeu
+| numéro=0257
+| nom=Méga-Braségali
+| nomSuivant=Gobou
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Brasegali]]

@@ -1,0 +1,147 @@
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Zygarde
+| numéro=0719
+| nom=Méga-Diancie
+| nomSuivant=Hoopa
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Diancie
+| nom-japonais=メガ ディアンシー
+| nom-déposé=Mega Diancie
+| nom-romaji=Mega Dianshī
+| nom-anglais=Mega Diancie
+| ndex=0719
+| dex=Illumis/231
+| dex-secondaires=Shuffle/307//Picross/N27-13//Picross (Alternatif)/A27-13
+| légende=Artwork de Méga-Diancie pour {{Jeu|ROSA}}.
+| type1=Roche
+| type2=Fée
+| catégorie=Joyau
+| taille=1.1
+| poids=27.8
+| talents=Miroir Magik
+| groupeoeuf1=Inconnu
+| oeufpas=6630
+| effortval=+1 Défense; +2 Défense Spéciale
+| expval=306
+| expmax=1250000
+| fmratio=-1
+| couleur=Rose
+| captureval=3
+| corps=4
+| cri=Cri 0719 Méga
+| génération=6
+}}
+'''Méga-Diancie''' (anglais : '''Mega Diancie''' ; japonais : '''メガ ディアンシー''' ''Mega Diancie'') est un [[Méga-Pokémon]] de [[type]] [[Roche (type)|Roche]] et [[Fée (type)|Fée]]. C'est la [[Méga-Évolution]] de [[Diancie]].
+
+Méga-Diancie a été révélé dans le magazine ''[[CoroCoro Comics]]'' de juillet 2014, en même temps que [[Méga-Laggron]] et [[Méga-Jungko]], lors d'une fuite de ce numéro, le 9 juin 2014.
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Méga-Diancie ressemble à une fée. Le diamant sur sa tête fait plus de 2 000 carats. Ses rubans sont longs, donnant l'apparence d'une robe. Des diamants roses en forme de losanges sont accrochés au bout de ses rubans. Des crochets à forme de croissant de lune se situent au niveau de son ventre et de son cou. Il est nommé « La princesse rose de l'élégance » par le gentleman et le karatéka voulant s'approprier le Diancie du joueur.
+
+==== Différences mâle/femelle ====
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Diancie mâle ou femelle, même si dans le film 17, Diancie et sa Méga-Évolution sont considérés comme une femelle.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Diancie a son corps et ses diamants plus foncés contrairement aux anneaux accrochés à sa robe qui eux sont plus clairs. Sa robe, elle, a une couleur rose foncé.
+
+Diancie ne pouvant pas être obtenu légalement en version chromatique, Méga-Diancie est le seul [[Méga-Pokémon]] à partager cette particularité.
+
+=== [[Évolution]] ===
+Méga-Diancie est la [[Méga-Évolution]] de [[Diancie]], rendu possible grâce à une [[Diancite]].
+{{#lst:Diancie|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Miroir Magik]] : annule les effets des capacités de statut subies par le Pokémon et les retourne à l'envoyeur.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:On l'appelle aussi « la princesse rose de l'élégance ». Le diamant resplendissant qui orne son front pèse pas moins de 2 000 carats.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Roche|type2=Fée}}
+
+== [[Statistiques]] ==
+Ses statistiques d'[[Attaque (statistique)|Attaque]], d'[[Attaque Spéciale]] et de [[Vitesse]] sont augmentées de 60. Sa [[Défense]] et sa [[Statistique#Défense Spéciale|Défense Spéciale]] sont diminuées de 40.
+
+{{Statistiques
+| type=Roche
+| PV=50
+| attaque=160
+| defense=110
+| atq-spc=160
+| def-spc=110
+| vitesse=110
+}}
+
+Méga-Diancie est le Pokémon de type [[Fée (type)|Fée]] possédant la plus haute statistique d'Attaque de base (Si on ne prend pas en compte l'attaque de [[Méga-Mysdibule]] boostée par son talent [[Coloforce]]). Il possède aussi le plus haut total de statistiques de base de tous les Pokémon de type Fée.
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Diancie voir [[Diancie/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/diancie.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/diancie/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Diancie voir [[Diancie#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/diancie.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/diancie/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Diancie/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Diancie}}
+
+== Apparitions dans d'autres jeux ==
+=== Dans {{Jeu|SSBU}} ===
+Dans Super Smash Bros. Ultimate, Méga-Diancie est un des esprits que le joueur peut obtenir.
+
+{| class="tableaustandard centre" style="max-width:100%"
+! colspan="10" | Esprit
+|-
+! Image
+! Nom
+! Type d'Esprit
+! Catégorie
+! Niveau
+! Bonus<br>supplémentaire
+! Emplacements
+! Obtention
+! Combattant(s)<br>associé(s)
+! Condition(s)<br>du combat
+|-
+| [[Fichier:Méga-Diancie (2)-CA.png|x100px]]
+| Méga-Diancie
+| Primaire
+| Saisie
+| ★★★★
+| Équipement : Badge Franklin
+| 3
+| Évolution
+| —
+| —
+|}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Diancie - Film 17.png|thumb|right|[[Diancie (film 17)|Méga-Diancie]] dans {{film|17}}.]]
+[[Diancie (film 17)|Méga-Diancie]] apparaît dans le [[Film 17|dix-septième film]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Avant {{Jeu|LPZA}}, Méga-Diancie était le seul Pokémon méga-évolué de la [[sixième génération]].
+
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Zygarde
+| numéro=0719
+| nom=Méga-Diancie
+| nomSuivant=Hoopa
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Diancie]]

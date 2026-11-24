@@ -1,0 +1,101 @@
+{{Ruban Pokémon
+| nomPrécédent=Crocrodil
+| numéro=0160
+| nom=Méga-Aligatueur
+| nomSuivant=Fouinette
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Aligatueur
+| nom-japonais=メガオーダイル
+| nom-romaji=Mega Ōdairu
+| nom-déposé=Mega Ordile
+| nom-anglais=Mega Feraligatr
+| ndex=0160
+| dex=Illumis/009
+| légende=Artwork de Méga-Aligatueur pour {{Jeu|LPZA}}.
+| type1=Eau
+| type2=Dragon
+| catégorie=Mâmâchoire
+| taille=2.3
+| poids=108.8
+| talents=Peau Draconique
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=6
+| cri=Cri 0160 Méga
+}}
+'''Méga-Aligatueur''' (anglais : '''Mega Feraligatr''' ; japonais : '''メガオーダイル''' ''Mega Ordile'') est un [[Méga-Pokémon]] de [[type]] [[Eau (type)|Eau]] et [[Dragon (type)|Dragon]]. C'est la [[Méga-Évolution]] d'[[Aligatueur]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Aligatueur gagne le type [[Dragon (type)|Dragon]] en plus de son type [[Eau]]. Ses griffes sont devenues bleu nuit, tout comme les écailles sur ses genoux, et une partie du bas de son ventre. Au centre de son ventre se trouve la partie beige d'origine. Les écailles sur ses bras sont devenues des épines rouges. Un énorme casque de la même couleur est apparu à la place de ses écailles dorsales.
+
+Lorsque Méga-Aligatueur referme son énorme casque, les épines de ses bras servent de crocs. Sous cette forme, il ressemble à un grand [[Kaiminus]], avec la tête et les yeux rouges.
+
+Le concept de Méga-Aligatueur pourrait s'inspirer des personnages de Revi et Vice issus de la série ''[[wp:Kamen Rider Revice|Kamen Rider Revice]]'', plus particulièrement leur forme combinée nommée Revice Rex ayant l'apparence d'un [[wp:Tyrannosaurus|tyrannosaure]].
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Aligatueur conserve les mêmes couleurs qu'Aligatueur chromatique. Toutes les zones habituellement bleu clair de son corps sont turquoise, et toutes les parties rouges sont bleu marine.
+
+=== [[Évolution]] ===
+
+Méga-Aligatueur est la [[Méga-Évolution]] d'[[Aligatueur]] avec une [[Aligatueurite]]. Ce dernier est l'évolution de [[Crocrodil]] à partir du [[niveau]] 30, qui lui-même est l'évolution de [[Kaiminus]] à partir du niveau 18.
+{{#lst:Kaiminus|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Peau Draconique]] : les capacités de type Normal deviennent de type Dragon. Leur puissance augmente légèrement.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Ce Pokémon peut former une mâchoire immense avec ses bras et son aileron en forme de capuche, ce qui décuple la puissance de ses morsures.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Eau|type2=Dragon}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 55, sa [[Défense]] de 25, son [[Attaque Spéciale]] de 10, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 10.
+
+{{Statistiques
+| type=Eau
+| PV=85
+| attaque=160
+| defense=125
+| atq-spc=89
+| def-spc=93
+| vitesse=78
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Aligatueur/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Aligatueur}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Méga-Aligatueur est l'un des quatre [[Méga-Pokémon]] à avoir une [[catégorie]] différente de celle de sa forme de base. Il partage cette caractéristique avec [[Méga-Darkrai]], [[Méga-Mistigrix]] et [[Méga-Draïeul]].
+
+{{Ruban Pokémon
+| nomPrécédent=Crocrodil
+| numéro=0160
+| nom=Méga-Aligatueur
+| nomSuivant=Fouinette
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Aligatueur]]

@@ -1,0 +1,106 @@
+{{Ruban Pokémon
+| nomPrécédent=Pikachu
+| numéro=0026
+| nom=Méga-Raichu Y
+| nomSuivant=Sabelette
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Raichu Y
+| nom-japonais=メガライチュウＹ
+| nom-romaji=Mega Raichū Y
+| nom-déposé=Mega Raichu Y
+| nom-anglais=Mega Raichu Y
+| ndex=0026
+| dex=Illumis/054
+| légende=Artwork de Méga-Raichu Y pour {{Jeu|LPZA}}.
+| type1=Électrik
+| catégorie=Souris
+| taille=1.0
+| poids=26.0
+| talents=Annule Garde
+| fmratio=
+| génération=9
+| couleur=Jaune
+| corps=6
+| cri=Cri 0026 Méga Y
+}}
+'''Méga-Raichu Y''' (anglais : '''Mega Raichu Y''' ; japonais : '''メガライチュウ''' ''Mega Raichu Y'') est un [[Méga-Pokémon]] de [[type]] [[Électrik (type)|Électrik]]. C'est l'une des [[Méga-Évolution]]s de [[Raichu]].
+
+Méga-Raichu Y a été révélé officiellement lors de la bande-annonce du ''Nintendo Direct'' du 12 septembre 2025<ref>[https://youtu.be/CzP479-mLmE Légendes Pokémon : Z-A – Méga-Dimension – Bande-annonce sur YouTube.]</ref>, avec [[Méga-Blindépique]], [[Méga-Goupelin]], [[Méga-Amphinobi]] et [[Méga-Raichu X]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Raichu Y a une physionomie rappelant celle de [[Pikachu]]. Ses oreilles sont les mêmes que ce dernier, un peu plus longues, tout comme ses pattes et son visage. Son corps a une couleur orange plus vive, tout comme ses joues qui sont d'un jaune plus vif. Sa queue s'allonge, se terminant comme celle de Pikachu. Son ventre blanc forme maintenant un cercle, auparavant plutôt ovale. Ses yeux possèdent désormais une pointe de bleu sur le contour intérieur inférieur. De longues fourrures rappelant des cornes, en forme d'éclair, dont l'une des extrémités est la même que celle des oreilles de [[Raichu]], se sont formées au niveau des oreilles de Méga-Raichu Y. De petites fourrures orange se trouvent devant, tandis que ces mêmes petites fourrures se retrouvent également sur ses épaules.
+
+<gallery class="center">
+Fichier:Méga-Raichu Y (Attaque)-LPZA.png|Artwork de Méga-Raichu Y en train d'attaquer.
+</gallery>
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, les couleurs du corps de Méga-Raichu Y ressemblent à celles d'un Pikachu commun. Son pelage normalement orangé arbore un jaune vif éclatant. Ses joues sont d'un rouge intense, tandis que ses grands oreilles et sa queue en forme d'éclairs ont une teinte orangée semblable à sa forme non chromatique.
+
+=== [[Évolution]] ===
+
+Méga-Raichu Y est l'une des [[Méga-Évolution]]s de [[Raichu]] avec une [[Raichuïte Y]]. Ce dernier est l'évolution de Pikachu grâce à une [[Pierre Foudre]], qui lui-même est l'évolution de Pichu quand celui-ci est suffisamment [[Bonheur|heureux]]. Raichu peut aussi [[Méga-Évolution|méga-évoluer]] en [[Méga-Raichu X]] avec une [[Raichuïte X]].
+{{#lst:Pichu|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Annule Garde]] : les capacités du Pokémon touchent l'ennemi à coup sûr, mais les capacités de l'ennemi le touchent aussi à coup sûr.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il émet de l'électricité depuis les extrémités de sa queue et des poils en zigzag qui ont poussé sous ses tempes. Le courant forme un Y sur son corps.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Électrik}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, son [[Attaque Spéciale]] de 70, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=Électrik
+| PV=60
+| attaque=100
+| defense=55
+| atq-spc=160
+| def-spc=80
+| vitesse=130
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Raichu Y/Imagerie|Génération 9}}
+{{Navigation Raichu}}
+
+== Apparitions dans les dessins animés ==
+=== {{série|LH}} ===
+
+{{PAGENAME}} apparait pour la première fois dans le [[LH138]], aux côtés de [[Méga-Raichu X]]. Ils sont tous deux utilisés par les fans des [[Électacleurs Volants]], lors d'un match amical contre [[Liko]], [[Rhod]], [[Dot]] et [[Ult]].
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Pikachu
+| numéro=0026
+| nom=Méga-Raichu Y
+| nomSuivant=Sabelette
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Raichu]]

@@ -1,0 +1,108 @@
+{{Ruban Pokémon
+| nomPrécédent=Stari
+| numéro=0121
+| nom=Méga-Staross
+| nomSuivant=M. Mime
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Staross
+| nom-japonais=メガスターミー
+| nom-romaji=Mega Sutāmī
+| nom-déposé=Mega Starmie
+| nom-anglais=Mega Starmie
+| ndex=0121
+| dex=Illumis/037
+| légende=Artwork de Méga-Staross pour {{Jeu|LPZA}}.
+| type1=Eau
+| type2=Psy
+| catégorie=Mystérieux
+| taille=2.3
+| poids=80.0
+| talents=Coloforce
+| fmratio=
+| génération=9
+| couleur=Violet
+| corps=5
+| cri=Cri 0121 Méga
+}}
+'''Méga-Staross''' (anglais : '''Mega Starmie''' ; japonais : '''メガスターミー''' ''Mega Starmie'') est un [[Méga-Pokémon]] de [[type]] [[Eau (type)|Eau]] et [[Psy (type)|Psy]]. C'est la [[Méga-Évolution]] de [[Staross]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Staross voit ses membres inférieurs devenir de longues jambes grâce à l'énergie de la [[Méga-Évolution]]. De plus, deux de ses membres supérieurs forment maintenant des bras. Le fait qu'il arbore un aspect humanoïde peut faire référence au film ''[[wp:Le Satellite mystérieux|Le Satellite mystérieux]]'', mettant en scène des aliens ressemblant à des étoiles de mer et prenant la forme d'humains.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, le corps de Méga-Staross est bleu gris, tandis que son joyau a l'apparence d'un saphir bleu cerclé de cuivre.
+
+=== [[Évolution]] ===
+
+Méga-Staross est la [[Méga-Évolution]] de [[Staross]] avec une [[Starossite]]. Ce dernier est l'évolution de [[Stari]] au contact d'une [[Pierre Eau]].
+{{#lst:Stari|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Coloforce]] : double l'Attaque du Pokémon.
+
+=== Descriptions du [[Pokédex]] ===
+;{{jeu|LPZA}}
+:Ses mouvements sont devenus plus humains. On ne sait pas s'il cherche à communiquer, ou s'il essaie de remplacer l'humanité.
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Eau|type2=Psy}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 25, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 5.
+
+{{Statistiques
+| type=Eau
+| PV=60
+| attaque=100
+| defense=105
+| atq-spc=130
+| def-spc=105
+| vitesse=120
+}}
+
+=== Dans {{Jeu|LPZA}} ===
+
+* Dû à l'absence de talent dans {{Jeu|LPZA}}, Méga-Staross gagne 40 points d'[[Attaque (statistique)|Attaque]] supplémentaires.
+
+{{Statistiques
+| type=Eau
+| PV=60
+| attaque=140
+| defense=105
+| atq-spc=130
+| def-spc=105
+| vitesse=120
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Staross/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Staross}}
+
+== Apparitions dans les dessins animés ==
+=== {{série|LH}} ===
+[[Fichier:LH122 - Méga-Staross.png|thumb|right|Le Méga-Staross de [[Friede]].]]
+Méga-Staross apparaît pour la première fois dans le [[LH121]]. Il fait son apparition aux côtés de [[Friede]], lorsque ce dernier revient de l'espace après un an d'absence. Friede révèle avoir capturé le Pokémon durant ce laps de temps. Depuis, Méga-Staross se trouve régulièrement aux côtés de Friede.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Stari
+| numéro=0121
+| nom=Méga-Staross
+| nomSuivant=M. Mime
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Staross]]

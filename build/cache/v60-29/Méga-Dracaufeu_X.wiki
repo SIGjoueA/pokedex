@@ -1,0 +1,137 @@
+{{Renvoi homonymie|Méga-Dracaufeu}}
+{{Ruban Pokémon
+| nomPrécédent=Reptincel
+| numéro=0006
+| nom=Méga-Dracaufeu X
+| nomSuivant=Carapuce
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Dracaufeu X
+| nom-japonais=メガ リザードン X
+| nom-déposé=Mega Lizardon X
+| nom-romaji=Mega Rizādon X
+| nom-anglais=Mega Charizard X
+| ndex=0006
+| dex=Kanto-LGPE/006//Kalos (Centre)/085//Illumis/153
+| dex-secondaires=Shuffle/006//Picross/N28-10//Picross (Alternatif)/A28-11
+| légende=Artwork de Méga-Dracaufeu X pour {{Jeu|XY}}.
+| type1=Feu
+| type2=Dragon
+| catégorie=Flamme
+| taille=1.7
+| poids=110.5
+| talents=Griffe Dure
+| fmratio=.125
+| conditions-couleur=Génération 6/Depuis la génération 7
+| couleur=Rouge/Noir
+| corps=6
+| génération=6
+| cri=Cri 0006 Méga X
+}}
+'''Méga-Dracaufeu X''' (anglais : '''Mega-Charizard X''' ; japonais : '''メガ リザードン X''' ''Mega Lizardon X'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Dragon (type)|Dragon]]. C'est une des [[Méga-Évolution]]s de [[Dracaufeu]].
+
+Méga-Dracaufeu X a été dévoilé le 2 octobre 2013 lors de la première diffusion de ''[[Pokémon : Les origines]]'' sur TV Tokyo, au Japon. [[Méga-Dracaufeu Y]] étant déjà connu avant, sous le nom de Méga-Dracaufeu, l'apparition de Méga-Dracaufeu X fait alors de [[Dracaufeu]], avec [[Mewtwo]] et [[Raichu]], le seul Pokémon possédant deux [[Méga-Évolution]]s.
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+
+Méga-Dracaufeu X ressemble à un [[Dracaufeu]] noir, au ventre bleu et aux yeux rouges. La membrane bleue foncé de ses ailes est acérée et une grande griffe termine chaque aile. Ses cornes sont plus effilées et le bout de celles-ci est bleu. Au niveau des épaules, des griffes bleues sortent de chaque côté (une vers l'avant, une vers l'arrière), et des pointes surgissent également à l'arrière de son cou. La flamme au bout de sa queue est bleue, tout comme les deux jets de flammes qui lui sortent de chaque côté de la gueule. La couleur bleue des flammes indique une température extraordinairement élevée et extrêmement puissante.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Dracaufeu X a le corps turquoise tirant sur le vert et le ventre vert blanchâtre, la membrane de ses ailes est rouge et la pointe des cornes/griffes qui ornent ses épaules ainsi que sa tête ont une teinte rouge clair.
+
+=== [[Évolution]] ===
+
+Méga-Dracaufeu X est la [[Méga-Évolution]] de [[Dracaufeu]] avec une [[Dracaufite X]]. Dracaufeu est l'évolution de [[Reptincel]] à partir du [[niveau]] 36, lui-même l'évolution de [[Salamèche]] à partir du niveau 16.
+{{#lst:Salamèche|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Griffe Dure]] : augmente la puissance des attaques directes du Pokémon.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}} et {{Jeu|GO}}
+:La puissance incommensurable parcourant son corps est à l'origine des flammes bleues qu'il déploie et de la teinte sombre de sa peau.
+;{{Jeu|LPZA}}
+:La puissance incommensurable parcourant son corps est à l'origine des flammes bleues qu'il arbore et de la teinte sombre de sa peau.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Feu|type2=Dragon}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 46, sa [[Défense]] de 33, et son [[Attaque Spéciale]] de 21.
+
+{{Statistiques
+| type=feu
+| PV=78
+| attaque=130
+| defense=111
+| atq-spc=130
+| def-spc=85
+| vitesse=100
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Dracaufeu et Méga-Dracaufeu Y voir [[Dracaufeu/Génération 6#Stratégie|leurs pages]] [[Méga-Dracaufeu Y#Stratégie|dédiées]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/dracaufeu.html#6gx Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/charizard/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Dracaufeu et Méga-Dracaufeu Y voir [[Dracaufeu#Stratégie|leurs pages]] [[Méga-Dracaufeu Y#Stratégie|dédiées]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/dracaufeu.html#7gx Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/charizard Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Dracaufeu X/Imagerie|Génération 9}}
+{{Navigation Dracaufeu}}
+
+== Apparitions dans les jeux secondaires ==
+
+{{Article principal|{{PAGENAME}}/Jeux secondaires}}
+
+Méga-Dracaufeu X apparaît notamment dans les jeux suivants :
+
+{{#invoke:Sommaire|triAlphabetique|page={{PAGENAME}}/Jeux secondaires}}
+
+== Apparitions dans les jeux tiers ==
+[[Fichier:Méga-Dracaufeu X SSB4.png|150px|vignette|droite|Méga-Dracaufeu X dans Super Smash Bros. 3DS/Wii U.]]
+==== Dans {{jeu|SSB4}} ====
+Méga-Dracaufeu X apparaît en tant que Final Smash de Dracaufeu. Plus il se prend de coups et moins longtemps dure sa transformation.
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Méga-Dracaufeu X apparaît dans ''[[Pokémon : Les origines]]'', où le [[Dracaufeu de Red]] [[Méga-Évolution|méga-évolue]] lors de son combat contre [[Mewtwo]], grâce à une [[Dracaufite X]] qui lui a été remise par [[M. Fuji]].
+C'est aussi le Pokémon de prédilection d'[[Alain]], le héros de [[Pokémon : Méga-Évolution]]. Sa première apparition dans le dessin animé principal se fait dans le [[XY106]]. Par ailleurs, on remarquera que les flammes de ses attaques comme [[Lance-Flammes]] ou le début de [[Rafale Feu]] sont bleues au lieu d'être rouges (Après quelques secondes, lorsque la capacité touche son adversaire, les flammes de Rafale Feu sont rouges).
+
+<center><gallery>
+Pokémon Les origines - Méga-Dracaufeu X et Red.png|[[Red/Pokémon : les origines|Red]] et son Méga-Dracaufeu X.
+Méga-Dracaufeu X avec Alain.png|[[Alain]] et son Méga-Dracaufeu X.
+Méga-Dracaufeu X Lance-Flammes.png|La capacité [[Lance-Flammes]] est bleue.
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdotes ==
+
+* Le design de Méga-Dracaufeu X a été conçu par [[Atsuko Nishida]]<ref>[https://funs-project.com/poplab/007/index_2.html Deuxième partie d'une interview de Atsuko Nishida sur Fun's Project où elle explique son processus de création] '''(ja)'''</ref>. Elle est également à l'origine de celui de Salamèche, Reptincel et Dracaufeu.
+* Méga-Dracaufeu X a les plus hautes stats des évolutions finales et des Pokémon de type [[feu]] non-légendaires.
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Reptincel
+| numéro=0006
+| nom=Méga-Dracaufeu X
+| nomSuivant=Carapuce
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Dracaufeu X]]

@@ -1,0 +1,105 @@
+{{Ruban Pokémon
+| nomPrécédent=Yveltal
+| numéro=0718
+| nom=Méga-Zygarde
+| nomSuivant=Méga-Diancie
+| forme-suivant=Méga
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Zygarde
+| nom-japonais=メガジガルデ
+| nom-romaji=Mega Jigarude
+| nom-déposé=Mega Zygarde
+| nom-anglais=Mega Zygarde
+| ndex=0718
+| dex=Illumis/230
+| légende=Artwork de Méga-Zygarde pour {{jeu|LPZA}}.
+| type1=Dragon
+| type2=Sol
+| catégorie=Équilibre
+| taille=7.7
+| poids=610.0
+| talents=
+| fmratio=-1
+| génération=9
+| couleur=Vert
+| corps=6
+| cri=Cri 0718 Méga
+}}
+'''Méga-Zygarde''' (anglais : '''Mega Zygarde''' ; japonais : '''メガジガルデ''' ''Mega Zygarde'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]] et [[Sol (type)|Sol]]. C'est la [[Méga-Évolution]] de [[Zygarde]] Forme Parfaite.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Le corps de Méga-Zygarde est principalement vert clair et fluorescent. Une flamme verte est apparue sur sa tête. Des motifs hexagonaux blancs sont observables sur ses jambes et le long de son buste, verticalement. Ses genoux sont formés de deux hexagones noirs et d'un hexagone blanc. La bouche qu'il avait en tant que [[Zygarde]] Forme Parfaite sur le torse s'est ouverte, laissant les parties noires supérieures flotter. Ses ailes se sont rassemblées pour maintenir et former l'immense canon qui se trouve au-dessus de lui. Ce canon est principalement noir ; une croix violette se trouve au milieu du bout du canon. Un hexagone bleu et un hexagone rouge sont visibles sur son torse. Ces mêmes couleurs sont représentées sur les extrémités du bout du canon de Méga-Zygarde, à droite et à gauche.
+
+==== Différences mâle/femelle ====
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Zygarde mâle ou femelle.
+
+==== [[Chromatique]] ====
+
+Ce Pokémon est dit [[Shiny Lock]] et ne peut être obtenu sous sa forme [[chromatique]].
+<!-- Lorsqu'il est chromatique, toutes les parties habituellement noires sont blanches, et toutes les parties habituellement blanches sont jaune pâle. Les parties habituellement vertes sur sa cape sont turquoise. -->
+
+=== [[Évolution]] ===
+
+Méga-Zygarde est la [[Méga-Évolution]] de [[Zygarde]] Forme Parfaite avec une [[Zygardite]].
+{{#lst:Zygarde|Tableau d'évolution}}
+
+=== [[Capacité signature]] ===
+
+Méga-Zygarde est le seul Pokémon à pouvoir utiliser [[Lux Nihilum]] (qu'il peut utiliser à partir de la capacité [[Sanction Suprême]]).
+
+=== [[Talent]] ===
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Il méga-évolue en réponse aux émotions des êtres humains frappés par un danger sans précédent, et apaise la situation grâce à son pouvoir inégalé.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Dragon|type2=Sol}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est diminuée de 30, sa [[Défense]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 10, son [[Attaque Spéciale]] est augmentée de 125, et sa [[Vitesse]] de 15.
+
+{{Statistiques
+| type=Dragon
+| PV=216
+| attaque=70
+| defense=91
+| atq-spc=216
+| def-spc=85
+| vitesse=100
+}}
+Méga-Zygarde est le Pokémon ayant la meilleure statistique d'[[Attaque Spéciale]].
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Zygarde/Imagerie|Génération 9}}
+{{Navigation Zygarde}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Sur la version console de {{jeu|HOME}}, l'[[apparence du corps]] de Méga-Zygarde est similaire à celle de Zygarde Forme Parfaite ({{Apparence du corps|6}}). Sur la version mobile, l'apparence du corps est identique à celle de Zygarde Forme 50 % ({{Apparence du corps|2}}).
+
+{{Ruban Pokémon
+| nomPrécédent=Yveltal
+| numéro=0718
+| nom=Méga-Zygarde
+| nomSuivant=Méga-Diancie
+| forme-suivant=Méga
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Zygarde]]

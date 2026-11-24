@@ -1,0 +1,95 @@
+{{Ruban Pokémon
+| nomPrécédent=Venalgue
+| numéro=0691
+| nom=Méga-Kravarech
+| nomSuivant=Flingouste
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Kravarech
+| nom-japonais=メガドラミドロ
+| nom-romaji=Mega Doramidoro
+| nom-déposé=Mega Dramidoro
+| nom-anglais=Mega Dragalge
+| ndex=0691
+| dex=Illumis/162
+| légende=Artwork de Méga-Kravarech pour {{Jeu|LPZA}}.
+| type1=Poison
+| type2=Dragon
+| catégorie=Simulalgue
+| taille=2.1
+| poids=100.3
+| talents=Régé-Force
+| fmratio=
+| génération=9
+| couleur=Brun
+| corps=5
+| cri=Cri 0691 Méga
+}}
+'''Méga-Kravarech''' (anglais : '''Mega Dragalge''' ; japonais : '''メガドラミドロ''' ''Mega Dramidoro'') est un [[Méga-Pokémon]] de [[type]] [[Poison (type)|Poison]] et [[Dragon (type)|Dragon]]. C'est la [[Méga-Évolution]] de [[Kravarech]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Kravarech possède de très longues algues violettes provenant de sa tête, semblables à une chevelure. Sa crête rouge s'est également développée. Sur sa crête se trouvent deux algues vertes servant d'antennes sur lesquelles se trouvent deux écailles roses et violette. Ses fines nageoires sont plus longues alors que l'extrémité de sa queue est plus fine.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, les parties habituellement violettes du bassin, du visage, et des écailles sur ses antennes sont bleu clair. Les parties habituellement marrons sont mauve foncé, les zones rouges sont vert clair, et les algues sur le dessus de sa tête sont jaunes.
+
+=== [[Évolution]] ===
+
+Méga-Kravarech est la [[Méga-Évolution]] de [[Kravarech]] avec une [[Kravarekite]]. Ce dernier est l'évolution de [[Venalgue]] à partir du [[niveau]] 48.
+{{#lst:Venalgue|Tableau d'évolution}}
+=== [[Talent]] ===
+* [[Régé-Force]] : restaure un tiers des PV si le Pokémon est retiré du combat.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Il crache un liquide qui perturbe la capacité de régénération des cellules. Cette substance est extrêmement toxique, sauf pour lui.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Poison|type2=Dragon}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, sa [[Défense]] de 15, son [[Attaque Spéciale]] de 35, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 40.
+
+{{Statistiques
+| type=Poison
+| PV=65
+| attaque=85
+| defense=105
+| atq-spc=132
+| def-spc=163
+| vitesse=44
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Kravarech/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Kravarech}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Venalgue
+| numéro=0691
+| nom=Méga-Kravarech
+| nomSuivant=Flingouste
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Kravarech]]

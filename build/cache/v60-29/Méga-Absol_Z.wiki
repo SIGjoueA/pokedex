@@ -1,0 +1,100 @@
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Éoko
+| numéro=0359
+| nom=Méga-Absol Z
+| nomSuivant=Okéoké
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Absol Z
+| nom-japonais=メガアブソルZ
+| nom-romaji=Mega Abusoru Z
+| nom-déposé=Mega Absol Z
+| nom-anglais=Mega Absol Z
+| ndex=0359
+| dex=Illumis/134
+| légende=Artwork de Méga-Absol Z pour {{Jeu|LPZA}}.
+| type1=Ténèbres
+| type2=Spectre
+| catégorie=Désastre
+| taille=1.2
+| poids=49.0
+| talents=Incisif
+| fmratio=0.5
+| génération=9
+| couleur=Noir
+| corps=8
+| cri=Cri 0359 Méga Z
+}}
+'''Méga-Absol Z''' (anglais : '''Mega Absol Z''' ; japonais : '''メガアブソルZ''' ''Mega Absol Z'') est un [[Méga-Pokémon]] de [[type]] [[Ténèbres (type)|Ténèbres]] et [[Spectre (type)|Spectre]]. C'est une des [[Méga-Évolution]]s d'[[Absol]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Grâce à la [[Méga-Évolution]], Méga-Absol Z acquiert le type [[Spectre (type)|Spectre]] en plus de son type [[Ténèbres (type)|Ténèbres]]. La fourrure de Méga-Absol Z est entièrement noire. Comme [[Méga-Absol]], une partie de la fourrure sur sa tête cache son œil gauche, il possède deux cornes de chaque côté de sa tête, celle de droite étant plus grande, sa queue est plus crochue et son ornement ovale est désormais triangulaire. Les poils de son dos sont redressés : du côté droit, ils forment une sorte de main composée de trois doigts ; du côté gauche, ils forment simplement une boule de poils qui passe du noir au rouge. Cette « main » est de couleur rouge et les « doigts » sont représentés par de la fourrure entremêlée.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, les zones habituellement bleu-gris sont oranges. Son aile rouge et ses yeux sont bleu clair.
+
+=== [[Évolution]] ===
+
+Méga-Absol Z est une des [[Méga-Évolution]]s d'[[Absol]] avec une [[Absolite Z]]. Absol peut également méga-évoluer en [[Méga-Absol]] avec une [[Absolite]].
+{{#lst:Absol|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Incisif]] : augmente la puissance des [[:Catégorie:Capacité tranchante|capacités tranchantes]].
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il tranche ses adversaires d'un seul coup avec sa fourrure acérée comme des griffes. Mais il agit ainsi par compassion, pour leur éviter de souffrir.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Ténèbres|type2=Spectre}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 24, et sa [[Vitesse]] de 76.
+
+{{Statistiques
+| type=Ténèbres
+| PV=65
+| attaque=154
+| defense=60
+| atq-spc=75
+| def-spc=60
+| vitesse=151
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Absol Z/Imagerie|Génération 9}}
+{{Navigation Absol}}
+
+== Apparitions dans les dessins animés ==
+
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Éoko
+| numéro=0359
+| nom=Méga-Absol Z
+| nomSuivant=Okéoké
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Absol]]

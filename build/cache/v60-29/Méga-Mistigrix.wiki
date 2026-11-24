@@ -1,0 +1,97 @@
+{{Ruban Pokémon
+| nomPrécédent=Psystigri
+| numéro=0678
+| nom=Méga-Mistigrix
+| nomSuivant=Monorpale
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Mistigrix
+| nom-japonais=メガニャオニクス
+| nom-romaji=Mega Nyaonikusu
+| nom-déposé=Mega Nyaonix
+| nom-anglais=Mega Meowstic
+| ndex=0678
+| dex=Illumis/044
+| légende=Artwork de Méga-Mistigrix pour {{Jeu|LPZA}}.
+| type1=Psy
+| type2=
+| catégorie=Clairvoyant
+| taille=0.8
+| poids=10.1
+| talents=Calque
+| fmratio=
+| génération=9
+| couleur=Blanc
+| corps=6
+| cri=Cri 0678 Méga
+}}
+'''Méga-Mistigrix''' (anglais : '''Mega Meowstic''' ; japonais : '''メガニャオニクス''' ''Mega Nyaonix'') est un [[Méga-Pokémon]] de [[type]] [[Psy (type)|Psy]]. C'est la [[Méga-Évolution]] de [[Mistigrix]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Mistigrix lévite dans les airs en utilisant ses pouvoirs psychiques décuplés grâce à la [[Méga-Évolution]]. Son corps est blanc et bleu, fusion des couleurs de [[Mistigrix]] mâle et femelle. Ses oreilles se sont redressées et possèdent chacune un œil jaune. Ses yeux principaux, bien que souvent fermés, sont vairons : l'un étant vert-cyan et l'autre jaune. La coiffe de Méga-Mistigrix est composée de trois mèches tombant sur son visage. L'une de ses queues est pointue, tandis que l'autre se termine en boucle. Son col de fourrure est composé de plusieurs touffes droites.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Mistigrix change radicalement d'apparence. Son corps délaisse son bleu foncé habituel pour une teinte jaune cuivré chaleureuse, presque or, lui conférant une allure beaucoup plus solaire. Les vastes motifs oculaires ornant ses appendices auriculaires sont également inversés : leurs pupilles, habituellement jaunes, deviennent d'un bleu profond, entourées d'iris aux reflets multi-colorés bleutés.
+
+=== [[Évolution]] ===
+
+Méga-Mistigrix est la [[Méga-Évolution]] de [[Mistigrix]] avec une [[Mistigrixite]]. Mistigrix est l'évolution de [[Psystigri]] à partir du [[niveau]] 25.
+{{#lst:Psystigri|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Calque]] : lorsque le Pokémon entre au combat, il calque le talent d'un ennemi pour remplacer le sien.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il dilate et comprime tout ce qu'il souhaite grâce à ses pouvoirs psychiques. Il va jusqu'à tordre l'espace-temps pour vaincre ses adversaires.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Psy}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque Spéciale]] est augmentée de 60, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=Psy
+| PV=74
+| attaque=48
+| defense=76
+| atq-spc=143
+| def-spc=101
+| vitesse=124
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Mistigrix/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Mistigrix}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Méga-Mistigrix est l'un des quatre [[Méga-Pokémon]] à avoir une [[catégorie]] différente de celle de sa forme de base. Il partage cette caractéristique avec [[Méga-Aligatueur]], [[Méga-Darkrai]] et [[Méga-Draïeul]].
+
+{{Ruban Pokémon
+| nomPrécédent=Psystigri
+| numéro=0678
+| nom=Méga-Mistigrix
+| nomSuivant=Monorpale
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Mistigrix]]

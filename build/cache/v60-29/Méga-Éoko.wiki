@@ -1,0 +1,101 @@
+{{Ruban Pokémon
+| nomPrécédent=Tropius
+| numéro=0358
+| nom=Méga-Éoko
+| nomSuivant=Méga-Absol
+| forme-suivant=Méga
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Éoko
+| nom-japonais=メガチリーン
+| nom-romaji=Mega Chirīn
+| nom-déposé=Mega Chirean
+| nom-anglais=Mega Chimecho
+| ndex=0358
+| dex=Extra Illumis/051
+| légende=Artwork de Méga-Éoko pour {{Jeu|LPZA}}.
+| type1=Psy
+| type2=Acier
+| catégorie=Carillon
+| taille=1.2
+| poids=8
+| talents=Lévitation
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=11
+| cri=Cri 0358 Méga
+}}
+'''Méga-Éoko''' (anglais : '''Mega Chimecho''' ; japonais : '''メガチリーン''' ''Mega Chirean'') est un [[Méga-Pokémon]] de [[type]] [[Psy (type)|Psy]] et [[Acier (type)|Acier]]. C'est la [[Méga-Évolution]] d'[[Éoko]].
+
+Méga-Éoko a été révélé officiellement lors de la bande-annonce du 6 novembre 2025, avec [[Méga-Glaivodo]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la Méga-Évolution, Méga-Éoko acquiert le type [[Acier (type)|Acier]] en plus de son type [[Psy]]. Méga-Éoko récupère l'attache rayée de rouge et de blanc au-dessus de sa tête qu'il possédait en tant que [[Korillon]], devenu bien plus grand. La petite boule dorée présente sur sa tête est maintenant la base d'un grand anneau de la même couleur sur lequel sont accrochées six répliques d'[[Éoko]], dont deux sont bleues, et deux autres vertes, au lieu de la couleur rose d'[[Éoko]] que possèdent les deux dernières répliques. Cet anneau rappelle le corps de [[Korillon]], sans les membres inférieurs.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Éoko troque le rouge de ses rubans supérieurs contre le orange. Le corps et les carillons passent du bleu au vert clair, et les motifs inférieurs rouges deviennent jaunes.
+
+=== [[Évolution]] ===
+
+Méga-Éoko est la [[Méga-Évolution]] d'[[Éoko]] avec une [[Éokite]]. Ce dernier est l'évolution de [[Korillon]] si celui-ci est [[bonheur|heureux]] et qu'il gagne un niveau de nuit.
+{{#lst:Korillon|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Lévitation]] : le Pokémon flotte, ce qui l'immunise contre les capacités de type Sol.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il fait vibrer tout son corps pour déclencher une onde sonore qui frappe dans toutes les directions. Quiconque l'entend perd ses repères.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Psy|type2=Acier
+| remarque-sol=L'efficacité des attaques de type [[Sol]] est nulle du fait de son talent [[Lévitation]]. De ce fait, si [[Gravité]], [[Échange (capacité)|Échange]], [[Rayon Simple]], [[Anti-Air]], [[Ten-danse]] ou [[Suc Digestif]] est utilisé, ou si l'adversaire dispose de [[Brise Moule]], [[Téra-Voltage]], [[TurboBrasier]] ou [[Gaz Inhibiteur]], l'effet de [[Lévitation]] est annulé et l'efficacité des attaques [[Sol]] à son encontre est double, du fait de son [[type]] [[Électrik]].}}
+
+== [[Statistique]]s ==
+
+Sa statistique de [[Défense (statistique)|Défense]] est augmentée de 30, son [[Attaque Spéciale]] de 40, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30.
+
+{{Statistiques
+| type=Psy
+| PV=75
+| attaque=50
+| defense=110
+| atq-spc=135
+| def-spc=120
+| vitesse=65
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Éoko/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Éoko}}
+
+== Apparitions dans les dessins animés ==
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Sur la version console de {{jeu|HOME}}, l'[[apparence du corps]] de Méga-Éoko est différente de celle d'[[Éoko]]. Sur la version mobile, elles sont identiques ({{Apparence du corps|4}}).
+
+{{Ruban Pokémon
+| nomPrécédent=Tropius
+| numéro=0358
+| nom=Méga-Éoko
+| nomSuivant=Méga-Absol
+| forme-suivant=Méga
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Éoko]]

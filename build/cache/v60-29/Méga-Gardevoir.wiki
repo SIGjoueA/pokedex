@@ -1,0 +1,113 @@
+{{Ruban Pokémon
+| nomPrécédent=Kirlia
+| numéro=0282
+| nom=Méga-Gardevoir
+| nomSuivant=Arakdo
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Gardevoir
+| nom-japonais=メガ サーナイト
+| nom-déposé=Mega Sirnight
+| nom-romaji=Mega Sānaito
+| nom-anglais=Mega Gardevoir
+| ndex=0282
+| dex=Hoenn-ROSA/031//Kalos (Centre)/066//Illumis/089
+| dex-secondaires=Shuffle/298//Picross/N25-05//Picross (Alternatif)/A25-15
+| légende=Artwork de Méga-Gardevoir pour {{Jeu|LPZA}}.
+| type1=Psy
+| type2=Fée
+| catégorie=Étreinte
+| taille=1.6
+| poids=48.4
+| talents=Peau Féérique
+| fmratio=.5
+| génération=6
+| couleur=Blanc
+| corps=12
+| cri=Cri 0282 Méga
+}}
+'''Méga-Gardevoir''' (anglais : '''Mega Gardevoir''' ; japonais : '''メガ サーナイト''' ''Mega Sirnight'') est un [[Pokémon (créature)|Pokémon]] de [[type]] [[Psy (type)|Psy]] et [[Fée (type)|Fée]]. C'est la [[Méga-Évolution]] de [[Gardevoir]].
+
+== À propos du Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Quand Gardevoir méga-évolue en Méga-Gardevoir, son corps devient complètement blanc ; seuls ses cheveux demeurent de couleur verte. Sa robe devient plus longue et plus large, faisant penser à une robe de mariée. Ses avant-bras sont légèrement plus épais, avec une extension pointue au-dessus du coude. Ses épines faciales sont plus larges et bouclent maintenant verticalement et non plus horizontalement. En contraste, ses cheveux sont plus courts et se courbent moins. Il a maintenant deux cornes rouges au lieu d'une au milieu du buste. Il se dit que ces cornes rouges seraient en réalité une manifestation extérieure du cœur de ce Pokémon, et il est maintenant capable de maîtriser de formidables pouvoirs magiques maintenant qu'il a ouvert son cœur.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, les "cheveux" de Méga-Gardevoir sont bleus au lieu de verts, son corps est légèrement teinté de violet, ses "appendices centraux" ainsi que ses yeux sont orangés plutôt que rouges et sa "robe" est noire.
+
+=== [[Évolution]] ===
+
+Méga-Gardevoir est la [[Méga-Évolution]] de [[Gardevoir]] grâce à une [[Gardevoirite]], qui est lui-même l'évolution de [[Kirlia]] à partir du [[niveau]] 30, lui-même l'évolution de [[Tarsal]] à partir du niveau 20. Kirlia peut également, pour les spécimens mâles uniquement, évoluer en [[Gallame]] lorsqu'il est mis en contact avec une [[Pierre Aube]].
+{{#lst:Tarsal|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Peau Féérique]] : les capacités de type Normal deviennent de type Fée. Leur puissance augmente légèrement.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Lorsqu'il déploie les plaques rouges sur sa poitrine et libère son esprit, il est capable de déchaîner ses plus grands pouvoirs psychiques.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Psy|type2=Fée}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, son [[Attaque Spéciale]] de 40, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20 et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| nom=Méga Gardevoir
+| type=psy
+| PV=68
+| attaque=85
+| defense=65
+| atq-spc=165
+| def-spc=135
+| vitesse=100
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Gardevoir voir [[Gardevoir/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/gardevoir.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/gardevoir/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Gardevoir voir [[Gardevoir#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/gardevoir Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Gardevoir/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Gardevoir}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+
+[[Fichier:Méga-Gardevoir de Dianthéa.png|200px|thumb|left|Le Méga-Gardevoir de Dianthéa]]
+[[Fichier:Méga-Gardevoir de Kimya.png|200px|thumb|right|Le Mega-Gardevoir de Kimya]]
+Un Méga-Gardevoir appartenant à [[Dianthéa]] apparaît dans le [[XY028]].
+
+Un Méga-Gardevoir chromatique apparaît dans {{film|19}}, en tant que [[Pokémon (créature)|Pokémon]] de la princesse [[Kimya]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Kirlia
+| numéro=0282
+| nom=Méga-Gardevoir
+| nomSuivant=Arakdo
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Gardevoir]]

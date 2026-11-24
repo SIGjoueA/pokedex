@@ -1,0 +1,93 @@
+{{Ruban Pokémon
+| nomPrécédent=Mélancolux
+| numéro=0609
+| nom=Méga-Lugulabre
+| nomSuivant=Coupenotte
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Lugulabre
+| nom-japonais=メガシャンデラ
+| nom-romaji=Mega Shandera
+| nom-déposé=Mega Chandela
+| nom-anglais=Mega Chandelure
+| ndex=0609
+| dex=Illumis/191
+| légende=Artwork de Méga-Lugulabre pour {{Jeu|LPZA}}.
+| type1=Spectre
+| type2=Feu
+| catégorie=Invitation
+| taille=2.5
+| poids=69.6
+| talents=Infiltration
+| fmratio=
+| génération=9
+| couleur=Noir
+| corps=4
+| cri=Cri 0609 Méga
+}}
+'''Méga-Lugulabre''' (anglais : '''Mega Chandelure''' ; japonais : '''メガシャンデラ''' ''Mega Chandela'') est un [[Méga-Pokémon]] de [[type]] [[Spectre (type)|Spectre]] et [[Feu (type)|Feu]]. C'est la [[Méga-Évolution]] de [[Lugulabre]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Lugulabre a les yeux vairons, l'un jaune et l'autre violet. Sur sa tête se trouve une sorte de couronne noire dans laquelle sa longue flamme violette circule. L'épine présente au-dessous de sa tête s'est allongée et l'extrémité est devenue dorée. De cette épine sortent huit autres « bras », aussi dorés, qui se hissent vers le haut et qui se finissent par du feu violet, comme ses quatre bras principaux, restés noirs.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Lugulabre conserve les mêmes couleurs que Lugulabre chromatique, le verre de sa tête habituellement violet pâle est vert clair, et son œil droit est rose vif. Les reflets habituellement dorés de son corps sont argentés.
+
+=== [[Évolution]] ===
+
+Méga-Lugulabre est la [[Méga-Évolution]] de [[Lugulabre]] avec une [[Lugulabrite]]. Ce dernier est l'évolution de [[Mélancolux]] au contact d'une [[Pierre Nuit]], qui lui-même est l'évolution de [[Funécire]] à partir du [[niveau]] 41.
+{{#lst:Funécire|Tableau d'évolution}}
+=== [[Talent]] ===
+* [[Infiltration]] : traverse les barrières (comme [[Mur Lumière]]) et les [[Clonage (capacité)|clones]] de l'ennemi pour attaquer directement.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Ce Pokémon aspire la rancune et la convertit en puissance. L'un de ses yeux est une fenêtre reliant notre monde à l'au-delà.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Spectre|type2=Feu}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Spectre
+| PV=60
+| attaque=75
+| defense=110
+| atq-spc=175
+| def-spc=110
+| vitesse=90
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Lugulabre/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Lugulabre}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Mélancolux
+| numéro=0609
+| nom=Méga-Lugulabre
+| nomSuivant=Coupenotte
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Lugulabre]]

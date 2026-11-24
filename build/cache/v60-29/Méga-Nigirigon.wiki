@@ -1,0 +1,109 @@
+{{Ruban Pokémon
+| nomPrécédent=Oyacata
+| numéro=0978
+| nom=Méga-Nigirigon
+| nomSuivant=Courrousinge
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Nigirigon
+| nom-japonais=メガシャリタツ
+| nom-romaji=Mega Sharitatsu
+| nom-déposé=Mega Syaritatsu
+| nom-anglais=Mega Tatsugiri
+| ndex=0978
+| dex=Extra Illumis/031
+| artwork=Méga-Nigirigon (Forme Courbée)/Méga-Nigirigon (Forme Affalée)/Méga-Nigirigon (Forme Raide)
+| légende=Artworks de Méga-Nigirigon pour {{Jeu|LPZA}}.
+| switch-artworks=oui
+| type1=Dragon
+| type2=Eau
+| catégorie=Mimétisme
+| taille=0.6
+| poids=24.0
+| talents=
+| fmratio=0.5
+| génération=9
+| couleur=Rouge/Rose/Jaune
+| corps=11
+| cri=Cri 0978 Méga
+| conditions=Forme Courbée/Forme Affalée/Forme Raide
+}}
+'''Méga-Nigirigon''' (anglais : '''Mega Tatsugiri''' ; japonais : '''メガシャリタツ''' ''Mega Syaritatsu'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]] et [[Eau (type)|Eau]]. C'est la [[Méga-Évolution]] de [[Nigirigon]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Lorsque [[Nigirigon]] méga-évolue, un spécimen de ses trois formes de base se rassemblent sur un plateau multicolore. La forme d'origine prend alors la place centrale du trio, et possède des œufs de saumon sur la tête. Ces trois corps sont séparés par une sorte de barrière, qui provient du plateau. Le plateau sur lequel se tiennent les [[Nigirigon]] ressemble au symbole de la [[Méga-Évolution]].
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+=== [[Évolution]] ===
+
+Méga-Nigirigon est la [[Méga-Évolution]] de [[Nigirigon]] avec une [[Nigirigonite]].
+{{#lst:Nigirigon|Tableau d'évolution}}
+
+=== [[Forme]]s ===
+À l'instar de sa forme non méga-évoluée, Méga-Nigirigon possède trois formes différentes : la Forme Courbée, la Forme Affalée et la Forme Raide.
+
+=== [[Talent]] ===
+
+=== Descriptions du [[Pokédex]] ===
+==== Forme Courbée ====
+;{{Jeu|LPZA}}
+:La Méga-Évolution a stimulé son cerveau et l'a rendu encore plus sournois. En combat, il crée et contrôle des doubles à son image.
+
+==== Forme Affalée ====
+;{{Jeu|LPZA}}
+:Il solidifie l'énergie de la Méga-Évolution et se sert des sphères obtenues comme projectiles. Ces dernières explosent au moindre contact.
+
+==== Forme Raide ====
+;{{Jeu|LPZA}}
+:Avec l'énergie de la Méga-Évolution, il s'est créé un plateau qui lui sert de moyen de transport. Il peut ainsi se déplacer librement dans les airs.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Dragon|type2=Eau}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 15, sa [[Défense]] de 30, son [[Attaque Spéciale]] de 15, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Dragon
+| PV=68
+| attaque=65
+| defense=90
+| atq-spc=135
+| def-spc=125
+| vitesse=92
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Nigirigon/Imagerie|Génération 9}}
+{{Navigation Nigirigon}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Sur la version console de {{jeu|HOME}}, l'[[apparence du corps]] de Méga-Nigirigon est différente de celle de [[Nigirigon]]. Sur la version mobile, elles sont identiques ({{Apparence du corps|3}}).
+
+{{Ruban Pokémon
+| nomPrécédent=Oyacata
+| numéro=0978
+| nom=Méga-Nigirigon
+| nomSuivant=Courrousinge
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Nigirigon]]

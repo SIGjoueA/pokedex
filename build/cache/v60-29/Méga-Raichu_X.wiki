@@ -1,0 +1,105 @@
+{{Ruban Pokémon
+| nomPrécédent=Pikachu
+| numéro=0026
+| nom=Méga-Raichu X
+| nomSuivant=Sabelette
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Raichu X
+| nom-japonais=メガライチュウＸ
+| nom-romaji=Mega Raichū X
+| nom-déposé=Mega Raichu X
+| nom-anglais=Mega Raichu X
+| ndex=0026
+| dex=Illumis/054
+| légende=Artwork de Méga-Raichu X pour {{Jeu|LPZA}}.
+| type1=Électrik
+| catégorie=Souris
+| taille=1.2
+| poids=38.0
+| talents=Créa-Élec
+| fmratio=
+| génération=9
+| couleur=Jaune
+| corps=6
+| cri=Cri 0026 Méga X
+}}
+'''Méga-Raichu X''' (anglais : '''Mega Raichu X''' ; japonais : '''メガライチュウ''' ''Mega Raichu X'') est un [[Méga-Pokémon]] de [[type]] [[Électrik (type)|Électrik]]. C'est l'une des [[Méga-Évolution]]s de [[Raichu]].
+
+Méga-Raichu X a été révélé officiellement lors de la bande-annonce du ''Nintendo Direct'' du 12 septembre 2025<ref>[https://youtu.be/CzP479-mLmE Légendes Pokémon : Z-A – Méga-Dimension – Bande-annonce sur YouTube.]</ref>, avec [[Méga-Blindépique]], [[Méga-Goupelin]], [[Méga-Amphinobi]] et [[Méga-Raichu Y]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Les joues de Méga-Raichu X sont redevenues rouges et son corps passe de l'orange au jaune. Outre le fait qu'elles sont plus épaisses, ses pattes supérieures sont arrondies tandis que la couleur des paumes de ses pattes inférieures passe du beige au jaune et brun. Les cercles jaunes, faisant penser à des talons, deviennent quant à eux orange. Ses oreilles sont encore plus grandes avec une extrémité devenant jaune, et l'autre noire. Ce phénomène est le même que pour ses deux queues, au lieu d'une seule, dont les extrémités extérieures sont orange. Les couleurs de Méga-Raichu X peuvent faire penser à celles de [[Pichu]].
+
+Grâce à l'énergie de la [[Méga-Évolution]], Méga-Raichu X génère un champ électromagnétique entre ses deux queues lui permettant de se déplacer en flottant dans les airs.
+
+<gallery class="center">
+Fichier:Méga-Raichu X (Attaque)-LPZA.png|Artwork de Méga-Raichu X en train d'attaquer.
+</gallery>
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les couleurs du corps de Méga-Raichu X ressemblent à celles d'un Raichu commun. Le pelage normalement jaune vif a une teinte orange beaucoup plus soutenue et chaleureuse. Ses joues, l'extrémité de ses oreilles et la partie inférieure de ses queues en forme d'éclairs arborent un jaune cuivré aux reflets légèrement argentés, lui donnant un aspect plus sombre et métallique.
+
+=== [[Évolution]] ===
+
+Méga-Raichu X est l'une des [[Méga-Évolution]]s de [[Raichu]] avec une [[Raichuïte X]]. Ce dernier est l'évolution de Pikachu grâce à une [[Pierre Foudre]], qui lui-même est l'évolution de Pichu quand celui-ci est suffisamment [[Bonheur|heureux]]. Raichu peut aussi [[Méga-Évolution|méga-évoluer]] en [[Méga-Raichu Y]] avec une [[Raichuïte Y]].
+{{#lst:Pichu|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Créa-Élec]] : le Pokémon crée un [[Champ Électrifié]] au moment où il entre au combat.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Pour voler, il prend la forme de la lettre X et émet une décharge électrique de 50 millions de volts à partir de ses oreilles et de sa double queue.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Électrik}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 45, sa [[Défense]] de 40, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 15.
+
+{{Statistiques
+| type=Électrik
+| PV=60
+| attaque=135
+| defense=95
+| atq-spc=90
+| def-spc=95
+| vitesse=110
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Raichu X/Imagerie|Génération 9}}
+{{Navigation Raichu}}
+
+== Apparitions dans les dessins animés ==
+=== {{série|LH}} ===
+
+{{PAGENAME}} apparait pour la première fois dans le [[LH138]], aux côtés de [[Méga-Raichu Y]]. Ils sont tous deux utilisés par les fans des [[Électacleurs Volants]], lors d'un match amical contre [[Liko]], [[Rhod]], [[Dot]] et [[Ult]].
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Pikachu
+| numéro=0026
+| nom=Méga-Raichu X
+| nomSuivant=Sabelette
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Raichu]]

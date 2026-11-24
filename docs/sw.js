@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.28';
+const VERSION = 'v60.29';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Classements raids et Combats Max : la marque † des attaques exclusives (événement / MT élite) réapparaît.';
-const DATA_VERSION = 'd70'; // bump when the schema of data/*.json changes
+const NOTES = 'Disponibilité des formes précisée (Méga du DLC Z-A, formes régionales). Textes officiels des Méga. Classements raids et Max : marque † rétablie.';
+const DATA_VERSION = 'd71'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

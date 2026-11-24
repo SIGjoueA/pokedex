@@ -1,0 +1,59 @@
+[[Fichier:Artwork Primo-Résurgence ROSA.png|thumb|right|Artworks des Primo-Résurgences de [[Kyogre]] et [[Groudon]] pour {{Jeu|ROSA}}.]]
+La '''Primo-Résurgence''' est un procédé apparu dans {{Jeu|ROSA}} qui permet à [[Kyogre]] et [[Groudon]] de se "transformer" en [[Primo-Kyogre]] ou [[Primo-Groudon]] à l'aide respectivement de la [[Gemme Bleue]] ou de la [[Gemme Rouge]] qu'ils utilisent comme des sortes de [[Méga-Gemme]].
+
+== Principe ==
+Comme la [[Méga-Évolution]], la Primo-Résurgence est un moyen de faire gagner en puissance un Pokémon. Il est expliqué qu'elle redonne des pouvoirs antiques à [[Kyogre]] et [[Groudon]]. Les deux légendaires gagnent ainsi en taille et leurs statistiques augmentent de la même manière que lors d'une Méga-Évolution : le total des [[Statistique de base|Statistiques de base]] augmente de 100, mais les [[PV]] ne sont pas touchés.
+
+La Primo-Résurgence est accompagnée d'un changement physique du Pokémon et d'un possible changement de type ([[Primo-Groudon]] gagne le type [[Feu]]). Aussi, un symbole précis pour chaque Primo-Résurgence apparaît à côté du niveau du Pokémon légendaire lorsque la Primo-Résurgence est active (le symbole Alpha pour Primo-Kyogre, et Oméga pour Primo-Groudon). Contrairement à la Méga-Évolution, la Primo-Resurgence s'active dès l'entrée en combat du Pokémon s'il tient la gemme lui correspondant.
+
+Aussi la Primo-Résurgence n'est pas considérée comme une [[Méga-Évolution]] au sens classique du terme. En effet, le Dresseur n'active pas sa [[Gemme Sésame]] au début du combat, la Primo-Résurgence provient du Pokémon seul, utilisant la gemme qui lui est attachée de manière instantanée.
+
+De ce fait il est possible de cumuler dans une seule équipe une Méga-Évolution classique (dépendant du lien Dresseur-Pokémon) ainsi que plusieurs Primo-Résurgences (provenant des Pokémon et de leurs gemmes respectives).
+
+== Liste des Primo-Résurgences ==
+
+{| class="tableaustandard sortable enroulable" style="text-align:center"
+! colspan="8" | Liste des Primo-Résurgences
+|-
+! style="width:50px" | Numéro
+! style="width:100px" | Nom
+! style="width:50px" | [[Type|Type(s)]]
+! style="width:100px" | [[Statistique|Statistique(s)]] la/les plus augmentée(s)
+! style="width:100px" | [[Talent]]
+! style="width:50px" | Objet à tenir
+! style="width:30px" | Symbole
+! style="width:50px" | Jeux d'apparition
+|-
+| {{Miniature|0382}}<br>0382
+| {{Miniature|0382|Primo}}<br>[[Primo-Kyogre]]
+| {{type|eau}}
+| [[Attaque (statistique)|Attaque]]
+| [[Mer Primaire]]
+| {{Objet|Gemme Bleue|br=oui}}
+| [[Fichier:Primo-Résurgence Kyogre.png]]
+| {{Sup|ROSA}}
+|-
+| {{Miniature|0383}}<br>0383
+| {{Miniature|0383|Primo}}<br>[[Primo-Groudon]]
+| {{type|sol|feu}}
+| [[Statistique#Attaque spéciale|Attaque spéciale]]
+| [[Terre Finale]]
+| {{Objet|Gemme Rouge|br=oui}}
+| [[Fichier:Primo-Résurgence Groudon.png]]
+| {{Sup|ROSA}}
+|}
+
+== Imagerie ==
+<center><gallery>
+Fresque Primo-Kyogre ROSA.png|Fresque représentant Primo-Kyogre dans {{Jeu|SaA}}.
+Fresque Primo-Groudon ROSA.png|Fresque représentant Primo-Groudon dans {{Jeu|RuO}}.
+</gallery></center>
+
+[[Catégorie:Mécanisme de jeu]]
+
+[[de:Protomorphose]]
+[[en:Primal Reversion]]
+[[es:Regresión primigenia]]
+[[it:Archeorisveglio]]
+[[ja:ゲンシカイキ]]
+[[zh:原始回归]]

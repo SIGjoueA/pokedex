@@ -1,0 +1,93 @@
+{{Ruban Pokémon
+| nomPrécédent=Macronium
+| numéro=0154
+| nom=Méga-Méganium
+| nomSuivant=Héricendre
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Méganium
+| nom-japonais=メガメガニウム
+| nom-romaji=Mega Meganiumu
+| nom-déposé=Mega Meganium
+| nom-anglais=Mega Meganium
+| ndex=0154
+| dex=Illumis/003
+| légende=Artwork de Méga-Méganium pour {{Jeu|LPZA}}.
+| type1=Plante
+| type2=Fée
+| catégorie=Herbe
+| taille=2.4
+| poids=201.0
+| talents=Méga-Soleil
+| fmratio=
+| génération=9
+| couleur=Vert
+| corps=8
+| cri=Cri 0154 Méga
+}}
+'''Méga-Méganium''' (anglais : '''Mega Meganium''' ; japonais : '''メガメガニウム''' ''Mega Meganium'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Fée (type)|Fée]]. C'est la [[Méga-Évolution]] de [[Méganium]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Méganium acquiert le type [[Fée]] en plus de son type [[Plante]]. Ses deux antennes forment une boucle et sa queue s'est un peu allongée. Le haut de chacune de ses pattes est recouvert par une sorte de manchon vert foncé. Les larges pétales qu'avait [[Méganium]] autour de son cou sont devenus une immense collerette florale composée de quatre couches de pétales aux teintes dégradées du rouge vif au rose fuchsia, puis au rose dragée pour finir sur du blanc. Au centre des pétales des trois premières couches, un motif blanc est distinguable ; ce même motif est de couleur rouge sur la dernière couche de pétales blanches.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Méganium conserve les mêmes couleurs que Méganium chromatique, avec son corps habituellement vert clair d'une teinte plus orangée. Habituellement roses, les fleurs autour de son cou ont une teinte plus orangée également, la fleur la plus près de sa tête est de couleur orange, la deuxième de couleur saumon, la troisième d'un rose pâle orangé, et la dernière a des motifs de la même couleur que la première fleur. Le blanc de ses fleurs garde la même couleur que le Méga-Méganium habituel.
+
+=== [[Évolution]] ===
+
+Méga-Méganium est la [[Méga-Évolution]] de [[Méganium]] avec une [[Méganiumite]]. Ce dernier est l'évolution de [[Macronium]] à partir du [[niveau]] 32, qui lui-même est l'évolution de [[Germignon]] à partir du niveau 16.
+{{#lst:Germignon|Tableau d'évolution}}
+=== [[Talent]] ===
+* [[Méga-Soleil]] : l'utilisateur peut utiliser ses capacités comme si la météo était constamment [[Ensoleillement|ensoleillée]], même si ce n'est pas le cas.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Quand il tire un Lance-Soleil depuis ses quatre fleurs, la capacité devient surpuissante. On la surnomme « canon Méga-Soleil ».
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Plante|type2=Fée}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, sa [[Défense]] de 15, son [[Attaque Spéciale]] de 60, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 15.
+
+{{Statistiques
+| type=Plante
+| PV=80
+| attaque=92
+| defense=115
+| atq-spc=143
+| def-spc=115
+| vitesse=80
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Méganium/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Méganium}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Macronium
+| numéro=0154
+| nom=Méga-Méganium
+| nomSuivant=Héricendre
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Méganium]]

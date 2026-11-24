@@ -1,0 +1,132 @@
+{{Ruban Pokémon
+| nomPrécédent=Ramoloss
+| numéro=0080
+| nom=Méga-Flagadoss
+| nomSuivant=Magnéti
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Flagadoss
+| nom-japonais=メガ ヤドラン
+| nom-déposé=Mega Yadoran
+| nom-anglais=Mega Slowbro
+| ndex=0080
+| dex=Kanto-LGPE/080//Alola/038//Alola-USUL/045//Illumis/138
+| dex-secondaires=Shuffle/082//Picross/N21-04//Picross (Alternatif)/A21-09
+| légende=Artwork de Méga-Flagadoss pour {{Jeu|ROSA}}.
+| type1=Eau
+| type2=Psy
+| catégorie=Symbiose
+| taille=2.0
+| poids=120.0
+| talents=Coque Armure
+| fmratio=.5
+| couleur=Rose
+| corps=4
+| cri=Cri 0080 Méga
+| génération=6
+}}
+'''Méga-Flagadoss''' (anglais : '''Mega Slowbro''' ; japonais : '''メガ ヤドラン''' ''Mega Yadoran'') est un [[Méga-Pokémon]] de type [[Eau]] et [[Psy]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Flagadoss]].
+
+Méga-Flagadoss a été révélé par erreur le 12 août 2014 par le site officiel coréen, en même temps que [[Méga-Nanméouïe]]. Suite à cela, il est officiellement annoncé par Masuda lors des Championnats du Monde Pokémon le 16 août 2014.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Lors de sa Méga-Évolution, le [[Kokiyas]] qui mordait auparavant la queue du [[Flagadoss]] englobe maintenant la totalité du corps de Méga-Flagadoss. De ce fait, il est dépourvu de ses pattes arrière et c'est sa queue qui transperce l'extrémité du coquillage qui lui permet de rester en équilibre. Néanmoins, deux trous dans le coquillage lui permettent de sortir ses pattes avant.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Flagadoss a encore sa peau violette et son [[Kokiyas]] est encore brun.
+
+=== [[Évolution]] ===
+Flagadoss est l'évolution de [[Ramoloss]] à partir du niveau 37, Ramoloss peut aussi évoluer en [[Roigada]] s'il est échangé en tenant une [[Roche Royale]]. Depuis {{Jeu|ROSA}}, Flagadoss peut méga-évoluer en Méga-Flagadoss.
+{{#lst:Ramoloss|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Coque Armure]] : le Pokémon est protégé des coups critiques par sa carapace.
+
+=== Description du Pokédex ===
+;{{Jeu|So}}
+:Toute l'énergie de la [[Méga-Évolution]] a été détournée au profit du [[Kokiyas]] de sa queue, qui n'a fait qu'une bouchée du [[Ramoloss]].
+;{{Jeu|Lu}}
+:L'énergie de la Méga-Évolution a transformé le [[Kokiyas]] en une armure indestructible. Le [[Ramoloss]], lui, n'a subi aucun changement.
+;{{Jeu|US}}
+:Toute l'énergie de la Méga-Évolution a profité au [[Kokiyas]] accroché à sa queue. Le [[Ramoloss]], lui, n'a pas changé.
+;{{Jeu|UL}}
+:Il est complètement enveloppé dans le [[Kokiyas]], qui forme un cocon impénétrable, mais somme toute plutôt confortable.
+;{{Jeu|LGPE}}
+:Les sucs digestifs de Kokiyas ont réveillé la force qui sommeillait en Flagadoss. Il a hérité d'une grande puissance et d'un soupçon de motivation.
+;{{Jeu|LPZA}}
+:L'énergie de la Méga-Évolution a transformé le [[Kokiyas]] en une armure indestructible. Le [[Ramoloss]], lui, n'a subi aucun changement.
+
+== QR Codes ==
+=== [[Septième génération]] ===
+
+{| class="tableaustandard centre eau"
+|-
+! colspan="2" | QR Codes
+|-
+| colspan="2" | Scanner ces QR Codes pour visualiser Méga-Flagadoss dans le Pokédex.
+|-
+| Méga-Flagadoss
+| Méga-Flagadoss chromatique
+|-
+| [[Fichier:QR code 0080 Méga SL.png]]
+| [[Fichier:QR code 0080 Méga chromatique SL.png]]
+|}
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Eau|type2=Psy}}
+
+== [[Statistique]]s ==
+Sa [[Défense]] est augmentée de 70, et son [[Attaque Spéciale]] de 30.
+{{Statistiques
+| type=eau
+| PV=95
+| attaque=75
+| defense=180
+| atq-spc=130
+| def-spc=80
+| vitesse=30
+}}
+Méga-Flagadoss est le Pokémon à la plus haute statistique de Défense des types Eau et Psy.
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Flagadoss voir [[Flagadoss/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/flagadoss.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/slowbro/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Flagadoss voir [[Flagadoss#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/slowbro/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Flagadoss/Imagerie|Génération 9}}
+{{Navigation Flagadoss}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Flagadoss - Pokédex Méga-Évolution.png|thumb|right|Un Méga-Flagadoss dans Pokémon Méga-Évolution.]]
+
+Méga-Flagadoss apparaît dans un épisode de [[Pokédex Méga-Évolution]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Ramoloss
+| numéro=0080
+| nom=Méga-Flagadoss
+| nomSuivant=Magnéti
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Flagadoss]]

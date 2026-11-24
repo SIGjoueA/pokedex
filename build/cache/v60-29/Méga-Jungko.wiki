@@ -1,0 +1,113 @@
+{{Ruban Pokémon
+| nomPrécédent=Massko
+| numéro=0254
+| nom=Méga-Jungko
+| nomSuivant=Poussifeu
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Jungko
+| nom-japonais=メガ ジュカイン
+| nom-déposé=Mega Jukain
+| nom-anglais=Mega Sceptile
+| ndex=0254
+| dex=Hoenn-ROSA/003//Extra Illumis/041
+| dex-secondaires=Shuffle/091//Picross/N18-10//Picross (Alternatif)/A18-08
+| légende=Artwork de Méga-Jungko pour {{Jeu|ROSA}}.
+| type1=Plante
+| type2=Dragon
+| catégorie=Forêt
+| taille=1.9
+| poids=55.2
+| talents=Paratonnerre
+| expmax=1059860
+| fmratio=0.125
+| génération=6
+| couleur=Vert
+| corps=6
+| cri=Cri 0254 Méga
+}}
+'''Méga-Jungko''' (anglais : '''Mega Sceptile''' ; japonais : '''メガ ジュカイン''' ''Mega Jukain'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Dragon (type)|Dragon]]. Il est apparu avec les versions {{jeu|ROSA}}, et c'est la [[Méga-Évolution]] de [[Jungko]].
+
+Méga-Jungko a été révélé dans le magazine ''[[CoroCoro Comics]]'' de juillet 2014, en même temps que [[Méga-Laggron]] et [[Méga-Diancie]], plus précisément lors d'une fuite de ce numéro, le 9 juin 2014.
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+
+Depuis {{Jeu|ROSA}}, [[Jungko]] peut [[wp:Méga-Évolution|méga-évoluer]] en Méga-Jungko s'il tient une [[Jungkite]]. Les crêtes sur sa tête sont plus aiguisées et une portion ronde en leur milieu n'est pas présente. Des marquages rouges entourent ses yeux qui sont plus petits et plus fins. Les graines rondes sur son dos sont plus grosses. Les deux dernières paires de graines sont orange puis rouges. Des bandes rouges encerclent sa queue et le bas de son ventre. Les feuilles sur ses poignets sont plus aiguisées. Les extrémités des feuilles supérieures sont rouges et une portion ronde en leur milieu n'est pas présente. Son torse et ses épaules sont recouverts de plaques feuillues similaires à celles formant sa queue. Cette dernière est allongée et a la forme d'un sapin avec une extrémité rouge très pointue.
+
+Sa capacité à lancer sa queue est une référence à l'[[wp:Autotomie|autotomie]], une stratégie de défense consistant à abandonner volontairement une partie de son corps qui se régénère plus tard pour divertir son prédateur. Ceci ressemble également à un [[wp:Lance-missiles|lance-missiles]], la forme de sa queue étant similaire à celle d'une [[wp:Roquette (arme)|roquette]].
+
+Méga-Jungko peut couper une portion de sa queue pour l'envoyer à un adversaire comme un missile. Sa queue peut se régénérer tant qu'il a encore l'énergie nécessaire pour méga-évoluer.
+
+Méga-Jungko est le premier [[Pokémon (créature)|Pokémon]] combinant les [[type]]s [[Plante (type)|Plante]] et [[Dragon (type)|Dragon]].
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Son corps est bleu au lieu d'être vert et ses rayures, habituellement rouges, sont jaunes.
+
+=== [[Évolution]] ===
+
+Méga-Jungko est la [[Méga-Évolution]] de [[Jungko]] avec une [[Jungkite]]. Jungko est l'évolution de [[Massko]] à partir du [[niveau]] 36, qui est lui-même l'évolution d'[[Arcko]] à partir du niveau 16.
+{{#lst:Arcko|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Paratonnerre]] : le Pokémon détourne sur lui les capacités de type Électrik et les neutralise, tout en montant son Attaque Spéciale.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Pour projeter le bout de sa queue, il fait exploser les graines situées sur son dos, qui sont chargées de l'énergie de la Méga-Évolution.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Plante|type2=Dragon
+| remarque-électrik=L'efficacité des attaques de type [[Électrik]] est nulle du fait de son talent [[Paratonnerre]]. De ce fait, si [[Échange (capacité)|Échange]], [[Suc Digestif]] ou [[Rayon Simple]] est utilisé, si l'adversaire dispose de [[Brise Moule]], [[Téra-Voltage]] ou [[TurboBrasier]], l'effet de [[Paratonnerre]] est annulé et l'efficacité des attaques [[Électrik]] à son encontre est de 0.25.
+}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 25, sa [[Défense]] de 10, son [[Attaque Spéciale]] de 40, et sa [[Vitesse]] de 25.
+
+{{Statistiques
+| type=plante
+| PV=70
+| attaque=110
+| defense=75
+| atq-spc=145
+| def-spc=85
+| vitesse=145
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Jungko voir [[Jungko/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/sceptile/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Jungko voir [[Jungko#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/sceptile/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Jungko/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Jungko}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Jungko de Liam.png|200px|thumb|left|Le Méga-Jungko de Liam.]]
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Massko
+| numéro=0254
+| nom=Méga-Jungko
+| nomSuivant=Poussifeu
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Jungko]]

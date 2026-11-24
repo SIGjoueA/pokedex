@@ -1,0 +1,87 @@
+{{Ruban Pokémon
+| nomPrécédent=Étourvol
+| numéro=0398
+| nom=Méga-Étouraptor
+| nomSuivant=Keunotor
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Étouraptor
+| nom-japonais=メガムクホーク
+| nom-romaji=Mega Mukuhōku
+| nom-déposé=Mega Mukuhawk
+| nom-anglais=Mega Staraptor
+| ndex=0398
+| dex=Extra Illumis/083
+| légende=Artwork de Méga-Étouraptor pour {{Jeu|LPZA}}.
+| type1=Combat
+| type2=Vol
+| catégorie=Rapace
+| taille=1.9
+| poids=50.0
+| talents=Contestation
+| fmratio=0.5
+| génération=9
+| couleur=Gris
+| corps=9
+| cri=Cri 0398 Méga
+}}
+'''Méga-Étouraptor''' (anglais : '''Mega Staraptor''' ; japonais : '''メガムクホーク''' ''Mega Mukuhawk'') est un [[Méga-Pokémon]] de [[type]] [[Combat (type)|Combat]] et [[Vol (type)|Vol]]. C'est la [[Méga-Évolution]] de [[Étouraptor]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Étouraptor voit son type [[Normal]] remplacé par le type [[Combat (type)|Combat]]. Son plumage est désormais beaucoup plus clair et plus épais. La crête de plumes au-dessus de sa tête, dont le flanc est recouvert par trois plumes redressées, est plus longue. Le marquage blanc autour de sa gorge et de son torse s'est étendu et les plumes de l'épaisse touffe de plumes encerclant sa tête, à l'arrière, ont l'extrémité rouge. Sa queue est composée de plusieurs plumes de la même couleur que son plumage, toutes possédant deux marques jaunes. Ses ailes, bien plus volumineuses et dont les différentes plumes sont noires, possèdent quant à elles trois marques également jaunes. Méga-Étouraptor a six plumes blanches sur le torse, provenant de son marquage blanc d'origine. Une tache noire se trouve sur son bec, tandis que ses pattes sont plus grosses et plus crochues.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, le plumage habituellement gris de Méga-Étouraptor est de couleur crème et ses serres sont marron. Les plumes de sa mèche sont bleues.
+
+=== [[Évolution]] ===
+Méga-Étouraptor est la [[Méga-Évolution]] de [[Étouraptor]] avec une [[Étouraptorite]]. Étouraptor est l'évolution d'[[Étourvol]] à partir du [[niveau]] 34, qui lui-même est l'évolution d'[[Étourmi]] à partir du niveau 14.
+{{#lst:Étourmi|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Contestation]] : inverse les changements de stats : les augmentations de stats se transforment en baisses, et vice-versa.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Ses prouesses en vol sont incomparables. Il peut traverser le ciel sans effort en portant un [[Steelix]] de plus de 400 kg.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Combat|type2=Vol}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 30, son [[Attaque Spéciale]] de 10, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Combat
+| PV=85
+| attaque=140
+| defense=100
+| atq-spc=60
+| def-spc=90
+| vitesse=110
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Étouraptor/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Étouraptor}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Étourvol
+| numéro=0398
+| nom=Méga-Étouraptor
+| nomSuivant=Keunotor
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Étouraptor]]

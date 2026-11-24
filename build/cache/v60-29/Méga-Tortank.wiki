@@ -1,0 +1,110 @@
+{{Ruban Pokémon
+| nomPrécédent=Carabaffe
+| numéro=0009
+| nom=Méga-Tortank
+| nomSuivant=Chenipan
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Tortank
+| nom-japonais=メガ カメックス
+| nom-romaji=Mega Kamekkusu
+| nom-déposé=Mega Kamex
+| nom-anglais=Mega Blastoise
+| ndex=0009
+| dex=Kanto-LGPE/009//Kalos (Centre)/088//Illumis/156
+| dex-secondaires=Shuffle/009//Picross/N21-09//Picross (Alternatif)/A21-04
+| légende=Artwork de Méga-Tortank pour {{Jeu|XY}}.
+| type1=Eau
+| catégorie=Carapace
+| taille=1.6
+| poids=101.1
+| talents=Méga Blaster
+| fmratio=.125
+| couleur=Bleu
+| corps=6
+| cri=Cri 0009 Méga
+| génération=6
+}}
+'''Méga-Tortank''' (anglais : '''Mega Blastoise''' ; japonais : '''メガ カメックス''' ''Mega Kamex'') est un [[Méga-Pokémon]] de [[type]] [[Eau (type)|Eau]]. C'est la [[Méga-Évolution]] de [[Tortank]].
+
+Méga-Tortank a été révélé dans le magazine ''[[CoroCoro Comics]]'' d'octobre 2013, en même temps que [[Méga-Dracaufeu Y]], [[Méga-Florizarre]], [[Méga-Mewtwo X]] et [[Méga-Carchacrok]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Tortank ressemble à un [[Tortank]]. Un gros canon est situé à l'avant de sa carapace et ses deux bras sont enveloppés chacun d'une mini-carapace avec également un petit canon au milieu. Ses yeux ont maintenant une couleur rouge.
+Il a un menton pointu.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Tortank est chromatique, ses carapaces sont vertes et sa peau est violette. De plus, son ventre prend une légère teinte orangée.
+
+=== [[Évolution]] ===
+
+Méga-Tortank est la [[Méga-Évolution]] de [[Tortank]] avec une [[Tortankite]]. Tortank est l'évolution de [[Carabaffe]] au niveau 36, lui-même l'évolution de [[Carapuce]] à partir du niveau 16.
+{{#lst:Carapuce|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Méga Blaster]] : augmente la puissance de certaines capacités de type aura, telles que [[Vibraqua]] et [[Vibrobscur]].
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}}
+:Ses robustes pattes arrière lui permettent d'amortir le recul de ses coups de canon, dont la puissance est comparable à celle d'un tank.
+;{{Jeu|LPZA}}
+:Ses robustes pattes arrière lui permettent d'amortir le recul de ses coups de canon, dont la puissance est comparable à celle d'un tank.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Eau}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 50, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10.
+
+{{Statistiques
+| type=eau
+| PV=79
+| attaque=103
+| defense=120
+| atq-spc=135
+| def-spc=115
+| vitesse=78
+}}
+Méga-Tortank possède la statistique d'[[Attaque Spéciale]] la plus élevée chez les Pokémon de type [[Eau]], hors [[Pokémon légendaire|légendaires]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Tortank voir [[Tortank/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/blastoise/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Tortank voir [[Tortank#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/blastoise/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Tortank/Imagerie|Génération 9}}
+{{Navigation Tortank}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Tortank de Narcisse.png|thumb|left|Le Méga-Tortank de [[Narcisse]].]]
+[[Fichier:PE08 - Méga-Tortank.png|thumb|right|Le Méga-Tortank de [[Leaf|Green]].]]
+Méga-Tortank apparait pour la première fois dans le [[PME01]].
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Carabaffe
+| numéro=0009
+| nom=Méga-Tortank
+| nomSuivant=Chenipan
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Tortank]]

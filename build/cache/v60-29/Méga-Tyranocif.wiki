@@ -1,0 +1,114 @@
+{{Confusion|texte='''Méca-Tyranocif''' du scénario de [[Méga-Monstres II]]}}
+{{Ruban Pokémon
+| nomPrécédent=Ymphect
+| numéro=0248
+| nom=Méga-Tyranocif
+| nomSuivant=Lugia
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Tyranocif
+| nom-japonais=メガ バンギラス
+| nom-romaji=Mega Bangirasu
+| nom-déposé=Mega Bangiras
+| nom-anglais=Mega Tyranitar
+| ndex=0248
+| dex=Kalos (Monts)/104//Alola-USUL/249//Illumis/208
+| dex-secondaires=Shuffle/210//Picross/N23-03//Picross (Alternatif)/A23-05
+| légende=Artwork de Méga-Tyranocif pour {{Jeu|XY}}.
+| type1=Roche
+| type2=Ténèbres
+| catégorie=Armure
+| taille=2.5
+| poids=255.0
+| talents=Sable Volant
+| expmax=1250000
+| fmratio=.5
+| génération=6
+| couleur=Vert
+| corps=6
+| cri=Cri 0248 Méga
+}}
+'''Méga-Tyranocif''' (anglais : '''Mega Tyranitar''' ; japonais : '''メガ バンギラス''' ''Mega Bangiras'') est un [[Méga-Pokémon]] de [[type]] [[Roche (type)|Roche]] et [[Ténèbres (type)|Ténèbres]]. C'est la [[Méga-Évolution]] de [[Tyranocif]].
+
+Méga-Tyranocif a été révélé dans le magazine ''[[CoroCoro Comics]]'' de novembre 2013, en même temps que [[Méga-Ectoplasma]] et [[Méga-Galeking]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Les piquants autour des bras et du bout de la queue de Méga-Tyranocif sont plus allongés. La pointe sur sa tête est plus grande et une autre apparaît sur ses genoux. Plusieurs cavités noires supplémentaires apparaissent sur son corps comme les deux grandes cavités noires sur son poitrail, avec une zone rouge au milieu, et les deux autres plus petites juste en dessous. Il a aussi un autre creux noir au milieu de son cou. Son ventre et ses yeux deviennent rouges. Les motifs sur son ventre rappellent le visage d'[[Ymphect]].
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Tyranocif est jaune sable et ses parties normalement orange sont violettes.
+
+=== [[Évolution]] ===
+Méga-Tyranocif est la [[Méga-Évolution]] de [[Tyranocif]] avec une [[Tyranocivite]]. Tyranocif est l'évolution d'[[Ymphect]] au niveau 55, lui-même l'évolution d'[[Embrylex]] à partir du niveau 30.
+{{#lst:Embrylex|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Sable Volant]] : le Pokémon invoque une tempête de sable quand il entre au combat.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|US}}
+:Sous l'influence de la [[Méga-Évolution]], son dos s'est fissuré et il n'écoute dorénavant plus que ses pulsions destructrices.
+;{{Jeu|UL}}
+:Il est encore plus violent en méga-évoluant, à tel point que l'on se demande s'il entend toujours les ordres de son Dresseur.
+;{{Jeu|LPZA}}
+:Il est devenu encore plus violent sous l'influence de la Méga-Évolution, à tel point que l'on se demande s'il entend toujours les ordres.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Roche|type2=Ténèbres
+| remarque-psy=Si l'attaque [[Œil Miracle]] est utilisée contre Méga-Tyranocif, l'efficacité des attaques [[Psy]] à son encontre est normale.
+}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 40, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=roche
+| PV=100
+| attaque=164
+| defense=150
+| atq-spc=95
+| def-spc=120
+| vitesse=71
+}}
+
+* Méga-Tyranocif possède le plus haut total de statistiques de base parmi tous les Pokémon de type [[Roche]] et de type [[Ténèbres (type)|Ténèbres]], excepté [[Arceus]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Tyranocif voir [[Tyranocif/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/tyranocif.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/tyranitar/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Tyranocif voir [[Tyranocif#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/tyranocif.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/tyranitar/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Tyranocif/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Tyranocif}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Tyranocif d'Alva.png|200px|thumb|left|Le Méga-Tyranocif d'Alva.]]
+Méga-Tyranocif apparaît dans le film {{film|19}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Ymphect
+| numéro=0248
+| nom=Méga-Tyranocif
+| nomSuivant=Lugia
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Tyranocif]]

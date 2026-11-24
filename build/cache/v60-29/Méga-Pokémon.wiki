@@ -1,0 +1,688 @@
+[[Fichier:Méga-Mewtwo-contre-Méga-Lucario-XY.png|thumb|right|200px|Artwork lié à l'apparition des Méga-Pokémon pour {{Jeu|XY}}.]]
+Un <dfn>Méga-Pokémon</dfn> est la [[forme]] que prend un Pokémon lorsqu'il effectue une [[Méga-Évolution]]. Dans le Pokédex, un Méga-Pokémon est considéré comme une [[forme]] d'un Pokémon.
+
+Actuellement, il existe 93 Méga-Pokémon :
+* 28 ont été introduits dans {{Jeu|XY}} ;
+* 20 dans {{Jeu|ROSA}} ;
+* 26 dans {{Jeu|LPZA}} ;
+* et 19 dans {{Jeu|LPZAmd}}.
+
+== Caractéristiques ==
+
+Un Pokémon [[Méga-Évolution|méga-évolue]] lorsqu'il tient la [[Méga-Gemme]] qui lui est propre, et son Dresseur une [[Méga-Anneau|Gemme Sésame]]. Seul [[Rayquaza]] échappe à cette règle, devant à la place connaître la capacité [[Draco Ascension]]. Le Dresseur déclenche sa Méga-Évolution via l'écran tactile, lors de la sélection de l'attaque. Cependant, la Méga-Évolution n'est que temporaire : le Méga-Pokémon reprend sa forme originelle à la fin du combat ou s'il est mis K.O. [[Switch (stratégie)|Switch]]er n'annule pas la Méga-Évolution. Un seul [[Pokémon (créature)|Pokémon]] par combat et par équipe peut méga-évoluer. Dans {{Jeu|SL}}, les Pokémon méga-évoluent une fois que le Dresseur a obtenu la [[Gemme Sésame]], ainsi que la [[Méga-Gemme]] correspondante, à l'[[Arbre de Combat]].
+
+De plus, un Pokémon peut avoir plusieurs Méga-Évolutions différentes, comme c'est le cas pour [[Mewtwo]], [[Dracaufeu]], [[Raichu]], [[Lucario]], [[Absol]] et [[Carchacrok]].
+
+En plus de changer de forme et de gagner au niveau [[statistique]]s, un Méga-Pokémon peut gagner un [[type]] supplémentaire. Ainsi, par exemple, [[Pharamp]], de type [[Électrik]], obtient en plus le type [[Dragon (type)|Dragon]] lors de sa Méga-Évolution en [[Méga-Pharamp]], devenant donc des 2 types, Électrik et Dragon. Il peut aussi perdre un type. [[Galeking]], de type [[Acier (type)|Acier]] et [[Roche (type)|Roche]], ne possède plus que le type Acier pur lorsqu'il méga-évolue en [[Méga-Galeking]].
+
+Certains Pokémon changent simplement de type lors de leur Méga-Évolution, sans en ajouter ou en perdre. C'est le cas de [[Dracaufeu]] par exemple, de type [[Feu (type)|Feu]] et [[Vol (type)|Vol]], méga-évoluant en [[Méga-Dracaufeu X]] de type Feu et Dragon.
+
+Le [[talent]] change également souvent. C'est le cas pour [[Mewtwo]], dont le talent est [[Pression]], et qui obtient soit le talent [[Insomnia]], en méga-évoluant vers [[Méga-Mewtwo Y]], soit le talent [[Impassible]] sous sa forme [[Méga-Mewtwo X]]. Quelques Méga-Pokémon peuvent garder leur talent, comme [[Méga-Cizayox]] avec [[Technicien (talent)|Technicien]].
+
+Lorsqu'un Pokémon méga-évolue, il gagne 100 de total de statistiques de base. [[Alakazam]] et [[Zygarde]] sont les seuls à échapper à cette règle, avec respectivement 90 et 70 de supplément. Dans le cas d'[[Alakazam]], cela a été corrigé depuis la septième génération avec {{Jeu|SL}}.
+Un Pokémon qui méga-évolue a toujours un minimum de 2 statistiques modifiées, mais ne dépasse jamais le seuil de 5 statistiques modifiées car la statistique des [[PV]] ne change jamais au cours d'une Méga-Évolution.
+
+La [[Méga-Évolution]] est à différencier de la [[Primo-Résurgence]], qui ne concerne que les Pokémon [[Kyogre]] et [[Groudon]], et dont ils bénéficient des effets immédiatement quand ils sont envoyés au combat en tenant la [[Gemme Rouge]] ou la [[Gemme Bleue]].
+
+== Liste des Méga-Pokémon ==
+
+{| class="tableaustandard centre sortable entetefixe"
+! Numéro
+! [[Type|Type(s)]]
+! Nom
+! [[Type|Type(s)]]
+! [[Méga-Gemme]]
+! Apparition
+|-
+| {{Miniature|0003}}<br>0003
+| {{type|plante|poison}}
+| data-sort-value="Florizarre" | {{Miniature|0003|Méga}}<br>[[Méga-Florizarre]]
+| {{type|plante|poison}}
+| {{Objet|Florizarrite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| rowspan="2" | {{Miniature|0006}}<br>0006
+| rowspan="2" | {{type|feu|vol}}
+| data-sort-value="Dracaufeu X" | {{Miniature|0006|Méga X}}<br>[[Méga-Dracaufeu X]]
+| {{type|feu|dragon}}
+| {{Objet|Dracaufite X|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| data-sort-value="Dracaufeu Y" | {{Miniature|0006|Méga Y}}<br>[[Méga-Dracaufeu Y]]
+| {{type|feu|vol}}
+| {{Objet|Dracaufite Y|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0009}}<br>0009
+| {{type|eau}}
+| data-sort-value="Tortank" | {{Miniature|0009|Méga}}<br>[[Méga-Tortank]]
+| {{type|eau}}
+| {{Objet|Tortankite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0015}}<br>0015
+| {{type|insecte|poison}}
+| data-sort-value="Dardargnan" | {{Miniature|0015|Méga}}<br>[[Méga-Dardargnan]]
+| {{type|insecte|poison}}
+| {{Objet|Dardargnite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0018}}<br>0018
+| {{type|normal|vol}}
+| data-sort-value="Roucarnage" | {{Miniature|0018|Méga}}<br>[[Méga-Roucarnage]]
+| {{type|normal|vol}}
+| {{Objet|Roucarnagite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| rowspan="2" | {{Miniature|0026}}<br>0026
+| rowspan="2" | {{type|électrik}}
+| data-sort-value="Raichu X" | {{Miniature|0026|Méga X}}<br>[[Méga-Raichu X]]
+| {{type|électrik}}
+| {{Objet|Raichuïte X|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| data-sort-value="Raichu Y" | {{Miniature|0026|Méga Y}}<br>[[Méga-Raichu Y]]
+| {{type|électrik}}
+| {{Objet|Raichuïte Y|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0036}}<br>0036
+| {{type|fée}}
+| data-sort-value="Mélodelfe" | {{Miniature|0036|Méga}}<br>[[Méga-Mélodelfe]]
+| {{type|fée|vol}}
+| {{Objet|Mélodelfite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0065}}<br>0065
+| {{type|psy}}
+| data-sort-value="Alakazam" | {{Miniature|0065|Méga}}<br>[[Méga-Alakazam]]
+| {{type|psy}}
+| {{Objet|Alakazamite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0071}}<br>0071
+| {{type|plante|poison}}
+| data-sort-value="Empiflor" | {{Miniature|0071|Méga}}<br>[[Méga-Empiflor]]
+| {{type|plante|poison}}
+| {{Objet|Empiflorite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0080}}<br>0080
+| {{type|eau|psy}}
+| data-sort-value="Flagadoss" | {{Miniature|0080|Méga}}<br>[[Méga-Flagadoss]]
+| {{type|eau|psy}}
+| {{Objet|Flagadossite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0094}}<br>0094
+| {{type|spectre|poison}}
+| data-sort-value="Ectoplasma" | {{Miniature|0094|Méga}}<br>[[Méga-Ectoplasma]]
+| {{type|spectre|poison}}
+| {{Objet|Ectoplasmite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0115}}<br>0115
+| {{type|normal}}
+| data-sort-value="Kangourex" | {{Miniature|0115|Méga}}<br>[[Méga-Kangourex]]
+| {{type|normal}}
+| {{Objet|Kangourexite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0121}}<br>0121
+| {{type|eau|psy}}
+| data-sort-value="Staross" | {{Miniature|0121|Méga}}<br>[[Méga-Staross]]
+| {{type|eau|psy}}
+| {{Objet|Starossite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0127}}<br>0127
+| {{type|insecte}}
+| data-sort-value="Scarabrute" | {{Miniature|0127|Méga}}<br>[[Méga-Scarabrute]]
+| {{type|insecte|vol}}
+| {{Objet|Scarabruite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0130}}<br>0130
+| {{type|eau|vol}}
+| data-sort-value="Léviator" | {{Miniature|0130|Méga}}<br>[[Méga-Léviator]]
+| {{type|eau|ténèbres}}
+| {{Objet|Léviatorite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0142}}<br>0142
+| {{type|roche|vol}}
+| data-sort-value="Ptéra" | {{Miniature|0142|Méga}}<br>[[Méga-Ptéra]]
+| {{type|roche|vol}}
+| {{Objet|Ptéraïte|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0149}}<br>0149
+| {{type|dragon|vol}}
+| data-sort-value="Dracolosse" | {{Miniature|0149|Méga}}<br>[[Méga-Dracolosse]]
+| {{type|dragon|vol}}
+| {{Objet|Dracolossite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| rowspan="2" | {{Miniature|0150}}<br>0150
+| rowspan="2" | {{type|psy}}
+| data-sort-value="Mewtwo X" | {{Miniature|0150|Méga X}}<br>[[Méga-Mewtwo X]]
+| {{type|psy|combat}}
+| {{Objet|Mewtwoïte X|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| data-sort-value="Mewtwo Y" | {{Miniature|0150|Méga Y}}<br>[[Méga-Mewtwo Y]]
+| {{type|psy}}
+| {{Objet|Mewtwoïte Y|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0154}}<br>0154
+| {{type|plante}}
+| data-sort-value="Méganium" | {{Miniature|0154|Méga}}<br>[[Méga-Méganium]]
+| {{type|plante|fée}}
+| {{Objet|Méganiumite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0160}}<br>0160
+| {{type|eau}}
+| data-sort-value="Aligatueur" | {{Miniature|0160|Méga}}<br>[[Méga-Aligatueur]]
+| {{type|eau|dragon}}
+| {{Objet|Aligatueurite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0181}}<br>0181
+| {{type|électrik}}
+| data-sort-value="Pharamp" | {{Miniature|0181|Méga}}<br>[[Méga-Pharamp]]
+| {{type|électrik|dragon}}
+| {{Objet|Pharampite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0208}}<br>0208
+| {{type|acier|sol}}
+| data-sort-value="Steelix" | {{Miniature|0208|Méga}}<br>[[Méga-Steelix]]
+| {{type|acier|sol}}
+| {{Objet|Steelixite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0212}}<br>0212
+| {{type|insecte|acier}}
+| data-sort-value="Cizayox" | {{Miniature|0212|Méga}}<br>[[Méga-Cizayox]]
+| {{type|insecte|acier}}
+| {{Objet|Cizayoxite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0214}}<br>0214
+| {{type|insecte|combat}}
+| data-sort-value="Scarhino" | {{Miniature|0214|Méga}}<br>[[Méga-Scarhino]]
+| {{type|insecte|combat}}
+| {{Objet|Scarhinoïte|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0227}}<br>0227
+| {{type|acier|vol}}
+| data-sort-value="Airmure" | {{Miniature|0227|Méga}}<br>[[Méga-Airmure]]
+| {{type|acier|vol}}
+| {{Objet|Airmurite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0229}}<br>0229
+| {{type|ténèbres|feu}}
+| data-sort-value="Démolosse" | {{Miniature|0229|Méga}}<br>[[Méga-Démolosse]]
+| {{type|ténèbres|feu}}
+| {{Objet|Démolossite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0248}}<br>0248
+| {{type|roche|ténèbres}}
+| data-sort-value="Tyranocif" | {{Miniature|0248|Méga}}<br>[[Méga-Tyranocif]]
+| {{type|roche|ténèbres}}
+| {{Objet|Tyranocivite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0254}}<br>0254
+| {{type|plante}}
+| data-sort-value="Jungko" | {{Miniature|0254|Méga}}<br>[[Méga-Jungko]]
+| {{type|plante|dragon}}
+| {{Objet|Jungkite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0257}}<br>0257
+| {{type|feu|combat}}
+| data-sort-value="Braségali" | {{Miniature|0257|Méga}}<br>[[Méga-Braségali]]
+| {{type|feu|combat}}
+| {{Objet|Braségalite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0260}}<br>0260
+| {{type|eau|sol}}
+| data-sort-value="Laggron" | {{Miniature|0260|Méga}}<br>[[Méga-Laggron]]
+| {{type|eau|sol}}
+| {{Objet|Laggronite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0282}}<br>0282
+| {{type|psy|fée}}
+| data-sort-value="Gardevoir" | {{Miniature|0282|Méga}}<br>[[Méga-Gardevoir]]
+| {{type|psy|fée}}
+| {{Objet|Gardevoirite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0302}}<br>0302
+| {{type|ténèbres|spectre}}
+| data-sort-value="Ténéfix" | {{Miniature|0302|Méga}}<br>[[Méga-Ténéfix]]
+| {{type|ténèbres|spectre}}
+| {{Objet|Ténéfixite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0303}}<br>0303
+| {{type|acier|fée}}
+| data-sort-value="Mysdibule" | {{Miniature|0303|Méga}}<br>[[Méga-Mysdibule]]
+| {{type|acier|fée}}
+| {{Objet|Mysdibulite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0306}}<br>0306
+| {{type|acier|roche}}
+| data-sort-value="Galeking" | {{Miniature|0306|Méga}}<br>[[Méga-Galeking]]
+| {{type|acier}}
+| {{Objet|Galekingite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0308}}<br>0308
+| {{type|combat|psy}}
+| data-sort-value="Charmina" | {{Miniature|0308|Méga}}<br>[[Méga-Charmina]]
+| {{type|combat|psy}}
+| {{Objet|Charminite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0310}}<br>0310
+| {{type|électrik}}
+| data-sort-value="Élecsprint" | {{Miniature|0310|Méga}}<br>[[Méga-Élecsprint]]
+| {{type|électrik}}
+| {{Objet|Élecsprintite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| 180px" | {{Miniature|0319}}<br>0319
+| {{type|eau|ténèbres}}
+| data-sort-value="Sharpedo" | {{Miniature|0319|Méga}}<br>[[Méga-Sharpedo]]
+| {{type|eau|ténèbres}}
+| {{Objet|Sharpedite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0323}}<br>0323
+| {{type|feu|sol}}
+| data-sort-value="Camérupt" | {{Miniature|0323|Méga}}<br>[[Méga-Camérupt]]
+| {{type|feu|sol}}
+| {{Objet|Caméruptite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0334}}<br>0334
+| {{type|dragon|vol}}
+| data-sort-value="Altaria" | {{Miniature|0334|Méga}}<br>[[Méga-Altaria]]
+| {{type|dragon|fée}}
+| {{Objet|Altarite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0354}}<br>0354
+| {{type|spectre}}
+| data-sort-value="Branette" | {{Miniature|0354|Méga}}<br>[[Méga-Branette]]
+| {{type|spectre}}
+| {{Objet|Branettite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0358}}<br>0358
+| {{type|psy}}
+| data-sort-value="Éoko" | {{Miniature|0358|Méga}}<br>[[Méga-Éoko]]
+| {{type|psy|acier}}
+| {{Objet|Éokite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| rowspan="2" | {{Miniature|0359}}<br>0359
+| rowspan="2" | {{type|ténèbres}}
+| data-sort-value="Absol" | {{Miniature|0359|Méga}}<br>[[Méga-Absol]]
+| {{type|ténèbres}}
+| {{Objet|Absolite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| data-sort-value="Absol Z" | {{Miniature|0359|Méga Z}}<br>[[Méga-Absol Z]]
+| {{type|ténèbres|spectre}}
+| {{Objet|Absolite Z|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0362}}<br>0362
+| {{type|glace}}
+| data-sort-value="Oniglali" | {{Miniature|0362|Méga}}<br>[[Méga-Oniglali]]
+| {{type|glace}}
+| {{Objet|Oniglalite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0373}}<br>0373
+| {{type|dragon|vol}}
+| data-sort-value="Drattak" | {{Miniature|0373|Méga}}<br>[[Méga-Drattak]]
+| {{type|dragon|vol}}
+| {{Objet|Drattakite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0376}}<br>0376
+| {{type|acier|psy}}
+| data-sort-value="Métalosse" | {{Miniature|0376|Méga}}<br>[[Méga-Métalosse]]
+| {{type|acier|psy}}
+| {{Objet|Métalossite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0380}}<br>0380
+| {{type|dragon|psy}}
+| data-sort-value="Latias" | {{Miniature|0380|Méga}}<br>[[Méga-Latias]]
+| {{type|dragon|psy}}
+| {{Objet|Latiasite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0381}}<br>0381
+| {{type|dragon|psy}}
+| data-sort-value="Latios" | {{Miniature|0381|Méga}}<br>[[Méga-Latios]]
+| {{type|dragon|psy}}
+| {{Objet|Latiosite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0384}}<br>0384
+| {{type|dragon|vol}}
+| data-sort-value="Rayquaza" | {{Miniature|0384|Méga}}<br>[[Méga-Rayquaza]]
+| {{type|dragon|vol}}
+| Aucune<br><small>(Doit connaître [[Draco Ascension]]<br>pour pouvoir méga-évoluer)</small>
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0398}}<br>0398
+| {{type|normal|Vol}}
+| data-sort-value="Étouraptor" | {{Miniature|0398|Méga}}<br>[[Méga-Étouraptor]]
+| {{type|combat|Vol}}
+| {{Objet|Étouraptorite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0428}}<br>0428
+| {{type|normal}}
+| data-sort-value="Lockpin" | {{Miniature|0428|Méga}}<br>[[Méga-Lockpin]]
+| {{type|normal|combat}}
+| {{Objet|Lockpinite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| rowspan="2" | {{Miniature|0445}}<br>0445
+| rowspan="2" | {{type|dragon|sol}}
+| data-sort-value="Carchacrok" | {{Miniature|0445|Méga}}<br>[[Méga-Carchacrok]]
+| {{type|dragon|sol}}
+| {{Objet|Carchacrokite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| data-sort-value="Carchacrok Z" | {{Miniature|0445|Méga Z}}<br>[[Méga-Carchacrok Z]]
+| {{type|dragon}}
+| {{Objet|Carchacrokite Z|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| rowspan="2" | {{Miniature|0448}}<br>0448
+| rowspan="2" | {{type|combat|acier}}
+| data-sort-value="Lucario" | {{Miniature|0448|Méga}}<br>[[Méga-Lucario]]
+| {{type|combat|acier}}
+| {{Objet|Lucarite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| data-sort-value="Lucario Z" | {{Miniature|0448|Méga Z}}<br>[[Méga-Lucario Z]]
+| {{type|combat|acier}}
+| {{Objet|Lucarite Z|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0460}}<br>0460
+| {{type|plante|glace}}
+| data-sort-value="Blizzaroi" | {{Miniature|0460|Méga}}<br>[[Méga-Blizzaroi]]
+| {{type|plante|glace}}
+| {{Objet|Blizzarite|br=oui}}
+| data-sort-value="6G1" | {{Abréviation|XY}}
+|-
+| {{Miniature|0475}}<br>0475
+| {{type|psy|combat}}
+| data-sort-value="Gallame" | {{Miniature|0475|Méga}}<br>[[Méga-Gallame]]
+| {{type|psy|combat}}
+| {{Objet|Gallamite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0478}}<br>0478
+| {{type|glace|spectre}}
+| data-sort-value="Momartik" | {{Miniature|0478|Méga}}<br>[[Méga-Momartik]]
+| {{type|glace|spectre}}
+| {{Objet|Momartikite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0485}}<br>0485
+| {{type|feu|acier}}
+| data-sort-value="Heatran" | {{Miniature|0485|Méga}}<br>[[Méga-Heatran]]
+| {{type|feu|acier}}
+| {{Objet|Heatranite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0491}}<br>0491
+| {{type|ténèbres}}
+| data-sort-value="Darkrai" | {{Miniature|0491|Méga}}<br>[[Méga-Darkrai]]
+| {{type|ténèbres}}
+| {{Objet|Darkraïte|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0500}}<br>0500
+| {{type|feu|combat}}
+| data-sort-value="Roitiflam" | {{Miniature|0500|Méga}}<br>[[Méga-Roitiflam]]
+| {{type|feu|combat}}
+| {{Objet|Roitiflamite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0530}}<br>0530
+| {{type|sol|acier}}
+| data-sort-value="Minotaupe" | {{Miniature|0530|Méga}}<br>[[Méga-Minotaupe]]
+| {{type|sol|acier}}
+| {{Objet|Minotaupite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0531}}<br>0531
+| {{type|normal}}
+| data-sort-value="Nanméouïe" | {{Miniature|0531|Méga}}<br>[[Méga-Nanméouïe]]
+| {{type|normal|fée}}
+| {{Objet|Nanméouïte|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0545}}<br>0545
+| {{type|insecte|poison}}
+| data-sort-value="Brutapode" | {{Miniature|0545|Méga}}<br>[[Méga-Brutapode]]
+| {{type|insecte|poison}}
+| {{Objet|Brutapodite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0560}}<br>0560
+| {{type|ténèbres|combat}}
+| data-sort-value="Baggaïd" | {{Miniature|0560|Méga}}<br>[[Méga-Baggaïd]]
+| {{type|ténèbres|combat}}
+| {{Objet|Baggaïdite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0604}}<br>0604
+| {{type|électrik}}
+| data-sort-value="Ohmassacre" | {{Miniature|0604|Méga}}<br>[[Méga-Ohmassacre]]
+| {{type|électrik}}
+| {{Objet|Ohmassacrite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0609}}<br>0609
+| {{type|spectre|feu}}
+| data-sort-value="Lugulabre" | {{Miniature|0609|Méga}}<br>[[Méga-Lugulabre]]
+| {{type|spectre|feu}}
+| {{Objet|Lugulabrite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0623}}<br>0623
+| {{type|sol|spectre}}
+| data-sort-value="Golemastoc" | {{Miniature|0623|Méga}}<br>[[Méga-Golemastoc]]
+| {{type|sol|spectre}}
+| {{Objet|Golemastokite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0652}}<br>0652
+| {{type|plante|combat}}
+| data-sort-value="Blindépique" | {{Miniature|0652|Méga}}<br>[[Méga-Blindépique]]
+| {{type|plante|combat}}
+| {{Objet|Blindépiquite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0655}}<br>0655
+| {{type|feu|psy}}
+| data-sort-value="Goupelin" | {{Miniature|0655|Méga}}<br>[[Méga-Goupelin]]
+| {{type|feu|psy}}
+| {{Objet|Goupelinite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0658}}<br>0658
+| {{type|eau|ténèbres}}
+| data-sort-value="Amphinobi" | {{Miniature|0658|Méga}}<br>[[Méga-Amphinobi]]
+| {{type|eau|ténèbres}}
+| {{Objet|Amphinolite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0668|♂}}{{Miniature|0668|♀}}<br>0668
+| {{type|feu|normal}}
+| data-sort-value="Némélios" | {{Miniature|0668|Méga}}<br>[[Méga-Némélios]]
+| {{type|feu|normal}}
+| {{Objet|Néméliosite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0670|Éternelle}}<br>0670
+| {{type|fée}}
+| data-sort-value="Floette" | {{Miniature|0670|Méga}}<br>[[Méga-Floette]]
+| {{type|fée}}
+| {{Objet|Floettite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0678|♂}}{{Miniature|0678|♀}}<br>0678
+| {{type|psy}}
+| data-sort-value="Mistigrix" | {{Miniature|0678|Méga}}<br>[[Méga-Mistigrix]]
+| {{type|psy}}
+| {{Objet|Mistigrixite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0687}}<br>0687
+| {{type|ténèbres|psy}}
+| data-sort-value="Sepiatroce" | {{Miniature|0687|Méga}}<br>[[Méga-Sepiatroce]]
+| {{type|ténèbres|psy}}
+| {{Objet|Sepiatrocite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0689}}<br>0689
+| {{type|roche|eau}}
+| data-sort-value="Golgopathe" | {{Miniature|0689|Méga}}<br>[[Méga-Golgopathe]]
+| {{type|roche|combat}}
+| {{Objet|Golgopathite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0691}}<br>0691
+| {{type|poison|dragon}}
+| data-sort-value="Kravarech" | {{Miniature|0691|Méga}}<br>[[Méga-Kravarech]]
+| {{type|poison|dragon}}
+| {{Objet|Kravarekite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0701}}<br>0701
+| {{type|combat|vol}}
+| data-sort-value="Brutalibré" | {{Miniature|0701|Méga}}<br>[[Méga-Brutalibré]]
+| {{type|combat|vol}}
+| {{Objet|Brutalibrite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0718|Parfaite}}<br>0718
+| {{type|dragon|sol}}
+| data-sort-value="Zygarde" | {{Miniature|0718|Méga}}<br>[[Méga-Zygarde]]
+| {{type|dragon|sol}}
+| {{Objet|Zygardite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0719}}<br>0719
+| {{type|roche|fée}}
+| data-sort-value="Diancie" | {{Miniature|0719|Méga}}<br>[[Méga-Diancie]]
+| {{type|roche|fée}}
+| {{Objet|Diancite|br=oui}}
+| data-sort-value="6G2" | {{Abréviation|ROSA}}
+|-
+| {{Miniature|0740}}<br>0740
+| {{type|combat|glace}}
+| data-sort-value="Crabominable" | {{Miniature|0740|Méga}}<br>[[Méga-Crabominable]]
+| {{type|combat|glace}}
+| {{Objet|Crabominablite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0768}}<br>0768
+| {{type|insecte|eau}}
+| data-sort-value="Sarmuraï" | {{Miniature|0768|Méga}}<br>[[Méga-Sarmuraï]]
+| {{type|insecte|acier}}
+| {{Objet|Sarmuraïte|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0780}}<br>0780
+| {{type|normal|dragon}}
+| data-sort-value="Draïeul" | {{Miniature|0780|Méga}}<br>[[Méga-Draïeul]]
+| {{type|normal|dragon}}
+| {{Objet|Draïeulite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0801}}{{Miniature|0801|Couleur du Passé}}<br>0801
+| {{type|acier|fée}}
+| data-sort-value="Magearna" | {{Miniature|0801|Méga}}{{Miniature|0801|Méga Couleur du Passé}}<br>[[Méga-Magearna]]
+| {{type|acier|fée}}
+| {{Objet|Magearnite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0807}}<br>0807
+| {{type|électrik}}
+| data-sort-value="Zeraora" | {{Miniature|0807|Méga}}<br>[[Méga-Zeraora]]
+| {{type|électrik}}
+| {{Objet|Zeraorite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0870}}<br>0870
+| {{type|combat}}
+| data-sort-value="Hexadron" | {{Miniature|0870|Méga}}<br>[[Méga-Hexadron]]
+| {{type|combat}}
+| {{Objet|Hexadronite|br=oui}}
+| data-sort-value="9G1" | {{Abréviation|LPZA}}
+|-
+| {{Miniature|0952}}<br>0952
+| {{type|plante|feu}}
+| data-sort-value="Scovilain" | {{Miniature|0952|Méga}}<br>[[Méga-Scovilain]]
+| {{type|plante|feu}}
+| {{Objet|Scovilainite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0970}}<br>0970
+| {{type|roche|poison}}
+| data-sort-value="Floréclat" | {{Miniature|0970|Méga}}<br>[[Méga-Floréclat]]
+| {{type|roche|poison}}
+| {{Objet|Floréclatite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0978|Courbée}}{{Miniature|0978|Affalée}}{{Miniature|0978|Raide}}<br>0978
+| {{type|dragon|eau}}
+| data-sort-value="Nigirigon" | {{Miniature|0978|Méga Courbée}}{{Miniature|0978|Méga Affalée}}{{Miniature|0978|Méga Raide}}<br>[[Méga-Nigirigon]]
+| {{type|dragon|eau}}
+| {{Objet|Nigirigonite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|-
+| {{Miniature|0998}}<br>0998
+| {{type|dragon|glace}}
+| data-sort-value="Glaivodo" | {{Miniature|0998|Méga}}<br>[[Méga-Glaivodo]]
+| {{type|dragon|glace}}
+| {{Objet|Glaivodite|br=oui}}
+| data-sort-value="9G2" | {{Abréviation|LPZAmd}}
+|}
+
+== Anecdote ==
+* À noter que mis à part [[Latias]] et [[Latios]], les Méga-Pokémon introduits dans {{jeu|ROSA}} ne sont pas compatibles avec {{jeu|XY}}.
+== Voir aussi ==
+
+* [[Méga-Anneau]]
+* [[Méga-Bracelet]]
+* [[Méga-Évolution]]
+* [[Méga-Gemme]]
+* [[Méga-Dex]]
+* [[Pokémon-EX Méga-Évolution]] et [[Pokémon-ex Méga-Évolution]], représentations des Méga-Pokémon dans le [[Jeu de Cartes à Collectionner]]
+
+[[Catégorie:Méga-Pokémon|*]]

@@ -1,0 +1,92 @@
+{{Ruban Pokémon
+| nomPrécédent=Crabagarre
+| numéro=0740
+| nom=Méga-Crabominable
+| nomSuivant=Plumeline
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Crabominable
+| nom-japonais=メガケケンカニ
+| nom-romaji=Mega Kekenkani
+| nom-déposé=
+| nom-anglais=Mega Crabominable
+| ndex=0740
+| dex=Extra Illumis/088
+| légende=Artwork de Méga-Crabominable pour {{Jeu|LPZA}}.
+| type1=Combat
+| type2=Glace
+| catégorie=Crabe Velu
+| taille=2.6
+| poids=252.8
+| talents=Poing de Fer
+| fmratio=
+| génération=9
+| couleur=Blanc
+| corps=14
+| cri=Cri 0740 Méga
+}}
+'''Méga-Crabominable''' (anglais : '''Mega Crabominable''' ; japonais : '''メガケケンカニ''' ''Mega Kekenkani'') est un [[Méga-Pokémon]] de [[type]] [[Combat (type)|Combat]] et [[Glace (type)|Glace]]. C'est la [[Méga-Évolution]] de [[Crabominable]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant, Méga-Crabominable voit ses mains se changer en blocs de glace dont les pics représentent les doigts. La fourrure autour de ses poignets est devenue violette et s'est rabattue vers l'arrière. Méga-Crabominable se tient désormais sur ses deux pattes arrière, devenues plus longues et dont l'extrémité inférieure est gelée. De la fourrure blanche tombe sur son ventre, tandis que sa chevelure, désormais blanche avec des pointes jaunes, s'est tant développée qu'elle couvre son dos. Sur sa tête trône un épi jaune redressé. Son visage, semblable à un masque de glace, est plus sombre.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga Crabominable a le visage et les bandes du ventre rouge. Les parties normalement jaune de sa fourrure sont devenues orange ou orange pale.
+
+=== [[Évolution]] ===
+
+Méga-Crabominable est la [[Méga-Évolution]] de [[Crabominable]] avec une [[Crabominablite]]. Crabominable est l'évolution de [[Crabagarre]] s'il monte d'un niveau au [[Mont Lanakila]] dans les jeux basés à [[Alola]], ou au contact d'une [[Pierre Glace]] depuis {{jeu|EV}}.
+{{#lst:Crabagarre|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Poing de Fer]] : augmente la puissance des capacités coups de poing.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Ses pinces, recouvertes d'une épaisse couche de glace, sont semblables à des poings. D'un simple geste, il peut réduire du béton armé en miettes.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Combat|type2=Glace}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 25, sa [[Défense]] de 45, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 40 tandis que sa [[Vitesse]] est diminuée de 10.
+
+{{Statistiques
+| type=Combat
+| PV=97
+| attaque=157
+| defense=122
+| atq-spc=62
+| def-spc=107
+| vitesse=33
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Crabominable/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Crabominable}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Crabagarre
+| numéro=0740
+| nom=Méga-Crabominable
+| nomSuivant=Plumeline
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Crabominable]]

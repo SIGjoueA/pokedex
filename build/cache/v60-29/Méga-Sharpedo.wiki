@@ -1,0 +1,118 @@
+{{Ruban Pokémon
+| nomPrécédent=Carvanha
+| numéro=0319
+| nom=Méga-Sharpedo
+| nomSuivant=Wailmer
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Sharpedo
+| nom-japonais=メガ サメハダー
+| nom-déposé=Mega Samehader
+| nom-romaji=Mega Samehadā
+| nom-anglais=Mega Sharpedo
+| ndex=0319
+| dex=Hoenn-ROSA/103//Alola/265//Alola-USUL/346//Illumis/141
+| dex-secondaires=Shuffle/228//Picross/N10-05//Picross (Alternatif)/A10-05
+| légende=Artwork de Méga-Sharpedo pour {{Jeu|ROSA}}.
+| type1=Eau
+| type2=Ténèbres
+| catégorie=Brutal
+| taille=2.5
+| poids=130.3
+| talents=Prognathe
+| fmratio=.5
+| génération=6
+| couleur=Bleu
+| corps=3
+| cri=Cri 0319 Méga
+}}
+'''Méga-Sharpedo''' (anglais : '''Mega Sharpedo''' ; japonais : '''メガ サメハダー''' ''Mega Samehader'') est un [[Méga-Pokémon]] de type [[Eau (type)|Eau]] et [[Ténèbres (type)|Ténèbres]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Sharpedo]].
+
+Méga-Sharpedo a été révélé le 10 septembre 2014, dans une fuite du numéro d'octobre 2014 du ''[[CoroCoro Comics]]'' en même temps que [[Méga-Gallame]] et [[Méga-Camérupt]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant , le corps de Sharpedo s'allonge pour devenir semblable à une torpille. Les cotés de son museau possèdent des lames rétractables qu'il sort lorsqu'il attaque. il fait alors penser à un [[:wp:Pristiophoriformes|Requin-scie]]. Il possède de nombreux motifs jaunes sur l'ensemble du corps, faisant penser à des cicatrices ou des peintures de guerre et également des dents recouvertes de chair sur les cotés de sa bouche. Ses branchies sont plus longues et espacés que celles de Sharpedo.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les Pokémon mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Sharpedo a la peau pourpre foncé au lieu de bleu, et les parties habituellement blanches de son corps sont pourpres claires.
+
+=== [[Évolution]] ===
+Sharpedo est l'évolution de [[Carvanha]] à partir du [[niveau]] 30.
+
+Depuis {{Jeu|ROSA}}, [[Sharpedo]] peut [[Méga-Évolution|méga-évoluer]] en Méga-Sharpedo s'il tient une [[Méga-Gemme]].
+{{#lst:Carvanha|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Prognathe]] : le Pokémon a une mâchoire robuste qui augmente la puissance de ses capacités à base de morsures.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:Les épines de sa tête sont des dents qui se sont transformées. Si elles s'abîment ou se brisent, elles repoussent comme neuves.
+;{{Jeu|Lu}}
+:Quand il méga-évolue, sa combativité explose. Les marques jaunes sur son corps retracent l'historique de ses batailles passées.
+;{{Jeu|US}}
+:Ses marques jaunes sont des cicatrices d'anciennes blessures. L'énergie de la [[Méga-Évolution]] ravive ses vieilles douleurs.
+;{{Jeu|UL}}
+:Quand il charge, des pics acérés surgissent sur sa tête ; il s'en sert pour blesser gravement ses adversaires.
+;{{Jeu|LPZA}}
+:Les épines de sa tête sont des dents qui se sont transformées. Si elles s'abîment et se brisent, elles sont systématiquement remplacées.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Eau|type2=Ténèbres
+| remarque-psy=Si l'attaque [[Œil Miracle]] est utilisée sur Sharpedo, l'efficacité des attaques Psy à son encontre est normale.
+}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 30, son [[Attaque Spéciale]] de 15, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 25, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=eau
+| PV=70
+| attaque=140
+| defense=70
+| atq-spc=110
+| def-spc=65
+| vitesse=105
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Sharpedo voir [[Sharpedo/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/sharpedo/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Sharpedo voir [[Sharpedo#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/sharpedo Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Sharpedo/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Sharpedo}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Sharpedo d'Alva.png|200px|thumb|left|Le Méga-Sharpedo d'Alva.]]
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Carvanha
+| numéro=0319
+| nom=Méga-Sharpedo
+| nomSuivant=Wailmer
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Sharpedo]]

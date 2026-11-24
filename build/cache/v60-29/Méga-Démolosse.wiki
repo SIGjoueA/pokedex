@@ -1,0 +1,107 @@
+{{Ruban Pokémon
+| nomPrécédent=Malosse
+| numéro=0229
+| nom=Méga-Démolosse
+| nomSuivant=Hyporoi
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Démolosse
+| nom-japonais=メガ ヘルガー
+| nom-romaji=Mega Herugā
+| nom-déposé=Mega Hellgar
+| nom-anglais=Mega Houndoom
+| ndex=0229
+| dex=Kalos (Côtes)/076//Alola-USUL/290//Illumis/092
+| dex-secondaires=Shuffle/490//Picross/N14-05//Picross (Alternatif)/A14-05
+| légende=Artwork de Méga-Démolosse pour {{Jeu|XY}}.
+| type1=Ténèbres
+| type2=Feu
+| catégorie=Sombre
+| taille=1.9
+| poids=49.5
+| talents=Force Soleil
+| fmratio=0.5
+| génération=6
+| couleur=Noir
+| corps=8
+| cri=Cri 0229 Méga
+}}
+'''Méga-Démolosse''' (anglais : '''Mega Houndoom''' ; japonais : '''メガ ヘルガー''' ''Mega Hellgar'') est un [[Méga-Pokémon]] de [[type]] [[Ténèbres (type)|Ténèbres]] et de type [[Feu (type)|Feu]]. C'est la [[Méga-Évolution]] de [[Démolosse]].
+
+Méga-Démolosse a été révélé dans le magazine ''[[CoroCoro Comics]]'' de décembre 2013, en même temps que [[Méga-Alakazam]], [[Méga-Branette]], [[Méga-Charmina]], [[Méga-Cizayox]], [[Méga-Élecsprint]], [[Méga-Ptéra]] et [[Méga-Scarabrute]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Démolosse possède deux cornes qui pointent vers le haut. Son corps est noir à l'exception de ses yeux, de son museau, de son ventre et de ses griffes. Deux de ses dents sortent de sa bouche. Son dos et ses pattes avant sont protégés par une ossature extérieure, tandis que son buste est protégé par deux défenses et par un immense crâne osseux équipé de quatre pics et de trois dents. Il possède une queue fourchue.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsque Méga-Démolosse est chromatique, son corps est bleu foncé et son rouge plus vif.
+
+=== [[Évolution]] ===
+Méga-Démolosse est la [[Méga-Évolution]] de [[Démolosse]] avec une [[Démolossite]]. Démolosse est l'évolution de [[Malosse]] à partir du [[niveau]] 24.
+{{#lst:Malosse|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Force Soleil]] : quand le soleil brille, l'Attaque Spéciale du Pokémon augmente de 50 % mais il perd des PV à chaque tour.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|US}}
+:Ses griffes et le bout de sa queue sont si chauds qu'ils atteignent le point de fusion, ce qui fait souffrir ce pauvre Démolosse.
+;{{Jeu|UL}}
+:Son corps tout entier devient fiévreux lors de la Méga-Évolution. Il réduit ses adversaires en cendres avec son souffle enflammé.
+;{{Jeu|LPZA}}
+:Quand ce Pokémon méga-évolue, son corps tout entier dégage de la chaleur. Son souffle enflammé réduit ses adversaires en cendres.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Ténèbres|type2=Feu}}
+
+== [[Statistique]]s ==
+Sa [[Défense]] est augmentée de 40, son [[Attaque Spéciale]] de 30, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| nom=Méga-Démolosse
+| type=ténèbres
+| PV=75
+| attaque=90
+| defense=90
+| atq-spc=140
+| def-spc=90
+| vitesse=115
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Démolosse voir [[Démolosse/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/houndoom/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Démolosse voir [[Démolosse#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/houndoom/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Démolosse/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Démolosse}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Démolosse de Malva.png|thumb|left|Le Méga-Démolosse de Malva.]]
+[[Fichier:Méga-Démolosse d'Alva.png|thumb|right|Le Méga-Démolosse d'Alva.]]
+Méga-Démolosse apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]], sous les ordres de [[Malva]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Malosse
+| numéro=0229
+| nom=Méga-Démolosse
+| nomSuivant=Hyporoi
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Demolosse]]

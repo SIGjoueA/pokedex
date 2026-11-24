@@ -1,0 +1,138 @@
+{{Ruban Pokémon
+| nomPrécédent=Spectrum
+| numéro=0094
+| nom=Méga-Ectoplasma
+| nomSuivant=Onix
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Ectoplasma
+| nom-japonais=メガ ゲンガ
+| nom-romaji=Mega Gengā
+| nom-déposé=Mega Gangar
+| nom-anglais=Mega Gengar
+| ndex=0094
+| dex=Kanto-LGPE/094//Kalos (Monts)/032//Alola/063//Alola-USUL/075//Illumis/067
+| dex-secondaires=Shuffle/114//Picross/N08-07//Picross (Alternatif)/A08-07
+| légende=Artwork de Méga-Ectoplasma pour {{Jeu|XY}}.
+| type1=Spectre
+| type2=Poison
+| catégorie=Ombre
+| taille=1.4
+| poids=40.5
+| talents=Marque Ombre
+| fmratio=.5
+| couleur=Violet
+| corps=6
+| génération=6
+| cri=Cri 0094 Méga
+}}
+'''Méga-Ectoplasma''' (anglais : '''Mega Gengar''' ; japonais : '''メガ ゲンガ''' ''Mega Gangar'') est un [[Méga-Pokémon]] de [[type]] [[Spectre (type)|Spectre]] et [[Poison (type)|Poison]]. C'est la [[Méga-Évolution]] d'[[Ectoplasma]].
+
+Méga-Ectoplasma a été révélé dans le magazine ''[[CoroCoro Comics]]'' de novembre 2013, en même temps que [[Méga-Tyranocif]] et [[Méga-Galeking]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Le corps violet de Méga-Ectoplasma aux reflets rougeâtres est parsemé de pointes. Ses « oreilles » ont gagné en longueur. Ses deux bras, qui lui servent désormais d'appui au sol, et sa queue ont un aspect qui se confond particulièrement avec le reste de son corps. Ses mains et la partie inférieure de son corps disparaissent dans le sol. Un troisième œil, jaune, s'est ouvert sur son front.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Ectoplasma est chromatique, son corps est blanc avec une lueur rose et ses yeux rouges sont noirs.
+
+=== [[Évolution]] ===
+
+Méga-Ectoplasma est la [[Méga-Évolution]] d'[[Ectoplasma]] avec une [[Ectoplasmite]]. Ectoplasma est l'évolution de [[Spectrum]] lorsque celui-ci est échangé entre Dresseurs ou au contact d'un [[Fil de Liaison]], lui-même l'évolution de [[Fantominus]] à partir du niveau 25.
+{{#lst:Fantominus|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Marque Ombre]] : empêche le Pokémon ennemi de quitter le combat.
+
+=== Description du Pokédex ===
+;{{Jeu|So}}
+:Certains disent que le lien invisible qui relie Ectoplasma à un être vivant ne se crée qu'avec celui qu'il a choisi comme proie.
+;{{Jeu|Lu}}
+:L'énergie de la [[Méga-Évolution]] l'a éveillé. Il se tapit dans une autre dimension en guettant une occasion de passer à l'attaque.
+;{{Jeu|US}}
+:Ce Pokémon en a vraiment après la terre entière. Il essaie même de maudire son propre Dresseur !
+;{{Jeu|UL}}
+:Grâce à la Méga-Évolution, il a accès à une autre dimension. Son corps déborde de puissance occulte.
+;{{Jeu|LGPE}}
+:Il se déplace où bon lui semble à travers les dimensions. Il lui est arrivé de créer la panique parce que seuls ses pieds dépassaient d'un mur.
+;{{Jeu|LPZA}}
+:Il traverse les dimensions pour apparaître où bon lui semble. Il lui est arrivé de créer la panique parce que seuls ses pieds dépassaient d'un mur.
+
+== QR Codes ==
+=== [[Septième génération]] ===
+
+{| class="tableaustandard centre spectre"
+|-
+! colspan="2" | QR Codes
+|-
+| colspan="2" | Scanner ces QR Codes pour visualiser {{PAGENAME}} dans le Pokédex.
+|-
+| {{PAGENAME}}
+| {{PAGENAME}} Chromatique
+|-
+| [[Fichier:QR code 0094 Méga SL.png]]
+| [[Fichier:QR code 0094 Méga chromatique SL.png]]
+|}
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Spectre|type2=Poison
+| remarque-combat=Si l'attaque [[Clairvoyance]] ou [[Flair]] est utilisée ou si l'adversaire dispose du [[talent]] [[Querelleur]], l'efficacité des attaques de type [[Combat (type)|Combat]] sur Méga-Ectoplasma est de 1/2 et celle des attaques de type [[Normal (type)|Normal]] est normale.
+}}
+
+== [[Statistique]]s ==
+
+Sa [[Défense]] est augmentée de 20, son [[Attaque Spéciale]] de 40, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=spectre
+| PV=60
+| attaque=65
+| defense=80
+| atq-spc=170
+| def-spc=95
+| vitesse=130
+}}
+
+Méga-Ectoplasma possède la meilleure statistique d'[[Attaque Spéciale]] de tous les Pokémon de type [[Spectre (type)|Spectre]]. Il possédait également leur meilleure [[Vitesse]] jusqu'à l'arrivée en huitième génération de [[Spectreval]], qui l'égale, et de [[Sylveroy]] sous sa forme Cavalier d'Effroi, qui le dépasse.
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Ectoplasma voir [[Ectoplasma/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/gengar/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Ectoplasma voir [[Ectoplasma#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/gengar/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Ectoplasma/Imagerie|Génération 9}}
+{{Navigation Ectoplasma}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Ectoplasma d'Alva.png|200px|thumb|right|Le Méga-Ectoplasma d'Alva.]]
+Un Méga-Ectoplasma Chromatique apparaît dans {{film|19}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Spectrum
+| numéro=0094
+| nom=Méga-Ectoplasma
+| nomSuivant=Onix
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Ectoplasma]]

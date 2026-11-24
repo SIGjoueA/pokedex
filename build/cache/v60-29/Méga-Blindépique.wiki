@@ -1,0 +1,104 @@
+{{Ruban Pokémon
+| nomPrécédent=Boguérisse
+| numéro=0652
+| nom=Méga-Blindépique
+| nomSuivant=Feunnec
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Blindépique
+| nom-japonais=メガブリガロン
+| nom-romaji=Mega Chesnaught
+| nom-déposé=Mega Burigaron
+| nom-anglais=Mega Chesnaught
+| ndex=0652
+| dex=Illumis/215
+| légende=Artwork de Méga-Blindépique pour {{Jeu|LPZA}}.
+| type1=Plante
+| type2=Combat
+| catégorie=Épinarmure
+| taille=1.6
+| poids=90.0
+| talents=Pare-Balles
+| fmratio=
+| génération=9
+| couleur=Blanc
+| corps=6
+| cri=Cri 0652 Méga
+}}
+'''Méga-Blindépique''' (anglais : '''Mega Chesnaught''' ; japonais : '''メガブリガロン''' ''Mega Brigarron'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] de [[Blindépique]].
+
+Méga-Blindépique a été révélé officiellement lors de la bande-annonce du ''Nintendo Direct'' du 12 septembre 2025<ref>[https://youtu.be/bsPF7K5taBM Légendes Pokémon : Z-A – Tant de Méga-Évolutions ! (Nintendo Switch 2/Nintendo Switch) sur YouTube.]</ref>, avec [[Méga-Goupelin]], [[Méga-Amphinobi]], [[Méga-Raichu X]] et [[Méga-Raichu Y]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], les trois griffes à chaque patte de Méga-Blindépique passent du brun au jaune doré. Il acquiert deux boucliers blancs, tachetés de vert kaki, sur sa carapace en forme de dôme qui lui sert d'armure, devenue blanche, contourée de rouge, se finissant en cape de fourrure de la même couleur. La fourrure blanche de son ventre et de son visage, donnant l'illusion d'une barbe, a poussé. Les deux épines sur ses bras sont plus longues tandis que celles sur ses épaules ont changé de couleur, passant du beige au vert kaki, couleur qui remplace toutes les surfaces à l'origine verte de son corps. Enfin, ses jambes passant du beige au blanc sont plus épaisses et une sorte de couronne jaune dorée se trouve sur sa tête.
+
+Lorsque Méga-Blindépique attaque, il saisit l'un de ses boucliers pour former une hache avec un manche créé grâce aux tâches vert kaki qui deviennent des épines.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Blindépique conserve les mêmes couleurs que Blindépique chromatique. Les parties habituellement beiges de Méga-Blindépique sont vertes, les parties habituellement vertes de son corps sont brunâtres, tandis que sa cape et la ligne habituellement rouge cerclant sa carapace est orange. Les zones habituellement blanches de son torse, de ses bras et de son visage abordent une teinte proche du beige.
+
+=== [[Évolution]] ===
+
+Méga-Blindépique est la [[Méga-Évolution]] de [[Blindépique]] avec une [[Blindépiquite]]. Ce dernier est l'évolution de [[Boguérisse]] à partir du [[niveau]] 36, qui lui-même est l'évolution de [[Marisson]] à partir du niveau 16.
+{{#lst:Marisson|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Pare-Balles]] : protège de certaines capacités projetant des bombes, balles...
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Son esprit protecteur et sa carapace renforcée partagent la même particularité : leur fermeté hors du commun.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Plante|type2=Combat}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 50, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 40, et sa [[Vitesse]] est diminuée de 20.
+
+{{Statistiques
+| type=Plante
+| PV=88
+| attaque=137
+| defense=172
+| atq-spc=74
+| def-spc=115
+| vitesse=44
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Blindépique/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Blindépique}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Boguérisse
+| numéro=0652
+| nom=Méga-Blindépique
+| nomSuivant=Feunnec
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Blindépique]]

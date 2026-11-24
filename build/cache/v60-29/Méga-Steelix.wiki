@@ -1,0 +1,105 @@
+{{Ruban Pokémon
+| nomPrécédent=Scorplane
+| numéro=0208
+| nom=Méga-Steelix
+| nomSuivant=Snubbull
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Steelix
+| nom-japonais=メガ ハガネール
+| nom-romaji=Mega Haganēru
+| nom-déposé=Mega Haganeil
+| nom-anglais=Mega Steelix
+| ndex=0208
+| dex=Illumis/198
+| dex-secondaires=Shuffle/181//Picross/N15-02//Picross (Alternatif)/A15-08
+| légende=Artwork de Méga-Steelix pour {{Jeu|ROSA}}.
+| type1=Acier
+| type2=Sol
+| catégorie=Serpenfer
+| taille=10.5
+| poids=740.0
+| talents=Force Sable
+| fmratio=0.5
+| génération=6
+| couleur=Gris
+| corps=2
+| cri=Cri 0208 Méga
+}}
+'''Méga-Steelix''' (anglais : '''Mega Steelix''' ; japonais : '''メガ ハガネール''' ''Mega Haganeil'') est un [[Méga-Pokémon]] [[type]] [[Acier (type)|Acier]] et [[Sol (type)|Sol]] apparu avec {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Steelix]].
+
+Méga-Steelix a été révélé le 14 octobre 2014 dans la version japonaise de {{Jeu|démo-ROSA}}, en même temps que [[Méga-Oniglali]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Après sa Méga-Évolution, les plus petits rochers formant le corps de Méga-Steelix laissent apparaître des facettes noires marquées d'un hexagone bleu. Les rochers les plus volumineux laissent surgir deux pointes de cristal aux reflets bleu/jaune/rouge pâle. Sa queue se termine de la même manière. Chaque côté de sa mâchoire inférieure possède une large excroissance striée plate dirigée vers l'avant. De petites plaques de métal gravitent autour de son cou. Il est le plus grand Pokémon de type Acier.
+
+==== Différences mâle/femelle ====
+Il n'y a pas de différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsque Méga-Steelix est chromatique, son corps est de couleur jaune doré. Ses cristaux ont une teinte jaune pâle.
+
+=== [[Évolution]] ===
+
+Méga-Steelix est la [[Méga-Évolution]] de Steelix avec une [[Steelixite]]. Steelix est l'[[évolution]] d'[[Onix]] lorsqu'il est échangé en tenant l'objet [[Peau Métal]]. Dans {{jeu|LPA}}, le simple contact avec un [[Peau Métal]] suffit pour déclencher l'évolution.
+{{#lst:Onix|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Force Sable]] : augmente la puissance des capacités de type Roche, Sol et Acier en cas de tempête de sable.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Il contrôle par magnétisme les fragments qui se sont détachés de la surface de son corps et s'en sert pour parer les attaques.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Acier|type2=Sol}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 30, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 30 également.
+{{Statistiques
+| type=acier
+| PV=75
+| attaque=125
+| defense=230
+| atq-spc=55
+| def-spc=95
+| vitesse=30
+}}
+Méga-Steelix est le Pokémon à la plus haute statistique de Défense du type Acier, arrivant ex aequo avec [[Méga-Galeking]], et du type Sol. Lui et Méga-Galeking ont d'ailleurs la seconde plus haute statistique de Défense de tous les Pokémon avec [[Caratroc]], n'étant dépassés que par [[Éthernatos Infinimax]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Steelix voir [[Steelix/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/steelix/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Steelix voir [[Steelix#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/steelix/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Steelix/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Steelix}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Steelix de Dohga.png|thumb|left|Le Méga-Steelix de [[Dohga]].]]
+[[Fichier:Méga-Steelix de Pierre.png|thumb|right|Le Méga-Steelix de [[Pierre]].]]
+Méga-Steelix apparaît pour la première fois dans {{film|19}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Scorplane
+| numéro=0208
+| nom=Méga-Steelix
+| nomSuivant=Snubbull
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Steelix]]

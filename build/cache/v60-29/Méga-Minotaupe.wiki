@@ -1,0 +1,98 @@
+{{Ruban Pokémon
+| nomPrécédent=Rototaupe
+| numéro=0530
+| nom=Méga-Minotaupe
+| nomSuivant=Méga-Nanméouïe
+| forme-suivant=Méga
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Minotaupe
+| nom-japonais=メガドリュウズ
+| nom-romaji=Mega Doryūzu
+| nom-déposé=Mega Doryuzu
+| nom-anglais=Mega Excadrill
+| ndex=0530
+| dex=Illumis/121
+| légende=Artwork de Méga-Minotaupe pour {{Jeu|LPZA}}.
+| type1=Sol
+| type2=Acier
+| catégorie=Souterrain
+| taille=0.9
+| poids=60.0
+| talents=Transperceuse
+| fmratio=
+| génération=9
+| couleur=Gris
+| corps=12
+| cri=Cri 0530 Méga
+}}
+'''Méga-Minotaupe''' (anglais : '''Mega Excadrill''' ; japonais : '''メガドリュウズ''' ''Mega Doryuzu'') est un [[Méga-Pokémon]] de [[type]] [[Sol (type)|Sol]] et [[Acier (type)|Acier]]. C'est la [[Méga-Évolution]] de [[Minotaupe]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Minotaupe voit ses griffes et l'excroissance sur sa tête devenir très longues, formant trois parties, qui, une fois rassemblées, lui permettent d'adopter la forme d'une immense foreuse. Ses pouces sont d'ailleurs visible sur la face intérieure de ces excroissances. Ses vrilles sont maintenant de couleur orange, en plus du gris acier. Au bout de ses griffes et de son excroissance se trouve une épine de fer. En plus d'être plus potelé, Méga-Minotaupe possède une plaque de fer sur son ventre et ses épaules et les trois griffures habituelles de Minotaupe sont remplacées par une seule plus large. Son visage est désormais plus carré et ses "moustaches" rouges sont bien moins imposantes. sa truffe rose s'est allongée et des cernes blanches sont apparues sous ses yeux.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Minotaupe conserve les mêmes couleurs que Minotaupe chromatique, les parties habituellement marron foncé de son corps sont bordeaux, et les parties habituellement rouges de son torse, genoux, et joues sont bleu clair. En partant du corps de Méga-Minotaupe, les deux premières rangées de vrilles sur sa tête et ses bras sont aussi de cette même couleur bleu clair.
+
+=== [[Évolution]] ===
+
+Méga-Minotaupe est la [[Méga-Évolution]] de [[Minotaupe]] avec une [[Minotaupite]]. Ce dernier est l'évolution de [[Rototaupe]] à partir du [[niveau]] 31.
+{{#lst:Rototaupe|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Transperceuse]] : permet aux attaques de contact du Pokémon de toucher la cible malgré ses capacités de protection, infligeant 25 % des dégâts initiaux. Tous les effets autres que les protections de la cible sont toujours déclenchés.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Joindre sa tête et ses bras lui permet d'adopter un profil fuselé. Lorsqu'il vrille ainsi à pleine vitesse, il peut tout détruire sur son passage.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Sol|type2=Acier}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 40, son [[Attaque Spéciale]] de 15, et sa [[Vitesse]] de 15.
+
+{{Statistiques
+| type=Sol
+| PV=110
+| attaque=165
+| defense=100
+| atq-spc=65
+| def-spc=65
+| vitesse=103
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Minotaupe/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Minotaupe}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Rototaupe
+| numéro=0530
+| nom=Méga-Minotaupe
+| nomSuivant=Méga-Nanméouïe
+| forme-suivant=Méga
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Minotaupe]]

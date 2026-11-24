@@ -1,0 +1,109 @@
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Minotaupe
+| numéro=0531
+| nom=Méga-Nanméouïe
+| nomSuivant=Charpenti
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Nanméouïe
+| nom-japonais=メガ タブンネ
+| nom-déposé=Mega Tabunne
+| nom-anglais=Mega Audino
+| ndex=0531
+| dex-secondaires=Shuffle/032//Picross/N18-08//Picross (Alternatif)/A18-03
+| légende=Artwork de Méga-Nanméouïe pour {{Jeu|ROSA}}.
+| type1=Normal
+| type2=Fée
+| catégorie=Audition
+| taille=1.5
+| poids=32.0
+| talents=Cœur Soin
+| fmratio=.5
+| génération=6
+| conditions-couleur=Génération 6/Depuis la génération 7
+| couleur=Rose/Blanc
+| corps=6
+| cri=Cri 0531 Méga
+}}
+'''Méga-Nanméouïe''' (anglais : '''Mega Audino''' ; japonais : '''メガ タブンネ''' ''Mega Tabunne'') est un [[Méga-Pokémon]] de type [[Normal]] et [[Fée (type)|Fée]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Nanméouïe]].
+
+Méga-Nanméouïe a été révélé par erreur le 12 août 2014 par le site officiel coréen, en même temps que [[Méga-Flagadoss]]. Suite à cela, il est officiellement annoncé lors du Gamescom de Cologne le 14 août 2014.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant, la couleur rose de [[Nanméouïe]] devient blanche et ses yeux, autrefois bleus, deviennent roses. Ses oreilles se sont redressées et sur son corps, le contour n'étant pas beige, s'est détaché et lui donne un effet de veste qui est attaché à son cou par un sorte de pompon de la même matière que sa queue. De plus, ses pieds sont recouverts de fourrure blanche.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les parties habituellement roses du corps de Méga-Nanméouïe sont violettes et ses yeux sont jaunes.
+Son ventre et son visage sont un peu plus beiges.
+
+=== [[Évolution]] ===
+
+Méga-Nanméouïe est la [[Méga-Évolution]] de [[Nanméouïe]].
+{{#lst:Nanméouïe|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Cœur Soin]] : en Combat Duo ou Multi, soigne parfois une altération de statut d'un allié proche.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Deux antennes ont poussé au cou de ce Pokémon. Il suffit de les toucher pour se retrouver plongé dans un profond sommeil.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Normal|type2=Fée}}
+
+== [[Statistiques]] ==
+
+Sa [[Défense]] est augmentée de 40, son [[Attaque Spéciale]] de 20, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 40.
+
+{{Statistiques
+| type=normal
+| PV=103
+| attaque=60
+| defense=126
+| atq-spc=80
+| def-spc=126
+| vitesse=50
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Nanméouïe voir [[Nanméouïe/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/audino/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Nanméouïe voir [[Nanméouïe#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/audino/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Nanméouïe/Imagerie|Génération 9}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Nanméouïe de l'Infirmière Joëlle.png|200px|thumb|left|Le Méga-Nanméouïe de l'Infirmière Joëlle.]]
+Méga-Nanméouïe apparaît dans un épisode de [[Pokédex Méga-Évolution]] et fait sa première apparition dans les aventures de Sacha dans le [[XY096]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Minotaupe
+| numéro=0531
+| nom=Méga-Nanméouïe
+| nomSuivant=Charpenti
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Nanméouïe]]

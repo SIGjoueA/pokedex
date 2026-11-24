@@ -1,0 +1,398 @@
+{
+  "Méga-Absol": {
+    "t": "Méga-Absol",
+    "missing": false
+  },
+  "Méga-Absol Z": {
+    "t": "Méga-Absol Z",
+    "missing": false
+  },
+  "Méga-Airmure": {
+    "t": "Méga-Airmure",
+    "missing": false
+  },
+  "Méga-Alakazam": {
+    "t": "Méga-Alakazam",
+    "missing": false
+  },
+  "Méga-Aligatueur": {
+    "t": "Méga-Aligatueur",
+    "missing": false
+  },
+  "Méga-Altaria": {
+    "t": "Méga-Altaria",
+    "missing": false
+  },
+  "Méga-Amphinobi": {
+    "t": "Méga-Amphinobi",
+    "missing": false
+  },
+  "Méga-Baggaïd": {
+    "t": "Méga-Baggaïd",
+    "missing": false
+  },
+  "Méga-Blindépique": {
+    "t": "Méga-Blindépique",
+    "missing": false
+  },
+  "Méga-Blizzaroi": {
+    "t": "Méga-Blizzaroi",
+    "missing": false
+  },
+  "Méga-Branette": {
+    "t": "Méga-Branette",
+    "missing": false
+  },
+  "Méga-Braségali": {
+    "t": "Méga-Braségali",
+    "missing": false
+  },
+  "Méga-Brutalibré": {
+    "t": "Méga-Brutalibré",
+    "missing": false
+  },
+  "Méga-Brutapode": {
+    "t": "Méga-Brutapode",
+    "missing": false
+  },
+  "Méga-Camérupt": {
+    "t": "Méga-Camérupt",
+    "missing": false
+  },
+  "Méga-Carchacrok": {
+    "t": "Méga-Carchacrok",
+    "missing": false
+  },
+  "Méga-Carchacrok Z": {
+    "t": "Méga-Carchacrok Z",
+    "missing": false
+  },
+  "Méga-Charmina": {
+    "t": "Méga-Charmina",
+    "missing": false
+  },
+  "Méga-Cizayox": {
+    "t": "Méga-Cizayox",
+    "missing": false
+  },
+  "Méga-Crabominable": {
+    "t": "Méga-Crabominable",
+    "missing": false
+  },
+  "Méga-Dardargnan": {
+    "t": "Méga-Dardargnan",
+    "missing": false
+  },
+  "Méga-Darkrai": {
+    "t": "Méga-Darkrai",
+    "missing": false
+  },
+  "Méga-Démolosse": {
+    "t": "Méga-Démolosse",
+    "missing": false
+  },
+  "Méga-Diancie": {
+    "t": "Méga-Diancie",
+    "missing": false
+  },
+  "Méga-Dracaufeu X": {
+    "t": "Méga-Dracaufeu X",
+    "missing": false
+  },
+  "Méga-Dracaufeu Y": {
+    "t": "Méga-Dracaufeu Y",
+    "missing": false
+  },
+  "Méga-Dracolosse": {
+    "t": "Méga-Dracolosse",
+    "missing": false
+  },
+  "Méga-Draïeul": {
+    "t": "Méga-Draïeul",
+    "missing": false
+  },
+  "Méga-Drattak": {
+    "t": "Méga-Drattak",
+    "missing": false
+  },
+  "Méga-Ectoplasma": {
+    "t": "Méga-Ectoplasma",
+    "missing": false
+  },
+  "Méga-Élecsprint": {
+    "t": "Méga-Élecsprint",
+    "missing": false
+  },
+  "Méga-Empiflor": {
+    "t": "Méga-Empiflor",
+    "missing": false
+  },
+  "Méga-Éoko": {
+    "t": "Méga-Éoko",
+    "missing": false
+  },
+  "Méga-Étouraptor": {
+    "t": "Méga-Étouraptor",
+    "missing": false
+  },
+  "Méga-Flagadoss": {
+    "t": "Méga-Flagadoss",
+    "missing": false
+  },
+  "Méga-Floette": {
+    "t": "Méga-Floette",
+    "missing": false
+  },
+  "Méga-Floréclat": {
+    "t": "Méga-Floréclat",
+    "missing": false
+  },
+  "Méga-Florizarre": {
+    "t": "Méga-Florizarre",
+    "missing": false
+  },
+  "Méga-Galeking": {
+    "t": "Méga-Galeking",
+    "missing": false
+  },
+  "Méga-Gallame": {
+    "t": "Méga-Gallame",
+    "missing": false
+  },
+  "Méga-Gardevoir": {
+    "t": "Méga-Gardevoir",
+    "missing": false
+  },
+  "Méga-Glaivodo": {
+    "t": "Méga-Glaivodo",
+    "missing": false
+  },
+  "Méga-Golemastoc": {
+    "t": "Méga-Golemastoc",
+    "missing": false
+  },
+  "Méga-Golgopathe": {
+    "t": "Méga-Golgopathe",
+    "missing": false
+  },
+  "Méga-Goupelin": {
+    "t": "Méga-Goupelin",
+    "missing": false
+  },
+  "Méga-Heatran": {
+    "t": "Méga-Heatran",
+    "missing": false
+  },
+  "Méga-Hexadron": {
+    "t": "Méga-Hexadron",
+    "missing": false
+  },
+  "Méga-Jungko": {
+    "t": "Méga-Jungko",
+    "missing": false
+  },
+  "Méga-Kangourex": {
+    "t": "Méga-Kangourex",
+    "missing": false
+  },
+  "Méga-Kravarech": {
+    "t": "Méga-Kravarech",
+    "missing": false
+  },
+  "Méga-Laggron": {
+    "t": "Méga-Laggron",
+    "missing": false
+  },
+  "Méga-Latias": {
+    "t": "Méga-Latias",
+    "missing": false
+  },
+  "Méga-Latios": {
+    "t": "Méga-Latios",
+    "missing": false
+  },
+  "Méga-Léviator": {
+    "t": "Méga-Léviator",
+    "missing": false
+  },
+  "Méga-Lockpin": {
+    "t": "Méga-Lockpin",
+    "missing": false
+  },
+  "Méga-Lucario": {
+    "t": "Méga-Lucario",
+    "missing": false
+  },
+  "Méga-Lucario Z": {
+    "t": "Méga-Lucario Z",
+    "missing": false
+  },
+  "Méga-Lugulabre": {
+    "t": "Méga-Lugulabre",
+    "missing": false
+  },
+  "Méga-Magearna": {
+    "t": "Méga-Magearna",
+    "missing": false
+  },
+  "Méga-Méganium": {
+    "t": "Méga-Méganium",
+    "missing": false
+  },
+  "Méga-Mélodelfe": {
+    "t": "Méga-Mélodelfe",
+    "missing": false
+  },
+  "Méga-Métalosse": {
+    "t": "Méga-Métalosse",
+    "missing": false
+  },
+  "Méga-Mewtwo X": {
+    "t": "Méga-Mewtwo X",
+    "missing": false
+  },
+  "Méga-Mewtwo Y": {
+    "t": "Méga-Mewtwo Y",
+    "missing": false
+  },
+  "Méga-Minotaupe": {
+    "t": "Méga-Minotaupe",
+    "missing": false
+  },
+  "Méga-Mistigrix": {
+    "t": "Méga-Mistigrix",
+    "missing": false
+  },
+  "Méga-Momartik": {
+    "t": "Méga-Momartik",
+    "missing": false
+  },
+  "Méga-Mysdibule": {
+    "t": "Méga-Mysdibule",
+    "missing": false
+  },
+  "Méga-Nanméouïe": {
+    "t": "Méga-Nanméouïe",
+    "missing": false
+  },
+  "Méga-Némélios": {
+    "t": "Méga-Némélios",
+    "missing": false
+  },
+  "Méga-Nigirigon": {
+    "t": "Méga-Nigirigon",
+    "missing": false
+  },
+  "Méga-Ohmassacre": {
+    "t": "Méga-Ohmassacre",
+    "missing": false
+  },
+  "Méga-Oniglali": {
+    "t": "Méga-Oniglali",
+    "missing": false
+  },
+  "Méga-Pharamp": {
+    "t": "Méga-Pharamp",
+    "missing": false
+  },
+  "Méga-Ptéra": {
+    "t": "Méga-Ptéra",
+    "missing": false
+  },
+  "Méga-Raichu X": {
+    "t": "Méga-Raichu X",
+    "missing": false
+  },
+  "Méga-Raichu Y": {
+    "t": "Méga-Raichu Y",
+    "missing": false
+  },
+  "Méga-Rayquaza": {
+    "t": "Méga-Rayquaza",
+    "missing": false
+  },
+  "Méga-Roitiflam": {
+    "t": "Méga-Roitiflam",
+    "missing": false
+  },
+  "Méga-Roucarnage": {
+    "t": "Méga-Roucarnage",
+    "missing": false
+  },
+  "Méga-Sarmuraï": {
+    "t": "Méga-Sarmuraï",
+    "missing": false
+  },
+  "Méga-Scarabrute": {
+    "t": "Méga-Scarabrute",
+    "missing": false
+  },
+  "Méga-Scarhino": {
+    "t": "Méga-Scarhino",
+    "missing": false
+  },
+  "Méga-Scovilain": {
+    "t": "Méga-Scovilain",
+    "missing": false
+  },
+  "Méga-Sepiatroce": {
+    "t": "Méga-Sepiatroce",
+    "missing": false
+  },
+  "Méga-Sharpedo": {
+    "t": "Méga-Sharpedo",
+    "missing": false
+  },
+  "Méga-Staross": {
+    "t": "Méga-Staross",
+    "missing": false
+  },
+  "Méga-Steelix": {
+    "t": "Méga-Steelix",
+    "missing": false
+  },
+  "Méga-Ténéfix": {
+    "t": "Méga-Ténéfix",
+    "missing": false
+  },
+  "Méga-Tortank": {
+    "t": "Méga-Tortank",
+    "missing": false
+  },
+  "Méga-Tyranocif": {
+    "t": "Méga-Tyranocif",
+    "missing": false
+  },
+  "Méga-Zeraora": {
+    "t": "Méga-Zeraora",
+    "missing": false
+  },
+  "Méga-Zygarde": {
+    "t": "Méga-Zygarde",
+    "missing": false
+  },
+  "Méga-Pokémon": {
+    "t": "Méga-Pokémon",
+    "missing": false
+  },
+  "Méga-Dimension": {
+    "t": "Méga-Dimension",
+    "missing": false
+  },
+  "Méga-Évolution": {
+    "t": "Méga-Évolution",
+    "missing": false
+  },
+  "Primo-Kyogre": {
+    "t": "Primo-Kyogre",
+    "missing": false
+  },
+  "Primo-Groudon": {
+    "t": "Primo-Groudon",
+    "missing": false
+  },
+  "Primo-Résurgence": {
+    "t": "Primo-Résurgence",
+    "missing": false
+  }
+}

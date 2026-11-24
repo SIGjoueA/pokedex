@@ -1,0 +1,88 @@
+{{Ruban Pokémon
+| nomPrécédent=Hélionceau
+| numéro=0668
+| nom=Méga-Némélios
+| nomSuivant=Flabébé
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Némélios
+| nom-japonais=メガカエンジシ
+| nom-romaji=Mega Kaenjishi
+| nom-déposé=Mega Kaenjishi
+| nom-anglais=Mega Pyroar
+| ndex=0668
+| dex=Illumis/046
+| légende=Artwork de Méga-Némélios pour {{Jeu|LPZA}}.
+| type1=Feu
+| type2=Normal
+| catégorie=Royal
+| taille=1.5
+| poids=93.3
+| talents=Crinière de Feu
+| fmratio=
+| génération=9
+| couleur=Brun
+| corps=8
+| cri=Cri 0668 Méga
+}}
+'''Méga-Némélios''' (anglais : '''Mega Pyroar''' ; japonais : '''メガカエンジシ''' ''Mega Kaenjishi'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Normal (type)|Normal]]. C'est la [[Méga-Évolution]] de [[Némélios]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Méga-Némélios arbore une crinière bien plus volumineuse, désormais identique, qu'il soit mâle ou femelle. La forme de cette crinière rappelle le kanji 炎, qui signifie « flamme ». Sa base ressemble à la crinière des Némélios mâles, tandis que sa partie supérieure ressemble à celle des femelles. Des petites touffes de fourrure beige sont présentes sur ses pattes avant tandis que la fourrure redressée de ses pattes arrière est plus longue. Des marques rouges se trouvent sur son visage, reliées à sa crinière. Sa queue est semblable à celle de [[Némélios]] femelle.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les parties habituellement rouges sont blanches, avec la pupille de ses yeux rouge. Toutes les parties de son pelage habituellement beige sont d'une teinte plus clair, et les parties habituellement marron foncé sont d'une couleur jaune brunâtre.
+
+=== [[Évolution]] ===
+Méga-Némélios est la [[Méga-Évolution]] de [[Némélios]] avec une [[Néméliosite]]. Ce dernier est l'évolution d'[[Hélionceau]] à partir du [[niveau]] 35.
+{{#lst:Hélionceau|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Crinière de Feu]] : augmente les dégâts des [[Feu#Capacités de type Feu|capacités de type Feu]] du Pokémon de 50 %.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Ce Pokémon crache des flammes à plus de 10 000 °C. Il protège ses congénères en secouant sa grande crinière ardente.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Feu|type2=Normal}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 20, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=Feu
+| PV=86
+| attaque=88
+| defense=92
+| atq-spc=129
+| def-spc=86
+| vitesse=126
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Némélios/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Némélios}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Hélionceau
+| numéro=0668
+| nom=Méga-Némélios
+| nomSuivant=Flabébé
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Némélios]]

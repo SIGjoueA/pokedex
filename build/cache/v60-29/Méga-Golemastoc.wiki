@@ -1,0 +1,93 @@
+{{Ruban Pokémon
+| nomPrécédent=Gringolem
+| numéro=0623
+| nom=Méga-Golemastoc
+| nomSuivant=Scalpion
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Golemastoc
+| nom-japonais=メガゴルーグ
+| nom-romaji=Mega Gorūgu
+| nom-déposé=Mega Goloog
+| nom-anglais=Mega Golurk
+| ndex=0623
+| dex=Extra Illumis/072
+| légende=Artwork de Méga-Golemastoc pour {{Jeu|LPZA}}.
+| type1=Sol
+| type2=Spectre
+| catégorie=Golem Ancien
+| taille=4.0
+| poids=330.0
+| talents=Poing Invisible
+| fmratio=
+| génération=9
+| couleur=Vert
+| corps=12
+| cri=Cri 0623 Méga
+}}
+'''Méga-Golemastoc''' (anglais : '''Mega Golurk''' ; japonais : '''メガゴルーグ''' ''Mega Goloog'') est un [[Méga-Pokémon]] de [[type]] [[Sol (type)|Sol]] et [[Spectre (type)|Spectre]]. C'est la [[Méga-Évolution]] de [[Golemastoc]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], l'énergie jaune à l'intérieur de Méga-Golemastoc se libère de ses poignets, de ses chevilles, de ses épaules et de son œil gauche. Des flammes violettes émanent de son dos et de l'énergie de ses épaules. Le pansement sur son torse a cédé pour laisser place à une croix d'énergie jaune. Son œil droit et les symboles qui sont sur les poignets et les épaules n'émettent plus de lumière.
+
+==== Différences mâle/femelle ====
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Golemastoc mâle ou femelle.
+
+==== [[Chromatique]] ====
+
+=== [[Évolution]] ===
+
+Méga-Golemastoc est la [[Méga-Évolution]] de [[Golemastoc]] avec une [[Golemastokite]]. Golemastoc est l'évolution de [[Gringolem]] à partir du [[niveau]] 43.
+{{#lst:Gringolem|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Poing Invisible]] : si le Pokémon utilise une attaque directe, celle-ci pourra passer outre les protections de la cible.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:La Méga-Évolution a stimulé l'énergie à l'intérieur de son corps. Il pourrait exploser à tout moment.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Sol|type2=Spectre}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 35, sa [[Défense]] de 25, son [[Attaque Spéciale]] de 15, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 25.
+
+{{Statistiques
+| type=Sol
+| PV=89
+| attaque=159
+| defense=105
+| atq-spc=70
+| def-spc=105
+| vitesse=55
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Golemastoc/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Golemastoc}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Gringolem
+| numéro=0623
+| nom=Méga-Golemastoc
+| nomSuivant=Scalpion
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Golemastoc]]

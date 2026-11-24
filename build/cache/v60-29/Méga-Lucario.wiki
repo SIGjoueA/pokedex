@@ -1,0 +1,175 @@
+{{Ruban Pokémon
+| nomPrécédent=Riolu
+| numéro=0448
+| nom=Méga-Lucario
+| nomSuivant=Hippopotas
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Lucario
+| nom-japonais=メガ ルカリオ
+| nom-romaji=Mega Rukario
+| nom-déposé=Mega Lucario
+| nom-anglais=Mega Lucario
+| ndex=0448
+| dex=Kalos (Centre)/063//Alola/280//Alola-USUL/378//Illumis/136
+| dex-secondaires=Shuffle/078//Picross/N16-04//Picross (Alternatif)/A16-08
+| légende=Artwork de Méga-Lucario pour {{Jeu|XY}}.
+| type1=Combat
+| type2=Acier
+| catégorie=Aura
+| taille=1.3
+| poids=57.5
+| talents=Adaptabilité
+| fmratio=.125
+| génération=6
+| couleur=Bleu
+| corps=6
+| cri=Cri 0448 Méga
+}}
+'''Méga-Lucario''' (anglais : '''Mega Lucario''' ; japonais : '''メガ ルカリオ''' ''Mega Lucario'') est un [[Méga-Pokémon]] de [[type]] [[Combat (type)|Combat]] et [[Acier (type)|Acier]]. C'est une des [[Méga-Évolution]]s de [[Lucario]].
+
+Méga-Lucario a été révélé dans le magazine [[CoroCoro Comics]] de septembre 2013, en même temps que [[Méga-Mewtwo Y]], [[Méga-Pharamp]], [[Méga-Braségali]], [[Méga-Mysdibule]] et [[Méga-Absol]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Sous sa forme méga-évoluée, Lucario développe un épais pelage pectoral et caudal de couleur beige. Sur le reste de son corps, la couleur noire empiète davantage sur le bleu, conséquence de l'afflux d'[[Aura]], et ses cuisses apparaissent amincies. Ses yeux sont rouge orangé, et son torse est paré de deux pointes supplémentaires au niveau des omoplates. Ses poings et ses pieds sont écarlates avec une paire de pointes chacun, celles aux extrémités sont plus longues. Deux de ses quatre appendices capillaires par ailleurs allongés sont rouges à leur extrémité.
+
+Il s'agit du premier Méga-Pokémon recensé à [[Kalos]]. Le style de combat de Méga-Lucario est souvent qualifié d'impitoyable, car il se laisse envahir par son instinct de combattant qui le pousse à attaquer sans répit son adversaire, quel qu'il soit.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Lucario est chromatique, ses zones habituellement bleues sont jaunes, la fourrure de son torse et de sa queue est bleu ciel, les extrémités des pattes et de sa "crinière" sont légèrement rosés au lieu de rouges.
+
+=== [[Évolution]] ===
+
+Méga-Lucario est l'une des [[Méga-Évolution]]s de [[Lucario]] s'il tient une [[Lucarite]]. Lucario est l'évolution de [[Riolu]] si celui-ci est [[bonheur|heureux]] et qu'il gagne un [[niveau]] de jour. Depuis {{jeu|LPZA}}, Lucario peut aussi méga-évoluer en [[Méga-Lucario Z]] avec une [[Lucarite Z]].
+{{#lst:Riolu|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Adaptabilité]] : quand le Pokémon utilise une capacité du même type que lui, le bonus de puissance qu'elle reçoit est multiplié par 2, au lieu de 1,5 normalement.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:L'énergie de la [[Méga-Évolution]] s'est mélangée à son aura. Ensemble, elles ont coulé sur son corps et y ont laissé des traces noires.
+;{{Jeu|Lu}}
+:Tout son système nerveux est mis à contribution lorsqu'il engage un combat. Il est absolument sans pitié lorsqu'il se bat.
+;{{Jeu|US}}
+:Son aura s'est dilatée sous l'effet de la [[Méga-Évolution]]. Son instinct guerrier le pousse à abattre sans pitié ses ennemis.
+;{{Jeu|UL}}
+:Son instinct guerrier s'est réveillé après son exposition à une explosion d'énergie. Il n'a absolument aucune pitié pour ses ennemis.
+;{{Jeu|LPZA}}
+:L'énergie de la Méga-Évolution et son aura se sont mélangées, puis ont parcouru son corps en y laissant des traces noires.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Combat|type2=Acier}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 35, sa [[Défense]] de 18, son [[Attaque Spéciale]] de 25, et sa [[Vitesse]] de 22.
+
+{{Statistiques
+| nom=Méga Lucario
+| type=combat
+| PV=70
+| attaque=145
+| defense=88
+| atq-spc=140
+| def-spc=70
+| vitesse=112
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Lucario voir [[Lucario/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/lucario/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Lucario voir [[Lucario#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/lucario Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Lucario/Imagerie|Génération 9}}
+{{Navigation Lucario}}
+
+== Dans ''[[Pokémon UNITE]]'' ==
+Méga-Lucario apparaît comme personnage jouable, où il est de type Polyvalent. Lorsque le Pokémon utilise sa Capacité Unité, Lucario Méga-évolue pendant une courte durée.
+
+{{Tableau Méga-Pokémon UNITE
+<!-- Informations -->
+| pokémon=Méga-Lucario
+| rôle1=Rapproché
+| rôle2=Polyvalent
+| dégâts=Attaque
+| difficulté=Difficile
+
+<!-- Statistiques -->
+| puissance=4,5
+| endurance=2
+| mobilité=3,5
+| scoring=3
+| utilité=0,5
+
+<!-- Capacités & Talent -->
+| talent=Cœur Noble
+| talentMéga=Adaptabilité
+| capacitéunité=Sphère Suprême
+| capacitéunité-niveau=9
+| capacité-2-niveau=3
+| capacité-a=Vive-Attaque
+| capacité-a-niveau=5
+| capacité-a1=Poing Boost
+| capacité-b=Poing Météore
+| capacité-b-niveau=7
+| capacité-b1=Close Combat
+
+<!-- Lignée évolutive -->
+| évolution=Méga-Évolution
+| stade-base=Lucario
+| stade-base-numéro=0448
+| stade-Méga=Méga-Lucario
+| stade-Méga-numéro=0448 Méga
+| stade-Méga-condition=Lucarite
+
+<!-- Obtention -->
+| pièces={{?}}
+| gemmes={{?}}
+}}
+
+== Apparitions dans les dessins animés ==
+=== {{série|PS}} ===
+Méga-Lucario fait sa première apparition dans l'[[épisode 831]]. Les [[Lucario]] de [[Cornélia]] et [[Cornélius]] s'y affrontent, méga-évoluant tous les deux. Le [[Méga-Lucario de Cornélia]] réapparaît plusieurs fois par la suite.
+
+Dans l'[[épisode 1171]], le [[Lucario de Sacha]] méga-évolue en Méga-Lucario.
+
+Il apparaît également dans le générique de fin du film 17 : {{film|17}}.
+
+<center><gallery perrow="6">
+Fichier:Méga-Lucario de Cornélia.png|Le Méga-Lucario de Cornélia.
+Fichier:Méga-Lucario de Cornélius.png|Le Méga-Lucario de Cornélius.
+Fichier:Méga-Lucario de Sacha.png|Le Méga-Lucario de Sacha.
+</gallery></center>
+
+=== {{série|LH}} ===
+<center><gallery perrow="6">
+Fichier:LH090 - Méga-Lucario de Rhod.png|Le Méga-Lucario de Rhod.
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Riolu
+| numéro=0448
+| nom=Méga-Lucario
+| nomSuivant=Hippopotas
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Lucario]]

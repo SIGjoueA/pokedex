@@ -1,0 +1,104 @@
+{{Ruban Pokémon
+| nomPrécédent=Boustiflor
+| numéro=0071
+| nom=Méga-Empiflor
+| nomSuivant=Tentacool
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Empiflor
+| nom-japonais=メガウツボット
+| nom-romaji=Mega Utsubotto
+| nom-déposé=Mega Utsubot
+| nom-anglais=Mega Victreebel
+| ndex=0071
+| dex=Illumis/076
+| légende=Artwork de Méga-Empiflor pour {{Jeu|LPZA}}.
+| type1=Plante
+| type2=Poison
+| catégorie=Carnivore
+| taille=4.5
+| poids=125.5
+| talents=Expuls'Organes
+| fmratio=
+| génération=9
+| couleur=Jaune
+| corps=5
+| cri=Cri 0071 Méga
+}}
+'''Méga-Empiflor''' (anglais : '''Mega Victreebel''' ; japonais : '''メガウツボット''' ''Mega Utsubot'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Poison (type)|Poison]]. C'est la [[Méga-Évolution]] d'[[Empiflor]].
+
+Méga-Empiflor a été teasé dans une série de tweets des comptes officiels de la [[Pokémon (licence)|licence]] à partir du 19 août 2025<ref>[https://x.com/PokemonFR/status/1957790412313166160 Premier tweet du compte officiel français de Pokémon] '''(fr)'''</ref><ref>[https://x.com/Pokemon_cojp/status/1957789905104335179 Deuxième tweet du compte officiel japonais de Pokémon] '''(ja)'''</ref><ref>[https://x.com/PokemonFR/status/1958504606100598918 Troisième tweet du compte officiel français de Pokémon] '''(fr)'''</ref>, avant d'être révélé officiellement lors de la bande-annonce du 21 août 2025.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Empiflor voit la feuille sur sa tête se relever et devenir plus grosse et plus grande. Les extrémités de ses feuilles deviennent jaune-orangées. Son corps est gonflé à cause de sa liane qui s'est enroulée autour de sa gorge, formant une petite tête où sa liane représente le cou. Le bout de sa liane est maintenant de couleur kaki. Sa bouche s'est refermée, créant des lèvres pulpeuses.
+
+Lorsque Méga-Empiflor attaque, son corps se dégonfle et sa liane se desserre. Pour se déplacer, il fait de grands bonds, ce qui effraie ses adversaires et les fait fuir.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Empiflor conserve les mêmes couleurs qu'Empiflor chromatique, son corps habituellement jaune est vert pâle avec des taches marron jaunâtre, la base de ses feuilles est marron clair, et sa lèvre bleue.
+
+=== [[Évolution]] ===
+
+Méga-Empiflor est la [[Méga-Évolution]] d'[[Empiflor]] avec une [[Empiflorite]]. Ce dernier est l'évolution de [[Boustiflor]] au contact d'une [[Pierre Plante]], qui lui-même est l'évolution de [[Chétiflor]] à partir du [[niveau]] 21.
+{{#lst:Chétiflor|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Expuls'Organes]] : le Pokémon inflige à l'adversaire l'ayant mis K.O. des dégâts égaux au nombre de PV qu'il lui restait avant le coup de grâce.
+
+=== Description du Pokédex ===
+;{{jeu|LPZA}}
+:Lorsqu'il méga-évolue, le volume d'acide dans sa bouche augmente jusqu'à la remplir entièrement. Il renverse de ce liquide à la moindre inattention.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Plante|type2=Poison}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 35, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 25.
+
+{{Statistiques
+| type=Plante
+| PV=80
+| attaque=125
+| defense=85
+| atq-spc=135
+| def-spc=95
+| vitesse=70
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Empiflor/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Empiflor|elision=oui}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans les dessins animés.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+{{Ruban Pokémon
+| nomPrécédent=Boustiflor
+| numéro=0071
+| nom=Méga-Empiflor
+| nomSuivant=Tentacool
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Empiflor]]

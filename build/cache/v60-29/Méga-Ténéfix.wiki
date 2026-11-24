@@ -1,0 +1,119 @@
+{{Ruban Pokémon
+| nomPrécédent=Delcatty
+| numéro=0302
+| nom=Méga-Ténéfix
+| nomSuivant=Méga-Mysdibule
+| forme-suivant=Méga
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Ténéfix
+| nom-japonais=メガ ヤミラミ
+| nom-déposé=Mega Yamirami
+| nom-anglais=Mega Sableye
+| ndex=0302
+| dex=Hoenn-ROSA/070//Alola/102//Alola-USUL/124//Illumis/132
+| dex-secondaires=Shuffle/074//Picross/N15-10//Picross (Alternatif)/A15-02
+| légende=Artwork de Méga-Ténéfix pour {{Jeu|ROSA}}.
+| type1=Ténèbres
+| type2=Spectre
+| catégorie=Obscurité
+| taille=0.5
+| poids=161.0
+| talents=Miroir Magik
+| fmratio=.5
+| génération=6
+| couleur=Violet
+| corps=12
+| cri=Cri 0302 Méga
+}}
+'''Méga-Ténéfix''' (anglais : '''Mega Sableye''' ; japonais : '''メガ ヤミラミ''' ''Mega Yamirami'') est un [[Méga-Pokémon]] de type [[Ténèbres (type)|Ténèbres]] et [[Spectre (type)|Spectre]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Ténéfix]].
+
+Méga-Ténéfix a été révélé suite à la publication d'une bande-annonce sur la chaîne YouTube officielle de Pokémon, le 11 juin 2014<ref>[https://www.youtube.com/watch?v=vW8KAQINGCs Découvrez Méga-Ténéfix dans Pokémon Rubis Oméga et Pokémon Saphir Alpha !] '''(fr)'''</ref>.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Ténéfix, lors de sa [[Méga-Évolution]], obtient un grand rubis hexagonal épais et solide qui lui sert de bouclier. Celui-ci était de petite taille et était auparavant situé sur son ventre, mais ce rubis est maintenant plus grand que Ténéfix lui-même. Ce même rubis devient de plus en plus petit à chaque coup porté, selon le [[Pokédex Méga-Évolution]] N°11. Ainsi, lorsque Méga-Ténéfix le mange, il recouvre son apparence originelle. C'est une créature de couleur mauve avec des dents dorées et des yeux en diamant devenus rouges. Les pics de ses cornes et de ses coudes ont grandi. Une troisième corne apparaît au milieu de sa tête. Les joyaux sur son dos sont plus nombreux et un peu plus comme une mosaïque.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Ténéfix a le corps jaune et ses cristaux ont une couleur verte.
+
+=== [[Évolution]] ===
+
+Méga-Ténéfix est la [[Méga-Évolution]] de [[Ténéfix]].
+{{#lst:Ténéfix|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Miroir Magik]] : annule les effets des capacités de statut subies par le Pokémon et les retourne à l'envoyeur.
+
+=== Description du Pokédex ===
+;{{Jeu|So}}
+:La [[Méga-Évolution]] a fait grossir le joyau sur sa poitrine. Il peut maintenant renvoyer n'importe quelle attaque.
+;{{Jeu|Lu}}
+:Le joyau géant est trop lourd pour qu'il puisse changer de direction. Il est très vulnérable aux attaques par-derrière.
+;{{Jeu|US}}
+:Le joyau sur sa poitrine a absorbé tant d'énergie suite à la [[Méga-Évolution]] qu'il a énormément grossi et s'est détaché en déchirant sa peau.
+;{{Jeu|UL}}
+:Son joyau est devenu immense et très lourd. Il lui permet de se protéger contre toute attaque, mais ralentit beaucoup ses mouvements.
+;{{Jeu|LPZA}}
+:La Méga-Évolution a fait grossir le joyau sur sa poitrine. Celui-ci peut maintenant renvoyer n'importe quelle attaque.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Ténèbres|type2=Spectre
+| remarque-combat=Si [[Clairvoyance]] ou [[Flair]] est utilisé contre Méga-Ténéfix ou que le Pokémon adverse dispose de la capacité [[Querelleur]], l'efficacité des attaques de type [[Normal]] est de ×1 et celle des attaques de type [[Combat (type)|Combat]] de ×2.
+| remarque-psy=Si l'attaque [[Œil Miracle]] est utilisée contre Méga-Ténéfix, l'efficacité des attaques [[Psy]] à son encontre est normale.
+}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, sa [[Défense]] augmentée de 50, son [[Attaque Spéciale]] augmentée de 20, sa [[Statistique#Défense Spéciale|Défense Spéciale]] augmentée de 50, et sa [[Vitesse]] diminuée de 30.
+{{Statistiques
+| type=ténèbres
+| PV=50
+| attaque=85
+| defense=125
+| atq-spc=85
+| def-spc=115
+| vitesse=20
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Ténéfix voir [[Ténéfix/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/sableye/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Ténéfix voir [[Ténéfix#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/tenefix.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/sableye Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Ténéfix/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Ténéfix}}
+
+== Dans les dessins animés ==
+<center><gallery perrow="6">
+Fichier:LH090 - Méga-Ténéfix d'Ult.png|Le Méga-Ténéfix d'Ult.
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Delcatty
+| numéro=0302
+| nom=Méga-Ténéfix
+| nomSuivant=Méga-Mysdibule
+| forme-suivant=Méga
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Tenefix]]

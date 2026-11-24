@@ -1,0 +1,93 @@
+{{Ruban Pokémon
+| nomPrécédent=Germéclat
+| numéro=0970
+| nom=Méga-Floréclat
+| nomSuivant=Toutombe
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Floréclat
+| nom-japonais=メガキラフロル
+| nom-romaji=Mega Kirafuroru
+| nom-déposé=Mega Kiraflor
+| nom-anglais=Mega Glimmora
+| ndex=0970
+| dex=Extra Illumis/021
+| légende=Artwork de Méga-Floréclat pour {{Jeu|LPZA}}.
+| type1=Roche
+| type2=Poison
+| catégorie=Minerai
+| taille=2.8
+| poids=77.0
+| talents=Adaptabilité
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=1
+| cri=Cri 0970 Méga
+}}
+'''Méga-Floréclat''' (anglais : '''Mega Glimmora''' ; japonais : '''メガキラフロル''' ''Mega Kiraflor'') est un [[Méga-Pokémon]] de [[type]] [[Roche (type)|Roche]] et [[Poison (type)|Poison]]. C'est la [[Méga-Évolution]] de [[Floréclat]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Floréclat voit sa première couche de six pétales bleu marine, dont les extrémités sont turquoise, se détacher de son corps pour léviter autour. Ce détachement révèle douze pétales mauve pâle et six pétales turquoise sur les douze pétales. Sa tête en forme de cône translucide est plus longue, plus pointue et plus sombre, et ses yeux deviennent rouges.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Floréclat arbore des teintes plus froides et givrées. Ses pétales principaux abandonnent le bleu vif pour un cyan pâle, tandis que son cœur complexe délaisse ses éclats violets pour des tons plus sombres de bleu marine et de brun cuivré. Les plus petits pétales entourant son noyau central passent également d'un bleu clair à un gris bleuté discret.
+
+=== [[Évolution]] ===
+
+Méga-Floréclat est la [[Méga-Évolution]] de [[Floréclat]] avec une [[Floréclatite]]. Floréclat est l'évolution de [[Germéclat]] à partir du niveau 35.
+{{#lst:Germéclat|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Adaptabilité]] : quand le Pokémon utilise une capacité du même type que lui, le bonus de puissance qu'elle reçoit est multiplié par 2, au lieu de 1,5 normalement.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Ses pétales ont grandi et se sont détachés de son corps. Ils orbitent autour de lui pour le protéger, tout en répandant des débris toxiques.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Roche|type2=Poison}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 35, sa [[Défense]] de 15, son [[Attaque Spéciale]] de 20, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 15, et sa [[Vitesse]] de 15.
+
+{{Statistiques
+| type=Roche
+| PV=83
+| attaque=90
+| defense=105
+| atq-spc=150
+| def-spc=96
+| vitesse=101
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Floréclat/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Floréclat}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Germéclat
+| numéro=0970
+| nom=Méga-Floréclat
+| nomSuivant=Toutombe
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Floréclat]]

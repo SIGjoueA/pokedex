@@ -1,0 +1,117 @@
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Éoko
+| numéro=0359
+| nom=Méga-Absol
+| nomSuivant=Okéoké
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Absol
+| nom-japonais=メガ アブソル
+| nom-romaji=Mega Abusoru
+| nom-déposé=Mega Absol
+| nom-anglais=Mega Absol
+| ndex=0359
+| dex=Hoenn-ROSA/159//Kalos (Côtes)/009//Alola/245//Alola-USUL/322//Illumis/134
+| dex-secondaires=Shuffle/033//Picross/N22-03//Picross (Alternatif)/A22-08
+| légende=Artwork de Méga-Absol pour {{Jeu|XY}}.
+| type1=Ténèbres
+| catégorie=Désastre
+| taille=1.2
+| poids=49.0
+| talents=Miroir Magik
+| fmratio=0.5
+| génération=6
+| couleur=Blanc
+| corps=8
+| cri=Cri 0359 Méga
+}}
+'''Méga-Absol''' (anglais : '''Mega Absol''' ; japonais : '''メガ アブソル''' ''Mega Absol'') est un [[Méga-Pokémon]] de [[type]] [[Ténèbres (type)|Ténèbres]]. C'est une des [[Méga-Évolution]]s d'[[Absol]].
+
+Méga-Absol a été révélé dans le magazine ''[[CoroCoro Comics]]'' de septembre 2013, en même temps que [[Méga-Mewtwo Y]], [[Méga-Pharamp]], [[Méga-Braségali]], [[Méga-Mysdibule]] et [[Méga-Lucario]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Absol a les poils de son dos redressés, comme des ailes. Il a deux cornes de chaque côté de sa tête, avec celle de droite qui est plus grande. Une partie de ses poils se rabattent sur sa tête, cachant son œil gauche. Sa queue est plus crochue.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Absol a des yeux verts et ses parties normalement bleues sont brun-rouge.
+
+=== [[Évolution]] ===
+
+Méga-Absol est la [[Méga-Évolution]] d'[[Absol]] avec une [[Absolite]]. Depuis {{jeu|LPZAMD}}, Absol peut aussi [[Méga-Évolution|méga-évoluer]] en [[Méga-Absol Z]] avec une [[Absolite Z]].
+{{#lst:Absol|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Miroir Magik]] : annule les effets des capacités de statut subies par le Pokémon et les retourne à l'envoyeur.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:Il projette une aura intimidante sur ses ennemis en agitant ses poils hérissés comme s'il s'agissait d'ailes.
+;{{Jeu|Lu}}
+:L'énergie de la Méga-Évolution a fait se hérisser tous les poils de son corps. Comme il ne s'agit pas d'ailes, il ne peut pas voler.
+;{{Jeu|US}}
+:Etant d'une nature très pacifique, il a horreur de prendre cette forme adaptée au combat.
+;{{Jeu|UL}}
+:Il transforme l'énergie de la Méga-Évolution pour créer et projeter une aura menaçante. Les gens de faible constitution peuvent en mourir.
+;{{Jeu|LPZA}}
+:Il projette une aura intimidante sur ses ennemis en agitant ses poils hérissés comme s'il s'agissait d'ailes.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Ténèbres}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, son [[Attaque Spéciale]] de 40, et sa [[Vitesse]] de 40.
+
+{{Statistiques
+| type=ténèbres
+| PV=65
+| attaque=150
+| defense=60
+| atq-spc=115
+| def-spc=60
+| vitesse=115
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Absol voir [[Absol/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/absol/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Absol voir [[Absol#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/absol Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Absol/Imagerie|Génération 9}}
+{{Navigation Absol}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Absol d'Astrid.png|200px|thumb|left|Le Méga-Absol d'Astrid.]]
+Méga-Absol a fait une apparition dans le premier épisode de la série Méga-Evolution, ainsi que dans {{film|17}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Éoko
+| numéro=0359
+| nom=Méga-Absol
+| nomSuivant=Okéoké
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Absol]]

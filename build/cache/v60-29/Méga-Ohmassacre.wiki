@@ -1,0 +1,89 @@
+{{Ruban Pokémon
+| nomPrécédent=Lampéroie
+| numéro=0604
+| nom=Méga-Ohmassacre
+| nomSuivant=Lewsor
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Ohmassacre
+| nom-japonais=メガシビルドン
+| nom-romaji=Mega Shibirudon
+| nom-déposé=Mega Shibirudon
+| nom-anglais=Mega Eelektross
+| ndex=0604
+| dex=Illumis/144
+| légende=Artwork de Méga-Ohmassacre pour {{Jeu|LPZA}}.
+| type1=Électrik
+| catégorie=Électrophore
+| taille=3.0
+| poids=180.0
+| talents=Lévitaboost
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=3
+| cri=Cri 0604 Méga
+}}
+'''Méga-Ohmassacre''' (anglais : '''Mega Eelektross''' ; japonais : '''メガシビルドン''' ''Mega Shibirudon'') est un [[Méga-Pokémon]] de [[type]] [[Électrik]]. C'est la [[Méga-Évolution]] d'[[Ohmassacre]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Les bras de Méga-Ohmassacre, devenus blanc translucide, sont semblables à des propulseurs avec deux nageoires verticales sur chacun d'eux. Les extrémités circulaires de ses bras sont rouges et les paumes de ses « mains » possèdent un symbole moins et un symbole plus qui changent de mains régulièrement, en référence au [[wp:Courant alternatif|courant alternatif]]. Ces attributs sont baptisés « faux Lampéroie », et ils sont affublés des surnoms « Lampégauche » et « Lampédroit ». L'arrière de son corps est de la même couleur que ses bras, donnant un aspect plus aérien, d'autant plus que ces appendices laissent une traînée spectrale et irisée. Son regard est plus agressif, notamment à cause des motifs jaunes électriques courant le long de ses yeux, de son dos et de ses flancs. Méga-Ohmassacre a l'air de contenir de l'électricité à l'intérieur de lui.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Ohmassacre conserve les mêmes couleurs qu'Ohmassacre chromatique. Son corps habituellement bleu foncé est entièrement vert, avec une bouche rose, et les taches habituellement jaunes de son corps et de son visage tendent vers le jaune-citron.
+
+=== [[Évolution]] ===
+Méga-Ohmassacre est la [[Méga-Évolution]] d'[[Ohmassacre]] avec une [[Ohmassacrite]]. Ce dernier est l'évolution de [[Lampéroie]] au contact d'une [[Pierre Foudre]], qui lui-même est l'évolution d'[[Anchwatt]] à partir du [[niveau]] 39.
+{{#lst:Anchwatt|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Lévitaboost]] : le Pokémon flotte au-dessus du sol, ce qui l'immunise contre les [[Sol#Capacités de type Sol|capacités de type Sol]], ainsi qu'aux effets de [[Picots]], [[Pics Toxik]] et [[Toile Gluante]]. Quand le Pokémon met K.O. un Pokémon avec une [[capacité]], sa statistique la plus élevée augmente d'un cran.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il peut produire dix fois plus d'électricité après avoir méga-évolué, et envoie des décharges avec ses faux Lampéroie constitués de mucus.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Électrik
+| remarque-sol=L'efficacité des attaques de type [[Sol]] est nulle du fait de son talent [[Lévitaboost]]. De ce fait, si [[Gravité]], [[Échange (capacité)|Échange]], [[Rayon Simple]], [[Anti-Air]], [[Ten-danse]] ou [[Suc Digestif]] est utilisé, ou si l'adversaire dispose de [[Brise Moule]], [[Téra-Voltage]], [[TurboBrasier]] ou [[Gaz Inhibiteur]], l'effet de [[Lévitaboost]] est annulé et l'efficacité des attaques [[Sol]] à son encontre est double, du fait de son [[type]] [[Électrik]].
+}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 10, et sa [[Vitesse]] de 30.
+
+{{Statistiques
+| type=Électrik
+| PV=85
+| attaque=145
+| defense=80
+| atq-spc=135
+| def-spc=90
+| vitesse=80
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Ohmassacre/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Ohmassacre}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Lampéroie
+| numéro=0604
+| nom=Méga-Ohmassacre
+| nomSuivant=Lewsor
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Ohmassacre]]

@@ -1,0 +1,95 @@
+{{Ruban Pokémon
+| nomPrécédent=Mélofée
+| numéro=0036
+| nom=Méga-Mélodelfe
+| nomSuivant=Goupix
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Mélodelfe
+| nom-japonais=メガピクシー
+| nom-romaji=Mega Pikushī
+| nom-déposé=Mega Pixy
+| nom-anglais=Mega Clefable
+| ndex=0036
+| dex=Illumis/057
+| légende=Artwork de Méga-Mélodelfe pour {{Jeu|LPZA}}.
+| type1=Fée
+| type2=Vol
+| catégorie=Fée
+| taille=1.7
+| poids=42.3
+| talents=Miroir Magik
+| fmratio=
+| génération=9
+| couleur=Rose
+| corps=6
+| cri=Cri 0036 Méga
+}}
+'''Méga-Mélodelfe''' (anglais : '''Mega Clefable''' ; japonais : '''メガピクシー''' ''Mega Pixy'') est un [[Méga-Pokémon]] de [[type]] [[Fée (type)|Fée]] et [[Vol (type)|Vol]]. C'est la [[Méga-Évolution]] de [[Mélodelfe]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Mélodelfe flotte désormais dans les airs, obtenant le type [[Vol (type)|Vol]] en plus de son type [[Fée]]. De ses ailes d'origine, devenues plus longues et d'un rose plus clair, jaillissent des ailes papillon multicolores, aux tons roses, jaune et orange, légèrement translucides. Elles relâchent de petites particules lumineuses. Une coiffe blanche bombée repose sur sa tête, sur laquelle se trouve une pointe arrondie. Ses yeux sont devenus bleu clair, ses oreilles se sont affaissées sur ses épaules et sont plus longues et arrondies, tandis que sa queue semble avoir disparu.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Mélodelfe a la peau plus pâle, le bout de ses oreilles est vert et ses yeux sont plus foncés.
+
+=== [[Évolution]] ===
+
+Méga-Mélodelfe est la [[Méga-Évolution]] de [[Mélodelfe]] avec une [[Mélodelfite]]. Ce dernier est l'évolution de [[Mélofée]] au contact d'une [[Pierre Lune]], qui lui-même est l'évolution de [[Mélo]] si son [[bonheur]] est suffisant.
+{{#lst:Mélo|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Miroir Magik]] : annule les effets des capacités de statut subies par le Pokémon et les retourne à l'envoyeur.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Grâce au pouvoir du clair de lune, il peut voler en manipulant à sa guise la gravité dans un rayon de dix mètres autour de lui.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Fée|type2=Vol}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 40, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Fée
+| PV=95
+| attaque=80
+| defense=93
+| atq-spc=135
+| def-spc=110
+| vitesse=70
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Mélodelfe/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Mélodelfe}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}|première=Méga-Mélodelfe-ex (Méga-Évolution Équilibre Parfait 031)}}
+
+{{Ruban Pokémon
+| nomPrécédent=Mélofée
+| numéro=0036
+| nom=Méga-Mélodelfe
+| nomSuivant=Goupix
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Mélodelfe]]

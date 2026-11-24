@@ -1,0 +1,110 @@
+{{Ruban Pokémon
+| nomPrécédent=Polichombr
+| numéro=0354
+| nom=Méga-Branette
+| nomSuivant=Skelénox
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Branette
+| nom-japonais=メガ ジュペッタ
+| nom-romaji=Mega Jupetta
+| nom-déposé=Mega Juppeta
+| nom-anglais=Mega Banette
+| ndex=0354
+| dex=Hoenn-ROSA/152//Kalos (Monts)/123//Alola-USUL/317//Illumis/112
+| dex-secondaires=Shuffle/212//Picross/N05-02//Picross (Alternatif)/A05-02
+| légende=Artwork de Méga-Branette pour {{Jeu|XY}}.
+| type1=Spectre
+| catégorie=Marionnette
+| taille=1.2
+| poids=13
+| talents=Farceur
+| fmratio=0.5
+| génération=6
+| couleur=Noir
+| corps=6
+| cri=Cri 0354 Méga
+}}
+'''Méga-Branette''' (anglais : '''Mega Banette''' ; japonais : '''メガ ジュペッタ''' ''Mega Juppeta'') est un [[Méga-Pokémon]] de [[type]] [[Spectre (type)|Spectre]]. C'est la [[Méga-Évolution]] de [[Branette]].
+
+Méga-Branette a été révélé dans le magazine ''[[CoroCoro Comics]]'' de décembre 2013, en même temps que [[Méga-Alakazam]], [[Méga-Cizayox]], [[Méga-Charmina]], [[Méga-Démolosse]], [[Méga-Élecsprint]], [[Méga-Ptéra]] et [[Méga-Scarabrute]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant, l'enveloppe gris foncé de Branette s'est couverte de fermetures éclair, dont certaines ouvertes laissent apparaître mains et jambes roses. Les mains ressortant des manches possèdent trois longues griffes de la même couleur, les jambes sont au contraire très courtes et sans pied.
+
+L'arrière de sa tête forme un long capuchon autour duquel une grande fermeture éclair s'enroule.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, la couleur de la robe de Méga-Branette prend une apparence légèrement bleu foncé et son corps est violet foncé.
+
+=== [[Évolution]] ===
+Méga-Branette est la [[Méga-Évolution]] de [[Branette]] avec une [[Branettite]].
+
+Branette est l'évolution de [[Polichombr]] à partir du [[niveau]] 37.
+{{#lst:Polichombr|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Farceur]] : rend les capacités de statut prioritaires.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|US}}
+:Le surplus d'énergie a amplifié sa malédiction et l'a rendue incontrôlable. Il en vient même à éprouver de la rancœur envers son Dresseur.
+;{{Jeu|UL}}
+:La Méga-Évolution a amplifié sa rancœur, et le maléfice qui était autrefois contenu déborde maintenant des fermetures éclair.
+;{{Jeu|LPZA}}
+:La Méga-Évolution a amplifié sa rancœur. Sa puissance maléfique autrefois contenue s'échappe désormais par ses fermetures éclair.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Spectre}}
+
+== [[Statistique]]s ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 50, sa [[Défense]] de 10, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| nom=Méga-Branette
+| type=spectre
+| PV=64
+| attaque=165
+| defense=75
+| atq-spc=93
+| def-spc=83
+| vitesse=75
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Branette voir [[Branette/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/banette/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Branette voir [[Branette#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/banette Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Branette/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Branette}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Pokémon Méga-Évolution 4 - Méga-Branette d'un Dresseur.png|200px|thumb|left|Le Méga-Branette d'un Dresseur.]]
+[[Fichier:Méga-Branette d'Alva.png|200px|thumb|right|Le Méga-Branette d'Alva.]]
+Méga-Branette apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon}}
+
+{{Ruban Pokémon
+| nomPrécédent=Polichombr
+| numéro=0354
+| nom=Méga-Branette
+| nomSuivant=Skelénox
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Branette]]

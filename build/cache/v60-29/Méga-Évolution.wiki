@@ -1,0 +1,777 @@
+{{Confusion|Pokémon Méga-Évolution|Méga-Évolution (JCC)|Pokémon : Méga-Évolution}}
+[[Fichier:Symbole Méga-Évolution LPZA.svg|thumb|150px|right|Le symbole de la Méga-Évolution dans {{jeu|LPZA}}.]]
+
+La '''Méga-Évolution''' est un stade supérieur à l'évolution. Principe de changement de [[Forme#Méga-Pokémon|forme]] introduit dans la [[sixième génération]], elle permet à un Pokémon de devenir un [[Méga-Pokémon]].
+
+Actuellement, il existe 93 Méga-Évolutions pour 87 Pokémon capables de méga-évoluer. Six Pokémon ont deux Méga-Évolutions différentes : [[Dracaufeu]], [[Raichu]], [[Mewtwo]], [[Absol]], [[Lucario]] et [[Carchacrok]].
+
+== Principe ==
+=== Activation de la Méga-Évolution ===
+Quand un Pokémon entre en combat avec un objet spécial appelé « [[Méga-Gemme]] », il peut méga-évoluer si le joueur active sa [[Gemme Sésame]] (située dans le [[Méga-Anneau]] dans {{Jeu|XY}} ou le [[Méga-Bracelet]] dans {{Jeu|ROSA}}). Dans {{Jeu|LGPE}}, les Pokémon ne peuvent pas tenir d'objet, mais ils peuvent tout de même méga-évoluer si la Méga-Gemme est dans le sac.
+
+La Méga-Évolution se déclenche manuellement par l'intermédiaire d'une icône dans le menu de combat. Le Pokémon peut attaquer durant le tour de Méga-Évolution. La Méga-Évolution reste effective pendant toute la durée du combat. Dans {{Jeu|LPZA}}, une jauge se remplit au fur et à mesure. Une fois celle-ci pleine, le joueur doit appuyer sur le joystick droit pour méga-évoluer son Pokémon. Lorsque la jauge est vide, le Pokémon reprend sa forme de base.
+
+Par exemple, si [[Braségali]] arrive en combat avec la [[Méga-Gemme]] qui lui est assignée, la [[Braségalite]], il peut méga-évoluer en Méga-Braségali.
+
+La Méga-Gemme ne disparaissant pas après utilisation, il est possible de faire méga-évoluer un même Pokémon à volonté. En contrepartie, un même Dresseur ne peut faire méga-évoluer qu'un seul de ses Pokémon par combat.
+
+Dans {{jeu|LPZA}}, le Pokémon est doté d'une jauge de Méga-Force qui se remplit en utilisant ses capacités. Une fois remplie, la Méga-Évolution peut être activée, et restera active jusqu'à ce qu'elle soit complètement épuisée. Toutefois il est possible de la faire durer en rappelant le Méga-Pokémon, ce qui bloque la jauge, et la remplir de nouveau en utilisant un autre Pokémon.
+
+<center><gallery caption="La Méga-Évolution Y de [[Mewtwo]]" widths="150px">
+Fichier:Méga-Évolution-1.png|Un [[Mewtwo]] qui s'apprête à méga-évoluer...
+Fichier:Méga-Évolution-2.png|...il se transforme...
+Fichier:Méga-Évolution-3.png|...en...
+Fichier:Méga-Évolution-4.png|...[[Méga-Mewtwo Y]].
+</gallery></center>
+
+=== Cas de Méga-Rayquaza ===
+Il est dit que chaque [[Pokémon (créature)|Pokémon]] pouvant méga-évoluer doit posséder une [[Méga-Gemme]] qui lui est propre pour pouvoir activer ce processus. Cependant, il existe une exception : [[Méga-Rayquaza]]. En effet, pour méga-évoluer, [[Rayquaza]] n'a pas besoin de Méga-Gemme. Il lui suffit de connaître la [[capacité]] [[Draco Ascension]]. S'il tient un [[Cristal Z]], il ne peut pas méga-évoluer.
+
+Ce phénomène est expliqué durant l'[[Épisode Delta]] de {{Jeu|ROSA}} : Rayquaza a absorbé assez d'énergie vitale Pokémon (l'énergie contenue dans les Méga-Gemmes) en plus de la météorite qu'il a ingurgitée pour créer en lui un substitut à une Méga-Gemme et ainsi s'émanciper du besoin d'une Méga-Gemme. De ce fait, il ne lui suffit que de l'activation d'une Gemme Sésame pour pouvoir méga-évoluer. Sa capacité Draco Ascension est le fruit de sa toute première Méga-Évolution et est devenue au fil du temps nécessaire pour renouveler ce processus.
+
+=== Méga-Évolution Ferox ===
+{{incomplet}}
+Dans {{jeu|LPZA}}, une variante de la Méga-Évolution est introduite : la Méga-Évolution Ferox. Il s'agit d'un phénomène étrange faisant méga-évoluer des Pokémon sauvages sans intervention d'un Dresseur, ni d'une [[Gemme Sésame]]. Les Pokémon affectés deviennent plus violents et se déchaînent de douleur.
+Les [[capacité]]s normales leur font peu de dégâts, les capacités + étant plus efficaces sur eux.
+
+Les Pokémon Méga-Ferox se différencie de leurs congénères par l'aura violette qui les entoure, signe qu'ils vont bientôt méga-évoluer. À l'instar des [[Pokémon monarque]]s de [[Hisui]], ils sont beaucoup plus grands en combat. Ils retrouvent leur taille initiale après avoir été vaincus.
+
+Vaincre un Pokémon Méga-Ferox permet d'obtenir la [[Méga-Gemme]] qui lui est associée.
+
+Après avoir terminé la {{Mission|P041|LPZA}}, le joueur peut réaffronter les Pokémon Méga-Ferox sous forme de projections holographiques dans le siège de la [[société Quazar]]. Ces derniers sont alors au niveau 70 et les combats sont chronométrés.
+
+==== Pokémon Méga-Ferox ====
+; {{Jeu|LPZA}}
+{| class="tableaustandard centre sortable"
+|-
+! Pokémon
+! Niveau
+! Récompense
+|-
+| style="text-align:left" | 0359 {{Miniature|0359 Méga-Ferox|jeu=LPZA}} [[Méga-Absol]]
+| 25
+| style="text-align:left" | {{Objet|Absolite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0080 {{Miniature|0080 Méga-Ferox|jeu=LPZA}} [[Méga-Flagadoss]]
+| 34
+| style="text-align:left" | {{Objet|Flagadossite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0323 {{Miniature|0323 Méga-Ferox|jeu=LPZA}} [[Méga-Camérupt]]
+| 34
+| style="text-align:left" | {{Objet|Caméruptite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0071 {{Miniature|0071 Méga-Ferox|jeu=LPZA}} [[Méga-Empiflor]]
+| 34
+| style="text-align:left" | {{Objet|Empiflorite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0015 {{Miniature|0015 Méga-Ferox|jeu=LPZA}} [[Méga-Dardargnan]]
+| 41
+| style="text-align:left" | {{Objet|Dardargnite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0701 {{Miniature|0701 Méga-Ferox|jeu=LPZA}} [[Méga-Brutalibré]]
+| 41
+| style="text-align:left" | {{Objet|Brutalibrite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0354 {{Miniature|0354 Méga-Ferox|jeu=LPZA}} [[Méga-Branette]]
+| 41
+| style="text-align:left" | {{Objet|Branettite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0303 {{Miniature|0303 Méga-Ferox|jeu=LPZA}} [[Méga-Mysdibule]]
+| 48
+| style="text-align:left" | {{Objet|Mysdibulite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0689 {{Miniature|0689 Méga-Ferox|jeu=LPZA}} [[Méga-Golgopathe]]
+| 48
+| style="text-align:left" | {{Objet|Golgopathite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0181 {{Miniature|0181 Méga-Ferox|jeu=LPZA}} [[Méga-Pharamp]]
+| 48
+| style="text-align:left" | {{Objet|Pharampite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0478 {{Miniature|0478 Méga-Ferox|jeu=LPZA}} [[Méga-Momartik]]
+| 53
+| style="text-align:left" | {{Objet|Momartikite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0334 {{Miniature|0334 Méga-Ferox|jeu=LPZA}} [[Méga-Altaria]]
+| 53
+| style="text-align:left" | {{Objet|Altarite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0003 {{Miniature|0003 Méga-Ferox|jeu=LPZA}} [[Méga-Florizarre]]
+| 53
+| style="text-align:left" | {{Objet|Florizarrite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0149 {{Miniature|0149 Méga-Ferox|jeu=LPZA}} [[Méga-Dracolosse]]
+| 59
+| style="text-align:left" | {{Objet|Dracolossite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0248 {{Miniature|0248 Méga-Ferox|jeu=LPZA}} [[Méga-Tyranocif]]
+| 59
+| style="text-align:left" | {{Objet|Tyranocivite|jeu=LPZA}}
+|-
+| style="text-align:left" | 0121 {{Miniature|0121 Méga-Ferox|jeu=LPZA}} [[Méga-Staross]]
+| 59
+| style="text-align:left" | {{Objet|Starossite|jeu=LPZA}}
+|}
+
+; {{Jeu|LPZAmd}}
+{| class="tableaustandard centre sortable"
+|-
+! Pokémon
+! Niveau
+! Récompense
+|-
+| style="text-align:left" | 0359 {{Miniature|0359|Méga Z}} [[Méga-Absol Z]]
+| 105
+| style="text-align:left" | {{Objet|Absolite Z}}
+|-
+| style="text-align:left" | 0398 {{Miniature|0398|Méga}} [[Méga-Étouraptor]]
+| 120
+| style="text-align:left" | {{Objet|Étouraptorite}}
+|-
+| style="text-align:left" | 0978 {{Miniature|0978|Méga}} [[Méga-Nigirigon]]
+| 140
+| style="text-align:left" | {{Objet|Nigirigonite}}
+|-
+| style="text-align:left" | 0678 {{Miniature|0678|Méga}} [[Méga-Mistigrix]]
+| 150
+| style="text-align:left" | {{Objet|Mistigrixite}}
+|-
+| style="text-align:left" | 0485 {{Miniature|0485|Méga}} [[Méga-Heatran]]
+| 180
+| style="text-align:left" | {{Objet|Heatranite}}
+|-
+| style="text-align:left" | 0491 {{Miniature|0491|Méga}} [[Méga-Darkrai]]
+| 200
+| style="text-align:left" | {{Objet|Darkraïte}}
+|-
+| style="text-align:left" | 0491 {{Miniature|0384|Méga|jeu=LPZA}} [[Méga-Rayquaza]]
+| 200
+| —
+|-
+| style="text-align:left" | 0807 {{Miniature|0807|Méga}} [[Méga-Zeraora]]
+| 200
+| style="text-align:left" | {{Objet|Zeraorite}}
+|}
+
+=== Méga-Évolution Z ===
+L'extension {{Jeu|LPZAMD}} de {{jeu|LPZA}}, introduit une nouvelle forme de Méga-Évolution, la Méga-Évolution Z. Dans cet état, les Pokémon méga-évolués exécutent plus rapidement leurs capacités, mais en contrepartie la jauge de Méga-Force s'épuise beaucoup plus vite, et n'est donc pas adaptée pour des combats de longue durée. Seul trois Pokémon sont dans ce cas : [[Méga-Lucario Z]], [[Méga-Absol Z]] et [[Méga-Carchacrok Z]].
+
+=== Variation de statistiques ===
+Un Pokémon méga-évoluant voit ses statistiques de base augmenter de 100 (sauf [[Alakazam]] en [[sixième génération]], dont les statistiques n'augmentent que de 90).
+La statistique de [[Statistique#Points de Vie|Points de Vie]] est la seule qui n'est pas affectée par la Méga-Évolution.
+
+La [[Vitesse (statistique)|Vitesse]] est un cas particulier. En [[sixième génération]], lors du tour de Méga-Évolution, l'ordre d'attaque d'un Pokémon est basé sur le talent et la Vitesse de sa forme de base, pas ceux de sa forme méga-évoluée. Ainsi, si un Pokémon devient plus rapide par l'intermédiaire de sa Méga-Évolution, cette rapidité acquise ne devient effective qu'après le tour de sa Méga-Évolution.
+
+Un autre cas est lorsqu'un Pokémon possède les talents [[Farceur]] ou [[Frein]], et qu'il perd ce talent lors de la Méga-Évolution. Dans cette situation, l'ordre d'attaque d'un Pokémon reste basé sur son ancien talent, lors du tour de transformation. À l'inverse, lorsqu'un Pokémon gagne un talent comme Farceur ([[Méga-Branette]] par exemple), les effets de ce nouveau talent ne deviennent effectifs que lors du tour suivant sa Méga-Évolution.
+
+Depuis la [[septième génération]], tous les changements apportés par la Méga-Évolution sont effectifs dès le tour de la transformation, que cela soit le gain de rapidité ou l'obtention d'un nouveau talent.
+
+=== [[Objet]]s liés ===
+Les deux seuls objets nécessaires à la Méga-Évolution sont la [[Méga-Gemme]] (tenue par le Pokémon) et la [[Gemme Sésame]] (tenue par le Dresseur). Ces pierres sont parfois serties sur divers objets pour faciliter leur utilisation, tels que des bracelets, des colliers, des bagues et même sur des lunettes. Ces objets permettent au Dresseur de déclencher une Méga-Évolution.
+
+{| class="tableaustandard" style="text-align:center;"
+|-
+! colspan="2" | Accessoire
+! rowspan="2" | Dresseur(s) concerné(s)
+! rowspan="2" | Utilisé dans
+|-
+! Image
+! Nom
+|-
+| [[Fichier:Bracelet Z-SL.png|x60px]]
+| [[Bracelet Z]]
+| [[Elio]], [[Selene]]
+| {{Abréviation|SL}}
+|-
+| [[Fichier:Méga-Ancre Arthur.png|x60px]]
+| Méga-Ancre
+| [[Arthur (Team Aqua)|Arthur]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Anneau Kalem.png|x60px]]
+| rowspan="5" | [[Méga-Anneau]]
+| [[Kalem]], [[Serena]]
+| {{Abréviation|XY}}
+|-
+| [[Fichier:Méga-Anneau Lysandre.png|x60px]]
+| [[Lysandre]]
+| {{Abréviation|XY}}
+|-
+| —
+| [[Courtney]], [[Matthieu]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Anneau Sina.png|x60px]]
+| [[Dexio]], [[Sina]]
+| {{Abréviation|SL}}{{Abréviation|USUL}}
+|-
+| —
+| [[Paxton]], [[Harmony]]
+| {{Abréviation|LPZA}}
+|-
+| [[Fichier:Méga-Bracelet Flora.png|x60px]]
+| [[Méga-Bracelet]]
+| [[Brice (Hoenn)|Brice]], [[Flora (Hoenn)|Flora]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Charme Dianthéa.png|x60px]]
+| rowspan="2" | Méga-Charme
+| [[Dianthéa]]
+| {{Abréviation|XY}}
+|-
+| [[Fichier:Méga-Charme de Flora.png|x60px]]
+| [[Flora (Hoenn)|Flora]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Gant Cornélia.png|x50px]]
+| Méga-Gant
+| [[Cornélia]]
+| {{Abréviation|XY}}
+|-
+| [[Fichier:Gemme Sésame d'Amaryllis.png|x60px]]
+| Méga-Grève
+| [[Amaryllis]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Lunettes Max.png|x60px]]
+| Méga-Lunettes
+| [[Max (Team Magma)|Max]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Manchette de Brice.png|x60px]]
+| Méga-Manchette
+| [[Brice (Hoenn)|Brice]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Pendentif Timmy.png|x60px]]
+| Méga-Pendentif
+| [[Timmy]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Pin's Pierre Rochard.png|x60px]]
+| Méga-Pin's
+| [[Pierre Rochard]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Méga-Tiare Atalante.png|x40px]]
+| Méga-Tiare
+| [[Atalante]]
+| {{Abréviation|ROSA}}
+|-
+| [[Fichier:Super Bracelet Z-USUL.png|x60px]]
+| [[Super Bracelet Z]]
+| [[Elio]], [[Selene]]
+| {{Abréviation|USUL}}
+|-
+| [[Fichier:Omni-Anneau-Champions.png|x60px]]
+| [[Omni-Anneau]]
+| [[Billy (Frontalis)|Billy]], [[Nicky]]
+| {{Jeu|Champions}}
+|}
+
+== Liste des Pokémon pouvant méga-évoluer ==
+{{Article principal|Méga-Pokémon}}
+Les Méga-Pokémon ont été introduits au cours de la [[sixième génération]], premièrement avec 28 formes dans {{Jeu|XY}}, et 20 supplémentaires dans {{Jeu|ROSA}}.
+
+{{Jeu|LPZA}} réintroduit le concept avec 26 nouveaux Méga-Pokémon, et 19 dans le DLC {{Jeu|LPZAmd}}.
+
+== Dans les jeux secondaires ==
+=== Série [[Pokémon Donjon Mystère (série)|Donjon Mystère]] ===
+À noter que dans la série ''Donjon Mystère'', les Pokémon ayant deux Méga-Évolutions possibles, à savoir [[Dracaufeu]] et [[Mewtwo]], voient leur forme méga-évoluée choisie de manière aléatoire.
+
+==== {{Jeu|PMDM}} ====
+La Méga-Évolution se fait au moyen d'un [[Anneau]], auquel est sertie une [[Éphélite|Éphélite Transcendance]]. Le phénomène se caractérise par une aura apparaissant autour du Pokémon, ainsi que l'apparition d'une barre comportant cinq niveaux au-dessus des PV du Pokémon.
+
+Un Pokémon méga-évolué observe de nombreux changements :
+* une nouvelle apparence physique (représentée par un changement d'icône de profil) ;
+* son attaque de base est grandement augmentée ;
+* ses capacités deviennent capables de détruire les murs de l'étage, en les attaquant ;
+* une immunité aux attaques de front, c'est-à-dire toute attaque physique ou spéciale lancée au corps à corps.
+
+À noter que la barre au-dessus des PV représente le temps restant à la transformation. Elle se remplit au fur et à mesure, de manière régulière, lors de chaque tour du Pokémon transformé. Une fois pleine, le Pokémon entre alors en statut Berserk : il devient incontrôlable et attaque aléatoirement tout ce qui l'entoure. Ainsi, ses cibles peuvent autant être les murs que les ennemis ou les alliés. Après 5 à 10 tours, le statut Berserk prend fin avec la Méga-Évolution. L'Éphélite utilisée est alors détruite.
+
+Contrairement à la série principale, un Pokémon méga-évolué peut se faire voler ou détruire son Anneau, annulant ainsi sa possibilité de méga-évoluer. Cela est notamment possible grâce à des capacités comme [[Passe-Passe]], à un [[Piège (Pokémon Donjon Mystère)|piège]], ou tout simplement lorsque l'Anneau est rangé dans le sac.
+
+Il est impossible de faire méga-évoluer un Pokémon en dehors d'un donjon, puisque les Éphélites sont automatiquement détruites à la sortie d'un donjon.
+
+==== {{Jeu|PDMDX}} ====
+Un Pokémon pouvant méga-évoluer ne peut le faire qu'en consommant une [[Graine Transcendance]]. Contrairement à {{Jeu|PMDM}}, la Méga-Évolution n'est pas limitée dans le temps. Elle ne peut prendre fin que dans deux cas : si le Pokémon termine l'exploration du donjon, ou si le Pokémon est atteint par une altération de [[statut]].
+
+Les Pokémon ennemis peuvent également méga-évoluer sous certaines conditions :
+* mettre K.O. un Pokémon de l'équipe du joueur, pourvu qu'il ne soit pas ranimé par une [[Résugraine]] ou une [[Mini-Résugraine]] ;
+* consommer une Graine Transcendance dans le sac de l'équipe du joueur, via [[Picore]] ;
+* mettre K.O. un {{Pdm|Munja}}, s'ils sont présents dans l'étage visité par le joueur et son équipe.
+
+=== {{Jeu|Pic}} ===
+La Méga-Évolution peut être activée à condition de posséder un Méga-Stylo. Pour cela, il faut l'acheter auprès du [[Professeur Tetra]] pour 500 Picrites. Toutefois, il faut d'abord avoir débloqué le [[Liste des niveaux de Pokémon Picross|niveau]] de [[Méga-Branette]], le N05-02 du Mode Normal, afin que l'objet soit disponible à l'achat.
+
+Une fois le Méga-Stylo possédé, il devient possible de réaliser les niveaux des [[Méga-Pokémon]], de les utiliser comme aide lors des autres niveaux, mais également de résoudre les fresques montrant les [[Primo-Résurgence]]s de [[Kyogre]] et de [[Groudon]].
+
+Concernant le fonctionnement, seule une Méga-Évolution peut être activée à la fois. Il est également impossible de les utiliser contre la forme de base du Pokémon méga-évolué. Par exemple, [[Méga-Oniglali]] ne peut servir contre [[Oniglali]]. Malgré tout, les talents des Pokémon méga-évolués sont plus puissants que ceux de leurs formes de base, et peuvent être utilisés sur des niveaux beaucoup plus grands.
+
+=== {{Jeu|PRW}} ===
+Afin de pouvoir utiliser la Méga-Évolution, il faut tout d'abord avoir terminé la bataille spéciale « L'attaque du Conquérant », ce qui permet d'obtenir en récompense le Kit du joaillier. Son utilisation dans la section Récompenses de la boutique normale permet d'obtenir une Méga-Clé, et d'ouvrir l'accès à la Maison du Joaillier. Là, des [[Méga-Gemme]]s peuvent être achetées et équipées directement, afin de renforcer les Pokémon déjà possédés, grâce à leur Méga-Évolution.
+
+À noter que la première pierre choisie par le joueur chez le Joaillier est gratuite, que cela soit une Méga-Gemme, la [[Gemme Rouge]] ou la [[Gemme Bleue]]. Les suivantes peuvent être toutes achetées, en échange de 5 Poké Diamants chacune.
+
+Lors des combats, la Méga-Évolution peut être activée en appuyant sur le bouton adéquat d'un Pokémon équipé d'une Méga-Gemme. Contrairement aux jeux de la série principale, l'utilisation de la Méga-Évolution n'est pas limitée au cours du combat, et peut être réutilisée sur n'importe quel Pokémon équipé de sa Méga-Gemme. La transformation se termine une fois qu'un voyage en montgolfière est terminé, que le Pokémon méga-évolué est K.O. ou échangé.
+
+Par ailleurs, la transformation du Pokémon en sa Méga-Évolution génère une onde d'énergie qui peut blesser, renverser voire vaincre tous les Pokémon adversaires qui sont touchés. Elle annule également automatiquement toutes les altérations de statut négatives que le Pokémon avait avant sa transformation.
+
+=== {{Jeu|Sh}} ===
+{{Article principal|Liste des talents de Pokémon Shuffle#Spécifiques aux Méga-Évolutions}}
+Afin de pouvoir activer la Méga-Évolution d'un Pokémon lors d'un niveau, il faut d'abord obtenir la [[Méga-Gemme]] correspondant à ce Pokémon. Dans le cas de [[Rayquaza]], il faut obtenir la [[Météorite (Hoenn)|Météorite]]. Il existe plusieurs moyens d'obtenir ces différents objets, notamment :
+* vaincre la Méga-Évolution du Pokémon, lors des derniers niveaux des différentes zones ;
+* les obtenir en récompense de la réussite de certains niveaux classés ;
+* atteindre un certain niveau lors des combats à échelons.
+
+Lors d'un niveau, la Méga-Évolution n'est possible que pour le premier Pokémon placé dans les soutiens, c'est-à-dire celui qui est le plus à gauche. Afin d'activer la transformation, il est nécessaire de remplir complètement la Méga-Jauge à l'écran. Le moyen le plus simple est de réaliser un certain nombre de chaînes à l'effigie du Pokémon qui doit méga-évoluer. Il est également possible de faire des chaînes de Pokémon ayant le talent Méga-Puissance/Méga-Puissance +, à condition que ces Pokémon soient du même type que le Pokémon qui doit méga-évoluer.
+
+La taille de la Méga-Jauge à remplir dépend du Pokémon qui doit méga-évoluer. Chacun d'entre eux nécessite un certain nombre d'icônes à aligner, afin de compléter sa Méga-Jauge. À noter qu'il est possible de réduire de manière permanente le nombre de chaînes à réaliser pour faire méga-évoluer un Pokémon. Pour cela, il suffit de donner un Méga-Turbo au Pokémon choisi.
+
+Une fois la transformation accomplie, elle ne reste active que pour le niveau en cours. Elle se traduit notamment par un changement du talent du Pokémon méga-évolué. En effet, après sa transformation, le Pokémon méga-évolué perd le talent de sa forme de base, en faveur de celui de sa Méga-Évolution, qui est plus efficace et permet souvent de toucher une large zone du niveau.
+
+=== {{Jeu|Pokkén}} et {{Jeu|PokkénDX}} ===
+Pour pouvoir déclencher la Méga-Évolution, il faut que le Pokémon qui puisse s'en servir remplisse sa jauge de synergie au maximum, lors d'un affrontement. Une fois que ceci est réalisé, le joueur doit activer l'éclat synergique du Pokémon, ce qui le transforme en sa forme méga-évoluée. La transformation se termine automatiquement lorsque toute la synergie de la jauge a été consommée, ce qui fait que le Pokémon méga-évolué reprenne sa forme d'origine.
+
+Ainsi, entre le jeu sur [[Wii U]] et sa réédition sur [[Nintendo Switch]], 11 Pokémon sont capables de méga-évoluer : [[Lucario]], [[Carchacrok]], [[Gardevoir]], [[Ectoplasma]], [[Dracaufeu]], [[Braségali]], [[Jungko]], [[Cizayox]], [[Tortank]], [[Mewtwo]] et [[Shadow Mewtwo]]. À noter que dans les deux jeux, Dracaufeu et les deux Mewtwo ne peuvent méga-évoluer qu'en leurs formes X.
+
+Dans le mode histoire du jeu, appelé « La Ligue Ferrum », Shadow Mewtwo méga-évolue systématiquement avant le début de chaque combat contre lui. Contrairement au reste du temps, sa transformation reste active pour la durée totale du combat, quel que soit le niveau de remplissage de sa jauge de synergie.
+
+Certains Méga-Pokémon sont également présents en guise de décoration et d'ornements de certains terrains de combat. Ainsi, [[Méga-Rayquaza]] apparaît sous la forme d'une énorme statue et d'un dessin au sol de l'Arène, sur le terrain Nid du Dragon. Une sculpture en neige géante de [[Méga-Laggron]] apparaît sur le terrain Ancien village de Ferrum (Hiver).
+
+Enfin, {{Jeu|PokkénDX}} possède un contenu téléchargeable payant, le Battle Pack, qui permet notamment de débloquer Méga-Rayquaza comme Pokémon de soutien.
+
+=== {{jeu|PM}} ===
+La Méga-Évolution est possible lorsque certains [[Liste des Duos de Pokémon Masters|Duos]] activent et utilisent leur [[Capacité Duo]]. La transformation permet ainsi une hausse significative des [[statistique]]s du Pokémon transformé, qui devient plus puissant. De plus, dans la majorité des cas, elle modifie également les capacités et/ou talents passifs disponibles pour le Pokémon méga-évolué.
+
+Une fois activée, la Méga-Évolution reste en effet jusqu'à la fin du combat, que le Pokémon transformé soit K.O. ou non lorsque l'affrontement se termine. Contrairement aux jeux principaux, il est possible de réaliser plusieurs Méga-Évolutions lors d'un même combat.
+
+À noter que plusieurs Dresseurs de {{Jeu|PM}} sont capables de faire méga-évoluer leur Pokémon partenaire, bien qu'ils ne possèdent normalement pas de [[Gemme Sésame]] dans les jeux principaux. À ce jour, les Duos ayant recours à la Méga-Évolution sont :
+
+{| class="tableaustandard" style="text-align:center"
+|-
+! Dresseur
+! Pokémon
+! rowspan="57"|
+! Dresseur
+! Pokémon
+! rowspan="57"|
+! Dresseur
+! Pokémon
+|-
+| [[Fichier:VS Agatha PM.png|x80px]]
+| [[Fichier:Sprite 0094 PM.png|x80px]] ↔ [[Fichier:Sprite 0094 Méga PM.png|x80px]]
+| [[Fichier:VS Hector PM.png|x80px]]
+| [[Fichier:Sprite 0015 PM.png|x80px]] ↔ [[Fichier:Sprite 0015 Méga PM.png|x80px]]
+| [[Fichier:VS Marion PM.png|x80px]]
+| [[Fichier:Sprite 0229 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0229 Méga PM.png|x80px]]
+|-
+| [[Agatha (Conseil 4)|Agatha]]
+| [[Ectoplasma]] ↔ [[Méga-Ectoplasma]]
+| [[Hector (Johto)|Hector]]
+| [[Dardargnan]] ↔ [[Méga-Dardargnan]]
+| [[Marion]]
+| [[Démolosse]] ↔ [[Méga-Démolosse]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Sam PM.png|x80px]]
+| [[Fichier:Sprite 0127 PM.png|x80px]] ↔ [[Fichier:Sprite 0127 Méga PM.png|x80px]]
+| [[Fichier:VS Cornélia PM.png|x80px]]
+| [[Fichier:Sprite 0448 PM.png|x80px]] ↔ [[Fichier:Sprite 0448 Méga PM.png|x80px]]
+| [[Fichier:VS Blue PM.png|x80px]]
+| [[Fichier:Sprite 0018 PM.png|x80px]] ↔ [[Fichier:Sprite 0018 Méga PM.png|x80px]]
+|-
+| [[Sam]]
+| [[Scarabrute]] ↔ [[Méga-Scarabrute]]
+| [[Cornélia]]
+| [[Lucario]] ↔ [[Méga-Lucario]]
+| [[Blue]]
+| [[Roucarnage]] ↔ [[Méga-Roucarnage]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Glacia PM.png|x80px]]
+| [[Fichier:Sprite 0362 PM.png|x80px]] ↔ [[Fichier:Sprite 0362 Méga PM.png|x80px]]
+| [[Fichier:VS Cynthia PM.png|x80px]]
+| [[Fichier:Sprite 0445 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0445 Méga PM.png|x80px]]
+| [[Fichier:VS Pierre Rochard PM.png|x80px]]
+| [[Fichier:Sprite 0376 PM.png|x80px]] ↔ [[Fichier:Sprite 0376 Méga PM.png|x80px]]
+|-
+| [[Glacia]]
+| [[Oniglali]] ↔ [[Méga-Oniglali]]
+| [[Cynthia]]
+| [[Carchacrok]] ↔ [[Méga-Carchacrok]]
+| [[Pierre Rochard]]
+| [[Métalosse]] ↔ [[Méga-Métalosse]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Red (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0006 PM.png|x80px]] ↔ [[Fichier:Sprite 0006 Méga X PM.png|x80px]]
+| [[Fichier:VS Morgane PM.png|x80px]]
+| [[Fichier:Sprite 0065 ♂ PM.png|x80px]] ↔ [[Fichier:Sprite 0065 Méga PM.png|x80px]]
+| [[Fichier:VS Timmy PM.png|x80px]]
+| [[Fichier:Sprite 0475 PM.png|x80px]] ↔ [[Fichier:Sprite 0475 Méga PM.png|x80px]]
+|-
+| [[Red|Red (Ultime)]]
+| [[Dracaufeu]] ↔ [[Méga-Dracaufeu X]]
+| [[Morgane]]
+| [[Alakazam]] ↔ [[Méga-Alakazam]]
+| [[Timmy]]
+| [[Gallame]] ↔ [[Méga-Gallame]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Blue (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0009 PM.png|x80px]] ↔ [[Fichier:Sprite 0009 Méga PM.png|x80px]]
+| [[Fichier:VS Leaf (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0003 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0003 Méga PM.png|x80px]]
+| [[Fichier:VS Jasmine PM.png|x80px]]
+| [[Fichier:Sprite 0208 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0208 Méga PM.png|x80px]]
+|-
+| [[Blue|Blue (Ultime)]]
+| [[Tortank]] ↔ [[Méga-Tortank]]
+| [[Leaf|Leaf (Ultime)]]
+| [[Florizarre]] ↔ [[Méga-Florizarre]]
+| [[Jasmine]]
+| [[Steelix]] ↔ [[Méga-Steelix]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Pieris (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0319 PM.png|x80px]] ↔ [[Fichier:Sprite 0319 Méga PM.png|x80px]]
+| [[Fichier:VS Atalante PM.png|x80px]]
+| [[Fichier:Sprite 0334 PM.png|x80px]] ↔ [[Fichier:Sprite 0334 Méga PM.png|x80px]]
+| [[Fichier:VS Flora PM.png|x80px]]
+| [[Fichier:Sprite 0260 PM.png|x80px]] ↔ [[Fichier:Sprite 0260 Méga PM.png|x80px]]
+|-
+| [[Pieris|Pieris (Ultime)]]
+| [[Sharpedo]] ↔ [[Méga-Sharpedo]]
+| [[Atalante]]
+| [[Altaria]] ↔ [[Méga-Altaria]]
+| [[Flora (Hoenn)|Flora]]
+| [[Laggron]] ↔ [[Méga-Laggron]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Dianthéa PM.png|x80px]]
+| [[Fichier:Sprite 0282 PM.png|x80px]] ↔ [[Fichier:Sprite 0282 Méga PM.png|x80px]]
+| [[Fichier:VS Flora (Saison 2021) PM.png|x80px]]
+| [[Fichier:Sprite 0428 PM.png|x80px]] ↔ [[Fichier:Sprite 0428 Méga PM.png|x80px]]
+| [[Fichier:VS Damien PM.png|x80px]]
+| [[Fichier:Sprite 0359 PM.png|x80px]] ↔ [[Fichier:Sprite 0359 Méga PM.png|x80px]]
+|-
+| [[Dianthéa]]
+| [[Gardevoir]] ↔ [[Méga-Gardevoir]]
+| [[Flora (Hoenn)|Flora<br>(Saison 2021)]]
+| [[Lockpin]] ↔ [[Méga-Lockpin]]
+| [[Damien (Conseil 4)|Damien]]
+| [[Absol]] ↔ [[Méga-Absol]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Pierre Rochard (Anniversaire 2021) PM.png|x80px]]
+| [[Fichier:Sprite 0384 chromatique PM.png|x80px]] ↔ [[Fichier:Sprite 0384 Méga chromatique PM.png|x80px]]
+| [[Fichier:VS Blue (Classique) PM.png|x80px]]
+| [[Fichier:Sprite 0142 PM.png|x80px]] ↔ [[Fichier:Sprite 0142 Méga PM.png|x80px]]
+| [[Fichier:VS Giovanni PM.png|x80px]]
+| [[Fichier:Sprite 0150 PM.png|x80px]] ↔ [[Fichier:Sprite 0150 Méga Y PM.png|x80px]]
+|-
+| [[Pierre Rochard|Pierre Rochard<br>(Anniversaire 2021)]]
+| [[Rayquaza]] ↔ [[Méga-Rayquaza]]
+| [[Blue]]
+| [[Ptéra]] ↔ [[Méga-Ptéra]]
+| [[Giovanni]]
+| [[Mewtwo]] ↔ [[Méga-Mewtwo Y]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Mortimer (Saison 2021) PM.png|x80px]]
+| [[Fichier:Sprite 0354 PM.png|x80px]] ↔ [[Fichier:Sprite 0354 Méga PM.png|x80px]]
+| [[Fichier:VS Percila (Saison 2021) PM.png|x80px]]
+| [[Fichier:Sprite 0302 PM.png|x80px]] ↔ [[Fichier:Sprite 0302 Méga PM.png|x80px]]
+| [[Fichier:VS Ludvina (Spécial) PM.png|x80px]]
+| [[Fichier:Sprite 0719 PM.png|x80px]] ↔ [[Fichier:Sprite 0719 Méga PM.png|x80px]]
+|-
+| [[Mortimer|Mortimer<br>(Saison 2021)]]
+| [[Branette]] ↔ [[Méga-Branette]]
+| [[Percila|Percila<br>(Saison 2021)]]
+| [[Ténéfix]] ↔ [[Méga-Ténéfix]]
+| [[Ludvina|Ludvina (Spécial)]]
+| [[Diancie]] ↔ [[Méga-Diancie]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Rosemary (Saison 2022) PM.png|x80px]]
+| [[Fichier:Sprite 0303 PM.png|x80px]] ↔ [[Fichier:Sprite 0303 Méga PM.png|x80px]]
+| [[Fichier:VS Flora (Anniversaire 2022) PM.png|x80px]]
+| [[Fichier:Sprite 0380 PM.png|x80px]] ↔ [[Fichier:Sprite 0380 Méga PM.png|x80px]]
+| [[Fichier:VS Flora (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0257 PM.png|x80px]] ↔ [[Fichier:Sprite 0257 Méga PM.png|x80px]]
+|-
+| [[Rosemary|Rosemary<br>(Saison 2022)]]
+| [[Mysdibule]] ↔ [[Méga-Mysdibule]]
+| [[Flora (Hoenn)|Flora<br>(Anniversaire 2022)]]
+| [[Latias]] ↔ [[Méga-Latias]]
+| [[Flora (Hoenn)|Flora (Ultime)]]
+| [[Braségali]] ↔ [[Méga-Braségali]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Brice (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0381 PM.png|x80px]] ↔ [[Fichier:Sprite 0381 Méga PM.png|x80px]]
+| [[Fichier:VS Courtney PM.png|x80px]]
+| [[Fichier:Sprite 0323 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0323 Méga PM.png|x80px]]
+| [[Fichier:VS Amaryllis PM.png|x80px]]
+| [[Fichier:Sprite 0384 PM.png|x80px]] ↔ [[Fichier:Sprite 0384 Méga PM.png|x80px]]
+|-
+| [[Brice (Hoenn)|Brice (Ultime)]]
+| [[Latios]] ↔ [[Méga-Latios]]
+| [[Courtney]]
+| [[Camérupt]] ↔ [[Méga-Camérupt]]
+| [[Amaryllis]]
+| [[Rayquaza]] ↔ [[Méga-Rayquaza]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Cynthia (Ultime 3) PM.png|x80px]]
+| [[Fichier:Sprite 0448 PM.png|x80px]] ↔ [[Fichier:Sprite 0448 Méga PM.png|x80px]]
+| [[Fichier:VS Timmy (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0282 chromatique PM.png|x80px]] ↔ [[Fichier:Sprite 0282 Méga chromatique PM.png|x80px]]
+| [[Fichier:VS Jasmine (Saison 2022) PM.png|x80px]]
+| [[Fichier:Sprite 0181 PM.png|x80px]] ↔ [[Fichier:Sprite 0181 Méga PM.png|x80px]]
+|-
+| [[Cynthia|Cynthia (Ultime 3)]]
+| [[Lucario]] ↔ [[Méga-Lucario]]
+| [[Timmy|Timmy (Ultime)]]
+| [[Gardevoir]] ↔ [[Méga-Gardevoir]]
+| [[Jasmine|Jasmine<br>(Saison 2022)]]
+| [[Pharamp]] ↔ [[Méga-Pharamp]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Dianthéa (Ultime) PM.png|x80px]]
+| [[Fichier:Sprite 0719 chromatique PM.png|x80px]] ↔ [[Fichier:Sprite 0719 Méga chromatique PM.png|x80px]]
+| [[Fichier:VS Brice PM.png|x80px]]
+| [[Fichier:Sprite 0254 PM.png|x80px]] ↔ [[Fichier:Sprite 0254 Méga PM.png|x80px]]
+| [[Fichier:VS Silver (Néo-Maître) PM.png|x80px]]
+| [[Fichier:Sprite 0248 chromatique PM.png|x80px]] ↔ [[Fichier:Sprite 0248 Méga chromatique PM.png|x80px]]
+|-
+| [[Dianthéa|Dianthéa<br>(Ultime)]]
+| [[Diancie]] ↔ [[Méga-Diancie]]
+| [[Brice (Hoenn)|Brice]]
+| [[Jungko]] ↔ [[Méga-Jungko]]
+| [[Silver (Johto)|Silver<br>(Néo-Maître)]]
+| [[Tyranocif]] ↔ [[Méga-Tyranocif]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS René (Spécial) PM.png|x80px]]
+| [[Fichier:Sprite 0214 ♂ PM.png|x80px]] ↔ [[Fichier:Sprite 0214 Méga PM.png|x80px]]
+| [[Fichier:VS Selene (Spécial) PM.png|x80px]]
+| [[Fichier:Sprite 0212 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0212 Méga PM.png|x80px]]
+| [[Fichier:VS Cynthia (Arceus) PM.png|x80px]]
+| [[Fichier:Sprite 0445 ♀ PM.png|x80px]] ↔ [[Fichier:Sprite 0445 Méga PM.png|x80px]]
+|-
+| [[René|René<br>(Spécial)]]
+| [[Scarhino]] ↔ [[Méga-Scarhino]]
+| [[Selene|Selene<br>(Spécial)]]
+| [[Cizayox]] ↔ [[Méga-Cizayox]]
+| [[Cynthia|Cynthia (Arceus)]]
+| [[Carchacrok]] ↔ [[Méga-Carchacrok]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Pierre Rochard (Arceus) PM.png|x80px]]
+| [[Fichier:Sprite 0376 PM.png|x80px]] ↔ [[Fichier:Sprite 0376 Méga PM.png|x80px]]
+| [[Fichier:VS Popi (Saison 2025) PM.png|x80px]]
+| [[Fichier:Sprite 0208 ♀ chromatique PM.png|x80px]] ↔ [[Fichier:Sprite 0208 Méga chromatique PM.png|x80px]]
+| [[Fichier:VS Pieris (Kimono) PM.png|x80px]]
+| [[Fichier:Sprite 0359 PM.png|x80px]] ↔ [[Fichier:Sprite 0359 Méga PM.png|x80px]]
+|-
+| [[Pierre Rochard|Pierre Rochard (Arceus)]]
+| [[Métalosse]] ↔ [[Méga-Métalosse]]
+| [[Popi|Popi (Saison 2025)]]
+| [[Steelix]] ↔ [[Méga-Steelix]]
+| [[Pieris|Pieris (Kimono)]]
+| [[Absol]] ↔ [[Méga-Absol]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Blue (Arceus) PM.png|x80px]]
+| [[Fichier:Sprite 0018 PM.png|x80px]] ↔ [[Fichier:Sprite 0018 Méga PM.png|x80px]]
+| [[Fichier:VS Peter PM.png|x80px]]
+| [[Fichier:Sprite 0006 PM.png|x80px]] ↔ [[Fichier:Sprite 0006 Méga Y PM.png|x80px]]
+| [[Fichier:VS Cornélia (Arceus) PM.png|x80px]]
+| [[Fichier:Sprite 0448 PM.png|x80px]] ↔ [[Fichier:Sprite 0448 Méga PM.png|x80px]]
+|-
+| [[Blue|Blue (Arceus)]]
+| [[Roucarnage]] ↔ [[Méga-Roucarnage]]
+| [[Peter]]
+| [[Dracaufeu]] ↔ [[Méga-Dracaufeu Y]]
+| [[Cornélia|Cornélia (Arceus)]]
+| [[Lucario]] ↔ [[Méga-Lucario]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Morgane (Arceus) PM.png|x80px]]
+| [[Fichier:Sprite 0065 ♂ PM.png|x80px]] ↔ [[Fichier:Sprite 0065 Méga PM.png|x80px]]
+| [[Fichier:VS Dianthéa PM.png|x80px]]
+| [[Fichier:Sprite 0282 PM.png|x80px]] ↔ [[Fichier:Sprite 0282 Méga PM.png|x80px]]
+| [[Fichier:VS Harmony PM.png|x80px]]
+| [[Fichier:Sprite 0160 PM.png|x80px]] ↔ [[Fichier:Sprite 0160 Méga PM.png|x80px]]
+|-
+| [[Morgane|Morgane (Arceus)]]
+| [[Alakazam]] ↔ [[Méga-Alakazam]]
+| [[Dianthéa|Dianthéa (Arceus)]]
+| [[Gardevoir]] ↔ [[Méga-Gardevoir]]
+| [[Harmony]]
+| [[Aligatueur]] ↔ [[Méga-Aligatueur]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Boro PM.png|x80px]]
+| [[Fichier:Sprite 0154 ♂ PM.png|x80px]] ↔ [[Fichier:Sprite 0154 Méga PM.png|x80px]]
+| [[Fichier:VS Blue (Anniversaire 2026) PM.png|x80px]]
+| [[Fichier:Sprite 0149 PM.png|x80px]] ↔ [[Fichier:Sprite 0149 Méga PM.png|x80px]]
+| [[Fichier:VS Serena (Anniversaire 2026) PM.png|x80px]]
+| [[Fichier:Sprite 0658 PM.png|x80px]] ↔ [[Fichier:Sprite 0658 Méga PM.png|x80px]]
+|-
+| [[Boro]]
+| [[Méganium]] ↔ [[Méga-Méganium]]
+| [[Blue|Blue (Anniversaire 2026)]]
+| [[Dracolosse]] ↔ [[Méga-Dracolosse]]
+| [[Serena|Serena (Anniversaire 2026)]]
+| [[Amphinobi]] ↔ [[Méga-Amphinobi]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Brice PM.png|x80px]]
+| [[Fichier:Sprite 0373 PM.png|x80px]] ↔ [[Fichier:Sprite 0373 Méga PM.png|x80px]]
+| [[Fichier:VS Luth PM.png|x80px]]
+| [[Fichier:Sprite 0130 ♂ chromatique PM.png|x80px]] ↔ [[Fichier:Sprite 0130 Méga chromatique PM.png|x80px]]
+| [[Fichier:VS Leaf PM.png|x80px]]
+| [[Fichier:Sprite 0015 PM.png|x80px]] ↔ [[Fichier:Sprite 0015 Méga PM.png|x80px]]
+|-
+| [[Brice (Hoenn)|Brice]]
+| [[Drattak]] ↔ [[Méga-Drattak]]
+| [[Luth]]
+| [[Léviator]] ↔ [[Méga-Léviator]]
+| [[Leaf]]
+| [[Dardargnan]] ↔ [[Méga-Dardargnan]]
+|-
+! colspan="8"|
+|-
+| [[Fichier:VS Matthieu PM.png|x80px]]
+| [[Fichier:Sprite 0319 PM.png|x80px]] ↔ [[Fichier:Sprite 0319 Méga PM.png|x80px]]
+|-
+| [[Matthieu]]
+| [[Sharpedo]] ↔ [[Méga-Sharpedo]]
+|}
+
+D'autres Duos du jeu sont également composés d'un Pokémon pouvant méga-évoluer dans les jeux principaux. Cependant, leurs Capacités Duo ne permettent pas à leurs Pokémon de méga-évoluer dans {{Jeu|PM}}.
+
+=== {{Jeu|UNITE}} ===
+Dans {{Jeu|UNITE|lien=non}}, la Méga-Évolution est disponible uniquement pour [[Mewtwo]],[[Lucario]],[[Dracaufeu]] et [[Léviator]].
+
+[[Mewtwo]] possède une jauge de synergie qui se remplit en touchant des Pokémon de l'équipe adverse avec des attaques de base. Lorsque cette jauge est remplie et que Mewtwo est supérieur au niveau 5, il méga-évolue soit en [[Méga-Mewtwo X]], soit en [[Méga-Mewtwo Y]], en fonction du Permis Unité utilisé. Les attaques de Méga-Mewtwo sont les mêmes que celles de Mewtwo, mais sa rapidité d'attaque de base ainsi que ses statistiques sont grandement augmentées. Après 15 secondes, la jauge de synergie devient vide et Méga-Mewtwo redevient Mewtwo.
+Pour les autres la méga évolution s'active après une capacité unite qui reste les mêmes que pour leur formes de bases.La différence avec la forme de base est ausi lié à un choix de capacités forcé aux niveau 5 et 7
+
+== Dans les dessins animés ==
+Hormis quelques rares exceptions, la Méga-Évolution fonctionne de la même manière dans les différents dessins animés que dans les jeux vidéo principaux. La seule différence est que, d'après certaines séries, le processus peut être influencé par l'amitié entre un Dresseur et son Pokémon.
+
+=== ''[[Pokémon, la série]]'' ===
+Dans l'univers de ''Pokémon, la série'', la toute première Méga-Évolution se fait dans le court épisode spécial ''[[Mewtwo - prélude à l'éveil]]'', suivi du film {{film|16}}. Là, un [[Mewtwo]] sauvage est capable de se transformer en [[Méga-Mewtwo Y]], sans [[Mewtwoïte Y]] ou Dresseur ayant une [[Gemme Sésame]]. Malgré ces deux apparitions, le processus n'est jamais clairement nommé ; la Méga-Évolution est uniquement présentée comme une nouvelle transformation de Mewtwo, qui lui permet d'augmenter grandement sa vitesse et sa force de combat. Cela s'explique par le fait que le film et son épisode spécial associé s'inscrivent tous deux dans la période du [[cycle 4]], qui est basée sur les jeux de la [[cinquième génération]]. À cette époque, la Méga-Évolution n'avait pas encore été officiellement dévoilée et présentée au public.
+
+La Méga-Évolution est réellement présentée et introduite dans l'univers du dessin animé dès le début du [[cycle 5]], avec les épisodes [[XY001]] et [[XY002]]. Dès le premier épisode, [[Sacha]] aperçoit le [[Méga-Braségali]] du [[Jérémy (Kalos)|héros au Masque de Braségali]], qui le sauve d'une chute de la [[Tour Prismatique]] dans l'épisode suivant. C'est également lors du deuxième épisode que le [[Professeur Platane]] explique pour la première fois le phénomène de la Méga-Évolution à Sacha.
+
+Depuis, la Méga-Évolution est apparue régulièrement au cours du cycle 5. Parmi les exemples notables, il y a les premières apparitions du [[Méga-Gardevoir]] de [[Dianthéa]] dans le [[XY028]], du [[Méga-Lucario]] de [[Cornélia]] dans le [[XY032]], du [[Méga-Carchacrok]] de Platane dans le [[XY068]], du [[Méga-Nanméouïe]] d'une [[Infirmière Joëlle]] dans le [[XY096]], du [[Méga-Blizzaroi]] d'[[Urup]] dans le [[XY122]], du [[Méga-Jungko]] de [[Liam]] dans le [[XY126]], et du [[Méga-Léviator]] [[chromatique]] de [[Lysandre]] dans le [[XY133]].
+
+En parallèle du cycle 5, une série dérivée intitulée ''[[Pokémon : Méga-Évolution]]'' fut diffusée. Elle met en scène les voyages d'[[Alain]] qui, accompagné de son [[Méga-Dracaufeu X]], souhaite percer les secrets de la Méga-Évolution. Pour cela, il cherche à rencontrer et à vaincre tous les [[Méga-Pokémon]] existants. Parmi ses adversaires notables, il y a notamment [[Narcisse]] et son [[Méga-Tortank]], ainsi que {{ps|Pierre Rochard}} et son [[Méga-Métalosse]] chromatique. Au cours des quatre épisodes de la série, il est révélé qu'Alain est un allié de [[Lysandre]] de la [[Team Flare]]. Lorsque le [[Marisson]] de son amie [[Martine]] tombe dans le coma, Alain décide de tout faire pour aider le Pokémon à se réveiller. Suite à cela, Alain et son arc narratif sont introduits lors de la [[saison 19]] de la série principale. Là, le Dresseur et son Méga-Dracaufeu X deviennent des [[rival|rivaux]] de Sacha et de son [[Sachanobi]].
+
+La Méga-Évolution continue d'apparaître dans les cycles plus récents de la série principale. Dans l'épisode [[SL043]] du [[cycle 6]], on apprend notamment que {{ps|Pierre}} et {{ps|Ondine}} sont désormais capables de faire méga-évoluer leurs [[Steelix]] et [[Léviator]] en [[Méga-Steelix]] et Méga-Léviator. Encore plus récemment, Cornélia et son Méga-Lucario font leur réapparition dans l'épisode [[LV025]] du [[cycle 7]]. Plus tard, dans le [[LV084]], Sacha acquiert une Lucarite sur l'île Méga, et est capable de faire méga-évoluer son [[Lucario de Sacha|Lucario]] à partir du [[LV086]].
+
+=== {{série|LH}} ===
+La Méga-Évolution réapparait dans la saison 3 de {{série|LH}} où, après une ellipse d'un an, [[Rhod]] a capturé un Lucario chromatique et maîtrisé la méga-évolution. Un nouveau protagoniste, [[Ult]], maitrise également la méga-évolution qu'il peut utiliser sur son [[Ténéfix d'Ult|Ténéfix]] et son [[Dracolosse d'Ult|Dracolosse]].
+
+Lorsque Friede revient dans le [[LH122]], il révèle pouvoir faire méga-évoluer son Dracaufeu en Méga-Dracaufeu Y, ainsi qu'un Staross, qu'il a attrapé durant son séjour au [[Centre Spatial d'Algatia]], en Méga-Staross. Il offre également à Rhod une météorite pour le [[Rayquaza de Rhod|Rayquaza noir]] qui lui permettra de faire méga-évoluer ce dernier dans le [[LH136]].
+
+Dans le [[LH130]], il est révélé que Calcé, membres des explorateurs, peut faire méga-évoluer son Charmina. Le [[LH133]] révèle que Corail et Sidienne peuvent aussi faire méga-évoluer leurs Pokémon: Oniglali pour Corail et Ptéra pour Sidienne.
+
+Dans le [[LH131]], Rhod reçoit une Lucarite Z de la part de Maître Mayonnaise pour son Lucario. Il ne parviendra cependant à maîtriser la méga-évolution Z que dans l'épisode suivant face au Méga-Brutalibré de son mentor.
+
+Dans le [[LH136]], Amethio révèle pouvoir faire méga-évoluer son Zygarde.
+
+=== ''[[Pokémon : Les origines]]'' ===
+[[Fichier:Dracaufite X Pokémon les origines.png|thumb|right|200px|Une Dracaufite X et une Gemme Sésame dans ''Pokémon : Les origines''.]]
+Bien que ''Pokémon : Les origines'' soit l'adaptation des événements des jeux vidéo de la [[première génération]], {{jeu|RB}}, la Méga-Évolution existe dans cette continuité.
+
+Dans l'épisode ''[[PO02|Dossier 2 - Osselait]]'', [[Red]] continue son voyage dans la région de [[Kanto]], et arrive à [[Lavanville]] pour la première fois. Là, le Dresseur parvient à sauver [[M. Fuji]] et la Tour Pokémon des mains de la [[Team Rocket]]. En récompense, M. Fuji offre à Red la [[Pokéflûte]] ainsi que deux [[Gemme Sésame|mystérieuses]] [[Dracaufite X|pierres]]. Pensant qu'il s'agit de pierres ayant une immense valeur, Red les refuse d'abord mais M. Fuji insiste, arguant que Red doit découvrir par lui-même l'utilité de ces deux pierres.
+
+Dans le dernier épisode, ''[[PO04|Dossier 4 - Dracaufeu]]'', Red et son fidèle [[Dracaufeu]] sont décidés à explorer la [[Caverne Azurée]], dans le but de capturer le 150<sup>e</sup> Pokémon : [[Mewtwo]]. Une fois le combat commencé, le Pokémon sauvage prend rapidement l'avantage sur le Dracaufeu de Red, et lance le Dresseur et son Pokémon au fond de l'eau. En parallèle de l'affrontement, M. Fuji raconte à son assistante la légende des deux mystérieuses pierres qu'il a confiées à Red. Il explique que, selon des textes anciens de [[Kalos]], lorsque les liens unissant un Dracaufeu et son Dresseur sont assez forts, une énergie inouïe peut se manifester et produire une Méga-Évolution. Au même moment, dans la Caverne Azurée, les deux pierres de Red (une [[Gemme Sésame]] et une [[Dracaufite X]]) brillent, et permettent à Dracaufeu de se transformer en [[Méga-Dracaufeu X]]. Le Méga-Pokémon prend l'avantage sur le Mewtwo sauvage, et Red parvient à le capturer.
+
+À noter que cet épisode a permis de dévoiler pour la première fois au public l'existence de Méga-Dracaufeu X, officiellement annoncé à la suite de la fin de la série.
+
+=== ''[[Pokémon Générations]]'' ===
+Bien que ''Pokémon Générations'' adapte différents événements des jeux vidéo de la [[série principale]], la Méga-Évolution n'apparaît que dans un seul épisode : le neuvième, intitulé ''[[PG09|Le scoop]]''.
+
+Suite à la destruction d'une météorite approchant de la planète, deux journalistes infiltrent le Centre Spatial d'[[Algatia]], dans la région de [[Hoenn]], afin de découvrir la vérité cachée par les scientifiques de l'institut. Grâce à une vidéo enregistrée par un satellite, les deux journalistes finissant par découvrir la vérité. Alors que la météorite s'approchait dangereusement de la planète, le [[Pokémon légendaire]] [[Rayquaza]] surgit sous sa forme méga-évoluée, [[Méga-Rayquaza]]. Alors qu'il porte un Dresseur habillé d'un scaphandre sur son dos, le Méga-Pokémon détruit la météorite. C'est alors qu'un étrange triangle apparaît au milieu des débris de la météorite, et laisse apparaître le Pokémon extra-terrestre [[Deoxys]]. S'engage alors un féroce combat entre les deux Pokémon. Méga-Rayquaza finit par prendre l'avantage ; le Dresseur utilise alors une Hyper Ball, afin de capturer Deoxys.
+
+Les événements de cet épisode sont une adaptation de la fin de l'[[épisode Delta]] de {{jeu|ROSA}}.
+
+=== Court-métrage promotionnel ===
+La Méga-Évolution apparaît dans le [[Pokémon Rubis Oméga et Saphir Alpha (court-métrage)|court-métrage promotionnel]] pour {{Jeu|ROSA}}. On y voit notamment [[Brice (Hoenn)|Brice]] et [[Flora (Hoenn)|Flora]] munis de leurs [[Méga-Bracelet]]s et de leurs [[Gemme Sésame|Gemmes Sésame]], avant de transformer leurs [[Pokémon de départ]] en leurs formes méga-évoluées.
+
+Par ailleurs, tous les Méga-Pokémon introduits dans les deux jeux ainsi que [[Méga-Braségali]] font une courte apparition dans la bande-annonce. Ainsi, dans l'ordre de la vidéo, on peut voir [[Méga-Jungko]], [[Méga-Braségali]], [[Méga-Laggron]], [[Méga-Diancie]], [[Méga-Gallame]], [[Méga-Drattak]], [[Méga-Roucarnage]], [[Méga-Oniglali]], [[Méga-Steelix]], [[Méga-Camérupt]], [[Méga-Dardargnan]], [[Méga-Flagadoss]], [[Méga-Sharpedo]], [[Méga-Lockpin]], [[Méga-Ténéfix]], [[Méga-Altaria]], [[Méga-Nanméouïe]], [[Méga-Métalosse]], [[Méga-Latios]], [[Méga-Latias]] et [[Méga-Rayquaza]].
+
+== Dans le manga ==
+Dans {{PMS}}, le phénomène de la Méga-Évolution est introduit pour la première fois dans l'{{PMS|Arc X et Y}}, qui est une adaptation du contenu des jeux principaux de la [[sixième génération]]. Le fonctionnement de ce processus est identique à celui qui est décrit dans {{Jeu|XY}} ; chaque Dresseur souhaitant utiliser la Méga-Évolution doit posséder une Gemme Sésame, qu'il doit faire ensuite réagir à la Méga-Gemme correspondante au Pokémon qu'il souhaite faire méga-évoluer.
+
+À noter que, contrairement aux jeux vidéo, un Dresseur peut être capable de faire méga-évoluer plusieurs Pokémon en même temps, et au cours d'un même combat. Un tel exploit est possible à partir du moment où le Dresseur possède une Gemme Sésame pour chaque Pokémon à faire méga-évoluer. Cependant, réussir toutes ces transformations en même temps est source d'une immense pression mentale sur le Dresseur, qui ne peut se concentrer sur rien d'autre que sur une cible unique. Le Dresseur ne retrouve ses esprits qu'une fois les Méga-Évolutions terminées.
+
+La Méga-Évolution a un rôle relativement majeur dans l'histoire de l'Arc X et Y. En effet, dès le début, elle est présentée comme un phénomène relativement inconnu du grand public, et limité à un certain nombre de Dresseurs. Comme dans les jeux vidéo, [[Cornélius]] en est le spécialiste, mais aussi le maître. À l'origine, il possédait dix-huit Gemmes Sésame, qu'il a décidé de transmettre aux Dresseurs qu'il estimait dignes d'en recevoir une. Ces Dresseurs sont donc devenus les Successeurs de la Méga-Évolution. Parmi eux, il y a notamment {{PMS|Xavier}}, [[Cornélia]], [[Dianthéa]], {{PMS|Yvonne}}, {{PMS|Bleu}} et [[Pierre Rochard]]. En parallèle, il apparaît rapidement que la [[Team Flare]] cherche à s'emparer du pouvoir de la Méga-Évolution, au point que le groupe conserve des données sur toutes les Méga-Gemmes découvertes par ses membres.
+
+La première transformation du manga a lieu dans le [[Chapitre 2 (Pocket Monsters Special X•Y)|chapitre 2]] de l'arc, lorsque [[Kangou et Ptigou|Ptigou]] parvient à méga-évoluer pour sauver sa mère et Xavier de la Team Flare. Des Méga-Pokémon apparaissent ensuite à de nombreuses reprises tout au long de l'arc. On peut notamment citer le [[Méga-Lucario]] de Cornélia dans le [[Chapitre 6 (Pocket Monsters Special X•Y)|chapitre 6]], le [[Méga-Gardevoir]] de Dianthéa dans le [[Chapitre 9 (Pocket Monsters Special X•Y)|chapitre 9]], le [[Méga-Scarhino]] de Cornélius dans le [[Chapitre 15 (Pocket Monsters Special X•Y)|chapitre 15]], les [[Méga-Scarabrute]] et [[Méga-Absol]] de Xavier et Yvonne dans le [[Chapitre 30 (Pocket Monsters Special X•Y)|chapitre 30]], ou encore le [[Méga-Dracaufeu Y]] de Bleu dans le [[Chapitre 34 (Pocket Monsters Special X•Y)|chapitre 34]]. À noter que Xavier réussit à faire méga-évoluer cinq de ses Pokémon en même temps dans le [[Chapitre 37 (Pocket Monsters Special X•Y)|chapitre 37]], grâce à sa Gemme Sésame et celles de Bleu, Dianthéa, Yvonne et Cornélia.
+
+La Méga-Évolution réapparaît dans l'{{PMS|Arc Rubis Oméga et Saphir Alpha}}, bien que son importance scénaristique soit largement amoindrie comparée à l'arc précédent. Il y est notamment dévoilé que Pierre Rochard a reçu trois Gemmes Sésame supplémentaires, en plus de la sienne, de la part de Cornélius. Pierre décide ensuite de confier ces trois Gemmes à {{PMS|Rubis}}, {{PMS|Saphir}} et {{PMS|Émeraude}}, afin qu'ils puissent utiliser la Méga-Évolution pour contrer la météorite, qui menace de s'écraser sur la planète. Dans le reste de l'arc, il est révélé que le Peuple du Météore est à l'origine de la connaissance de la Méga-Évolution, grâce à leur culture ancienne et à leur vénération de [[Rayquaza]]. Lorsque la Doyenne du Peuple du Météore entend parler de Cornélius, elle spécule qu'il doit être le descendant d'un membre du Peuple qui a migré vers [[Kalos]].
+
+À noter que le nombre de Dresseurs possédant une Gemme Sésame semble avoir augmenté entre les deux arcs. En plus des protagonistes principaux de l'arc, on peut notamment citer {{PMS|Rouge}}, {{PMS|Verte}}, {{PMS|Giovanni}}, [[Arthur (Team Aqua)|Arthur]] et [[Max (Team Magma)|Max]].
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Article principal|Pokémon Méga-Évolution}}
+Les [[Pokémon Méga-Évolution]], comme ceux des jeux vidéo, sont des [[Évolution (JCC)|évolutions]] d'un Pokémon au stade final. Ils sont donc plus puissants que celui-ci, que ce soit au niveau de la puissance d'[[Attaque (JCC)|attaque]] et/ou des [[PV]]. Leur statut de Pokémon Méga-Évolution est indiqué par la présence d'un {{Symbole JCC|Méga}} au début de leur nom.
+
+Les Pokémon Méga-Évolution du [[Jeu de Cartes à Collectionner]] sont apparus avec l'[[extension]] [[XY (JCC)|XY]]. Dans cette série, tous les Pokémon Méga-Évolution évoluent depuis un [[Pokémon-EX]]. Étant eux-mêmes des Pokémon-EX, ils sont donc généralement appelés Méga-Pokémon-EX.
+
+En 2025, le JCC débute la [[série Méga-Évolution]] avec l'extension [[Méga-Évolution (JCC)|Méga-Évolution]]. Elle réintroduit les Méga-Pokémon, qui sont cette fois des [[Pokémon-ex]] (avec un logo {{Symbole JCC|ex Méga}} spécial et avec Méga en toutes lettres plutôt qu'un {{Symbole JCC|Méga}}), et qui évoluent depuis le stade précédant leur forme normale. Ainsi, Méga-Gardevoir-ex évolue depuis Kirlia.
+
+== Galerie ==
+<center><gallery widths="150px">
+Bouton Méga-Évolution.png|Le bouton permettant la Méga-Évolution dans {{Jeu|XY}}, en dessous des [[capacité]]s.
+Artwork évolution Méga-Braségali.png|Artwork pour la Méga-Évolution de [[Braségali]].
+Artwork évolution Méga-Diancie.png|Artwork pour la Méga-Évolution de [[Diancie]].
+Méga-Évolution-PMDM.png|L'artwork lié aux Méga-Évolutions dans {{Jeu|PMDM}}.
+</gallery></center>
+
+== Voir aussi ==
+
+* [[Méga-Anneau]]
+* [[Méga-Bracelet]]
+* [[Méga-Gemme]]
+* [[Méga-Pokémon]]
+* [[Capacité Z]]
+* [[Dynamax]]
+* [[Gigamax]]
+* [[Téracristallisation]]
+
+[[Catégorie:Mécanisme de jeu]]
+[[Catégorie:Pokémon à plusieurs formes|*]]
+
+[[de:Mega-Entwicklung]]
+[[en:Mega Evolution]]
+[[es:Megaevolución]]
+[[it:Megaevoluzione]]
+[[ja:メガシンカ]]
+[[zh:超级进化]]

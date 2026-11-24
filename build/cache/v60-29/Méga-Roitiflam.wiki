@@ -1,0 +1,95 @@
+{{Ruban Pokémon
+| nomPrécédent=Grotichon
+| numéro=0500
+| nom=Méga-Roitiflam
+| nomSuivant=Moustillon
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Roitiflam
+| nom-japonais=メガエンブオー
+| nom-romaji=Mega Enbuō
+| nom-déposé=Mega Enbuoh
+| nom-anglais=Mega Emboar
+| ndex=0500
+| dex=Illumis/006
+| légende=Artwork de Méga-Roitiflam pour {{Jeu|LPZA}}.
+| type1=Feu
+| type2=Combat
+| catégorie=Grochon Feu
+| taille=1.8
+| poids=180.3
+| talents=Brise Moule
+| fmratio=
+| génération=9
+| couleur=Rouge
+| corps=6
+| cri=Cri 0500 Méga
+}}
+'''Méga-Roitiflam''' (anglais : '''Mega Emboar''' ; japonais : '''メガエンブオー''' ''Mega Enbuoh'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] de [[Roitiflam]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], les flammes qui recouvraient le cou et les épaules de Méga-Roitiflam se sont étendues sur son corps, formant un genre de masque de flamme sur son torse et son dos. Ces flammes se surélèvent au niveau des épaules. Les motifs jaunes de son ventre se touchent désormais diagonalement. Ces mêmes motifs se retrouvent au centre de son dos, à l'horizontal. Son entrejambe est à présent noir, recouvert cependant par ce qui semble être une robe rouge. Sa queue arbore la même couleur que cette robe, et ne possède plus que trois épis. Ses sourcils noirs forment une couronne qui se lève sur l'arrière du crâne pour former un motif semblable à un oiseau. Une bande jaune est venue se rajouter à la bande rouge présente sur ses bras, tandis que deux bandes rouges entourent la bande jaune sur ses jambes. Méga-Roitiflam tient une lance de flamme dans la main gauche, rappelant la « Lance du Serpent » de [[wp:Zhang Fei|Zhang Fei]].
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Roitiflam conserve les mêmes couleurs que Roitiflam chromatique. Les parties habituellement jaunes sont bleu clair, et les parties rouges sont bleu cyan.
+
+=== [[Évolution]] ===
+
+Méga-Roitiflam est la [[Méga-Évolution]] de [[Roitiflam]] avec une [[Roitiflamite]]. Ce dernier est l'évolution de [[Grotichon]] à partir du [[niveau]] 36, qui lui-même est l'évolution de [[Gruikui]] à partir du niveau 17.
+{{#lst:Gruikui|Tableau d'évolution}}
+=== [[Talent]] ===
+* [[Brise Moule]] : le Pokémon ignore les talents adverses qui auraient un effet sur ses capacités.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Quand ses camarades sont en difficulté, il accourt en brandissant une lance serpentine qu'il matérialise à l'aide de ses flammes.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Feu|type2=Combat}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 25, sa [[Défense]] de 10, son [[Attaque Spéciale]] de 10, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 45, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Feu
+| PV=110
+| attaque=148
+| defense=75
+| atq-spc=110
+| def-spc=110
+| vitesse=75
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Roitiflam/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Roitiflam}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Grotichon
+| numéro=0500
+| nom=Méga-Roitiflam
+| nomSuivant=Moustillon
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Roitiflam]]

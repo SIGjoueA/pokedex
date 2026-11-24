@@ -1,0 +1,112 @@
+{{Ruban Pokémon
+| nomPrécédent=Tylton
+| numéro=0334
+| nom=Méga-Altaria
+| nomSuivant=Mangriff
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Altaria
+| nom-japonais=メガ チルタリス
+| nom-romaji=Mega Chirutarisu
+| nom-déposé=Mega Tyltalis
+| nom-anglais=Mega Altaria
+| ndex=0334
+| dex=Hoenn-ROSA/127//Illumis/094
+| dex-secondaires=Shuffle/044//Picross/N22-08//Picross (Alternatif)/A22-03
+| légende=Artwork de Méga-Altaria pour {{Jeu|ROSA}}.
+| type1=Dragon
+| type2=Fée
+| catégorie=Virevolteur
+| taille=1.5
+| poids=20.6
+| talents=Peau Féérique
+| fmratio=.5
+| génération=6
+| couleur=Bleu
+| corps=9
+| cri=Cri 0334 Méga
+}}
+'''Méga-Altaria''' (anglais : '''Mega Altaria''' ; japonais : '''メガ チルタリス''' ''Mega Tyltalis'') est un [[Méga-Pokémon]] de type [[Dragon (type)|Dragon]] et [[Fée (type)|Fée]]. Apparu avec les jeux {{Jeu|ROSA}}, c'est actuellement le seul Pokémon ayant ce double type. C'est la [[Méga-Évolution]] d'[[Altaria]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+En méga-évoluant, il conserve sa forme d'oiseau bleu avec de larges ailes de coton ayant la forme d'un nuage. De nouveaux cotons apparaissent sur sa tête formant un chapeau et sur son cou comme un collier. Au niveau de son dos, une grande masse de cotons de la forme d'une étoile aux bords arrondis apparaît. De plus, les plumes constituant sa queue deviennent plus longues, sa peau adopte un bleu plus pâle et tous les cotons ont maintenant une nuance rosée.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les Pokémon mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, le corps d'Altaria est jaune or au lieu d'être bleu.
+
+=== [[Évolution]] ===
+[[Altaria]] est l'évolution de [[Tylton]] à partir du [[niveau]] 35.
+Depuis {{Jeu|ROSA}}, [[Altaria]] peut [[Méga-Évolution|méga-évoluer]] en Méga-Altaria.
+{{#lst:Tylton|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Peau Féérique]] : les capacités de type Normal deviennent de type Fée. Leur puissance augmente légèrement.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Ses douces plumes si fragiles en apparence sont tellement robustes qu'une poignée suffit pour hisser un camion-benne.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Dragon|type2=Fée}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 20, et son [[Attaque Spéciale]] de 40.
+
+{{Statistiques
+| type=dragon
+| PV=75
+| attaque=110
+| defense=110
+| atq-spc=110
+| def-spc=105
+| vitesse=80
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Altaria voir [[Altaria/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/altaria.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/altaria/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Altaria voir [[Altaria#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/altaria Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Altaria/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Altaria}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Altaria de Dracéna.png|thumb|left|Le Méga-Altaria de Dracéna.]]
+[[Fichier:Méga-Altaria d'Atalante.png|thumb|right|Le Méga-Altaria d'Atalante.]]
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Méga-Altaria est le seul [[Méga-Pokémon]] n'ayant aucun type en commun avec le Pokémon de base de sa famille d'évolution, à savoir [[Tylton]].
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Tylton
+| numéro=0334
+| nom=Méga-Altaria
+| nomSuivant=Mangriff
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Altaria]]

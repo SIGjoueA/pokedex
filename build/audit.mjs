@@ -534,7 +534,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   for (const e of core.e) { if (!(e.mb || e.c === 'primal')) continue;
     for (const g of ['xy', 'oras', 'sm', 'usum', 'lgpe', 'za']) { if (!((e.gb >> GI[g]) & 1)) continue; const nm = nameOf(e);
       if (nm && L[nm] && L[nm][g] && L[nm][g].length) n++; else if (!(KNOWN[g] || []).includes(e.k)) (miss[g] ||= []).push(e.k); } }
-  eq('v60.23 chaque Méga / Primo (X / Y, ROSA, SL, USUL, Let’s Go, Z-A) a son objet localisé ou est dans la liste connue', miss, {}); ok('v60.23 formes avec objet localisé', n >= 280, n);
+  eq('v60.23 chaque Méga / Primo (X / Y, ROSA, SL, USUL, Let’s Go, Z-A) a son objet localisé ou est dans la liste connue', miss, {}); ok('v60.23 formes avec objet localisé', n >= 260, n); // v60.29 : les Méga du DLC ne comptent plus pour le jeu de base Z-A
   { const bad = Object.entries(ms.stones).filter(([k, s]) => !/-primal$/.test(k) && !/[iï]te( [XYZ])?$/.test(s.fr || '')).map(([k, s]) => k + ':' + s.fr); eq('v60.23 noms des Méga-Gemmes en « -ite »', bad, []); }
   eq('v60.23 noms officiels', ['382-primal', '383-primal', '65-mega', '6-mega-x', '150-mega-y', '94-mega', '485-mega', '978-curly-mega'].map(k => (ms.stones[k] || {}).fr),
     ['Gemme Bleue', 'Gemme Rouge', 'Alakazamite', 'Dracaufite X', 'Mewtwoïte Y', 'Ectoplasmite', 'Heatranite', 'Nigirigonite']);
@@ -760,5 +760,40 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.28 app : † via rd.E / mx.E dans les classements', /msE\(rd\.E/.test(src) && /msMax\(mx\.E/.test(src) && src.includes('† : attaque exclusive'));
   ok('v60.28 SW : VERSION ≥ v60.28, DATA_VERSION ≥ d70', /VERSION = 'v60\.(2[8-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 70);
 }
+
+// ---- v60.29: précision des formes (build/fix-v60-29.mjs → f.av / core.e.gb, f.pv des Méga / Primo)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  ok('v60.29 SW : VERSION ≥ v60.29, DATA_VERSION ≥ d71', /VERSION = 'v60\.(29|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 71);
+  ok('v60.29 NOTES ≤ 160 caractères', notes.length > 0 && notes.length <= 160, String(notes.length));
+  const DLC = ['26-mega-x', '26-mega-y', '358-mega', '359-mega-z', '398-mega', '445-mega-z', '448-mega-z', '485-mega', '491-mega', '623-mega', '678-male-mega', '740-mega', '768-mega', '801-mega', '801-original-mega', '807-mega', '952-mega', '970-mega', '978-curly-mega', '978-droopy-mega', '978-stretchy-mega', '998-mega'];
+  const dlcZa = DLC.filter(k => { const e = E[k], f = e && F(e.id, k); return !f || (f.av || []).includes('za') || !(f.av || []).includes('zadlc'); });
+  eq('v60.29 Méga du DLC Méga-Dimension : zadlc, pas za', dlcZa, []);
+  ok('v60.29 Méga-Mistigrix ♀ (variante d’apparence) : zadlc, pas za', !(F(678, '678-female-mega').av || []).includes('za') && (F(678, '678-female-mega').av || []).includes('zadlc'));
+  ok('v60.29 Méga-Mélodelfe (Z-A de base) : za et zadlc', (F(36, '36-mega').av || []).includes('za') && (F(36, '36-mega').av || []).includes('zadlc'));
+  ok('v60.29 Méga-Florizarre : encore dans X/Y', (F(3, '3-mega').av || []).includes('xy'));
+  ok('v60.29 Méga-Dardargnan : ROSA, pas X/Y', (F(15, '15-mega').av || []).includes('oras') && !(F(15, '15-mega').av || []).includes('xy'));
+  const megaPv = core.e.filter(e => e.c === 'mega' || e.c === 'primal');
+  const noPv = megaPv.filter(e => !F(e.id, e.k).pv || F(e.id, e.k).pv[47] === undefined);
+  eq('v60.29 chaque Méga / Primo a un texte Légendes Z-A (v47)', noPv.map(e => e.k), []);
+  { const s3 = sp(3), f = s3.f['3-mega'], i = f.pv[47], t = s3.pt[i], base = s3.pt[s3.pv[47]];
+    ok('v60.29 Méga-Florizarre : texte Z-A propre, différent de la forme de base', /pattes se sont renforcées/.test(t) && t !== base, t); }
+  { const s8 = sp(801), t = s8.pt[s8.f['801-original-mega'].pv[47]];
+    ok('v60.29 Méga-Magearna Couleur du Passé : texte propre', /500 ans/.test(t), t); }
+  { const s6 = sp(6), tx = s6.pt[s6.f['6-mega-x'].pv[31]], ty = s6.pt[s6.f['6-mega-y'].pv[31]];
+    ok('v60.29 Méga-Dracaufeu X et Y : textes Let’s Go distincts', /flammes bleues/.test(tx) && tx !== ty, tx); }
+  ok('v60.29 Raichu d’Alola : disponible à Illumis et Extra Illumis', (F(26, '26-alola').av || []).includes('za') && (F(26, '26-alola').av || []).includes('zadlc'));
+  ok('v60.29 Raichu d’Alola : échange Société Quazar (Z-A)', ((F(26, '26-alola').pl || {}).za || []).some(r => /Société Quazar/.test(r[0])));
+  ok('v60.29 Plaine Salutation (cadeau d’Alola) sous Isolarmure, plus sous Épée / Bouclier', ((F(26, '26-alola').pl || {}).swisle || []).some(r => r[0] === 'Plaine Salutation') && !((F(26, '26-alola').pl || {}).sw || []).some(r => r[0] === 'Plaine Salutation'));
+  ok('v60.29 Tauros de Paldea Combative : lieux à Paldea, plus sur la fiche de Kanto', ((F(128, '128-paldea-combat-breed').pl || {}).sv || []).some(r => r[0] === 'Zone Est n° 1') && !((F(128).pl || {}).sv || []).some(r => /Paldea/.test(r[0] + r[1])));
+  ok('v60.29 gb aligné sur av (échantillon Méga-Raichu X et Raichu d’Alola)', (() => {
+    const align = k => { const e = E[k], f = F(e.id, k), av = f.av || []; const gb = core.games.reduce((m, g, i) => m + (av.includes(g.id) ? 2 ** i : 0), 0); return e.gb === gb; };
+    return align('26-mega-x') && align('26-alola');
+  })());
+  const cache = path.join(HERE, 'cache/v60-29');
+  ok('v60.29 cache : pages Méga-Florizarre et Méga-Pokémon', fs.existsSync(path.join(cache, 'Méga-Florizarre.wiki')) && fs.existsSync(path.join(cache, 'Méga-Pokémon.wiki')));
+}
+
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

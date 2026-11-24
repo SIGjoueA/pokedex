@@ -1,0 +1,106 @@
+{{Ruban Pokémon
+| nomPrécédent=Nymphali
+| numéro=0701
+| nom=Méga-Brutalibré
+| nomSuivant=Dedenne
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Brutalibré
+| nom-japonais=メガルチャブル
+| nom-romaji=Mega Ruchaburu
+| nom-déposé=Mega Luchabull
+| nom-anglais=Mega Hawlucha
+| ndex=0701
+| dex=Illumis/181
+| légende=Artwork de Méga-Brutalibré pour {{Jeu|LPZA}}.
+| type1=Combat
+| type2=Vol
+| catégorie=Catcheur
+| taille=1
+| poids=25
+| talents=Annule Garde
+| fmratio=.5
+| génération=9
+| couleur=Jaune
+| corps=12
+| cri=Cri 0701 Méga
+}}
+'''Méga-Brutalibré''' (anglais : '''Mega Hawlucha''' ; japonais : '''メガルチャブル''' ''Mega Luchabull'') est un [[Méga-Pokémon]] de [[type]] [[Combat (type)|Combat]] et [[Vol (type)|Vol]]. C'est la [[Méga-Évolution]] de [[Brutalibré]].
+
+Méga-Brutalibré a été teasé dans un tweet des comptes officiels de la [[Pokémon (licence)|licence]] le 26 août 2025<ref>[https://x.com/PokemonFR/status/1960329884095414278 Tweet du compte officiel français de Pokémon] '''(fr)'''</ref>, avant d'être révélé officiellement lors de la bande-annonce du 28 août 2025.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Brutalibré voit son marquage bleu-vert sur le visage, qui ressemble à un masque, changer de couleur pour devenir noir et jaune doré. Ce marquage gagne une flèche allant de la nuque à son bec. Les trois plumes rectangulaires orange à l'arrière de sa tête deviennent plus longues et plus fines. Ses ailes ressemblant à une cape sont désormais plus grandes. Ses trois grandes plumes centrales, dans son dos, se terminent en pointes jaunes dorées. De la fourrure apparaît autour de son cou, tout comme un plastron recouvrant le haut de son corps, de couleur jaune dorée et se finissant en pointe et en épaulette noire. Enfin, il voit les poils autour de sa taille former une ceinture. Une plume tombe entre ses jambes, se finissant de la même couleur que ses pattes.
+
+Méga-Brutalibré continue d'impressionner son public avec sa forte masse musculaire, mais il se concentre davantage sur son adversaire lors d'un combat que sur l'étalage de sa force. Il se sert expressément de ses muscles pour provoquer son adversaire et parer ses coups, avant le prendre par surprise et de contre-attaquer avec sa [[capacité signature]] [[Flying Press]].
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Méga-Brutalibré sous sa forme chromatique garde des couleure très similaires à sa forme de base : un torse et cou rouge sang, le dos des ailes noires, la membrane des ailes en violet et les plumes de sa tête en vert pâle.
+
+Son masque lui, ne change pas.
+
+=== [[Évolution]] ===
+
+Méga-Brutalibré est la [[Méga-Évolution]] de [[Brutalibré]] avec une [[Brutalibrite]].
+{{#lst:Brutalibré|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Annule Garde]] : les capacités du Pokémon touchent l'ennemi à coup sûr, mais les capacités de l'ennemi le touchent aussi à coup sûr.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Lors de sa Méga-Évolution, tous les muscles de son corps gagnent en volume. Il aime les mettre en valeur pour montrer sa force.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Combat|type2=Vol}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 45, sa [[Défense]] de 25, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30.
+
+{{Statistiques
+| type=Combat
+| PV=78
+| attaque=137
+| defense=100
+| atq-spc=74
+| def-spc=93
+| vitesse=118
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Brutalibré/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Brutalibré}}
+
+== Apparitions dans les dessins animés ==
+[[Fichier:LH132 - Méga-Brutalibré.png|thumb|right|Le Méga-Brutalibré de [[Maître Mayonnaise]].]]
+Méga-Brutalibré apparaît pour la première fois dans le [[LH131]] lorsque Maître Mayonnaise fait méga-évoluer son [[Brutalibré]] lors de son combat contre le [[Lucario de Rhod]].
+==== Descriptions du [[Pokédex]] ====
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Nymphali
+| numéro=0701
+| nom=Méga-Brutalibré
+| nomSuivant=Dedenne
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Brutalibré]]

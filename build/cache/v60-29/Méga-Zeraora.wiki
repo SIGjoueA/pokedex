@@ -1,0 +1,93 @@
+{{Ruban Pokémon
+| nomPrécédent=Pierroteknik
+| numéro=0807
+| nom=Méga-Zeraora
+| nomSuivant=Meltan
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Zeraora
+| nom-japonais=メガゼラオラ
+| nom-romaji=Mega Zeraora
+| nom-déposé=
+| nom-anglais=Mega Zeraora
+| ndex=0807
+| dex=Extra Illumis/132
+| légende=Artwork de Méga-Zeraora pour {{Jeu|LPZA}}.
+| type1=Électrik
+| type2=
+| catégorie=Vif Éclair
+| taille=1.5
+| poids=44.5
+| talents=
+| fmratio=
+| génération=9
+| couleur=Noir
+| corps=12
+| cri=Cri 0807 Méga
+}}
+'''Méga-Zeraora''' (anglais : '''Mega Zeraora''' ; japonais : '''メガゼラオラ''' ''Mega Zeraora'') est un [[Méga-Pokémon]] de [[type]] [[Électrik]]. C'est la [[Méga-Évolution]] de [[Zeraora]].
+
+Méga-Zeraora a été révélé officiellement lors de la bande-annonce du 19 novembre 2025.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Zeraora voit sa fourrure devenir principalement noire en [[Méga-Évolution|méga-évoluant]]. Ses jambes deviennent bleues, séparées de la partie supérieure de son corps par une bande jaune ciselée. Les extrémités de la fourrure autour de sa tête gardent la couleur jaune d'origine tandis que plusieurs excroissances bleues sont apparues sur le dos de ses mains, semblables à des pointes. La fourrure bleue qu'il possédait sur le torse s'est scindée en trois parties, plus rigides, semblables aux pointes sur ses mains. Le même phénomène s'est produit pour la fourrure bleue sur sa tête, devenue une corne. La longue queue de cheval qui court le long de son dos s'est séparée en deux, formant alors deux queues noires, où les extrémités sont jaunes. Son dos est recouvert de pointes bleues. Enfin, son petit museau passe du blanc au noir.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les zones habituellement noires du corps de Méga-Zeraora sont blanches. Ses motifs en zig-zag auparavant jaune sont noires et ses piques bleus ainsi que ses motifs aux ventre deviennent jaunes.
+
+=== [[Évolution]] ===
+
+Méga-Zeraora est la [[Méga-Évolution]] de [[Zeraora]] avec une [[Zeraorite]].
+{{#lst:Zeraora|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il stocke l'équivalent énergétique de dix éclats de foudre. Lorsqu'il transcende ses limites, il devient l'un des Pokémon Électrik les plus puissants.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Électrik}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 45, son [[Attaque Spéciale]] de 45, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Électrik
+| PV=88
+| attaque=157
+| defense=75
+| atq-spc=147
+| def-spc=80
+| vitesse=153
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Zeraora/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Zeraora}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Pierroteknik
+| numéro=0807
+| nom=Méga-Zeraora
+| nomSuivant=Meltan
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Zeraora]]

@@ -1,0 +1,114 @@
+{{Ruban Pokémon
+| nomPrécédent=Stalgamin
+| numéro=0362
+| nom=Méga-Oniglali
+| nomSuivant=Obalie
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Oniglali
+| nom-japonais=メガ オニゴーリ
+| nom-romaji=Mega Onigōri
+| nom-déposé=Mega Onigohri
+| nom-anglais=Mega Glalie
+| ndex=0362
+| dex=Hoenn-ROSA/180//Alola/247//Alola-USUL/324//Illumis/170
+| dex-secondaires=Shuffle/125//Picross/N06-04//Picross (Alternatif)/A06-04
+| légende=Artwork de Méga-Oniglali pour {{Jeu|ROSA}}.
+| type1=Glace
+| catégorie=Face
+| taille=2.1
+| poids=350.2
+| talents=Peau Gelée
+| fmratio=.5
+| génération=6
+| couleur=Gris
+| corps=1
+| cri=Cri 0362 Méga
+}}
+'''Méga-Oniglali''' (anglais : '''Mega Glalie''' ; japonais : '''メガ オニゴーリ''' ''Mega Onigohri'') est un [[Méga-Pokémon]] de [[type]] [[Glace (type)|Glace]] apparu avec {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] d'[[Oniglali]].
+
+Méga-Oniglali a été révélé le 14 octobre 2014, dans la version coréenne de {{Jeu|démo-ROSA}}, en même temps que [[Méga-Steelix]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Lors de sa Méga-Évolution, Oniglali voit les pics de sa tête se couvrir de glace ainsi que l'apparition d'une troisième excroissance glacée au milieu de son front. De la brume froide s'échappe de sa grande mâchoire désarticulée qui se dote d'une large rangée de dents. La roche qui le compose devient plus importante sur son corps, elle est d'une teinte plus claire sous sa forme méga-évoluée. Ses pupilles deviennent rouges et l'expression de ses yeux devient plus menaçante. Sur le bas du corps, il possède deux piquants qui peuvent ressembler à des pattes.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Oniglali a les yeux entièrement rouges et il est d'un gris un tout petit peu plus clair.
+
+=== [[Évolution]] ===
+
+Méga-Oniglali est la [[Méga-Évolution]] d'Oniglali avec une [[Oniglalite]]. Oniglali est l'évolution de [[Stalgamin]] à partir du [[niveau]] 42.
+
+Un Stalgamin [[sexe|femelle]] (♀) peut également évoluer en [[Momartik]] s'il a été mis en contact avec une [[Pierre Aube]]. Depuis {{jeu|LPZA}}, Momartik peut [[Méga-Évolution|méga-évoluer]] en [[Méga-Momartik]] avec une [[Momartikite]].
+{{#lst:Stalgamin|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Peau Gelée]] : les capacités de type Normal deviennent de type Glace. Leur puissance augmente légèrement.
+
+=== Description du [[Pokédex]] ===
+;{{Jeu|So}}
+:Le surplus d'énergie de la Méga-Évolution s'est déversé par sa bouche et a démis sa mâchoire. Il projette en continu un puissant blizzard.
+;{{Jeu|Lu}}
+:Il enfourne ses proies dans sa bouche et les gèle instantanément, mais sa mâchoire étant déboîtée, il ne peut pas les manger.
+;{{Jeu|US}}
+:Sa mâchoire déboîtée projette un blizzard terrible qui recouvre les alentours d'un voile blanc.
+;{{Jeu|UL}}
+:Le pouvoir de la Méga-Évolution est si fort qu'il en a déboîté sa mâchoire. Il est maintenant bien agacé, car il a du mal à manger.
+;{{Jeu|LPZA}}
+:Depuis sa bouche à la mâchoire déboîtée, il souffle un vent glacial terrible qui recouvre les alentours d'un voile blanc.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Glace}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, son [[Attaque Spéciale]] de 40, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=glace
+| PV=80
+| attaque=120
+| defense=80
+| atq-spc=120
+| def-spc=80
+| vitesse=100
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Oniglali voir [[Oniglali/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/glalie/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique d'Oniglali voir [[Oniglali#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/glalie Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Oniglali/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Oniglali}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Oniglali de Dohga.png|200px|thumb|right|L'Oniglali de Dohga.]]
+Un Méga-Oniglali apparaît dans le film {{film|19}}. Contrôlé par [[Dohga]], il pouvait évoluer de manière forcée et douloureuse.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Stalgamin
+| numéro=0362
+| nom=Méga-Oniglali
+| nomSuivant=Obalie
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Oniglali]]

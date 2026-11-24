@@ -1,0 +1,116 @@
+{{Ruban Pokémon
+| nomPrécédent=Herbizarre
+| numéro=0003
+| nom=Méga-Florizarre
+| nomSuivant=Salamèche
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Florizarre
+| nom-japonais=メガ フシギバナ
+| nom-déposé=Mega Fushigibana
+| nom-anglais=Mega Venusaur
+| ndex=0003
+| dex=Kanto-LGPE/003//Kalos (Centre)/082//Illumis/150
+| dex-secondaires=Shuffle/003//Picross/N26-09//Picross (Alternatif)/A26-05
+| légende=Artwork de Méga-Florizarre pour {{Jeu|XY}}.
+| type1=Plante
+| type2=Poison
+| catégorie=Graine
+| taille=2.4
+| poids=155.5
+| talents=Isograisse
+| expval=208
+| expmax=1059860
+| fmratio=.125
+| couleur=Vert
+| corps=8
+| cri=Cri 0003 Méga
+| génération=6
+}}
+'''Méga-Florizarre''' (anglais : '''Mega Venusaur''' ; japonais : '''メガ フシギバナ''' ''Mega Fushigibana'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Poison (type)|Poison]]. C'est la [[Méga-Évolution]] de [[Florizarre]].
+
+Méga-Florizarre a été révélé dans le magazine ''[[CoroCoro Comics]]'' d'octobre 2013, en même temps que [[Méga-Dracaufeu Y]], [[Méga-Tortank]], [[Méga-Mewtwo X]] et [[Méga-Carchacrok]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Florizarre a un feuillage plus développé. Son dos est recouvert de feuilles et d'un tronc qui est plus élevé avec une grande fleur qui s'épanouit à son sommet. Des lianes glissent sous cette fleur et soutiennent deux branches dont la base se situe près du tronc principal, celui-ci ressemblant à un tronc de [[:wp:Baobab|baobab]]. Deux fleurs roses ornent son corps (une sur son front, et une autre dans son dos). Des taches apparaissent également au dessus de son museau, ce qui est un attribut de ses pré-évolutions.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Quand Méga-Florizarre est chromatique, sa peau et les feuilles de ses branches sont vert clair et ses fleurs prennent une couleur dorée.
+
+=== [[Évolution]] ===
+
+Méga-Florizarre est la [[Méga-Évolution]] de [[Florizarre]] avec une [[Florizarrite]] depuis la [[sixième génération]]. Florizarre est l'évolution d'[[Herbizarre]] au niveau 32, lui-même l'évolution de [[Bulbizarre]] à partir du niveau 16.
+{{#lst:Bulbizarre|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Isograisse]] : le Pokémon est protégé par une épaisse couche de graisse qui diminue de moitié les dégâts qu'il subit des capacités de types Feu et Glace.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}} et {{Jeu|GO}}
+:Ses pattes se sont renforcées pour supporter le poids de sa fleur dorsale, qui s'est épanouie davantage grâce à la Méga-Évolution.
+;{{Jeu|LPZA}}
+:Ses pattes se sont renforcées pour supporter le poids de sa fleur dorsale, qui s'est épanouie davantage grâce à la Méga-Évolution.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Plante|type2=Poison
+| remarque-feu=Ce Pokémon a le [[Talent]] [[Isograisse]], l'efficacité des capacités de type [[Feu]] est de × 1 (normale).
+| remarque-glace=Ce Pokémon a le [[Talent]] [[Isograisse]], l'efficacité des capacités de type [[Glace]] est de × 1 (normale).
+}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 18, sa [[Défense]] de 40, son [[Attaque Spéciale]] de 22, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20.
+
+{{Statistiques
+| type=plante
+| PV=80
+| attaque=100
+| defense=123
+| atq-spc=122
+| def-spc=120
+| vitesse=80
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Florizarre voir [[Florizarre/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/florizarre.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/venusaur/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Florizarre voir [[Florizarre#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/florizarre.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [https://www.smogon.com/dex/sm/pokemon/venusaur/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Florizarre/Imagerie|Génération 9}}
+{{Navigation Florizarre}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Méga-Florizarre apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdotes ==
+
+* Méga-Florizarre a le plus haut total de stats de base des Pokémon de type [[Poison (type)|Poison]], si l'on ne compte pas [[Arceus]] lorsqu'il arbore la plaque [[Plaque Toxik|Toxik]].
+
+{{Ruban Pokémon
+| nomPrécédent=Herbizarre
+| numéro=0003
+| nom=Méga-Florizarre
+| nomSuivant=Salamèche
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Florizarre]]

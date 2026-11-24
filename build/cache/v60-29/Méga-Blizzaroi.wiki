@@ -1,0 +1,110 @@
+{{Ruban Pokémon
+| nomPrécédent=Blizzi
+| numéro=0460
+| nom=Méga-Blizzaroi
+| nomSuivant=Dimoret
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Blizzaroi
+| nom-japonais=メガ ユキノオー
+| nom-romaji=Mega Yukinoō
+| nom-déposé=Mega Yukinooh
+| nom-anglais=Mega Abomasnow
+| ndex=0460
+| dex=Kalos (Monts)/089//Illumis/173
+| dex-secondaires=Shuffle/382//Picross/N29-03//Picross (Alternatif)/A29-07
+| légende=Artwork de Méga-Blizzaroi pour {{Jeu|XY}}.
+| type1=Plante
+| type2=Glace
+| catégorie=Arbregelé
+| taille=2.7
+| poids=185.0
+| talents=Alerte Neige
+| fmratio=0.5
+| génération=6
+| couleur=Blanc
+| corps=6
+| cri=Cri 0460 Méga
+}}
+'''Méga-Blizzaroi''' (anglais : '''Mega Abomasnow''' ; japonais : '''メガ ユキノオー''' ''Mega Yukinooh'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Glace (type)|Glace]]. C'est la [[Méga-Évolution]] de [[Blizzaroi]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Blizzaroi a l'apparence d'un primate quadrupède. Les pousses de son dos et de sa queue grandissent jusqu'à obtenir une extrémité de glace. Sa fourrure blanche couvre davantage le corps et devient plus longue et hirsute.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, les parties habituellement vertes de son corps sont bleues.
+
+=== [[Évolution]] ===
+
+Méga-Blizzaroi est la [[Méga-Évolution]] de [[Blizzaroi]] avec une [[Blizzarite]].
+
+Blizzaroi est l'évolution de [[Blizzi]] à partir du [[niveau]] 40.
+{{#lst:Blizzi|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Alerte Neige]] : déclenche une tempête de grêle quand le Pokémon entre au combat.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Les bourgeons sur son dos ont donné naissance à d'imposantes épines de glace qui déclenchent des blizzards à −30 °C.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Plante|type2=Glace}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 30, son [[Attaque Spéciale]] de 40, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20 et sa [[Vitesse]] diminuée de 30.
+
+{{Statistiques
+| nom=Méga-Blizzaroi
+| type=plante
+| PV=90
+| attaque=132
+| defense=105
+| atq-spc=132
+| def-spc=105
+| vitesse=30
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Blizzaroi voir [[Blizzaroi/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/abomasnow/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Blizzaroi voir [[Blizzaroi#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/abomasnow Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Blizzaroi/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Blizzaroi}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Blizzaroi d'Urup.png|200px|thumb|left|Le Méga-Blizzaroi d'Urup.]]
+Méga-Blizzaroi a fait une apparition dans la première partie de [[Pokémon : Méga-Évolution]]. Il apparaît pour la première fois dans la série principale lors de l'épisode [[XY122]] en tant que dernier Pokémon d'[[Urup]], [[Champion]] d'[[Auffrac-les-Congères]], lors du match contre Sacha.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon}}
+
+{{Ruban Pokémon
+| nomPrécédent=Blizzi
+| numéro=0460
+| nom=Méga-Blizzaroi
+| nomSuivant=Dimoret
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Blizzaroi]]

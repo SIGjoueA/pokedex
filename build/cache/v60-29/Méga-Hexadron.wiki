@@ -1,0 +1,90 @@
+{{Ruban Pokémon
+| nomPrécédent=Charmilly
+| numéro=0870
+| nom=Méga-Hexadron
+| nomSuivant=Wattapik
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Hexadron
+| nom-japonais=メガタイレーツ
+| nom-romaji=Mega Tairētsu
+| nom-déposé=Mega Tairetsu
+| nom-anglais=Mega Falinks
+| ndex=0870
+| dex=Illumis/212
+| légende=Artwork de Méga-Hexadron pour {{Jeu|LPZA}}.
+| type1=Combat
+| catégorie=Escadron
+| taille=1.6
+| poids=99.0
+| talents=Acharné
+| fmratio=
+| génération=9
+| couleur=Jaune
+| corps=11
+| cri=Cri 0870 Méga
+}}
+'''Méga-Hexadron''' (anglais : '''Mega Falinks''' ; japonais : '''メガタイレーツ''' ''Mega Tairetsu'') est un [[Méga-Pokémon]] de [[type]] [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] d'[[Hexadron]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+En méga-évoluant, les membres de Méga-Hexadron se sont réunis pour ne faire qu'un, et forment un être humanoïde. Le chef de la formation est la tête du corps, deux cadets servent de bras, deux autres de jambes et le dernier soutient le chef en étant le buste. Le cadet, représentant le buste, a développé deux petits bras sur lesquels le chef se repose, il a également les yeux plissés. Tous les membres ont perdu leurs deux petits boucliers qu'ils possédaient en tant qu'[[Hexadron]], hormis le bras gauche qui a un grand bouclier sur la tête, protégeant la formation. Le bras droit quant à lui a développé une lame à partir de l'épine sur sa tête, permettant ainsi d'attaquer. Le chef voit aussi son épine grandir, et possède maintenant deux points bleus autour des yeux.
+
+==== Différences mâle/femelle ====
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Hexadron mâle ou femelle.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Hexadron conserve les mêmes couleurs qu'Hexadron chromatique. Les parties de son corps habituellement jaunes sont marron, et les parties rouges sont jaunes.
+
+=== [[Évolution]] ===
+Méga-Hexadron est la [[Méga-Évolution]] d'[[Hexadron]] avec une [[Hexadronite]].
+{{#lst:Hexadron|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Acharné]] : augmente beaucoup l'[[Attaque (statistique)|Attaque]] du Pokémon quand ses stats baissent.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Seuls les chefs et les subordonnés ayant noué des liens solides sont capables d'adopter cette formation de combat suprême.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Combat}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 35, sa [[Défense]] de 35, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 5, et sa [[Vitesse]] de 25.
+
+{{Statistiques
+| type=Combat
+| PV=65
+| attaque=135
+| defense=135
+| atq-spc=70
+| def-spc=65
+| vitesse=100
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Hexadron/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Hexadron}}
+
+== Apparitions dans les dessins animés ==
+=== {{série|LH}} ===
+[[Fichier:LH142 - Méga-Hexadron de Nivis.png|thumb|right|Le Méga-Hexadron de [[Nivis]].]]
+Méga-Hexadron apparaît pour la première fois dans l'épisode [[LH142]]. [[Nivis]] utilise la [[Méga-Évolution]] pour transformer son [[Hexadron]] en Méga-Hexadron, grâce à son [[Hexadronite]]. Méga-Hexadron affronte le [[Lucario de Rhod|Méga-Lucario Z]] de [[Rhod]] et perd le combat.
+==== Descriptions du [[Pokédex]] ====
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Charmilly
+| numéro=0870
+| nom=Méga-Hexadron
+| nomSuivant=Wattapik
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Hexadron]]

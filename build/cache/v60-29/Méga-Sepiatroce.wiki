@@ -1,0 +1,99 @@
+{{Ruban Pokémon
+| nomPrécédent=Sepiatop
+| numéro=0687
+| nom=Méga-Sepiatroce
+| nomSuivant=Opermine
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Sepiatroce
+| nom-japonais=メガカラマネロ
+| nom-romaji=Mega Karamanero
+| nom-déposé=Mega Calamanero
+| nom-anglais=Mega Malamar
+| ndex=0687
+| dex=Illumis/160
+| légende=Artwork de Méga-Sepiatroce pour {{Jeu|LPZA}}.
+| type1=Ténèbres
+| type2=Psy
+| catégorie=Révolution
+| taille=2.9
+| poids=69.8
+| talents=Contestation
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=4
+| cri=Cri 0687 Méga
+}}
+'''Méga-Sepiatroce''' (anglais : '''Mega Malamar''' ; japonais : '''メガカラマネロ''' ''Mega Calamanero'') est un [[Méga-Pokémon]] de [[type]] [[Ténèbres (type)|Ténèbres]] et [[Psy (type)|Psy]]. C'est la [[Méga-Évolution]] de [[Sepiatroce]].
+
+Méga-Sepiatroce a été teasé lors de la bande-annonce du 4 septembre 2025<ref>[https://www.youtube.com/watch?v=aPS_43Y18wM Sepiatroce.mp4] '''(fr)'''</ref>, suivie par une campagne promotionnelle intitulée « Mon ami Sepiatroce », avant d'être révélé officiellement lors de la bande-annonce du 10 septembre 2025.
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Sepiatroce voit son corps devenir plus long et plus fin. Celui-ci, qui était principalement violet foncé, devient multicolore, commençant par le violet, continuant avec le rouge, l'orange, le jaune et le vert pour finir avec du bleu clair et du bleu foncé à l'extrémité de son corps. Ses deux nageoires blanches, qui servaient de jambes, se sont rassemblées pour former une pointe. Les hauts de ses bras sont devenus des épaulettes longues et pointues, semblables à celles d'un manteau, gardant la couleur rose foncé de [[Sepiatroce]]. Ses nageoires blanches en forme de faux sont maintenant des sortes de longs rubans violets, se finissant par ces mêmes nageoires, plus petites, émettant de la lumière de couleur vert d'un côté, et rose de l'autre. Enfin, les tentacules sortant du haut de sa tête se sont entrelacées pour former une masse ressemblant à un cerveau, mêlant violet et bleu clair.
+
+Méga-Sepiatroce utilise ses deux longs bras pour hypnotiser ses victimes. Pour se déplacer, il lévite désormais.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les parties habituellement violet pâle de Méga-Sepiatroce ont une teinte gris jaunâtre. Les tentacules sur sa tête sont vert brun, avec l'intérieur de couleur jaune. Aussi, les parties habituellement roses de son bec et de ses épaules sont rouges.
+
+=== [[Évolution]] ===
+Méga-Sepiatroce est la [[Méga-Évolution]] de [[Sepiatroce]] avec une [[Sepiatrocite]]. Il est lui-même l'évolution de [[Sepiatop]] à partir du [[niveau]] 30, en gardant la console orientée vers le bas lors d'une montée de niveau.
+{{#lst:Sepiatop|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Contestation]] : inverse les changements de stats : les augmentations de stats se transforment en baisses, et vice-versa.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Grâce à ses lumières multicolores, il réécrit les souvenirs de ses adversaires et restructure leur personnalité afin de les contrôler à sa guise.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Ténèbres|type2=Psy}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 10, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 45, et sa [[Vitesse]] de 15.
+
+{{Statistiques
+| type=Ténèbres
+| PV=86
+| attaque=102
+| defense=88
+| atq-spc=98
+| def-spc=120
+| vitesse=88
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Sepiatroce/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Sepiatroce}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+* Sur la version console de {{jeu|HOME}}, l'[[apparence du corps]] de Méga-Sepiatroce est différente de celle de [[Sepiatroce]]. Sur la version mobile, elles sont identiques ({{Apparence du corps|5}}).
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Sepiatop
+| numéro=0687
+| nom=Méga-Sepiatroce
+| nomSuivant=Opermine
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Sepiatroce]]

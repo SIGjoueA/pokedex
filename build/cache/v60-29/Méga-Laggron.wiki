@@ -1,0 +1,112 @@
+{{Ruban Pokémon
+| nomPrécédent=Flobio
+| numéro=0260
+| nom=Méga-Laggron
+| nomSuivant=Medhyèna
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Laggron
+| nom-japonais=メガ ラグラージ
+| nom-romaji=Mega Ragurāji
+| nom-déposé=Mega Laglarge
+| nom-anglais=Mega Swampert
+| ndex=0260
+| dex=Hoenn-ROSA/009//Extra Illumis/047
+| dex-secondaires=Shuffle/097//Picross/N27-07//Picross (Alternatif)/A27-10
+| légende=Artwork de Méga-Laggron pour {{Jeu|ROSA}}.
+| type1=Eau
+| type2=Sol
+| catégorie=Poissonboue
+| taille=1.9
+| poids=102.0
+| talents=Glissade
+| fmratio=.125
+| génération=6
+| couleur=Bleu
+| corps=6
+| cri=Cri 0260 Méga
+}}
+'''Méga-Laggron''' (anglais : '''Mega Swampert''' ; japonais : '''メガ ラグラージ''' ''Mega Laglarge'') est un [[Méga-Pokémon]] de [[type]] [[Eau (type)|Eau]] et [[Sol (type)|Sol]] apparu avec les versions {{jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Laggron]].
+
+Méga-Laggron a été révélé dans le magazine ''[[CoroCoro Comics]]'' de juillet 2014, en même temps que [[Méga-Jungko]] et [[Méga-Diancie]], plus précisément lors d'une fuite de ce numéro, le 9 juin 2014.
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Les parties jaunâtres du corps de Méga-Laggron sont de couleur orange foncé et il est beaucoup plus imposant. Ses pattes arrière sont atrophiées et ont un aspect plus terrestre. Elles perdent également les "coquilles" qui les ornaient. Ses branchies divisées en trois branches sont beaucoup plus longues et il a d'autres "coquilles" sur les bras et les épaules. La grosse coquille sur chacun de ses avant-bras semble être une sorte de propulseur qui le fait nager plus vite sous l'eau. Ses doigts noirs sont plus épais et mieux définis. Il a trois crêtes en forme de nageoire parcourant sa tête jusqu'au dos qui sont plus effilées, surtout celle au centre.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique ce Pokémon a le corps rose à la place de bleu clair, et les ailerons de son dos ne sont pas bleu foncé mais mauves. Les parties oranges deviennent quand à elles rose pêche.
+
+=== [[Évolution]] ===
+
+Méga-Laggron est la [[Méga-Évolution]] de [[Laggron]] avec une [[Laggronite]]. Laggron est l'évolution de [[Flobio]] au niveau 36, lui-même l'évolution de [[Gobou]] à partir du niveau 16.
+{{#lst:Gobou|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Glissade]] : augmente la Vitesse du Pokémon s'il pleut.
+
+Remarque : lorsque Laggron méga-évolue en Méga-Laggron et qu'il pleut déjà sur le terrain, il faut attendre un tour avant que Glissade ne fasse effet. Ainsi, lors de son premier tour en tant que Méga-Pokémon, Méga-Laggron n'aura pas sa statistique de Vitesse doublée.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:En utilisant le même principe qu'une pompe hydraulique, l'eau dans son corps renforce encore plus ses muscles déjà considérablement gonflés.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Eau|type2=Sol}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=eau
+| PV=100
+| attaque=150
+| defense=110
+| atq-spc=95
+| def-spc=110
+| vitesse=70
+}}
+
+* Méga-Laggron a le plus grand total de statistiques des Méga-Évolutions de [[Pokémon de départ]] (635).
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Laggron voir [[Laggron/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/swampert/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Laggron voir [[Laggron#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/laggron.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/swampert Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Laggron/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Laggron}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Laggron d'Alva.png|thumb|left|Le Méga-Laggron d'[[Alva]].]]
+[[Fichier:PE06 - Méga-Laggron.png|thumb|right|Le Méga-Laggron de [[Flora (Hoenn)|Flora]].]]
+Méga-Laggron apparaît dans un épisode de [[Pokédex Méga-Évolution]].
+Un Méga-Laggron apparaît dans le film 19.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Flobio
+| numéro=0260
+| nom=Méga-Laggron
+| nomSuivant=Medhyèna
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Laggron]]

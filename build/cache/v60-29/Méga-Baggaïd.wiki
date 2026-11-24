@@ -1,0 +1,88 @@
+{{Ruban Pokémon
+| nomPrécédent=Baggiguane
+| numéro=0560
+| nom=Méga-Baggaïd
+| nomSuivant=Cryptéro
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Baggaïd
+| nom-japonais=メガズルズキン
+| nom-romaji=Mega Zuruzukin
+| nom-déposé=Mega Zuruzukin
+| nom-anglais=Mega Scrafty
+| ndex=0560
+| dex=Illumis/185
+| légende=Artwork de Méga-Baggaïd pour {{Jeu|LPZA}}.
+| type1=Ténèbres
+| type2=Combat
+| catégorie=Gang
+| taille=1.1
+| poids=31.0
+| talents=Intimidation
+| fmratio=
+| génération=9
+| couleur=Brun
+| corps=6
+| cri=Cri 0560 Méga
+}}
+'''Méga-Baggaïd''' (anglais : '''Mega Scrafty''' ; japonais : '''メガズルズキン''' ''Mega Zuruzukin'') est un [[Méga-Pokémon]] de [[type]] [[Ténèbres (type)|Ténèbres]] et [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] de [[Baggaïd]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], sa capuche jaune est devenue un gilet à capuche blanc, qui possède deux trous sur le haut de la capuche. Il porte cette dernière sur l'arrière de la tête, cachant une partie de sa crête rouge qui ressort uniquement au niveau du front, et à l'arrière de son crâne. Son excroissance de peau jaune rappelant un pantalon est maintenant blanche, et suffisamment grande pour qu'il puisse y rentrer ses mains. De plus, ce « pantalon » est troué au genou. Ses pieds et sa queue sont maintenant visibles. L'écaille rouge sur sa queue a disparu en méga-évoluant.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, sa capuche et son pantalon sont violets, et sa crête est noire.
+
+=== [[Évolution]] ===
+Méga-Baggaïd est la [[Méga-Évolution]] de [[Baggaïd]] avec une [[Baggaïdite]]. Ce dernier est l'évolution de [[Baggiguane]] à partir du [[niveau]] 39.
+{{#lst:Baggiguane|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Intimidation (talent)|Intimidation]] : le Pokémon rugit lorsqu'il arrive au combat, ce qui intimide l'ennemi et baisse son [[Attaque (statistique)|Attaque]].
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:En méga-évoluant, sa peau a blanchi, est devenue plus résistante et a gagné en élasticité. Son esprit combatif, lui, est resté inchangé.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Ténèbres|type2=Combat}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 10, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Ténèbres
+| PV=65
+| attaque=130
+| defense=135
+| atq-spc=55
+| def-spc=135
+| vitesse=68
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Baggaïd/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Baggaïd}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Baggiguane
+| numéro=0560
+| nom=Méga-Baggaïd
+| nomSuivant=Cryptéro
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Baggaïd]]

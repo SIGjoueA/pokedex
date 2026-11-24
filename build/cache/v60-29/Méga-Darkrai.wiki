@@ -1,0 +1,94 @@
+{{Ruban Pokémon
+| nomPrécédent=Manaphy
+| numéro=0491
+| nom=Méga-Darkrai
+| nomSuivant=Shaymin
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Darkrai
+| nom-japonais=メガダークライ
+| nom-romaji=Mega Dākurai
+| nom-déposé=Mega Darkrai
+| nom-anglais=Mega Darkrai
+| ndex=0491
+| dex=Extra Illumis/125
+| légende=Artwork de Méga-Darkrai pour {{Jeu|LPZA}}.
+| type1=Ténèbres
+| type2=
+| catégorie=Cauchemar
+| taille=3.0
+| poids=240.0
+| talents=
+| fmratio=
+| génération=9
+| couleur=Noir
+| corps=4
+| cri=Cri 0491 Méga
+}}
+'''Méga-Darkrai''' (anglais : '''Mega Darkrai''' ; japonais : '''メガダークライ''' ''Mega Darkrai'') est un [[Méga-Pokémon]] de [[type]] [[Ténèbres (type)|Ténèbres]]. C'est la [[Méga-Évolution]] de [[Darkrai]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant, Méga-Darkrai s'allonge à l'horizontale et lévite dans les airs. Son œil droit devient rose, tandis que l'œil gauche est caché par une mèche issue de la substance blanche coiffant sa tête. Celle-ci, redressée, est plus longue et plus fine, tout comme les rubans lui servant d'épaulettes. Deux autres mèches tombent sur les côtés, tandis que cinq rubans semblables à ses épaulettes trainent sur son dos et un autre sur son ventre. Sa collerette, désormais noire, est entourée de craquelures blanches. Ses longues jambes, minces et pointues, ressortent de son bassin. Méga-Darkrai est capable de rétracter sa tête et sa collerette dans son corps pour laisser place à un œil à la pupille blanche et à l'iris rose, entouré par des arcs de cercles bleus. Sous cette forme, les craquelures blanches sont roses, laissant place à l'énergie provenant des entrailles de Méga-Darkrai.
+Méga-Darkrai est peut-être inspiré du [[:wp:Sluagh|sluagh]], un spectre irlandais qui vole à l'horizontale en trainant derrière lui ses grandes jambes en forme de pointes, incapable de toucher le sol.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+
+=== [[Évolution]] ===
+
+Méga-Darkrai est la [[Méga-Évolution]] de [[Darkrai]] avec une [[Darkraïte]].
+{{#lst:Darkrai|Tableau d'évolution}}
+=== [[Talent]] ===
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Ses pouvoirs obscurs cachent le soleil et plongent les environs dans les ténèbres. Personne ne peut échapper à son œil maléfique.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Ténèbres}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 40, son [[Attaque Spéciale]] de 30, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 40 tandis que sa [[Vitesse]] est diminuée de 40.
+
+{{Statistiques
+| type=Ténèbres
+| PV=70
+| attaque=120
+| defense=130
+| atq-spc=165
+| def-spc=130
+| vitesse=85
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Darkrai/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Darkrai}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdotes ==
+* Méga-Darkrai est l'un des quatre [[Méga-Pokémon]] à avoir une [[catégorie]] différente de celle de sa forme de base. Il partage cette caractéristique avec [[Méga-Aligatueur]], [[Méga-Mistigrix]] et [[Méga-Draïeul]].
+* Sur la version console de {{jeu|HOME}}, l'[[apparence du corps]] de Méga-Darkrai est différente de celle de [[Darkrai]]. Sur la version mobile, elles sont identiques ({{Apparence du corps|12}}).
+
+{{Ruban Pokémon
+| nomPrécédent=Manaphy
+| numéro=0491
+| nom=Méga-Darkrai
+| nomSuivant=Shaymin
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Darkrai]]

@@ -1,0 +1,94 @@
+{{Ruban Pokémon
+| nomPrécédent=Noctunoir
+| numéro=0478
+| nom=Méga-Momartik
+| nomSuivant=Motisma
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Momartik
+| nom-japonais=メガユキメノコ
+| nom-romaji=Mega Yukimenoko
+| nom-déposé=Mega Yukimenoko
+| nom-anglais=Mega Froslass
+| ndex=0478
+| dex=Illumis/171
+| légende=Artwork de Méga-Momartik pour {{Jeu|LPZA}}.
+| type1=Glace
+| type2=Spectre
+| catégorie=Enneigement
+| taille=2.6
+| poids=29.6
+| talents=Alerte Neige
+| fmratio=1
+| génération=9
+| couleur=Blanc
+| corps=4
+| cri=Cri 0478 Méga
+}}
+'''Méga-Momartik''' (anglais : '''Mega Froslass''' ; japonais : '''メガユキメノコ''' ''Mega Yukimenoko'') est un [[Méga-Pokémon]] de [[type]] [[Glace (type)|Glace]] et [[Spectre (type)|Spectre]]. C'est la [[Méga-Évolution]] de [[Momartik]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Momartik possède un corps très allongé, reposé sur un nuage. Ses bras se sont, eux aussi, allongés, tombant comme un vêtement au niveau des coudes. Les deux rocs glacés sur sa tête sont maintenant des cornes de glace. Les contours de ses yeux ne sont plus arrondis, mais forment des losanges. Méga-Momartik a une longue chevelure blanche provenant de l'arrière de son crâne. Le bas de son corps, semblable à un kimono, où l'intérieur est bleu clair et violet, possède un flocon de glace et des éclats gelés sur la partie inférieure.
+
+==== Différences mâle/femelle ====
+Cette espèce est composée uniquement d'individus femelles.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, son [[wp:obi|obi]] est rose, et les parties de sa tête habituellement violettes sont plus claires. Les motifs sur les manches et le bas de son kimono, habituellement bleu pâle, sont encore plus claires.
+
+=== [[Évolution]] ===
+
+Méga-Momartik est la [[Méga-Évolution]] de [[Momartik]] avec une [[Momartikite]]. Ce dernier est l'évolution de [[Stalgamin]] [[sexe|femelle]] (♀) au contact d'une [[Pierre Aube]]. Stalgamin peut aussi évoluer en [[Oniglali]] à partir du [[niveau]] 42, qui lui-même [[Méga-Évolution|méga-évolution]] en [[Méga-Oniglali]] avec une [[Oniglalite]].
+{{#lst:Stalgamin|Tableau d'évolution}}
+=== [[Talent]] ===
+* [[Alerte Neige]] : déclenche une tempête de grêle quand le Pokémon entre au combat.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Son souffle glacial sinistre imprégné d'énergie spectrale lui permet de tout geler, même ce qui est intangible comme le feu ou le vent.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Glace|type2=Spectre}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque Spéciale]] est augmentée de 60, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| type=Glace
+| PV=70
+| attaque=80
+| defense=70
+| atq-spc=140
+| def-spc=100
+| vitesse=120
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Momartik/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Momartik}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Noctunoir
+| numéro=0478
+| nom=Méga-Momartik
+| nomSuivant=Motisma
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Momartik]]

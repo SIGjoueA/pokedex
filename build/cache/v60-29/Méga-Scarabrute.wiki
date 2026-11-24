@@ -1,0 +1,122 @@
+{{Ruban Pokémon
+| nomPrécédent=Magmar
+| numéro=0127
+| nom=Méga-Scarabrute
+| nomSuivant=Tauros
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Scarabrute
+| nom-japonais=メガ カイロス
+| nom-romaji=Mega Kairosu
+| nom-déposé=Mega Kailios
+| nom-anglais=Mega Pinsir
+| ndex=0127
+| dex=Kanto-LGPE/127//Hoenn-ROSA/174//Kalos (Côtes)/130//Alola/175//Alola-USUL/211//Illumis/178
+| dex-secondaires=Shuffle/233//Picross/N14-07//Picross (Alternatif)/A14-07
+| légende=Artwork de Méga-Scarabrute pour {{Jeu|XY}}.
+| type1=Insecte
+| type2=Vol
+| catégorie=Scarabée
+| taille=1.7
+| poids=59.0
+| talents=Peau Céleste
+| fmratio=0.5
+| couleur=Brun
+| conditions-corps={{Jeu|XY}}/Depuis {{Jeu|ROSA}}
+| corps=12/13
+| cri=Cri 0127 Méga
+| génération=6
+}}
+'''Méga-Scarabrute''' (anglais : '''Mega Pinsir''' ; japonais : '''メガ カイロス''' ''Mega Kailios'') est un [[Méga-Pokémon]] de [[type]] [[Insecte (type)|Insecte]] et [[Vol (type)|Vol]]. C'est la [[Méga-Évolution]] de [[Scarabrute]].
+
+Méga-Scarabrute a été révélé dans le magazine CoroCoro Comics de décembre 2013, en même temps que [[Méga-Branette]], [[Méga-Charmina]], [[Méga-Démolosse]], [[Méga-Cizayox]], [[Méga-Élecsprint]], [[Méga-Ptéra]] et [[Méga-Alakazam]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Scarabrute possède des ailes jaunes. Il possède également des excroissances au niveau des cornes et des pattes avant, elles-mêmes étant un peu plus longues. Ses pattes arrière sont plus courtes et ses yeux sont désormais jaunes avec des cercles concentriques.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Scarabrute est bleu, ses cornes et ses mandibules sont jaunes et une partie de ses ailes est verte.
+
+=== [[Évolution]] ===
+
+Méga-Scarabrute est la [[Méga-Évolution]] de [[Scarabrute]] avec une [[Scarabruite]].
+{{#lst:Scarabrute|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Peau Céleste]] : les capacités de type Normal deviennent de type Vol. Leur puissance augmente légèrement.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:La [[Méga-Évolution]] le maintient excité en permanence. Il embroche ses ennemis sur ses pinces avant de les déchirer en deux.
+;{{Jeu|Lu}}
+:Grâce à la [[Méga-Évolution]], ses ailes ont atteint une taille démesurée. Sa vitesse de pointe est d'environ 50 km/h.
+;{{Jeu|US}}
+:Grâce à la [[Méga-Évolution]], il peut voler. Il est tellement content d'en profiter qu'il se pose rarement.
+;{{Jeu|UL}}
+:Il vole à toute allure et attend le moment propice pour attaquer ses adversaires. Il les embroche sur ses deux pinces.
+;{{Jeu|LGPE}}
+:Il est très fier de ses cornes, qui lui permettent de soulever sans effort des adversaires pesant dix fois son poids, et ce même en volant.
+;{{Jeu|LPZA}}
+:La Méga-Évolution lui permet désormais de voler. Il se pose rarement, sûrement trop content de profiter de cette nouvelle faculté.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Insecte|type2=Vol
+| remarque-sol=Si l'attaque [[Gravité]] est utilisée l'efficacité des attaques [[Sol]] à son encontre est d'1/2, du fait de son type [[Insecte]] qui y est résistant par ailleurs.
+}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=insecte
+| PV=65
+| attaque=155
+| defense=120
+| atq-spc=65
+| def-spc=90
+| vitesse=105
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Scarabrute voir [[Scarabrute/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/scarabrute.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/pinsir/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Scarabrute voir [[Scarabrute#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/scarabrute.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/pinsir/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Scarabrute/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Scarabrute}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Scarabrute d'Alva.png|200px|thumb|left|Le Méga-Scarabrute d'Alva.]]
+Méga-Scarabrute apparaît pour la première fois dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Magmar
+| numéro=0127
+| nom=Méga-Scarabrute
+| nomSuivant=Tauros
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Scarabrute]]

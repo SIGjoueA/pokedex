@@ -1,0 +1,107 @@
+{{Ruban Pokémon
+| nomPrécédent=Roucoups
+| numéro=0018
+| nom=Méga-Roucarnage
+| nomSuivant=Rattata
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Roucarnage
+| nom-japonais=メガ ピジョット
+| nom-romaji=Mega Pijotto
+| nom-déposé=Mega Pigeot
+| nom-anglais=Mega Pidgeot
+| ndex=0018
+| dex=Kanto-LGPE/018//Illumis/023
+| dex-secondaires=Shuffle/012//Picross/N12-08//Picross (Alternatif)/A12-07
+| légende=Artwork de Méga-Roucarnage pour {{Jeu|ROSA}}.
+| type1=Normal
+| type2=Vol
+| catégorie=Oiseau
+| taille=2.2
+| poids=50.5
+| talents=Annule Garde
+| fmratio=0.5
+| couleur=Brun
+| corps=9
+| cri=Cri 0018 Méga
+| génération=6
+}}
+'''Méga-Roucarnage''' (anglais : '''Mega Pidgeot''' ; japonais : '''メガ ピジョット''' ''Mega Pigeot'') est un [[Méga-Pokémon]] de [[type]] [[Normal (type)|Normal]] et [[Vol (type)|Vol]] apparu avec les versions {{jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Roucarnage]].
+
+Méga-Roucarnage a été révélé le 10 octobre 2014, dans une fuite du numéro de novembre 2014 du ''[[CoroCoro Comics]]'' en même temps que [[Méga-Dardargnan]], [[Méga-Latias]] et [[Méga-Latios]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+
+Méga-Roucarnage a surtout pris en taille et en poids. Ses yeux sont maintenant rouges. Les longues plumes sur sa tête se changent en une crête moitié jaune, moitié rose et deux longues plumes roses en sortent (une vers l'avant et une plus longue vers l'arrière). Les plumes de sa queue sont également devenues roses. Les pointes des plumes de ses ailes et de sa queue sont bleues.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, Méga-Roucarnage a le corps et la grande plume dorés. Le bout de sa queue et de ses ailes sont violets.
+
+=== [[Évolution]] ===
+
+Méga-Roucarnage est la [[Méga-Évolution]] de [[Roucarnage]] avec la [[Méga-Gemme]] de Roucarnage. Roucarnage est l'évolution de [[Roucoups]] à partir du [[niveau]] 36, qui est lui-même l'évolution de [[Roucool]] à partir du niveau 18.
+{{#lst:Roucool|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Annule Garde]] : les capacités du Pokémon touchent l'ennemi à coup sûr, mais les capacités de l'ennemi le touchent aussi à coup sûr.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}}
+:Ses muscles se sont tant développés qu'il est désormais capable de voler pendant deux semaines sans se reposer.
+;{{Jeu|LPZA}}
+:Ses muscles se sont tant développés qu'il est désormais capable de voler pendant deux semaines sans se reposer.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Normal|type2=Vol
+| remarque-sol=Si l'attaque [[Gravité]] est utilisée, l'efficacité des attaques [[Sol]] à son encontre est normale.
+}}
+
+== [[Statistique]]s ==
+
+Sa [[Défense]] est augmentée de 5, son [[Attaque Spéciale]] de 65, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=normal
+| PV=83
+| attaque=80
+| defense=80
+| atq-spc=135
+| def-spc=80
+| vitesse=121
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Roucarnage voir [[Roucarnage/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/roucarnage.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/pidgeot/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Roucarnage voir [[Roucarnage#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/pidgeot/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Roucarnage/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Roucarnage}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Méga-Roucarnage apparaît lors de {{film|19}}.
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Roucoups
+| numéro=0018
+| nom=Méga-Roucarnage
+| nomSuivant=Rattata
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Roucarnage]]

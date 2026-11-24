@@ -1,0 +1,102 @@
+{{Ruban Pokémon
+| nomPrécédent=Denticrisse
+| numéro=0780
+| nom=Méga-Draïeul
+| nomSuivant=Sinistrail
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Draïeul
+| nom-japonais=メガジジーロン
+| nom-romaji=Mega Jijīron
+| nom-déposé=Mega Jijilong
+| nom-anglais=Mega Drampa
+| ndex=0780
+| dex=Illumis/224
+| légende=Artwork de Méga-Draïeul pour {{Jeu|LPZA}}.
+| type1=Normal
+| type2=Dragon
+| catégorie=Magistral
+| taille=3.0
+| poids=240.5
+| talents=Folle Furie
+| fmratio=
+| génération=9
+| couleur=Noir
+| corps=2
+| cri=Cri 0780 Méga
+}}
+'''Méga-Draïeul''' (anglais : '''Mega Drampa''' ; japonais : '''メガジジーロン''' ''Mega Jijilong'') est un [[Méga-Pokémon]] de [[type]] [[Normal (type)|Normal]] et [[Dragon (type)|Dragon]]. C'est la [[Méga-Évolution]] de [[Draïeul]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Draïeul redresse son cou, maintenant blanc sur le dessous, en méga-évoluant. Des flancs de sa tête ressortent deux cornes blanches et deux moustaches de la même couleur se trouvent au coin supérieur de sa bouche. Sa chevelure est maintenant noire et s'est redressée tandis que sa petite barbe forme un bouc de la même couleur. Son regard est plus agressif à cause de ses sourcils jaunes qui se sont relevés. Sa fourrure devenue noire prend le dessus sur tout son corps, le cachant désormais quasiment entièrement. Celle-ci rappelle un nuage sur lequel Méga-Draïeul se repose pour flotter dans les airs. Sa queue s'est assombrie et s'est recroquevillée.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, ses sourcils sont noirs, ses griffes sont blanches, et le corps habituellement bleu-vert est couleur moutarde. Les parties habituellement blanches de son corps, moustaches et cornes sont jaune pâle.
+
+=== [[Évolution]] ===
+
+Méga-Draïeul est la [[Méga-Évolution]] de [[Draïeul]] avec une [[Draïeulite]].
+{{#lst:Draïeul|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Folle Furie]] : augmente l'Attaque Spéciale du Pokémon lorsqu'il tombe à la moitié de ses PV à cause d'une attaque.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Les cellules de son corps se sont activées, ce qui lui a permis de retrouver sa jeunesse. Il manipule l'atmosphère pour invoquer des tempêtes.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Normal|type2=Dragon}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 25, sa [[Défense]] de 25, son [[Attaque Spéciale]] de 25, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 25.
+
+{{Statistiques
+| type=Normal
+| PV=78
+| attaque=85
+| defense=110
+| atq-spc=160
+| def-spc=116
+| vitesse=36
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Draïeul/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Draïeul}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdotes ==
+* Méga-Draïeul est l'un des quatre [[Méga-Pokémon]] à avoir une [[catégorie]] différente de celle de sa forme de base. Il partage cette caractéristique avec [[Méga-Aligatueur]], [[Méga-Darkrai]] et [[Méga-Mistigrix]].
+* Le design de Méga-Draïeul a été conçu par [[Hitoshi Ariga]]<ref>[https://x.com/ariga_megamix/status/2016357810372804793 Tweet de Hitoshi Ariga sur Méga-Draïeul] '''(ja)'''</ref>, qui a aussi conçu celui de [[Draïeul]]<ref>[https://x.com/ariga_megamix/status/804500572967555072 Tweet de Hitoshi Ariga sur les Pokémon de Pokémon Soleil et Pokémon Lune] '''(ja)'''</ref>.
+
+== Références ==
+<references/>
+{{Ruban Pokémon
+| nomPrécédent=Denticrisse
+| numéro=0780
+| nom=Méga-Draïeul
+| nomSuivant=Sinistrail
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Draïeul]]

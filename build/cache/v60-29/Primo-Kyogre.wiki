@@ -1,0 +1,121 @@
+{{Ruban Pokémon
+| nomPrécédent=Latios
+| numéro=0382
+| nom=Primo-Kyogre
+| nomSuivant=Primo-Groudon
+| forme-suivant=Primo
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Primo-Kyogre
+| nom-japonais=ゲンシ カイオーガ
+| nom-déposé=Genshi Kyogre
+| nom-romaji=Genshi Kaiōga
+| nom-anglais=Primal Kyogre
+| ndex=0382
+| dex=Hoenn-ROSA/207//Extra Illumis/128
+| dex-secondaires=Shuffle/160//Picross/F02
+| légende=Artwork de Primo-Kyogre pour {{Jeu|ROSA}}.
+| type1=Eau
+| catégorie=Bassinmarin
+| taille=9.8
+| poids=430.0
+| talents=Mer Primaire
+| fmratio=-1
+| captureval=3
+| génération=6
+| couleur=Bleu
+| corps=3
+| cri=Cri 0382 Primo
+}}
+'''Primo-Kyogre''' (anglais : '''Primal Kyogre''' ; japonais : '''ゲンシ カイオーガ''' ''Genshi Kyogre'') est une forme du [[Pokémon légendaire]] [[Kyogre]] apparue dans {{Jeu|ROSA}}.
+
+== À propos du Pokémon ==
+
+Primo-Kyogre été initialement révélé en tant qu'illustration de la boîte du jeu {{Jeu|SaA}}, sans plus d'informations sur son nom et son lien avec Kyogre. C'est via un communiqué de presse<ref>http://pokemon.gamespress.com/releases/1498/pokmon-rubis-omga-et-pokmon-saphir-alpha-disponibles-le-28-novembre-20</ref> diffusé au début de l'E3 2014 que le nom de « Primo-Kyogre » a été dévoilé, ainsi que celui du mécanisme de jeu associé : la [[Primo-Résurgence]].
+
+=== Physionomie et attitudes ===
+Par rapport à Kyogre, de nombreux tracés lumineux blancs parcourent le corps de Primo-Kyogre. Il est deux fois plus grand que sa forme usuelle.
+Le motif de ses bras, qui laisse maintenant apparaître un tracé supplémentaire jaune, rappelle la lettre grecque Alpha. On remarque aussi que les « rubans » de sa queue sont plus nombreux.
+
+==== Différences mâle/femelle ====
+
+[[Kyogre]] est un Pokémon asexué, il n'y a donc pas de Primo-Kyogre mâle ou femelle.
+
+==== [[Chromatique]] ====
+Lorsque Primo-Kyogre est chromatique, les parties habituellement bleues de son corps sont noires et les parties normalement blanches de ses nageoires sont violettes.
+
+=== [[Évolution]] ===
+
+Primo-Kyogre est la [[forme]] de [[Kyogre]], obtenue grâce à l'activation de la [[Primo-Résurgence]] avec la [[Gemme Bleue]].
+{{#lst:Kyogre|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Mer Primaire]] : altère les conditions météo en [[Météo (mécanisme)#Pluie battante|pluie battante]].
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:L'énergie primordiale de la [[Gemme Bleue]] a rendu à ce Pokémon sa forme originelle. Son corps a une composition similaire à celle de l'eau de mer.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Eau
+| remarque-feu=L'efficacité des capacités de type [[Feu]] est nulle du fait de son talent [[Mer Primaire]]. Lorsqu'il n'est pas actif, l'efficacité des attaques Feu à son encontre est de 0.5.
+}}
+
+== [[Statistique]]s ==
+La Primo-Résurgence de Kyogre améliore l'Attaque de 50, l'Attaque Spéciale de 30 et la Défense Spéciale de 20.
+{{Statistiques
+| type=Eau
+| PV=100
+| attaque=150
+| defense=90
+| atq-spc=180
+| def-spc=160
+| vitesse=90
+}}
+Primo-Kyogre est le Pokémon aux plus hautes statistiques Spéciales du type Eau.
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Kyogre voir [[Kyogre/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/kyogre/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Kyogre voir [[Kyogre#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/kyogre Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Primo-Kyogre/Imagerie|Génération 9}}
+
+{| class="tableaustandard eau centre"
+|-
+| [[Fichier:Primo-Résurgence Kyogre animation.mp4]]
+|-
+| [[Primo-Résurgence]]
+|}
+{{Navigation Primo-Résurgence|Kyogre}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:PME03 Primo-Kyogre.png|200px|vignette|droite|Primo-Kyogre dans le PME03.]]
+Primo-Kyogre apparaît dans le [[Film 18|dix-huitième film Pokémon]], invoqué par les anneaux de [[Hoopa]].
+
+Il apparaît aussi dans le [[PME03]] ainsi que dans l'[[PG08|épisode 8]] de [[Pokémon Générations]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Latios
+| numéro=0382
+| nom=Primo-Kyogre
+| nomSuivant=Primo-Groudon
+| forme-suivant=Primo
+}}
+{{Bandeau Pokédex}}
+[[es:Kyogre#Kyogre primigenio]]

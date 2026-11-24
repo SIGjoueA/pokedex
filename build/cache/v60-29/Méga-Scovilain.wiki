@@ -1,0 +1,91 @@
+{{Ruban Pokémon
+| nomPrécédent=Pimito
+| numéro=0952
+| nom=Scovilain
+| nomSuivant=Léboulérou
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Scovilain
+| nom-japonais=メガスコヴィラン
+| nom-romaji=Mega Sukoviran
+| nom-déposé=Mega Scovillain
+| nom-anglais=Mega Scovillain
+| ndex=0952
+| dex=Extra Illumis/015
+| légende=Artwork de Méga-Scovilain pour {{Jeu|LPZA}}.
+| type1=Plante
+| type2=Feu
+| catégorie=Habanero
+| taille=1.2
+| poids=22.0
+| talents=Habanéruption
+| fmratio=
+| génération=9
+| couleur=Vert
+| corps=6
+| cri=Cri 0952 Méga
+}}
+'''Méga-Scovilain''' (anglais : '''Mega Scovillain''' ; japonais : '''メガスコヴィラン''' ''Mega Scovillain'') est un [[Méga-Pokémon]] de [[type]] [[Plante (type)|Plante]] et [[Feu (type)|Feu]]. C'est la [[Méga-Évolution]] de [[Scovilain]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], le torse, les bras, la collerette et les cous de Méga-Scovilain sont désormais noirs. Sa collerette forme une sorte de col semblable à un costume. D'une excroissance verte en forme de croix sur son torse ressort une excroissance orange telle une longue cravate qui atteint ses pieds. Ses deux têtes, plus féroces, ont des pétales blanches : les pétales de sa tête rouge forment une crête, tandis que les pétales de sa tête verte sont réparties deux à deux de chaque côté. Les deux langues orange de Méga-Scovilain sont plus longues et une griffe apparait au-dessus de chaque griffe qui fait office de pied. Sa queue s'est développée et possède une rangée de pétales blancs redressés, plus ou moins grands.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les parties du corps habituellement vert foncé et noires du corps de Méga-Scovilain ont des nuances bleue foncé. La partie normalement vert foncé entourant ses griffes est blanche.
+=== [[Évolution]] ===
+
+Méga-Scovilain est la [[Méga-Évolution]] de [[Scovilain]] avec une [[Scovilainite]]. Scovilain est l'évolution de [[Pimito]] au contact d'une [[Pierre Feu]].
+{{#lst:Pimito|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Habanéruption]] : lorsque le Pokémon est touché par une capacité offensive, il [[Brûlure|brûle]] l'adversaire.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:La Méga-Évolution l'a rendu encore plus piquant. Il agite la partie de son corps semblable à une cravate pour frapper violemment ses ennemis.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Plante|type2=Feu}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 30, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20.
+
+{{Statistiques
+| type=Plante
+| PV=65
+| attaque=138
+| defense=85
+| atq-spc=138
+| def-spc=85
+| vitesse=75
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Scovilain/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Scovilain}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Pimito
+| numéro=0952
+| nom=Méga-Scovilain
+| nomSuivant=Léboulérou
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Scovilain]]

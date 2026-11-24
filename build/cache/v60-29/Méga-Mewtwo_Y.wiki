@@ -1,0 +1,162 @@
+{{Renvoi homonymie|Méga-Mewtwo}}
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Dracolosse
+| numéro=0150
+| nom=Méga-Mewtwo Y
+| nomSuivant=Mew
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Mewtwo Y
+| nom-japonais=メガ ミュウツー Y
+| nom-déposé=Mega Mewtwo Y
+| nom-romaji=Mega Myūtsū Y
+| nom-anglais=Mega Mewtwo Y
+| ndex=0150
+| dex=Kanto-LGPE/150//Kalos (Monts)/151//Illumis/232
+| dex-secondaires=Shuffle/158//Picross/N30-08//Picross (Alternatif)/A30-07
+| légende=Artwork de Méga-Mewtwo Y pour {{Jeu|XY}}.
+| type1=Psy
+| catégorie=Génétique
+| taille=1.5
+| poids=33.0
+| talents=Insomnia
+| fmratio=-1
+| couleur=Violet
+| corps=6
+| cri=Cri 0150 Méga Y
+| génération=6
+}}
+'''Méga-Mewtwo Y''' (anglais : '''Mega Mewtwo Y''' ; japonais : '''メガ ミュウツー Y''' ''Mega Mewtwo Y'') est un [[Méga-Pokémon]] de [[type]] [[Psy (type)|Psy]]. C'est une des [[Méga-Évolution]]s de [[Mewtwo]].
+
+Méga-Mewtwo Y a été dévoilé dans le ''[[Pokémon Smash!]]'' du 7 avril 2013. [[Junichi Masuda]] y a dévoilé un nouveau Pokémon de la [[sixième génération]], qui s'est avéré être un aspect que peut prendre Mewtwo lorsqu'il s'éveille<ref>''[[CoroCoro Comics]]'' d'avril 2013</ref>. Le 8 août 2013, une fuite du ''[[CoroCoro Comics]]'' du mois de septembre indique qu'il s'agit de Méga-Mewtwo Y, la [[Méga-Évolution]] de Mewtwo activable grâce à une [[Mewtwoïte Y]].
+== À propos du Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Mewtwo Y est plus petit et plus clair que Mewtwo. Il perd sa longue queue et le tube qui se trouvait derrière sa tête. Cependant, il a grandi à l'arrière de sa tête un long appendice violet qui se courbe en sa fin qui peut faire penser à la queue de sa forme précédente. Il a deux cornes sur la tête, qui soutiennent une structure en forme de demi-anneau, qui ne contient que du vide. Ses yeux sont maintenant rouges et légèrement plus grands. Les doigts de ses mains et de ses pieds sont violets et plus bulbeux, et le doigt du milieu est toujours plus grand que les autres. Une arête cahoteuse, similaire à un sternum, remplace la structure thoracique de sa forme précédente. Dans l'ensemble, Méga-Mewtwo Y a les graphismes les plus doux des trois Mewtwo.
+
+==== Différences mâle/femelle ====
+
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Mewtwo Y mâle ou femelle.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Mewtwo Y est chromatique, la queue à l'arrière de sa tête et ses doigts sont verts. Ses yeux restent rouges.
+
+=== [[Évolution]] ===
+
+[[Mewtwo]] peut [[Méga-Évolution|méga-évoluer]] en Méga-Mewtwo Y s'il tient une [[Mewtwoïte Y]]. Il peut également méga-évoluer en [[Méga-Mewtwo X]] s'il tient une [[Mewtwoïte X]].
+{{#lst:Mewtwo|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Insomnia]] : le Pokémon est incapable de dormir.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LGPE}}
+:Son corps a rétréci, mais sa puissance s'est démultipliée. Il peut réduire un gratte-ciel en miettes d'une simple pensée.
+;{{Jeu|LPZA}}
+:Son corps a rétréci, mais sa puissance s'est démultipliée. Il peut réduire un gratte-ciel en miettes d'une simple pensée.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Psy}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, son [[Attaque Spéciale]] de 40, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 30, et sa [[Vitesse]] de 10. Sa [[Défense]] est diminuée de 20.
+
+{{Statistiques
+| nom=Méga-Mewtwo Y
+| type=psy
+| PV=106
+| attaque=150
+| defense=70
+| atq-spc=194
+| def-spc=120
+| vitesse=140
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Mewtwo et Méga-Mewtwo X voir [[Mewtwo/Génération 6#Stratégie|leurs pages]] [[Méga-Mewtwo X#Stratégie|dédiées]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/mewtwo/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur les fiches stratégiques de Mewtwo et Méga-Mewtwo X voir [[Mewtwo#Stratégie|leurs pages]] [[Méga-Mewtwo X#Stratégie|dédiées]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/mewtwo Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Mewtwo Y/Imagerie|Génération 9}}
+{{Navigation Mewtwo}}
+
+== Dans ''[[Pokémon UNITE]]'' ==
+Méga-Mewtwo Y est la Méga-Évolution de Mewtwo (Permis Unité Y), qui est present comme personnage jouable de type attaquant. Quand Mewtwo (Permis Unité Y) tient la Mewtwoïte Y, une jauge de synergie apparait et lorsqu'elle est remplie, le Pokémon Méga-Évolue a partir du niveau 5.
+
+{{Tableau Pokémon UNITE
+<!-- Informations -->
+| pokémon=Méga-Mewtwo Y
+| rôle1=À distance
+| rôle2=Attaquant
+| dégâts=Attaque Spéciale
+| difficulté=Facile
+
+<!-- Statistiques -->
+| puissance=5
+| endurance=3
+| mobilité=3,5
+| scoring=2
+| utilité=2
+
+<!-- Capacités & Talent -->
+| talent=Pression
+| capacitéunité=Brûlure Psy Infinie
+| capacitéunité-niveau=9
+| capacité-2-niveau=3
+| capacité-a=Choc Mental
+| capacité-a-niveau=5
+| capacité-a1=Prescience
+| capacité-a2=Frappe Psy
+| capacité-b=Bouclier
+| capacité-b-niveau=7
+| capacité-b1=Soin
+| capacité-b2=Téléport
+
+<!-- Lignée évolutive -->
+| évolution=Méga-Évolution
+| stade-base=Mewtwo
+| stade-base-numéro=0150
+| stade-Méga=Méga-Mewtwo Y
+| stade-Méga-numéro=0150 Méga Y
+| stade-Méga-condition=Mewtwoïte Y
+
+<!-- Obtention -->
+| pièces=15 000
+| gemmes=700
+}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Méga-Mewtwo Y est apparu pour la première fois dans ''[[Mewtwo, prologue à l'éveil !]]'', diffusé le 11 juillet 2013 au Japon. C'est le prologue de {{film|16}}, film où Méga-Mewtwo Y apparaît également.
+
+Il fut la première [[Méga-Évolution]] à apparaître dans le dessin animé.
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+
+* Le design de Méga-Mewtwo Y a été conçu par [[Tomohiro Kitakaze]]<ref>[https://x.com/kitakazeee/status/1149513798115459073 Tweet de Tomohiro Kitakaze où il révèle avoir conçu le design de Méga-Mewtwo Y] '''(ja)'''</ref>.
+
+== Notes et références ==
+<references/>
+
+{{Ruban Pokémon
+| forme-précédent=Méga
+| nomPrécédent=Méga-Dracolosse
+| numéro=0150
+| nom=Méga-Mewtwo Y
+| nomSuivant=Mew
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Mewtwo]]

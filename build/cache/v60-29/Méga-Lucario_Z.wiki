@@ -1,0 +1,102 @@
+{{Ruban Pokémon
+| nomPrécédent=Riolu
+| numéro=0448
+| nom=Méga-Lucario Z
+| nomSuivant=Hippopotas
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Lucario Z
+| nom-japonais=メガルカリオZ
+| nom-romaji=Mega Rukario Z
+| nom-déposé=Mega Lucario Z
+| nom-anglais=Mega Lucario Z
+| ndex=0448
+| dex=Illumis/136
+| légende=Artwork de Méga-Lucario Z pour {{Jeu|LPZA}}.
+| type1=Combat
+| type2=Acier
+| catégorie=Aura
+| taille=1.3
+| poids=49.4
+| talents=Aura Protectrice
+| fmratio=0.125
+| génération=9
+| couleur=Gris
+| corps=6
+| cri=Cri 0448 Méga Z
+}}
+'''Méga-Lucario Z''' (anglais : '''Mega Lucario Z''' ; japonais : '''メガルカリオZ''' ''Mega Lucario Z'') est un [[Méga-Pokémon]] de [[type]] [[Combat (type)|Combat]] et [[Acier (type)|Acier]]. C'est une des [[Méga-Évolution]]s de [[Lucario]].
+
+Méga-Lucario Z a été révélé officiellement lors de la bande-annonce du 2 décembre 2025.
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+
+Une épaisse fourrure beige recouvre le torse, les hanches et les épaules de Méga-Lucario Z. L'extrémité de ses membres est cyan, tandis que son corps est principalement gris foncé. Son torse et l'arrière de ses pattes sont recouverts d'écailles grises. Une bande grise sépare le gris foncé de son corps du cyan de ses membres inférieurs. Sa queue est fendue en deux à son extrémité. Les oreilles de Méga-Lucario Z, désormais grises, sont parfaitement dressées et séparées par une fine mèche de poils cyan qui tombe sur son visage. Une mèche similaire se trouve à l'arrière de sa tête, accompagnée de deux grands appendices capillaires allant du gris au cyan. Ces appendices sont cisaillés bout à bout en leur milieu. Les mèches et les appendices ont également des extrémités ondulées. Enfin, une marque grise entoure la tête de Méga-Lucario Z, passant au-dessus de son museau. Contrairement au reste de sa famille évolutive, ses yeux sont bleu clair.
+
+Méga-Lucario Z utilise principalement l'[[Aura]] pour renforcer sa défense, sa vitesse et son agilité. Il peut l'utiliser pour former un bouclier afin de se défendre, ou la concentrer dans ses pattes pour frapper ses adversaires. Il peut également porter des coups à l'aide de ses écailles d'acier, dans lesquelles il concentre de l'énergie métallique. Ses longues mèches et sa queue en forme d'éventail peuvent rendre ses attaques difficiles à anticiper et déstabiliser son adversaire en combat rapproché.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, les zones habituellement grises sont bleu marine, tandis que la fourrure de son torse et de sa queue est turquoise clair. Les extrémités de ses bras, ses jambes, et ses deux longues mèches à l'arrière de sa tête sont violettes, ainsi que la mèche qui passe de l'avant à l'arrière de sa tête.
+
+=== [[Évolution]] ===
+
+Méga-Lucario Z est une des [[Méga-Évolution]]s de [[Lucario]] avec une [[Lucarite Z]]. Son autre Méga-Évolution est [[Méga-Lucario]], au contact d'une [[Lucarite]]. Lucario est l'évolution de [[Riolu]] si son [[bonheur]] est suffisant, et qu'il gagne un [[niveau]] de jour.
+{{#lst:Riolu|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Aura Protectrice]] : les dégâts des [[capacité à contact|capacités à contact]] subis par le Pokémon sont réduits de moitié.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:L'aura dont il enveloppe son corps lui permet de dévier toutes les attaques. En combat, il donne l'impression de danser.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Combat|type2=Acier}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est diminuée de 10, son [[Attaque Spéciale]] est augmentée de 49, et sa [[Vitesse]] de 61.
+
+{{Statistiques
+| type=Combat
+| PV=70
+| attaque=100
+| defense=70
+| atq-spc=164
+| def-spc=70
+| vitesse=151
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Lucario Z/Imagerie|Génération 9}}
+{{Navigation Lucario}}
+
+== Apparitions dans les dessins animés ==
+[[Fichier:LH132 - Méga-Lucario Z.png|thumb|right|Le Méga-Lucario Z de Rhod.]]
+Méga-Lucario Z, sous sa forme [[chromatique]], apparaît pour la première fois dans le [[LH132]] lorsque Rhod réussit à faire méga-évoluer son [[Lucario de Rhod|Lucario]] lors de son combat revanche contre le [[Brutalibré]] de [[Maître Mayonnaise]].
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Riolu
+| numéro=0448
+| nom=Méga-Lucario Z
+| nomSuivant=Hippopotas
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Lucario]]

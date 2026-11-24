@@ -1,0 +1,111 @@
+{{Ruban Pokémon
+| nomPrécédent=Kabutops
+| numéro=0142
+| nom=Méga-Ptéra
+| nomSuivant=Ronflex
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Ptéra
+| nom-japonais=メガ プテラ
+| nom-romaji=Mega Putera
+| nom-déposé=Mega Ptera
+| nom-anglais=Mega Aerodactyl
+| ndex=0142
+| dex=Kanto-LGPE/142//Kalos (Côtes)/068//Alola/284//Alola-USUL/382//Illumis/192
+| dex-secondaires=Shuffle/148//Picross/N13-03//Picross (Alternatif)/A13-03
+| légende=Artwork de Méga-Ptéra pour {{Jeu|XY}}.
+| type1=Roche
+| type2=Vol
+| catégorie=Fossile
+| taille=2.1
+| poids=79.0
+| talents=Griffe Dure
+| fmratio=.125
+| couleur=Violet
+| corps=9
+| cri=Cri 0142 Méga
+| génération=6
+}}
+'''Méga-Ptéra''' (anglais : '''Mega Aerodactyl''' ; japonais : '''メガ プテラ''' ''Mega Ptera'') est un [[Méga-Pokémon]] de [[type]] [[Roche (type)|Roche]] et [[Vol (type)|Vol]]. C'est la [[Méga-Évolution]] de [[Ptéra]].
+
+Méga-Ptéra a été révélé dans le magazine CoroCoro Comics de décembre 2013, en même temps que [[Méga-Branette]], [[Méga-Charmina]], [[Méga-Démolosse]], [[Méga-Cizayox]], [[Méga-Élecsprint]], [[Méga-Scarabrute]] et [[Méga-Alakazam]].
+
+== À propos du Pokémon ==
+=== Physionomie et attitudes ===
+
+Plusieurs parties de son corps sont noires et rocailleuses comme les pointes qui s'alignent le long de sa colonne vertébrale jusqu'au bout de sa queue et celle présente sous son menton ressemble à une barbe. Il en est de même pour les griffes qui jaillissent de ses ailes, les deux cornes à l'arrière de son crâne et les excroissances rocheuses qu'il a sur le ventre, sur ses joues et au-dessus de ses yeux.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsque Méga-Ptéra est chromatique, son corps est violet et la membrane de ses ailes est bleue.
+
+=== [[Évolution]] ===
+Méga-Ptéra est la [[Méga-Évolution]] de [[Ptéra]] avec une [[Ptéraïte]].
+{{#lst:Ptéra|Tableau d'évolution}}
+=== [[Talent]] ===
+* [[Griffe Dure]] : augmente la puissance des attaques directes du Pokémon.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+: Une partie de son corps est devenue pierreuse. Certains scientifiques pensent qu'il s'agit là de la véritable apparence du Ptéra préhistorique.
+;{{Jeu|Lu}}
+:La Méga-Évolution l'a rendu encore plus violent. On suppose que son trop-plein d'énergie le fait souffrir continuellement.
+;{{Jeu|US}}
+:Il attaque tout ce qui bouge. Le stress de la Méga-Évolution le rend extrêmement irritable.
+;{{Jeu|UL}}
+:La Méga-Évolution a réveillé des gènes inactifs et son corps s'est couvert de pierres tranchantes.
+;{{Jeu|LGPE}}
+:La puissance de la Méga-Évolution a pleinement restauré son ADN. Les rochers de son corps sont plus durs que le diamant.
+;{{Jeu|LPZA}}
+:Plusieurs parties de son corps sont devenues pierreuses. Certains scientifiques pensent qu'il s'agit là de l'apparence originelle de Ptéra.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Roche|type2=Vol
+| remarque-sol=Si l'attaque [[Gravité]] est utilisée, l'efficacité des attaques [[Sol]] à son encontre est de × 2, du fait de son type [[Roche]].
+}}
+
+== [[Statistique]]s ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=roche
+| PV=80
+| attaque=135
+| defense=85
+| atq-spc=70
+| def-spc=95
+| vitesse=150
+}}
+
+Méga-Ptéra, en plus d'être l'un des Pokémon les plus rapides, possède la meilleure [[Vitesse]] parmi les Pokémon [[Roche]].
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Ptéra voir [[Ptéra/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/aerodactyl/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Ptéra voir [[Ptéra#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/aerodactyl/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Ptéra/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Ptéra}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Méga-Ptéra apparait dans le [[PME01]].
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Kabutops
+| numéro=0142
+| nom=Méga-Ptéra
+| nomSuivant=Ronflex
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Ptera]]

@@ -1,0 +1,122 @@
+{{Ruban Pokémon
+| nomPrécédent=Qwilfish
+| numéro=0212
+| nom=Méga-Cizayox
+| nomSuivant=Caratroc
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Cizayox
+| nom-japonais=メガ ハッサム
+| nom-romaji=Mega Hassamu
+| nom-déposé=Mega Hassam
+| nom-anglais=Mega Scizor
+| ndex=0212
+| dex=Kalos (Monts)/137//Alola/276//Alola-USUL/366//Illumis/177
+| dex-secondaires=Shuffle/139//Picross/N11-04//Picross (Alternatif)/A11-04
+| légende=Artwork de Méga-Cizayox pour {{Jeu|XY}}.
+| type1=Insecte
+| type2=Acier
+| catégorie=Pince
+| taille=2
+| poids=125
+| talents=Technicien (talent){{!}}Technicien
+| fmratio=0.5
+| génération=6
+| couleur=Rouge
+| corps=13
+| cri=Cri 0212 Méga
+}}
+'''Méga-Cizayox''' (anglais : '''Mega Scizor''' ; japonais : '''メガ ハッサム''' ''Mega Hassam'') est un [[Méga-Pokémon]] de [[type]] [[Insecte]] et [[Acier (type)|Acier]]. C'est la [[Méga-Évolution]] de [[Cizayox]].
+
+Méga-Cizayox a été révélé dans le magazine ''[[CoroCoro Comics]]'' de décembre 2013, en même temps que [[Méga-Alakazam]], [[Méga-Branette]], [[Méga-Charmina]], [[Méga-Démolosse]], [[Méga-Élecsprint]], [[Méga-Ptéra]] et [[Méga-Scarabrute]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Méga-Cizayox possède un front, des épaules et des cuisses noires ainsi que des yeux bleus. La partie basse de ses pinces est blanche, et le centre du cercle situé sur la partie haute est bleu. Chacune de ses pinces possède dix-neuf dents. La forme de ses jambes est triangulaire et beaucoup plus géométrique que celle de Cizayox. Il a des ailes sensiblement plus larges que Cizayox et est bien plus grand.
+Ses ailes battent à une vitesse phénoménale indiquant la température corporelle élevée que déploie Méga-Cizayox.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Cizayox est chromatique, ses yeux et les sphères de ses pinces sont orange. Son front, ses épaules, ses cuisses et le centre de son bassin sont vert foncé. Le reste de son corps a une teinte vert anis.
+
+=== [[Évolution]] ===
+
+Méga-Cizayox est la [[Méga-Évolution]] de [[Cizayox]] avec une [[Cizayoxite]].
+
+Cizayox est l'évolution d'[[Insécateur]] s'il est échangé alors qu'il porte l'objet [[Peau Métal]], sauf dans {{jeu|LPA}} où le simple contact de la Peau Métal suffit pour le faire évoluer. Insécateur peut également évoluer en [[Hachécateur]] au contact d'une [[Obsidienne]].
+{{#lst:Insécateur|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Technicien (talent)|Technicien]] : augmente la puissance des capacités lorsque celle-ci est inférieure ou égale à 60.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+:Son énergie surpuissante déborde. Il lui est difficile de combattre pendant de longues périodes.
+;{{Jeu|Lu}}
+:La Méga-Évolution a transformé ses pinces en de redoutables outils capables de mettre en pièces tout ce qu'il saisit.
+;{{Jeu|US}}
+:S'il reste trop longtemps sous cette forme, son corps commence à fondre à cause de l'afflux d'énergie.
+;{{Jeu|UL}}
+:Ses pinces lui servent davantage à frapper qu'à couper. Elles sont si lourdes qu'il lui est difficile de tenir quand le combat s'éternise.
+;{{Jeu|LPZA}}
+:La Méga-Évolution a transformé ses pinces en outils destructeurs capables de broyer tout ce qu'il saisit.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Insecte|type2=Acier}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 40, son [[Attaque Spéciale]] de 10, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] de 10.
+
+{{Statistiques
+| nom=Méga-Cizayox
+| type=insecte
+| PV=70
+| attaque=150
+| defense=140
+| atq-spc=65
+| def-spc=100
+| vitesse=75
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Cizayox voir [[Cizayox/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/cizayox.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/scizor/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Cizayox voir [[Cizayox#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/cizayox.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/scizor/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Cizayox/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Cizayox}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Cizayox de Thyméo.png|vignette|right|Le Méga-Cizayox de Thyméo.]]
+Un Méga-Cizayox appartenant à [[Thyméo]] apparaît dans {{film|17}}. Il combat le [[Méga-Gardevoir]] de [[Dianthéa]] et perd face à lui. Un autre Méga-Cizayox apparaît dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Qwilfish
+| numéro=0212
+| nom=Méga-Cizayox
+| nomSuivant=Caratroc
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Cizayox]]

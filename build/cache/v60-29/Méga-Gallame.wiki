@@ -1,0 +1,108 @@
+{{Ruban Pokémon
+| nomPrécédent=Porygon-Z
+| numéro=0475
+| nom=Méga-Gallame
+| nomSuivant=Tarinorme
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Gallame
+| nom-japonais=メガ エルレイド
+| nom-déposé=Mega Erureido
+| nom-anglais=Mega Gallade
+| ndex=0475
+| dex=Hoenn-ROSA/032//Illumis/090
+| dex-secondaires=Shuffle/299//Picross/N24-05//Picross (Alternatif)/A24-05
+| légende=Artwork de Méga-Gallame pour {{Jeu|ROSA}}.
+| type1=Psy
+| type2=Combat
+| catégorie=Lame
+| taille=1.6
+| poids=56.4
+| talents=Attention
+| fmratio=0
+| génération=6
+| couleur=Blanc
+| corps=12
+| cri=Cri 0475 Méga
+}}
+'''Méga-Gallame''' (anglais : '''Mega Gallade''' ; japonais : '''メガ エルレイド''' ''Mega Erureido'') est un [[Méga-Pokémon]] de [[type]] [[Psy (type)|Psy]] et [[Combat (type)|Combat]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Gallame]].
+
+Méga-Gallame a été révélé le 10 septembre 2014, dans une fuite du numéro d'octobre 2014 du ''[[CoroCoro Comics]]'' en même temps que [[Méga-Sharpedo]] et [[Méga-Camérupt]].
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Méga-Gallame ressemble à un gladiateur. Sa [[Méga-Évolution]] lui permet d'obtenir des plaques formant des lames rouges aiguisées au niveau de ses coudes. Selon la situation, il peut former des lames psychiques le long de celles-ci, permettant de combattre avec un style rappelant celui à deux épées. La Méga-Évolution lui donne aussi une cape et une extension de son excroissance au-dessus de la tête, donnant à cette dernière une forme crochue. Sa cape est scindée en deux parties, coupée en trois aux extrémités. Le pic rouge sur l'avant et l'arrière de son buste s'est atrophié en triangle rouge des deux côtés. Sa couleur verte a presque disparu, étant présente seulement sur sa tête. Ses épines faciales se sont redressées vers le haut, de manière similaire à [[Méga-Gardevoir]], mais plutôt de manière droite.
+
+==== Différences mâle/femelle ====
+
+Cette espèce est composée uniquement d'individus mâles.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, Méga-Gallame a les « cheveux » bleus. Son excroissance au-dessus de la tête et l'intérieur de ses capes sont noirs. Les lames sur ses bras ainsi que ses pics sur le buste sont orange.
+
+=== [[Évolution]] ===
+Gallame est l'évolution de [[Kirlia]], pour les spécimens mâles uniquement, lorsqu'il est mis en contact avec une [[Pierre Aube]]. Kirlia est lui-même l'évolution de [[Tarsal]] à partir du [[niveau]] 20. Kirlia peut également évoluer en [[Gardevoir]] à partir du [[niveau]] 30.
+
+Depuis {{Jeu|ROSA}}, Gallame peut [[Méga-Évolution|méga-évoluer]] en Méga-Gallame s'il tient une [[Gallamite]].
+{{#lst:Tarsal|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Attention]] : le Pokémon a un mental à toute épreuve qui empêche les capacités ennemies de lui faire peur.
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Il tire sa force du lien qui l'unit à son Dresseur ou à sa Dresseuse. Son corps s'est doté de plaques tranchantes et d'une cape protectrice.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Psy|type2=Combat}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 30, et sa [[Vitesse]] de 30.
+
+{{Statistiques
+| type=psy
+| PV=68
+| attaque=165
+| defense=95
+| atq-spc=65
+| def-spc=115
+| vitesse=110
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Gallame voir [[Gallame/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/gallame.html#6g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/gallade/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Gallame voir [[Gallame#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/gallade Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Gallame/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Gallame}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Il apparaît dans le court-métrage de [[Pokémon Rubis Oméga et Saphir Alpha (court-métrage)|Pokémon Rubis Oméga et Saphir Alpha]].
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Porygon-Z
+| numéro=0475
+| nom=Méga-Gallame
+| nomSuivant=Tarinorme
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Gallame]]

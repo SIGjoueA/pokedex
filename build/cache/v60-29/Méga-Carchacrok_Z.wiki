@@ -1,0 +1,96 @@
+{{Ruban Pokémon
+| nomPrécédent=Carmache
+| numéro=0445
+| nom=Méga-Carchacrok Z
+| nomSuivant=Goinfrex
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Carchacrok Z
+| nom-japonais=メガガブリアスZ
+| nom-romaji=Mega Gaburiasu Z
+| nom-déposé=Mega Gaburias Z
+| nom-anglais=Mega Garchomp Z
+| ndex=0445
+| dex=Illumis/130
+| légende=Artwork de Méga-Carchacrok Z pour {{Jeu|LPZA}}.
+| type1=Dragon
+| type2=
+| catégorie=Supersonic
+| taille=1.9
+| poids=99.0
+| talents=Lévitation
+| fmratio=
+| génération=9
+| couleur=Bleu
+| corps=6
+| cri=Cri 0445 Méga Z
+}}
+'''Méga-Carchacrok Z''' (anglais : '''Mega Garchomp Z''' ; japonais : '''メガガブリアスZ''' ''Mega Gaburias Z'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]]. C'est une des [[Méga-Évolution]]s de [[Carchacrok]].
+
+Méga-Carchacrok Z a été révélé officiellement lors de la bande-annonce du ''[[Pokémon Presents]]'' du 27 février 2026.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant, Méga-Carchacrok Z perd le type [[Sol]]. Ses appendices en forme de nageoire sur les avant-bras se sont développés, tout comme sa nageoire dorsale. Ses appendices sont désormais rouge et bleu-violet avec quatre excroissances semblables à des griffes sur chaque appendice, en plus de sa griffe à l'extrémité intérieure. Le milieu de sa protubérance en forme de turbine d'avion de chaque côté de son crâne est rouge. De cette partie rouge ressort une excroissance comparable à des petites ailes d'avion. Deux excroissances sont présentes sur le long de sa queue tandis que l'excroissance supérieure au bout de sa queue est plus longue. L'extrémité de sa queue est précédée d'une rayure jaune, comme sur ses chevilles et son ventre. Les griffes sur ses pattes inférieures sont devenues bleu-violet et le bout de sa queue blanc.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, la partie bleue de Méga-Carchacork Z devient noire et sa partie rouge devient rose
+
+=== [[Évolution]] ===
+
+Méga-Carchacrok Z est une des [[Méga-Évolution]]s de [[Carchacrok]] avec une [[Carchacrokite Z]]. Son autre Méga-Évolution est [[Méga-Carchacrok]], au contact d'une [[Carchacrokite]]. Carchacrok est l'évolution de [[Carmache]] au niveau 48, lui-même l'évolution de [[Griknot]] à partir du niveau 24.
+{{#lst:Griknot|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Lévitation]] : le Pokémon flotte, ce qui l'immunise contre les capacités de type Sol.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Sous cette nouvelle forme méga-évoluée, il vole à une vitesse supersonique et découpe ses ennemis avec les griffes de ses ailes funestes.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Dragon
+| remarque-sol=L'efficacité des attaques de type [[Sol]] est nulle du fait de son talent [[Lévitation]]. De ce fait, si [[Gravité]], [[Échange (capacité)|Échange]], [[Rayon Simple]], [[Anti-Air]], [[Ten-danse]] ou [[Suc Digestif]] est utilisé, ou si l'adversaire dispose de [[Brise Moule]], [[Téra-Voltage]], [[TurboBrasier]] ou [[Gaz Inhibiteur]], l'effet de [[Lévitation]] est annulé et l'efficacité des attaques [[Sol]] à son encontre est normale.
+}}
+
+== [[Statistiques]] ==
+
+Sa statistique de [[Défense]] est diminuée de 10, son [[Attaque Spéciale]] est augmentée de 61 et sa [[Vitesse]] de 49.
+
+{{Statistiques
+| type=Dragon
+| PV=108
+| attaque=130
+| defense=85
+| atq-spc=141
+| def-spc=85
+| vitesse=151
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Carchacrok Z/Imagerie|Génération 9}}
+{{Navigation Carchacrok}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Carmache
+| numéro=0445
+| nom=Méga-Carchacrok Z
+| nomSuivant=Goinfrex
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Carchacrok]]

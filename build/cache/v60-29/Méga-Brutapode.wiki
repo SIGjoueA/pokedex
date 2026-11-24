@@ -1,0 +1,88 @@
+{{Ruban Pokémon
+| nomPrécédent=Scobolide
+| numéro=0545
+| nom=Méga-Brutapode
+| nomSuivant=Doudouvet
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Brutapode
+| nom-japonais=メガペンドラー
+| nom-romaji=Mega Pendorā
+| nom-déposé=Mega Pendror
+| nom-anglais=Mega Scolipede
+| ndex=0545
+| dex=Illumis/070
+| légende=Artwork de Méga-Brutapode pour {{Jeu|LPZA}}.
+| type1=Insecte
+| type2=Poison
+| catégorie=Mégaplopode
+| taille=3.2
+| poids=230.5
+| talents=Coque Armure
+| fmratio=
+| génération=9
+| couleur=Violet
+| corps=14
+| cri=Cri 0545 Méga
+}}
+'''Méga-Brutapode''' (anglais : '''Mega Scolipede''' ; japonais : '''メガペンドラー''' ''Mega Pendror'') est un [[Méga-Pokémon]] de [[type]] [[Insecte (type)|Insecte]] et [[Poison (type)|Poison]]. C'est la [[Méga-Évolution]] de [[Brutapode]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Une sorte d'armure gris violacé recouvre le corps de Méga-Brutapode en segments, chacun possédant de petites griffes roses. Une sorte de tablier gris violacé protège également son corps. Des anneaux violets et noirs à l'intérieur se trouvent sur chacun de ses segments. Ses deux cornes sont plus longues et les extrémités extérieures ressemblent à des lames turquoise, translucides. Les motifs sur ses cornes et sa queue coupée en deux sont identiques ; deux longs traits rose violet à l'horizontal et entourés de noir, avec une pointe au milieu du trait supérieur pour s'aligner aux excroissances présentes au même endroit. Les contours de ses yeux et du premier segment de son « armure » sont turquoise. Des traits roses se trouvent au milieu de chacune de ses pattes.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, son corps rouge est plus vif, son armure habituellement gris clair est beaucoup plus foncée, et la partie habituellement jaune de ses yeux est vert clair. Toutes les parties habituellement rose-violet sont turquoise, tandis que celles qui sont habituellement turquoise sont ici violettes, avec l'extrémité de ses cornes bleu pâle.
+
+=== [[Évolution]] ===
+Méga-Brutapode est la [[Méga-Évolution]] de [[Brutapode]] avec une [[Brutapodite]]. Ce dernier est l'évolution de [[Scobolide]] à partir du [[niveau]] 30, qui lui-même est l'évolution de [[Venipatte]] à partir du niveau 22.
+{{#lst:Venipatte|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Coque Armure]] : le Pokémon est protégé des [[Coup critique|coups critiques]] par sa carapace.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Son poison virulent émet une faible lueur. Celui-ci a influencé son comportement et l'a rendu encore plus agressif.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Insecte|type2=Poison}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 60, son [[Attaque Spéciale]] de 20, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 30, et sa [[Vitesse]] est diminuée de 50.
+
+{{Statistiques
+| type=Insecte
+| PV=60
+| attaque=140
+| defense=149
+| atq-spc=75
+| def-spc=99
+| vitesse=62
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Brutapode/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Brutapode}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Scobolide
+| numéro=0545
+| nom=Méga-Brutapode
+| nomSuivant=Doudouvet
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Brutapode]]

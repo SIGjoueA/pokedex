@@ -1,0 +1,120 @@
+{{Ruban Pokémon
+| nomPrécédent=Carmache
+| numéro=0445
+| nom=Méga-Carchacrok
+| nomSuivant=Goinfrex
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Carchacrok
+| nom-japonais=メガ ガブリアス
+| nom-romaji=Mega Gaburiasu
+| nom-déposé=Mega Gaburias
+| nom-anglais=Mega Garchomp
+| ndex=0445
+| dex=Kalos (Monts)/008//Alola/240//Alola-USUL/309//Illumis/130
+| dex-secondaires=Shuffle/281//Picross/N17-08//Picross (Alternatif)/A17-06
+| légende=Artwork de Méga-Carchacrok pour {{Jeu|XY}}.
+| type1=Dragon
+| type2=Sol
+| catégorie=Supersonic
+| taille=1.9
+| poids=95.0
+| talents=Force Sable
+| fmratio=.5
+| génération=6
+| couleur=Bleu
+| corps=6
+| cri=Cri 0445 Méga
+}}
+'''Méga-Carchacrok''' (anglais : '''Mega Garchomp''' ; japonais : '''メガ ガブリアス''' ''Mega Gaburias'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]] et [[Sol (type)|Sol]]. C'est une des [[Méga-Évolution]]s de [[Carchacrok]].
+
+Méga-Carchacrok été révélé dans le magazine ''[[CoroCoro Comics]]'' d'octobre 2013, en même temps que [[Méga-Dracaufeu Y]], [[Méga-Florizarre]], [[Méga-Tortank]] et [[Méga-Mewtwo X]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+La griffe et la nageoire de son bras ont fusionné en une grande faux rouge, une rangée de dents aiguisées saille chaque côté de son torse et une grande dent rouge sort de ses genoux. La partie jaune au niveau de son bas-ventre a une forme légèrement différente. Alors que les formes de la partie basse de son corps restent assez aérodynamique, le haut devient plus carré, surtout au niveau des épaules et de la mâchoire. Les deux excroissances au bout de sa queue prennent une forme de croissant.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce sous cette forme.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, la partie bleue du corps de Méga-Carchacrok est violette, les parties rouges sont roses et la partie jaune est un peu plus foncée.
+
+=== [[Évolution]] ===
+
+Méga-Carchacrok est la [[Méga-Évolution]] de [[Carchacrok]] avec une [[Carchacrokite]]. Carchacrok est l'évolution de [[Carmache]] au niveau 48, lui-même l'évolution de [[Griknot]] à partir du niveau 24. Depuis {{jeu|LPZA}}, Carchacrok peut aussi [[Méga-Évolution|méga-évoluer]] en [[Méga-Carchacrok Z]] avec une [[Carchacrokite Z]].
+{{#lst:Griknot|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Force Sable]] : augmente la puissance des capacités de type Roche, Sol et Acier en cas de tempête de sable.
+
+=== Descriptions du Pokédex ===
+;{{Jeu|So}}
+: Le soudain influx d'énergie a transformé les ailerons de ses bras en énormes faux tranchantes.
+;{{Jeu|Lu}}
+:Il est fou de colère que ses ailerons, dont il était si fier, soient devenus des faux. Il les agite avec rage en lacérant la terre.
+;{{Jeu|US}}
+:Furieux d'avoir perdu ses bras ailés au profit de deux grandes faux, il se laisse emporter par la violence.
+;{{Jeu|UL}}
+:La Méga-Évolution l'a rendu plus brutal. Il taille en pièces ses ennemis à l'aide de ses bras en forme de faux.
+;{{Jeu|LPZA}}
+:La Méga-Évolution l'a rendu plus brutal. Il taille en pièces ses ennemis à l'aide de ses bras en forme de faux.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Dragon|type2=Sol}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 40, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10. Sa [[Vitesse]] est diminuée de 10.
+
+{{Statistiques
+| type=dragon
+| PV=108
+| attaque=170
+| defense=115
+| atq-spc=120
+| def-spc=95
+| vitesse=92
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Carchacrok voir [[Carchacrok/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/garchomp/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Carchacrok voir [[Carchacrok#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/garchomp Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Carchacrok/Imagerie|Génération 9}}
+{{Navigation Carchacrok}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+Le [[professeur Platane]] possède un Carchacrok qui est capable de méga-évoluer.
+Un autre Méga-Carchacrok est apparu dans [[Pokémon : Méga-Évolution - Acte I]], sous les ordres d'[[Enzo]].
+
+<center><gallery perrow="6">
+Fichier:Méga-Carchacrok du Professeur Platane.png|Le Méga-Carchacrok du Professeur Platane.
+Fichier:Méga-Carchacrok d'Enzo.png|Le Méga-Carchacrok d'Enzo.
+Fichier:Méga-Carchacrok de Cynthia.png|Le Méga-Carchacrok de Cynthia.
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Carmache
+| numéro=0445
+| nom=Méga-Carchacrok
+| nomSuivant=Goinfrex
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Carchacrok]]

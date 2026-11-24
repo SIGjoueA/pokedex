@@ -1,0 +1,123 @@
+{{Ruban Pokémon
+| nomPrécédent=Méga-Latias
+| forme-précédent=Méga
+| numéro=0381
+| nom=Méga-Latios
+| nomSuivant=Kyogre
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Latios
+| nom-japonais=メガ ラティオス
+| nom-romaji=Mega Ratiosu
+| nom-déposé=Mega Latios
+| nom-anglais=Mega Latios
+| ndex=0381
+| dex=Hoenn-ROSA/206//Extra Illumis/127
+| dex-secondaires=Shuffle/316//Picross/N25-13//Picross (Alternatif)/A25-05
+| légende=Artwork de Méga-Latios pour {{Jeu|ROSA}}.
+| type1=Dragon
+| type2=Psy
+| catégorie=Éon
+| taille=2.3
+| poids=70.0
+| talents=Lévitation
+| fmratio=0
+| génération=6
+| conditions-couleur=Génération 6/Depuis la génération 7
+| couleur=Bleu/Violet
+| corps=9
+| cri=Cri 0381 Méga
+}}
+'''Méga-Latios''' (anglais : '''Mega Latios''' ; japonais : '''メガ ラティオス''' ''Mega Latios'') est un [[Méga-Pokémon]] de [[type]] [[Dragon (type)|Dragon]] et [[Psy (type)|Psy]] apparu avec {{Jeu|ROSA}}, mais aussi compatible avec {{Jeu|XY}}. C'est la [[Méga-Évolution]] de [[Latios]].
+
+Méga-Latios a été révélé le 10 octobre 2014, dans une fuite du numéro de novembre 2014 du ''[[CoroCoro Comics]]'' en même temps que [[Méga-Latias]], [[Méga-Dardargnan]] et [[Méga-Roucarnage]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+Tout comme Latios, Méga-Latios ressemble à un avion à réaction.
+Quelques changements notables par rapport à [[Latios]] mis à part la couleur :
+* deux petites cornes pointent vers le bas de ses joues ;
+* ses ailes dorsales disparaissent pour laisser ses bras s'élargir et devenir des sortes de boucliers, sur lesquels de nouvelles ailes se forment ;
+* son symbole ventral, en forme de triangle rouge, devient blanc et s'inscrit désormais sur les deux parties supérieures des [[:wp:bouclier|boucliers]] ;
+* ses excroissances ventrales sont affinées ;
+* une longue et fine queue se forme à l'arrière de son corps.
+
+Dans {{Jeu|Ruo}}, Méga-Latios peut être utilisé en tant que [[Poké Monture]].
+
+==== Différences mâle/femelle ====
+
+Cette espèce est composée uniquement d'individus mâles.
+L'équivalent femelle est [[Méga-Latias]], dont il partage la physionomie et la couleur principale mauve.
+
+==== [[Chromatique]] ====
+Quand Méga-Latios est chromatique, ses parties mauves sont vertes et le rouge de ses yeux est orange.
+
+=== [[Évolution]] ===
+
+Méga-Latios est la [[Méga-Évolution]] de Latios avec une [[Latiosite]].
+{{#lst:Latios|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Lévitation]] : le Pokémon flotte, ce qui l'immunise contre les capacités de type Sol.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Il vole à une vitesse dépassant Mach 4. Il compte parmi les Pokémon les plus doués en combat aérien.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Dragon|type2=Psy
+| remarque-sol=L'efficacité des attaques de type [[Sol]] est nulle du fait de son talent [[Lévitation]]. De ce fait, si [[Gravité]], [[Échange (capacité)|Échange]], [[Rayon Simple]], [[Anti-Air]], [[Ten-danse]] ou [[Suc Digestif]] est utilisé, si l'adversaire dispose de [[Brise Moule]], [[Téra-Voltage]] ou [[TurboBrasier]], l'effet de [[Lévitation]] est annulé.
+}}
+
+== [[Statistique]]s ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 40, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 30, et sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10.
+
+{{Statistiques
+| type=dragon
+| PV=80
+| attaque=130
+| defense=100
+| atq-spc=160
+| def-spc=120
+| vitesse=110
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Latios voir [[Latios/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/latios/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Latios voir [[Latios#Stratégie|sa page dédiée]].|Loupe}}
+* '''(fr)''' [http://overstrat.free.fr/fiches/latios.html#7g Fiche stratégique sur Overstrat]
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/latios Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Latios/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Latios}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:Méga-Latios Film 18.png|thumb|right|200px|Méga-Latios dans le film 18.]]
+Méga-Latios apparaît dans {{film|18}}.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Méga-Latias
+| forme-précédent=Méga
+| numéro=0381
+| nom=Méga-Latios
+| nomSuivant=Kyogre
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Latios]]

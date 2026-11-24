@@ -1,0 +1,122 @@
+{{Ruban Pokémon
+| nomPrécédent=Primo-Kyogre
+| forme-précédent=Primo
+| numéro=0383
+| nom=Primo-Groudon
+| nomSuivant=Rayquaza
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Primo-Groudon
+| nom-japonais=ゲンシ グラードン
+| nom-romaji=Genshi Gurādon
+| nom-déposé=Genshi Groudon
+| nom-anglais=Primal Groudon
+| ndex=0383
+| dex=Hoenn-ROSA/208//Extra Illumis/129
+| dex-secondaires=Shuffle/161//Picross/F01
+| légende=Artwork de Primo-Groudon pour {{Jeu|ROSA}}.
+| type1=Sol
+| type2=Feu
+| catégorie=Continent
+| taille=5.0
+| poids=999.7
+| talents=Terre Finale
+| fmratio=-1
+| captureval=3
+| génération=6
+| couleur=Rouge
+| corps=6
+| cri=Cri 0383 Primo
+}}
+'''Primo-Groudon''' (anglais : '''Primal Groudon''' ; japonais : '''ゲンシ グラードン''' ''Genshi Groudon'') est une forme du [[Pokémon légendaire]] [[Groudon]] apparue dans {{Jeu|ROSA}}.
+
+== À propos du Pokémon ==
+Primo-Groudon été initialement révélé en tant qu'illustration de la boîte du jeu {{Jeu|RuO}}, sans plus d'informations sur son nom et son lien avec Groudon. C'est via un communiqué de presse<ref>http://pokemon.gamespress.com/releases/1498/pokmon-rubis-omga-et-pokmon-saphir-alpha-disponibles-le-28-novembre-20</ref> diffusé au début de l'E3 2014 que le nom de « Primo-Groudon » a été dévoilé, ainsi que celui du mécanisme de jeu associé : la [[Primo-Résurgence]].
+
+=== Physionomie et attitudes ===
+Par rapport à Groudon, son ventre et les pics qui parcourent le bord de son corps sont devenus noirs. Toutes les sections non recouvertes par sa carapace brillent comme du magma incandescent (formant la lettre Oméga majuscule sur ses mains). Sa queue est plus longue et plus large, et les pointes au bout sont rouges et tordues. Il obtient le second type [[Feu]].
+
+Groudon est devenu le Pokémon le plus lourd lors de son apparition, et Primo-Groudon est venu affirmer ce record avec un poids de 999,7&nbsp;kg, mais il a été détrôné de peu par [[Bamboiselle]] et [[Cosmovum]] (999,9&nbsp;kg) depuis la septième génération.
+
+==== Différences mâle/femelle ====
+[[Groudon]] est un Pokémon asexué, il n'y a donc pas de Primo-Groudon mâle ou femelle.
+
+==== [[Chromatique]] ====
+Lorsque Primo-Groudon est chromatique, les parties habituellement rouges de son corps sont noires tandis que ses griffes sont jaunâtres.
+
+=== [[Évolution]] ===
+Primo-Groudon est la [[forme]] de [[Groudon]], obtenue grâce à l'activation de la [[Primo-Résurgence]] avec la [[Gemme Rouge]].
+{{#lst:Groudon|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Terre Finale]] : altère les conditions météo en [[Météo (mécanisme)#Soleil intense|soleil intense]].
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:La [[Gemme Rouge]] a rendu à ce Pokémon sa forme originelle. Son énergie s'est changée en magma et s'échappe de son corps.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Sol|type2=Feu
+| remarque-eau=L'efficacité des capacités de type [[Eau]] est <span style="background:#AAAAAA">nulle</span> du fait de son talent [[Terre Finale]]. Lorsqu'il n'est pas actif, l'efficacité des attaques Eau à son encontre est de <span style="background:#FF5E4D">× 4</span>.
+}}
+
+== [[Statistique]]s ==
+La Primo-Résurgence de Groudon améliore l'Attaque de 30, la Défense de 20 et l'Attaque Spéciale de 50.
+{{Statistiques
+| type=Sol
+| PV=100
+| attaque=180
+| defense=160
+| atq-spc=150
+| def-spc=90
+| vitesse=90
+}}
+Primo-Groudon est le Pokémon aux plus hautes Attaque et Défense du type Feu et aux plus hautes Attaque et Attaque Spéciale du type Sol.
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Groudon voir [[Groudon/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/groudon/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Groudon voir [[Groudon#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/groudon Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Primo-Groudon/Imagerie|Génération 9}}
+
+{| class="tableaustandard feu centre"
+|-
+| [[Fichier:Primo-Résurgence Groudon animation.mp4]]
+|-
+| [[Primo-Résurgence]]
+|}
+{{Navigation Primo-Résurgence|Groudon}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:PME03 Primo-Groudon.png|200px|vignette|droite|Primo-Groudon dans le [[PME03]].]]
+Primo-Groudon a été appelé par le Hoopa maléfique dans le [[Film 18|dix-huitième film Pokémon]].
+
+Il apparaît aussi dans le [[PME03]], où il affronte [[Primo-Kyogre]] puis [[Méga-Rayquaza]], avant d'être vaincu par ce dernier.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Anecdote ==
+Primo-Groudon était le Pokémon le plus lourd connu jusqu'à l'arrivée de [[Cosmovum]] et [[Bamboiselle]] en [[septième génération]].
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Primo-Kyogre
+| forme-précédent=Primo
+| numéro=0383
+| nom=Primo-Groudon
+| nomSuivant=Rayquaza
+}}
+{{Bandeau Pokédex}}
+[[es:Groudon#Groudon primigenio]]

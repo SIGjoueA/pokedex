@@ -1,0 +1,104 @@
+{{Ruban Pokémon
+| nomPrécédent=Roussil
+| numéro=0655
+| nom=Méga-Goupelin
+| nomSuivant=Grenousse
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Goupelin
+| nom-japonais=メガマフォクシー
+| nom-romaji=Mega Mafokushī
+| nom-déposé=Mega Mahoxy
+| nom-anglais=Mega Delphox
+| ndex=0655
+| dex=Illumis/219
+| légende=Artwork de Méga-Goupelin pour {{Jeu|LPZA}}.
+| type1=Feu
+| type2=Psy
+| catégorie=Renard
+| taille=1.5
+| poids=39.0
+| talents=Lévitation
+| fmratio=
+| génération=9
+| couleur=Rouge
+| corps=6
+| cri=Cri 0655 Méga
+}}
+'''Méga-Goupelin''' (anglais : '''Mega Delphox''' ; japonais : '''メガマフォクシー''' ''Mega Mahoxy'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Psy (type)|Psy]]. C'est la [[Méga-Évolution]] de [[Goupelin]].
+
+Méga-Goupelin a été révélé officiellement lors de la bande-annonce du ''Nintendo Direct'' du 12 septembre 2025<ref>[https://youtu.be/bsPF7K5taBM Légendes Pokémon : Z-A – Tant de Méga-Évolutions ! (Nintendo Switch 2/Nintendo Switch) sur YouTube.]</ref>, avec [[Méga-Blindépique]], [[Méga-Amphinobi]], [[Méga-Raichu X]] et [[Méga-Raichu Y]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Désormais, Méga-Goupelin se déplace en suspension dans les airs sur une longue branche embrasée d'une flamme jaune rose. Deux tiges flottantes embrasées l'entourent également. Toutes les extrémités de sa fourrure deviennent violet foncé et s'allongent, tout comme sa queue. Sa fine touffe de fourrure blanche sur le torse a poussé, tandis que celle qui la recouvrait, de couleur jaune, s'est raccourcie pour donner l'illusion d'épaulette. Son manteau de fourrure cache maintenant ses pattes inférieures. Le centre de son corps est resté rouge. Une tâche orangée est apparue au-dessus de son museau devenu également orange, et la fourrure blanche sur ses joues est devenue plus longue, tombante sur ses épaules. Les touffes de fourrure présentes dans ses oreilles se sont coiffées et l'extrémité centrale s'est teinte de bordeaux. Deux longues mèches de fourrure violettes ont poussé à l'arrière de sa tête.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, son pelage habituellement jaune est de couleur grise, la fourrure habituellement orange de son front et de ses oreilles est d'une couleur saumon, tandis que toutes les zones habituellement violet foncé sont violet pâle. Le bout de son nez est aussi de couleur saumon.
+
+=== [[Évolution]] ===
+
+Méga-Goupelin est la [[Méga-Évolution]] de [[Goupelin]] avec une [[Goupelinite]]. Ce dernier est l'évolution de [[Roussil]] à partir du [[niveau]] 36, qui lui-même est l'évolution de [[Feunnec]] à partir du niveau 16.
+{{#lst:Feunnec|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Lévitation]] : le Pokémon flotte, ce qui l'immunise contre les capacités de type Sol.
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:Il manipule des branches enflammées pour envoûter ses adversaires, puis réduit ces derniers en cendres avec une énorme boule de feu.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Feu|type2=Psy
+| remarque-sol=L'efficacité des attaques de type [[Sol]] est nulle du fait de son talent [[Lévitation]]. De ce fait, si [[Gravité]], [[Échange (capacité)|Échange]], [[Rayon Simple]], [[Anti-Air]], [[Ten-danse]] ou [[Suc Digestif]] est utilisé, ou si l'adversaire dispose de [[Brise Moule]], [[Téra-Voltage]], [[TurboBrasier]] ou [[Gaz Inhibiteur]], l'effet de [[Lévitation]] est annulé et l'efficacité des attaques [[Sol]] à son encontre est double, du fait de son [[type]] [[Électrik]].}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque Spéciale]] est augmentée de 45, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 25, et sa [[Vitesse]] de 30.
+
+{{Statistiques
+| type=Feu
+| PV=75
+| attaque=69
+| defense=72
+| atq-spc=159
+| def-spc=125
+| vitesse=134
+}}
+
+== Stratégie ==
+
+* '''(fr)''' [https://overstrat.pages-perso.free.fr/fiches/goupelin.html#champions Fiche stratégique sur Overstrat]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Goupelin/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Goupelin}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references />
+
+{{Ruban Pokémon
+| nomPrécédent=Roussil
+| numéro=0655
+| nom=Méga-Goupelin
+| nomSuivant=Grenousse
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Goupelin]]

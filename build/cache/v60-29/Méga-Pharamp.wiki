@@ -1,0 +1,112 @@
+{{Ruban Pokémon
+| nomPrécédent=Lainergie
+| numéro=0181
+| nom=Méga-Pharamp
+| nomSuivant=Joliflor
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Pharamp
+| nom-japonais=メガ デンリュウ
+| nom-romaji=Mega Denryū
+| nom-déposé=Mega Denryu
+| nom-anglais=Mega Ampharos
+| ndex=0181
+| dex=Kalos (Côtes)/129//Alola-USUL/164//Illumis/026
+| dex-secondaires=Shuffle/038//Picross/N20-02//Picross (Alternatif)/A20-02
+| légende=Artwork de Méga-Pharamp pour {{Jeu|XY}}.
+| type1=Électrik
+| type2=Dragon
+| catégorie=Lumière
+| taille=1.4
+| poids=61.5
+| talents=Brise Moule
+| fmratio=.5
+| génération=6
+| couleur=Jaune
+| corps=6
+| cri=Cri 0181 Méga
+}}
+'''Méga-Pharamp''' (anglais : '''Mega Ampharos''' ; japonais : '''メガ デンリュウ''' ''Mega Denryu'') est un [[Méga-Pokémon]] de [[type]] [[Électrik]] et [[Dragon (type)|Dragon]]. C'est la [[Méga-Évolution]] de [[Pharamp]].
+
+Méga-Pharamp a été révélé dans le magazine ''[[CoroCoro Comics]]'' de septembre 2013, en même temps que [[Méga-Mewtwo Y]], [[Méga-Braségali]], [[Méga-Mysdibule]], [[Méga-Absol]] et [[Méga-Lucario]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+
+La laine présente sur son corps semble rappeler celle de ses pré-évolutions. En effet, une longue crinière en laine pousse au niveau de sa tête jusqu'au cou et sa queue est également recouverte de laine ornée de boules rouges. Une boule rouge est aussi entortillée au bout de sa fourrure, sur la tête. Ses cornes sont enroulées sur elles-mêmes, le bout de ses pieds est noir et le haut de son ventre a une forme légèrement différente.
+
+==== Différences mâle/femelle ====
+
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+
+Lorsque Méga-Pharamp est chromatique, sa peau jaune est rose et les boules présentes sur lui sont bleues.
+
+=== [[Évolution]] ===
+
+Méga-Pharamp est la [[Méga-Évolution]] de [[Pharamp]] avec une [[Pharampite]]. Pharamp est l'évolution de [[Lainergie]] au niveau 30, lui-même l'évolution de [[Wattouat]] à partir du niveau 15.
+{{#lst:Wattouat|Tableau d'évolution}}
+=== [[Talent]] ===
+
+* [[Brise Moule]] : le Pokémon ignore les talents adverses qui auraient un effet sur ses capacités.
+
+=== Description du Pokédex ===
+;{{Jeu|US}}
+:L'afflux d'énergie de la [[Méga-Évolution]] a stimulé ses gènes et a entraîné une repousse de sa laine, perdue depuis des générations.
+;{{Jeu|UL}}
+:L'énergie de la Méga-Évolution a altéré son tissu cellulaire et réveillé le sang de dragon qui sommeillait en lui.
+;{{Jeu|LPZA}}
+:Une immense quantité d'énergie a altéré son tissu cellulaire, ce qui semble avoir réveillé le sang de dragon qui sommeillait en lui.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=7|type1=Électrik|type2=Dragon}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 20, sa [[Défense]] de 20, son [[Attaque Spéciale]] de 50, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 20, et sa [[Vitesse]] est diminuée de 10.
+
+{{Statistiques
+| type=Électrik
+| PV=90
+| attaque=95
+| defense=105
+| atq-spc=165
+| def-spc=110
+| vitesse=45
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Pharamp voir [[Pharamp/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/ampharos/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Pharamp voir [[Pharamp#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/ampharos/ Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Pharamp/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Pharamp}}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:XY033 - Méga-Pharamp d'un Dresseur.png|200px|thumb|left|Le Méga-Pharamp d'un Dresseur.]]
+Méga-Pharamp apparaît dans le [[XY033]] en flashback uniquement, il apparaît ensuite dans l'[[PME04|acte IV de Pokémon : Méga-Évolution]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Lainergie
+| numéro=0181
+| nom=Méga-Pharamp
+| nomSuivant=Joliflor
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Pharamp]]

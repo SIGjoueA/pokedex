@@ -1,0 +1,88 @@
+{{Ruban Pokémon
+| nomPrécédent=Opermine
+| numéro=0689
+| nom=Méga-Golgopathe
+| nomSuivant=Venalgue
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Golgopathe
+| nom-japonais=メガガメノデス
+| nom-romaji=Mega Gamenodesu
+| nom-déposé=Mega Gamenodes
+| nom-anglais=Mega Barbaracle
+| ndex=0689
+| dex=Illumis/035
+| légende=Artwork de Méga-Golgopathe pour {{Jeu|LPZA}}.
+| type1=Roche
+| type2=Combat
+| catégorie=Assemblage
+| taille=2.2
+| poids=100.0
+| talents=Griffe Dure
+| fmratio=
+| génération=9
+| couleur=Brun
+| corps=11
+| cri=Cri 0689 Méga
+}}
+'''Méga-Golgopathe''' (anglais : '''Mega Barbaracle''' ; japonais : '''メガガメノデス''' ''Mega Gamenodes'') est un [[Méga-Pokémon]] de [[type]] [[Roche (type)|Roche]] et [[Combat (type)|Combat]]. C'est la [[Méga-Évolution]] de [[Golgopathe]].
+
+== À propos du Méga-Pokémon ==
+=== Physionomie et attitudes ===
+Grâce à la [[Méga-Évolution]], Méga-Golgopathe voit son type [[Eau]] être remplacé par le type [[Combat (type)|Combat]]. Les parties brunes du corps de [[Golgopathe]] sont désormais noires. Il possède huit bras, dont quatre avec des yeux aux pupilles rouges. Toutes ses mains possèdent trois griffes noires. Chaque bras a, au niveau du coude, une bande noire aux extrémités pointues. Cela se retrouve également sur ses jambes et ses pieds, dont les griffes sont blanches. Deux des « doigts » sur sa tête se sont relevés, formant deux cornes. De petits rochers noirs se situent sur les deux rochers gris de Méga-Golgopathe, et on y voit désormais des fissures également noires.
+
+==== Différences mâle/femelle ====
+Il n'y a aucune différence entre les individus mâles et femelles de cette espèce.
+
+==== [[Chromatique]] ====
+Lorsqu'il est chromatique, les parties habituellement blanches de sa tête et des griffes de ses jambes sont vert clair, les parties habituellement noires (hormis les fissures des rochers) sont vert kaki, et les parties habituellement orange sont roses.
+
+=== [[Évolution]] ===
+Méga-Golgopathe est la [[Méga-Évolution]] de [[Golgopathe]] avec une [[Golgopathite]]. Ce dernier est l'évolution d'[[Opermine]] à partir du [[niveau]] 39.
+{{#lst:Opermine|Tableau d'évolution}}
+
+=== [[Talent]] ===
+* [[Griffe Dure]] : augmente la puissance des [[Capacité directe|capacités directes]] du Pokémon.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Ses nombreux bras lui permettent de prendre le dessus sur ses adversaires, mais cela sollicite fortement le Golgopathe qui fait office de tête.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=9|type1=Roche|type2=Combat}}
+
+== [[Statistiques]] ==
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 35, sa [[Défense]] de 15, son [[Attaque Spéciale]] de 10, sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 20, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=Roche
+| PV=72
+| attaque=140
+| defense=130
+| atq-spc=64
+| def-spc=106
+| vitesse=88
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Golgopathe/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Golgopathe}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Opermine
+| numéro=0689
+| nom=Méga-Golgopathe
+| nomSuivant=Venalgue
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Golgopathe]]
