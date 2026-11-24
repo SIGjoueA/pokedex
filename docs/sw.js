@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.19';
+const VERSION = 'v60.20';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Les formes Obscur et Purifié de Pokémon GO ont leur propre suivi, sans effet sur la complétion.';
-const DATA_VERSION = 'd61'; // bump when the schema of data/*.json changes
+const NOTES = 'Combats Max : Duralugon Gigamax est ajouté comme attaquant (1 n°1, utile contre 25 boss).';
+const DATA_VERSION = 'd62'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

@@ -433,7 +433,16 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.19 hors complétion : marques séparées, jamais de coche auto de l’espèce', /SHADOW_C/.test(app) && !/toggleMark\([^\n]*SHADOW/.test(app) && !/CAUGHT_G\.add\([^\n]*SHADOW/.test(app) && /n’inscrit pas l’espèce/.test(app));
   ok('v60.19 fiche : bloc Obscur & Purifié interactif, lecture seule en vue d’ensemble', /function shadowHTML\(title\)/.test(app) && /shadcg/.test(app) && app.includes("D = shadowHTML('Obscur & Purifié') + costumesHTML('Costumes')") && app.includes("shadowHTML('Obscur & Purifié GO')"));
   ok('v60.19 menu : compteurs Obscur et Purifié', /id="goshad"/.test(html) && /updateGoShadMenu/.test(app));
-  ok('v60.19 SW : VERSION v60.19, DATA_VERSION d61', /VERSION = 'v60\.19'/.test(sw) && /DATA_VERSION = 'd61'/.test(sw));
+  ok('v60.19 SW : VERSION ≥ v60.19, DATA_VERSION ≥ d61', /VERSION = 'v60\.(19|[2-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 61);
 }
+
+// ---- v60.20: Duralugon Gigamax as a Combats Max attacker
+{ const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8'), rm = D('rank-max.json'), rd = D('raid-moves.json');
+  const g = (rm.R.A.g || []).find(r => rm.F[r[0]] === '884-gmax');
+  ok('v60.20 SW : VERSION ≥ v60.20, DATA_VERSION ≥ d62', /VERSION = 'v60\.(2[0-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 62);
+  ok('v60.20 Duralugon Gigamax attaquant dans le classement Combats Max', rm.F.includes('884-gmax') && g && g[3] >= 1 && g[4] >= 20);
+  ok('v60.20 Duralugon Gigamax : listes de boss sur la fiche (utile en attaquant)', !!(rd.bm && rd.bm['884-gmax'] && rd.bm['884-gmax'].A && rd.bm['884-gmax'].A.length));
+}
+
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
