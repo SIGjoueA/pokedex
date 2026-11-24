@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.21';
+const VERSION = 'v60.22';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Faiblesses selon le talent : un tableau par talent (Lévitation, Absorbe-Volt, Garde Mystik…), effets vérifiés.';
-const DATA_VERSION = 'd63'; // bump when the schema of data/*.json changes
+const NOTES = 'Anciens jeux : où trouver chaque Pokémon (lieux ou méthode d’obtention Poképédia) au lieu de « aucune rencontre répertoriée ».';
+const DATA_VERSION = 'd64'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

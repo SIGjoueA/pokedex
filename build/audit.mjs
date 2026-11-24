@@ -486,4 +486,39 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
 }
 
 
+// ---- v60.22: lieux / méthodes d’obtention des anciens jeux (build/fix-v60-22.mjs) et textes du Pokédex
+{
+  const OLD = ['rb', 'y', 'gs', 'c', 'rs', 'e', 'frlg', 'dp', 'pt', 'hgss', 'bw', 'b2w2', 'xy', 'oras', 'sm', 'usum', 'frlgsw'], GI = Object.fromEntries(core.games.map((g, i) => [g.id, i]));
+  const shows = (e, s, g) => { const f = s.f[e.k] || {}; let P = null; if (f.pl && f.pl[g]) P = f.pl[g]; else if (!(e.c === 'reg' || e.mb)) { const b = s.f[f.enOf || String(s.id)]; P = b && b.pl ? b.pl[g] || null : null; }
+    if (P && P.length) return 'pl'; if ((f.pln && f.pln[g]) || (e.c !== 'reg' && ((s.f[String(s.id)] || {}).pln || {})[g])) return 'pln';
+    const src = f.en ? f : (f.enOf && s.f[f.enOf]) || f; return src.en && src.en[g] && src.en[g].length ? 'en' : null; };
+  const none = {}, cache = {}, S = id => cache[id] ||= sp(id); let wiki = 0, tag = 0, glitch = 0;
+  for (const e of core.e) { if (e.c === 'gmax') continue; const s = S(e.id);
+    for (const g of OLD) { if (!((e.gb >> GI[g]) & 1) && !(e.k === String(e.id) && (s.hx || []).includes(g))) continue; if (!shows(e, s, g)) (none[g] ||= []).push(e.k); } }
+  for (const s of Object.values(cache)) for (const f of Object.values(s.f)) {
+    for (const [g, rows] of Object.entries(f.pl || {})) if (OLD.includes(g)) for (const [pl, d] of rows) { const t = pl + ' ' + d; if (/\{\{|\}\}|\[\[|\]\]/.test(t)) wiki++; if (/, (No2?|Bl2?|R|B|O|A|X|Y|D|P|Ru|Sa|RuO|SaA|So|Lu|US|UL|RF|VF|HG|SS)\b|· —/.test(t)) tag++; if (/^Bug\b/.test(d)) glitch++; }
+    for (const [g, t] of Object.entries(f.pln || {})) if (OLD.includes(g) && /\{\{|\}\}|\[\[|\]\]|\bBP\b/.test(t)) wiki++;
+  }
+  const nN = Object.values(none).reduce((a, l) => a + l.length, 0);
+  ok('v60.22 anciens jeux : fiches sans lieu ni méthode ≤ 50 (avant : 4 174)', nN <= 50, `${nN} ${JSON.stringify(none)}`);
+  eq('v60.22 pas de balise wiki dans les lieux / méthodes', wiki, 0); eq('v60.22 pas d’abréviation de version ni de taux « — » restants', tag, 0); eq('v60.22 pas de glitch (Bug du Croupier)', glitch, 0);
+  eq('v60.22 Florizarre X/Y', F(3).pln.xy, 'Faire évoluer Herbizarre'); eq('v60.22 Rattata X/Y', F(19).pln.xy, 'Échange');
+  eq('v60.22 Méga-Alakazam ROSA', F(65, '65-mega').pln.oras, 'Méga-Évolution d’Alakazam (avec sa Méga-Gemme)'); eq('v60.22 Primo-Kyogre', F(382, '382-primal').pln.oras, 'Primo-Résurgence de Kyogre');
+  eq('v60.22 Miaouss Soleil / Lune (Hors dex)', F(52).pln.sm, 'À transférer par la Banque Pokémon'); eq('v60.22 Salamèche Or / Argent', F(4).pln.gs, 'À transférer par le Bloc Temporel');
+  ok('v60.22 Léviator ROSA : Atalanopolis, Méga Canne', (F(130).pl.oras || []).some(r => r[0] === 'Atalanopolis' && /Méga Canne/.test(r[1])));
+  ok('v60.22 Granivol RF/VF Switch (lignes RF/VF, taux par version)', (F(165).pl.frlgsw || []).some(r => /5 % Rouge Feu, 30 % Vert Feuille/.test(r[1])));
+  ok('v60.22 Mew Rouge / Bleu : pas de lieu (événement seulement)', !(F(151).pl || {}).rb);
+  eq('v60.22 Empiflor N2B2 = texte officiel de Noir / Blanc', [sp(71).pv[21], sp(71).pv[22]], [sp(71).pv[17], sp(71).pv[17]]);
+  eq('v60.22 Hippopotas N2B2 = texte officiel de Noir / Blanc', [sp(449).pv[21], sp(449).pv[22]], [sp(449).pv[17], sp(449).pv[17]]);
+  ok('v60.22 Raikou Écarlate / Violet : hors Pokédex (pna)', [40, 41].every(v => (sp(243).pna || []).includes(v)));
+  // machine translation still shown on a game sheet: Chenipotte (RF/VF) only — no official French text known
+  { const tr = []; for (const e of core.e) { const s = S(e.id), f = s.f[e.k] || {}; const src = v => (f.pv && f.pv[v] !== undefined) || (s.pv && s.pv[v] !== undefined) || s.fv[v] !== undefined ? 'ok' : s.tv && s.tv[v] !== undefined ? 'tr' : null;
+      core.games.forEach((g, i) => { if (!((e.gb >> i) & 1) && !(e.k === String(e.id) && (s.hx || []).includes(g.id))) return; if (g.ver.some(([v]) => src(v) === 'tr')) tr.push(g.id + ':' + e.k); }); }
+    eq('v60.22 traduction automatique affichée : Chenipotte RF/VF seulement', tr, ['frlg:265']); }
+  { const L = loc.a.filter(a => /\b(City|Town|Forest|Island|Tower|Mt\.|Mount|Path|Road|Cave|Lake)\b/.test(a) && !/^Cave (Taupiqueur|Connecterre)$/.test(a)); eq('v60.22 noms de lieux PokéAPI sans anglais', L, []); }
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.22 SW : VERSION ≥ v60.22, DATA_VERSION ≥ d64', /VERSION = 'v60\.(2[2-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 64);
+}
+
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

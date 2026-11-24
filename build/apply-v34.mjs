@@ -23,3 +23,4 @@ node('fix-v44c.mjs');          // v44: différences mâle / femelle d’apparenc
 node('fix-v44d.mjs');          // v44: Méga-Mistigrix une seule entrée (image ♂ / ♀), « mâle » / « femelle » sur les 4 vraies différences
 node('fix-v47.mjs');           // v47: GO depuis le game master (refresh-go + overrides), descriptions Poképédia, images des Méga-Gemmes Z-A, Grotte Métamo
 node('fix-v60-21.mjs');      // v60.21: Pichu Troizépi sans talent caché (faiblesses selon le talent)
+node('fix-v60-22.mjs');      // v60.22: lieux / méthodes d’obtention Poképédia des anciens jeux (Gén. I–VII, Hors dex, RF/VF Switch), textes N2B2 officiels, pna des jeux sans Pokédex National

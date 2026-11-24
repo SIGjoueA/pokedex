@@ -1659,7 +1659,7 @@ function ppLocHTML(rows, gm) {
 function encHTML(f, sp, gm, shared) {
   const pp = ppLocs(f, sp, gm);
   if (pp && pp.length) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2>${ppLocHTML(pp, gm)}</section>`;
-  { const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k], N = f.pln || (e && e.c !== 'reg' ? (sp.f[String(sp.id)] || {}).pln : null) || {}, na = N[gm.id] || N[{ svmask: 'sv', svdisk: 'sv', swisle: 'sw', swcrown: 'sw', zadlc: 'za' }[gm.id]];
+  { const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k], B = (e && e.c !== 'reg' ? (sp.f[String(sp.id)] || {}).pln : null) || {}, F = f.pln || {}, al = { svmask: 'sv', svdisk: 'sv', swisle: 'sw', swcrown: 'sw', zadlc: 'za' }[gm.id], na = F[gm.id] || F[al] || B[gm.id] || B[al]; // v60.22: per game (a form with its own text for one game still inherits the others)
     if (na) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(na)}</p><p class="note">Pas de lieu de capture dans ce jeu ; méthode d’obtention selon <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p></section>`; }
   const src = f.en ? f : (f.enOf && sp.f[f.enOf]) || f;
   const rows = (src.en && src.en[gm.id]) || [];
@@ -1667,7 +1667,8 @@ function encHTML(f, sp, gm, shared) {
   if (!rows.length && !gm.enc) { // v34: recent games (Poképédia only): say how to get it instead of « PokéAPI ne fournit aucune donnée »
     const k = Object.keys(sp.f).find(x => sp.f[x] === f), p = BY_KEY[k] || BY_KEY[String(sp.id)];
     const pre = evoGraph().filter(x => (x.t === k || x.t === String(sp.id)) && BY_KEY[x.f] && BY_KEY[x.f].id !== sp.id && inGame(BY_KEY[x.f], GIDX[gm.id])).map(x => BY_KEY[x.f].n);
-    const how = p && p.mb ? `Méga-Évolution de ${(BY_KEY[p.mb] || {}).n || 'sa forme de base'} (avec sa Méga-Gemme)` : p && p.bo ? `Changement de forme de ${(BY_KEY[p.bo] || {}).n || 'sa forme de base'}` : pre.length ? `Faire évoluer ${[...new Set(pre)].join(' ou ')}` : 'Lieu non renseigné pour ce jeu (cadeau, échange, événement, raid ou rencontre unique possibles).';
+    const de = n => n ? (/^[AEIOUYÉÈÊÂÎÔ]/i.test(n) ? 'd’' : 'de ') + n : 'de sa forme de base'; // v60.22: « Méga-Évolution d’Alakazam »
+    const how = p && p.mb ? `Méga-Évolution ${de((BY_KEY[p.mb] || {}).n)} (avec sa Méga-Gemme)` : p && p.bo ? `Changement de forme ${de((BY_KEY[p.bo] || {}).n)}` : pre.length ? `Faire évoluer ${[...new Set(pre)].join(' ou ')}` : 'Lieu non renseigné pour ce jeu (cadeau, échange, événement, raid ou rencontre unique possibles).';
     return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(how)}</p><p class="note">Aucun lieu de capture répertorié par <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> pour ce Pokémon dans ce jeu.</p></section>`;
   }
   if (!rows.length) body = `<p class="note">${gm.enc ? 'Aucune rencontre sauvage répertoriée par PokéAPI pour ce Pokémon dans ce jeu (il peut s’obtenir par évolution, œuf, cadeau, échange ou autre moyen, ou la donnée est absente).' : 'PokéAPI ne fournit aucune donnée de rencontres pour ce jeu (les apparitions dans la nature ne sont pas répertoriées).'}</p>`;

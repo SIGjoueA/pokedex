@@ -1,5 +1,16 @@
 [
  {
+  "v": "v60.22",
+  "d": "2026-11-24",
+  "l": [
+   "Anciens jeux (Rouge / Bleu à Ultra-Soleil / Ultra-Lune, et Rouge Feu / Vert Feuille sur Switch) : « Où le trouver » n’affiche presque plus « Aucune rencontre sauvage répertoriée ». Plus de 4 000 fiches de jeu (sur 4 174 sans rien) reçoivent les lieux de Poképédia (niveaux, taux, version) ou la méthode d’obtention : « Faire évoluer … », « Faire reproduire … », « Échange », « À transférer par la Banque Pokémon », Poké Fret, Bloc Temporel, Pokéwalker, événement.",
+   "Ajouts notables : X / Y, Rubis Oméga / Saphir Alpha, Soleil / Lune et Ultra-Soleil / Ultra-Lune (jusqu’ici sans aucune donnée Poképédia), Gén. I et II, et les Pokémon « Hors dex » de tous ces jeux. Les rencontres PokéAPI déjà présentes ne changent pas.",
+   "Les Méga-Évolutions et changements de forme de ces jeux indiquent « Méga-Évolution de … » au lieu de reprendre la méthode de la forme de base.",
+   "Textes du Pokédex : Empiflor et Hippopotas dans Noir 2 / Blanc 2 ont maintenant le texte officiel (celui de Noir / Blanc) au lieu d’une traduction automatique. Dans Soleil / Lune, Ultra-Soleil / Ultra-Lune, Épée / Bouclier et Écarlate / Violet, un Pokémon hors du Pokédex régional indique qu’il n’a pas de description dans ce jeu.",
+   "Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.21",
   "d": "2026-11-24",
   "l": [
