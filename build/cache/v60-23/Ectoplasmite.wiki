@@ -1,0 +1,123 @@
+{{Infobox Objet
+| nom=Ectoplasmite
+| nom-tm=Ganganite
+| nom-ja=ゲンガナイト
+| nom-romaji=Genganaito
+| nom-en=Gengarite
+| image=Ectoplasmite-PGL.png
+| image-taille=59px
+| légende=Artwork de l'Ectoplasmite pour le [[Pokémon Global Link]].
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| rangement=Objet
+| fonctionnement=tenu
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| prix-achat2=30000
+| monnaie-achat2={{P}}
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+| prix-achat3=50 000
+| prix-achat3-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat3={{P}}
+}}
+L''''Ectoplasmite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, l'Ectoplasmite permet à [[Ectoplasma]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Ectoplasma]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Ectoplasma de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+L'Ectoplasmite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / 50000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est offerte par une [[Mystimaniac]], située au nord-ouest à [[Romant-sous-Bois]].
+
+Elle est également tenue par l'[[Ectoplasma]] [[Chromatique]] événementiel distribué par code du 15 octobre au 5 novembre 2014.
+
+==== Dans {{Jeu|ROSA}} ====
+Elle se trouve à l'[[Atoll de Combat]], dans une maison isolée à gauche du [[Centre Pokémon]].
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+==== {{Jeu|lgpe}} ====
+S'achète à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{p}}.
+
+=== [[neuvième génération]] ===
+==== Dans {{Jeu|LPZA}} ====
+Peut-être achetée dans [[Le Joyau de Kalos]] pour 50 000 {{P}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 27 du Pass de combat de la saison M-2 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Ectoplasma]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de [[Méga-Gemme]]. Elle permet à un [[Ectoplasma]] de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Ectoplasma de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Gengarnit
+| de-info=Ectoplasmite
+| en=Gengarite
+| en-info=Ectoplasmite
+| es=Gengarita
+| es-info=Ectoplasmite
+| it=Gengarite
+| it-info=Ectoplasmite
+| ja=ゲンガナイト
+| ja-romaji=Ganganite
+| ja-info=Ectoplasmite
+| ko=팬텀나이트
+| ko-hangeul=Paenteomnaiteu
+| ko-info=Ectoplasmite
+| zh-simplifié=耿鬼进化石
+| zh-traditionnel=耿鬼進化石
+| zh-pinyin=Gěngguǐ Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Ectoplasma
+}}
+
+== Voir aussi ==
+* Pour le Pokémon capable de méga-évoluer avec cette [[Méga-Gemme]] : [[Ectoplasma]].
+* Pour le Pokémon méga-évolué correspondant à cette Méga-Gemme : [[Méga-Ectoplasma]].
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Gengarnit]]
+[[en:Gengarite]]
+[[es:Gengarita]]
+[[it:Gengarite]]
+[[ja:ゲンガナイト]]
+[[zh:耿鬼进化石（道具）]]

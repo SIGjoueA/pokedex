@@ -1,0 +1,77 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Minotaupite
+| nom-ja=ドリュウズナイト
+| nom-romaji=Doryuzunaito
+| nom-tm=Doryuzunite
+| nom-en=Excadrite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=360
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Minotaupite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Minotaupite permet à [[Minotaupe]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Minotaupe]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Minotaupite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P014|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-5 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Minotaupe, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Minotaupe de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Excadrite
+| en-info=Minotaupite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ドリュウズナイト
+| ja-romaji=Doryuzunite
+| ja-info=Minotaupite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Stalobornit]]
+[[en:Excadrite]]
+[[es:Excadrillita]]
+[[it:Excadrillite]]
+[[ja:ドリュウズナイト]]
+[[zh:龙头地鼠进化石（道具）]]

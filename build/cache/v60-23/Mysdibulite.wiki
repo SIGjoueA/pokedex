@@ -1,0 +1,90 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Mysdibulite
+| nom-tm=Kucheatnite
+| nom-ja=クチートナイト
+| nom-romaji=Kuchītonaito
+| nom-en=Mawilite
+| image=Mysdibulite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Mysdibulite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-revente=
+}}
+La '''Mysdibulite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Permet de faire [[Méga-Évolution|méga-évoluer]] [[Mysdibule]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Après avoir terminé le jeu et obtenu l'amélioration du [[Méga-Anneau]], le joueur doit se rendre au [[Fort de Vanitas]] entre 20h00 et 21h00. La [[Méga-Gemme]] se trouve au 1<sup>er</sup> étage du Fort entre l'escalier de gauche et le mur.
+
+==== Dans {{Jeu|ROSA}} ====
+Elle est trouvable après avoir traversé le petit jardin de la [[Route 117]] puis avoir pris à gauche juste avant d'arriver à [[Vergazon]].
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} ====
+Elle fut distribuée aux participants qui ont participé à au moins 3 combats au Défi International de Février 2017, puis fut distribuée à partir du 7 avril pour tout le monde via le code '''INTIMIDATE''' et valable jusqu'au 31 octobre 2017 inclus.
+
+==== Dans {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+==== Dans {{Jeu|LPZA}} ====
+
+Obtenue après avoir vaincu [[Mysdibule]] [[Méga-Évolution Ferox|Méga-Férox]] lors de la {{Mission|P021|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Mysdibule]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Mysdibule de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Mysdibule]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Flunkifernit]]
+[[en:Mawilite]]
+[[es:Mawilita]]
+[[it:Mawilite]]
+[[ja:クチートナイト]]
+[[zh:大嘴娃进化石（道具）]]

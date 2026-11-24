@@ -1,0 +1,84 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Draïeulite
+| nom-en=Drampanite
+| nom-ja=ジジーロナイト
+| nom-romaji=Jijīronaito
+| nom-tm=Jijilonite
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=360
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Draïeulite''' est un [[objet]] apparu dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Draïeulite permet à [[Draïeul]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Draïeul]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Draïeulite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Draïeul]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Draïeul de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Sen-Longnit
+| de-info=Draïeulite
+| en=Drampanite
+| en-info=Draïeulite
+| es=Drampanita
+| es-info=Draïeulite
+| it=Drampanite
+| it-info=Draïeulite
+| ja=ジジーロナイト
+| ja-romaji=Jijilonite
+| ja-info=Draïeulite
+| ko=할비롱나이트
+| ko-hangeul=Halbirongnaiteu
+| ko-info=Draïeulite
+| zh-simplifié=老翁龙进化石
+| zh-traditionnel=老翁龍進化石
+| zh-pinyin=Lǎowēnglóng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Draïeul
+}}
+
+== Voir aussi ==
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Sen-Longnit]]
+[[en:Drampanite]]
+[[es:Drampanita]]
+[[it:Drampite]]
+[[ja:ジジーロナイト]]
+[[zh:老翁龙进化石（道具）]]

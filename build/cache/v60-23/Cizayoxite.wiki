@@ -1,0 +1,111 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Cizayoxite
+| nom-tm=Hassamnite
+| nom-ja=ハッサムナイト
+| nom-romaji=Hassamunaito
+| nom-en=Scizorite
+| image=Cizayoxite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Cizayoxite.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| monnaie-achat=PCo
+| prix-achat2=50 000
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2={{P}}
+}}
+La '''Cizayoxite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Cizayoxite permet à [[Cizayox]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Cizayox]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Cizayox de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Cizayoxite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 50000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+* Trouvable derrière [[Blizzaroi]] dans la [[Caverne Gelée (Kalos)|Caverne Gelée]] entre 20 h et 21 h après avoir amélioré le [[Méga-Anneau]].
+* Tenue par le [[Liste des Pokémon distribués durant la sixième génération#Cizayox 2|Cizayox Pokémon Center Battle Championship]], distribué par [[Cadeau Mystère]] local dans tous les [[Pokémon Center]] japonais du 19 au 25 mai 2014 puis du 23 juin au 6 juillet 2014.
+
+;{{Jeu|ROSA}}
+Trouvable au [[Bois Clémenti]] après avoir vaincu ou capturé [[Groudon]]{{Sup|RuO}}/[[Kyogre]]{{Sup|SaA}}.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}} et {{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la boutique [[Le Joyau de Kalos]] pour 50 000 {{P}} après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Cizayox, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Cizayox de méga-évoluer.
+
+== Dans le dessin animé ==
+=== {{série|LH}} ===
+<center><gallery>
+Fichier:LH112 - Cizayoxite.png|Une Cizayoxite dans l'épisode [[LH112]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Scheroxnit
+| de-info=Cizayoxite
+| en=Scizorite
+| en-info=Cizayoxite
+| es=Scizorita
+| es-info=Cizayoxite
+| it=Scizorite
+| it-info=Cizayoxite
+| ja=ハッサムナイト
+| ja-romaji=Hassamnite
+| ja-info=Cizayoxite
+| ko=핫삼나이트
+| ko-hangeul=Hatsamnaiteu
+| ko-info=Cizayoxite
+| zh-traditionnel=巨鉗螳螂進化石
+| zh-simplifié=巨钳螳螂进化石
+| zh-pinyin=Jùqiántángláng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Cizayox
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Scheroxnit]]
+[[en:Scizorite]]
+[[es:Scizorita]]
+[[it:Scizorite]]
+[[ja:ハッサムナイト]]
+[[zh:巨钳螳螂进化石（道具）]]

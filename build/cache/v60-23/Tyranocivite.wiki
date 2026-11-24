@@ -1,0 +1,97 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Tyranocivite
+| nom-tm=Bangirasnite
+| nom-ja=バンギラスナイト
+| nom-romaji=Bangirasunaito
+| nom-en=Tyranitarite
+| image=Tyranocivite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Tyranocivite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=
+}}
+La '''Tyranocivite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Permet de faire [[Méga-Évolution|méga-évoluer]] [[Tyranocif]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Cet objet est exclusif à {{Jeu|X}} mais peut être échangé vers {{Jeu|Y}}.
+
+Après avoir battu la Ligue et obtenu l'amélioration du [[Méga-Anneau]], il faut entrer dans l'[[Arène de Relifac-le-Haut]]. Ensuite, si le joueur escalade la paroi en face de lui, puis la paroi de droite, il peut trouver la [[Méga-Gemme]] au bout du chemin entre 20h00 et 21h00.
+
+==== Dans {{Jeu|ROSA}} ====
+Elle se trouve au [[Sentier Sinuroc]], après la capture de Kyogre/Groudon (nécessite le [[Bicyclette|Vélo Cross]]).
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} ====
+Elle fut distribuée aux participants qui ont participé à au moins 3 combats au Défi International de Mai 2017.
+
+Elle fut aussi distribuée via le code SABLEVOLANT valable jusqu'au 31 octobre 2017 inclus.
+
+==== Dans {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Tyranocif|Tyranocif]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|P033|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Tyranocif]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Tyranocif de méga-évoluer.
+
+== Anecdote ==
+* La Tyranocivite, la [[Kravarekite]], l'[[Amphinolite]] et la [[Golemastokite]] sont les seules [[Méga-Gemme]]s dont le nom utilise une lettre de transition entre le radical (nom du Pokémon, complet ou tronqué) et le suffixe -ite commun à toutes les Méga-Gemmes.
+
+== Voir aussi ==
+* [[Méga-Tyranocif]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Despotarnit]]
+[[en:Tyranitarite]]
+[[es:Tyranitarita]]
+[[it:Tyranitarite]]
+[[ja:バンギラスナイト]]
+[[zh:班基拉斯进化石（道具）]]

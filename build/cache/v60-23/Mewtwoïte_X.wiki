@@ -1,0 +1,102 @@
+{{Renvoi homonymie|Mewtwoïte}}
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Mewtwoïte X
+| nom-tm=Mewtwonite X
+| nom-ja=ミュウツナイトX
+| nom-romaji=Myuutsunaito X
+| nom-en=Mewtwonite X
+| image=Mewtwoïte X-PGL.png
+| image-taille=59px
+| légende=Artwork de la Mewtwoïte X pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-revente=
+| prix-achat-diff=S'achète pour 64 [[PCo]] dans {{jeu|usul}}
+| prix-revente-diff=N'est jamais revendable
+}}
+La '''Mewtwoïte X''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Elle permet de faire [[Méga-Évolution|méga-évoluer]] [[Mewtwo]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / - / -
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+; {{Jeu|XY}}
+L'objet ne peut être trouvé que dans {{Jeu|X}}. Il apparaît à l'emplacement de [[Mewtwo]], juste après sa capture dans la [[Grotte Inconnue (Kalos)|Grotte Inconnue]]. La seule façon de l'obtenir dans {{Jeu|Y}} est de l'échanger depuis l'autre version du jeu.
+
+; {{Jeu|ROSA}}
+Elle se trouve à gauche du laboratoire du [[Professeur Seko]], à [[Bourg-en-Vol]] après la capture de Kyogre/Groudon.
+
+=== [[Septième génération]] ===
+; {{Jeu|SL}}
+Elle est disponible au Cadeau Mystère à partir du 3 Mars 2017 via le code '''M2DESCENT''', en même tant que la [[Mewtwoïte Y]] et valable jusqu'au 31 octobre 2017 inclus.
+
+; {{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+; {{Jeu|lgpe}}
+Donnée par [[Green]] au sous-sol de la [[Caverne Azurée]], après avoir battu Mewtwo et être ressorti de la grotte.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Distribuée via [[Cadeau Mystère]] à partir du 2 décembre 2025.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}}
+:Une variété de [[Méga-Gemme]]. Tenue par [[Mewtwo]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de [[Méga-Gemme]]. Elle permet à un [[Mewtwo]] de [[Méga-Évolution|méga-évoluer]] durant un combat.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon Évolutions]]'' ===
+Une Mewtwoïte X et une [[Mewtwoïte Y]] apparaissent au début de l'épisode 8, "[[PE08|La découverte]]", appartenant à [[Leaf|Green]]. Après avoir découvert qu'[[Elaine]] a capturé Mewtwo avant elle et est vaincue par elle au combat, Green lui donne ses [[Méga-Gemme]]s.
+
+<center><gallery>
+Fichier:PE08 - Mewtwoïte X et Y.png|Une Mewtwoïte X et une Mewtwoïte Y.
+</gallery></center>
+
+== Voir aussi ==
+
+* [[Méga-Évolution]]
+* [[Méga-Mewtwo X]]
+* [[Mewtwoïte Y]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Mewtunit X]]
+[[en:Mewtwonite X]]
+[[es:Mewtwoita X]]
+[[it:Mewtwoite X]]
+[[ja:ミュウツナイトX]]
+[[zh:超梦进化石Ｘ（道具）]]

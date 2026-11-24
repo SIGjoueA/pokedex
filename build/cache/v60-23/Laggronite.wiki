@@ -1,0 +1,117 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Laggronite
+| nom-tm=Laglargenite
+| nom-ja=ラグラージナイト
+| nom-romaji=Ragurājinaito
+| nom-en=Swampertite
+| image=Laggronite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Laggronite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=1500
+| prix-achat-condition=dans {{Abréviation|ROSA}}
+| prix-achat2=64
+| monnaie-achat2=PCo
+| prix-achat2-condition=dans {{Abréviation|USUL}}
+}}
+La '''Laggronite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Laggronite permet à [[Laggron]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Laggron]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Laggron de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Laggronite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Laggronite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+;{{Jeu|ROSA}}
+Donnée par [[Pierre Rochard]] sur la [[Route 120]] si le joueur a choisi [[Gobou]].
+
+Vendeur de pierres sur la [[Route 114]] au prix de 1500 [[Pokédollar]]s, après la rencontre de [[Kyogre]]{{Infobulle|*|Dans Saphir Alpha}} ou [[Groudon]]{{infobulle|*|Dans Rubis Oméga}}.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+Elle fut distribuée aux joueurs ayant fait au minimum 3 combats dans le Défi International d'Avril 2017, puis fut distribuée à partir du 23 juin pour tout le monde via le code '''MATSUBUSA''' et valable jusqu'au 31 octobre 2017 inclus.
+
+;{{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+; {{jeu|LPZA}}
+* Obtenue automatiquement lorsque le rang S est atteint pendant la saison 6 des [[Club de Combat Z-A|combats classés]], du 29 janvier au 19 février 2026.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-4 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Laggron, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Laggron de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Sumpexnit
+| de-info=Laggronite
+| en=Swampertite
+| en-info=Laggronite
+| es=Swampertita
+| es-info=Laggronite
+| it=Swampertite
+| it-info=Laggronite
+| ja=ラグラージナイト
+| ja-romaji=Laglargenite
+| ja-info=Laggronite
+| ko=대짱이나이트
+| ko-hangeul=Daejjanginaiteu
+| ko-info=Laggronite
+| zh-simplifié=巨沼怪进化石
+| zh-traditionnel=巨沼怪進化石
+| zh-pinyin=Jùzhǎoguài Jìnhuà Shí
+| zh-info=Pierre d'évolution de Laggron
+}}
+
+== Voir aussi ==
+* [[Méga-Laggron]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Sumpexnit]]
+[[en:Swampertite]]
+[[es:Swampertita]]
+[[it:Swampertite]]
+[[ja:ラグラージナイト]]
+[[zh:巨沼怪进化石（道具）]]

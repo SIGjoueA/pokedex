@@ -1,0 +1,112 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Absolite
+| nom-tm=Absolnite
+| nom-ja=アブソルナイト
+| nom-romaji=Abusorunaito
+| nom-en=Absolite
+| image=Absolite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de l'Absolite.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objets
+| rangement-condition=avant {{Abréviation|LPZA}}
+| rangement2=Méga-Gemme
+| rangement2-condition=depuis {{Abréviation|LPZA}}
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| monnaie-achat=PCo
+}}
+L''''Absolite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, l'Absolite permet à [[Absol]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Absol]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Absol de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+L'Absolite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+Donnée par [[Serena]] ou [[Kalem]] à [[Batisques]] après l'avoir vaincu∙e une première fois.
+
+;{{Jeu|ROSA}}
+Trouvable au [[Parc Safari (Hoenn)|Parc Safari]] (nécessite le [[Vélo Cross]]).
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}} et {{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Absol|Absol]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|P009|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Absol, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Absol de méga-évoluer en Méga-Absol.
+
+== Dans les dessins animés ==
+=== ''[[Pokémon : Méga-Évolution]]'' ===
+L'Absolite apparaît pour la première fois dans le [[PME01]]. L'[[Absol]] d'[[Astrid]] porte un collier avec une Absolite qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<gallery class="center">
+Absolite Pokémon Méga-Évolution.png|Une Absolite dans le PME01.
+</gallery>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Absolnit
+| de-info=Absolite
+| en=Absolite
+| en-info=Absolite
+| es=Absolita
+| es-info=Absolite
+| it=Absolite
+| it-info=Absolite
+| ja=アブソルナイト
+| ja-romaji=Absolnite
+| ja-info=Absolite
+| ko=앱솔나이트
+| ko-hangeul=Aepsollaiteu
+| ko-info=Absolite
+| zh-traditionnel=阿勃梭魯進化石
+| zh-simplifié=阿勃梭鲁进化石
+| zh-pinyin=Ābósuōlǔ Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Absol
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Absolnit]]
+[[en:Absolite]]
+[[es:Absolita]]
+[[it:Absolite]]
+[[ja:アブソルナイト]]
+[[zh:阿勃梭鲁进化石（道具）]]

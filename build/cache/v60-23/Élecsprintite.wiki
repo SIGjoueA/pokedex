@@ -1,0 +1,123 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Élecsprintite
+| nom-tm=Livoltnite
+| nom-ja=ライボルトナイト
+| nom-romaji=Raiborutonaito
+| nom-en=Manectite
+| image=Élecsprintite-PGL.png
+| image-taille=59px
+| légende=Artwork de l'Élecsprintite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| prix-achat2=180
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2=[[Méga-Fragment]]s
+}}
+L''''Élecsprintite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, l'Élecsprintite permet à [[Élecsprint]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Élecsprint]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Élecsprint de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+L'Élecsprintite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 180 Méga-Fragments / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est exclusive à {{Jeu|X}}. Elle se trouve sur la [[Route 16 (Kalos)|Route 16]], près d'un rocher autour duquel des Roller Skateurs s'exercent, après avoir battu la [[Ligue Pokémon (Kalos)|Ligue Pokémon]], entre 20h et 21h.
+
+==== Dans {{Jeu|ROSA}} ====
+[[Fichier:Route 110 Élecsprintite ROSA.png|180px|vignette|droite|La Méga-Gemme dans {{Jeu|ROSA}}.]]
+Elle se trouve à l'entrée de la [[piste cyclable]] du côté de [[Lavandia]] puis à droite. (Disponible après avoir eu le vélo)
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} ====
+Elle fut distribuée aux participants qui ont participé à au moins 3 combats au Défi International de Mai 2017.
+
+Elle fut aussi distribuée via le code SABLEVOLANT valable jusqu'au 31 octobre 2017 inclus.
+
+==== Dans {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 180 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Récompense du tutoriel de combat « La Méga-Évolution ».
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Élecsprint]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Élecsprint de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Voltensonit
+| de-info=Élecsprintite
+| en=Manectite
+| en-info=Élecsprintite
+| es=Manectricita
+| es-info=Élecsprintite
+| it=Manectricite
+| it-info=Élecsprintite
+| ja=ライボルトナイト
+| ja-romaji=Livoltnite
+| ja-info=Élecsprintite
+| ko=썬더볼트나이트
+| ko-hangeul=Sseondeobolteunaiteu
+| ko-info=Élecsprintite
+| zh-simplifié=雷电兽进化石
+| zh-traditionnel=雷電獸進化石
+| zh-pinyin=Léidiànshòu Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Élecsprint
+}}
+
+== Voir aussi ==
+* [[Méga-Élecsprint]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Voltensonit]]
+[[en:Manectite]]
+[[es:Manectricita]]
+[[it:Manectricite]]
+[[ja:ライボルトナイト]]
+[[zh:雷电兽进化石（道具）]]

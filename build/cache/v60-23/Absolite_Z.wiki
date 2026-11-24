@@ -1,0 +1,83 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Absolite Z
+| nom-tm=Absolnite Z
+| nom-ja=アブソルナイトZ
+| nom-romaji=Abusorunaito Z
+| nom-en=Absolite Z
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+L''''Absolite Z''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Absolite Z permet à [[Absol]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Absol Z]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Absolite Z n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Absol Z|Absol]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|E001|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 10 du Pass de combat Premium de la saison M-7 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 09 septembre 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Absol, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Absol de méga-évoluer en Méga-Absol Z.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Absolnit Z
+| de-info=Absolite Z
+| en=Absolite Z
+| en-info=Absolite Z
+| es=Absolita Z
+| es-info=Absolite Z
+| it=Absolite Z
+| it-info=Absolite Z
+| ja=アブソルナイトZ
+| ja-romaji=Absolnite Z
+| ja-info=Absolite Z
+| ko=앱솔나이트Z
+| ko-hangeul=Aepsolnaiteu Z
+| ko-info=Absolite Z
+| zh-simplifié=阿勃梭鲁进化石Z
+| zh-traditionnel=阿勃梭魯進化石Z
+| zh-pinyin=Ābósuōlǔ Jìnhuà Shí Z
+| zh-info=Pierre d'évolution d'Absol Z
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Absolnit Z]]
+[[en:Absolite Z]]
+[[es:Absolita Z]]
+[[it:Absolite Z]]
+[[ja:アブソルナイトZ]]
+[[zh:阿勃梭鲁进化石Ｚ（道具）]]

@@ -1,0 +1,108 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Latiasite
+| nom-tm=Latiasnite
+| nom-ja=ラティアスナイト
+| nom-romaji=Ratiasunaito
+| nom-en=Latiasite
+| image=Latiasite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Latiasite.
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| monnaie-achat=PCo
+}}
+La '''Latiasite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Latiasite permet à [[Latias]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Latias]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Latias de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Latiasite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|ROSA}}.
+
+;{{Jeu|RuO}}
+Donnée par la [[mère]] du [[joueur]] à [[Bourg-en-Vol]] après avoir terminé l'[[Épisode Delta]].
+
+;{{Jeu|SaA}}
+Tenue par [[Latias]] à l'[[Île du Sud]], qui rejoint l'équipe du joueur après avoir vaincu [[Matthieu]] et un [[Sbire de la Team Aqua]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par [[Cadeau Mystère]] du 8 août au 29 septembre 2017 avec un code individuel, recevable après avoir combattu au moins trois fois lors de la [[Liste des objets distribués en 2017#Altarite, Latiasite, Latiosite et Pharampite|Coupe Faiblesse]] du [[Pokémon Global Link]].
+* Distribuée par Cadeau Mystère du 8 septembre au 31 octobre 2017 avec le code DRACHE.
+* À recevoir par échange avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+=== [[Neuvième génération]] ===
+; {{jeu|LPZA}}
+* Récompense de la {{Mission|S189|LPZA}}, après avoir vaincu [[Méga-Latios]] et [[Méga-Latias]].
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par Latias, elle lui permet de méga-évoluer durant un combat.
+
+== Anecdote ==
+* Dans {{Jeu|XY}}, la Latiasite est fonctionnelle depuis la sortie des jeux, mais ne pouvait pas être obtenue légitimement avant la sortie de {{Jeu|ROSA}}.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Latiasnit
+| de-info=Latiasite
+| en=Latiasite
+| en-info=Latiasite
+| es=Latiasita
+| es-info=Latiasite
+| it=Latiasite
+| it-info=Latiasite
+| ja=ラティアスナイト
+| ja-romaji=Latiasnite
+| ja-info=Latiasite
+| ko=라티아스나이트
+| ko-hangeul=Ratiaseunaiteu
+| ko-info=Latiasite
+| zh-traditionnel=拉帝亞斯進化石
+| zh-simplifié=拉帝亚斯进化石
+| zh-pinyin=Lādìyǎsī Jìnhuà Shí
+| zh-info=Pierre d'évolution de Latias
+}}
+
+== Voir aussi ==
+* [[Méga-Latias]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Latiasnit]]
+[[en:Latiasite]]
+[[es:Latiasita]]
+[[it:Latiasite]]
+[[ja:ラティアスナイト]]
+[[zh:拉帝亚斯进化石（道具）]]

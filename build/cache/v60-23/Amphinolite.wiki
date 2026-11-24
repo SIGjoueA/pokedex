@@ -1,0 +1,93 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Amphinolite
+| nom-tm=Gekkouganite
+| nom-ja=ゲッコウガナイト
+| nom-romaji=Gekkōganaito
+| nom-en=Greninjite
+| image=Amphinolite-LPZA.png
+| image-taille=177
+| légende=Artwork de l'Amphinolite pour {{Jeu|LPZA}}.
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+}}
+L''''Amphinolite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+
+En combat, l'Amphinolite permet à [[Amphinobi]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Amphinobi]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Amphinolite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+* Obtenue automatiquement lorsque le rang K est atteint pendant la saison 1 des [[Club de Combat Z-A|combats classés]], du 16 octobre au 5 novembre 2025.
+* Obtenue automatiquement lorsque le rang Y est atteint pendant la saison 2 des combats classés, du 5 novembre au 26 novembre 2025.
+* Obtenue automatiquement lorsque le rang Y est atteint pendant la saison 3 des combats classés, du 26 novembre au 18 décembre 2025.
+* Obtenue automatiquement lorsque le rang Y est atteint pendant la saison 4 des combats classés, du 18 décembre 2025 au 8 janvier 2026.
+* Obtenue automatiquement lorsque le rang Y est atteint pendant la saison 5 des combats classés, du 8 janvier au 29 janvier 2026.
+* Obtenue automatiquement lorsque le rang Y est atteint pendant la saison 6 des combats classés, du 29 janvier au 19 février 2026.
+
+=== {{Jeu|Champions}} ===
+* Obtenue lors du transfert d'un Amphinobi depuis {{Jeu|LPZA}} du 8 avril 2026 au 17 juin 2026 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Amphinobi, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Amphinobi de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Quajutsunit
+| de-info=Amphinolite
+| en=Greninjite
+| en-info=Amphinolite
+| es=Greninjanita
+| es-info=Amphinolite
+| it=Greninjite
+| it-info=Amphinolite
+| ja=ゲッコウガナイト
+| ja-romaji=Gekkouganite
+| ja-info=Amphinolite
+| ko=개굴닌자나이트
+| ko-hangeul=Gaegulninjanaiteu
+| ko-info=Amphinolite
+| zh-simplifié=甲贺忍蛙进化石
+| zh-traditionnel=甲賀忍蛙進化石
+| zh-pinyin=Jiǎhèrěnwā Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Amphinobi
+}}
+
+== Anecdote ==
+* L'Amphinolite, la [[Kravarekite]], la [[Tyranocivite]] et la [[Golemastokite]] sont les seules [[Méga-Gemme]]s dont le nom utilise une lettre de transition entre le radical (nom du Pokémon, complet ou tronqué) et le suffixe -ite commun à toutes les Méga-Gemmes.
+
+== Voir aussi ==
+* [[Méga-Amphinobi]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Quajutsunit]]
+[[en:Greninjite]]
+[[es:Greninjanita]]
+[[it:Greninjite]]
+[[ja:ゲッコウガナイト]]
+[[zh:甲贺忍蛙进化石（道具）]]

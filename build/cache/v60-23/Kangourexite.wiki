@@ -1,0 +1,136 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Kangourexite
+| nom-tm=Garuranite
+| nom-ja=ガルーラナイト
+| nom-romaji=Garūranaito
+| nom-en=Kangaskhanite
+| image=Kangourexite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Kangourexite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|Sl}} et {{Abréviation|USUL}}
+| prix-achat2=30 000
+| monnaie-achat2={{P}}
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+| prix-achat3=70 000
+| prix-achat3-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat3={{P}}
+}}
+La '''Kangourexite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Kangourexite permet à [[Kangourex]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Kangourex]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Kangourex de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Kangourexite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / 70000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+[[Fichier:Localisation Kangourexite XY.png|180px|vignette|droite|La Méga-Gemme dans {{Jeu|XY}}.]]
+
+Elle se trouve dans la [[Grotte Étincelante]], à droite du premier embranchement, entre 20h00 et 21h00, après avoir battu la [[Ligue Pokémon (Kalos)|Ligue Pokémon]].
+
+;{{Jeu|ROSA}}
+Elle se trouve derrière le panneau du [[Centre Pokémon]] de [[Pacifiville]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}} et {{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+;{{Jeu|lgpe}}
+S'achète à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{p}}.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la boutique [[Le Joyau de Kalos]] pour 70 000 {{P}} après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-2 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Kangourex, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de Méga-Gemme. Elle permet à un Kangourex de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Kangourex de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+Une Kangourexite apparaît pour la première fois dans le [[SL130]]. Le Kangourex d'[[Althéo]] en possède une, qui lui permet de méga-évoluer.
+
+<center><gallery>
+Fichier:Kangourexite animé.png|Une Kangourexite dans l'[[épisode 1069]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Kangamanit
+| de-info=Kangourexite
+| en=Kangaskhanite
+| en-info=Kangourexite
+| es=Kangaskhanita
+| es-info=Kangourexite
+| it=Kangaskhanite
+| it-info=Kangourexite
+| ja=ガルーラナイト
+| ja-romaji=Garuranite
+| ja-info=Kangourexite
+| ko=캥카나이트
+| ko-hangeul=Kaengkanaiteu
+| ko-info=Kangourexite
+| zh-simplifié=袋兽进化石
+| zh-traditionnel=袋獸進化石
+| zh-pinyin=Dàishòu Jìnhuà Shí
+| zh-info=Pierre d'évolution de Kangourex
+}}
+
+== Voir aussi ==
+* [[Méga-Kangourex]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Kangamanit]]
+[[en:Kangaskhanite]]
+[[es:Kangaskhanita]]
+[[it:Kangaskhanite]]
+[[ja:ガルーラナイト]]
+[[zh:袋兽进化石（道具）]]

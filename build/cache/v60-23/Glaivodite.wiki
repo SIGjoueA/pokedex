@@ -1,0 +1,87 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Glaivodite
+| nom-tm=Seglaivenite
+| nom-ja=セグレイブナイト
+| nom-romaji=Segureibunaito
+| nom-en=Baxcalibrite
+| image=Glaivodite-LPZA.png
+| image-taille=177
+| légende=Artwork de la Glaivodite pour {{Jeu|LPZA}}.
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+}}
+La '''Glaivodite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Glaivodite permet à [[Glaivodo]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Glaivodo]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Glaivodite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+* Obtenue automatiquement lorsque le rang S est atteint pendant la saison 4 des [[Club de Combat Z-A|combats classés]], du 18 décembre 2025 au 8 janvier 2026.
+* Obtenue automatiquement lorsque le rang V est atteint pendant la saison 5 des combats classés, du 8 janvier au 29 janvier 2026.
+* Obtenue automatiquement lorsque le rang V est atteint pendant la saison 6 des combats classés, du 29 janvier au 19 février 2026.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-7 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 09 septembre 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Glaivodo, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Glaivodo de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Espinodonit
+| de-info=Glaivodite
+| en=Baxcalibrite
+| en-info=Glaivodite
+| es=Baxcaliburita
+| es-info=Glaivodite
+| it=Baxcaliburite
+| it-info=Glaivodite
+| ja=セグレイブナイト
+| ja-romaji=Seglaivenite
+| ja-info=Glaivodite
+| ko=드닐레이브나이트
+| ko-hangeul=Deunilreibeunaiteu
+| ko-info=Glaivodite
+| zh-simplifié=戟脊龙进化石
+| zh-traditionnel=戟脊龍進化石
+| zh-pinyin=Jǐjǐlóng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Glaivodo
+}}
+
+== Voir aussi ==
+* [[Méga-Glaivodo]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Espinodonit]]
+[[en:Baxcalibrite]]
+[[es:Baxcaliburita]]
+[[it:Baxcaliburite]]
+[[ja:セグレイブナイト]]
+[[zh:戟脊龙进化石（道具）]]

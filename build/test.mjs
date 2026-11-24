@@ -668,7 +668,7 @@ for (const [w, h, mobile] of [[360, 780, true], [1000, 800, false]]) {
     // base-form note
     const bn = async k => { await open(k); return p.evaluate(() => document.querySelector('.basenote')?.innerText.replace(/\s+/g, ' ') || ''); };
     const n1 = await bn('52-galar'), n2 = await bn('6-mega-x'), n3 = await bn('382-primal'), n4 = await bn('6');
-    ok(/^Forme de Galar de Miaouss/.test(n1) && /Méga-Évolution de Dracaufeu, nécessite la Dracaufite X/.test(n2) && /Primo-Résurgence de Kyogre.*Orbe Bleu/.test(n3) && !n4, tag + ' v31 base-form notes ' + [n1, n2, n3].join(' | ').slice(0, 260));
+    ok(/^Forme de Galar de Miaouss/.test(n1) && /Méga-Évolution de Dracaufeu, nécessite la Dracaufite X/.test(n2) && /Primo-Résurgence de Kyogre.*Gemme Bleue/.test(n3) && !n4, tag + ' v31 base-form notes ' + [n1, n2, n3].join(' | ').slice(0, 260));
     await open('26-alola'); ok(await p.$eval('.basenote a', a => a.getAttribute('href')) === '#/p/26', tag + ' v31 base-form note links to the base sheet');
     // sprites on demand
     const ext = []; const onReq = r => { if (/raw\.githubusercontent\.com/.test(r.url())) ext.push(r.url()); }; p.on('request', onReq);

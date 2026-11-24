@@ -1,0 +1,117 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Blizzarite
+| nom-tm=Yukinoonite
+| nom-ja=ユキノオナイト
+| nom-romaji=Yukinōnaito
+| nom-en=Abomasite
+| image=Blizzarite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Blizzarite.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| monnaie-achat=PCo
+| prix-achat2=50000
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2={{P}}
+}}
+La '''Blizzarite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Blizzarite permet à [[Blizzaroi]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Blizzaroi]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Blizzaroi de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Blizzarite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 50000 P / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+Donnée par [[Blizzaroi]] dans la [[Caverne Gelée (Kalos)|Caverne Gelée]] après avoir vaincu [[Myosotis]].
+
+;{{Jeu|ROSA}}
+Trouvable sur la [[Route 123]] après avoir vaincu ou capturé [[Groudon]]{{Sup|RuO}}/[[Kyogre]]{{Sup|SaA}}.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par [[Cadeau Mystère]] du 6 juin au 30 juillet 2017 avec un code individuel, recevable après avoir combattu au moins trois fois lors du [[Liste des objets distribués en 2017#Tyranocivite, Blizzarite et Élecsprintite|Défi International de mai 2017]] du [[Pokémon Global Link]].
+* Distribuée par Cadeau Mystère du 21 juillet au 31 octobre 2017 avec le code SABLEVOLANT.
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la boutique [[Le Joyau de Kalos]] pour 50 000 {{P}} après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Récompense du tutoriel de combat « La Méga-Évolution ».
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Blizzaroi, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Blizzaroi de méga-évoluer.
+
+== Dans les dessins animés ==
+=== ''[[Pokémon, la série]]'' ===
+La Blizzarite apparaît pour la première fois dans le [[XY122]]. Le [[Blizzaroi d'Urup|Blizzaroi]] d'[[Urup]] en possède une sur sa poitrine qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<gallery class="center">
+Blizzarite.png|Une Blizzarite dans le XY122.
+</gallery>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Rexblisarnit
+| de-info=Blizzarite
+| en=Abomasite
+| en-info=Blizzarite
+| es=Abomasnowita
+| es-info=Blizzarite
+| it=Abomasnowite
+| it-info=Blizzarite
+| ja=ユキノオナイト
+| ja-romaji=Yukinoonite
+| ja-info=Blizzarite
+| ko=눈설왕나이트
+| ko-hangeul=Nunseorwangnaiteu
+| ko-info=Blizzarite
+| zh-traditionnel=暴雪王進化石
+| zh-simplifié=暴雪王进化石
+| zh-pinyin=Bàoxuěwáng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Blizzaroi
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Rexblisarnit]]
+[[en:Abomasite]]
+[[es:Abomasnowita]]
+[[it:Abomasnowite]]
+[[ja:ユキノオナイト]]
+[[zh:暴雪王进化石（道具）]]

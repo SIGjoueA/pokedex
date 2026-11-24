@@ -1,0 +1,79 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Golemastokite
+| nom-tm=Goloognite
+| nom-ja=ゴルーグナイト
+| nom-romaji=
+| nom-en=Golurkite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Golemastokite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Golemastokite permet à [[Golemastoc]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Golemastoc]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Golemastokite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Golemastoc|Golemastoc]] [[Méga-Évolution Ferox|Méga-Ferox]] dans une [[Dimension inconnue|faille extradimensionnelle 3★]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Golemastoc, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Golemastoc de méga-évoluer.
+
+== Anecdote ==
+* La [[Tyranocivite]], la [[Kravarekite]], l'[[Amphinolite]] et la Golemastokite sont les seules [[Méga-Gemme]]s dont le nom utilise une lettre de transition entre le radical (nom du Pokémon, complet ou tronqué) et le suffixe -ite commun à toutes les Méga-Gemmes.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Golurkite
+| en-info=Golemastokite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ゴルーグナイト
+| ja-romaji=Goloognite
+| ja-info=Golemastokite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Golgantesnit]]
+[[en:Golurkite]]
+[[es:Golurkita]]
+[[it:Golurkite]]
+[[ja:ゴルーグナイト]]
+[[zh:泥偶巨人进化石（道具）]]

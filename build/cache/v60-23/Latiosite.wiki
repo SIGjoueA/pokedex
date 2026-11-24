@@ -1,0 +1,113 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Latiosite
+| nom-tm=Latiosnite
+| nom-ja=ラティオスナイト
+| nom-romaji=Ratiosunaito
+| nom-en=Latiosite
+| image=Latiosite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Latiosite.
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| monnaie-achat=PCo
+}}
+La '''Latiosite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Latiosite permet à [[Latios]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Latios]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Latios de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Latiosite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+* Tenue par le [[Latios]] [[wp:7-Eleven|7-Eleven]], distribué par [[Cadeau Mystère]] du 1<sup>er</sup> août au 30 septembre 2015 avec un code individuel, recevable dans les magasins 7-Eleven japonais du 1<sup>er</sup> au 16 août 2015.
+* Tenue par le Latios [[Pokémon Center]], distribué par Cadeau Mystère local au Japon du 31 août au 6 septembre 2015 avec le [[Nintendo Network]].
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|ROSA}}.
+
+;{{Jeu|RuO}}
+* Tenue par Latios à [[Île du Sud]], qui rejoint l'équipe du [[joueur]] après avoir vaincu [[Courtney]] et un [[Sbire de la Team Magma]].
+* Tenue par le Latios 7-Eleven, distribué par Cadeau Mystère du 1<sup>er</sup> août au 30 septembre 2015 avec un code individuel, recevable dans les magasins 7-Eleven japonais du 1<sup>er</sup> au 16 août 2015.
+* Tenue par le Latios Pokémon Center, distribué par Cadeau Mystère local au Japon du 31 août au 6 septembre 2015 avec le Nintendo Network.
+
+;{{Jeu|SaA}}
+* Donnée par la [[mère]] du joueur à [[Bourg-en-Vol]] après avoir terminé l'[[Épisode Delta]].
+* Tenue par le Latios 7-Eleven, distribué par Cadeau Mystère du 1<sup>er</sup> août au 30 septembre 2015 avec un code individuel, recevable dans les magasins 7-Eleven japonais du 1<sup>er</sup> au 16 août 2015.
+* Tenue par le Latios Pokémon Center, distribué par Cadeau Mystère local au Japon du 31 août au 6 septembre 2015 avec le Nintendo Network.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par [[Cadeau Mystère]] du 8 août au 29 septembre 2017 avec un code individuel, recevable après avoir combattu au moins trois fois lors de la [[Liste des objets distribués en 2017#Altarite, Latiasite, Latiosite et Pharampite|Coupe Faiblesse]] du [[Pokémon Global Link]].
+* Distribuée par Cadeau Mystère du 8 septembre au 31 octobre 2017 avec le code DRACHE.
+* À recevoir par échange avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+=== [[Neuvième génération]] ===
+; {{jeu|LPZA}}
+* Récompense de la {{Mission|S189|LPZA}}, après avoir vaincu [[Méga-Latios]] et [[Méga-Latias]].
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par Latios, elle lui permet de méga-évoluer durant un combat.
+
+== Anecdote ==
+* Dans {{Jeu|XY}}, la Latiosite est fonctionnelle depuis la sortie des jeux, mais ne pouvait pas être obtenue légitimement avant la sortie de {{Jeu|ROSA}}.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Latiosnit
+| de-info=Latiosite
+| en=Latiosite
+| en-info=Latiosite
+| es=Latiosita
+| es-info=Latiosite
+| it=Latiosite
+| it-info=Latiosite
+| ja=ラティオスナイト
+| ja-romaji=Latiosnite
+| ja-info=Latiosite
+| ko=라티오스나이트
+| ko-hangeul=Ratioseunaiteu
+| ko-info=Latiosite
+| zh-traditionnel=拉帝歐斯進化石
+| zh-simplifié=拉帝欧斯进化石
+| zh-pinyin=Lādì'ōusī Jìnhuà Shí
+| zh-info=Pierre d'évolution de Latios
+}}
+
+== Voir aussi ==
+* [[Méga-Latios]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Latiosnit]]
+[[en:Latiosite]]
+[[es:Latiosita]]
+[[it:Latiosite]]
+[[ja:ラティオスナイト]]
+[[zh:拉帝欧斯进化石（道具）]]

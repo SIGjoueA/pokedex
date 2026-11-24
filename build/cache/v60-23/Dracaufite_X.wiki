@@ -1,0 +1,155 @@
+{{Renvoi homonymie|Dracaufite}}
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Dracaufite X
+| nom-tm=Lizardonite X
+| nom-ja=リザードナイトX
+| nom-romaji=Rizādonaito X
+| nom-en=Charizardite X
+| image=Dracaufite X-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Dracaufite X.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=1 000 000
+| prix-achat-condition=dans {{Abréviation|X}}, si [[Salamèche]] n'a pas été choisi
+| prix-achat-diff=S'achète de moins en moins cher au [[Le Joyau de Kalos|Joyau de Kalos]] dans {{Abréviation|X}} selon le niveau de style du [[joueur]].
+| prix-achat2=100 000
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2={{P}}
+}}
+La '''Dracaufite X''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Dracaufite X permet à [[Dracaufeu]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Dracaufeu X]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|XY}}, la Dracaufite X et la [[Dracaufite Y]] sont mutuellement exclusives, la Dracaufite X ne pouvant être obtenue de manière traditionnelle que dans {{Jeu|X|lien=non}}.
+
+Dans {{Jeu|ROSA}}, elle permet à Dracaufeu de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Dracaufite X n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / Variable / - / Entre 10&nbsp;000 et 100&nbsp;000&nbsp;{{P}} selon le [[Style]].
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / - / -
+LGPE / Poche de Combat / - / -
+LPZA / Méga-Gemmes / 100000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|X}}
+* Donnée par le [[Professeur Platane]] dans [[Laboratoire du Professeur Platane|son Laboratoire]] à [[Illumis]] après avoir choisi [[Salamèche]].
+* Achetable au [[Le Joyau de Kalos|Joyau de Kalos]] à Illumis pour un prix variable entre 10 000 {{P}} et 1 000 000 {{P}} selon le niveau de style du [[joueur]], si Salamèche n'a pas été choisi au Laboratoire du Professeur Platane (nécessite l'achat de la [[Florizarrite]] si [[Carapuce]] a été choisi).
+
+;{{Jeu|Y}}
+* Tenue par plusieurs Pokémon distribués par [[Cadeau Mystère]] :
+** [[Dracaufeu]] CoroCoro, distribué au Japon du 15 mars au 29 août 2014 avec un code individuel, recevable dans le numéro d'avril 2013 du magazine ''[[CoroCoro Comics]]''.
+** Dracaufeu Olleh TV 2014, distribué en Corée du Sud du 11 avril au 31 mai 2014 avec un code individuel, recevable en regardant une vidéo sur le site web du service de télévision [[:wp:Olleh TV|Olleh TV]] du 11 au 30 avril 2014.
+** Dracaufeu GAME 2014, distribué au Royaume-Uni du 11 juillet au 10 août 2014 avec un code individuel, recevable dans les magasins [[:wp:Game (retailer)|GAME]], ou localement via les stations [[:wp:Nintendo Zone|Nintendo Zone]] dans les magasins GAME équipés.
+** Dracaufeu Olleh TV, distribué localement en Corée du Sud le 26 juillet 2014 lors du Pokémon Town 2014 de Séoul.
+** Dracaufeu XY, distribué du 29 juillet au 31 octobre 2014 avec un code individuel, recevable en étant parmi les 1 000 premiers joueurs à avoir répondu correctement à au moins un des deux quizz respectivement organisés par Nintendo Hong-Kong (du 11 au 27 juillet 2014) et Nintendo Taïwan (du 1<sup>er</sup> au 14 août 2014). Les codes reçus étaient également fonctionnels sur les consoles japonaises et européennes.
+** Dracaufeu GameStop 2014, distribué en Allemagne du 15 août 2014 au 15 janvier 2015 avec un code individuel, recevable dans les magasins [[:wp:GameStop|GameStop]].
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|X}}.
+
+;{{Jeu|ROSA}}
+* Trouvable sur le [[Chemin Ardent]] après avoir vaincu ou capturé [[Groudon]]{{Sup|RuO}}/[[Kyogre]]{{Sup|SaA}} (nécessite [[Force]]).
+* Tenue par le [[Liste des Pokémon distribués durant la sixième génération#Championnats du Monde 2016|Salamèche Championnats du Monde 2016]], distribué par Cadeau Mystère local du 19 au 21 août 2016 aux États-Unis lors des [[Championnats du Monde 2016]] à San Francisco.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+Donnée par [[Red]] à l'[[Arbre de Combat]] après l'avoir vaincu au 20<sup>e</sup> [[Combat Solo]].
+
+;{{Jeu|USUL}}
+Donnée par Red à l'Arbre de Combat après l'avoir vaincu, lui et/ou [[Blue]], au 20<sup>e</sup> Combat Solo, [[Combat Duo|Duo]] ou Multi.
+
+;{{Jeu|LGPE}}
+Donnée par Blue au [[Laboratoire Pokémon du Professeur Chen]] à [[Bourg Palette]] après avoir obtenu sept [[Badge]]s.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+
+Peut-être achetée dans [[Le Joyau de Kalos]] pour 100 000 {{P}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Dracaufeu, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de Méga-Gemme. Elle permet à un Dracaufeu de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Dracaufeu de méga-évoluer en Méga-Dracaufeu X.
+
+== Dans les dessins animés ==
+=== ''[[Pokémon : Méga-Évolution]]'' ===
+La Dracaufite X apparaît pour la première fois dans le [[PME01]]. Le [[Dracaufeu d'Alain|Dracaufeu]] d'[[Alain]] porte un collier avec une Dracaufite X qui lui permet de [[Méga-Évolution|méga-évoluer]]. Alain l'a reçue de la part de [[Lysandre]], en même temps que son [[Méga-Anneau]].
+
+<gallery class="center">
+Dracaufite X Pokémon Méga-Évolution.png|Une Dracaufite X dans le PME01.
+</gallery>
+
+=== ''[[Pokémon, la série]]'' ===
+La Dracaufite X d'Alain est revue dès le [[XY106]], en même tant que l'intégration d'Alain dans la série animée principale. Après avoir compris les véritables intentions de Lysandre et son erreur, Alain se débarrasse de la Dracaufite X quelque temps avant le [[XY140]], en promettant de faire table rase du passé.
+
+=== ''[[Pokémon : Les origines]]'' ===
+La Dracaufite X apparaît à la fin du [[PO02]]. De retour à la Maison Pokémon, [[M. Fuji]] offre à [[Red/Pokémon : les origines|Red]] une [[Poké Flûte]] et [[Méga-Gemme|deux mystérieuses pierres]] pour l'avoir sauvé, lui et la [[Tour Pokémon]], des griffes de la [[Team Rocket]].
+
+Dans le [[PO04]]. Alors que Red et [[Dracaufeu de Red|Dracaufeu]] sont projetés dans l'eau, la [[Gemme Sésame]] de l'un et la Dracaufite X de l'autre s'activent, transformant Dracaufeu en [[Méga-Dracaufeu X]] qui finit par vaincre [[Mewtwo]], permettant à Red de l'attraper.
+
+<gallery class="center">
+Dracaufite X Pokémon les origines.png|La Dracaufite X et une [[Gemme Sésame]] dans le PO02.
+</gallery>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+=== Apparitions sur d'autres cartes ===
+La Dracaufite X apparaît sur les cartes suivantes :
+
+{{Liste des cartes d'un sujet secondaire}}
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Gluraknit X
+| de-info=Dracaufite X
+| en=Charizardite X
+| en-info=Dracaufite X
+| es=Charizardita X
+| es-info=Dracaufite X
+| it=Charizardite X
+| it-info=Dracaufite X
+| ja=リザードナイトX
+| ja-romaji=Lizardonite X
+| ja-info=Dracaufite X
+| ko=리자몽나이트X
+| ko-hangeul=RijamongnaiteuX
+| ko-info=Dracaufite X
+| zh-traditionnel=噴火龍進化石X
+| zh-simplifié=喷火龙进化石X
+| zh-pinyin=Pēnhuǒlóng Jìnhuà Shí X
+| zh-info=Pierre d'évolution de Dracaufeu X
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Gluraknit X]]
+[[en:Charizardite X]]
+[[es:Charizardita X]]
+[[it:Charizardite X]]
+[[ja:リザードナイトX]]
+[[zh:喷火龙进化石Ｘ（道具）]]

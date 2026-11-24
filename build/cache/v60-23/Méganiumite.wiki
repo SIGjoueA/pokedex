@@ -1,0 +1,80 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Méganiumite
+| nom-tm=
+| nom-ja=メガニウムナイト
+| nom-romaji=Meganiumnite
+| nom-en=Meganiumite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=100 000
+| prix-achat-condition=
+| monnaie-achat={{P}}
+}}
+La '''Méganiumite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Méganiumite permet à [[Méganium]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Méganium]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Méganiumite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 100000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+* Offerte par [[A.Z.]] après la première réunion stratégique de la [[Team MZ]], lors de la {{Mission|P010|LPZA}}, si [[Germignon]] est le [[Pokémon de départ]] choisi.
+* Peut être achetée à la boutique [[Le Joyau de Kalos]] contre 100 000 {{P}}, après avoir terminé l'histoire principale, si Germignon n'est pas le Pokémon de départ choisi.
+; {{Jeu|Champions}}
+* Obtenue en envoyant un [[Méganium]] capturé dans {{jeu|LPZA}} dans le jeu.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 27 du Pass de combat de la saison M-1 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Méganium, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Mégamium de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Meganiumite
+| en-info=Méganiumite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=メガニウムナイト
+| ja-romaji=Meganiumnite
+| ja-info=Méganiumite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Meganienit]]
+[[en:Meganiumite]]
+[[es:Meganiumita]]
+[[it:Meganiumite]]
+[[ja:メガニウムナイト]]
+[[zh:大竺葵进化石（道具）]]

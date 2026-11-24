@@ -1,0 +1,77 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Ohmassacrite
+| nom-tm=
+| nom-ja=シビルドナイト
+| nom-romaji=Shibirudonite
+| nom-en=Eelektrossite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+L''''Ohmassacrite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Ohmassacrite permet à [[Ohmassacre]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Ohmassacre]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Ohmassacrite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P014|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-3 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Ohmassacre, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Ohmassacre de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Eelektrossite
+| en-info=Ohmassacrite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=シビルドナイト
+| ja-romaji=Shibirudonite
+| ja-info=Ohmassacrite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Zapplarangonit]]
+[[en:Eelektrossite]]
+[[es:Eelektrossita]]
+[[it:Eelektrossite]]
+[[ja:シビルドナイト]]
+[[zh:麻麻鳗鱼王进化石（道具）]]

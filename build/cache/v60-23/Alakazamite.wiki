@@ -1,0 +1,122 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Alakazamite
+| nom-tm=Foodinite
+| nom-ja=フーディナイト
+| nom-romaji=Fūdinaito
+| nom-en=Alakazite
+| image=Alakazamite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de l'Alakazamite.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| monnaie-achat=PCo
+| prix-achat2=30 000
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+| monnaie-achat2={{P}}
+| prix-achat3=360
+| prix-achat3-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat3=[[Méga-Fragment]]s
+}}
+L''''Alakazamite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, l'Alakazamite permet à [[Alakazam]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Alakazam]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Alakazam de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+L'Alakazamite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+Trouvable au 2<sup>e</sup> sous-sol de la [[Grotte Miroitante]] entre 20 h et 21 h après avoir amélioré le [[Méga-Anneau]].
+
+;{{Jeu|ROSA}}
+Trouvable au Marché de [[Poivressel]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}} et {{Jeu|USUL}}
+* Donnée par [[Dexio]] sur la [[Vieille Route]]{{Sup|SL}}/dans la [[Plaine de Poni]]{{Sup|USUL}} après l'avoir vaincu.
+* Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+;{{Jeu|LGPE}}
+Achetable à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{P}}.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Alakazam, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de Méga-Gemme. Elle permet à un Alakazam de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Alakazam de méga-évoluer.
+
+== Dans les dessins animés ==
+=== ''[[Pokémon : Méga-Évolution]]'' ===
+L'Alakazamite apparaît pour la première fois dans le [[PME04]]. L'[[Alakazam]] d'un [[Dresseur]] en possède une attachée à une cuillère qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<gallery class="center">
+Alakazamite Pokémon Méga-Évolution.png|Une Alakazamite dans le PM04.
+</gallery>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Simsalanit
+| de-info=Alakazamite
+| en=Alakazite
+| en-info=Alakazamite
+| es=Alakazamita
+| es-info=Alakazamite
+| it=Alakazamite
+| it-info=Alakazamite
+| ja=フーディナイト
+| ja-romaji=Foodinite
+| ja-info=Alakazamite
+| ko=후디나이트
+| ko-hangeul=Hudinaiteu
+| ko-info=Alakazamite
+| zh-traditionnel=胡地進化石
+| zh-simplifié=胡地进化石
+| zh-pinyin=Húdì Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Alakazam
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Simsalanit]]
+[[en:Alakazite]]
+[[es:Alakazamita]]
+[[it:Alakazamite]]
+[[ja:フーディナイト]]
+[[zh:胡地进化石（道具）]]

@@ -1,0 +1,76 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Mélodelfite
+| nom-tm=
+| nom-ja=ピクシナイト
+| nom-romaji=Pixinite
+| nom-en=Clefablite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Mélodelfite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Mélodelfite permet à [[Mélodelfe]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Mélodelfe]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Mélodelfite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P030|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Mélodelfe, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Mélodelfe de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Clefablite
+| en-info=Mélodelfite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ピクシナイト
+| ja-romaji=Pixinite
+| ja-info=Mélodelfite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Pixinit]]
+[[en:Clefablite]]
+[[es:Clefablita]]
+[[it:Clefablite]]
+[[ja:ピクシナイト]]
+[[zh:皮可西进化石（道具）]]

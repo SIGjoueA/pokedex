@@ -1,0 +1,92 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Métalossite
+| nom-tm=Metagrossnite
+| nom-ja=メタグロスナイト
+| nom-romaji=Metagurosunaito
+| nom-en=Metagrossite
+| image=Métalossite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Métalossite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=360
+| prix-achat-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Métalossite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+Cet objet permet de faire [[Méga-Évolution|méga-évoluer]] [[Métalosse]] s'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|ROSA}} ====
+[[Cadeau Mystère]] du 28 novembre 2014 au 15 janvier 2015.
+
+Donnée par [[Pierre Rochard|Pierre]] après la seconde victoire contre la [[Ligue de Hoenn|Ligue Pokémon]].
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{Jeu|USUL}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+==== Dans {{Jeu|LPZA}} ====
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P030|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-3 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Métalosse]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Métalosse de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+La Métalossite apparaît pour la première fois dans ''[[PME02|Pokémon : Méga-Évolution 2]]''. Le [[Métalosse de Pierre Rochard|Métalosse]] de {{ps|Pierre Rochard}} en possède une, sur sa patte avant droite, qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<center><gallery>
+Fichier:LV118 - Métalossite.png|Une Métalossite dans l'[[épisode 1203]].
+</gallery></center>
+
+== Voir aussi ==
+* [[Méga-Métalosse]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Metagrossnit]]
+[[en:Metagrossite]]
+[[es:Metagrossita]]
+[[it:Metagrossite]]
+[[ja:メタグロスナイト]]
+[[zh:巨金怪进化石（道具）]]

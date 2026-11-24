@@ -1,0 +1,70 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Heatranite
+| nom-tm=Heatranite
+| nom-ja=ヒードラナイト
+| nom-romaji=
+| nom-en=Heatranite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Heatranite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Heatranite permet à [[Heatran]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Heatran]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Heatranite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Heatran|Heatran]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|E009|LPZA}}.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par Heatran, elle lui permet de méga-évoluer durant un combat.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Heatranite
+| en-info=Heatranite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ヒードラナイト
+| ja-romaji=Heatranite
+| ja-info=Heatranite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Heatranit]]
+[[en:Heatranite]]
+[[es:Heatranita]]
+[[it:Heatranite]]
+[[ja:ヒードラナイト]]
+[[zh:席多蓝恩进化石（道具）]]

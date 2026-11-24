@@ -525,4 +525,41 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
 }
 
 
+// ---- v60.23: où obtenir la Méga-Gemme / Gemme Bleue / Gemme Rouge (build/fix-v60-23.mjs → mega-stones.json loc)
+{ const ms = D('mega-stones.json'), L = ms.loc || {}, GI = Object.fromEntries(core.games.map((g, i) => [g.id, i]));
+  const KNOWN = { za: ['257-mega', '384-mega'] }; // Poképédia : pas de lieu Z-A pour la Braségalite ; Méga-Rayquaza dans Z-A : sources divergentes
+  const nameOf = e => e.id === 384 && e.c === 'mega' ? 'Draco Ascension' : (ms.stones[e.k] || {}).fr;
+  const miss = {}; let n = 0;
+  for (const e of core.e) { if (!(e.mb || e.c === 'primal')) continue;
+    for (const g of ['xy', 'oras', 'sm', 'usum', 'lgpe', 'za']) { if (!((e.gb >> GI[g]) & 1)) continue; const nm = nameOf(e);
+      if (nm && L[nm] && L[nm][g] && L[nm][g].length) n++; else if (!(KNOWN[g] || []).includes(e.k)) (miss[g] ||= []).push(e.k); } }
+  eq('v60.23 chaque Méga / Primo (X / Y, ROSA, SL, USUL, Let’s Go, Z-A) a son objet localisé ou est dans la liste connue', miss, {}); ok('v60.23 formes avec objet localisé', n >= 280, n);
+  { const bad = Object.entries(ms.stones).filter(([k, s]) => !/-primal$/.test(k) && !/[iï]te( [XYZ])?$/.test(s.fr || '')).map(([k, s]) => k + ':' + s.fr); eq('v60.23 noms des Méga-Gemmes en « -ite »', bad, []); }
+  eq('v60.23 noms officiels', ['382-primal', '383-primal', '65-mega', '6-mega-x', '150-mega-y', '94-mega', '485-mega', '978-curly-mega'].map(k => (ms.stones[k] || {}).fr),
+    ['Gemme Bleue', 'Gemme Rouge', 'Alakazamite', 'Dracaufite X', 'Mewtwoïte Y', 'Ectoplasmite', 'Heatranite', 'Nigirigonite']);
+  let wiki = 0, code = 0, empty = 0; const VS = ['', 'X', 'Y', 'Rubis Oméga', 'Saphir Alpha', 'Soleil', 'Lune', 'Ultra-Soleil', 'Ultra-Lune', 'Let’s Go, Pikachu', 'Let’s Go, Évoli'];
+  for (const [nm, gs] of Object.entries(L)) for (const [g, rows] of Object.entries(gs)) { if (!['xy', 'oras', 'sm', 'usum', 'lgpe', 'za'].includes(g)) code++;
+    for (const [v, t] of rows) { if (/\{\{|\}\}|\[\[|\]\]|''|<|>|&\w+;|\bwp:|Fichier:/.test(t)) wiki++; if (/\b(SL|USUL|ROSA|LPZA|LGPE|RuO|SaA|XY)\b|\bmission [A-Z]+\d+\b/.test(t.replace('Poussifeu XY', ''))) code++; /* « Poussifeu XY » = nom de la distribution */ if (!t || t.length < 12 || !VS.includes(v)) empty++; } }
+  eq('v60.23 pas de balise wiki dans les lieux des objets', wiki, 0); eq('v60.23 pas de code de jeu / mission non traduit', code, 0); eq('v60.23 lignes vides ou version inconnue', empty, 0);
+  const T = (nm, g) => (L[nm] && L[nm][g] || []).map(r => (r[0] ? r[0] + ' : ' : '') + r[1]).join(' | ');
+  ok('v60.23 Alakazamite X / Y : Grotte Miroitante, 20 h – 21 h', /Grotte Miroitante.*20 h et 21 h/.test(T('Alakazamite', 'xy')), T('Alakazamite', 'xy'));
+  ok('v60.23 Alakazamite ROSA : Poivressel', /Poivressel/.test(T('Alakazamite', 'oras')));
+  ok('v60.23 Alakazamite SL = Vieille Route, USUL = Plaine de Poni (alternative résolue par jeu)', /Vieille Route/.test(T('Alakazamite', 'sm')) && !/Poni/.test(T('Alakazamite', 'sm')) && /Plaine de Poni/.test(T('Alakazamite', 'usum')) && !/Vieille Route/.test(T('Alakazamite', 'usum')));
+  ok('v60.23 Alakazamite Let’s Go : 30 000 ₽', /30 000 ₽/.test(T('Alakazamite', 'lgpe')));
+  ok('v60.23 Alakazamite Z-A : Méga-Fragments, mission principale 10', /Méga-Fragments.*mission principale 10\s:\s«\sLes secrets de la Méga-Évolution\s»/.test(T('Alakazamite', 'za')));
+  ok('v60.23 Dracaufite X : lignes X et Y distinctes en X / Y', (L['Dracaufite X'].xy || []).some(r => r[0] === 'X' && /Salamèche/.test(r[1])) && (L['Dracaufite X'].xy || []).some(r => r[0] === 'Y' && /échange/.test(r[1])));
+  ok('v60.23 Gemme Bleue ROSA : une ligne par version', ['Rubis Oméga', 'Saphir Alpha'].every(v => (L['Gemme Bleue'].oras || []).some(r => r[0] === v)) && /Arthur/.test(T('Gemme Bleue', 'oras')));
+  ok('v60.23 Gemme Rouge ROSA : Max (Rubis Oméga)', (L['Gemme Rouge'].oras || []).some(r => r[0] === 'Rubis Oméga' && /Max/.test(r[1])));
+  ok('v60.23 Méga-Rayquaza ROSA / SL / USUL : Draco Ascension, pas de Méga-Gemme', ['oras', 'sm', 'usum'].every(g => /Pas de Méga-Gemme.*Draco Ascension/.test(T('Draco Ascension', g))) && !(L['Draco Ascension'] || {}).za);
+  eq('v60.23 Méga-Rayquaza « Où le trouver » ROSA', F(384, '384-mega').pln.oras, 'Méga-Évolution de Rayquaza (avec la capacité Draco Ascension)');
+  eq('v60.23 Méga-Mewtwo X Let’s Go : méthode au lieu de « Aucune rencontre PokéAPI »', F(150, '150-mega-x').pln.lgpe, 'Méga-Évolution de Mewtwo (avec sa Méga-Gemme)');
+  ok('v60.23 apostrophes typographiques', !Object.values(L).some(gs => Object.values(gs).some(rows => rows.some(r => /'/.test(r[1])))));
+  ok('v60.23 Heatranite Z-A (Méga-Dimension)', /mission extradimensionnelle 09/.test(T('Heatranite', 'za')));
+  const src = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  ok('v60.23 app : bloc objet requis + crédit Poképédia', /function stoneLocHTML/.test(src) && /Où obtenir l’objet[^`]*Poképédia<\/a> \(CC BY-NC-SA 3\.0 FR\)/.test(src));
+  ok('v60.23 app : plus d’« Orbe Bleu / Rouge » (Gemme Bleue / Rouge depuis ROSA)', !/Orbe (Bleu|Rouge)/.test(src));
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  ok('v60.23 SW : VERSION ≥ v60.23, DATA_VERSION ≥ d65', /VERSION = 'v60\.(2[3-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 65);
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

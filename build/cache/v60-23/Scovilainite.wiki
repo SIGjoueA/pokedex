@@ -1,0 +1,76 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Scovilainite
+| nom-tm=Scovillanite
+| nom-ja=スコヴィラナイト
+| nom-romaji=
+| nom-en=Scovillainite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Scovilainite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Scovilainite permet à [[Scovilain]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Scovilain]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Scovilainite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Scovilain|Scovilain]] [[Méga-Évolution Ferox|Méga-Ferox]] dans une [[Dimension inconnue|faille extradimensionnelle 2★]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Scovilain, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Scovilain de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Scovillainite
+| en-info=Scovilainite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=スコヴィラナイト
+| ja-romaji=Scovillanite
+| ja-info=Scovilainite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Halupenjonit]]
+[[en:Scovillainite]]
+[[es:Scovillainita]]
+[[it:Scovillainite]]
+[[ja:スコヴィラナイト]]
+[[zh:狠辣椒进化石（道具）]]

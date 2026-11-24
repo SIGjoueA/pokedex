@@ -1,0 +1,127 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Jungkite
+| nom-tm=Jukainnite
+| nom-ja=ジュカインナイト
+| nom-romaji=Jukainnaito
+| nom-en=Sceptilite
+| image=Jungkite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Jungkite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=1500
+| prix-achat-condition=dans {{Abréviation|ROSA}}
+| prix-achat2=64
+| monnaie-achat2=PCo
+| prix-achat2-condition=dans {{Abréviation|USUL}}
+}}
+La '''Jungkite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Jungkite permet à [[Jungko]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Jungko]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Jungko de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Jungkite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Jungkite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+;{{Jeu|ROSA}}
+Donnée par [[Pierre Rochard]] sur la [[Route 120]] si le joueur a choisi [[Arcko]].
+
+Vendeur de pierres sur la [[Route 114]], au prix de 1500 pokédollars après la rencontre de [[Kyogre]]{{Infobulle|*|Dans Saphir Alpha}} ou [[Groudon]]{{infobulle|*|Dans Rubis Oméga}}.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+Elle fut distribuée aux joueurs ayant fait au minimum 3 combats dans le Défi International d'Avril 2017, puis fut distribuée à partir du 23 juin pour tout le monde via le code '''MATSUBUSA''' et valable jusqu'au 31 octobre 2017 inclus.
+
+;{{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+* Obtenue automatiquement lorsque le rang S est atteint pendant la saison 5 des [[Club de Combat Z-A|combats classés]], du 8 janvier au 29 janvier 2026.
+* Obtenue automatiquement lorsque le rang U est atteint pendant la saison 6 des combats classés, du 29 janvier au 19 février 2026.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 27 du Pass de combat de la saison M-4 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Jungko]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Jungko de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+Une Jungkite apparaît pour la première fois dans le [[XY126]]. Le [[Jungko de Liam|Jungko]] de [[Liam]] en possède une, attachée à un bandana noué autour de son cou, qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<center><gallery>
+Fichier:Jungkite animé.png|Une Jungkite dans l'[[épisode 925]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Gewaldronit
+| de-info=Jungkite
+| en=Sceptilite
+| en-info=Jungkite
+| es=Sceptilita
+| es-info=Jungkite
+| it=Sceptilite
+| it-info=Jungkite
+| ja=ジュカインナイト
+| ja-romaji=Jukainnite
+| ja-info=Jungkite
+| ko=나무킹나이트
+| ko-hangeul=Namukingnaiteu
+| ko-info=Jungkite
+| zh-simplifié=蜥蜴王进化石
+| zh-traditionnel=蜥蜴王進化石
+| zh-pinyin=Xīyìwáng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Jungko
+}}
+
+== Voir aussi ==
+* [[Méga-Jungko]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Gewaldronit]]
+[[en:Sceptilite]]
+[[es:Sceptilita]]
+[[it:Sceptilite]]
+[[ja:ジュカインナイト]]
+[[zh:蜥蜴王进化石（道具）]]

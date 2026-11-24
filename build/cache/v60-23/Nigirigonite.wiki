@@ -1,0 +1,70 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Nigirigonite
+| nom-tm=Syaritatsunite
+| nom-ja=シャリタツナイト
+| nom-romaji=
+| nom-en=Tatsugirinite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Nigirigonite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Nigirigonite permet à [[Nigirigon]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Nigirigon]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Nigirigonite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Nigirigon|Nigirigon]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|E006|LPZA}}.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Nigirigon, elle lui permet de méga-évoluer durant un combat.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Tatsugirinite
+| en-info=Nigirigonite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=シャリタツナイト
+| ja-romaji=Syaritatsunite
+| ja-info=Nigirigonite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Nigiraginit]]
+[[en:Tatsugirinite]]
+[[es:Tatsugirita]]
+[[it:Tatsugirite]]
+[[ja:シャリタツナイト]]
+[[zh:米立龙进化石（道具）]]

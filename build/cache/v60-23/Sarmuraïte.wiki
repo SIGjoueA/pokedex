@@ -1,0 +1,77 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Sarmuraïte
+| nom-tm=Gusokumushanite
+| nom-ja=グソクムシャナイト
+| nom-romaji=
+| nom-en=Golisopite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Sarmuraïte''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Sarmuraïte permet à [[Sarmuraï]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Sarmuraï]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Sarmuraïte n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Sarmuraï|Sarmuraï]] [[Méga-Évolution Ferox|Méga-Ferox]] dans une [[Dimension inconnue|faille extradimensionnelle 3★]].
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-6 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 09 septembre 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Sarmuraï, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Sarmuraï de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Golisopite
+| en-info=Sarmuraïte
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=グソクムシャナイト
+| ja-romaji=Gusokumushanite
+| ja-info=Sarmuraïte
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Tectassnit]]
+[[en:Golisopite]]
+[[es:Golisopodita]]
+[[it:Golisopodite]]
+[[ja:グソクムシャナイト]]
+[[zh:具甲武者进化石（道具）]]

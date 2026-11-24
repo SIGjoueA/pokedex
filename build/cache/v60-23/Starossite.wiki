@@ -1,0 +1,78 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Starossite
+| nom-tm=
+| nom-ja=スターミナイト
+| nom-romaji=Starminite
+| nom-en=Starminite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Starossite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Starossite permet à [[Staross]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Staross]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Starossite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir apaisé le Staross Méga-Ferox.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 27 du Pass de combat de la saison M-3 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Staross, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Staross de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Starminite
+| en-info=Starossite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=スターミナイト
+| ja-romaji=Starminite
+| ja-info=Starossite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Starmienit]]
+[[en:Starminite]]
+[[es:Starmita]]
+[[it:Starmite]]
+[[ja:スターミナイト]]
+[[zh:宝石海星进化石（道具）]]

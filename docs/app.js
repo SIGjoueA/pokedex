@@ -1536,7 +1536,7 @@ function baseNoteHTML(p) {
   const lk = `<a href="#/p/${b.k}">${esc(b.n)}</a>`, st = MEGA_STONES.stones?.[p.k];
   const txt = p.c === 'reg' ? `Forme ${deFR(p.l)} ${deFR(b.n).replace(b.n, lk)}`
     : p.c === 'mega' ? `Méga-Évolution ${deFR(b.n).replace(b.n, lk)}, ${p.id === 384 ? 'nécessite la capacité Draco Ascension (pas de Méga-Gemme)' : st ? `nécessite la ${esc(st.fr)}` : 'nécessite sa Méga-Gemme'} (en combat, avec une Gemme Sésame / un Méga-Anneau)`
-    : p.c === 'primal' ? `Primo-Résurgence ${deFR(b.n).replace(b.n, lk)}, déclenchée en combat par ${p.id === 382 ? 'l’Orbe Bleu' : 'l’Orbe Rouge'}`
+    : p.c === 'primal' ? `Primo-Résurgence ${deFR(b.n).replace(b.n, lk)}, déclenchée en combat par ${p.id === 382 ? 'la Gemme Bleue' : 'la Gemme Rouge'}`
     : p.c === 'gmax' ? `Forme Gigamax ${deFR(b.n).replace(b.n, lk)} : en combat Dynamax avec le Facteur Gigamax (Épée / Bouclier), en Combats Max (GO)`
     : p.c === 'sex' ? `Forme ${p.l === 'Femelle' ? 'femelle' : 'mâle'} ${deFR(b.n).replace(b.n, lk)}`
     : `Forme « ${esc(p.l || p.n)} » ${deFR(b.n).replace(b.n, lk)}${p.bo ? ' — forme de combat : redevient ' + lk + ' après le combat' : ''}`;
@@ -1658,7 +1658,21 @@ function ppLocHTML(rows, gm) {
 }
 // v60.22: methods written by build/fix-v60-22.mjs (not Poképédia) → neutral note, no Poképédia credit
 const GEN_HOW = /^(Méga-Évolution|Primo-Résurgence|Changement de forme) /;
+// v60.23: where to get the item a Méga / Primo needs in this game (mega-stones.json loc, from build/fix-v60-23.mjs; Poképédia item pages)
+const EVT_ROW = /Cadeau Mystère|[Dd]istribuée?s? |\bcode\b|combats classés/;
+function stoneLocHTML(k, gm) {
+  const e = BY_KEY[k]; if (!e || !(e.mb || e.c === 'primal')) return '';
+  const g = gm.id === 'zadlc' ? 'za' : gm.id, st = MEGA_STONES.stones?.[k], ray = e.id === 384 && e.c === 'mega', n = ray ? 'Draco Ascension' : st && st.fr;
+  const L = n && MEGA_STONES.loc?.[n]?.[g]; if (!L || !L.length) return '';
+  const img = !ray && st && st.img ? `<img src="${esc(st.img)}" alt="" width="24" height="24" loading="lazy">` : '';
+  return `<div class="stoneloc"><h3>${img}${ray ? 'Capacité requise' : 'Objet requis'} : ${esc(n)}</h3><ul>${L.map(([v, t]) => `<li${EVT_ROW.test(t) ? ' class="evt"' : ''}>${v ? `<b>${esc(v)} :</b> ` : ''}${esc(t)}</li>`).join('')}</ul>` +
+    `<p class="note">${ray ? 'Capacité' : 'Où obtenir l’objet'} : <a href="https://www.pokepedia.fr/${encodeURIComponent(ray ? 'Draco-Ascension' : n)}" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR)${ray ? '' : ', page de l’objet'}${L.some(([, t]) => EVT_ROW.test(t)) ? ' ; en grisé, distributions et événements limités dans le temps' : ''}.</p></div>`;
+}
 function encHTML(f, sp, gm, shared) {
+  const h = encHTML0(f, sp, gm, shared), k = Object.keys(sp.f).find(x => sp.f[x] === f), s = k ? stoneLocHTML(k, gm) : '';
+  return s ? h.replace(/<\/section>$/, s + '</section>') : h;
+}
+function encHTML0(f, sp, gm, shared) {
   const pp = ppLocs(f, sp, gm);
   if (pp && pp.length) return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2>${ppLocHTML(pp, gm)}</section>`;
   { const k = Object.keys(sp.f).find(x => sp.f[x] === f), e = k && BY_KEY[k], B = (e && e.c !== 'reg' ? (sp.f[String(sp.id)] || {}).pln : null) || {}, F = f.pln || {}, al = { svmask: 'sv', svdisk: 'sv', swisle: 'sw', swcrown: 'sw', zadlc: 'za' }[gm.id], na = F[gm.id] || F[al] || B[gm.id] || B[al]; // v60.22: per game (a form with its own text for one game still inherits the others)
@@ -1670,7 +1684,7 @@ function encHTML(f, sp, gm, shared) {
     const k = Object.keys(sp.f).find(x => sp.f[x] === f), p = BY_KEY[k] || BY_KEY[String(sp.id)];
     const pre = evoGraph().filter(x => (x.t === k || x.t === String(sp.id)) && BY_KEY[x.f] && BY_KEY[x.f].id !== sp.id && inGame(BY_KEY[x.f], GIDX[gm.id])).map(x => BY_KEY[x.f].n);
     const de = n => n ? (/^[AEIOUYÉÈÊÂÎÔ]/i.test(n) ? 'd’' : 'de ') + n : 'de sa forme de base'; // v60.22: « Méga-Évolution d’Alakazam »
-    const how = p && p.mb ? `Méga-Évolution ${de((BY_KEY[p.mb] || {}).n)} (avec sa Méga-Gemme)` : p && p.bo ? `Changement de forme ${de((BY_KEY[p.bo] || {}).n)}` : pre.length ? `Faire évoluer ${[...new Set(pre)].join(' ou ')}` : 'Lieu non renseigné pour ce jeu (cadeau, échange, événement, raid ou rencontre unique possibles).';
+    const how = p && p.mb ? `Méga-Évolution ${de((BY_KEY[p.mb] || {}).n)}${p.id === 384 ? '' : ' (avec sa Méga-Gemme)'}` : p && p.bo ? `Changement de forme ${de((BY_KEY[p.bo] || {}).n)}` : pre.length ? `Faire évoluer ${[...new Set(pre)].join(' ou ')}` : 'Lieu non renseigné pour ce jeu (cadeau, échange, événement, raid ou rencontre unique possibles).';
     return `<section class="box encbox"><h2>Où le trouver <small class="cnt">${esc(gm.s)}</small></h2><p class="encna">${esc(how)}</p><p class="note">Aucun lieu de capture répertorié par <a href="https://www.pokepedia.fr" target="_blank" rel="noopener">Poképédia</a> pour ce Pokémon dans ce jeu.</p></section>`;
   }
   if (!rows.length) body = `<p class="note">${gm.enc ? 'Aucune rencontre sauvage répertoriée par PokéAPI pour ce Pokémon dans ce jeu (il peut s’obtenir par évolution, œuf, cadeau, échange ou autre moyen, ou la donnée est absente).' : 'PokéAPI ne fournit aucune donnée de rencontres pour ce jeu (les apparitions dans la nature ne sont pas répertoriées).'}</p>`;

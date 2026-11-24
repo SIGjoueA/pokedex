@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Floréclatite
+| nom-tm=Kiraflornite
+| nom-ja=キラフロルナイト
+| nom-romaji=Kirafurorunaito
+| nom-en=Glimmoranite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Floréclatite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Floréclatite permet à [[Floréclat]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Floréclat]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Floréclatite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Floréclat|Floréclat]] [[Méga-Évolution Ferox|Méga-Ferox]] dans une [[Dimension inconnue|faille extradimensionnelle 4★]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Floréclat, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Floréclat de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Lumifloranit
+| de-info=Floréclatite
+| en=Glimmoranite
+| en-info=Floréclatite
+| es=Glimmoranita
+| es-info=Floréclatite
+| it=Glimmorite
+| it-info=Floréclatite
+| ja=キラフロルナイト
+| ja-romaji=Kiraflornite
+| ja-info=Floréclatite
+| ko=킬라플로르나이트
+| ko-hangeul=Kilrapeulroreunaiteu
+| ko-info=Floréclatite
+| zh-simplifié=晶光花进化石
+| zh-traditionnel=晶光花進化石
+| zh-pinyin=Jīngguānghuā Jìnhuà Shí
+| zh-info=Pierre d'évolution de Floréclat
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Lumifloranit]]
+[[en:Glimmoranite]]
+[[es:Glimmoranita]]
+[[it:Glimmorite]]
+[[ja:キラフロルナイト]]
+[[zh:晶光花进化石（道具）]]

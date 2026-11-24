@@ -1,0 +1,77 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Lugulabrite
+| nom-tm=
+| nom-ja=シャンデラナイト
+| nom-romaji=Chandelanite
+| nom-en=Chandelurite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=360
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Lugulabrite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Lugulabrite permet à [[Lugulabre]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Lugulabre]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Lugulabrite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P019|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 27 du Pass de combat de la saison M-5.
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Lugulabre, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Lugulabre de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Chandelurite
+| en-info=Lugulabrite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=シャンデラナイト
+| ja-romaji=Chandelanite
+| ja-info=Lugulabrite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Skelabranit]]
+[[en:Chandelurite]]
+[[es:Chandelurita]]
+[[it:Chandelurite]]
+[[ja:シャンデラナイト]]
+[[zh:水晶灯火灵进化石（道具）]]

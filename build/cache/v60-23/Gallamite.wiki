@@ -1,0 +1,118 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Gallamite
+| nom-tm=Erureidonite
+| nom-ja=エルレイドナイト
+| nom-romaji=Erureidonaito
+| nom-en=Galladite
+| image=Gallamite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Gallamite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!--commerce-->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| prix-achat2=240
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2=[[Méga-Fragment]]s
+}}
+La '''Gallamite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Gallamite permet à [[Gallame]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Gallame]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Gallame de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Gallamite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Gallamite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+;{{Jeu|ROSA}}
+Remise au [[joueur]] par le [[Professeur Kosmo]] après l'[[Épisode Delta]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+Indisponible durant l'aventure, cette Méga-Gemme fait partie des lots offerts aux participants de la compétition en ligne "Tournoi des petits", avec la [[Gardevoirite]] et [[Lockpinite]].
+
+Elle fut aussi distribuée via le code POYONG valable jusqu'au 31 octobre 2017 inclus.
+
+;{{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P024|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Gallame, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Gallame de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Galagladinit
+| de-info=Gallamite
+| en=Galladite
+| en-info=Gallamite
+| es=Galladita
+| es-info=Gallamite
+| it=Galladite
+| it-info=Gallamite
+| ja=エルレイドナイト
+| ja-romaji=Erureidonite
+| ja-info=Gallamite
+| ko=엘레이드나이트
+| ko-hangeul=Elreideunaiteu
+| ko-info=Gallamite
+| zh-simplifié=艾路雷朵进化石
+| zh-traditionnel=艾路雷朵進化石
+| zh-pinyin=Àilùléiduǒ Jìnhuà Shí
+| zh-info=Pierre d'évolution de Gallame
+}}
+
+== Voir aussi ==
+* [[Méga-Gallame]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Galagladinit]]
+[[en:Galladite]]
+[[es:Galladita]]
+[[it:Galladite]]
+[[ja:エルレイドナイト]]
+[[zh:艾路雷朵进化石（道具）]]

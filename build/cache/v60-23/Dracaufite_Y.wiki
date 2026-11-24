@@ -1,0 +1,152 @@
+{{Renvoi homonymie|Dracaufite}}
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Dracaufite Y
+| nom-tm=Lizardonite Y
+| nom-ja=リザードナイトY
+| nom-romaji=Rizādonaito Y
+| nom-en=Charizardite Y
+| image=Dracaufite Y-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Dracaufite Y.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=1 000 000
+| prix-achat-condition=dans {{Abréviation|Y}}, si [[Salamèche]] n'a pas été choisi
+| prix-achat-diff=S'achète de moins en moins cher au [[Le Joyau de Kalos|Joyau de Kalos]] dans {{Abréviation|Y}} selon le niveau de style du [[joueur]].
+| prix-achat2=100 000
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2={{P}}
+}}
+La '''Dracaufite Y''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Dracaufite Y permet à [[Dracaufeu]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Dracaufeu Y]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|XY}}, la Dracaufite Y et la [[Dracaufite X]] sont mutuellement exclusives, la Dracaufite Y ne pouvant être obtenue de manière traditionnelle que dans {{Jeu|Y|lien=non}}.
+
+Dans {{Jeu|ROSA}}, elle permet à Dracaufeu de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Dracaufite Y n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / Variable / - / Entre 10&nbsp;000 et 100&nbsp;000&nbsp;{{P}} selon le [[Style]].
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / - / -
+LGPE / Poche de Combat / - / -
+LPZA / Méga-Gemmes / 100000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|X}}
+* Tenue par plusieurs Pokémon distribués par [[Cadeau Mystère]] :
+** [[Dracaufeu]] CoroCoro, distribué au Japon du 15 mars au 29 août 2014 avec un code individuel, recevable dans le numéro d'avril 2013 du magazine ''[[CoroCoro Comics]]''.
+** Dracaufeu Olleh TV 2014, distribué en Corée du Sud du 11 avril au 31 mai 2014 avec un code individuel, recevable en regardant une vidéo sur le site web du service de télévision [[:wp:Olleh TV|Olleh TV]] du 11 au 30 avril 2014.
+** Dracaufeu GAME 2014, distribué au Royaume-Uni du 11 juillet au 10 août 2014 avec un code individuel, recevable dans les magasins [[:wp:Game (retailer)|GAME]], ou localement via les stations [[:wp:Nintendo Zone|Nintendo Zone]] dans les magasins GAME équipés.
+** Dracaufeu Olleh TV, distribué localement en Corée du Sud le 26 juillet 2014 lors du Pokémon Town 2014 de Séoul.
+** Dracaufeu XY, distribué du 29 juillet au 31 octobre 2014 avec un code individuel, recevable en étant parmi les 1 000 premiers joueurs à avoir répondu correctement à au moins un des deux quizz respectivement organisés par Nintendo Hong-Kong (du 11 au 27 juillet 2014) et Nintendo Taïwan (du 1<sup>er</sup> au 14 août 2014). Les codes reçus étaient également fonctionnels sur les consoles japonaises et européennes.
+** Dracaufeu GameStop 2014, distribué en Allemagne du 15 août 2014 au 15 janvier 2015 avec un code individuel, recevable dans les magasins [[:wp:GameStop|GameStop]].
+** Dracaufeu Printemps 2015, distribué en Europe du 21 mars au 18 juillet 2015, sauf en Belgique et aux Pays-Bas où il a été distribué du 1<sup>er</sup> au 21 juin 2015.
+** [[Salamèche]] Pokémon Lab, distribué localement au Japon du 8 juillet au 30 novembre 2015 avec un code individuel, recevable en terminant la « mission du Professeur » au musée [[:wp:Miraikan|Miraikan]] de Tokyo du 8 juillet au 12 octobre 2015.
+** Dracaufeu EXPO Gym, distribué localement au Japon du 19 novembre 2015 au 31 mai 2016 avec un code individuel, recevable en terminant le « Colisée Combat Dracaufeu » durant le Pokémon EXPO Gym organisé par l'[https://www.expocity-mf.com/expo/ EXPOCITY] d'Osaka.
+** Dracaufeu Pokémon Scrap 2016, distribué au Japon du 28 avril au 31 août 2016 avec un code individuel, recevable en ayant entré un code Pokémon Scrap pour le Parcours B sur le site officiel.
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|Y}}.
+
+;{{Jeu|Y}}
+* Donnée par le [[Professeur Platane]] dans [[Laboratoire du Professeur Platane|son Laboratoire]] à [[Illumis]] après avoir choisi [[Salamèche]].
+* Achetable au [[Le Joyau de Kalos|Joyau de Kalos]] à Illumis pour un prix variable entre 10 000 {{P}} et 1 000 000 {{P}} selon le niveau de style du [[joueur]], si Salamèche n'a pas été choisi au Laboratoire du Professeur Platane (nécessite l'achat de la [[Florizarrite]] si [[Carapuce]] a été choisi).
+* Tenue par plusieurs Pokémon distribués par Cadeau Mystère :
+** Dracaufeu Printemps 2015, distribué en Europe du 21 mars au 18 juillet 2015, sauf en Belgique et aux Pays-Bas où il a été distribué du 1<sup>er</sup> au 21 juin 2015.
+** Salamèche Pokémon Lab, distribué localement au Japon du 8 juillet au 30 novembre 2015 avec un code individuel, recevable en terminant la « mission du Professeur » au musée Miraikan de Tokyo du 8 juillet au 12 octobre 2015.
+** Dracaufeu EXPO Gym, distribué localement au Japon du 19 novembre 2015 au 31 mai 2016 avec un code individuel, recevable en terminant le « Colisée Combat Dracaufeu » durant le Pokémon EXPO Gym organisé par l'EXPOCITY d'Osaka.
+** Dracaufeu Pokémon Scrap 2016, distribué au Japon du 28 avril au 31 août 2016 avec un code individuel, recevable en ayant entré un code Pokémon Scrap pour le Parcours B sur le site officiel.
+
+;{{Jeu|ROSA}}
+* Trouvable au 2<sup>e</sup> sous-sol de la [[Grotte Zénith]] après avoir vaincu ou capturé [[Groudon]]{{Sup|RuO}}/[[Kyogre]]{{Sup|SaA}}.
+* Tenue par plusieurs Pokémon distribués par Cadeau Mystère :
+** Dracaufeu Printemps 2015, distribué en Europe du 21 mars au 18 juillet 2015, sauf en Belgique et aux Pays-Bas où il a été distribué du 1<sup>er</sup> au 21 juin 2015.
+** Dracaufeu Olleh TV 2015, distribué en Corée du Sud du 10 mai au 14 juin 2015 avec un code individuel, recevable en regardant une vidéo sur le site web du service de télévision Olleh TV du 30 avril au 10 avril 2015.
+** Salamèche Pokémon Lab, distribué localement au Japon du 8 juillet au 30 novembre 2015 avec un code individuel, recevable en terminant la « mission du Professeur » au musée Miraikan de Tokyo du 8 juillet au 12 octobre 2015.
+** Dracaufeu Festival Méga-Combat Pokémon, distribué localement en Corée du Sud les 8 et 9 août 2015 aux participants du Festival Méga-Combat Pokémon.
+** Dracaufeu EXPO Gym, distribué localement au Japon du 19 novembre 2015 au 31 mai 2016 avec un code individuel, recevable en terminant le « Colisée Combat Dracaufeu » durant le Pokémon EXPO Gym organisé par l'EXPOCITY d'Osaka.
+** Dracaufeu Pokémon Center Repeat, distribué localement au Japon du 1<sup>er</sup> au 31 janvier 2016 au [[Pokémon Center]] d'Hiroshima.
+** Dracaufeu Pokémon Scrap 2016, distribué au Japon du 28 avril au 31 août 2016 avec un code individuel, recevable en ayant entré un code Pokémon Scrap pour le Parcours B sur le site officiel.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+Donnée par [[Red]] à l'[[Arbre de Combat]] après l'avoir vaincu au 20<sup>e</sup> [[Combat Solo]].
+
+;{{Jeu|USUL}}
+Donnée par Red à l'Arbre de Combat après l'avoir vaincu, lui et/ou [[Blue]], au 20<sup>e</sup> Combat Solo, [[Combat Duo|Duo]] ou Multi.
+
+;{{Jeu|LGPE}}
+Donnée par Blue au [[Laboratoire Pokémon du Professeur Chen]] à [[Bourg Palette]] après avoir obtenu sept [[Badge]]s.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la boutique [[Le Joyau de Kalos]] pour 100 000 {{P}} après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Dracaufeu, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de Méga-Gemme. Elle permet à un Dracaufeu de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Dracaufeu de méga-évoluer en Méga-Dracaufeu Y.
+
+== Dans les dessins animés ==
+=== ''[[Pokémon, la série]]'' ===
+La Dracaufite Y apparaît pour la première fois dans le [[XY125]]. Le [[Dracaufeu de Trovato|Dracaufeu]] de [[Trovato/Pokémon, la série|Trovato]] en possède une attachée à sa queue qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<gallery class="center">
+Dracaufite Y animé.png|Une Dracaufite Y dans le XY125.
+</gallery>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Gluraknit Y
+| de-info=Dracaufite Y
+| en=Charizardite Y
+| en-info=Dracaufite Y
+| es=Charizardita Y
+| es-info=Dracaufite Y
+| it=Charizardite Y
+| it-info=Dracaufite Y
+| ja=リザードナイトY
+| ja-romaji=Lizardonite Y
+| ja-info=Dracaufite Y
+| ko=리자몽나이트Y
+| ko-hangeul=RijamongnaiteuY
+| ko-info=Dracaufite Y
+| zh-traditionnel=噴火龍進化石Y
+| zh-simplifié=喷火龙进化石Y
+| zh-pinyin=Pēnhuǒlóng Jìnhuà Shí Y
+| zh-info=Pierre d'évolution de Dracaufeu Y
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Gluraknit Y]]
+[[en:Charizardite Y]]
+[[es:Charizardita Y]]
+[[it:Charizardite Y]]
+[[ja:リザードナイトY]]
+[[zh:喷火龙进化石Ｙ（道具）]]

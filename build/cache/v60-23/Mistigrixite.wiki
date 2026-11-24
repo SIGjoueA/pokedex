@@ -1,0 +1,76 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Mistigrixite
+| nom-tm=Nyaonixnite
+| nom-ja=ニャオニクスナイト
+| nom-romaji=
+| nom-en=Meowsticite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Mistigrixite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Mistigrixite permet à [[Mistigrix]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Mistigrix]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Mistigrixite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Mistigrix|Mistigrix]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|E008|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Mistigrix, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Mistigrix de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Meowsticite
+| en-info=Mistigrixite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ニャオニクスナイト
+| ja-romaji=Nyaonixnite
+| ja-info=Mistigrixite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Psiaugonit]]
+[[en:Meowsticite]]
+[[es:Meowsticita]]
+[[it:Meowsticite]]
+[[ja:ニャオニクスナイト]]
+[[zh:超能妙喵进化石（道具）]]

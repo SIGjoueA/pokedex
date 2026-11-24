@@ -1,0 +1,184 @@
+{{ItemInfobox/head
+|name=Blazikenite
+|jname=バシャーモナイト
+|jtrans=Bursyamonite
+|art=Bag Blazikenite Champs Sprite
+|caption=Sprite from {{g|Champions}}
+|gen=VI
+|colorscheme=items
+|fling=yes
+}}
+{{ItemInfobox/BagRow|VI|Items}}
+{{ItemInfobox/BagRow|VII|Items}}
+{{ItemInfobox/BagRowBottom|IX|Mega Stones|game=ZA|group={{gameabbrev9|ZA}}|colorscheme=items}}
+{{ItemInfobox/Fling|80|colorscheme=items}}
+|}
+
+The '''Blazikenite''' (Japanese: '''バシャーモナイト''' ''Bursyamonite'') is a type of [[held item]] introduced in [[Generation VI]]. It is the [[Mega Stone]] that allows {{p|Blaziken}} to [[Mega Evolution|Mega Evolve]] into Mega Blaziken.
+
+==In the core series games==
+===Price===
+{{ItemPrice/head|items}}
+{{ItemPrice|{{gameabbrev6|XYORAS}}<br>{{gameabbrev7|SMUSUM}}|N/A|N/A}}
+|}
+|}
+
+===Effect===
+====In battle====
+If held by a {{p|Blaziken}}, the Blazikenite allows it to [[Mega Evolution|Mega Evolve]] into Mega Blaziken if its {{pkmn|Trainer}} has a [[Key Stone]]. A Trainer can only Mega Evolve one Pokémon per battle (or only have one Mega-Evolved Pokémon at any given moment{{sup/9|ZA}}).
+
+As a [[Mega Stone]], it is unaffected by item-negating effects (such as {{m|Embargo}} and {{a|Klutz}}). Item-manipulating effects (such as {{m|Trick}} and {{m|Fling}}) cannot give or remove a Blazikenite from Blaziken.
+
+====Outside of battle====
+If held by a Blaziken, the Blazikenite allows it to Mega Evolve into Mega Blaziken when it performs a {{DL|Appeal|Spectacular Talent}} during a [[Pokémon Contest|Pokémon Contest Spectacular]] if its Trainer has a Key Stone. Blaziken will remain a Mega Blaziken until the [[Pokémon Contest#Secondary judging|Talent Round]] ends.
+
+===Description===
+{{movedesc|items}}
+{{movedescentry|{{gameabbrev6|XY}}|One variety of the mysterious Mega Stones. Have Blaziken hold it, and this stone will enable it to Mega Evolve during battle.}}
+{{movedescentry|{{gameabbrev6|ORAS}}<br>{{gameabbrev7|SMUSUMPE}}<br>{{gameabbrev8|SwShBDSPLA}}<br>{{gameabbrev9|SV}}|One of a variety of mysterious Mega Stones. Have Blaziken hold it, and this stone will enable it to Mega Evolve during battle.}}
+{{movedescentry|{{gameabbrev9|ZA}}|One of a variety of mysterious Mega Stones. A Blaziken holding this stone will be able to Mega Evolve during battle.}}
+{{movedescentry|{{gameabbrevss|CHP}}|A held item that allows Blaziken to Mega Evolve.}}
+|}
+|}
+
+===Acquisition===
+{{ItemAvailability/head|items}}
+|-
+| {{gameabbrev6|XY}}
+| [[#Distribution|Event]]
+|
+|-
+| {{gameabbrev6|ORAS}}
+| {{rt|120|Hoenn}} (if the player's [[first partner Pokémon]] was {{p|Torchic}})<br>{{rt|114|Hoenn}} (if the player's [[first partner Pokémon]] was not {{p|Torchic}}, after defeating or capturing {{p|Groudon}}{{sup/6|OR}}/{{p|Kyogre}}{{sup/6|AS}})
+|
+|-
+| {{gameabbrev7|SM}}
+| [[#Distribution|Event]]
+| ''[[Trade]]''
+|-
+| {{gameabbrev7|USUM}}
+|
+| [[Battle Tree]] (64 [[Battle Point|BP]])
+|-
+| {{gameabbrev9|ZA}}
+| Reach '''Rank S''' in Ranked Battles Season 7 (February 19 - March 12, 2026)
+|
+|-
+| {{gameabbrevss|Champs}}
+| [[Shop (Champions)#Frontier Shop|Frontier Shop]] (2,000 [[Victory Point|VP]])<br>[[Pokémon Champions Season M-4 Battle Pass|Season M-4 Battle Pass reward]]
+|}
+|}
+
+====Distribution====
+{| class="roundy" style="background: #{{items color light}}; border: 5px solid #{{items color}}"
+|-
+|
+{| border=1 style="background:#FFF; border:1px solid #{{items color light}}; border-collapse:collapse"
+|-
+! style="background:#FFF; {{roundytl|5px}}" | Games
+! style="background:#FFF" | Event
+! style="background:#FFF" | Language/Region
+! style="background:#FFF; {{roundytr|5px}}" | Distribution period
+|- style="background:#FFF;"
+| rowspan=2 | {{gameabbrev7|SM}}
+| {{DL|List of other event distributions in Generation VII|2017 International Challenge April Mega Stones}}
+| All
+| May 30 to June 30, 2017
+|- style="background:#FFF;"
+| {{DL|List of other event distributions in Generation VII|Third Mega Stone Gift}}
+| All
+| June 23 to October 31, 2017
+|}
+|}
+
+=====As a [[held item]]=====
+{| class="roundy" style="background: #{{items color light}}; border: 5px solid #{{items color}}"
+|-
+|
+{| border=1 style="background:#FFF; border:1px solid #{{items color light}}; border-collapse:collapse"
+|-
+! style="background:#FFF; {{roundytl|5px}}" | Games
+! style="background:#FFF" | Event
+! style="background:#FFF" | Language/Region
+! style="background:#FFF; {{roundytr|5px}}" | Distribution period
+|- style="background:#FFF;"
+| {{gameabbrev6|XY}}
+| [[XY Torchic]]
+| All
+| October 12, 2013 to January 15, 2014
+|}
+|}
+
+==Gallery==
+===Artwork===
+{| style="margin:auto; text-align:center; {{roundy|20px}} border: 2px solid #{{items color dark}}; background: #{{items color}}; font-size: 80%"
+|-
+|style="{{roundy|80px}} border: 2px solid #{{items color dark}}; background: #{{items color light}}"| [[File:Z-A Blazikenite.png|140px]]
+|-
+| Artwork from<br>{{color2|000|Pokémon Legends: Z-A|Legends: Z-A}}
+|}
+===Sprites===
+{| style="margin:auto; text-align:center; {{roundy|20px}} border: 2px solid #{{items color dark}}; background: #{{items color}}; font-size: 80%"
+|-
+|style="{{roundy|80px}} border: 2px solid #{{items color dark}}; background: #{{items color light}}; width:100px; height:100px; overflow:hidden"| [[File:Dream Blazikenite Sprite.png]]
+|style="{{roundy|80px}} border: 2px solid #{{items color dark}}; background: #{{items color light}}"| [[File:Bag Blazikenite ZA Sprite.png|100px]]
+|-
+| Sprite from<br>{{color2|000|Pokémon Global Link|Global Link}}
+| Sprite from<br>{{color2|000|Pokémon Legends: Z-A|Legends: Z-A}}
+|}
+
+==In spin-off games==
+===Pokémon Shuffle===
+In [[Pokémon Shuffle]], the Blazikenite allows the player to [[Mega Evolution (Shuffle)|Mega Evolve]] {{p|Blaziken}}.
+
+The player can obtain the Blazikenite by completing [[Mission Card#Mission Card #17|Mission Card 17]].
+
+The Blazikenite was also available as a prize during the Mega Blaziken [[competitive stage]] during the game's [[Competitive stage/Live service period|live service period]]:
+* July 20 to 27, 2015 (3DS only)
+* April 19 to 26, 2016 (3DS and Mobile)
+
+The Blazikenite enables the following Mega Evolutions:
+
+{{ShuffleMegaStone}}
+{{ShuffleMegaStone/entry|stone=Blazikenite|257|Blaziken|Fire|Replaces Pokémon (max 3) of the same type as Mega Blaziken.|note=Converts three tiles containing a single Fire type into Mega Blaziken.|12|{{tt|6|3 prior to Version 1.4.6 (3DS)/1.10 (Mobile)}}}}
+{{ShuffleMegaStone/foot}}
+
+==In the manga==
+[[File:Blazikenite Adventures.png|thumb|175px|A Blazikenite in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Omega Ruby & Alpha Sapphire}}====
+In ''[[PS598|Claydol Unleashes]]'', it was revealed that {{Steven}} had found a Blazikenite for {{adv|Sapphire}}'s {{p|Blaziken}}, [[Chic]].
+{{-}}
+
+==Merchandise==
+The Blazikenite has been featured in several officially licensed merchandise.<gallery>
+File:Mega Ring System Blazikenite.png|[[Mega Ring System]] Blazikenite
+File:Blaziken Mega Blaziken Blazikenite metal charm set.jpg|{{p|Blaziken}}, Mega Blaziken & Blazikenite metal charm set
+File:Mega Evolution Plush Mega Blaziken.png|[[Mega Evolution Plush]] Mega Blaziken
+File:Trainers Collection Serena keychain.jpg|[[Trainers Collection]] [[Serena (game)|Serena]] & {{p|Torchic}} keychain
+</gallery>
+
+==In other languages==
+{{langtable|color={{items color light}}|bordercolor={{items color}}
+|zh_yue=火焰雞進化石 ''Fóyihmgāi Jeunfa Sehk''
+|zh_cmn=火焰雞進化石 / 火焰鸡进化石 ''Huǒyànjī Jìnhuà Shí''
+|de=Lohgocknit
+|fr=Braségalite
+|it=Blazikenite
+|ko=번치코나이트 ''Bunchikonite''
+|es=Blazikenita
+}}
+
+==External links==
+{{SItem/6|item=blazikenite}}
+
+==Related articles==
+{{Mega Stones}}
+{{Project ItemDex notice}}
+
+[[de:Lohgocknit]]
+[[es:Blazikenita]]
+[[fr:Braségalite]]
+[[it:Blazikenite]]
+[[ja:バシャーモナイト]]
+[[zh:火焰鸡进化石（道具）]]

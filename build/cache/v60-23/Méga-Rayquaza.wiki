@@ -1,0 +1,139 @@
+{{Ruban Pokémon
+| nomPrécédent=Groudon
+| numéro=0384
+| nom=Méga-Rayquaza
+| nomSuivant=Jirachi
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Rayquaza
+| nom-japonais=メガ レックウザ
+| nom-déposé=Mega Rayquaza
+| nom-romaji=Mega Rekkūza
+| nom-anglais=Mega Rayquaza
+| ndex=0384
+| dex=Hoenn-ROSA/209//Extra Illumis/130
+| dex-secondaires=Shuffle/162//Picross/N30-06//Picross (Alternatif)/A30-06
+| légende=Artwork de Méga-Rayquaza pour {{Jeu|ROSA}}.
+| type1=Dragon
+| type2=Vol
+| catégorie=Cieux
+| taille=10.8
+| poids=392.0
+| talents=Souffle Delta
+| fmratio=-1
+| génération=6
+| couleur=Vert
+| corps=2
+| cri=Cri 0384 Méga
+}}
+'''Méga-Rayquaza''' (anglais : '''Mega Rayquaza''' ; japonais : '''メガ レックウザ''' ''Mega Rayquaza'') est un [[Méga-Pokémon]] de type [[Dragon (type)|Dragon]] et [[Vol (type)|Vol]] apparu avec les jeux {{Jeu|ROSA}}. C'est la [[Méga-Évolution]] de [[Rayquaza]].
+
+Méga-Rayquaza été révélé dans un live NicoNico de la Pokémon Company, le 2 octobre 2014<ref name="live_niconico">[http://live.nicovideo.jp/watch/lv194212576 Niconico Live] '''(ja)'''</ref>. Une vidéo de présentation du Méga-Pokémon a ensuite été mise en ligne sur YouTube<ref name="video_youtube">[http://youtu.be/RfN5FkzilhM Méga-Rayquaza fait ses débuts dans Pokémon Rubis Oméga et Pokémon Saphir Alpha !] '''(fr)'''</ref>.
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+Lors de sa Méga-Évolution, Méga-Rayquaza voit ses deux excroissances inférieures se recourber pour former une sorte de protège-mâchoire. De ces deux excroissances partent deux flèches segmentées quatre fois par deux cercles liés. Sur ces excroissances supérieures partent deux flèches orange se terminant avec un cercle avec une pointe sur le dessus. Ses deux flèches segmentées par quatre cercles liés peuvent s'attacher au deux excroissances du bout de sa queue pour former le signe Delta. On le voit notamment lors de l'[[Épisode Delta]]. Ses yeux sont entourés par un tracé noir formant une épée à sept lames communément appelé Shichishitō. Les deux excroissances de son dos sont devenues plus grandes et les bords du haut orange. Le ventre de Méga-Rayquaza a une couleur noire partant des bras à l'occasion de la [[Méga-Évolution]]. Les orbes de Méga-Rayquaza deviennent orange en méga-évoluant, son corps est segmenté par trois anneaux dont partent trois excroissances dont les bords supérieurs sont orange. Au bout de sa queue partent deux parties ondulantes avec les bords supérieurs orange. Sur sa tête, on aperçoit le caractère delta.
+
+Dans l'[[Épisode Delta]] de {{Jeu|ROSA}}, Méga-Rayquaza peut être utilisé en tant que [[Poké Monture]].
+
+==== Différences mâle/femelle ====
+Ce Pokémon est asexué, il n'y a donc pas de Méga-Rayquaza mâle ou femelle.
+
+==== [[Chromatique]] ====
+
+Lorsqu'il est chromatique, le corps de Méga-Rayquaza est noir et ses rayures sont rosées.
+
+=== [[Évolution]] ===
+Méga-Rayquaza est la [[Méga-Évolution]] de [[Rayquaza]], à laquelle il accède lorsqu'il connaît la [[capacité]] [[Draco Ascension]]. Cette méthode est inédite pour ce type de transformation, puisqu'aucune [[Méga-Gemme]] n'est requise.
+{{#lst:Rayquaza|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+* [[Souffle Delta]] : invoque une tempête qui annule absolument tous les climats et les faiblesses du type Vol.
+
+=== Descriptions du [[Pokédex]] ===
+;{{Jeu|LPZA}}
+:Lorsqu'une étoile filante illumine le ciel nocturne, il se pourrait qu'il s'agisse en réalité de Méga-Rayquaza pourchassant une météorite.
+
+== Sensibilités ==
+{{#invoke:Sensibilités|tableau|generation=7|type1=Dragon|type2=Vol
+| remarque-électrik=Les attaques de type [[Électrik]] n'infligent que ×0.5 à Méga-Rayquaza à cause de son talent Souffle Delta (toutes les attaques super efficaces sur le type Vol infligent des dégâts normaux) et de son type [[Dragon (type)|Dragon]].
+| remarque-glace=Les attaques de type [[Glace]] n'infligent que ×2 à Méga-Rayquaza à cause de son talent Souffle Delta (toutes les attaques super efficaces sur le type Vol infligent des dégâts normaux).
+| remarque-roche=Les attaques de type [[Roche]] infligent des dégâts normaux à Méga-Rayquaza à cause de son talent Souffle Delta (toutes les attaques super efficaces sur le type Vol infligent des dégâts normaux).
+| remarque-sol=Si l'attaque [[Gravité]] ou [[Anti-Air]] est utilisée, que Méga-Rayquaza tient un [[Point de Mire]] ou que Méga-Rayquaza tient une [[Balle Fer]], l'efficacité des attaques [[Sol]] à son encontre est normale.
+}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, sa [[Défense]] de 10, son [[Attaque Spéciale]] de 30, sa [[Statistique#Défense Spéciale|Défense Spéciale]] de 10, et sa [[Vitesse]] de 20.
+
+{{Statistiques
+| type=dragon
+| PV=105
+| attaque=180
+| defense=100
+| atq-spc=180
+| def-spc=100
+| vitesse=115
+}}
+
+== Stratégie ==
+=== Sixième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Rayquaza voir [[Rayquaza/Génération 6#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/xy/pokemon/rayquaza/ Fiche stratégique sur Smogon]
+
+=== Septième génération ===
+{{Renvoi Article|Pour plus d'informations sur la fiche stratégique de Rayquaza voir [[Rayquaza#Stratégie|sa page dédiée]].|Loupe}}
+* '''(en)''' [http://www.smogon.com/dex/sm/pokemon/rayquaza Fiche stratégique sur Smogon]
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Rayquaza/Imagerie|Génération 9}}
+
+== Apparitions dans d'autres jeux ==
+=== Dans {{Jeu|PokkénDX}} ===
+Dans ''Pokkén Tournament DX'', Méga-Rayquaza est un Pokémon de soutien et peut être utilisé par le joueur durant le combat, après avoir acheté le DLC "Pokkén Tournament DX Battle Pack" à 14,99€.
+
+{| class="tableaustandard dragon" style="text-align:center"
+|-
+! Pokémon
+! Type de Soutien
+! Attaques
+! width="55%" | Description de l'attaque
+! Temps de Charge
+|-
+| [[Fichier:Méga-Rayquaza-PokkénDX.png|100x100px]]
+| Attaque
+| [[Draco Ascension]]
+| Consomme une partie de la jauge de synergie pour lancer une attaque dévastatrice en direction de l'adversaire. Ne peut être appelé qu'une seule fois par round.
+| Lent
+|}
+
+== Apparitions dans le [[Pokémon, la série|dessin animé]] ==
+[[Fichier:PME02 Méga-Rayquaza.png|200px|thumb|left|Méga-Rayquaza dans PME02.]]
+[[Fichier:Méga-Rayquaza Film 18.png|200px|thumb|right|Un Méga-Rayquaza chromatique dans le [[Pokémon, le film : Hoopa et le choc des légendes|film 18]].]]
+Il apparaît dans un court-métrage de {{Jeu|ROSA}} et dans [[PME02|Pokémon : Méga-Évolution - Acte II]]. Il apparaît également dans {{film|18}} sous sa forme [[chromatique]].
+
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+== Références ==
+<references/>
+
+{{Ruban Pokémon
+| nomPrécédent=Groudon
+| numéro=0384
+| nom=Méga-Rayquaza
+| nomSuivant=Jirachi
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Rayquaza]]
+
+[[de:Rayquaza]]
+[[en:Rayquaza (Pokémon)]]
+[[it:Rayquaza]]
+[[ja:レックウザ]]
+[[zh:烈空坐]]

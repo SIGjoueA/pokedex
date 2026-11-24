@@ -1,0 +1,84 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Aligatueurite
+| nom-tm=Ordilenite
+| nom-ja=オーダイルナイト
+| nom-romaji=Ōdairunaito
+| nom-en=Feraligite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=100 000
+| prix-achat-condition=
+| monnaie-achat={{P}}
+}}
+L''''Aligatueurite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Aligatueurite permet à [[Aligatueur]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Aligatueur]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Aligatueurite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 100000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+* Offerte par [[A.Z.]] après la première réunion stratégique de la [[Team MZ]], lors de la [[Mission (Légendes Pokémon : Z-A)#P010|mission principale 10 : « Les secrets de la Méga-Évolution »]], si [[Kaiminus]] est le [[Pokémon de départ]] choisi.
+* Peut être achetée à la boutique [[Le Joyau de Kalos]] contre 100 000 {{P}}, après avoir terminé l'histoire principale, si Kaiminus n'est pas le Pokémon de départ choisi.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-1 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Aligatueur, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Aligatueur de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Impergatornit
+| de-info=Aligatueurite
+| en=Feraligite
+| en-info=Aligatueurite
+| es=Feraligatrita
+| es-info=Aligatueurite
+| it=Feraligatrite
+| it-info=Aligatueurite
+| ja=オーダイルナイト
+| ja-romaji=Ordilenite
+| ja-info=Aligatueurite
+| ko=장크로다일나이트
+| ko-hangeul=Jangkeurodailnaiteu
+| ko-info=Aligatueurite
+| zh-simplifié=大力鳄进化石
+| zh-traditionnel=大力鱷進化石
+| zh-pinyin=Dàlì'è Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Aligatueur
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Impergatornit]]
+[[en:Feraligite]]
+[[es:Feraligatrita]]
+[[it:Feraligatrite]]
+[[ja:オーダイルナイト]]
+[[zh:大力鳄进化石（道具）]]

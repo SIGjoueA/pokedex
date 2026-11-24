@@ -1,0 +1,97 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Diancite
+| nom-tm=Diancinite
+| nom-ja=ディアンシナイト
+| nom-romaji=Dianshinaito
+| nom-en=Diancite
+| image=Diancite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Diancite.
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+}}
+La '''Diancite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Diancite permet à [[Diancie]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Diancie]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Diancie de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Diancite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Diancite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / - / -
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|ROSA}}
+Donnée par un [[Ninja Amateur]] dans n'importe quel [[Centre Pokémon]] si un [[Diancie]] rencontré « par la force du destin » est présent dans l'équipe.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par [[Cadeau Mystère]] du 10 août au 31 octobre 2017 avec le code POYONG.
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Donnée par un [[Collectionneur]] à la Joaillerie [[Alyxia]] à [[Konikoni]] si un Diancie est présent dans l'équipe.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Distribuée via [[Cadeau Mystère]] à partir du 6 novembre 2025.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Diancie, elle lui permet de méga-évoluer durant un combat.
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+=== Apparitions sur d'autres cartes ===
+La Diancite apparaît sur les cartes suivantes :
+
+{{Liste des cartes d'un sujet secondaire}}
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Diancienit
+| de-info=Diancite
+| en=Diancite
+| en-info=Diancite
+| es=Diancita
+| es-info=Diancite
+| it=Diancite
+| it-info=Diancite
+| ja=ディアンシナイト
+| ja-romaji=Diancinite
+| ja-info=Diancite
+| ko=디안시나이트
+| ko-hangeul=Diansinaiteu
+| ko-info=Diancite
+| zh-traditionnel=蒂安希進化石
+| zh-simplifié=蒂安希进化石
+| zh-pinyin=Dì'ānxī Jìnhuà Shí
+| zh-info=Pierre d'évolution de Diancie
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Diancienit]]
+[[en:Diancite]]
+[[es:Diancita]]
+[[it:Diancite]]
+[[ja:ディアンシナイト]]
+[[zh:蒂安希进化石（道具）]]

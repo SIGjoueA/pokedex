@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Floettite
+| nom-tm=Floettenite
+| nom-ja=フラエッテナイト
+| nom-romaji=Furaettenaito
+| nom-en=Floettite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Floettite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Floettite permet à [[Floette]] Fleur Éternelle de [[Méga-Évolution|méga-évoluer]] en [[Méga-Floette]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Floettite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Offerte par [[Boro]]/[[Cety]] après sa défaite lors de la [[Mission (Légendes Pokémon : Z-A)#P039|mission principale 39 : « Le Royale Z-A ∞ »]].
+
+=== {{Jeu|Champions}} ===
+Obtenue en envoyant un [[Floette]] capturé dans {{jeu|LPZA}} dans le jeu.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Floette particulier, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Floette Éternelle de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Floetteonit
+| de-info=Floettite
+| en=Floettite
+| en-info=Floettite
+| es=Floettita
+| es-info=Floettite
+| it=Floettite
+| it-info=Floettite
+| ja=フラエッテナイト
+| ja-romaji=Floettenite
+| ja-info=Floettite
+| ko=플라엣테나이트
+| ko-hangeul=Peulraettenaiteu
+| ko-info=Floettite
+| zh-simplifié=花叶蒂进化石
+| zh-traditionnel=花葉蒂進化石
+| zh-pinyin=Huāyèdì Jìnhuà Shí
+| zh-info=Pierre d'évolution de Floette
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Floetteonit]]
+[[en:Floettite]]
+[[es:Floettita]]
+[[it:Floettite]]
+[[ja:フラエッテナイト]]
+[[zh:花叶蒂进化石（道具）]]

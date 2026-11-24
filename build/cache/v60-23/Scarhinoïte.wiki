@@ -1,0 +1,99 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Scarhinoïte
+| nom-tm=Heracrosnite
+| nom-ja=ヘラクロスナイト
+| nom-romaji=Herakurosunaito
+| nom-en=Heracronite
+| image=Scarhinoïte-PGL.png
+| image-taille=59px
+| légende=Artwork de la Scarhinoïte pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce-->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| prix-achat2=240
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2=[[Méga-Fragment]]s
+}}
+La '''Scarhinoïte''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Elle permet de faire [[Méga-Évolution|méga-évoluer]] [[Scarhino]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est exclusive à {{Jeu|Y}}. Elle se trouve à l'entrée de la [[Forêt de Neuvartault]] entre 20H et 21H, après avoir obtenu l'amélioration du [[Méga-Anneau]].
+
+==== Dans {{Jeu|ROSA}} ====
+Elle se trouve sur le [[Chenal 127]], dans une petite Baie sableuse au sud-est de la zone.
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} ====
+Elle fut distribuée via le code AZUL valable jusqu'au 31 octobre 2017 inclus.
+
+==== Dans {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Récompense du tutoriel de combat « La Méga-Évolution ».
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Scarhino]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Scarhino de méga-évoluer.
+
+== Dans le dessin animé ==
+=== {{série|LH}} ===
+<center><gallery>
+Fichier:LH112 - Scarhinoïte.png|Une Scarhinoïte dans l'épisode [[LH112]].
+</gallery></center>
+
+== Voir aussi ==
+* [[Méga-Scarhino]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Skarabornit]]
+[[en:Heracronite]]
+[[es:Heracrossita]]
+[[it:Heracrossite]]
+[[ja:ヘラクロスナイト]]
+[[zh:赫拉克罗斯进化石（道具）]]

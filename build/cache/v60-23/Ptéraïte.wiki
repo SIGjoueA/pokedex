@@ -1,0 +1,99 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Ptéraïte
+| nom-tm=Pteranite
+| nom-ja=プテラナイト
+| nom-romaji=Puteranaito
+| nom-en=Aerodactylite
+| image=Ptéraïte-PGL.png
+| image-taille=59px
+| légende=Artwork de la Ptéraïte pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| prix-achat2=30 000
+| monnaie-achat2={{P}}
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+| prix-achat3=240
+| prix-achat3-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat3=[[Méga-Fragment]]s
+}}
+La '''Ptéraïte''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Permet de faire [[Méga-Évolution|méga-évoluer]] [[Ptéra]] en [[Méga-Ptéra]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est offerte par un scientifique au [[Bureau d'Étude des Fossiles]] à [[Roche-sur-Gliffe]].
+
+==== Dans {{Jeu|ROSA}} ====
+Elle est trouvable au [[Site Météore]] (nécessite la CS [[Cascade]]).
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+==== {{Jeu|lgpe}} ====
+S'achète à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{p}}.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Ptéra]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de [[Méga-Gemme]]. Elle permet à un [[Ptéra]] de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Ptéra de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Ptéra]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Aerodactylonit]]
+[[en:Aerodactylite]]
+[[es:Aerodactylita]]
+[[it:Aerodactylite]]
+[[ja:プテラナイト]]
+[[zh:化石翼龙进化石（道具）]]

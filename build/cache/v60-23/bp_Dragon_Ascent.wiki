@@ -1,0 +1,310 @@
+{{MoveInfobox
+|n=620
+|name=Dragon Ascent
+|jname=ガリョウテンセイ
+|jtrans=Dragon Ascension
+|jtranslit=Garyō Tensei
+|gameimage=Dragon Ascent IX.png
+|gameimage2=Dragon Ascent IX 2.png
+|gameimagewidth=300
+|type=Flying
+|damagecategory=Physical
+|basepp=5
+|maxpp=8
+|power=120
+|accuracy=100
+|bdesc=
+|gen=VI
+|mtoras=yes
+|mtsm=yes
+|mtusum=yes
+|na=no
+|category6=Beautiful
+|appeal6=6
+|jam6=0
+|cdesc6=A very appealing move, but after using this move, the user is more easily startled.
+|pokefordex=
+|touches=yes
+|target=any
+|protect=yes
+|magiccoat=no
+|snatch=no
+|mirrormove=yes
+|kingsrock=yes
+|flag7=no
+|flag8=no
+|sound=no
+|footnotes=}}
+
+'''Dragon Ascent''' (Japanese: '''ガリョウテンセイ''' ''Dragon Ascension'') is a damage-dealing {{type|Flying}} [[move]] introduced during [[Generation VI]], in {{g|Omega Ruby and Alpha Sapphire}}. It is the [[signature move]] of {{p|Rayquaza}}.
+
+==Effect==
+===Generations VI and VII===
+Dragon Ascent inflicts damage and then lowers the user's {{stat|Defense}} stat and {{stat|Special Defense}} stat by one stage each.
+
+===Generation VIII===
+====Pokémon Sword and Shield====
+In Versions 1.0 to 1.2.1 of {{g|Sword and Shield}}, Dragon Ascent could not be selected in a battle. Starting with Version 1.3.0, it is usable and functions the same as it did in the previous generations.
+
+===Generation IX===
+====Pokémon Legends: Z-A====
+{{LegendsZAMove
+|type=Flying
+|damagecategory=Physical
+|power=120
+|cooldown=20
+|charge-time=20
+}}
+
+===Other effects===
+====Generations VI and VII====
+The player can [[Mega Evolution|Mega Evolve]] any Rayquaza that knows Dragon Ascent. Rayquaza cannot Mega Evolve if it is [[Held item|holding]] a [[Z-Crystal]] or knows the move only through {{m|Mimic}}. In {{g|Omega Ruby and Alpha Sapphire}}, no Rayquaza can Mega Evolve until the Rayquaza in the [[Delta Episode]] has been caught.
+
+Dragon Ascent does not exist in the game data of {{g|X and Y}}. As a result, a Pokémon knowing Dragon Ascent cannot be traded from Pokémon Omega Ruby and Alpha Sapphire to Pokémon X and Y, and if a Pokémon in [[Pokémon Bank]] knows the move it cannot be withdrawn in Pokémon X and Y. The Pokémon must forget the move in order to 
+be sent to X and Y.
+
+====Generation VIII onwards====
+Dragon Ascent no longer enables Mega Evolution.
+
+==Description==
+{{movedesc|flying}}
+{{movedescentry|{{gameabbrev6|ORAS}}|After soaring upward, the user attacks its target by dropping out of the sky at high speeds, although it lowers its own Defense and Sp. Def in the process.}}
+{{movedescentry|{{gameabbrev7|SMUSUMPE}}<br>{{gameabbrev8|SwShBDSPLA}}|After soaring upward, the user attacks its target by dropping out of the sky at high speeds. But it lowers its own Defense and Sp. Def stats in the process.}}
+{{movedescentry|{{gameabbrev9|SV}}|The user attacks the target by dropping out of the sky at high speed. This also lowers the user's Defense and Sp. Def stats.}}
+{{movedescentry|{{gameabbrev9|ZA}}|The user attacks targets by dropping out of the sky at high speed. This also lowers the user's Defense and Sp. Def stats for a short time.}}
+|}
+|}{{left clear}}
+
+==Learnset==
+===By [[Level|leveling up]]===
+{{Movehead/Games|Flying|g1=none|g2=none|g3=none|g4=none|g5=none|g6=none|g7=none|g8=2|g9=2}}
+{{Moveentry/4|0384|Rayquaza|type=Dragon|type2=Flying|1|No Eggs Discovered|No Eggs Discovered|1|1|1|1|STAB='''}}
+{{Movefoot|Flying|4}}
+
+===By [[Move Tutor]]===
+Some Move Tutors will teach Dragon Ascent to a Rayquaza. The Move Tutors are:
+* {{gameabbrev6|ORAS}}: [[Zinnia]]'s grandmother at [[Meteor Falls]].
+* {{gameabbrev7|SMUSUM}}: a man in a red shirt in the [[Pokémon Center]] in [[Seafolk Village]].
+
+{{Movehead/TMGames|Flying|g1=none|g2=none|g3=none|g4=none|g5=none|g8=none|g9=none
+|g6tm=tutor|g6g={{gameabbrev6|ORAS}}
+|g7=1|g7tm=tutor|g7g={{gameabbrev7|SMUSUM}}}}
+{{Moveentry/2|0384|Rayquaza|type=Dragon|type2=Flying|1|No Eggs Discovered|No Eggs Discovered|✔|✔|STAB='''}}
+{{Movefoot|Flying|2}}
+
+===Special move===
+====[[Generation VI]]====
+In [[Pokémon Omega Ruby and Alpha Sapphire]], while Rayquaza does not know Dragon Ascent when the player battles it at [[Sky Pillar]], [[Zinnia]] will automatically teach it Dragon Ascent (replacing {{m|Fly}}) immediately after the player captures it.
+{{Movehead/Special|Flying}}
+{{Moveentry/1|0384|Rayquaza|type=Dragon|type2=Flying|1|No Eggs Discovered|No Eggs Discovered|[[Sky Pillar]] {{p|Rayquaza}}{{sup/6|ORAS}}|STAB='''}}
+{{Movefoot|Flying|1}}
+
+==In other games==
+===[[Pokémon GO]]===
+Dragon Ascent is a Charged Attack that has been available since August 27, 2023. It is required to [[Mega Evolution (GO)|Mega Evolve]] {{p|Rayquaza}}. A [[Meteorite]] is needed to teach Rayquaza Dragon Ascent.
+
+{{GoChargedAttack
+|id=384
+|image=no
+|move=Dragon Ascent
+|type=Flying
+|pow=140
+|energy=50
+|duration=3.5
+|damage_window=3.25 - 3.4
+|pow_trainer=110
+|energy_trainer=45
+|effect={{goboost|-1}} Defense
+|effect_chance=100
+|legacy_users={{MSP/GO|384|Rayquaza}}
+}}{{left clear}}
+
+====Updates====
+;Trainer Battles
+* '''June 2, 2026'''
+** '''Power''': 150 → 110
+** '''Energy cost''': 70 → 45
+
+===[[Pokémon Masters EX]]===
+{| class="roundy" style="margin:auto; background:#{{flying color}}; border:3px solid #{{flying color dark}}; text-align:center"
+|- style="background: #{{flying color light}}"
+! style="width: 100px"|Name
+! style="width: 50px"|{{color2|000|Move category|Category}}
+! style="width: 50px"|Move Gauge
+! style="width: 50px"|MP
+! style="width: 50px"|Base {{color2|000|power}}
+! style="width: 50px"|Max {{color2|000|power}}
+! style="width: 50px"|{{color2|000|Accuracy}}
+! style="width: 70px"|Target
+! style="width: 50px"|Effect tag(s)
+! style="width: 250px"|Description
+! style="width: 280px"|Playable Users
+|- style="background:#fff"
+|Dragon Ascent
+{{statustable|Physical}}
+|4
+|—
+|192
+|230
+|100%
+|An opponent
+|—
+|Lowers the user's Defense and Sp. Def by one stat rank.
+|{{sync|Steven|Rayquaza|Anniversary 2021}} {{shinystar}}<hr>{{sync|Zinnia|Mega Rayquaza}} <small>(Requires power boost)</small>
+|- style="background:#{{flying color dark}}"
+! colspan=12 |{{color2|FFF|Sync move|Sync move(s)}}
+|- style="background: #{{flying color light}}"
+|'''Name'''
+|'''{{color2|000|Move category|Category}}'''
+|colspan="2" |'''State'''
+|'''Base {{color2|000|power}}'''
+|'''Max {{color2|000|power}}'''
+|colspan="2" |'''Target'''
+|'''Effect tag'''
+|'''Description'''
+|'''Playable {{color2|000|Sync pair|sync pair}}'''
+|- style="background:#fff""
+|rowspan=3|Triumph and Glory Dragon Ascent
+| rowspan=3 align="center" style="background:#{{physical color}}"|{{color2|{{physical textcolor}}|Physical move|Physical}}
+|colspan=2|Default
+|rowspan=3|160
+|rowspan=3|192
+|colspan=2|An opponent
+|rowspan=3|—
+|rowspan=2|Become {{me|Rayquaza}} until the end of battle.
+|rowspan=3|{{sync|Steven|Rayquaza|Anniversary 2021}}
+|- style="background:#fff"
+! colspan=2 | 6★ EX
+! colspan=2 rowspan=2 | All opponents
+|- style="background:#fff"
+! colspan=2 | 6★ EX with EX role
+! Implements the following field effect just before the user's sync move is used the first time each battle. Extends the field effect duration only that time.<br>• Flying Zone
+|}
+Notes:
+* {{sync|Steven|Rayquaza|Anniversary 2021}}'s passive {{mas|skill}} {{sk|Downside Up}} makes Dragon Ascent boost their Defense and Sp. Def by one stat rank after use, instead of lowering them.
+* {{sync|Zinnia|Rayquaza}}'s power boost is only accessible through the [[villain event]] [[Team Aqua's Stormy Seas]].
+
+===[[Pokémon Mystery Dungeon series]]===
+Dragon Ascent damages enemies in a 5×5 square in front of the user. It lowers the user's Defense and Sp. Defense by one stage.
+
+Rayquaza can Mega Evolve if it knows Dragon Ascent and has an Awakening [[emera]] or {{DL|Seed|Empowerment Seed}}.
+
+{{MDMoveheader|type=flying}}
+{{MDMoveRow|game=SMD|pow=60|pp=5|ppmax=30|acc=100%|range=Front area (5×5 square)|target=Enemy|cuts=Yes}}
+{{MDMovefoot|type=flying|SMD=yes|RTDX=yes}}
+
+===[[Pokémon Rumble Rush]]===
+{{RumbleRushPhysicalAttack|move=Dragon Ascent|type=Flying
+|image=no
+|stars=5
+|pow=114.927
+|charge=1.3
+|range=Dash
+|hits=1
+|projectiles=1
+|crit=1.5
+|effect=Lower the user's Defense}}
+
+===Description===
+{{movedesc|Flying}}
+{{movedescentry|{{gameabbrevmd|SMD}}|It damages enemies in a wide area in front. But it lowers your Defense and Sp. Def.{{tt|*|Move Summary}}<br>It damages enemies in a wide area in front of you. But it lowers your Defense and Sp. Def. The stats return to normal when you go to the next floor or step on a [[File:IconTileSMD.png]]Wonder Tile.{{tt|*|Move Description}}}}
+|}
+|}{{left clear}}
+
+==In animation==
+===Pokémon animated series===
+{{moveanime|type=flying|exp=yes|gen=After soaring upward, the user attacks its target by dropping out of the sky at high speeds.|image1=Hoopa Mega Rayquaza Dragon Ascent.png|image1p=Shiny Mega Rayquaza|image2=Black Rayquaza Dragon Ascent.png|image2p=Rayquaza|image3=Mega Rayquaza Dragon Ascent.png|image3p=Mega Rayquaza|image4=Mega Black Rayquaza Dragon Ascent.png|image4p=Shiny Mega Rayquaza}}
+{{movep|type=flying|ms=384M|pkmn=Rayquaza|method=Mega Rayquaza flies high into the air. Its body then becomes outlined or covered in a teal or emerald green aura, and it dives into the opponent with great speed.}}
+{{movemid|type=flying|user=Super-ancient Pokémon (XY series)#Rayquaza|user1=Rayquaza (XY series)|startcode=XYS02|startname=Mega Evolution Special II|notes=Debut}}
+{{movemid|type=flying|user=Hoopa (anime)|user1=A Rayquaza summoned by Hoopa|startcode=M18|startname=Hoopa and the Clash of Ages}}
+{{movemid|type=flying|user=Black Rayquaza|user1=Roy's Rayquaza|startcode=HZ136|startname=Stellar Finale}}
+{{movemid|type=flying|user=Rayquaza (Pokémon)|user1=A Rayquaza imagined by the Rising Volt Tacklers|startcode=HZ145|startname=HZ145}}
+{{movemid|type=flying|user=Rayquaza (Pokémon)|user1=A wild Rayquaza|startcode=HZ145|startname=HZ145|notes={{color2|000|Mega Study with Instructor Starmie}} segment}}
+{{movep|type=flying|ms=384|pkmn=Rayquaza|method=Rayquaza flies high into the air. Its body then becomes covered in a teal or light emerald green aura, and it dives into the opponent with great speed.}}
+{{movebtm|type=flying|user=Black Rayquaza|user1=Roy's Rayquaza|startcode=HZ045|startname=From So Far Away}}
+
+===Pokémon Generations===
+{{moveanime|type=flying|exp=yes|gen=After soaring upward, the user attacks its target by dropping out of the sky at high speeds.|image1=Mega Rayquaza Dragon Ascent PG.png|image1p=Mega Rayquaza}}
+{{movep|type=flying|ms=384M|pkmn=Rayquaza|method=Mega Rayquaza flies high into the air. Its body then becomes covered in a green aura, and it dives into the opponent with great speed.}}
+{{movebtm|type=flying|user=Player character|user1=Trainer's Rayquaza|startcode=PG09|startname=The Scoop|notes=Debut}}
+
+==In the manga==
+===Movie adaptations===
+{{movemanga|type=flying|exp=yes|gen=After soaring upward, the user attacks the target by dropping out of the sky at high speed.|image1=Mega Rayquaza Dragon Ascent M18 manga.png|image1p=Mega Rayquaza}}
+{{movep|type=flying|ms=384M|pkmn=Rayquaza|method=Mega Rayquaza releases a shock wave from its body.}}
+{{movebtmManga|type=flying|user=Rayquaza (Pokémon)|user1=A wild Rayquaza|startcode=Hoopa and the Clash of Ages (manga)|startname=Hoopa and the Clash of Ages|notes=Debut}}
+
+===Pokémon Adventures===
+{{movemanga|type=flying|exp=yes|gen=After soaring upward, the user attacks the target by dropping out of the sky at high speed.|image1=Rayquaza Dragon Ascent Adventures.png|image1p=Rayquaza|image2=Mega Rayquaza Dragon Ascent Adventures.png|image2p=Mega Rayquaza}}
+{{movep|type=flying|ms=384|pkmn=Rayquaza|method=Rayquaza glows brightly and rams its body into the opponent.}}
+{{movemidManga|type=flying|user=Super-ancient Pokémon (Adventures)#Rayquaza|user1=Rayquaza (Adventures)|startcode=PS613|startname=PS613|notes=Debut}}
+{{movep|type=flying|ms=384M|pkmn=Rayquaza|method=Mega Rayquaza glows brightly and rams its body into the opponent.}}
+{{movebtmManga|type=flying|user=Super-ancient Pokémon (Adventures)#Rayquaza|user1=Rayquaza (Adventures)|startcode=PAORAS21|startname=Omega Alpha Adventure 21}}
+
+==In other generations==
+===Core series games===
+{{Movegen
+|type=Flying
+|ORAS=ORAS Prerelease Dragon Ascent
+|ORAS2=ORAS Prerelease Dragon Ascent 2
+|genVII=Dragon Ascent VII
+|genVII2=Dragon Ascent VII 2
+|genVIII=Dragon Ascent VIII
+|genVIII2=Dragon Ascent VIII 2
+|ZA=Dragon Ascent ZA
+|ZA2=Dragon Ascent ZA 2
+}}
+
+===Spin-off series games===
+{{Movegen
+|type=Flying
+|PSMD=Dragon Ascent PSMD 2
+|Masters=Dragon Ascent Masters
+}}
+
+==Trivia==
+[[File:Dragon Ascent Smeargle.png|thumb|200px|Smeargle's Dragon Ascent]]
+* The Japanese name of this move literally means "to paint a dragon and dot its eyes" and serves as a metaphor for the finishing touch in a piece of work that gives it "the spark of life". The idiom originated from a legend where {{wp|Zhang Sengyou}}, a Chinese painter, completes the dragons on a mural by dotting their eyes and thus literally bringing them to life; they spring out of the temple wall and fly off. The completed dragons immediately ascended to the heavens after the work was done.
+* Dragon Ascent is the only move with the word "dragon" in its English name that is not {{type|Dragon}}. <!-- Does any other Japanese name for a non-Dragon-type move have word "dragon" in it? -->
+* Because [[Zinnia]] teaches Dragon Ascent to the Rayquaza caught at Sky Pillar in [[Pokémon Omega Ruby and Alpha Sapphire]] to replace {{m|Fly}}, Dragon Ascent is the only move that can replace an HM move in a game in which the move is available as an [[HM]].
+* When used by a Rayquaza which has [[Mega Evolution|Mega Evolved]], this move will play an additional animation before the main animation, and the main animation is also changed slightly.
+* When used by a Pokémon other than Mega Rayquaza (including non-Mega-Evolved Rayquaza), Dragon Ascent will play a cyan blue animation instead of the green animation.
+* When used by a {{Shiny}} Rayquaza in [[Pokémon Sword and Shield]], the animation still displays a normal Rayquaza.
+
+==In other languages==
+{{Langtable|color={{flying color}}|bordercolor={{flying color light}}
+|zh_yue=畫龍點睛 ''{{tt|Waahklùhngdímjīng|Dragon Ascension}}''
+|zh_cmn=畫龍點睛 / 画龙点睛 ''{{tt|Huàlóngdiǎnjīng|Dragon Ascension}}''
+|cs=Dračí vzestup
+|fr=Draco-Ascension<sup>{{gen|VIII}}+</sup><br>Draco Ascension<sup>{{gen|VI}}–{{gen|VII}}</sup>
+|de=Zenitstürmer
+|hi=ड्रैगन असेंट ''Dragon Ascent''
+|id=Terpaan Naga Langit
+|it=Ascesa del Drago
+|ko=화룡점정 ''{{tt|Hwaryong Jeomjeong|Dragon Ascension}}''
+|pl=Wzlot Smoka
+|pt_br=Ascenção{{sic}} do Dragão
+|pt_eu=Ascensão do Dragão
+|ru=Взлёт Дракона ''{{tt|Vzlët Drakona|Dragon's Ascent}}''
+|es_la=Ascenso Dracónico{{tt|*|In-battle messages, animated series}}<!-- (games, [[HZ082]]–present)--><br>Ascen. Dracónico{{tt|*|Move selection}}<!--<br>Ascenso Draco ([[HZ045]])-->
+|es_eu=Ascenso Draco
+|th=ไม้ตายมังกรทะยานฟ้า ''{{tt|Maitai Mangkon Thayanfa|Soaring Dragon's Move}}''
+|tr=Ejderha Yükselişi
+}}
+
+{{Superpower|Flying}}
+{{Project Moves and Abilities notice}}
+[[Category:Beauty moves]]
+[[Category:Signature moves]]
+[[Category:Moves that can lower the user's Defense]]
+[[Category:Moves that can lower the user's Special Defense]]
+[[Category:Moves usable in Pokémon Sword and Shield]]
+[[Category:Moves usable in Pokémon Scarlet and Violet]]
+[[Category:Moves in Pokémon Legends: Z-A]]
+
+[[de:Zenitstürmer]]
+[[es:Ascenso Dracónico/Ascenso Draco]]
+[[fr:Draco-Ascension]]
+[[it:Ascesa del Drago]]
+[[ja:ガリョウテンセイ]]
+[[zh:畫龍點睛（招式）]]

@@ -1,0 +1,133 @@
+{{Infobox Objet
+| nom=Léviatorite
+| nom-tm=Gyaradosnite
+| nom-ja=ギャラドスナイト
+| nom-romaji=Gyaradosunaito
+| nom-en=Gyaradosite
+| image=Léviatorite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Léviatorite pour le [[Pokémon Global Link]].
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| rangement=Objet
+| fonctionnement=tenu
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| prix-achat2=30 000
+| monnaie-achat2={{P}}
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+| prix-achat3=240
+| prix-achat3-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat3=[[Méga-Fragment]]s
+}}
+La '''Léviatorite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Léviatorite permet à [[Léviator]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Léviator]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Léviator de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Léviatorite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+Elle peut être obtenue à [[Mozheim]] entre 20h00 et 21h00, près des cascades (celle du milieu), après amélioration du [[Méga-Anneau]].
+
+;{{Jeu|ROSA}}
+Elle se trouve dans la bouche du [[Medhyèna]] de la Maison du Pêcheur sur la [[Route 123]]. Pour y accéder, il faut passer par le [[Chenal 122]] et donc avoir [[Surf]]. Ensuite, sur la [[Route 123]], le joueur doit aller vers l'ouest en longeant le plus possible le bord nord et utiliser [[Coupe]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}} et {{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+;{{Jeu|lgpe}}
+S'achète à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{p}}.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Récompense du tutoriel de combat « La Méga-Évolution ».
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Léviator, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de Méga-Gemme. Elle permet à un Léviator de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Léviator de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+[[Alain]] trouve une Léviatorite brute dans [[PME01|Pokémon : Méga-Évolution 1]].
+
+La Léviatorite apparaît pour la première fois dans le [[XY133]]. Le [[Léviator de Lysandre|Léviator]] [[chromatique]] de [[Lysandre]] a un collier avec une Léviatorite, qui lui permet de méga-évoluer.
+
+Une autre Léviatorite apparaît dans le [[SL043]]. Le [[Léviator d'Ondine|Léviator]] d'[[Ondine/Pokémon, la série|Ondine]] a une Léviatorite sur son front, qui lui permet de méga-évoluer.
+
+<center><gallery>
+Fichier:PME01 - Léviatorite brute.png|Une Léviatorite brute dans [[PME01|Pokémon : Méga-Évolution 1]].
+Fichier:Léviatorite.png|Une Léviatorite dans l'[[épisode 932]].
+Fichier:SL043 - Léviatorite.png|Une Léviatorite dans l'[[épisode 982]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Garadosnit
+| de-info=Léviatorite
+| en=Gyaradosite
+| en-info=Léviatorite
+| es=Gyaradosita
+| es-info=Léviatorite
+| it=Gyaradosite
+| it-info=Léviatorite
+| ja=ギャラドスナイト
+| ja-romaji=Gyaradosnite
+| ja-info=Léviatorite
+| ko=갸라도스나이트
+| ko-hangeul=Gyaradoseunaiteu
+| ko-info=Léviatorite
+| zh-simplifié=暴鲤龙进化石
+| zh-traditionnel=暴鯉龍進化石
+| zh-pinyin=Bàolǐlóng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Léviator
+}}
+
+== Voir aussi ==
+* [[Méga-Léviator]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Garadosnit]]
+[[en:Gyaradosite]]
+[[es:Gyaradosita]]
+[[it:Gyaradosite]]
+[[ja:ギャラドスナイト]]
+[[zh:暴鲤龙进化石（道具）]]

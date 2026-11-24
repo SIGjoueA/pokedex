@@ -1,0 +1,138 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Gardevoirite
+| nom-tm=Sirnightnite
+| nom-ja=サーナイトナイト
+| nom-romaji=Sānaitonaito
+| nom-en=Gardevoirite
+| image=Gardevoirite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Gardevoirite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| prix-achat2=240
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2=[[Méga-Fragment]]s
+}}
+La '''Gardevoirite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Gardevoirite permet à [[Gardevoir]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Gardevoir]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Gardevoir de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Gardevoirite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+Elle est tenue par le [[Tarsal]] échangé par [[Dianthéa]] dans le restaurant [[Café Soleil]] d'[[Illumis]] après la Ligue.
+
+;{{Jeu|ROSA}}
+Elle est offerte par Sylvie, la cousine de [[Timmy]], à [[Vergazon]], après le combat contre [[Primo-Groudon]]{{Sup|RuO}}/[[Primo-Kyogre]]{{Sup|SaA}}. Pour cela, le joueur doit avoir brisé les rochers du [[Tunnel Mérazon]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+Indisponible durant l'aventure, cette Méga-Gemme fait partie des lots offerts aux participants de la compétition en ligne "Tournoi des petits", avec la [[Lockpinite]] et [[Gallamite]].
+
+Elle fut aussi distribuée via le code POYONG valable jusqu'au 31 octobre 2017 inclus.
+
+;{{Jeu|USUL}}
+Peut être achetée à l'Arbre de Combat pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+* Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P024|LPZA}}.
+* Tenue par le [[Tarsal]] distribué via [[Cadeau Mystère]], en guise de cadeau d'achat du jeu, du 16 octobre 2025 jusqu'au 28 février 2026.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Gardevoir, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Gardevoir de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+Une Gardevoirite apparaît pour la première fois dans le [[XY028]]. Le [[Gardevoir de Dianthéa]] en possède une, sous forme de collier.
+Le [[Gardevoir]] de [[Kimya]] en possède également une, autour de son cou dans le [[Pokémon, le film : Volcanion et la merveille mécanique|film 19]].
+
+<center><gallery>
+Fichier:Gardevoirite.png|Une Gardevoirite dans l'[[épisode 827]].
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+=== Apparitions sur d'autres cartes ===
+La Gardevoirite apparaît sur les cartes suivantes :
+
+{{Liste des cartes d'un sujet secondaire}}
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Guardzvoirnit
+| de-info=Gardevoirite
+| en=Gardevoirite
+| en-info=Gardevoirite
+| es=Gardevoirita
+| es-info=Gardevoirite
+| it=Gardevoirite
+| it-info=Gardevoirite
+| ja=サーナイトナイト
+| ja-romaji=Sirnightnite
+| ja-info=Gardevoirite
+| ko=가디안나이트
+| ko-hangeul=Gadiannaiteu
+| ko-info=Gardevoirite
+| zh-simplifié=沙奈朵进化石
+| zh-traditionnel=沙奈朵進化石
+| zh-pinyin=Shānàiduǒ Jìnhuà Shí
+| zh-info=Pierre d'évolution de Gardevoir
+}}
+
+== Voir aussi ==
+* [[Méga-Gardevoir]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Guardevoirnit]]
+[[en:Gardevoirite]]
+[[es:Gardevoirita]]
+[[it:Gardevoirite]]
+[[ja:サーナイトナイト]]
+[[zh:沙奈朵进化石（道具）]]

@@ -1,0 +1,70 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Magearnite
+| nom-tm=Magearnite
+| nom-ja=マギアナイト
+| nom-romaji=
+| nom-en=Magearnite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Magearnite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Magearnite permet à [[Magearna]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Magearna]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Magearnite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Offerte après avoir donné 999 [[Méga-Fragment|Méga-Fragments]] à [[Bridjet]], lors de la {{Mission|S195|LPZA}}.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par Magearna, elle lui permet de méga-évoluer durant un combat.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Magearnite
+| en-info=Magearnite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=マギアナイト
+| ja-romaji=Magearnite
+| ja-info=Magearnite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Magearnanit]]
+[[en:Magearnite]]
+[[es:Magearnita]]
+[[it:Magearnite]]
+[[ja:マギアナイト]]
+[[zh:玛机雅娜进化石（道具）]]

@@ -1,0 +1,122 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Flagadossite
+| nom-tm=Yadorannite
+| nom-ja=ヤドランナイト
+| nom-romaji=Yadorannaito
+| nom-en=Slowbronite
+| image=Flagadossite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Flagadossite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-8=non
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| prix-achat2=30000
+| monnaie-achat2={{P}}
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+}}
+La '''Flagadossite''' est une [[Méga-Gemme]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Flagadossite permet à [[Flagadoss]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Flagadoss]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Flagadoss de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Flagadossite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Flagadossite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+; {{Jeu|ROSA}}
+Donnée par le vieil homme en échange de quatre [[Sel Tréfonds]] et de quatre [[Coquillage Tréfonds]] provenant de la [[Grotte Tréfonds]].
+
+=== [[Septième génération]] ===
+; {{Jeu|SL}} et {{jeu|usul}}
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+;{{Jeu|lgpe}}
+S'achète à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{p}}.
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+Obtenue automatiquement après avoir vaincu le [[Flagadoss]] [[Méga-Évolution Ferox|Méga-Férox]], lors de la [[Mission (Légendes Pokémon : Z-A)#P011|mission principale 11 : « Flagadoss Méga-Férox »]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|USUL}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Flagadoss]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de [[Méga-Gemme]]. Elle permet à un [[Flagadoss]] de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Flagadoss]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat. Elle n'a aucun effet sur sa [[Flagadoss de Galar|Forme de Galar]].
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Flagadoss de méga-évoluer. Cet objet n'a pas d'effet sur Flagadoss de Galar.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Lahmusnit
+| de-info=Flagadossite
+| en=Slowbronite
+| en-info=Flagadossite
+| es=Slowbronita
+| es-info=Flagadossite
+| it=Slowbroite
+| it-info=Flagadossite
+| ja=ヤドランナイト
+| ja-romaji=Yadorannite
+| ja-info=Flagadossite
+| ko=야도란나이트
+| ko-hangeul=Yadorannaiteu
+| ko-info=Flagadossite
+| zh-simplifié=呆壳兽进化石
+| zh-traditionnel=呆殼獸進化石
+| zh-pinyin=Dāikéshòu Jìnhuà Shí
+| zh-info=Pierre d'évolution de Flagadoss
+}}
+
+== Voir aussi ==
+* [[Méga-Flagadoss]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Lahmusnit]]
+[[en:Slowbronite]]
+[[es:Slowbronita]]
+[[it:Slowbroite]]
+[[ja:ヤドランナイト]]
+[[zh:呆壳兽进化石（道具）]]

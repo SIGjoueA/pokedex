@@ -1,0 +1,105 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Braségalite
+| nom-tm=Bursyamonite
+| nom-ja=バシャーモナイト
+| nom-romaji=Bashāmonaito
+| nom-en=Blazikenite
+| image=Braségalite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Braségalite.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=1 500
+| prix-achat-condition=dans {{Abréviation|ROSA}}
+| prix-achat2=64
+| prix-achat2-condition=dans {{Abréviation|USUL}}
+| monnaie-achat2=PCo
+}}
+La '''Braségalite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Braségalite permet à [[Braségali]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Braségali]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Braségali de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Braségalite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+* Tenue par le [[Liste des Pokémon distribués en 2013#Poussifeu XY|Poussifeu XY]], distribué par [[Cadeau Mystère]] du 12 octobre 2013 au 15 janvier 2014.
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|ROSA}}.
+
+;{{Jeu|ROSA}}
+* Donnée par [[Pierre Rochard]] sur la [[Route 120]] si le [[Pokémon de départ]] choisi est [[Poussifeu]].
+* Achetable auprès du vendeur de pierres sur la [[Route 114]] après avoir vaincu ou capturé [[Groudon]]{{Sup|RuO}}/[[Kyogre]]{{Sup|SaA}}, si le Pokémon de départ choisi n'est pas Poussifeu.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par Cadeau Mystère du 30 mai au 30 juin 2017 avec un code individuel, recevable après avoir combattu au moins trois fois lors du [[Liste des objets distribués en 2017#Jungkite, Braségalite et Laggronite|Défi International d'avril 2017]] du [[Pokémon Global Link]].
+* Distribuée par Cadeau Mystère du 23 juin au 31 octobre 2017 avec le code MATSUBUSA.
+* À recevoir par échange avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-4 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}}
+:Une variété de Méga-Gemme. Tenue par un Braségali, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Braségali de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Lohgocknit
+| de-info=Braségalite
+| en=Blazikenite
+| en-info=Braségalite
+| es=Blazikenita
+| es-info=Braségalite
+| it=Blazikenite
+| it-info=Braségalite
+| ja=バシャーモナイト
+| ja-romaji=Bursyamonite
+| ja-info=Braségalite
+| ko=번치코나이트
+| ko-hangeul=Beonchikonaiteu
+| ko-info=Braségalite
+| zh-traditionnel=火焰雞進化石
+| zh-simplifié=火焰鸡进化石
+| zh-pinyin=Huǒyànjī Jìnhuà Shí
+| zh-info=Pierre d'évolution de Braségali
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Lohgocknit]]
+[[en:Blazikenite]]
+[[es:Blazikenita]]
+[[it:Blazikenite]]
+[[ja:バシャーモナイト]]
+[[zh:火焰鸡进化石（道具）]]

@@ -1,0 +1,76 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Raichuïte Y
+| nom-tm=Raichunite Y
+| nom-ja=ライチュウナイトＹ
+| nom-romaji=
+| nom-en=Raichunite Y
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Raichuïte Y''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Raichuïte Y permet à [[Raichu]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Raichu Y]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Raichuïte Y n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Récompense de la {{Mission|S139|LPZA}}, après avoir vaincu les [[Méga-Raichu X]] et [[Méga-Raichu Y]] [[Pokémon Baron|Barons]].
+
+=== {{Jeu|Champions}} ===
+Distribuée entre le 17 juin et le 02 septembre 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Raichu, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Raichu de méga-évoluer en Méga-Raichu Y. Cet objet n'a pas d'effet sur Raichu d'Alola.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Raichunite Y
+| en-info=Raichuïte Y
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ライチュウナイトＹ
+| ja-romaji=Raichunite Y
+| ja-info=Raichuïte Y
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Raichunit Y]]
+[[en:Raichunite Y]]
+[[es:Raichunita Y]]
+[[it:Raichuite Y]]
+[[ja:ライチュウナイトY]]
+[[zh:雷丘进化石Ｙ（道具）]]

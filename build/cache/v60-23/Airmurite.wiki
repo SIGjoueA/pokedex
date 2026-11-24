@@ -1,0 +1,83 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Airmurite
+| nom-tm=Airmdnite
+| nom-ja=エアームドナイト
+| nom-romaji=Eāmudonaito
+| nom-en=Skarmorite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+L''''Airmurite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Airmurite permet à [[Airmure]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Airmure]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Airmurite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P024|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-2 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Airmure, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Airmure de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Panzaeronite
+| de-info=Airmurite
+| en=Skarmorite
+| en-info=Airmurite
+| es=Skarmorita
+| es-info=Airmurite
+| it=Skarmorite
+| it-info=Airmurite
+| ja=エアームドナイト
+| ja-romaji=Airmdnite
+| ja-info=Airmurite
+| ko=무장조나이트
+| ko-hangeul=Mujangjonaiteu
+| ko-info=Airmurite
+| zh-traditionnel=盔甲鳥進化石
+| zh-simplifié=盔甲鸟进化石
+| zh-pinyin=Kuījiǎniǎo Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Airmure
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Panzaeronit]]
+[[en:Skarmorite]]
+[[es:Skarmorita]]
+[[it:Skarmorite]]
+[[ja:エアームドナイト]]
+[[zh:盔甲鸟进化石（道具）]]

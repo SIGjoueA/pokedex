@@ -1,0 +1,89 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Lucarite Z
+| nom-tm=Lucarionite Z
+| nom-ja=ルカリオナイトZ
+| nom-romaji=Rukarionaito Z
+| nom-en=Lucarionite Z
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Lucarite Z''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Lucarite Z permet à [[Lucario]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Lucario Z]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Lucarite Z n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Récompense de la {{Mission|S197|LPZA}}, après avoir vaincu le [[Méga-Lucario Z]] de [[Cornélia]] à l'[[Hôtel Z]].
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-6 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 09 septembre 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Lucario, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Lucario de méga-évoluer en Méga-Lucario Z.
+
+== Dans le dessin animé ==
+=== {{série|LH}} ===
+<center><gallery>
+Fichier:LH131 - Lucarite Z.png|Une Lucarite Z dans l'épisode [[LH131]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Lucarionit Z
+| de-info=Lucarite Z
+| en=Lucarionite Z
+| en-info=Lucarite Z
+| es=Lucarita Z
+| es-info=Lucarite Z
+| it=Lucarite Z
+| it-info=Lucarite Z
+| ja=ルカリオナイトZ
+| ja-romaji=Lucarionite Z
+| ja-info=Lucarite Z
+| ko=루카리오나이트Z
+| ko-hangeul=Rukarionaiteu Z
+| ko-info=Lucarite Z
+| zh-simplifié=路卡利欧进化石Z
+| zh-traditionnel=路卡利歐進化石Z
+| zh-pinyin=Lùkǎlì'ōu Jìnhuà Shí Z
+| zh-info=Pierre d'évolution de Lucario Z
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Lucarionit Z]]
+[[en:Lucarionite Z]]
+[[es:Lucarita Z]]
+[[it:Lucarite Z]]
+[[ja:ルカリオナイトZ]]
+[[zh:路卡利欧进化石Ｚ（道具）]]

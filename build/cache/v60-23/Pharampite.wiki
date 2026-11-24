@@ -1,0 +1,91 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Pharampite
+| nom-tm=Denryunite
+| nom-ja=デンリュウナイト
+| nom-romaji=Denryuunaito
+| nom-en=Ampharosite
+| image=Pharampite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Pharampite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-8=non
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-revente=
+}}
+La '''Pharampite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Permet de faire [[Méga-Évolution|méga-évoluer]] [[Pharamp]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est offerte par un vieil homme devant l'Antre Néréen dans la [[Baie Azur]], au nord du [[Port Tempères]] (utilisation de [[Surf]] requise en partant de la Route 12).
+
+==== Dans {{Jeu|ROSA}} ====
+Elle se trouve dans le [[New Lavandia]] à gauche de l'entrée.
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} ====
+Cet objet a été distribué sous forme de code à partir du 8 août 2017 aux joueurs ayant participé à un minimum de 3 combats dans le cadre de la compétition « Coupe Faiblesse » du Pokémon Global Link. Le code est valable jusqu'au 29 septembre 2017.
+
+Elle fut aussi distribuée via le code DRACHE valable jusqu'au 31 octobre 2017 inclus.
+
+==== Dans {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+==== Dans {{Jeu|LPZA}} ====
+Obtenue après avoir vaincu [[Pharamp]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la [[Mission (Légendes Pokémon : Z-A)#P023|mission principale 23 : « Pharamp Méga-Ferox »]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Pharamp]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Pharamp de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Pharamp]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Ampharosnit]]
+[[en:Ampharosite]]
+[[es:Ampharosita]]
+[[it:Ampharosite]]
+[[ja:デンリュウナイト]]
+[[zh:电龙进化石（道具）]]

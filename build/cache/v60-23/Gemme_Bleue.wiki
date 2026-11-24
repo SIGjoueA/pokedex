@@ -1,0 +1,188 @@
+{{Infobox Objet
+| nom=Gemme Bleue
+| nom-ja=あいいろのたま
+| nom-tm=Indigo Orb
+| nom-romaji=Ai Iro no Tama
+| nom-en=Blue Orb
+| image=Gemme Bleue-PGL.png
+| image-taille=80
+| légende=Artwork de la Gemme Bleue pour le [[Pokémon Global Link]].
+| gén-3=oui
+| gén-4=oui
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| jeu=Pokémon Rubis et Saphir
+| exclu=oui
+| rangement=Objets rares
+| rangement-condition=Avant {{Abréviation|ROSA}}
+| rangement2=Objets
+| rangement2-condition=Depuis {{Abréviation|ROSA}}
+| fonctionnement=tenu
+| prix-achat=10000
+| prix-achat-condition=Dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+}}
+La '''Gemme Bleue''' est un [[objet rare]] apparu dans la [[troisième génération]], avec {{Jeu|RS}}. Elle est associée à [[Kyogre]], et permet de contrôler le [[Pokémon légendaire]].
+
+Avant {{jeu|ROSA}}, cet objet était appelé « '''Orbe Bleu''' ».
+
+== Utilisation et effet ==
+Dans la [[troisième génération]], l'Orbe Bleu a deux effets assez contraires sur deux Pokémon :
+* il calme [[Kyogre]] (que l'on peut considérer comme le ''véritable'' Pokémon cible de l'Orbe Bleu).
+* il énerve [[Groudon]], l'amenant à déclencher une forte [[ensoleillement|sécheresse]] ;
+
+À noter que dans {{jeu|RSE}}, cet objet ne peut pas être utilisé ''manuellement'' par le joueur, son effet est ainsi déclenché automatiquement pendant l'avancée dans le scénario.
+
+Dans {{jeu|ROSA}}, la Gemme Bleue possède des effets similaires sur les deux Pokémon légendaires :
+* elle permet à [[Kyogre]] de déclencher sa [[Primo-Résurgence]] et sa transformation en [[Primo-Kyogre]]. Le processus de transformation énerve Kyogre et le pousse à déclencher [[Mer Primaire]].
+* elle permet de contre-balancer les pouvoirs de [[Groudon]] et de [[Primo-Groudon]], ainsi que de calmer leur colère.
+
+Contrairement aux [[Méga-Gemme]]s, la Gemme Bleue enclenche la Primo-Résurgence dès l'entrée de Kyogre en combat, lorsqu'il la tient en objet. Le seul moyen de l'empêcher de se transformer est de lui retirer sa Gemme. Cependant, l'objet ne peut pas être retiré en combat quelque soit les moyens utilisés.
+
+{| class="tableaustandard centre"
+|+ Représentations graphiques
+! De {{Abréviation|RS}} à {{Abréviation|HGSS}}
+! De {{Abréviation|NB}} à {{Abréviation|XY}}
+! Depuis {{Abréviation|ROSA}}
+|-
+| [[Fichier:Miniature Orbe Bleu RS.png]]
+| [[Fichier:Miniature Orbe Bleu NB.png]]
+| [[Fichier:Miniature Gemme Bleue SL.png]]
+|}
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 10000 P / -
+USUL / Objets / 10000 P / -
+LPZA / Objets / - / -
+}}
+
+== Impact scénaristique ==
+=== Dans {{Jeu|Ru}} ===
+
+[[Max (Team Magma)|Max]], le chef de la [[Team Magma]], dérobe l'Orbe Bleu au [[Mont Mémoria]]. L'Orbe Rouge est alors remis au joueur.
+
+Dans la [[Caverne Fondmer]], Max essaye de contrôler Groudon grâce à l'Orbe Bleu, mais ne réussit qu'à le réveiller, ce qui déclenche une catastrophe. Grâce à l'Orbe Rouge que le joueur possède, il doit calmer le Pokémon en le combattant dans la [[Grotte Origine]].
+
+=== Dans {{Jeu|Sa}} ===
+
+[[Arthur (Team Aqua)|Arthur]], le chef de la [[Team Aqua]], dérobe l'Orbe Rouge au Mont Mémoria. L'Orbe Bleu est alors remis au joueur.
+
+Dans la Caverne Fondmer, Arthur essaye de contrôler Kyogre grâce à l'Orbe Rouge, mais ne réussit qu'à le réveiller, ce qui déclenche une catastrophe. Grâce à l'Orbe Bleu que le joueur possède, il doit calmer le Pokémon en le combattant dans la Grotte Origine.
+
+=== Dans {{Jeu|E}} ===
+
+À la première arrivée du joueur au Mont Mémoria, Arthur vole l'Orbe Rouge. La vieille dame dit ensuite au joueur que l'Orbe Bleu a aussi été volé. Max est le responsable de cet acte.
+
+Dans la [[Planque Magma]] au [[Mont Chimnée]], le joueur voit [[Max (Team Magma)|Max]] utiliser l'Orbe Bleu. Il réveille alors Groudon qui était endormi. De même, dans la Caverne Fondmer, Arthur utilise l'Orbe Rouge. Il réveille alors [[Kyogre]] qui était lui aussi endormi.
+
+Alors que la tempête fait rage, les deux [[Pokémon légendaire]]s se combattent à [[Atalanopolis]].
+
+=== Dans {{Jeu|HG}} ===
+
+Quand le joueur a battu [[Red (jeux vidéo)|Red]] au [[Mont Argenté]], [[M. Pokémon]] le lui donne pour capturer [[Kyogre]] dans la [[Tour Enfouie]].
+
+=== Dans {{jeu|RuO}} ===
+
+Après l'échec de son plan au [[Mont Chimnée]], [[Max (Team Magma)|Max]], leader de la [[Team Magma]], découvre l'existence de la [[Gemme Rouge]] et la vole au [[Mont Mémoria]]. Les deux gardiens remettent la Gemme Bleue au [[joueur]], avant qu'il ne se lance à la poursuite des criminels.
+
+Après le réveil de [[Groudon]], le joueur est chargé d'entrer dans la [[Grotte Origine]] d'[[Atalanopolis]], afin de calmer le Pokémon. Grâce au pouvoir de la Gemme, et du [[Scaph. Magma]], le joueur parvient à approcher Groudon et à monter sur son dos, tandis que ce dernier se dirige vers le cœur de [[Hoenn]]. Après son combat contre [[Primo-Groudon]], le joueur conserve la Gemme Bleue avec lui.
+
+=== Dans {{jeu|SaA}} ===
+
+Après l'échec de son plan au [[Mont Chimnée]], [[Arthur (Team Aqua)|Arthur]], leader de la [[Team Aqua]], découvre l'existence de la Gemme Bleue et la vole au [[Mont Mémoria]]. Ayant parvenu à découvrir [[Kyogre]] au fond de la [[Caverne Fondmer]], Arthur utilise le pouvoir de la Gemme Bleue pour le réveiller, et déclencher le processus de la [[Primo-Résurgence]]. Cependant, Kyogre s'énerve et finit par fuir, échappant complètement au contrôle d'Arthur.
+
+Après que le joueur est parvenu à calmer le Pokémon ancestral dans la [[Grotte Origine]] d'[[Atalanopolis]], Arthur reconnaît la puissance du joueur et décide de lui offrir la Gemme Bleue, estimant qu'il sera plus apte à contrôler Kyogre que lui.
+
+== Localisation ==
+=== [[Troisième génération]] ===
+* Dans {{jeu|Sa}}, l'Orbe Bleu est gardé par un couple au sommet du [[Mont Mémoria]]. La vieille dame le donne après le vol de l'Orbe Rouge.
+=== [[Quatrième génération]] ===
+* Dans {{jeu|HG}}, l'Orbe Bleu est donné par [[M. Pokémon]] après avoir vaincu la Ligue, sur la [[Route 30]].
+=== [[Sixième génération]] ===
+* Dans ''[[Pokémon Rubis Oméga]]'', la Gemme Bleue est donnée par la vieille dame du [[Mont Mémoria]], après le vol de la [[Gemme Rouge]].
+* Dans ''[[Pokémon Saphir Alpha]]'', la Gemme Bleue est donnée par [[Arthur (Team Aqua)|Arthur]] après le combat contre [[Primo-Kyogre]].
+
+=== [[Septième génération]] ===
+* Dans {{Jeu|SL}} et {{Jeu|USUL}}, la Gemme Bleue peut être achetée à Antique et Chic, pour 10 000 {{P}} dans le centre commercial d'[[Ekaeka]], tout comme la [[Gemme Rouge]].
+
+=== [[Neuvième génération]] ===
+* Dans {{jeu|LPZA}}, la Gemme Bleue est obtenue après avoir vaincu [[Primo-Kyogre]] [[Méga-Évolution Ferox|Ferox]] lors de la {{Mission|E014|LPZA}}.
+== Descriptions ==
+;{{Jeu|RSE}}
+:Un globe bleu lumineux censé abriter un pouvoir antique.
+;{{Jeu|HG}}
+:Un orbe céruléen dont on dit qu'il a un lien très étroit avec les légendes de [[Hoenn]].
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une gemme céruléenne dont on dit qu'elle a un lien très étroit avec les légendes de [[Hoenn]].
+
+== Dans les dessins animés ==
+=== ''[[Pokémon, la série]]'' ===
+L'Orbe Bleu apparaît dans l'[[AG097]]. [[Max (Team Magma)|Max]] est en possession de l'Orbe, et il explique au [[Pokégroupe]] qu'il souhaite s'en servir, afin de prendre temporairement le contrôle de [[Groudon]]. Pendant ce temps, [[Sarah]] a infiltré la base des Magma, et parvient à libérer [[Kyogre]]. Dans la confusion causée par la libération du légendaire, [[Pikachu de Sacha|Pikachu]] s'empare de l'Orbe Bleu et se retrouve possédé par celui-ci. Pikachu gagne ainsi en puissance, mais devient fou furieux.
+
+Dans l'[[AG098]], on apprend que Groudon a délibérément fait fusionner l'Orbe Bleu avec Pikachu, afin de se servir de lui pour se libérer du sous-marin de la [[Team Aqua]]. Après avoir été libéré, Groudon commence à combattre Kyogre. Une fois ce-dernier vaincu, l'Orbe Bleu sort du corps de Pikachu ; et s'élève dans le ciel en compagnie de l'[[Orbe Rouge]], qui était dans le corps d'[[Arthur (Team Aqua)|Arthur]]. Les deux objets se détruisent mutuellement, empêchant ainsi tout nouveau contrôle sur les deux Pokémon légendaires.
+
+<center><gallery>
+Fichier:Orbe Bleu animé.png|L'Orbe Bleu dans l'[[épisode 371]].
+</gallery></center>
+
+=== ''[[Pokémon Générations]]'' ===
+L'Orbe Bleu apparaît dans l'épisode ''[[PG08|La caverne]]''. Au fond de la [[Caverne Fondmer]], [[Arthur (Team Aqua)|Arthur]] et des [[Sbire de la Team Aqua|Sbires de la Team Aqua]] sont à la recherche du Pokémon légendaire, [[Kyogre]]. Une fois trouvé, Arthur le réveille avec l'Orbe Bleu, en ignorant les avertissements de [[Sarah]]. Sûr de lui, Arthur assure qu'il peut contrôler le légendaire avec l'Orbe, et lui permettre de se transformer en sa forme originelle. Pour prouver ses paroles, Arthur jette l'Orbe Bleu vers Kyogre, qui brille d'une intense lumière et [[Primo-Résurgence|transforme]] le légendaire en [[Primo-Kyogre]].
+
+<center><gallery widths="200px">
+Fichier:PG08 - Orbe Bleu.png|L'Orbe Bleu.<br />(épisode ''[[PG08|La caverne]]'')
+</gallery></center>
+== Dans d'autres langues ==
+{| class="tableaustandard centre"
+! Langue
+! Nom
+! {{Infobulle|Traduction|Francisation}}
+|-
+| [[Bulbapedia|Anglais]]
+| [[:en:Blue Orb|Blue Orb]]
+| Orbe Bleu
+|-
+| [[Pokémon Wiki|Japonais]]
+| [[:ja:あいいろのたま|あいいろのたま]]<br /><small>''Ai Iro no Tama''</small>
+| Orbe Indigo
+|-
+| rowspan="2" | [[PokéWiki|Allemand]]
+| [[:de:Blaue Kugel|Blaue Kugel]]{{Sup|Avant {{Abréviation|ROSA}}}}
+| Boule Bleue
+|-
+| [[:de:Blauer Edelstein|Blauer Edelstein]]{{Sup|Depuis {{Abréviation|ROSA}}}}
+| Gemme Bleue
+|-
+| rowspan="2" | [[Pokémon Central|Italien]]
+| [[:it:Sfera Blu|Sfera Blu]]{{Sup|Avant {{Abréviation|ROSA}}}}
+| Sphère Bleue
+|-
+| [[:it:Gemma blu|Gemma Blu]]{{Sup|Depuis {{Abréviation|ROSA}}}}
+| Gemme Bleue
+|-
+| rowspan="2" | [[WikiDex|Espagnol]]
+| [[:es:Esfera Azul|Esfera Azul]]{{Sup|Avant {{Abréviation|ROSA}}}}
+| Sphère Bleue
+|-
+| [[:es:Prisma azul|Prisma Azul]]{{Sup|Depuis {{Abréviation|ROSA}}}}
+| Prisme Bleu
+|-
+| [[52Poké Wiki|Chinois]]
+| [[:zh:靛蓝色宝珠（道具）|靛蓝色宝珠]]<br /><small>''Diànlánsè Bǎozhū''</small>
+| Orbe Indigo
+|}
+== Voir aussi ==
+* [[Kyogre]]
+* [[Primo-Kyogre]]
+* [[Gemme Rouge]]
+
+{{Bandeau Inventaire}}
+
+[[de:Blauer Edelstein]]
+[[en:Blue Orb]]
+[[es:Prisma Azul]]
+[[it:Gemma blu]]
+[[ja:あいいろのたま]]
+[[zh:靛蓝色宝珠（道具）]]

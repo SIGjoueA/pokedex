@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Golgopathite
+| nom-tm=Gamenodesnite
+| nom-ja=ガメノデスナイト
+| nom-romaji=Gamenodesunaito
+| nom-en=Barbaracite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Golgopathite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Golgopathite permet à [[Golgopathe]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Golgopathe]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Golgopathite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue automatiquement après avoir vaincu le [[Golgopathe]] [[Méga-Évolution Ferox|Méga-Férox]], lors de la [[Mission (Légendes Pokémon : Z-A)#P022|mission principale 22 : « Golgopathe Méga-Férox »]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Golgopathe, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Golgopathe de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Thanathoranit
+| de-info=Golgopathite
+| en=Barbaracite
+| en-info=Golgopathite
+| es=Barbaraclita
+| es-info=Golgopathite
+| it=Barbaraclite
+| it-info=Golgopathite
+| ja=ガメノデスナイト
+| ja-romaji=Gamenodesnite
+| ja-info=Golgopathite
+| ko=거북손데스나이트
+| ko-hangeul=Geobuksondeseunaiteu
+| ko-info=Golgopathite
+| zh-simplifié=龟足巨铠进化石
+| zh-traditionnel=龜足巨鎧進化石
+| zh-pinyin=Guīzújùkǎi Jìnhuà Shí
+| zh-info=Pierre d'évolution de Golgopathe
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Thanathoranit]]
+[[en:Barbaracite]]
+[[es:Barbaraclita]]
+[[it:Barbaraclite]]
+[[ja:ガメノデスナイト]]
+[[zh:龟足巨铠进化石（道具）]]

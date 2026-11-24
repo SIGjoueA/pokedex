@@ -1,0 +1,72 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Zeraorite
+| nom-tm=Zeraoranite
+| nom-ja=ゼラオラナイト
+| nom-romaji=
+| nom-en=Zeraorite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Zeraorite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Zeraorite permet à [[Zeraora]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Zeraora]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Zeraorite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Zeraora|Zeraora]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|EX003|LPZA}}.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par Zeraora, elle lui permet de méga-évoluer durant un combat.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Zeraorite
+| en-info=Zeraorite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ゼラオラナイト
+| ja-romaji=Zeraoranite
+| ja-info=Zeraorite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Zeraoranit]]
+[[en:Zeraorite]]
+[[es:Zeraoranita]]
+[[it:Zeraorite]]
+[[ja:ゼラオラナイト]]
+[[zh:捷拉奥拉进化石（道具）]]

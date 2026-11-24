@@ -1,0 +1,122 @@
+{{Infobox Capacité
+| nom=Draco-Ascension
+| nom-en=Dragon Ascent
+| nom-ja=ガリョウテンセイ
+| nom-tm=Garyō Tensei
+| image=Draco-Ascension EV.mp4{{!}}300px
+| légende=Draco-Ascension dans {{jeu|EV}}.
+| puissance=120
+| précision=100
+| pp=5
+| type=Vol
+| catégorie=Physique
+| génération=6
+| cible=adversaire
+| effet-terrain=aucun
+| contact=oui
+| abri=oui
+| saisie=non
+| reflet-magik=non
+| poudre-claire=oui
+| roche-royale=oui
+| coup-critique-élevé=
+| priorité=0
+| sonore=non
+| donneur-rosa=[[Mont Sélénite]] après l'épisode Delta
+| donneur-sl=[[Centre Pokémon]] du [[Village Flottant]]
+| donneur-usul=[[Centre Pokémon]] du [[Village Flottant]]
+| donneur-eb=N'importe quel [[Centre Pokémon]] de [[Galar]]
+| concours-live-type=Beauté
+| concours-live-charme=6
+| concours-live-blocage=0
+| concours-live-description=Une Démonstration très plaisante, mais le Pokémon sera aisément effrayé par la suite.
+}}
+'''Draco-Ascension''' ('''Draco Ascension''' avant {{Jeu|EB}}) est une capacité de type [[Vol (type)|Vol]] apparue dans {{Jeu|ROSA}}. C'est également la [[capacité signature]] de [[Rayquaza]] lui permettant de méga-évoluer en [[Méga-Rayquaza]].
+
+== Effet ==
+{{Générations|6|Effet}}
+Draco-Ascension inflige des dégâts à la cible puis diminue la [[Défense]] et la [[Statistique#Défense Spéciale|Défense Spéciale]] du lanceur d'un niveau.
+
+En sixième et septième génération, avoir cette capacité dans son [[moveset]] permet à Rayquaza de [[Méga-Évolution|méga-évoluer]]. L'animation est différente si Rayquaza a méga-évolué ou non.
+
+Draco-Ascension n'existe pas sous forme de [[CT|capsule]], et est enseignée par divers PNJ [[donneur de capacités]] selon les jeux : [[Amaryllis]] puis sa grand-mère dans {{Jeu|ROSA}}, un vieil homme au [[Centre Pokémon]] du [[Village Flottant]] (dans {{Jeu|SL}} et {{Jeu|USUL}}), l'homme situé au comptoir de gauche des [[Centre Pokémon]] dans {{Jeu|EB}}...
+
+Il existe des attaques à l'effet similaire : [[Close Combat]] et [[Assaut Frontal]].
+
+=== Capacité Dynamax ===
+Quand Draco-Ascension est utilisée comme [[capacité Dynamax]], elle devient [[Aéromax]] et atteint alors une puissance de 140.
+
+=== Descriptions ===
+;{{Jeu|EB}} et {{Jeu|DEPS}}
+:Le Pokémon s'abat à toute vitesse sur la cible depuis les hautes couches de l'atmosphère. Baisse la Défense et la Défense Spéciale du lanceur.
+;{{Jeu|EV}}
+:Le Pokémon s'abat à toute vitesse sur la cible depuis les hautes couches de l'atmosphère. Baisse la Défense et la Défense Spéciale du lanceur.
+;{{Jeu|LPZA}}
+:Le lanceur s'abat à toute vitesse sur la cible depuis les cieux. Baisse la Défense et la Défense Spéciale du lanceur pendant un court instant.
+
+== [[Pokémon (créature)|Pokémon]] apprenant la capacité ==
+{{Générations|6|Pokémon apprenant la capacité}}
+=== [[Huitième génération]] ===
+
+==== Par montée en [[niveau]] ====
+{{#invoke:Capacité|niveau|
+Rayquaza / Départ
+}}
+
+=== [[Neuvième génération]] ===
+
+==== Par montée en [[niveau]] ====
+{{#invoke:Capacité|niveau|
+Rayquaza / Départ
+}}
+
+== Représentations antérieures ==
+{{#invoke:Représentations antérieures|capacite|ROSA/USUL/EB}}
+
+== Dans les dessins animés ==
+=== {{série|PS}} ===
+
+<center><gallery perrow="4">
+Méga-Rayquaza Draco Ascension.png|[[Méga-Rayquaza]]
+</gallery></center>
+
+=== {{série|LH}} ===
+
+<center><gallery perrow="4">
+LH045 - Rayquaza Draco-Ascension.png|[[Rayquaza de Rhod|Rayquaza]]
+</gallery></center>
+
+== Dans d'autres langues ==
+{| class="tableaustandard vol centre"
+! Langue
+! Nom
+! Traduction
+|-
+| [[Bulbapedia|Anglais]] || [[:en:Dragon Ascent (move)|Dragon Ascent]] || rowspan="2" | Ascension Dragon
+|-
+| [[Pokémon Wiki|Japonais]]
+| [[:ja:ガリョウテンセイ|ガリョウテンセイ]]<br /><small>''Garyō Tensei''</small>
+|-
+| [[PokéWiki|Allemand]] || [[:de:Zenitstürmer|Zenitstürmer]] || Attaquant Zénith
+|-
+| [[Pokémon Central|Italien]] || [[:it:Ascesa del Drago|Ascesa del Drago]] || Ascension Dragon
+|-
+| [[WikiDex|Espagnol]] || [[:es:Ascenso Draco|Ascenso Draco]] || Draco Ascension
+|-
+| [[52Poké Wiki|Chinois]]
+| [[:zh:畫龍點睛（招式）|畫龍點睛]]<br /><small>''Huàlóngdiǎnjīng''</small>
+| Dessin Dragon Final
+|}
+{{DEFAULTSORT:Draco Ascension}}
+{{Bandeau Attaquedex}}
+
+[[Catégorie:Capacité pouvant baisser la Défense du lanceur]]
+[[Catégorie:Capacité pouvant baisser la Défense Spéciale du lanceur]]
+[[Catégorie:Capacité signature]]
+
+[[de:Zenitstürmer]]
+[[en:Dragon Ascent (move)]]
+[[es:Ascenso Dracónico/Ascenso Draco]]
+[[it:Ascesa del Drago]]
+[[ja:ガリョウテンセイ]]
+[[zh:畫龍點睛（招式）]]

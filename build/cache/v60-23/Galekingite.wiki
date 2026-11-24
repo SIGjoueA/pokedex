@@ -1,0 +1,126 @@
+{{Infobox Objet
+| nom=Galekingite
+| nom-tm=Bossgodoranite
+| nom-ja=ボスゴドラナイト
+| nom-romaji=Bosugodoranaito
+| nom-en=Aggronite
+| image=Galekingite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Galekingite pour le [[Pokémon Global Link]].
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+| rangement=Objet
+| fonctionnement=tenu
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| prix-achat2=360
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2=[[Méga-Fragment]]s
+}}
+La '''Galekingite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Galekingite permet à [[Galeking]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Galeking]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Galeking de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Galekingite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / - / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Cet objet est exclusif à {{Jeu|Y}} mais peut être échangé vers {{Jeu|X}}.
+
+Après avoir battu la Ligue et obtenu l'amélioration du [[Méga-Anneau]], il faut entrer dans l'[[Arène de Relifac-le-Haut]]. Ensuite, si le joueur escalade la paroi en face de lui, puis la paroi de droite, il peut trouver la [[Méga-Gemme]] au bout du chemin entre 20h00 et 21h00.
+
+==== Dans {{Jeu|ROSA}} ====
+Donnée par un homme après avoir utilisé [[Éclate-Roc]] dans le [[Tunnel Mérazon]] en venant de [[Vergazon]].
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} ====
+Elle fut distribuée par Cadeau Mystère via le code '''SABLEVOLANT''' à partir du 21 juillet 2017 et valable jusqu'au 31 octobre 2017 inclus.
+
+==== Dans {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+==== {{Jeu|LPZA}} ====
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P019|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Récompense du tutoriel de combat « La Méga-Évolution ».
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Galeking]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Galeking de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+Une Galekingite apparaît pour la première fois dans le [[SL089]]. Le [[Galeking]] de [[Gozu]] en possède une, sur sa tête, qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<center><gallery>
+Fichier:Galekingite animé.png|Une Galekingite dans l'[[épisode 1028]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Stollossnit
+| de-info=Galekingite
+| en=Aggronite
+| en-info=Galekingite
+| es=Aggronita
+| es-info=Galekingite
+| it=Aggronite
+| it-info=Galekingite
+| ja=ボスゴドラナイト
+| ja-romaji=Bossgodoranite
+| ja-info=Galekingite
+| ko=보스로라나이트
+| ko-hangeul=Boseuroranaiteu
+| ko-info=Galekingite
+| zh-simplifié=波士可多拉进化石
+| zh-traditionnel=波士可多拉進化石
+| zh-pinyin=Bōshìkěduōlā Jìnhuà Shí
+| zh-info=Pierre d'évolution de Galeking
+}}
+
+== Voir aussi ==
+* [[Méga-Galeking]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Stollossnit]]
+[[en:Aggronite]]
+[[es:Aggronita]]
+[[it:Aggronite]]
+[[ja:ボスゴドラナイト]]
+[[zh:波士可多拉进化石（道具）]]

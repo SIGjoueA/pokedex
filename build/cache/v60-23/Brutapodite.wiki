@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Brutapodite
+| nom-tm=Pendronite
+| nom-ja=ペンドラナイト
+| nom-romaji=Pendoranaito
+| nom-en=Scolipite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Brutapodite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Brutapodite permet à [[Brutapode]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Brutapode]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Brutapodite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P024|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Brutapode, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Brutapode de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Cerapendranit
+| de-info=Brutapodite
+| en=Scolipite
+| en-info=Brutapodite
+| es=Scolipedita
+| es-info=Brutapodite
+| it=Scolipedite
+| it-info=Brutapodite
+| ja=ペンドラナイト
+| ja-romaji=Pendronite
+| ja-info=Brutapodite
+| ko=펜드라나이트
+| ko-hangeul=Pendeuranaiteu
+| ko-info=Brutapodite
+| zh-simplifié=蜈蚣王进化石
+| zh-traditionnel=蜈蚣王進化石
+| zh-pinyin=Wúgōngwáng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Brutapode
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Cerapendranit]]
+[[en:Scolipite]]
+[[es:Scolipedita]]
+[[it:Scolipedite]]
+[[ja:ペンドラナイト]]
+[[zh:蜈蚣王进化石（道具）]]

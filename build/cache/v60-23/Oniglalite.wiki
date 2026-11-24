@@ -1,0 +1,80 @@
+{{Infobox Objet
+| nom=Oniglalite
+| nom-tm=Onigohrinite
+| nom-ja=オニゴーリナイト
+| nom-romaji=Onigōrinaito
+| nom-en=Glalitite
+| image=Oniglalite-PGL.png
+| image-taille=59px
+| légende=Artwork de l'Oniglalite pour le [[Pokémon Global Link]].
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+L''''Oniglalite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Permet de faire [[Méga-Évolution|méga-évoluer]] [[Oniglali]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|démo-ROSA}} ====
+* Dans les versions autres que japonaises, cet objet est tenu par un [[Oniglali]] que le joueur doit capturer à la fin de la première quête.
+
+==== Dans {{Jeu|ROSA}} ====
+Obtenue dans la [[Grotte Tréfonds]] à marée basse (de 3h00 à 8h59 et de 15h00 à 20h59, nécessite le [[Bicyclette|vélo de course]]), en se rendant dans la zone glacée. Elle peut également être obtenue en transférant l'[[Oniglali]] de [[Pokémon Rubis Oméga et Saphir Alpha : Version démo spéciale]].
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P014|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Oniglali]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Oniglali de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Oniglali]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Firnontornit]]
+[[en:Glalitite]]
+[[es:Glalita]]
+[[it:Glalite]]
+[[ja:オニゴーリナイト]]
+[[zh:冰鬼护进化石（道具）]]

@@ -1,0 +1,78 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Roitiflamite
+| nom-tm=
+| nom-ja=エンブオナイト
+| nom-romaji=Enbuonite
+| nom-en=Emboarite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=100 000
+| prix-achat-condition=
+| monnaie-achat={{P}}
+}}
+La '''Roitiflamite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Roitiflamite permet à [[Roitiflam]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Roitiflam]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Roitiflamite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 100000 P / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+* Offerte par [[A.Z.]] après la première réunion stratégique de la [[Team MZ]], lors de la [[Mission (Légendes Pokémon : Z-A)#P010|mission principale 10 : « Les secrets de la Méga-Évolution »]], si [[Gruikui]] est le [[Pokémon de départ]] choisi.
+* Peut être achetée à la boutique [[Le Joyau de Kalos]] contre 100 000 {{P}}, après avoir terminé l'histoire principale, si Gruikui n'est pas le Pokémon de départ choisi.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-1 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Roitiflam, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Roitiflam de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Emboarite
+| en-info=Roitiflamite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=エンブオナイト
+| ja-romaji=Enbuonite
+| ja-info=Roitiflamite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Flambirexonit]]
+[[en:Emboarite]]
+[[es:Emboarita]]
+[[it:Emboarite]]
+[[ja:エンブオナイト]]
+[[zh:炎武王进化石（道具）]]

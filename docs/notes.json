@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.23",
+  "d": "2026-11-24",
+  "l": [
+   "Fiches Méga et Primo : « Où le trouver » indique maintenant, jeu par jeu, où obtenir l’objet requis (Méga-Gemme, Gemme Bleue ou Gemme Rouge) : lieu, version (X ou Y, Rubis Oméga ou Saphir Alpha), conditions (après la Ligue, entre 20 h et 21 h, Pokémon de départ, prix en ₽, PCo ou Méga-Fragments, mission de Z-A…). Source : Poképédia.",
+   "Couvert : X / Y, Rubis Oméga / Saphir Alpha, Soleil / Lune, Ultra-Soleil / Ultra-Lune, Let’s Go et Légendes Pokémon : Z-A (Méga-Dimension compris). Les distributions et événements limités dans le temps sont grisés.",
+   "Méga-Rayquaza : pas de Méga-Gemme, il lui faut la capacité Draco Ascension (ROSA, Soleil / Lune, USUL), avec le lieu où elle est enseignée.",
+   "Noms officiels corrigés : Gemme Bleue et Gemme Rouge (et non plus Orbe Bleu / Rouge) ; la Heatranite de Méga-Heatran a son nom."
+  ]
+ },
+ {
   "v": "v60.22",
   "d": "2026-11-24",
   "l": [

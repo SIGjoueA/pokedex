@@ -1,0 +1,92 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Dracolossite
+| nom-tm=Kairyunite
+| nom-ja=カイリュナイト
+| nom-romaji=Kairyunaito
+| nom-en=Dragoninite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Dracolossite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Dracolossite permet à [[Dracolosse]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Dracolosse]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Dracolossite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue automatiquement après avoir vaincu le [[Dracolosse]] [[Méga-Évolution Ferox|Méga-Férox]], lors de la [[Mission (Légendes Pokémon : Z-A)#P032|mission principale 32 : « Dracolosse Méga-Férox »]].
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 2 du Pass de combat de la saison M-1 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Dracolosse, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Dracolosse de méga-évoluer.
+
+== Dans les dessins animés ==
+=== {{série|LH}} ===
+[[Fichier:LH107 - Méga-Évolution de Dracolosse.png|right|thumb|La Dracolossite dans {{série|LH}}.]]
+La Dracolossite apparaît pour la première dans l'épisode [[LH107]]. Elle est visible devant le [[Dracolosse d'Ult]] lorsque ce [[Ult|dernier]] active la [[Méga-Évolution]] de son Pokémon pour la première fois. La Dracolossite réapparaît lorsqu'Ult utilise la Méga-Évolution de son Dracolosse contre les [[Explorateurs]], dans l'épisode [[LH110]].
+{{clear}}
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Dragoranit
+| de-info=Dracolossite
+| en=Dragoninite
+| en-info=Dracolossite
+| es=Dragonitita
+| es-info=Dracolossite
+| it=Dragoninite
+| it-info=Dracolossite
+| ja=カイリュナイト
+| ja-romaji=Kairyunite
+| ja-info=Dracolossite
+| ko=망나뇽나이트
+| ko-hangeul=Mangnanyongnaiteu
+| ko-info=Dracolossite
+| zh-simplifié=快龙进化石
+| zh-traditionnel=快龍進化石
+| zh-pinyin=Kuàilóng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Dracolosse
+}}
+
+== Anecdote ==
+* La première apparition officielle de la Dracolossite dans un média de la [[Pokémon (licence)|licence]] est l'épisode [[LH107]] de {{série|LH}}. En effet, il a été diffusé pour la première fois au Japon le 22 août 2025, soit presque deux mois avant la sortie de {{jeu|LPZA}}.
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Dragoranit]]
+[[en:Dragoninite]]
+[[es:Dragonitita]]
+[[it:Dragonitite]]
+[[ja:カイリュナイト]]
+[[zh:快龙进化石（道具）]]

@@ -1,0 +1,130 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Florizarrite
+| nom-tm=Fushigibanite
+| nom-ja=フシギバナイト
+| nom-romaji=Fushigibanaito
+| nom-en=Venusaurite
+| image=Florizarrite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Florizarrite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-revente=
+| prix-achat-diff=S'achète pour 10 000 {{p}} (au minimum) dans {{jeu|xy}}, puis est non achetable dans {{jeu|rosa}}, {{jeu|sl}} et {{jeu|usul}}
+| prix-revente-diff=N'est jamais revendable
+}}
+La '''Florizarrite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Florizarrite permet à [[Florizarre]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Florizarre]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Florizarre de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Florizarrite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / Variable / - / Entre 10&nbsp;000 et 100&nbsp;000&nbsp;{{P}} selon le [[Style]].
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / - / -
+LGPE / Poche de Combat / - / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+* La Florizarrite est offerte par le [[Professeur Platane]] en même temps que [[Bulbizarre]].
+* Vendue dans le magasin [[Le Joyau de Kalos]] à [[Illumis]] par un homme près du comptoir (si le joueur a choisi [[Salamèche]] ou [[Carapuce]] auprès du Professeur Platane). Le prix varie de 1 000 000 {{P}} à 10 000 {{P}} selon le niveau de style du joueur.
+
+==== Dans {{Jeu|ROSA}} ====
+Elle se trouve dans les [[hautes herbes]] devant la maison de la [[Route 119]], après la capture de Kyogre/Groudon.
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Elle est donnée en même temps que la [[Dracaufite X]], la [[Dracaufite Y]] et la [[Tortankite]] par [[Red]] après l'avoir battu en Mode Solo à l'[[Arbre de Combat]].
+
+==== {{Jeu|lgpe}} ====
+Donnée par [[Blue]] à [[Bourg Palette]], après avoir obtenu 7 Badges.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Florizarre|Florizarre]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|P029|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Florizarre, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de Méga-Gemme. Elle permet à un Florizarre de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Florizarre de méga-évoluer.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon : Méga-Évolution]]'' ===
+La Florizarrite apparaît pour la première fois dans [[PME04|Pokémon : Méga-Évolution 4]]. Elle est attachée sur une bande placée autour à la fleur de [[Florizarre]], qui lui permet de [[Méga-Évolution|méga-évoluer]].
+
+<center><gallery>
+Fichier:Florizarrite Pokémon Méga-Évolution.png|Une Florizarrite dans [[PME04|Pokémon : Méga-Évolution 4]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Bisaflornit
+| de-info=Florizarrite
+| en=Venusaurite
+| en-info=Florizarrite
+| es=Venusaurita
+| es-info=Florizarrite
+| it=Venusaurite
+| it-info=Florizarrite
+| ja=フシギバナイト
+| ja-romaji=Fushigibanite
+| ja-info=Florizarrite
+| ko=이상해꽃나이트
+| ko-hangeul=Isanghaekkotnaiteu
+| ko-info=Florizarrite
+| zh-simplifié=妙蛙花进化石
+| zh-traditionnel=妙蛙花進化石
+| zh-pinyin=Miàowāhuā Jìnhuà Shí
+| zh-info=Pierre d'évolution de Florizarre
+}}
+
+== Voir aussi ==
+* [[Méga-Florizarre]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Bisaflornit]]
+[[en:Venusaurite]]
+[[es:Venusaurita]]
+[[it:Venusaurite]]
+[[ja:フシギバナイト]]
+[[zh:妙蛙花进化石（道具）]]

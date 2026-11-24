@@ -1,0 +1,83 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Carchacrokite Z
+| nom-tm=Gaburiasnite Z
+| nom-ja=ガブリアスナイトZ
+| nom-romaji=Gaburiasunaito
+| nom-en=Garchompite Z
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Carchacrokite Z''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Carchacrokite Z permet à [[Carchacrok]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Carchacrok Z]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Carchacrokite Z n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Carchacrok Z|Carchacrok]] [[Méga-Évolution Ferox|Méga-Ferox]] dans une [[Dimension inconnue|faille extradimensionnelle 1★]], après avoir activé le [[Cadeau Mystère]] correspondant.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-8 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 09 septembre 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Carchacrok, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Carchacrok de méga-évoluer en Méga-Carchacrok Z.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Knakracknit Z
+| de-info=Carchacrokite Z
+| en=Garchompite Z
+| en-info=Carchacrokite Z
+| es=Garchompita Z
+| es-info=Carchacrokite Z
+| it=Garchompite Z
+| it-info=Carchacrokite Z
+| ja=ガブリアスナイトZ
+| ja-romaji=Gaburiasnite Z
+| ja-info=Carchacrokite Z
+| ko=한카리아스나이트Z
+| ko-hangeul=Hankariaseunaiteu Z
+| ko-info=Carchacrokite Z
+| zh-traditionnel=烈咬陸鯊進化石Z
+| zh-simplifié=烈咬陆鲨进化石Z
+| zh-pinyin=Lièyǎolùshā Jìnhuà Shí Z
+| zh-info=Pierre d'évolution de Carchacrok Z
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Knakracknit Z]]
+[[en:Garchompite Z]]
+[[es:Garchompita Z]]
+[[it:Garchompite Z]]
+[[ja:ガブリアスナイトZ]]
+[[zh:烈咬陆鲨进化石Ｚ（道具）]]

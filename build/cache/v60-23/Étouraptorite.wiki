@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Étouraptorite
+| nom-tm=Mukuhawknite
+| nom-ja=ムクホークナイト
+| nom-romaji=Mukuhōkunaito
+| nom-en=Staraptite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+L''''Étouraptorite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Étouraptorite permet à [[Étouraptor]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Étouraptor]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Étouraptorite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Étouraptor|Étouraptor]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la {{Mission|E003|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Étouraptor, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Étouraptor de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Staraptornit
+| de-info=Étouraptorite
+| en=Staraptite
+| en-info=Étouraptorite
+| es=Staraptorita
+| es-info=Étouraptorite
+| it=Staraptorite
+| it-info=Étouraptorite
+| ja=ムクホークナイト
+| ja-romaji=Mukuhawknite
+| ja-info=Étouraptorite
+| ko=찌르호크나이트
+| ko-hangeul=Jjireuhokeunaiteu
+| ko-info=Étouraptorite
+| zh-simplifié=姆克鹰进化石
+| zh-traditionnel=姆克鷹進化石
+| zh-pinyin=Mǔkèyīng Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Étouraptor
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Staraptornit]]
+[[en:Staraptite]]
+[[es:Staraptorita]]
+[[it:Staraptorite]]
+[[ja:ムクホークナイト]]
+[[zh:姆克鹰进化石（道具）]]

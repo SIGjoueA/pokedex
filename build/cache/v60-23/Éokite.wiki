@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Éokite
+| nom-tm=Chileanite
+| nom-ja=チリーンナイト
+| nom-romaji=Chirīnnaito
+| nom-en=Chimechite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+L''''Éokite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Éokite permet à [[Éoko]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Éoko]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Éokite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Éoko|Éoko]] [[Méga-Évolution Ferox|Méga-Ferox]] dans une [[Dimension inconnue|faille extradimensionnelle 2★]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Éoko, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Éoko de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Palimpalimonit
+| de-info=Éokite
+| en=Chimechite
+| en-info=Éokite
+| es=Chimechita
+| es-info=Éokite
+| it=Chimechite
+| it-info=Éokite
+| ja=チリーンナイト
+| ja-romaji=Chileanite
+| ja-info=Éokite
+| ko=치렁나이트
+| ko-hangeul=Chireongnaiteu
+| ko-info=Éokite
+| zh-simplifié=风铃铃进化石
+| zh-traditionnel=風鈴鈴進化石
+| zh-pinyin=Fēnglínglíng Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Éoko
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Palimpalimonit]]
+[[en:Chimechite]]
+[[es:Chimechita]]
+[[it:Chimechite]]
+[[ja:チリーンナイト]]
+[[zh:风铃铃进化石（道具）]]

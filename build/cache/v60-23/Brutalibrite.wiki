@@ -1,0 +1,88 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Brutalibrite
+| nom-tm=Luchabullnite
+| nom-ja=ルチャブルナイト
+| nom-romaji=Ruchaburunaito
+| nom-en=Hawluchanite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Brutalibrite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Brutalibrite permet à [[Brutalibré]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Brutalibré]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Brutalibrite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Brutalibré]] [[Méga-Évolution Ferox|Méga-Férox]] lors de la [[Mission (Légendes Pokémon : Z-A)#P017|mission principale 17 : « Brutalibré Méga-Ferox »]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Brutalibré, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Brutalibré de méga-évoluer.
+
+== Dans le dessin animé ==
+=== {{série|LH}} ===
+<center><gallery>
+Fichier:LH131 - Brutalibrite.png|Une Brutalibrite dans l'épisode [[LH131]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Resladeronite
+| de-info=Brutalibrite
+| en=Hawluchanite
+| en-info=Brutalibrite
+| es=Hawluchanita
+| es-info=Brutalibrite
+| it=Hawluchanite
+| it-info=Brutalibrite
+| ja=ルチャブルナイト
+| ja-romaji=Luchabullnite
+| ja-info=Brutalibrite
+| ko=루차불나이트
+| ko-hangeul=Ruchabulnaiteu
+| ko-info=Brutalibrite
+| zh-simplifié=摔角鹰人进化石
+| zh-traditionnel=摔角鷹人進化石
+| zh-pinyin=Shuāijiǎoyīngrén Jìnhuà Shí
+| zh-info=Pierre d'évolution de Brutalibré
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Resladeronit]]
+[[en:Hawluchanite]]
+[[es:Hawluchanita]]
+[[it:Hawluchite]]
+[[ja:ルチャブルナイト]]
+[[zh:摔角鹰人进化石（道具）]]

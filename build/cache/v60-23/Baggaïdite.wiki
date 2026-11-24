@@ -1,0 +1,83 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Baggaïdite
+| nom-tm=Zuruzukinite
+| nom-ja=ズルズキナイト
+| nom-romaji=Zuruzukinaito
+| nom-en=Scraftinite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Baggaïdite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Baggaïdite permet à [[Baggaïd]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Baggaïd]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Baggaïdite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[ Neuvième génération ]] ===
+; {{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P030|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 12 du Pass de combat Premium de la saison M-5 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Baggaïd, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Baggaïd de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Irokexonit
+| de-info=Baggaïdite
+| en=Scraftinite
+| en-info=Baggaïdite
+| es=Scraftita
+| es-info=Baggaïdite
+| it=Scraftite
+| it-info=Baggaïdite
+| ja=ズルズキナイト
+| ja-romaji=Zuruzukinite
+| ja-info=Baggaïdite
+| ko=곤율거니나이트
+| ko-hangeul=Gonyulgeoninaiteu
+| ko-info=Baggaïdite
+| zh-simplifié=头巾混混进化石
+| zh-traditionnel=頭巾混混進化石
+| zh-pinyin=Tóujīnhùnhun Jìnhuà Shí
+| zh-info=Pierre d'évolution de Baggaïd
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Irokexonit]]
+[[en:Scraftinite]]
+[[es:Scraftita]]
+[[it:Scraftite]]
+[[ja:ズルズキナイト]]
+[[zh:头巾混混进化石（道具）]]

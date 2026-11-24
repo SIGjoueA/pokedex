@@ -1,0 +1,180 @@
+{{Infobox Objet
+| nom=Gemme Rouge
+| nom-ja=べにいろのたま
+| nom-tm=Crimson Orb
+| nom-romaji=Benīrono Tama
+| nom-en=Red Orb
+| image=Gemme Rouge-PGL.png
+| image-taille=80
+| légende=Artwork de la Gemme Rouge pour le [[Pokémon Global Link]].
+| gén-3=oui
+| gén-4=oui
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| jeu=Pokémon Rubis et Saphir
+| exclu=oui
+| rangement=Objets rares
+| rangement-condition=Avant {{Abréviation|ROSA}}
+| rangement2=Objets
+| rangement2-condition=Depuis {{Abréviation|ROSA}}
+| fonctionnement=tenu
+| prix-achat=10000
+| prix-achat-condition=Dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+}}
+La '''Gemme Rouge''' est un [[objet rare]] apparu dans la [[troisième génération]], avec {{Jeu|RS}}. Elle est associée à [[Groudon]], et permet de contrôler le [[Pokémon légendaire]].
+
+Avant {{jeu|ROSA}}, cet objet était appelé « '''Orbe Rouge''' ».
+
+== Utilisation et effet ==
+Dans la [[troisième génération]], l'Orbe Rouge a deux effets assez contraires sur deux Pokémon :
+* il énerve [[Kyogre]], l'amenant à déclencher une forte [[pluie]] ;
+* il calme [[Groudon]] (que l'on peut considérer comme le ''véritable'' Pokémon cible de l'Orbe Rouge).
+
+À noter que dans {{jeu|RSE}}, cet objet ne peut pas être utilisé ''manuellement'' par le joueur, son effet est ainsi déclenché automatiquement pendant l'avancée dans le scénario.
+
+Dans {{jeu|ROSA}}, la Gemme Rouge possède des effets similaires sur les deux Pokémon légendaires :
+* elle permet à [[Groudon]] de déclencher sa [[Primo-Résurgence]] et sa transformation en [[Primo-Groudon]]. Le processus de transformation énerve Groudon et le pousse à déclencher [[Terre Finale]].
+* elle permet de contre-balancer les pouvoirs de [[Kyogre]] et de [[Primo-Kyogre]], ainsi que de calmer leur colère.
+
+Contrairement aux [[Méga-Gemme]]s, la Gemme Rouge enclenche la Primo-Résurgence dès l'entrée de Groudon en combat, lorsqu'il la tient en objet. Le seul moyen de l'empêcher de se transformer est de lui retirer sa Gemme. Cependant, l'objet ne peut pas être retiré en combat quelque soit les moyens utilisés.
+
+{| class="tableaustandard centre"
+|+ Représentations graphiques
+! De {{Abréviation|RS}} à {{Abréviation|HGSS}}
+! De {{Abréviation|NB}} à {{Abréviation|XY}}
+! Depuis {{Abréviation|ROSA}}
+|-
+| [[Fichier:Miniature Orbe Rouge RS.png]]
+| [[Fichier:Miniature Orbe Rouge NB.png]]
+| [[Fichier:Miniature Gemme Rouge SL.png]]
+|}
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 10000 P / -
+USUL / Objets / 10000 P / -
+LPZA / Objets / - / -
+}}
+
+== Impact scénaristique ==
+
+=== Dans {{Jeu|Ru}} ===
+
+[[Max (Team Magma)|Max]], le chef de la [[Team Magma]], dérobe l'[[Orbe Bleu]] au [[Mont Mémoria]]. L'Orbe Rouge est alors remis au joueur.
+
+Dans la [[Caverne Fondmer]], Max essaye de contrôler Groudon grâce à l'Orbe Bleu, mais ne réussit qu'à le réveiller, ce qui déclenche une catastrophe. Grâce à l'Orbe Rouge que le joueur possède, il doit calmer le Pokémon en le combattant dans la [[Grotte Origine]].
+
+=== Dans {{Jeu|Sa}} ===
+
+[[Arthur (Team Aqua)|Arthur]], le chef de la [[Team Aqua]], dérobe l'Orbe Rouge au Mont Mémoria. L'Orbe Bleu est alors remis au joueur.
+
+Dans la Caverne Fondmer, Arthur essaye de contrôler Kyogre grâce à l'Orbe Rouge, mais ne réussit qu'à le réveiller, ce qui déclenche une catastrophe. Grâce à l'Orbe Bleu que le joueur possède, il doit calmer le Pokémon en le combattant dans la Grotte Origine.
+
+=== Dans {{Jeu|E}} ===
+
+À la première arrivée du joueur au Mont Mémoria, Arthur vole l'Orbe Rouge. La vieille dame dit ensuite au joueur que l'Orbe Bleu a aussi été volé. Max est le responsable de cet acte.
+
+Dans la [[Planque Magma]] au [[Mont Chimnée]], le joueur voit [[Max (Team Magma)|Max]] utiliser l'Orbe Bleu. Il réveille alors Groudon qui était endormi. De même, dans la Caverne Fondmer, Arthur utilise l'Orbe Rouge. Il réveille alors [[Kyogre]] qui était endormi.
+
+Alors que la sécheresse et la tempête font rage, les deux [[Pokémon légendaire]]s se combattent à [[Atalanopolis]].
+
+=== Dans {{Jeu|SS}} ===
+
+Quand le joueur a battu [[Red]] au [[Mont Argenté]], [[M. Pokémon]] le lui donne pour capturer [[Groudon]] dans la [[Tour Enfouie]].
+=== Dans ''[[Pokémon Rubis Oméga]]'' ===
+Après l'échec de son plan au [[Mont Chimnée]], [[Max (Team Magma)|Max]], leader de la [[Team Magma]], découvre l'existence de la Gemme Rouge et la vole au [[Mont Mémoria]]. Ayant parvenu à découvrir [[Groudon]] au fond de la [[Caverne Fondmer]], Max utilise le pouvoir de la Gemme Rouge pour le réveiller, et déclencher le processus de la [[Primo-Résurgence]]. Cependant, Groudon s'énerve et finit par fuir, échappant complètement au contrôle de Max.
+
+Après que le joueur est parvenu à calmer le Pokémon ancestral dans la [[Grotte Origine]] d'[[Atalanopolis]], Max reconnaît la puissance du joueur et décide de lui offrir la Gemme Rouge, estimant qu'il sera plus apte à contrôler Groudon que lui.
+
+=== Dans ''[[Pokémon Saphir Alpha]]'' ===
+
+Après l'échec de son plan au [[Mont Chimnée]], [[Arthur (Team Aqua)|Arthur]], leader la [[Team Aqua]], découvre l'existence de la [[Gemme Bleue]] et la vole au [[Mont Mémoria]]. Les deux gardiens remettent la Gemme Rouge au [[joueur]], avant qu'il ne se lance à la poursuite des criminels.
+
+Après le réveil de [[Kyogre]], le joueur est chargé d'entrer dans la [[Grotte Origine]] d'[[Atalanopolis]], afin de calmer le Pokémon. Grâce au pouvoir de la Gemme, et du [[Scaphandre Aqua]], le joueur parvient à approcher Kyogre et à monter sur son dos, tandis que ce dernier se dirige vers le cœur de [[Hoenn]]. Après son combat contre [[Primo-Kyogre]], le joueur conserve la [[Gemme Bleue]] avec lui.
+
+== Localisation ==
+=== [[Troisième génération]] ===
+* Dans {{jeu|Ru}}, l'Orbe Rouge est gardé par un couple au sommet du [[Mont Mémoria]]. La vieille dame le donne après le vol de l'Orbe Bleu.
+=== [[Quatrième génération]] ===
+* Dans {{jeu|SS}}, l'Orbe Rouge est donné par [[M. Pokémon]] dans sa maison, après avoir obtenu un [[Pokémon de départ]] de [[Kanto]] de la part du [[Professeur Chen]].
+
+=== [[Sixième génération]] ===
+* Dans ''[[Pokémon Rubis Oméga]]'', la Gemme Rouge est donnée par [[Max (Team Magma)|Max]] après le combat contre [[Primo-Groudon]].
+* Dans ''[[Pokémon Saphir Alpha]]'', la Gemme Rouge est donnée par la vieille dame du [[Mont Mémoria]], après le vol de la [[Gemme Bleue]].
+
+=== [[Septième génération]] ===
+* Dans {{Jeu|SL}} et {{Jeu|USUL}}, la Gemme Rouge peut être achetée à Antique et Chic, pour 10 000 {{P}} dans le centre commercial d'[[Ekaeka]], tout comme la [[Gemme Bleue]].
+=== [[Neuvième génération]] ===
+* Dans {{jeu|LPZA}}, la Gemme Rouge est obtenue après avoir vaincu [[Primo-Groudon]] [[Méga-Évolution Ferox|Ferox]] lors de la {{Mission|E013|LPZA}}.
+== Descriptions ==
+;{{Jeu|RSE}}
+:Un globe rouge lumineux censé abriter un pouvoir antique.
+;''[[Pokémon Argent SoulSilver]]''
+:Un orbe incarnat dont on dit qu'il a un lien très étroit avec les légendes de [[Hoenn]].
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une gemme incarnate dont on dit qu'elle a un lien très étroit avec les légendes de [[Hoenn]].
+== Dans le dessin animé ==
+=== ''[[Pokémon, la série]]'' ===
+L'Orbe Rouge apparaît dans l'[[AG097]]. [[Arthur (Team Aqua)|Arthur]] est déjà en possession de l'Orbe. Il s'en sert afin de prendre temporairement le contrôle de [[Kyogre]]. Pendant ce temps, [[Sarah]] infiltre la base des Magma, et parvient à libérer le Pokémon légendaire. Une fois libre, Kyogre commence à détruire le bateau des Magma, sous les ordres d'Arthur.
+
+Dans l'[[AG098]], l'influence de l'Orbe Rouge continue de pervertir l'esprit d'Arthur, qui envoie Kyogre causer tout détruire avec ses eaux, menaçant même de noyer les Sbires de la Team Aqua. L'Orbe finit par entrer dans le corps d'Arthur. Après avoir été libéré, [[Groudon]] commence à combattre Kyogre. Une fois ce-dernier vaincu, l'[[Orbe Bleu]] sort du corps de [[Pikachu de Sacha|Pikachu]] ; et s'élève dans le ciel en compagnie de l'Orbe Rouge, qui sort du corps d'Arthur. Les deux objets se détruisent mutuellement, empêchant ainsi tout nouveau contrôle sur les deux Pokémon légendaires.
+
+<center><gallery>
+Fichier:Orbe Rouge animé.png|L'Orbe Rouge dans l'[[épisode 371]].
+</gallery></center>
+== Dans d'autres langues ==
+{| class="tableaustandard centre"
+! Langue
+! Nom
+! {{Infobulle|Traduction|Francisation}}
+|-
+| [[Bulbapedia|Anglais]]
+| [[:en:Red Orb|Red Orb]]
+| Orbe Rouge
+|-
+| [[Pokémon Wiki|Japonais]]
+| [[:ja:べにいろのたま|べにいろのたま]]<br /><small>''Benīrono Tama''</small>
+| Orbe Cramoisi
+|-
+| rowspan="2" | [[PokéWiki|Allemand]]
+| [[:de:Rote Kugel|Rote Kugel]]{{Sup|Avant {{Abréviation|ROSA}}}}
+| Boule Rouge
+|-
+| [[:de:Roter Edelstein|Roter Edelstein]]{{Sup|Depuis {{Abréviation|ROSA}}}}
+| Gemme Rouge
+|-
+|-
+| rowspan="2" | [[Pokémon Central|Italien]]
+| [[:it:Sfera Rossa|Sfera Rossa]]{{Sup|Avant {{Abréviation|ROSA}}}}
+| Sphère Rouge
+|-
+| [[:it:Gemma rossa|Gemma Rossa]]{{Sup|Depuis {{Abréviation|ROSA}}}}
+| Gemme Rouge
+|-
+| rowspan="2" | [[WikiDex|Espagnol]]
+| [[:es:Esfera Roja|Esfera Roja]]{{Sup|Avant {{Abréviation|ROSA}}}}
+| Sphère Rouge
+|-
+| [[:es:Prisma rojo|Prisma Rojo]]{{Sup|Depuis {{Abréviation|ROSA}}}}
+| Prisme Rouge
+|-
+| [[52Poké Wiki|Chinois]]
+| [[:zh:朱红色宝珠（道具）|朱红色宝珠]]<br /><small>''Zhūhóngsè Bǎozhū''</small>
+| Orbe Écarlate
+|}
+== Voir aussi ==
+* [[Groudon]]
+* [[Primo-Groudon]]
+* [[Gemme Bleue]]
+
+{{Bandeau Inventaire}}
+
+[[de:Roter Edelstein]]
+[[en:Red Orb]]
+[[es:Prisma Rojo]]
+[[it:Gemma rossa]]
+[[ja:べにいろのたま]]
+[[zh:朱红色宝珠（道具）]]

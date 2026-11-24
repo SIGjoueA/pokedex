@@ -1,0 +1,99 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Scarabruite
+| nom-tm=Kailiosnite
+| nom-ja=カイロスナイト
+| nom-romaji=Kairosunaito
+| nom-en=Pinsirite
+| image=Scarabruite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Scarabruite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| prix-achat2=30 000
+| monnaie-achat2={{P}}
+| prix-achat2-condition=dans {{Abréviation|LGPE}}
+| prix-achat3=240
+| prix-achat3-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat3=[[Méga-Fragment]]s
+}}
+La '''Scarabruite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Elle permet de faire [[Méga-Évolution|méga-évoluer]] [[Scarabrute]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LGPE / Poche de Combat / 30000 P / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est exclusive à {{Jeu|X}}. Elle se trouve dans la [[Forêt de Neuvartault]], dans la première zone d'herbe vers le nord, entre 20h et 21h, après avoir battu la [[Ligue Pokémon (Kalos)|Ligue Pokémon]].
+
+==== Dans {{Jeu|ROSA}} ====
+Elle est trouvable sur le [[Chenal 124]] (nécessite la CS [[Plongée]] et la CS [[Surf]]). Pour l'obtenir, il faut aller voir deux nageurs côte-à-côte puis plonger à proximité, rejoindre la première sortie et enfin remonter vers le nord. Pour trouver les nageurs, il faut atteindre la maison sur le [[Chenal 124]], puis aller à gauche.
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+==== {{Jeu|lgpe}} ====
+S'achète à la [[Plateau Indigo|Ligue Pokémon]] pour 30 000 {{p}}.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P014|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|USUL}} et {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Scarabrute]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|LGPE}}
+:Une variété de [[Méga-Gemme]]. Elle permet à un [[Scarabrute]] de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Scarabrute de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Scarabrute]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Pinsirnit]]
+[[en:Pinsirite]]
+[[es:Pinsirita]]
+[[it:Pinsirite]]
+[[ja:カイロスナイト]]
+[[zh:凯罗斯进化石（道具）]]

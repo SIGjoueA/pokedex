@@ -1,0 +1,106 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Caméruptite
+| nom-tm=Bakuudanite
+| nom-ja=バクーダナイト
+| nom-romaji=Bakūdanaito
+| nom-en=Cameruptite
+| image=Caméruptite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Caméruptite.
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| monnaie-achat=PCo
+}}
+La '''Caméruptite''' est une [[Méga-Gemme]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Caméruptite permet à [[Camérupt]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Camérupt]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Camérupt de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Caméruptite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Caméruptite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|RuO}}
+* Donnée par [[Max (Team Magma)|Max]] dans la [[Planque Magma]] pendant l'[[Épisode Delta]].
+* Tenue par le [[Camérupt]] de Max, distribué par [[Cadeau Mystère]] local au Japon du 1<sup>er</sup> octobre au 11 novembre 2016.
+
+;{{Jeu|SaA}}
+* Donnée par [[Courtney]] à l'[[Atoll de Combat]].
+* Tenue par le Camérupt de Max, distribué par Cadeau Mystère local au Japon du 1<sup>er</sup> octobre au 11 novembre 2016.
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par Cadeau Mystère du 23 juin au 31 octobre 2017 avec le code MATSUBUSA.
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Camérupt]] [[Méga-Évolution Ferox|Méga-Férox]] lors de la {{Mission|P012|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Camérupt, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Camérupt de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Cameruptnit
+| de-info=Caméruptite
+| en=Cameruptite
+| en-info=Caméruptite
+| es=Cameruptita
+| es-info=Caméruptite
+| it=Cameruptite
+| it-info=Caméruptite
+| ja=バクーダナイト
+| ja-romaji=Bakuudanite
+| ja-info=Caméruptite
+| ko=폭타나이트
+| ko-hangeul=Poktanaiteu
+| ko-info=Caméruptite
+| zh-traditionnel=噴火駝進化石
+| zh-simplifié=喷火驼进化石
+| zh-pinyin=Pēnhuǒtuó Jìnhuà Shí
+| zh-info=Pierre d'évolution de Camérupt
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Cameruptnit]]
+[[en:Cameruptite]]
+[[es:Cameruptita]]
+[[it:Cameruptite]]
+[[ja:バクーダナイト]]
+[[zh:喷火驼进化石（道具）]]

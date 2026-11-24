@@ -1,0 +1,82 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Empiflorite
+| nom-tm=Utsubotnite
+| nom-ja=ウツボットナイト
+| nom-romaji=Utsubottonaito
+| nom-en=Victreebelite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+L''''Empiflorite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Empiflorite permet à [[Empiflor]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Empiflor]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Empiflorite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Empiflor]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la [[Mission (Légendes Pokémon : Z-A)#P013|mission principale 13 : « Empiflor Méga-Ferox »]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Empiflor, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Empiflor de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Sarzenianit
+| de-info=Empiflorite
+| en=Victreebelite
+| en-info=Empiflorite
+| es=Victreebelita
+| es-info=Empiflorite
+| it=Victreebelite
+| it-info=Empiflorite
+| ja=ウツボットナイト
+| ja-romaji=Utsubotnite
+| ja-info=Empiflorite
+| ko=우츠보트나이트
+| ko-hangeul=Ucheuboteunaiteu
+| ko-info=Empiflorite
+| zh-simplifié=大食花进化石
+| zh-traditionnel=大食花進化石
+| zh-pinyin=Dàshíhuā Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Empiflor
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Sarzenianit]]
+[[en:Victreebelite]]
+[[es:Victreebelita]]
+[[it:Victreebelite]]
+[[ja:ウツボットナイト]]
+[[zh:大食花进化石（道具）]]

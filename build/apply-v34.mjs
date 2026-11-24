@@ -24,3 +24,4 @@ node('fix-v44d.mjs');          // v44: Méga-Mistigrix une seule entrée (image 
 node('fix-v47.mjs');           // v47: GO depuis le game master (refresh-go + overrides), descriptions Poképédia, images des Méga-Gemmes Z-A, Grotte Métamo
 node('fix-v60-21.mjs');      // v60.21: Pichu Troizépi sans talent caché (faiblesses selon le talent)
 node('fix-v60-22.mjs');      // v60.22: lieux / méthodes d’obtention Poképédia des anciens jeux (Gén. I–VII, Hors dex, RF/VF Switch), textes N2B2 officiels, pna des jeux sans Pokédex National
+node('fix-v60-23.mjs');      // v60.23: où obtenir la Méga-Gemme / Gemme Bleue / Gemme Rouge de chaque Méga / Primo (pages d’objets Poképédia), Heatranite, Draco Ascension

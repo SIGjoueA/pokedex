@@ -1,0 +1,70 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Zygardite
+| nom-tm=
+| nom-ja=ジガルデナイト
+| nom-romaji=Zygardenite
+| nom-en=Zygardite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Zygardite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Zygardite permet à [[Zygarde]] Forme Parfaite de [[Méga-Évolution|méga-évoluer]] en [[Méga-Zygarde]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Zygardite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue automatiquement une fois que le [[Caillou]] a été serré dans la main, après avoir vaincu l'[[Ange]] [[Floette]] [[Méga-Évolution Ferox|Ferox Suprême]], lors de la [[Mission (Légendes Pokémon : Z-A)#P037|mission principale 37 : « Opération sauvetage d'Illumis »]].
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par Zygarde, elle lui permet de méga-évoluer durant un combat lorsqu'il est sous sa Forme Parfaite.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Zygardite
+| en-info=Zygardite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ジガルデナイト
+| ja-romaji=Zygardenite
+| ja-info=Zygardite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Zygardenit]]
+[[en:Zygardite]]
+[[es:Zygardita]]
+[[it:Zygardite]]
+[[ja:ジガルデナイト]]
+[[zh:基格尔德进化石（道具）]]

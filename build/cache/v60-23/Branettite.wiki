@@ -1,0 +1,105 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Branettite
+| nom-tm=Juppetanite
+| nom-ja=ジュペッタナイト
+| nom-romaji=Jupettanaito
+| nom-en=Banettite
+| image=Branettite-PGL.png
+| image-taille=59px
+| légende=Corporate Art de la Branettite.
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| prix-achat-condition=dans {{Abréviation|USUL}}
+| monnaie-achat=PCo
+}}
+La '''Branettite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+En combat, la Branettite permet à [[Branette]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Branette]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Branette de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]].
+
+La Branettite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / - / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Sixième génération]] ===
+;{{Jeu|XY}}
+Trouvable dans la [[Chambre Néant]] entre 20 h et 21 h après avoir amélioré le [[Méga-Anneau]].
+
+;{{Jeu|ROSA}}
+Trouvable au sommet du [[Mont Mémoria]].
+
+=== [[Septième génération]] ===
+;{{Jeu|SL}}
+* Distribuée par [[Cadeau Mystère]] du 23 juin au 31 octobre 2017 avec le code MATSUBUSA.
+* À recevoir par [[Échange de Pokémon|échange]] avec {{Jeu|USUL}}.
+
+;{{Jeu|USUL}}
+Achetable à l'[[Arbre de Combat]] pour 64 PCo.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Branette|Branette]] [[Méga-Évolution Ferox|Méga-Ferox]] lors de la [[Mission (Légendes Pokémon : Z-A)#P018|mission principale 18 : « Branette Méga-Ferox »]].
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Branette, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Branette de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Banetteonit
+| de-info=Branettite
+| en=Banettite
+| en-info=Branettite
+| es=Banettita
+| es-info=Branettite
+| it=Banettite
+| it-info=Branettite
+| ja=ジュペッタナイト
+| ja-romaji=Juppetanite
+| ja-info=Branettite
+| ko=다크펫나이트
+| ko-hangeul=Dakeupennaiteu
+| ko-info=Branettite
+| zh-traditionnel=詛咒娃娃進化石
+| zh-simplifié=诅咒娃娃进化石
+| zh-pinyin=Zǔzhòuwáwá Jìnhuà Shí
+| zh-info=Pierre d'évolution de Branette
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Banetteonit]]
+[[en:Banettite]]
+[[es:Banettita]]
+[[it:Banettite]]
+[[ja:ジュペッタナイト]]
+[[zh:诅咒娃娃进化石（道具）]]

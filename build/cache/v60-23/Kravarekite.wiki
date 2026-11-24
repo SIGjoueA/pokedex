@@ -1,0 +1,88 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Kravarekite
+| nom-tm=Dramidonite
+| nom-ja=ドラミドナイト
+| nom-romaji=Doramidonaito
+| nom-en=Dragalgite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Kravarekite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Kravarekite permet à [[Kravarech]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Kravarech]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Kravarekite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P030|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Kravarech, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Kravarech de méga-évoluer.
+
+== Anecdote ==
+* La [[Tyranocivite]], la Kravarekite, l'[[Amphinolite]] et la [[Golemastokite]] sont les seules [[Méga-Gemme]]s dont le nom utilise une lettre de transition entre le radical (nom du Pokémon, complet ou tronqué) et le suffixe -ite commun à toutes les Méga-Gemmes.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Tandraknit
+| de-info=Kravarekite
+| en=Dragalgite
+| en-info=Kravarekite
+| es=Dragalgita
+| es-info=Kravarekite
+| it=Dragalgite
+| it-info=Kravarekite
+| ja=ドラミドナイト
+| ja-romaji=Dramidonite
+| ja-info=Kravarekite
+| ko=드래캄나이트
+| ko-hangeul=Deuraekamnaiteu
+| ko-info=Kravarekite
+| zh-simplifié=毒藻龙进化石
+| zh-traditionnel=毒藻龍進化石
+| zh-pinyin=Dúzǎolóng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Kravarech
+}}
+
+== Voir aussi ==
+* [[Méga-Kravarech]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Tandraknit]]
+[[en:Dragalgite]]
+[[es:Dragalgita]]
+[[it:Dragalgite]]
+[[ja:ドラミドナイト]]
+[[zh:毒藻龙进化石（道具）]]

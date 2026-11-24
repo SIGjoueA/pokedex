@@ -1,0 +1,112 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Lucarite
+| nom-tm=Lucarionite
+| nom-ja=ルカリオナイト
+| nom-romaji=Rukarionaito
+| nom-en=Lucarionite
+| image=Lucarite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Lucarite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon X et Y
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Lucarite''' est un [[objet]] apparu dans la [[sixième génération]].
+[[Fichier:Menu Lucarite.png|vignette|droite|270px|Le menu de la Lucarite dans {{Jeu|XY}}.]]
+
+== Utilisation et effet ==
+
+Elle permet de faire [[Méga-Évolution|méga-évoluer]] [[Lucario]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+XY / Objets / - / -
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|XY}} ====
+Elle est offerte par [[Cornélia]] au sommet de la [[Tour Maîtrise]], en même temps que [[Lucario]].
+
+==== Dans {{Jeu|ROSA}} ====
+Offerte par [[Liseron]] après avoir gagné le [[Concours Pokémon]] en difficulté Master et avoir battu [[Atalante]] en même temps.
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|XY}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Lucario]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Lucario de méga-évoluer en Méga-Lucario.
+
+== Dans le dessin animé ==
+=== ''[[Pokémon : Méga-Évolution]]'' et ''[[Pokémon, la série]]'' ===
+Une Lucarite apparaît sur une peinture montrée à [[Alain]] par le [[Professeur Platane]], lors d'un flash-back dans [[PME01|Pokémon : Méga-Évolution 1]]. Cette peinture montre la toute première [[Méga-Évolution]].
+
+Une Lucarite brute apparaît pour la première fois dans le [[XY031]]. Elle se trouve dans une grande salle au fond d'une grotte près de [[Cromlac'h]], gardée par un [[Braségali]] qui attaque [[Cornélia]] et le [[Pokégroupe]]. Un combat s'engage entre [[Lucario de Cornélia|Lucario]] et Braségali. Alors que Lucario reprend le dessus après s'être fait malmené par son adversaire, quelqu'un sort de l'ombre et interrompt le combat ; ce n'est autre que [[Cornélius]], le grand-père de Cornélia et le Dresseur de Braségali. Il reconnaît la valeur de sa petite fille et lui remet la Lucarite. Elle déclenche la Méga-Évolution de son Lucario. Dans l'[[XY032|épisode suivant]], [[Stanislas]] arrive avec un bracelet pour Lucario, où il a intégré un morceau de la Lucarite brute trouvée dans l'épisode précédent.
+
+Dans le [[XY032]], Cornélius possède lui aussi une Lucarite. Tout comme le Lucario de Cornélia, le Lucario de Cornélius porte également sa Lucarite à un bracelet sur son poignet gauche.
+
+Dans le [[XY043]], Cornélius raconte une histoire sur la première Méga-Évolution connue, qui comportait une Lucarite.
+
+Dans le [[LV084]], [[Sacha Ketchum|Sacha]] trouve et obtient une Lucarite pour son [[Lucario de Sacha|Lucario]] sur l'Île Méga.
+
+<center><gallery>
+Fichier:XY031 - Lucarite brute.png|Une Lucarite brute dans l'[[épisode 830]].
+Fichier:Lucarite.png|Une Lucarite dans l'[[épisode 831]].
+Fichier:LV084 - Lucarite.png|Une Lucarite dans l'[[épisode 1169]].
+</gallery></center>
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+=== Apparitions sur d'autres cartes ===
+La Lucarite apparaît sur les cartes suivantes :
+
+{{Liste des cartes d'un sujet secondaire}}
+
+== Voir aussi ==
+* [[Méga-Lucario]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Lucarionit]]
+[[en:Lucarionite]]
+[[es:Lucarita]]
+[[it:Lucarite]]
+[[ja:ルカリオナイト]]
+[[zh:路卡利欧进化石（道具）]]

@@ -1,0 +1,88 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Hexadronite
+| nom-tm=Tairetsunite
+| nom-ja=タイレーツナイト
+| nom-romaji=Tairētsunaito
+| nom-en=Falinksite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=360
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+L''''Hexadronite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, l'Hexadronite permet à [[Hexadron]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Hexadron]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+L'Hexadronite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P019|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Hexadron, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Hexadron de méga-évoluer.
+
+== Dans le dessin animé ==
+=== {{série|LH}} ===
+<center><gallery>
+Fichier:LH142 - Hexadronite.png|Une Hexadronite dans l'épisode [[LH142]].
+</gallery></center>
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Legiosnit
+| de-info=Hexadronite
+| en=Falinksite
+| en-info=Hexadronite
+| es=Falinksita
+| es-info=Hexadronite
+| it=Falinksite
+| it-info=Hexadronite
+| ja=タイレーツナイト
+| ja-romaji=Tairetsunite
+| ja-info=Hexadronite
+| ko=대여르나이트
+| ko-hangeul=Daeyeoreunaiteu
+| ko-info=Hexadronite
+| zh-simplifié=列阵兵进化石
+| zh-traditionnel=列陣兵進化石
+| zh-pinyin=Lièzhènbīng Jìnhuà Shí
+| zh-info=Pierre d'évolution d'Hexadron
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Legiosnit]]
+[[en:Falinksite]]
+[[es:Falinksita]]
+[[it:Falinksite]]
+[[ja:タイレーツナイト]]
+[[zh:列阵兵进化石（道具）]]

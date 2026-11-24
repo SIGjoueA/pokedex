@@ -1,0 +1,91 @@
+{{Ruban Pokémon
+| nomPrécédent=Palkia
+| numéro=0485
+| nom=Méga-Heatran
+| nomSuivant=Regigigas
+}}
+{{#invoke:Infobox Pokémon|infobox
+| nom=Méga-Heatran
+| nom-japonais=メガヒードラン
+| nom-romaji=Mega Hīdoran
+| nom-déposé=Mega Heatran
+| nom-anglais=Mega Heatran
+| ndex=0485
+| dex=Extra Illumis/113
+| légende=Artwork de Méga-Heatran pour {{Jeu|LPZA}}.
+| type1=Feu
+| type2=Acier
+| catégorie=Caldeira
+| taille=2.8
+| poids=570.0
+| talents=
+| fmratio=
+| génération=9
+| couleur=Brun
+| corps=8
+| cri=Cri 0485 Méga
+}}
+'''Méga-Heatran''' (anglais : '''Mega Heatran''' ; japonais : '''メガヒードラン''' ''Mega Heatran'') est un [[Méga-Pokémon]] de [[type]] [[Feu (type)|Feu]] et [[Acier (type)|Acier]]. C'est la [[Méga-Évolution]] de [[Heatran]].
+
+== À propos du Méga-Pokémon ==
+
+=== Physionomie et attitudes ===
+En méga-évoluant, le ventre de Méga-Heatran devient une véritable poche de magma. Il est, cependant, incapable de rester contenu dans son corps ; il s'échappe par ses pattes et sa bouche constamment ouverte, goutte à goutte. De la fumée se dégage de son dos, tandis que des excroissances métalliques sortent de sa partie supérieure. Une goutte de métal fondu reste accrochée à chaque corne de Méga-Heatran.
+
+==== Différences mâle/femelle ====
+
+==== [[Chromatique]] ====
+
+=== [[Évolution]] ===
+
+Méga-Heatran est la [[Méga-Évolution]] de [[Heatran]] avec une [[Heatranite]].
+{{#lst:Heatran|Tableau d'évolution}}
+
+=== [[Talent]] ===
+
+=== Descriptions du [[Pokédex]] ===
+
+;{{Jeu|LPZA}}
+:À pleine puissance, il garde l'ennemi à distance en augmentant sa température corporelle. On dit qu'il pourrait atteindre ainsi un million de degrés.
+
+== Sensibilités ==
+
+{{#invoke:Sensibilités|tableau|generation=9|type1=Feu|type2=Acier}}
+
+== [[Statistiques]] ==
+
+Sa statistique d'[[Attaque (statistique)|Attaque]] est augmentée de 30, son [[Attaque Spéciale]] de 45, et sa [[Défense Spéciale (statistique)|Défense Spéciale]] de 35 tandis que sa [[Vitesse]] est diminuée de 10.
+
+{{Statistiques
+| type=Feu
+| PV=91
+| attaque=120
+| defense=106
+| atq-spc=175
+| def-spc=141
+| vitesse=67
+}}
+
+== Stratégie ==
+
+== Imagerie ==
+{{Renvoi imagerie}}
+{{#lst:Méga-Heatran/Imagerie|Génération 9}}
+{{Navigation Méga-Pokémon|Heatran}}
+
+== Apparitions dans les dessins animés ==
+{{PAGENAME}} n'est pas encore apparu dans un dessin animé.
+{{clear}}
+
+== Dans le [[Jeu de Cartes à Collectionner]] ==
+
+{{Liste des cartes d'un Pokémon|{{PAGENAME}}}}
+
+{{Ruban Pokémon
+| nomPrécédent=Palkia
+| numéro=0485
+| nom=Méga-Heatran
+| nomSuivant=Regigigas
+}}
+{{Bandeau Pokédex}}
+[[Catégorie:Méga-Pokémon|Heatran]]

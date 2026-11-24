@@ -1,0 +1,66 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Goupelinite
+| nom-tm=Mahoxynite
+| nom-ja=マフォクシナイト
+| nom-romaji=Mafokushinaito
+| nom-en=Delphoxite
+| image=Goupelinite-LPZA.png
+| image-taille=177
+| légende=Artwork de la Goupelinite pour {{Jeu|LPZA}}.
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+}}
+La '''Goupelinite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Goupelinite permet à [[Goupelin]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Goupelin]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Goupelinite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+* Obtenue automatiquement lorsque le rang S est atteint pendant la saison 2 des [[Club de Combat Z-A|combats classés]], du 5 novembre au 26 novembre 2025.
+* Obtenue automatiquement lorsque le rang V est atteint pendant la saison 3 des combats classés, du 26 novembre au 18 décembre 2025.
+* Obtenue automatiquement lorsque le rang W est atteint pendant la saison 4 des combats classés, du 18 décembre 2025 au 8 janvier 2026.
+* Obtenue automatiquement lorsque le rang X est atteint pendant la saison 5 des combats classés, du 8 janvier au 29 janvier 2026.
+* Obtenue automatiquement lorsque le rang X est atteint pendant la saison 6 des combats classés, du 29 janvier au 19 février 2026.
+
+=== {{Jeu|Champions}} ===
+* Obtenue lors du transfert d'un Blindépique depuis {{Jeu|LPZA}} du 8 avril 2026 au 17 juin 2026 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Goupelin, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Goupelin de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Goupelin]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Fennexisnit]]
+[[en:Delphoxite]]
+[[es:Delphoxita]]
+[[it:Delphoxite]]
+[[ja:マフォクシナイト]]
+[[zh:妖火红狐进化石（道具）]]

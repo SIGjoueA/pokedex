@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.22';
+const VERSION = 'v60.23';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Anciens jeux : où trouver chaque Pokémon (lieux ou méthode d’obtention Poképédia) au lieu de « aucune rencontre répertoriée ».';
-const DATA_VERSION = 'd64'; // bump when the schema of data/*.json changes
+const NOTES = 'Méga et Primo : où obtenir la Méga-Gemme, la Gemme Bleue ou la Gemme Rouge dans chaque jeu (Poképédia).';
+const DATA_VERSION = 'd65'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

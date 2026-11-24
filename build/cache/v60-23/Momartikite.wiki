@@ -1,0 +1,77 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Momartikite
+| nom-tm=
+| nom-ja=ユキメノコナイト
+| nom-romaji=Yukimenokonite
+| nom-en=Froslassite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=
+| prix-achat-condition=
+| monnaie-achat=
+}}
+La '''Momartikite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Momartikite permet à [[Momartik]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Momartik]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Momartikite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Obtenue après avoir vaincu [[Méga-Momartik|Momartik]] [[Méga-Ferox]] lors de la {{Mission|P027|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Momartik, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Momartik de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Froslassite
+| en-info=Momartikite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=ユキメノコナイト
+| ja-romaji=Yukimenokonite
+| ja-info=Momartikite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Frosdedjenit]]
+[[en:Froslassite]]
+[[es:Froslassita]]
+[[it:Froslassite]]
+[[ja:ユキメノコナイト]]
+[[zh:雪妖女进化石（道具）]]

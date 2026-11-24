@@ -1,0 +1,89 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Sharpedite
+| nom-tm=Samehadenite
+| nom-ja=サメハダナイト
+| nom-romaji=Samehadanaito
+| nom-en=Sharpedonite
+| image=Sharpedite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Sharpedite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=64
+| monnaie-achat=PCo
+| prix-achat-condition=dans {{Abréviation|SL}} et {{Abréviation|USUL}}
+| prix-achat2=180
+| prix-achat2-condition=dans {{Abréviation|LPZA}}
+| monnaie-achat2=[[Méga-Fragment]]s
+}}
+La '''Sharpedite''' est un [[objet]] apparu dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+Elle permet de faire [[Méga-Évolution|méga-évoluer]] [[Sharpedo]] lorsqu'il entre en combat avec cet objet tenu.
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 180 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|SaA}} ====
+Remise par [[Arthur (Team Aqua)|Arthur]] et [[Sarah]] dans la [[Planque Aqua]] lors de l'[[Épisode Delta]].
+
+==== Dans {{Jeu|RuO}} ====
+Elle est offerte par [[Matthieu]] à l'[[Atoll de Combat]].
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Elle peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 180 [[Méga-Fragment]]s après la {{Mission|P010|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 8 avril 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de [[Méga-Gemme]]. Tenue par un [[Sharpedo]], elle lui permet de [[Méga-Évolution|méga-évoluer]] durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Sharpedo de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Sharpedo]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Tohaidonit]]
+[[en:Sharpedonite]]
+[[es:Sharpedonita]]
+[[it:Sharpedite]]
+[[ja:サメハダナイト]]
+[[zh:巨牙鲨进化石（道具）]]

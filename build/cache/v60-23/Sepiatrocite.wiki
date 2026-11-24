@@ -1,0 +1,76 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Sepiatrocite
+| nom-tm=
+| nom-ja=カラマネナイト
+| nom-romaji=Calamanenite
+| nom-en=Malamarite
+| image=
+| image-taille=
+| légende=
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=240
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Sepiatrocite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+En combat, la Sepiatrocite permet à [[Sepiatroce]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Sepiatroce]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Sepiatrocite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / 240 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+=== [[Neuvième génération]] ===
+;{{Jeu|LPZA}}
+Achetable à la [[Société Quazar]] pour 240 [[Méga-Fragment]]s après la {{Mission|P035|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Sepiatroce, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Sepiatroce de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{incomplet}}
+{{Autres langues
+| type=traductions
+| de=
+| de-info=
+| en=Malamarite
+| en-info=Sepiatrocite
+| es=
+| es-info=
+| it=
+| it-info=
+| ja=カラマネナイト
+| ja-romaji=Calamanenite
+| ja-info=Sepiatrocite
+}}
+
+== Voir aussi ==
+{{Méga-Gemmes}}
+{{Bandeau Inventaire}}
+
+[[de:Calamaneronit]]
+[[en:Malamarite]]
+[[es:Malamarita]]
+[[it:Malamarite]]
+[[ja:カラマネナイト]]
+[[zh:乌贼王进化石（道具）]]

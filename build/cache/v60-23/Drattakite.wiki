@@ -1,0 +1,111 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Drattakite
+| nom-tm=Bohmandanite
+| nom-ja=ボーマンダナイト
+| nom-romaji=Bōmandanaito
+| nom-en=Salamencite
+| image=Drattakite-PGL.png
+| image-taille=59px
+| légende=Artwork de la Drattakite pour le [[Pokémon Global Link]].
+<!-- disponibilité -->
+| jeu=Pokémon Rubis Oméga et Saphir Alpha
+| gén-1=non
+| gén-2=non
+| gén-3=non
+| gén-4=non
+| gén-5=non
+| gén-6=oui
+| gén-7=oui
+| gén-9=oui
+| série=
+| évènementiel=
+<!-- utilisation -->
+| rangement=Objet
+| fonctionnement=tenu
+<!-- commerce -->
+| prix-achat=360
+| prix-achat-condition=
+| monnaie-achat=[[Méga-Fragment]]s
+}}
+La '''Drattakite''' est une [[Méga-Gemme]] apparue dans la [[sixième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Drattakite permet à [[Drattak]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Drattak]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+Dans {{Jeu|ROSA}}, elle permet à Drattak de méga-évoluer dès qu'il effectue une Démonstration Live lors d'un [[Concours Pokémon Live]]. De plus, les Pokémon qui tiennent une Drattakite ne peuvent pas être échangés vers {{Jeu|XY}}.
+
+La Drattakite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+ROSA / Objets / - / -
+SL / Objets / 64 PCo / -
+USUL / Objets / 64 PCo / -
+LPZA / Méga-Gemmes / 360 Méga-Fragments / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Sixième génération]] ===
+==== Dans {{Jeu|ROSA}} ====
+Donnée par la grand-mère d'[[Amaryllis]] au [[Site Météore]] (après l'[[Épisode Delta]]).
+
+=== [[Septième génération]] ===
+==== Dans {{Jeu|SL}} et {{jeu|usul}} ====
+Peut être achetée à l'[[Arbre de Combat]] pour 64 PCo auprès de l'intendante de droite.
+
+=== [[Neuvième génération]] ===
+==== Dans {{Jeu|LPZA}} ====
+Achetable à la [[Société Quazar]] pour 360 [[Méga-Fragment]]s après la {{Mission|P030|LPZA}}.
+
+=== {{Jeu|Champions}} ===
+* Récompense du rang 4 du Pass de combat Premium de la saison M-8 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 09 septembre 2026.
+
+== Descriptions ==
+;De {{Jeu|ROSA}} à {{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Drattak, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Drattak de méga-évoluer.
+
+== Nom dans d'autres langues ==
+{{Autres langues
+| type=traductions
+| de=Brutalandanite
+| de-info=Drattakite
+| en=Salamencite
+| en-info=Drattakite
+| es=Salamencita
+| es-info=Drattakite
+| it=Salamencite
+| it-info=Drattakite
+| ja=ボーマンダナイト
+| ja-romaji=Bohmandanite
+| ja-info=Drattakite
+| ko=보만다나이트
+| ko-hangeul=Bomandanaiteu
+| ko-info=Drattakite
+| zh-simplifié=暴飞龙进化石
+| zh-traditionnel=暴飛龍進化石
+| zh-pinyin=Bàofēilóng Jìnhuà Shí
+| zh-info=Pierre d'évolution de Drattak
+}}
+
+== Voir aussi ==
+* [[Méga-Drattak]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Brutalandanit]]
+[[en:Salamencite]]
+[[es:Salamencita]]
+[[it:Salamencite]]
+[[ja:ボーマンダナイト]]
+[[zh:暴飞龙进化石（道具）]]

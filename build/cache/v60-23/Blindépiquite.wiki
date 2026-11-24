@@ -1,0 +1,65 @@
+{{Infobox Objet
+<!-- présentation de l'objet -->
+| nom=Blindépiquite
+| nom-tm=Burigaronite
+| nom-ja=ブリガロナイト
+| nom-romaji=Burigaronaito
+| nom-en=Chesnaughtite
+| image=Blindépiquite-LPZA.png
+| image-taille=177
+| légende=Artwork de la Blindépiquite pour {{Jeu|LPZA}}.
+<!-- disponibilité -->
+| jeu=Légendes Pokémon : Z-A
+| gén-9=oui
+<!-- utilisation -->
+| rangement=Méga-Gemme
+| fonctionnement=tenu
+}}
+La '''Blindépiquite''' est une [[Méga-Gemme]] apparue dans la [[neuvième génération]].
+
+== Utilisation et effet ==
+
+En combat, la Blindépiquite permet à [[Blindépique]] de [[Méga-Évolution|méga-évoluer]] en [[Méga-Blindépique]] si son [[Dresseur]] n'a pas déjà fait appel à la Méga-Évolution.
+
+La Blindépiquite n'a aucun effet si le Dresseur ne possède pas de [[Gemme Sésame]].
+
+== Prix et [[Sac|rangement]] ==
+
+{{#invoke:Tableau Objet|donnees|
+LPZA / Méga-Gemmes / - / -
+Champions / Méga-Gemme / 2000 PdV / -
+}}
+
+== Localisations ==
+
+=== [[Neuvième génération]] ===
+; {{Jeu|LPZA}}
+* Obtenue automatiquement lorsque le rang S est atteint pendant la saison 3 des [[Club de Combat Z-A|combats classés]], du 26 novembre au 18 décembre 2025.
+* Obtenue automatiquement lorsque le rang U est atteint pendant la saison 4 des combats classés, du 18 décembre 2025 au 8 janvier 2026.
+* Obtenue automatiquement lorsque le rang W est atteint pendant la saison 5 des combats classés, du 8 janvier au 29 janvier 2026.
+* Obtenue automatiquement lorsque le rang W est atteint pendant la saison 6 des combats classés, du 29 janvier au 19 février 2026.
+
+=== {{Jeu|Champions}} ===
+* Obtenue lors du transfert d'un Blindépique depuis {{Jeu|LPZA}} du 8 avril 2026 au 17 juin 2026 ;
+* Achetable dans la boutique de Frontalis pour 2000 PdV depuis le 17 juin 2026.
+
+== Descriptions ==
+;{{Jeu|LPZA}}
+:Une variété de Méga-Gemme. Tenue par un Blindépique, elle lui permet de méga-évoluer durant un combat.
+;{{Jeu|Champions}}
+:Objet à tenir permettant à Blindépique de méga-évoluer.
+
+== Voir aussi ==
+* [[Méga-Blindépique]]
+* [[Méga-Évolution]]
+
+{{Méga-Gemmes}}
+
+{{Bandeau Inventaire}}
+
+[[de:Brigaronit]]
+[[en:Chesnaughtite]]
+[[es:Chesnaughtita]]
+[[it:Chesnaughtite]]
+[[ja:ブリガロナイト]]
+[[zh:布里卡隆进化石（道具）]]
