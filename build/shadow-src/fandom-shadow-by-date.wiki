@@ -1,0 +1,2230 @@
+{{Notice|This page is the list of all Shadow Pokémon by their release dates.<br>For a simple list of all Shadow Pokémon, see: ''[[List of Shadow Pokémon]]''.<br>For list of purification cost, see: ''[[List of purification cost]]''.<br>For more information about Shadow Pokémon, see: ''[[Shadow Pokémon]]''.}}
+
+This is the list of every '''[[Shadow Pokémon]]''' '''available''' in the game ordered by release date. Certain Shadow Pokémon may not be obtainable from [[Team GO Rocket]] [[Team GO Rocket Grunts|Grunts]] and [[Team GO Rocket Leaders|Leaders]] currently. To understand how the the total number of Pokémon species and Pokémon distinct forms (regular and shiny) was raised, check [[List of Pokémon forms by release date]].
+
+This list does not keep track of Shadow [[Event Pokémon]]. For that, see [[List of Event Pokémon by release date]]. 
+
+==July {{Nth|22}}, 2019==
+{{FormCounter
+| Kanto = 17 | KantoForms = 17 | KantoFormsT = 169 | KantoShiny = 0  | KantoS = 0
+| Johto = 1  | JohtoForms = 1  | JohtoFormsT = 127 | JohtoShiny = 0  | JohtoS = 0
+| Hoenn = 3  | HoennForms = 3  | HoennFormsT = 160 | HoennShiny = 0  | HoennS = 0
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (21)=
+<div class="pogo-list-container bg-picture">
+{{P|Bulbasaur||Grass|Poison|shadow=t}}
+{{P|Ivysaur||Grass|Poison|shadow=t}}
+{{P|Venusaur||Grass|Poison|shadow=t}}
+{{P|Charmander||Fire||shadow=t}}
+{{P|Charmeleon||Fire||shadow=t}}
+{{P|Charizard||Fire|Flying|shadow=t}}
+{{P|Squirtle||Water||shadow=t}}
+{{P|Wartortle||Water||shadow=t}}
+{{P|Blastoise||Water||shadow=t}}
+{{P|Rattata||Normal||shadow=t}}
+{{P|Raticate||Normal||shadow=t}}
+{{P|Zubat||Poison|Flying|shadow=t}}
+{{P|Golbat||Poison|Flying|shadow=t}}
+{{P|Snorlax||Normal||shadow=t}}
+{{P|Dratini||Dragon||shadow=t}}
+{{P|Dragonair||Dragon||shadow=t}}
+{{P|Dragonite||Dragon|Flying|shadow=t}}
+{{P|Crobat||Poison|Flying|shadow=t}}
+{{P|Mudkip||Water||shadow=t}}
+{{P|Marshtomp||Water|Ground|shadow=t}}
+{{P|Swampert||Water|Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==August {{Nth|1}}, 2019==
+<ref>[https://reddit.com/r/TheSilphRoad/comments/ckhsgp New stats for Purified/Shadow Pokémon]. ''/r/TheSilphRoad''. Retrieved on 2019-08-01.</ref><ref>PokemonGoApp. (2019, August 1). [https://twitter.com/PokemonGoApp/status/1157019440225169408 Luckily, we've intercepted a list]. Retrieved on 2019-08-01.</ref>
+{{FormCounter
+| Kanto = 29 | KantoForms = 29 | KantoFormsT = 169 | KantoShiny = 0  | KantoS = 0
+| Johto = 5  | JohtoForms = 5  | JohtoFormsT = 127 | JohtoShiny = 0  | JohtoS = 0
+| Hoenn = 3  | HoennForms = 3  | HoennFormsT = 160 | HoennShiny = 0  | HoennS = 0
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (16)=
+<div class="pogo-list-container bg-picture">
+{{P|Poliwag||Water||shadow=t}}
+{{P|Poliwhirl||Water||shadow=t}}
+{{P|Poliwrath||Water|Fighting|shadow=t}}
+{{P|Grimer||Poison||shadow=t}}
+{{P|Muk||Poison||shadow=t}}
+{{P|Drowzee||Psychic||shadow=t}}
+{{P|Hypno||Psychic||shadow=t}}
+{{P|Cubone||Ground||shadow=t}}
+{{P|Marowak||Ground||shadow=t}}
+{{P|Scyther||Bug|Flying|shadow=t}}
+{{P|Magikarp||Water||shadow=t}}
+{{P|Gyarados||Water|Flying|shadow=t}}
+{{P|Politoed||Water||shadow=t}}
+{{P|Scizor||Bug|Steel|shadow=t}}
+{{P|Houndour||Dark|Fire|shadow=t}}
+{{P|Houndoom||Dark|Fire|shadow=t}}
+</div>
+</tabber></div>
+
+==August {{Nth|8}}, 2019==
+<ref>[https://www.reddit.com/r/TheSilphRoad/comments/cnpj6h/shadow_ralts_now_out Shadow Ralts now out]. ''/r/TheSilphRoad''. Retrieved on 2019-08-12.</ref>
+{{FormCounter
+| Kanto = 29 | KantoForms = 29 | KantoFormsT = 169 | KantoShiny = 0  | KantoS = 0
+| Johto = 5  | JohtoForms = 5  | JohtoFormsT = 127 | JohtoShiny = 0  | JohtoS = 0
+| Hoenn = 6  | HoennForms = 6  | HoennFormsT = 160 | HoennShiny = 0  | HoennS = 0
+| Sinnoh = 1 | SinnohForms = 1 | SinnohFormsT = 138| SinnohShiny = 0 | SinnohS = 0
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (4)=
+<div class="pogo-list-container bg-picture">
+{{P|Ralts||Psychic|Fairy|shadow=t}}
+{{P|Kirlia||Psychic|Fairy|shadow=t}}
+{{P|Gardevoir||Psychic|Fairy|shadow=t}}
+{{P|Gallade||Psychic|Fighting|shadow=t}}
+</div>
+</tabber></div>
+
+==September {{Nth|5}}, 2019==
+<ref>PokemonGoApp. (2019, September 5). [https://twitter.com/PokemonGoApp/status/1169701793019957248 TeamGORocket has turned even more species of Pokémon into Shadow Pokémon! Can you help us rescue the Shadow Pokémon below?]. Retrieved on 2019-09-07.</ref>
+{{FormCounter
+| Kanto = 42 | KantoForms = 42 | KantoFormsT = 169 | KantoShiny = 0  | KantoS = 0
+| Johto = 9  | JohtoForms = 9  | JohtoFormsT = 127 | JohtoShiny = 0  | JohtoS = 0
+| Hoenn = 6  | HoennForms = 6  | HoennFormsT = 160 | HoennShiny = 0  | HoennS = 0
+| Sinnoh = 4 | SinnohForms = 4 | SinnohFormsT = 138| SinnohShiny = 0 | SinnohS = 0
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (20)=
+<div class="pogo-list-container bg-picture">
+{{P|Oddish||Grass|Poison|shadow=t}}
+{{P|Gloom||Grass|Poison|shadow=t}}
+{{P|Vileplume||Grass|Poison|shadow=t}}
+{{P|Venonat||Bug|Poison|shadow=t}}
+{{P|Venomoth||Bug|Poison|shadow=t}}
+{{P|Psyduck||Water||shadow=t}}
+{{P|Golduck||Water||shadow=t}}
+{{P|Growlithe||Fire||shadow=t}}
+{{P|Arcanine||Fire||shadow=t}}
+{{P|Abra||Psychic||shadow=t}}
+{{P|Kadabra||Psychic||shadow=t}}
+{{P|Alakazam||Psychic||shadow=t}}
+{{P|Hitmonchan||Fighting||shadow=t}}
+{{P|Bellossom||Grass||shadow=t}}
+{{P|Larvitar||Rock|Ground|shadow=t}}
+{{P|Pupitar||Rock|Ground|shadow=t}}
+{{P|Tyranitar||Rock|Dark|shadow=t}}
+{{P|Turtwig||Grass||shadow=t}}
+{{P|Grotle||Grass||shadow=t}}
+{{P|Torterra||Grass|Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|17}}, 2019==
+These [[Shadow Pokémon]] were released at the start of [[Halloween 2019]]. <ref>[https://pokemongolive.com/post/halloween2019 Prepare for a ghastly good time during Pokémon GO Halloween 2019!]. ''Pokémon GO Live''. Retrieved on 2019-10-18.</ref>
+{{FormCounter
+| Kanto = 48 | KantoForms = 48 | KantoFormsT = 169 | KantoShiny = 0  | KantoS = 0
+| Johto = 12 | JohtoForms = 12 | JohtoFormsT = 127 | JohtoShiny = 0  | JohtoS = 0
+| Hoenn = 19 | HoennForms = 19 | HoennFormsT = 160 | HoennShiny = 0  | HoennS = 0
+| Sinnoh = 7 | SinnohForms = 7 | SinnohFormsT = 138| SinnohShiny = 0 | SinnohS = 0
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (25)=
+<div class="pogo-list-container bg-picture">
+{{P|Weedle||Bug|Poison|shadow=t}}
+{{P|Kakuna||Bug|Poison|shadow=t}}
+{{P|Beedrill||Bug|Poison|shadow=t}}
+{{P|Electabuzz||Electric||shadow=t}}
+{{P|Magmar||Fire||shadow=t}}
+{{P|Lapras||Water|Ice|shadow=t}}
+{{P|Mareep||Electric||shadow=t}}
+{{P|Flaaffy||Electric||shadow=t}}
+{{P|Ampharos||Electric||shadow=t}}
+{{P|Seedot||Grass||shadow=t}}
+{{P|Nuzleaf||Grass|Dark|shadow=t}}
+{{P|Shiftry||Grass|Dark|shadow=t}}
+{{P|Sableye||Dark|Ghost|shadow=t}}
+{{P|Trapinch||Ground||shadow=t}}
+{{P|Vibrava||Ground|Dragon|shadow=t}}
+{{P|Flygon||Ground|Dragon|shadow=t}}
+{{P|Cacnea||Grass||shadow=t}}
+{{P|Cacturne||Grass|Dark|shadow=t}}
+{{P|Shuppet||Ghost||shadow=t}}
+{{P|Banette||Ghost||shadow=t}}
+{{P|Duskull||Ghost||shadow=t}}
+{{P|Dusclops||Ghost||shadow=t}}
+{{P|Electivire||Electric||shadow=t}}
+{{P|Magmortar||Fire||shadow=t}}
+{{P|Dusknoir||Ghost||shadow=t}}
+</div>
+</tabber></div>
+
+==November {{Nth|7}}, 2019==
+The release of [[Team GO Rocket Leaders]], at the start of [[Team GO Rocket Leaders Disruption]], introduced [[Shiny Pokémon|Shiny]] and [[Legendary Pokémon|Legendary]] Shadow Pokémon.<ref>[https://pokemongolive.com/post/teamgorocketleadersdisruption2019 The Team GO Rocket Leaders have disrupted Pokémon habitats!]. ''Pokémon GO Live''. Retrieved on 2019-11-09.</ref>
+{{FormCounter
+| Kanto = 60 | KantoForms = 60 | KantoFormsT = 169 | KantoShiny = 3  | KantoS = 3
+| Johto = 15 | JohtoForms = 15 | JohtoFormsT = 127 | JohtoShiny = 2  | JohtoS = 2
+| Hoenn = 19 | HoennForms = 19 | HoennFormsT = 160 | HoennShiny = 0  | HoennS = 0
+| Sinnoh = 10| SinnohForms = 10| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (18)=
+<div class="pogo-list-container bg-picture">
+{{P|Sandshrew||Ground||shadow=t}}
+{{P|Sandslash||Ground||shadow=t}}
+{{P|Meowth||Normal||shadow=t}}
+{{P|Persian||Normal||shadow=t}}
+{{P|Bellsprout||Grass|Poison|shadow=t}}
+{{P|Weepinbell||Grass|Poison|shadow=t}}
+{{P|Victreebel||Grass|Poison|shadow=t}}
+{{P|Magnemite||Electric|Steel|shadow=t}}
+{{P|Magneton||Electric|Steel|shadow=t}}
+{{P|Hitmonlee||Fighting||shadow=t}}
+{{P|Porygon||Normal||shadow=t}}
+{{P|Articuno||Ice|Flying|shadow=t}}
+{{P|Wobbuffet||Psychic||shadow=t}}
+{{P|Sneasel||Dark|Ice|shadow=t}}
+{{P|Porygon2||Normal||shadow=t}}
+{{P|Weavile||Dark|Ice|shadow=t}}
+{{P|Magnezone||Electric|Steel|shadow=t}}
+{{P|Porygon-Z||Normal||shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{P|Meowth||Normal|ci=Meowth shiny|shadow=t}}
+{{P|Persian||Normal|ci=Persian shiny|shadow=t}}
+{{P|Scyther||Bug|Flying|ci=Scyther shiny|shadow=t}}
+{{P|Scizor||Bug|Steel|ci=Scizor shiny|shadow=t}}
+{{P|Sneasel||Dark|Ice|ci=Sneasel shiny|shadow=t}}
+{{P|Weavile||Dark|Ice|ci=Weavile shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==December {{Nth|1}}, 2019==
+{{FormCounter
+| Kanto = 61 | KantoForms = 61 | KantoFormsT = 170 | KantoShiny = 3  | KantoS = 3
+| Johto = 15 | JohtoForms = 15 | JohtoFormsT = 127 | JohtoShiny = 2  | JohtoS = 2
+| Hoenn = 19 | HoennForms = 19 | HoennFormsT = 162 | HoennShiny = 0  | HoennS = 0
+| Sinnoh = 10| SinnohForms = 10| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Zapdos||Electric|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==December {{Nth|24}}, 2019==
+These [[Shadow Pokémon]] were released at the start of [[Holiday 2019]].
+<ref>[https://pokemongolive.com/post/holiday2019 A gift from us to you: Pokémon GO’s December events!]. ''Pokémon GO Live''. Retrieved on 2019-12-11.</ref>
+{{FormCounter
+| Kanto = 61 | KantoForms = 61 | KantoFormsT = 170 | KantoShiny = 3  | KantoS = 3
+| Johto = 17 | JohtoForms = 17 | JohtoFormsT = 127 | JohtoShiny = 3  | JohtoS = 3
+| Hoenn = 23 | HoennForms = 23 | HoennFormsT = 162 | HoennShiny = 4  | HoennS = 4
+| Sinnoh = 12| SinnohForms = 12| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (8)=
+<div class="pogo-list-container bg-picture">
+{{P|Delibird||Ice|Flying|shadow=t}}
+{{P|Stantler||Normal||shadow=t}}
+{{P|Absol||Dark||shadow=t}}
+{{P|Bagon||Dragon||shadow=t}}
+{{P|Shelgon||Dragon||shadow=t}}
+{{P|Salamence||Dragon|Flying|shadow=t}}
+{{P|Snover||Grass|Ice|shadow=t}}
+{{P|Abomasnow||Grass|Ice|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{P|Stantler||Normal|ci=Stantler shiny|shadow=t}}
+{{P|Absol||Dark|ci=Absol shiny|shadow=t}}
+{{P|Bagon||Dragon|ci=Bagon shiny|shadow=t}}
+{{P|Shelgon||Dragon|ci=Shelgon shiny|shadow=t}}
+{{P|Salamence||Dragon|Flying|ci=Salamence shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==January {{Nth|1}}, 2020==
+{{FormCounter
+| Kanto = 62 | KantoForms = 62 | KantoFormsT = 170 | KantoShiny = 3  | KantoS = 3
+| Johto = 17 | JohtoForms = 17 | JohtoFormsT = 127 | JohtoShiny = 3  | JohtoS = 3
+| Hoenn = 23 | HoennForms = 23 | HoennFormsT = 162 | HoennShiny = 4  | HoennS = 4
+| Sinnoh = 12| SinnohForms = 12| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Moltres||Fire|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==February {{Nth|1}}, 2020==
+{{FormCounter
+| Kanto = 62 | KantoForms = 62 | KantoFormsT = 170 | KantoShiny = 3  | KantoS = 3
+| Johto = 18 | JohtoForms = 18 | JohtoFormsT = 127 | JohtoShiny = 3  | JohtoS = 3
+| Hoenn = 23 | HoennForms = 23 | HoennFormsT = 162 | HoennShiny = 4  | HoennS = 4
+| Sinnoh = 12| SinnohForms = 12| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Raikou||Electric||shadow=t}}
+</div>
+</tabber></div>
+
+==February {{Nth|3}}, 2020==
+<ref>Pokemon. (2020, February 3). [https://twitter.com/Pokemon/status/1224447559097184257 Team GO Rocket may have captured a whole new batch of Shadow Pokémon...but they didn’t count on you coming to the rescue!]. Retrieved on 2020-02-05.</ref><ref>[https://www.reddit.com/r/TheSilphRoad/comments/eyfnci/new_shadow_mons_pushed_these_are_now_officially New Shadow Mons Pushed - These are now officially in the game]. ''/r/TheSilphRoad''. Retrieved on 2020-02-05.</ref><ref>PokemonGoApp. (2020, February 7). [https://twitter.com/PokemonGoApp/status/1225525624930021376 Whoa! Even more Pokémon have been transformed into Shadow Pokémon by #TeamGORocket!]. Retrieved on 2020-02-29.</ref>
+{{FormCounter
+| Kanto = 69 | KantoForms = 69 | KantoFormsT = 170 | KantoShiny = 4  | KantoS = 4
+| Johto = 19 | JohtoForms = 19 | JohtoFormsT = 127 | JohtoShiny = 3  | JohtoS = 3
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 13| SinnohForms = 13| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (15)=
+<div class="pogo-list-container bg-picture">
+{{P|Vulpix||Fire||shadow=t}}
+{{P|Ninetales||Fire||shadow=t}}
+{{P|Exeggcute||Grass|Psychic|shadow=t}}
+{{P|Exeggutor||Grass|Psychic|shadow=t}}
+{{P|Pinsir||Bug||shadow=t}}
+{{P|Omanyte||Rock|Water|shadow=t}}
+{{P|Omastar||Rock|Water|shadow=t}}
+{{P|Misdreavus||Ghost||shadow=t}}
+{{P|Mawile||Steel|Fairy|shadow=t}}
+{{P|Carvanha||Water|Dark|shadow=t}}
+{{P|Sharpedo||Water|Dark|shadow=t}}
+{{P|Beldum||Steel|Psychic|shadow=t}}
+{{P|Metang||Steel|Psychic|shadow=t}}
+{{P|Metagross||Steel|Psychic|shadow=t}}
+{{P|Mismagius||Ghost||shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{P|Pinsir||Bug|ci=Pinsir shiny|shadow=t}}
+{{P|Mawile||Steel|Fairy|ci=Mawile shiny|shadow=t}}
+{{P|Beldum||Steel|Psychic|ci=Beldum shiny|shadow=t}}
+{{P|Metang||Steel|Psychic|ci=Metang shiny|shadow=t}}
+{{P|Metagross||Steel|Psychic|ci=Metagross shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==March {{Nth|1}}, 2020==
+{{FormCounter
+| Kanto = 69 | KantoForms = 69 | KantoFormsT = 170 | KantoShiny = 4  | KantoS = 4
+| Johto = 20 | JohtoForms = 20 | JohtoFormsT = 127 | JohtoShiny = 3  | JohtoS = 3
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 13| SinnohForms = 13| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Entei||Fire||shadow=t}}
+</div>
+</tabber></div>
+
+==July {{Nth|9}}, 2020==
+These [[Shadow Pokémon]] were released at the start of along with [[Jessie and James]].<ref>[https://pokemongolive.com/post/teamgorocket-jessie-james Battle Jessie and James by finding their Meowth balloon!]. ''Pokémon GO Live''. Retrieved on 2020-07-09.</ref>
+{{FormCounter
+| Kanto = 73 | KantoForms = 73 | KantoFormsT = 177 | KantoShiny = 8  | KantoS = 8
+| Johto = 20 | JohtoForms = 20 | JohtoFormsT = 128 | JohtoShiny = 3  | JohtoS = 3
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 13| SinnohForms = 13| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (4)=
+<div class="pogo-list-container bg-picture">
+{{P|Ekans||Poison|shadow=t}}
+{{P|Arbok||Poison|shadow=t}}
+{{P|Koffing||Poison|shadow=t}}
+{{P|Weezing||Poison|shadow=t}}
+</div>
+|-|
+Shiny (4)=
+<div class="pogo-list-container bg-picture">
+{{P|Ekans||Poison|ci=Ekans shiny|shadow=t}}
+{{P|Arbok||Poison|ci=Arbok shiny|shadow=t}}
+{{P|Koffing||Poison|ci=Koffing shiny|shadow=t}}
+{{P|Weezing||Poison|ci=Weezing shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==July {{Nth|10}}, 2020==
+These [[Shadow Pokémon]] were released at the start of [[Team GO Rocket Event]].<ref>[https://pokemongolive.com/post/gofestweeklychallenge-teamgorocket Team GO Rocket has taken over the GO Fest Weekly Challenge!]. ''Pokémon GO Live''. Retrieved on 2020-07-09.</ref>
+{{FormCounter
+| Kanto = 82 | KantoForms = 82 | KantoFormsT = 177 | KantoShiny = 11 | KantoS = 11
+| Johto = 25 | JohtoForms = 25 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 16| SinnohForms = 16| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (17)=
+<div class="pogo-list-container bg-picture">
+{{P|Nidoran♀||Poison|shadow=t}}
+{{P|Nidorina||Poison|shadow=t}}
+{{P|Nidoqueen||Poison|Ground|shadow=t}}
+{{P|Nidoran♂||Poison|shadow=t}}
+{{P|Nidorino||Poison|shadow=t}}
+{{P|Nidoking||Poison|Ground|shadow=t}}
+{{P|Machop||Fighting|shadow=t}}
+{{P|Machoke||Fighting|shadow=t}}
+{{P|Machamp||Fighting|shadow=t}}
+{{P|Pineco||Bug|shadow=t}}
+{{P|Forretress||Bug|Steel|shadow=t}}
+{{P|Gligar||Ground|Flying|shadow=t}}
+{{P|Shuckle||Bug|Rock|shadow=t}}
+{{P|Suicune||Water|shadow=t}}
+{{P|Stunky||Poison|Dark|shadow=t}}
+{{P|Skuntank||Poison|Dark|shadow=t}}
+{{P|Gliscor||Ground|Flying|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{P|Grimer||Poison|ci=Grimer shiny|shadow=t}}
+{{P|Muk||Poison|ci=Muk shiny|shadow=t}}
+{{P|Lapras||Water|Ice|ci=Lapras shiny|shadow=t}}
+{{P|Pineco||Bug|ci=Pineco shiny|shadow=t}}
+{{P|Forretress||Bug|Steel|ci=Forretress shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==July {{Nth|26}}, 2020==
+Shadow [[Mewtwo]] was released through [[GO Fest 2020: Rocket Straight to Victory]] [[Special Research]].
+{{FormCounter
+| Kanto = 83 | KantoForms = 83 | KantoFormsT = 177 | KantoShiny = 11 | KantoS = 11
+| Johto = 25 | JohtoForms = 25 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 16| SinnohForms = 16| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+| Castform = t
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Mewtwo||Psychic|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|12}}, 2020==
+These [[Shadow Pokémon]] were released at the start of [[The Seasons Change: Part 2]].<ref>[https://pokemongolive.com/post/autumn-event-2020-strange-eggs What are these Strange Eggs? Save them from Team GO Rocket during the autumn event!]. ''Pokémon GO Live''. Retrieved on 2020-10-13.</ref>
+{{FormCounter
+| Kanto = 90 | KantoForms = 90 | KantoFormsT = 177 | KantoShiny = 17 | KantoS = 17
+| Johto = 32 | JohtoForms = 32 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 16| SinnohForms = 16| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (14)=
+<div class="pogo-list-container bg-picture">
+{{P|Diglett||Ground|shadow=t}}
+{{P|Dugtrio||Ground|shadow=t}}
+{{P|Slowpoke||Water|Psychic|shadow=t}}
+{{P|Slowbro||Water|Psychic|shadow=t}}
+{{P|Shellder||Water|shadow=t}}
+{{P|Cloyster||Water|Ice|shadow=t}}
+{{P|Aerodactyl||Rock|Flying|shadow=t}}
+{{P|Hoppip||Grass|Flying|shadow=t}}
+{{P|Skiploom||Grass|Flying|shadow=t}}
+{{P|Jumpluff||Grass|Flying|shadow=t}}
+{{P|Slowking||Water|Psychic|shadow=t}}
+{{P|Teddiursa||Normal|shadow=t}}
+{{P|Ursaring||Normal|shadow=t}}
+{{P|Skarmory||Steel|Flying|shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{P|Growlithe||Fire|ci=Growlithe shiny|shadow=t}}
+{{P|Arcanine||Fire|ci=Arcanine shiny|shadow=t}}
+{{P|Drowzee||Psychic|ci=Drowzee shiny|shadow=t}}
+{{P|Hypno||Psychic|ci=Hypno shiny|shadow=t}}
+{{P|Omanyte||Rock|Water|ci=Omanyte shiny|shadow=t}}
+{{P|Omastar||Rock|Water|ci=Omastar shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==December {{Nth|10}}, 2020==
+Shadow [[Wooper]] was released at the start of [[Wooper Watch]].<ref>[https://pokemongolive.com/post/the-game-awards-2020 Let’s watch The Game Awards 2020 together!]. ''Pokémon GO Live''. Retrieved on 2020-12-10.</ref>
+{{FormCounter
+| Kanto = 90 | KantoForms = 90 | KantoFormsT = 177 | KantoShiny = 17 | KantoS = 17
+| Johto = 34 | JohtoForms = 34 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 29 | HoennForms = 29 | HoennFormsT = 162 | HoennShiny = 8  | HoennS = 8
+| Sinnoh = 16| SinnohForms = 16| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (2)=
+<div class="pogo-list-container bg-picture">
+{{P|Wooper||Water|Ground|shadow=t}}
+{{P|Quagsire||Water|Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==February {{Nth|2}}, 2021==
+These [[Shadow Pokémon]] were released at the start of [[Team GO Rocket Celebration]].<ref>[https://pokemongolive.com/post/team-go-rocket-celebration-2021 Team GO Rocket is celebrating? Smells like trouble!]. ''Pokémon GO Live''. Retrieved on 2021-01-29.</ref>
+{{FormCounter
+| Kanto = 90 | KantoForms = 90 | KantoFormsT = 177 | KantoShiny = 18 | KantoS = 18
+| Johto = 36 | JohtoForms = 36 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 39 | HoennForms = 39 | HoennFormsT = 162 | HoennShiny = 10 | HoennS = 10
+| Sinnoh = 18| SinnohForms = 18| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (15)=
+<div class="pogo-list-container bg-picture">
+{{P|Swinub||Ice|Ground|shadow=t}}
+{{P|Piloswine||Ice|Ground|shadow=t}}
+{{P|Nosepass||Rock|shadow=t}}
+{{P|Aron||Steel|Rock|shadow=t}}
+{{P|Lairon||Steel|Rock|shadow=t}}
+{{P|Aggron||Steel|Rock|shadow=t}}
+{{P|Lileep||Rock|Grass|shadow=t}}
+{{P|Cradily||Rock|Grass|shadow=t}}
+{{P|Anorith||Rock|Bug|shadow=t}}
+{{P|Armaldo||Rock|Bug|shadow=t}}
+{{P|Spheal||Ice|Water|shadow=t}}
+{{P|Sealeo||Ice|Water|shadow=t}}
+{{P|Walrein||Ice|Water|shadow=t}}
+{{P|Mamoswine||Ice|Ground|shadow=t}}
+{{P|Probopass||Rock|Steel|shadow=t}}
+</div>
+|-|
+Shiny (3)=
+<div class="pogo-list-container bg-picture">
+{{P|Aerodactyl||Rock|Flying|ci=Aerodactyl shiny|shadow=t}}
+{{P|Carvanha||Water|Dark|ci=Carvanha shiny|shadow=t}}
+{{P|Sharpedo||Water|Dark|ci=Sharpedo shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==April {{Nth|1}}, 2021==
+Shadow [[Aipom]] was released at the start of [[Tricky Pokémon 2021]].<ref>[https://pokemongolive.com/post/trickypokemon-2021 BREAKING: Pokémon mischief is on the rise, and Team GO Rocket has an Aipom problem]. ''Pokémon GO Live''. Retrieved on 2021-03-30.</ref>
+{{FormCounter
+| Kanto = 90 | KantoForms = 90 | KantoFormsT = 177 | KantoShiny = 18 | KantoS = 18
+| Johto = 37 | JohtoForms = 37 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 40 | HoennForms = 40 | HoennFormsT = 162 | HoennShiny = 10 | HoennS = 10
+| Sinnoh = 19| SinnohForms = 19| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (2)=
+<div class="pogo-list-container bg-picture">
+{{P|Aipom||Normal|shadow=t}}
+{{P|Ambipom||Normal|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|18}}, 2021==
+These [[Shadow Pokémon]] were released at the start of [[Luminous Legends Y]] Part 1.<ref>[https://pokemongolive.com/post/luminouslegends-y-2021 Luminous Legends Y: Yveltal joins Xerneas in Pokémon GO—and Team GO Rocket wants in on the action!] ''Pokémon GO Live''. Retrieved on 2021-05-10.</ref>
+{{FormCounter
+| Kanto = 93 | KantoForms = 93 | KantoFormsT = 177 | KantoShiny = 20 | KantoS = 20
+| Johto = 41 | JohtoForms = 41 | JohtoFormsT = 128 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 46 | HoennForms = 46 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 26| SinnohForms = 26| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (20)=
+<div class="pogo-list-container bg-picture">
+{{P|Tangela||Grass|shadow=t}}
+{{P|Horsea||Water|shadow=t}}
+{{P|Seadra||Water|shadow=t}}
+{{P|Murkrow||Dark|Flying|shadow=t}}
+{{P|Snubbull||Fairy|shadow=t}}
+{{P|Granbull||Fairy|shadow=t}}
+{{P|Kingdra||Water|Dragon|shadow=t}}
+{{P|Poochyena||Dark|shadow=t}}
+{{P|Mightyena||Dark|shadow=t}}
+{{P|Makuhita||Fighting|shadow=t}}
+{{P|Hariyama||Fighting|shadow=t}}
+{{P|Electrike||Electric|shadow=t}}
+{{P|Manectric||Electric|shadow=t}}
+{{P|Starly||Normal|Flying|shadow=t}}
+{{P|Staravia||Normal|Flying|shadow=t}}
+{{P|Staraptor||Normal|Flying|shadow=t}}
+{{P|Honchkrow||Dark|Flying|shadow=t}}
+{{P|Skorupi||Poison|Bug|shadow=t}}
+{{P|Drapion||Poison|Dark|shadow=t}}
+{{P|Tangrowth||Grass|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{P|Venonat||Bug|Poison|ci=Venonat shiny|shadow=t}}
+{{P|Venomoth||Bug|Poison|ci=Venomoth shiny|shadow=t}}
+{{P|Seedot||Grass|ci=Seedot shiny|shadow=t}}
+{{P|Nuzleaf||Grass|Dark|ci=Nuzleaf shiny|shadow=t}}
+{{P|Shiftry||Grass|Dark|ci=Shiftry shiny|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|17}}, 2021==
+{{FormCounter
+| Kanto = 93 | KantoForms = 93 | KantoFormsT = 177 | KantoShiny = 20 | KantoS = 20
+| Johto = 42 | JohtoForms = 42 | JohtoFormsT = 129 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 46 | HoennForms = 46 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 26| SinnohForms = 26| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Ho-Oh||Fire|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|25}}, 2021==
+Shadow [[Bidoof]] was released at the start of [[Bidoof Breakout]].<ref>[https://pokemongolive.com/post/bidoof-breakout-2021 Bidoof will be breaking out, and Shiny Bidoof is coming—BIDOOF!] ''Pokémon GO Live''. Retrieved on 2021-06-15.</ref>
+{{FormCounter
+| Kanto = 93 | KantoForms = 93 | KantoFormsT = 177 | KantoShiny = 20 | KantoS = 20
+| Johto = 42 | JohtoForms = 42 | JohtoFormsT = 129 | JohtoShiny = 5  | JohtoS = 5
+| Hoenn = 45 | HoennForms = 45 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 28| SinnohForms = 28| SinnohFormsT = 138| SinnohShiny = 1 | SinnohS = 1
+}}
+<div class="poketab"><tabber>
+Regular (2)=
+<div class="pogo-list-container bg-picture">
+{{P|Bidoof||Normal|shadow=t}}
+{{P|Bibarel||Normal|Water|shadow=t}}
+</div>
+</tabber></div>
+
+==November {{Nth|9}}, 2021==
+These Shiny [[Shadow Pokémon]] and Shadow [[Lugia]] were released at the start of [[A Looming Shadow Returns!]].
+{{FormCounter
+| Kanto = 93 | KantoForms = 93 | KantoFormsT = 177 | KantoShiny = 23 | KantoS = 23
+| Johto = 43 | JohtoForms = 43 | JohtoFormsT = 129 | JohtoShiny = 6  | JohtoS = 6
+| Hoenn = 46 | HoennForms = 46 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 28| SinnohForms = 28| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Lugia||Psychic|Flying|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{PS|Nidoran♀||Poison|shadow=t}}
+{{PS|Nidorina||Poison|shadow=t}}
+{{PS|Nidoqueen||Poison|Ground|shadow=t}}
+{{PS|Gligar||Ground|Flying|shadow=t}}
+{{PS|Gliscor||Ground|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==January {{Nth|24}}, 2022==
+These [[Shadow Pokémon]] were released at the start of [[Team GO Rocket Strikes]].<ref>[https://pokemongolive.com/post/season-of-heritage-power-plant-event Unlock the last part of the door as Helioptile makes its debut in the electrifying Power Plant event]. ''Pokémon GO Live''. Retrieved on 2022-01-17.</ref>
+{{FormCounter
+| Kanto = 95 | KantoForms = 95 | KantoFormsT = 177 | KantoShiny = 26 | KantoS = 26
+| Johto = 52 | JohtoForms = 52 | JohtoFormsT = 129 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 49 | HoennForms = 49 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 30| SinnohForms = 30| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+}}
+<div class="poketab"><tabber>
+Regular (16)=
+<div class="pogo-list-container bg-picture">
+{{P|Voltorb||Electric|shadow=t}}
+{{P|Electrode||Electric|shadow=t}}
+{{P|Chikorita||Grass|shadow=t}}
+{{P|Bayleef||Grass|shadow=t}}
+{{P|Meganium||Grass|shadow=t}}
+{{P|Cyndaquil||Fire|shadow=t}}
+{{P|Quilava||Fire|shadow=t}}
+{{P|Typhlosion||Fire|shadow=t}}
+{{P|Totodile||Water|shadow=t}}
+{{P|Croconaw||Water|shadow=t}}
+{{P|Feraligatr||Water|shadow=t}}
+{{P|Whismur||Normal|shadow=t}}
+{{P|Loudred||Normal|shadow=t}}
+{{P|Exploud||Normal|shadow=t}}
+{{P|Hippopotas||Ground|shadow=t}}
+{{P|Hippowdon||Ground|shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Poliwag||Water|shadow=t}}
+{{PS|Poliwhirl||Water|shadow=t}}
+{{PS|Poliwrath||Water|Fighting|shadow=t}}
+{{PS|Politoed||Water|shadow=t}}
+{{PS|Teddiursa||Normal|shadow=t}}
+{{PS|Ursaring||Normal|shadow=t}}
+</div>
+</tabber></div>
+
+==February {{Nth|26}}, 2022==
+Apex Shadow [[Lugia]] and [[Ho-Oh]] were released at the start of [[Pokémon GO Tour: Johto]].
+{{FormCounter
+| Kanto = 95 | KantoForms = 95 | KantoFormsT = 179 | KantoShiny = 26 | KantoS = 26
+| Johto = 52 | JohtoForms = 54 | JohtoFormsT = 131 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 49 | HoennForms = 49 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 30| SinnohForms = 30| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+}}
+<div class="poketab"><tabber>
+Regular (2)=
+<div class="pogo-list-container bg-picture">
+{{P|Lugia||Psychic|Flying|shadow=yes|ci=Lugia apex|form=Apex Shadow}}
+{{P|Ho-Oh||Fire|Flying|shadow=yes|ci=Ho-Oh apex|form=Apex Shadow}}
+</div>
+</tabber></div>
+
+==April {{Nth|3}}, 2022==
+These [[Shadow Pokémon]] were released at the start of [[All-Hands Rocket Retreat]].<ref>[https://pokemongolive.com/post/team-go-rocket-takeover-rocket-retreat Salandit, Salazzle, and more debut during the All-Hands Rocket Retreat event]. ''Pokémon GO Live''. Retrieved on 2022-04-02.</ref>
+{{FormCounter
+| Kanto = 95 | KantoForms = 100| KantoFormsT = 179 | KantoShiny = 30 | KantoS = 30
+| Johto = 54 | JohtoForms = 56 | JohtoFormsT = 131 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 52 | HoennForms = 52 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 30| SinnohForms = 30| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+}}
+<div class="poketab"><tabber>
+Regular (10)=
+<div class="pogo-list-container bg-picture">
+{{P|Rattata||Dark|Normal|ci=Rattata alolan|form=Alolan|shadow=t}}
+{{P|Raticate||Dark|Normal|ci=Raticate alolan|form=Alolan|shadow=t}}
+{{P|Sandshrew||Ice|Steel|ci=Sandshrew alolan|form=Alolan|shadow=t}}
+{{P|Sandslash||Ice|Steel|ci=Sandslash alolan|form=Alolan|shadow=t}}
+{{P|Exeggutor||Grass|Dragon|ci=Exeggutor alolan|form=Alolan|shadow=t}}
+{{P|Sudowoodo||Rock|shadow=t}}
+{{P|Girafarig||Normal|Psychic|shadow=t}}
+{{P|Numel||Fire|Ground|shadow=t}}
+{{P|Camerupt||Fire|Ground|shadow=t}}
+{{P|Latias||Dragon|Psychic|shadow=t}}
+</div>
+|-|
+Shiny (4)=
+<div class="pogo-list-container bg-picture">
+{{PS|Exeggcute||Grass|Psychic|shadow=t}}
+{{PS|Exeggutor||Grass|Psychic|shadow=t}}
+{{PS|Cubone||Ground|shadow=t}}
+{{PS|Marowak||Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==April {{Nth|16}}, 2022==
+Shiny Shadow Alolan [[Exeggutor]] can be obtained through evolution during [[Spring into Spring 2022#An Egg-citing Spring Surprise|An Egg-citing Spring Surprise]].
+{{FormCounter
+| Kanto = 95 | KantoForms = 100| KantoFormsT = 179 | KantoShiny = 31 | KantoS = 30
+| Johto = 54 | JohtoForms = 56 | JohtoFormsT = 131 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 52 | HoennForms = 52 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 30| SinnohForms = 30| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Exeggutor||Grass|Dragon|ci=Exeggutor alolan|form=Alolan|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|25}}, 2022==
+Shadow Alolan [[Marowak]] and its shiny form can be obtained through evolution during [[Alola to Alola]].
+{{FormCounter
+| Kanto = 95 | KantoForms = 101| KantoFormsT = 184 | KantoShiny = 32 | KantoS = 30
+| Johto = 54 | JohtoForms = 56 | JohtoFormsT = 134 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 52 | HoennForms = 52 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 30| SinnohForms = 30| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Marowak||Fire|Ghost|ci=Marowak alolan|form=Alolan|shadow=t}}
+</div>
+|-|
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Marowak||Fire|Ghost|ci=Marowak alolan|form=Alolan|shadow=t}}
+</div>
+</tabber></div>
+
+==July {{Nth|9}}, 2022==
+These [[Shadow Pokémon]] were released at the start of [[Battle Weekend]].<ref>[https://pokemongolive.com/post/anniversary-event-battle-weekend-2022 Celebrate six years of Pokémon GO during the Anniversary Event and Battle Weekend!]. ''Pokémon GO Live''. Retrieved on 2022-06-29.</ref>
+{{FormCounter
+| Kanto = 98 | KantoForms = 104| KantoFormsT = 184 | KantoShiny = 41 | KantoS = 39
+| Johto = 54 | JohtoForms = 56 | JohtoFormsT = 134 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 53 | HoennForms = 53 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 33| SinnohForms = 33| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+| Unova = 8  | UnovaForms = 8  | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (15)=
+<div class="pogo-list-container bg-picture">
+{{P|Geodude||Rock|Ground|shadow=t}}
+{{P|Graveler||Rock|Ground|shadow=t}}
+{{P|Golem||Rock|Ground|shadow=t}}
+{{P|Latios||Dragon|Psychic|shadow=t}}
+{{P|Shinx||Electric|shadow=t}}
+{{P|Luxio||Electric|shadow=t}}
+{{P|Luxray||Electric|shadow=t}}
+{{P|Patrat||Normal|shadow=t}}
+{{P|Watchog||Normal|shadow=t}}
+{{P|Purrloin||Dark|shadow=t}}
+{{P|Liepard||Dark|shadow=t}}
+{{P|Ducklett||Water|Flying|shadow=t}}
+{{P|Swanna||Water|Flying|shadow=t}}
+{{P|Foongus||Grass|Poison|shadow=t}}
+{{P|Amoonguss||Grass|Poison|shadow=t}}
+</div>
+|-|
+Shiny (9)=
+<div class="pogo-list-container bg-picture">
+{{PS|Bulbasaur||Grass|Poison|shadow=t}}
+{{PS|Ivysaur||Grass|Poison|shadow=t}}
+{{PS|Venusaur||Grass|Poison|shadow=t}}
+{{PS|Charmander||Fire|shadow=t}}
+{{PS|Charmeleon||Fire|shadow=t}}
+{{PS|Charizard||Fire|Flying|shadow=t}}
+{{PS|Squirtle||Water|shadow=t}}
+{{PS|Wartortle||Water|shadow=t}}
+{{PS|Blastoise||Water|shadow=t}}
+</div>
+</tabber></div>
+
+==November {{Nth|12}}, 2022==
+Shadow and shiny shadow [[Ursaluna]] was released at the start of [[November 2022 Community Day]].
+{{FormCounter
+| Kanto = 98 | KantoForms = 104| KantoFormsT = 184 | KantoShiny = 41 | KantoS = 39
+| Johto = 54 | JohtoForms = 56 | JohtoFormsT = 134 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 53 | HoennForms = 53 | HoennFormsT = 162 | HoennShiny = 13 | HoennS = 13
+| Sinnoh = 33| SinnohForms = 33| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+| Unova = 8  | UnovaForms = 8  | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Ursaluna||Ground|Normal|shadow=t}}
+</div>
+|-|
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Ursaluna||Ground|Normal|shadow=t}}
+</div>
+</tabber></div>
+
+==November {{Nth|14}}, 2022==
+These [[Shadow Pokémon]] were released at the start of [[Greedy Gluttons]] - [[Greedy Gluttons#Team GO Rocket Takeover|Team GO Rocket Takeover]].<ref>[https://pokemongolive.com/post/greedy-gluttons The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon GO this November!] ''Pokémon GO Live''. Retrieved on 2022-11-07.</ref>
+{{FormCounter
+| Kanto = 99 | KantoForms = 107| KantoFormsT = 184 | KantoShiny = 44 | KantoS = 42
+| Johto = 57 | JohtoForms = 59 | JohtoFormsT = 134 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 55 | HoennForms = 55 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 33| SinnohForms = 33| SinnohFormsT = 138| SinnohShiny = 2 | SinnohS = 2
+| Unova = 10 | UnovaForms = 10 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (10)=
+<div class="pogo-list-container bg-picture">
+{{P|Diglett||Ground|Steel|shadow=t|ci=Diglett alolan|form=Alolan}}
+{{P|Dugtrio||Ground|Steel|shadow=t|ci=Dugtrio alolan|form=Alolan}}
+{{P|Onix||Rock|Ground|shadow=t}}
+{{P|Natu||Psychic|Flying|shadow=t}}
+{{P|Xatu||Psychic|Flying|shadow=t}}
+{{P|Steelix||Steel|Ground|shadow=t}}
+{{P|Wailmer||Water|shadow=t}}
+{{P|Wailord||Water|shadow=t}}
+{{P|Golett||Ground|Ghost|shadow=t}}
+{{P|Golurk||Ground|Ghost|shadow=t}}
+</div>
+|-|
+Shiny (4)=
+<div class="pogo-list-container bg-picture">
+{{PS|Machop||Fighting|shadow=t}}
+{{PS|Machoke||Fighting|shadow=t}}
+{{PS|Machamp||Fighting|shadow=t}}
+{{PS|Sableye||Dark|Ghost|shadow=t}}
+</div>
+</tabber></div>
+
+==February {{Nth|1}}, 2023==
+These [[Shadow Pokémon]] were released at the start of [[Crackling Voltage]] - [[Crackling Voltage#Team GO Rocket Takeover|Team GO Rocket Takeover]].<ref>[https://pokemongolive.com/post/crackling-voltage-team-go-rocket-takeover Bzzt! Shiny Helioptile and Shiny Tapu Koko bring the thunder in the Crackling Voltage event; Team GO Rocket activity also detected]. ''Pokémon GO Live''. Retrieved on 2023-01-20.</ref>
+{{FormCounter
+| Kanto = 99 | KantoForms = 109| KantoFormsT = 184 | KantoShiny = 49 | KantoS = 47
+| Johto = 57 | JohtoForms = 59 | JohtoFormsT = 134 | JohtoShiny = 9  | JohtoS = 9
+| Hoenn = 58 | HoennForms = 58 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 33| SinnohForms = 33| SinnohFormsT = 138| SinnohShiny = 3 | SinnohS = 3
+| Unova = 17 | UnovaForms = 17 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (12)=
+<div class="pogo-list-container bg-picture">
+{{P|Vulpix||Ice|shadow=t|ci=Vulpix alolan|form=Alolan}}
+{{P|Ninetales||Ice|Fairy|shadow=t|ci=Ninetales alolan|form=Alolan}}
+{{P|Spoink||Psychic|shadow=t}}
+{{P|Grumpig||Psychic|shadow=t}}
+{{P|Registeel||Steel|shadow=t}}
+{{P|Pidove||Normal|Flying|shadow=t}}
+{{P|Tranquill||Normal|Flying|shadow=t}}
+{{P|Unfezant||Normal|Flying|shadow=t}}
+{{P|Blitzle||Electric|shadow=t}}
+{{P|Zebstrika||Electric|shadow=t}}
+{{P|Joltik||Bug|Electric|shadow=t}}
+{{P|Galvantula||Bug|Electric|shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Nidoran♂||Poison|shadow=t}}
+{{PS|Nidorino||Poison|shadow=t}}
+{{PS|Nidoking||Poison|Ground|shadow=t}}
+{{PS|Magnemite||Electric|Steel|shadow=t}}
+{{PS|Magneton||Electric|Steel|shadow=t}}
+{{PS|Magnezone||Electric|Steel|shadow=t}}
+</div>
+</tabber></div>
+
+==March {{Nth|25}}, 2023==
+These [[Shadow Pokémon]] were released at the start of [[Let's GO!]] - [[Let's GO!#Team GO Rocket Takeover|Team GO Rocket Takeover]].<ref>[https://pokemongolive.com/post/lets-go-event-team-go-rocket-takeover Professor Willow needs everybody’s help in a new event; Team GO Rocket activity also detected]. ''Pokémon GO Live''. Retrieved on 2023-03-14.</ref>
+{{FormCounter
+| Kanto = 99 | KantoForms = 111| KantoFormsT = 184 | KantoShiny = 49 | KantoS = 47
+| Johto = 59 | JohtoForms = 61 | JohtoFormsT = 134 | JohtoShiny = 13  | JohtoS = 13
+| Hoenn = 65 | HoennForms = 65 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 35| SinnohForms = 35| SinnohFormsT = 138| SinnohShiny = 4 | SinnohS = 4
+| Unova = 17 | UnovaForms = 17 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (13)=
+<div class="pogo-list-container bg-picture">
+{{P|Grimer||Poison|Dark|ci=Grimer alolan|shadow=t|form=Alolan}}
+{{P|Muk||Poison|Dark|ci=Muk alolan|shadow=t|form=Alolan}}
+{{P|Phanpy||Ground|shadow=t}}
+{{P|Donphan||Ground|shadow=t}}
+{{P|Treecko||Grass|shadow=t}}
+{{P|Grovyle||Grass|shadow=t}}
+{{P|Sceptile||Grass|shadow=t}}
+{{P|Torchic||Fire|shadow=t}}
+{{P|Combusken||Fire|Fighting|shadow=t}}
+{{P|Blaziken||Fire|Fighting|shadow=t}}
+{{P|Regice||Ice|shadow=t}}
+{{P|Drifloon||Ghost|Flying|shadow=t}}
+{{P|Drifblim||Ghost|Flying|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{PS|Murkrow||Dark|Flying|shadow=t}}
+{{PS|Larvitar||Rock|Ground|shadow=t}}
+{{PS|Pupitar||Rock|Ground|shadow=t}}
+{{PS|Tyranitar||Rock|Dark|shadow=t}}
+{{PS|Honchkrow||Dark|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|27}}, 2023==
+Shiny Shadow [[Mewtwo]] was released on the weekend of [[Rising Shadows]].
+{{FormCounter
+| Kanto = 99 | KantoForms = 111| KantoFormsT = 184 | KantoShiny = 50 | KantoS = 48
+| Johto = 59 | JohtoForms = 61 | JohtoFormsT = 134 | JohtoShiny = 13  | JohtoS = 13
+| Hoenn = 65 | HoennForms = 65 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 35| SinnohForms = 35| SinnohFormsT = 138| SinnohShiny = 4 | SinnohS = 4
+| Unova = 17 | UnovaForms = 17 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Mewtwo||Psychic|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|5}}, 2023==
+Shadow [[Throh]] and [[Sawk]] were released.
+{{FormCounter
+| Kanto = 99 | KantoForms = 111| KantoFormsT = 184 | KantoShiny = 50 | KantoS = 48
+| Johto = 59 | JohtoForms = 61 | JohtoFormsT = 134 | JohtoShiny = 13  | JohtoS = 13
+| Hoenn = 65 | HoennForms = 65 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 35| SinnohForms = 35| SinnohFormsT = 138| SinnohShiny = 4 | SinnohS = 4
+| Unova = 19 | UnovaForms = 19 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (2)=
+<div class="pogo-list-container bg-picture">
+{{P|Throh||Fighting|shadow=t}}
+{{P|Sawk||Fighting|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|10}}, 2023==
+Shiny Shadow [[Articuno]] was released.
+{{FormCounter
+| Kanto = 99 | KantoForms = 111| KantoFormsT = 184 | KantoShiny = 51 | KantoS = 49
+| Johto = 59 | JohtoForms = 61 | JohtoFormsT = 134 | JohtoShiny = 13  | JohtoS = 13
+| Hoenn = 65 | HoennForms = 65 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 35| SinnohForms = 35| SinnohFormsT = 138| SinnohShiny = 4 | SinnohS = 4
+| Unova = 19 | UnovaForms = 19 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Articuno||Ice|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|21}}, 2023==
+These [[Shadow Pokémon]] were released at the start of [[Solstice Horizons]] - [[Solstice Horizons#Team GO Rocket Takeover|Team GO Rocket Takeover]].<ref>[https://pokemongolive.com/post/solstice-horizons Spend the perfect day—or evening—with Pokémon during the Solstice Horizons event!]. ''Pokémon GO Live''. Retrieved on 2023-06-13.</ref>
+{{FormCounter
+| Kanto = 99 | KantoForms = 114| KantoFormsT = 184 | KantoShiny = 54 | KantoS = 52
+| Johto = 62 | JohtoForms = 64 | JohtoFormsT = 134 | JohtoShiny = 14  | JohtoS = 14
+| Hoenn = 66 | HoennForms = 66 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 40| SinnohForms = 40| SinnohFormsT = 138| SinnohShiny = 5 | SinnohS = 5
+| Unova = 19 | UnovaForms = 19 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (12)=
+<div class="pogo-list-container bg-picture">
+{{P|Geodude||Rock|Electric|ci=Geodude alolan|shadow=t|form=Alolan}}
+{{P|Graveler||Rock|Electric|ci=Graveler alolan|shadow=t|form=Alolan}}
+{{P|Golem||Rock|Electric|ci=Golem alolan|shadow=t|form=Alolan}}
+{{P|Ledyba||Bug|Flying|shadow=t}}
+{{P|Ledian||Bug|Flying|shadow=t}}
+{{P|Hitmontop||Fighting|shadow=t}}
+{{P|Regirock||Rock|shadow=t}}
+{{P|Glameow||Normal|shadow=t}}
+{{P|Purugly||Normal|shadow=t}}
+{{P|Gible||Dragon|Ground|shadow=t}}
+{{P|Gabite||Dragon|Ground|shadow=t}}
+{{P|Garchomp||Dragon|Ground|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{PS|Geodude||Rock|Ground|shadow=t}}
+{{PS|Graveler||Rock|Ground|shadow=t}}
+{{PS|Golem||Rock|Ground|shadow=t}}
+{{PS|Aipom||Normal|shadow=t}}
+{{PS|Ambipom||Normal|shadow=t}}
+</div>
+</tabber></div>
+
+==September {{Nth|2}}, 2023==
+Shiny Shadow [[Zapdos]] was released.
+{{FormCounter
+| Kanto = 99 | KantoForms = 114| KantoFormsT = 187 | KantoShiny = 55 | KantoS = 53
+| Johto = 62 | JohtoForms = 64 | JohtoFormsT = 135 | JohtoShiny = 14  | JohtoS = 14
+| Hoenn = 66 | HoennForms = 66 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 40| SinnohForms = 40| SinnohFormsT = 138| SinnohShiny = 5 | SinnohS = 5
+| Unova = 19 | UnovaForms = 19 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Zapdos||Electric|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|1}}, 2023==
+Shiny Shadow [[Moltres]] was released.
+{{FormCounter
+| Kanto = 99 | KantoForms = 114| KantoFormsT = 187 | KantoShiny = 56 | KantoS = 54
+| Johto = 62 | JohtoForms = 64 | JohtoFormsT = 135 | JohtoShiny = 14  | JohtoS = 14
+| Hoenn = 66 | HoennForms = 66 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 40| SinnohForms = 40| SinnohFormsT = 138| SinnohShiny = 5 | SinnohS = 5
+| Unova = 19 | UnovaForms = 19 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 1  | HisuiForms = 1  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Moltres||Fire|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|26}}, 2023==
+These Shadow Pokémon were released at the start of [[Halloween 2023]] Part 2.<ref>[https://pokemongolive.com/post/halloween-team-go-rocket-takeover-2023 Sinister shadows abound this Halloween season. Team GO Rocket returns, Giovanni partners with Shadow Regigigas, and Shadow Lugia makes its Shadow Raid debut!]. ''Pokémon GO Live''. Retrieved on 2023-10-18.</ref>
+{{FormCounter
+| Kanto = 104 | KantoForms = 119| KantoFormsT = 187 | KantoShiny = 62 | KantoS = 60
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 14  | JohtoS = 14
+| Hoenn = 68 | HoennForms = 68 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 46| SinnohForms = 46| SinnohFormsT = 138| SinnohShiny = 5 | SinnohS = 5
+| Unova = 24 | UnovaForms = 24 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (20)=
+<div class="pogo-list-container bg-picture">
+{{P|Gastly||Ghost|Poison|shadow=t}}
+{{P|Haunter||Ghost|Poison|shadow=t}}
+{{P|Gengar||Ghost|Poison|shadow=t}}
+{{P|Rhyhorn||Ground|Rock|shadow=t}}
+{{P|Rhydon||Ground|Rock|shadow=t}}
+{{P|Sneasel||Fighting|Poison|ci=Sneasel hisuian|form=Hisuian|shadow=t}}
+{{P|Barboach||Water|Ground|shadow=t}}
+{{P|Whiscash||Water|Ground|shadow=t}}
+{{P|Cranidos||Rock|shadow=t}}
+{{P|Rampardos||Rock|shadow=t}}
+{{P|Shieldon||Rock|Steel|shadow=t}}
+{{P|Bastiodon||Rock|Steel|shadow=t}}
+{{P|Rhyperior||Ground|Rock|shadow=t}}
+{{P|Regigigas||Normal|shadow=t}}
+{{P|Drilbur||Ground|shadow=t}}
+{{P|Excadrill||Ground|Steel|shadow=t}}
+{{P|Litwick||Ghost|Fire|shadow=t}}
+{{P|Lampent||Ghost|Fire|shadow=t}}
+{{P|Chandelure||Ghost|Fire|shadow=t}}
+{{P|Sneasler||Fighting|Poison|shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Bellsprout||Grass|Poison|shadow=t}}
+{{PS|Weepinbell||Grass|Poison|shadow=t}}
+{{PS|Victreebel||Grass|Poison|shadow=t}}
+{{PS|Dratini||Dragon||shadow=t}}
+{{PS|Dragonair||Dragon||shadow=t}}
+{{PS|Dragonite||Dragon|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|28}}, 2023==
+Shiny Shadow [[Lugia]] was released.
+{{FormCounter
+| Kanto = 104 | KantoForms = 119| KantoFormsT = 187 | KantoShiny = 62 | KantoS = 60
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 15  | JohtoS = 15
+| Hoenn = 68 | HoennForms = 68 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 46| SinnohForms = 46| SinnohFormsT = 138| SinnohShiny = 5 | SinnohS = 5
+| Unova = 24 | UnovaForms = 24 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Lugia||Psychic|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==January {{Nth|27}}, 2024==
+These Shadow Pokémon were released at the start of [[Taken Treasures]].<ref>[https://pokemongolive.com/post/taken-treasures-team-go-rocket-takeover-2024 Team GO Rocket returns, Shadow Kyogre joins Giovanni, and Shadow Ho-Oh makes its Shadow Raid debut!]. ''Pokémon GO Live''. Retrieved on 2024-01-16.</ref>
+{{FormCounter
+| Kanto = 106 | KantoForms = 121| KantoFormsT = 187 | KantoShiny = 66 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 17  | JohtoS = 17
+| Hoenn = 73 | HoennForms = 73 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 55| SinnohForms = 55| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 28 | UnovaForms = 28 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (20)=
+<div class="pogo-list-container bg-picture">
+{{P|Tentacool||Water|Poison|shadow=t}}
+{{P|Tentacruel||Water|Poison|shadow=t}}
+{{P|Corphish||Water|shadow=t}}
+{{P|Crawdaunt||Water|Dark|shadow=t}}
+{{P|Snorunt||Ice|shadow=t}}
+{{P|Glalie||Ice|shadow=t}}
+{{P|Kyogre||Water|shadow=t}}
+{{P|Chimchar||Fire|shadow=t}}
+{{P|Monferno||Fire|Fighting|shadow=t}}
+{{P|Infernape||Fire|Fighting|shadow=t}}
+{{P|Piplup||Water|shadow=t}}
+{{P|Prinplup||Water|shadow=t}}
+{{P|Empoleon||Water|Steel|shadow=t}}
+{{P|Croagunk||Poison|Fighting|shadow=t}}
+{{P|Toxicroak||Poison|Fighting|shadow=t}}
+{{P|Froslass||Ice|Ghost|shadow=t}}
+{{P|Dwebble||Bug|Rock|shadow=t}}
+{{P|Crustle||Bug|Rock|shadow=t}}
+{{P|Ferroseed||Grass|Steel|shadow=t}}
+{{P|Ferrothorn||Grass|Steel|shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Zubat||Poison|Flying|shadow=t}}
+{{PS|Golbat||Poison|Flying|shadow=t}}
+{{PS|Tentacool||Water|Poison|shadow=t}}
+{{PS|Tentacruel||Water|Poison|shadow=t}}
+{{PS|Crobat||Poison|Flying|shadow=t}}
+{{PS|Ho-Oh||Fire|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==March {{Nth|2}}, 2024==
+Shiny Shadow [[Raikou]] was released.
+{{FormCounter
+| Kanto = 106 | KantoForms = 121| KantoFormsT = 187 | KantoShiny = 66 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 18  | JohtoS = 18
+| Hoenn = 73 | HoennForms = 73 | HoennFormsT = 162 | HoennShiny = 14 | HoennS = 14
+| Sinnoh = 55| SinnohForms = 55| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 28 | UnovaForms = 28 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Raikou||Electric|shadow=t}}
+</div>
+</tabber></div>
+
+==March {{Nth|27}}, 2024==
+These Shadow Pokémon were released at the start of [[World of Wonders: Taken Over]].<ref>[https://pokemongolive.com/post/world-taken-over-by-TGR Protect the world from Team GO Rocket and Giovanni—and rescue Shadow Groudon and Shadow Mewtwo during World of Wonders: Taken Over!]. ''Pokémon GO Live''. Retrieved on 2024-03-13.</ref>
+{{FormCounter
+| Kanto = 109 | KantoForms = 124| KantoFormsT = 187 | KantoShiny = 66 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 18  | JohtoS = 18
+| Hoenn = 74 | HoennForms = 74 | HoennFormsT = 162 | HoennShiny = 19 | HoennS = 19
+| Sinnoh = 55| SinnohForms = 55| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 36 | UnovaForms = 36 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (12)=
+<div class="pogo-list-container bg-picture">
+{{P|Pidgey||Normal|Flying|shadow=t}}
+{{P|Pidgeotto||Normal|Flying|shadow=t}}
+{{P|Pidgeot||Normal|Flying|shadow=t}}
+{{P|Groudon||Ground|shadow=t}}
+{{P|Darumaka||Fire|shadow=t}}
+{{P|Darmanitan||Fire|shadow=t}}
+{{P|Gothita||Psychic|shadow=t}}
+{{P|Gothorita||Psychic|shadow=t}}
+{{P|Gothitelle||Psychic|shadow=t}}
+{{P|Solosis||Psychic|shadow=t}}
+{{P|Duosion||Psychic|shadow=t}}
+{{P|Reuniclus||Psychic|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{PS|Trapinch||Ground|shadow=t}}
+{{PS|Vibrava||Ground|Dragon|shadow=t}}
+{{PS|Flygon||Ground|Dragon|shadow=t}}
+{{PS|Cacnea||Grass|shadow=t}}
+{{PS|Cacturne||Grass|Dark|shadow=t}}
+</div>
+</tabber></div>
+
+==April {{Nth|6}}, 2024==
+Shiny Shadow [[Entei]] was released.
+{{FormCounter
+| Kanto = 109 | KantoForms = 124| KantoFormsT = 187 | KantoShiny = 66 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 19  | JohtoS = 19
+| Hoenn = 74 | HoennForms = 74 | HoennFormsT = 162 | HoennShiny = 19 | HoennS = 19
+| Sinnoh = 55| SinnohForms = 55| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 36 | UnovaForms = 36 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Entei||Fire|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|4}}, 2024==
+Shiny Shadow [[Suicune]] was released.
+{{FormCounter
+| Kanto = 109 | KantoForms = 124| KantoFormsT = 187 | KantoShiny = 66 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 74 | HoennForms = 74 | HoennFormsT = 162 | HoennShiny = 19 | HoennS = 19
+| Sinnoh = 55| SinnohForms = 55| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 36 | UnovaForms = 36 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Suicune||Water|shadow=t}}
+</div>
+</tabber></div>
+
+==August {{Nth|8}}, 2024==
+These Shadow Pokémon were released at the start of [[Adventure Week: Taken Over]].<ref>[https://pokemongolive.com/post/adventure-week-team-go-rocket Prepare for rocky roads ahead as Team GO Rocket takes over Adventure Week!] ''Pokémon GO Live''. Retrieved on 2024-07-29.</ref>
+{{FormCounter
+| Kanto = 109 | KantoForms = 124| KantoFormsT = 187 | KantoShiny = 66 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 74 | HoennForms = 74 | HoennFormsT = 162 | HoennShiny = 23 | HoennS = 23
+| Sinnoh = 56| SinnohForms = 56| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 43 | UnovaForms = 43 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (8)=
+<div class="pogo-list-container bg-picture">
+{{P|Cresselia||Psychic|shadow=t}}
+{{P|Timburr||Fighting|shadow=t}}
+{{P|Gurdurr||Fighting|shadow=t}}
+{{P|Conkeldurr||Fighting|shadow=t}}
+{{P|Tirtouga||Water|Rock|shadow=t}}
+{{P|Carracosta||Water|Rock|shadow=t}}
+{{P|Archen||Rock|Flying|shadow=t}}
+{{P|Archeops||Rock|Flying|shadow=t}}
+</div>
+|-|
+Shiny (4)=
+<div class="pogo-list-container bg-picture">
+{{PS|Lileep||Rock|Grass|shadow=t}}
+{{PS|Cradily||Rock|Grass|shadow=t}}
+{{PS|Anorith||Rock|Bug|shadow=t}}
+{{PS|Armaldo||Rock|Bug|shadow=t}}
+</div>
+</tabber></div>
+
+==September {{Nth|26}}, 2024==
+Shadow Galarian [[Weezing]] was released at the start of [[Legendary Heroes]].
+{{FormCounter
+| Kanto = 109 | KantoForms = 125| KantoFormsT = 187 | KantoShiny = 67 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 74 | HoennForms = 74 | HoennFormsT = 162 | HoennShiny = 23 | HoennS = 23
+| Sinnoh = 56| SinnohForms = 56| SinnohFormsT = 140| SinnohShiny = 5 | SinnohS = 5
+| Unova = 43 | UnovaForms = 43 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Weezing||Poison|Fairy|ci=Weezing galarian|form=Galarian|shadow=t}}
+</div>
+|-|
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Weezing||Poison|Fairy|ci=Weezing galarian|form=Galarian|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|8}}, 2024==
+These Shadow Pokémon were released at the start of [[Galarian Expedition#Galarian Expedition: Taken Over|Galarian Expedition: Taken Over]].<ref>[https://pokemongolive.com/post/galarian-expedition-taken-over-by-TGR Team GO Rocket and Giovanni return—give it your all and rescue Shadow Heatran during Galarian Expedition: Taken Over!] ''Pokémon GO Live''. Retrieved on 2024-09-25.</ref>
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 67 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 76 | HoennForms = 76 | HoennFormsT = 162 | HoennShiny = 28 | HoennS = 28
+| Sinnoh = 57| SinnohForms = 57| SinnohFormsT = 140| SinnohShiny = 6 | SinnohS = 6
+| Unova = 53 | UnovaForms = 53 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (20)=
+<div class="pogo-list-container bg-picture">
+{{P|Caterpie||Bug|shadow=t}}
+{{P|Metapod||Bug|shadow=t}}
+{{P|Butterfree||Bug|Flying|shadow=t}}
+{{P|Mankey||Fighting|shadow=t}}
+{{P|Primeape||Fighting|shadow=t}}
+{{P|Zigzagoon||Dark|Normal|ci=Zigzagoon galarian|form=Galarian|shadow=t}}
+{{P|Linoone||Dark|Normal|ci=Linoone galarian|form=Galarian|shadow=t}}
+{{P|Heatran||Fire|Steel|shadow=t}}
+{{P|Roggenrola||Rock|shadow=t}}
+{{P|Boldore||Rock|shadow=t}}
+{{P|Gigalith||Rock|shadow=t}}
+{{P|Venipede||Bug|Poison|shadow=t}}
+{{P|Whirlipede||Bug|Poison|shadow=t}}
+{{P|Scolipede||Bug|Poison|shadow=t}}
+{{P|Karrablast||Bug|shadow=t}}
+{{P|Escavalier||Bug|Steel|shadow=t}}
+{{P|Shelmet||Bug|shadow=t}}
+{{P|Accelgor||Bug|shadow=t}}
+{{P|Obstagoon||Dark|Normal|shadow=t}}
+{{P|Annihilape||Fighting|Ghost|shadow=t}}
+</div>
+|-|
+Shiny (7)=
+<div class="pogo-list-container bg-picture">
+{{PS|Zigzagoon||Dark|Normal|ci=Zigzagoon galarian|form=Galarian|shadow=t}}
+{{PS|Linoone||Dark|Normal|ci=Linoone galarian|form=Galarian|shadow=t}}
+{{PS|Ralts||Psychic|Fairy|shadow=t}}
+{{PS|Kirlia||Psychic|Fairy|shadow=t}}
+{{PS|Gardevoir||Psychic|Fairy|shadow=t}}
+{{PS|Gallade||Psychic|Fighting|shadow=t}}
+{{PS|Obstagoon||Dark|Normal|shadow=t}}
+</div>
+</tabber></div>
+
+==December {{Nth|7}}, 2024==
+Shiny Shadow [[Regice]] was released.
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 67 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 76 | HoennForms = 76 | HoennFormsT = 162 | HoennShiny = 29 | HoennS = 29
+| Sinnoh = 57| SinnohForms = 57| SinnohFormsT = 140| SinnohShiny = 6 | SinnohS = 6
+| Unova = 53 | UnovaForms = 53 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Regice||Ice|shadow=t}}
+</div>
+</tabber></div>
+
+==January {{Nth|4}}, 2025==
+Shiny Shadow [[Registeel]] was released.
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 67 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 76 | HoennForms = 76 | HoennFormsT = 162 | HoennShiny = 30 | HoennS = 30
+| Sinnoh = 57| SinnohForms = 57| SinnohFormsT = 140| SinnohShiny = 6 | SinnohS = 6
+| Unova = 53 | UnovaForms = 53 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Registeel||Steel|shadow=t}}
+</div>
+</tabber></div>
+
+==January {{Nth|15}}, 2025==
+These Shadow Pokémon were released at the start of [[Fashion Week 2025#Fashion Week: Taken Over|Fashion Week: Taken Over]].<ref>[https://pokemongolive.com/post/fashion-week-taken-over-by-TGR/ Team GO Rocket and Giovanni return. Give it your all and rescue Shadow Palkia during Fashion Week: Taken Over!] ''Pokémon GO Live''. Retrieved on 2025-01-14.</ref>
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 69 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 78 | HoennForms = 78 | HoennFormsT = 162 | HoennShiny = 30 | HoennS = 30
+| Sinnoh = 58| SinnohForms = 58| SinnohFormsT = 140| SinnohShiny = 8 | SinnohS = 8
+| Unova = 64 | UnovaForms = 64 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 2  | KalosForms = 2  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (16)=
+<div class="pogo-list-container bg-picture">
+{{P|Taillow||Normal|Flying|shadow=t}}
+{{P|Swellow||Normal|Flying|shadow=t}}
+{{P|Palkia||Water|Dragon|shadow=t}}
+{{P|Snivy||Grass|shadow=t}}
+{{P|Servine||Grass|shadow=t}}
+{{P|Serperior||Grass|shadow=t}}
+{{P|Tepig||Fire|shadow=t}}
+{{P|Pignite||Fire|Fighting|shadow=t}}
+{{P|Emboar||Fire|Fighting|shadow=t}}
+{{P|Oshawott||Water|shadow=t}}
+{{P|Dewott||Water|shadow=t}}
+{{P|Samurott||Water|shadow=t}}
+{{P|Trubbish||Poison|shadow=t}}
+{{P|Garbodor||Poison|shadow=t}}
+{{P|Bunnelby||Normal|shadow=t}}
+{{P|Diggersby||Normal|Ground|shadow=t}}
+</div>
+|-|
+Shiny (4)=
+<div class="pogo-list-container bg-picture">
+{{PS|Grimer||Poison|Dark|ci=Grimer alolan|form=Alolan|shadow=t}}
+{{PS|Muk||Poison|Dark|ci=Muk alolan|form=Alolan|shadow=t}}
+{{PS|Skorupi||Poison|Bug|shadow=t}}
+{{PS|Drapion||Poison|Dark|shadow=t}}
+</div>
+</tabber></div>
+
+==February {{Nth|8}}, 2025==
+Shiny Shadow [[Regirock]] was released.
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 69 | KantoS = 64
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 20  | JohtoS = 20
+| Hoenn = 78 | HoennForms = 78 | HoennFormsT = 162 | HoennShiny = 31 | HoennS = 31
+| Sinnoh = 58| SinnohForms = 58| SinnohFormsT = 140| SinnohShiny = 8 | SinnohS = 8
+| Unova = 64 | UnovaForms = 64 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 2  | KalosForms = 2  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Regirock||Rock|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|14}}, 2025==
+These Shadow Pokémon were released at the start of [[Crown Clash#Crown Clash: Taken Over|Crown Clash: Taken Over]].<ref>[https://pokemongo.com/post/crown-clash-tgr-2025 Team GO Rocket and Giovanni strike again—team up to rescue Shadow Dialga during Crown Clash: Taken Over!] ''Pokémon GO''. Retrieved on 2025-04-28.</ref>
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 21  | JohtoS = 21
+| Hoenn = 81 | HoennForms = 81 | HoennFormsT = 162 | HoennShiny = 31 | HoennS = 31
+| Sinnoh = 59| SinnohForms = 59| SinnohFormsT = 140| SinnohShiny = 11| SinnohS = 11
+| Unova = 64 | UnovaForms = 64 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 8  | KalosForms = 8  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (10)=
+<div class="pogo-list-container bg-picture">
+{{P|Slakoth||Normal|shadow=t}}
+{{P|Vigoroth||Normal|shadow=t}}
+{{P|Slaking||Normal|shadow=t}}
+{{P|Dialga||Steel|Dragon|shadow=t}}
+{{P|Inkay||Dark|Psychic|shadow=t}}
+{{P|Malamar||Dark|Psychic|shadow=t}}
+{{P|Tyrunt||Rock|Dragon|shadow=t}}
+{{P|Tyrantrum||Rock|Dragon|shadow=t}}
+{{P|Amaura||Rock|Ice|shadow=t}}
+{{P|Aurorus||Rock|Ice|shadow=t}}
+</div>
+|-|
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Horsea||Water|shadow=t}}
+{{PS|Seadra||Water|shadow=t}}
+{{PS|Kingdra||Water|Dragon|shadow=t}}
+{{PS|Gible||Dragon|Ground|shadow=t}}
+{{PS|Gabite||Dragon|Ground|shadow=t}}
+{{PS|Garchomp||Dragon|Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|17}}, 2025==
+Shiny Shadow [[Regigigas]] was released at the start of [[Regigigas Shadow Raid Day]].<ref>[https://pokemongo.com/post/shadow-regigigas-raid-day-2025 Rescue Shadow Regigigas from Team GO Rocket during a Shadow Raid Day event!] ''Pokémon GO''. Retrieved on 2025-04-30.</ref>
+{{FormCounter
+| Kanto = 114 | KantoForms = 130| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 21  | JohtoS = 21
+| Hoenn = 81 | HoennForms = 81 | HoennFormsT = 162 | HoennShiny = 31 | HoennS = 31
+| Sinnoh = 59| SinnohForms = 59| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 64 | UnovaForms = 64 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 8  | KalosForms = 8  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 112   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Regigigas||Normal|shadow=t}}
+</div>
+</tabber></div>
+
+==August {{Nth|11}}, 2025==
+These Shadow Pokémon were released at the start of [[Delightful Days: Taken Over]].<ref>[https://pokemongo.com/post/delightful-days-tgr-2025 Shadow Kyogre arrives in Shadow Raids! Face Giovanni and save Shadow Giratina in Delightful Days: Taken Over!] ''Pokémon GO''. Retrieved on 2025-07-31.</ref>
+{{FormCounter
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 30  | JohtoS = 30
+| Hoenn = 81 | HoennForms = 81 | HoennFormsT = 162 | HoennShiny = 31 | HoennS = 31
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 64 | UnovaForms = 64 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 11  | KalosForms = 11  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 129   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (12)=
+<div class="pogo-list-container bg-picture">
+{{P|Staryu||Water|shadow=t}}
+{{P|Starmie||Water|Psychic|shadow=t}}
+{{P|Giratina||Ghost|Dragon|form=Altered Forme|shadow=t}}
+{{P|Fletchling||Normal|Flying|shadow=t}}
+{{P|Fletchinder||Fire|Flying|shadow=t}}
+{{P|Talonflame||Fire|Flying|shadow=t}}
+{{P|Pikipek||Normal|Flying|shadow=t}}
+{{P|Trumbeak||Normal|Flying|shadow=t}}
+{{P|Toucannon||Normal|Flying|shadow=t}}
+{{P|Grubbin||Bug|shadow=t}}
+{{P|Charjabug||Bug|Electric|shadow=t}}
+{{P|Vikavolt||Bug|Electric|shadow=t}}
+</div>
+|-|
+Shiny (9)=
+<div class="pogo-list-container bg-picture">
+{{PS|Chikorita||Grass|shadow=t}}
+{{PS|Bayleef||Grass|shadow=t}}
+{{PS|Meganium||Grass|shadow=t}}
+{{PS|Cyndaquil||Fire|shadow=t}}
+{{PS|Quilava||Fire|shadow=t}}
+{{PS|Typhlosion||Fire|shadow=t}}
+{{PS|Totodile||Water|shadow=t}}
+{{PS|Croconaw||Water|shadow=t}}
+{{PS|Feraligatr||Water|shadow=t}}</div>
+</tabber></div>
+
+==August {{Nth|16}}, 2025==
+Shiny Shadow [[Kyogre]] was released at the start of [[Delightful Days: Taken Over#Kyogre Shadow Raid Weekend|Kyogre Shadow Raid Weekend]].
+{{FormCounter
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 62 | JohtoForms = 65 | JohtoFormsT = 135 | JohtoShiny = 30  | JohtoS = 30
+| Hoenn = 81 | HoennForms = 81 | HoennFormsT = 162 | HoennShiny = 32 | HoennS = 32
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 64 | UnovaForms = 64 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 11  | KalosForms = 11  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 129   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Kyogre||Water|shadow=t}}
+</div>
+</tabber></div>
+
+==September {{Nth|16}}, 2025==
+These Shadow Pokémon were released at the start of [[Psychic Spectacular 2025#Psychic Spectacular: Taken Over|Psychic Spectacular: Taken Over]].<ref>[https://pokemongo.com/post/psychic-spectacular-tgr-2025 The Psychic Spectacular: Taken Over event arrives, featuring Indeedee’s debut!] ''Pokémon GO''. Retrieved on 2025-09-01.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 63 | JohtoForms = 66 | JohtoFormsT = 135 | JohtoShiny = 31  | JohtoS = 31
+| Hoenn = 87 | HoennForms = 87 | HoennFormsT = 162 | HoennShiny = 34 | HoennS = 34
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 68 | UnovaForms = 68 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 11  | KalosForms = 11  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 136   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (11)=
+<div class="pogo-list-container bg-picture">
+{{P|Qwilfish||Water|Poison|shadow=t}}
+{{P|Swablu||Normal|Flying|shadow=t}}
+{{P|Altaria||Dragon|Flying|shadow=t}}
+{{P|Baltoy||Ground|Psychic|shadow=t}}
+{{P|Claydol||Ground|Psychic|shadow=t}}
+{{P|Feebas||Water|shadow=t}}
+{{P|Milotic||Water|shadow=t}}
+{{P|Deino||Dark|Dragon|shadow=t}}
+{{P|Zweilous||Dark|Dragon|shadow=t}}
+{{P|Hydreigon||Dark|Dragon|shadow=t}}
+{{P|Tornadus||Flying|form=Incarnate Forme|shadow=t}}
+</div>
+|-|
+Shiny (3)=
+<div class="pogo-list-container bg-picture">
+{{PS|Wobbuffet||Psychic|shadow=t}}
+{{PS|Feebas||Water|shadow=t}}
+{{PS|Milotic||Water|shadow=t}}
+</div>
+</tabber></div>
+
+==September {{Nth|20}}, 2025==
+Shiny Shadow [[Groudon]] was released at the start of [[Groudon Shadow Raid Weekend]].<ref>[https://pokemongo.com/post/shadow-groudon-raid-weekend-2025 Band together and save Shadow Groudon from Team GO Rocket during a Shadow Raid Weekend event!] ''Pokémon GO''. Retrieved on 2025-09-01.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 63 | JohtoForms = 66 | JohtoFormsT = 135 | JohtoShiny = 31  | JohtoS = 31
+| Hoenn = 87 | HoennForms = 87 | HoennFormsT = 162 | HoennShiny = 35 | HoennS = 35
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 68 | UnovaForms = 68 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 11  | KalosForms = 11  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 136   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Groudon||Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|2}}, 2025==
+Shiny Shadow [[Latias]] was released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 63 | JohtoForms = 66 | JohtoFormsT = 135 | JohtoShiny = 31  | JohtoS = 31
+| Hoenn = 87 | HoennForms = 87 | HoennFormsT = 162 | HoennShiny = 36 | HoennS = 36
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 68 | UnovaForms = 68 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 11  | KalosForms = 11  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 136   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Latias||Dragon|Psychic|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|21}}, 2025==
+Shadow [[Yamask]] and [[Phantump]] were released at the start of [[Halloween 2025]] Part I.<ref>[https://pokemongo.com/news/halloween-part-1-2025 Have a haunted Halloween tea party with Poltchageist, Sinistcha, and more in Pokémon GO!] ''Pokémon GO''. Retrieved on 2025-10-06.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 63 | JohtoForms = 66 | JohtoFormsT = 135 | JohtoShiny = 31  | JohtoS = 31
+| Hoenn = 87 | HoennForms = 87 | HoennFormsT = 162 | HoennShiny = 36 | HoennS = 36
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 70 | UnovaForms = 70 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 13  | KalosForms = 13  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 136   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (4)=
+<div class="pogo-list-container bg-picture">
+{{P|Yamask||Ghost|shadow=t}}
+{{P|Cofagrigus||Ghost|shadow=t}}
+{{P|Phantump||Ghost|Grass|shadow=t}}
+{{P|Trevenant||Ghost|Grass|shadow=t}}
+</tabber></div>
+
+==November {{Nth|2}}, 2025==
+Shiny Shadow [[Latios]] was released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116 | KantoForms = 132| KantoFormsT = 187 | KantoShiny = 71 | KantoS = 66
+| Johto = 63 | JohtoForms = 66 | JohtoFormsT = 135 | JohtoShiny = 31  | JohtoS = 31
+| Hoenn = 87 | HoennForms = 87 | HoennFormsT = 162 | HoennShiny = 37 | HoennS = 37
+| Sinnoh = 60| SinnohForms = 60| SinnohFormsT = 140| SinnohShiny = 12| SinnohS = 12
+| Unova = 70 | UnovaForms = 70 | UnovaFormsT = 186 | UnovaShiny = 0  | UnovaS = 0
+| Kalos = 13  | KalosForms = 13  | KalosFormsT = 127 | KalosShiny = 0  | KalosS = 0
+| Alola = 6  | AlolaForms = 6  | AlolaFormsT = 122 | AlolaShiny = 0  | AlolaS = 0
+| Galar = 1  | GalarForms = 1  | GalarFormsT = 110 | GalarShiny = 1  | GalarS = 1
+| Hisui = 2  | HisuiForms = 2  | HisuiFormsT = 8   | HisuiShiny = 1  | HisuiS = 1
+| Paldea = 1  | PaldeaForms = 1  | PaldeaFormsT = 136   | PaldeaShiny = 0  | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Latios||Dragon|Psychic|shadow=t}}
+</div>
+</tabber></div>
+
+==November {{Nth|7}}, 2025==
+Shadow [[Darkrai]] and Shiny Shadow [[Cresselia]] were released at the start of [[Pokémon GO Wild Area 2025: Nagasaki]].
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116  | KantoForms = 132  | KantoFormsT = 187  | KantoShiny = 71   | KantoS = 66
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 31   | JohtoS = 31
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 37   | HoennS = 37
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 14  | SinnohS = 14
+| Unova = 70   | UnovaForms = 70   | UnovaFormsT = 186  | UnovaShiny = 0    | UnovaS = 0
+| Kalos = 13   | KalosForms = 13   | KalosFormsT = 127  | KalosShiny = 0    | KalosS = 0
+| Alola = 6    | AlolaForms = 6    | AlolaFormsT = 122  | AlolaShiny = 0    | AlolaS = 0
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 0   | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (1)=
+<div class="pogo-list-container bg-picture">
+{{P|Darkrai||Dark|shadow=t}}
+</div>
+|-|
+Shiny (2)=
+<div class="pogo-list-container bg-picture">
+{{PS|Cresselia||Psychic|shadow=t}}
+{{PS|Darkrai||Dark|shadow=t}}
+</div>
+</tabber></div>
+
+==December {{Nth|2}}, 2025==
+Shiny Shadow [[Heatran]] was released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 116  | KantoForms = 132  | KantoFormsT = 187  | KantoShiny = 71   | KantoS = 66
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 31   | JohtoS = 31
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 37   | HoennS = 37
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 15  | SinnohS = 15
+| Unova = 70   | UnovaForms = 70   | UnovaFormsT = 186  | UnovaShiny = 0    | UnovaS = 0
+| Kalos = 13   | KalosForms = 13   | KalosFormsT = 127  | KalosShiny = 0    | KalosS = 0
+| Alola = 6    | AlolaForms = 6    | AlolaFormsT = 122  | AlolaShiny = 0    | AlolaS = 0
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 0   | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Heatran||Fire|Steel|shadow=t}}
+</div>
+</tabber></div>
+
+==January {{Nth|23}}, 2026==
+These Shadow Pokémon were released at the start of [[Precious Pals#Precious Pals: Taken Over|Precious Pals: Taken Over]].<ref>[https://pokemongo.com/news/precious-pals-tgr-2026 Rescue Shadow Incarnate Forme Thundurus during Precious Pals: Taken Over!] ''Pokémon GO''. Retrieved on 2026-01-14.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 122  | KantoForms = 138  | KantoFormsT = 187  | KantoShiny = 73   | KantoS = 68
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 34   | JohtoS = 34
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 37   | HoennS = 37
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 15  | SinnohS = 15
+| Unova = 71   | UnovaForms = 71   | UnovaFormsT = 186  | UnovaShiny = 0    | UnovaS = 0
+| Kalos = 22   | KalosForms = 22   | KalosFormsT = 127  | KalosShiny = 0    | KalosS = 0
+| Alola = 6    | AlolaForms = 6    | AlolaFormsT = 122  | AlolaShiny = 0    | AlolaS = 0
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 0   | PaldeaS = 0
+}}
+<div class="poketab"><tabber>
+Regular (16)=
+<div class="pogo-list-container bg-picture">
+{{P|Ponyta||Fire|shadow=t}}
+{{P|Rapidash||Fire|shadow=t}}
+{{P|Krabby||Water|shadow=t}}
+{{P|Kingler||Water|shadow=t}}
+{{P|Kabuto||Rock|Water|shadow=t}}
+{{P|Kabutops||Rock|Water|shadow=t}}
+{{P|Thundurus||Electric|Flying|form=Incarnate Forme|shadow=t}}
+{{P|Chespin||Grass|shadow=t}}
+{{P|Quilladin||Grass|shadow=t}}
+{{P|Chesnaught||Grass|Fighting|shadow=t}}
+{{P|Fennekin||Fire|shadow=t}}
+{{P|Braixen||Fire|shadow=t}}
+{{P|Delphox||Fire|Psychic|shadow=t}}
+{{P|Froakie||Water|shadow=t}}
+{{P|Frogadier||Water|shadow=t}}
+{{P|Greninja||Water|Dark|shadow=t}}
+</div>
+|-|
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{PS|Magikarp||Water|shadow=t}}
+{{PS|Gyarados||Water|Flying|shadow=t}}
+{{PS|Hoppip||Grass|Flying|shadow=t}}
+{{PS|Skiploom||Grass|Flying|shadow=t}}
+{{PS|Jumpluff||Grass|Flying|shadow=t}}
+</div>
+</tabber></div>
+
+==March {{Nth|3}}, 2026==
+These Shiny Shadow Pokémon were released at the start of [[Memories in Motion]].<ref>[https://pokemongo.com/seasons/memories-in-motion Welcome to Pokémon GO: Memories in Motion]. ''Pokémon GO''. Retrieved on 2026-02-24.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 122  | KantoForms = 138  | KantoFormsT = 187  | KantoShiny = 101  | KantoS = 92
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 42   | JohtoS = 42
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 52   | HoennS = 52
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 22  | SinnohS = 22
+| Unova = 71   | UnovaForms = 71   | UnovaFormsT = 186  | UnovaShiny = 18   | UnovaS = 18
+| Kalos = 22   | KalosForms = 22   | KalosFormsT = 127  | KalosShiny = 11   | KalosS = 11
+| Alola = 6    | AlolaForms = 6    | AlolaFormsT = 122  | AlolaShiny = 0    | AlolaS = 0
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (88)=
+<div class="pogo-list-container bg-picture">
+{{PS|Pidgey||Normal|Flying|shadow=t}}
+{{PS|Pidgeotto||Normal|Flying|shadow=t}}
+{{PS|Pidgeot||Normal|Flying|shadow=t}}
+{{PS|Rattata||Dark|Normal|ci=Rattata alolan|form=Alolan|shadow=t}}
+{{PS|Raticate||Dark|Normal|ci=Raticate alolan|form=Alolan|shadow=t}}
+{{PS|Sandshrew||Ground||shadow=t}}
+{{PS|Sandshrew||Ice|Steel|ci=Sandshrew alolan|form=Alolan|shadow=t}}
+{{PS|Sandslash||Ground||shadow=t}}
+{{PS|Sandslash||Ice|Steel|ci=Sandslash alolan|form=Alolan|shadow=t}}
+{{PS|Vulpix||Fire||shadow=t}}
+{{PS|Vulpix||Ice|shadow=t|ci=Vulpix alolan|form=Alolan}}
+{{PS|Ninetales||Fire||shadow=t}}
+{{PS|Ninetales||Ice|Fairy|shadow=t|ci=Ninetales alolan|form=Alolan}}
+{{PS|Oddish||Grass|Poison|shadow=t}}
+{{PS|Gloom||Grass|Poison|shadow=t}}
+{{PS|Vileplume||Grass|Poison|shadow=t}}
+{{PS|Mankey||Fighting|shadow=t}}
+{{PS|Primeape||Fighting|shadow=t}}
+{{PS|Gastly||Ghost|Poison|shadow=t}}
+{{PS|Haunter||Ghost|Poison|shadow=t}}
+{{PS|Gengar||Ghost|Poison|shadow=t}}
+{{PS|Krabby||Water|shadow=t}}
+{{PS|Kingler||Water|shadow=t}}
+{{PS|Voltorb||Electric|shadow=t}}
+{{PS|Electrode||Electric|shadow=t}}
+{{PS|Hitmonlee||Fighting||shadow=t}}
+{{PS|Hitmonchan||Fighting||shadow=t}}
+{{PS|Snorlax||Normal||shadow=t}}
+{{PS|Bellossom||Grass||shadow=t}}
+{{PS|Snubbull||Fairy|shadow=t}}
+{{PS|Granbull||Fairy|shadow=t}}
+{{PS|Qwilfish||Water|Poison|shadow=t}}
+{{PS|Shuckle||Bug|Rock|shadow=t}}
+{{PS|Swinub||Ice|Ground|shadow=t}}
+{{PS|Piloswine||Ice|Ground|shadow=t}}
+{{PS|Hitmontop||Fighting|shadow=t}}
+{{PS|Poochyena||Dark|shadow=t}}
+{{PS|Mightyena||Dark|shadow=t}}
+{{PS|Taillow||Normal|Flying|shadow=t}}
+{{PS|Swellow||Normal|Flying|shadow=t}}
+{{PS|Aron||Steel|Rock|shadow=t}}
+{{PS|Lairon||Steel|Rock|shadow=t}}
+{{PS|Aggron||Steel|Rock|shadow=t}}
+{{PS|Swablu||Normal|Flying|shadow=t}}
+{{PS|Altaria||Dragon|Flying|shadow=t}}
+{{PS|Claydol||Ground|Psychic|shadow=t}}
+{{PS|Duskull||Ghost||shadow=t}}
+{{PS|Dusclops||Ghost||shadow=t}}
+{{PS|Spheal||Ice|Water|shadow=t}}
+{{PS|Sealeo||Ice|Water|shadow=t}}
+{{PS|Walrein||Ice|Water|shadow=t}}
+{{PS|Shinx||Electric|shadow=t}}
+{{PS|Luxio||Electric|shadow=t}}
+{{PS|Luxray||Electric|shadow=t}}
+{{PS|Cranidos||Rock|shadow=t}}
+{{PS|Rampardos||Rock|shadow=t}}
+{{PS|Mamoswine||Ice|Ground|shadow=t}}
+{{PS|Dusknoir||Ghost||shadow=t}}
+{{PS|Timburr||Fighting|shadow=t}}
+{{PS|Gurdurr||Fighting|shadow=t}}
+{{PS|Conkeldurr||Fighting|shadow=t}}
+{{PS|Yamask||Ghost|shadow=t}}
+{{PS|Cofagrigus||Ghost|shadow=t}}
+{{PS|Karrablast||Bug|shadow=t}}
+{{PS|Escavalier||Bug|Steel|shadow=t}}
+{{PS|Joltik||Bug|Electric|shadow=t}}
+{{PS|Galvantula||Bug|Electric|shadow=t}}
+{{PS|Litwick||Ghost|Fire|shadow=t}}
+{{PS|Lampent||Ghost|Fire|shadow=t}}
+{{PS|Chandelure||Ghost|Fire|shadow=t}}
+{{PS|Shelmet||Bug|shadow=t}}
+{{PS|Accelgor||Bug|shadow=t}}
+{{PS|Deino||Dark|Dragon|shadow=t}}
+{{PS|Zweilous||Dark|Dragon|shadow=t}}
+{{PS|Hydreigon||Dark|Dragon|shadow=t}}
+{{PS|Thundurus||Electric|Flying|form=Incarnate Forme|shadow=t}}
+{{PS|Chespin||Grass|shadow=t}}
+{{PS|Quilladin||Grass|shadow=t}}
+{{PS|Chesnaught||Grass|Fighting|shadow=t}}
+{{PS|Fennekin||Fire|shadow=t}}
+{{PS|Braixen||Fire|shadow=t}}
+{{PS|Delphox||Fire|Psychic|shadow=t}}
+{{PS|Froakie||Water|shadow=t}}
+{{PS|Frogadier||Water|shadow=t}}
+{{PS|Greninja||Water|Dark|shadow=t}}
+{{PS|Phantump||Ghost|Grass|shadow=t}}
+{{PS|Trevenant||Ghost|Grass|shadow=t}}
+{{PS|Annihilape||Fighting|Ghost|shadow=t}}
+</div>
+</tabber></div>
+
+==April {{Nth|30}}, 2026==
+These Shadow Pokémon were released at the start of [[Steeled Resolve 2026#Steeled Resolve: Taken Over|Steeled Resolve: Taken Over]].<ref>[https://pokemongo.com/news/steeled-resolve-taken-over-2026 Rescue Shadow Incarnate Forme Landorus and more during Steeled Resolve: Taken Over!]. ''Pokémon GO''. Retrieved on 2026-04-07.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 122  | KantoForms = 138  | KantoFormsT = 187  | KantoShiny = 106  | KantoS = 94
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 42   | JohtoS = 42
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 56   | HoennS = 56
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 27  | SinnohS = 27
+| Unova = 72   | UnovaForms = 72   | UnovaFormsT = 186  | UnovaShiny = 19   | UnovaS = 19
+| Kalos = 24   | KalosForms = 24   | KalosFormsT = 128  | KalosShiny = 13   | KalosS = 13
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 6    | AlolaS = 6
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Regular (9)=
+<div class="pogo-list-container bg-picture">
+{{P|Landorus||Ground|Flying|form=Incarnate Forme|shadow=t}}
+{{P|Helioptile||Electric|Normal|shadow=t}}
+{{P|Heliolisk||Electric|Normal|shadow=t}}
+{{P|Dewpider||Water|Bug|shadow=t}}
+{{P|Araquanid||Water|Bug|shadow=t}}
+{{P|Morelull||Grass|Fairy|shadow=t}}
+{{P|Shiinotic||Grass|Fairy|shadow=t}}
+{{P|Stufful||Normal|Fighting|shadow=t}}
+{{P|Bewear||Normal|Fighting|shadow=t}}
+</div>
+|-|
+Shiny (23)=
+<div class="pogo-list-container bg-picture">
+{{PS|Geodude||Rock|Electric|ci=Geodude alolan|form=Alolan|shadow=t}}
+{{PS|Graveler||Rock|Electric|ci=Graveler alolan|form=Alolan|shadow=t}}
+{{PS|Golem||Rock|Electric|ci=Golem alolan|form=Alolan|shadow=t}}
+{{PS|Electabuzz||Electric|shadow=t}}
+{{PS|Magmar||Fire||shadow=t}}
+{{PS|Loudred||Normal|shadow=t}}
+{{PS|Exploud||Normal|shadow=t}}
+{{PS|Numel||Fire|Ground|shadow=t}}
+{{PS|Camerupt||Fire|Ground|shadow=t}}
+{{PS|Starly||Normal|Flying|shadow=t}}
+{{PS|Staravia||Normal|Flying|shadow=t}}
+{{PS|Staraptor||Normal|Flying|shadow=t}}
+{{PS|Electivire||Electric|shadow=t}}
+{{PS|Magmortar||Fire||shadow=t}}
+{{PS|Landorus||Ground|Flying|form=Incarnate Forme|shadow=t}}
+{{PS|Helioptile||Electric|Normal|shadow=t}}
+{{PS|Heliolisk||Electric|Normal|shadow=t}}
+{{PS|Dewpider||Water|Bug|shadow=t}}
+{{PS|Araquanid||Water|Bug|shadow=t}}
+{{PS|Morelull||Grass|Fairy|shadow=t}}
+{{PS|Shiinotic||Grass|Fairy|shadow=t}}
+{{PS|Stufful||Normal|Fighting|shadow=t}}
+{{PS|Bewear||Normal|Fighting|shadow=t}}
+</div>
+</tabber></div>
+
+==May {{Nth|6}}, 2026==
+Shiny Shadow [[Onix]] and [[Inkay]] were released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 122  | KantoForms = 138  | KantoFormsT = 187  | KantoShiny = 107  | KantoS = 95
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 43   | JohtoS = 43
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 56   | HoennS = 56
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 27  | SinnohS = 27
+| Unova = 72   | UnovaForms = 72   | UnovaFormsT = 186  | UnovaShiny = 19   | UnovaS = 19
+| Kalos = 24   | KalosForms = 24   | KalosFormsT = 128  | KalosShiny = 15   | KalosS = 15
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 6    | AlolaS = 6
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (4)=
+<div class="pogo-list-container bg-picture">
+{{PS|Onix||Rock|Ground|shadow=t}}
+{{PS|Steelix||Steel|Ground|shadow=t}}
+{{PS|Inkay||Dark|Psychic|shadow=t}}
+{{PS|Malamar||Dark|Psychic|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|2}}, 2026==
+Shiny Shadow [[Porygon]], [[Dialga]], and [[Golett]] were released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 122  | KantoForms = 138  | KantoFormsT = 187  | KantoShiny = 108  | KantoS = 96
+| Johto = 63   | JohtoForms = 66   | JohtoFormsT = 135  | JohtoShiny = 44   | JohtoS = 44
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 56   | HoennS = 56
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 29  | SinnohS = 29
+| Unova = 72   | UnovaForms = 72   | UnovaFormsT = 186  | UnovaShiny = 21   | UnovaS = 21
+| Kalos = 24   | KalosForms = 24   | KalosFormsT = 128  | KalosShiny = 15   | KalosS = 15
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 6    | AlolaS = 6
+| Galar = 1    | GalarForms = 1    | GalarFormsT = 110  | GalarShiny = 1    | GalarS = 1
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Porygon||Normal||shadow=t}}
+{{PS|Porygon2||Normal||shadow=t}}
+{{PS|Porygon-Z||Normal||shadow=t}}
+{{PS|Dialga||Steel|Dragon|shadow=t}}
+{{PS|Golett||Ground|Ghost|shadow=t}}
+{{PS|Golurk||Ground|Ghost|shadow=t}}
+</div>
+</tabber></div>
+
+==June {{Nth|25}}, 2026==
+These Shadow Pokémon were released at the start of [[Flying Taxi#Flying Taxi: Taken Over|Flying Taxi: Taken Over]].<ref>[https://pokemongo.com/news/flying-taxi-taken-over-2026 Rescue Shadow Reshiram and more during Flying Taxi: Taken Over!]. ''Pokémon GO''. Retrieved on 2026-06-09.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 124  | KantoForms = 140  | KantoFormsT = 187  | KantoShiny = 120  | KantoS = 108
+| Johto = 65   | JohtoForms = 68   | JohtoFormsT = 135  | JohtoShiny = 49   | JohtoS = 49
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 65   | HoennS = 65
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 33  | SinnohS = 33
+| Unova = 76   | UnovaForms = 76   | UnovaFormsT = 186  | UnovaShiny = 27   | UnovaS = 27
+| Kalos = 26   | KalosForms = 26   | KalosFormsT = 128  | KalosShiny = 21   | KalosS = 21
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 9    | AlolaS = 9
+| Galar = 4    | GalarForms = 4    | GalarFormsT = 110  | GalarShiny = 4    | GalarS = 4
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Regular (13)=
+<div class="pogo-list-container bg-picture">
+{{P|Seel||Water|shadow=t}}
+{{P|Dewgong||Water|Ice|shadow=t}}
+{{P|Hoothoot||Normal|Flying|shadow=t}}
+{{P|Noctowl||Normal|Flying|shadow=t}}
+{{P|Axew||Dragon|shadow=t}}
+{{P|Fraxure||Dragon|shadow=t}}
+{{P|Haxorus||Dragon|shadow=t}}
+{{P|Reshiram||Dragon|Fire|shadow=t}}
+{{P|Noibat||Flying|Dragon|shadow=t}}
+{{P|Noivern||Flying|Dragon|shadow=t}}
+{{P|Rookidee||Flying|shadow=t}}
+{{P|Corvisquire||Flying|shadow=t}}
+{{P|Corviknight||Flying|Steel|shadow=t}}
+</div>
+|-|
+Shiny (48)=
+<div class="pogo-list-container bg-picture">
+{{PS|Weedle||Bug|Poison|shadow=t}}
+{{PS|Kakuna||Bug|Poison|shadow=t}}
+{{PS|Beedrill||Bug|Poison|shadow=t}}
+{{PS|Ponyta||Fire|shadow=t}}
+{{PS|Rapidash||Fire|shadow=t}}
+{{PS|Seel||Water|shadow=t}}
+{{PS|Dewgong||Water|Ice|shadow=t}}
+{{PS|Rhyhorn||Ground|Rock|shadow=t}}
+{{PS|Rhydon||Ground|Rock|shadow=t}}
+{{PS|Tangela||Grass|shadow=t}}
+{{PS|Kabuto||Rock|Water|shadow=t}}
+{{PS|Kabutops||Rock|Water|shadow=t}}
+{{PS|Hoothoot||Normal|Flying|shadow=t}}
+{{PS|Noctowl||Normal|Flying|shadow=t}}
+{{PS|Delibird||Ice|Flying|shadow=t}}
+{{PS|Houndour||Dark|Fire|shadow=t}}
+{{PS|Houndoom||Dark|Fire|shadow=t}}
+{{PS|Treecko||Grass|shadow=t}}
+{{PS|Grovyle||Grass|shadow=t}}
+{{PS|Sceptile||Grass|shadow=t}}
+{{PS|Torchic||Fire|shadow=t}}
+{{PS|Combusken||Fire|Fighting|shadow=t}}
+{{PS|Blaziken||Fire|Fighting|shadow=t}}
+{{PS|Mudkip||Water||shadow=t}}
+{{PS|Marshtomp||Water|Ground|shadow=t}}
+{{PS|Swampert||Water|Ground|shadow=t}}
+{{PS|Shieldon||Rock|Steel|shadow=t}}
+{{PS|Bastiodon||Rock|Steel|shadow=t}}
+{{PS|Rhyperior||Ground|Rock|shadow=t}}
+{{PS|Tangrowth||Grass|shadow=t}}
+{{PS|Duosion||Psychic|shadow=t}}
+{{PS|Reuniclus||Psychic|shadow=t}}
+{{PS|Axew||Dragon|shadow=t}}
+{{PS|Fraxure||Dragon|shadow=t}}
+{{PS|Haxorus||Dragon|shadow=t}}
+{{PS|Reshiram||Dragon|Fire|shadow=t}}
+{{PS|Tyrunt||Rock|Dragon|shadow=t}}
+{{PS|Tyrantrum||Rock|Dragon|shadow=t}}
+{{PS|Amaura||Rock|Ice|shadow=t}}
+{{PS|Aurorus||Rock|Ice|shadow=t}}
+{{PS|Noibat||Flying|Dragon|shadow=t}}
+{{PS|Noivern||Flying|Dragon|shadow=t}}
+{{PS|Grubbin||Bug|shadow=t}}
+{{PS|Charjabug||Bug|Electric|shadow=t}}
+{{PS|Vikavolt||Bug|Electric|shadow=t}}
+{{PS|Rookidee||Flying|shadow=t}}
+{{PS|Corvisquire||Flying|shadow=t}}
+{{PS|Corviknight||Flying|Steel|shadow=t}}
+</div>
+</tabber></div>
+
+==July {{Nth|1}}, 2026==
+Shiny Shadow [[Phanpy]], [[Palkia]], and [[Darumaka]] were released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 124  | KantoForms = 140  | KantoFormsT = 187  | KantoShiny = 120  | KantoS = 108
+| Johto = 65   | JohtoForms = 68   | JohtoFormsT = 135  | JohtoShiny = 51   | JohtoS = 51
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 65   | HoennS = 65
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 34  | SinnohS = 34
+| Unova = 76   | UnovaForms = 76   | UnovaFormsT = 186  | UnovaShiny = 29   | UnovaS = 29
+| Kalos = 26   | KalosForms = 26   | KalosFormsT = 128  | KalosShiny = 21   | KalosS = 21
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 9    | AlolaS = 9
+| Galar = 4    | GalarForms = 4    | GalarFormsT = 110  | GalarShiny = 4    | GalarS = 4
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (5)=
+<div class="pogo-list-container bg-picture">
+{{PS|Phanpy||Ground|shadow=t}}
+{{PS|Donphan||Ground|shadow=t}}
+{{PS|Palkia||Water|Dragon|shadow=t}}
+{{PS|Darumaka||Fire|shadow=t}}
+{{PS|Darmanitan||Fire|shadow=t}}
+</div>
+</tabber></div>
+
+==August {{Nth|5}}, 2026==
+Shiny Shadow [[Slowpoke]], [[Croagunk]], and [[Giratina]] were released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 124  | KantoForms = 140  | KantoFormsT = 187  | KantoShiny = 122  | KantoS = 110
+| Johto = 65   | JohtoForms = 68   | JohtoFormsT = 135  | JohtoShiny = 52   | JohtoS = 52
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 65   | HoennS = 65
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 37  | SinnohS = 37
+| Unova = 76   | UnovaForms = 76   | UnovaFormsT = 186  | UnovaShiny = 29   | UnovaS = 29
+| Kalos = 26   | KalosForms = 26   | KalosFormsT = 128  | KalosShiny = 21   | KalosS = 21
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 9    | AlolaS = 9
+| Galar = 4    | GalarForms = 4    | GalarFormsT = 110  | GalarShiny = 4    | GalarS = 4
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (6)=
+<div class="pogo-list-container bg-picture">
+{{PS|Slowpoke||Water|Psychic|shadow=t}}
+{{PS|Slowbro||Water|Psychic|shadow=t}}
+{{PS|Slowking||Water|Psychic|shadow=t}}
+{{PS|Croagunk||Poison|Fighting|shadow=t}}
+{{PS|Toxicroak||Poison|Fighting|shadow=t}}
+{{PS|Giratina||Ghost|Dragon|form=Altered Forme|shadow=t}}
+</div>
+</tabber></div>
+
+==September {{Nth|9}}, 2026==
+Shiny Shadow [[Quagsire]] was released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 124  | KantoForms = 140  | KantoFormsT = 187  | KantoShiny = 122  | KantoS = 110
+| Johto = 65   | JohtoForms = 68   | JohtoFormsT = 135  | JohtoShiny = 53   | JohtoS = 53
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 65   | HoennS = 65
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 37  | SinnohS = 37
+| Unova = 76   | UnovaForms = 76   | UnovaFormsT = 186  | UnovaShiny = 29   | UnovaS = 29
+| Kalos = 26   | KalosForms = 26   | KalosFormsT = 128  | KalosShiny = 21   | KalosS = 21
+| Alola = 12   | AlolaForms = 12   | AlolaFormsT = 122  | AlolaShiny = 9    | AlolaS = 9
+| Galar = 4    | GalarForms = 4    | GalarFormsT = 110  | GalarShiny = 4    | GalarS = 4
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (1)=
+<div class="pogo-list-container bg-picture">
+{{PS|Quagsire||Water|Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==October {{Nth|2}}, 2026==
+These Shadow Pokémon were released at the start of [[Harvest Festival: Applin Picking#Harvest Festival: Taken Over|Harvest Festival: Taken Over]].<ref>[https://pokemongo.com/news/harvest-festival-tgr-2026 Rescue Shadow Zekrom during Harvest Festival: Taken Over!]. ''Pokémon GO''. Retrieved on 2026-09-07.</ref>
+{{FormCounter|PaldeaEspT=120
+| Kanto = 124  | KantoForms = 140  | KantoFormsT = 187  | KantoShiny = 122  | KantoS = 110
+| Johto = 65   | JohtoForms = 68   | JohtoFormsT = 135  | JohtoShiny = 53   | JohtoS = 53
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 67   | HoennS = 67
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 37  | SinnohS = 37
+| Unova = 77   | UnovaForms = 77   | UnovaFormsT = 186  | UnovaShiny = 30   | UnovaS = 30
+| Kalos = 28   | KalosForms = 28   | KalosFormsT = 128  | KalosShiny = 23   | KalosS = 23
+| Alola = 18   | AlolaForms = 18   | AlolaFormsT = 122  | AlolaShiny = 15   | AlolaS = 15
+| Galar = 4    | GalarForms = 4    | GalarFormsT = 110  | GalarShiny = 4    | GalarS = 4
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Regular (9)=
+<div class="pogo-list-container bg-picture">
+{{P|Zekrom||Dragon|Electric|shadow=t}}
+{{P|Pancham||Fighting|shadow=t}}
+{{P|Pangoro||Fighting|Dark|shadow=t}}
+{{P|Fomantis||Grass|shadow=t}}
+{{P|Lurantis||Grass|shadow=t}}
+{{P|Wimpod||Bug|Water|shadow=t}}
+{{P|Golisopod||Bug|Water|shadow=t}}
+{{P|Sandygast||Ghost|Ground|shadow=t}}
+{{P|Palossand||Ghost|Ground|shadow=t}}
+</div>
+|-|
+Shiny (11)=
+<div class="pogo-list-container bg-picture">
+{{PS|Makuhita||Fighting|shadow=t}}
+{{PS|Hariyama||Fighting|shadow=t}}
+{{PS|Zekrom||Dragon|Electric|shadow=t}}
+{{PS|Pancham||Fighting|shadow=t}}
+{{PS|Pangoro||Fighting|Dark|shadow=t}}
+{{PS|Fomantis||Grass|shadow=t}}
+{{PS|Lurantis||Grass|shadow=t}}
+{{PS|Wimpod||Bug|Water|shadow=t}}
+{{PS|Golisopod||Bug|Water|shadow=t}}
+{{PS|Sandygast||Ghost|Ground|shadow=t}}
+{{PS|Palossand||Ghost|Ground|shadow=t}}
+</div>
+</tabber></div>
+
+==November {{Nth|4}}, 2026==
+Shiny Shadow [[Prinplup]] and [[Tornadus]] were released.
+{{FormCounter|PaldeaEspT=120
+| Kanto = 124  | KantoForms = 140  | KantoFormsT = 187  | KantoShiny = 122  | KantoS = 110
+| Johto = 65   | JohtoForms = 68   | JohtoFormsT = 135  | JohtoShiny = 53   | JohtoS = 53
+| Hoenn = 87   | HoennForms = 87   | HoennFormsT = 162  | HoennShiny = 67   | HoennS = 67
+| Sinnoh = 61  | SinnohForms = 61  | SinnohFormsT = 140 | SinnohShiny = 39  | SinnohS = 39
+| Unova = 77   | UnovaForms = 77   | UnovaFormsT = 186  | UnovaShiny = 31   | UnovaS = 31
+| Kalos = 28   | KalosForms = 28   | KalosFormsT = 128  | KalosShiny = 23   | KalosS = 23
+| Alola = 18   | AlolaForms = 18   | AlolaFormsT = 122  | AlolaShiny = 15   | AlolaS = 15
+| Galar = 4    | GalarForms = 4    | GalarFormsT = 110  | GalarShiny = 4    | GalarS = 4
+| Hisui = 2    | HisuiForms = 2    | HisuiFormsT = 8    | HisuiShiny = 1    | HisuiS = 1
+| Paldea = 1   | PaldeaForms = 1   | PaldeaFormsT = 136 | PaldeaShiny = 1   | PaldeaS = 1
+}}
+<div class="poketab"><tabber>
+Shiny (3)=
+<div class="pogo-list-container bg-picture">
+{{PS|Prinplup||Water|shadow=t}}
+{{PS|Empoleon||Water|Steel|shadow=t}}
+{{PS|Tornadus||Flying|form=Incarnate Forme|shadow=t}}
+</div>
+</tabber></div>
+
+==References==
+{{Reflist}}
+[[Category:Listings]]

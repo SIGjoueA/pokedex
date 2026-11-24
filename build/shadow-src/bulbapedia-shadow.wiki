@@ -1,0 +1,552 @@
+This is a '''list of {{OBP|Shadow Pokémon|GO}}''' in {{g|GO}}. Shadow Pokémon with a {{shinystar/GO}} icon denote those whose [[Shiny Pokémon (GO)|Shiny]] forms has been obtainable during a bonus challenge. Shadow Pokémon with a {{bag/GO|Premier Ball}} [[Premier Ball]] icon denote species that, in at least one of any rotation, has been encounterable during the bonus challenge; these icons redirect to the Team GO Rocket member the Shadow Pokémon was most recently obtainable from.
+
+__TOC__
+
+==List of Shadow Pokémon==
+{{incomplete|2=actual CP for Apex Shadow Ho-Oh/Lugia; release date for cowboy hat Snorlax}}
+
+{| class="roundy sortable" style="display:inline-table; background:#{{XD color}}; border:3px solid #{{XD color dark}}; text-align:center; margin-bottom:2em;"
+|- style="color:#fff; background-color:#{{XD color light}}"
+! style="{{roundytl|5px}}" | #
+! width=180px colspan=2 | Pokémon
+! Catch CP
+! Purification cost
+! style="{{roundytr|5px}}" data-sort-type=usLongDate | Release date
+{{lop/shadow/GO|0001|Bulbasaur|128|118|111|3|July 22, 2019|candy=Bulbasaur|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0002|Ivysaur|155|151|143|3|July 22, 2019|candy=Bulbasaur|catch=Grunt}}
+{{lop/shadow/GO|0003|Venusaur|190|198|189|3|July 22, 2019|candy=Bulbasaur}}
+{{lop/shadow/GO|0004|Charmander|118|116|93|3|July 22, 2019|candy=Charmander|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0005|Charmeleon|151|158|126|3|July 22, 2019|candy=Charmander|catch=Grunt}}
+{{lop/shadow/GO|0006|Charizard|186|223|173|3|July 22, 2019|candy=Charmander}}
+{{lop/shadow/GO|0007|Squirtle|127|94|121|3|July 22, 2019|candy=Squirtle|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0008|Wartortle|153|126|155|3|July 22, 2019|candy=Squirtle|catch=Grunt}}
+{{lop/shadow/GO|0009|Blastoise|188|171|207|3|July 22, 2019|candy=Squirtle}}
+{{lop/shadow/GO|0010|Caterpie|120|63|50|1|October 8, 2024|candy=Caterpie|catch=Grunt}}
+{{lop/shadow/GO|0011|Metapod|128|46|75|1|October 8, 2024|candy=Caterpie}}
+{{lop/shadow/GO|0012|Butterfree|163|169|130|1|October 8, 2024|candy=Caterpie}}
+{{lop/shadow/GO|0013|Weedle|120|63|50|1|October 17, 2019|candy=Weedle|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0014|Kakuna|128|46|75|1|October 17, 2019|candy=Weedle|catch=Grunt}}
+{{lop/shadow/GO|0015|Beedrill|163|169|130|1|October 17, 2019|candy=Weedle|catch=Grunt}}
+{{lop/shadow/GO|0016|Pidgey|120|85|73|1|March 27, 2024|candy=Pidgey|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0017|Pidgeotto|160|117|105|1|March 27, 2024|candy=Pidgey}}
+{{lop/shadow/GO|0018|Pidgeot|199|166|154|1|March 27, 2024|candy=Pidgey}}
+{{lop/shadow/GO|0019|Rattata|102|103|70|1|July 22, 2019|candy=Rattata|catch=Grunt}}
+{{lop/shadow/GO|0019A|Rattata|102|103|70|1|April 3, 2022|candy=Rattata|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0020|Raticate|146|161|139|1|July 22, 2019|candy=Rattata|catch=Grunt}}
+{{lop/shadow/GO|0020Jan2020|Raticate|146|161|139|1|December 31, 2022|candy=Rattata|catch=Grunt}}
+{{lop/shadow/GO|0020A|Raticate|181|135|154|1|April 3, 2022|candy=Rattata|catch=Grunt}}
+{{lop/shadow/GO|0023|Ekans|111|110|97|3|June 10, 2020|candy=Ekans|shiny=yes|catch=Jessie}}
+{{lop/shadow/GO|0024|Arbok|155|167|153|3|June 10, 2020|candy=Ekans}}
+{{lop/shadow/GO|0027|Sandshrew|137|126|120|3|November 7, 2019|candy=Sandshrew|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0027A|Sandshrew|137|125|129|3|April 3, 2022|candy=Sandshrew|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0028|Sandslash|181|182|175|3|November 7, 2019|candy=Sandshrew}}
+{{lop/shadow/GO|0028A|Sandslash|181|177|195|3|April 3, 2022|candy=Sandshrew|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0029|Nidoran♀|146|86|89|3|February 3, 2020|candy=Nidoran♀|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0030|Nidorina|172|117|120|3|June 10, 2020|candy=Nidoran♀|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0031|Nidoqueen|207|180|173|3|June 10, 2020|candy=Nidoran♀}}
+{{lop/shadow/GO|0032|Nidoran♂|130|105|76|3|June 10, 2020|candy=Nidoran♂|catch=Arlo|shiny=yes}}
+{{lop/shadow/GO|0033|Nidorino|156|137|111|3|June 10, 2020|candy=Nidoran♂|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0033Jan2020|Nidorino|156|137|111|3|December 31, 2022|candy=Nidoran♂|catch=Grunt}}
+{{lop/shadow/GO|0034|Nidoking|191|204|156|3|June 10, 2020|candy=Nidoran♂}}
+{{lop/shadow/GO|0037|Vulpix|116|96|109|3|February 3, 2020|candy=Vulpix|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0037Halloween2022|Vulpix|116|96|109|3|October 26, 2023|candy=Vulpix|catch=Grunt}}
+{{lop/shadow/GO|0037A|Vulpix|116|96|109|3|February 1, 2023|candy=Vulpix|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0038|Ninetales|177|169|190|3|February 3, 2020|candy=Vulpix|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0038Halloween2022|Ninetales|177|169|190|3|October 26, 2023|candy=Vulpix|catch=Grunt}}
+{{lop/shadow/GO|0038A|Ninetales|177|169|190|3|February 1, 2023|candy=Vulpix}}
+{{lop/shadow/GO|0041|Zubat|120|83|73|1|July 22, 2019|candy=Zubat|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0042|Golbat|181|161|150|1|July 22, 2019|candy=Zubat|catch=Shadow Raid}}
+{{lop/shadow/GO|0043|Oddish|128|131|112|3|September 5, 2019|candy=Oddish|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0044|Gloom|155|153|136|3|September 5, 2019|candy=Oddish|catch=Grunt}}
+{{lop/shadow/GO|0045|Vileplume|181|202|167|3|September 5, 2019|candy=Oddish}}
+{{lop/shadow/GO|0048|Venonat|155|100|100|3|September 5, 2019|candy=Venonat|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0049|Venomoth|172|179|143|3|September 5, 2019|candy=Venonat|catch=Grunt}}
+{{lop/shadow/GO|0050|Diglett|67|109|78|3|October 12, 2020|candy=Diglett|catch=Timed Research}}
+{{lop/shadow/GO|0050A|Diglett|67|108|81|3|November 14, 2022|candy=Diglett|catch=Grunt}}
+{{lop/shadow/GO|0051|Dugtrio|111|167|134|3|October 12, 2020|candy=Diglett}}
+{{lop/shadow/GO|0051A|Dugtrio|111|201|142|3|November 14, 2022|candy=Diglett}}
+{{lop/shadow/GO|0052|Meowth|120|92|78|3|November 5, 2019|candy=Meowth|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0053|Persian|163|150|136|3|November 5, 2019|candy=Meowth|catch=Giovanni}}
+{{lop/shadow/GO|0054|Psyduck|137|122|95|3|September 5, 2019|candy=Psyduck|catch=Grunt}}
+{{lop/shadow/GO|0054Holiday2023|Psyduck|137|122|95|3|December 25, 2023|candy=Psyduck|catch=Grunt}}
+{{lop/shadow/GO|0055|Golduck|190|191|162|3|September 5, 2019|candy=Psyduck}}
+{{lop/shadow/GO|0055Holiday2023|Golduck|190|191|162|3|December 25, 2023|candy=Psyduck}}
+{{lop/shadow/GO|0056|Mankey|120|92|78|3|October 8, 2024|candy=Mankey|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0057|Primeape|190|191|162|3|October 8, 2024|candy=Mankey|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0058|Growlithe|146|136|93|3|September 5, 2019|candy=Growlithe|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0059|Arcanine|207|227|166|3|September 5, 2019|candy=Growlithe}}
+{{lop/shadow/GO|0060|Poliwag|120|101|82|3|August 1, 2019|candy=Poliwag|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0061|Poliwhirl|163|130|123|3|August 1, 2019|candy=Poliwag|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0062|Poliwrath|207|182|184|3|August 1, 2019|candy=Poliwag}}
+{{lop/shadow/GO|0063|Abra|93|195|82|3|September 5, 2019|candy=Abra|catch=Grunt}}
+{{lop/shadow/GO|0064|Kadabra|120|232|117|3|September 5, 2019|candy=Abra}}
+{{lop/shadow/GO|0065|Alakazam|146|271|167|3|September 5, 2019|candy=Abra}}
+{{lop/shadow/GO|0066|Machop|172|137|82|3|June 10, 2020|candy=Machop|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0067|Machoke|190|177|125|3|June 10, 2020|candy=Machop}}
+{{lop/shadow/GO|0068|Machamp|207|234|159|3|June 10, 2020|candy=Machop}}
+{{lop/shadow/GO|0069|Bellsprout|137|139|61|3|November 7, 2019|candy=Bellsprout|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0070|Weepinbell|163|172|92|3|November 7, 2019|candy=Bellsprout|catch=Grunt}}
+{{lop/shadow/GO|0071|Victreebel|190|207|135|3|November 7, 2019|candy=Bellsprout}}
+{{lop/shadow/GO|0072|Tentacool|120|97|149|3|January 27, 2024|candy=Tentacool|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0073|Tentacruel|190|166|209|3|January 27, 2024|candy=Tentacool|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0074|Geodude|120|132|132|1|July 9, 2022|candy=Geodude|catch=Sierra|shiny=yes}}
+{{lop/shadow/GO|0074A|Geodude|120|132|132|1|June 21, 2023|candy=Geodude|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0075|Graveler|146|164|164|1|July 9, 2022|candy=Geodude|catch=Grunt}}
+{{lop/shadow/GO|0075A|Graveler|146|164|164|1|June 21, 2023|candy=Geodude}}
+{{lop/shadow/GO|0076|Golem|190|211|198|1|July 9, 2022|candy=Geodude}}
+{{lop/shadow/GO|0076A|Golem|190|211|198|1|June 21, 2023|candy=Geodude}}
+{{lop/shadow/GO|0077|Ponyta|137|170|127|3|June 25, 2026|candy=Ponyta|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0078|Rapidash|163|207|162|3|June 25, 2026|candy=Ponyta}}
+{{lop/shadow/GO|0079|Slowpoke|207|109|98|3|October 12, 2020|candy=Slowpoke|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0080|Slowbro|216|177|180|3|October 12, 2020|candy=Slowpoke}}
+{{lop/shadow/GO|0081|Magnemite|93|165|121|3|November 7, 2019|candy=Magnemite|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0082|Magneton|137|223|169|3|November 7, 2019|candy=Magnemite|catch=Grunt}}
+<!--{{lop/shadow/GO|0083|Farfetch'd|141|124|115|3|  |candy=Farfetch'd}}
+{{lop/shadow/GO|0083G|Farfetch'd|141|174|114|3|  |candy=Farfetch'd}}-->
+{{lop/shadow/GO|0086|Seel|163|85|121|3|June 25, 2026|candy=Seel|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0087|Dewgong|207|139|177|3|June 25, 2026|candy=Seel}}
+{{lop/shadow/GO|0088|Grimer|190|135|90|3|August 1, 2019|candy=Grimer|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0088A|Grimer|190|135|90|3|March 25, 2023|candy=Grimer|shiny=yes|catch=Arlo}}
+{{lop/shadow/GO|0089|Muk|233|190|172|3|August 1, 2019|candy=Grimer|catch=Grunt}}
+{{lop/shadow/GO|0089A|Muk|233|190|172|3|March 25, 2023|candy=Grimer}}
+{{lop/shadow/GO|0090|Shellder|102|116|134|3|October 12, 2020|candy=Shellder|catch=Grunt}}
+{{lop/shadow/GO|0091|Cloyster|137|186|256|3|October 12, 2020|candy=Shellder|catch=Grunt}}
+{{lop/shadow/GO|0092|Gastly|102|186|67|3|October 26, 2023|candy=Gastly|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0093|Haunter|128|223|107|3|October 26, 2023|candy=Gastly|catch=Grunt}}
+{{lop/shadow/GO|0094|Gengar|155|261|149|3|October 26, 2023|candy=Gastly}}
+{{lop/shadow/GO|0095|Onix|111|85|232|5|November 14, 2022|candy=Onix|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0096|Drowzee|155|89|136|3|August 1, 2019|candy=Drowzee|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0097|Hypno|198|144|193|3|August 1, 2019|candy=Drowzee|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0098|Krabby|102|181|124|3|January 23, 2026|candy=Krabby|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0099|Kingler|146|240|181|3|January 23, 2026|candy=Krabby}}
+{{lop/shadow/GO|0100|Voltorb|120|109|111|3|January 24, 2022|candy=Voltorb|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0101|Electrode|155|173|173|3|January 24, 2022|candy=Voltorb|catch=Grunt}}
+{{lop/shadow/GO|0102|Exeggcute|155|107|125|3|February 3, 2020|candy=Exeggcute|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0103|Exeggutor|216|233|149|3|February 3, 2020|candy=Exeggcute}}
+{{lop/shadow/GO|0103A|Exeggutor|216|230|153|3|April 3, 2022|candy=Exeggcute|catch=Grunt}}
+{{lop/shadow/GO|0104|Cubone|137|90|144|3|August 1, 2019|candy=Cubone|shiny=yes|catch=Cliff}}
+{{lop/shadow/GO|0105|Marowak|155|144|186|3|August 1, 2019|candy=Cubone}}
+{{lop/shadow/GO|0105A|Marowak|155|144|186|3|May 25, 2022|candy=Cubone|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0106|Hitmonlee|137|224|181|5|November 7, 2019|candy=Tyrogue|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0107|Hitmonchan|137|193|197|5|September 5, 2019|candy=Tyrogue|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0109|Koffing|120|119|141|3|June 10, 2020|candy=Koffing|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0110|Weezing|163|174|197|3|June 10, 2020|candy=Koffing|catch=Grunt}}
+{{lop/shadow/GO|0110G|Weezing|163|174|197|3|September 26, 2024|candy=Koffing|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0111|Rhyhorn|190|140|127|3|October 26, 2023|candy=Rhyhorn|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0112|Rhydon|233|222|171|3|October 26, 2023|candy=Rhyhorn}}
+{{lop/shadow/GO|0114|Tangela|163|183|169|3|May 18, 2021|candy=Tangela|catch=Grunt|shiny=yes}}<!--
+{{lop/shadow/GO|0115|Kangaskhan|233|181|165|3|Unobtainable|candy=Kangaskhan|background=ccc}}-->
+{{lop/shadow/GO|0116|Horsea|shiny=yes|102|129|103|3|May 18, 2021|candy=Horsea|catch=Shadow Raid}}
+{{lop/shadow/GO|0117|Seadra|146|187|156|3|May 18, 2021|candy=Horsea}}
+{{lop/shadow/GO|0120|Staryu|102|137|112|3|August 11, 2025|candy=Staryu|catch=Grunt}}
+{{lop/shadow/GO|0121|Starmie|155|210|184|3|August 11, 2025|candy=Staryu}}<!--
+{{lop/shadow/GO|0122|Mr. Mime|120|192|205|3|  |candy=Mr. Mime}}
+{{lop/shadow/GO|0122G|Mr. Mime|137|183|169|3|  |candy=Mr. Mime}}-->
+{{lop/shadow/GO|0123|Scyther|172|218|170|5|August 1, 2019|candy=Scyther|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0125|Electabuzz|163|198|158|5|October 17, 2019|candy=Electabuzz|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0126|Magmar|163|206|154|5|October 17, 2019|candy=Magmar|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0127|Pinsir|163|238|182|5|February 3, 2020|candy=Pinsir|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0129|Magikarp|85|29|85|1|August 1, 2019|candy=Magikarp|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0130|Gyarados|216|237|186|1|August 1, 2019|candy=Magikarp}}
+{{lop/shadow/GO|0131|Lapras|277|165|174|5|October 17, 2019|candy=Lapras|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0137|Porygon|163|153|136|3|November 7, 2019|candy=Porygon|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0138|Omanyte|111|155|153|5|February 3, 2020|candy=Omanyte|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0139|Omastar|172|207|201|5|February 3, 2020|candy=Omanyte}}
+{{lop/shadow/GO|0140|Kabuto|102|148|140|5|June 25, 2026|candy=Kabuto|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0141|Kabutops|155|220|186|5|June 25, 2026|candy=Kabuto}}
+{{lop/shadow/GO|0142|Aerodactyl|190|221|159|5|October 12, 2020|candy=Aerodactyl|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0143|Snorlax|330|190|169|5|July 22, 2019|candy=Snorlax|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0143GOFest2022|Snorlax|330|190|169|5|August 26, 2023|candy=Snorlax|catch=Grunt}}
+{{lop/shadow/GO|0144|Articuno|207|192|236|20|November 5, 2019|candy=Articuno|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0145|Zapdos|207|253|185|20|December 1, 2019|candy=Zapdos|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0146|Moltres|207|251|181|20|January 1, 2020|candy=Moltres|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0147|Dratini|121|119|91|5|July 22, 2019|candy=Dratini|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0148|Dragonair|156|163|135|5|July 22, 2019|candy=Dratini|catch=Grunt}}
+{{lop/shadow/GO|0149|Dragonite|209|263|198|5|July 22, 2019|candy=Dratini}}
+{{lop/shadow/GO|0150|Mewtwo|214|300|182|20|{{tt|June 26, 2020|GO Fest ticket holders only; October 13, 2020 Worldwide}}|candy=Mewtwo|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0152|Chikorita|128|92|122|3|January 24, 2022|candy=Chikorita|catch=Arlo|shiny=yes}}
+{{lop/shadow/GO|0153|Bayleef|155|122|155|3|January 24, 2022|candy=Chikorita|catch=Shadow Raid}}
+{{lop/shadow/GO|0154|Meganium|190|168|202|3|January 24, 2022|candy=Chikorita}}
+{{lop/shadow/GO|0155|Cyndaquil|118|116|93|3|January 24, 2022|candy=Cyndaquil|catch=Cliff|shiny=yes}}
+{{lop/shadow/GO|0156|Quilava|151|158|126|3|January 24, 2022|candy=Cyndaquil|catch=Shadow Raid}}
+{{lop/shadow/GO|0157|Typhlosion|186|223|173|3|January 24, 2022|candy=Cyndaquil}}
+{{lop/shadow/GO|0158|Totodile|137|117|109|3|January 24, 2022|candy=Totodile|catch=Sierra|shiny=yes}}
+{{lop/shadow/GO|0159|Croconaw|163|150|142|3|January 24, 2022|candy=Totodile|catch=Shadow Raid}}
+{{lop/shadow/GO|0160|Feraligatr|198|205|188|3|January 24, 2022|candy=Totodile}}
+{{lop/shadow/GO|0163|Hoothoot|155|67|88|1|June 25, 2026|candy=Hoothoot|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0164|Noctowl|225|145|156|1|June 25, 2026|candy=Hoothoot}}
+{{lop/shadow/GO|0165|Ledyba|120|72|118|1|June 21, 2023|candy=Ledyba|catch=Grunt}}
+{{lop/shadow/GO|0166|Ledian|146|107|179|1|June 21, 2023|candy=Ledyba}}
+{{lop/shadow/GO|0169|Crobat|198|194|178|1|July 22, 2019|candy=Zubat}}
+{{lop/shadow/GO|0177|Natu|120|134|89|3|November 14, 2022|candy=Natu|catch=Grunt}}
+{{lop/shadow/GO|0178|Xatu|163|192|146|3|November 14, 2022|candy=Natu}}
+{{lop/shadow/GO|0179|Mareep|146|114|79|5|October 17, 2019|candy=Mareep|catch=Grunt}}
+{{lop/shadow/GO|0180|Flaaffy|172|145|109|5|October 17, 2019|candy=Mareep}}
+{{lop/shadow/GO|0181|Ampharos|207|211|169|5|October 17, 2019|candy=Mareep}}
+{{lop/shadow/GO|0182|Bellossom|181|169|186|3|September 5, 2019|candy=Oddish}}
+{{lop/shadow/GO|0185|Sudowoodo|172|167|176|5|April 3, 2022|candy=Sudowoodo|catch=Shadow Raid}}
+{{lop/shadow/GO|0186|Politoed|207|174|179|3|August 1, 2019|candy=Poliwag|shiny=yes}}
+{{lop/shadow/GO|0187|Hoppip|111|67|94|3|October 12, 2020|candy=Hoppip|shiny=yes|catch=Sierra}}
+{{lop/shadow/GO|0188|Skiploom|146|91|120|3|October 12, 2020|candy=Hoppip|catch=Grunt}}
+{{lop/shadow/GO|0189|Jumpluff|181|118|183|3|October 12, 2020|candy=Hoppip}}
+{{lop/shadow/GO|0190|Aipom|146|136|112|3|April 1, 2021|candy=Aipom|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0194|Wooper|146|75|66|3|December 10, 2020|candy=Wooper|catch=Shadow Raid}}
+{{lop/shadow/GO|0195|Quagsire|216|152|143|3|December 10, 2020|candy=Wooper|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0198|Murkrow|155|175|87|3|May 18, 2021|candy=Murkrow|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0199|Slowking|216|177|180|3|October 12, 2020|candy=Slowpoke}}
+{{lop/shadow/GO|0200|Misdreavus|155|167|154|3|November 7, 2019|candy=Misdreavus|catch=Shadow Raid}}
+{{lop/shadow/GO|0202|Wobbuffet|382|60|106|3|November 7, 2019|candy=Wobbuffet|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0203|Girafarig|172|182|133|3|April 3, 2022|candy=Girafarig|catch=Shadow Raid}}
+{{lop/shadow/GO|0204|Pineco|137|108|122|5|June 10, 2020|candy=Pineco|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0205|Forretress|181|161|205|5|June 10, 2020|candy=Pineco}}
+{{lop/shadow/GO|0207|Gligar|163|143|184|5|June 10, 2020|candy=Gligar|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0208|Steelix|181|148|272|5|November 14, 2022|candy=Onix}}
+{{lop/shadow/GO|0209|Snubbull|155|137|85|3|May 18, 2021|candy=Snubbull|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0210|Granbull|207|212|131|3|May 18, 2021|candy=Snubbull}}
+{{lop/shadow/GO|0211|Qwilfish|163|184|138|3|September 16, 2025|candy=Qwilfish|catch=Grunt|shiny=yes}}<!--
+{{lop/shadow/GO|0211H|Qwilfish|163|184|151|3|  |candy=Qwilfish}}-->
+{{lop/shadow/GO|0212|Scizor|172|236|181|5|August 1, 2019|candy=Scyther|catch=Special Research}}
+{{lop/shadow/GO|0213|Shuckle|85|17|396|3|June 10, 2020|candy=Shuckle|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0215|Sneasel|146|189|146|3|November 5, 2019|candy=Sneasel|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0215H|Sneasel|146|189|146|3|October 26, 2023|candy=Sneasel|catch=Grunt}}
+{{lop/shadow/GO|0216|Teddiursa|155|142|93|3|October 12, 2020|candy=Teddiursa|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0217|Ursaring|207|236|144|3|October 12, 2020|candy=Teddiursa}}
+{{lop/shadow/GO|0220|Swinub|137|90|69|3|February 2, 2021|candy=Swinub|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0221|Piloswine|225|181|138|3|February 2, 2021|candy=Swinub|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0225|Delibird|128|128|90|5|December 24, 2019|candy=Delibird|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0227|Skarmory|163|148|226|5|October 12, 2020|candy=Skarmory|catch=Grunt}}
+{{lop/shadow/GO|0228|Houndour|128|152|83|3|August 1, 2019|candy=Houndour|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0229|Houndoom|181|224|144|3|August 1, 2019|candy=Houndour|catch=Grunt}}
+{{lop/shadow/GO|0230|Kingdra|181|194|194|3|May 18, 2021|candy=Horsea}}
+{{lop/shadow/GO|0231|Phanpy|207|107|98|3|March 25, 2023|candy=Phanpy|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0232|Donphan|207|214|185|3|March 25, 2023|candy=Phanpy|catch=Grunt}}
+{{lop/shadow/GO|0233|Porygon2|198|198|180|3|November 7, 2019|candy=Porygon}}
+{{lop/shadow/GO|0234|Stantler|177|192|131|3|December 24, 2019|candy=Stantler|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0237|Hitmontop|137|173|207|5|June 21, 2023|candy=Tyrogue|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0243|Raikou|207|241|195|20|February 1, 2020|candy=Raikou|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0244|Entei|251|235|171|20|March 1, 2020|candy=Entei|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0245|Suicune|225|180|235|20|June 10, 2020|candy=Suicune|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0246|Larvitar|137|115|93|5|September 5, 2019|candy=Larvitar|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0247|Pupitar|172|155|133|5|September 5, 2019|candy=Larvitar|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0248|Tyranitar|225|251|207|5|September 5, 2019|candy=Larvitar}}
+{{lop/shadow/GO|0249|Lugia|235|193|310|20|November 9, 2021|candy=Lugia|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0249A|Lugia|235|193|310|5|{{tt|March 26, 2022|After a 30 day quest}}|candy=Lugia|catch=Ticketed event (GO)#Masterwork Research: Apex}}
+{{lop/shadow/GO|0250|Ho-Oh|214|239|244|20|June 17, 2021|candy=Ho-Oh|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0250A|Ho-Oh|214|239|244|5|February 26, 2022|candy=Ho-Oh|catch=Ticketed event (GO)#Masterwork Research: Apex}}
+{{lop/shadow/GO|0252|Treecko|120|124|94|3|March 25, 2023|candy=Treecko|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0253|Grovyle|137|172|120|3|March 25, 2023|candy=Treecko}}
+{{lop/shadow/GO|0254|Sceptile|172|223|169|3|March 25, 2023|candy=Treecko}}
+{{lop/shadow/GO|0255|Torchic|128|130|87|3|March 25, 2023|candy=Torchic|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0256|Combusken|155|163|115|3|March 25, 2023|candy=Torchic}}
+{{lop/shadow/GO|0257|Blaziken|190|240|141|3|March 25, 2023|candy=Torchic}}
+{{lop/shadow/GO|0258|Mudkip|137|126|93|3|July 22, 2019|candy=Mudkip|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0259|Marshtomp|172|156|133|3|July 22, 2019|candy=Mudkip|catch=Grunt}}
+{{lop/shadow/GO|0260|Swampert|225|208|175|3|July 22, 2019|candy=Mudkip}}
+{{lop/shadow/GO|0261|Poochyena|111|96|61|1|May 18, 2021|candy=Poochyena|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0262|Mightyena|172|171|132|1|May 18, 2021|candy=Poochyena|catch=Grunt}}<!--
+{{lop/shadow/GO|0263|Zigzagoon|116|58|80|3|  |candy=Zigzagoon}}-->
+{{lop/shadow/GO|0263G|Zigzagoon|116|58|80|3|  October 8, 2024|candy=Zigzagoon|catch=Cliff|shiny=yes}}
+<!--{{lop/shadow/GO|0264|Linoone|186|142|128|3|  |candy=Zigzagoon}}
+-->
+{{lop/shadow/GO|0264G|Linoone|186|142|128|3|  October 8, 2024|candy=Zigzagoon}}
+{{lop/shadow/GO|0273|Seedot|120|71|77|3|October 17, 2019|candy=Seedot|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0274|Nuzleaf|172|134|78|3|October 17, 2019|candy=Seedot|catch=Shadow Raid}}
+{{lop/shadow/GO|0275|Shiftry|207|200|121|3|October 17, 2019|candy=Seedot}}
+{{lop/shadow/GO|0276|Taillow|120|134|89|3|January 15, 2025|candy=Taillow|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0277|Swellow|163|192|146|3|January 15, 2025|candy=Taillow|catch=Grunt}}
+{{lop/shadow/GO|0280|Ralts|99|79|59|5|August 8, 2019|candy=Ralts|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0281|Kirlia|116|117|90|5|August 8, 2019|candy=Ralts|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0281Fashion2020|Kirlia|116|117|90|5|November 15, 2023|candy=Ralts|catch=Grunt}}
+{{lop/shadow/GO|0282|Gardevoir|169|237|195|5|August 8, 2019|candy=Ralts}}
+{{lop/shadow/GO|0287|Slakoth|120|96|132|5|May 14, 2025|candy=Slakoth|catch=Grunt}}
+{{lop/shadow/GO|0288|Vigoroth|155|138|176|5| May 14, 2025 |candy=Slakoth}}
+{{lop/shadow/GO|0289|Slaking|190|257|228|5| May 14, 2025|candy=Slakoth}}
+{{lop/shadow/GO|0293|Whismur|162|92|42|1|January 24, 2022|candy=Whismur|catch=Grunt}}
+{{lop/shadow/GO|0294|Loudred|197|134|81|1|January 24, 2022|candy=Whismur|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0295|Exploud|232|179|137|1|January 24, 2022|candy=Whismur}}
+{{lop/shadow/GO|0296|Makuhita|176|99|54|3|May 18, 2021|candy=Makuhita|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0297|Hariyama|302|209|114|3|May 18, 2021|candy=Makuhita}}
+{{lop/shadow/GO|0299|Nosepass|102|82|215|3|February 2, 2021|candy=Nosepass|catch=Grunt}}
+{{lop/shadow/GO|0302|Sableye|137|141|136|5|October 17, 2019|candy=Sableye|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0303|Mawile|137|155|141|5|February 3, 2020|candy=Mawile|shiny=yes|catch=Arlo}}
+{{lop/shadow/GO|0304|Aron|137|121|141|1|February 2, 2021|candy=Aron|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0305|Lairon|155|158|198|1|February 2, 2021|candy=Aron|catch=Grunt}}
+{{lop/shadow/GO|0306|Aggron|172|198|257|1|February 2, 2021|candy=Aron}}
+{{lop/shadow/GO|0309|Electrike|120|123|78|3|May 18, 2021|candy=Electrike|catch=Grunt}}
+{{lop/shadow/GO|0310|Manectric|172|215|127|3|May 18, 2021|candy=Electrike|catch=Shadow Raid}}
+{{lop/shadow/GO|0318|Carvanha|128|171|39|3|February 3, 2020|candy=Carvanha|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0319|Sharpedo|172|243|83|3|February 3, 2020|candy=Carvanha}}
+{{lop/shadow/GO|0320|Wailmer|277|136|68|1|November 14, 2022|candy=Wailmer|catch=Grunt}}
+{{lop/shadow/GO|0321|Wailord|347|175|87|1|November 14, 2022|candy=Wailmer}}
+{{lop/shadow/GO|0322|Numel|155|119|79|3|April 3, 2022|candy=Numel|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0323|Camerupt|172|194|136|3|April 3, 2022|candy=Numel}}
+{{lop/shadow/GO|0325|Spoink|155|125|122|1|February 1, 2023|candy=Spoink|catch=Shadow Raid}}
+{{lop/shadow/GO|0326|Grumpig|190|171|188|1|February 1, 2023|candy=Spoink}}
+{{lop/shadow/GO|0328|Trapinch|128|162|78|5|October 17, 2019|candy=Trapinch|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0329|Vibrava|137|134|99|5|October 17, 2019|candy=Trapinch|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0330|Flygon|190|205|168|5|October 17, 2019|candy=Trapinch}}
+{{lop/shadow/GO|0331|Cacnea|137|156|74|3|October 17, 2019|candy=Cacnea|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0332|Cacturne|172|221|115|3|October 17, 2019|candy=Cacnea|catch=Grunt}}
+{{lop/shadow/GO|0333|Swablu|128|76|132|1|September 16, 2025|candy=Swablu|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0334|Altaria|181|141|201|1|September 16, 2025|candy=Swablu}}
+{{lop/shadow/GO|0339|Barboach|137|93|82|1|October 26, 2023|candy=Barboach|catch=Grunt}}
+{{lop/shadow/GO|0340|Whiscash|242|151|141|1|October 26, 2023|candy=Barboach}}
+{{lop/shadow/GO|0341|Corphish|125|141|99|3|January 27, 2024|candy=Corphish|catch=Grunt}}
+{{lop/shadow/GO|0342|Crawdaunt|160|224|142|3|January 27, 2024|candy=Corphish}}
+{{lop/shadow/GO|0343|Baltoy|120|77|124|3|September 16, 2025|candy=Baltoy|catch=Grunt}}
+{{lop/shadow/GO|0344|Claydol|155|140|229|3|September 16, 2025|candy=Baltoy|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0345|Lileep|165|105|150|3|February 2, 2021|candy=Lileep|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0346|Cradily|200|152|194|3|February 2, 2021|candy=Lileep}}
+{{lop/shadow/GO|0347|Anorith|128|176|100|3|February 2, 2021|candy=Anorith|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0348|Armaldo|181|222|174|3|February 2, 2021|candy=Anorith}}
+{{lop/shadow/GO|0349|Feebas|85|29|85|5|September 16, 2025|candy=Feebas|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0350|Milotic|216|192|219|5|September 16, 2025|candy=Feebas}}
+{{lop/shadow/GO|0353|Shuppet|127|138|65|3|October 17, 2019|candy=Shuppet|catch=Grunt}}
+{{lop/shadow/GO|0354|Banette|162|218|126|3|October 17, 2019|candy=Shuppet}}
+{{lop/shadow/GO|0355|Duskull|85|70|162|3|October 17, 2019|candy=Duskull|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0356|Dusclops|120|124|234|3|October 17, 2019|candy=Duskull|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0359|Absol|163|246|120|5|December 24, 2019|candy=Absol|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0361|Snorunt|137|95|95|5|January 27, 2024|candy=Snorunt|catch=Grunt}}
+{{lop/shadow/GO|0362|Glalie|190|162|162|5|January 27, 2024|candy=Snorunt}}
+{{lop/shadow/GO|0363|Spheal|172|95|90|3|February 2, 2021|candy=Spheal|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0364|Sealeo|207|137|132|3|February 2, 2021|candy=Spheal|catch=Grunt}}
+{{lop/shadow/GO|0365|Walrein|242|182|176|3|February 2, 2021|candy=Spheal}}
+{{lop/shadow/GO|0371|Bagon|128|134|93|5|December 24, 2019|candy=Bagon|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0372|Shelgon|163|172|155|5|December 24, 2019|candy=Bagon}}
+{{lop/shadow/GO|0373|Salamence|216|277|168|5|December 24, 2019|candy=Bagon}}
+{{lop/shadow/GO|0374|Beldum|120|96|132|5|February 3, 2020|candy=Beldum|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0375|Metang|155|138|176|5|February 3, 2020|candy=Beldum|catch=Grunt}}
+{{lop/shadow/GO|0376|Metagross|190|257|228|5|February 3, 2020|candy=Beldum}}
+{{lop/shadow/GO|0377|Regirock|190|179|309|20|June 21, 2023|candy=Regirock|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0378|Regice|190|179|309|20|March 25, 2023|candy=Regice|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0379|Registeel|190|143|285|20|February 1, 2023|candy=Registeel|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0380|Latias|190|228|246|20|April 3, 2022|candy=Latias|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0381|Latios|190|268|212|20|July 9, 2022|candy=Latios|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0382|Kyogre|205|270|228|20|January 27, 2024|candy=Kyogre|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0383|Groudon|205|270|228|20|March 27, 2024|candy=Groudon|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0387|Turtwig|146|119|110|3|September 5, 2019|candy=Turtwig|catch=Grunt}}
+{{lop/shadow/GO|0388|Grotle|181|157|143|3|September 5, 2019|candy=Turtwig}}
+{{lop/shadow/GO|0389|Torterra|216|202|188|3|September 5, 2019|candy=Turtwig}}
+{{lop/shadow/GO|0390|Chimchar|127|113|86|3|January 27, 2024|candy=Chimchar|catch=Grunt}}
+{{lop/shadow/GO|0391|Monferno|162|158|105|3|January 27, 2024|candy=Chimchar}}
+{{lop/shadow/GO|0392|Infernape|183|222|151|3|January 27, 2024|candy=Chimchar}}
+{{lop/shadow/GO|0393|Piplup|142|112|102|3|January 27, 2024|candy=Piplup|catch=Grunt}}
+{{lop/shadow/GO|0394|Prinplup|162|150|139|3|January 27, 2024|candy=Piplup|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0395|Empoleon|197|210|186|3|January 27, 2024|candy=Piplup}}
+{{lop/shadow/GO|0396|Starly|120|101|58|1|May 18, 2021|candy=Starly|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0397|Staravia|146|142|94|1|May 18, 2021|candy=Starly}}
+{{lop/shadow/GO|0398|Staraptor|198|234|140|1|May 18, 2021|candy=Starly}}
+{{lop/shadow/GO|0399|Bidoof|153|80|73|1|June 25, 2021|candy=Bidoof|catch=Grunt}}
+{{lop/shadow/GO|0400|Bibarel|188|162|119|1|June 25, 2021|candy=Bidoof|catch=Grunt}}
+{{lop/shadow/GO|0403|Shinx|128|117|64|5|July 9, 2022|candy=Shinx|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0403Fashion2020|Shinx|128|117|64|5|September 27, 2022|candy=Shinx|catch=Grunt}}
+{{lop/shadow/GO|0404|Luxio|155|159|95|5|July 9, 2022|candy=Shinx}}
+{{lop/shadow/GO|0405|Luxray|190|232|156|5|July 9, 2022|candy=Shinx}}
+{{lop/shadow/GO|0408|Cranidos|167|218|71|5|October 26, 2023|candy=Cranidos|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0409|Rampardos|219|295|109|5|October 26, 2023|candy=Cranidos}}
+{{lop/shadow/GO|0410|Shieldon|102|76|195|5|October 26, 2023|candy=Shieldon|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0411|Bastiodon|155|94|286|5|October 26, 2023|candy=Shieldon}}
+{{lop/shadow/GO|0424|Ambipom|181|205|143|3|April 1, 2021|candy=Aipom}}
+{{lop/shadow/GO|0425|Drifloon|207|117|80|5|March 25, 2023|candy=Drifloon|catch=Grunt}}
+{{lop/shadow/GO|0426|Drifblim|312|180|102|5|March 25, 2023|candy=Drifloon}}
+{{lop/shadow/GO|0429|Mismagius|155|211|187|3|November 7, 2019|candy=Misdreavus|catch=Special Research}}
+{{lop/shadow/GO|0430|Honchkrow|225|243|103|3|May 18, 2021|candy=Murkrow|catch=Special Research}}
+{{lop/shadow/GO|0431|Glameow|135|109|82|3|June 21, 2023|candy=Glameow|catch=Grunt}}
+{{lop/shadow/GO|0432|Purugly|174|172|133|3|June 21, 2023|candy=Glameow}}
+{{lop/shadow/GO|0434|Stunky|160|121|90|3|June 10, 2020|candy=Stunky|catch=Grunt}}
+{{lop/shadow/GO|0435|Skuntank|230|184|132|3|June 10, 2020|candy=Stunky}}
+{{lop/shadow/GO|0443|Gible|shiny=yes|151|124|84|5|June 21, 2023|candy=Gible|catch=Cliff}}
+{{lop/shadow/GO|0444|Gabite|169|172|125|5|June 21, 2023|candy=Gible}}
+{{lop/shadow/GO|0445|Garchomp|239|261|193|5|June 21, 2023|candy=Gible}}
+{{lop/shadow/GO|0449|Hippopotas|169|124|118|3|January 24, 2022|candy=Hippopotas|catch=Grunt}}
+{{lop/shadow/GO|0450|Hippowdon|239|201|191|3|January 24, 2022|candy=Hippopotas}}
+{{lop/shadow/GO|0451|Skorupi|120|93|151|5|May 18, 2021|candy=Skorupi|shiny=yes|catch=Grunt}}
+{{lop/shadow/GO|0452|Drapion|172|180|202|5|May 18, 2021|candy=Skorupi}}
+{{lop/shadow/GO|0453|Croagunk|134|116|76|3|January 27, 2024|candy=Croagunk|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0454|Toxicroak|195|211|133|3|January 27, 2024|candy=Croagunk}}
+{{lop/shadow/GO|0459|Snover|155|115|105|3|December 24, 2019|candy=Snover|catch=Shadow Raid}}
+{{lop/shadow/GO|0460|Abomasnow|207|178|158|3|December 24, 2019|candy=Snover}}
+{{lop/shadow/GO|0461|Weavile|172|243|171|3|November 5, 2019|candy=Sneasel}}
+{{lop/shadow/GO|0462|Magnezone|172|238|205|3|November 7, 2019|candy=Magnemite}}
+{{lop/shadow/GO|0464|Rhyperior|251|241|190|3|October 26, 2023|candy=Rhyhorn}}
+{{lop/shadow/GO|0465|Tangrowth|225|207|184|3|May 18, 2021|candy=Tangela}}
+{{lop/shadow/GO|0466|Electivire|181|249|163|5|October 17, 2019|candy=Electabuzz}}
+{{lop/shadow/GO|0467|Magmortar|181|247|172|5|October 17, 2019|candy=Magmar}}
+{{lop/shadow/GO|0472|Gliscor|181|185|222|5|June 10, 2020|candy=Gligar}}
+{{lop/shadow/GO|0473|Mamoswine|242|247|146|3|February 2, 2021|candy=Swinub}}
+{{lop/shadow/GO|0474|Porygon-Z|198|264|150|3|November 7, 2019|candy=Porygon}}
+{{lop/shadow/GO|0475|Gallade|169|237|195|5|August 8, 2019|candy=Ralts}}
+{{lop/shadow/GO|0476|Probopass|155|135|275|3|February 2, 2021|candy=Nosepass}}
+{{lop/shadow/GO|0477|Dusknoir|128|180|254|3|October 17, 2019|candy=Duskull}}
+{{lop/shadow/GO|0478|Froslass|172|171|150|5|January 27, 2024|candy=Snorunt}}
+{{lop/shadow/GO|0483|Dialga|205|275|211|20|May 14, 2025|candy=Dialga|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0484|Palkia|189|280|215|20|January 15, 2025|candy=Palkia|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0485|Heatran|190|228|246|20|October 8, 2024|candy=Heatran|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0486|Regigigas|221|287|210|20|October 26, 2023|candy=Regigigas|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0487|Giratina|284|187|225|20|August 11, 2025|candy=Giratina|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0488|Cresselia|260|152|258|20|August 8, 2024|candy=Cresselia|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0491|Darkrai|172|285|198|20|November 7, 2025|candy=Darkrai|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0495|Snivy|146|119|110|3|January 15, 2025|candy=Snivy|catch=Grunt}}
+{{lop/shadow/GO|0496|Servine|181|157|143|3|January 15, 2025|candy=Snivy}}
+{{lop/shadow/GO|0497|Serperior|216|202|188|3|January 15, 2025|candy=Snivy}}
+{{lop/shadow/GO|0498|Tepig|127|113|86|3|January 15, 2025|candy=Tepig|catch=Grunt}}
+{{lop/shadow/GO|0499|Pignite|162|158|105|3|January 15, 2025|candy=Tepig}}
+{{lop/shadow/GO|0500|Emboar|183|222|151|3|January 15, 2025|candy=Tepig}}
+{{lop/shadow/GO|0501|Oshawott|142|112|102|3|January 15, 2025|candy=Oshawott|catch=Grunt}}
+{{lop/shadow/GO|0502|Dewott|162|150|139|3|January 15, 2025|candy=Oshawott}}
+{{lop/shadow/GO|0503|Samurott|197|210|186|3|January 15, 2025|candy=Oshawott}}
+{{lop/shadow/GO|0504|Patrat|128|98|73|1|July 9, 2022|candy=Patrat|catch=Grunt}}
+{{lop/shadow/GO|0505|Watchog|155|165|139|1|July 9, 2022|candy=Patrat}}
+{{lop/shadow/GO|0509|Purrloin|121|98|73|1|July 9, 2022|candy=Purrloin|catch=Grunt}}
+{{lop/shadow/GO|0510|Liepard|162|187|106|1|July 9, 2022|candy=Purrloin}}
+{{lop/shadow/GO|0519|Pidove|137|98|80|1|February 1, 2023|candy=Pidove|catch=Shadow Raid}}
+{{lop/shadow/GO|0520|Tranquill|158|144|107|1|February 1, 2023|candy=Pidove}}
+{{lop/shadow/GO|0521|Unfezant|190|226|146|1|February 1, 2023|candy=Pidove}}
+{{lop/shadow/GO|0522|Blitzle|128|118|645|3|February 1, 2023|candy=Blitzle|catch=Grunt}}
+{{lop/shadow/GO|0523|Zebstrika|181|211|136|3|February 1, 2023|candy=Blitzle}}
+{{lop/shadow/GO|0524|Roggenrola|120|132|132|3|October 8, 2024|candy=Roggenrola|catch=Grunt}}
+{{lop/shadow/GO|0525|Boldore|146|164|164|3|October 8, 2024|candy=Roggenrola}}
+{{lop/shadow/GO|0526|Gigalith|190|211|198|3|October 8, 2024|candy=Roggenrola}}
+{{lop/shadow/GO|0529|Drilbur|155|154|85|3|October 26, 2023|candy=Drilbur|catch=Grunt}}
+{{lop/shadow/GO|0530|Excadrill|242|255|129|3|October 26, 2023|candy=Drilbur}}
+{{lop/shadow/GO|0532|Timburr|181|134|87|5|August 8, 2024|candy=Timburr|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0533|Gurdurr|198|180|134|5|August 8, 2024|candy=Timburr|catch=Grunt}}
+{{lop/shadow/GO|0534|Conkeldurr|233|243|158|5|August 8, 2024|candy=Timburr}}
+{{lop/shadow/GO|0538|Throh|260|172|160|5|{{tt|June 5, 2023|North America, South America and Africa only; March 1,2025 for everywhere else}}|candy=Throh|catch=Shadow Raid}}
+{{lop/shadow/GO|0539|Sawk|181|231|153|5|{{tt|June 5, 2023|Europe, Asia and Australia; March 1,2025 for everywhere else}}|candy=Sawk|catch=Shadow Raid}}
+{{lop/shadow/GO|0543|Venipede|120|132|132|3|October 8, 2024|candy=Venipede|catch=Grunt}}
+{{lop/shadow/GO|0544|Whirlipede|146|164|164|3|October 8, 2024|candy=Venipede|catch=Shadow Raid}}
+{{lop/shadow/GO|0545|Scolipede|190|211|198|3|October 8, 2024|candy=Venipede}}
+{{lop/shadow/GO|0554|Darumaka|172|153|86|3|March 27, 2024|candy=Darumaka|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0555|Darmanitan|233|263|114|3|March 27, 2024|candy=Darumaka}}
+{{lop/shadow/GO|0557|Dwebble|137|118|128|1|January 27, 2024|candy=Dwebble|catch=Grunt}}
+{{lop/shadow/GO|0558|Crustle|172|188|200|1|January 27, 2024|candy=Dwebble}}
+{{lop/shadow/GO|0562|Yamask|116|95|141|3|October 21, 2025|candy=Yamask|catch=Grunt|shiny=yes}}
+<!--
+{{lop/shadow/GO|0562G|Yamask|116|95|116|3|  |candy=Yamask}}-->
+{{lop/shadow/GO|0563|Cofagrigus|151|163|237|3|October 21, 2025|candy=Yamask|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0564|Tirtouga|144|134|146|5|August 8, 2024|candy=Tirtouga|catch=Grunt}}
+{{lop/shadow/GO|0565|Carracosta|179|192|197|5|August 8, 2024|candy=Tirtouga}}
+{{lop/shadow/GO|0566|Archen|146|213|89|5|August 8, 2024|candy=Archen|catch=Grunt}}
+{{lop/shadow/GO|0567|Archeops|181|292|139|5|August 8, 2024|candy=Archen}}
+{{lop/shadow/GO|0568|Trubbish|153|127|92|3|January 15, 2025|candy=Trubbish|catch=Grunt}}
+{{lop/shadow/GO|0569|Garbodor|205|222|154|3|January 15, 2025|candy=Trubbish}}
+{{lop/shadow/GO|0574|Gothita|128|98|112|3|March 27, 2024|candy=Gothita|catch=Grunt}}
+{{lop/shadow/GO|0575|Gothorita|155|137|153|3|March 27, 2024|candy=Gothita}}
+{{lop/shadow/GO|0576|Gothitelle|172|176|205|3|March 27, 2024|candy=Gothita}}
+{{lop/shadow/GO|0577|Solosis|128|170|83|3|March 27, 2024|candy=Solosis|catch=Grunt}}
+{{lop/shadow/GO|0578|Duosion|163|208|103|3|March 27, 2024|candy=Solosis|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0579|Reuniclus|242|214|148|3|March 27, 2024|candy=Solosis}}
+{{lop/shadow/GO|0580|Ducklett|158|84|96|1|July 9, 2022|candy=Ducklett|catch=Grunt}}
+{{lop/shadow/GO|0581|Swanna|181|182|132|1|July 9, 2022|candy=Ducklett}}
+{{lop/shadow/GO|0588|Karrablast|120|132|132|3|October 8, 2024|candy=Karrablast|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0589|Escavalier|146|164|164|3|October 8, 2024|candy=Karrablast}}
+{{lop/shadow/GO|0590|Foongus|170|97|91|1|July 9, 2022|candy=Foongus|catch=Grunt}}
+{{lop/shadow/GO|0591|Amoonguss|249|155|139|1|July 9, 2022|candy=Foongus}}
+{{lop/shadow/GO|0595|Joltik|137|110|98|3|February 1, 2023|candy=Joltik|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0596|Galvantula|172|201|128|3|February 1, 2023|candy=Joltik}}
+{{lop/shadow/GO|0597|Ferroseed|127|82|155|3|January 27, 2024|candy=Ferroseed|catch=Grunt}}
+{{lop/shadow/GO|0598|Ferrothorn|179|158|223|3|January 27, 2024|candy=Ferroseed}}
+{{lop/shadow/GO|0607|Litwick|137|108|98|5|October 26, 2023|candy=Litwick|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0608|Lampent|155|169|115|5|October 26, 2023|candy=Litwick|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0609|Chandelure|155|271|182|5|October 26, 2023|candy=Litwick}}
+{{lop/shadow/GO|0610|Axew|130|154|101|5|June 25, 2026|candy=Axew|catch=Cliff|shiny=yes}}
+{{lop/shadow/GO|0611|Fraxure|165|212|123|5|June 25, 2026|candy=Axew}}
+{{lop/shadow/GO|0612|Haxorus|183|284|172|5|June 25, 2026|candy=Axew}}
+{{lop/shadow/GO|0616|Shelmet|120|132|132|3|October 8, 2024|candy=Shelmet|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0617|Accelgor|146|164|164|3|October 8, 2024|candy=Shelmet}}<!--
+{{lop/shadow/GO|0618|Stunfisk|240|144|171|3|  |candy=Stunfisk}}-->
+{{lop/shadow/GO|0622|Golett|153|127|92|5|November 14, 2022|candy=Golett|shiny=yes|catch=Shadow Raid}}
+{{lop/shadow/GO|0623|Golurk|205|222|154|5|November 14, 2022|candy=Golett}}
+{{lop/shadow/GO|0633|Deino|141|116|93|5|September 16, 2025|candy=Deino|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0634|Zweilous|176|159|135|5|September 16, 2025|candy=Deino}}
+{{lop/shadow/GO|0635|Hydreigon|211|256|188|5|September 16, 2025|candy=Deino}}
+{{lop/shadow/GO|0641|Tornadus|188|266|164|20|September 16, 2025|candy=Tornadus|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0642|Thundurus|188|266|164|20|January 23, 2026|candy=Thundurus|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0643|Reshiram|205|275|211|20|June 25, 2026|candy=Reshiram|catch=Giovanni|shiny=yes}}
+{{lop/shadow/GO|0644|Zekrom|205|275|211|20|October 2, 2026|candy=Zekrom|catch=Giovanni|shiny=yes}}
+{{lop/shadow/GO|0645|Landorus|205|261|182|20|April 30, 2026|candy=Landorus|catch=Giovanni|shiny=yes}}
+{{lop/shadow/GO|0650|Chespin|148|110|106|3|January 23, 2026|candy=Chespin|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0651|Quilladin|156|146|156|3|January 23, 2026|candy=Chespin|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0652|Chesnaught|204|201|204|3|January 23, 2026|candy=Chespin}}
+{{lop/shadow/GO|0653|Fennekin|120|116|102|3|January 23, 2026|candy=Fennekin|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0654|Braixen|153|171|130|3|January 23, 2026|candy=Fennekin|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0655|Delphox|181|230|189|3|January 23, 2026|candy=Fennekin}}
+{{lop/shadow/GO|0656|Froakie|121|122|84|3|January 23, 2026|candy=Froakie|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0657|Frogadier|144|168|114|3|January 23, 2026|candy=Froakie|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0658|Greninja|176|223|152|3|January 23, 2026|candy=Froakie}}
+{{lop/shadow/GO|0659|Bunnelby|128|98|73|3|January 15, 2025|candy=Bunnelby|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0660|Diggersby|155|165|139|3|January 15, 2025|candy=Bunnelby}}
+{{lop/shadow/GO|0661|Fletchling|128|95|80|1|August 11, 2025|candy=Fletchling|catch=Grunt}}
+{{lop/shadow/GO|0662|Fletchinder|158|145|110|1|August 11, 2025|candy=Fletchling}}
+{{lop/shadow/GO|0663|Talonflame|186|176|155|1|August 11, 2025|candy=Fletchling}}
+{{lop/shadow/GO|0674|Pancham|167|145|107|3|October 2, 2026|candy=Pancham|catch=Sierra|shiny=yes}}
+{{lop/shadow/GO|0675|Pangoro|216|226|146|3|October 2, 2026|candy=Pancham}}
+{{lop/shadow/GO|0686|Inkay|153|127|92|3|May 14, 2025|candy=Inkay|catch=Shadow Raid|shiny=yes}}
+{{lop/shadow/GO|0687|Malamar|205|222|154|3|May 14, 2025|candy=Inkay}}
+{{lop/shadow/GO|0694|Helioptile|127|115|78|3|April 30, 2026|candy=Helioptile|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0695|Heliolisk|158|219|168|3|April 30, 2026|candy=Helioptile}}
+{{lop/shadow/GO|0696|Tyrunt|144|134|146|3|May 14, 2025|candy=Tyrunt|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0697|Tyrantrum|179|192|197|3|May 14, 2025|candy=Tyrunt}}
+{{lop/shadow/GO|0698|Amaura|146|213|89|3|May 14, 2025|candy=Amaura|catch=Sierra|shiny=yes}}
+{{lop/shadow/GO|0699|Aurorus|181|292|139|3|May 14, 2025|candy=Amaura}}
+{{lop/shadow/GO|0708|Phantump|125|125|103|5|October 21, 2025|candy=Phantump|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0709|Trevenant|198|201|154|5|October 21, 2025|candy=Phantump}}
+{{lop/shadow/GO|0714|Noibat|120|83|73|5|June 25, 2026|candy=Noibat|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0715|Noivern|198|205|175|5|June 25, 2026|candy=Noibat}}
+{{lop/shadow/GO|0731|Pikipek|111|136|59|1|August 11, 2025|candy=Pikipek|catch=Grunt}}
+{{lop/shadow/GO|0732|Trumbeak|146|159|100|1|August 11, 2025|candy=Pikipek}}
+{{lop/shadow/GO|0733|Toucannon|190|222|146|1|August 11, 2025|candy=Pikipek}}
+{{lop/shadow/GO|0736|Grubbin|132|115|85|1|August 11, 2025|candy=Grubbin|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0737|Charjabug|149|145|161|1|August 11, 2025|candy=Grubbin}}
+{{lop/shadow/GO|0738|Vikavolt|184|254|158|1|August 11, 2025|candy=Grubbin}}
+{{lop/shadow/GO|0751|Dewpider|116|72|117|3|April 30, 2026|candy=Dewpider|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0752|Araquanid|169|126|219|3|April 30, 2026|candy=Dewpider}}
+{{lop/shadow/GO|0753|Fomantis|120|100|64|3|October 2, 2026|candy=Fomantis|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0754|Lurantis|172|192|169|3|October 2, 2026|candy=Fomantis}}
+{{lop/shadow/GO|0755|Morelull|120|108|119|3|April 30, 2026|candy=Morelull|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0756|Shiinotic|155|154|168|3|April 30, 2026|candy=Morelull}}
+{{lop/shadow/GO|0759|Stufful|172|136|95|1|April 30, 2026|candy=Stufful|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0760|Bewear|260|226|141|1|April 30, 2026|candy=Stufful}}
+{{lop/shadow/GO|0767|Wimpod|93|67|74|1|October 2, 2026|candy=Wimpod|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0768|Golisopod|181|218|226|1|October 2, 2026|candy=Wimpod}}
+{{lop/shadow/GO|0769|Sandygast|146|120|118|3|October 2, 2026|candy=Sandygast|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0770|Palossand|198|178|178|3|October 2, 2026|candy=Sandygast}}
+{{lop/shadow/GO|0821|Rookidee|116|88|67|1|June 25, 2026|candy=Rookidee|catch=Grunt|shiny=yes}}
+{{lop/shadow/GO|0822|Corvisquire|169|129|110|1|June 25, 2026|candy=Rookidee}}
+{{lop/shadow/GO|0823|Corviknight|221|163|192|1|June 25, 2026|candy=Rookidee}}
+{{lop/shadow/GO|0862|Obstagoon|212|180|194|3|October 8, 2024|candy=Zigzagoon}}
+<!--
+{{lop/shadow/GO|0863|Perrserker|172|195|162|3|  |candy=Meowth}}
+{{lop/shadow/GO|0864|Cursola|155|253|182|3||candy=Corsola}}
+{{lop/shadow/GO|0865|Sirfetch'd|158|248|176|3|  |candy=Farfetch'd}}
+{{lop/shadow/GO|0866|Mr. Rime|190|212|179|3|  |candy=Mr. Mime}}
+{{lop/shadow/GO|0867|Runerigus|151|163|237|3|  |candy=Yamask}}-->
+{{lop/shadow/GO|0901|Ursaluna|277|243|181|3|November 12, 2022|candy=Teddiursa}}
+{{lop/shadow/GO|0903|Sneasler|190|259|158|3|October 26, 2023|candy=Sneasel}}<!--
+{{lop/shadow/GO|0904|Overqwil|198|222|171|3||candy=Qwilfish}}-->
+{{lop/shadow/GO|0979|Annihilape|242|220|178|3|October 8, 2024|candy=Mankey}}
+|-style=background:#{{XD color light}}
+! colspan=6 style="{{roundybottom|5px}}"|
+|}
+
+==Unobtainable Shadow Pokémon==
+Some Shadow Pokémon are currently unobtainable by players, but have been used by [[Giovanni]] or {{tc|Team GO Rocket Leader}}s.
+
+{| class="roundy" style="margin:auto; border: 3px solid #{{XD color}}; white-space:nowrap; padding:3px; width:640px; background:#{{XD color light}};"
+| style="display:flex; flex-flow:row wrap; justify-content:center; font-size:80%; text-align:center;" |
+{| style="text-align:center; margin:1ch; display:inline-table"
+| style="{{roundy|80px}}; width:100px; background:#{{normal color light}}; border: 2px solid #{{normal color}}" | {{MSP/GO|0115|Kangaskhan|shadow=yes|size=100}}
+|-
+|Shadow {{pcolor|Kangaskhan|000}}
+|}
+|}
+==Related entries==
+{{forms}}
+
+[[Category:Pokémon GO]]
+[[Category:Shadow Pokémon]]
+[[Category:Lists]]
+
+[[es:Lista de Pokémon oscuros de Pokémon GO]]
+[[ja:シャドウポケモン一覧]]

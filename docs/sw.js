@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.18';
+const VERSION = 'v60.19';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Salarsen Gigamax a son chromatique dans Pokémon GO (Combats Max), comme la Forme Grave.';
-const DATA_VERSION = 'd60'; // bump when the schema of data/*.json changes
+const NOTES = 'Les formes Obscur et Purifié de Pokémon GO ont leur propre suivi, sans effet sur la complétion.';
+const DATA_VERSION = 'd61'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

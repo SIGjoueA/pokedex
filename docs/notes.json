@@ -1,5 +1,17 @@
 [
  {
+  "v": "v60.19",
+  "d": "2026-11-24",
+  "l": [
+   "Sur les fiches Pokémon GO, un bloc « Obscur & Purifié » permet de cocher les formes Obscur et Purifié, et le chromatique Obscur lorsqu’il a été constaté.",
+   "Ces marques sont optionnelles : elles ne comptent pas dans la complétion Pokémon GO, et elles n’inscrivent pas l’espèce comme capturée. Deux compteurs figurent dans le menu, sous Pokémon GO.",
+   "484 formes sont suivies (dont 19 formes régionales d’Alola, de Galar ou de Hisui, et 357 chromatiques Obscurs), d’après Bulbapedia (liste des Pokémon Obscurs, révision du 3 novembre 2026) recoupée avec la liste par date de sortie de la Pokémon GO Wiki (Fandom, consultée le 24 novembre 2026, y compris les chromatiques du 4 novembre). Toutes ces formes peuvent être purifiées.",
+   "Hors du suivi : Kangourex Obscur (utilisé par les Leaders, non capturable), les costumes Obscurs (déjà dans Costumes), et quelques formes régionales encore non confirmées (sans date de sortie fiable).",
+   "Lugia et Ho-Oh incluent leur variante Apex, qui se purifie aussi (sans Frustration ni Retour).",
+   "Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.18",
   "d": "2026-11-24",
   "l": [

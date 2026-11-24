@@ -86,6 +86,25 @@ function costumesOf(p) {
   if (p.c === 'reg' || REG.test(p.k)) return list.filter(c => c.k === p.k);
   return list.filter(c => !c.k || !REG.test(c.k));
 }
+// v60.19: Pokémon GO Shadow (Obscur) / Purified (Purifié) marks, optional. No effect on GO completion, and they never tick the species « Capturé ».
+const SHADOW_C = new Set(store.get('go_shadow', []).map(String));
+const SHADOW_S = new Set(store.get('go_shadow_s', []).map(String));
+const PURIFIED = new Set(store.get('go_purified', []).map(String));
+let SHADOW = null, SHADOW_P = null;
+const loadShadow = () => SHADOW_P || (SHADOW_P = getJSON('data/shadow.json').then(d => { SHADOW = d; updateGoShadMenu(); return d; }).catch(() => { SHADOW_P = null; return null; }));
+const saveShadow = () => { store.set('go_shadow', [...SHADOW_C]); store.set('go_shadow_s', [...SHADOW_S]); store.set('go_purified', [...PURIFIED]); updateGoShadMenu(); };
+function updateGoShadMenu() {
+  const el = $('#goshad'); if (!el) return;
+  if (!SHADOW) { el.hidden = true; el.textContent = ''; return; }
+  const keys = Object.keys(SHADOW.s);
+  const nO = keys.filter(k => SHADOW_C.has(k)).length, nP = keys.filter(k => PURIFIED.has(k)).length;
+  el.hidden = false;
+  el.textContent = `Obscur : ${nO} / ${SHADOW.n} (sans effet sur la complétion)\nPurifié : ${nP} / ${SHADOW.n} (sans effet sur la complétion)`;
+}
+function shadowOf(p) {
+  if (!SHADOW || !p || goTemp(p) || p.c === 'gmax' || !p.go) return null;
+  return SHADOW.s[p.k] || null;
+}
 
 const GMAX_IC = '<img class="gemimg" src="img/max/gigamax.webp" alt="" width="28" height="28" decoding="async">', DMAX_IC = '<img class="gemimg" src="img/max/dynamax.webp" alt="" width="28" height="28" decoding="async">';
 let ENERGY_ICONS = { generic: 'img/energy/generic.webp', ids: new Set() };
@@ -365,7 +384,7 @@ const homeBaronOn = p => alphaHomeGames(p).some(c => HOME_O.has(ALPHA_MARK[c] + 
 // The sheet has its own tracking context: its game switcher (state.dgame). 'all' = overview (general infos, read-only); 'home' = Pokémon HOME sheet (origin marks).
 let sheetPref = null; // game chosen in the sheet switcher during this visit to the sheets (reset on return to the list)
 const sheetCtx = () => { const d = state.dgame; return d === 'home' ? 'home' : (GAME_BY[d] || d === 'go') ? d : null; };
-const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); store.set('go_costumes', [...COSTUME_C]); store.set('go_costumes_s', [...COSTUME_S]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_R.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
+const saveTrack = () => { store.set('caught_g', [...CAUGHT_G]); store.set('shiny_g', [...SHINY_G]); store.set('home_g', [...TRANS_G]); store.set('homeshiny_g', [...STRANS_G]); store.set('home_o', [...HOME_O]); store.set('home_og', [...HOME_OG]); store.set('mega_gems', [...MEGA_GEMS]); store.set('mega_energy', [...MEGA_ENERGY]); store.set('go_dynamax', [...DYNAMAX]); store.set('go_costumes', [...COSTUME_C]); store.set('go_costumes_s', [...COSTUME_S]); store.set('go_shadow', [...SHADOW_C]); store.set('go_shadow_s', [...SHADOW_S]); store.set('go_purified', [...PURIFIED]); rebuildHome(); for (const k of [...HOME_SH]) if (!HOME_R.has(k)) HOME_SH.delete(k); store.set('home_sh', [...HOME_SH]);
   for (const k of [...HOME_B]) if ((!BY_KEY[k] && !FEM_OF[k]) || !['hisui', 'za'].some(m => HOME_O.has(m + ':' + k))) HOME_B.delete(k); // HOME Baron needs the Hisui or Z-A mark (v34: a form no longer Baron-capable keeps its mark, hidden)
   // v47: Baron shiny marks (BARONS_G / HOME_BS) are frozen: no button, never shown or changed, kept in storage + export (future « mode Collection »)
   store.set('baron_g', [...BARON_G]); store.set('barons_g', [...BARONS_G]); store.set('home_b', [...HOME_B]); store.set('home_bs', [...HOME_BS]); rebuildHome(); }; // shiny in HOME needs ≥ 1 transfer mark
@@ -641,6 +660,7 @@ async function boot() {
   buildControls();
   render(); colInit(); pkInit();
   loadCostumes().then(() => { updateGoCostMenu(); if (DET && DET.p && !$('#detail-view').hidden) renderDetail(); });
+  loadShadow().then(() => { updateGoShadMenu(); if (DET && DET.p && !$('#detail-view').hidden) renderDetail(); });
   window.addEventListener('hashchange', route);
   route();
   registerSW();
@@ -1096,6 +1116,11 @@ function trackHTML(p0) {
     h += `<br><span class="mute gemline">${ms.map(m => `${m.c === 'primal' ? 'Énergie Primo' : megaXYZ(m) ? `Méga-énergie ${megaXYZ(m).toUpperCase()}` : 'Méga-énergie'} de ${esc((BY_KEY[String(p0.id)] || p0).n)} : ${hasEnergy(m) ? 'obtenue' : 'pas encore obtenue'}`).join(' · ')} (${ms.length > 1 ? 'une marque par forme' : 'marque par espèce'}, sans effet sur la complétion ; cochée automatiquement quand vous marquez la ${ms.some(m => m.c === 'primal') ? 'Primo' : 'Méga'} capturée).</span>`;
   }
   if (c === 'go' && !goTemp(p0) && p0.c !== 'gmax') {
+    const shd = shadowOf(p0);
+    if (shd) {
+      const on = SHADOW_C.has(p0.k), shOn = SHADOW_S.has(p0.k), pu = PURIFIED.has(p0.k);
+      h += `<br><span class="mute">Obscur : ${on ? 'oui' : 'non'}${shOn ? ' · ✨ shiny' : ''} · Purifié : ${pu ? 'oui' : 'non'} <small>(sans effet sur la complétion)</small></span>`;
+    }
     const cl = costumesOf(p0);
     if (cl.length) {
       const nC = cl.filter(x => COSTUME_C.has(x.id)).length, nS = cl.filter(x => COSTUME_S.has(x.id)).length;
@@ -1837,6 +1862,25 @@ function costumesHTML(title) {
     : 'Pour les marquer, choisissez le jeu « Pokémon GO ». Les costumes ne comptent pas dans la complétion.';
   return `<section class="box costbox"><h2>${title} <small class="cnt">${nC} / ${list.length}</small></h2><div class="costgrid">${cards}</div><p class="note">${note}</p></section>`;
 }
+// v60.19: GO Shadow / Purified (interactive on the GO sheet, read-only on the overview). Empty when this form has none.
+function shadowHTML(title) {
+  const p = DET && DET.p, info = shadowOf(p);
+  if (!info) return '';
+  const edit = title === 'Obscur & Purifié';
+  const on = SHADOW_C.has(p.k), shOn = SHADOW_S.has(p.k), pu = PURIFIED.has(p.k);
+  const date = info.d ? ` depuis le ${info.d.split('-').reverse().join('/')}` : '';
+  const bits = [];
+  bits.push(info.sh ? 'Chromatique Obscur constaté' : 'Chromatique Obscur non constaté');
+  if (info.apex) bits.push('variante Apex aussi sortie (elle se purifie également, sans Frustration ni Retour)');
+  const meta = `<small class="mute">${bits.join(' · ')}</small>`;
+  const btns = edit
+    ? `<div class="shadacts"><button type="button" class="act cg shadcg" data-shad="o" data-sk="${esc(p.k)}" aria-pressed="${on}">${on ? BALL : BALL_OFF}<span class="t">Obscur</span></button>${info.sh ? `<button type="button" class="act sh shadsh" data-shad="s" data-sk="${esc(p.k)}" aria-pressed="${shOn}">✨ <span class="t">Shiny</span></button>` : ''}<button type="button" class="act cg shadpu" data-shad="p" data-sk="${esc(p.k)}" aria-pressed="${pu}">${pu ? BALL : BALL_OFF}<span class="t">Purifié</span></button></div>`
+    : `<p class="shadst">${on ? 'Obscur obtenu' : 'Pas encore obtenu en Obscur'}${shOn ? ' · ✨ shiny' : ''}${pu ? ' · Purifié obtenu' : ' · pas encore Purifié'}</p>`;
+  const note = edit
+    ? 'Les marques Obscur et Purifié ne comptent pas dans la complétion Pokémon GO : elles forment des compteurs à part, optionnels. Marquer un Obscur ou un Purifié n’inscrit pas l’espèce comme capturée. Tous les Pokémon Obscurs disponibles peuvent être purifiés.'
+    : 'Pour les marquer, choisissez le jeu « Pokémon GO ». Les formes Obscur et Purifié ne comptent pas dans la complétion.';
+  return `<section class="box shadbox"><h2>${title}</h2><p class="gol1">Disponible en Obscur${date}.</p>${meta}${btns}<p class="note">${note}</p></section>`;
+}
 
 function renderDetail() {
   const { p, sp, f, shared } = DET;
@@ -1861,7 +1905,7 @@ function renderDetail() {
     desc = flavorHTML(sp, null, f);
     P = g.dispo + g.shiny; S = g.stats + g.eff;
     N = `<section class="box"><h2>Évolutions <small class="cnt">GO</small></h2>${evoHTML(p, f, 'go', null)}${g.candy ? `<ul class="plain gol">${g.candy}</ul>` : ''}<p class="note">Coûts en bonbons et conditions issus des données GO communautaires.</p></section>`; C = g.comp + g.dit;
-    M = g.moves + g.pvp; D = costumesHTML('Costumes');
+    M = g.moves + g.pvp; D = shadowHTML('Obscur & Purifié') + costumesHTML('Costumes');
   } else {
     const sArr = gm ? pickGen(f.ps, gen, f.s) : f.s;
     const gen1 = gm && gen === 1;
@@ -1884,7 +1928,7 @@ function renderDetail() {
     S = statsB + effB + abB;
     if (gm) { P = tradeBoxHTML(p, gm.id) + regB; N = evoB + encHTML(f, sp, gm, shared); C = heldHTML(f, gm, shared.ref) + shinyHTML(p, gm) + breedHTML(p, sp, gm); M = gmaxMoveHTML(p) + movesHTML(f, sp, gm, shared); D = E.ev; }
     else if (mode === 'home') { P = homeDexHTML(p) + homeSrcHTML(p, f, 'Compatibilité') + homeShinyHTML(p, f); N = evoB; }
-    else { P = availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + homeSrcHTML(p, f) + goBox; N = evoB; C = breedHTML(p, sp, gm); M = gmaxMoveHTML(p); D = E.ety + E.ev + costumesHTML('Costumes GO'); } // « Présent dans »: overview only
+    else { P = availHTML(sp, games, horsGames(p, sp).filter(g => !games.includes(g))) + homeSrcHTML(p, f) + goBox; N = evoB; C = breedHTML(p, sp, gm); M = gmaxMoveHTML(p); D = E.ety + E.ev + shadowHTML('Obscur & Purifié GO') + costumesHTML('Costumes GO'); } // « Présent dans »: overview only
   }
   $('#detail-view').innerHTML = navHTML(p, `<div class="gamebar dgbar"><label for="dgame">Jeu</label><select id="dgame" aria-label="Jeu">${opts}</select></div>`) + `
   <div class="detail">
@@ -2070,6 +2114,12 @@ document.addEventListener('click', e => {
     if (ccb.classList.contains('costsh')) { if (COSTUME_S.has(id)) COSTUME_S.delete(id); else { COSTUME_S.add(id); COSTUME_C.add(id); } }
     else if (COSTUME_C.has(id)) { COSTUME_C.delete(id); COSTUME_S.delete(id); } else COSTUME_C.add(id);
     saveCostumes(); refreshTrack(p); render(); return; }
+  const sdb = e.target.closest('.shadcg[data-sk], .shadsh[data-sk], .shadpu[data-sk]');
+  if (sdb) { const k = sdb.dataset.sk, p = DET && DET.p, info = shadowOf(p); if (!k || !p || p.k !== k || !info || sheetCtx() !== 'go') return;
+    if (sdb.classList.contains('shadsh')) { if (SHADOW_S.has(k)) SHADOW_S.delete(k); else { SHADOW_S.add(k); SHADOW_C.add(k); } }
+    else if (sdb.classList.contains('shadpu')) { if (PURIFIED.has(k)) PURIFIED.delete(k); else PURIFIED.add(k); }
+    else if (SHADOW_C.has(k)) { SHADOW_C.delete(k); SHADOW_S.delete(k); } else SHADOW_C.add(k);
+    saveShadow(); refreshTrack(p); renderDetailKeepScroll(); render(); return; }
   const enb = e.target.closest('#actbar .energy');
   if (enb) { const p = DET && DET.p, m = BY_KEY[enb.dataset.energy]; if (!p || !m || !goTemp(m) || enb.disabled || sheetCtx() !== 'go') return; toggleEnergy(m); refreshTrack(p); render(); return; }
   const bab = e.target.closest('#actbar .baron, #actbar .barons');
@@ -2204,7 +2254,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
@@ -2302,7 +2352,7 @@ boot();
   const ex = document.getElementById('export'), im = document.getElementById('import');
   if (!ex || !im) return;
   ex.addEventListener('click', () => {
-    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], go_costumes: [...COSTUME_C], go_costumes_s: [...COSTUME_S], collection: COLL, pocket: PKQ };
+    const data = { sal_h47: 1, favs: [...FAVS], caught: [...CAUGHT], shiny: [...SHINY], caught_g: [...CAUGHT_G], shiny_g: [...SHINY_G], home_g: [...TRANS_G], homeshiny_g: [...STRANS_G], home_o: [...HOME_O], home_og: [...HOME_OG], home_sh: [...HOME_SH], baron_g: [...BARON_G], barons_g: [...BARONS_G], home_b: [...HOME_B], home_bs: [...HOME_BS], mega_gems: [...MEGA_GEMS], mega_energy: [...MEGA_ENERGY], go_dynamax: [...DYNAMAX], go_costumes: [...COSTUME_C], go_costumes_s: [...COSTUME_S], go_shadow: [...SHADOW_C], go_shadow_s: [...SHADOW_S], go_purified: [...PURIFIED], collection: COLL, pocket: PKQ };
     const url = URL.createObjectURL(new Blob([JSON.stringify(data)], { type: 'application/json' }));
     const l = document.createElement('a'); l.href = url; l.download = 'pokedex-sauvegarde.json'; l.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -2331,6 +2381,11 @@ boot();
       if (Array.isArray(d.go_costumes)) d.go_costumes.map(String).filter(x => /^\d+-[a-z0-9]+$/i.test(x)).forEach(k => COSTUME_C.add(k));
       if (Array.isArray(d.go_costumes_s)) d.go_costumes_s.map(String).filter(x => /^\d+-[a-z0-9]+$/i.test(x)).forEach(k => { COSTUME_S.add(k); COSTUME_C.add(k); });
       store.set('go_costumes', [...COSTUME_C]); store.set('go_costumes_s', [...COSTUME_S]);
+      const sk = x => typeof x === 'string' && KEYRE.test(x) && !!(BY_KEY[x]);
+      if (Array.isArray(d.go_shadow)) d.go_shadow.map(String).filter(sk).forEach(k => SHADOW_C.add(k));
+      if (Array.isArray(d.go_shadow_s)) d.go_shadow_s.map(String).filter(sk).forEach(k => { SHADOW_S.add(k); SHADOW_C.add(k); });
+      if (Array.isArray(d.go_purified)) d.go_purified.map(String).filter(sk).forEach(k => PURIFIED.add(k));
+      store.set('go_shadow', [...SHADOW_C]); store.set('go_shadow_s', [...SHADOW_S]); store.set('go_purified', [...PURIFIED]);
       if (d.pocket && typeof d.pocket === 'object') pkMerge(d.pocket); // v50: Pocket copies, max per language (old format = array of ids)
       if (Array.isArray(d.collection)) colImport(d.collection); // v49: older backups have no collection → nothing changes
       migrateEnergy(); migrateMarks(); rebuildHome(); if (!d.sal_h47) migrateSalHome(true); store.set('mega_energy', [...MEGA_ENERGY]);

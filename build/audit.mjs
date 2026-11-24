@@ -201,7 +201,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v30 app : vérifications au démarrage, au retour (visibilitychange) et toutes les 30 min', /swWatch\(reg\)/.test(app) && /visibilitychange[^\n]*swCheck\(\)/.test(app) && /setInterval\(swCheck, 30 \* 60 \* 1000\)/.test(app) && /\.update\(\)/.test(app));
   ok('v30 sélecteur de jeu de la fiche dans l’en-tête collant', /navHTML\(p, `<div class="gamebar dgbar">/.test(app) && /\.dgbar\{/.test(css) && /\.gnum\{/.test(css));
   ok('v30 « Présent dans » en vue d’ensemble seulement', /else \{ P = availHTML\(sp, games[^\n]*homeSrcHTML\(p, f\) \+ goBox;/.test(app));
-  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) \{ P = tradeBoxHTML\(p, gm\.id\) \+ regB; N = evoB \+ encHTML[^\n]*C = heldHTML[^\n]*shinyHTML[^\n]*breedHTML[^\n]*M = (?:gmaxMoveHTML\(p\) \+ )?movesHTML[^\n]*D = E\.ev; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')") && app.includes('${size}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
+  ok('v43 ordre des blocs : jeu (lieu → objets → repro → shiny), GO (Obscur & Purifié puis Costumes après Formes), HOME (Compatibilité), vue d’ensemble (Costumes GO en dernier)', /if \(gm\) \{ P = tradeBoxHTML\(p, gm\.id\) \+ regB; N = evoB \+ encHTML[^\n]*C = heldHTML[^\n]*shinyHTML[^\n]*breedHTML[^\n]*M = (?:gmaxMoveHTML\(p\) \+ )?movesHTML[^\n]*D = E\.ev; \}/.test(app) && app.includes("costumesHTML('Costumes')") && app.includes("homeSrcHTML(p, f, 'Compatibilité')") && app.includes("costumesHTML('Costumes GO')") && app.includes('${size}\n    ${baseNoteHTML(p)}\n    <section class="box trackbox">'));
 }
 // ---- v31: shiny data, popup texts, Rouge Feu / Vert Feuille (Switch)
 { const S = D('shiny.json'), DS = D('desc.json'), mv = D('moves.json'), ref = D('ref.json'), sw = fs.readFileSync(path.join(HERE, '../docs/sw.js'), 'utf8'), app = fs.readFileSync(path.join(HERE, '../docs/app.js'), 'utf8');
@@ -394,7 +394,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.16 pack hors-ligne : data/costumes.json', /'data\/costumes\.json'/.test(app));
   ok('v60.16 export/import : go_costumes et go_costumes_s', /go_costumes: \[\.\.\.COSTUME_C\]/.test(app) && /go_costumes_s: \[\.\.\.COSTUME_S\]/.test(app) && /d\.go_costumes/.test(app));
   ok('v60.16 costumes hors complétion : marques séparées, jamais de coche auto de l’espèce', /COSTUME_C/.test(app) && !/toggleMark\([^\n]*COSTUME/.test(app) && !/CAUGHT_G\.add\([^\n]*COSTUME/.test(app) && /n’inscrit pas l’espèce/.test(app));
-  ok('v60.16 fiche : bloc Costumes interactif (plus seulement « En chantier »)', /function costumesHTML\(title\)/.test(app) && /costcg/.test(app) && !/function costumesHTML\(title\) \{ return `<section class="box costbox"><h2>\$\{title\}<\/h2><p class="note">En chantier\.<\/p><\/section>`; \}/.test(app) && app.includes("D = costumesHTML('Costumes')") && app.includes("D = E.ety + E.ev + costumesHTML('Costumes GO')"));
+  ok('v60.16 fiche : bloc Costumes interactif (plus seulement « En chantier »)', /function costumesHTML\(title\)/.test(app) && /costcg/.test(app) && !/function costumesHTML\(title\) \{ return `<section class="box costbox"><h2>\$\{title\}<\/h2><p class="note">En chantier\.<\/p><\/section>`; \}/.test(app) && app.includes("costumesHTML('Costumes')") && app.includes("costumesHTML('Costumes GO')"));
   ok('v60.16 menu : compteur costumes', /id="gocost"/.test(html) && /updateGoCostMenu/.test(app));
 }
 
@@ -416,8 +416,24 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.17 pack hors-ligne : data/gmax-moves.json', /'data\/gmax-moves\.json'/.test(app));
   ok('v60.17 sim : types G-Max complets dont Duralugon (884-gmax, dragon)', /884-gmax':'dragon'/.test(sim) && /133-gmax':'normal'/.test(sim) && /809-gmax':'steel'/.test(sim) && /892-rapid-strike-gmax':'water'/.test(sim));
   ok('v60.17 SW : VERSION ≥ v60.17, DATA_VERSION ≥ d59', /VERSION = 'v60\.(1[7-9]|[2-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 59);
-  ok('v60.18 SW : VERSION v60.18, DATA_VERSION d60', /VERSION = 'v60\.18'/.test(sw) && /DATA_VERSION = 'd60'/.test(sw));
+  ok('v60.18 SW : VERSION ≥ v60.18, DATA_VERSION ≥ d60', /VERSION = 'v60\.(1[8-9]|[2-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 60);
   ok('v60.18 Salarsen Gigamax : shiny GO (Combats Max), Forme Grave renseignée', F(849, '849-amped-gmax').go.sh?.includes('max') && !F(849, '849-amped-gmax').go.nosh && Array.isArray(F(849, '849-low-key').go.sh) && F(849, '849-low-key').go.sh.length > 0);
+}
+
+
+// ---- v60.19: Pokémon GO Shadow (Obscur) / Purified (Purifié) marks, not in GO completion
+{ const sh = D('shadow.json'), app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8'), html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+  const keys = Object.keys(sh.s || {});
+  const coreKeys = new Set(core.e.map(e => e.k));
+  ok('v60.19 shadow.json : schéma et volume', sh && sh.n === keys.length && sh.n >= 480 && sh.n <= 520 && sh.ns >= 350 && sh.ns === keys.filter(k => sh.s[k].sh).length && keys.length === new Set(keys).size);
+  ok('v60.19 shadow.json : clés d’entrées du dex, sans Méga / Gigamax / femelle', keys.every(k => coreKeys.has(k) && /^\d+(?:-[a-z0-9-]+)?$/.test(k) && !['mega','primal','gmax','sex'].includes(E[k].c) && !/-female$/.test(k) && !/-gmax$/.test(k)));
+  ok('v60.19 shadow.json : espèces typiques, formes régionales, pas de Pikachu ni Kangourex', sh.s['1'] && sh.s['1'].sh && sh.s['19-alola'] && sh.s['19-alola'].sh && sh.s['150'] && sh.s['150'].sh && sh.s['249'] && sh.s['249'].apex && sh.s['215-hisui'] && sh.s['263-galar'] && sh.s['641'] && !sh.s['25'] && !sh.s['115'] && !sh.s['83-galar'] && !sh.s['562-galar']);
+  ok('v60.19 pack hors-ligne : data/shadow.json', /'data\/shadow\.json'/.test(app));
+  ok('v60.19 export/import : go_shadow, go_shadow_s, go_purified', /go_shadow: \[\.\.\.SHADOW_C\]/.test(app) && /go_shadow_s: \[\.\.\.SHADOW_S\]/.test(app) && /go_purified: \[\.\.\.PURIFIED\]/.test(app) && /d\.go_shadow/.test(app) && /d\.go_purified/.test(app));
+  ok('v60.19 hors complétion : marques séparées, jamais de coche auto de l’espèce', /SHADOW_C/.test(app) && !/toggleMark\([^\n]*SHADOW/.test(app) && !/CAUGHT_G\.add\([^\n]*SHADOW/.test(app) && /n’inscrit pas l’espèce/.test(app));
+  ok('v60.19 fiche : bloc Obscur & Purifié interactif, lecture seule en vue d’ensemble', /function shadowHTML\(title\)/.test(app) && /shadcg/.test(app) && app.includes("D = shadowHTML('Obscur & Purifié') + costumesHTML('Costumes')") && app.includes("shadowHTML('Obscur & Purifié GO')"));
+  ok('v60.19 menu : compteurs Obscur et Purifié', /id="goshad"/.test(html) && /updateGoShadMenu/.test(app));
+  ok('v60.19 SW : VERSION v60.19, DATA_VERSION d61', /VERSION = 'v60\.19'/.test(sw) && /DATA_VERSION = 'd61'/.test(sw));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
