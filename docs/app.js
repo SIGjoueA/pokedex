@@ -1803,6 +1803,18 @@ function evoHTML(p, f, mode, gm) {
 
 /* Pokémon GO */
 const frDate = s => s.split('-').reverse().join('/');
+const eggSeasonNote = go => {
+  const EH = go && go.eh, cur = EH && (EH.seasons || []).find(s => s.id === EH.current) || {}, ff = EH && (EH.seasons || []).find(s => s.id === 'forever-forward') || {};
+  const nom = cur.fr || (go.egg && go.egg.season) || '';
+  const checked = EH && EH.checked, upd = go.egg && go.egg.upd;
+  const dates = cur.from && cur.to ? ` (du ${frDate(cur.from)} au ${frDate(cur.to)}, site officiel)` : '';
+  const chk = checked ? ` au ${frDate(checked)}` : '';
+  const pool = go.egg ? ` Le pool actuel vient de Leek Duck (${go.egg.n} Pokémon)` + (upd ? ` ;${checked ? ' au ' + frDate(checked) + ',' : ''} Leek Duck indiquait encore une dernière mise à jour du tableau le ${frDate(upd)}` + (checked && upd && checked !== upd ? ' (inchangé depuis)' : '') : '') + '.' : ' Le pool actuel vient de Leek Duck.';
+  const ffDates = ff.from && ff.to ? `, du ${frDate(ff.from)} au ${frDate(ff.to)}` : '';
+  const serebii = checked ? ` La page « current eggs » de Serebii était encore titrée Forever Forward le ${frDate(checked)} et n’est pas utilisée comme pool actuel.` : '';
+  return `Œufs : saison en cours${chk} : ${esc(nom)}${dates}.${pool} L’historique par saison vient de Serebii, complété par Leek Duck pour la saison en cours et, à titre partiel, pour Toujours en avant (saison précédente${ffDates} ; nom officiel, site Pokémon GO).${serebii}`;
+};
+
 // v60.26: past GO egg pools (go-eggs.json). Current pool stays on go.eg; this lists other seasons / periods.
 const eggDistLbl = (km, tag) => km + ' km' + ({ as: ' (récompense Aventure Synchro)', ga: ' (cadeau d’ami)', gr: ' (cadeau de route)' }[tag] || '');
 const eggHistHTML = (p, go) => {
@@ -1815,16 +1827,18 @@ const eggHistHTML = (p, go) => {
   const years = s => { const a = s.from && s.from.slice(0, 4), b = s.to && s.to.slice(0, 4); return a && b && a !== b ? a + '–' + b : a || b || ''; };
   const distOf = L => L.map(x => eggDistLbl(x.km, x.tag)).filter((v, i, a) => a.indexOf(v) === i).join(', ');
   const named = [], pre = [], mix = [];
-  for (const id of Object.keys(byS).sort((a, b) => (meta[b]?.from || '').localeCompare(meta[a]?.from || '') || a.localeCompare(b))) {
+  const sortK = s => s.sortFrom || s.from || '';
+  for (const id of Object.keys(byS).sort((a, b) => sortK(meta[b] || {}).localeCompare(sortK(meta[a] || {})) || a.localeCompare(b))) {
     const s = meta[id] || { id, en: id }, rec = { s, d: distOf(byS[id]) };
     if (s.kind === 'pre') pre.push(rec); else if (s.kind === 'mix') mix.push(rec); else named.push(rec);
   }
+  pre.sort((a, b) => sortK(b.s).localeCompare(sortK(a.s)) || (b.s.to || '').localeCompare(a.s.to || '') || (a.s.id || '').localeCompare(b.s.id || ''));
   const li = (s, d, extra) => `<li><b>${esc(s.fr || s.en || s.label || s.id)}</b>${extra ? ` <span class="mute">${extra}</span>` : ''} : ${esc(d)}</li>`;
   let lis = named.map(({ s, d }) => li(s, d, years(s) ? '(' + years(s) + ')' : '')).join('');
   lis += mix.map(({ s, d }) => li(s, d, s.from && s.to ? '(' + frDate(s.from) + ' – ' + frDate(s.to) + ')' : '')).join('');
   if (pre.length) {
     const allD = [...new Set(pre.flatMap(({ d }) => d.split(', ')))].join(', ');
-    const preLab = s => { const lab = s.label || s.en || ''; if (s.month) return lab; const rng = s.from ? (s.to && s.to !== s.from ? frDate(s.from) + ' – ' + frDate(s.to) : frDate(s.from)) : ''; if (s.from && /^\d{1,2}\/\d{1,2}\/\d{2,4}/.test(lab)) return rng; return rng ? `${lab} (${rng})` : lab; };
+    const preLab = s => s.labelFr || s.label || s.en || '';
     const det = pre.map(({ s, d }) => `<li>${esc(preLab(s))} : ${esc(d)}</li>`).join('');
     lis += `<li><b>Avant les saisons</b> <span class="mute">(2016–2020)</span> : ${esc(allD)}<details class="eghsub"><summary>Détail des périodes (${pre.length})</summary><ul class="plain">${det}</ul></details></li>`;
   }
@@ -1959,7 +1973,7 @@ function goHTML(p, f, sp, shared, go) {
         ${d.eg ? `<li>Éclosion d’œuf (pool actuel) : <b>${d.eg.map(e => eggDistLbl(e[0], e[1])).join(', ')}</b></li>` : ''}
         ${eggHistHTML(p, go)}
       </ul>
-      <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. Œufs : le pool actuel vient de Leek Duck${go.egg ? ` (${esc((go.eh && (go.eh.seasons || []).find(s => s.id === go.eh.current) || {}).fr || go.egg.season)}, au ${frDate(go.egg.upd)}, ${go.egg.n} Pokémon)` : ''} ; l’historique par saison vient de Serebii, complété par Leek Duck pour la saison en cours. Un Pokémon sans mention d’œuf n’est pas dans le pool actuel ; il peut aussi manquer à l’historique (événements, sources incomplètes). Noms des saisons : <a href="https://www.pokepedia.fr/Liste_des_%C3%A9v%C3%A9nements_de_Pok%C3%A9mon_GO_(2026)" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p></section>`,
+      <p class="note">Exclusivités régionales : liste vérifiée manuellement à chaque version de l’app ; des événements peuvent les rendre disponibles ailleurs temporairement. ${eggSeasonNote(go)} Un Pokémon sans mention d’œuf n’est pas dans le pool actuel ; il peut aussi manquer à l’historique (événements, sources incomplètes). Noms des saisons : <a href="https://www.pokepedia.fr/Liste_des_%C3%A9v%C3%A9nements_de_Pok%C3%A9mon_GO_(2026)" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR).</p></section>`,
     shiny: `
     <section class="box shinybox goshiny"><h2>✨ Shiny <small class="cnt">GO</small></h2><ul class="plain gol"><li>Shiny : <b>${sh}</b></li></ul></section>`,
     moves: `

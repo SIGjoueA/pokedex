@@ -177,10 +177,15 @@ function parseSerebiiTitleDates(title) {
   if (parts.length === 1) {
     const a = parseOneDate(parts[0]);
     if (typeof a === 'string') return { from: a, to: a, point: true };
+    if (a && a.monthOnly) return { from: a.from, to: null, month: true };
   }
   // "1.37 25/07/17"
   m = t.match(/(\d{1,2}\/\d{1,2}\/\d{2,4})\s*$/);
   if (m) { const d = parseOneDate(m[1]); if (d) return { from: d, to: d, point: true }; }
+  // Serebii tab « 1.0 » = pool du lancement (juillet 2016) ; jour non indiqué par Serebii
+  if (/^1\.0$/.test(t)) return { from: '2016-07-01', to: null, month: true };
+  // Dates officielles : https://pokemongo.com/fr/news/sinnoh-hatchathon
+  if (/^hatchathon 2018$/i.test(t)) return { from: '2018-11-14', to: '2018-11-27' };
   return { from: null, to: null };
 }
 
@@ -230,7 +235,7 @@ function attachFrNames() {
   const names = parsePokepediaFrNames();
   const used = new Set();
   for (const s of SEASONS) {
-    if (s.id === 'celebration') continue; // no reliable official French name in the cached sources
+    if (s.id === 'celebration') continue; // pas de nom FR officiel : pokemongo.com/fr/seasons/celebration = 404 ; l’article pokemongolive.com/fr/post/season-of-celebration-2020 est en anglais ; pas de page Poképédia
     let hit = names.find(n => n.from === s.from && (n.to === s.to || (n.to && s.to && n.to.slice(0, 7) === s.to.slice(0, 7))));
     if (!hit) hit = names.find(n => n.from === s.from);
     // last resort: unique year overlap + start day match
@@ -450,6 +455,43 @@ for (const [id, pool] of Object.entries(bbHatch)) {
 }
 if (bbOnly.length) report.notes.push(`Bulbapedia mentionne ${bbOnly.length} couple(s) (saison, espèce, distance) absents de Serebii ; non ajoutés (tables Bulbapedia = extraits, pas des pools complets). Ex. : ${bbOnly.slice(0, 8).join(', ')}`);
 
+
+const MOIS_FR = { 1: 'janvier', 2: 'février', 3: 'mars', 4: 'avril', 5: 'mai', 6: 'juin', 7: 'juillet', 8: 'août', 9: 'septembre', 10: 'octobre', 11: 'novembre', 12: 'décembre' };
+const MOIS_EN_FULL = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12 };
+function frYMD(iso) { if (!iso) return ''; const [y, m, d] = iso.split('-'); return `${d}/${m}/${y}`; }
+function labelFrPre(p) {
+  const lab = (p.label || p.en || '').trim();
+  if (/^1\.0$/.test(lab)) return 'lancement (juillet 2016)';
+  if (/hatchathon/i.test(lab)) return p.from && p.to ? `Marathon Éclosion (${frYMD(p.from)} – ${frYMD(p.to)})` : 'Marathon Éclosion';
+  const stripped = lab.replace(/^\d+\.\d+(?:\.\d+)?\s+/, '');
+  const mo = 'January|February|March|April|May|June|July|August|September|October|November|December';
+  let m = stripped.match(new RegExp(`^(${mo})\\s+(\\d{1,2})(?:st|nd|rd|th)?\\s+(\\d{4})\\s*-\\s*(${mo})\\s+(\\d{1,2})(?:st|nd|rd|th)?\\s+(\\d{4})$`, 'i'));
+  if (m) return `${pad(+m[2])}/${pad(MOIS_EN_FULL[m[1].toLowerCase()])}/${m[3]} – ${pad(+m[5])}/${pad(MOIS_EN_FULL[m[4].toLowerCase()])}/${m[6]}`;
+  m = stripped.match(new RegExp(`^(${mo})\\s+(\\d{1,2})(?:st|nd|rd|th)?\\s+(\\d{4})\\s*-\\s*(${mo})\\s+(\\d{4})$`, 'i'));
+  if (m) return `${pad(+m[2])}/${pad(MOIS_EN_FULL[m[1].toLowerCase()])}/${m[3]} – ${MOIS_FR[MOIS_EN_FULL[m[4].toLowerCase()]]} ${m[5]}`;
+  m = stripped.match(new RegExp(`^(${mo})\\s+(\\d{4})\\s*-\\s*(${mo})\\s+(\\d{4})$`, 'i'));
+  if (m) return `${MOIS_FR[MOIS_EN_FULL[m[1].toLowerCase()]]} ${m[2]} – ${MOIS_FR[MOIS_EN_FULL[m[3].toLowerCase()]]} ${m[4]}`;
+  m = stripped.match(new RegExp(`^(${mo})\\s+(\\d{4})$`, 'i'));
+  if (m) return `${MOIS_FR[MOIS_EN_FULL[m[1].toLowerCase()]]} ${m[2]}`;
+  const yy = y => y.length === 2 ? String(+y >= 70 ? 1900 + +y : 2000 + +y) : y;
+  m = stripped.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})\s*-\s*(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+  if (m) return `${pad(+m[1])}/${pad(+m[2])}/${yy(m[3])} – ${pad(+m[4])}/${pad(+m[5])}/${yy(m[6])}`;
+  m = stripped.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})$/);
+  if (m) return `${pad(+m[1])}/${pad(+m[2])}/${yy(m[3])}`;
+  if (p.point && p.from) return frYMD(p.from);
+  if (p.month && p.from) {
+    const [y, moN] = p.from.split('-');
+    if (p.to && p.to.slice(0, 7) !== p.from.slice(0, 7)) {
+      const [y2, mo2] = p.to.split('-');
+      return `${MOIS_FR[+moN]} ${y} – ${MOIS_FR[+mo2]} ${y2}`;
+    }
+    return `${MOIS_FR[+moN]} ${y}`;
+  }
+  if (p.from && p.to && p.from !== p.to) return `${frYMD(p.from)} – ${frYMD(p.to)}`;
+  if (p.from) return frYMD(p.from);
+  return lab;
+}
+
 // Build history object
 const src = [
   ['Leek Duck — Eggs (pool de la saison en cours, communautaires)', 'https://leekduck.com/eggs/'],
@@ -457,7 +499,10 @@ const src = [
   ['Serebii — Pokémon Eggs (page encore titrée Forever Forward le 24/11/2026)', 'https://www.serebii.net/pokemongo/eggs.shtml'],
   ['Leek Duck — Forever Forward (Aventure Synchro, liste partielle)', 'https://leekduck.com/events/season-23-forever-forward/'],
   ['Poképédia — listes des événements (noms français des saisons), CC BY-NC-SA 3.0 FR', 'https://www.pokepedia.fr/Liste_des_%C3%A9v%C3%A9nements_de_Pok%C3%A9mon_GO_(2026)'],
-  ['Bulbapedia — Season (GO) (dates, contrôle des extraits « Hatchable Pokémon »)', 'https://bulbapedia.bulbagarden.net/wiki/Season_(GO)']
+  ['Bulbapedia — Season (GO) (dates, contrôle des extraits « Hatchable Pokémon »)', 'https://bulbapedia.bulbagarden.net/wiki/Season_(GO)'],
+  ['Pokémon GO — Sentiers crépusculaires (page officielle de la saison en cours)', 'https://pokemongo.com/fr/seasons/twilight-trails'],
+  ['Pokémon GO — Toujours en avant (page officielle, nom FR)', 'https://pokemongo.com/fr/seasons/forever-forward'],
+  ['Pokémon GO — Marathon Éclosion (14–27 novembre 2018, dates et nom FR officiels)', 'https://pokemongo.com/fr/news/sinnoh-hatchathon']
 ];
 
 const seasons = [];
@@ -470,8 +515,18 @@ for (const s of SEASONS) {
   seasons.push(o);
 }
 for (const p of dated) {
-  seasons.push({ id: p.id, kind: p.kind, en: p.en, fr: p.fr, from: p.from || null, to: p.to || null, label: p.label, src: p.src, pool: p.pool, note: p.note || null, month: p.month || null, point: p.point || null });
+  const o = { id: p.id, kind: p.kind, en: p.en, fr: p.fr, from: p.from || null, to: p.to || null, label: p.label, src: p.src, pool: p.pool, note: p.note || null, month: p.month || null, point: p.point || null };
+  if (p.kind === 'pre') o.labelFr = labelFrPre(p);
+  seasons.push(o);
 }
+const febJul = dated.find(p => /february 2018\s*-\s*july 2018/i.test(p.label || ''));
+const jul18 = dated.find(p => /^july 2018$/i.test((p.label || '').trim()));
+const oct18 = dated.find(p => /^october 2018$/i.test((p.label || '').trim()));
+if (febJul && jul18) {
+  const A = new Set(Object.keys(febJul.pool || {})), B = new Set(Object.keys(jul18.pool || {}));
+  report.notes.push(`Chevauchement de libellés Serebii : « ${labelFrPre(febJul)} » et « ${labelFrPre(jul18)} » partagent le mois de juillet (Serebii n’indique pas le jour de changement). Ce sont des instantanés successifs : juillet 2018 reprend les ${A.size} espèces de février–juillet et en ajoute ${[...B].filter(k => !A.has(k)).length} (Taupiqueur d’Alola, Canarticho, Kangourex, M. Mime, Tauros). « ${oct18 ? labelFrPre(oct18) : 'octobre 2018'} » ne chevauche pas une période voisine datée au jour près (après juillet 2018, avant le Marathon Éclosion du 14/11/2018) ; un trou août–septembre 2018 est possible si le pool de juillet n’a pas duré jusqu’en octobre, mais les sources ne le tranchent pas.`);
+}
+report.notes.push('Season of Celebration : pas de nom FR officiel trouvé (page saison 404, article /fr/post/season-of-celebration-2020 resté en anglais, pas de page Poképédia) — le nom anglais est conservé.');
 
 // Keep a previous current-season union if we re-run after a weekly update (same current id)
 const prev = loadEggHistory();
@@ -502,7 +557,7 @@ const reportPath = path.join(CACHE, 'report.json');
 fs.writeFileSync(reportPath, JSON.stringify({
   current: { id: curId, season: leek.season, updated: leek.updated, n: Object.keys(leek.byKey).length },
   seasons: named.map(s => ({ id: s.id, fr: s.fr, n: countPool(s.pool), src: s.src })),
-  pre: pre.map(s => ({ id: s.id, label: s.label, from: s.from, to: s.to, n: countPool(s.pool) })),
+  pre: pre.map(s => ({ id: s.id, label: s.label, labelFr: s.labelFr, from: s.from, to: s.to, n: countPool(s.pool) })),
   mix: mix.map(s => ({ id: s.id, n: countPool(s.pool) })),
   species: keys.size,
   empty: empty.map(s => s.id),

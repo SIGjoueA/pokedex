@@ -155,6 +155,7 @@
     {
       "id": "pre-2020-10-20",
       "label": "20/10/20-2/12/20",
+      "labelFr": "20/10/2020 – 02/12/2020",
       "from": "2020-10-20",
       "to": "2020-12-02",
       "n": 72
@@ -162,6 +163,7 @@
     {
       "id": "pre-2020-10-12",
       "label": "12/10/20-19/10/20",
+      "labelFr": "12/10/2020 – 19/10/2020",
       "from": "2020-10-12",
       "to": "2020-10-19",
       "n": 89
@@ -169,6 +171,7 @@
     {
       "id": "pre-2020-06-08",
       "label": "8/6/20-12/10/20",
+      "labelFr": "08/06/2020 – 12/10/2020",
       "from": "2020-06-08",
       "to": "2020-10-12",
       "n": 88
@@ -176,6 +179,7 @@
     {
       "id": "pre-2020-06-03",
       "label": "3/6/20-8/6/20",
+      "labelFr": "03/06/2020 – 08/06/2020",
       "from": "2020-06-03",
       "to": "2020-06-08",
       "n": 83
@@ -183,6 +187,7 @@
     {
       "id": "pre-2020-02-18",
       "label": "18/02/2020-3/6/20",
+      "labelFr": "18/02/2020 – 03/06/2020",
       "from": "2020-02-18",
       "to": "2020-06-03",
       "n": 81
@@ -190,6 +195,7 @@
     {
       "id": "pre-2019-12-16",
       "label": "16/12/2019-18/02/2020",
+      "labelFr": "16/12/2019 – 18/02/2020",
       "from": "2019-12-16",
       "to": "2020-02-18",
       "n": 90
@@ -197,6 +203,7 @@
     {
       "id": "pre-2019-09-23",
       "label": "23/09/2019-16/12/2019",
+      "labelFr": "23/09/2019 – 16/12/2019",
       "from": "2019-09-23",
       "to": "2019-12-16",
       "n": 140
@@ -204,6 +211,7 @@
     {
       "id": "pre-2019-09-16",
       "label": "16/09/2019-23/09/2019",
+      "labelFr": "16/09/2019 – 23/09/2019",
       "from": "2019-09-16",
       "to": "2019-09-23",
       "n": 119
@@ -211,6 +219,7 @@
     {
       "id": "pre-2019-09-09",
       "label": "09/09/2019-23/09/2019",
+      "labelFr": "09/09/2019 – 23/09/2019",
       "from": "2019-09-09",
       "to": "2019-09-23",
       "n": 108
@@ -218,6 +227,7 @@
     {
       "id": "pre-2019-09-02",
       "label": "02/09/2019-09/09/2019",
+      "labelFr": "02/09/2019 – 09/09/2019",
       "from": "2019-09-02",
       "to": "2019-09-09",
       "n": 105
@@ -225,6 +235,7 @@
     {
       "id": "pre-2019-04-26",
       "label": "26/04/2019-02/09/2019",
+      "labelFr": "26/04/2019 – 02/09/2019",
       "from": "2019-04-26",
       "to": "2019-09-02",
       "n": 90
@@ -232,6 +243,7 @@
     {
       "id": "pre-2019-04-09",
       "label": "09/04/2019-26/04/2019",
+      "labelFr": "09/04/2019 – 26/04/2019",
       "from": "2019-04-09",
       "to": "2019-04-26",
       "n": 124
@@ -239,6 +251,7 @@
     {
       "id": "pre-2019-02-13",
       "label": "13/02/2019-09/04/2019",
+      "labelFr": "13/02/2019 – 09/04/2019",
       "from": "2019-02-13",
       "to": "2019-04-09",
       "n": 122
@@ -246,6 +259,7 @@
     {
       "id": "pre-2019-01-31",
       "label": "31/01/2019-13/02/2019",
+      "labelFr": "31/01/2019 – 13/02/2019",
       "from": "2019-01-31",
       "to": "2019-02-13",
       "n": 134
@@ -253,6 +267,7 @@
     {
       "id": "pre-2019-01-15",
       "label": "15/01/2019-29/01/2019",
+      "labelFr": "15/01/2019 – 29/01/2019",
       "from": "2019-01-15",
       "to": "2019-01-29",
       "n": 140
@@ -260,6 +275,7 @@
     {
       "id": "pre-2018-12-20",
       "label": "20/12/2018-15/01/2019",
+      "labelFr": "20/12/2018 – 15/01/2019",
       "from": "2018-12-20",
       "to": "2019-01-15",
       "n": 136
@@ -267,34 +283,39 @@
     {
       "id": "pre-2018-11-27",
       "label": "27/11/2018 - 20/12/2018",
+      "labelFr": "27/11/2018 – 20/12/2018",
       "from": "2018-11-27",
       "to": "2018-12-20",
       "n": 128
     },
     {
-      "id": "pre-hatchathon-2018",
+      "id": "pre-2018-11-14",
       "label": "Hatchathon 2018",
-      "from": null,
-      "to": null,
+      "labelFr": "Marathon Éclosion (14/11/2018 – 27/11/2018)",
+      "from": "2018-11-14",
+      "to": "2018-11-27",
       "n": 121
     },
     {
-      "id": "pre-october-2018",
+      "id": "pre-2018-10-01",
       "label": "October 2018",
-      "from": null,
+      "labelFr": "octobre 2018",
+      "from": "2018-10-01",
       "to": null,
       "n": 128
     },
     {
-      "id": "pre-july-2018",
+      "id": "pre-2018-07-01",
       "label": "July 2018",
-      "from": null,
+      "labelFr": "juillet 2018",
+      "from": "2018-07-01",
       "to": null,
       "n": 123
     },
     {
       "id": "pre-2018-02-01",
       "label": "February 2018 - July 2018",
+      "labelFr": "février 2018 – juillet 2018",
       "from": "2018-02-01",
       "to": "2018-07-01",
       "n": 118
@@ -302,6 +323,7 @@
     {
       "id": "pre-2018-01-01",
       "label": "January 2018 - February 2018",
+      "labelFr": "janvier 2018 – février 2018",
       "from": "2018-01-01",
       "to": "2018-02-01",
       "n": 32
@@ -309,6 +331,7 @@
     {
       "id": "pre-2017-12-21",
       "label": "December 21st 2017 - January 2018",
+      "labelFr": "21/12/2017 – janvier 2018",
       "from": "2017-12-21",
       "to": "2018-01-01",
       "n": 104
@@ -316,27 +339,31 @@
     {
       "id": "pre-2017-12-08",
       "label": "December 8th 2017 - December 21st 2017",
+      "labelFr": "08/12/2017 – 21/12/2017",
       "from": "2017-12-08",
       "to": "2017-12-21",
       "n": 92
     },
     {
-      "id": "pre-october-2017",
+      "id": "pre-2017-10-01",
       "label": "October 2017",
-      "from": null,
+      "labelFr": "octobre 2017",
+      "from": "2017-10-01",
       "to": null,
       "n": 80
     },
     {
-      "id": "pre-september-2017",
+      "id": "pre-2017-09-01",
       "label": "September 2017",
-      "from": null,
+      "labelFr": "septembre 2017",
+      "from": "2017-09-01",
       "to": null,
       "n": 77
     },
     {
       "id": "pre-2017-07-25",
       "label": "1.37 25/07/17",
+      "labelFr": "25/07/2017",
       "from": "2017-07-25",
       "to": "2017-07-25",
       "n": 78
@@ -344,6 +371,7 @@
     {
       "id": "pre-2017-07-06",
       "label": "1.37 06/07/17",
+      "labelFr": "06/07/2017",
       "from": "2017-07-06",
       "to": "2017-07-06",
       "n": 84
@@ -351,6 +379,7 @@
     {
       "id": "pre-2017-05-05",
       "label": "1.33 05/05/17",
+      "labelFr": "05/05/2017",
       "from": "2017-05-05",
       "to": "2017-05-05",
       "n": 73
@@ -358,6 +387,7 @@
     {
       "id": "pre-2017-04-20",
       "label": "1.31 20/04/17",
+      "labelFr": "20/04/2017",
       "from": "2017-04-20",
       "to": "2017-04-20",
       "n": 80
@@ -365,6 +395,7 @@
     {
       "id": "pre-2017-04-13",
       "label": "1.31 13/04/17",
+      "labelFr": "13/04/2017",
       "from": "2017-04-13",
       "to": "2017-04-13",
       "n": 61
@@ -372,6 +403,7 @@
     {
       "id": "pre-2017-02-16",
       "label": "1.27.2 16/02/17",
+      "labelFr": "16/02/2017",
       "from": "2017-02-16",
       "to": "2017-02-16",
       "n": 68
@@ -379,6 +411,7 @@
     {
       "id": "pre-2017-02-08",
       "label": "1.25.0 08/02/17",
+      "labelFr": "08/02/2017",
       "from": "2017-02-08",
       "to": "2017-02-08",
       "n": 57
@@ -386,6 +419,7 @@
     {
       "id": "pre-2016-12-12",
       "label": "1.19.1 12/12/16",
+      "labelFr": "12/12/2016",
       "from": "2016-12-12",
       "to": "2016-12-12",
       "n": 69
@@ -393,14 +427,16 @@
     {
       "id": "pre-2016-11-03",
       "label": "1.13.3 03/11/16",
+      "labelFr": "03/11/2016",
       "from": "2016-11-03",
       "to": "2016-11-03",
       "n": 66
     },
     {
-      "id": "pre-1-0",
+      "id": "pre-2016-07-01",
       "label": "1.0",
-      "from": null,
+      "labelFr": "lancement (juillet 2016)",
+      "from": "2016-07-01",
       "to": null,
       "n": 73
     }
@@ -424,7 +460,9 @@
   "notes": [
     "onglet mixte « 1/3/22-30/6/22 » : 55 espèces, conservé comme période datée (chevauche Alola et GO)",
     "Toujours en avant : pool Serebii unionné avec la page d’événement Leek Duck (39 espèces listées ; la page précise que la liste n’est pas exhaustive)",
-    "Bulbapedia mentionne 171 couple(s) (saison, espèce, distance) absents de Serebii ; non ajoutés (tables Bulbapedia = extraits, pas des pools complets). Ex. : delightful-days:636:5, delightful-days:775:5, delightful-days:935:10:as, delightful-days:996:10:as, delightful-days:52-alola:7:ga, delightful-days:88-alola:7:ga, delightful-days:100-hisui:7:ga, delightful-days:222-galar:7:ga"
+    "Bulbapedia mentionne 171 couple(s) (saison, espèce, distance) absents de Serebii ; non ajoutés (tables Bulbapedia = extraits, pas des pools complets). Ex. : delightful-days:636:5, delightful-days:775:5, delightful-days:935:10:as, delightful-days:996:10:as, delightful-days:52-alola:7:ga, delightful-days:88-alola:7:ga, delightful-days:100-hisui:7:ga, delightful-days:222-galar:7:ga",
+    "Chevauchement de libellés Serebii : « février 2018 – juillet 2018 » et « juillet 2018 » partagent le mois de juillet (Serebii n’indique pas le jour de changement). Ce sont des instantanés successifs : juillet 2018 reprend les 118 espèces de février–juillet et en ajoute 5 (Taupiqueur d’Alola, Canarticho, Kangourex, M. Mime, Tauros). « octobre 2018 » ne chevauche pas une période voisine datée au jour près (après juillet 2018, avant le Marathon Éclosion du 14/11/2018) ; un trou août–septembre 2018 est possible si le pool de juillet n’a pas duré jusqu’en octobre, mais les sources ne le tranchent pas.",
+    "Season of Celebration : pas de nom FR officiel trouvé (page saison 404, article /fr/post/season-of-celebration-2020 resté en anglais, pas de page Poképédia) — le nom anglais est conservé."
   ],
   "bbOnlyCount": 171,
   "bbOnlySample": [

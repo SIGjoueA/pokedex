@@ -668,6 +668,14 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.26 apply-go-overrides lance update-go-eggs (routine hebdo)', /update-go-eggs\.mjs/.test(fs.readFileSync(path.join(HERE, 'apply-go-overrides.mjs'), 'utf8')));
   const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
   ok('v60.26 SW : VERSION ≥ v60.26, DATA_VERSION ≥ d68', /VERSION = 'v60\.(2[6-9]|[3-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 68);
+  ok('v60.26 libellés FR des périodes avant les saisons, sans n° de version ni mois anglais', pre.length >= 30 && pre.every(s => s.labelFr && !/\d+\.\d+/.test(s.labelFr) && !/\b(January|February|March|April|May|June|July|August|September|October|November|December)\b/.test(s.labelFr)));
+  ok('v60.26 lancement (juillet 2016) pour le pool 1.0', pre.some(s => s.labelFr === 'lancement (juillet 2016)'));
+  ok('v60.26 Marathon Éclosion daté officiellement (14/11/2018 – 27/11/2018)', pre.some(s => s.labelFr === 'Marathon Éclosion (14/11/2018 – 27/11/2018)' && s.from === '2018-11-14' && s.to === '2018-11-27'));
+  const preSorted = [...pre].sort((a, b) => (b.from || '').localeCompare(a.from || '') || (b.to || '').localeCompare(a.to || ''));
+  ok('v60.26 toutes les périodes avant les saisons ont une date de tri', pre.every(s => s.from));
+  ok('v60.26 Toujours en avant : nom officiel, saison précédente (02/06–08/09/2026)', named.some(s => s.id === 'forever-forward' && s.fr === 'Toujours en avant' && s.from === '2026-06-02' && s.to === '2026-09-08'));
+  ok('v60.26 date de vérif Leek Duck renseignée (pool ≥ date de mise à jour)', !!(eh.checked && eh.updated && eh.checked >= eh.updated));
+  ok('v60.26 app : labelFr + note saison en cours (site officiel, tableau Leek Duck, Forever Forward)', /labelFr/.test(src) && /saison en cours/.test(src) && /mise à jour du tableau/.test(src) && /Forever Forward/.test(src) && /site officiel/.test(src));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

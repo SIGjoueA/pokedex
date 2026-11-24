@@ -14,5 +14,9 @@ Sources téléchargées une fois (24/11/2026) et versionnées. Rien n’est inve
 | `bulbapedia-List_of_Eggs_in_Pokemon_GO.json` | [Bulbapedia — List of Eggs in Pokémon GO](https://bulbapedia.bulbagarden.net/wiki/List_of_Eggs_in_Pokémon_GO) (liste courante, page signalée comme obsolète ; non utilisée comme pool) |
 | `pokepedia-evenements-20XX.json` | [Poképédia — listes d’événements](https://www.pokepedia.fr/Liste_des_%C3%A9v%C3%A9nements_de_Pok%C3%A9mon_GO_(2026)) (noms français des saisons, CC BY-NC-SA 3.0 FR) |
 | `report.json` | Rapport du script `build/fix-v60-26.mjs` (contrôles, écarts, non reliés) |
+| `official-fr-sinnoh-hatchathon-2018.html` | [Pokémon GO — Marathon Éclosion](https://pokemongo.com/fr/news/sinnoh-hatchathon) (nom FR officiel et dates 14–27 novembre 2018) |
+| `official-fr-celebration-2020-post.html` | [Pokémon GO — Season of Celebration](https://pokemongolive.com/fr/post/season-of-celebration-2020) (article `/fr/` resté en anglais ; pas de nom FR officiel) |
 
 Les URL `https://leekduck.com/eggs/?season=…` renvoient le pool actuel, pas un historique : elles n’ont pas été conservées.
+
+Relevé du 24/11/2026 : la page Leek Duck Eggs indiquait encore « Twilight Trails », mise à jour le 14/09/2026, même pool que `leekduck-eggs.html` (fichier live non conservé, doublon). Pages officielles [Sentiers crépusculaires](https://pokemongo.com/fr/seasons/twilight-trails) et [Toujours en avant](https://pokemongo.com/fr/seasons/forever-forward) consultées pour les noms FR (non versionnées ici).
