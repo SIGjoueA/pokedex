@@ -80,7 +80,10 @@ await p.evaluate(() => { RV.g = 'sw'; RV.s = '5'; location.hash = '#/raids/sw'; 
 await sleep(1000);
 await p.evaluate(() => { RV.g = 'sw'; RV.s = '5'; renderRaids(); });
 await sleep(700);
-const mxId = await pickBoss("return /gmax-mx$/.test(o.value || '') || (o.value || '').endsWith('-mx')");
+await p.evaluate(() => { RV.swBoss = '6-gmax-mx'; RV.svMode = 'd'; renderRaids(); });
+await sleep(700);
+await openRank();
+const mxId = '6-gmax-mx';
 await shot('03-vue-raids-dynamax');
 
 // 04 : vue Couronneige, un légendaire d’Aventure Dynamax

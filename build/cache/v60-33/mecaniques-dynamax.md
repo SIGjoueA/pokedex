@@ -69,3 +69,4 @@ Retenu pour le classement des légendaires :
   - Terra-Dôme 5★ : 20 / 35 / 75 (comme Paldea, pas comme les 6★ du dôme).
 - Durabilité du bouclier : 25 % des PV max (générique, non listée par boss).
 - Seuils génériques : bouclier à 60 % des PV ou 50–55 % du chrono ; une annulation des boosts à 60 % du chrono.
+- **Munja** : écarté des classements Dynamax / Aventure. Ses 1 PV rendent le plancher de 3 % inopérant et gonfleraient artificiellement le score (dégâts² / dégâts encaissés).

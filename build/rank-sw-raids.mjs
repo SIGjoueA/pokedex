@@ -792,6 +792,8 @@ export function buildRankSwRaids(opts = {}) {
         try {
           pokeN = makePoke(atk.smo, { level: 100, nature, evs, ivs, ability: abilOpt, item: 'Leftovers' });
           ourMaxN = pokeN.maxHP();
+          // Munja (1 PV) : le plancher de 3 % ne suffit pas, le score serait artificiel.
+          if (ourMaxN <= 1) continue;
           pokeD = makePoke(atk.smo, { level: 100, nature, evs, ivs, ability: abilOpt, item: 'Leftovers', isDynamaxed: atk.gmax ? 'gmax' : true, dynamaxLevel: DYNA_LEVEL });
           ourMaxD = pokeD.maxHP();
         } catch { continue; }
