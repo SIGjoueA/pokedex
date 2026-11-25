@@ -1,0 +1,72 @@
+{
+  "ok": 2920,
+  "bad": 0,
+  "bytes": 307176323,
+  "bytes_mo": 307.18,
+  "size_min": 949,
+  "size_median": 67543,
+  "size_avg": 105197,
+  "size_max": 2478662,
+  "largest": [
+    {
+      "k": "890-eternamax",
+      "as": "10190",
+      "shiny": true,
+      "bytes": 2478662
+    },
+    {
+      "k": "890-eternamax",
+      "as": "10190",
+      "shiny": false,
+      "bytes": 2425380
+    },
+    {
+      "k": "809-gmax",
+      "as": "10208",
+      "shiny": true,
+      "bytes": 1480195
+    },
+    {
+      "k": "879-gmax",
+      "as": "10224",
+      "shiny": true,
+      "bytes": 1045463
+    },
+    {
+      "k": "879-gmax",
+      "as": "10224",
+      "shiny": false,
+      "bytes": 1038963
+    },
+    {
+      "k": "844-gmax",
+      "as": "10218",
+      "shiny": true,
+      "bytes": 1009954
+    },
+    {
+      "k": "844-gmax",
+      "as": "10218",
+      "shiny": false,
+      "bytes": 956632
+    },
+    {
+      "k": "892-rapid-strike-gmax",
+      "as": "10227",
+      "shiny": true,
+      "bytes": 936528
+    },
+    {
+      "k": "892-rapid-strike-gmax",
+      "as": "10227",
+      "shiny": false,
+      "bytes": 933270
+    },
+    {
+      "k": "839-gmax",
+      "as": "10215",
+      "shiny": false,
+      "bytes": 929190
+    }
+  ]
+}

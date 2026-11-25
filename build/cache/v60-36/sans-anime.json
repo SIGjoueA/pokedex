@@ -1,0 +1,979 @@
+{
+  "entries_without_as": [
+    {
+      "k": "26-mega-x",
+      "n": "Méga-Raichu X",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "26-mega-y",
+      "n": "Méga-Raichu Y",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "150-armored",
+      "n": "Mewtwo Armuré",
+      "c": "form",
+      "hh": false,
+      "sh": false
+    },
+    {
+      "k": "172-spiky-eared",
+      "n": "Pichu Troizépi",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "358-mega",
+      "n": "Méga-Éoko",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "359-mega-z",
+      "n": "Méga-Absol Z",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "398-mega",
+      "n": "Méga-Étouraptor",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "412-sandy",
+      "n": "Cheniti Sable",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "412-trash",
+      "n": "Cheniti Déchet",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "445-mega-z",
+      "n": "Méga-Carchacrok Z",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "448-mega-z",
+      "n": "Méga-Lucario Z",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "485-mega",
+      "n": "Méga-Heatran",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "491-mega",
+      "n": "Méga-Darkrai",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "493-unknown",
+      "n": "Arceus ???",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "530-mega",
+      "n": "Méga-Minotaupe",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "545-mega",
+      "n": "Méga-Brutapode",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "560-mega",
+      "n": "Méga-Baggaïd",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "604-mega",
+      "n": "Méga-Ohmassacre",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "609-mega",
+      "n": "Méga-Lugulabre",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "623-mega",
+      "n": "Méga-Golemastoc",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "652-mega",
+      "n": "Méga-Blindépique",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "655-mega",
+      "n": "Méga-Goupelin",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "658-mega",
+      "n": "Méga-Amphinobi",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "666-icy-snow",
+      "n": "Prismillon Motif Blizzard",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "666-high-plains",
+      "n": "Prismillon Motif Sécheresse",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "666-poke-ball",
+      "n": "Prismillon Motif Poké Ball",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "668-mega",
+      "n": "Méga-Némélios",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "670-mega",
+      "n": "Méga-Floette",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "676-la-reine",
+      "n": "Couafarel Coupe Reine",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "678-male-mega",
+      "n": "Méga-Mistigrix",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "687-mega",
+      "n": "Méga-Sepiatroce",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "689-mega",
+      "n": "Méga-Golgopathe",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "691-mega",
+      "n": "Méga-Kravarech",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "701-mega",
+      "n": "Méga-Brutalibré",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "718-mega",
+      "n": "Méga-Zygarde",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "740-mega",
+      "n": "Méga-Crabominable",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "768-mega",
+      "n": "Méga-Sarmuraï",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "780-mega",
+      "n": "Méga-Draïeul",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "801-mega",
+      "n": "Méga-Magearna",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "801-original-mega",
+      "n": "Méga-Magearna Couleur du Passé",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "807-mega",
+      "n": "Méga-Zeraora",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "854-antique",
+      "n": "Théffroi Forme Authentique",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "855-antique",
+      "n": "Polthégeist Forme Authentique",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-strawberry-sweet",
+      "n": "Charmilly Lait Ruby Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-strawberry-sweet",
+      "n": "Charmilly Lait Matcha Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-strawberry-sweet",
+      "n": "Charmilly Lait Menthe Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-strawberry-sweet",
+      "n": "Charmilly Lait Citron Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-strawberry-sweet",
+      "n": "Charmilly Lait Salé Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-strawberry-sweet",
+      "n": "Charmilly Mélange Ruby Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-strawberry-sweet",
+      "n": "Charmilly Mélange Caramel Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-strawberry-sweet",
+      "n": "Charmilly Mélange Tricolore Fraise en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-vanilla-cream-berry-sweet",
+      "n": "Charmilly Lait Vanille Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-berry-sweet",
+      "n": "Charmilly Lait Ruby Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-berry-sweet",
+      "n": "Charmilly Lait Matcha Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-berry-sweet",
+      "n": "Charmilly Lait Menthe Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-berry-sweet",
+      "n": "Charmilly Lait Citron Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-berry-sweet",
+      "n": "Charmilly Lait Salé Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-berry-sweet",
+      "n": "Charmilly Mélange Ruby Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-berry-sweet",
+      "n": "Charmilly Mélange Caramel Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-berry-sweet",
+      "n": "Charmilly Mélange Tricolore Baie en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-vanilla-cream-love-sweet",
+      "n": "Charmilly Lait Vanille Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-love-sweet",
+      "n": "Charmilly Lait Ruby Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-love-sweet",
+      "n": "Charmilly Lait Matcha Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-love-sweet",
+      "n": "Charmilly Lait Menthe Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-love-sweet",
+      "n": "Charmilly Lait Citron Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-love-sweet",
+      "n": "Charmilly Lait Salé Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-love-sweet",
+      "n": "Charmilly Mélange Ruby Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-love-sweet",
+      "n": "Charmilly Mélange Caramel Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-love-sweet",
+      "n": "Charmilly Mélange Tricolore Cœur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-vanilla-cream-star-sweet",
+      "n": "Charmilly Lait Vanille Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-star-sweet",
+      "n": "Charmilly Lait Ruby Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-star-sweet",
+      "n": "Charmilly Lait Matcha Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-star-sweet",
+      "n": "Charmilly Lait Menthe Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-star-sweet",
+      "n": "Charmilly Lait Citron Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-star-sweet",
+      "n": "Charmilly Lait Salé Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-star-sweet",
+      "n": "Charmilly Mélange Ruby Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-star-sweet",
+      "n": "Charmilly Mélange Caramel Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-star-sweet",
+      "n": "Charmilly Mélange Tricolore Étoile en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-vanilla-cream-clover-sweet",
+      "n": "Charmilly Lait Vanille Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-clover-sweet",
+      "n": "Charmilly Lait Ruby Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-clover-sweet",
+      "n": "Charmilly Lait Matcha Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-clover-sweet",
+      "n": "Charmilly Lait Menthe Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-clover-sweet",
+      "n": "Charmilly Lait Citron Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-clover-sweet",
+      "n": "Charmilly Lait Salé Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-clover-sweet",
+      "n": "Charmilly Mélange Ruby Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-clover-sweet",
+      "n": "Charmilly Mélange Caramel Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-clover-sweet",
+      "n": "Charmilly Mélange Tricolore Trèfle en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-vanilla-cream-flower-sweet",
+      "n": "Charmilly Lait Vanille Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-flower-sweet",
+      "n": "Charmilly Lait Ruby Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-flower-sweet",
+      "n": "Charmilly Lait Matcha Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-flower-sweet",
+      "n": "Charmilly Lait Menthe Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-flower-sweet",
+      "n": "Charmilly Lait Citron Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-flower-sweet",
+      "n": "Charmilly Lait Salé Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-flower-sweet",
+      "n": "Charmilly Mélange Ruby Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-flower-sweet",
+      "n": "Charmilly Mélange Caramel Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-flower-sweet",
+      "n": "Charmilly Mélange Tricolore Fleur en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-vanilla-cream-ribbon-sweet",
+      "n": "Charmilly Lait Vanille Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-cream-ribbon-sweet",
+      "n": "Charmilly Lait Ruby Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-matcha-cream-ribbon-sweet",
+      "n": "Charmilly Lait Matcha Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-mint-cream-ribbon-sweet",
+      "n": "Charmilly Lait Menthe Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-lemon-cream-ribbon-sweet",
+      "n": "Charmilly Lait Citron Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-salted-cream-ribbon-sweet",
+      "n": "Charmilly Lait Salé Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-ruby-swirl-ribbon-sweet",
+      "n": "Charmilly Mélange Ruby Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-caramel-swirl-ribbon-sweet",
+      "n": "Charmilly Mélange Caramel Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "869-rainbow-swirl-ribbon-sweet",
+      "n": "Charmilly Mélange Tricolore Ruban en Sucre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "870-mega",
+      "n": "Méga-Hexadron",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "925-family-of-three",
+      "n": "Famignol Famille de Trois",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "952-mega",
+      "n": "Méga-Scovilain",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "970-mega",
+      "n": "Méga-Floréclat",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "978-curly-mega",
+      "n": "Méga-Nigirigon Forme Courbée",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "978-droopy-mega",
+      "n": "Méga-Nigirigon Forme Affalée",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "978-stretchy-mega",
+      "n": "Méga-Nigirigon Forme Raide",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "990",
+      "n": "Roue-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "991",
+      "n": "Hotte-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "992",
+      "n": "Paume-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "993",
+      "n": "Têtes-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "994",
+      "n": "Mite-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "995",
+      "n": "Épine-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "998-mega",
+      "n": "Méga-Glaivodo",
+      "c": "mega",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1006",
+      "n": "Garde-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1007-sprinting-build",
+      "n": "Koraidon Forme de Course",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "1007-gliding-build",
+      "n": "Koraidon Forme de Vol",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "1008",
+      "n": "Miraidon",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1008-drive-mode",
+      "n": "Miraidon Mode Terrestre",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "1008-glide-mode",
+      "n": "Miraidon Mode Aérien",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "1010",
+      "n": "Vert-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1012-artisan",
+      "n": "Poltchageist Forme Onéreuse",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "1013-masterpiece",
+      "n": "Théffroyable Forme Exceptionnelle",
+      "c": "form",
+      "hh": false,
+      "sh": true
+    },
+    {
+      "k": "1017",
+      "n": "Ogerpon",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1017-wellspring-mask",
+      "n": "Ogerpon Masque du Puits",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1017-hearthflame-mask",
+      "n": "Ogerpon Masque du Fourneau",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1017-cornerstone-mask",
+      "n": "Ogerpon Masque de la Pierre",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1022",
+      "n": "Roc-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1023",
+      "n": "Chef-de-Fer",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1024",
+      "n": "Terapagos",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1024-terastal",
+      "n": "Terapagos Téracristal",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1024-stellar",
+      "n": "Terapagos Stellaire",
+      "c": "form",
+      "hh": true,
+      "sh": true
+    },
+    {
+      "k": "1025",
+      "n": "Pêchaminus",
+      "c": "base",
+      "hh": true,
+      "sh": true
+    }
+  ],
+  "females_without_as": [
+    {
+      "k": "678-female-mega",
+      "n": "Méga-Mistigrix Femelle",
+      "c": "sex"
+    }
+  ],
+  "n": 138,
+  "n_fe": 1
+}
