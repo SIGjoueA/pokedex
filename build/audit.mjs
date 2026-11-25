@@ -1069,4 +1069,28 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
 }
 
 
+
+
+// ---- v60.38 : journal des versions v35–v60.37 dans le README
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const readme = fs.readFileSync(path.join(HERE, '../README.md'), 'utf8');
+  const notesj = fs.readFileSync(path.join(DOCS, 'notes.json'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1];
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-38.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.38 SW : VERSION ≥ v60.38, DATA_VERSION = d77 (inchangée)', /VERSION = 'v60\.(3[8-9]|[4-9]\d)'/.test(sw) && /DATA_VERSION = 'd77'/.test(sw));
+  ok('v60.38 NOTES ≤ 160 caractères' + (ver === 'v60.38' ? ', commence par le changelog / journal' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.38' || (/Changelog|journal/i.test(notes) && /v35/.test(notes) && /d77/.test(notes))), String(notes.length));
+  ok('v60.38 README : journal v35–v60.37, une ligne, dates, groupes v60.4–v60.7 et v60.8–v60.15', /## Journal des versions \(v35–v60\.37\)/.test(readme) && /\*\*v35\*\*/.test(readme) && /\*\*v40\*\*/.test(readme) && /\*\*v50\*\*/.test(readme) && /\*\*v60\.37\*\*/.test(readme) && /\*\*v60\.4–v60\.7\*\*/.test(readme) && /\*\*v60\.8–v60\.15\*\*/.test(readme) && /\(14\/10\)/.test(readme) && /\(25\/11\)/.test(readme));
+  ok('v60.38 README : trou v60.13 (pas de VERSION d’appli) et historique git depuis v46', /v60\.13/.test(readme) && /981e83c/.test(readme) && /notes\.json/.test(readme));
+  ok('v60.38 README : fonctions et chiffres à jour (capacité, 28 jeux, 1 501, ~370 Ko, ~104 Mo)', /Capacité…/.test(readme) && /28 jeux/.test(readme) && /1 501 entrées/.test(readme) && /core\.json` \(~370 Ko\)/.test(readme) && /docs\/` ≈ 104 Mo/.test(readme) && /learn-index\.json/.test(readme));
+  ok('v60.38 pas de second historique dans l’appli (Notes de version déjà en v46)', /id="notesbtn"/.test(fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8')) && /Notes de version/.test(app) && /function notesShow/.test(app) && !/Historique des versions/.test(app + fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8')));
+  ok('v60.38 notes.json contient v60.38', /"v": "v60\.38"/.test(notesj));
+  ok('v60.38 apply-v34 lance fix-v60-38', /fix-v60-38\.mjs/.test(apply));
+  ok('v60.38 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![readme, sw, fix, notesj].some(s => /\bYann\b/.test(s)));
+}
+
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

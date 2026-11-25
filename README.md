@@ -4,13 +4,14 @@ Site statique dans `docs/` (HTML/CSS/JS sans framework ni backend), publié par 
 https://sigjouea.github.io/pokedex/
 
 ## Fonctions
-- Recherche instantanée sans accents, filtres type / génération / catégorie / tri, grille ou liste.
-- **Jeux** : Pokémon HOME, Pokémon GO, puis 27 jeux (série principale + Légendes + DLC) du plus récent au plus ancien, et 3 listes en plus : **Méga-Dex Z-A** (espèces ayant une Méga dans la sauvegarde Z-A, forme de base + Méga, ordre national), **Hors dex Écarlate/Violet** et **Hors dex Épée/Bouclier** (espèces obtenables par transfert / échange / événement mais absentes de tous les Pokédex de la sauvegarde ; marques dans le jeu de base). Dans la liste, chaque liste en plus est placée juste **au-dessus** de la dernière extension de son jeu : Méga-Dex Z-A au-dessus de Méga-Dimension, Hors dex É/V au-dessus du Disque Indigo, Hors dex É/B au-dessus de Couronneige (v22). Un jeu sans extension choisi = Pokédex régional, puis en fin de liste toutes les espèces obtenables absentes du Pokédex régional (transfert Pal Park / Poké Transfert / Bank / HOME, échange, événement, Méga) marquées « Hors dex », ordre national. Une espèce présente dans un autre Pokédex de la même sauvegarde (Z-A ↔ Méga-Dimension…) n'est jamais « Hors dex ». Source : PokéAPI (espèce avec une liste de capacités dans le groupe de versions du jeu = présente dans les données du jeu), `build/fetch-obtainable.mjs` + `build/apply-hors-dex.mjs` (exceptions manuelles documentées dans le script). Les marques « hors dex » ne changent pas la complétion.
+- Recherche instantanée sans accents (nom FR / EN / JA / romaji, ou numéro), filtres type / génération / catégorie / tri, plus « Capacité… » et « Talent… » (autocomplétion française, jeu et méthode d’apprentissage, v60.37), grille ou liste.
+- **Jeux** : Pokémon HOME, Pokémon GO, puis 28 jeux (série principale, Légendes et DLC) du plus récent au plus ancien, et 3 listes en plus : **Méga-Dex Z-A** (espèces ayant une Méga dans la sauvegarde Z-A, forme de base + Méga, ordre national), **Hors dex Écarlate/Violet** et **Hors dex Épée/Bouclier** (espèces obtenables par transfert / échange / événement mais absentes de tous les Pokédex de la sauvegarde ; marques dans le jeu de base). Dans la liste, chaque liste en plus est placée juste **au-dessus** de la dernière extension de son jeu : Méga-Dex Z-A au-dessus de Méga-Dimension, Hors dex É/V au-dessus du Disque Indigo, Hors dex É/B au-dessus de Couronneige (v22). Un jeu sans extension choisi = Pokédex régional, puis en fin de liste toutes les espèces obtenables absentes du Pokédex régional (transfert Pal Park / Poké Transfert / Bank / HOME, échange, événement, Méga) marquées « Hors dex », ordre national. Une espèce présente dans un autre Pokédex de la même sauvegarde (Z-A ↔ Méga-Dimension…) n'est jamais « Hors dex ». Source : PokéAPI (espèce avec une liste de capacités dans le groupe de versions du jeu = présente dans les données du jeu), `build/fetch-obtainable.mjs` + `build/apply-hors-dex.mjs` (exceptions manuelles documentées dans le script). Les marques « hors dex » ne changent pas la complétion.
 - **Formes** (bouton dans l'en-tête, masquées par défaut) : régionales, Méga, Primo, Gigamax, multi-formes (Zarbi, Flabébé, Vivaldaim…), mâle/femelle. Sélecteur de formes sur la fiche.
 - **Fiche par jeu** : stats / types / talents / objets tenus / attaques / évolutions tels qu'à l'époque du jeu, Pokédex FR, numéros régionaux.
-- **Pokémon GO** : stats ATT/DEF/END, PC max (niv. 50 et 51), attaques avec DPS, distance compagnon, coûts d'évolution, shiny, statut de sortie.
+- **Pokémon GO** : stats ATT/DEF/END, PC max (niv. 40, 50 et 51), attaques avec DPS, distance compagnon, coûts d'évolution, shiny, statut de sortie, costumes, formes Obscur / Purifié, classements PvP, raids, Combats Max et Team GO Rocket.
+- Modes **Collection** (journal des Pokémon que vous possédez) et **Pocket** (cartodex TCG Pocket).
 - Capturés (Poké Ball), shiny et favoris dans `localStorage` (`caught`, `shiny`, `favs`) ; export / import JSON.
-- Hors-ligne : service worker (coquille + données), images en cache sur demande ou en arrière-plan.
+- Hors-ligne : service worker (coquille + données). Pack images HOME (~17 Mo, peut se lancer tout seul hors connexion mesurée), pack des fiches et formes (~35 Mo), illustrations shiny HOME en option (~16,4 Mo, jamais automatique). Les sprites animés (GIF Showdown, ~307 Mo au total) ne sont dans aucun pack.
 
 ## Lancer en local
     python3 -m http.server 8765 --directory docs
@@ -32,7 +33,7 @@ puis http://localhost:8765 (le service worker exige localhost ou HTTPS).
     node fetch-cries.mjs     # v29 : cris (dépôt PokéAPI « cries ») -> docs/cries/*.mp3 + docs/data/cries.json (relançable, cache build/.cache/cries)
     node fetch-obtainable.mjs && node apply-hors-dex.mjs   # -> Hors dex (dex/*.json x, dex/hors-sw|sv.json, sp hx)
     python3 make-mega-energy.py  # -> icônes Méga-énergie GO (docs/img/energy, docs/data/mega-energy.json)
-    node audit.mjs           # vérifications de cohérence (~100 faits connus)
+    node audit.mjs           # vérifications de cohérence (~800 faits connus)
     node make-icons.mjs      # icônes PWA (facultatif)
     node test.mjs 8765       # tests Chrome headless (360 px et 1000 px), captures dans ../screenshots
 Après toute modification de `docs/`, incrémenter `VERSION` dans `docs/sw.js` (et `DATA_VERSION` si le format des JSON change).
@@ -40,10 +41,12 @@ Après toute modification de `docs/`, incrémenter `VERSION` dans `docs/sw.js` (
 ## Fichiers de données (`docs/data/`)
 | Fichier | Contenu | Chargement |
 |---|---|---|
-| `core.json` (~240 Ko) | liste des 1 591 entrées (espèces + formes), types, tables de types par génération, catalogue des jeux | au démarrage |
+| `core.json` (~370 Ko) | liste des 1 501 entrées (espèces + formes), types, tables de types par génération, catalogue des jeux | au démarrage |
 | `dex/{jeu}.json` | Pokédex régional d'un jeu (ordre + numéros) | au choix du jeu |
 | `sp/{id}.json` | une espèce : textes, stats passées, talents, objets, attaques par jeu, GO, pour chaque forme | à l'ouverture d'une fiche |
 | `evo.json`, `moves.json`, `ref.json`, `go.json`, `tm.json`, `loc.json` | évolutions (FR), attaques, talents/objets, attaques GO, numéros de CT/CS/DT par jeu, noms de lieux/méthodes de rencontre | à la première fiche |
+| `learn-index.json` (~1,94 Mo) | index inversé des capacités et des talents pour les filtres de la liste | à la première utilisation d’un de ces filtres |
+| `raids.json`, `tera7.json`, `rank-*.json`, `pocket.json`, `go-eggs.json`, … | raids Dynamax / Téracristal, classements, Pocket, œufs GO, etc. | à la demande, ou avec le pack hors-ligne |
 
 Clés d'entrée : `25` (espèce de base), `26-alola`, `25-female`, `6-mega-x`, `25-gmax`, `201-b`… Dans `localStorage`, la base reste un entier (compatible avec les anciennes sauvegardes), les formes sont des chaînes (`"26-alola"`).
 
@@ -56,7 +59,7 @@ Les Pokédex viennent de PokéAPI (`/pokedex/{nom}`). Jeux à plusieurs Pokédex
 Exclus : Colosseum / XD (aucun Pokédex régional dans PokéAPI), Pokémon Champions (jeu de combat), versions japonaises Rouge/Vert/Bleu (même Pokédex que Rouge/Bleu).
 
 ## Formes
-Les formes proviennent de `pokemon` / `pokemon-form` de PokéAPI. Femelles : formes « dimorphisme » ajoutées d'après les rendus HOME quand `has_gender_differences` (à partir de la génération IV). Sont exclus : Totems, Pikachu casquettes cosplay, formes sans illustration. Les formes identiques à l'octet près à une autre sont fusionnées (`build/art-dupes.json`). Pitrouille / Banshitrouye : tailles « Taille S / M / L / XL » (les 4 formes, même illustration). Mégas multiples : « Méga X / Y / Z », « Méga ♂ / ♀ », « Méga Passé » (Magearna), « Méga Courbée / Affalée / Raide » (Nigirigon). Compteur en mode Formes : « N formes (+ M formes de combat, non comptées) », N = dénominateur. Libellé de la forme de base sans nom officiel (jamais « Normal ») : « Commun » si l'espèce a des formes régionales (officiellement « de Kanto »…) ou d'autres formes, « Mâle » s'il n'y a qu'un dimorphisme sexuel en plus des Méga/Gigamax ; les noms officiels restent (Deoxys/Terapagos Forme Normale, Arceus/Silvallié type Normal, Keldeo). Disponibilité d'une forme par jeu : déduite des données d'attaques de PokéAPI + règles (Gigamax = Épée/Bouclier, Méga = jeux compatibles et Pokédex du jeu, féminin ≥ gén. IV) – approximative.
+Les formes proviennent de `pokemon` / `pokemon-form` de PokéAPI. Femelles : formes « dimorphisme » ajoutées d'après les rendus HOME quand `has_gender_differences` (à partir de la génération IV). Sont exclus : Totems, Pikachu casquettes cosplay, formes sans illustration. Les formes identiques à l'octet près à une autre sont fusionnées (`build/art-dupes.json`). Pitrouille / Banshitrouye : tailles « Taille S / M / L / XL » (les 4 formes, même illustration). Mégas multiples : « Méga X / Y / Z », « Méga ♂ / ♀ », « Méga Passé » (Magearna), « Méga Courbée / Affalée / Raide » (Nigirigon). Compteur en mode Formes : « N formes (+ M formes de combat, non comptées) », N = dénominateur. Libellé de la forme de base sans nom officiel (jamais « Normal ») : « Commun » si l'espèce a des formes régionales (officiellement « de Kanto »…) ou d'autres formes, « Mâle » s'il n'y a qu'un dimorphisme sexuel en plus des Méga/Gigamax ; les noms officiels restent (Deoxys/Terapagos Forme Normale, Arceus/Silvallié type Normal, Keldeo). Disponibilité d'une forme par jeu : déduite des données d'attaques de PokéAPI + règles (Gigamax = Épée/Bouclier, Méga = jeux compatibles et Pokédex du jeu, féminin ≥ gén. IV), précisée en v60.29 (Méga du DLC Z-A, formes régionales, Gigamax).
 
 ## Pokémon GO
 Source principale : PokeMiners `game_masters` (`latest/latest.json`, daté dans `go.json`) ; liste des Pokémon sortis / shiny / Méga : pogoapi.net. PC max = formule officielle `floor((ATT+15)·√(DEF+15)·√(END+15)·cpm²/10)`, vérifiée (Mewtwo 4 724, Leuphorie 3 117 au niveau 50). Aucune valeur n'est inventée : une donnée absente n'est pas affichée (la distance d'éclosion n'est pas dans la source ; le statut shiny est au niveau espèce). Pied de page : « Données GO : communautaires, non officielles ».
@@ -64,10 +67,10 @@ Source principale : PokeMiners `game_masters` (`latest/latest.json`, daté dans 
 **Overrides manuels GO (v28)** : `build/go-overrides.json` (édité à la main, **jamais écrit par les scripts**) est appliqué par `build/apply-go-overrides.mjs`, lancé automatiquement à la fin de `build-data.mjs` et relançable seul (idempotent). Il contient : (1) les Méga sorties dans GO après le gel de la liste pogoapi `mega_pokemon` (Méga-Raichu X/Y, Empiflor, Staross, Dracolosse, Mewtwo X/Y, Airmure, Étouraptor, Blindépique, Goupelin, Amphinobi, Sepiatroce, Hexadron ; une Méga sans stats dans le game master reçoit les attaques de sa base et la note « stats à venir ») ; (2) la liste des Gigamax de GO avec date de sortie (`from`, la forme apparaît automatiquement dans l’app à partir de ce jour : Duralugon le 2026-11-06) et la disponibilité shiny (`shiny`, `shinyFrom` ; pas de shiny pour Lézargus). **Mise à jour GO hebdomadaire** : après `fetch-go.mjs` + reconstruction (ou toute modification de `docs/data`), toujours relancer `node apply-go-overrides.mjs` (sans effet si déjà appliqué ; met aussi à jour le pool d’œufs courant et l’ajoute à l’historique, `node update-go-eggs.mjs`) puis `node audit.mjs`, qui échoue si une Méga ou un Gigamax de la liste a perdu son statut GO. Ajouter une Méga / un Gigamax nouvellement sorti = éditer `go-overrides.json` (sources : Bulbapedia « Mega Evolution (GO) », « Gigantamax (GO) »), retirer de la liste une Méga que pogoapi connaît n’a pas d’effet.
 
 ## Rencontres, CT/CS, œufs GO, textes traduits
-- **Rencontres** : PokéAPI `pokemon/{id}/encounters` (noms de lieux FR de PokéAPI, sinon nom du lieu + suffixe). Données jusqu'à la génération VIII (pas de Légendes Arceus, DEPS, Écarlate/Violet, Z-A : message explicite).
+- **Rencontres** : jeux Switch (y compris Légendes Arceus, Écarlate / Violet, Z-A, DEPS, RF/VF Switch) via Poképédia (`f.pl`, v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux et méthodes Poképédia (v42, v60.22) quand une fiche n’avait rien.
 - **CT / CS / DT** : PokéAPI `machine` par groupe de versions (ex. « CT24 »), affichés dans l'onglet CT/CS.
 - **Œufs GO** : le **pool de la saison en cours** (distance 1/2/5/7/10/12 km, Aventure Synchro, cadeaux) est lu sur la page Leek Duck « Eggs » (communautaire ; la date indiquée est celle de la dernière mise à jour du tableau Leek Duck, pas celle du début de saison). L’**historique par saison** (et les périodes d’avant 2020, libellés normalisés en français, plus récente en haut) vient des archives Serebii « Previous Egg Pokémon », unionné chaque semaine avec le pool Leek Duck courant (`build/update-go-eggs.mjs`, aussi lancé par `apply-go-overrides.mjs`) sans effacer les saisons passées. Fiches : « Éclosion d’œuf (pool actuel) » et « Déjà sorti en œuf » (saison et distance si connues). Noms français des saisons : Poképédia (CC BY-NC-SA 3.0 FR), confirmés sur le site officiel quand une page existe. Aucune valeur inventée : une saison ou une éclosion douteuse est laissée vide et signalée.
-- **Textes Pokédex traduits** : les jeux sans texte français dans PokéAPI (avant Noir/Blanc, Noir 2/Blanc 2, Légendes Arceus, Écarlate/Violet) reçoivent une traduction automatique (Argos Translate, noms de Pokémon remplacés par les noms français), stockée à part (`tt`/`tv` dans `sp/*.json`) et toujours signalée « Traduit en français faute de données officielles ». Les textes officiels FR priment.
+- **Textes Pokédex** : les textes officiels français (PokéAPI ou Poképédia, v57 / v60.22) priment. Une traduction automatique (Argos Translate, signalée « Traduit en français faute de données officielles ») n’apparaît qu’en dernier recours.
 
 ## Noms (FR / EN / JA / romaji)
 En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom japonais · romaji. Les noms d'espèces viennent de PokéAPI (`ja-Hrkt`/`ja`, `ja-roma`). Formes : nom anglais = nom de forme PokéAPI (« Alolan Raichu »), sinon « Espèce (libellé de forme) » ; japonais = nom de forme PokéAPI s'il contient le nom de l'espèce (メガフシギバナ), « région + espèce » pour Alola/Galar/Hisui/Paldea (アローラライチュウ), sinon « espèce（libellé japonais de la forme） » ; les formes sans libellé japonais dans PokéAPI (femelles, Charmilly, Pichu Troizépi, Amphinobi Synergie) affichent le nom de l'espèce. Romaji des morceaux de forme : translittération Hepburn automatique (`build/names.mjs`) accolée au romaji PokéAPI de l'espèce. La recherche couvre FR, EN, japonais (hiragana ou katakana) et romaji, sans accents ni casse.
@@ -165,6 +168,76 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Hors-ligne** : `packDone2` contient la DATA_VERSION téléchargée (le service worker la renvoie avec sa version) ; après un changement de DATA_VERSION, le bouton de téléchargement revient.
 - **Lieux** : sans lieu Poképédia pour un jeu récent, la fiche affiche « Faire évoluer … », « Méga-Évolution de … » ou « Lieu non renseigné pour ce jeu ».
 
+## Journal des versions (v35–v60.37)
+
+Les versions v21 à v34 sont détaillées ci-dessus. Ce journal les prolonge jusqu’à la v60.37, **une ligne par version**, en regroupant seulement les petites mises à jour GO successives. Rien n’est inventé : chaque ligne s’appuie sur `docs/notes.json`, les NOTES de `docs/sw.js` ou un message de commit. Les dates sont celles des notes de version, ou la date du commit de publication.
+
+L’historique git de ce dépôt commence à la v46 (`981e83c`) : les **v35–v45** n’ont pas de commit conservé ici et s’appuient uniquement sur `notes.json`. Les **v60.8–v60.15** n’ont pas d’entrée dans `notes.json` ; le résumé vient des NOTES de `sw.js` et des commits. Un commit intitulé « v60.13 » (correctif du script de planning des boss, `6296364`) n’a pas créé de `VERSION` d’appli (`sw.js` est resté en v60.12).
+
+### v35–v45 (octobre 2026)
+
+- **v35** (14/10) — Nom officiel de la forme par défaut (ex. Nigirigon Forme Courbée) ; images HOME et animées propres à chaque forme, disponibles hors-ligne.
+- **v36** (14/10) — Théffroi et Polthégeist : Forme Contrefaçon et Forme Authentique ; noms de Salarsen Gigamax et d’Éthernatos Infinimax corrigés.
+- **v37** (16/10) — Cocher un Gigamax coche aussi la forme de base ; fiches Méga et Gigamax avec leurs propres boutons.
+- **v38** (16/10) — Icônes officielles Gigamax et Dynamax ; bouton Dynamax sur les fiches GO ; icônes d’Énergie Primo.
+- **v39** (16/10) — Disponibilités GO corrigées ; noms officiels des Méga-Gemmes, des Orbes et de formes ; correctifs de dex (dont RF/VF Switch).
+- **v40** (16/10) — Les Ultra-Chimères n’apparaissent plus dans les jeux où elles n’existent pas ; tris par Att. Spé. et Déf. Spé.
+- **v41** (16/10) — Bouton « Cocher toutes les formes » ; images des formes dans le pack hors-ligne.
+- **v42** (16/10) — Lieux de capture des jeux GBA et DS, de Rubis / Saphir à Noire 2 / Blanche 2.
+- **v43** (17/10) — Ordre des blocs d’une fiche adapté à chaque vue (jeu, GO, HOME, vue d’ensemble).
+- **v44** (17/10) — Poké Ball dorée réservée aux jeux actuels (badge 🕹 pour les anciens jeux complets) ; une seule fiche pour Salarsen Gigamax et Méga-Mistigrix ; femelles distinctes seulement par l’apparence regroupées.
+- **v45** (17/10) — Boutons pour aller en haut ou en bas de la liste ; menu ☰ (hors-ligne, export / import, légende, version).
+
+### v46–v59 (octobre 2026)
+
+- **v46** (18/10) — Rubrique « Notes de version » dans le menu ☰ ; proposition de les lire après une mise à jour ; bouton pour signaler un bug.
+- **v47** (18/10) — Fiches HOME : blocs « Dex national HOME » et « Shiny » ; données GO mises à jour.
+- **v48** (19/10) — Les quatre masques d’Ogerpon sont liés dans Écarlate / Violet et leurs extensions.
+- **v49** (20/10) — Mode Collection : journal des Pokémon que vous possédez.
+- **v50** (20/10) — Mode Pocket : cartodex de Pokémon TCG Pocket.
+- **v51** (20/10) — Extensions Pocket manquantes ajoutées (Booster de Luxe ex, Méga-Rayonnement, etc.).
+- **v52** (24/10) — Chaque carte Pocket indique ses boosters, avec un filtre par booster.
+- **v53** (25/10) — Collection : champs facultatifs Ball, niveau, lieu et date de capture.
+- **v54** (25/10) — Pokémon que l’on n’obtient que par échange : filtre, mention sur la fiche.
+- **v55** (25/10) — Fiche GO : l’échange est intégré au bloc Disponibilité ; moveset recommandé en raids et arènes.
+- **v56** (26/10) — Blocs « Évolutions » puis « Où le trouver » placés juste après Formes.
+- **v57** (26/10) — 373 textes officiels du Pokédex ; coupes de Couafarel (zones GO, toiletteurs des jeux).
+- **v58** (28/10) — Movesets recommandés en raid et Combats Max sur la fiche GO.
+- **v59** (28/10) — Écran « Classements » dans le menu ☰ (PvP, raids, Combats Max).
+
+### v60–v60.37 (29 octobre – 25 novembre 2026)
+
+- **v60** (29/10) — Onglet Team GO Rocket dans les classements ; encadré PC à la capture en raid.
+- **v60.1** (29/10) — Dans les classements, les boss en cours et à venir sont mis en avant ; calendrier des boss.
+- **v60.2** (29/10) — Méga-Lugulabre, Boréas obscur et Regidrago ajoutés aux classements.
+- **v60.3** (29/10) — Pocket : Série C (Fusion Double, Promo-C) et booster Premiers Partenaires.
+- **v60.4–v60.7** (30/10–2/11) — Classements raids et Combats Max enrichis : équipes conseillées, listes repliées, boss Dynamax 3★ et 4★, Combats Max sur la fiche, Méga-Lugulabre sorti dans GO.
+- **v60.8–v60.15** (5–23/11) — Classements et planning GO : Dialga et Palkia Dynamax, Zacian Épée Suprême et Zamazenta Bouclier Suprême, Méga-Mélodelfe (Super Méga-Raid), Météno Noyau Vert et Jaune, Colimucus et Muplodocus de Hisui, Duralugon Gigamax, 25 000 PV confirmés pour les Super Méga-Raids, comptes officiels de cartes Pocket. (Le commit v60.13 n’a pas publié de nouvelle VERSION d’appli.)
+- **v60.16** (23/11) — Costumes de Pokémon GO sur les fiches, avec un compteur à part.
+- **v60.17** (23/11) — Noms officiels français des 33 attaques G-Max, sur les fiches et dans les classements Combats Max.
+- **v60.18** (24/11) — Chromatique de Salarsen Gigamax dans Pokémon GO.
+- **v60.19** (24/11) — Formes Obscur et Purifié de Pokémon GO, avec un compteur à part.
+- **v60.20** (24/11) — Duralugon Gigamax rejoint les classements Combats Max comme attaquant.
+- **v60.21** (24/11) — Faiblesses selon le talent (un tableau par talent), y compris l’absence de talents dans Let’s Go et Z-A.
+- **v60.22** (24/11) — Lieux et méthodes d’obtention Poképédia des anciens jeux (gén. I–VII, Hors dex, RF/VF Switch) ; textes officiels N2B2.
+- **v60.23** (24/11) — Où obtenir la Méga-Gemme, la Gemme Bleue ou la Gemme Rouge de chaque Méga / Primo, jeu par jeu.
+- **v60.24** (24/11) — Raids Dynamax d’Épée / Bouclier : vrais antres (zone, lettre, faisceau), Isolarmure, Couronneige, Expédition Dynamax.
+- **v60.25** (24/11) — Formes GO reliées à PvPoke (formes régionales et spéciales avec leur propre rang).
+- **v60.26** (24/11) — Historique des œufs GO par saison (« déjà sorti en œuf », saison et distance).
+- **v60.27** (24/11) — Raids Téracristal d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo).
+- **v60.28** (24/11) — Marque † des attaques exclusives rétablie dans les classements raids et Combats Max.
+- **v60.29** (24/11) — Précision des formes (Méga du DLC Z-A, formes régionales, Gigamax) et textes officiels des Méga / Primo.
+- **v60.30** (24/11) — Filtre « Dispo en raid » et vue Raids (Dynamax ÉB, Téracristal ÉV), par étoiles et par lieu.
+- **v60.31** (24/11) — Raids Téracristal 7★ événementiels d’Écarlate / Violet (fiche, vue Raids, filtre).
+- **v60.32** (25/11) — Meilleurs attaquants des raids Téracristal 7★ et 6★ (attaque directe ou avec accumulation).
+- **v60.33** (25/11) — Meilleurs attaquants des raids Téracristal 5★, Dynamax 5★ et Aventure Dynamax.
+- **v60.34** (25/11) — Illustrations HOME par défaut, y compris shiny HOME ; sprite officiel en secours.
+- **v60.35** (25/11) — Téléchargement optionnel des illustrations shiny HOME hors-ligne (~16,4 Mo), jamais automatique.
+- **v60.36** (25/11) — Sprites animés vérifiés ; si le GIF manque, secours HOME puis sprite officiel ; jamais dans le pack auto.
+- **v60.37** (25/11) — Filtres « Capacité… » et « Talent… » sur la liste, autocomplétion française, jeu et méthode ; index dans le pack hors-ligne (d77).
+
+Les versions v60.22 à v60.37 conservent ci-dessous leur notice détaillée, dans l’ordre chronologique.
+
 ## v60.22 : lieux et textes des anciens jeux
 - **Où le trouver (Gén. I à VII, RF/VF Switch)** : `build/fix-v60-22.mjs` (lancé par `apply-v34.mjs`, idempotent) complète les fiches de jeu qui n’avaient ni rencontre PokéAPI ni donnée Poképédia : lieux des modules Poképédia `Module:Localisations/Données/Pokémon <jeu>` (niveau, taux, version, renforts SOS, précisions), sinon méthode de la sous-page `/Indisponibles` (« Faire évoluer … », « Échange », « À transférer par la Banque Pokémon », Poké Fret, Bloc Temporel, Pokéwalker…). Jeux ajoutés : Rouge / Bleu, Jaune, Or / Argent, Cristal, X / Y, ROSA, Soleil / Lune, USUL ; Pokémon « Hors dex » de tous ces jeux et des jeux GBA / DS (que `fix-v42.mjs` ne couvrait pas). RF/VF Switch reprend les lignes RF/VF sans ce qui demande une GBA (échanges avec Rubis / Saphir / Émeraude, Colosseum, événements). Les rencontres PokéAPI existantes priment ; les glitchs (« Bug du Croupier ») sont exclus. Cache des modules : `build/cache/v42/` (versionné, téléchargé une seule fois).
 - **Formes** : libellé Poképédia « forme(…) » relié au libellé de la forme dans l’app (Alola, Motif Bleu…), sinon ignoré ; une forme sans ligne propre n’hérite pas des lieux d’une autre forme. Méga-Évolutions / changements de forme : « Méga-Évolution de … » au lieu de la méthode de la forme de base. `app.js` : la méthode d’obtention (`pln`) se cherche par jeu (forme, puis forme de base).
@@ -203,7 +276,6 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Jeux** : Paldea → Écarlate / Violet, Septentria → Masque Turquoise, Terra-Dôme (Institut Myrtille) → Disque Indigo. `app.js` (`teraRaidHTML`) : sous-bloc « Raids Téracristal » de « Où le trouver », même repli que v60.24 (raids d’une extension hors Pokédex affichés avec le nom de l’extension). Note de rareté selon l’histoire (Paldea, page « Raid Téracristal ») et crédit Poképédia (CC BY-NC-SA 3.0 FR).
 - **Audit** : contrôles `v60.27` dans `build/audit.mjs` (plus de « Cristal de raid N étoiles » dans `pl`, événements conservés, 18 cristaux = module, comptes Paldea / Septentria / Terra-Dôme, Pikachu, Chartor, Bekipan, Chapignon, Tauros de Paldea, Grotadmorv d’Alola, Muciole, Ogerpon (Antre Interdit en lieu habituel, pas dans les raids), pas de 7★ dans `rd`, talent caché seulement si la fiche en a un).
 
-
 ## v60.28 : marque † des attaques exclusives dans les classements raids et Max
 - **Cause** : depuis la v60.2 (`8578148`), `build/rank-raids.mjs` et `build/rank-max.mjs` réécrivent `docs/data/rank-raid.json` et `rank-max.json` sans le champ `E` (et sans appeler `build/rank-elite.mjs`). Les mises à jour suivantes des classements (jusqu’à la v60.20) ont fait de même. La routine « Planning des boss » (`build/fetch-boss-schedule.mjs`, lundi et jeudi) lit ces fichiers mais ne les réécrit pas. En v60.25, `E` a été remis sur `rank-pvp.json` seulement.
 - **Correctif** : `build/rank-elite.mjs` pose uniquement le champ `E` (attaques `fe` + `ce` des fiches GO). L’ordre des classements et les scores ne changent pas.
@@ -217,13 +289,11 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Hors lot** : Melmetal Gigamax (av encore vide : événement particulier, non tranché) ; pas de textes GO.
 - **Audit** : contrôles `v60.29` dans `build/audit.mjs` (VERSION / DATA_VERSION, Méga DLC hors Z-A de base, textes Z-A distincts de la forme de base, Raichu d’Alola à Illumis, Tauros de Paldea, NOTES ≤ 160 caractères).
 
-
 ## v60.30 : filtre « Dispo en raid » et vue Raids
 - **Filtre** : catégorie « Dispo en raid » dans la liste, au style des filtres existants. Elle s’appuie sur le jeu sélectionné lorsqu’il s’agit d’Épée / Bouclier, Isolarmure, Couronneige, Écarlate / Violet, Masque Turquoise ou Disque Indigo ; sans jeu, elle couvre les six. Des puces d’étoiles (1–5★, 6★ pour ÉV, « Expédition » à Couronneige) permettent d’affiner. Les formes réellement rencontrées en raid (régionales, Gigamax) sont affichées même si le bouton Formes est éteint. Le filtre est grisé dans les autres jeux.
 - **Vue** : entrée de menu « Raids Dynamax et Téracristal » (`#/raids` / `#/raids/<jeu>`), plutôt qu’un quatrième onglet (le bandeau Dex / Collection / Pocket resterait trop serré à 390 px, et cette vue est un catalogue comme les classements GO). Boss classés par jeu, puis par étoiles et par lieu ou antre ; chaque ligne ouvre la fiche sur le bon jeu. L’Expédition Dynamax a sa section à Couronneige. Les raids événementiels restent visibles, en grisé. Les taux et IV restent sur la fiche. L’Antre Interdit d’Ogerpon n’y figure pas ; les raids 7★ d’événement restent hors périmètre.
 - **Données** : `build/fix-v60-30.mjs` (lancé par `apply-v34.mjs`, idempotent) construit `docs/data/raids.json` (index compact, ~200 Ko) à partir de `f.rd` (v60.24 / v60.27), sans nouvel appel réseau. Le fichier est inclus dans le pack hors-ligne. `DATA_VERSION` passe à `d72`.
 - **Audit** : contrôles `v60.30` dans `build/audit.mjs` (VERSION / DATA_VERSION, cohérence de l’index avec `f.rd`, Ogerpon absent, Pikachu / Tygnon / Mewtwo / Mackogneur Gigamax, filtre et vue dans l’appli, pack, NOTES ≤ 160 caractères).
-
 
 ## v60.31 : raids 7★ événementiels d’Écarlate / Violet
 - **Données** : `build/update-tera7.mjs` (et `build/fix-v60-31.mjs`, lancé par `apply-v34.mjs`, idempotent, mode cache uniquement) construit `docs/data/tera7.json` : tous les raids Téracristal 7★ depuis décembre 2022, rediffusions fusionnées par espèce, forme et type Téra. Le script ajoute les nouvelles fenêtres et les nouveaux boss, sans jamais effacer l’historique. Pages sources mises en cache dans `build/cache/v60-31/`. `DATA_VERSION` passe à `d73` ; le fichier est inclus dans le pack hors-ligne.
@@ -232,29 +302,13 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Sources** : Poképédia (CC BY-NC-SA 3.0 FR) en priorité pour les noms français (pages Raid Téracristal et Cristal de raid événementiel N), puis Serebii (Mighty / Unrivaled) et Bulbapedia (table 7★) pour le talent, la nature et le recoupement des dates.
 - **Audit** : contrôles `v60.31` dans `build/audit.mjs` (VERSION / DATA_VERSION, 53 raids, Lanssorien en cours, formes Hisui, exclusivités de version, puce 7★, pack, NOTES ≤ 160 caractères).
 
-## v60.37 : recherche par capacité et par talent
-- **Liste** : deux filtres s’ajoutent sous les types, sans remplacer la recherche par nom ou numéro ni les filtres déjà là (jeu, génération, catégorie, types). « Capacité… » propose une autocomplétion des noms français (accents ignorés) et ne retient que les Pokémon qui apprennent cette capacité. Une fois le choix fait, des puces permettent de restreindre la méthode : niveau, CT, œuf / élevage ou tuteur. « Talent… » filtre de la même façon sur le talent actuel, ou sur le talent en vigueur dans le jeu sélectionné.
-- **Jeu** : si vous choisissez un jeu qui a un jeuxet (tous sauf Z-A et son DLC), le filtre de capacité ne garde que les apprentissages de ce jeu. Z-A, HOME et GO n’ont pas ces listes ici : le filtre porte alors sur les autres jeux, avec une mention. Les talents suivent les règles déjà en vigueur sur la fiche (absents avant la génération III, ainsi que dans Let’s Go, Légendes Arceus et Z-A).
-- **Données** : un index compact `docs/data/learn-index.json` (~1,94 Mo, ~372 Ko compressé) est généré de façon idempotente par `build/fix-v60-37.mjs` à partir des fiches `sp/` déjà livrées, et ajouté au pack hors-ligne. Il n’est chargé qu’à la première utilisation d’un de ces filtres. `DATA_VERSION` passe à `d77` : retéléchargez le pack hors-ligne pour l’avoir. La recherche par lieu est reportée (deux formats de lieux, pas d’index inversé).
-- **Audit** : contrôles `v60.37` dans `build/audit.mjs` (Séisme, Lévitation d’Ectoplasma selon le jeu, autocomplétion, pack, NOTES ≤ 160 caractères).
-
-## v60.36 : sprites animés, vérifications et secours HOME
-- **Déjà en place** : aucun drapeau d’aperçu. Les boutons HOME / Officiel / Animé sont proposés sur chaque fiche depuis la v35 ; le rendu HOME est le défaut depuis la v35 / v60.34. L’animé (GIF Showdown du dépôt PokéAPI) n’est chargé qu’au toucher, jamais dans le service worker ni dans les packs hors-ligne.
-- **Vérifications** : 1 363 / 1 501 entrées ont un identifiant `as` (57 / 96 Méga, toutes les Gigamax et Primo, 99 / 100 femelles distinctes). Les 138 manques (Méga Z-A, paradoxes de fer, Miraidon, Ogerpon, Terapagos, Pêchaminus, la plupart des Charmilly, etc.) n’ont toujours pas de fichier dans le dépôt PokéAPI/sprites (liste identique à `build/sprite-files.json`). 2 920 URL (normal + shiny) ont été interrogées : 0 fichier introuvable, environ 307 Mo au total. Détail : `build/cache/v60-36/etat-des-lieux.md`.
-- **Secours** : si l’animé manque, est hors-ligne ou échoue, l’appli affiche le rendu HOME, puis le sprite officiel. Le pack automatique (~17 Mo) n’est pas alourdi. `DATA_VERSION` reste `d76`. `build/fix-v60-36.mjs`, lancé par `apply-v34.mjs`, est idempotent.
-- **Audit** : contrôles `v60.36` dans `build/audit.mjs`.
-
-## v60.35 : cache optionnel des illustrations shiny HOME
-- **Pack hors-ligne** : un bouton optionnel, à côté des packs existants, télécharge les rendus shiny HOME auto-hébergés (`docs/img/hs/`, 1 584 fichiers, ~16,4 Mo). Il affiche la taille, la progression, puis « déjà téléchargées » une fois le pack complet, et permet de le supprimer. Il n’est jamais lancé automatiquement (contrairement au pack images ~17 Mo, qui peut se lancer tout seul hors connexion mesurée).
-- **Cache** : les shiny déjà ouverts (enregistrés à la demande dans `pokedex-img`) sont réutilisés, sans second téléchargement. Le pack automatique des images (~17 Mo) reste inchangé et ne contient pas les shiny. `DATA_VERSION` reste `d76`.
-- **Limite** : sur iPhone, iOS peut limiter ou effacer le cache du service worker si le stockage est insuffisant ; le pack peut alors être retéléchargé.
-- **Audit** : contrôles `v60.35` dans `build/audit.mjs`. `build/fix-v60-35.mjs`, lancé par `apply-v34.mjs`, est idempotent.
-
-## v60.34 : illustrations HOME par défaut
-- **Style** : le rendu HOME (3D, auto-hébergé dans `docs/img/h/`) est l’illustration par défaut de tous les portraits : liste, fiche (y compris l’écran de chargement), puces de formes, évolutions, Collection, classements, raids et GO. Le bouton Shiny d’une fiche et les exemplaires shiny de la Collection utilisent le rendu HOME shiny (`docs/img/hs/`) lorsqu’il existe. Le sprite officiel (`docs/img/` ou `docs/img/s/`) s’affiche automatiquement si un rendu manque ou si le chargement échoue.
-- **Écarts** : 10 formes n’ont pas de rendu HOME (Mewtwo Armuré, Pichu Troizépi, Formes Authentiques de Théffroi et Polthégeist, formes de combat de Koraidon et Miraidon, Forme Onéreuse / Exceptionnelle de Poltchageist et Théffroyable). Sept casquettes de Pikachu n’ont pas de shiny HOME côté PokéAPI.
-- **Pack et perf.** : le bouton « images » (~17 Mo) télécharge les rendus HOME (et le sprite officiel des 10 formes sans HOME), y compris les femelles distinctes. Les shiny, HOME ou officiels, restent en cache seulement à l’ouverture. `loading="lazy"` partout sauf l’illustration de la fiche. Les scans de cartes Pocket sont inchangés. `DATA_VERSION` reste `d76`. Inventaire : `build/cache/v60-34/illustrations.md`. Script : `build/fetch-home-shiny.mjs`. `build/fix-v60-34.mjs`, lancé par `apply-v34.mjs`, est idempotent.
-- **Audit** : contrôles `v60.34` dans `build/audit.mjs`.
+## v60.32 : meilleurs attaquants des raids Téracristal 7★ et 6★
+- **Données** : `build/rank-sv-raids.mjs` construit `docs/data/rank-sv-raid.json` (inclus dans le pack hors-ligne). `DATA_VERSION` passe à `d75` (schéma à deux listes). Le script est relançable : `node build/rank-sv-raids.mjs` recalcule 7★ et 6★ ; `node build/rank-sv-raids.mjs --7star` ne recalcule que les 7★ (conserve les 6★). `build/update-tera7.mjs` relance le classement 7★ après une mise à jour des événements. `build/fix-v60-32.mjs`, lancé par `apply-v34.mjs`, est idempotent.
+- **Méthode** : attaquant de niveau 100, IV 31, 252 EV PV et 252 EV offensifs, nature favorable, meilleur talent offensif, objet Restes. Il charge l’Orbe Téra en trois attaques, puis téracristallise dans le type de sa meilleure capacité apprenable dans Écarlate / Violet. Deux classements par boss : « Attaque directe » et « Avec une accumulation » (une capacité de boost, après l’annulation de stats prévue au script du boss, et seulement si le bouclier est baissé). Inconscient chez le boss ignore les boosts de l’attaquant. Score : dégâts infligés au carré, divisés par les dégâts encaissés. Chrono de 7 min 30 (15 min pour Mewtwo). Pénalité de K.O. retenue : 100 secondes (égale au niveau ; les wikis japonais indiquent 60 s — incertitude notée). Bouclier Téra et script du boss : données Serebii pour les 7★ lorsqu’elles existent, sinon un script générique documenté ; 6★ selon Paldea / Septentria / Terra-Dôme (atwiki / Bulbapedia) avec une annulation typique. Un plancher de dégâts encaissés évite les artefacts d’immunité. Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut (option pour les afficher).
+- **Nom 7★** : « [Pokémon] redoutable », doté de l’Insigne Surpuissant (et non le titre « le Surpuissant »).
+- **Affichage** : bloc « Meilleurs attaquants » dans la vue Raids (sélecteur de boss, type Téra du boss s’il est aléatoire, deux onglets) et sur la fiche (blocs raids 7★ et 6★) : top 12, capacité, Téra, lien vers la fiche, ligne de méthode.
+- **Suite** : les classements des raids 5★ d’Écarlate / Violet, des raids Dynamax 5★ d’Épée / Bouclier et d’Aventure Dynamax ont été ajoutés en v60.33. Les 1–4★ n’ont pas de classement dédié.
+- **Audit** : contrôles `v60.32` dans `build/audit.mjs`.
 
 ## v60.33 : meilleurs attaquants des raids Téracristal 5★, Dynamax 5★ et Aventure Dynamax
 - **Données** : `build/rank-sv-raids.mjs --5star` ajoute les raids Téracristal 5★ dans `docs/data/rank-sv-raid.json` (fusion sans effacer les 7★ et 6★). `build/rank-sw-raids.mjs` ajoute les raids Dynamax 5★ et les légendaires d’Aventure Dynamax dans le même pack. `DATA_VERSION` passe à `d76`. `build/fix-v60-33.mjs`, lancé par `apply-v34.mjs`, est idempotent. Notes de méthode : `build/cache/v60-33/mecaniques-dynamax.md`.
@@ -263,16 +317,38 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Affichage** : le bloc « Meilleurs attaquants » de la vue Raids gagne les optgroups 5★ (ÉV) et Dynamax 5★ / Aventure (ÉB). Sur la fiche : blocs 5★ Téracristal, Dynamax 5★ et Aventure Dynamax.
 - **Audit** : contrôles `v60.33` dans `build/audit.mjs`.
 
-## v60.32 : meilleurs attaquants des raids Téracristal 7★ et 6★
-- **Données** : `build/rank-sv-raids.mjs` construit `docs/data/rank-sv-raid.json` (inclus dans le pack hors-ligne). `DATA_VERSION` passe à `d75` (schéma à deux listes). Le script est relançable : `node build/rank-sv-raids.mjs` recalcule 7★ et 6★ ; `node build/rank-sv-raids.mjs --7star` ne recalcule que les 7★ (conserve les 6★). `build/update-tera7.mjs` relance le classement 7★ après une mise à jour des événements. `build/fix-v60-32.mjs`, lancé par `apply-v34.mjs`, est idempotent.
-- **Méthode** : attaquant de niveau 100, IV 31, 252 EV PV et 252 EV offensifs, nature favorable, meilleur talent offensif, objet Restes. Il charge l’Orbe Téra en trois attaques, puis téracristallise dans le type de sa meilleure capacité apprenable dans Écarlate / Violet. Deux classements par boss : « Attaque directe » et « Avec une accumulation » (une capacité de boost, après l’annulation de stats prévue au script du boss, et seulement si le bouclier est baissé). Inconscient chez le boss ignore les boosts de l’attaquant. Score : dégâts infligés au carré, divisés par les dégâts encaissés. Chrono de 7 min 30 (15 min pour Mewtwo). Pénalité de K.O. retenue : 100 secondes (égale au niveau ; les wikis japonais indiquent 60 s — incertitude notée). Bouclier Téra et script du boss : données Serebii pour les 7★ lorsqu’elles existent, sinon un script générique documenté ; 6★ selon Paldea / Septentria / Terra-Dôme (atwiki / Bulbapedia) avec une annulation typique. Un plancher de dégâts encaissés évite les artefacts d’immunité. Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut (option pour les afficher).
-- **Nom 7★** : « [Pokémon] redoutable », doté de l’Insigne Surpuissant (et non le titre « le Surpuissant »).
-- **Affichage** : bloc « Meilleurs attaquants » dans la vue Raids (sélecteur de boss, type Téra du boss s’il est aléatoire, deux onglets) et sur la fiche (blocs raids 7★ et 6★) : top 12, capacité, Téra, lien vers la fiche, ligne de méthode.
-- **Reste à venir** : raids 5★ d’Écarlate / Violet, raids 5★ d’Épée / Bouclier (Isolarmure, Couronneige) et Aventure Dynamax. Les 1–4★ n’ont pas de classement dédié.
-- **Audit** : contrôles `v60.32` dans `build/audit.mjs`.
+## v60.34 : illustrations HOME par défaut
+- **Style** : le rendu HOME (3D, auto-hébergé dans `docs/img/h/`) est l’illustration par défaut de tous les portraits : liste, fiche (y compris l’écran de chargement), puces de formes, évolutions, Collection, classements, raids et GO. Le bouton Shiny d’une fiche et les exemplaires shiny de la Collection utilisent le rendu HOME shiny (`docs/img/hs/`) lorsqu’il existe. Le sprite officiel (`docs/img/` ou `docs/img/s/`) s’affiche automatiquement si un rendu manque ou si le chargement échoue.
+- **Écarts** : 10 formes n’ont pas de rendu HOME (Mewtwo Armuré, Pichu Troizépi, Formes Authentiques de Théffroi et Polthégeist, formes de combat de Koraidon et Miraidon, Forme Onéreuse / Exceptionnelle de Poltchageist et Théffroyable). Sept casquettes de Pikachu n’ont pas de shiny HOME côté PokéAPI.
+- **Pack et perf.** : le bouton « images » (~17 Mo) télécharge les rendus HOME (et le sprite officiel des 10 formes sans HOME), y compris les femelles distinctes. Les shiny, HOME ou officiels, restent en cache seulement à l’ouverture. `loading="lazy"` partout sauf l’illustration de la fiche. Les scans de cartes Pocket sont inchangés. `DATA_VERSION` reste `d76`. Inventaire : `build/cache/v60-34/illustrations.md`. Script : `build/fetch-home-shiny.mjs`. `build/fix-v60-34.mjs`, lancé par `apply-v34.mjs`, est idempotent.
+- **Audit** : contrôles `v60.34` dans `build/audit.mjs`.
+
+## v60.35 : cache optionnel des illustrations shiny HOME
+- **Pack hors-ligne** : un bouton optionnel, à côté des packs existants, télécharge les rendus shiny HOME auto-hébergés (`docs/img/hs/`, 1 584 fichiers, ~16,4 Mo). Il affiche la taille, la progression, puis « déjà téléchargées » une fois le pack complet, et permet de le supprimer. Il n’est jamais lancé automatiquement (contrairement au pack images ~17 Mo, qui peut se lancer tout seul hors connexion mesurée).
+- **Cache** : les shiny déjà ouverts (enregistrés à la demande dans `pokedex-img`) sont réutilisés, sans second téléchargement. Le pack automatique des images (~17 Mo) reste inchangé et ne contient pas les shiny. `DATA_VERSION` reste `d76`.
+- **Limite** : sur iPhone, iOS peut limiter ou effacer le cache du service worker si le stockage est insuffisant ; le pack peut alors être retéléchargé.
+- **Audit** : contrôles `v60.35` dans `build/audit.mjs`. `build/fix-v60-35.mjs`, lancé par `apply-v34.mjs`, est idempotent.
+
+## v60.36 : sprites animés, vérifications et secours HOME
+- **Déjà en place** : aucun drapeau d’aperçu. Les boutons HOME / Officiel / Animé sont proposés sur chaque fiche depuis la v35 ; le rendu HOME est le défaut depuis la v35 / v60.34. L’animé (GIF Showdown du dépôt PokéAPI) n’est chargé qu’au toucher, jamais dans le service worker ni dans les packs hors-ligne.
+- **Vérifications** : 1 363 / 1 501 entrées ont un identifiant `as` (57 / 96 Méga, toutes les Gigamax et Primo, 99 / 100 femelles distinctes). Les 138 manques (Méga Z-A, paradoxes de fer, Miraidon, Ogerpon, Terapagos, Pêchaminus, la plupart des Charmilly, etc.) n’ont toujours pas de fichier dans le dépôt PokéAPI/sprites (liste identique à `build/sprite-files.json`). 2 920 URL (normal + shiny) ont été interrogées : 0 fichier introuvable, environ 307 Mo au total. Détail : `build/cache/v60-36/etat-des-lieux.md`.
+- **Secours** : si l’animé manque, est hors-ligne ou échoue, l’appli affiche le rendu HOME, puis le sprite officiel. Le pack automatique (~17 Mo) n’est pas alourdi. `DATA_VERSION` reste `d76`. `build/fix-v60-36.mjs`, lancé par `apply-v34.mjs`, est idempotent.
+- **Audit** : contrôles `v60.36` dans `build/audit.mjs`.
+
+## v60.37 : recherche par capacité et par talent
+- **Liste** : deux filtres s’ajoutent sous les types, sans remplacer la recherche par nom ou numéro ni les filtres déjà là (jeu, génération, catégorie, types). « Capacité… » propose une autocomplétion des noms français (accents ignorés) et ne retient que les Pokémon qui apprennent cette capacité. Une fois le choix fait, des puces permettent de restreindre la méthode : niveau, CT, œuf / élevage ou tuteur. « Talent… » filtre de la même façon sur le talent actuel, ou sur le talent en vigueur dans le jeu sélectionné.
+- **Jeu** : si vous choisissez un jeu qui a un jeuxet (tous sauf Z-A et son DLC), le filtre de capacité ne garde que les apprentissages de ce jeu. Z-A, HOME et GO n’ont pas ces listes ici : le filtre porte alors sur les autres jeux, avec une mention. Les talents suivent les règles déjà en vigueur sur la fiche (absents avant la génération III, ainsi que dans Let’s Go, Légendes Arceus et Z-A).
+- **Données** : un index compact `docs/data/learn-index.json` (~1,94 Mo, ~372 Ko compressé) est généré de façon idempotente par `build/fix-v60-37.mjs` à partir des fiches `sp/` déjà livrées, et ajouté au pack hors-ligne. Il n’est chargé qu’à la première utilisation d’un de ces filtres. `DATA_VERSION` passe à `d77` : retéléchargez le pack hors-ligne pour l’avoir. La recherche par lieu est reportée (deux formats de lieux, pas d’index inversé).
+- **Audit** : contrôles `v60.37` dans `build/audit.mjs` (Séisme, Lévitation d’Ectoplasma selon le jeu, autocomplétion, pack, NOTES ≤ 160 caractères).
+
+## v60.38 : journal des versions dans le README
+- **Changelog** : le journal public, qui s’arrêtait vers la v34, est complété jusqu’à la v60.37 (une ligne par version, dates comprises, petites v60.x regroupées quand c’est plus lisible). Sources : `docs/notes.json`, NOTES de `docs/sw.js`, messages de commit. `DATA_VERSION` reste `d77`.
+- **Applis** : le menu ☰ proposait déjà « Notes de version » depuis la v46 (liste tirée de `notes.json`, aussi proposée après une mise à jour). Aucun second historique n’a été ajouté.
+- **Corrections du README** : fonctions (recherche par capacité et talent, Collection, Pocket, packs hors-ligne, 28 jeux), table des données (1 501 entrées, `core.json` ~370 Ko, `learn-index.json` et fichiers de raids / classements / Pocket), lieux et textes officiels, tailles actuelles de `docs/`, mention de la recherche par lieu encore absente.
+- **Audit** : contrôles `v60.38` dans `build/audit.mjs`. `build/fix-v60-38.mjs`, lancé par `apply-v34.mjs`, est idempotent.
 
 ## Limites connues
-Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16,4 Mo, officielles ≈ 20 Mo) peuvent être téléchargées en option dans le menu Hors-ligne (v60.35) ; sinon elles ne sont mises en cache que lorsqu'on les ouvre. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant. Sprites animés (GIF Showdown, dépôt PokéAPI) : chargés seulement au toucher, exclus des packs hors-ligne (environ 307 Mo au total) ; 138 formes n’en ont pas, avec un secours HOME puis sprite officiel (v60.36).
+Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16,4 Mo, officielles ≈ 20 Mo) peuvent être téléchargées en option dans le menu Hors-ligne (v60.35) ; sinon elles ne sont mises en cache que lorsqu'on les ouvre. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant. Sprites animés (GIF Showdown, dépôt PokéAPI) : chargés seulement au toucher, exclus des packs hors-ligne (environ 307 Mo au total) ; 138 formes n’en ont pas, avec un secours HOME puis sprite officiel (v60.36). Recherche par capacité et par talent sur la liste (v60.37, index `learn-index.json` ~1,94 Mo dans le pack hors-ligne, `DATA_VERSION` d77) ; la recherche par lieu n’est pas encore proposée.
 
 ## Taille
-`docs/` ≈ 107 Mo (images ≈ 73 Mo dont shiny officiels ≈ 20 Mo et shiny HOME ≈ 16 Mo à la demande ; données ≈ 18 Mo).
+`docs/` ≈ 104 Mo (images ≈ 70 Mo dont sprites officiels ≈ 19 Mo, shiny officiels ≈ 19 Mo, rendus HOME ≈ 16 Mo et shiny HOME ≈ 16 Mo à la demande ; données ≈ 19 Mo dont l’index des capacités ~1,94 Mo ; cris ≈ 14 Mo).

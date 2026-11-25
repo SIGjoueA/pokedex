@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.38",
+  "d": "2026-11-25",
+  "l": [
+   "Le README publie désormais un journal des versions, de la v35 à la v60.37 : une ligne par version, avec la date, d’après les notes de version et les commits. Les petites mises à jour de classements et de planning GO (v60.8 à v60.15) sont regroupées.",
+   "Le menu ☰ proposait déjà « Notes de version » depuis la v46 (liste tirée de notes.json, aussi proposée après une mise à jour). Aucun second historique n’a été ajouté dans l’appli.",
+   "Le reste du README a été recalé sur l’état actuel : filtres par capacité et talent, 1 501 entrées, 28 jeux, tailles des dossiers et des packs, fichiers de données récents, lieux et textes officiels. DATA_VERSION inchangée (d77)."
+  ]
+ },
+ {
   "v": "v60.37",
   "d": "2026-11-25",
   "l": [

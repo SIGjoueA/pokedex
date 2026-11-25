@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v60.37';
+const VERSION = 'v60.38';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Recherche : filtre « apprend la capacité… » (autocomplétion FR, jeu et méthode) et filtre par talent. Dans le pack hors-ligne (~2 Mo).';
+const NOTES = 'Changelog du README : journal des versions v35–v60.37 (une ligne par version, d’après les notes et les commits). DATA_VERSION inchangée (d77).';
 const DATA_VERSION = 'd77'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
