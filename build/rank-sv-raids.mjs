@@ -1,7 +1,8 @@
-// Classements des meilleurs attaquants contre les raids Téracristal 7★ et 6★ d’Écarlate / Violet.
+// Classements des meilleurs attaquants contre les raids Téracristal 7★, 6★ et 5★ d’Écarlate / Violet.
 // Calcul interne avec @smogon/calc (MIT, formule officielle de dégâts).
-//   node build/rank-sv-raids.mjs           tout recalculer (7★ + 6★)
-//   node build/rank-sv-raids.mjs --7star   ne recalculer que les 7★ (conserve les 6★ déjà présents)
+//   node build/rank-sv-raids.mjs           tout recalculer (7★ + 6★ ; conserve les 5★ déjà présents)
+//   node build/rank-sv-raids.mjs --7star   ne recalculer que les 7★
+//   node build/rank-sv-raids.mjs --5star   ne recalculer que les 5★ (conserve 7★ et 6★)
 // Réutilisable après update-tera7.mjs : ajoute les nouveaux boss 7★ sans effacer le reste.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,6 +19,7 @@ const CACHE = path.join(HERE, 'cache/v60-32');
 const CACHE7 = path.join(HERE, 'cache/v60-31');
 const OUT = path.join(DATA, 'rank-sv-raid.json');
 const ONLY7 = process.argv.includes('--7star');
+const ONLY5 = process.argv.includes('--5star');
 const ONLY_KEYS = (process.env.ONLY_KEYS || '').split(',').map(s => s.trim()).filter(Boolean);
 const TYPES = ['normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'];
 const TYPE_CAP = { normal:'Normal', fire:'Fire', water:'Water', grass:'Grass', electric:'Electric', ice:'Ice', fighting:'Fighting', poison:'Poison', ground:'Ground', flying:'Flying', psychic:'Psychic', bug:'Bug', rock:'Rock', ghost:'Ghost', dragon:'Dragon', dark:'Dark', steel:'Steel', fairy:'Fairy' };
@@ -43,6 +45,7 @@ const TIMER_MEWTWO = 900;      // 15 min
 const TERA_CHARGES = 3;
 const SHIELD_DUR_7 = 0.35;     // atwiki (Lanssorien 35 %) ; défaut 7★ si non listé
 const SHIELD_DUR_6 = 0.30;
+const SHIELD_DUR_5 = 0.25;     // générique 5★, non listé par boss
 const IN_FLOOR = 0.03;         // plancher de dégâts encaissés : 3 % des PV par action du boss
 const TOP_N = 12;
 const gen = Generations.get(9);
@@ -485,6 +488,30 @@ function generic6(game) {
   ], src: 'script générique 6★ Paldea : bouclier 20 / 35 / 75, seuil 60 % PV ou 55 % du chrono (atwiki / Bulbapedia) ; une annulation des boosts du joueur à 60 % du chrono (hypothèse, non listée par boss).' };
 }
 
+function generic5(game) {
+  const base = {
+    evs: null, hpMult: 0, durability: SHIELD_DUR_5,
+    events: [],
+    src: ''
+  };
+  if (game === 'svmask') {
+    return { ...base, rates: [0.30, 0.60, 0.90], events: [
+      { kind: 'shield', hp: 60, time: 50 },
+      { kind: 'playerReset', time: 60 }
+    ], src: 'script générique 5★ Septentria (Kitakami) : bouclier 30 / 60 / 90 (Bulbapedia / wikiwiki) ; seuil typique 60 % PV ou 50 % du chrono ; une annulation des boosts du joueur à 60 % du chrono (hypothèse, non listée par boss).' };
+  }
+  if (game === 'svdisk') {
+    return { ...base, rates: [0.20, 0.35, 0.75], events: [
+      { kind: 'shield', hp: 60, time: 50 },
+      { kind: 'playerReset', time: 60 }
+    ], src: 'script générique 5★ Terra-Dôme (Blueberry) : bouclier 20 / 35 / 75, comme Paldea 5★ (Bulbapedia / wikiwiki) ; seuil typique 60 % PV ou 50 % du chrono ; une annulation des boosts du joueur à 60 % du chrono (hypothèse, non listée par boss).' };
+  }
+  return { ...base, rates: [0.20, 0.35, 0.75], events: [
+    { kind: 'shield', hp: 60, time: 55 },
+    { kind: 'playerReset', time: 60 }
+  ], src: 'script générique 5★ Paldea : bouclier 20 / 35 / 75 (comme Paldea 6★, Bulbapedia / wikiwiki) ; seuil typique 60 % PV ou 55 % du chrono ; une annulation des boosts du joueur à 60 % du chrono (hypothèse, non listée par boss).' };
+}
+
 function lookupScript(scripts, smo, tera) {
   const slug = String(smo || '').toLowerCase().replace(/ /g, '');
   const base = slug.split('-')[0];
@@ -653,6 +680,7 @@ function simulateRaid({
 
 export function buildRankSvRaids(opts = {}) {
   const only7 = opts.only7 ?? ONLY7;
+  const only5 = opts.only5 ?? ONLY5;
   const maps = loadCsvMaps();
   const core = J('core.json');
   const evo = J('evo.json');
@@ -774,7 +802,7 @@ export function buildRankSvRaids(opts = {}) {
       const cands = [];
       const seen = new Set();
       for (const x of scored) {
-        if (cands.length >= (ctx.stars === 6 ? 4 : 6)) break;
+        if (cands.length >= (ctx.stars === 6 || ctx.stars === 5 ? 4 : 6)) break;
         if (seen.has(x.m.en + '|' + x.m.typ)) continue;
         if (x.est <= 0 && cands.length) continue;
         seen.add(x.m.en + '|' + x.m.typ); cands.push(x.m);
@@ -857,6 +885,7 @@ export function buildRankSvRaids(opts = {}) {
   const scripts = parseRaidScripts();
   const bosses = [];
 
+  if (!only5) {
   for (const r of tera7.raids) {
     const e = byKey.get(r.k);
     if (!e) continue;
@@ -893,8 +922,9 @@ export function buildRankSvRaids(opts = {}) {
       script, timer, evs: script.evs || null
     });
   }
+  } // 7★
 
-  if (!only7) {
+  if (!only7 && !only5) {
     const seen = new Set();
     for (const row of raids.r) {
       const g = raids.g[row[1]];
@@ -935,6 +965,47 @@ export function buildRankSvRaids(opts = {}) {
     }
   }
 
+  if (only5) {
+    const seen = new Set();
+    for (const row of raids.r) {
+      const g = raids.g[row[1]];
+      if (!['sv', 'svmask', 'svdisk'].includes(g)) continue;
+      if (!(row[5] & (1 << 4))) continue;
+      const k = row[0];
+      if (seen.has(k)) continue;
+      seen.add(k);
+      const e = byKey.get(k);
+      const f = formOf(k);
+      if (!e || !f) continue;
+      const smo = smogonName(e);
+      if (!smo) { unmapped.push('boss5 ' + k); continue; }
+      const extra = raids.x[row[7]] || '';
+      const ids = learnIds(f);
+      let mvs = damagingMoves(ids, movesJ, maps.moves.fr2en);
+      mvs = mvs.map(m => ({ ...m, est: m.pow * ((e.t || f.t || []).includes(m.typ) ? 1.5 : 1) }))
+        .sort((a, b) => b.est - a.est);
+      const uniq = [];
+      const have = new Set();
+      for (const m of mvs) { if (have.has(m.en)) continue; have.add(m.en); uniq.push(m); if (uniq.length >= 4) break; }
+      const spa = (f.s || e.s || [])[3] || 0, atk = (f.s || e.s || [])[1] || 0;
+      const nature = spa > atk ? 'Modest' : 'Adamant';
+      let ability;
+      const abs = f.a || [];
+      const pick = /talent caché garanti/i.test(extra) ? (abs.find(a => a[1]) || abs[0]) : (abs.find(a => !a[1]) || abs[0]);
+      if (pick) {
+        const fr = (ref.ab[String(pick[0])] || [])[0];
+        ability = fr && lookupFr(maps.ab.fr2en, fr);
+      }
+      const defaultTera = (e.t || f.t || ['normal'])[0];
+      const random = !/Téra par défaut/i.test(extra);
+      bosses.push({
+        id: k + '-5', k, n: e.n, stars: 5, tera: random ? '*' : defaultTera, game: g, title: '',
+        smo, level: 75, nature, ability, moves: uniq, hpMult: 15,
+        script: generic5(g), timer: TIMER_DEFAULT, evs: null, random, defaultTera
+      });
+    }
+  }
+
   if (ONLY_KEYS.length) {
     const keep = new Set(ONLY_KEYS);
     for (let i = bosses.length - 1; i >= 0; i--) if (!keep.has(bosses[i].k) && !keep.has(bosses[i].id)) bosses.splice(i, 1);
@@ -967,7 +1038,7 @@ export function buildRankSvRaids(opts = {}) {
       }
       const rowsD = [], rowsDL = [], rowsA = [], rowsAL = [];
       let pool = attackers;
-      if (b.stars === 6 && attackers.length > 90) {
+      if ((b.stars === 6 || b.stars === 5) && attackers.length > 90) {
         const est = attackers.map(atk => {
           const spa = (atk.stats || [])[3] || 80, atkS = (atk.stats || [])[1] || 80, hp = (atk.stats || [])[0] || 80;
           const off = Math.max(spa, atkS);
@@ -1019,8 +1090,8 @@ export function buildRankSvRaids(opts = {}) {
 
   const B = bosses.filter(b => P[b.id]).map(b => [b.id, b.k, b.n, b.stars, b.tera, b.game, b.title || '']);
   let outB = B, outP = P, outPL = PL, outF = F, outMv = mv, outMvfr = mvfr;
-  const prev = (only7 || ONLY_KEYS.length) && exists(OUT) ? JSON.parse(read(OUT)) : null;
-  if (prev && (only7 || ONLY_KEYS.length)) {
+  const prev = exists(OUT) ? JSON.parse(read(OUT)) : null;
+  if (prev) {
     const nF = [], fMap = new Map(), nMv = [], nFr = [], mMap = new Map();
     const addF = k => { if (fMap.has(k)) return fMap.get(k); fMap.set(k, nF.length); nF.push(k); return nF.length - 1; };
     const addM = (en, fr) => { if (mMap.has(en)) return mMap.get(en); mMap.set(en, nMv.length); nMv.push(en); nFr.push(fr || en); return nMv.length - 1; };
@@ -1047,7 +1118,7 @@ export function buildRankSvRaids(opts = {}) {
       return out;
     };
     const newIds = new Set(B.map(row => row[0]));
-    const keep = (prev.B || []).filter(row => only7 && !ONLY_KEYS.length ? row[3] !== 7 : !newIds.has(row[0]));
+    const keep = (prev.B || []).filter(row => !newIds.has(row[0]));
     const ids = new Set(keep.map(row => row[0]));
     const oldP = Object.fromEntries(Object.entries(prev.P || {}).filter(([id]) => ids.has(id)));
     const oldL = Object.fromEntries(Object.entries(prev.L || {}).filter(([id]) => ids.has(id)));
@@ -1060,8 +1131,8 @@ export function buildRankSvRaids(opts = {}) {
   const data = {
     date: '2026-11-25',
     src: 'Calcul interne avec la formule officielle de dégâts (@smogon/calc, licence MIT). Scripts et multiplicateurs 7★ : Serebii (Scripted Actions / Notes). Seuils et multiplicateurs de bouclier 6★ : atwiki / Bulbapedia. Guides Game8 / communauté utilisés uniquement pour vérifier le haut de quelques classements.',
-    method: 'Attaquant de niveau 100, IV 31, 252 EV PV et 252 EV dans sa meilleure stat offensive, nature qui l’augmente, meilleur talent offensif, objet Restes. Il charge l’Orbe Téra en trois attaques, puis téracristallise dans le type de sa meilleure capacité offensive apprenable dans Écarlate / Violet. Deux classements : attaque directe, et avec une accumulation (une capacité de boost, après la dernière annulation de stats du joueur prévue au script — on n’engage pas le boost s’il en reste une autre — et seulement si le bouclier Téra est baissé : une capacité de statut échoue pendant le bouclier). Inconscient chez le boss ignore les boosts de l’attaquant. Score : dégâts infligés pendant le combat (jusqu’au K.O. du boss ou à la fin du minuteur) au carré, divisés par les dégâts encaissés. Chrono : 7 min 30 (15 min pour Mewtwo). Pénalité de K.O. : 100 secondes, égales au niveau de l’attaquant (Bulbapedia / Serebii) ; les wikis japonais indiquent 60 s — incertitude notée. Délai de retour : 5 s × le numéro du K.O., plafonné à 30 s. Chaque action de l’attaquant compte pour 6 s (simplifié : 75 actions dans 7 min 30). Bouclier Téra : multiplicateurs 7★ 20 / 30 / 70 ; 6★ selon le jeu (Paldea 20 / 35 / 75, Septentria 30 / 55 / 85, Terra-Dôme 40 / 60 / 80) ; durabilité 35 % des PV max en 7★ (atwiki, Lanssorien) et 30 % en 6★ lorsque la valeur exacte n’est pas listée. Un plancher de 3 % des PV de l’attaquant par action du boss évite les classements artificiels (immunités totales). Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut (option pour les afficher).',
-    scope: 'Raids 7★ événementiels et raids 6★ d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo). Les 5★ ÉV, les 5★ ÉB / Isolarmure / Couronneige et l’Aventure Dynamax restent pour une mise à jour suivante. Les 1–4★ n’apportent pas assez pour un classement dédié.',
+    method: 'Attaquant de niveau 100, IV 31, 252 EV PV et 252 EV dans sa meilleure stat offensive, nature qui l’augmente, meilleur talent offensif, objet Restes. Il charge l’Orbe Téra en trois attaques, puis téracristallise dans le type de sa meilleure capacité offensive apprenable dans Écarlate / Violet. Deux classements : attaque directe, et avec une accumulation (une capacité de boost, après la dernière annulation de stats du joueur prévue au script — on n’engage pas le boost s’il en reste une autre — et seulement si le bouclier Téra est baissé : une capacité de statut échoue pendant le bouclier). Inconscient chez le boss ignore les boosts de l’attaquant. Score : dégâts infligés pendant le combat (jusqu’au K.O. du boss ou à la fin du minuteur) au carré, divisés par les dégâts encaissés. Chrono : 7 min 30 (15 min pour Mewtwo). Pénalité de K.O. : 100 secondes, égales au niveau de l’attaquant (Bulbapedia / Serebii) ; les wikis japonais indiquent 60 s — incertitude notée. Délai de retour : 5 s × le numéro du K.O., plafonné à 30 s. Chaque action de l’attaquant compte pour 6 s (simplifié : 75 actions dans 7 min 30). Bouclier Téra : multiplicateurs 7★ 20 / 30 / 70 ; 6★ selon le jeu (Paldea 20 / 35 / 75, Septentria 30 / 55 / 85, Terra-Dôme 40 / 60 / 80) ; 5★ selon le jeu (Paldea et Terra-Dôme 20 / 35 / 75, Septentria 30 / 60 / 90, Bulbapedia / wikiwiki) ; durabilité 35 % des PV max en 7★, 30 % en 6★ et 25 % en 5★ lorsque la valeur exacte n’est pas listée. Un plancher de 3 % des PV de l’attaquant par action du boss évite les classements artificiels (immunités totales). Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut (option pour les afficher).',
+    scope: 'Raids 7★ événementiels, 6★ et 5★ d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo). Les 5★ Dynamax d’Épée / Bouclier et l’Aventure Dynamax sont calculés à part (rank-sw-raids). Les 1–4★ n’apportent pas assez pour un classement dédié.',
     hypotheses: {
       koPenaltySec: 100,
       koPenaltyNote: 'Bulbapedia et Serebii : la pénalité égale le niveau du Pokémon K.O. (ici 100 s). Wikis japonais (atwiki, hyperWiki, octobre 2026) : 60 s fixes. Hypothèse retenue : 100 s.',
@@ -1099,8 +1170,8 @@ function fmtTop(data, id, mode) {
 
 const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
-  console.log('rank-sv-raids:', ONLY7 ? '7★ seulement' : '7★ + 6★');
-  const { data, unmapped, nAtk, nBoss, nLegend } = buildRankSvRaids({ only7: ONLY7 });
+  console.log('rank-sv-raids:', ONLY5 ? '5★ seulement' : ONLY7 ? '7★ seulement' : '7★ + 6★');
+  const { data, unmapped, nAtk, nBoss, nLegend } = buildRankSvRaids({ only7: ONLY7, only5: ONLY5 });
   if (process.env.DEBUG_BOSS) { console.log('DEBUG_BOSS: pas d’écriture'); process.exit(0); }
   const w = writeRankSvRaids(data);
   console.log(`attaquants ${nAtk} (dont ${nLegend} légendaires/fabuleux), boss calculés ${nBoss}, fiches ${data.B.length}, ${w.changed ? 'écrit' : 'inchangé'} ${w.file} ${w.bytes || ''} octets`);
