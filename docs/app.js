@@ -1061,7 +1061,7 @@ function renderRaids() {
   let body = `<div class="rkwrap rvwrap"><div class="rvctl"><p class="note rvlbl">Raids ${esc(kind)} — ${esc(RAID_LONG[g])}</p><div class="chips rvgames" role="tablist" aria-label="Jeu">${tabs}</div><div class="chips rvstars" role="group" aria-label="Étoiles">${st}</div></div>`;
   const shown = sections.filter(sec => sec.n);
   if (!shown.length && !showT7) body += '<p class="empty">Aucun raid ne correspond à ce filtre.</p>';
-  if (isEV) body += svRaidsBlockHTML(g);
+  if (isEV || g === 'sw' || g === 'swisle' || g === 'swcrown') body += svRaidsBlockHTML(g);
   if (showT7) body += tera7ViewHTML(g);
   for (const sec of shown) {
     const label = sec.s === 'exp' ? 'Expédition Dynamax' : sec.s + '★';
@@ -1118,7 +1118,7 @@ document.addEventListener('click', e => {
 document.addEventListener('change', e => {
   const sel = e.target.closest('[data-svrk-boss]');
   if (sel) {
-    RV.svBoss = sel.value;
+    if (svIsMaxId(sel.value)) RV.swBoss = sel.value; else RV.svBoss = sel.value;
     RV.svTera = svDefaultTera(sel.value);
     if (/^#\/raids/.test(location.hash)) renderRaids();
     return;
@@ -1909,10 +1909,14 @@ function tera7ViewHTML(g) {
 // v60.32 : meilleurs attaquants des raids Téracristal 7★ et 6★
 const SV_TYPES = ['normal','fire','water','grass','electric','ice','fighting','poison','ground','flying','psychic','bug','rock','ghost','dragon','dark','steel','fairy'];
 function svRankReady() { return !!(RSV && RSV.P && RSV.F); }
+function svIsMaxId(id) { return /-(mx|adv)$/.test(id || ''); }
 function svBossRow(id) { return ((RSV && RSV.B) || []).find(b => b[0] === id); }
 function svTeraKeys(id, leg) {
   const slot = svRankReady() && (leg ? RSV.L : RSV.P)[id];
-  return slot ? SV_TYPES.filter(t => slot[t] && (Array.isArray(slot[t]) || slot[t].d || slot[t].a)) : [];
+  if (!slot) return [];
+  const keys = SV_TYPES.filter(t => slot[t] && (Array.isArray(slot[t]) || slot[t].d || slot[t].a));
+  if (slot.max && (Array.isArray(slot.max) || slot.max.d || slot.max.a)) keys.push('max');
+  return keys;
 }
 function svRankRows(cell, mode) {
   if (!cell) return [];
@@ -1937,14 +1941,18 @@ function svRankListHTML(id, tera, leg, origin, mode) {
   mode = mode === 'a' ? 'a' : 'd';
   const slot = (leg ? RSV.L : RSV.P)[id] || {};
   const rows = svRankRows(slot[tera], mode);
-  if (!rows.length) return '<p class="note">Pas encore de classement pour ce type Téra.</p>';
+  if (!rows.length) return `<p class="note">Pas encore de classement${svIsMaxId(id) ? '' : ' pour ce type Téra'}.</p>`;
   return `<ol class="rklist svrklist">${rows.map((r, i) => {
     const k = RSV.F[r[0]], mv = RSV.mvfr[r[1]], typ = r[2], pct = r[3];
     const boost = r[4] != null ? RSV.mvfr[r[4]] : '';
     const p = BY_KEY[k];
     const href = p ? `#/p/${p.k}` : `#/p/${k}`;
     const raid = origin ? ` data-raid="${esc(origin)}"` : '';
-    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)}${boost ? ' après ' + esc(boost) : ''} · Téra ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
+    const en = (RSV.mv && RSV.mv[r[1]]) || '';
+    const kind = svIsMaxId(id)
+      ? ((/^(G-Max|Giga )/.test(mv) || /^(G-Max|Giga )/.test(en)) ? 'Gigamax' : 'Dynamax')
+      : 'Téra';
+    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)}${boost ? ' après ' + esc(boost) : ''} · ${kind} ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
   }).join('')}</ol>`;
 }
 function svTeraChipsHTML(id, tera, leg) {
@@ -1955,7 +1963,10 @@ function svTeraChipsHTML(id, tera, leg) {
 function svLegHTML(leg) {
   return `<label class="svrkleg"><input type="checkbox" data-svrk-leg${leg ? ' checked' : ''}> Inclure les légendaires et fabuleux</label>`;
 }
-function svMethodNote() {
+function svMethodNote(id) {
+  if (svIsMaxId(id)) {
+    return 'Deux classements : attaque directe, ou avec une accumulation (une capacité de boost, après la dernière annulation de stats et hors barrière). L’attaquant est au niveau 100 (IV 31, 252 EV PV et 252 EV offensifs, nature favorable, meilleur talent offensif, Restes). Il entre en Dynamax aux tours 1 à 3, puis attaque normalement. Combat limité à 10 tours (4 K.O. = échec). Les barrières du boss 5★ comptent comme du temps perdu. En Aventure Dynamax, le combat du légendaire n’a pas de barrière. Score : dégâts infligés au carré, divisés par les dégâts encaissés. Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut.';
+  }
   return 'Deux classements : attaque directe, ou avec une accumulation (une capacité de boost, après l’annulation de stats prévue au script du boss). L’attaquant est au niveau 100 (IV 31, 252 EV PV et 252 EV offensifs, nature favorable, meilleur talent offensif, Restes). Il charge l’Orbe Téra en trois attaques, puis téracristallise dans le type de sa meilleure capacité. Le chrono, le bouclier Téra et le script du boss sont simulés. Score : dégâts infligés au carré, divisés par les dégâts encaissés, comme pour les raids de Pokémon GO. Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut.';
 }
 function svRankBoxHTML(id, tera, leg, opts = {}) {
@@ -1970,7 +1981,7 @@ function svRankBoxHTML(id, tera, leg, opts = {}) {
   return `<div class="svrkbox" data-svrk-id="${esc(id)}" data-svrk-tera="${esc(tera)}" data-svrk-leg="${leg ? '1' : ''}" data-svrk-mode="${mode}"${opts.origin ? ` data-svrk-origin="${esc(opts.origin)}"` : ''}>
     ${title ? `<h3>${esc(title)}</h3>` : ''}${pick}${teraLine}${svLegHTML(leg)}${svModeTabsHTML(mode)}
     <div class="svrkbody">${svRankListHTML(id, tera, leg, opts.origin, mode)}</div>
-    <p class="note">${svMethodNote()}</p>
+    <p class="note">${svMethodNote(id)}</p>
   </div>`;
 }
 function refreshSvRankBox(box) {
@@ -1993,25 +2004,30 @@ function svBossSelectHTML(cur, game) {
   if (!svRankReady()) return '';
   const today = todayISO();
   const B = RSV.B || [];
+  const isSW = !!(game && String(game).startsWith('sw'));
   const g7 = B.filter(b => b[3] === 7), g6 = B.filter(b => b[3] === 6);
+  const g5 = B.filter(b => b[3] === 5 && !svIsMaxId(b[0]));
+  const mx = B.filter(b => String(b[0]).endsWith('-mx'));
+  const adv = B.filter(b => String(b[0]).endsWith('-adv') || b[3] === 8);
   const stOf = id => { const r = (TERA7 && TERA7.raids || []).find(x => x.id === id); return r ? tera7RaidStatus(r, today) : 'past'; };
   const ord = { now: 0, soon: 1, past: 2 };
   g7.sort((a, b) => (ord[stOf(a[0])] ?? 9) - (ord[stOf(b[0])] ?? 9) || a[2].localeCompare(b[2], 'fr'));
   g6.sort((a, b) => a[2].localeCompare(b[2], 'fr'));
+  g5.sort((a, b) => a[2].localeCompare(b[2], 'fr'));
+  mx.sort((a, b) => a[2].localeCompare(b[2], 'fr'));
+  adv.sort((a, b) => a[2].localeCompare(b[2], 'fr'));
   const opt = (b, tag) => `<option value="${esc(b[0])}"${b[0] === cur ? ' selected' : ''}>${esc(b[2])}${b[6] ? ' ' + esc(b[6]) : ''}${b[4] && b[4] !== '*' ? ' · ' + esc(TYPE_FR[b[4]] || b[4]) : ''}${tag ? ' (' + tag + ')' : ''}</option>`;
+  const group = (lab, list, tagFn) => list.length ? `<optgroup label="${lab}">${list.map(b => opt(b, tagFn ? tagFn(b) : '')).join('')}</optgroup>` : '';
   let html = `<label class="svrkpick"><span>Boss</span><select data-svrk-boss aria-label="Boss du classement">`;
-  if (g7.length) {
-    html += '<optgroup label="7★">';
-    for (const b of g7) {
-      const st = stOf(b[0]);
-      html += opt(b, st === 'now' ? 'en cours' : st === 'soon' ? 'à venir' : '');
-    }
-    html += '</optgroup>';
-  }
-  if (g6.length) {
-    html += '<optgroup label="6★">';
-    for (const b of g6) html += opt(b, '');
-    html += '</optgroup>';
+  if (isSW) {
+    const labelG = { sw: 'Dynamax 5★ (Terres Sauvages)', swisle: 'Dynamax 5★ (Isolarmure)', swcrown: 'Dynamax 5★ (Couronneige)' };
+    for (const gid of ['sw', 'swisle', 'swcrown']) html += group(labelG[gid], mx.filter(b => b[5] === gid));
+    html += group('Aventure Dynamax', adv);
+  } else {
+    html += group('7★', g7, b => { const st = stOf(b[0]); return st === 'now' ? 'en cours' : st === 'soon' ? 'à venir' : ''; });
+    html += group('6★', g6);
+    const label5 = { sv: '5★ Paldea', svmask: '5★ Masque Turquoise', svdisk: '5★ Disque Indigo' };
+    for (const gid of ['sv', 'svmask', 'svdisk']) html += group(label5[gid], g5.filter(b => b[5] === gid));
   }
   html += '</select></label>';
   return html;
@@ -2021,12 +2037,23 @@ function svDefaultBoss() {
   const today = todayISO();
   const g7 = (RSV.B || []).filter(b => b[3] === 7);
   const now = g7.find(b => { const r = (TERA7 && TERA7.raids || []).find(x => x.id === b[0]); return r && tera7RaidStatus(r, today) === 'now'; });
-  return (now || g7[0] || (RSV.B || [])[0] || [])[0] || '';
+  const g6 = (RSV.B || []).find(b => b[3] === 6);
+  const g5 = (RSV.B || []).find(b => b[3] === 5 && !svIsMaxId(b[0]));
+  return (now || g7[0] || g6 || g5 || [])[0] || '';
+}
+function swDefaultBoss(g) {
+  if (!svRankReady()) return '';
+  const B = RSV.B || [];
+  const mx = B.find(b => String(b[0]).endsWith('-mx') && (!g || b[5] === g)) || B.find(b => String(b[0]).endsWith('-mx'));
+  const adv = B.find(b => String(b[0]).endsWith('-adv') || b[3] === 8);
+  return ((g === 'swcrown' ? (adv || mx) : (mx || adv)) || [])[0] || '';
 }
 function svRaidsBlockHTML(g) {
   if (!svRankReady()) return '';
-  const id = (RV.svBoss && svBossRow(RV.svBoss)) ? RV.svBoss : svDefaultBoss();
-  RV.svBoss = id;
+  const wantSW = !!(g && String(g).startsWith('sw'));
+  let id = wantSW ? RV.swBoss : RV.svBoss;
+  if (!id || !svBossRow(id) || svIsMaxId(id) !== wantSW) id = wantSW ? swDefaultBoss(g) : svDefaultBoss();
+  if (wantSW) RV.swBoss = id; else RV.svBoss = id;
   const b = svBossRow(id);
   const tera = (b && b[4] && b[4] !== '*') ? b[4] : (RV.svTera && svTeraKeys(id, !!RV.svLeg).includes(RV.svTera) ? RV.svTera : svDefaultTera(id));
   RV.svTera = tera;
@@ -2076,9 +2103,10 @@ function teraRaidHTML(k, f, sp, gm) {
     'Niveau du boss : 1★ 12 · 2★ 20 · 3★ 35 · 4★ 45 · 5★ 75 · 6★ 90 (75 après capture).',
     'Sauf indication, le type Téra est aléatoire (couleur du cristal). « Téra par défaut » = un type naturel du Pokémon.',
     'Listes, type Téra et talent caché : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid. Les raids 7★ d’événement figurent dans le bloc « Raids 7★ (événements) ».'].filter(Boolean);
-  const sixId = k + '-6';
-  const sixRk = svRankReady() && (RSV.P[sixId] || (RSV.L && RSV.L[sixId])) ? `<div class="raidloc svrk6">${svRankBoxHTML(sixId, svDefaultTera(sixId), false, { title: 'Meilleurs attaquants (raid 6★)', origin: gm.id })}</div>` : '';
-  return { html: t7.html + `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>` + sixRk, rows: rows.length + t7.rows };
+  const boxOf = (id, title) => svRankReady() && (RSV.P[id] || (RSV.L && RSV.L[id])) ? `<div class="raidloc svrk6">${svRankBoxHTML(id, svDefaultTera(id), false, { title, origin: gm.id })}</div>` : '';
+  const sixRk = boxOf(k + '-6', 'Meilleurs attaquants (raid 6★)');
+  const fiveRk = boxOf(k + '-5', 'Meilleurs attaquants (raid 5★)');
+  return { html: t7.html + `<div class="raidloc"><h3>Raids Téracristal</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>` + sixRk + fiveRk, rows: rows.length + t7.rows };
 }
 function raidRows(k, f, sp, g) {
   const e = BY_KEY[k]; if (f.rd && f.rd[g]) return f.rd[g];
@@ -2105,7 +2133,10 @@ function raidHTML(k, f, sp, gm) {
     dens ? 'Taux = chance d’apparition parmi les raids de ce nombre d’étoiles dans cet antre ; faisceau rouge = raid commun, mauve = raid rare. « IV parfaits » = nombre d’IV au maximum garantis.' : '',
     evt ? 'Raid événementiel (en grisé) : depuis le 1er novembre 2022, il a 25 % de chances de remplacer n’importe quel antre (dernier Bulletin des Terres Sauvages).' : '',
     'Antres, lettres et taux : <a href="https://www.pokepedia.fr/Antre_de_Pok%C3%A9mon" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des antres et des zones.'].filter(Boolean);
-  return { html: `<div class="raidloc"><h3>Raids Dynamax</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}${dens ? ` · ${dens} antre${dens > 1 ? 's' : ''}` : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>`, rows: rows.length };
+  const boxOf = (id, title) => svRankReady() && (RSV.P[id] || (RSV.L && RSV.L[id])) ? `<div class="raidloc svrk6">${svRankBoxHTML(id, svDefaultTera(id), false, { title, origin: gm.id })}</div>` : '';
+  const mxRk = boxOf(k + '-mx', 'Meilleurs attaquants (raid Dynamax 5★)');
+  const advRk = boxOf(k + '-adv', 'Meilleurs attaquants (Aventure Dynamax)');
+  return { html: `<div class="raidloc"><h3>Raids Dynamax</h3><details${n <= 8 ? ' open' : ''}><summary>${n} lieu${n > 1 ? 'x' : ''}${dens ? ` · ${dens} antre${dens > 1 ? 's' : ''}` : ''}</summary>${list}</details>${hint}<p class="note">${notes.join(' ')}</p></div>` + mxRk + advRk, rows: rows.length };
 }
 function encHTML(f, sp, gm, shared) {
   const k = Object.keys(sp.f).find(x => sp.f[x] === f), r = k ? raidHTML(k, f, sp, gm) : { html: '', rows: 0 };

@@ -32,3 +32,4 @@ node('fix-v60-29.mjs');      // v60.29: précision des formes — disponibilité
 node('fix-v60-30.mjs');      // v60.30: index compact des raids Dynamax (ÉB) et Téracristal (ÉV) → docs/data/raids.json (filtre « Dispo en raid » et vue Raids)
 node('fix-v60-31.mjs');      // v60.31: raids Téracristal 7★ événementiels d’Écarlate / Violet → docs/data/tera7.json
 node('fix-v60-32.mjs');      // v60.32: classements des meilleurs attaquants des raids Téracristal 7★ et 6★ → docs/data/rank-sv-raid.json
+node('fix-v60-33.mjs');      // v60.33: classements des meilleurs attaquants des raids Téracristal 5★, Dynamax 5★ et Aventure Dynamax → docs/data/rank-sv-raid.json

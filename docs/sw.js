@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.32';
+const VERSION = 'v60.33';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Meilleurs attaquants (attaque directe ou avec accumulation) : raids Téracristal 7★ et 6★ (ÉV + DLC). Raids 7★, filtre Dispo en raid, vue Raids ÉB / ÉV.';
-const DATA_VERSION = 'd75'; // bump when the schema of data/*.json changes
+const NOTES = 'Meilleurs attaquants : raids Téracristal 5–7★ (ÉV + DLC) et Dynamax 5★ / Aventure (ÉB). Filtre Dispo en raid, vue Raids ÉB / ÉV.';
+const DATA_VERSION = 'd76'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

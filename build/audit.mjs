@@ -889,7 +889,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const fairy = ['671', '730', '700'];
   ok('v60.32 Lanssorien (attaque directe) : Florges, Primarina et Nymphali, Pouvoir Lunaire, Téra Fée', !!(drag.length >= 3 && fairy.some(k => String(rk.F[drag[0][0]]) === k) && names.some(n => /Pouvoir Lunaire/.test(n)) && fairy.every(k => drag.some(r => String(rk.F[r[0]]) === k))), names.slice(0, 6).join(' · '));
   const src = fs.readFileSync(path.join(HERE, 'rank-sv-raids.mjs'), 'utf8');
-  ok('v60.32 script : pas de capacités suicidaires, apostrophes normalisées, --7star conserve les 6★', /Misty Explosion|Explo-Brume/.test(src) && /function normFr/.test(src) && /--7star/.test(src) && /row\[3\] !== 7/.test(src));
+  ok('v60.32 script : pas de capacités suicidaires, apostrophes normalisées, --7star conserve les 6★', /Misty Explosion|Explo-Brume/.test(src) && /function normFr/.test(src) && /--7star/.test(src) && (/row\[3\] !== 7/.test(src) || /!newIds\.has\(row\[0\]\)/.test(src)));
   ok('v60.32 script : chrono, Orbe Téra, pénalité K.O. et deux listes', /TIMER_DEFAULT = 450/.test(src) && /TERA_CHARGES = 3/.test(src) && /KO_PENALTY_SEC = 100/.test(src) && /Belly Drum/.test(src) && /unaware/.test(src));
   ok('v60.32 @smogon/calc déclaré, node_modules ignoré', /@smogon\/calc/.test(fs.readFileSync(path.join(HERE, 'package.json'), 'utf8')) && /build\/node_modules\//.test(fs.readFileSync(path.join(HERE, '../.gitignore'), 'utf8')));
   const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
@@ -899,6 +899,43 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const tera7meta = JSON.parse(fs.readFileSync(path.join(HERE, '../docs/data/tera7.json'), 'utf8'));
   ok('v60.32 nom officiel : redoutable, pas « le Surpuissant »', tera7meta.titleOfficial === 'redoutable' && tera7meta.raids.every(r => r.title === 'redoutable') && !/le Surpuissant/.test(app) && /redoutable/.test(fs.readFileSync(path.join(HERE, 'update-tera7.mjs'), 'utf8')));
   ok('v60.32 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, src, fs.readFileSync(path.join(HERE, 'fix-v60-32.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
+}
+
+
+// ---- v60.33 : meilleurs attaquants 5★ Téracristal, Dynamax 5★ et Aventure Dynamax
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  ok('v60.33 SW : VERSION ≥ v60.33, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[3-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
+  ok('v60.33 NOTES ≤ 160 caractères, commence par les meilleurs attaquants', notes.length > 0 && notes.length <= 160 && /^Meilleurs attaquants/.test(notes) && /7★/.test(notes) && /5★/.test(notes) && /Dynamax/.test(notes) && /Dispo en raid/.test(notes), String(notes.length));
+  const rk = D('rank-sv-raid.json');
+  const n5 = (rk.B || []).filter(b => b[3] === 5 && !String(b[0]).endsWith('-mx')).length;
+  const nMx = (rk.B || []).filter(b => String(b[0]).endsWith('-mx')).length;
+  const nAdv = (rk.B || []).filter(b => String(b[0]).endsWith('-adv') || b[3] === 8).length;
+  const cellOf = (id, typ) => {
+    const c = rk.P && rk.P[id] && rk.P[id][typ];
+    if (!c) return null;
+    if (Array.isArray(c)) return { d: c, a: [] };
+    return c;
+  };
+  const rowsOf = (c, mode) => (c && c[mode]) || [];
+  ok('v60.33 rank-sv-raid : ≥ 100 raids 5★ ÉV, ≥ 200 Dynamax 5★, ≥ 40 Aventure', n5 >= 100 && nMx >= 200 && nAdv >= 40, `${n5}/${nMx}/${nAdv}`);
+  const sampleIds = (rk.B || []).filter(b => String(b[0]).endsWith('-5') || String(b[0]).endsWith('-mx') || String(b[0]).endsWith('-adv')).slice(0, 30);
+  ok('v60.33 échantillon 5★ / Dynamax / Aventure : deux listes (directe et accumulation), 1 à 12', sampleIds.length >= 10 && sampleIds.every(b => {
+    const typ = String(b[0]).endsWith('-5') ? (Object.keys((rk.P && rk.P[b[0]]) || {})[0]) : 'max';
+    const slot = cellOf(b[0], typ);
+    const d = rowsOf(slot, 'd'), a = rowsOf(slot, 'a');
+    return d.length >= 1 && d.length <= 12 && a.length >= 1 && a.length <= 12 && d.every(r => r.length >= 4);
+  }), String(sampleIds.length));
+  const src5 = fs.readFileSync(path.join(HERE, 'rank-sv-raids.mjs'), 'utf8');
+  const srcW = fs.readFileSync(path.join(HERE, 'rank-sw-raids.mjs'), 'utf8');
+  ok('v60.33 script ÉV : generic5, --5star, boucliers Paldea / Septentria / Terra-Dôme, fusion conservative', /function generic5/.test(src5) && /--5star/.test(src5) && /0\.30, 0\.60, 0\.90/.test(src5) && /!newIds\.has\(row\[0\]\)/.test(src5) && /hpMult: 15/.test(src5));
+  ok('v60.33 script ÉB : 10 tours, 4 K.O., Dynamax 3 tours, barrières, Aventure sans bouclier', /MAX_TURNS = 10/.test(srcW) && /MAX_FAINTS = 4/.test(srcW) && /DYNA_TURNS = 3/.test(srcW) && /BARRIER_SEGS = 4/.test(srcW) && /BARRIER_DMG = 0\.20/.test(srcW) && /adventure/.test(srcW) && /LVL_ADV = 70/.test(srcW));
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.33 apply-v34 lance fix-v60-33', /fix-v60-33\.mjs/.test(apply));
+  ok('v60.33 app : optgroups 5★ et Dynamax, fiches 5★ / mx / adv, deux onglets', /5★ Paldea/.test(app) && /Dynamax 5★/.test(app) && /Aventure Dynamax/.test(app) && /function svIsMaxId/.test(app) && /k \+ '-5'/.test(app) && /k \+ '-mx'/.test(app) && /k \+ '-adv'/.test(app) && /Attaque directe/.test(app));
+  ok('v60.33 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, src5, srcW, fs.readFileSync(path.join(HERE, 'fix-v60-33.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.33",
+  "d": "2026-11-25",
+  "l": [
+   "Meilleurs attaquants contre les raids Téracristal 5★ d’Écarlate / Violet (Paldea, Masque Turquoise, Disque Indigo), les raids Dynamax 5★ d’Épée / Bouclier (Terres Sauvages, Isolarmure, Couronneige) et les légendaires d’Aventure Dynamax. Deux listes : « Attaque directe » et « Avec une accumulation ». Le bloc figure dans la vue Raids et sur la fiche du boss.",
+   "Les 5★ Téracristal reprennent la méthode des 6★ et 7★ (chrono, Orbe Téra, bouclier selon la zone, script générique). Les raids Dynamax : 10 tours, Dynamax aux tours 1 à 3, barrières du boss comptées comme du temps perdu, 4 K.O. = échec. En Aventure, le combat du légendaire n’a pas de barrière. Les 1–4★ Dynamax restent hors classement.",
+   "Calcul interne avec la formule officielle de dégâts (@smogon/calc, licence MIT). Pensez à retélécharger le pack hors-ligne."
+  ]
+ },
+ {
   "v": "v60.32",
   "d": "2026-11-25",
   "l": [
