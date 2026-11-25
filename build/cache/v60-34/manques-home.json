@@ -1,0 +1,60 @@
+{
+  "forms": 1501,
+  "withHome": 1591,
+  "noHome": [
+    {
+      "k": "150-armored",
+      "n": "Mewtwo Armuré"
+    },
+    {
+      "k": "172-spiky-eared",
+      "n": "Pichu Troizépi"
+    },
+    {
+      "k": "854-antique",
+      "n": "Théffroi Forme Authentique"
+    },
+    {
+      "k": "855-antique",
+      "n": "Polthégeist Forme Authentique"
+    },
+    {
+      "k": "1007-sprinting-build",
+      "n": "Koraidon Forme de Course"
+    },
+    {
+      "k": "1007-gliding-build",
+      "n": "Koraidon Forme de Vol"
+    },
+    {
+      "k": "1008-drive-mode",
+      "n": "Miraidon Mode Terrestre"
+    },
+    {
+      "k": "1008-glide-mode",
+      "n": "Miraidon Mode Aérien"
+    },
+    {
+      "k": "1012-artisan",
+      "n": "Poltchageist Forme Onéreuse"
+    },
+    {
+      "k": "1013-masterpiece",
+      "n": "Théffroyable Forme Exceptionnelle"
+    }
+  ],
+  "expectHs": 1591,
+  "hsFiles": 1584,
+  "hsBytes": 16435814,
+  "missingHs": [
+    "25-original-cap",
+    "25-hoenn-cap",
+    "25-sinnoh-cap",
+    "25-unova-cap",
+    "25-kalos-cap",
+    "25-alola-cap",
+    "25-world-cap"
+  ],
+  "extraHs": [],
+  "hCount": 1592
+}

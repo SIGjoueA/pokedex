@@ -22,6 +22,8 @@ puis http://localhost:8765 (le service worker exige localhost ou HTTPS).
     node fetch-extra.mjs     # encounters, locations, TM/HM machines (PokéAPI) + GO egg pool (Leek Duck) -> build/.cache
     node fetch-go.mjs        # PokeMiners game_masters + pogoapi.net -> build/.cache
     node fetch-images.mjs    # illustrations -> docs/img/{clé}.webp (256 px) et docs/img/s/{clé}.webp (shiny)
+    node fetch-home.mjs         # rendus HOME -> docs/img/h/{clé}.webp
+    node fetch-home-shiny.mjs  # rendus HOME shiny -> docs/img/hs/{clé}.webp (v60.34)
     # textes Pokédex seulement en anglais (traduction automatique, une seule fois ; résultat versionné : build/translations-fr.json)
     #   node translate-prep.mjs && python3 translate.py && python3 translate-fix.py   (pip install argostranslate)
     node build-data.mjs      # -> docs/data/*.json (efface et recrée docs/data)
@@ -230,6 +232,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Sources** : Poképédia (CC BY-NC-SA 3.0 FR) en priorité pour les noms français (pages Raid Téracristal et Cristal de raid événementiel N), puis Serebii (Mighty / Unrivaled) et Bulbapedia (table 7★) pour le talent, la nature et le recoupement des dates.
 - **Audit** : contrôles `v60.31` dans `build/audit.mjs` (VERSION / DATA_VERSION, 53 raids, Lanssorien en cours, formes Hisui, exclusivités de version, puce 7★, pack, NOTES ≤ 160 caractères).
 
+## v60.34 : illustrations HOME par défaut
+- **Style** : le rendu HOME (3D, auto-hébergé dans `docs/img/h/`) est l’illustration par défaut de tous les portraits : liste, fiche (y compris l’écran de chargement), puces de formes, évolutions, Collection, classements, raids et GO. Le bouton Shiny d’une fiche et les exemplaires shiny de la Collection utilisent le rendu HOME shiny (`docs/img/hs/`) lorsqu’il existe. Le sprite officiel (`docs/img/` ou `docs/img/s/`) s’affiche automatiquement si un rendu manque ou si le chargement échoue.
+- **Écarts** : 10 formes n’ont pas de rendu HOME (Mewtwo Armuré, Pichu Troizépi, Formes Authentiques de Théffroi et Polthégeist, formes de combat de Koraidon et Miraidon, Forme Onéreuse / Exceptionnelle de Poltchageist et Théffroyable). Sept casquettes de Pikachu n’ont pas de shiny HOME côté PokéAPI.
+- **Pack et perf.** : le bouton « images » (~17 Mo) télécharge les rendus HOME (et le sprite officiel des 10 formes sans HOME), y compris les femelles distinctes. Les shiny, HOME ou officiels, restent en cache seulement à l’ouverture. `loading="lazy"` partout sauf l’illustration de la fiche. Les scans de cartes Pocket sont inchangés. `DATA_VERSION` reste `d76`. Inventaire : `build/cache/v60-34/illustrations.md`. Script : `build/fetch-home-shiny.mjs`. `build/fix-v60-34.mjs`, lancé par `apply-v34.mjs`, est idempotent.
+- **Audit** : contrôles `v60.34` dans `build/audit.mjs`.
+
 ## v60.33 : meilleurs attaquants des raids Téracristal 5★, Dynamax 5★ et Aventure Dynamax
 - **Données** : `build/rank-sv-raids.mjs --5star` ajoute les raids Téracristal 5★ dans `docs/data/rank-sv-raid.json` (fusion sans effacer les 7★ et 6★). `build/rank-sw-raids.mjs` ajoute les raids Dynamax 5★ et les légendaires d’Aventure Dynamax dans le même pack. `DATA_VERSION` passe à `d76`. `build/fix-v60-33.mjs`, lancé par `apply-v34.mjs`, est idempotent. Notes de méthode : `build/cache/v60-33/mecaniques-dynamax.md`.
 - **Méthode Téracristal 5★** : même simulateur que la v60.32 (niveau 100, Orbe Téra en trois attaques, deux listes, chrono 7 min 30). Boss de niveau 75, PV ×15, durabilité de bouclier 25 %. Multiplicateurs : Paldea et Terra-Dôme 20 / 35 / 75, Septentria 30 / 60 / 90 (Bulbapedia / wikiwiki). Script générique : bouclier typique à 60 % des PV, annulation des boosts du joueur à 60 % du chrono.
@@ -246,7 +254,7 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Audit** : contrôles `v60.32` dans `build/audit.mjs`.
 
 ## Limites connues
-Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : officielles (PokéAPI sprites) ou rendus HOME pour certaines formes (style mixte). Les illustrations shiny (~19 Mo) ne sont mises en cache que lorsqu'on les ouvre.
+Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16 Mo, officielles ≈ 20 Mo) ne sont mises en cache que lorsqu'on les ouvre.
 
 ## Taille
-`docs/` ≈ 52 Mo (images ≈ 44 Mo dont shiny 19 Mo à la demande, données ≈ 6 Mo, ≈ 1,5 Mo compressées).
+`docs/` ≈ 107 Mo (images ≈ 73 Mo dont shiny officiels ≈ 20 Mo et shiny HOME ≈ 16 Mo à la demande ; données ≈ 18 Mo).

@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v60.33';
+const VERSION = 'v60.34';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Meilleurs attaquants : raids Téracristal 5–7★ (ÉV + DLC) et Dynamax 5★ / Aventure (ÉB). Filtre Dispo en raid, vue Raids ÉB / ÉV.';
+const NOTES = 'Illustrations : rendus HOME par défaut, y compris shiny HOME. Sprite officiel en secours si un rendu manque. Shiny en cache à l’ouverture seulement.';
 const DATA_VERSION = 'd76'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

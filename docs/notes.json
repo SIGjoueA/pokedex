@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.34",
+  "d": "2026-11-25",
+  "l": [
+   "Les illustrations sont désormais des rendus HOME (3D) par défaut, partout où un portrait de Pokémon apparaît : liste, fiches, formes, évolutions, Collection, classements, raids et GO. Le bouton Shiny d’une fiche et les exemplaires shiny de la Collection utilisent le rendu HOME shiny lorsqu’il existe.",
+   "S’il n’existe pas de rendu HOME, ou si le chargement échoue, le sprite officiel s’affiche automatiquement. Dix formes n’ont pas de rendu HOME (dont Mewtwo Armuré et Pichu Troizépi). Sept casquettes de Pikachu n’ont pas de shiny HOME : le sprite officiel shiny sert de secours.",
+   "Le pack images hors-ligne (~17 Mo) télécharge les rendus HOME (et le sprite officiel des formes sans HOME), y compris les femelles distinctes. Les illustrations shiny, HOME ou officielles, restent enregistrées seulement lorsque vous les ouvrez. Les scans de cartes Pocket sont inchangés."
+  ]
+ },
+
+ {
   "v": "v60.33",
   "d": "2026-11-25",
   "l": [

@@ -322,7 +322,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v37 Gigamax → forme de base (gbk) + Salarsen Gigamax (v44 : une fiche, marques Aigüe / Grave)', core.e.filter(e => e.c === 'gmax').every(e => E[e.gbk]) && !E['849-low-key-gmax'] && E['849-amped-gmax']?.gbk === '849' && /SAL_BASE = \{ A: '849', G: '849-low-key' \}/.test(app) && E['892-rapid-strike-gmax'].gbk === '892-rapid-strike' && /p\.c === 'gmax'\) \{ const b = base \|\| BY_KEY\[p\.gbk\]/.test(app));
   ok('v37c GO Méga : Méga-énergie en premier, sans doublon', /slot = gT \? '' : energyMates/.test(app) && /const goMegaOn = /.test(app));
   ok('v37b boutons : Méga (gemme d’abord, sans Capturé), Gigamax (Gigamax), base (+ Gigamax)', /if \(mg\) \{ first = slot; slot = ''; \}/.test(app) && /data-gmax=/.test(app) && /toggleMark\(g, 'caught', c, p\)/.test(app) && /\$\{slot\}\$\{dmb\}\$\{gbs\}/.test(app));
-  ok('v35 HOME par défaut dans l’app', /let spriteMode = 'home'/.test(app) && /spriteMode = 'home'; closePop\(\)/.test(app) && /const artOf = p => p\.hh/.test(app) && !/pokeId\(p\)/.test(app.split('function spriteBtns')[1].slice(0, 1500)));
+  ok('v35 HOME par défaut dans l’app', /let spriteMode = 'home'/.test(app) && /spriteMode = 'home'; closePop\(\)/.test(app) && /const artOf = \(p, shiny\)/.test(app) && /img\/h\//.test(app) && !/pokeId\(p\)/.test(app.split('function spriteBtns')[1].slice(0, 1500)));
 }
 // ---- v38 : Dynamax GO, icônes Gigamax / Dynamax / Énergie Primo
 { const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8'), core = JSON.parse(fs.readFileSync(path.join(DOCS, 'data/core.json'))), me = JSON.parse(fs.readFileSync(path.join(DOCS, 'data/mega-energy.json')));
@@ -352,7 +352,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const lg = dex('lgpe'), ids = new Set(lg.e.map(x => x[0])), nreq = new Set(lg.x || []);
   eq('v41 compteur Let’s Go', [lg.e.length, ids.size, [...ids].filter(i => !nreq.has(i)).length], [153, 153, 153]);
   const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
-  ok('v41 formes interchangeables : FLINK / FSHORT, raccourci, images des formes', /const FLINK = \{ 493: '\*', 773: '\*', 676: \['xy'\], 649: \['bw', 'b2w2', 'home'\]/.test(app) && /Cocher toutes les formes/.test(app) && /✓ Toutes cochées/.test(app) && /new Set\(E\.map\(artOf\)\)/.test(app));
+  ok('v41 formes interchangeables : FLINK / FSHORT, raccourci, images des formes', /const FLINK = \{ 493: '\*', 773: '\*', 676: \['xy'\], 649: \['bw', 'b2w2', 'home'\]/.test(app) && /Cocher toutes les formes/.test(app) && /✓ Toutes cochées/.test(app) && /E\.map\(p => artOf\(p\)\)/.test(app));
   ok('v48 Ogerpon lié dans Écarlate / Violet (+ HOME), séparé dans GO, migration idempotente', /1017: \['sv', 'home'\]/.test(app) && /function migrateLinkV48\(\)/.test(app) && /migrateFem\(\); migrateLinkV48\(\);/.test(app) && !/1017: '\*'/.test(app));
 }
 // ---- v60.11: peremption (coupe PvP, equipes Rocket), doublon « Gigamax », cri de Mewtwo Armure
@@ -806,7 +806,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
   const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
   ok('v60.30 SW : VERSION ≥ v60.30, DATA_VERSION ≥ d72', /VERSION = 'v60\.(3[0-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 72);
-  ok('v60.30 NOTES ≤ 160 caractères, commence par le filtre / la vue Raids', notes.length > 0 && notes.length <= 160 && /Dispo en raid/.test(notes) && /vue Raids/.test(notes), String(notes.length));
+  { const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1] || '';
+    ok('v60.30 NOTES ≤ 160 caractères' + (ver === 'v60.30' ? ', commence par le filtre / la vue Raids' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.30' || (/Dispo en raid/.test(notes) && /vue Raids/.test(notes))), String(notes.length)); }
   const raids = D('raids.json'), built = buildRaids(), { _meta, ...data } = built;
   eq('v60.30 raids.json idempotent (égal au résultat de fix-v60-30)', raids, data);
   ok('v60.30 raids.json : 6 jeux ÉB / ÉV, ≥ 6800 lignes, ≥ 800 fiches', raids.g.join() === RAID_GAMES.join() && raids.r.length >= 6800 && new Set(raids.r.map(r => r[0])).size >= 800, `${raids.r.length}/${new Set(raids.r.map(r => r[0])).size}`);
@@ -835,7 +836,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
   const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
   ok('v60.31 SW : VERSION ≥ v60.31, DATA_VERSION ≥ d73', /VERSION = 'v60\.(3[1-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 73);
-  ok('v60.31 NOTES ≤ 160 caractères, commence par les raids 7★', notes.length > 0 && notes.length <= 160 && /7★/.test(notes) && /Dispo en raid/.test(notes), String(notes.length));
+  { const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1] || '';
+    ok('v60.31 NOTES ≤ 160 caractères' + (ver === 'v60.31' ? ', commence par les raids 7★' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.31' || (/7★/.test(notes) && /Dispo en raid/.test(notes))), String(notes.length)); }
   const tera7 = D('tera7.json'), built = buildTera7({ offline: true });
   eq('v60.31 tera7.json idempotent (égal au résultat de update-tera7, hors divergences)', tera7.raids, built.raids);
   ok('v60.31 tera7 : ≥ 50 raids, autant d’espèces, ≥ 100 fenêtres', tera7.raids.length >= 50 && new Set(tera7.raids.map(r => r.k)).size === tera7.raids.length && tera7.raids.reduce((n, r) => n + r.windows.length, 0) >= 100, `${tera7.raids.length}/${new Set(tera7.raids.map(r => r.k)).size}/${tera7.raids.reduce((n, r) => n + r.windows.length, 0)}`);
@@ -866,7 +868,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
   const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
   ok('v60.32 SW : VERSION ≥ v60.32, DATA_VERSION ≥ d75', /VERSION = 'v60\.(3[2-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 75);
-  ok('v60.32 NOTES ≤ 160 caractères, commence par les meilleurs attaquants', notes.length > 0 && notes.length <= 160 && /^Meilleurs attaquants/.test(notes) && /7★/.test(notes) && /Dispo en raid/.test(notes), String(notes.length));
+  { const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1] || '';
+    ok('v60.32 NOTES ≤ 160 caractères' + (ver === 'v60.32' ? ', commence par les meilleurs attaquants' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.32' || (/^Meilleurs attaquants/.test(notes) && /7★/.test(notes) && /Dispo en raid/.test(notes))), String(notes.length)); }
   const rk = D('rank-sv-raid.json');
   const n7 = (rk.B || []).filter(b => b[3] === 7).length;
   const n6 = (rk.B || []).filter(b => b[3] === 6).length;
@@ -908,7 +911,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
   const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
   ok('v60.33 SW : VERSION ≥ v60.33, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[3-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
-  ok('v60.33 NOTES ≤ 160 caractères, commence par les meilleurs attaquants', notes.length > 0 && notes.length <= 160 && /^Meilleurs attaquants/.test(notes) && /7★/.test(notes) && /5★/.test(notes) && /Dynamax/.test(notes) && /Dispo en raid/.test(notes), String(notes.length));
+  { const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1] || '';
+    ok('v60.33 NOTES ≤ 160 caractères' + (ver === 'v60.33' ? ', commence par les meilleurs attaquants' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.33' || (/^Meilleurs attaquants/.test(notes) && /7★/.test(notes) && /5★/.test(notes) && /Dynamax/.test(notes) && /Dispo en raid/.test(notes))), String(notes.length)); }
   const rk = D('rank-sv-raid.json');
   const n5 = (rk.B || []).filter(b => b[3] === 5 && !String(b[0]).endsWith('-mx')).length;
   const nMx = (rk.B || []).filter(b => String(b[0]).endsWith('-mx')).length;
@@ -936,6 +940,35 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.33 apply-v34 lance fix-v60-33', /fix-v60-33\.mjs/.test(apply));
   ok('v60.33 app : optgroups 5★ et Dynamax, fiches 5★ / mx / adv, deux onglets', /5★ Paldea/.test(app) && /Dynamax 5★/.test(app) && /Aventure Dynamax/.test(app) && /function svIsMaxId/.test(app) && /k \+ '-5'/.test(app) && /k \+ '-mx'/.test(app) && /k \+ '-adv'/.test(app) && /Attaque directe/.test(app));
   ok('v60.33 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, src5, srcW, fs.readFileSync(path.join(HERE, 'fix-v60-33.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
+}
+
+
+
+// ---- v60.34 : illustrations HOME par défaut (y compris shiny HOME) et secours sprite officiel
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-34.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  const fetchHs = fs.readFileSync(path.join(HERE, 'fetch-home-shiny.mjs'), 'utf8');
+  ok('v60.34 SW : VERSION ≥ v60.34, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[4-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
+  ok('v60.34 NOTES ≤ 160 caractères, illustrations HOME et secours', notes.length > 0 && notes.length <= 160 && /HOME/.test(notes) && /shiny HOME/.test(notes) && /secours/.test(notes), String(notes.length));
+  ok('v60.34 app : artOf / artFb / artImg, HOME par défaut y compris shiny', /const artOf = \(p, shiny\)/.test(app) && /function artImg/.test(app) && /const artFb = \(p, shiny\)/.test(app) && /img\/hs\//.test(app) && /let spriteMode = 'home'/.test(app));
+  ok('v60.34 app : portraits unifiés (liste, fiche, formes, raids, Collection, GO)', /artImg\(p, \{ w: 256 \}\)/.test(app) && /artImg\(p, \{ w: 256, lazy: false, alt: fullN\(p\) \}\)/.test(app) && /id: 'heroimg'/.test(app) && /const colArt =/.test(app) && /artImg\(p, \{ w: 44 \}\)/.test(app));
+  ok('v60.34 app : lazy par défaut, pas de lazy sur le héros, onerror vers le sprite', /opts\.lazy === false \? '' : ' loading="lazy"'/.test(app) && /lazy: false, shiny: showShinyArt/.test(app) && /this\.onerror=null;this\.src=/.test(app));
+  const cacheFn = (app.split('async function cacheImages')[1] || '').split('async function cachePack')[0] || '';
+  ok('v60.34 pack images : femelles incluses, shiny HOME hors pack auto', /femP\(p\)/.test(cacheFn) && !/img\/hs\//.test(cacheFn) && /artOf\(p\)/.test(cacheFn));
+  ok('v60.34 Pocket inchangé (scans de cartes)', /const pkImg =/.test(app) && !/artImg|artOf/.test((app.split('const pkImg =')[1] || '').slice(0, 500)));
+  const hsDir = path.join(DOCS, 'img/hs');
+  const hsFiles = fs.existsSync(hsDir) ? fs.readdirSync(hsDir).filter(f => f.endsWith('.webp')) : [];
+  ok('v60.34 fichiers shiny HOME auto-hébergés', hsFiles.length >= 1580, String(hsFiles.length));
+  const noHome = [...core.e, ...core.e.filter(e => e.fe).map(e => e.fe)].filter(e => !e.hh && !e.hs);
+  ok('v60.34 dix formes sans rendu HOME', noHome.length === 10 && noHome.some(e => e.k === '150-armored') && noHome.some(e => e.k === '172-spiky-eared'), noHome.map(e => e.k).join(','));
+  const caps = ['25-alola-cap', '25-hoenn-cap', '25-kalos-cap', '25-original-cap', '25-sinnoh-cap', '25-unova-cap', '25-world-cap'];
+  ok('v60.34 sept casquettes de Pikachu sans fichier shiny HOME', caps.every(k => E[k] && E[k].hs && E[k].sh && !fs.existsSync(path.join(hsDir, k + '.webp'))));
+  ok('v60.34 apply-v34 lance fix-v60-34, script de récupération présent', /fix-v60-34\.mjs/.test(apply) && /img\/hs/.test(fetchHs) && /home\/shiny/.test(fetchHs));
+  ok('v60.34 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, fetchHs, fs.readFileSync(path.join(HERE, 'preview60-34.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

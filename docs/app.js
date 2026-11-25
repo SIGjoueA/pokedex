@@ -39,8 +39,29 @@ let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // v35: full name of a form; default forms of real alternate-form species carry their official form name (core fn: « Nigirigon Forme Courbée »)
 const fullN = p => p.fn || p.n;
-// v35: default art = the self-hosted Pokémon HOME image of THIS form (img/h/<key>.webp, core hh); official art when HOME has none
-const artOf = p => p.hh ? `img/h/${p.k}.webp` : `img/${p.k}.webp`;
+// v35 / v60.34 : illustration par défaut = rendu HOME auto-hébergé de cette forme (img/h/<clé>.webp, core hh) ;
+// shiny HOME dans img/hs/ lorsqu’un identifiant hs existe ; le sprite officiel (img/ ou img/s/) sert de secours.
+const artOf = (p, shiny) => {
+  if (!p) return '';
+  if (shiny && p.sh) return p.hs ? `img/hs/${p.k}.webp` : `img/s/${p.k}.webp`;
+  return p.hh ? `img/h/${p.k}.webp` : `img/${p.k}.webp`;
+};
+const artFb = (p, shiny) => {
+  if (!p) return '';
+  if (shiny && p.sh) return `img/s/${p.k}.webp`;
+  return `img/${p.k}.webp`;
+};
+function artImg(p, opts = {}) {
+  const shiny = !!(opts.shiny && p && p.sh);
+  const src = artOf(p, shiny), fb = artFb(p, shiny);
+  const w = opts.w || 256, h = opts.h || w;
+  const lazy = opts.lazy === false ? '' : ' loading="lazy"';
+  const dec = opts.decoding === false ? '' : ' decoding="async"';
+  const id = opts.id ? ` id="${esc(opts.id)}"` : '';
+  const cls = opts.cls ? ` class="${esc(opts.cls)}"` : '';
+  const onerr = src && fb && src !== fb ? ` onerror="this.onerror=null;this.src='${fb}'"` : '';
+  return `<img${id} src="${src}" alt="${esc(opts.alt || '')}" width="${w}" height="${h}"${dec}${lazy}${onerr}${cls}${opts.extra || ''}>`;
+}
 // Tracking context: a game id (or 'go') when one is selected in the Jeux filter, otherwise null = global marks (unchanged behaviour)
 // 'home' (list) = Pokémon HOME: marks = origin-mark transfers (HOME_O), shared with the game sheets.
 const TRANS_G = new Set(store.get('home_g', [])), STRANS_G = new Set(store.get('homeshiny_g', [])); // TRANS_G (v8–v21 per-game transfers): kept as a frozen backup, migrated once to HOME_O
@@ -885,7 +906,7 @@ function cardHTML(p) {
     (trackCtx() && trackCtx() !== 'home' && isTrans(p) ? homeIcon(false, HOME_T) : '');
   const tr = tradeOf(p, trackCtx()), trc = tr ? (tr.opt ? ' tradeo' : ' trade') : '';
   const trI = tr ? `<span class="trk" aria-label="${tr.opt ? 'Échange facultatif' : 'Échange requis'}" title="${esc(tr.r)}">⇄</span>` : '';
-  return `<a class="card${trc}${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}"><img src="${artOf(p)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+  return `<a class="card${trc}${p.c ? ' form' : ''}${sizeClass(p) ? ' ' + sizeClass(p) : ''}" href="#/p/${p.k}">${artImg(p, { w: 256 })}` +
     `<div class="info"><div class="num">${numHTML(p)}</div><div class="nm">${esc(state.forms ? fullN(p) : p.n)} ${trI}${star}</div></div>` +
     `<div class="badges">${p.t.map(badge).join('')}</div><span class="cadd" role="button" tabindex="0" data-add="${p.k}" aria-label="Ajouter ${esc(fullN(p))} à ma collection">＋</span></a>`;
 }
@@ -1056,7 +1077,7 @@ function renderRaids() {
     const p = BY_KEY[k], tags = [];
     if (/g/.test(info.fl)) tags.push('Gigamax');
     if (info.extra) tags.push(info.extra);
-    return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-raid="${esc(g)}">${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b>${p ? `<span class="rkty">${p.t.map(badge).join('')}</span>` : ''}${tags.length ? `<small>${esc(tags.join(' · '))}</small>` : ''}</span></a></li>`;
+    return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-raid="${esc(g)}">${p ? artImg(p, { w: 44 }) : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b>${p ? `<span class="rkty">${p.t.map(badge).join('')}</span>` : ''}${tags.length ? `<small>${esc(tags.join(' · '))}</small>` : ''}</span></a></li>`;
   };
   let body = `<div class="rkwrap rvwrap"><div class="rvctl"><p class="note rvlbl">Raids ${esc(kind)} — ${esc(RAID_LONG[g])}</p><div class="chips rvgames" role="tablist" aria-label="Jeu">${tabs}</div><div class="chips rvstars" role="group" aria-label="Étoiles">${st}</div></div>`;
   const shown = sections.filter(sec => sec.n);
@@ -1158,7 +1179,7 @@ async function openDetail(p) {
   const tok = ++detailTok;
   state.dgame = sheetPref || (state.game === 'go' || state.game === 'home' || GAME_BY[state.game] ? state.game : 'all'); // sheet game: its own choice, else the list filter
   document.title = `${fullN(p)} #${pad(p.id)} – Pokédex`;
-  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}${p.c === 'sex' || p.l === 'Mâle' ? ' · ' + esc(p.l) : ''}</div><img src="img/${p.k}.webp" alt="${esc(fullN(p))}" width="256" height="256"><h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
+  $('#detail-view').innerHTML = navHTML(p) + `<div class="detail"><div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${TYPE_COLORS[p.t[0]]};--c2:${TYPE_COLORS[p.t[1] || p.t[0]]}"><div class="num">#${pad(p.id)}${p.c === 'sex' || p.l === 'Mâle' ? ' · ' + esc(p.l) : ''}</div>${artImg(p, { w: 256, lazy: false, alt: fullN(p) })}<h1>${esc(p.n)}</h1>${namesHTML(p)}</div><p class="note" id="dload">Chargement de la fiche…</p></div>`;
   try {
     const [sp, shared, shiny] = await Promise.all([loadSp(p.id), loadShared(), loadShiny()]); CRIES = await loadCries();
     if (tok !== detailTok) return;
@@ -1524,7 +1545,7 @@ function formSwitcher(p, gm) {
   const gi = gm ? GIDX[gm.id] : -1;
   const chips = list.map(q => {
     const na = gm && q.c && !inGame(q, gi);
-    return `<a class="fchip${q.k === p.k ? ' cur' : ''}${na ? ' na' : ''}" href="#/p/${q.k}" title="${esc(fullN(q))}"><img src="${artOf(q)}" alt="" loading="lazy" width="36" height="36"><span>${esc(formLabel(q))}</span></a>`;
+    return `<a class="fchip${q.k === p.k ? ' cur' : ''}${na ? ' na' : ''}" href="#/p/${q.k}" title="${esc(fullN(q))}">${artImg(q, { w: 36 })}<span>${esc(formLabel(q))}</span></a>`;
   }).join('');
   return `<section class="box" id="formesbox"><h2>Formes <small class="cnt">${list.length}</small></h2><div class="fchips${list.length > 14 ? ' many' : ''}${p.id === 676 ? ' fgrid' : ''}">${chips}</div>${gm ? '<p class="note">Formes grisées : absentes de ce jeu.</p>' : ''}${trimHTML(p, gm)}${allFormsHTML(p)}</section>`;
 }
@@ -1671,10 +1692,10 @@ function baseNoteHTML(p) {
   return `<section class="box basenote"><p>${txt}.</p><p class="note"><a href="#/p/${b.k}">Fiche de ${esc(p.c === 'sex' ? fullN(b) : b.n)} →</a></p></section>`;
 }
 
-/* ---------------- v31: alternative sprites (on demand, network only) ---------------- */
-// Officiel = the self-hosted artwork (offline). HOME / Animé come from the PokéAPI sprites repository ONLY when tapped:
-// never precached, not stored by the service worker (other origin); offline or missing → back to the official artwork.
-let spriteMode = 'home'; // v35: HOME = default (self-hosted, offline); Officiel / Animé = alternatives for the current sheet
+/* ---------------- v31 / v60.34 : styles d’illustration ---------------- */
+// HOME = rendu 3D auto-hébergé (défaut, y compris shiny HOME dans img/hs). Officiel = sprite auto-hébergé (secours).
+// Animé = dépôt PokéAPI sprites, seulement au toucher (autre origine, never precached, pas dans le service worker) ; hors-ligne ou absence → sprite officiel.
+let spriteMode = 'home'; // v35 / v60.34 : HOME par défaut
 const SPR = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/';
 const pokeId = p => { const c = CRIES && CRIES[p.k] && CRIES[p.k][0]; return c ? +c.slice(2) : (p.c ? 0 : p.id); };
 function spriteBtns(p) {
@@ -1685,18 +1706,24 @@ function spriteBtns(p) {
 let SPR_TOK = 0;
 function setSprite(mode, quiet) {
   const p0 = DET && DET.p, p = p0 && showFemArt && p0.fe ? femP(p0) : p0, img = $('#heroimg'); if (!p || !img) return;
-  const tok = ++SPR_TOK, shiny = showShinyArt && p.sh, off = `img/${shiny ? 's/' : ''}${p.k}.webp`;
+  const tok = ++SPR_TOK, shiny = showShinyArt && p.sh, off = artFb(p, shiny);
   img.onerror = null; img.onload = null;
   const press = m => document.querySelectorAll('.sprsw button').forEach(b => b.setAttribute('aria-pressed', b.dataset.spr === m));
   const back = msg => { if (tok !== SPR_TOK) return; img.onerror = null; spriteMode = 'off'; img.classList.remove('pix'); img.src = off; press('off'); if (msg && !quiet) toast(msg, 'err', 4500); };
   if (mode === 'off') return back();
-  let url;
-  if (mode === 'home') url = !shiny && p.hh ? `img/h/${p.k}.webp` : p.hs && navigator.onLine !== false ? `${SPR}home/${shiny ? 'shiny/' : ''}${p.hs}.png` : null;
-  else url = p.as && navigator.onLine !== false ? `${SPR}showdown/${shiny ? 'shiny/' : ''}${p.as}.gif` : null;
-  if (!url) return back(navigator.onLine === false && mode === 'anim' ? 'Hors-ligne : sprite animé indisponible, illustration officielle.' : `${mode === 'home' ? 'Rendu HOME' : 'Sprite animé'} indisponible pour ${fullN(p)} : illustration officielle.`);
-  spriteMode = mode; press(mode);
-  img.classList.toggle('pix', mode === 'anim');
-  img.onerror = () => back(`${mode === 'home' ? 'Rendu HOME' : 'Sprite animé'} indisponible pour ${fullN(p)} : illustration officielle.`);
+  if (mode === 'home') {
+    const src = artOf(p, shiny), fb = artFb(p, shiny);
+    spriteMode = 'home'; press('home');
+    img.classList.remove('pix');
+    if (src !== fb) img.onerror = () => { if (tok !== SPR_TOK) return; img.onerror = null; img.src = fb; };
+    img.src = src;
+    return;
+  }
+  const url = p.as && navigator.onLine !== false ? `${SPR}showdown/${shiny ? 'shiny/' : ''}${p.as}.gif` : null;
+  if (!url) return back(navigator.onLine === false ? 'Hors-ligne : sprite animé indisponible, illustration officielle.' : `Sprite animé indisponible pour ${fullN(p)} : illustration officielle.`);
+  spriteMode = 'anim'; press('anim');
+  img.classList.add('pix');
+  img.onerror = () => back(`Sprite animé indisponible pour ${fullN(p)} : illustration officielle.`);
   img.src = url;
 }
 
@@ -1897,7 +1924,7 @@ function tera7ViewHTML(g) {
     const dates = (r.windows || []).map(w => fmtT7Range(w.s, w.e)).join(' · ');
     const ver = r.ver === 's' ? 'Écarlate uniquement' : r.ver === 'v' ? 'Violet uniquement' : '';
     const tags = [lab, r.title, ver].filter(Boolean).join(' · ');
-    return `<li><a class="rkrow" href="#/p/${p ? p.k : r.k}" data-raid="${esc(g)}">${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : r.n)}</b><span class="rkty">${badge(r.tera)}</span><small>${esc(tags)}${dates ? ' · ' + esc(dates) : ''}</small></span></a></li>`;
+    return `<li><a class="rkrow" href="#/p/${p ? p.k : r.k}" data-raid="${esc(g)}">${p ? artImg(p, { w: 44 }) : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : r.n)}</b><span class="rkty">${badge(r.tera)}</span><small>${esc(tags)}${dates ? ' · ' + esc(dates) : ''}</small></span></a></li>`;
   };
   let html = `<details class="rvsec t7sec" open><summary>7★ <span class="mute">${TERA7.raids.length} Pokémon</span></summary>`;
   if (live.length) html += `<details class="rvloc t7now" open><summary>En cours et à venir <span class="mute">${live.length}</span></summary><ul class="rklist">${live.map(row).join('')}</ul></details>`;
@@ -1952,7 +1979,7 @@ function svRankListHTML(id, tera, leg, origin, mode) {
     const kind = svIsMaxId(id)
       ? ((/G-Max/.test(mv) || /G-Max/.test(en)) ? 'Gigamax' : 'Dynamax')
       : 'Téra';
-    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)}${boost ? ' après ' + esc(boost) : ''} · ${kind} ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
+    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? artImg(p, { w: 44 }) : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)}${boost ? ' après ' + esc(boost) : ''} · ${kind} ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
   }).join('')}</ol>`;
 }
 function svTeraChipsHTML(id, tera, leg) {
@@ -2234,7 +2261,7 @@ function evoHTML(p, f, mode, gm) {
   const seen = new Set();
   const node = (k, label) => {
     const q = BY_KEY[k]; const cur = k === start;
-    const me = `<a class="evpk${cur ? ' cur' : ''}" href="#/p/${q.k}"><img src="${artOf(q)}" alt="" loading="lazy" width="72" height="72"><span>${esc(q.n)}</span><small>#${pad(q.id)}</small></a>`;
+    const me = `<a class="evpk${cur ? ' cur' : ''}" href="#/p/${q.k}">${artImg(q, { w: 72 })}<span>${esc(q.n)}</span><small>#${pad(q.id)}</small></a>`;
     if (seen.has(k)) return `<div class="evrow">${me}</div>`;
     seen.add(k);
     const kids = (out[k] || []).map(e => `<div class="evrow"><div class="evlink">${e.lines.map(l => `<div>${esc(cap(l))}</div>`).join('') || ''}</div>${node(e.t)}</div>`).join('');
@@ -2320,7 +2347,7 @@ function pvpHTML(p, go) {
 // v32: Ditto (Métamorph) — Pokémon it can be disguised as in GO (build/go-ditto.json, cited sources)
 function ditHTML(d) {
   const D = d && d.dit; if (!D) return '';
-  const chip = id => { const q = BY_KEY[String(id)]; return q ? `<a class="fchip" href="#/p/${q.k}" title="${esc(q.n)}"><img src="${artOf(q)}" alt="" loading="lazy" width="36" height="36"><span>${esc(q.n)}</span></a>` : ''; };
+  const chip = id => { const q = BY_KEY[String(id)]; return q ? `<a class="fchip" href="#/p/${q.k}" title="${esc(q.n)}">${artImg(q, { w: 36 })}<span>${esc(q.n)}</span></a>` : ''; };
   const grp = (l, ids, cls) => `<p class="ditl${cls}">${esc(l)} <small class="mute">· ${ids.length}</small></p><div class="fchips ditc">${ids.map(chip).join('')}</div>`;
   return `<section class="box ditbox"><h2>Déguisements <small class="cnt">${D.cur.ids.length} actuels</small></h2>
     <p class="note">Dans Pokémon GO, Métamorph n’apparaît jamais sous sa propre forme : il se cache sous l’apparence d’une de ces espèces sauvages (révélé à la capture).</p>
@@ -2504,7 +2531,7 @@ function renderDetail() {
   const games = availGames(f);
   const goOk = goRel(f.go);
   const opts = sheetGameOpts(p, sp, games, goOk, mode);
-  const ap = showFemArt && p.fe ? femP(p) : p, gimg = spriteMode === 'off' ? `img/${ap.k}.webp` : artOf(ap), simg = `img/s/${ap.k}.webp`; // v35: HOME by default
+  const ap = showFemArt && p.fe ? femP(p) : p; // v60.34 : illustration HOME par défaut (y compris shiny HOME)
   const regional = gm ? dexNumbers(sp, gm.id) : '';
   // v43: sheet order chosen per view; description, tracking and forms are placed in the template below
   // v55: one order for every view — identity (hero, taille, suivi, collection, formes) → statut / présence (P) → stats, faiblesses, talents (S)
@@ -2545,7 +2572,7 @@ function renderDetail() {
     <div class="hero${sizeClass(p) ? ' ' + sizeClass(p) : ''}" style="--c1:${c1};--c2:${c2}">
       <div class="num">#${pad(p.id)}${p.c === 'sex' || p.l === 'Mâle' ? ' · ' + esc(p.l) : ''}</div>
       ${cryBtns(p)}
-      <img id="heroimg" src="${showShinyArt && ap.sh ? simg : gimg}" alt="${esc(p.n)}${showFemArt && p.fe ? ' femelle' : ''}" width="256" height="256">
+      ${artImg(ap, { id: 'heroimg', w: 256, lazy: false, shiny: showShinyArt, alt: p.n + (showFemArt && p.fe ? ' femelle' : '') })}
       ${spriteBtns(p)}
       ${p.sh ? `<button id="shbtn" class="shart" type="button" aria-pressed="${showShinyArt}" title="Afficher l’illustration shiny">✨ ${showShinyArt ? 'Normal' : 'Shiny'}</button>` : ''}
       ${p.fe ? `<button id="febtn" class="shart feart" type="button" aria-pressed="${showFemArt}" title="${showFemArt ? 'Afficher le mâle' : 'Afficher la femelle (différence d’apparence)'}">${showFemArt ? '♂ Mâle' : '♀ Femelle'}</button>` : ''}
@@ -2835,9 +2862,9 @@ const packOk = () => { const v = store.get('packDone2', false); return !!v && DA
 function showOffline(msg) {
   const imgs = store.get('imgsDoneF', false), pack = packOk();
   $('#offline').innerHTML = msg || [
-    imgs ? '<p style="margin:0">✓ Images des Pokémon et de leurs formes enregistrées pour le hors-ligne.</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon et de leurs formes (~17 Mo, images HOME)</button></p>',
+    imgs ? '<p style="margin:0">✓ Images des Pokémon et de leurs formes enregistrées pour le hors-ligne (rendus HOME, ou sprite officiel s’il n’existe pas de rendu HOME).</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon et de leurs formes (~17 Mo, rendus HOME)</button></p>',
     pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~35 Mo)</button></p>',
-    '<p class="note">Les illustrations shiny ne sont enregistrées que lorsque vous les ouvrez.</p>'
+    '<p class="note">Les illustrations shiny (rendus HOME, ou sprite officiel à défaut) ne sont enregistrées que lorsque vous les ouvrez.</p>'
   ].join('');
   const b = $('#dl'); if (b) b.onclick = cacheImages;
   const b2 = $('#dl2'); if (b2) b2.onclick = cachePack;
@@ -2856,14 +2883,14 @@ async function runPool(urls, n, label) {
 }
 async function cacheImages() {
   if (caching) return; caching = true;
-  const fail = await runPool([...new Set(E.map(artOf))], 4, 'Téléchargement des images');
+  const fail = await runPool([...new Set([...E.map(p => artOf(p)), ...E.filter(p => p.fe).map(p => artOf(femP(p)))])], 4, 'Téléchargement des images');
   caching = false;
   if (!fail) store.set('imgsDoneF', true);
   showOffline();
 }
 async function cachePack() {
   if (caching) return; caching = true;
-  const urls = [...E.filter(p => p.c).map(artOf), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
+  const urls = [...E.filter(p => p.c).map(p => artOf(p)), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
     'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', 'data/rank-sv-raid.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
@@ -3135,8 +3162,9 @@ const colGName = g => g === 'go' ? 'Pokémon GO' : g === 'home' ? 'Pokémon HOME
 const colWhere = w => !w ? '' : w.startsWith('other:') ? w.slice(6) : colGName(w);
 const colOrigOk = g => g === 'go' || !!GAME_BY[g];
 const colId = () => (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2, 10));
-const colImg = e => { const p = (e.mg && BY_KEY[e.mg]) || BY_KEY[e.k]; // v53: Méga specimen shows its Mega art
-  return p ? (e.sh && p.sh ? `img/s/${p.k}.webp` : artOf(p)) : ''; };
+const colPoke = e => (e.mg && BY_KEY[e.mg]) || BY_KEY[e.k]; // v53: un exemplaire Méga montre l’art de la Méga
+const colImg = e => { const p = colPoke(e); return p ? artOf(p, e.sh) : ''; };
+const colArt = (e, opts = {}) => { const p = colPoke(e); return p ? artImg(p, { shiny: !!e.sh, ...opts }) : ''; };
 const colValid = e => e && typeof e === 'object' && typeof e.k === 'string' && BY_KEY[e.k] && colOrigOk(e.g);
 function colImport(arr) {
   const have = new Set(COLL.map(e => e.id));
@@ -3248,11 +3276,11 @@ function myColHTML(p) {
 }
 function colRowHTML(e) {
   const p = BY_KEY[e.k];
-  return `<li${e.gone ? ' class="gone"' : ''}><button type="button" class="colrow" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" width="48" height="48" loading="lazy"><span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.bn ? ' · Baron' : ''}${e.gx ? ' · Gigamax' : ''}${e.mg ? ' · ' + esc(colMegaL(e.mg)) : ''}${e.gone ? ' · ' + esc(colGoneTxt(e.gone)) : e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
+  return `<li${e.gone ? ' class="gone"' : ''}><button type="button" class="colrow" data-cid="${esc(e.id)}">${colArt(e, { w: 48 })}<span class="ct"><b>${esc(fullN(p))}${e.sh ? ' ✨' : ''}</b>${e.n ? `<i>« ${esc(e.n)} »</i>` : ''}<small>${gdot(e.g)}${esc(colGName(e.g))}${e.bn ? ' · Baron' : ''}${e.gx ? ' · Gigamax' : ''}${e.mg ? ' · ' + esc(colMegaL(e.mg)) : ''}${e.gone ? ' · ' + esc(colGoneTxt(e.gone)) : e.w ? ' · ' + esc(colWhere(e.w)) : ''}</small></span></button></li>`;
 }
 function colCardHTML(e) {
   const p = BY_KEY[e.k]; if (!p) return '';
-  return `<button type="button" class="card colcard${e.gone ? ' gone' : ''}" data-cid="${esc(e.id)}"><img src="${colImg(e)}" alt="" loading="lazy" decoding="async" width="256" height="256">` +
+  return `<button type="button" class="card colcard${e.gone ? ' gone' : ''}" data-cid="${esc(e.id)}">${colArt(e, { w: 256 })}` +
     `<div class="info"><div class="nm">${esc(fullN(p))}${colLvHTML(e)}${e.sh ? ' <span class="mk sh" aria-label="Shiny">✨</span>' : ''}</div>${e.n ? `<div class="sn">« ${esc(e.n)} »</div>` : ''}${e.bn || e.gx || e.mg || colIvBadge(e) ? `<div class="cbad">${colIvBadge(e)}${e.bn ? '<span class="cb bn">Baron</span>' : ''}${e.gx ? '<span class="cb gx">Gigamax</span>' : ''}${e.mg ? `<span class="cb mg">${esc(colMegaL(e.mg))}</span>` : ''}</div>` : ''}<div class="og" title="${esc(colGName(e.g))}">${gdot(e.g)}<span>${esc(colGName(e.g))}</span>${e.b ? ballImg(e.b) : ''}</div>${e.gone ? `<div class="gn">${esc(colGoneTxt(e.gone))}</div>` : ''}</div></button>`;
 }
 function colRender() {
@@ -3340,7 +3368,7 @@ function colOpen(o) {
   const m = document.createElement('div'); m.id = 'colmodal'; m.className = 'colback';
   m.innerHTML = `<div class="colsheet" role="dialog" aria-modal="true" aria-labelledby="coltitle">
     <div class="menuhead"><h2 id="coltitle">${ed ? 'Mon Pokémon' : 'Ajouter à ma collection'}</h2><button type="button" class="menux" id="colx" aria-label="Fermer">✕</button></div>
-    ${ed ? `<div class="colhero"><img src="${colImg(e)}" alt="" width="96" height="96"><div><b>${esc(fullN(p))}${colLvHTML(e)}</b>${colGoHTML(e)}${e.mg ? `<span class="cbad"><span class="cb mg">${esc(colMegaL(e.mg))}</span></span>` : ''}${e.b || e.cd || e.l ? `<small class="colcap">${e.b ? ballImg(e.b) + esc(BALL_N[e.b]) : ''}${e.b && (e.cd || e.l) ? ' · ' : ''}${e.cd || e.l ? 'Capturé' + (e.l ? ' : ' + esc(e.l) : '') + (e.cd ? ' le ' + colDate(e.cd) : '') : ''}</small>` : ''}${e.at ? `<small>Ajouté le ${new Date(e.at).toLocaleDateString('fr-FR')}</small>` : ''}${(e.h || []).filter(r => r.t === 'evo' && BY_KEY[r.from]).map(r => `<small class="colevo">A évolué de ${esc(fullN(BY_KEY[r.from]))}${r.d ? ' le ' + new Date(r.d).toLocaleDateString('fr-FR') : ''}</small>`).join('')}</div></div>
+    ${ed ? `<div class="colhero">${colArt(e, { w: 96, lazy: false })}<div><b>${esc(fullN(p))}${colLvHTML(e)}</b>${colGoHTML(e)}${e.mg ? `<span class="cbad"><span class="cb mg">${esc(colMegaL(e.mg))}</span></span>` : ''}${e.b || e.cd || e.l ? `<small class="colcap">${e.b ? ballImg(e.b) + esc(BALL_N[e.b]) : ''}${e.b && (e.cd || e.l) ? ' · ' : ''}${e.cd || e.l ? 'Capturé' + (e.l ? ' : ' + esc(e.l) : '') + (e.cd ? ' le ' + colDate(e.cd) : '') : ''}</small>` : ''}${e.at ? `<small>Ajouté le ${new Date(e.at).toLocaleDateString('fr-FR')}</small>` : ''}${(e.h || []).filter(r => r.t === 'evo' && BY_KEY[r.from]).map(r => `<small class="colevo">A évolué de ${esc(fullN(BY_KEY[r.from]))}${r.d ? ' le ' + new Date(r.d).toLocaleDateString('fr-FR') : ''}</small>`).join('')}</div></div>
     ${e.gone ? `<div class="colgonebar"><span><b>Plus en votre possession</b> · ${esc(colGoneTxt(e.gone))}${e.gone.n ? `<br><i>${esc(e.gone.n)}</i>` : ''}</span><button type="button" id="cfrest" class="cfrest">Restaurer</button></div>` : ''}
     <div id="cfevow"></div><div id="cfevol" class="cfevol" hidden></div>` : ''}
     <form id="colform" novalidate>
@@ -3428,7 +3456,7 @@ function colOpen(o) {
     colEvos(p, e.sx).then(ev => { const w = q('#cfevow'); if (!ev.length || !w || !w.isConnected) return;
       w.innerHTML = '<button type="button" id="cfevo" class="cfevo">Faire évoluer</button>';
       q('#cfevo').onclick = () => { const l = q('#cfevol'); l.hidden = !l.hidden; if (l.hidden) return;
-        l.innerHTML = '<p class="cfevoh">En quel Pokémon a-t-il évolué ?</p>' + ev.map(x => `<button type="button" class="colrow cfevopick" data-evo="${esc(x.p.k)}" data-sx="${x.sx}"><img src="${e.sh && x.p.sh ? `img/s/${x.p.k}.webp` : artOf(x.p)}" alt="" width="48" height="48"><span class="ct"><b>${esc(fullN(x.p))}</b>${x.how.length ? `<small>${esc(x.how.join(', '))}</small>` : ''}</span></button>`).join('') + '<small class="note">Le jeu d’origine, le surnom, le Shiny et le sexe sont conservés. Capturé est coché pour la nouvelle espèce.</small>';
+        l.innerHTML = '<p class="cfevoh">En quel Pokémon a-t-il évolué ?</p>' + ev.map(x => `<button type="button" class="colrow cfevopick" data-evo="${esc(x.p.k)}" data-sx="${x.sx}">${artImg(x.p, { w: 48, shiny: e.sh })}<span class="ct"><b>${esc(fullN(x.p))}</b>${x.how.length ? `<small>${esc(x.how.join(', '))}</small>` : ''}</span></button>`).join('') + '<small class="note">Le jeu d’origine, le surnom, le Shiny et le sexe sont conservés. Capturé est coché pour la nouvelle espèce.</small>';
         l.querySelectorAll('[data-evo]').forEach(bt => bt.onclick = async () => { const np = BY_KEY[bt.dataset.evo]; const op = await colEvolve(ed, np, bt.dataset.sx || '');
           colRender(); if (DET && DET.p && !$('#detail-view').hidden) { try { refreshTrack(DET.p); } catch {} } if (!colMode) render();
           colOpen({ id: ed.id }); toast(`${fullN(op)} a évolué en ${fullN(np)} · Capturé coché dans ${colGName(ed.g)}.`); }); };
@@ -3710,7 +3738,7 @@ async function loadRank() { if (!RANKD) RANKD = Promise.all([loadGo(), getJSON('
 const rkSeg = (k, opts) => `<div class="seg rkseg" role="group">${opts.map(([v, l]) => `<button type="button" data-rk="${k}" data-v="${v}" aria-pressed="${RK[k] === v}">${l}</button>`).join('')}</div>`;
 function rkRow(i, k, sh, sub, right, tag) {
   const p = BY_KEY[k]; const nm = p ? fullN(p) : k;
-  return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-go="1"><span class="rkn">${i}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(nm)}${sh ? ' <span class="rksh">Obscur</span>' : ''}${tag || ''}</b><span class="rkty">${p ? p.t.map(badge).join('') : ''}</span><small>${sub}</small></span><span class="rkv">${right}</span></a></li>`;
+  return `<li><a class="rkrow" href="#/p/${p ? p.k : k}" data-go="1"><span class="rkn">${i}</span>${p ? artImg(p, { w: 44 }) : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(nm)}${sh ? ' <span class="rksh">Obscur</span>' : ''}${tag || ''}</b><span class="rkty">${p ? p.t.map(badge).join('') : ''}</span><small>${sub}</small></span><span class="rkv">${right}</span></a></li>`;
 }
 // v60.4: recommended teams per boss (raids: 6, Combats Max: 3), built on the device from the per-boss lists (top 20 + « x » = next ranks).
 const NOLEG_X = new Set([793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806, ...Array.from({ length: 12 }, (_, i) => 984 + i), 1005, 1006, 1007, 1008, 1009, 1010, 1020, 1021, 1022, 1023]); // Ultra-Chimères + Paradoxes (same list as the Rocket teams)
@@ -3835,7 +3863,7 @@ async function renderRank() {
   } else if (RK.s === 'rocket') {
     if (!rk) body += '<p class="note">Classement Team GO Rocket indisponible hors-ligne. Ouvrez cet écran une fois avec une connexion Internet.</p>';
     else { const F = rk.F, mvk = i => rk.mv[i]; const L = rk.L.find(x => x.id === RK.rl) || rk.L[0]; RK.rl = L.id;
-      const ops = L.S.flat(), sp = o => { const p = BY_KEY[o[0]]; return p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="40" height="40">` : ''; };
+      const ops = L.S.flat(), sp = o => { const p = BY_KEY[o[0]]; return p ? artImg(p, { w: 40 }) : ''; };
       const rkOld = !!(rk.valid && TODAY >= rk.valid); // v60.11: past the end of the lineup rotation → never presented as current
       if (rkOld) body += `<p class="note rkwarn">⚠️ Ces équipes étaient celles de la rotation du ${new Date(rk.upd).toLocaleDateString('fr-FR')} au ${new Date(rk.valid).toLocaleDateString('fr-FR')}. La Team GO Rocket a probablement changé ses équipes depuis : vérifiez en jeu avant de vous y fier. Les nouvelles équipes seront ajoutées dès leur publication.</p>`;
       body += `<div class="rkctl">${rkSeg('rl', rk.L.map(x => [x.id, x.n]))}${rkSeg('rr', [['g', 'Équipe complète'], ['o', 'Par adversaire']])}</div>`;
