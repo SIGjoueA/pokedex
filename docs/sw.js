@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v60.34';
+const VERSION = 'v60.35';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Illustrations : rendus HOME par défaut, y compris shiny HOME. Sprite officiel en secours si un rendu manque. Shiny en cache à l’ouverture seulement.';
+const NOTES = 'Illustrations shiny HOME : téléchargement optionnel hors-ligne (~16,4 Mo). Jamais automatique ; le cache déjà présent est réutilisé ; vous pouvez le supprimer.';
 const DATA_VERSION = 'd76'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;

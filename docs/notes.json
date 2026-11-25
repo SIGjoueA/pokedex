@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.35",
+  "d": "2026-11-25",
+  "l": [
+   "Nouveau téléchargement optionnel dans le menu Hors-ligne : les illustrations shiny HOME (~16,4 Mo, 1 584 fichiers). Le bouton indique la taille, affiche la progression, puis « déjà téléchargées » une fois le pack complet, avec la possibilité de le supprimer. Il n’est jamais lancé automatiquement.",
+   "Les shiny que vous avez déjà ouverts restent dans le cache et ne sont pas retéléchargés. Le pack automatique des images (~17 Mo, rendus HOME) est inchangé. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant : vous pourrez le télécharger à nouveau.",
+   "DATA_VERSION inchangée (d76)."
+  ]
+ },
+
+ {
   "v": "v60.34",
   "d": "2026-11-25",
   "l": [

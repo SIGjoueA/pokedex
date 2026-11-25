@@ -2788,7 +2788,7 @@ function registerSW() {
     const metered = navigator.connection && (navigator.connection.saveData || navigator.connection.type === 'cellular');
     notesAfterUpdate();
     swDataVersion().then(() => showOffline()); // v34: the offline pack flag is only valid for the data cache it filled
-    if (!store.get('imgsDoneF', false) && !metered) cacheImages();
+    if (!store.get('imgsDoneF', false) && !metered) cacheImages(); // v60.35 : le pack shiny HOME n’est jamais lancé automatiquement
     else showOffline();
   }).catch(() => {});
 }
@@ -2861,13 +2861,29 @@ async function swDataVersion() { const c = navigator.serviceWorker && navigator.
 const packOk = () => { const v = store.get('packDone2', false); return !!v && DATA_DV !== null && v === DATA_DV; };
 function showOffline(msg) {
   const imgs = store.get('imgsDoneF', false), pack = packOk();
+  const hsDone = store.get('hsDone', false) || (HS_STATE && HS_STATE.total > 0 && HS_STATE.have === HS_STATE.total);
+  const hsHave = HS_STATE ? HS_STATE.have : 0, hsTotal = HS_STATE ? HS_STATE.total : 0, hsRest = HS_STATE ? HS_STATE.missing.length : 0;
+  const hsLine = (() => {
+    if (hsDone) return '<p style="margin:0">✓ Illustrations shiny HOME déjà téléchargées (~16,4 Mo).</p><p style="margin:8px 0 0"><button type="button" id="dlhsx">Supprimer les illustrations shiny HOME du cache</button></p>';
+    if (hsHave > 0 && hsTotal) {
+      const restMo = (16.4 * hsRest / hsTotal).toFixed(1).replace('.', ',');
+      return `<p style="margin:0"><button type="button" id="dlhs">Télécharger les illustrations shiny HOME restantes (~${restMo} Mo, ${hsHave}/${hsTotal} déjà en cache)</button></p><p style="margin:8px 0 0"><button type="button" id="dlhsx">Supprimer les illustrations shiny HOME du cache</button></p>`;
+    }
+    return '<p style="margin:0"><button type="button" id="dlhs">Télécharger les illustrations shiny HOME (~16,4 Mo)</button></p>';
+  })();
   $('#offline').innerHTML = msg || [
     imgs ? '<p style="margin:0">✓ Images des Pokémon et de leurs formes enregistrées pour le hors-ligne (rendus HOME, ou sprite officiel s’il n’existe pas de rendu HOME).</p>' : '<p style="margin:0"><button id="dl">Télécharger les images des Pokémon et de leurs formes (~17 Mo, rendus HOME)</button></p>',
     pack ? '<p>✓ Formes, fiches détaillées, jeux et Pokémon GO disponibles hors-ligne.</p>' : '<p><button id="dl2">Télécharger les formes et toutes les fiches (~35 Mo)</button></p>',
-    '<p class="note">Les illustrations shiny (rendus HOME, ou sprite officiel à défaut) ne sont enregistrées que lorsque vous les ouvrez.</p>'
+    hsLine,
+    hsDone
+      ? '<p class="note">Vous pouvez supprimer ce pack à tout moment. Les illustrations s’enregistreront à nouveau si vous les ouvrez, ou si vous retéléchargez le pack. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant.</p>'
+      : '<p class="note">Optionnel : ce pack n’est jamais téléchargé automatiquement. Les shiny que vous avez déjà ouverts sont réutilisés, sans doublon. À défaut, les illustrations shiny ne sont enregistrées que lorsque vous les ouvrez. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant.</p>'
   ].join('');
   const b = $('#dl'); if (b) b.onclick = cacheImages;
   const b2 = $('#dl2'); if (b2) b2.onclick = cachePack;
+  const bh = $('#dlhs'); if (bh) bh.onclick = cacheShinyHome;
+  const bx = $('#dlhsx'); if (bx) bx.onclick = uncacheShinyHome;
+  if (!msg) queueHsVerify();
 }
 async function runPool(urls, n, label) {
   let done = 0, fail = 0; const q = urls.slice();
@@ -2895,6 +2911,100 @@ async function cachePack() {
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }
+  showOffline();
+}
+// v60.35 : pack optionnel des rendus shiny HOME (jamais automatique). Réutilise le cache pokedex-img déjà rempli à la demande.
+let HS_STATE = null, HS_VERIF = false;
+const HS_SKIP = /\/25-(alola|hoenn|kalos|original|sinnoh|unova|world)-cap\.webp$/;
+function shinyHomeUrls() {
+  const out = [];
+  const add = p => { if (p && p.hs && p.sh) out.push(`img/hs/${p.k}.webp`); };
+  for (const p of E) { add(p); if (p.fe) add(femP(p)); }
+  return [...new Set(out)].filter(u => !HS_SKIP.test(u));
+}
+async function hsMatch(c, u) {
+  return (await c.match(u)) || (await c.match(new URL(u, location.href).href));
+}
+async function hsCacheState() {
+  const urls = shinyHomeUrls();
+  if (!('caches' in window)) return { total: urls.length, have: 0, missing: urls.slice() };
+  const c = await caches.open('pokedex-img');
+  const missing = [];
+  let have = 0;
+  for (const u of urls) {
+    const hit = await hsMatch(c, u);
+    if (hit && hit.ok) have++; else missing.push(u);
+  }
+  return { total: urls.length, have, missing };
+}
+function queueHsVerify() {
+  if (HS_VERIF || caching) return;
+  HS_VERIF = true;
+  hsCacheState().then(st => {
+    HS_VERIF = false;
+    const prev = HS_STATE;
+    HS_STATE = st;
+    if (st.total && st.have === st.total) store.set('hsDone', true);
+    else if (store.get('hsDone', false) && st.have < st.total) store.set('hsDone', false);
+    const same = prev && prev.have === st.have && prev.total === st.total && prev.missing.length === st.missing.length;
+    if (!same && !caching) showOffline();
+  }).catch(() => { HS_VERIF = false; });
+}
+async function cacheShinyHome() {
+  if (caching) return;
+  caching = true;
+  const urls = shinyHomeUrls();
+  let st = await hsCacheState();
+  HS_STATE = st;
+  const progress = d => showOffline(`<p style="margin:0">Téléchargement des illustrations shiny HOME : ${d}/${st.total}…</p>`);
+  progress(st.have);
+  let quota = false, done = st.have;
+  const q = st.missing.slice();
+  const next = async () => {
+    while (q.length && !quota) {
+      const u = q.shift();
+      try {
+        if ('caches' in window) {
+          const c = await caches.open('pokedex-img');
+          const hit = await hsMatch(c, u);
+          if (hit && hit.ok) { done++; if (done % 25 === 0 || !q.length) progress(done); continue; }
+        }
+        const r = await fetch(u);
+        if (!r.ok) throw 0;
+        await r.arrayBuffer();
+      } catch (e) {
+        if (e && (e.name === 'QuotaExceededError' || e.code === 22 || e.code === 1014)) { quota = true; q.length = 0; break; }
+      }
+      done++;
+      if (done % 25 === 0 || !q.length) progress(done);
+    }
+  };
+  try { await Promise.all(Array.from({ length: 4 }, next)); }
+  catch (e) { if (e && (e.name === 'QuotaExceededError' || e.code === 22 || e.code === 1014)) quota = true; }
+  st = await hsCacheState();
+  HS_STATE = st;
+  caching = false;
+  if (st.have === st.total && st.total) { store.set('hsDone', true); showOffline(); }
+  else if (quota) {
+    store.set('hsDone', false);
+    showOffline(`<p style="margin:0">Stockage insuffisant : ${st.have}/${st.total} illustrations shiny HOME enregistrées. Libérez de l’espace sur votre appareil, puis réessayez. Les fichiers déjà présents sont conservés.</p><p style="margin:8px 0 0"><button type="button" id="dlhs">Reprendre le téléchargement</button></p>`);
+    const bh = $('#dlhs'); if (bh) bh.onclick = cacheShinyHome;
+  } else { store.set('hsDone', false); showOffline(); }
+}
+async function uncacheShinyHome() {
+  if (caching) return;
+  caching = true;
+  showOffline('<p style="margin:0">Suppression des illustrations shiny HOME…</p>');
+  try {
+    if ('caches' in window) {
+      const c = await caches.open('pokedex-img');
+      const keys = await c.keys();
+      await Promise.all(keys.filter(req => /\/img\/hs\//.test(req.url)).map(req => c.delete(req)));
+    }
+  } catch {}
+  store.set('hsDone', false);
+  HS_STATE = await hsCacheState().catch(() => null);
+  caching = false;
   showOffline();
 }
 // v46: « Notes de version » (notes.json, newest first) = sub-panel of the ☰ menu; also opened from the update banner and once after an update.

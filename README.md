@@ -232,6 +232,12 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Sources** : Poképédia (CC BY-NC-SA 3.0 FR) en priorité pour les noms français (pages Raid Téracristal et Cristal de raid événementiel N), puis Serebii (Mighty / Unrivaled) et Bulbapedia (table 7★) pour le talent, la nature et le recoupement des dates.
 - **Audit** : contrôles `v60.31` dans `build/audit.mjs` (VERSION / DATA_VERSION, 53 raids, Lanssorien en cours, formes Hisui, exclusivités de version, puce 7★, pack, NOTES ≤ 160 caractères).
 
+## v60.35 : cache optionnel des illustrations shiny HOME
+- **Pack hors-ligne** : un bouton optionnel, à côté des packs existants, télécharge les rendus shiny HOME auto-hébergés (`docs/img/hs/`, 1 584 fichiers, ~16,4 Mo). Il affiche la taille, la progression, puis « déjà téléchargées » une fois le pack complet, et permet de le supprimer. Il n’est jamais lancé automatiquement (contrairement au pack images ~17 Mo, qui peut se lancer tout seul hors connexion mesurée).
+- **Cache** : les shiny déjà ouverts (enregistrés à la demande dans `pokedex-img`) sont réutilisés, sans second téléchargement. Le pack automatique des images (~17 Mo) reste inchangé et ne contient pas les shiny. `DATA_VERSION` reste `d76`.
+- **Limite** : sur iPhone, iOS peut limiter ou effacer le cache du service worker si le stockage est insuffisant ; le pack peut alors être retéléchargé.
+- **Audit** : contrôles `v60.35` dans `build/audit.mjs`. `build/fix-v60-35.mjs`, lancé par `apply-v34.mjs`, est idempotent.
+
 ## v60.34 : illustrations HOME par défaut
 - **Style** : le rendu HOME (3D, auto-hébergé dans `docs/img/h/`) est l’illustration par défaut de tous les portraits : liste, fiche (y compris l’écran de chargement), puces de formes, évolutions, Collection, classements, raids et GO. Le bouton Shiny d’une fiche et les exemplaires shiny de la Collection utilisent le rendu HOME shiny (`docs/img/hs/`) lorsqu’il existe. Le sprite officiel (`docs/img/` ou `docs/img/s/`) s’affiche automatiquement si un rendu manque ou si le chargement échoue.
 - **Écarts** : 10 formes n’ont pas de rendu HOME (Mewtwo Armuré, Pichu Troizépi, Formes Authentiques de Théffroi et Polthégeist, formes de combat de Koraidon et Miraidon, Forme Onéreuse / Exceptionnelle de Poltchageist et Théffroyable). Sept casquettes de Pikachu n’ont pas de shiny HOME côté PokéAPI.
@@ -254,7 +260,7 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Audit** : contrôles `v60.32` dans `build/audit.mjs`.
 
 ## Limites connues
-Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16 Mo, officielles ≈ 20 Mo) ne sont mises en cache que lorsqu'on les ouvre.
+Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16,4 Mo, officielles ≈ 20 Mo) peuvent être téléchargées en option dans le menu Hors-ligne (v60.35) ; sinon elles ne sont mises en cache que lorsqu'on les ouvre. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant.
 
 ## Taille
 `docs/` ≈ 107 Mo (images ≈ 73 Mo dont shiny officiels ≈ 20 Mo et shiny HOME ≈ 16 Mo à la demande ; données ≈ 18 Mo).

@@ -953,7 +953,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
   const fetchHs = fs.readFileSync(path.join(HERE, 'fetch-home-shiny.mjs'), 'utf8');
   ok('v60.34 SW : VERSION ≥ v60.34, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[4-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
-  ok('v60.34 NOTES ≤ 160 caractères, illustrations HOME et secours', notes.length > 0 && notes.length <= 160 && /HOME/.test(notes) && /shiny HOME/.test(notes) && /secours/.test(notes), String(notes.length));
+  { const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1] || '';
+    ok('v60.34 NOTES ≤ 160 caractères' + (ver === 'v60.34' ? ', illustrations HOME et secours' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.34' || (/HOME/.test(notes) && /shiny HOME/.test(notes) && /secours/.test(notes))), String(notes.length)); }
   ok('v60.34 app : artOf / artFb / artImg, HOME par défaut y compris shiny', /const artOf = \(p, shiny\)/.test(app) && /function artImg/.test(app) && /const artFb = \(p, shiny\)/.test(app) && /img\/hs\//.test(app) && /let spriteMode = 'home'/.test(app));
   ok('v60.34 app : portraits unifiés (liste, fiche, formes, raids, Collection, GO)', /artImg\(p, \{ w: 256 \}\)/.test(app) && /artImg\(p, \{ w: 256, lazy: false, alt: fullN\(p\) \}\)/.test(app) && /id: 'heroimg'/.test(app) && /const colArt =/.test(app) && /artImg\(p, \{ w: 44 \}\)/.test(app));
   ok('v60.34 app : lazy par défaut, pas de lazy sur le héros, onerror vers le sprite', /opts\.lazy === false \? '' : ' loading="lazy"'/.test(app) && /lazy: false, shiny: showShinyArt/.test(app) && /this\.onerror=null;this\.src=/.test(app));
@@ -969,6 +970,27 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.34 sept casquettes de Pikachu sans fichier shiny HOME', caps.every(k => E[k] && E[k].hs && E[k].sh && !fs.existsSync(path.join(hsDir, k + '.webp'))));
   ok('v60.34 apply-v34 lance fix-v60-34, script de récupération présent', /fix-v60-34\.mjs/.test(apply) && /img\/hs/.test(fetchHs) && /home\/shiny/.test(fetchHs));
   ok('v60.34 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, fetchHs, fs.readFileSync(path.join(HERE, 'preview60-34.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
+}
+
+
+
+// ---- v60.35 : téléchargement optionnel des illustrations shiny HOME hors-ligne
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-35.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.35 SW : VERSION ≥ v60.35, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[5-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
+  ok('v60.35 NOTES ≤ 160 caractères, pack shiny optionnel', notes.length > 0 && notes.length <= 160 && /shiny HOME/.test(notes) && /optionnel/.test(notes) && /16,4 Mo/.test(notes), String(notes.length));
+  ok('v60.35 app : bouton, taille, progression, déjà téléchargé, suppression', /function cacheShinyHome/.test(app) && /function uncacheShinyHome/.test(app) && /id="dlhs"/.test(app) && /id="dlhsx"/.test(app) && /16,4 Mo/.test(app) && /déjà téléchargées/.test(app) && /Téléchargement des illustrations shiny HOME :/.test(app));
+  const reg = (app.split('function registerSW')[1] || '').split('function swAsk')[0] || '';
+  ok('v60.35 pack shiny jamais automatique, pack images auto inchangé', /cacheImages\(\)/.test(reg) && !/cacheShinyHome\(/.test(reg) && /jamais lancé automatiquement/.test(reg));
+  const cacheFn = (app.split('async function cacheImages')[1] || '').split('async function cachePack')[0] || '';
+  ok('v60.35 pack auto (~17 Mo) sans shiny HOME', /femP\(p\)/.test(cacheFn) && !/img\/hs\//.test(cacheFn));
+  ok('v60.35 réutilise le cache pokedex-img, sans doublon', /caches\.open\('pokedex-img'\)/.test(app) && /function hsMatch/.test(app) && /déjà ouverts sont réutilisés/.test(app));
+  ok('v60.35 apply-v34 lance fix-v60-35', /fix-v60-35\.mjs/.test(apply));
+  ok('v60.35 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, fs.readFileSync(path.join(HERE, 'preview60-35.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
