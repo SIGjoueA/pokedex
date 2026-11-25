@@ -1,8 +1,8 @@
 'use strict';
-const VERSION = 'v60.38';
+const VERSION = 'v60.39';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Changelog du README : journal des versions v35–v60.37 (une ligne par version, d’après les notes et les commits). DATA_VERSION inchangée (d77).';
-const DATA_VERSION = 'd77'; // bump when the schema of data/*.json changes
+const NOTES = 'Recherche : filtre « Lieu… » (autocomplétion FR, selon le jeu choisi). D’après les fiches, sans à-peu-près. Dans le pack hors-ligne.';
+const DATA_VERSION = 'd78'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';

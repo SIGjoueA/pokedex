@@ -6,6 +6,7 @@ import { mapPvPoke, PVP_ABSENT, PVP_FORMS } from './pvp-map.mjs';
 import { buildRaids, RAID_GAMES } from './fix-v60-30.mjs';
 import { buildTera7 } from './update-tera7.mjs';
 import { buildLearnIndex, readLearnSources, learnIndexToJSON } from './fix-v60-37.mjs';
+import { buildLocIndex, readLocSources, locIndexToJSON } from './fix-v60-39.mjs';
 const D = f => JSON.parse(fs.readFileSync(path.join(DOCS, 'data', f), 'utf8'));
 const core = D('core.json'), evo = D('evo.json'), ref = D('ref.json'), moves = D('moves.json'), go = D('go.json'), tm = D('tm.json'), loc = D('loc.json');
 const E = Object.fromEntries(core.e.map(e => [e.k, e])); const G = Object.fromEntries(core.games.map(g => [g.id, g]));
@@ -1064,7 +1065,7 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.37 app : filtres Capacité / Talent, autocomplétion, méthodes, pack hors-ligne', /function loadLearn/.test(app) && /function initAdvSearch/.test(app) && /moveHitSet/.test(app) && /abilHitSet/.test(app) && /data\/learn-index\.json/.test(app) && /id="mvq"/.test(html) && /id="abq"/.test(html) && /placeholder="Capacité…"/.test(html) && /placeholder="Talent…"/.test(html) && /id="mvmeth"/.test(html) && /METH_LAB/.test(app) && /advfilters/.test(css));
   ok('v60.37 filtres existants conservés (nom, types, jeu)', /state\.q = e\.target\.value/.test(app) && /state\.types/.test(app) && /id="q"/.test(html) && /placeholder="Nom ou n°…"/.test(html) && /id="typechips"/.test(html) && /id="game"/.test(html));
   ok('v60.37 apply-v34 lance fix-v60-37', /fix-v60-37\.mjs/.test(apply));
-  ok('v60.37 pas de recherche par lieu dans cette version', !/state\.loc/.test(app) && !/id="locq"/.test(html));
+  ok('v60.37 pas de recherche par lieu dans cette version', ver !== 'v60.37' || (!/state\.loc/.test(app) && !/id="locq"/.test(html)));
   ok('v60.37 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, html, css, fs.readFileSync(path.join(HERE, 'preview60-37.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
 }
 
@@ -1081,9 +1082,9 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1];
   const fix = fs.readFileSync(path.join(HERE, 'fix-v60-38.mjs'), 'utf8');
   const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
-  ok('v60.38 SW : VERSION ≥ v60.38, DATA_VERSION = d77 (inchangée)', /VERSION = 'v60\.(3[8-9]|[4-9]\d)'/.test(sw) && /DATA_VERSION = 'd77'/.test(sw));
+  ok('v60.38 SW : VERSION ≥ v60.38, DATA_VERSION ≥ d77' + (ver === 'v60.38' ? ' (inchangée, d77)' : ''), /VERSION = 'v60\.(3[8-9]|[4-9]\d)'/.test(sw) && (ver === 'v60.38' ? /DATA_VERSION = 'd77'/.test(sw) : +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 77));
   ok('v60.38 NOTES ≤ 160 caractères' + (ver === 'v60.38' ? ', commence par le changelog / journal' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.38' || (/Changelog|journal/i.test(notes) && /v35/.test(notes) && /d77/.test(notes))), String(notes.length));
-  ok('v60.38 README : journal v35–v60.37, une ligne, dates, groupes v60.4–v60.7 et v60.8–v60.15', /## Journal des versions \(v35–v60\.37\)/.test(readme) && /\*\*v35\*\*/.test(readme) && /\*\*v40\*\*/.test(readme) && /\*\*v50\*\*/.test(readme) && /\*\*v60\.37\*\*/.test(readme) && /\*\*v60\.4–v60\.7\*\*/.test(readme) && /\*\*v60\.8–v60\.15\*\*/.test(readme) && /\(14\/10\)/.test(readme) && /\(25\/11\)/.test(readme));
+  ok('v60.38 README : journal v35–v60.37 ou plus, une ligne, dates, groupes v60.4–v60.7 et v60.8–v60.15', /## Journal des versions \(v35–v60\.(3[7-9]|[4-9]\d)\)/.test(readme) && /\*\*v35\*\*/.test(readme) && /\*\*v40\*\*/.test(readme) && /\*\*v50\*\*/.test(readme) && /\*\*v60\.37\*\*/.test(readme) && /\*\*v60\.4–v60\.7\*\*/.test(readme) && /\*\*v60\.8–v60\.15\*\*/.test(readme) && /\(14\/10\)/.test(readme) && /\(25\/11\)/.test(readme));
   ok('v60.38 README : trou v60.13 (pas de VERSION d’appli) et historique git depuis v46', /v60\.13/.test(readme) && /981e83c/.test(readme) && /notes\.json/.test(readme));
   ok('v60.38 README : fonctions et chiffres à jour (capacité, 28 jeux, 1 501, ~370 Ko, ~104 Mo)', /Capacité…/.test(readme) && /28 jeux/.test(readme) && /1 501 entrées/.test(readme) && /core\.json` \(~370 Ko\)/.test(readme) && /docs\/` ≈ 104 Mo/.test(readme) && /learn-index\.json/.test(readme));
   ok('v60.38 pas de second historique dans l’appli (Notes de version déjà en v46)', /id="notesbtn"/.test(fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8')) && /Notes de version/.test(app) && /function notesShow/.test(app) && !/Historique des versions/.test(app + fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8')));
@@ -1092,5 +1093,55 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.38 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![readme, sw, fix, notesj].some(s => /\bYann\b/.test(s)));
 }
 
+
+
+
+// ---- v60.39 : recherche par lieu (build/fix-v60-39.mjs → docs/data/loc-index.json)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+  const css = fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8');
+  const readme = fs.readFileSync(path.join(HERE, '../README.md'), 'utf8');
+  const notesj = fs.readFileSync(path.join(DOCS, 'notes.json'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1];
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-39.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  const preview = fs.readFileSync(path.join(HERE, 'preview60-39.mjs'), 'utf8');
+  const idx = D('loc-index.json');
+  ok('v60.39 SW : VERSION ≥ v60.39, DATA_VERSION ≥ d78', /VERSION = 'v60\.(39|[4-9]\d)/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 78);
+  ok('v60.39 NOTES ≤ 160 caractères' + (ver === 'v60.39' ? ', commence par la recherche / le filtre Lieu' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.39' || (/Recherche/.test(notes) && /Lieu/.test(notes))), String(notes.length));
+  const built = buildLocIndex(readLocSources());
+  eq('v60.39 loc-index.json idempotent (égal au résultat de fix-v60-39)', JSON.stringify(idx), locIndexToJSON(built));
+  ok('v60.39 index : 28 jeux, ≥ 1 200 formes, ≥ 1 500 lieux', idx.g.length === 28 && idx.k.length >= 1200 && idx.n.length >= 1500, `${idx.g.length}/${idx.k.length}/${idx.n.length}`);
+  ok('v60.39 index : poids entre 150 Ko et 300 Ko', (() => { const n = fs.statSync(path.join(DOCS, 'data', 'loc-index.json')).size; return n >= 150e3 && n <= 300e3; })(), String(fs.statSync(path.join(DOCS, 'data', 'loc-index.json')).size));
+  const placeOf = name => {
+    const i = idx.n.indexOf(name);
+    const arr = i < 0 ? [] : (idx.L[String(i)] || []);
+    const out = new Map();
+    for (let j = 0; j < arr.length; j += 2) out.set(idx.k[arr[j]], arr[j + 1]);
+    return out;
+  };
+  const jade = placeOf('Forêt de Jade');
+  ok('v60.39 Forêt de Jade (Kanto) : Pikachu et Chenipan, pas Mew ni forme Gigamax / casquette', jade.has('25') && jade.has('10') && !jade.has('151') && !jade.has('12-gmax') && !jade.has('25-original-cap'), 'n=' + jade.size);
+  const desert = placeOf('Désert Rôtissable');
+  ok('v60.39 Désert Rôtissable (Écarlate / Violet) : Taupiqueur et Hippopotas, pas Pikachu', desert.has('50') && desert.has('449') && !desert.has('25'), 'n=' + desert.size);
+  const mew = [];
+  for (let i = 0; i < idx.n.length; i++) {
+    const arr = idx.L[String(i)] || [];
+    for (let j = 0; j < arr.length; j += 2) if (idx.k[arr[j]] === '151') mew.push(idx.n[i]);
+  }
+  ok('v60.39 Mew (151) introuvable à l’état sauvage (aucun lieu dans l’index)', mew.length === 0, mew.join(', '));
+  const giSV = idx.g.indexOf('sv'), giRB = idx.g.indexOf('rb');
+  ok('v60.39 Forêt de Jade dans Rouge / Bleu : Pikachu oui, Mew non', !!(jade.get('25') & (1 << giRB)) && !jade.get('151'));
+  ok('v60.39 Désert Rôtissable seulement à Paldea', giSV >= 0 && !!(desert.get('449') & (1 << giSV)) && !(desert.get('449') & (1 << giRB)));
+  ok('v60.39 app : filtre Lieu, autocomplétion, pack hors-ligne, mention HOME / GO', /function loadLoc/.test(app) && /function locHitSet/.test(app) && /data\/loc-index\.json/.test(app) && /id="locq"/.test(html) && /placeholder="Lieu…"/.test(html) && /LOC_NO_GAME/.test(app) && /n’a pas de liste de lieux ici/.test(app) && /cachePack/.test(app));
+  ok('v60.39 filtres existants conservés (nom, types, capacité, talent, jeu)', /state\.q = e\.target\.value/.test(app) && /id="q"/.test(html) && /id="mvq"/.test(html) && /id="abq"/.test(html) && /id="game"/.test(html) && /id="typechips"/.test(html));
+  ok('v60.39 apply-v34 lance fix-v60-39', /fix-v60-39\.mjs/.test(apply));
+  ok('v60.39 README : filtre Lieu, loc-index, journal v60.39, DATA d78', /Lieu…/.test(readme) && /loc-index\.json/.test(readme) && /\*\*v60\.39\*\*/.test(readme) && /d78/.test(readme));
+  ok('v60.39 notes.json contient v60.39', /"v": "v60\.39"/.test(notesj));
+  ok('v60.39 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, html, css, preview, readme, notesj].some(t => /\bYann\b/.test(t)));
+}
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

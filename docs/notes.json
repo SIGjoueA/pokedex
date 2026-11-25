@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.39",
+  "d": "2026-11-25",
+  "l": [
+   "Vous pouvez filtrer la liste par lieu (« Lieu… »), à côté de Capacité et Talent. L’autocomplétion est en français (accents ignorés) et suit le jeu choisi dans le menu Jeu.",
+   "L’index reprend les lieux déjà affichés sur les fiches (Poképédia en priorité, sinon PokéAPI), sans mélanger les deux formats. Pokémon HOME et Pokémon GO n’ont pas de liste de lieux ici : le filtre porte alors sur les jeux de la série principale, avec une mention.",
+   "Un Pokémon introuvable à l’état sauvage (comme Mew) n’apparaît pas. DATA_VERSION passe à d78 : retéléchargez le pack hors-ligne pour avoir l’index."
+  ]
+ },
+ {
   "v": "v60.38",
   "d": "2026-11-25",
   "l": [

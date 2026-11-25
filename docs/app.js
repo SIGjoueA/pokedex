@@ -34,7 +34,7 @@ let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, 
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
 const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get('shiny_g', []));
-const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all', rstars: [], mv: '', mvMeth: [], ab: '' };
+const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all', rstars: [], mv: '', mvMeth: [], ab: '', loc: '' };
 let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // v35: full name of a form; default forms of real alternate-form species carry their official form name (core fn: « Nigirigon Forme Courbée »)
@@ -744,10 +744,11 @@ function toggleType(t) {
   render();
 }
 function resetFilters() {
-  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', rstars: [], mv: '', mvMeth: [], ab: '' });
+  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', rstars: [], mv: '', mvMeth: [], ab: '', loc: '' });
   $('#q').value = ''; $('#gen').value = ''; $('#cat').value = ''; $('#sort').value = 'id'; $('#game').value = '';
   if ($('#mvq')) { $('#mvq').value = ''; $('#mvq').classList.remove('has'); }
   if ($('#abq')) { $('#abq').value = ''; $('#abq').classList.remove('has'); }
+  if ($('#locq')) { $('#locq').value = ''; $('#locq').classList.remove('has'); }
   closeSug(); updateMethChips();
   render();
 }
@@ -804,6 +805,11 @@ const METH_LAB = { l: 'Niveau', m: 'CT', e: 'Œuf', t: 'Tuteur', o: 'Autre' };
 const LEARN_NO_GAME = new Set(['za', 'zadlc', 'go', 'home']);
 let LEARN = null, LEARN_P = null, LEARN_FAIL = false;
 let LEARN_HIT = null, LEARN_SIG = '', ABIL_HIT = null, ABIL_SIG = '';
+// v60.39 : index compact data/loc-index.json (lieux), chargé à la première utilisation du filtre Lieu
+const LOC_NO_GAME = new Set(['go', 'home']);
+const LOC_REGIONS = [['rb', 'y', 'frlg', 'frlgsw', 'lgpe'], ['gs', 'c'], ['rs', 'e', 'oras'], ['dp', 'pt', 'bdsp'], ['bw', 'b2w2'], ['xy'], ['sm', 'usum'], ['sw', 'swisle', 'swcrown'], ['la'], ['sv', 'svmask', 'svdisk'], ['za', 'zadlc']];
+let LOC = null, LOC_P = null, LOC_FAIL = false;
+let LOC_HIT = null, LOC_SIG = '';
 async function loadLearn() {
   if (LEARN) return LEARN;
   if (!LEARN_P) LEARN_P = getJSON('data/learn-index.json').then(d => {
@@ -850,6 +856,60 @@ function abilHitSet() {
   for (let i = 0; i < arr.length; i += 3) if (arr[i + 1] & bit) ABIL_HIT.add(LEARN.k[arr[i]]);
   return ABIL_HIT;
 }
+
+async function loadLoc() {
+  if (LOC) return LOC;
+  if (!LOC_P) LOC_P = getJSON('data/loc-index.json').then(d => {
+    LOC = d; LOC_FAIL = false;
+    const bits = d.n.map((_, i) => {
+      const arr = d.L[i] || d.L[String(i)] || [];
+      let b = 0;
+      for (let j = 1; j < arr.length; j += 2) b |= arr[j];
+      return b;
+    });
+    LOC._n = d.n.map((name, i) => [String(i), name, norm(name), bits[i]]);
+    return d;
+  }).catch(e => { LOC_P = null; LOC_FAIL = true; throw e; });
+  return LOC_P;
+}
+function locGameIdx() {
+  const id = state.game;
+  if (!LOC || !id || LOC_NO_GAME.has(id)) return -1;
+  const i = LOC.g.indexOf(id);
+  return i;
+}
+function locHitSet() {
+  const sig = `${state.loc}|${state.game}`;
+  if (sig === LOC_SIG && LOC_HIT) return LOC_HIT;
+  LOC_SIG = sig; LOC_HIT = new Set();
+  if (!state.loc || !LOC) return LOC_HIT;
+  const arr = LOC.L[state.loc] || LOC.L[String(state.loc)];
+  if (!arr) return LOC_HIT;
+  const gi = locGameIdx();
+  const mask = gi < 0 ? 0 : (1 << gi);
+  for (let i = 0; i < arr.length; i += 2) if (gi < 0 || (arr[i + 1] & mask)) LOC_HIT.add(LOC.k[arr[i]]);
+  return LOC_HIT;
+}
+function locAmbiguous(id) {
+  if (!LOC || id === '' || id == null) return false;
+  const arr = LOC.L[id] || LOC.L[String(id)] || [];
+  let bits = 0;
+  for (let i = 1; i < arr.length; i += 2) bits |= arr[i];
+  const has = gid => { const gi = LOC.g.indexOf(gid); return gi >= 0 && !!(bits & (1 << gi)); };
+  const regs = [];
+  for (const group of LOC_REGIONS) {
+    if (group.some(has)) regs.push(group);
+  }
+  // HGSS reprend Johto et Kanto : sa seule présence n’ajoute pas une seconde région.
+  const kanto = LOC_REGIONS[0], johto = LOC_REGIONS[1];
+  if (has('hgss')) {
+    const hasK = kanto.some(has), hasJ = johto.some(has);
+    if (hasK && !hasJ) { /* déjà compté Kanto */ }
+    else if (hasJ && !hasK) { /* déjà compté Johto */ }
+    else if (!hasK && !hasJ) regs.push(['hgss']);
+  }
+  return regs.length > 1;
+}
 function updateMethChips() {
   const el = $('#mvmeth'); if (!el) return;
   if (!state.mv) { el.hidden = true; el.innerHTML = ''; return; }
@@ -862,21 +922,35 @@ function updateAdvNote() {
   const gm = GAME_BY[state.game];
   if (state.ab && gm && (gm.g < 3 || NO_ABIL[gm.id])) msg = gm.g < 3 ? 'Les talents n’existent pas avant la génération III.' : `Les talents n’existent pas dans ${NO_ABIL[gm.id]}.`;
   else if (state.mv && (state.game === 'za' || state.game === 'zadlc')) msg = 'Pas encore de données de capacités pour ce jeu : le filtre porte sur les autres jeux.';
-  else if (state.mv && (state.game === 'go' || state.game === 'home')) msg = 'Ce jeu n’a pas de liste de capacités ici : le filtre porte sur les jeux de la série principale.';
+  else if ((state.mv || state.loc) && (state.game === 'go' || state.game === 'home')) {
+    msg = state.mv && state.loc
+      ? 'Ce jeu n’a pas de liste de capacités ni de lieux ici : les filtres portent sur les jeux de la série principale.'
+      : state.mv
+        ? 'Ce jeu n’a pas de liste de capacités ici : le filtre porte sur les jeux de la série principale.'
+        : 'Ce jeu n’a pas de liste de lieux ici : le filtre porte sur les jeux de la série principale.';
+  } else if (state.loc && !state.game && locAmbiguous(state.loc)) msg = 'Sans jeu choisi, un même nom de lieu peut exister dans plusieurs régions. Choisissez un jeu pour préciser.';
   el.hidden = !msg; el.textContent = msg;
 }
+function advInp(kind) { return kind === 'mv' ? $('#mvq') : kind === 'ab' ? $('#abq') : $('#locq'); }
+function advUl(kind) { return kind === 'mv' ? $('#mvsug') : kind === 'ab' ? $('#absug') : $('#locsug'); }
+function advReady(kind) { return kind === 'loc' ? LOC : LEARN; }
+function advLoad(kind) { return kind === 'loc' ? loadLoc() : loadLearn(); }
 function closeSug(except) {
-  for (const id of ['mvsug', 'absug']) {
+  for (const id of ['mvsug', 'absug', 'locsug']) {
     if (except && except.id === id) continue;
     const ul = $('#' + id); if (!ul) continue;
     ul.hidden = true; ul.innerHTML = '';
-    const inp = id === 'mvsug' ? $('#mvq') : $('#abq');
+    const inp = id === 'mvsug' ? $('#mvq') : id === 'absug' ? $('#abq') : $('#locq');
     if (inp) inp.setAttribute('aria-expanded', 'false');
   }
 }
 function acItems(kind, q) {
-  const all = kind === 'mv' ? (LEARN && LEARN._mn) : (LEARN && LEARN._an);
+  let all = kind === 'loc' ? (LOC && LOC._n) : kind === 'mv' ? (LEARN && LEARN._mn) : (LEARN && LEARN._an);
   if (!all) return [];
+  if (kind === 'loc') {
+    const gi = locGameIdx();
+    if (gi >= 0) all = all.filter(it => it[3] & (1 << gi));
+  }
   const qn = norm(q.trim());
   if (!qn) return all.slice().sort((a, b) => a[1].localeCompare(b[1], 'fr')).slice(0, 12);
   const start = [], mid = [];
@@ -889,8 +963,7 @@ function acItems(kind, q) {
   return start.concat(mid).slice(0, 12);
 }
 function renderSug(kind, items) {
-  const ul = kind === 'mv' ? $('#mvsug') : $('#absug');
-  const inp = kind === 'mv' ? $('#mvq') : $('#abq');
+  const ul = advUl(kind), inp = advInp(kind);
   if (!ul || !inp) return;
   if (!items.length) { ul.hidden = true; ul.innerHTML = ''; inp.setAttribute('aria-expanded', 'false'); return; }
   ul.hidden = false;
@@ -903,7 +976,7 @@ function moveSugSel(ul, dir) {
   let i = items.findIndex(li => li.getAttribute('aria-selected') === 'true');
   i = Math.max(0, Math.min(items.length - 1, (i < 0 ? 0 : i) + dir));
   items.forEach((li, j) => li.setAttribute('aria-selected', j === i));
-  const inp = ul.id === 'mvsug' ? $('#mvq') : $('#abq');
+  const inp = ul.id === 'mvsug' ? $('#mvq') : ul.id === 'absug' ? $('#abq') : $('#locq');
   if (inp) inp.setAttribute('aria-activedescendant', items[i].id);
   items[i].scrollIntoView({ block: 'nearest' });
 }
@@ -915,31 +988,38 @@ function pickSug(kind, id) {
     inp.value = id && LEARN ? (LEARN.n[id] || LEARN.n[String(id)] || '') : '';
     inp.classList.toggle('has', !!state.mv);
     updateMethChips();
-  } else {
+  } else if (kind === 'ab') {
     state.ab = id ? String(id) : '';
     const inp = $('#abq');
     inp.value = id && LEARN ? (LEARN.an[id] || LEARN.an[String(id)] || '') : '';
     inp.classList.toggle('has', !!state.ab);
+  } else {
+    state.loc = id ? String(id) : '';
+    const inp = $('#locq');
+    inp.value = id && LOC ? (LOC.n[id] || LOC.n[+id] || '') : '';
+    inp.classList.toggle('has', !!state.loc);
   }
   closeSug();
   render();
 }
 function initAdvSearch() {
   const bind = kind => {
-    const inp = kind === 'mv' ? $('#mvq') : $('#abq');
-    const ul = kind === 'mv' ? $('#mvsug') : $('#absug');
+    const inp = advInp(kind);
+    const ul = advUl(kind);
     if (!inp || !ul) return;
     const show = () => {
       const run = () => renderSug(kind, acItems(kind, inp.value));
-      if (LEARN) run(); else loadLearn().then(run).catch(() => render());
+      if (advReady(kind)) run(); else advLoad(kind).then(run).catch(() => render());
     };
     inp.addEventListener('focus', show);
     inp.addEventListener('input', () => {
-      const cur = kind === 'mv' ? state.mv : state.ab;
-      const name = cur && LEARN ? (kind === 'mv' ? LEARN.n[cur] : LEARN.an[cur]) : '';
+      const cur = kind === 'mv' ? state.mv : kind === 'ab' ? state.ab : state.loc;
+      const data = advReady(kind);
+      const name = cur && data ? (kind === 'mv' ? data.n[cur] : kind === 'ab' ? data.an[cur] : (data.n[cur] || data.n[+cur] || '')) : '';
       if (cur && inp.value.trim() !== name) {
         if (kind === 'mv') { state.mv = ''; state.mvMeth = []; inp.classList.remove('has'); updateMethChips(); }
-        else { state.ab = ''; inp.classList.remove('has'); }
+        else if (kind === 'ab') { state.ab = ''; inp.classList.remove('has'); }
+        else { state.loc = ''; inp.classList.remove('has'); }
         render();
       }
       show();
@@ -950,7 +1030,7 @@ function initAdvSearch() {
       else if (e.key === 'Enter') {
         const sel = ul.querySelector('li[aria-selected="true"]');
         if (!ul.hidden && sel) { e.preventDefault(); pickSug(kind, sel.dataset.id); }
-        else if (LEARN) {
+        else if (advReady(kind)) {
           const items = acItems(kind, inp.value);
           const exact = items.filter(it => it[2] === norm(inp.value.trim()));
           if (exact.length === 1) { e.preventDefault(); pickSug(kind, exact[0][0]); }
@@ -965,7 +1045,7 @@ function initAdvSearch() {
       e.preventDefault(); pickSug(kind, li.dataset.id);
     });
   };
-  bind('mv'); bind('ab');
+  bind('mv'); bind('ab'); bind('loc');
   const meth = $('#mvmeth');
   if (meth) meth.addEventListener('click', e => {
     const b = e.target.closest('[data-meth]'); if (!b) return;
@@ -1022,6 +1102,7 @@ function filtered() {
     if (BARON_CATS.includes(state.cat) && !baronCat(p, state.cat)) return false;
     if (state.mv && LEARN && !moveHitSet().has(p.k)) return false;
     if (state.ab && LEARN && !abilHitSet().has(p.k)) return false;
+    if (state.loc && LOC && !locHitSet().has(p.k)) return false;
     return true;
   });
   const pos0 = new Map(out.map((p, i) => [p, i]));
@@ -1150,12 +1231,13 @@ function render() {
   updateCatOptions(); syncMenus();
   updateMethChips(); updateAdvNote();
   if ((state.mv || state.ab) && !LEARN && !LEARN_FAIL) loadLearn().then(() => render()).catch(() => render());
-  const res = ((state.mv || state.ab) && !LEARN) ? [] : filtered();
+  if (state.loc && !LOC && !LOC_FAIL) loadLoc().then(() => render()).catch(() => render());
+  const res = (((state.mv || state.ab) && !LEARN) || (state.loc && !LOC)) ? [] : filtered();
   const box = $('#results');
   box.className = state.view === 'grid' ? 'grid' : 'grid list';
   { const vb = $('#viewbtn'), g = state.view === 'grid'; if (vb.dataset.v !== state.view) { vb.innerHTML = g ? VIEW_LIST_IC : VIEW_GRID_IC; vb.dataset.v = state.view; vb.title = g ? 'Afficher en liste' : 'Afficher en grille'; vb.setAttribute('aria-label', vb.title); } }
-  const loading = (GAME_BY[state.game] && !DEX[state.game]) || (state.cat === 'raid' && !RAID_F && RAIDS !== false) || ((state.mv || state.ab) && !LEARN && !LEARN_FAIL);
-  const empty = LEARN_FAIL && (state.mv || state.ab) ? 'Index des capacités indisponible hors-ligne : ouvrez-le une fois avec une connexion, ou retéléchargez le pack hors-ligne.' : 'Aucun Pokémon trouvé.';
+  const loading = (GAME_BY[state.game] && !DEX[state.game]) || (state.cat === 'raid' && !RAID_F && RAIDS !== false) || ((state.mv || state.ab) && !LEARN && !LEARN_FAIL) || (state.loc && !LOC && !LOC_FAIL);
+  const empty = LEARN_FAIL && (state.mv || state.ab) ? 'Index des capacités indisponible hors-ligne : ouvrez-le une fois avec une connexion, ou retéléchargez le pack hors-ligne.' : (LOC_FAIL && state.loc) ? 'Index des lieux indisponible hors-ligne : ouvrez-le une fois avec une connexion, ou retéléchargez le pack hors-ligne.' : 'Aucun Pokémon trouvé.';
   box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${loading ? 'Chargement…' : empty}</p>`;
   const gm = GAME_BY[state.game];
   const ctx = trackCtx(); let prog;
@@ -1184,7 +1266,7 @@ function render() {
   const lg = $('#legend'), lgW = ctx === 'home' ? 'home' : 'base'; if (lg.dataset.w !== lgW) { lg.dataset.w = lgW; lg.innerHTML = lgW === 'home' ? HOME_LEGEND : BASE_LEGEND; }
   document.querySelectorAll('#typechips .chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
   updateRaidChips();
-  const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game || state.rstars.length || state.mv || state.ab || (state.mvMeth && state.mvMeth.length);
+  const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game || state.rstars.length || state.mv || state.ab || state.loc || (state.mvMeth && state.mvMeth.length);
   $('#reset').hidden = !active;
   requestAnimationFrame(updJump);
 }
@@ -3114,7 +3196,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(p => artOf(p)), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', 'data/rank-sv-raid.json', 'data/learn-index.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', 'data/rank-sv-raid.json', 'data/learn-index.json', 'data/loc-index.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }

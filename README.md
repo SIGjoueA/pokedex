@@ -4,7 +4,7 @@ Site statique dans `docs/` (HTML/CSS/JS sans framework ni backend), publié par 
 https://sigjouea.github.io/pokedex/
 
 ## Fonctions
-- Recherche instantanée sans accents (nom FR / EN / JA / romaji, ou numéro), filtres type / génération / catégorie / tri, plus « Capacité… » et « Talent… » (autocomplétion française, jeu et méthode d’apprentissage, v60.37), grille ou liste.
+- Recherche instantanée sans accents (nom FR / EN / JA / romaji, ou numéro), filtres type / génération / catégorie / tri, plus « Capacité… », « Talent… » (v60.37) et « Lieu… » (v60.39) (autocomplétion française, selon le jeu), grille ou liste.
 - **Jeux** : Pokémon HOME, Pokémon GO, puis 28 jeux (série principale, Légendes et DLC) du plus récent au plus ancien, et 3 listes en plus : **Méga-Dex Z-A** (espèces ayant une Méga dans la sauvegarde Z-A, forme de base + Méga, ordre national), **Hors dex Écarlate/Violet** et **Hors dex Épée/Bouclier** (espèces obtenables par transfert / échange / événement mais absentes de tous les Pokédex de la sauvegarde ; marques dans le jeu de base). Dans la liste, chaque liste en plus est placée juste **au-dessus** de la dernière extension de son jeu : Méga-Dex Z-A au-dessus de Méga-Dimension, Hors dex É/V au-dessus du Disque Indigo, Hors dex É/B au-dessus de Couronneige (v22). Un jeu sans extension choisi = Pokédex régional, puis en fin de liste toutes les espèces obtenables absentes du Pokédex régional (transfert Pal Park / Poké Transfert / Bank / HOME, échange, événement, Méga) marquées « Hors dex », ordre national. Une espèce présente dans un autre Pokédex de la même sauvegarde (Z-A ↔ Méga-Dimension…) n'est jamais « Hors dex ». Source : PokéAPI (espèce avec une liste de capacités dans le groupe de versions du jeu = présente dans les données du jeu), `build/fetch-obtainable.mjs` + `build/apply-hors-dex.mjs` (exceptions manuelles documentées dans le script). Les marques « hors dex » ne changent pas la complétion.
 - **Formes** (bouton dans l'en-tête, masquées par défaut) : régionales, Méga, Primo, Gigamax, multi-formes (Zarbi, Flabébé, Vivaldaim…), mâle/femelle. Sélecteur de formes sur la fiche.
 - **Fiche par jeu** : stats / types / talents / objets tenus / attaques / évolutions tels qu'à l'époque du jeu, Pokédex FR, numéros régionaux.
@@ -46,6 +46,7 @@ Après toute modification de `docs/`, incrémenter `VERSION` dans `docs/sw.js` (
 | `sp/{id}.json` | une espèce : textes, stats passées, talents, objets, attaques par jeu, GO, pour chaque forme | à l'ouverture d'une fiche |
 | `evo.json`, `moves.json`, `ref.json`, `go.json`, `tm.json`, `loc.json` | évolutions (FR), attaques, talents/objets, attaques GO, numéros de CT/CS/DT par jeu, noms de lieux/méthodes de rencontre | à la première fiche |
 | `learn-index.json` (~1,94 Mo) | index inversé des capacités et des talents pour les filtres de la liste | à la première utilisation d’un de ces filtres |
+| `loc-index.json` (~222 Ko) | index inversé des lieux de capture pour le filtre « Lieu… » | à la première utilisation de ce filtre |
 | `raids.json`, `tera7.json`, `rank-*.json`, `pocket.json`, `go-eggs.json`, … | raids Dynamax / Téracristal, classements, Pocket, œufs GO, etc. | à la demande, ou avec le pack hors-ligne |
 
 Clés d'entrée : `25` (espèce de base), `26-alola`, `25-female`, `6-mega-x`, `25-gmax`, `201-b`… Dans `localStorage`, la base reste un entier (compatible avec les anciennes sauvegardes), les formes sont des chaînes (`"26-alola"`).
@@ -168,9 +169,9 @@ En-tête de chaque fiche : nom français, puis genus · nom anglais, puis nom ja
 - **Hors-ligne** : `packDone2` contient la DATA_VERSION téléchargée (le service worker la renvoie avec sa version) ; après un changement de DATA_VERSION, le bouton de téléchargement revient.
 - **Lieux** : sans lieu Poképédia pour un jeu récent, la fiche affiche « Faire évoluer … », « Méga-Évolution de … » ou « Lieu non renseigné pour ce jeu ».
 
-## Journal des versions (v35–v60.37)
+## Journal des versions (v35–v60.39)
 
-Les versions v21 à v34 sont détaillées ci-dessus. Ce journal les prolonge jusqu’à la v60.37, **une ligne par version**, en regroupant seulement les petites mises à jour GO successives. Rien n’est inventé : chaque ligne s’appuie sur `docs/notes.json`, les NOTES de `docs/sw.js` ou un message de commit. Les dates sont celles des notes de version, ou la date du commit de publication.
+Les versions v21 à v34 sont détaillées ci-dessus. Ce journal les prolonge jusqu’à la v60.39, **une ligne par version**, en regroupant seulement les petites mises à jour GO successives. Rien n’est inventé : chaque ligne s’appuie sur `docs/notes.json`, les NOTES de `docs/sw.js` ou un message de commit. Les dates sont celles des notes de version, ou la date du commit de publication.
 
 L’historique git de ce dépôt commence à la v46 (`981e83c`) : les **v35–v45** n’ont pas de commit conservé ici et s’appuient uniquement sur `notes.json`. Les **v60.8–v60.15** n’ont pas d’entrée dans `notes.json` ; le résumé vient des NOTES de `sw.js` et des commits. Un commit intitulé « v60.13 » (correctif du script de planning des boss, `6296364`) n’a pas créé de `VERSION` d’appli (`sw.js` est resté en v60.12).
 
@@ -205,7 +206,7 @@ L’historique git de ce dépôt commence à la v46 (`981e83c`) : les **v35–v4
 - **v58** (28/10) — Movesets recommandés en raid et Combats Max sur la fiche GO.
 - **v59** (28/10) — Écran « Classements » dans le menu ☰ (PvP, raids, Combats Max).
 
-### v60–v60.37 (29 octobre – 25 novembre 2026)
+### v60–v60.39 (29 octobre – 25 novembre 2026)
 
 - **v60** (29/10) — Onglet Team GO Rocket dans les classements ; encadré PC à la capture en raid.
 - **v60.1** (29/10) — Dans les classements, les boss en cours et à venir sont mis en avant ; calendrier des boss.
@@ -235,8 +236,10 @@ L’historique git de ce dépôt commence à la v46 (`981e83c`) : les **v35–v4
 - **v60.35** (25/11) — Téléchargement optionnel des illustrations shiny HOME hors-ligne (~16,4 Mo), jamais automatique.
 - **v60.36** (25/11) — Sprites animés vérifiés ; si le GIF manque, secours HOME puis sprite officiel ; jamais dans le pack auto.
 - **v60.37** (25/11) — Filtres « Capacité… » et « Talent… » sur la liste, autocomplétion française, jeu et méthode ; index dans le pack hors-ligne (d77).
+- **v60.38** (25/11) — Journal des versions v35–v60.37 dans le README ; chiffres et fonctions recalés.
+- **v60.39** (25/11) — Filtre « Lieu… » sur la liste, autocomplétion française, selon le jeu ; index d’après les fiches, pack hors-ligne (d78).
 
-Les versions v60.22 à v60.37 conservent ci-dessous leur notice détaillée, dans l’ordre chronologique.
+Les versions v60.22 à v60.39 conservent ci-dessous leur notice détaillée, dans l’ordre chronologique.
 
 ## v60.22 : lieux et textes des anciens jeux
 - **Où le trouver (Gén. I à VII, RF/VF Switch)** : `build/fix-v60-22.mjs` (lancé par `apply-v34.mjs`, idempotent) complète les fiches de jeu qui n’avaient ni rencontre PokéAPI ni donnée Poképédia : lieux des modules Poképédia `Module:Localisations/Données/Pokémon <jeu>` (niveau, taux, version, renforts SOS, précisions), sinon méthode de la sous-page `/Indisponibles` (« Faire évoluer … », « Échange », « À transférer par la Banque Pokémon », Poké Fret, Bloc Temporel, Pokéwalker…). Jeux ajoutés : Rouge / Bleu, Jaune, Or / Argent, Cristal, X / Y, ROSA, Soleil / Lune, USUL ; Pokémon « Hors dex » de tous ces jeux et des jeux GBA / DS (que `fix-v42.mjs` ne couvrait pas). RF/VF Switch reprend les lignes RF/VF sans ce qui demande une GBA (échanges avec Rubis / Saphir / Émeraude, Colosseum, événements). Les rencontres PokéAPI existantes priment ; les glitchs (« Bug du Croupier ») sont exclus. Cache des modules : `build/cache/v42/` (versionné, téléchargé une seule fois).
@@ -347,8 +350,15 @@ Les versions v60.22 à v60.37 conservent ci-dessous leur notice détaillée, dan
 - **Corrections du README** : fonctions (recherche par capacité et talent, Collection, Pocket, packs hors-ligne, 28 jeux), table des données (1 501 entrées, `core.json` ~370 Ko, `learn-index.json` et fichiers de raids / classements / Pocket), lieux et textes officiels, tailles actuelles de `docs/`, mention de la recherche par lieu encore absente.
 - **Audit** : contrôles `v60.38` dans `build/audit.mjs`. `build/fix-v60-38.mjs`, lancé par `apply-v34.mjs`, est idempotent.
 
+
+## v60.39 : recherche par lieu
+- **Liste** : un filtre « Lieu… » s’ajoute à côté de « Capacité… » et « Talent… », sans remplacer la recherche par nom ou numéro ni les autres filtres. L’autocomplétion propose les noms français (accents ignorés) et suit le jeu choisi dans le menu Jeu. Sans jeu, la recherche porte sur l’ensemble des jeux de la série principale ; si un même nom existe dans plusieurs régions (ex. Route 1), une mention vous invite à préciser le jeu.
+- **Jeux** : l’index couvre les 28 jeux de la série principale, à partir des lieux déjà affichés sur les fiches. Pokémon HOME et Pokémon GO n’ont pas de liste de lieux ici : le filtre porte alors sur les jeux de la série principale, avec une mention. Mieux vaut un sous-ensemble juste qu’un rapprochement approximatif : on n’indexe que le source que la fiche montre (Poképédia `f.pl` en priorité, sinon PokéAPI `f.en`) ; les phrases de méthode (`f.pln`, « Faire évoluer … ») ne sont pas des lieux ; une forme n’est retenue que si elle existe dans le jeu (`inGame`) ; pas d’héritage vers une forme régionale, une Méga, un Gigamax, un Primo ou une forme de combat.
+- **Données** : un index compact `docs/data/loc-index.json` (~222 Ko, ~49 Ko compressé) est généré de façon idempotente par `build/fix-v60-39.mjs` à partir des fiches `sp/`, de `loc.json` et de `core.json` déjà livrés, et ajouté au pack hors-ligne. Il n’est chargé qu’à la première utilisation du filtre. `DATA_VERSION` passe à `d78` : retéléchargez le pack hors-ligne pour l’avoir. Inventaire : `build/cache/v60-39/etat-des-lieux.md`.
+- **Audit** : contrôles `v60.39` dans `build/audit.mjs` (Forêt de Jade, Désert Rôtissable, Mew introuvable à l’état sauvage, autocomplétion, pack, NOTES ≤ 160 caractères).
+
 ## Limites connues
-Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16,4 Mo, officielles ≈ 20 Mo) peuvent être téléchargées en option dans le menu Hors-ligne (v60.35) ; sinon elles ne sont mises en cache que lorsqu'on les ouvre. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant. Sprites animés (GIF Showdown, dépôt PokéAPI) : chargés seulement au toucher, exclus des packs hors-ligne (environ 307 Mo au total) ; 138 formes n’en ont pas, avec un secours HOME puis sprite officiel (v60.36). Recherche par capacité et par talent sur la liste (v60.37, index `learn-index.json` ~1,94 Mo dans le pack hors-ligne, `DATA_VERSION` d77) ; la recherche par lieu n’est pas encore proposée.
+Rencontres détaillées des jeux Switch via Poképédia (v32) ; anciens jeux : rencontres PokéAPI, complétées par les lieux / méthodes Poképédia (v42, v60.22). Textes Pokédex FR officiels via Poképédia pour presque tous les jeux ; traduction automatique signalée seulement en dernier recours. Historique des œufs GO par saison (Serebii + Leek Duck) ; les éclosions uniquement événementielles peuvent manquer. Illustrations : rendus HOME (3D) par défaut, y compris shiny HOME ; sprite officiel en secours pour les formes sans rendu HOME (10 formes, plus 7 casquettes de Pikachu en shiny). Les illustrations shiny (HOME ≈ 16,4 Mo, officielles ≈ 20 Mo) peuvent être téléchargées en option dans le menu Hors-ligne (v60.35) ; sinon elles ne sont mises en cache que lorsqu'on les ouvre. Sur iPhone, iOS peut limiter ou effacer ce cache si le stockage est insuffisant. Sprites animés (GIF Showdown, dépôt PokéAPI) : chargés seulement au toucher, exclus des packs hors-ligne (environ 307 Mo au total) ; 138 formes n’en ont pas, avec un secours HOME puis sprite officiel (v60.36). Recherche par capacité et par talent sur la liste (v60.37, index `learn-index.json` ~1,94 Mo) et par lieu (v60.39, index `loc-index.json` ~222 Ko, d’après les fiches, sans mélange approximatif des formats). Les deux index sont dans le pack hors-ligne (`DATA_VERSION` d78). Pokémon HOME et Pokémon GO n’ont pas de liste de lieux ici. Certains jeux n’ont que des lieux sommaires (Disque Indigo : 7 noms ; DEPS : surtout des méthodes d’évolution, non indexées comme lieux).
 
 ## Taille
-`docs/` ≈ 104 Mo (images ≈ 70 Mo dont sprites officiels ≈ 19 Mo, shiny officiels ≈ 19 Mo, rendus HOME ≈ 16 Mo et shiny HOME ≈ 16 Mo à la demande ; données ≈ 19 Mo dont l’index des capacités ~1,94 Mo ; cris ≈ 14 Mo).
+`docs/` ≈ 104 Mo (images ≈ 70 Mo dont sprites officiels ≈ 19 Mo, shiny officiels ≈ 19 Mo, rendus HOME ≈ 16 Mo et shiny HOME ≈ 16 Mo à la demande ; données ≈ 19 Mo dont l’index des capacités ~1,94 Mo et l’index des lieux ~222 Ko ; cris ≈ 14 Mo).

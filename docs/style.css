@@ -25,12 +25,14 @@ button.icon{width:var(--tap);height:var(--tap);border-radius:var(--radius);borde
 @media(min-width:700px){.filters{grid-template-columns:repeat(4,1fr)}}
 .filters select{flex:1;min-width:0;height:44px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);padding:0 4px;font-size:14px}
 
-/* v60.37: filtres capacité et talent */
+/* v60.37–v60.39: filtres capacité, talent et lieu */
 .advfilters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+#locac{grid-column:1/-1}
+@media(min-width:700px){.advfilters{grid-template-columns:1fr 1fr 1fr}#locac{grid-column:auto}}
 .ac{position:relative;min-width:0}
-#mvq,#abq{width:100%;box-sizing:border-box;height:var(--tap);border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);padding:0 12px;font-size:15px;outline:none}
-#mvq:focus,#abq:focus{border-color:var(--accent)}
-#mvq.has,#abq.has{border-color:var(--accent);font-weight:600}
+#mvq,#abq,#locq{width:100%;box-sizing:border-box;height:var(--tap);border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);padding:0 12px;font-size:15px;outline:none}
+#mvq:focus,#abq:focus,#locq:focus{border-color:var(--accent)}
+#mvq.has,#abq.has,#locq.has{border-color:var(--accent);font-weight:600}
 .acsug{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:8;margin:0;padding:4px;list-style:none;background:var(--bg2);border:2px solid var(--line);border-radius:12px;max-height:240px;overflow:auto;box-shadow:0 8px 24px #0003}
 .acsug li{padding:8px 10px;border-radius:8px;cursor:pointer;font-size:15px}
 .acsug li[aria-selected=true],.acsug li:hover{background:var(--bg)}
