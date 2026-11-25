@@ -1144,4 +1144,66 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.39 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, html, css, preview, readme, notesj].some(t => /\bYann\b/.test(t)));
 }
 
+
+
+// ---- v60.40 : conditions de combat du tableau des faiblesses (build/fix-v60-40.mjs, bloc FIELDEFF de docs/app.js)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const css = fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8');
+  const readme = fs.readFileSync(path.join(HERE, '../README.md'), 'utf8');
+  const notesj = fs.readFileSync(path.join(DOCS, 'notes.json'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1];
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-40.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  const preview = fs.readFileSync(path.join(HERE, 'preview60-40.mjs'), 'utf8');
+  const rules = fs.readFileSync(path.join(HERE, 'cache/v60-40/regles.md'), 'utf8');
+  ok('v60.40 SW : VERSION ≥ v60.40, DATA_VERSION ≥ d78 (inchangée si pas de nouveau JSON)', /VERSION = 'v60\.(40|[4-9]\d|[1-9]\d{2})'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 78 && (ver !== 'v60.40' || /DATA_VERSION = 'd78'/.test(sw)));
+  ok('v60.40 NOTES ≤ 160 caractères' + (ver === 'v60.40' ? ', commence par les faiblesses' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.40' || (/Faiblesses/.test(notes) && /Téracristal|Téra|météo/.test(notes))), String(notes.length));
+  const blk = app.slice(app.indexOf('// ABEFF-START'), app.indexOf('// FIELDEFF-END') + '// FIELDEFF-END'.length);
+  ok('v60.40 bloc FIELDEFF présent après ABEFF', /\/\/ ABEFF-START/.test(blk) && /\/\/ FIELDEFF-START/.test(blk) && /function fieldMults/.test(blk));
+  const fns = new Function(blk.replace(/\/\/ ABEFF-START|\/\/ ABEFF-END|\/\/ FIELDEFF-START|\/\/ FIELDEFF-END/g, '') + '\nreturn { ABIL_EFF, typeMults, abMults, fieldMults, defTypesOf, FIELD_BERRIES, FIELD_NO_GAME };')();
+  const { fieldMults: FM, typeMults: TM, FIELD_BERRIES: FB, FIELD_NO_GAME: FN } = fns;
+  const ch = g => core.charts[g <= 1 ? 1 : g <= 5 ? 2 : 6];
+  const run = (types, gen, opt, ab) => FM(types, ch(gen), gen, opt, ab);
+  const Z = ['electric', 'flying'], C = ['fire', 'flying'], G = ['ghost', 'poison'];
+  eq('v60.40 tables de types réutilisées (Électhor Sol ×0 sans condition)', TM(Z, ch(9)).ground, 0);
+  eq('v60.40 Électhor Gravité : Sol ×2 (Bulbapedia Zapdos, Poképédia Électhor, calc)', run(Z, 9, { grav: true }, null).ground, 2);
+  eq('v60.40 Électhor Balle Fer gén. IX : Sol ×1 (Bulbapedia Iron Ball gén. V+, calc gen789)', run(Z, 9, { it: 'iron' }, null).ground, 1);
+  eq('v60.40 Électhor Balle Fer gén. IV : Sol ×2 (Bulbapedia Iron Ball, calc gen4)', run(Z, 4, { it: 'iron' }, null).ground, 2);
+  eq('v60.40 Électhor Balle Fer + Gravité gén. IX : Sol ×2 (Gravité prime)', run(Z, 9, { it: 'iron', grav: true }, null).ground, 2);
+  eq('v60.40 Électhor Ballon : Sol ×0', run(Z, 9, { it: 'balloon' }, null).ground, 0);
+  eq('v60.40 Électhor Ballon + Gravité : Sol ×2', run(Z, 9, { it: 'balloon', grav: true }, null).ground, 2);
+  eq('v60.40 Électhor Point de Mire : Sol ×2', run(Z, 9, { it: 'ring' }, null).ground, 2);
+  const winds = run(C, 9, { wx: 'winds' }, null);
+  eq('v60.40 Dracaufeu vents mystérieux : Roche 4→2', winds.rock, 2);
+  eq('v60.40 Dracaufeu vents mystérieux : Électrik 2→1', winds.electric, 1);
+  eq('v60.40 Dracaufeu vents mystérieux : Glace 1→½ (l’autre type compte)', winds.ice, 0.5);
+  eq('v60.40 Dracaufeu soleil intense : Eau ×0', run(C, 9, { wx: 'sun' }, null).water, 0);
+  eq('v60.40 Dracaufeu pluie battante : Feu ×0', run(C, 9, { wx: 'rain' }, null).fire, 0);
+  eq('v60.40 Dracaufeu Téra Feu : Sol ×2 (plus d’immunité Vol)', run(C, 9, { tera: 'fire' }, null).ground, 2);
+  eq('v60.40 Dracaufeu Téra Feu : Roche ×2 (plus ×4)', run(C, 9, { tera: 'fire' }, null).rock, 2);
+  eq('v60.40 Dracaufeu Téra Stellaire : typage d’origine, Roche ×4', run(C, 9, { tera: 'stellar' }, null).rock, 4);
+  eq('v60.40 Dracaufeu Baie Charti : Roche 4→2', run(C, 9, { it: 'berry-rock' }, null).rock, 2);
+  eq('v60.40 Électhor Baie Zalis : Normal 1→½ (pas seulement super efficace)', run(Z, 9, { it: 'berry-normal' }, null).normal, 0.5);
+  eq('v60.40 Ectoplasma Lévitation (v60.21) : Sol ×0', run(G, 9, {}, 26).ground, 0);
+  eq('v60.40 Ectoplasma Lévitation + Gravité : Sol ×2', run(G, 9, { grav: true }, 26).ground, 2);
+  eq('v60.40 Champ Brumeux, Dracaufeu non au sol : Dragon inchangé ×1', run(C, 9, { tr: 'misty' }, null).dragon, 1);
+  eq('v60.40 Champ Brumeux + Gravité, Dracaufeu au sol : Dragon ×½', run(C, 9, { tr: 'misty', grav: true }, null).dragon, 0.5);
+  eq('v60.40 tempête de sable : le tableau ne change pas (Roche ×4)', run(C, 9, { wx: 'sand' }, null).rock, 4);
+  ok('v60.40 baies : 18 types, Roséli en gén. VI, Zalis « all »', Object.keys(FB).length === 18 && FB['berry-fairy'].g === 6 && FB['berry-fairy'].n === 'Baie Roséli' && FB['berry-normal'].all === 1);
+  ok('v60.40 jeux sans ces options : Let’s Go, Légendes Arceus, Z-A', !!FN.lgpe && !!FN.la && !!FN.za && !!FN.zadlc);
+  ok('v60.40 app : contrôles météo, terrain, objet, Téra, Gravité sur le tableau existant', /id="efffield"/.test(app) && /id="effwx"/.test(app) && /id="efftr"/.test(app) && /id="effit"/.test(app) && /id="efftera"/.test(app) && /id="effgrav"/.test(app) && /function refreshEff/.test(app) && /efffield/.test(css) && /id="eff"/.test(app));
+  ok('v60.40 talents v60.21 conservés (ABEFF inchangé dans ses contrôles, Souffle Delta toujours là)', /ABIL_EFF/.test(app) && /191: \{ g: 6, ds: 1/.test(app) && /function abMults/.test(app));
+  ok('v60.40 un type devenu ×1 reste visible (groupe Neutre)', /label: 'Neutre'/.test(app) && /id="effbox"/.test(app) && /nofold/.test(app));
+  ok('v60.40 pas de Bottes Ferreuses dans l’interface (hors types)', !/Bottes Ferreuses/.test(app) && /Bottes Ferreuses/.test(rules));
+  ok('v60.40 règles sourcées (Bulbapedia, Poképédia, calc) et écart Balle Fer tranché', /Bulbapedia/.test(rules) && /Poképédia/.test(rules) && /@smogon\/calc/.test(rules) && /Génération V/.test(rules) && /Électhor/.test(rules));
+  ok('v60.40 apply-v34 lance fix-v60-40', /fix-v60-40\.mjs/.test(apply));
+  ok('v60.40 README : journal v60.40, DATA d78, notice', /Lieu…/.test(readme) && /\*\*v60\.40\*\*/.test(readme) && /d78/.test(readme) && /Faiblesses/.test(readme));
+  ok('v60.40 notes.json contient v60.40', /"v": "v60\.40"/.test(notesj));
+  ok('v60.40 DATA_VERSION inchangée (pas de nouveau JSON de données)', !fs.existsSync(path.join(DOCS, 'data', 'field-index.json')) && /DATA_VERSION = 'd78'/.test(sw));
+  ok('v60.40 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, css, preview, readme, notesj, rules].some(t => /\bYann\b/.test(t)));
+}
+
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);

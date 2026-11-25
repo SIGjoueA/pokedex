@@ -104,7 +104,7 @@ section.box h2{margin:0 0 10px;font-size:17px;display:flex;justify-content:space
 .eff{margin:10px 0 0}
 .eff .hd{font-weight:700;font-size:14px;margin-bottom:6px}
 .eff .hd small{color:var(--mute);font-weight:500}
-.eff.w .hd{color:var(--weak)}.eff.r .hd{color:var(--res)}
+.eff.w .hd{color:var(--weak)}.eff.r .hd{color:var(--res)}.eff.n .hd{color:var(--fg)}
 .eff .badges{margin:0;gap:6px}
 .eff .badge{font-size:14px;padding:5px 12px;min-height:34px;display:inline-flex;align-items:center;text-decoration:none}
 .note{color:var(--mute);font-size:12.5px;margin:10px 0 0}
@@ -421,6 +421,18 @@ details.shd summary::before{content:'▸';margin-right:6px}details.shd[open] sum
 .abseg button[aria-pressed="true"]{border-color:rgba(123,92,214,.9);background:rgba(123,92,214,.16)}
 .abnote .abhd{font-weight:600}
 .abnote .abbrk,.abnote .abpast{color:var(--mute);font-size:13px}
+
+/* v60.40: conditions de combat du tableau des faiblesses */
+.efffield{margin:8px 0 10px}
+.effhint{margin:0 0 8px;font-size:13px;color:var(--mute);font-weight:500;line-height:1.35}
+.efffgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(min-width:700px){.efffgrid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.efffield label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:var(--mute)}
+.efffield select{height:40px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);color:var(--fg);font-size:14px;font-weight:600;padding:0 8px}
+.effgrav{flex-direction:row!important;align-items:center;gap:8px;margin-top:8px;color:var(--fg);font-size:14px;font-weight:600}
+.effgrav input{width:18px;height:18px}
+#efffieldnote{margin:8px 0 0}
+#efffieldnote p{margin:0 0 6px}
 /* v31: base-form note */
 .basenote{border-left:4px solid var(--accent)}
 .basenote p{margin:0;font-size:14.5px;line-height:1.45}

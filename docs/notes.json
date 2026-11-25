@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.40",
+  "d": "2026-11-25",
+  "l": [
+   "Sur la fiche, vous pouvez ajouter au tableau des faiblesses les conditions de combat qui changent vraiment l’efficacité des types : météo (vents mystérieux, pluie battante, soleil intense), terrains, objets (Ballon, Balle Fer, Point de Mire, baies anti-type), Gravité et Téracristal.",
+   "Les talents déjà traités en v60.21 restent le point de départ. La tempête de sable et la neige, ainsi que les champs Électrifié, Psychique et Herbu, sont rappelés en note s’ils ne changent pas le tableau (bonus de Déf. Spé. ou de Défense, puissances de certaines capacités).",
+   "Let’s Go, Légendes Arceus, Z-A et Pokémon GO n’ont pas ces options (autre système de combat). DATA_VERSION inchangée (d78)."
+  ]
+ },
+ {
   "v": "v60.39",
   "d": "2026-11-25",
   "l": [

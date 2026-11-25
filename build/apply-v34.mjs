@@ -39,3 +39,4 @@ node('fix-v60-36.mjs');      // v60.36: secours HOME puis sprite officiel quand 
 node('fix-v60-37.mjs');      // v60.37: index compact capacités / talents pour la recherche de la liste (learn-index.json)
 node('fix-v60-38.mjs');      // v60.38: journal des versions v35–v60.37 dans le README
 node('fix-v60-39.mjs');      // v60.39: index compact des lieux pour la recherche de la liste (loc-index.json)
+node('fix-v60-40.mjs');      // v60.40: conditions de combat du tableau des faiblesses (pas de nouveau fichier de données)

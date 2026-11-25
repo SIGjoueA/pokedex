@@ -1693,7 +1693,18 @@ function effGroups(types, mode, chart, mm = null) {
 const multTxt = v => '×' + ({ 0.5: '½', 0.25: '¼', 0.125: '⅛' }[v] || dec(v));
 function effHTML(types, mode, chart, mm = null, mark = null) {
   mark ||= new Set();
-  const body = effGroups(types, mode, chart, mm).map(x => `<div class="eff ${x.cls}"><div class="hd">${x.label} <small>${x.mult}</small></div><div class="badges">` +
+  const groups = effGroups(types, mode, chart, mm);
+  // v60.40 : un type devenu ×1 (Balle Fer, vents mystérieux…) doit rester visible, avec la même marque * que les autres changements
+  if (mode !== 'go' && mark.size) {
+    const mults = mm || typeMults(types, chart);
+    const neu = [...mark].filter(t => (mults[t] ?? 1) === 1);
+    if (neu.length) {
+      const g = { label: 'Neutre', mult: '×1', cls: 'n', types: neu };
+      const i = groups.findIndex(x => x.cls !== 'w');
+      if (i < 0) groups.push(g); else groups.splice(i, 0, g);
+    }
+  }
+  const body = groups.map(x => `<div class="eff ${x.cls}"><div class="hd">${x.label} <small>${x.mult}</small></div><div class="badges">` +
     x.types.map(t => `<a class="badge${mark.has(t) ? ' abx' : ''}" href="#" data-type="${t}" style="background:${TYPE_COLORS[t]}">${esc(TYPE_FR[t])}${mark.has(t) ? '<sup aria-hidden="true">*</sup>' : ''}</a>`).join('') + '</div></div>').join('');
   return body || '<p class="note">Aucune faiblesse ni résistance.</p>';
 }
@@ -1744,6 +1755,208 @@ function abMults(types, chart, id) { // multipliers of every attacking type for 
   return out;
 }
 // ABEFF-END
+// FIELDEFF-START
+// v60.40 : conditions de combat qui changent l’efficacité ou la défense de type (météo de terrain, terrains, objets, Gravité, Téra).
+// Tables de types et talents (ABEFF / v60.21) inchangés, seulement composés. Bloc pur, relu par build/audit.mjs.
+const FIELD_NO_GAME = { lgpe: 1, la: 1, za: 1, zadlc: 1 };
+const FIELD_BERRIES = {
+  'berry-normal': { t: 'normal', n: 'Baie Zalis', g: 4, all: 1 },
+  'berry-fire': { t: 'fire', n: 'Baie Chocco', g: 4 },
+  'berry-water': { t: 'water', n: 'Baie Pocpoc', g: 4 },
+  'berry-electric': { t: 'electric', n: 'Baie Parma', g: 4 },
+  'berry-grass': { t: 'grass', n: 'Baie Ratam', g: 4 },
+  'berry-ice': { t: 'ice', n: 'Baie Nanone', g: 4 },
+  'berry-fighting': { t: 'fighting', n: 'Baie Pomroz', g: 4 },
+  'berry-poison': { t: 'poison', n: 'Baie Kébia', g: 4 },
+  'berry-ground': { t: 'ground', n: 'Baie Jouca', g: 4 },
+  'berry-flying': { t: 'flying', n: 'Baie Cobaba', g: 4 },
+  'berry-psychic': { t: 'psychic', n: 'Baie Yapap', g: 4 },
+  'berry-bug': { t: 'bug', n: 'Baie Panga', g: 4 },
+  'berry-rock': { t: 'rock', n: 'Baie Charti', g: 4 },
+  'berry-ghost': { t: 'ghost', n: 'Baie Sédra', g: 4 },
+  'berry-dragon': { t: 'dragon', n: 'Baie Fraigo', g: 4 },
+  'berry-dark': { t: 'dark', n: 'Baie Lampou', g: 4 },
+  'berry-steel': { t: 'steel', n: 'Baie Babiri', g: 4 },
+  'berry-fairy': { t: 'fairy', n: 'Baie Roséli', g: 6 }
+};
+const FIELD_TYPES = ['normal','fighting','flying','poison','ground','rock','bug','ghost','steel','fire','water','grass','electric','psychic','ice','dragon','dark','fairy'];
+function defTypesOf(types, tera) { return (tera && tera !== 'stellar') ? [tera] : types.slice(); }
+function isGroundedField(defTypes, opt, abId) {
+  if (opt.grav || opt.it === 'iron') return true;
+  if (defTypes.includes('flying')) return false;
+  if (String(abId) === '26') return false;
+  if (opt.it === 'balloon') return false;
+  return true;
+}
+function fieldTypeMults(defTypes, chart, opt, gen) {
+  const grav = !!opt.grav, ring = opt.it === 'ring', iron = opt.it === 'iron';
+  const ironGen4 = iron && gen < 5, ironGen5 = iron && gen >= 5;
+  const m = {};
+  for (const [atk, row] of Object.entries(chart)) {
+    let v = 1;
+    for (const d of defTypes) {
+      let x = row[d] ?? 1;
+      if ((grav || ironGen4 || ring) && atk === 'ground' && d === 'flying' && x === 0) x = 1;
+      if (ring && x === 0) x = 1;
+      v *= x;
+    }
+    if (ironGen5 && defTypes.includes('flying') && atk === 'ground' && v === 0 && !grav && !ring) v = 1;
+    m[atk] = r4(v);
+  }
+  return m;
+}
+function fieldMults(types, chart, gen, opt, abId) {
+  const defTypes = defTypesOf(types, opt.tera);
+  const grounded = isGroundedField(defTypes, opt, abId);
+  let mm = fieldTypeMults(defTypes, chart, opt, gen);
+  const e = abId != null && abId !== '' && ABIL_EFF[abId] && ABIL_EFF[abId].g <= gen ? ABIL_EFF[abId] : null;
+  if (e && !(String(abId) === '26' && grounded)) {
+    const out = {};
+    for (const [atk, b] of Object.entries(mm)) {
+      let m = b;
+      if (e.ds && defTypes.includes('flying') && chart[atk]?.flying === 2) m /= 2;
+      if (e.t && atk in e.t) m *= e.t[atk];
+      if (e.se && b > 1) m *= e.se;
+      if (e.wg && b <= 1) m = 0;
+      if (e.ts && m >= 1) m = 0.5;
+      out[atk] = r4(m);
+    }
+    mm = out;
+  }
+  if (opt.it === 'balloon' && !opt.grav) mm.ground = 0;
+  if (opt.wx === 'sun') mm.water = 0;
+  if (opt.wx === 'rain') mm.fire = 0;
+  if (opt.wx === 'winds' && defTypes.includes('flying')) {
+    for (const atk of Object.keys(mm)) if (chart[atk]?.flying === 2) mm[atk] = r4(mm[atk] / 2);
+  }
+  if (opt.tr === 'misty' && grounded && 'dragon' in mm) mm.dragon = r4(mm.dragon * 0.5);
+  const berry = FIELD_BERRIES[opt.it];
+  if (berry && berry.g <= gen) {
+    const cur = mm[berry.t];
+    if (berry.all || cur > 1) mm[berry.t] = r4(cur * 0.5);
+  }
+  return mm;
+}
+function fieldNotes(types, gen, opt, abId) {
+  const defTypes = defTypesOf(types, opt.tera);
+  const grounded = isGroundedField(defTypes, opt, abId);
+  const notes = [];
+  if (opt.tera === 'stellar') notes.push('Le type Téra Stellaire conserve, en défense, les types d’origine de votre Pokémon.');
+  else if (opt.tera) notes.push('Téracristal : en défense, votre Pokémon n’a plus que le type ' + (TYPE_FR[opt.tera] || opt.tera) + '.');
+  if (opt.wx === 'rain') notes.push('En pluie battante, les capacités offensives de type Feu échouent.');
+  if (opt.wx === 'sun') notes.push('En soleil intense, les capacités offensives de type Eau échouent.');
+  if (opt.wx === 'winds') notes.push('Par vents mystérieux, les faiblesses du type Vol de votre Pokémon passent à ×1 ; l’autre type continue de s’appliquer.');
+  if (opt.wx === 'sand') notes.push('La tempête de sable ne change pas les faiblesses : depuis la génération IV, la Déf. Spé. des types Roche est multipliée par 1,5.');
+  if (opt.wx === 'snow') notes.push('La neige ne change pas les faiblesses : depuis la génération IX, la Défense des types Glace est multipliée par 1,5 (la grêle des générations précédentes n’a pas cet effet).');
+  if (opt.tr === 'electric') notes.push('Le Champ Électrifié ne change pas les faiblesses. Il renforce les capacités Électrik des Pokémon au sol (×1,5 en Gén. VI–VII, ×1,3 depuis la Gén. VIII) et empêche le sommeil.');
+  if (opt.tr === 'psychic') notes.push('Le Champ Psychique ne change pas les faiblesses. Il renforce les capacités Psy des Pokémon au sol (×1,5 en Gén. VI–VII, ×1,3 depuis la Gén. VIII) et empêche les capacités prioritaires de les viser.');
+  if (opt.tr === 'grassy') notes.push('Le Champ Herbu ne change pas le tableau des types. Séisme, Piétisol et Ampleur voient leur puissance divisée par 2 contre un Pokémon au sol.');
+  if (opt.tr === 'misty') notes.push(grounded
+    ? 'Le Champ Brumeux divise par 2 les dégâts des capacités Dragon reçues par votre Pokémon (il est au sol).'
+    : 'Le Champ Brumeux divise par 2 les dégâts Dragon, mais seulement si votre Pokémon est au sol. Ici, il ne l’est pas (type Vol, Lévitation ou Ballon, sans Gravité ni Balle Fer).');
+  if (opt.it === 'balloon') notes.push(opt.grav
+    ? 'Sous Gravité, le Ballon n’immunise plus contre le type Sol (il n’éclate pas pour autant).'
+    : 'Le Ballon immunise votre Pokémon contre le type Sol, jusqu’au premier coup reçu.');
+  if (opt.it === 'iron') notes.push(opt.grav
+    ? 'La Balle Fer et Gravité sont tous les deux actifs : Gravité s’applique (l’autre type compte pour Sol).'
+    : gen < 5
+      ? 'Avec la Balle Fer, en génération IV, l’immunité Sol du type Vol est levée et l’autre type compte encore (Électhor : Sol ×2).'
+      : 'Avec la Balle Fer, depuis la génération V, une attaque Sol inflige ×1 à un type Vol, quel que soit son autre type (sauf si Gravité ou le Point de Mire s’y ajoute).');
+  if (opt.it === 'ring') notes.push('Le Point de Mire annule les immunités dues aux types de votre Pokémon (Sol touche le type Vol, Normal et Combat touchent le type Spectre, etc.).');
+  const berry = FIELD_BERRIES[opt.it];
+  if (berry) notes.push(berry.all
+    ? 'La Baie Zalis divise par 2 les dégâts d’une capacité Normal, une seule fois (même si elle n’est pas super efficace).'
+    : berry.n + ' divise par 2 les dégâts d’une capacité ' + (TYPE_FR[berry.t] || berry.t) + ' super efficace, une seule fois.');
+  if (opt.grav) notes.push('Sous Gravité, le type Vol et Lévitation ne protègent plus contre le type Sol ; l’autre type compte.');
+  return notes;
+}
+function clampEffOpt(gen, gm) {
+  const o = { wx: EFF_OPT.wx, tr: EFF_OPT.tr, it: EFF_OPT.it, tera: EFF_OPT.tera, grav: !!EFF_OPT.grav };
+  if (gm && FIELD_NO_GAME[gm.id]) return { wx: '', tr: '', it: '', tera: '', grav: false };
+  if (gen < 6) { if (o.wx === 'sun' || o.wx === 'rain' || o.wx === 'winds') o.wx = ''; o.tr = ''; }
+  if (gen < 2 && o.wx === 'sand') o.wx = '';
+  if (gen < 9 && o.wx === 'snow') o.wx = '';
+  if (gen < 9) o.tera = '';
+  if (gen < 4) { o.grav = false; if (o.it === 'iron') o.it = ''; }
+  if (gen < 5 && (o.it === 'balloon' || o.it === 'ring')) o.it = '';
+  const berry = FIELD_BERRIES[o.it]; if (berry && berry.g > gen) o.it = '';
+  return o;
+}
+function fieldHasEffect(opt) { return !!(opt.wx || opt.tr || opt.it || opt.tera || opt.grav); }
+// FIELDEFF-END
+
+const EFF_OPT = { wx: '', tr: '', it: '', tera: '', grav: false };
+let EFF_CTX = null;
+function selOpt(v, cur, label) { return `<option value="${v}"${cur === v ? ' selected' : ''}>${label}</option>`; }
+function fieldControlsHTML(gen, gm) {
+  if (gm && FIELD_NO_GAME[gm.id]) {
+    return `<p class="note" id="efffieldnote">Ce jeu n’a pas ici de météo, de terrain, d’objet de combat, de Gravité ni de Téracristal (Let’s Go, Légendes Arceus, Z-A ou un système à part). Le tableau reste celui des types${gm && NO_ABIL[gm.id] ? ', sans talents' : ''}.</p>`;
+  }
+  const o = clampEffOpt(gen, gm);
+  const wx = [selOpt('', o.wx, 'Aucune')];
+  if (gen >= 2) wx.push(selOpt('sand', o.wx, 'Tempête de sable'));
+  if (gen >= 6) { wx.push(selOpt('rain', o.wx, 'Pluie battante'), selOpt('sun', o.wx, 'Soleil intense'), selOpt('winds', o.wx, 'Vents mystérieux')); }
+  if (gen >= 9) wx.push(selOpt('snow', o.wx, 'Neige'));
+  const tr = [selOpt('', o.tr, 'Aucun')];
+  if (gen >= 6) tr.push(selOpt('electric', o.tr, 'Champ Électrifié'), selOpt('psychic', o.tr, 'Champ Psychique'), selOpt('grassy', o.tr, 'Champ Herbu'), selOpt('misty', o.tr, 'Champ Brumeux'));
+  const it = [selOpt('', o.it, 'Aucun')];
+  if (gen >= 5) it.push(selOpt('balloon', o.it, 'Ballon'));
+  if (gen >= 4) it.push(selOpt('iron', o.it, 'Balle Fer'));
+  if (gen >= 5) it.push(selOpt('ring', o.it, 'Point de Mire'));
+  const berries = Object.entries(FIELD_BERRIES).filter(([, b]) => b.g <= gen);
+  if (berries.length) it.push('<optgroup label="Baies anti-type">' + berries.map(([id, b]) => selOpt(id, o.it, b.n)).join('') + '</optgroup>');
+  let tera = '';
+  if (gen >= 9) {
+    tera = `<label>Téra <select id="efftera" aria-label="Type Téra défensif">${selOpt('', o.tera, 'Aucun')}${FIELD_TYPES.map(t => selOpt(t, o.tera, TYPE_FR[t])).join('')}${selOpt('stellar', o.tera, 'Stellaire')}</select></label>`;
+  }
+  const grav = gen >= 4 ? `<label class="effgrav"><input type="checkbox" id="effgrav"${o.grav ? ' checked' : ''}> Gravité</label>` : '';
+  return `<div class="efffield" id="efffield">
+    <p class="effhint">Vous pouvez ajouter les conditions de combat qui changent vraiment les faiblesses de votre Pokémon.</p>
+    <div class="efffgrid">
+      <label>Météo <select id="effwx" aria-label="Météo">${wx.join('')}</select></label>
+      <label>Terrain <select id="efftr" aria-label="Terrain"${gen < 6 ? ' disabled' : ''}>${tr.join('')}</select></label>
+      <label>Objet <select id="effit" aria-label="Objet tenu">${it.join('')}</select></label>
+      ${tera}
+    </div>
+    ${grav}
+    <div id="efffieldnote" class="note" hidden></div>
+  </div>`;
+}
+function readEffForm() {
+  const wx = $('#effwx'), tr = $('#efftr'), it = $('#effit'), te = $('#efftera'), gr = $('#effgrav');
+  if (wx) EFF_OPT.wx = wx.value;
+  if (tr) EFF_OPT.tr = tr.value;
+  if (it) EFF_OPT.it = it.value;
+  if (te) EFF_OPT.tera = te.value;
+  if (gr) EFF_OPT.grav = !!gr.checked;
+}
+function currentAbId(box) {
+  const b = box && box.querySelector('.abseg [data-abv][aria-pressed="true"]');
+  if (b && b.dataset.abv !== '0') return b.dataset.abv;
+  return (EFF_CTX && EFF_CTX.abE && EFF_CTX.abE.one) || null;
+}
+function refreshEff() {
+  if (!EFF_CTX) return;
+  const box = $('#effbox') || ($('#eff') && $('#eff').closest('section'));
+  const { types, chart, gen, gm, abE } = EFF_CTX;
+  const opt = clampEffOpt(gen, gm);
+  const abId = currentAbId(box);
+  const useAb = abId && !(abE && abE.panes && String(abId) && box && box.querySelector('.abseg [data-abv="0"][aria-pressed="true"]'));
+  const id = useAb ? abId : (abE && abE.one && !abE.panes ? abE.one : null);
+  const mm = fieldMults(types, chart, gen, opt, id);
+  const defT = defTypesOf(types, opt.tera);
+  const bare = typeMults(defT, chart);
+  const mark = new Set(Object.keys(mm).filter(t => mm[t] !== bare[t]));
+  const eff = $('#eff'); if (eff) eff.innerHTML = effHTML(defT, 'main', chart, mm, mark);
+  const note = $('#efffieldnote');
+  if (note && !FIELD_NO_GAME[gm && gm.id]) {
+    const lines = fieldNotes(types, gen, opt, id);
+    note.hidden = !lines.length;
+    note.innerHTML = lines.map(t => `<p>${t}</p>`).join('');
+  }
+}
+
+
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
 // v60.21: one table per talent. A single talent (or the same twice) is applied directly; otherwise « Types seuls » (types changed by a talent marked *) + a button per talent.
 function abilityEff(f, gm, ref, types, chart) {
@@ -1781,15 +1994,19 @@ function abilityEff(f, gm, ref, types, chart) {
   return { one: null, mark, mm: null, seg, panes,
     html: `<div class="abnote"><p class="abhd">Touchez le talent de votre Pokémon, au-dessus du tableau, pour voir ses faiblesses avec ce talent. « Types seuls » n’en tient pas compte : les types marqués * changent selon le talent.</p>${notes}${brk}${pastP}${scope}</div>` };
 }
-function effBlockHTML(types, chart, abE) { // the table(s) of « Faiblesses & résistances » for the main games
-  if (!abE) return `<div id="eff">${effHTML(types, 'main', chart)}</div>`;
-  if (!abE.panes) return `<div id="eff">${effHTML(types, 'main', chart, abE.mm, abE.mark)}</div>${abE.html}`;
-  return `${abE.seg}<div id="eff"><div data-abp="0">${effHTML(types, 'main', chart, null, abE.mark)}</div>${abE.panes.map(p => `<div data-abp="${p.id}" hidden>${effHTML(types, 'main', chart, p.mm, p.mark)}</div>`).join('')}</div>${abE.html}`;
+function effBlockHTML(types, chart, abE, gm, gen) { // the table(s) of « Faiblesses & résistances » for the main games
+  EFF_CTX = { types, chart, gen: gen || 9, gm, abE };
+  const field = fieldControlsHTML(gen || 9, gm);
+  const table = `<div id="eff">${effHTML(types, 'main', chart)}</div>`;
+  if (!abE) return field + table;
+  if (!abE.panes) return field + `<div id="eff">${effHTML(types, 'main', chart, abE.mm, abE.mark)}</div>${abE.html}`;
+  return field + `${abE.seg}<div id="eff">${effHTML(types, 'main', chart, null, abE.mark)}</div>${abE.html}`;
 }
 // v60.21: talent buttons of the weakness table (not remembered: each Pokémon has its own talents)
-document.addEventListener('click', e => { const b = e.target.closest('.abseg [data-abv]'); if (!b) return; const box = b.closest('section'), v = b.dataset.abv;
+document.addEventListener('click', e => { const b = e.target.closest('.abseg [data-abv]'); if (!b) return; const box = b.closest('section');
   box.querySelectorAll('.abseg [data-abv]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-  box.querySelectorAll('[data-abp]').forEach(x => { x.hidden = x.dataset.abp !== v; }); });
+  refreshEff(); });
+document.addEventListener('change', e => { if (!e.target.closest('#efffield')) return; readEffForm(); refreshEff(); });
 function statColor(v) { return v < 50 ? '#e5534b' : v < 80 ? '#e0a02f' : v < 110 ? '#9bc53d' : v < 150 ? '#3fbf7f' : '#35b7d6'; }
 const pickGen = (list, gen, cur) => { const e = (list || []).find(x => x[0] >= gen); return e ? e[1] : cur; };
 function statsHTML(arr, gen1, max = 255) {
@@ -2845,8 +3062,8 @@ function renderDetail() {
     const regB = regional ? `<section class="box"><h2>Pokédex régional</h2><p class="rn-line">${regional}</p></section>` : '';
     const statsB = `<section class="box"><h2>Statistiques de base${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${statsHTML(sArr, gen1)}
       <p class="note">${gm ? (gen1 ? 'Génération I : une seule stat Spécial. ' : '') + `Stats telles qu’en génération ${['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'][gen]} (PokéAPI).` : 'Stats actuelles (dernière génération). Choisissez un jeu pour voir les stats de son époque.'}</p></section>`;
-    const effB = `<section class="box"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
-      ${effBlockHTML(types, chart, abE)}
+    const effB = `<section class="box nofold" id="effbox"><h2>Faiblesses &amp; résistances${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>
+      ${effBlockHTML(types, chart, abE, gm, gm ? gen : 9)}
       <p class="note" id="effnote">${effNote(mode2, gm)}</p></section>`;
     const abB = (() => { const ab = abilitiesHTML(f, gm, shared.ref); return typeof ab === 'string' ? `<section class="box"><h2>Talents</h2>${ab}</section>` : `<section class="box"><h2>Talents <span class="cntb" title="${ab.n} talent${ab.n > 1 ? 's' : ''}">${ab.n}</span></h2>${ab.body}</section>`; })();
     const evoB = `<section class="box"><h2>Évolutions${gm ? ` <small class="cnt">${esc(gm.s)}</small>` : ''}</h2>${evoHTML(p, f, 'game', gm)}
@@ -2882,6 +3099,7 @@ function renderDetail() {
     <p class="note disclaimer">Les données proviennent de PokéAPI, de Poképédia (CC BY-NC-SA 3.0 FR) et de sources communautaires : elles peuvent contenir des erreurs ou différer des jeux. Les données Pokémon GO sont communautaires et non officielles.</p>
   </div>`;
   setBarH(); initSheetGameMenu(); applyFolds(); pkSheet(p); setSprite(spriteMode, true); // v35: HOME (default) or the mode chosen on this sheet
+  refreshEff();
 }
 // hero names: French (h1) → genus · English → Japanese · romaji
 function namesHTML(p, sp) {

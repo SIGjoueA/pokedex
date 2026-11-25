@@ -1,7 +1,7 @@
 'use strict';
-const VERSION = 'v60.39';
+const VERSION = 'v60.40';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
-const NOTES = 'Recherche : filtre « Lieu… » (autocomplétion FR, selon le jeu choisi). D’après les fiches, sans à-peu-près. Dans le pack hors-ligne.';
+const NOTES = 'Faiblesses : vous pouvez ajouter météo, terrain, objet, Gravité et Téracristal au tableau déjà là. Seulement ce qui change vraiment l’efficacité des types.';
 const DATA_VERSION = 'd78'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
