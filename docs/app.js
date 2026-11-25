@@ -1950,7 +1950,7 @@ function svRankListHTML(id, tera, leg, origin, mode) {
     const raid = origin ? ` data-raid="${esc(origin)}"` : '';
     const en = (RSV.mv && RSV.mv[r[1]]) || '';
     const kind = svIsMaxId(id)
-      ? ((/^(G-Max|Giga )/.test(mv) || /^(G-Max|Giga )/.test(en)) ? 'Gigamax' : 'Dynamax')
+      ? ((/G-Max/.test(mv) || /G-Max/.test(en)) ? 'Gigamax' : 'Dynamax')
       : 'Téra';
     return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)}${boost ? ' après ' + esc(boost) : ''} · ${kind} ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
   }).join('')}</ol>`;

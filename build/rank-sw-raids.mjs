@@ -82,24 +82,24 @@ const GMAX_MOVE = {
 };
 
 const MAX_FR = {
-  'Max Flare': 'Max Brasier', 'Max Geyser': 'Max Geyser', 'Max Overgrowth': 'Max Verdoyance',
-  'Max Lightning': 'Max Foudre', 'Max Hailstorm': 'Max Chute Glace', 'Max Knuckle': 'Max Poing',
-  'Max Ooze': 'Max Acide', 'Max Quake': 'Max Séisme', 'Max Airstream': 'Max Cyclone',
-  'Max Mindstorm': 'Max Psy', 'Max Flutterby': 'Max Frelon', 'Max Rockfall': 'Max Rocades',
-  'Max Phantasm': 'Max Spectre', 'Max Wyrmwind': 'Max Dragon', 'Max Darkness': 'Max Ténèbres',
-  'Max Steelspike': 'Max Métal', 'Max Starfall': 'Max Féerie', 'Max Strike': 'Max Pognée',
-  'Max Guard': 'Max Garde',
-  'G-Max Vine Lash': 'Giga Fouet', 'G-Max Wildfire': 'Giga Feu', 'G-Max Cannonade': 'Giga Canon',
-  'G-Max Befuddle': 'Giga Folie', 'G-Max Volt Crash': 'Giga Foudre', 'G-Max Gold Rush': 'Giga Pognon',
-  'G-Max Chi Strike': 'Giga Frappe', 'G-Max Terror': 'Giga Maléfice', 'G-Max Foam Burst': 'Giga Bulles',
-  'G-Max Resonance': 'Giga Résonance', 'G-Max Cuddle': 'Giga Câlinerie', 'G-Max Replenish': 'Giga Récolte',
-  'G-Max Malodor': 'Giga Pestilence', 'G-Max Meltdown': 'Giga Fusion', 'G-Max Drum Solo': 'Giga Percussion',
-  'G-Max Fire Ball': 'Giga Incendie', 'G-Max Hydrosnipe': 'Giga Sniper', 'G-Max Wind Rage': 'Giga Coupure',
-  'G-Max Gravitas': 'Giga Gravité', 'G-Max Stonesurge': 'Giga Roc', 'G-Max Volcalith': 'Giga Volcan',
-  'G-Max Tartness': 'Giga Fébrilité', 'G-Max Sweetness': 'Giga Sucrosité', 'G-Max Sandblast': 'Giga Poussière',
-  'G-Max Stun Shock': 'Giga Choc', 'G-Max Centiferno': 'Giga Fournaise', 'G-Max Smite': 'Giga Foudre Sainte',
-  'G-Max Snooze': 'Giga Torpeur', 'G-Max Finale': 'Giga Finale', 'G-Max Steelsurge': 'Giga Fontesol',
-  'G-Max Depletion': 'Giga Usure', 'G-Max One Blow': 'Giga Coup Final', 'G-Max Rapid Flow': 'Giga Flux'
+  'Max Flare': 'Pyromax', 'Max Geyser': 'Hydromax', 'Max Overgrowth': 'Phytomax',
+  'Max Lightning': 'Fulguromax', 'Max Hailstorm': 'Cryomax', 'Max Knuckle': 'Pugilomax',
+  'Max Ooze': 'Toxinomax', 'Max Quake': 'Sismomax', 'Max Airstream': 'Aéromax',
+  'Max Mindstorm': 'Psychomax', 'Max Flutterby': 'Insectomax', 'Max Rockfall': 'Lithomax',
+  'Max Phantasm': 'Spectromax', 'Max Wyrmwind': 'Dracomax', 'Max Darkness': 'Sinistromax',
+  'Max Steelspike': 'Métallomax', 'Max Starfall': 'Enchantomax', 'Max Strike': 'Normalomax',
+  'Max Guard': 'Gardomax',
+  'G-Max Vine Lash': 'Fouet G-Max', 'G-Max Wildfire': 'Fournaise G-Max', 'G-Max Cannonade': 'Canonnade G-Max',
+  'G-Max Befuddle': 'Illusion G-Max', 'G-Max Volt Crash': 'Foudre G-Max', 'G-Max Gold Rush': 'Pactole G-Max',
+  'G-Max Chi Strike': 'Frappe G-Max', 'G-Max Terror': 'Hantise G-Max', 'G-Max Foam Burst': 'Bulles G-Max',
+  'G-Max Resonance': 'Résonance G-Max', 'G-Max Cuddle': 'Câlin G-Max', 'G-Max Replenish': 'Récolte G-Max',
+  'G-Max Malodor': 'Pestilence G-Max', 'G-Max Meltdown': 'Fonte G-Max', 'G-Max Drum Solo': 'Percussion G-Max',
+  'G-Max Fire Ball': 'Pyroball G-Max', 'G-Max Hydrosnipe': 'Gâchette G-Max', 'G-Max Wind Rage': 'Rafale G-Max',
+  'G-Max Gravitas': 'Ondes G-Max', 'G-Max Stonesurge': 'Récif G-Max', 'G-Max Volcalith': 'Téphra G-Max',
+  'G-Max Tartness': 'Corrosion G-Max', 'G-Max Sweetness': 'Nectar G-Max', 'G-Max Sandblast': 'Enlisement G-Max',
+  'G-Max Stun Shock': 'Choc G-Max', 'G-Max Centiferno': 'Combustion G-Max', 'G-Max Smite': 'Sentence G-Max',
+  'G-Max Snooze': 'Torpeur G-Max', 'G-Max Finale': 'Cure G-Max', 'G-Max Steelsurge': 'Percée G-Max',
+  'G-Max Depletion': 'Usure G-Max', 'G-Max One Blow': 'Coup Final G-Max', 'G-Max Rapid Flow': 'Multicoup G-Max'
 };
 
 const GMAX_SMOGON = {
