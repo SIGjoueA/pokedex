@@ -24,6 +24,20 @@ button.icon{width:var(--tap);height:var(--tap);border-radius:var(--radius);borde
 .filters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
 @media(min-width:700px){.filters{grid-template-columns:repeat(4,1fr)}}
 .filters select{flex:1;min-width:0;height:44px;border-radius:12px;border:2px solid var(--line);background:var(--bg2);padding:0 4px;font-size:14px}
+
+/* v60.37: filtres capacité et talent */
+.advfilters{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.ac{position:relative;min-width:0}
+#mvq,#abq{width:100%;box-sizing:border-box;height:var(--tap);border-radius:var(--radius);border:2px solid var(--line);background:var(--bg2);padding:0 12px;font-size:15px;outline:none}
+#mvq:focus,#abq:focus{border-color:var(--accent)}
+#mvq.has,#abq.has{border-color:var(--accent);font-weight:600}
+.acsug{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:8;margin:0;padding:4px;list-style:none;background:var(--bg2);border:2px solid var(--line);border-radius:12px;max-height:240px;overflow:auto;box-shadow:0 8px 24px #0003}
+.acsug li{padding:8px 10px;border-radius:8px;cursor:pointer;font-size:15px}
+.acsug li[aria-selected=true],.acsug li:hover{background:var(--bg)}
+.mvmeth{padding-top:4px}
+.mvmeth .chip{background:var(--bg2);color:var(--fg);text-shadow:none;opacity:.85;border-color:var(--line);font-weight:600}
+.mvmeth .chip[aria-pressed=true]{opacity:1;border-color:var(--accent);background:color-mix(in srgb, var(--accent) 22%, transparent);box-shadow:0 0 0 2px var(--bg) inset}
+.advnote{margin:4px 0 0;font-size:13px}
 .chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex:none;min-height:40px;padding:0 14px;border-radius:999px;border:2px solid transparent;color:#fff;font-weight:600;font-size:14px;cursor:pointer;opacity:.62;text-shadow:0 1px 1px rgba(0,0,0,.35)}
@@ -530,8 +544,8 @@ button.icon .mic{display:block}
 .hdxl a{color:inherit;text-decoration:none}.hdxl li.cur span{font-weight:600}.hdx1{margin:0 0 6px} /* v47 Dex national HOME */
 /* v49: mode Collection */
 .modeseg{display:flex;width:100%;margin-bottom:8px}.modeseg button{flex:1;min-height:40px;font-size:15px;color:var(--fg)}
-body.colmode #list-view .filters,body.colmode #typechips,body.colmode #list-view .status,body.colmode #results,body.colmode #q,body.colmode #formsbtn,body.colmode #viewbtn,body.colmode #list-view .foot{display:none}
-body.pkmode #list-view .filters,body.pkmode #typechips,body.pkmode #list-view .status,body.pkmode #results,body.pkmode #q,body.pkmode #formsbtn,body.pkmode #viewbtn,body.pkmode #list-view .foot{display:none}
+body.colmode #list-view .filters,body.colmode #typechips,body.colmode #advfilters,body.colmode #mvmeth,body.colmode #advnote,body.colmode #list-view .status,body.colmode #results,body.colmode #q,body.colmode #formsbtn,body.colmode #viewbtn,body.colmode #list-view .foot{display:none}
+body.pkmode #list-view .filters,body.pkmode #typechips,body.pkmode #advfilters,body.pkmode #mvmeth,body.pkmode #advnote,body.pkmode #list-view .status,body.pkmode #results,body.pkmode #q,body.pkmode #formsbtn,body.pkmode #viewbtn,body.pkmode #list-view .foot{display:none}
 body.colmode .searchrow{justify-content:flex-end;margin-top:-50px;pointer-events:none}body.colmode .searchrow #menubtn{pointer-events:auto}
 body.pkmode .searchrow{justify-content:flex-end;margin-top:-50px;pointer-events:none}body.pkmode .searchrow #menubtn{pointer-events:auto}
 body.colmode .modeseg{width:calc(100% - var(--tap) - 8px)}

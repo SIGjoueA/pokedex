@@ -36,3 +36,4 @@ node('fix-v60-33.mjs');      // v60.33: classements des meilleurs attaquants des
 node('fix-v60-34.mjs');      // v60.34: illustrations HOME par défaut (y compris shiny HOME) et secours sprite officiel
 node('fix-v60-35.mjs');      // v60.35: téléchargement optionnel des illustrations shiny HOME dans le pack hors-ligne
 node('fix-v60-36.mjs');      // v60.36: secours HOME puis sprite officiel quand le sprite animé manque
+node('fix-v60-37.mjs');      // v60.37: index compact capacités / talents pour la recherche de la liste (learn-index.json)

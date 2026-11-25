@@ -1,5 +1,14 @@
 [
  {
+  "v": "v60.37",
+  "d": "2026-11-25",
+  "l": [
+   "Deux nouveaux filtres sur la liste, combinables avec la recherche par nom ou numéro, le jeu, la génération, la catégorie et les types : « Capacité… » (les Pokémon qui apprennent cette capacité) et « Talent… ».",
+   "La saisie propose une autocomplétion des noms français (accents ignorés). Une fois la capacité choisie, vous pouvez restreindre la méthode : niveau, CT, œuf / élevage ou tuteur. Le menu Jeu, s’il est renseigné, limite le filtre aux jeuxets de ce jeu (sauf Z-A, HOME et GO, dont les listes de capacités ne sont pas dans ces données : le filtre porte alors sur les autres jeux).",
+   "Le filtre de talent tient compte du jeu choisi (pas de talent avant la génération III, ni dans Let’s Go, Légendes Arceus et Z-A ; un talent perdu, comme Lévitation d’Ectoplasma, n’apparaît que pour les jeux concernés). Un index compact (~2 Mo) a été ajouté au pack hors-ligne : pensez à le retélécharger. DATA_VERSION d77. La recherche par lieu viendra plus tard."
+  ]
+ },
+ {
   "v": "v60.36",
   "d": "2026-11-25",
   "l": [
@@ -8,7 +17,6 @@
    "Les GIF restent chargés seulement au toucher, depuis le dépôt PokéAPI, et ne sont pas ajoutés au pack automatique : les télécharger tous pèserait environ 307 Mo. DATA_VERSION inchangée (d76)."
   ]
  },
-
  {
   "v": "v60.35",
   "d": "2026-11-25",
@@ -18,7 +26,6 @@
    "DATA_VERSION inchangée (d76)."
   ]
  },
-
  {
   "v": "v60.34",
   "d": "2026-11-25",
@@ -28,7 +35,6 @@
    "Le pack images hors-ligne (~17 Mo) télécharge les rendus HOME (et le sprite officiel des formes sans HOME), y compris les femelles distinctes. Les illustrations shiny, HOME ou officielles, restent enregistrées seulement lorsque vous les ouvrez. Les scans de cartes Pocket sont inchangés."
   ]
  },
-
  {
   "v": "v60.33",
   "d": "2026-11-25",

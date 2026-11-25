@@ -68,6 +68,18 @@
       </select>
     </div>
     <div id="typechips" class="chips" role="group" aria-label="Filtrer par type"></div>
+    <div id="advfilters" class="advfilters">
+      <div class="ac">
+        <input id="mvq" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Capacité…" aria-label="Filtrer par capacité apprise" aria-autocomplete="list" aria-expanded="false" aria-controls="mvsug">
+        <ul id="mvsug" class="acsug" hidden role="listbox"></ul>
+      </div>
+      <div class="ac">
+        <input id="abq" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Talent…" aria-label="Filtrer par talent" aria-autocomplete="list" aria-expanded="false" aria-controls="absug">
+        <ul id="absug" class="acsug" hidden role="listbox"></ul>
+      </div>
+    </div>
+    <div id="mvmeth" class="chips mvmeth" role="group" aria-label="Méthode d’apprentissage" hidden></div>
+    <p id="advnote" class="note advnote" hidden></p>
     <div id="raidchips" class="chips raidchips" role="group" aria-label="Filtrer par étoiles" hidden></div>
     <div class="status"><span id="count"></span><button id="reset" class="link" hidden>Réinitialiser</button></div>
   </header>

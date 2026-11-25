@@ -34,7 +34,7 @@ let DATA, E = [], BY_KEY = {}, FORMS = {}, GAMES = [], GAME_BY = {}, GIDX = {}, 
 let FAVS = new Set(store.get('favs', [])), CAUGHT = new Set(store.get('caught', [])), SHINY = new Set(store.get('shiny', []));
 // Per-game marks (only used while a game or Pokémon GO is selected in the "Jeux" filter): strings "gameId:25" / "gameId:26-alola"
 const CAUGHT_G = new Set(store.get('caught_g', [])), SHINY_G = new Set(store.get('shiny_g', []));
-const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all', rstars: [] };
+const state = { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', forms: store.get('forms', false), view: store.get('view', 'grid'), dgame: 'all', rstars: [], mv: '', mvMeth: [], ab: '' };
 let listScroll = 0;
 const ik = p => p.c ? p.k : p.id; // key used in the global sets
 // v35: full name of a form; default forms of real alternate-form species carry their official form name (core fn: « Nigirigon Forme Courbée »)
@@ -697,6 +697,7 @@ function buildControls() {
   $('#typechips').innerHTML = DATA.types.map(t =>
     `<button class="chip" data-t="${t[0]}" aria-pressed="false" style="background:${TYPE_COLORS[t[0]]}">${esc(t[1])}</button>`).join('');
   $('#q').addEventListener('input', e => { state.q = e.target.value; render(); });
+  initAdvSearch();
   $('#game').addEventListener('change', async e => { await setGame(e.target.value); });
   initGameMenu(); initCatMenu(); initGenMenu(); initSortMenu();
   $('#gen').addEventListener('change', e => { state.gen = e.target.value; render(); });
@@ -743,8 +744,11 @@ function toggleType(t) {
   render();
 }
 function resetFilters() {
-  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', rstars: [] });
+  Object.assign(state, { q: '', types: [], gen: '', cat: '', sort: 'id', game: '', vdex: '', rstars: [], mv: '', mvMeth: [], ab: '' });
   $('#q').value = ''; $('#gen').value = ''; $('#cat').value = ''; $('#sort').value = 'id'; $('#game').value = '';
+  if ($('#mvq')) { $('#mvq').value = ''; $('#mvq').classList.remove('has'); }
+  if ($('#abq')) { $('#abq').value = ''; $('#abq').classList.remove('has'); }
+  closeSug(); updateMethChips();
   render();
 }
 function badge(t) { return `<span class="badge" style="background:${TYPE_COLORS[t]}">${esc(TYPE_FR[t])}</span>`; }
@@ -793,6 +797,187 @@ const isUB = p => UB_IDS.has(p.id);
 // v32: form categories — Méga-évolutions (Megas + Primo-Résurgences) and Gigamax (+ Éthernatos Infinimax); shown whatever the Formes toggle
 const FORM_CATS = { mega: p => p.c === 'mega' || p.c === 'primal', gmax: p => p.c === 'gmax' };
 const formCat = (p, cat = state.cat) => !!(FORM_CATS[cat] && FORM_CATS[cat](p));
+
+// v60.37 : index compact data/learn-index.json (capacités + talents), chargé à la première utilisation des filtres
+const METH_BITS = { l: 1, m: 2, e: 4, t: 8, o: 16 };
+const METH_LAB = { l: 'Niveau', m: 'CT', e: 'Œuf', t: 'Tuteur', o: 'Autre' };
+const LEARN_NO_GAME = new Set(['za', 'zadlc', 'go', 'home']);
+let LEARN = null, LEARN_P = null, LEARN_FAIL = false;
+let LEARN_HIT = null, LEARN_SIG = '', ABIL_HIT = null, ABIL_SIG = '';
+async function loadLearn() {
+  if (LEARN) return LEARN;
+  if (!LEARN_P) LEARN_P = getJSON('data/learn-index.json').then(d => {
+    LEARN = d; LEARN_FAIL = false;
+    LEARN._mn = Object.entries(d.n).map(([id, n]) => [id, n, norm(n)]);
+    LEARN._an = Object.entries(d.an).map(([id, n]) => [id, n, norm(n)]);
+    return d;
+  }).catch(e => { LEARN_P = null; LEARN_FAIL = true; throw e; });
+  return LEARN_P;
+}
+function learnGameIdx() {
+  const id = state.game;
+  if (!LEARN || !id || LEARN_NO_GAME.has(id)) return -1;
+  const i = LEARN.g.indexOf(id);
+  return i;
+}
+function moveHitSet() {
+  const sig = `${state.mv}|${state.game}|${(state.mvMeth || []).join()}`;
+  if (sig === LEARN_SIG && LEARN_HIT) return LEARN_HIT;
+  LEARN_SIG = sig; LEARN_HIT = new Set();
+  if (!state.mv || !LEARN) return LEARN_HIT;
+  const arr = LEARN.L[state.mv] || LEARN.L[String(state.mv)];
+  if (!arr) return LEARN_HIT;
+  const gi = learnGameIdx();
+  const want = (state.mvMeth && state.mvMeth.length) ? state.mvMeth.reduce((a, m) => a | (METH_BITS[m] || 0), 0) : 0;
+  let i = 0;
+  while (i < arr.length) {
+    const ki = arr[i], n = arr[i + 1], packs = arr.slice(i + 2, i + 2 + n); i += 2 + n;
+    if (packs.some(p => (gi < 0 || (p >> 5) === gi) && (!want || (p & want)))) LEARN_HIT.add(LEARN.k[ki]);
+  }
+  return LEARN_HIT;
+}
+function abilHitSet() {
+  const sig = `${state.ab}|${state.game}`;
+  if (sig === ABIL_SIG && ABIL_HIT) return ABIL_HIT;
+  ABIL_SIG = sig; ABIL_HIT = new Set();
+  if (!state.ab || !LEARN) return ABIL_HIT;
+  const gm = GAME_BY[state.game];
+  if (gm && (gm.g < 3 || NO_ABIL[gm.id])) return ABIL_HIT;
+  const gen = gm ? gm.g : 9;
+  const bit = 1 << (gen - 1);
+  const arr = LEARN.A[state.ab] || LEARN.A[String(state.ab)];
+  if (!arr) return ABIL_HIT;
+  for (let i = 0; i < arr.length; i += 3) if (arr[i + 1] & bit) ABIL_HIT.add(LEARN.k[arr[i]]);
+  return ABIL_HIT;
+}
+function updateMethChips() {
+  const el = $('#mvmeth'); if (!el) return;
+  if (!state.mv) { el.hidden = true; el.innerHTML = ''; return; }
+  el.hidden = false;
+  el.innerHTML = Object.entries(METH_LAB).map(([id, lab]) => `<button type="button" class="chip" data-meth="${id}" aria-pressed="${state.mvMeth.includes(id)}">${lab}</button>`).join('');
+}
+function updateAdvNote() {
+  const el = $('#advnote'); if (!el) return;
+  let msg = '';
+  const gm = GAME_BY[state.game];
+  if (state.ab && gm && (gm.g < 3 || NO_ABIL[gm.id])) msg = gm.g < 3 ? 'Les talents n’existent pas avant la génération III.' : `Les talents n’existent pas dans ${NO_ABIL[gm.id]}.`;
+  else if (state.mv && (state.game === 'za' || state.game === 'zadlc')) msg = 'Pas encore de données de capacités pour ce jeu : le filtre porte sur les autres jeux.';
+  else if (state.mv && (state.game === 'go' || state.game === 'home')) msg = 'Ce jeu n’a pas de liste de capacités ici : le filtre porte sur les jeux de la série principale.';
+  el.hidden = !msg; el.textContent = msg;
+}
+function closeSug(except) {
+  for (const id of ['mvsug', 'absug']) {
+    if (except && except.id === id) continue;
+    const ul = $('#' + id); if (!ul) continue;
+    ul.hidden = true; ul.innerHTML = '';
+    const inp = id === 'mvsug' ? $('#mvq') : $('#abq');
+    if (inp) inp.setAttribute('aria-expanded', 'false');
+  }
+}
+function acItems(kind, q) {
+  const all = kind === 'mv' ? (LEARN && LEARN._mn) : (LEARN && LEARN._an);
+  if (!all) return [];
+  const qn = norm(q.trim());
+  if (!qn) return all.slice().sort((a, b) => a[1].localeCompare(b[1], 'fr')).slice(0, 12);
+  const start = [], mid = [];
+  for (const it of all) {
+    if (it[2].startsWith(qn)) start.push(it);
+    else if (it[2].includes(qn)) mid.push(it);
+  }
+  const cmp = (a, b) => a[1].localeCompare(b[1], 'fr');
+  start.sort(cmp); mid.sort(cmp);
+  return start.concat(mid).slice(0, 12);
+}
+function renderSug(kind, items) {
+  const ul = kind === 'mv' ? $('#mvsug') : $('#absug');
+  const inp = kind === 'mv' ? $('#mvq') : $('#abq');
+  if (!ul || !inp) return;
+  if (!items.length) { ul.hidden = true; ul.innerHTML = ''; inp.setAttribute('aria-expanded', 'false'); return; }
+  ul.hidden = false;
+  inp.setAttribute('aria-expanded', 'true');
+  ul.innerHTML = items.map((it, i) => `<li id="${kind}opt${i}" role="option" data-id="${esc(it[0])}" aria-selected="${i === 0}">${esc(it[1])}</li>`).join('');
+  inp.setAttribute('aria-activedescendant', items.length ? kind + 'opt0' : '');
+}
+function moveSugSel(ul, dir) {
+  const items = [...ul.querySelectorAll('li')]; if (!items.length) return;
+  let i = items.findIndex(li => li.getAttribute('aria-selected') === 'true');
+  i = Math.max(0, Math.min(items.length - 1, (i < 0 ? 0 : i) + dir));
+  items.forEach((li, j) => li.setAttribute('aria-selected', j === i));
+  const inp = ul.id === 'mvsug' ? $('#mvq') : $('#abq');
+  if (inp) inp.setAttribute('aria-activedescendant', items[i].id);
+  items[i].scrollIntoView({ block: 'nearest' });
+}
+function pickSug(kind, id) {
+  if (kind === 'mv') {
+    state.mv = id ? String(id) : '';
+    state.mvMeth = [];
+    const inp = $('#mvq');
+    inp.value = id && LEARN ? (LEARN.n[id] || LEARN.n[String(id)] || '') : '';
+    inp.classList.toggle('has', !!state.mv);
+    updateMethChips();
+  } else {
+    state.ab = id ? String(id) : '';
+    const inp = $('#abq');
+    inp.value = id && LEARN ? (LEARN.an[id] || LEARN.an[String(id)] || '') : '';
+    inp.classList.toggle('has', !!state.ab);
+  }
+  closeSug();
+  render();
+}
+function initAdvSearch() {
+  const bind = kind => {
+    const inp = kind === 'mv' ? $('#mvq') : $('#abq');
+    const ul = kind === 'mv' ? $('#mvsug') : $('#absug');
+    if (!inp || !ul) return;
+    const show = () => {
+      const run = () => renderSug(kind, acItems(kind, inp.value));
+      if (LEARN) run(); else loadLearn().then(run).catch(() => render());
+    };
+    inp.addEventListener('focus', show);
+    inp.addEventListener('input', () => {
+      const cur = kind === 'mv' ? state.mv : state.ab;
+      const name = cur && LEARN ? (kind === 'mv' ? LEARN.n[cur] : LEARN.an[cur]) : '';
+      if (cur && inp.value.trim() !== name) {
+        if (kind === 'mv') { state.mv = ''; state.mvMeth = []; inp.classList.remove('has'); updateMethChips(); }
+        else { state.ab = ''; inp.classList.remove('has'); }
+        render();
+      }
+      show();
+    });
+    inp.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' && !ul.hidden) { e.preventDefault(); moveSugSel(ul, 1); }
+      else if (e.key === 'ArrowUp' && !ul.hidden) { e.preventDefault(); moveSugSel(ul, -1); }
+      else if (e.key === 'Enter') {
+        const sel = ul.querySelector('li[aria-selected="true"]');
+        if (!ul.hidden && sel) { e.preventDefault(); pickSug(kind, sel.dataset.id); }
+        else if (LEARN) {
+          const items = acItems(kind, inp.value);
+          const exact = items.filter(it => it[2] === norm(inp.value.trim()));
+          if (exact.length === 1) { e.preventDefault(); pickSug(kind, exact[0][0]); }
+        }
+      } else if (e.key === 'Escape') { closeSug(); inp.blur(); }
+    });
+    inp.addEventListener('search', () => {
+      if (!inp.value) { pickSug(kind, ''); show(); }
+    });
+    ul.addEventListener('mousedown', e => {
+      const li = e.target.closest('li[data-id]'); if (!li) return;
+      e.preventDefault(); pickSug(kind, li.dataset.id);
+    });
+  };
+  bind('mv'); bind('ab');
+  const meth = $('#mvmeth');
+  if (meth) meth.addEventListener('click', e => {
+    const b = e.target.closest('[data-meth]'); if (!b) return;
+    const id = b.dataset.meth, i = state.mvMeth.indexOf(id);
+    if (i >= 0) state.mvMeth.splice(i, 1); else state.mvMeth.push(id);
+    updateMethChips(); render();
+  });
+  document.addEventListener('mousedown', e => {
+    if (!e.target.closest('#advfilters')) closeSug();
+  });
+}
+
 function filtered() {
   const raw = state.q.trim();
   const qn = norm(raw);
@@ -835,6 +1020,8 @@ function filtered() {
     if (state.cat === 'nostrans') { const q = mp(p); if (!HOME_C.has(q.k) || HOME_S.has(q.k)) return false; } // in HOME (≥ 1 origin mark) but not marked shiny in HOME
     if (TRANS_CATS.includes(state.cat) && !transCat(p, state.cat)) return false;
     if (BARON_CATS.includes(state.cat) && !baronCat(p, state.cat)) return false;
+    if (state.mv && LEARN && !moveHitSet().has(p.k)) return false;
+    if (state.ab && LEARN && !abilHitSet().has(p.k)) return false;
     return true;
   });
   const pos0 = new Map(out.map((p, i) => [p, i]));
@@ -961,11 +1148,15 @@ function updateCatOptions() {
 }
 function render() {
   updateCatOptions(); syncMenus();
-  const res = filtered();
+  updateMethChips(); updateAdvNote();
+  if ((state.mv || state.ab) && !LEARN && !LEARN_FAIL) loadLearn().then(() => render()).catch(() => render());
+  const res = ((state.mv || state.ab) && !LEARN) ? [] : filtered();
   const box = $('#results');
   box.className = state.view === 'grid' ? 'grid' : 'grid list';
   { const vb = $('#viewbtn'), g = state.view === 'grid'; if (vb.dataset.v !== state.view) { vb.innerHTML = g ? VIEW_LIST_IC : VIEW_GRID_IC; vb.dataset.v = state.view; vb.title = g ? 'Afficher en liste' : 'Afficher en grille'; vb.setAttribute('aria-label', vb.title); } }
-  box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${(GAME_BY[state.game] && !DEX[state.game]) || (state.cat === 'raid' && !RAID_F && RAIDS !== false) ? 'Chargement…' : 'Aucun Pokémon trouvé.'}</p>`;
+  const loading = (GAME_BY[state.game] && !DEX[state.game]) || (state.cat === 'raid' && !RAID_F && RAIDS !== false) || ((state.mv || state.ab) && !LEARN && !LEARN_FAIL);
+  const empty = LEARN_FAIL && (state.mv || state.ab) ? 'Index des capacités indisponible hors-ligne : ouvrez-le une fois avec une connexion, ou retéléchargez le pack hors-ligne.' : 'Aucun Pokémon trouvé.';
+  box.innerHTML = res.length ? res.map(cardHTML).join('') : `<p class="empty">${loading ? 'Chargement…' : empty}</p>`;
   const gm = GAME_BY[state.game];
   const ctx = trackCtx(); let prog;
   if (ctx) { // progress of the selected game: marks among the entries that belong to it
@@ -993,7 +1184,7 @@ function render() {
   const lg = $('#legend'), lgW = ctx === 'home' ? 'home' : 'base'; if (lg.dataset.w !== lgW) { lg.dataset.w = lgW; lg.innerHTML = lgW === 'home' ? HOME_LEGEND : BASE_LEGEND; }
   document.querySelectorAll('#typechips .chip').forEach(c => c.setAttribute('aria-pressed', state.types.includes(c.dataset.t)));
   updateRaidChips();
-  const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game || state.rstars.length;
+  const active = state.q || state.types.length || state.gen || state.cat || state.sort !== 'id' || state.game || state.rstars.length || state.mv || state.ab || (state.mvMeth && state.mvMeth.length);
   $('#reset').hidden = !active;
   requestAnimationFrame(updJump);
 }
@@ -2923,7 +3114,7 @@ async function cacheImages() {
 async function cachePack() {
   if (caching) return; caching = true;
   const urls = [...E.filter(p => p.c).map(p => artOf(p)), ...E.filter(p => p.hh).map(p => `img/${p.k}.webp`), ...E.filter(p => p.fe).flatMap(p => [artOf(femP(p)), `img/${p.fe.k}.webp`]), ...Array.from({ length: 1025 }, (_, i) => `data/sp/${i + 1}.json`),
-    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', 'data/rank-sv-raid.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
+    'data/evo.json', 'data/moves.json', 'data/ref.json', 'data/shiny.json', 'data/desc.json', 'data/go.json', 'data/pvp.json', 'data/pvp-moves.json', 'data/rank-pvp.json', 'data/rank-raid.json', 'data/rank-max.json', 'data/rank-rocket.json', 'data/raid-bosses.json', 'data/boss-schedule.json', 'data/raid-moves.json', 'data/tm.json', 'data/loc.json', 'data/mega-energy.json', 'data/pocket.json', 'data/costumes.json', 'data/gmax-moves.json', 'data/shadow.json', 'data/go-eggs.json', 'data/raids.json', 'data/tera7.json', 'data/rank-sv-raid.json', 'data/learn-index.json', ...GAMES.map(g => `data/dex/${g.id}.json`), ...Object.values(VDEX).filter(v => v.file).map(v => `data/dex/${v.file}.json`)];
   const fail = await runPool(urls, 5, 'Téléchargement des formes et fiches');
   caching = false;
   if (!fail) { await swDataVersion().catch(() => null); store.set('packDone2', DATA_DV || false); }

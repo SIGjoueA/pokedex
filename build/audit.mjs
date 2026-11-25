@@ -5,6 +5,7 @@ import { DOCS, HERE } from './lib.mjs';
 import { mapPvPoke, PVP_ABSENT, PVP_FORMS } from './pvp-map.mjs';
 import { buildRaids, RAID_GAMES } from './fix-v60-30.mjs';
 import { buildTera7 } from './update-tera7.mjs';
+import { buildLearnIndex, readLearnSources, learnIndexToJSON } from './fix-v60-37.mjs';
 const D = f => JSON.parse(fs.readFileSync(path.join(DOCS, 'data', f), 'utf8'));
 const core = D('core.json'), evo = D('evo.json'), ref = D('ref.json'), moves = D('moves.json'), go = D('go.json'), tm = D('tm.json'), loc = D('loc.json');
 const E = Object.fromEntries(core.e.map(e => [e.k, e])); const G = Object.fromEntries(core.games.map(g => [g.id, g]));
@@ -1004,7 +1005,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const fix = fs.readFileSync(path.join(HERE, 'fix-v60-36.mjs'), 'utf8');
   const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
   ok('v60.36 SW : VERSION ≥ v60.36, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[6-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
-  ok('v60.36 NOTES ≤ 160 caractères, animés et secours HOME', notes.length > 0 && notes.length <= 160 && /animés/.test(notes) && /HOME/.test(notes) && /pack auto/.test(notes), String(notes.length));
+  const ver36 = (sw.match(/const VERSION = '([^']+)'/) || [])[1];
+  ok('v60.36 NOTES ≤ 160 caractères' + (ver36 === 'v60.36' ? ', animés et secours HOME' : ''), notes.length > 0 && notes.length <= 160 && (ver36 !== 'v60.36' || (/animés/.test(notes) && /HOME/.test(notes) && /pack auto/.test(notes))), String(notes.length));
   const set = (app.split('function setSprite')[1] || '').split('function closePop')[0] || '';
   ok('v60.36 setSprite : secours HOME puis officiel pour l’animé', /const useHome = /.test(set) && /artOf\(p, shiny\)/.test(set) && /artFb\(p, shiny\)/.test(set) && /spriteMode = 'home'/.test(set) && /img\.onerror = \(\) => useHome\(\)/.test(set));
   ok('v60.36 animé jamais précaché, pack auto inchangé', /never precached/.test(app) && /showdown\//.test(app) && !/githubusercontent/.test(sw));
@@ -1013,5 +1015,58 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.36 apply-v34 lance fix-v60-36', /fix-v60-36\.mjs/.test(apply));
   ok('v60.36 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, fs.readFileSync(path.join(HERE, 'preview60-36.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
 }
+
+
+
+// ---- v60.37 : recherche par capacité et par talent (build/fix-v60-37.mjs → docs/data/learn-index.json)
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const html = fs.readFileSync(path.join(DOCS, 'index.html'), 'utf8');
+  const css = fs.readFileSync(path.join(DOCS, 'style.css'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1];
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-37.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  const idx = D('learn-index.json');
+  ok('v60.37 SW : VERSION ≥ v60.37, DATA_VERSION ≥ d77', /VERSION = 'v60\.(3[7-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 77);
+  ok('v60.37 NOTES ≤ 160 caractères' + (ver === 'v60.37' ? ', commence par la recherche / le filtre' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.37' || (/Recherche/.test(notes) && /capacit/.test(notes) && /talent/.test(notes))), String(notes.length));
+  const built = buildLearnIndex(readLearnSources());
+  eq('v60.37 learn-index.json idempotent (égal au résultat de fix-v60-37)', JSON.stringify(idx), learnIndexToJSON(built));
+  ok('v60.37 index : 28 jeux, ≥ 1400 formes, 819 capacités, 313 talents', idx.g.length === 28 && idx.k.length >= 1400 && Object.keys(idx.L).length === 819 && Object.keys(idx.A).length === 313, `${idx.g.length}/${idx.k.length}/${Object.keys(idx.L).length}/${Object.keys(idx.A).length}`);
+  ok('v60.37 index : poids entre 1,5 Mo et 2,5 Mo', (() => { const n = fs.statSync(path.join(DOCS, 'data', 'learn-index.json')).size; return n >= 1.5e6 && n <= 2.5e6; })(), String(fs.statSync(path.join(DOCS, 'data', 'learn-index.json')).size));
+  const parseL = mid => {
+    const arr = idx.L[String(mid)] || [], out = new Map();
+    let i = 0;
+    while (i < arr.length) {
+      const ki = arr[i], n = arr[i + 1], packs = arr.slice(i + 2, i + 2 + n); i += 2 + n;
+      out.set(idx.k[ki], packs);
+    }
+    return out;
+  };
+  const parseA = aid => {
+    const arr = idx.A[String(aid)] || [], out = new Map();
+    for (let i = 0; i < arr.length; i += 3) out.set(idx.k[arr[i]], { mask: arr[i + 1], hid: arr[i + 2] });
+    return out;
+  };
+  const eqForms = parseL(89);
+  ok('v60.37 Séisme (89) : Rhinoféros, Groudon, Carchacrok, Libégon ; pas Pikachu', eqForms.has('112') && eqForms.has('383') && eqForms.has('445') && eqForms.has('330') && !eqForms.has('25'), String(eqForms.size));
+  const giSV = idx.g.indexOf('sv'), giXY = idx.g.indexOf('xy'), giUSUM = idx.g.indexOf('usum');
+  const hasPack = (packs, gi, bit) => packs.some(p => (gi < 0 || (p >> 5) === gi) && (!bit || (p & bit)));
+  ok('v60.37 Séisme en CT à Paldea (Écarlate / Violet) : Carchacrok oui, Pikachu non', hasPack(eqForms.get('445') || [], giSV, 2) && !hasPack(eqForms.get('25') || [], giSV, 2));
+  ok('v60.37 Séisme au niveau : Groudon oui, Pikachu non', hasPack(eqForms.get('383') || [], -1, 1) && !hasPack(eqForms.get('25') || [], -1, 1));
+  eq('v60.37 nom FR de la capacité 89', idx.n['89'] || idx.n[89], 'Séisme');
+  eq('v60.37 nom FR du talent 26', idx.an['26'] || idx.an[26], 'Lévitation');
+  const lev = parseA(26);
+  const bit = g => 1 << (g - 1);
+  ok('v60.37 Lévitation actuelle (gén. IX) : Libégon oui, Ectoplasma non', !!(lev.get('330') && (lev.get('330').mask & bit(9))) && !(lev.get('94') && (lev.get('94').mask & bit(9))), `n=${[...lev].filter(([, r]) => r.mask & bit(9)).length}`);
+  ok('v60.37 Lévitation d’Ectoplasma en gén. III–VI seulement (XY oui, US/UL non)', !!(lev.get('94') && (lev.get('94').mask & bit(6)) && !(lev.get('94').mask & bit(7)) && (lev.get('94').mask & bit(3))), 'mask=' + ((lev.get('94') || {}).mask));
+  ok('v60.37 app : filtres Capacité / Talent, autocomplétion, méthodes, pack hors-ligne', /function loadLearn/.test(app) && /function initAdvSearch/.test(app) && /moveHitSet/.test(app) && /abilHitSet/.test(app) && /data\/learn-index\.json/.test(app) && /id="mvq"/.test(html) && /id="abq"/.test(html) && /placeholder="Capacité…"/.test(html) && /placeholder="Talent…"/.test(html) && /id="mvmeth"/.test(html) && /METH_LAB/.test(app) && /advfilters/.test(css));
+  ok('v60.37 filtres existants conservés (nom, types, jeu)', /state\.q = e\.target\.value/.test(app) && /state\.types/.test(app) && /id="q"/.test(html) && /placeholder="Nom ou n°…"/.test(html) && /id="typechips"/.test(html) && /id="game"/.test(html));
+  ok('v60.37 apply-v34 lance fix-v60-37', /fix-v60-37\.mjs/.test(apply));
+  ok('v60.37 pas de recherche par lieu dans cette version', !/state\.loc/.test(app) && !/id="locq"/.test(html));
+  ok('v60.37 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, html, css, fs.readFileSync(path.join(HERE, 'preview60-37.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
+}
+
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
