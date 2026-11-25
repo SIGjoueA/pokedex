@@ -1,5 +1,15 @@
 [
  {
+  "v": "v60.36",
+  "d": "2026-11-25",
+  "l": [
+   "Les boutons HOME, Officiel et Animé étaient déjà proposés sur chaque fiche, pour tout le monde (le rendu HOME est le style par défaut depuis la v60.34). Cette mise à jour termine les vérifications des sprites animés et corrige le secours : s’il n’existe pas de GIF, s’il est hors-ligne ou si le chargement échoue, le rendu HOME s’affiche, puis le sprite officiel s’il n’y a pas de rendu HOME. Plus de bascule directe vers l’officiel ni de toast d’erreur dans ce cas.",
+   "Couverture : 1 363 formes sur 1 501 ont un sprite animé (et 99 femelles distinctes sur 100). Les 138 manques sont surtout les Méga de Légendes Z-A, des espèces récentes (paradoxes de fer, Miraidon, Ogerpon, Terapagos, Pêchaminus) et de nombreuses variantes de Charmilly. Les 2 920 URL correspondantes répondent toutes correctement (0 fichier introuvable).",
+   "Les GIF restent chargés seulement au toucher, depuis le dépôt PokéAPI, et ne sont pas ajoutés au pack automatique : les télécharger tous pèserait environ 307 Mo. DATA_VERSION inchangée (d76)."
+  ]
+ },
+
+ {
   "v": "v60.35",
   "d": "2026-11-25",
   "l": [

@@ -1692,9 +1692,10 @@ function baseNoteHTML(p) {
   return `<section class="box basenote"><p>${txt}.</p><p class="note"><a href="#/p/${b.k}">Fiche de ${esc(p.c === 'sex' ? fullN(b) : b.n)} →</a></p></section>`;
 }
 
-/* ---------------- v31 / v60.34 : styles d’illustration ---------------- */
+/* ---------------- v31 / v60.34 / v60.36 : styles d’illustration ---------------- */
 // HOME = rendu 3D auto-hébergé (défaut, y compris shiny HOME dans img/hs). Officiel = sprite auto-hébergé (secours).
-// Animé = dépôt PokéAPI sprites, seulement au toucher (autre origine, never precached, pas dans le service worker) ; hors-ligne ou absence → sprite officiel.
+// Animé = dépôt PokéAPI sprites, seulement au toucher (autre origine, never precached, pas dans le service worker).
+// Si l’animé manque, est hors-ligne ou échoue : rendu HOME, puis sprite officiel.
 let spriteMode = 'home'; // v35 / v60.34 : HOME par défaut
 const SPR = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/';
 const pokeId = p => { const c = CRIES && CRIES[p.k] && CRIES[p.k][0]; return c ? +c.slice(2) : (p.c ? 0 : p.id); };
@@ -1719,11 +1720,26 @@ function setSprite(mode, quiet) {
     img.src = src;
     return;
   }
+  // v60.36 : si l’animé manque ou échoue, secours HOME puis sprite officiel (sans toast d’erreur si le HOME s’affiche).
+  const home = artOf(p, shiny), fb = artFb(p, shiny);
+  const useHome = () => {
+    if (tok !== SPR_TOK) return;
+    img.onerror = null;
+    img.classList.remove('pix');
+    if (home && home !== fb) {
+      spriteMode = 'home'; press('home');
+      img.onerror = () => { if (tok !== SPR_TOK) return; img.onerror = null; spriteMode = 'off'; img.src = fb; press('off'); };
+      img.src = home;
+    } else {
+      spriteMode = 'off'; press('off');
+      img.src = fb;
+    }
+  };
   const url = p.as && navigator.onLine !== false ? `${SPR}showdown/${shiny ? 'shiny/' : ''}${p.as}.gif` : null;
-  if (!url) return back(navigator.onLine === false ? 'Hors-ligne : sprite animé indisponible, illustration officielle.' : `Sprite animé indisponible pour ${fullN(p)} : illustration officielle.`);
+  if (!url) return useHome();
   spriteMode = 'anim'; press('anim');
   img.classList.add('pix');
-  img.onerror = () => back(`Sprite animé indisponible pour ${fullN(p)} : illustration officielle.`);
+  img.onerror = () => useHome();
   img.src = url;
 }
 

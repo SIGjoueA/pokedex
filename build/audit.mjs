@@ -982,7 +982,8 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   const fix = fs.readFileSync(path.join(HERE, 'fix-v60-35.mjs'), 'utf8');
   const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
   ok('v60.35 SW : VERSION ≥ v60.35, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[5-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
-  ok('v60.35 NOTES ≤ 160 caractères, pack shiny optionnel', notes.length > 0 && notes.length <= 160 && /shiny HOME/.test(notes) && /optionnel/.test(notes) && /16,4 Mo/.test(notes), String(notes.length));
+  { const ver = (sw.match(/const VERSION = '([^']+)'/) || [])[1] || '';
+    ok('v60.35 NOTES ≤ 160 caractères' + (ver === 'v60.35' ? ', pack shiny optionnel' : ''), notes.length > 0 && notes.length <= 160 && (ver !== 'v60.35' || (/shiny HOME/.test(notes) && /optionnel/.test(notes) && /16,4 Mo/.test(notes))), String(notes.length)); }
   ok('v60.35 app : bouton, taille, progression, déjà téléchargé, suppression', /function cacheShinyHome/.test(app) && /function uncacheShinyHome/.test(app) && /id="dlhs"/.test(app) && /id="dlhsx"/.test(app) && /16,4 Mo/.test(app) && /déjà téléchargées/.test(app) && /Téléchargement des illustrations shiny HOME :/.test(app));
   const reg = (app.split('function registerSW')[1] || '').split('function swAsk')[0] || '';
   ok('v60.35 pack shiny jamais automatique, pack images auto inchangé', /cacheImages\(\)/.test(reg) && !/cacheShinyHome\(/.test(reg) && /jamais lancé automatiquement/.test(reg));
@@ -991,6 +992,26 @@ ok('Enc Pikachu sv none', !F(25).en || !F(25).en.sv);
   ok('v60.35 réutilise le cache pokedex-img, sans doublon', /caches\.open\('pokedex-img'\)/.test(app) && /function hsMatch/.test(app) && /déjà ouverts sont réutilisés/.test(app));
   ok('v60.35 apply-v34 lance fix-v60-35', /fix-v60-35\.mjs/.test(apply));
   ok('v60.35 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, fs.readFileSync(path.join(HERE, 'preview60-35.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
+}
+
+
+
+// ---- v60.36 : sprites animés vérifiés, secours HOME puis officiel, exclus du pack auto
+{
+  const sw = fs.readFileSync(path.join(DOCS, 'sw.js'), 'utf8');
+  const app = fs.readFileSync(path.join(DOCS, 'app.js'), 'utf8');
+  const notes = (sw.match(/const NOTES = '([^']*)'/) || [])[1] || '';
+  const fix = fs.readFileSync(path.join(HERE, 'fix-v60-36.mjs'), 'utf8');
+  const apply = fs.readFileSync(path.join(HERE, 'apply-v34.mjs'), 'utf8');
+  ok('v60.36 SW : VERSION ≥ v60.36, DATA_VERSION ≥ d76', /VERSION = 'v60\.(3[6-9]|[4-9]\d)'/.test(sw) && +((sw.match(/DATA_VERSION = 'd(\d+)'/) || [])[1] || 0) >= 76);
+  ok('v60.36 NOTES ≤ 160 caractères, animés et secours HOME', notes.length > 0 && notes.length <= 160 && /animés/.test(notes) && /HOME/.test(notes) && /pack auto/.test(notes), String(notes.length));
+  const set = (app.split('function setSprite')[1] || '').split('function closePop')[0] || '';
+  ok('v60.36 setSprite : secours HOME puis officiel pour l’animé', /const useHome = /.test(set) && /artOf\(p, shiny\)/.test(set) && /artFb\(p, shiny\)/.test(set) && /spriteMode = 'home'/.test(set) && /img\.onerror = \(\) => useHome\(\)/.test(set));
+  ok('v60.36 animé jamais précaché, pack auto inchangé', /never precached/.test(app) && /showdown\//.test(app) && !/githubusercontent/.test(sw));
+  const cacheFn = (app.split('async function cacheImages')[1] || '').split('async function cachePack')[0] || '';
+  ok('v60.36 pack auto sans GIF Showdown', !/showdown/.test(cacheFn) && !/githubusercontent/.test(cacheFn) && /artOf\(p\)/.test(cacheFn));
+  ok('v60.36 apply-v34 lance fix-v60-36', /fix-v60-36\.mjs/.test(apply));
+  ok('v60.36 pas de « Yann » dans les fichiers suivis de cette mise à jour', ![app, sw, fix, fs.readFileSync(path.join(HERE, 'preview60-36.mjs'), 'utf8')].some(s => /\bYann\b/.test(s)));
 }
 
 console.log(`audit: ${pass} passed, ${fail} failed`); for (const f of fails) console.log('  FAIL', f);
