@@ -1,18 +1,18 @@
 [
  {
   "v": "v60.32",
-  "d": "2026-11-24",
+  "d": "2026-11-25",
   "l": [
-   "Meilleurs attaquants contre les raids Téracristal 7★ (événements) et 6★ d’Écarlate / Violet, y compris le Masque Turquoise et le Disque Indigo. Un bloc « Meilleurs attaquants » figure dans la vue Raids et sur la fiche du boss (raids 7★ et 6★) : top 12, capacité, type Téra, lien vers la fiche.",
-   "Le type Téra du boss 6★ se choisit quand il est aléatoire. Les légendaires et fabuleux sont exclus par défaut, avec une option pour les afficher. Une ligne rappelle la méthode (niveau 100, IV 31, EV, talent offensif, Restes, Téra de l’attaque, score dégâts infligés / dégâts encaissés).",
-   "Calcul interne avec la formule officielle de dégâts (@smogon/calc, licence MIT). Les 5★ Écarlate / Violet, les 5★ Épée / Bouclier et l’Aventure Dynamax viendront dans une mise à jour suivante. Pensez à retélécharger le pack hors-ligne."
+   "Meilleurs attaquants contre les raids Téracristal 7★ (événements) et 6★ d’Écarlate / Violet, y compris le Masque Turquoise et le Disque Indigo. Deux listes : « Attaque directe » et « Avec une accumulation » (un boost, après l’annulation de stats prévue au script du boss). Le bloc figure dans la vue Raids et sur la fiche du boss : top 12, capacité, type Téra, lien vers la fiche.",
+   "L’attaquant charge l’Orbe Téra en trois attaques, puis téracristallise. Le chrono (7 min 30, 15 min pour Mewtwo), le bouclier Téra et le script du boss sont simulés. Les légendaires et fabuleux sont exclus par défaut, avec une option pour les afficher. Les encouragements et les PNJ sont rappelés en note, sans être chiffrés.",
+   "Le nom officiel d’un boss 7★ est « [Pokémon] redoutable », doté de l’Insigne Surpuissant. Calcul interne avec la formule officielle de dégâts (@smogon/calc, licence MIT). Les 5★ Écarlate / Violet, les 5★ Épée / Bouclier et l’Aventure Dynamax viendront dans une mise à jour suivante. Pensez à retélécharger le pack hors-ligne."
   ]
  },
  {
   "v": "v60.31",
   "d": "2026-11-24",
   "l": [
-   "Écarlate / Violet : liste complète des raids Téracristal 7★ événementiels (décembre 2022 à aujourd’hui, rediffusions comprises). Sur la fiche, un bloc « Raids 7★ (événements) » donne le boss et sa forme, le type Téra, les dates de chaque diffusion, le titre « le Surpuissant », le talent, la nature et les capacités (la capacité mise en avant, le cas échéant).",
+   "Écarlate / Violet : liste complète des raids Téracristal 7★ événementiels (décembre 2022 à aujourd’hui, rediffusions comprises). Sur la fiche, un bloc « Raids 7★ (événements) » donne le boss et sa forme, le type Téra, les dates de chaque diffusion, le nom « redoutable », doté de l’Insigne Surpuissant, le talent, la nature et les capacités (la capacité mise en avant, le cas échéant).",
    "La vue Raids a une section 7★ pour Écarlate / Violet, et le filtre « Dispo en raid » accepte une puce 7★. Les raids terminés sont en grisé ; les raids en cours ou à venir sont mis en avant.",
    "Sources : Poképédia (CC BY-NC-SA 3.0 FR) en priorité pour les noms français, puis Serebii et Bulbapedia. Pensez à retélécharger le pack hors-ligne."
   ]

@@ -2,7 +2,7 @@
  "src": "Poképédia (CC BY-NC-SA 3.0 FR) — pages Raid Téracristal et Cristal de raid événementiel N ; Serebii (Tera Raid Battle Events / Mighty / Unrivaled) ; Bulbapedia (Tera Raid Battle, table 7★). Noms de talents et de capacités anglophones traduits via les noms officiels (données PokeAPI).",
  "updated": "2026-11-24",
  "tz": "Dates civiles inclusives. Les horaires officiels sont typiquement 00:00–23:59 UTC.",
- "titleOfficial": "le Surpuissant",
+ "titleOfficial": "redoutable",
  "markOfficial": "Insigne Surpuissant",
  "raids": [
   {
@@ -13,7 +13,7 @@
    "evts": [
     41
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Chlorophylle",
    "ha": "Toujours",
@@ -55,7 +55,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "6-dragon",
@@ -66,7 +66,7 @@
     2,
     43
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Force Soleil",
    "ha": "Toujours",
@@ -127,7 +127,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "9-steel",
@@ -137,7 +137,7 @@
    "evts": [
     42
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Cuvette",
    "ha": "Toujours",
@@ -180,7 +180,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "25-water",
@@ -191,7 +191,7 @@
     12,
     52
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Paratonnerre",
    "ha": "Toujours",
@@ -232,7 +232,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique. [[Balle Lumière]] tenue."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique. [[Balle Lumière]] tenue."
   },
   {
    "id": "129-dragon",
@@ -242,7 +242,7 @@
    "evts": [
     88
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Phobique",
    "ha": "Toujours",
@@ -271,7 +271,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "133-normal",
@@ -281,7 +281,7 @@
    "evts": [
     32
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Anticipation",
    "ha": "Toujours",
@@ -312,7 +312,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "149-normal",
@@ -322,7 +322,7 @@
    "evts": [
     55
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Attention",
    "ha": "Impossible",
@@ -365,7 +365,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "150-psychic",
@@ -375,7 +375,7 @@
    "evts": [
     27
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Tension",
    "ha": "Toujours",
@@ -407,7 +407,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "154-psychic",
@@ -417,7 +417,7 @@
    "evts": [
     45
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Feuille Garde",
    "ha": "Toujours",
@@ -469,7 +469,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "157-ghost",
@@ -479,7 +479,7 @@
    "evts": [
     18
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Torche",
    "ha": "Toujours",
@@ -528,7 +528,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "157-hisui-fire",
@@ -538,7 +538,7 @@
    "evts": [
     31
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Fouille",
    "ha": "Toujours",
@@ -586,7 +586,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "160-dark",
@@ -596,7 +596,7 @@
    "evts": [
     61
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Sans Limite",
    "ha": "Toujours",
@@ -648,7 +648,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "233-normal",
@@ -658,7 +658,7 @@
    "evts": [
     77
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Analyste",
    "ha": "Toujours",
@@ -690,7 +690,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "248-ghost",
@@ -700,7 +700,7 @@
    "evts": [
     73
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Sable Volant",
    "ha": "Impossible",
@@ -750,7 +750,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "254-dragon",
@@ -760,7 +760,7 @@
    "evts": [
     51
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Délestage",
    "ha": "Toujours",
@@ -811,7 +811,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "257-flying",
@@ -821,7 +821,7 @@
    "evts": [
     36
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Turbo",
    "ha": "Toujours",
@@ -871,7 +871,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "260-poison",
@@ -881,7 +881,7 @@
    "evts": [
     49
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Moiteur",
    "ha": "Toujours",
@@ -931,7 +931,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "373-flying",
@@ -941,7 +941,7 @@
    "evts": [
     74
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Impudence",
    "ha": "Toujours",
@@ -992,7 +992,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "376-steel",
@@ -1002,7 +1002,7 @@
    "evts": [
     75
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Corps Sain",
    "ha": "Impossible",
@@ -1053,7 +1053,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "389-ground",
@@ -1063,7 +1063,7 @@
    "evts": [
     62
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Coque Armure",
    "ha": "Toujours",
@@ -1113,7 +1113,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "392-rock",
@@ -1123,7 +1123,7 @@
    "evts": [
     58
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Poing de Fer",
    "ha": "Toujours",
@@ -1175,7 +1175,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "395-ice",
@@ -1185,7 +1185,7 @@
    "evts": [
     38
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Battant",
    "ha": "Toujours",
@@ -1235,7 +1235,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "445-ground",
@@ -1245,7 +1245,7 @@
    "evts": [
     76
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Peau Dure",
    "ha": "Toujours",
@@ -1295,7 +1295,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "497-grass",
@@ -1305,7 +1305,7 @@
    "evts": [
     57
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Contestation",
    "ha": "Toujours",
@@ -1357,7 +1357,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "500-electric",
@@ -1367,7 +1367,7 @@
    "evts": [
     50
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Téméraire",
    "ha": "Toujours",
@@ -1418,7 +1418,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "503-bug",
@@ -1428,7 +1428,7 @@
    "evts": [
     16
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Coque Armure",
    "ha": "Toujours",
@@ -1480,7 +1480,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "503-hisui-water",
@@ -1490,7 +1490,7 @@
    "evts": [
     33
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Incisif",
    "ha": "Toujours",
@@ -1540,7 +1540,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "635-poison",
@@ -1550,7 +1550,7 @@
    "evts": [
     85
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Lévitation",
    "ha": "Impossible",
@@ -1601,7 +1601,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "652-rock",
@@ -1611,7 +1611,7 @@
    "evts": [
     20
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Pare-Balles",
    "ha": "Toujours",
@@ -1660,7 +1660,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "655-fairy",
@@ -1670,7 +1670,7 @@
    "evts": [
     23
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Magicien",
    "ha": "Toujours",
@@ -1718,7 +1718,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "658-poison",
@@ -1728,7 +1728,7 @@
    "evts": [
     8
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Protéen",
    "ha": "Toujours",
@@ -1779,7 +1779,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "706-water",
@@ -1789,7 +1789,7 @@
    "evts": [
     86
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Herbivore",
    "ha": "Impossible",
@@ -1839,7 +1839,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "724-flying",
@@ -1849,7 +1849,7 @@
    "evts": [
     14
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Longue Portée",
    "ha": "Toujours",
@@ -1901,7 +1901,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "724-hisui-grass",
@@ -1911,7 +1911,7 @@
    "evts": [
     29
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Querelleur",
    "ha": "Toujours",
@@ -1962,7 +1962,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "727-dark",
@@ -1972,7 +1972,7 @@
    "evts": [
     56
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Intimidation",
    "ha": "Toujours",
@@ -2024,7 +2024,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "730-fairy",
@@ -2034,7 +2034,7 @@
    "evts": [
     47
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Hydrata-Son",
    "ha": "Toujours",
@@ -2085,7 +2085,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "784-fighting",
@@ -2095,7 +2095,7 @@
    "evts": [
     79
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Anti-Bruit",
    "ha": "Impossible",
@@ -2145,7 +2145,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "812-normal",
@@ -2155,7 +2155,7 @@
    "evts": [
     24
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Créa-Herbe",
    "ha": "Toujours",
@@ -2206,7 +2206,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "815-fighting",
@@ -2216,7 +2216,7 @@
    "evts": [
     5
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Libéro",
    "ha": "Toujours",
@@ -2266,7 +2266,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "818-ice",
@@ -2276,7 +2276,7 @@
    "evts": [
     19
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Sniper",
    "ha": "Toujours",
@@ -2326,7 +2326,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "887-dragon",
@@ -2336,7 +2336,7 @@
    "evts": [
     87
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Corps Maudit",
    "ha": "Toujours",
@@ -2386,7 +2386,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "908-grass",
@@ -2396,7 +2396,7 @@
    "evts": [
     70
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Protéen",
    "ha": "Toujours",
@@ -2438,7 +2438,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "911-fire",
@@ -2448,7 +2448,7 @@
    "evts": [
     71
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Inconscient",
    "ha": "Toujours",
@@ -2489,7 +2489,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "914-water",
@@ -2499,7 +2499,7 @@
    "evts": [
     72
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Impudence",
    "ha": "Toujours",
@@ -2540,7 +2540,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "970-grass",
@@ -2550,7 +2550,7 @@
    "evts": [
     89
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Dépôt Toxique",
    "ha": "Impossible",
@@ -2584,7 +2584,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "977-water",
@@ -2594,7 +2594,7 @@
    "evts": [
     53
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Inconscient",
    "ha": "Impossible",
@@ -2627,7 +2627,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "979-ghost",
@@ -2637,7 +2637,7 @@
    "evts": [
     90
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Acharné",
    "ha": "Toujours",
@@ -2671,7 +2671,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "981-fairy",
@@ -2681,7 +2681,7 @@
    "evts": [
     91
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Armure Caudale",
    "ha": "Impossible",
@@ -2714,7 +2714,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "983-dark",
@@ -2724,7 +2724,7 @@
    "evts": [
     92
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Général Suprême",
    "ha": "Impossible",
@@ -2757,7 +2757,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "991-ice",
@@ -2767,7 +2767,7 @@
    "evts": [
     35
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Charge Quantique",
    "ha": "Impossible",
@@ -2800,7 +2800,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "998-ice",
@@ -2810,7 +2810,7 @@
    "evts": [
     78
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Thermodynamique",
    "ha": "Impossible",
@@ -2858,7 +2858,7 @@
      ]
     }
    ],
-   "notes": "Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "1005-dragon",
@@ -2868,7 +2868,7 @@
    "evts": [
     84
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Paléosynthèse",
    "ha": "Impossible",
@@ -2901,7 +2901,7 @@
      ]
     }
    ],
-   "notes": "Exclusif Ec. Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Exclusif Ec. Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   },
   {
    "id": "1006-fairy",
@@ -2911,7 +2911,7 @@
    "evts": [
     84
    ],
-   "title": "le Surpuissant",
+   "title": "redoutable",
    "mark": "Insigne Surpuissant",
    "talent": "Charge Quantique",
    "ha": "Impossible",
@@ -2944,7 +2944,7 @@
      ]
     }
    ],
-   "notes": "Exclusif Vi. Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
+   "notes": "Exclusif Vi. Doté de l’Insigne Surpuissant. Capturable une seule fois. Jamais chromatique."
   }
  ],
  "divergences": [

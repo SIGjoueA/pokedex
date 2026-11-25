@@ -598,7 +598,7 @@ export function buildTera7(opts = {}) {
       n: g.n,
       tera: g.tera,
       evts: [...new Set(g.evts)].sort((a, b) => a - b),
-      title: g.mark || se.some(b => b.mark) ? 'le Surpuissant' : '',
+      title: g.mark || se.some(b => b.mark) ? 'redoutable' : '',
       mark: g.mark || se.some(b => b.mark) ? 'Insigne Surpuissant' : '',
       talent,
       ha: g.ha || '',
@@ -613,7 +613,7 @@ export function buildTera7(opts = {}) {
       ver: g.ver,
       lv: g.lv || 100,
       windows,
-      notes: noteTxt
+      notes: noteTxt.replace(/(?<!Doté de l’)Insigne Surpuissant\./gi, 'Doté de l’Insigne Surpuissant.')
     });
   }
 
@@ -643,7 +643,7 @@ export function buildTera7(opts = {}) {
     src: 'Poképédia (CC BY-NC-SA 3.0 FR) — pages Raid Téracristal et Cristal de raid événementiel N ; Serebii (Tera Raid Battle Events / Mighty / Unrivaled) ; Bulbapedia (Tera Raid Battle, table 7★). Noms de talents et de capacités anglophones traduits via les noms officiels (données PokeAPI).',
     updated: '2026-11-24',
     tz: 'Dates civiles inclusives. Les horaires officiels sont typiquement 00:00–23:59 UTC.',
-    titleOfficial: 'le Surpuissant',
+    titleOfficial: 'redoutable',
     markOfficial: 'Insigne Surpuissant',
     raids,
     divergences

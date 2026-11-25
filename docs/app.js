@@ -1092,6 +1092,16 @@ document.addEventListener('click', e => {
   if (gb) { const id = gb.dataset.rg; RV.g = id; RV.s = ''; const h = '#/raids/' + id; if (location.hash !== h) location.hash = h; else renderRaids(); return; }
   const sb = e.target.closest('#raid-view [data-rvs]');
   if (sb) { RV.s = sb.dataset.rvs; renderRaids(); return; }
+  const modeBtn = e.target.closest('[data-svrk-mode]');
+  if (modeBtn) {
+    const box = modeBtn.closest('.svrkbox');
+    if (box) {
+      box.dataset.svrkMode = modeBtn.dataset.svrkMode;
+      if (box.closest('#raid-view')) RV.svMode = box.dataset.svrkMode;
+      refreshSvRankBox(box);
+    }
+    return;
+  }
   const teraBtn = e.target.closest('[data-svrk-tera]');
   if (teraBtn) {
     const box = teraBtn.closest('.svrkbox');
@@ -1857,7 +1867,7 @@ function tera7HTML(k) {
     const moves = (r.moves || []).map(m => r.feat && m === r.feat ? `<b>${esc(m)}</b>` : esc(m)).join(', ');
     const raidM = (r.raidMoves || []).length ? `<div class="ms">En raid : ${r.raidMoves.map(esc).join(', ')}</div>` : '';
     const bits = [
-      r.mark ? r.mark + '.' : '',
+      r.mark ? 'Doté de l’Insigne Surpuissant.' : '',
       r.once ? 'Capturable une seule fois.' : '',
       r.shiny === 'never' ? 'Jamais chromatique.' : '',
       r.held ? `Objet tenu : ${r.held}.` : '',
@@ -1872,7 +1882,7 @@ function tera7HTML(k) {
       ${rk}
     </div>`;
   }).join('');
-  const note = 'Sources : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid événementiels ; <a href="https://www.serebii.net/scarletviolet/teraraidbattleevents.shtml" target="_blank" rel="noopener">Serebii</a> ; Bulbapedia. Titre officiel : « le Surpuissant » (Insigne Surpuissant). Dates civiles inclusives (horaires typiques 00:00–23:59 UTC).';
+  const note = 'Sources : <a href="https://www.pokepedia.fr/Raid_Téracristal" target="_blank" rel="noopener">Poképédia</a> (CC BY-NC-SA 3.0 FR), pages des cristaux de raid événementiels ; <a href="https://www.serebii.net/scarletviolet/teraraidbattleevents.shtml" target="_blank" rel="noopener">Serebii</a> ; Bulbapedia. Nom officiel : « [Pokémon] redoutable », doté de l’Insigne Surpuissant. Dates civiles inclusives (horaires typiques 00:00–23:59 UTC).';
   return { html: `<div class="raidloc t7block"><h3>Raids 7★ (événements)</h3>${blocks}<p class="note">${note}</p></div>`, rows: L.length };
 }
 function tera7ViewHTML(g) {
@@ -1902,7 +1912,17 @@ function svRankReady() { return !!(RSV && RSV.P && RSV.F); }
 function svBossRow(id) { return ((RSV && RSV.B) || []).find(b => b[0] === id); }
 function svTeraKeys(id, leg) {
   const slot = svRankReady() && (leg ? RSV.L : RSV.P)[id];
-  return slot ? SV_TYPES.filter(t => slot[t]) : [];
+  return slot ? SV_TYPES.filter(t => slot[t] && (Array.isArray(slot[t]) || slot[t].d || slot[t].a)) : [];
+}
+function svRankRows(cell, mode) {
+  if (!cell) return [];
+  if (Array.isArray(cell)) return mode === 'a' ? [] : cell;
+  return (cell[mode === 'a' ? 'a' : 'd'] || []);
+}
+function svModeOf(box) { return (box && box.dataset.svrkMode === 'a') || (typeof RV !== 'undefined' && RV.svMode === 'a') ? 'a' : 'd'; }
+function svModeTabsHTML(mode) {
+  const tab = (id, lab) => `<button type="button" class="chip rchip" data-svrk-mode="${id}" aria-pressed="${mode === id}">${lab}</button>`;
+  return `<div class="svrktabs" role="tablist" aria-label="Type de classement">${tab('d', 'Attaque directe')}${tab('a', 'Avec une accumulation')}</div>`;
 }
 function svDefaultTera(id) {
   const b = svBossRow(id);
@@ -1912,17 +1932,19 @@ function svDefaultTera(id) {
   if (p && p.t && keys.includes(p.t[0])) return p.t[0];
   return keys[0] || 'normal';
 }
-function svRankListHTML(id, tera, leg, origin) {
+function svRankListHTML(id, tera, leg, origin, mode) {
   if (!svRankReady()) return '<p class="note">Classement indisponible.</p>';
+  mode = mode === 'a' ? 'a' : 'd';
   const slot = (leg ? RSV.L : RSV.P)[id] || {};
-  const rows = slot[tera] || [];
+  const rows = svRankRows(slot[tera], mode);
   if (!rows.length) return '<p class="note">Pas encore de classement pour ce type Téra.</p>';
   return `<ol class="rklist svrklist">${rows.map((r, i) => {
     const k = RSV.F[r[0]], mv = RSV.mvfr[r[1]], typ = r[2], pct = r[3];
+    const boost = r[4] != null ? RSV.mvfr[r[4]] : '';
     const p = BY_KEY[k];
     const href = p ? `#/p/${p.k}` : `#/p/${k}`;
     const raid = origin ? ` data-raid="${esc(origin)}"` : '';
-    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)} · Téra ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
+    return `<li><a class="rkrow" href="${href}"${raid}><span class="rki">${i + 1}</span>${p ? `<img src="${artOf(p)}" alt="" loading="lazy" width="44" height="44">` : '<span class="rkimg"></span>'}<span class="rkm"><b>${esc(p ? fullN(p) : k)}</b><span class="rkty">${badge(typ)}</span><small>${esc(mv)}${boost ? ' après ' + esc(boost) : ''} · Téra ${esc(TYPE_FR[typ] || typ)}</small></span><span class="rkv"><b>${String(pct).replace('.', ',')} %</b></span></a></li>`;
   }).join('')}</ol>`;
 }
 function svTeraChipsHTML(id, tera, leg) {
@@ -1934,34 +1956,38 @@ function svLegHTML(leg) {
   return `<label class="svrkleg"><input type="checkbox" data-svrk-leg${leg ? ' checked' : ''}> Inclure les légendaires et fabuleux</label>`;
 }
 function svMethodNote() {
-  return 'Méthode : attaquant de niveau 100, IV 31, 252 EV PV et 252 EV dans sa meilleure stat offensive, nature qui l’augmente, meilleur talent offensif, objet Restes. Il téracristallise dans le type de sa meilleure capacité apprenable dans Écarlate / Violet. Score : dégâts infligés au carré, divisés par les dégâts encaissés, comme pour les raids de Pokémon GO. Bouclier Téra simplifié. Les stratégies de soutien (Cognobidon, Grondement, soins) ne sont pas classées. Les légendaires et fabuleux sont exclus par défaut.';
+  return 'Deux classements : attaque directe, ou avec une accumulation (une capacité de boost, après l’annulation de stats prévue au script du boss). L’attaquant est au niveau 100 (IV 31, 252 EV PV et 252 EV offensifs, nature favorable, meilleur talent offensif, Restes). Il charge l’Orbe Téra en trois attaques, puis téracristallise dans le type de sa meilleure capacité. Le chrono, le bouclier Téra et le script du boss sont simulés. Score : dégâts infligés au carré, divisés par les dégâts encaissés, comme pour les raids de Pokémon GO. Les encouragements et les PNJ ne sont pas chiffrés. Les légendaires et fabuleux sont exclus par défaut.';
 }
 function svRankBoxHTML(id, tera, leg, opts = {}) {
   if (!svRankReady() || !((leg ? RSV.L : RSV.P)[id])) return '';
   const keys = svTeraKeys(id, leg);
   if (!keys.includes(tera)) tera = svDefaultTera(id);
+  const mode = opts.mode === 'a' || opts.mode === 'd' ? opts.mode : ((typeof RV !== 'undefined' && RV.svMode === 'a') ? 'a' : 'd');
   const b = svBossRow(id);
   const title = Object.prototype.hasOwnProperty.call(opts, 'title') ? opts.title : 'Meilleurs attaquants';
   const pick = opts.select || '';
   const teraLine = keys.length > 1 ? `<p class="note rvlbl">Type Téra du boss</p>${svTeraChipsHTML(id, tera, leg)}` : (b && b[4] && b[4] !== '*' ? `<p class="note">Téra ${esc(TYPE_FR[b[4]] || b[4])}</p>` : '');
-  return `<div class="svrkbox" data-svrk-id="${esc(id)}" data-svrk-tera="${esc(tera)}" data-svrk-leg="${leg ? '1' : ''}"${opts.origin ? ` data-svrk-origin="${esc(opts.origin)}"` : ''}>
-    ${title ? `<h3>${esc(title)}</h3>` : ''}${pick}${teraLine}${svLegHTML(leg)}
-    <div class="svrkbody">${svRankListHTML(id, tera, leg, opts.origin)}</div>
+  return `<div class="svrkbox" data-svrk-id="${esc(id)}" data-svrk-tera="${esc(tera)}" data-svrk-leg="${leg ? '1' : ''}" data-svrk-mode="${mode}"${opts.origin ? ` data-svrk-origin="${esc(opts.origin)}"` : ''}>
+    ${title ? `<h3>${esc(title)}</h3>` : ''}${pick}${teraLine}${svLegHTML(leg)}${svModeTabsHTML(mode)}
+    <div class="svrkbody">${svRankListHTML(id, tera, leg, opts.origin, mode)}</div>
     <p class="note">${svMethodNote()}</p>
   </div>`;
 }
 function refreshSvRankBox(box) {
   if (!box || !svRankReady()) return;
   const id = box.dataset.svrkId, leg = box.dataset.svrkLeg === '1';
+  const mode = box.dataset.svrkMode === 'a' ? 'a' : 'd';
   let tera = box.dataset.svrkTera || svDefaultTera(id);
   const keys = svTeraKeys(id, leg);
   if (keys.length && !keys.includes(tera)) tera = keys[0];
   box.dataset.svrkTera = tera;
+  box.dataset.svrkMode = mode;
   box.querySelectorAll('[data-svrk-tera]').forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.svrkTera === tera));
+  box.querySelectorAll('[data-svrk-mode]').forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.svrkMode === mode));
   const legIn = box.querySelector('[data-svrk-leg]');
   if (legIn) legIn.checked = leg;
   const body = box.querySelector('.svrkbody');
-  if (body) body.innerHTML = svRankListHTML(id, tera, leg, box.dataset.svrkOrigin || '');
+  if (body) body.innerHTML = svRankListHTML(id, tera, leg, box.dataset.svrkOrigin || '', mode);
 }
 function svBossSelectHTML(cur, game) {
   if (!svRankReady()) return '';
@@ -2004,7 +2030,7 @@ function svRaidsBlockHTML(g) {
   const b = svBossRow(id);
   const tera = (b && b[4] && b[4] !== '*') ? b[4] : (RV.svTera && svTeraKeys(id, !!RV.svLeg).includes(RV.svTera) ? RV.svTera : svDefaultTera(id));
   RV.svTera = tera;
-  return `<details class="rvsec svrksec" open><summary>Meilleurs attaquants</summary>${svRankBoxHTML(id, tera, !!RV.svLeg, { title: '', select: svBossSelectHTML(id, g), origin: g })}</details>`;
+  return `<details class="rvsec svrksec" open><summary>Meilleurs attaquants</summary>${svRankBoxHTML(id, tera, !!RV.svLeg, { title: '', select: svBossSelectHTML(id, g), origin: g, mode: RV.svMode === 'a' ? 'a' : 'd' })}</details>`;
 }
 
 function raidGameOfList() { return RAID_GAME.has(state.game) ? state.game : ''; }

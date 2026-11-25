@@ -782,3 +782,7 @@ section.box.fold:not(.open) .foldbtn{position:absolute;left:50%;transform:transl
 .svrkleg{display:flex;align-items:center;gap:8px;margin:8px 0;font-size:14px}
 .svrklist .rki{flex:none;width:1.4em;text-align:right;font-variant-numeric:tabular-nums;opacity:.7;font-size:13px}
 .svrksec .svrkbox{padding:0 2px 8px}
+
+.svrktabs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 4px}
+.svrktabs button{font:inherit;padding:6px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.svrktabs button[aria-pressed="true"]{border-color:rgba(123,92,214,.9);background:rgba(123,92,214,.16)}

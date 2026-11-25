@@ -45,6 +45,17 @@ await p.evaluate(() => {
 await hideChrome(); await sleep(300);
 await shot('01-vue-raids-attaquants');
 
+// 01b : même vue, onglet « Avec une accumulation »
+await p.evaluate(() => {
+  const tab = document.querySelector('#raid-view [data-svrk-mode="a"]');
+  if (tab) tab.click();
+  const sec = document.querySelector('#raid-view details.svrksec');
+  if (sec) sec.open = true;
+  window.scrollTo(0, 0);
+});
+await hideChrome(); await sleep(300);
+await shot('05-vue-raids-accumulation');
+
 // 02 : même vue, un boss 6★ (type Téra au choix)
 const sixId = await p.evaluate(() => {
   const sel = document.querySelector('#raid-view [data-svrk-boss]');
@@ -54,6 +65,8 @@ const sixId = await p.evaluate(() => {
 });
 if (sixId) {
   await p.evaluate(id => {
+    const tab = document.querySelector('#raid-view [data-svrk-mode="d"]');
+    if (tab) tab.click();
     const sel = document.querySelector('#raid-view [data-svrk-boss]');
     if (!sel) return;
     sel.value = id;
