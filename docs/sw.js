@@ -2,7 +2,7 @@
 const VERSION = 'v60.40';
 // v30: shown in the in-app « Nouvelle version disponible » banner (keep it short)
 const NOTES = 'Faiblesses : vous pouvez ajouter météo, terrain, objet, Gravité et Téracristal au tableau déjà là. Seulement ce qui change vraiment l’efficacité des types.';
-const DATA_VERSION = 'd78'; // bump when the schema of data/*.json changes
+const DATA_VERSION = 'd79'; // bump when the schema of data/*.json changes
 const DATA = `pokedex-data-${DATA_VERSION}`;
 const SHELL = `pokedex-shell-${VERSION}`;
 const IMGS = 'pokedex-img';
